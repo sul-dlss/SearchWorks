@@ -9,7 +9,7 @@ RSpec.describe Holdings::Library do
     end
 
     context 'with a FOLIO item' do
-      let(:items) { [instance_double(Holdings::Item, folio_item?: true, permanent_location: double(library:), effective_location: nil)] }
+      let(:items) { [instance_double(Holdings::Item, folio_item?: true, permanent_location: double(library:), effective_location: nil, bound_with_parent: nil)] }
       let(:library) { Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library') }
 
       it "translates the library code using the FOLIO library data" do
@@ -17,8 +17,20 @@ RSpec.describe Holdings::Library do
       end
     end
 
+    context 'with a FOLIO item in a temporary location and a bound_with parent' do
+      let(:green_hash) { { 'id' => 'green', 'code' => 'GREEN', 'name' => 'Cecil R. Green Library' } }
+      let(:items) {
+ [instance_double(Holdings::Item, folio_item?: true, permanent_location: double(sal3:), effective_location:, bound_with_parent: { 'hrid' => 'hrid' }, bound_with_location: green_hash)] }
+      let(:effective_location) { instance_double(Folio::Location, details: { 'searchworksTreatTemporaryLocationAsPermanentLocation' => true }, library: sal3) }
+      let(:sal3) { Folio::Library.new(id: 'sal3', code: 'SAL3', name: 'SAL3') }
+
+      it "translates the library code using the FOLIO library data" do
+        expect(Holdings::Library.new("GREEN", items).name).to eq "Cecil R. Green Library"
+      end
+    end
+
     context 'with a FOLIO item in a temporary location we treat at the permanent location for display' do
-      let(:items) { [instance_double(Holdings::Item, folio_item?: true, permanent_location: double(sal3:), effective_location:)] }
+      let(:items) { [instance_double(Holdings::Item, folio_item?: true, permanent_location: double(sal3:), effective_location:, bound_with_parent: nil)] }
       let(:effective_location) { instance_double(Folio::Location, details: { 'searchworksTreatTemporaryLocationAsPermanentLocation' => true }, library:) }
       let(:library) { Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library') }
       let(:sal3) { Folio::Library.new(id: 'sal3', code: 'SAL3', name: 'SAL3') }

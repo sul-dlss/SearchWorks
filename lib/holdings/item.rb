@@ -170,9 +170,17 @@ class Holdings
       availability_class.present? && availability_class == 'In_process'
     end
 
+    def bound_with_location
+      library_id = Folio::Locations.library_id(code: item_display[:effective_permanent_location_code])
+      Folio::Types.libraries[library_id]
+    end
+
     private
 
     def standard_or_zombie_library
+      # we want the parent library, not the child record's library
+      return bound_with_location['code'] if bound_with_parent.present?
+
       item_display[:library].presence || 'ZOMBIE'
     end
 
