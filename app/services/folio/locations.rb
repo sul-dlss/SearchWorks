@@ -21,6 +21,11 @@ module Folio
       location && location['details']
     end
 
+    def self.library_id(code:)
+      location = find_by(code:)
+      location && location['libraryId']
+    end
+
     def self.find_by(code:)
       instance.data[code]
     end
