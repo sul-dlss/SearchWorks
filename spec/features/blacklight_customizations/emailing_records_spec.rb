@@ -19,7 +19,7 @@ RSpec.describe "Emailing Records", :js do
       expect(page).to have_css('h1', text: 'Email This', visible: true)
 
       within('.modal-dialog') do
-        expect(page).to have_css('p', text: '(Stanford users can avoid this Captcha by logging in.)')
+        expect(page).to have_css('p', text: 'Stanford affiliates: Log in to skip Captcha.')
       end
     end
   end

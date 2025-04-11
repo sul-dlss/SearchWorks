@@ -1,0 +1,12 @@
+.recaptcha {
+  a {
+    --link-text-decoration-color: var(--stanford-digital-red);
+    --bs-link-decoration: underline dotted var(--underline-color) 1px;
+    color: var(--stanford-digital-red);
+
+    &:hover {
+      color: rgb(var(--stanford-digital-red-dark-rgb));
+      font-weight: 500;
+    }
+  }
+}
