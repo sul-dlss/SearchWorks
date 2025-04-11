@@ -13,7 +13,7 @@ class StanfordOnlyIconComponent < ViewComponent::Base
   end
 
   def svg
-    tag.svg(width: '13px', height: '13px', viewBox: '0 0 13 13', aria: { hidden: true }) do
+    tag.svg(width: font_size, height: font_size, viewBox: '0 0 14 14', aria: { hidden: true }) do
       tag.g(stroke: 'none', stroke_width: 1, fill: 'none', fill_rule: 'evenodd') do
         tag.g(transform: 'translate(-1.000000, -1.000000)') do
           tag.g(id: 'stanford-only', transform: 'translate(1.000000, -3.000000)') do
@@ -27,5 +27,9 @@ class StanfordOnlyIconComponent < ViewComponent::Base
 
   def call
     svg
+  end
+
+  def font_size
+    '14px' # TODO: This will change in Bootstrap 5
   end
 end
