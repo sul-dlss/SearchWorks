@@ -1,27 +1,5 @@
 <div class='card'>
   <div class='card-body'>
-    <% if on_campus_or_su_affiliated_user? %>
-      <div data-library-h3lp data-jid="ic@chat.libraryh3lp.com">
-    <% else %>
-      <div>
-    <% end %>
-      <span class="image-icon image-icon-message-away media-object pull-left"></span>
-      <div class="media-body">
-        <% if on_campus_or_su_affiliated_user? %>
-          <h3><%= link_to "Chat with a librarian", "https://library.stanford.edu/ask" %></h3>
-          <p>
-            Chat is available during normal Reference hours.
-            <span data-hours-route='<%= "#{hour_path('IC-CHAT')}" %>'>
-              <span class='location-hours-today'></span>
-            </span>
-          </p>
-        <% else %>
-          <h3>Chat with a librarian</h3>
-          <p>
-            <%= link_to 'Login to access chat assistance.', new_user_session_path(referrer: request.original_url) %>
-          </p>
-        <% end %>
-      </div>
-    </div>
+    <%= render ChatWithLibrarianComponent.new %>
   </div>
 </div>
