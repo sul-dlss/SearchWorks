@@ -30,16 +30,17 @@
     color: $gray-light;
   }
 
-  dd .btn-zero-results, dd .constraint-value {
+  dd .btn-zero-results,
+  dd .constraint-value {
     @extend .btn-secondary;
     color: $gray-light;
     border-radius: 5px;
     font-weight: bold;
-    &:hover,:focus {
+    &:hover,
+    :focus {
       text-decoration: underline;
-    };
+    }
   }
-
 }
 
 .zero-results-more-options {
