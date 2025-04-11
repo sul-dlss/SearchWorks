@@ -11,6 +11,7 @@
 
   <% potential_context = capture do %>
     <%= render AccessPanels::ExhibitComponent.new(document: document) %>
+    <%= render AccessPanels::OtherListingsComponent.new(document: document) %>
   <% end %>
 
   <% if context.present? || potential_context.present? %>

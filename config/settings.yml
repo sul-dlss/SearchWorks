@@ -272,3 +272,6 @@ folio_unrequestable_statuses:
   - Unavailable
   - Unknown
   - Withdrawn
+
+earthworks:
+  url: 'https://earthworks.stanford.edu'

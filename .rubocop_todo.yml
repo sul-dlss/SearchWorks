@@ -661,7 +661,6 @@ RSpec/PendingWithoutReason:
     - "spec/features/marc_results_metadata_spec.rb"
     - "spec/features/preview_spec.rb"
     - "spec/views/catalog/record/_callnumber_browse.html.erb_spec.rb"
-    - "spec/views/catalog/record/_mods_bibliographic.html.erb_spec.rb"
 
 # Offense count: 42
 # This cop supports unsafe autocorrection (--autocorrect-all).
