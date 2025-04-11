@@ -4,8 +4,8 @@
 
     <% if target == '#feedback-form' %>
       <div class="col-sm-12 offset-sm-3">
-        <div class="row">
-          <%= render "shared/feedback_forms/chat_with_librarian" if on_campus_or_su_affiliated_user? %>
+        <%= render ChatWithLibrarianComponent.new %>
+        <div class="row mt-3">
           <%= render "shared/quick_reports/form", layout: nil %>
         </div>
       </div>

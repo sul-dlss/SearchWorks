@@ -3,7 +3,7 @@ import fetchJsonp from "fetch-jsonp";
 function libraryH3lp(element) {
   const item = element;
   const link = element.querySelector("a");
-  const icon = element.querySelector("span.image-icon");
+  const icon = element.querySelector("span.bi");
   const jid = element.dataset.jid;
 
   checkStatus();
@@ -28,15 +28,15 @@ function libraryH3lp(element) {
   }
 
   function setAsAvailable() {
-    icon.classList.remove("image-icon-message-away")
-    icon.classList.add("image-icon-message-available")
+    icon.classList.remove("bi-chat")
+    icon.classList.add("bi-chat-fill")
     link.classList.remove("disabled")
     item.addEventListener("click", handleAvailableClick)
   }
 
   function setAsUnavailable() {
-    icon.classList.remove("image-icon-message-available")
-    icon.classList.add("image-icon-message-away")
+    icon.classList.remove("bi-chat-fill")
+    icon.classList.add("bi-chat")
     link.classList.add("disabled")
     item.removeEventListener("click", handleAvailableClick)
     item.addEventListener("click", handleUnavailableClick)

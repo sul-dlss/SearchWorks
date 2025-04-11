@@ -18,3 +18,6 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 
 import MetaJsonCheckController from "./meta_json_check_controller"
 application.register("meta-json-check", MetaJsonCheckController)
+
+import ChatHoursController from "./chat_hours_controller"
+application.register("chat-hours", ChatHoursController)
