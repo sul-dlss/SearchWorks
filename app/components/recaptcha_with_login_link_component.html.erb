@@ -1,0 +1,5 @@
+<div class="recaptcha <%= classes %>">
+  <p class="mb-1">Stanford affiliates: <%= link_to 'Log in', new_user_session_path(referrer: request.original_url), data: { turbo: false } %>
+ to skip Captcha.</p>
+  <%= recaptcha_tags id: recaptcha_id, noscript: %>
+</div>
