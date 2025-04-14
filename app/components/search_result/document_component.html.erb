@@ -7,12 +7,16 @@
   itemscope: true,
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
-  <%= header %>
-  <div class="document-main-section">
-    <%= title %>
-    <%= thumbnail %>
-    <%= embed %>
-    <%= document_metadata %>
-  </div>
-  <%= footer %>
+  <% if eds_restricted? %>
+    <%= render SearchResult::EdsRestrictedComponent.new(counter: @counter, document: @document) %>
+  <% else %>
+    <%= header %>
+    <div class="document-main-section">
+      <%= title %>
+      <%= thumbnail %>
+      <%= embed %>
+      <%= document_metadata %>
+    </div>
+    <%= footer %>
+  <% end %>
 <% end %>
