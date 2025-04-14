@@ -77,7 +77,7 @@ GEM
     airbrussh (1.5.3)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.3)
-    autoprefixer-rails (10.4.19.0)
+    autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
     base64 (0.2.0)
     bcrypt_pbkdf (1.1.1)
@@ -235,7 +235,7 @@ GEM
     okcomputer (1.19.0)
     ostruct (0.6.1)
     parallel (1.26.3)
-    parser (3.3.7.4)
+    parser (3.3.8.0)
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
@@ -255,7 +255,7 @@ GEM
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.12)
+    rack (3.1.13)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-session (2.1.0)
@@ -337,7 +337,7 @@ GEM
       rubocop-ast (>= 1.44.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.44.0)
+    rubocop-ast (1.44.1)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     rubocop-capybara (2.22.1)
@@ -451,4 +451,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   2.6.7
+   2.6.8
