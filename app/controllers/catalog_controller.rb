@@ -65,7 +65,6 @@ class CatalogController < ApplicationController
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
-      qt: 'search',
       rows: 20,
       "f.callnum_facet_hsim.facet.limit": "-1",
       "f.stanford_work_facet_hsim.facet.limit": "-1"
@@ -87,9 +86,8 @@ class CatalogController < ApplicationController
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
     #
-    config.document_solr_path = 'select'
+    config.document_solr_path = 'document'
     config.default_document_solr_params = {
-     :qt => 'document',
     #  ## These are hard-coded in the blacklight 'document' requestHandler
     #  # :fl => '*',
     #  # :rows => 1
@@ -489,7 +487,6 @@ class CatalogController < ApplicationController
     config.view.brief(partials: [:index], icon_class: "fa-align-justify")
 
     config.index.respond_to.mobile = true
-    config.fetch_many_document_params = { qt: 'document' }
 
     config.add_show_tools_partial :citation, if: false
     config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
