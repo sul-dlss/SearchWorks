@@ -1,7 +1,7 @@
 <div class="record-toolbar sul-toolbar navbar navbar-expand-md navbar-dark px-3 my-4" role="navigation">
   <div>
     <%= helpers.link_back_to_catalog class: 'btn btn-link btn-sul-toolbar back-to-results', label: t('blacklight.back_to_search').html_safe %>
-    <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: nil) %>
+    <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
   </div>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".toolbar-collapse">
     <span class="sr-only">Toggle navigation</span>
@@ -23,7 +23,7 @@
         </div>
       </li>
       <li>
-        <%= render 'bookmark_control', document: document %>
+        <%= render 'bookmark_control', document: document, document_action_config: @presenter.view_config.document_actions.find { |x| x.key == :bookmark } %>
       </li>
     </ul>
   </div>

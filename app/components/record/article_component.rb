@@ -7,6 +7,8 @@ module Record
       super()
     end
 
+    delegate :html_present?, to: :helpers
+
     attr_reader :document
   end
 end

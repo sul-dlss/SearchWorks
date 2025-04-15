@@ -189,8 +189,8 @@ class ArticlesController < ApplicationController
     # config.add_facet_field 'eds_author_university_facet', label: 'University'
 
     # View type group config
-    config.view.list.icon_class = "fa-th-list"
-    config.view.brief(partials: %i[index], icon_class: "fa-align-justify")
+    config.view.list.icon = Searchworks::Icons::ListIcon
+    config.view.brief(icon: Searchworks::Icons::BriefIcon)
 
     # Sorting, using EDS sort keys
     config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
@@ -199,7 +199,7 @@ class ArticlesController < ApplicationController
   end
 
   def fulltext_link
-    _response, document = search_service.fetch(params[:id])
+    document = search_service.fetch(params[:id])
     url = extract_fulltext_link(document, params[:type])
     redirect_to url, allow_other_host: true if url.present?
   rescue => e
