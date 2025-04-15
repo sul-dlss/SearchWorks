@@ -19,7 +19,8 @@ class FixturesIndexer
     "holdings_json_struct",
     "toc_struct",
     "item_display_struct",
-    "browse_nearby_struct"
+    "browse_nearby_struct",
+    "collection_struct"
   ].freeze
 
   def self.run

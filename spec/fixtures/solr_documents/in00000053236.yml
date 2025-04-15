@@ -50,7 +50,8 @@ marc_json_struct:
   1"},{"d":"Cham : Springer International Publishing AG,c2024"},{"z":"9783031407017"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
   to Stanford-affiliated users."},{"u":"https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209"},{"y":"ProQuest
   Ebook Central"},{"x":"Provider: GOBI"},{"x":"purchased"},{"z":"Access limited to
-  1 user"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"s":"e8c564e2-deee-4494-a2bb-108507a66e42"},{"i":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c"}]}}]}'
+  1 user"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"LINDER"},{"b":"druid:xg474qk4925"},{"c":"xg474qk4925_00_0001.jp2"},{"d":"The
+  Doris H. Linder Book Fund"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"s":"e8c564e2-deee-4494-a2bb-108507a66e42"},{"i":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c"}]}}]}'
 all_search: '10.1007/978-3-031-40702-4 doi 100 years of radio in South Africa. Volume
   1, South African radio stations and broadcasters then & now / Sisanda Nkoala, Gilbert
   Motsaathebe, editors. South African radio stations and broadcasters then & now South
@@ -79,7 +80,8 @@ all_search: '10.1007/978-3-031-40702-4 doi 100 years of radio in South Africa. V
   https://orcid.org/0000-0002-8681-6945 ProQuest (Firm) Print version: Nkoala, Sisanda
   100 Years of Radio in South Africa, Volume 1 Cham : Springer International Publishing
   AG,c2024 9783031407017 Available to Stanford-affiliated users. https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
-  ProQuest Ebook Central Provider: GOBI purchased Access limited to 1 user'
+  ProQuest Ebook Central Provider: GOBI purchased Access limited to 1 user LINDER
+  druid:xg474qk4925 xg474qk4925_00_0001.jp2 The Doris H. Linder Book Fund'
 title_245a_search: 100 years of radio in South Africa.
 title_245_search: 100 years of radio in South Africa. Volume 1, South African radio
   stations and broadcasters then & now /
@@ -112,8 +114,6 @@ author_other_facet:
 - ProQuest (Firm)
 author_sort: "\U0010FFFF 100 years of radio in South Africa Volume 1 South African
   radio stations and broadcasters then  now"
-works_struct:
-- '{"included":[null,null,null],"related":[null,null,null]}'
 author_authorities_ssim:
 - "(orcid)0000-0002-8681-6945"
 - https://orcid.org/0000-0002-8681-6945
@@ -194,6 +194,12 @@ shelfkey:
 - lc pn  1991.300000 s0.650000 a0.150000 002024
 reverse_shelfkey:
 - en~ac~~yqqy}wzzzzz~7z}tuzzzz~pz}yuzzzz~zzxzxv~~~~~
+bookplates_display:
+- LINDER -|- xg474qk4925 -|- xg474qk4925_00_0001.jp2 -|- The Doris H. Linder Book
+  Fund
+fund_facet:
+- LINDER
+- xg474qk4925
 collection:
 - sirsi
 - folio
@@ -201,11 +207,11 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'cd22424f88a551875fc3ebf7d99547e1e30323f7
+context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
 
   '
 context_input_name_ssi: "/dev/null"
-context_input_modified_dtsi: '2023-08-24T16:49:09Z'
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
 - '001'
 - '006'
@@ -236,6 +242,7 @@ context_marc_fields_ssim:
 - '710'
 - '776'
 - '856'
+- '979'
 - '999'
 - 020aq
 - 020z
@@ -263,6 +270,7 @@ context_marc_fields_ssim:
 - 710a
 - 776iatdz
 - 856zuyxxz
+- 979fbcd
 - 999si
 - "?020a"
 - "?020q"
@@ -321,6 +329,10 @@ context_marc_fields_ssim:
 - "?856u"
 - "?856y"
 - "?856x"
+- "?979f"
+- "?979b"
+- "?979c"
+- "?979d"
 - "?999s"
 - "?999i"
 bib_search: '100 years of radio in South Africa. Volume 1, South African radio stations
@@ -330,9 +342,9 @@ bib_search: '100 years of radio in South Africa. Volume 1, South African radio s
   editor. Motsaathebe, Gilbert, editor. ProQuest (Firm) Radio broadcasting Book'
 vern_bib_search: Book
 uuid_ssi: 3f1e6f2c-ab5c-4562-8784-96a2e1003c9c
-last_updated: '2024-03-11T17:12:10Z'
-created: '2024-03-11T17:12:10Z'
-timestamp: '2024-03-11T17:12:10Z'
+last_updated: '2025-04-13T10:10:40Z'
+created: '2025-04-13T10:10:40Z'
+timestamp: '2025-04-13T10:10:40Z'
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c","hrid":"in00000053236","tags":{"tagList":[]},"notes":[{"note":"1.
   Introduction: A Century Of South Africa''s Most Renowned Medium -- 2. 100 Years
@@ -355,14 +367,14 @@ folio_json_struct:
   reproduction. Ann Arbor, MI Available via World Wide Web","staffOnly":false,"instanceNoteTypeId":"d548fdff-b71c-4359-8055-f1c008c30f01"},{"note":"Online
   resource; title from PDF title page (SpringerLink, viewed January 11, 2024)","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"}],"title":"100
   years of radio in South Africa. Volume 1, South African radio stations and broadcasters
-  then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors.","series":[],"source":"MARC","_version":6,"editions":[],"metadata":{"createdDate":"2024-02-01T15:43:45.739Z","updatedDate":"2024-02-06T23:36:27.551Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"1da4a196-c7a6-4a6b-8099-6cb51a97b1ed"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":["Radio
-  broadcasting--South Africa--History"],"languages":["eng"],"indexTitle":"100 years
+  then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors.","series":[],"source":"MARC","_version":9,"editions":[],"metadata":{"createdDate":"2024-02-01T15:43:45.739Z","updatedDate":"2024-10-31T17:15:50.777Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Radio
+  broadcasting--South Africa--History"}],"languages":["eng"],"indexTitle":"100 years
   of radio in South Africa. Volume 1, South African radio stations and broadcasters
   then & now /","identifiers":[{"value":"9783031407024 (electronic bk.)","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"3031407024
   (electronic bk.)","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9783031407017","identifierTypeId":"fcca2643-406a-482a-b760-7a7f8aec640e"},{"value":"3031407016","identifierTypeId":"fcca2643-406a-482a-b760-7a7f8aec640e"},{"value":"10.1007/978-3-031-40702-4
   doi","identifierTypeId":"2e8b3b6c-0e7d-4e48-bca2-b0b23b376af5"},{"value":"gls305914613","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"role":"Publication","place":"Cham","publisher":"Palgrave
-  Macmillan","dateOfPublication":"2024"}],"contributors":[{"name":"Nkoala, Sisanda,","primary":false,"contributorTypeText":"editor.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Motsaathebe,
-  Gilbert,","primary":false,"contributorTypeText":"editor.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"ProQuest
+  Macmillan","dateOfPublication":"2024"}],"contributors":[{"name":"Nkoala, Sisanda","primary":false,"contributorTypeId":"9deb29d1-3e71-4951-9413-a80adac703d0","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Motsaathebe,
+  Gilbert","primary":false,"contributorTypeId":"9deb29d1-3e71-4951-9413-a80adac703d0","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"ProQuest
   (Firm)","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2024-02-06","instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"PN1991.3.S65
   A15 2024","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"791.440968","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209","name":"Resource","linkText":"ProQuest
   Ebook Central","publicNote":"Available to Stanford-affiliated users. Access limited
@@ -400,6 +412,8 @@ marc_links_struct:
   link_text: ProQuest Ebook Central
   link_title: Available to Stanford-affiliated users only
   additional_text: Access limited to 1 user
+  material_type:
+  note: Available to Stanford-affiliated users.
   href: https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
   sort:
   casalini:
@@ -452,11 +466,9 @@ holdings_json_struct:
       id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
       name: Electronic
       source: folio
-    holdingsItems: []
     callNumberType:
     holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
     electronicAccess: []
-    bareHoldingsItems: []
     holdingsStatements: []
     statisticalCodeIds: []
     administrativeNotes: []
