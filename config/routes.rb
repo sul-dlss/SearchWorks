@@ -112,4 +112,8 @@ Rails.application.routes.draw do
 
   # Vanity URL used in development office mailings
   get '/funds/:fund', to: redirect { |path_params, _req| "/?f[fund_facet][]=#{path_params[:fund].upcase}" }
+
+  %w(404).each do |code|
+    match code, to: 'errors#show', code: code, via: :all
+  end
 end

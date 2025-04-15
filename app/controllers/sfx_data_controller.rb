@@ -9,7 +9,7 @@ class SfxDataController < ApplicationController
     if @sfx_data.targets.present?
       render layout: false
     else
-      render status: :not_found, layout: false, file: Rails.root.join('public', '404.html')
+      render Status::NotFoundComponent.new, status: :not_found
     end
   end
 
