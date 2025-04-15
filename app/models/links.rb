@@ -24,7 +24,7 @@ class Links
   end
 
   def finding_aid
-    all.select(&:finding_aid?)
+    all.select(&:finding_aid?).sort_by { |x| [x.href.present?, x.sort.present? ? 0 : 1, x.sort] }
   end
 
   def sfx

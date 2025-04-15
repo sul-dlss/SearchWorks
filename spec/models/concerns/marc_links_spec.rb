@@ -115,6 +115,23 @@ RSpec.describe MarcLinks do
         end
       end
 
+      context 'with multiple (OAC and Archives) finding aids' do
+        let(:document) do
+          SolrDocument.new(
+            marc_links_struct: [{ href: 'http://oac.cdlib.org/findaid/ark:/oac-ark-id', note: 'finding aid is here' },
+                                { href: 'http://archives.stanford.edu/findaid/ark:/archives-ark-id', note: 'finding aid' }]
+          )
+        end
+
+        it 'displays the preferred (Archives) finding aid' do
+          expect(marc_links.first).to be_finding_aid
+          expect(document.marc_links.finding_aid.length).to eq 2
+          expect(document.marc_links.finding_aid.first.html).to match(
+            %r{<a href=".*archives\.stanford\.edu/findaid/ark:/archives-ark-id">Archival Collections at Stanford</a>}
+          )
+        end
+      end
+
       context 'with a managed purl' do
         let(:document) do
           SolrDocument.new(

@@ -17,7 +17,7 @@
     <% if document.marc_links.finding_aid.present? %>
         <div class='access-panel-subsection'>
           <h4>Finding aid</h4>
-          <%= document.marc_links.finding_aid.first.html.html_safe %>
+          <%= document.preferred_finding_aid.html.html_safe %>
         </div>
     <% end %>
     <% if library.library_instructions.present? %>

@@ -19,14 +19,14 @@ module MarcLinks
     end
 
     def to_link
-      Links::Link.new(link_struct.merge({ href:, link_text:, finding_aid: finding_aid? }))
+      Links::Link.new(link_struct.merge({ href:, link_text:, finding_aid: finding_aid?, sort: finding_aid_sort }))
     end
 
     private
 
     def link_text
       if finding_aid?
-        'Online Archive of California'
+        finding_aid_link_text
       elsif link_struct[:sfx]
         'Find full text'
       else
@@ -50,6 +50,20 @@ module MarcLinks
 
     def finding_aid?
       link_struct[:material_type]&.downcase&.include?('finding aid') || link_struct[:note]&.downcase&.include?('finding aid')
+    end
+
+    def archives_finding_aid?
+      finding_aid? && link_struct[:href]&.include?('//archives.stanford.edu')
+    end
+
+    def finding_aid_link_text
+      archives_finding_aid? ? 'Archival Collections at Stanford' : 'Online Archive of California'
+    end
+
+    def finding_aid_sort
+      return nil unless finding_aid?
+
+      archives_finding_aid? ? 0 : 1
     end
 
     def href
