@@ -155,11 +155,11 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       expect(page).to have_css(".card-header", text: "Available online")
       expect(page).to have_css("ul.links li a", text: "Link text")
     end
-    it "adds the stanford-only class to Stanford only resources" do
+    it 'adds the stanford-only icon to Stanford only resources' do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', additional_text: '4 at one time', fulltext: true, stanford_only: true }])
       render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
-      expect(page).to have_css("ul.links li span.stanford-only")
+      expect(page).to have_css("ul.links li .stanford-only")
       expect(page).to have_css("span.additional-link-text", text: "4 at one time")
     end
     it 'renders a different heading for SDR items' do

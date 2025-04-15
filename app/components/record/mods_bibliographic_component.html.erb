@@ -1,5 +1,3 @@
-<% document ||= @document %>
-
 <% document.mods.subTitle.each do |title| %>
   <%= render ModsDisplay::FieldComponent.new(field: title, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
@@ -24,6 +22,6 @@
   <%= render ModsDisplay::FieldComponent.new(field: identifier, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>
 
-<% document.mods.location.each do |location| %>
+<% locations.each do |location| %>
   <%= render ModsDisplay::FieldComponent.new(field: location, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
 <% end %>

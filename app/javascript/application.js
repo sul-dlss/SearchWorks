@@ -60,6 +60,7 @@ import "./recent-selections";
 import "./select-all";
 import "./sfx-panel";
 import "./tooltip";
+import "./popover";
 import "./truncate";
 import "./update-hidden-inputs-by-checkbox";
 

@@ -13,8 +13,8 @@
         <strong><%= document.eresources_library_display_name %></strong>
       <% end %>
       <% document.preferred_online_links.each do |link| %>
-        <li class="<%= 'stanford-only' if link.stanford_only? %>">
-          <%= link.html.html_safe %>
+        <li>
+          <%= link.html.html_safe %><%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
         </li>
       <% end %>
 

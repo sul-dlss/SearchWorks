@@ -1,0 +1,11 @@
+<%= tag.section(class: 'chat') do %>
+  <header class="h3">Chat with a librarian <%= render StanfordOnlyPopoverComponent.new %></header>
+  <%= tag.span data: chat_attrs do %>
+    <span class="bi bi-chat"></span>
+    <%= link_to "Start chat", "https://library.stanford.edu/contact-us", class: 'disabled start-chat' %>
+  <% end %>
+  <span class="ml-1 ms-1" data-controller="chat-hours" data-chat-hours-url-value="https://library-hours.stanford.edu/api/v1/library/green/location/reference/hours/for/today">
+    <span class="placeholder"></span>
+  </span>
+  <%= link_to 'All reference hours', 'https://library.stanford.edu/libraries/cecil-h-green-library', class: "ml-1 ms-1" %>
+<% end %>

@@ -1,6 +1,6 @@
 <%
   contributors = render(partial: "catalog/record/marc_contributors", locals: {document: document})
-  contents_summary = render(partial: "catalog/record/marc_contents_summary", locals: {document: document})
+  contents_summary = render(Record::MarcContentsSummaryComponent.new(document:))
   subjects = render(partial: "catalog/record/marc_subjects", locals: {document: document})
   bibliography = render(partial: "catalog/record/marc_bibliographic", locals: {document: document})
 
@@ -20,6 +20,8 @@
 <%= render partial: "shared/side_nav_minimap", locals: locals %>
 
 <h2>Description</h2>
+<%= render Record::MarcContentAdviceComponent.new(document:) %>
+
 <% if html_present?(contributors) %>
   <div class="section" id="<%= t('record_side_nav.contributors.id') %>" data-side-nav-class="<%= t('record_side_nav.contributors.id') %>">
     <div class="section-heading">
