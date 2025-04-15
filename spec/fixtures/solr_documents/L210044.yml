@@ -24,61 +24,61 @@ marc_json_struct:
   Scanned 2006"},{"0":"Z65974"}]}},{"710":{"ind1":"1","ind2":" ","subfields":[{"a":"New
   Jersey."},{"b":"State Department of Health."},{"0":"Z208677"}]}},{"785":{"ind1":"0","ind2":"0","subfields":[{"t":"Healthy
   in New Jersey"},{"g":"(not owned)."}]}},{"904":{"ind1":"0","ind2":" ","subfields":[{"a":"annual
-  report department health state new jersey"}]}},{"953":{"ind1":"9","ind2":" ","subfields":[{"a":"A"},{"b":"A42480000"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"41fb6f87-176f-5db3-a3d1-1060c5635f81"},{"s":"1d40b5eb-f092-50fd-a3fd-83ddb749f74e"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage"},{"y":"Fulltext
-  (1877-81)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage"},{"y":"Fulltext
-  (1882-84)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage"},{"y":"Fulltext
-  (1885)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage"},{"y":"Fulltext
-  (1886-87)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage"},{"y":"Fulltext
-  (1888-89)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage"},{"y":"Fulltext
-  (1890)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage"},{"y":"Fulltext
-  (1891-92)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage"},{"y":"Fulltext
-  (1893-94)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage"},{"y":"Fulltext
-  (1920)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage"},{"y":"Fulltext
-  (1921)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage"},{"y":"Fulltext
-  (1923)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage"},{"y":"Fulltext
-  (1924)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage"},{"y":"Fulltext
-  (1922)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage"},{"y":"Fulltext
-  (1913)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage"},{"y":"Fulltext
-  (1914)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage"},{"y":"Fulltext
-  (1915)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage"},{"y":"Fulltext
-  (1917)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage"},{"y":"Fulltext
-  (1919)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage"},{"y":"Fulltext
-  (1906)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage"},{"y":"Fulltext
-  (1907)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage"},{"y":"Fulltext
-  (1908)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage"},{"y":"Fulltext
-  (1909)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage"},{"y":"Fulltext
-  (1910)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage"},{"y":"Fulltext
-  (1911)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage"},{"y":"Fulltext
-  (1912)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage"},{"y":"Fulltext
-  (1895-97)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage"},{"y":"Fulltext
-  (1898)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage"},{"y":"Fulltext
-  (1899)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage"},{"y":"Fulltext
-  (1900)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage"},{"y":"Fulltext
-  (1901)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage"},{"y":"Fulltext
-  (1902)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage"},{"y":"Fulltext
-  (1904)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage"},{"y":"Fulltext
-  (1903)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage"},{"y":"Fulltext
-  (1934)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage"},{"y":"Fulltext
-  (1929)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage"},{"y":"Fulltext
-  (1936)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage"},{"y":"Fulltext
-  (1937)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage"},{"y":"Fulltext
-  (1933)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage"},{"y":"Fulltext
-  (1930)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage"},{"y":"Fulltext
-  (1928)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage"},{"y":"Fulltext
-  (1927)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage"},{"y":"Fulltext
-  (1932)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage"},{"y":"Fulltext
-  (1926)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage"},{"y":"Fulltext
-  (1938)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage"},{"y":"Fulltext
-  (1963)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage"},{"y":"Fulltext
-  (1964)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage"},{"y":"Fulltext
-  (1966)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage"},{"y":"Fulltext
-  (1959)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage"},{"y":"Fulltext
-  (1960)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage"},{"y":"Fulltext
-  (1961)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage"},{"y":"Fulltext
-  (1962)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage"},{"y":"Fulltext
-  (1935)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage"},{"y":"Fulltext
-  (1925)"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage"},{"y":"Fulltext
-  (1931)"}]}}]}'
+  report department health state new jersey"}]}},{"953":{"ind1":"9","ind2":" ","subfields":[{"a":"A"},{"b":"A42480000"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"41fb6f87-176f-5db3-a3d1-1060c5635f81"},{"s":"1d40b5eb-f092-50fd-a3fd-83ddb749f74e"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1877-81"},{"u":"https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1882-84"},{"u":"https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1885"},{"u":"https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1886-87"},{"u":"https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1888-89"},{"u":"https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1890"},{"u":"https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1891-92"},{"u":"https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1893-94"},{"u":"https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1920"},{"u":"https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1921"},{"u":"https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1923"},{"u":"https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1924"},{"u":"https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1922"},{"u":"https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1913"},{"u":"https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1914"},{"u":"https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1915"},{"u":"https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1917"},{"u":"https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1919"},{"u":"https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1906"},{"u":"https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1907"},{"u":"https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1908"},{"u":"https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1909"},{"u":"https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1910"},{"u":"https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1911"},{"u":"https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1912"},{"u":"https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1895-97"},{"u":"https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1898"},{"u":"https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1899"},{"u":"https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1900"},{"u":"https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1901"},{"u":"https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1902"},{"u":"https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1904"},{"u":"https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1903"},{"u":"https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1934"},{"u":"https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1929"},{"u":"https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1936"},{"u":"https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1937"},{"u":"https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1933"},{"u":"https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1930"},{"u":"https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1928"},{"u":"https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1927"},{"u":"https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1932"},{"u":"https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1926"},{"u":"https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1938"},{"u":"https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1963"},{"u":"https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1964"},{"u":"https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1966"},{"u":"https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1959"},{"u":"https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1960"},{"u":"https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1961"},{"u":"https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1962"},{"u":"https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1935"},{"u":"https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1925"},{"u":"https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage"},{"y":"Google
+  Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1931"},{"u":"https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage"},{"y":"Google
+  Books"}]}}]}'
 all_search: 'Annu Rep Dep Health State N J [print/digital] Annual report of the Department
   of Health of the State of New Jersey [print/digital]. Annual report of the Board
   of Health of the State of New Jersey 1879-1914 Report of the Board of Health of
@@ -87,61 +87,61 @@ all_search: 'Annu Rep Dep Health State N J [print/digital] Annual report of the 
   Report year irregular; 1917/19 covers period from November 1, 1917-June 30, 1919.
   Public Health Z16573 New Jersey Z10258 Annual Reports Z17183 Government Publications,
   State Z255755 Serials Z15113 Subset, Scanned 2006 Z65974 New Jersey. State Department
-  of Health. Z208677 Healthy in New Jersey (not owned). https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
-  Fulltext (1877-81) https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage
-  Fulltext (1882-84) https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage
-  Fulltext (1885) https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage
-  Fulltext (1886-87) https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage
-  Fulltext (1888-89) https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage
-  Fulltext (1890) https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage
-  Fulltext (1891-92) https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage
-  Fulltext (1893-94) https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage
-  Fulltext (1920) https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage
-  Fulltext (1921) https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage
-  Fulltext (1923) https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage
-  Fulltext (1924) https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage
-  Fulltext (1922) https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage
-  Fulltext (1913) https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage
-  Fulltext (1914) https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage
-  Fulltext (1915) https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage
-  Fulltext (1917) https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage
-  Fulltext (1919) https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage
-  Fulltext (1906) https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage
-  Fulltext (1907) https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage
-  Fulltext (1908) https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage
-  Fulltext (1909) https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage
-  Fulltext (1910) https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage
-  Fulltext (1911) https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage
-  Fulltext (1912) https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage
-  Fulltext (1895-97) https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage
-  Fulltext (1898) https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage
-  Fulltext (1899) https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage
-  Fulltext (1900) https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage
-  Fulltext (1901) https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage
-  Fulltext (1902) https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage
-  Fulltext (1904) https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage
-  Fulltext (1903) https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage
-  Fulltext (1934) https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage
-  Fulltext (1929) https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage
-  Fulltext (1936) https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage
-  Fulltext (1937) https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage
-  Fulltext (1933) https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage
-  Fulltext (1930) https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage
-  Fulltext (1928) https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage
-  Fulltext (1927) https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage
-  Fulltext (1932) https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage
-  Fulltext (1926) https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage
-  Fulltext (1938) https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage
-  Fulltext (1963) https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage
-  Fulltext (1964) https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage
-  Fulltext (1966) https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage
-  Fulltext (1959) https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage
-  Fulltext (1960) https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage
-  Fulltext (1961) https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage
-  Fulltext (1962) https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage
-  Fulltext (1935) https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage
-  Fulltext (1925) https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage
-  Fulltext (1931)'
+  of Health. Z208677 Healthy in New Jersey (not owned). 1877-81 https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
+  Google Books 1882-84 https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage
+  Google Books 1885 https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage
+  Google Books 1886-87 https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage
+  Google Books 1888-89 https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage
+  Google Books 1890 https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage
+  Google Books 1891-92 https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage
+  Google Books 1893-94 https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage
+  Google Books 1920 https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage
+  Google Books 1921 https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage
+  Google Books 1923 https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage
+  Google Books 1924 https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage
+  Google Books 1922 https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage
+  Google Books 1913 https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage
+  Google Books 1914 https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage
+  Google Books 1915 https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage
+  Google Books 1917 https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage
+  Google Books 1919 https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage
+  Google Books 1906 https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage
+  Google Books 1907 https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage
+  Google Books 1908 https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage
+  Google Books 1909 https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage
+  Google Books 1910 https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage
+  Google Books 1911 https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage
+  Google Books 1912 https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage
+  Google Books 1895-97 https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage
+  Google Books 1898 https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage
+  Google Books 1899 https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage
+  Google Books 1900 https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage
+  Google Books 1901 https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage
+  Google Books 1902 https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage
+  Google Books 1904 https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage
+  Google Books 1903 https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage
+  Google Books 1934 https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage
+  Google Books 1929 https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage
+  Google Books 1936 https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage
+  Google Books 1937 https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage
+  Google Books 1933 https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage
+  Google Books 1930 https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage
+  Google Books 1928 https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage
+  Google Books 1927 https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage
+  Google Books 1932 https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage
+  Google Books 1926 https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage
+  Google Books 1938 https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage
+  Google Books 1963 https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage
+  Google Books 1964 https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage
+  Google Books 1966 https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage
+  Google Books 1959 https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage
+  Google Books 1960 https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage
+  Google Books 1961 https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage
+  Google Books 1962 https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage
+  Google Books 1935 https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage
+  Google Books 1925 https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage
+  Google Books 1931 https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage
+  Google Books'
 title_245a_search: Annual report of the Department of Health of the State of New Jersey
 title_245_search: Annual report of the Department of Health of the State of New Jersey
 title_variant_search:
@@ -169,8 +169,6 @@ author_other_facet:
 - New Jersey. State Department of Health
 author_sort: "\U0010FFFF Annual report of the Department of Health of the State of
   New Jersey printdigital"
-works_struct:
-- '{"included":[null],"related":[null]}'
 author_authorities_ssim:
 - Z208677
 topic_search:
@@ -468,11 +466,11 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'cd22424f88a551875fc3ebf7d99547e1e30323f7
+context_version_ssi: '08b28382861fa67296d99d70cc2db6a2e4464eae
 
   '
 context_input_name_ssi: "/dev/null"
-context_input_modified_dtsi: '2023-08-24T16:49:09Z'
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
 - '001'
 - '005'
@@ -517,7 +515,7 @@ context_marc_fields_ssim:
 - 904a
 - 953ab
 - 999is
-- 856uy
+- 8563uy
 - "?0359"
 - "?035a"
 - "?040a"
@@ -556,6 +554,7 @@ context_marc_fields_ssim:
 - "?953b"
 - "?999i"
 - "?999s"
+- "?8563"
 - "?856u"
 - "?856y"
 bib_search: Annu Rep Dep Health State N J [print/digital] Annual report of the Department
@@ -568,19 +567,19 @@ uuid_ssi: 41fb6f87-176f-5db3-a3d1-1060c5635f81
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"41fb6f87-176f-5db3-a3d1-1060c5635f81","hrid":"L210044","tags":{"tagList":[]},"notes":[{"note":"Report
   year irregular; 1917/19 covers period from November 1, 1917-June 30, 1919","staffOnly":false,"instanceNoteTypeId":"cf635f41-29e7-4dd0-8598-33f230157074"}],"title":"Annual
-  report of the Department of Health of the State of New Jersey [print/digital].","series":[],"source":"MARC","_version":1,"editions":[],"metadata":{"createdDate":"2023-08-24T15:18:21.687Z","updatedDate":"2023-08-24T15:18:21.687Z","createdByUserId":"0b29ca0a-68b6-5547-ab9e-a266c4379236","updatedByUserId":"0b29ca0a-68b6-5547-ab9e-a266c4379236"},"statusId":"52a2ff34-2a12-420d-8539-21aa8d3cf5d8","subjects":["Public
-  Health","New Jersey","Annual Reports","Government Publications, State","Serials","Subset,
-  Scanned 2006"],"languages":["eng"],"indexTitle":"Annual report of the Department
-  of Health of the State of New Jersey","identifiers":[{"value":"(DNLM)A42480000(s)","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC)5255092","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"210044","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"publisher":"State
+  report of the Department of Health of the State of New Jersey [print/digital].","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-24T15:18:21.687Z","updatedDate":"2023-08-24T15:18:21.687Z","createdByUserId":"0b29ca0a-68b6-5547-ab9e-a266c4379236","updatedByUserId":"0b29ca0a-68b6-5547-ab9e-a266c4379236"},"statusId":"52a2ff34-2a12-420d-8539-21aa8d3cf5d8","subjects":[{"value":"Public
+  Health"},{"value":"New Jersey"},{"value":"Annual Reports"},{"value":"Government
+  Publications, State"},{"value":"Serials"},{"value":"Subset, Scanned 2006"}],"languages":["eng"],"indexTitle":"Annual
+  report of the Department of Health of the State of New Jersey","identifiers":[{"value":"(DNLM)A42480000(s)","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC)5255092","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"210044","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"publisher":"State
   Dept. of Health","dateOfPublication":"1877-19uu"}],"contributors":[{"name":"New
   Jersey. State Department of Health","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"1979-08-09","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"068b5344-e2a6-40df-9186-1829e13cd344","publicationRange":["1877-19uu"],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Annu
   Rep Dep Health State N J","alternativeTitleTypeId":"bba5b222-1cc8-4745-9a75-3f1d3b5c3a67"},{"alternativeTitle":"Annual
   report of the Board of Health of the State of New Jersey 1879-1914","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"Report
   of the Board of Health of the State of New Jersey 1877-1878","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1877},"statusUpdatedDate":"2023-08-24T15:18:21.607+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["volumes
   : illustrations ; 24 cm"],"publicationFrequency":["Annual"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-03-11T17:30:23Z'
-created: '2024-03-11T17:30:23Z'
-timestamp: '2024-03-11T17:30:23Z'
+last_updated: '2025-04-15T01:36:47Z'
+created: '2025-04-15T01:36:47Z'
+timestamp: '2025-04-15T01:36:47Z'
 author_struct:
 - contributors:
   - link: New Jersey. State Department of Health.
@@ -594,9 +593,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1877-81)
+  link_text: 1877-81 Google Books
   link_title: ''
   additional_text:
+  material_type: 1877-81
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
   sort:
   casalini:
@@ -609,9 +610,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1882-84)
+  link_text: 1882-84 Google Books
   link_title: ''
   additional_text:
+  material_type: 1882-84
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage
   sort:
   casalini:
@@ -624,9 +627,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1885)
+  link_text: 1885 Google Books
   link_title: ''
   additional_text:
+  material_type: '1885'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage
   sort:
   casalini:
@@ -639,9 +644,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1886-87)
+  link_text: 1886-87 Google Books
   link_title: ''
   additional_text:
+  material_type: 1886-87
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage
   sort:
   casalini:
@@ -654,9 +661,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1888-89)
+  link_text: 1888-89 Google Books
   link_title: ''
   additional_text:
+  material_type: 1888-89
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage
   sort:
   casalini:
@@ -669,9 +678,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1890)
+  link_text: 1890 Google Books
   link_title: ''
   additional_text:
+  material_type: '1890'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage
   sort:
   casalini:
@@ -684,9 +695,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1891-92)
+  link_text: 1891-92 Google Books
   link_title: ''
   additional_text:
+  material_type: 1891-92
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage
   sort:
   casalini:
@@ -699,9 +712,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1893-94)
+  link_text: 1893-94 Google Books
   link_title: ''
   additional_text:
+  material_type: 1893-94
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage
   sort:
   casalini:
@@ -714,9 +729,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1920)
+  link_text: 1920 Google Books
   link_title: ''
   additional_text:
+  material_type: '1920'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage
   sort:
   casalini:
@@ -729,9 +746,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1921)
+  link_text: 1921 Google Books
   link_title: ''
   additional_text:
+  material_type: '1921'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage
   sort:
   casalini:
@@ -744,9 +763,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1923)
+  link_text: 1923 Google Books
   link_title: ''
   additional_text:
+  material_type: '1923'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage
   sort:
   casalini:
@@ -759,9 +780,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1924)
+  link_text: 1924 Google Books
   link_title: ''
   additional_text:
+  material_type: '1924'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage
   sort:
   casalini:
@@ -774,9 +797,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1922)
+  link_text: 1922 Google Books
   link_title: ''
   additional_text:
+  material_type: '1922'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage
   sort:
   casalini:
@@ -789,9 +814,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1913)
+  link_text: 1913 Google Books
   link_title: ''
   additional_text:
+  material_type: '1913'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage
   sort:
   casalini:
@@ -804,9 +831,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1914)
+  link_text: 1914 Google Books
   link_title: ''
   additional_text:
+  material_type: '1914'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage
   sort:
   casalini:
@@ -819,9 +848,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1915)
+  link_text: 1915 Google Books
   link_title: ''
   additional_text:
+  material_type: '1915'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage
   sort:
   casalini:
@@ -834,9 +865,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1917)
+  link_text: 1917 Google Books
   link_title: ''
   additional_text:
+  material_type: '1917'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage
   sort:
   casalini:
@@ -849,9 +882,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1919)
+  link_text: 1919 Google Books
   link_title: ''
   additional_text:
+  material_type: '1919'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage
   sort:
   casalini:
@@ -864,9 +899,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1906)
+  link_text: 1906 Google Books
   link_title: ''
   additional_text:
+  material_type: '1906'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage
   sort:
   casalini:
@@ -879,9 +916,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1907)
+  link_text: 1907 Google Books
   link_title: ''
   additional_text:
+  material_type: '1907'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage
   sort:
   casalini:
@@ -894,9 +933,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1908)
+  link_text: 1908 Google Books
   link_title: ''
   additional_text:
+  material_type: '1908'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage
   sort:
   casalini:
@@ -909,9 +950,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1909)
+  link_text: 1909 Google Books
   link_title: ''
   additional_text:
+  material_type: '1909'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage
   sort:
   casalini:
@@ -924,9 +967,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1910)
+  link_text: 1910 Google Books
   link_title: ''
   additional_text:
+  material_type: '1910'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage
   sort:
   casalini:
@@ -939,9 +984,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1911)
+  link_text: 1911 Google Books
   link_title: ''
   additional_text:
+  material_type: '1911'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage
   sort:
   casalini:
@@ -954,9 +1001,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1912)
+  link_text: 1912 Google Books
   link_title: ''
   additional_text:
+  material_type: '1912'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage
   sort:
   casalini:
@@ -969,9 +1018,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1895-97)
+  link_text: 1895-97 Google Books
   link_title: ''
   additional_text:
+  material_type: 1895-97
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage
   sort:
   casalini:
@@ -984,9 +1035,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1898)
+  link_text: 1898 Google Books
   link_title: ''
   additional_text:
+  material_type: '1898'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage
   sort:
   casalini:
@@ -999,9 +1052,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1899)
+  link_text: 1899 Google Books
   link_title: ''
   additional_text:
+  material_type: '1899'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage
   sort:
   casalini:
@@ -1014,9 +1069,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1900)
+  link_text: 1900 Google Books
   link_title: ''
   additional_text:
+  material_type: '1900'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage
   sort:
   casalini:
@@ -1029,9 +1086,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1901)
+  link_text: 1901 Google Books
   link_title: ''
   additional_text:
+  material_type: '1901'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage
   sort:
   casalini:
@@ -1044,9 +1103,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1902)
+  link_text: 1902 Google Books
   link_title: ''
   additional_text:
+  material_type: '1902'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage
   sort:
   casalini:
@@ -1059,9 +1120,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1904)
+  link_text: 1904 Google Books
   link_title: ''
   additional_text:
+  material_type: '1904'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage
   sort:
   casalini:
@@ -1074,9 +1137,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1903)
+  link_text: 1903 Google Books
   link_title: ''
   additional_text:
+  material_type: '1903'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage
   sort:
   casalini:
@@ -1089,9 +1154,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1934)
+  link_text: 1934 Google Books
   link_title: ''
   additional_text:
+  material_type: '1934'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage
   sort:
   casalini:
@@ -1104,9 +1171,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1929)
+  link_text: 1929 Google Books
   link_title: ''
   additional_text:
+  material_type: '1929'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage
   sort:
   casalini:
@@ -1119,9 +1188,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1936)
+  link_text: 1936 Google Books
   link_title: ''
   additional_text:
+  material_type: '1936'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage
   sort:
   casalini:
@@ -1134,9 +1205,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1937)
+  link_text: 1937 Google Books
   link_title: ''
   additional_text:
+  material_type: '1937'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage
   sort:
   casalini:
@@ -1149,9 +1222,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1933)
+  link_text: 1933 Google Books
   link_title: ''
   additional_text:
+  material_type: '1933'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage
   sort:
   casalini:
@@ -1164,9 +1239,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1930)
+  link_text: 1930 Google Books
   link_title: ''
   additional_text:
+  material_type: '1930'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage
   sort:
   casalini:
@@ -1179,9 +1256,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1928)
+  link_text: 1928 Google Books
   link_title: ''
   additional_text:
+  material_type: '1928'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage
   sort:
   casalini:
@@ -1194,9 +1273,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1927)
+  link_text: 1927 Google Books
   link_title: ''
   additional_text:
+  material_type: '1927'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage
   sort:
   casalini:
@@ -1209,9 +1290,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1932)
+  link_text: 1932 Google Books
   link_title: ''
   additional_text:
+  material_type: '1932'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage
   sort:
   casalini:
@@ -1224,9 +1307,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1926)
+  link_text: 1926 Google Books
   link_title: ''
   additional_text:
+  material_type: '1926'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage
   sort:
   casalini:
@@ -1239,9 +1324,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1938)
+  link_text: 1938 Google Books
   link_title: ''
   additional_text:
+  material_type: '1938'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage
   sort:
   casalini:
@@ -1254,9 +1341,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1963)
+  link_text: 1963 Google Books
   link_title: ''
   additional_text:
+  material_type: '1963'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage
   sort:
   casalini:
@@ -1269,9 +1358,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1964)
+  link_text: 1964 Google Books
   link_title: ''
   additional_text:
+  material_type: '1964'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage
   sort:
   casalini:
@@ -1284,9 +1375,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1966)
+  link_text: 1966 Google Books
   link_title: ''
   additional_text:
+  material_type: '1966'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage
   sort:
   casalini:
@@ -1299,9 +1392,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1959)
+  link_text: 1959 Google Books
   link_title: ''
   additional_text:
+  material_type: '1959'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage
   sort:
   casalini:
@@ -1314,9 +1409,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1960)
+  link_text: 1960 Google Books
   link_title: ''
   additional_text:
+  material_type: '1960'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage
   sort:
   casalini:
@@ -1329,9 +1426,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1961)
+  link_text: 1961 Google Books
   link_title: ''
   additional_text:
+  material_type: '1961'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage
   sort:
   casalini:
@@ -1344,9 +1443,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1962)
+  link_text: 1962 Google Books
   link_title: ''
   additional_text:
+  material_type: '1962'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage
   sort:
   casalini:
@@ -1359,9 +1460,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1935)
+  link_text: 1935 Google Books
   link_title: ''
   additional_text:
+  material_type: '1935'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage
   sort:
   casalini:
@@ -1374,9 +1477,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1925)
+  link_text: 1925 Google Books
   link_title: ''
   additional_text:
+  material_type: '1925'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage
   sort:
   casalini:
@@ -1389,9 +1494,11 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
-  link_text: Fulltext (1931)
+  link_text: 1931 Google Books
   link_title: ''
   additional_text:
+  material_type: '1931'
+  note: ''
   href: https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage
   sort:
   casalini:
@@ -1406,243 +1513,299 @@ holdings_json_struct:
   - id: 73519534-4c3e-5937-acc3-865f263ca51d
     hrid: LH285451
     notes: []
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:38:01.766Z'
-      updatedDate: '2023-08-24T15:38:01.766Z'
+      updatedDate: '2025-04-12T02:58:17.243Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
     boundWith:
     formerIds: []
     illPolicy:
     callNumber: ''
     instanceId: 41fb6f87-176f-5db3-a3d1-1060c5635f81
     holdingsType:
-    holdingsItems: []
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
     callNumberTypeId: 6caca63e-5651-4db6-9247-3205156e9699
     electronicAccess:
     - uri: https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1877-81)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: 1877-81
     - uri: https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1882-84)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: 1882-84
     - uri: https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1885)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1885'
     - uri: https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1886-87)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: 1886-87
     - uri: https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1888-89)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: 1888-89
     - uri: https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1890)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1890'
     - uri: https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1891-92)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: 1891-92
     - uri: https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1893-94)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: 1893-94
     - uri: https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1920)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1920'
     - uri: https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1921)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1921'
     - uri: https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1923)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1923'
     - uri: https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1924)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1924'
     - uri: https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1922)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1922'
     - uri: https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1913)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1913'
     - uri: https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1914)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1914'
     - uri: https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1915)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1915'
     - uri: https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1917)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1917'
     - uri: https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1919)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1919'
     - uri: https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1906)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1906'
     - uri: https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1907)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1907'
     - uri: https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1908)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1908'
     - uri: https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1909)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1909'
     - uri: https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1910)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1910'
     - uri: https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1911)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1911'
     - uri: https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1912)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1912'
     - uri: https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1895-97)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: 1895-97
     - uri: https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1898)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1898'
     - uri: https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1899)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1899'
     - uri: https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1900)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1900'
     - uri: https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1901)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1901'
     - uri: https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1902)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1902'
     - uri: https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1904)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1904'
     - uri: https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1903)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1903'
     - uri: https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1934)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1934'
     - uri: https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1929)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1929'
     - uri: https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1936)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1936'
     - uri: https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1937)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1937'
     - uri: https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1933)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1933'
     - uri: https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1930)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1930'
     - uri: https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1928)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1928'
     - uri: https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1927)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1927'
     - uri: https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1932)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1932'
     - uri: https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1926)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1926'
     - uri: https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1938)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1938'
     - uri: https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1963)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1963'
     - uri: https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1964)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1964'
     - uri: https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1966)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1966'
     - uri: https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1959)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1959'
     - uri: https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1960)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1960'
     - uri: https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1961)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1961'
     - uri: https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1962)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1962'
     - uri: https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1935)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1935'
     - uri: https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1925)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
+      materialsSpecification: '1925'
     - uri: https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage
       name: Version of resource
-      linkText: Fulltext (1931)
+      linkText: Google Books
       relationshipId: 3b430592-2e09-4b48-9a0c-0636d66b9fb3
-    bareHoldingsItems: []
+      materialsSpecification: '1931'
     discoverySuppress: false
     holdingsStatements:
     - statement: 1877-1904, 1906-24
@@ -1696,27 +1859,29 @@ holdings_json_struct:
   - id: e3ebc0ed-ab3f-5d23-85ef-9e41f339ec47
     hrid: LH217153
     notes: []
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:38:01.766Z'
-      updatedDate: '2023-08-24T15:38:01.766Z'
+      updatedDate: '2025-04-15T01:31:04.298Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
     boundWith:
     formerIds: []
     illPolicy:
     callNumber: I114 .B1
     instanceId: 41fb6f87-176f-5db3-a3d1-1060c5635f81
     holdingsType:
-    holdingsItems: []
-    callNumberType:
-      id: 6caca63e-5651-4db6-9247-3205156e9699
-      name: Other scheme
+      id: 0c422f92-0f4d-4d32-8cbe-390ebc33a3e5
+      name: Physical
       source: folio
-    callNumberTypeId: 6caca63e-5651-4db6-9247-3205156e9699
+    callNumberType:
+      id: 05e1b95d-3665-400f-b87b-a9f0c63da69c
+      name: Lane old classification
+      source: local
+    holdingsTypeId: 0c422f92-0f4d-4d32-8cbe-390ebc33a3e5
+    callNumberTypeId: 05e1b95d-3665-400f-b87b-a9f0c63da69c
     electronicAccess: []
-    bareHoldingsItems: []
     discoverySuppress: false
     holdingsStatements:
     - statement: 1877-1904, 1906-38, 1959-64, 1966.
@@ -1775,12 +1940,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219662'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -1793,7 +1958,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -1840,12 +2005,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175135'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -1858,7 +2023,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -1905,12 +2070,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175096'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -1923,7 +2088,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -1970,12 +2135,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175151'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -1988,7 +2153,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2035,12 +2200,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220304'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2053,7 +2218,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2100,12 +2265,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219654'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2118,7 +2283,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2165,12 +2330,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220257'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2183,7 +2348,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2230,12 +2395,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219638'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2248,7 +2413,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2295,12 +2460,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504174993'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2313,7 +2478,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2360,12 +2525,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220215'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2378,7 +2543,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2425,12 +2590,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219670'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2443,7 +2608,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2490,12 +2655,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135193'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2508,7 +2673,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2555,12 +2720,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220299'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2573,7 +2738,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2620,12 +2785,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175070'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2638,7 +2803,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2685,12 +2850,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504174969'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2703,7 +2868,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2750,12 +2915,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219620'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2768,7 +2933,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2815,12 +2980,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135216'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2833,7 +2998,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2880,12 +3045,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175143'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2898,7 +3063,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -2945,12 +3110,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175127'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -2963,7 +3128,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3010,12 +3175,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220223'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3028,7 +3193,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3075,12 +3240,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175101'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3093,7 +3258,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3140,12 +3305,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135240'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3158,7 +3323,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3205,12 +3370,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220231'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3223,7 +3388,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3270,12 +3435,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175169'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3288,7 +3453,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3335,12 +3500,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504174951'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3353,7 +3518,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3400,12 +3565,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220192'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3418,7 +3583,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3465,12 +3630,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175240'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3483,7 +3648,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3530,12 +3695,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175177'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3548,7 +3713,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3595,12 +3760,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220249'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3613,7 +3778,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3660,12 +3825,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219688'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3678,7 +3843,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3725,12 +3890,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175232'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3743,7 +3908,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3790,12 +3955,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175119'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3808,7 +3973,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3855,12 +4020,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175282'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3873,7 +4038,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3920,12 +4085,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220281'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -3938,7 +4103,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -3985,12 +4150,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504174977'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4003,7 +4168,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4050,12 +4215,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175266'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4068,7 +4233,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4115,12 +4280,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175088'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4133,7 +4298,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4180,12 +4345,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175305'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4198,7 +4363,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4245,12 +4410,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135208'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4263,7 +4428,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4310,12 +4475,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219701'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4328,7 +4493,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4375,12 +4540,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175274'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4393,7 +4558,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4440,12 +4605,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135266'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4458,7 +4623,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4505,12 +4670,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135232'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4523,7 +4688,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4570,12 +4735,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220265'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4588,7 +4753,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4635,12 +4800,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504220273'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4653,7 +4818,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4700,12 +4865,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175185'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4718,7 +4883,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4765,12 +4930,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175290'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4783,7 +4948,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4830,12 +4995,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135258'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4848,7 +5013,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4895,12 +5060,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504175258'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4913,7 +5078,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -4960,12 +5125,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219646'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -4978,7 +5143,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -5025,12 +5190,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504174985'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -5043,7 +5208,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -5090,12 +5255,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219696'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -5108,7 +5273,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -5155,12 +5320,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504219612'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -5173,7 +5338,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -5220,12 +5385,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135224'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -5238,7 +5403,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -5285,12 +5450,12 @@ holdings_json_struct:
     status: Available
     barcode: '24504135169'
     request:
-    _version: 1
+    _version: 3
     metadata:
       createdDate: '2023-08-24T15:54:20.512Z'
-      updatedDate: '2023-08-24T15:54:20.512Z'
+      updatedDate: '2025-04-15T01:31:04.313Z'
       createdByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
-      updatedByUserId: 0b29ca0a-68b6-5547-ab9e-a266c4379236
+      updatedByUserId: ff43bcb5-9f21-4ed3-a28e-d46fab8e382f
     formerIds: []
     callNumber:
       typeId: 6caca63e-5651-4db6-9247-3205156e9699
@@ -5304,7 +5469,7 @@ holdings_json_struct:
     callNumberType:
       id: 6caca63e-5651-4db6-9247-3205156e9699
       name: Other scheme
-      source: folio
+      source: system
     materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
     circulationNotes: []
     electronicAccess: []
@@ -5349,7 +5514,6 @@ item_display_struct:
 - id: 020bf7a0-003c-599c-818d-ed8e89ed4c4c
   barcode: '24504219662'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5362,13 +5526,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1930
   full_shelfkey: other i000114 .b000001 zzyqwz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 02f58aac-0b70-5f08-a9b7-187d55747095
   barcode: '24504175135'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5381,13 +5545,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1907
   full_shelfkey: other i000114 .b000001 zzyqzs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: '03547889-4065-5637-a259-833891a65674'
   barcode: '24504175096'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5400,13 +5564,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1915
   full_shelfkey: other i000114 .b000001 zzyqyu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 03d5c0eb-2d3b-5e13-8f27-bc571b992473
   barcode: '24504175151'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5419,13 +5583,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1909
   full_shelfkey: other i000114 .b000001 zzyqzq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 05750fe4-885d-5613-964d-8b4f4cf0c4ca
   barcode: '24504220304'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5438,13 +5602,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1931
   full_shelfkey: other i000114 .b000001 zzyqwy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: '091805fd-d698-5909-b409-cc29ab1cdba2'
   barcode: '24504219654'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5457,13 +5621,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1933
   full_shelfkey: other i000114 .b000001 zzyqww~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 17db1266-7b6f-5cad-ac42-37baba6237e0
   barcode: '24504220257'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5476,13 +5640,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1960
   full_shelfkey: other i000114 .b000001 zzyqtz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 24e9b5d9-e6fb-5a1f-9968-1d57306c1b37
   barcode: '24504219638'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5495,13 +5659,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1936
   full_shelfkey: other i000114 .b000001 zzyqwt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 2ac2e6f7-291c-5215-b278-1d2c493cfbe0
   barcode: '24504174993'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5514,13 +5678,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1922
   full_shelfkey: other i000114 .b000001 zzyqxx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 38467ed2-a328-50f9-8ec0-a5f2222bc74c
   barcode: '24504220215'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5533,13 +5697,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1963
   full_shelfkey: other i000114 .b000001 zzyqtw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 387e498e-7901-5fef-a9d3-27ca5332b266
   barcode: '24504219670'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5552,13 +5716,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1928
   full_shelfkey: other i000114 .b000001 zzyqxr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 404f4ca0-66ba-5dbc-902c-a3cd6ffafee8
   barcode: '24504135193'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5571,13 +5735,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1877-81
   full_shelfkey: other i000114 .b000001 zzyrss~zzzzry~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 453c2033-49b1-510a-8444-12856e18b61e
   barcode: '24504220299'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5590,13 +5754,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1925
   full_shelfkey: other i000114 .b000001 zzyqxu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 458d8449-d290-5fe3-8797-ccb73176519d
   barcode: '24504175070'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5609,13 +5773,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1913
   full_shelfkey: other i000114 .b000001 zzyqyw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 45914a9d-fde2-569c-8a18-c48cbb469ab1
   barcode: '24504174969'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5628,13 +5792,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1921
   full_shelfkey: other i000114 .b000001 zzyqxy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 45ea9025-2d1b-5422-9210-95cf398c7e78
   barcode: '24504219620'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5647,13 +5811,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1929
   full_shelfkey: other i000114 .b000001 zzyqxq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 4a196c7a-4995-5e7e-b35f-4cf25c056790
   barcode: '24504135216'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5666,13 +5830,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1885
   full_shelfkey: other i000114 .b000001 zzyrru~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 540940f8-af56-53ed-b1d1-ff9e468f89ae
   barcode: '24504175143'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5685,13 +5849,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1908
   full_shelfkey: other i000114 .b000001 zzyqzr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 548d9d6d-9a4c-5108-9052-cc8820e28c7b
   barcode: '24504175127'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5704,13 +5868,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1906
   full_shelfkey: other i000114 .b000001 zzyqzt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 5cea612e-3420-52d1-adfc-da85e278f57c
   barcode: '24504220223'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5723,13 +5887,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1964
   full_shelfkey: other i000114 .b000001 zzyqtv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 61b20559-fe6f-5ca2-a9b3-02e97f5535cb
   barcode: '24504175101'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5742,13 +5906,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1917
   full_shelfkey: other i000114 .b000001 zzyqys~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 6691e1c4-bb06-5244-920e-5d4ddedfb4ed
   barcode: '24504135240'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5761,13 +5925,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1890
   full_shelfkey: other i000114 .b000001 zzyrqz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 67fabe79-8725-538e-affe-318f710fbd8e
   barcode: '24504220231'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5780,13 +5944,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1966
   full_shelfkey: other i000114 .b000001 zzyqtt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 6d3a335a-675a-550b-87e8-69ddce80d0a4
   barcode: '24504175169'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5799,13 +5963,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1910
   full_shelfkey: other i000114 .b000001 zzyqyz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 76c2633b-2443-570a-83ae-a3f81c27e826
   barcode: '24504174951'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5818,13 +5982,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1920
   full_shelfkey: other i000114 .b000001 zzyqxz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 7b5e5c2a-3dc1-526b-8529-c8209cf5ca5f
   barcode: '24504220192'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5837,13 +6001,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1938
   full_shelfkey: other i000114 .b000001 zzyqwr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 7ea3f648-c6da-5d8b-be64-3da5a9c77569
   barcode: '24504175240'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5856,13 +6020,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1898
   full_shelfkey: other i000114 .b000001 zzyrqr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 88e985e1-175c-5a80-810f-171f4d0ecc4d
   barcode: '24504175177'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5875,13 +6039,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1911
   full_shelfkey: other i000114 .b000001 zzyqyy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 8d419b7f-ec46-5727-812e-59c8d4aca845
   barcode: '24504220249'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5894,13 +6058,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1959
   full_shelfkey: other i000114 .b000001 zzyquq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 8db8883c-0e6b-532d-9dbc-b6a61f503a78
   barcode: '24504219688'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5913,13 +6077,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1927
   full_shelfkey: other i000114 .b000001 zzyqxs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 99242c63-ccf2-5a92-8ac5-40c4a9022f62
   barcode: '24504175232'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5932,13 +6096,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1895-97
   full_shelfkey: other i000114 .b000001 zzyrqu~zzzzqs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: 9da4bed5-b962-57cd-814b-e28d7e95c073
   barcode: '24504175119'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5951,13 +6115,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1919
   full_shelfkey: other i000114 .b000001 zzyqyq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: a0ed7717-9cea-5639-8112-4c3b153011b2
   barcode: '24504175282'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5970,13 +6134,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1902
   full_shelfkey: other i000114 .b000001 zzyqzx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: a65953dc-5aab-5f15-a93d-569bb68da767
   barcode: '24504220281'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -5989,13 +6153,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1935
   full_shelfkey: other i000114 .b000001 zzyqwu~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: ac60e3f2-7f3c-59e3-b5e3-b5a2934ffffc
   barcode: '24504174977'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6008,13 +6172,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1923
   full_shelfkey: other i000114 .b000001 zzyqxw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: adf92a23-4d96-5a46-8b9e-0f333ac416b8
   barcode: '24504175266'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6027,13 +6191,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1900
   full_shelfkey: other i000114 .b000001 zzyqzz~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: b033963e-73ed-5199-92c7-e7a6d0d11c0e
   barcode: '24504175088'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6046,13 +6210,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1914
   full_shelfkey: other i000114 .b000001 zzyqyv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: bd5d83a7-8378-5910-86f9-554c49d9f8e8
   barcode: '24504175305'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6065,13 +6229,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1903
   full_shelfkey: other i000114 .b000001 zzyqzw~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c0593344-bee2-569e-a0ba-30a70404ee3b
   barcode: '24504135208'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6084,13 +6248,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1882-84
   full_shelfkey: other i000114 .b000001 zzyrrx~zzzzrv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c2d9f30c-d62b-54f7-81c7-92950abfbf82
   barcode: '24504219701'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6103,13 +6267,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1926
   full_shelfkey: other i000114 .b000001 zzyqxt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c3e217b4-b476-5a41-9520-c37152819baa
   barcode: '24504175274'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6122,13 +6286,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1901
   full_shelfkey: other i000114 .b000001 zzyqzy~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: c98ba0cf-957a-5a86-baee-ef1414402339
   barcode: '24504135266'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6141,13 +6305,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1893-94
   full_shelfkey: other i000114 .b000001 zzyrqw~zzzzqv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: cce4e3ac-eba6-50ac-a7d9-81dce75d116e
   barcode: '24504135232'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6160,13 +6324,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1888-89
   full_shelfkey: other i000114 .b000001 zzyrrr~zzzzrq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: d9282f9d-763c-53b9-bfba-684f28f5a7dc
   barcode: '24504220265'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6179,13 +6343,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1961
   full_shelfkey: other i000114 .b000001 zzyqty~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: e0e1283e-c326-5814-9ccb-b211bdbfc680
   barcode: '24504220273'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6198,13 +6362,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1962
   full_shelfkey: other i000114 .b000001 zzyqtx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: e4970f93-18c6-5184-8131-0bf4755e0447
   barcode: '24504175185'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6217,13 +6381,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1912
   full_shelfkey: other i000114 .b000001 zzyqyx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: e8e11db7-9667-5fdd-8b21-f31477ad1f65
   barcode: '24504175290'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6236,13 +6400,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1904
   full_shelfkey: other i000114 .b000001 zzyqzv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: ee970959-a616-5fbe-898f-02407413f665
   barcode: '24504135258'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6255,13 +6419,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1891-92
   full_shelfkey: other i000114 .b000001 zzyrqy~zzzzqx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f689d891-094d-51e8-8b0b-6e279fd8b137
   barcode: '24504175258'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6274,13 +6438,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1899
   full_shelfkey: other i000114 .b000001 zzyrqq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f77b74ba-031c-517f-b810-ee935790005b
   barcode: '24504219646'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6293,13 +6457,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1937
   full_shelfkey: other i000114 .b000001 zzyqws~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f7e52ab0-1b82-5067-a74f-87e3e01fe46f
   barcode: '24504174985'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6312,13 +6476,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1924
   full_shelfkey: other i000114 .b000001 zzyqxv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f96e0a17-d24b-517c-b990-f6512491cc40
   barcode: '24504219696'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6331,13 +6495,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1932
   full_shelfkey: other i000114 .b000001 zzyqwx~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: f9a9cfb2-38bd-5aa9-88d3-0655315163ee
   barcode: '24504219612'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6350,13 +6514,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1934
   full_shelfkey: other i000114 .b000001 zzyqwv~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: fcf30d18-03ac-5a1b-9c98-47a30bab9519
   barcode: '24504135224'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6369,13 +6533,13 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 1886-87
   full_shelfkey: other i000114 .b000001 zzyrrt~zzzzrs~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - id: d83e4817-dae5-5376-ad76-7300ce4c9685
   barcode: '24504135169'
   library: LANE
-  current_location:
   type: book
   note:
   instance_id: 41fb6f87-176f-5db3-a3d1-1060c5635f81
@@ -6388,6 +6552,7 @@ item_display_struct:
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
   bound_with:
+  is_bound_with_principal: false
   lopped_callnumber: I114 .B1
   callnumber: I114 .B1 v. 40 1916
   full_shelfkey: other i000114 .b000001 4}~zzzzvz~zzyqyt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

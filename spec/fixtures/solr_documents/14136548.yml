@@ -39,6 +39,8 @@ author_title_1xx_search:
 - Vaughan, Daniel Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
 author_title_search:
 - Vaughan, Daniel Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
+best_author_title_search: Vaughan, Daniel Umiejętności analityczne w pracy z danymi
+  i sztuczną inteligencją
 author_1xx_search: Vaughan, Daniel.
 author_person_facet:
 - Vaughan, Daniel
@@ -48,8 +50,6 @@ author_person_full_display:
 - Vaughan, Daniel.
 author_sort: Vaughan Daniel Umiejętności analityczne w pracy z danymi i sztuczną inteligencją
   electronic resource
-works_struct:
-- '{"included":[],"related":[]}'
 pub_search:
 - Helion
 pub_display:
@@ -84,8 +84,6 @@ isbn_display:
 - '8328373467'
 holdings_library_code_ssim:
 - SUL
-on_order_library_ssim:
-- SUL
 collection:
 - sirsi
 - folio
@@ -93,11 +91,11 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'cd22424f88a551875fc3ebf7d99547e1e30323f7
+context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
 
   '
 context_input_name_ssi: "/dev/null"
-context_input_modified_dtsi: '2023-08-24T16:49:09Z'
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
 - '001'
 - '003'
@@ -162,16 +160,16 @@ folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"19fa529d-ef49-5c9b-b4f0-1060512033f1","hrid":"a14136548","notes":[{"note":"Title
   from content provider","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"}],"title":"Umiejętności
   analityczne w pracy z danymi i sztuczną inteligencją  [electronic resource] / Daniel
-  Vaughan.","series":[],"source":"MARC","_version":1,"editions":[],"metadata":{"createdDate":"2023-08-21T21:08:33.896Z","updatedDate":"2023-08-21T21:08:33.896Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[],"languages":["und"],"indexTitle":"Umiejętności
+  Vaughan.","series":[],"source":"MARC","_version":2,"editions":[],"metadata":{"createdDate":"2023-08-21T21:08:33.896Z","updatedDate":"2023-08-21T21:08:33.896Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[],"languages":["und"],"indexTitle":"Umiejętności
   analityczne w pracy z danymi i sztuczną inteligencją","identifiers":[{"value":"(Sirsi)
   a14136548","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"9788328373464","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"8328373467","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(OCoLC)1262685188","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
   sron1262685188","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"[S.l.]","publisher":"Helion","dateOfPublication":"2025"}],"contributors":[{"name":"Vaughan,
   Daniel","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2022-02-06","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar","name":"Resource","linkText":"Safari
   Books Online","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":2025},"statusUpdatedDate":"2023-08-21T21:08:33.602+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
   online resource"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2024-03-11T17:09:42Z'
-created: '2024-03-11T17:09:42Z'
-timestamp: '2024-03-11T17:09:42Z'
+last_updated: '2025-04-13T09:47:22Z'
+created: '2025-04-13T09:47:22Z'
+timestamp: '2025-04-13T09:47:22Z'
 author_struct:
 - creator:
   - link: Vaughan, Daniel.
@@ -183,6 +181,8 @@ marc_links_struct:
   link_text: Safari Books Online
   link_title: Available to Stanford-affiliated users only
   additional_text:
+  material_type:
+  note: Available to Stanford-affiliated users.
   href: https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar
   sort:
   casalini:
@@ -212,11 +212,9 @@ holdings_json_struct:
       id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
       name: Electronic
       source: folio
-    holdingsItems: []
     callNumberType:
     holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
     electronicAccess: []
-    bareHoldingsItems: []
     holdingsStatements: []
     statisticalCodeIds: []
     administrativeNotes: []

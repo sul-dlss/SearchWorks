@@ -23,7 +23,7 @@ RSpec.describe 'Request Links' do
         within 'table.availability' do
           expect(page).to have_content 'Some records bound together'
           expect(page).to have_link 'See full record for details'
-          expect(page).to have_no_content("Request")
+          expect(page).to have_link "Request"
         end
       end
     end
