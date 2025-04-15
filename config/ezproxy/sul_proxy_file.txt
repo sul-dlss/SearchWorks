@@ -816,7 +816,6 @@ www.cq.com
 moneyline.cq.com
 www.molbiolcell.org
 chronicle.com
-www.oecd-ilibrary.org
 www.daredictionary.com
 www.biochemsoctrans.org
 online.liverpooluniversitypress.co.uk
@@ -1082,7 +1081,6 @@ www.aspresolver.com
 lib.haifa.ac.il
 hanchi.ihp.sinica.edu.tw
 online.munzinger.de
-www.oecd-ilibrary.org
 www.lrb.co.uk
 www.nachschlage.net
 www.europaworld.com
