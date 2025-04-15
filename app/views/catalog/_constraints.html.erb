@@ -1,1 +1,3 @@
-<%= render((blacklight_config&.view_config(document_index_view_type)&.constraints_component || Blacklight::ConstraintsComponent).new(search_state: convert_to_search_state(controller.params != params ? params : search_state))) %>
+<%= render (blacklight_config&.view_config(document_index_view_type)&.constraints_component || Blacklight::ConstraintsComponent).new(
+  search_state: convert_to_search_state(controller.params != params ? params : search_state),
+  start_over_component: StartOverButtonComponent) %>
