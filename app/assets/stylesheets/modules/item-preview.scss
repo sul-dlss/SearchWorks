@@ -1,4 +1,5 @@
-.preview-trigger-btn, .preview-trigger-focus {
+.preview-trigger-btn,
+.preview-trigger-focus {
   background-color: $sul-btn-preview-bg;
   color: #fff;
   cursor: pointer;
@@ -30,8 +31,6 @@
 }
 
 .preview-opacity {
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; // IE8
-  filter: alpha(opacity=85); // IE 5-7
   opacity: 0.85;
 }
 
@@ -82,12 +81,12 @@
   }
 }
 
-#documents.gallery .preview{
+#documents.gallery .preview {
   display: inline-block;
   margin-bottom: 20px;
 }
 
-h3.preview-title{
+h3.preview-title {
   @include h3-index-title-font;
   margin-right: 30px;
 
