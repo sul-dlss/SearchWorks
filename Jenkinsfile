@@ -53,11 +53,10 @@ pipeline {
     stage('UAT deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'uat'
-        BRANCH = 'blacklight8-redux'
       }
 
       when {
-        branch 'blacklight8-redux'
+        branch 'main'
       }
 
       steps {
