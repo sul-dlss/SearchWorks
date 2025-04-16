@@ -17,6 +17,6 @@
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
-    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css ./app/assets/stylesheets/print.scss:./app/assets/builds/print.css --no-source-map --load-path=node_modules"
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css ./app/assets/stylesheets/print.scss:./app/assets/builds/print.css --no-source-map --quiet-deps --load-path=node_modules"
   }
 }
