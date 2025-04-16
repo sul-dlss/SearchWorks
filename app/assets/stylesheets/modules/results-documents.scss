@@ -48,6 +48,13 @@
   }
 }
 
+.eds-restricted {
+  border-left: 4px solid var(--stanford-cardinal-red);
+  .stanford-only {
+    margin-left: 0;
+  }
+}
+
 .document-metadata {
   list-style-type: none;
   padding-left: 0;

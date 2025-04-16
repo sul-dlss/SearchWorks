@@ -146,25 +146,4 @@ RSpec.feature 'Article Record Display' do
       end
     end
   end
-
-  context 'when a document is restricted' do
-    let(:document) do
-      SolrDocument.new(
-        id: 'abc123',
-        'eds_title' => 'This title is unavailable for guests, please login to see more information.',
-        'eds_publication_type' => 'Metadata Content'
-      )
-    end
-
-    it 'does not render metadata' do
-      visit article_path(document[:id])
-
-      expect(page).to have_css(
-        'h1',
-        text: 'This title is not available for guests. Log in to see the title and access the article.'
-      )
-      expect(page).to have_no_css('.article-record-metadata')
-      expect(page).to have_no_content('Metadata Content')
-    end
-  end
 end

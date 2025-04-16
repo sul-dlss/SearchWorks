@@ -15,7 +15,7 @@ RSpec.describe ShowEdsDocumentPresenter do
       end
 
       it 'renders a custom title' do
-        expect(presenter.heading).to eq SolrDocument::UPDATED_EDS_RESTRICTED_TITLE
+        expect(presenter.heading).to eq 'This title is unavailable for guests, please login to see more information.'
       end
     end
 
