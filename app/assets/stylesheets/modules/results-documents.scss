@@ -1,8 +1,7 @@
 #documents {
-   // This is for the "list" view type documents. It is included by the "brief" view type, but not the "gallery" view type.
+  // This is for the "list" view type documents. It is included by the "brief" view type, but not the "gallery" view type.
   .document {
     @include document;
-
 
     h3.index_title {
       @include h3-index-title-font;
@@ -21,7 +20,7 @@
 
   .main-title-date {
     color: $sul-main-title-date-color;
-    font-size: .938em;
+    font-size: 0.938em;
     white-space: nowrap;
   }
 
@@ -38,10 +37,9 @@
 
     // Without this a dot is displayed before the first li
     li::marker {
-        content: '';
+      content: "";
     }
   }
-
 
   .results-metadata-section:last-child {
     border-bottom: 0;
@@ -74,7 +72,7 @@
 
 .search_num_of_results {
   text-align: left;
-  margin-top: $h2-font-size / 2;
+  margin-top: $h2-font-size * 0.5;
 
   .results-heading a {
     border-bottom: 0;
@@ -90,5 +88,4 @@
   .rss-icon {
     vertical-align: baseline;
   }
-
 }
