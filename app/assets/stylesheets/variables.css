@@ -1,12 +1,3 @@
 :root {
   --stanford-illuminating-dark: #fec51d1a;
-
-  /* From component library */
-  --stanford-digital-red: #b1040e;
-  --stanford-digital-red-dark-rgb: 130, 0, 0;
-  --stanford-digital-blue-rgb: 0, 108, 184;
-  --stanford-digital-green: #008566;
-  --stanford-40-black: #ababa9;
-  --stanford-10-black: #EAEAEA;
-  --stanford-cardinal-red: #8c1515;
 }
