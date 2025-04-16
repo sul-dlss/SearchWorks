@@ -1,0 +1,7 @@
+<%= render Status::ErrorPageComponent.new(code: '500', header: 'Internal server error') do |component| %>
+  <% component.with_message do %>
+    <p>
+    Something went wrong on our end. Please check the <%= link_to 'system status', 'https://library-status.stanford.edu/' %> for updates or try again later. 
+    </p>
+  <% end %>
+<% end %>
