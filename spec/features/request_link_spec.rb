@@ -11,7 +11,7 @@ RSpec.describe 'Request Links' do
         within 'table.availability' do
           expect(page).to have_no_content 'ABC 123'
 
-          expect(page).to have_link 'See full record for details'
+          expect(page).to have_link 'see record for full details.'
         end
       end
     end
@@ -21,8 +21,8 @@ RSpec.describe 'Request Links' do
         visit search_catalog_path(q: '2279186')
 
         within 'table.availability' do
-          expect(page).to have_content 'Some records bound together'
-          expect(page).to have_link 'See full record for details'
+          expect(page).to have_content 'Some items are bound together - '
+          expect(page).to have_link 'see record for full details.'
           expect(page).to have_link "Request"
         end
       end

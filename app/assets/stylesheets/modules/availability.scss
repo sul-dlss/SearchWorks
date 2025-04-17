@@ -38,7 +38,7 @@
 
 .results-metadata-section {
   .availability {
-    td:first-child {
+    td:first-child:not(.bound-with-note) {
       padding-left: 15px !important;
     }
   }

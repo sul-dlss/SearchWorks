@@ -118,6 +118,26 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
   end
 
   describe "bound with" do
+    context 'when is_bound_with_principal is true' do
+      let(:document) do
+        SolrDocument.new(
+          id: '123',
+          item_display_struct: [
+            {
+              id: '66645303-add1-5d4f-ae33-7944f5d1cae2', barcode: '36105097469808', library: 'SPEC-COLL',
+              effective_permanent_location_code: 'SPEC-SAMSON', callnumber: 'PJ5204 .B6 1866',
+              bound_with: nil, is_bound_with_principal: true
+            }
+          ]
+        )
+      end
+      let(:library) { document.holdings.libraries.first }
+
+      it "shows the message" do
+        expect(page).to have_content 'Some items are bound together'
+      end
+    end
+
     context 'with bound-with in SAL3 and a regular holding in SPEC-COLL' do
       let(:document) do
         SolrDocument.new(
@@ -143,7 +163,7 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
         let(:library) { document.holdings.libraries.first }
 
         it "shows the message" do
-          expect(page).to have_content 'Some records bound together'
+          expect(page).to have_content 'Some items are bound together'
         end
       end
 
@@ -151,7 +171,7 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
         let(:library) { document.holdings.libraries.last }
 
         it "doesn't show" do
-          expect(page).to have_no_content 'Some records bound together'
+          expect(page).to have_no_content 'Some items are bound together'
         end
       end
     end
