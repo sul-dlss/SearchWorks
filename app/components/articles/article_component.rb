@@ -24,6 +24,8 @@ module Articles
       end.compact
     end
 
+    delegate :allowed_to?, to: :helpers
+
     attr_reader :document
 
     def metadata_fields_for_section(section_name)
