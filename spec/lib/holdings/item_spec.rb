@@ -178,36 +178,5 @@ RSpec.describe Holdings::Item do
         expect(item.live_lookup_item_id).to eq '64d4220b-ebae-5fb0-971c-0f98f6d9cc93'
       end
     end
-
-    describe '#live_lookup_instance_id' do
-      context 'with a regular (not bound-with) item'
-      it 'returns nil' do
-        expect(item.live_lookup_instance_id).to be_nil
-      end
-    end
-  end
-
-  context 'with a FOLIO bound-with' do
-    let(:document) { SolrDocument.new }
-
-    describe '#live_lookup_instance_id' do
-      context 'with a bound-with item' do
-        subject(:item) do
-          described_class.new(
-            {
-              barcode: '1234', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS',
-              bound_with: {
-                instance: { id: "7e194e58-e134-56fe-a3c2-2c0494e04c5b" }
-              }
-            },
-            document:
-          )
-        end
-
-        it 'returns the parent instance id' do
-          expect(item.live_lookup_instance_id).to eq "7e194e58-e134-56fe-a3c2-2c0494e04c5b"
-        end
-      end
-    end
   end
 end

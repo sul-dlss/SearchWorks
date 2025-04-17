@@ -141,10 +141,6 @@ class Holdings
       id || folio_item&.id
     end
 
-    def live_lookup_instance_id
-      bound_with? ? bound_with_parent.dig('instance', 'id') : document.live_lookup_id
-    end
-
     def folio_item?
       folio_item.present?
     end
