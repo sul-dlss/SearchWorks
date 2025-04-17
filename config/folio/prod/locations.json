@@ -8960,6 +8960,28 @@
     }
   },
   {
+    "id": "a192dc24-ac67-4c50-aaba-f38e10b053c3",
+    "name": "Science Reference Oversize",
+    "code": "SCI-REF-OVERSIZE",
+    "discoveryDisplayName": "Reference: Oversize",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
+    "details": {},
+    "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
+    "servicePointIds": [
+      "50ef1036-06d3-48ef-9048-26cabfccf630"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-04-16T22:15:54.147+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-04-16T22:15:54.147+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "a19fa3e9-687b-47fe-aa7b-09d06bcdac6d",
     "name": "Lane Ref: LC Class",
     "code": "LANE-REF",

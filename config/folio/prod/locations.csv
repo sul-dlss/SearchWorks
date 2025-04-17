@@ -386,6 +386,7 @@ a13680b4-8d74-452c-8f7d-057d81b8e7e9,East Asia Shadowed,EAL-SHADOW,SU,SUL,EAST-A
 a148f1ad-7bf4-44fe-ae27-c63ba43f0bed,East Asia Withdrawn Digital Substitute,EAL-WD-DIGITAL-SUB,SU,SUL,EAST-ASIA,Digital substitute,true,EAST-ASIA,EAST-ASIA,,,,,,,,,,,,,,,
 a172bf77-3012-4a30-a6e0-8a83884a423c,SAL3 PAGE-MM,SAL3-PAGE-MM,SU,SUL,SAL3,Request for pickup at Green Media Center,true,SAL3,SAL3,,,,,MEDIA-CENTER,,,Offsite,,,,,,,
 a18f5612-e6b4-49e8-b13e-87a95390f10e,Green IC Send to SAL3,GRE-IC-SEND2SAL3,SU,SUL,GREEN,Ask at circulation desk,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,,
+a192dc24-ac67-4c50-aaba-f38e10b053c3,Science Reference Oversize,SCI-REF-OVERSIZE,SU,SUL,SCIENCE,Reference: Oversize,true,SCIENCE,SCIENCE,,,,,,,,,,,,,,,
 a19fa3e9-687b-47fe-aa7b-09d06bcdac6d,Lane Ref: LC Class,LANE-REF,SU,MED,LANE,Reference (Shelved at Information Desk),true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,
 a1e48e5a-5a5a-49b1-a7f1-0d248ef26f04,ARS Inprocess,ARS-INPROCESS,SU,SUL,ARS,In process,true,ARS,ARS,,,,,ARS,,,In_process,,,,,,,
 a2b544b8-4087-4b1e-bef2-e27be9faa7f0,Media Microfiche Diazo,MEDIA-DIZOCAB,SU,SUL,MEDIA-CENTER,Microfiche collection,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
