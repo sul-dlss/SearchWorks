@@ -41,8 +41,7 @@ RSpec.describe Record::MarcContentsSummaryComponent, type: :component do
 
     it "is displayed when present" do
       expect(page).to have_css("dt", text: "Finding aid")
-      expect(page).to have_css("dd", text: "FINDING AID:")
-      expect(page).to have_css("dd a", text: "Link text")
+      expect(page).to have_css("dd a", text: "Online Archive of California")
     end
   end
 

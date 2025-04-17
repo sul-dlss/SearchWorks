@@ -28,9 +28,11 @@
       <% end %>
       <% if document.preferred_online_links.any? %>
         <h2>Online</h2>
+        <div class="preferred-online-links">
         <% document.preferred_online_links.each do |link| %>
           <%= link.html.html_safe %><br/>
         <% end %>
+        </div>
       <% end %>
       <% if document.holdings.present? %>
         <h2>At the library</h2>
