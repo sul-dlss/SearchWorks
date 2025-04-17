@@ -1,0 +1,13 @@
+    <div data-controller="articles-facet-more" data-articles-facet-more-title-value="<%= @facet_field.label %>">
+      <ul class="facet-values list-unstyled" data-articles-facet-more-target="list">
+        <%= render facet_items %>
+        <%= render facet_hidden_items %>
+      </ul>
+      <% if has_more? %>
+        <div class="more_facets">
+          <%= link_to t("more_#{@facet_field.key}_html", scope: 'blacklight.search.facets', default: :more_html, field_name: @facet_field.label),
+            '#',
+            data: { action: 'articles-facet-more#open' } %>
+        </div>
+      <% end %>
+    </div>

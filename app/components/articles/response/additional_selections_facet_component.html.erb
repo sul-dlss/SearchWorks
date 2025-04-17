@@ -9,9 +9,6 @@
       </div>
     <% end %>
 
-    <%= helpers.render(Blacklight::FacetFieldInclusiveConstraintComponent.new(facet_field: @facet_field)) %>
-    <ul class="facet-values list-unstyled">
-      <%= render facet_items %>
-    </ul>
+    <%= render Articles::Response::MoreFacetsListComponent.new(facet_field: @facet_field, layout: @layout) %>
   <% end %>
 <% end %>
