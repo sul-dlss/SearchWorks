@@ -16,7 +16,7 @@ RSpec.describe FeedbackFormHelper do
 
     context 'anything else' do
       before do
-        allow(helper).to receive(:on_campus_or_su_affiliated_user?).and_return false
+        allow(helper).to receive(:allowed_to?).and_return false
       end
 
       it { expect(helper.render_feedback_form('other')).not_to include 'Name of resource' }
