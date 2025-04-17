@@ -32,8 +32,8 @@ class Holdings
     end
 
     # @return [Bool] true if any of the items in this location bound-with children
-    def bound_with?
-      items.any?(&:bound_with?)
+    def bound_with_child?
+      items.any?(&:bound_with_child?)
     end
 
     def bound_with_parents
@@ -44,7 +44,7 @@ class Holdings
     def location_link; end
 
     def present?
-      any_items? || any_mhlds? || bound_with?
+      any_items? || any_mhlds? || bound_with_child?
     end
 
     def present_on_index?

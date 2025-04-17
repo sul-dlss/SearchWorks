@@ -115,7 +115,7 @@ class Holdings
     end
 
     # @return [Bool] true if this is a bound-with child
-    def bound_with?
+    def bound_with_child?
       bound_with_parent.present?
     end
 
@@ -173,7 +173,7 @@ class Holdings
     end
 
     def folio_item
-      return bound_with_folio_item if bound_with?
+      return bound_with_folio_item if bound_with_child?
 
       @folio_item ||= document&.folio_items&.find do |item|
         # We prefer to match on the item id (uuid) because the barcode
