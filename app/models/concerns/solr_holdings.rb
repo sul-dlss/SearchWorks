@@ -57,10 +57,10 @@ module SolrHoldings
   end
 
   def bound_with_folio_items
-    @bound_with_folio_items ||= Array(holdings_json['holdings']).filter_map do |holdings_record|
-      next if holdings_record['boundWith'].blank?
+    @bound_with_folio_items ||= folio_holdings.filter_map do |holdings_record|
+      next unless holdings_record.bound_with_parent
 
-      Folio::Item.from_dynamic(holdings_record.dig('boundWith', 'item'))
+      Folio::Item.from_dynamic(holdings_record.bound_with_parent.item, holdings_record: holdings_record)
     end
   end
 

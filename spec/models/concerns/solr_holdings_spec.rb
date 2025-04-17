@@ -10,6 +10,53 @@ RSpec.describe SolrHoldings do
     expect(document.holdings).to be_a Holdings
   end
 
+  describe '#bound_with_folio_items' do
+    let(:document) {
+      SolrDocument.new(holdings_json_struct: [{ 'holdings' => [
+        {
+          'id' => '123456', 'holdingsType' => { 'code' => 'Bound-with' },
+          'location' => {
+            'effectiveLocation' => {
+              'id' => "158168a3-ede4-4cc1-8c98-61f4feeb22ea",
+              'code' => "SAL3-SEE-OTHER",
+              'name' => "Off-campus storage",
+              'campus' => { id: "c365047a-51f2-45ce-8601-e421ca3615c5", code: "SUL", name: "Stanford Libraries" },
+              "details" => nil,
+              "library" => { id: "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9", code: "SAL3", name: "Stanford Auxiliary Library 3" },
+              "isActive" => true,
+              "institution" => { id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929", code: "SU", name: "Stanford University" }
+            }
+          },
+          'boundWith' => {
+            "item" => { id: '1234580', 'status' => 'avaliable', 'typeId' => 'typeId', 'typeName' => 'typeName',
+                        'callNumber' => 'callNumber',
+                        'location' => {
+                          'effectiveLocation' => {
+                            'id' => 'f6b5519e-88d9-413e-924d-9ed96255f72e', 'code' => "GREEN", 'name' => 'Green Library',
+                            'campus' => { id: "c365047a-51f2-45ce-8601-e421ca3615c5", code: "SUL", name: "Stanford Libraries" },
+                            "institution" => { id: "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929", code: "SU", name: "Stanford University" },
+                            "library" => { id: "f6b5519e-88d9-413e-924d-9ed96255f72e", code: "GREEN", name: "Green Library" }
+                          }
+                        } },
+            "holding" => {}, "instance" => "instance"
+          }
+        }
+      ] }])
+    }
+
+    it 'adds the boundWith data to bound_with_folio_items' do
+      expect(document.bound_with_folio_items.first.id).to eq '1234580'
+    end
+
+    it 'populates effective_location with the items effective_location' do
+      expect(document.bound_with_folio_items.first.effective_location.code).to eq 'GREEN'
+    end
+
+    it 'populates permanent_location with the holdings effective_location' do
+      expect(document.bound_with_folio_items.first.permanent_location.code).to eq 'SAL3-SEE-OTHER'
+    end
+  end
+
   describe '#preferred_barcode' do
     let(:preferred) {
       SolrDocument.new(
