@@ -16,7 +16,7 @@ module AccessPanels
       @counter = item_counter
     end
 
-    delegate :bound_with_parent, to: :item
+    delegate :bound_with_parent, :callnumber, to: :item
 
     def has_bound_with_parent?
       bound_with_parent.present?

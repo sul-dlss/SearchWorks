@@ -26,7 +26,7 @@ RSpec.describe 'Results Document Metadata' do
 
   it 'has the stacks image for objects with image behavior' do
     visit root_path
-    fill_in 'search for', with: '35'
+    fill_in 'search for', with: 'Image Item3' # 35.yml in fixtures
     click_button 'search'
 
     within 'article.document' do

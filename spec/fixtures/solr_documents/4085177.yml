@@ -1,0 +1,3031 @@
+---
+id: '4085177'
+hashed_id_ssi: 507878682d81ec31e3f156e724340ac1
+marc_json_struct:
+- '{"leader":"03621cpcaa22004213a 4500","fields":[{"001":"a4085177"},{"003":"SIRSI"},{"008":"841009i19391992cau                 eng
+  d"},{"005":"20250305182134.7"},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  CSUV84-A231"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"CSt"},{"b":"eng"},{"e":"appm"},{"c":"CSt"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"SC0132"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Rambo,
+  William R."},{"q":"(William Ralph),"},{"d":"1916-"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"William
+  R. Rambo papers,"},{"f":"1939-1992 (inclusive),"},{"g":"1954-1974 (bulk)."}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"35"},{"f":"linear feet"}]}},{"506":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Materials are open for research use. Audio-visual materials
+  are not available in original format and must be reformatted to a digital use copy."}]}},{"545":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"William R. Rambo received his B.A. and Electrical Engineering
+  degrees from Stanford University in 1938 and 1941.  He was a research associate
+  at the Harvard Radio Research Lab and a research engineer with Airborne Instruments
+  Lab in New York before coming to Stanford as a research associate in 1951.  He was
+  made a Professor of Electrical Engineering in 1957, Director of Electronics Labs
+  in 1960, and Associate Dean of the School of Engineering in 1961.  He retired as
+  a Professor Emeritus in 1972."}]}},{"520":{"ind1":"2","ind2":" ","subfields":[{"a":"These
+  papers, kept in their original arrangement, reflect Prof. Rambo''s administrative
+  responsibilities as well as his research interests, largely during his time at Stanford
+  University.  Stanford subjects include the School of Engineering, the Electrical
+  Engineering Department, the Stanford Electronic Labs, the Applied Electronics Lab,
+  research policy at Stanford, courses, the Academic Senate, the University Land and
+  Building Development Committee, and student demonstrations.  Other subjects include
+  the American Society for Engineering Education, Engineering College Research Council,
+  Joint Services Electronic Program, and Rambo''s research work with the U.S. Army,
+  Air Force, and Navy."}]}},{"541":{"ind1":" ","ind2":" ","subfields":[{"a":"Gift
+  of William R. Rambo, 1975, 1976, 1997."}]}},{"500":{"ind1":" ","ind2":" ","subfields":[{"a":"Special
+  Collections and University Archives materials are stored offsite and must be paged
+  48 hours in advance. For more information on paging collections, see the department''s
+  website: https://library.stanford.edu/libraries/special-collections."}]}},{"524":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"[identification of item] William R. Rambo Papers
+  (SC0132). Department of Special Collections and University Archives, Stanford University
+  Libraries, Stanford, Calif."}]}},{"540":{"ind1":" ","ind2":" ","subfields":[{"a":"While
+  University Archives is the owner of the physical and/or digital items, permission
+  to examine collection materials is not an authorization to publish. These materials
+  are made available for use in research, teaching, and private study. Any transmission
+  or reproduction beyond that allowed by fair use requires permission from the owners
+  of rights, heir(s) or assigns."}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Rambo,
+  William R."},{"q":"(William Ralph),"},{"d":"1916-"}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  University."},{"b":"School of Engineering."}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  University."},{"b":"Department of Electrical Engineering"},{"x":"Faculty."}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  Electronics Laboratories."}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  University"},{"b":"Academic Council."}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  University"},{"b":"Faculty Senate."}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  University"},{"b":"Applied Electronics Laboratory."}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  University"},{"b":"Stanford Electronics Laboratories."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Engineering"},{"x":"Research."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Student movements."}]}},{"856":{"ind1":"4","ind2":"2","subfields":[{"3":"Finding
+  aid"},{"u":"https://oac.cdlib.org/findaid/ark:/13030/kt6h4nf6c6/"}]}},{"596":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"21"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)702129461"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"d70d30e9-53a0-59bf-988c-6ce27c1fda2a"},{"s":"35a0d337-3cda-5002-9315-eb5914fa9ddc"}]}}]}'
+all_search: 'Rambo, William R. (William Ralph), 1916- William R. Rambo papers, 1939-1992
+  (inclusive), 1954-1974 (bulk). 35 linear feet Materials are open for research use.
+  Audio-visual materials are not available in original format and must be reformatted
+  to a digital use copy. William R. Rambo received his B.A. and Electrical Engineering
+  degrees from Stanford University in 1938 and 1941.  He was a research associate
+  at the Harvard Radio Research Lab and a research engineer with Airborne Instruments
+  Lab in New York before coming to Stanford as a research associate in 1951.  He was
+  made a Professor of Electrical Engineering in 1957, Director of Electronics Labs
+  in 1960, and Associate Dean of the School of Engineering in 1961.  He retired as
+  a Professor Emeritus in 1972. These papers, kept in their original arrangement,
+  reflect Prof. Rambo''s administrative responsibilities as well as his research interests,
+  largely during his time at Stanford University.  Stanford subjects include the School
+  of Engineering, the Electrical Engineering Department, the Stanford Electronic Labs,
+  the Applied Electronics Lab, research policy at Stanford, courses, the Academic
+  Senate, the University Land and Building Development Committee, and student demonstrations.  Other
+  subjects include the American Society for Engineering Education, Engineering College
+  Research Council, Joint Services Electronic Program, and Rambo''s research work
+  with the U.S. Army, Air Force, and Navy. Gift of William R. Rambo, 1975, 1976, 1997.
+  Special Collections and University Archives materials are stored offsite and must
+  be paged 48 hours in advance. For more information on paging collections, see the
+  department''s website: https://library.stanford.edu/libraries/special-collections.
+  [identification of item] William R. Rambo Papers (SC0132). Department of Special
+  Collections and University Archives, Stanford University Libraries, Stanford, Calif.
+  While University Archives is the owner of the physical and/or digital items, permission
+  to examine collection materials is not an authorization to publish. These materials
+  are made available for use in research, teaching, and private study. Any transmission
+  or reproduction beyond that allowed by fair use requires permission from the owners
+  of rights, heir(s) or assigns. Rambo, William R. (William Ralph), 1916- Stanford
+  University. School of Engineering. Stanford University. Department of Electrical
+  Engineering Faculty. Stanford Electronics Laboratories. Stanford University Academic
+  Council. Stanford University Faculty Senate. Stanford University Applied Electronics
+  Laboratory. Stanford University Stanford Electronics Laboratories. Engineering Research.
+  Student movements. Finding aid https://oac.cdlib.org/findaid/ark:/13030/kt6h4nf6c6/
+  21'
+title_245a_search: William R. Rambo papers,
+title_245_search: William R. Rambo papers, 1939-1992 (inclusive), 1954-1974 (bulk).
+title_245a_display: William R. Rambo papers
+title_display: William R. Rambo papers, 1939-1992 (inclusive), 1954-1974 (bulk)
+title_full_display: William R. Rambo papers, 1939-1992 (inclusive), 1954-1974 (bulk).
+title_sort: William R Rambo papers 19391992 inclusive 19541974 bulk
+author_title_245ac_search:
+- William R. Rambo papers,
+author_title_1xx_search:
+- Rambo, William R. (William Ralph) William R. Rambo papers,
+author_title_search:
+- Rambo, William R. (William Ralph), 1916- William R. Rambo papers,
+best_author_title_search: Rambo, William R. (William Ralph), 1916- William R. Rambo
+  papers,
+author_1xx_search: Rambo, William R. (William Ralph), 1916-
+author_person_facet:
+- Rambo, William R. (William Ralph), 1916-
+author_person_display:
+- Rambo, William R. (William Ralph), 1916-
+author_person_full_display:
+- Rambo, William R. (William Ralph), 1916-
+author_sort: Rambo William R William Ralph 1916 William R Rambo papers 19391992 inclusive
+  19541974 bulk
+topic_search:
+- Engineering
+- Student movements.
+topic_display:
+- Engineering
+- Student movements.
+topic_subx_search:
+- Faculty.
+- Research.
+subject_other_search:
+- Rambo, William R. (William Ralph), 1916-
+- Stanford University. School of Engineering.
+- Stanford University. Department of Electrical Engineering
+- Stanford Electronics Laboratories.
+- Stanford University Academic Council.
+- Stanford University Faculty Senate.
+- Stanford University Applied Electronics Laboratory.
+- Stanford University Stanford Electronics Laboratories.
+subject_other_display:
+- Rambo, William R. (William Ralph), 1916-
+- Stanford University. School of Engineering.
+- Stanford University. Department of Electrical Engineering
+- Stanford Electronics Laboratories.
+- Stanford University Academic Council.
+- Stanford University Faculty Senate.
+- Stanford University Applied Electronics Laboratory.
+- Stanford University Stanford Electronics Laboratories.
+subject_all_search:
+- Rambo, William R. (William Ralph), 1916-
+- Stanford University. School of Engineering.
+- Stanford University. Department of Electrical Engineering Faculty.
+- Stanford Electronics Laboratories.
+- Stanford University Academic Council.
+- Stanford University Faculty Senate.
+- Stanford University Applied Electronics Laboratory.
+- Stanford University Stanford Electronics Laboratories.
+- Engineering Research.
+- Student movements.
+topic_facet:
+- Rambo, William R. (William Ralph), 1916-
+- Stanford University. School of Engineering
+- Stanford University. Department of Electrical Engineering
+- Stanford Electronics Laboratories
+- Stanford University Academic Council
+- Stanford University Faculty Senate
+- Stanford University Applied Electronics Laboratory
+- Stanford University Stanford Electronics Laboratories
+- Engineering
+- Student movements
+pub_country: California, United States
+pub_date: '1939'
+pub_date_search: '1939'
+pub_date_sort: '1939'
+pub_year_tisim:
+- 1939
+- 1992
+- 1940
+- 1941
+- 1942
+- 1943
+- 1944
+- 1945
+- 1946
+- 1947
+- 1948
+- 1949
+- 1950
+- 1951
+- 1952
+- 1953
+- 1954
+- 1955
+- 1956
+- 1957
+- 1958
+- 1959
+- 1960
+- 1961
+- 1962
+- 1963
+- 1964
+- 1965
+- 1966
+- 1967
+- 1968
+- 1969
+- 1970
+- 1971
+- 1972
+- 1973
+- 1974
+- 1975
+- 1976
+- 1977
+- 1978
+- 1979
+- 1980
+- 1981
+- 1982
+- 1983
+- 1984
+- 1985
+- 1986
+- 1987
+- 1988
+- 1989
+- 1990
+- 1991
+pub_year_ss: 1939 - 1992
+earliest_year_isi: 1939
+latest_year_isi: 1992
+date_cataloged: '1999-05-29T00:00:00Z'
+language:
+- English
+url_suppl:
+- https://oac.cdlib.org/findaid/ark:/13030/kt6h4nf6c6/
+oclc:
+- '702129461'
+access_facet:
+- At the Library
+format_main_ssim:
+- Archive/Manuscript
+physical:
+- 35 linear feet
+summary_search:
+- These papers, kept in their original arrangement, reflect Prof. Rambo's administrative
+  responsibilities as well as his research interests, largely during his time at Stanford
+  University.  Stanford subjects include the School of Engineering, the Electrical
+  Engineering Department, the Stanford Electronic Labs, the Applied Electronics Lab,
+  research policy at Stanford, courses, the Academic Senate, the University Land and
+  Building Development Committee, and student demonstrations.  Other subjects include
+  the American Society for Engineering Education, Engineering College Research Council,
+  Joint Services Electronic Program, and Rambo's research work with the U.S. Army,
+  Air Force, and Navy.
+summary_display:
+- These papers, kept in their original arrangement, reflect Prof. Rambo's administrative
+  responsibilities as well as his research interests, largely during his time at Stanford
+  University.  Stanford subjects include the School of Engineering, the Electrical
+  Engineering Department, the Stanford Electronic Labs, the Applied Electronics Lab,
+  research policy at Stanford, courses, the Academic Senate, the University Land and
+  Building Development Committee, and student demonstrations.  Other subjects include
+  the American Society for Engineering Education, Engineering College Research Council,
+  Joint Services Electronic Program, and Rambo's research work with the U.S. Army,
+  Air Force, and Navy.
+callnum_search:
+- SC0132 1997-093 FLAT BOX 9
+- SC0132 CARTON 2
+- SC0132 CARTON 9
+- SC0132 CARTON 19
+- SC0132 CARTON 12
+- SC0132 CARTON 11
+- SC0132 CARTON 13
+- SC0132 CARTON 10
+- SC0132 CARTON 16
+- SC0132 CARTON 17
+- SC0132 1997-093 BOX 7
+- SC0132 CARTON 15
+- SC0132 1997-093 BOX 8
+- SC0132 1997-093 BOX 3
+- SC0132 CARTON 18
+- SC0132 1997-093 BOX 5
+- SC0132 CARTON 1
+- SC0132 1997-093 BOX 2
+- SC0132 CARTON 4
+- SC0132 CARTON 8
+- SC0132 CARTON 3
+- SC0132 BOX 20
+- SC0132 1997-093 BOX 4
+- SC0132 1997-093 BOX 1
+- SC0132 1997-093 BOX 6
+- SC0132 CARTON 14
+- SC0132 CARTON 5
+- SC0132 CARTON 7
+- SC0132 CARTON 6
+barcode_search:
+- '36105116676094'
+- '36105116534921'
+- '36105116534996'
+- '36105116534863'
+- '36105116534889'
+- '36105116534871'
+- '36105116534848'
+- '36105116535001'
+- '36105116534897'
+- '36105116534905'
+- '36105116676078'
+- '36105116534822'
+- '36105116676086'
+- '36105116676037'
+- '36105116534830'
+- '36105116676052'
+- '36105116534913'
+- '36105116676029'
+- '36105116534970'
+- '36105116535019'
+- '36105116534939'
+- '36105116534947'
+- '36105116676045'
+- '36105116676011'
+- '36105116676060'
+- '36105116534954'
+- '36105116534962'
+- '36105116534988'
+- '36105116534855'
+item_barcodes:
+- '36105116676094'
+- '36105116534921'
+- '36105116534996'
+- '36105116534863'
+- '36105116534889'
+- '36105116534871'
+- '36105116534848'
+- '36105116535001'
+- '36105116534897'
+- '36105116534905'
+- '36105116676078'
+- '36105116534822'
+- '36105116676086'
+- '36105116676037'
+- '36105116534830'
+- '36105116676052'
+- '36105116534913'
+- '36105116676029'
+- '36105116534970'
+- '36105116535019'
+- '36105116534939'
+- '36105116534947'
+- '36105116676045'
+- '36105116676011'
+- '36105116676060'
+- '36105116534954'
+- '36105116534962'
+- '36105116534988'
+- '36105116534855'
+preferred_barcode: '36105116676011'
+holdings_library_code_ssim:
+- SPEC-COLL
+library_code_facet_ssim:
+- SPEC-COLL
+location_code_facet_ssim:
+- SPEC-SAL3-U-ARCHIVES
+building_facet:
+- Special Collections
+building_location_facet_ssim:
+- SPEC-COLL/*
+- SPEC-COLL/SPEC-SAL3-U-ARCHIVES
+- SPEC-COLL/*/type/archival
+- SPEC-COLL/SPEC-SAL3-U-ARCHIVES/type/archival
+shelfkey:
+- other sc000132 001997-000093 box 000001
+reverse_shelfkey:
+- b6il8~7nzzzywx~zzyqqs~zzzzqw~ob2~zzzzzy~~~~~~~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '008'
+- '005'
+- '035'
+- '040'
+- '099'
+- '100'
+- '245'
+- '300'
+- '506'
+- '545'
+- '520'
+- '541'
+- '500'
+- '524'
+- '540'
+- '600'
+- '610'
+- '650'
+- '856'
+- '596'
+- '999'
+- 035a
+- 040abec
+- '099a'
+- 100aqd
+- 245afg
+- 300af
+- 506a
+- 545a
+- 520a
+- 541a
+- 500a
+- 524a
+- 540a
+- 600aqd
+- 610ab
+- 610abx
+- 610a
+- 650ax
+- 650a
+- 8563u
+- 596a
+- 999is
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?099a"
+- "?100a"
+- "?100q"
+- "?100d"
+- "?245a"
+- "?245f"
+- "?245g"
+- "?300a"
+- "?300f"
+- "?506a"
+- "?545a"
+- "?520a"
+- "?541a"
+- "?500a"
+- "?524a"
+- "?540a"
+- "?600a"
+- "?600q"
+- "?600d"
+- "?610a"
+- "?610b"
+- "?610x"
+- "?650a"
+- "?650x"
+- "?8563"
+- "?856u"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: Rambo, William R. (William Ralph), 1916- William R. Rambo papers, 1939-1992
+  (inclusive), 1954-1974 (bulk). Engineering Student movements. Archive/Manuscript
+vern_bib_search: Archive/Manuscript
+uuid_ssi: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"d70d30e9-53a0-59bf-988c-6ce27c1fda2a","hrid":"a4085177","tags":{"tagList":[]},"notes":[{"note":"Materials
+  are open for research use. Audio-visual materials are not available in original
+  format and must be reformatted to a digital use copy","staffOnly":false,"instanceNoteTypeId":"e814a32e-02da-4773-8f3a-6629cdb7ecdf"},{"note":"William
+  R. Rambo received his B.A. and Electrical Engineering degrees from Stanford University
+  in 1938 and 1941.  He was a research associate at the Harvard Radio Research Lab
+  and a research engineer with Airborne Instruments Lab in New York before coming
+  to Stanford as a research associate in 1951.  He was made a Professor of Electrical
+  Engineering in 1957, Director of Electronics Labs in 1960, and Associate Dean of
+  the School of Engineering in 1961.  He retired as a Professor Emeritus in 1972","staffOnly":false,"instanceNoteTypeId":"c636881b-8927-4480-ad1b-8d7b27b4bbfe"},{"note":"These
+  papers, kept in their original arrangement, reflect Prof. Rambo''s administrative
+  responsibilities as well as his research interests, largely during his time at Stanford
+  University.  Stanford subjects include the School of Engineering, the Electrical
+  Engineering Department, the Stanford Electronic Labs, the Applied Electronics Lab,
+  research policy at Stanford, courses, the Academic Senate, the University Land and
+  Building Development Committee, and student demonstrations.  Other subjects include
+  the American Society for Engineering Education, Engineering College Research Council,
+  Joint Services Electronic Program, and Rambo''s research work with the U.S. Army,
+  Air Force, and Navy","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Gift
+  of William R. Rambo, 1975, 1976, 1997","staffOnly":false,"instanceNoteTypeId":"86c4bd09-16de-45ee-89d3-b6d32fae6de9"},{"note":"Special
+  Collections and University Archives materials are stored offsite and must be paged
+  48 hours in advance. For more information on paging collections, see the department''s
+  website: https://library.stanford.edu/libraries/special-collections","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"[identification
+  of item] William R. Rambo Papers (SC0132). Department of Special Collections and
+  University Archives, Stanford University Libraries, Stanford, Calif","staffOnly":false,"instanceNoteTypeId":"09812302-92f7-497e-9120-ed25de458ea5"},{"note":"While
+  University Archives is the owner of the physical and/or digital items, permission
+  to examine collection materials is not an authorization to publish. These materials
+  are made available for use in research, teaching, and private study. Any transmission
+  or reproduction beyond that allowed by fair use requires permission from the owners
+  of rights, heir(s) or assigns","staffOnly":false,"instanceNoteTypeId":"f677d908-69c6-4450-94a6-abbcf94a1ee5"}],"title":"William
+  R. Rambo papers, 1939-1992 (inclusive), 1954-1974 (bulk).","series":[],"source":"MARC","_version":5,"editions":[],"metadata":{"createdDate":"2023-08-21T06:44:48.549Z","updatedDate":"2025-03-05T18:21:35.787Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"cc228aae-d24d-4271-bd70-9afe7add6ec9"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Rambo,
+  William R. (William Ralph), 1916-"},{"value":"Stanford University. School of Engineering"},{"value":"Stanford
+  University. Department of Electrical Engineering--Faculty"},{"value":"Stanford Electronics
+  Laboratories"},{"value":"Stanford University Academic Council"},{"value":"Stanford
+  University Faculty Senate"},{"value":"Stanford University Applied Electronics Laboratory"},{"value":"Stanford
+  University Stanford Electronics Laboratories"},{"value":"Engineering--Research"},{"value":"Student
+  movements"}],"languages":["eng"],"indexTitle":"William R. Rambo papers,","identifiers":[{"value":"(Sirsi)
+  CSUV84-A231","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)702129461","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[],"contributors":[{"name":"Rambo,
+  William R. (William Ralph), 1916-","primary":true,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1999-05-29","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://oac.cdlib.org/findaid/ark:/13030/kt6h4nf6c6","name":"Related
+  resource","relationshipId":"5bfe1b7b-f151-4501-8cfa-23b321d5cd1e","materialsSpecification":"Finding
+  aid"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:44:48.463+0000","statisticalCodeIds":["36dfb19d-8d6b-4c4f-a8cc-8b403452bce5"],"administrativeNotes":[],"physicalDescriptions":["35
+  linear feet"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-04-13T12:46:01Z'
+created: '2025-04-13T12:46:01Z'
+timestamp: '2025-04-13T12:46:01Z'
+author_struct:
+- creator:
+  - link: Rambo, William R. (William Ralph), 1916-
+    search: Rambo, William R. (William Ralph), 1916-
+marc_links_struct:
+- version: '0.2'
+  stanford_only: false
+  stanford_law_only: false
+  link_text: Finding aid
+  link_title: ''
+  additional_text:
+  material_type: Finding aid
+  note:
+  href: https://oac.cdlib.org/findaid/ark:/13030/kt6h4nf6c6/
+  sort:
+  casalini:
+  fulltext: false
+  finding_aid: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - These papers, kept in their original arrangement, reflect Prof. Rambo's administrative
+      responsibilities as well as his research interests, largely during his time
+      at Stanford University.  Stanford subjects include the School of Engineering,
+      the Electrical Engineering Department, the Stanford Electronic Labs, the Applied
+      Electronics Lab, research policy at Stanford, courses, the Academic Senate,
+      the University Land and Building Development Committee, and student demonstrations.  Other
+      subjects include the American Society for Engineering Education, Engineering
+      College Research Council, Joint Services Electronic Program, and Rambo's research
+      work with the U.S. Army, Air Force, and Navy.
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    hrid: ah4085177_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:23.091Z'
+      updatedDate: '2023-08-21T06:46:23.091Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SC0132
+    instanceId: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+    holdingsType:
+      id: 06667eb8-8ac1-49f2-93ba-82e3935e50dc
+      name: Archival Collection
+      source: local
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    holdingsTypeId: 06667eb8-8ac1-49f2-93ba-82e3935e50dc
+    callNumberTypeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 01ca98cd-57c7-5ab4-8382-4a002e4a2a06
+    hrid: ai4085177_1_1
+    notes: []
+    status: Available
+    barcode: '36105116676094'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 FLAT BOX 9
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 FLAT BOX 9 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 0f1f5c88-0200-552c-a3b8-db4793b6d0d5
+    hrid: ai4085177_1_5
+    notes: []
+    status: Available
+    barcode: '36105116534921'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 2
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 2 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 116c788c-45a5-5956-9117-7f91581142a9
+    hrid: ai4085177_1_19
+    notes: []
+    status: Available
+    barcode: '36105116534996'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 9
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 9 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 12d10a49-d875-5f6d-b714-310039c9cc3a
+    hrid: ai4085177_1_41
+    notes: []
+    status: Available
+    barcode: '36105116534863'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 19
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 19 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 2172ba61-15c2-58ec-901f-4f89fbb8bfe9
+    hrid: ai4085177_1_27
+    notes: []
+    status: Available
+    barcode: '36105116534889'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 12
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 12 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 2dc10ea0-6046-5dd3-9ee6-63131da5053d
+    hrid: ai4085177_1_23
+    notes: []
+    status: Available
+    barcode: '36105116534871'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 11
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 11 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 2ea06ac0-f7e1-5015-96cc-f48a088f420c
+    hrid: ai4085177_1_29
+    notes: []
+    status: Available
+    barcode: '36105116534848'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 13
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 13 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 2eaf7cc8-c1f0-55eb-a6b3-36907a185282
+    hrid: ai4085177_1_21
+    notes: []
+    status: Available
+    barcode: '36105116535001'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 10
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 10 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 2efe697e-b1be-5012-9fbe-1340fdb17913
+    hrid: ai4085177_1_35
+    notes: []
+    status: Available
+    barcode: '36105116534897'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 16
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 16 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 30386e50-7f37-56ba-a219-6eb398e270d8
+    hrid: ai4085177_1_37
+    notes: []
+    status: Available
+    barcode: '36105116534905'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 17
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 17 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 33f9e7ee-d546-51aa-847f-2993b986da99
+    hrid: ai4085177_1_55
+    notes: []
+    status: Available
+    barcode: '36105116676078'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 7
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 7 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 356f93ac-ea9e-5ced-90fd-7ce32180b2ae
+    hrid: ai4085177_1_33
+    notes: []
+    status: Available
+    barcode: '36105116534822'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 15
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 15 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 44b908e6-2aac-5fee-92d1-0fe4ea388a35
+    hrid: ai4085177_1_57
+    notes: []
+    status: Available
+    barcode: '36105116676086'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 8
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 8 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 4c3360b3-1b9c-5e66-bd77-cda44cf2547b
+    hrid: ai4085177_1_47
+    notes: []
+    status: Available
+    barcode: '36105116676037'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 3
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 3 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 4fc649cd-df78-59a9-8b7c-727d892ed126
+    hrid: ai4085177_1_39
+    notes: []
+    status: Available
+    barcode: '36105116534830'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 18
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 18 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 533e8cb0-05f4-5b35-ab3c-7bbb118ece8f
+    hrid: ai4085177_1_51
+    notes: []
+    status: Available
+    barcode: '36105116676052'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 5
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 5 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 5685ca62-d3d5-510c-97c4-0991ea0f9bc5
+    hrid: ai4085177_1_3
+    notes: []
+    status: Available
+    barcode: '36105116534913'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 1
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 1 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 5adab065-daf3-5f3d-a1ba-591d6874da63
+    hrid: ai4085177_1_45
+    notes: []
+    status: Available
+    barcode: '36105116676029'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 2
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 2 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 5e956b5a-4bff-5411-bfd5-29a188f0c60d
+    hrid: ai4085177_1_9
+    notes: []
+    status: Available
+    barcode: '36105116534970'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 4
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 4 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 7774d700-ce51-5c81-80f2-5eff3dd6f326
+    hrid: ai4085177_1_17
+    notes: []
+    status: Available
+    barcode: '36105116535019'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 8
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 8 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 77c9ab0c-df4a-52cd-b7e4-db58201a447c
+    hrid: ai4085177_1_7
+    notes: []
+    status: Available
+    barcode: '36105116534939'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 3
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 3 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 784dce22-c40c-5f70-8d5f-3ef15a782056
+    hrid: ai4085177_1_43
+    notes: []
+    status: Available
+    barcode: '36105116534947'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: BOX 20
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 BOX 20 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 870d89ad-6f59-57c4-b20b-a62e39a19fb1
+    hrid: ai4085177_1_49
+    notes: []
+    status: Available
+    barcode: '36105116676045'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 4
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 4 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 97e4e9d0-3cda-5a13-9ba4-b46e4510a8cb
+    hrid: ai4085177_1_25
+    notes: []
+    status: Available
+    barcode: '36105116676011'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 1
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 1 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: b20ac9c2-fc07-5713-9551-bea82a52e49b
+    hrid: ai4085177_1_53
+    notes: []
+    status: Available
+    barcode: '36105116676060'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: 1997-093 BOX 6
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 1997-093 BOX 6 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: e93d541e-dc52-5df2-b573-ae004f36ebcf
+    hrid: ai4085177_1_31
+    notes: []
+    status: Available
+    barcode: '36105116534954'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 14
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 14 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: ee8f6b9f-61a7-5bae-acdc-c5daab3a6574
+    hrid: ai4085177_1_11
+    notes: []
+    status: Available
+    barcode: '36105116534962'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 5
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 5 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: efeb51e6-84ce-5e7a-9380-e9d3a5a92ddf
+    hrid: ai4085177_1_15
+    notes: []
+    status: Available
+    barcode: '36105116534988'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 7
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 7 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: f22de359-29bb-5dba-a820-f65730b43574
+    hrid: ai4085177_1_13
+    notes: []
+    status: Available
+    barcode: '36105116534855'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:47.003Z'
+      updatedDate: '2023-08-21T06:46:47.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0132
+    copyNumber: '1'
+    enumeration: CARTON 6
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 62bf0dc2-6af3-50d6-b5ce-1ded43ae6960
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0132 CARTON 6 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0132
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 01ca98cd-57c7-5ab4-8382-4a002e4a2a06
+  barcode: '36105116676094'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 FLAT BOX 9
+  full_shelfkey: other sc000132 001997-000093 flat box 000009
+- id: 0f1f5c88-0200-552c-a3b8-db4793b6d0d5
+  barcode: '36105116534921'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 2
+  full_shelfkey: other sc000132 carton 000002
+- id: 116c788c-45a5-5956-9117-7f91581142a9
+  barcode: '36105116534996'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 9
+  full_shelfkey: other sc000132 carton 000009
+- id: 12d10a49-d875-5f6d-b714-310039c9cc3a
+  barcode: '36105116534863'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 19
+  full_shelfkey: other sc000132 carton 000019
+- id: 2172ba61-15c2-58ec-901f-4f89fbb8bfe9
+  barcode: '36105116534889'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 12
+  full_shelfkey: other sc000132 carton 000012
+- id: 2dc10ea0-6046-5dd3-9ee6-63131da5053d
+  barcode: '36105116534871'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 11
+  full_shelfkey: other sc000132 carton 000011
+- id: 2ea06ac0-f7e1-5015-96cc-f48a088f420c
+  barcode: '36105116534848'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 13
+  full_shelfkey: other sc000132 carton 000013
+- id: 2eaf7cc8-c1f0-55eb-a6b3-36907a185282
+  barcode: '36105116535001'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 10
+  full_shelfkey: other sc000132 carton 000010
+- id: 2efe697e-b1be-5012-9fbe-1340fdb17913
+  barcode: '36105116534897'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 16
+  full_shelfkey: other sc000132 carton 000016
+- id: 30386e50-7f37-56ba-a219-6eb398e270d8
+  barcode: '36105116534905'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 17
+  full_shelfkey: other sc000132 carton 000017
+- id: 33f9e7ee-d546-51aa-847f-2993b986da99
+  barcode: '36105116676078'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 7
+  full_shelfkey: other sc000132 001997-000093 box 000007
+- id: 356f93ac-ea9e-5ced-90fd-7ce32180b2ae
+  barcode: '36105116534822'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 15
+  full_shelfkey: other sc000132 carton 000015
+- id: 44b908e6-2aac-5fee-92d1-0fe4ea388a35
+  barcode: '36105116676086'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 8
+  full_shelfkey: other sc000132 001997-000093 box 000008
+- id: 4c3360b3-1b9c-5e66-bd77-cda44cf2547b
+  barcode: '36105116676037'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 3
+  full_shelfkey: other sc000132 001997-000093 box 000003
+- id: 4fc649cd-df78-59a9-8b7c-727d892ed126
+  barcode: '36105116534830'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 18
+  full_shelfkey: other sc000132 carton 000018
+- id: 533e8cb0-05f4-5b35-ab3c-7bbb118ece8f
+  barcode: '36105116676052'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 5
+  full_shelfkey: other sc000132 001997-000093 box 000005
+- id: 5685ca62-d3d5-510c-97c4-0991ea0f9bc5
+  barcode: '36105116534913'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 1
+  full_shelfkey: other sc000132 carton 000001
+- id: 5adab065-daf3-5f3d-a1ba-591d6874da63
+  barcode: '36105116676029'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 2
+  full_shelfkey: other sc000132 001997-000093 box 000002
+- id: 5e956b5a-4bff-5411-bfd5-29a188f0c60d
+  barcode: '36105116534970'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 4
+  full_shelfkey: other sc000132 carton 000004
+- id: 7774d700-ce51-5c81-80f2-5eff3dd6f326
+  barcode: '36105116535019'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 8
+  full_shelfkey: other sc000132 carton 000008
+- id: 77c9ab0c-df4a-52cd-b7e4-db58201a447c
+  barcode: '36105116534939'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 3
+  full_shelfkey: other sc000132 carton 000003
+- id: 784dce22-c40c-5f70-8d5f-3ef15a782056
+  barcode: '36105116534947'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 BOX 20
+  full_shelfkey: other sc000132 box 000020
+- id: 870d89ad-6f59-57c4-b20b-a62e39a19fb1
+  barcode: '36105116676045'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 4
+  full_shelfkey: other sc000132 001997-000093 box 000004
+- id: 97e4e9d0-3cda-5a13-9ba4-b46e4510a8cb
+  barcode: '36105116676011'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 1
+  full_shelfkey: other sc000132 001997-000093 box 000001
+- id: b20ac9c2-fc07-5713-9551-bea82a52e49b
+  barcode: '36105116676060'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 1997-093 BOX 6
+  full_shelfkey: other sc000132 001997-000093 box 000006
+- id: e93d541e-dc52-5df2-b573-ae004f36ebcf
+  barcode: '36105116534954'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 14
+  full_shelfkey: other sc000132 carton 000014
+- id: ee8f6b9f-61a7-5bae-acdc-c5daab3a6574
+  barcode: '36105116534962'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 5
+  full_shelfkey: other sc000132 carton 000005
+- id: efeb51e6-84ce-5e7a-9380-e9d3a5a92ddf
+  barcode: '36105116534988'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 7
+  full_shelfkey: other sc000132 carton 000007
+- id: f22de359-29bb-5dba-a820-f65730b43574
+  barcode: '36105116534855'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: d70d30e9-53a0-59bf-988c-6ce27c1fda2a
+  instance_hrid: a4085177
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0132
+  callnumber: SC0132 CARTON 6
+  full_shelfkey: other sc000132 carton 000006
+browse_nearby_struct:
+- lopped_callnumber: SC0132
+  shelfkey: other sc000132 001997-000093 box 000001
+  reverse_shelfkey: b6il8~7nzzzywx~zzyqqs~zzzzqw~ob2~zzzzzy~~~~~~~~~~~
+  callnumber: SC0132 1997-093 BOX 1
+  scheme: ALPHANUM
+  item_id: 97e4e9d0-3cda-5a13-9ba4-b46e4510a8cb
