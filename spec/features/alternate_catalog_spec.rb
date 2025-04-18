@@ -44,7 +44,7 @@ RSpec.feature 'Alterate catalog results', :js do
     visit articles_path(q: '1*')
     within '.alternate-catalog' do
       expect(page).to have_css 'h3', text: 'Your search also found results in'
-      expect(page).to have_css 'a.btn', text: 'See 43 catalog results'
+      expect(page).to have_css 'a.btn', text: 'See 45 catalog results'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Book"]', text: 'Book (18)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Image"]', text: 'Image (7)'
       expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Database"]', text: 'Database (5)'

@@ -1,0 +1,1271 @@
+---
+id: '6631609'
+hashed_id_ssi: fe4b9cc160551e2704a490035e26600e
+marc_json_struct:
+- '{"leader":"05063cmm a2200649 a 4500","fields":[{"001":"a6631609"},{"007":"co cga||||||||"},{"008":"011029s2000    cc     fq  g        eng
+  d"},{"005":"20250225203953.3"},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"1882982398"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"9781882982394"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"188298241X"},{"q":"(guide)"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"9781882982417"},{"q":"(guide)"}]}},{"029":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"YDXCP"},{"b":"1673383"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)48227022"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"MUS"},{"b":"eng"},{"c":"MUS"},{"d":"OCLCQ"},{"d":"BAKER"},{"d":"YDXCP"},{"d":"OCLCQ"},{"d":"OCLCF"},{"d":"OCLCO"},{"d":"OCLCQ"},{"d":"OCLCO"},{"d":"OCLCQ"},{"d":"OCLCL"},{"d":"OCLCO"},{"d":"STF"}]}},{"050":{"ind1":"
+  ","ind2":"4","subfields":[{"a":"LB2341"},{"b":".V57 2000"}]}},{"099":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"SCM0445"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Virtual
+  U :"},{"b":"a simulation of university system management /"},{"c":"Enlight Software
+  ; Jackson Hole Higher Education Group ; Digitalmill ; developed by William F. Massy
+  [and Trevor Chan]."}]}},{"250":{"ind1":" ","ind2":" ","subfields":[{"a":"Administrator
+  version."}]}},{"256":{"ind1":" ","ind2":" ","subfields":[{"a":"Electronic data and
+  program."}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"[Hong Kong] :"},{"b":"Enlight
+  Software ;"},{"a":"[Bolton, Mass.] :"},{"b":"Anker Pub. [distributor],"},{"c":"©2000."}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1 computer optical disc :"},{"b":"sound, color ;"},{"c":"4
+  3/4 in. +"},{"e":"1 guide (viii, 132 pages ; 23 cm) + 1 user manual (v, 73 pages
+  : illustrations ; 23 cm)"}]}},{"538":{"ind1":" ","ind2":" ","subfields":[{"a":"System
+  requirements: Windows 95/98/2000; 32 MB of RAM; 65 MB available hard disk space;
+  CD-ROM drive; DirectX 6.0 with compatible graphics card."}]}},{"500":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Not compatible with WindowsNT 3.5 or 4.0."}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Title from title screen."}]}},{"500":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Accompanying guide: Virtual U strategy guide by Neil S. Salkind
+  and Therese Rainwater."}]}},{"505":{"ind1":"0","ind2":" ","subfields":[{"a":"Scenario
+  1. Pay faculty better -- 2. Allocate new money -- 3. Teach better -- 4. Improve
+  research performance -- 5. Win games -- 6. Reduce tuition -- 7. Respond to enrollment
+  shifts -- 8. Enroll more minority students -- 9. Hire more minority faculty members
+  -- 10. Balance the budget."}]}},{"506":{"ind1":"0","ind2":" ","subfields":[{"a":"Materials
+  are open for research use. Audio-visual materials are not available in original
+  format and must be reformatted to a digital use copy."}]}},{"520":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"Virtual U is a computer simulation game that engages participants
+  in exercises designed to improve understanding of universities as systems. Participants
+  take the point of view of a university president. They set institutional and departmental
+  budgets and make decisions in areas such as faculty hiring and compensation, enrollment
+  management, incentives for teaching and research, finance, facilities, and even
+  parking. Begun in 1994, Enlight Software of Hong Kong designed and developed the
+  game, which was first released in 1997. Trevor Chan, Enlight''s President, designed
+  the previous games Capitalism and Seven Kingdoms. The Jackson Hole Higher Education
+  Group developed the simulation engine, which was an entirely new model although
+  it does draw heavily on the work of William F. Massy. Data to drive the engine were
+  collected by the University of Pennsylvania''s Institute for Research in Higher
+  Education. The Alfred P. Sloan Foundation supported the project from its inception."}]}},{"521":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"University administrators, deans, and department
+  chairs; university faculty; educational organizations and associations; educational
+  consultants; business, management, and educational students; higher education writers;
+  student game-players; university alumni."}]}},{"524":{"ind1":" ","ind2":" ","subfields":[{"a":"[identification
+  of item], Virtual U [video game]: A Simulation of University System Management (SCM0445).
+  Dept. of Special Collections and University Archives, Stanford University Libraries,
+  Stanford, Calif."}]}},{"540":{"ind1":" ","ind2":" ","subfields":[{"a":"While University
+  Archives is the owner of the physical and/or digital items, permission to examine
+  collection materials is not an authorization to publish. These materials are made
+  available for use in research, teaching, and private study. Any transmission or
+  reproduction beyond that allowed by fair use requires permission from the owners
+  of rights, heir(s) or assigns."}]}},{"536":{"ind1":" ","ind2":" ","subfields":[{"a":"Support
+  provided by the Alfred P. Sloan Foundation."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Universities
+  and colleges"},{"x":"Administration"},{"v":"Video games."}]}},{"650":{"ind1":" ","ind2":"7","subfields":[{"a":"Universities
+  and colleges"},{"x":"Administration"},{"2":"fast"}]}},{"655":{"ind1":" ","ind2":"7","subfields":[{"a":"Computer
+  games."},{"2":"fast"},{"0":"(OCoLC)fst01423728"}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Massy, William F."}]}},{"700":{"ind1":"1","ind2":" ","subfields":[{"a":"Chan,
+  Trevor."}]}},{"700":{"ind1":"1","ind2":" ","subfields":[{"a":"Salkind, Neil S."}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Rainwater, Therese."}]}},{"710":{"ind1":"2","ind2":" ","subfields":[{"a":"Enlight
+  Software."}]}},{"710":{"ind1":"2","ind2":" ","subfields":[{"a":"Jackson Hole Higher
+  Education Group."}]}},{"710":{"ind1":"2","ind2":" ","subfields":[{"a":"Anker Publishing."}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"Digitalmill (Firm)"},{"1":"https://id.oclc.org/worldcat/entity/E39QH7JmpGgrCXTWVVr7yfcGTR"}]}},{"740":{"ind1":"0","ind2":"2","subfields":[{"a":"Virtual
+  U strategy guide."}]}},{"856":{"ind1":"4","ind2":"2","subfields":[{"3":"Finding
+  Aid"},{"u":"https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://purl.stanford.edu/rc671ym6474"},{"x":"SDR-PURL"},{"x":"collection"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ocm48227022"}]}},{"938":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Baker & Taylor"},{"b":"BKTY"},{"c":"130.00"},{"d":"134.95"},{"i":"1882982398"},{"n":"0003568638"},{"s":"active"}]}},{"938":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"YBP Library Services"},{"b":"YANK"},{"n":"1673383"}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Z0"},{"b":"STF"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"93289e1f-8763-5dcd-8bd5-640af6f767d7"},{"s":"14b52e2d-5bc7-580a-94bf-e62e3591d031"}]}}]}'
+all_search: 'Virtual U : a simulation of university system management / Enlight Software
+  ; Jackson Hole Higher Education Group ; Digitalmill ; developed by William F. Massy
+  [and Trevor Chan]. Administrator version. Electronic data and program. [Hong Kong]
+  : Enlight Software ; [Bolton, Mass.] : Anker Pub. [distributor], ©2000. 1 computer
+  optical disc : sound, color ; 4 3/4 in. + 1 guide (viii, 132 pages ; 23 cm) + 1
+  user manual (v, 73 pages : illustrations ; 23 cm) System requirements: Windows 95/98/2000;
+  32 MB of RAM; 65 MB available hard disk space; CD-ROM drive; DirectX 6.0 with compatible
+  graphics card. Not compatible with WindowsNT 3.5 or 4.0. Title from title screen.
+  Accompanying guide: Virtual U strategy guide by Neil S. Salkind and Therese Rainwater.
+  Scenario 1. Pay faculty better -- 2. Allocate new money -- 3. Teach better -- 4.
+  Improve research performance -- 5. Win games -- 6. Reduce tuition -- 7. Respond
+  to enrollment shifts -- 8. Enroll more minority students -- 9. Hire more minority
+  faculty members -- 10. Balance the budget. Materials are open for research use.
+  Audio-visual materials are not available in original format and must be reformatted
+  to a digital use copy. Virtual U is a computer simulation game that engages participants
+  in exercises designed to improve understanding of universities as systems. Participants
+  take the point of view of a university president. They set institutional and departmental
+  budgets and make decisions in areas such as faculty hiring and compensation, enrollment
+  management, incentives for teaching and research, finance, facilities, and even
+  parking. Begun in 1994, Enlight Software of Hong Kong designed and developed the
+  game, which was first released in 1997. Trevor Chan, Enlight''s President, designed
+  the previous games Capitalism and Seven Kingdoms. The Jackson Hole Higher Education
+  Group developed the simulation engine, which was an entirely new model although
+  it does draw heavily on the work of William F. Massy. Data to drive the engine were
+  collected by the University of Pennsylvania''s Institute for Research in Higher
+  Education. The Alfred P. Sloan Foundation supported the project from its inception.
+  University administrators, deans, and department chairs; university faculty; educational
+  organizations and associations; educational consultants; business, management, and
+  educational students; higher education writers; student game-players; university
+  alumni. [identification of item], Virtual U [video game]: A Simulation of University
+  System Management (SCM0445). Dept. of Special Collections and University Archives,
+  Stanford University Libraries, Stanford, Calif. While University Archives is the
+  owner of the physical and/or digital items, permission to examine collection materials
+  is not an authorization to publish. These materials are made available for use in
+  research, teaching, and private study. Any transmission or reproduction beyond that
+  allowed by fair use requires permission from the owners of rights, heir(s) or assigns.
+  Support provided by the Alfred P. Sloan Foundation. Universities and colleges Administration
+  Video games. Universities and colleges Administration fast Computer games. fast
+  (OCoLC)fst01423728 Massy, William F. Chan, Trevor. Salkind, Neil S. Rainwater, Therese.
+  Enlight Software. Jackson Hole Higher Education Group. Anker Publishing. Digitalmill
+  (Firm) https://id.oclc.org/worldcat/entity/E39QH7JmpGgrCXTWVVr7yfcGTR Virtual U
+  strategy guide. Finding Aid https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
+  https://purl.stanford.edu/rc671ym6474 SDR-PURL collection'
+title_245a_search: 'Virtual U :'
+title_245_search: 'Virtual U : a simulation of university system management /'
+title_related_search:
+- Virtual U strategy guide.
+title_245a_display: Virtual U
+title_245c_display: Enlight Software ; Jackson Hole Higher Education Group ; Digitalmill
+  ; developed by William F. Massy [and Trevor Chan].
+title_display: 'Virtual U : a simulation of university system management'
+title_full_display: 'Virtual U : a simulation of university system management / Enlight
+  Software ; Jackson Hole Higher Education Group ; Digitalmill ; developed by William
+  F. Massy [and Trevor Chan].'
+title_sort: Virtual U a simulation of university system management
+author_title_245ac_search:
+- 'Virtual U : Enlight Software ; Jackson Hole Higher Education Group ; Digitalmill
+  ; developed by William F. Massy [and Trevor Chan].'
+author_7xx_search:
+- Massy, William F.
+- Chan, Trevor.
+- Salkind, Neil S.
+- Rainwater, Therese.
+- Enlight Software.
+- Jackson Hole Higher Education Group.
+- Anker Publishing.
+- Digitalmill (Firm)
+author_person_facet:
+- Massy, William F.
+- Chan, Trevor
+- Salkind, Neil S.
+- Rainwater, Therese
+author_other_facet:
+- Enlight Software
+- Jackson Hole Higher Education Group
+- Anker Publishing
+- Digitalmill (Firm)
+author_sort: "\U0010FFFF Virtual U a simulation of university system management"
+works_struct:
+- '{"included":[{"link":"Virtual U strategy guide.","search":"Virtual U strategy guide.","pre_text":"","post_text":"","authorities":[],"rwo":[]}],"related":[{"link":"Virtual
+  U strategy guide.","search":"Virtual U strategy guide.","pre_text":"","post_text":"","authorities":[],"rwo":[]}]}'
+author_authorities_ssim:
+- https://id.oclc.org/worldcat/entity/E39QH7JmpGgrCXTWVVr7yfcGTR
+topic_search:
+- Universities and colleges
+topic_display:
+- Universities and colleges
+topic_subx_search:
+- Administration
+subject_other_search:
+- Computer games.
+subject_other_display:
+- Computer games.
+subject_other_subvy_search:
+- Video games.
+subject_all_search:
+- Universities and colleges Administration Video games.
+- Universities and colleges Administration
+- Computer games.
+topic_facet:
+- Universities and colleges
+pub_search:
+- "[Hong Kong] : Enlight Software ; [Bolton, Mass.] : Anker Pub. [distributor]"
+pub_display:
+- "[Hong Kong] : Enlight Software ; [Bolton, Mass.] : Anker Pub. [distributor]"
+pub_country: China
+pub_date: '2000'
+pub_date_search: '2000'
+pub_date_sort: '2000'
+pub_year_tisim:
+- 2000
+pub_year_ss: '2000'
+publication_year_isi: 2000
+imprint_display:
+- 'Administrator version. - [Hong Kong] : Enlight Software ; [Bolton, Mass.] : Anker
+  Pub. [distributor], ©2000.'
+date_cataloged: '2007-03-01T00:00:00Z'
+language:
+- English
+url_fulltext:
+- https://purl.stanford.edu/rc671ym6474
+url_suppl:
+- https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
+oclc:
+- '48227022'
+access_facet:
+- Online
+- At the Library
+format_main_ssim:
+- Software/Multimedia
+- Archive/Manuscript
+genre_ssim:
+- Computer games
+- Video games
+physical:
+- '1 computer optical disc : sound, color ; 4 3/4 in. + 1 guide (viii, 132 pages ;
+  23 cm) + 1 user manual (v, 73 pages : illustrations ; 23 cm)'
+toc_search:
+- Scenario 1. Pay faculty better -- 2. Allocate new money -- 3. Teach better -- 4.
+  Improve research performance -- 5. Win games -- 6. Reduce tuition -- 7. Respond
+  to enrollment shifts -- 8. Enroll more minority students -- 9. Hire more minority
+  faculty members -- 10. Balance the budget.
+summary_search:
+- Virtual U is a computer simulation game that engages participants in exercises designed
+  to improve understanding of universities as systems. Participants take the point
+  of view of a university president. They set institutional and departmental budgets
+  and make decisions in areas such as faculty hiring and compensation, enrollment
+  management, incentives for teaching and research, finance, facilities, and even
+  parking. Begun in 1994, Enlight Software of Hong Kong designed and developed the
+  game, which was first released in 1997. Trevor Chan, Enlight's President, designed
+  the previous games Capitalism and Seven Kingdoms. The Jackson Hole Higher Education
+  Group developed the simulation engine, which was an entirely new model although
+  it does draw heavily on the work of William F. Massy. Data to drive the engine were
+  collected by the University of Pennsylvania's Institute for Research in Higher Education.
+  The Alfred P. Sloan Foundation supported the project from its inception.
+summary_display:
+- Virtual U is a computer simulation game that engages participants in exercises designed
+  to improve understanding of universities as systems. Participants take the point
+  of view of a university president. They set institutional and departmental budgets
+  and make decisions in areas such as faculty hiring and compensation, enrollment
+  management, incentives for teaching and research, finance, facilities, and even
+  parking. Begun in 1994, Enlight Software of Hong Kong designed and developed the
+  game, which was first released in 1997. Trevor Chan, Enlight's President, designed
+  the previous games Capitalism and Seven Kingdoms. The Jackson Hole Higher Education
+  Group developed the simulation engine, which was an entirely new model although
+  it does draw heavily on the work of William F. Massy. Data to drive the engine were
+  collected by the University of Pennsylvania's Institute for Research in Higher Education.
+  The Alfred P. Sloan Foundation supported the project from its inception.
+isbn_search:
+- '1882982398'
+- '9781882982394'
+- 188298241X
+- '9781882982417'
+isbn_display:
+- '1882982398'
+- '9781882982394'
+- 188298241X
+- '9781882982417'
+callnum_facet_hsim:
+- LC Classification|L - Education|LB - Theory & Practice of Education
+callnum_search:
+- ZMS 1688
+- ZMS 1688 PRODUCT MANUAL
+- SCM0445 ACCN 2015-099 HALF BOX 1
+- ZMS 1688 STRATEGY & TECHNICAL GUIDE
+lc_assigned_callnum_ssim:
+- LB2341 .V57 2000
+barcode_search:
+- '36105127681539'
+- '36105127681547'
+- '36105125791397'
+- '36105127681554'
+item_barcodes:
+- '36105127681539'
+- '36105127681547'
+- '36105125791397'
+- '36105127681554'
+preferred_barcode: '36105127681539'
+holdings_library_code_ssim:
+- SUL
+- SPEC-COLL
+- MEDIA-CENTER
+library_code_facet_ssim:
+- MEDIA-CENTER
+- SPEC-COLL
+location_code_facet_ssim:
+- MEDIA-CDCAB
+- MEDIA-CAGE
+- SPEC-SAL3-U-ARCHIVES
+building_facet:
+- Media Center
+- Special Collections
+- Stanford Digital Repository
+building_location_facet_ssim:
+- MEDIA-CENTER/*
+- MEDIA-CENTER/MEDIA-CDCAB
+- MEDIA-CENTER/*/type/multimedia
+- MEDIA-CENTER/MEDIA-CDCAB/type/multimedia
+- MEDIA-CENTER/MEDIA-CAGE
+- MEDIA-CENTER/MEDIA-CAGE/type/multimedia
+- SPEC-COLL/*
+- SPEC-COLL/SPEC-SAL3-U-ARCHIVES
+- SPEC-COLL/*/type/electronic resource
+- SPEC-COLL/SPEC-SAL3-U-ARCHIVES/type/electronic resource
+shelfkey:
+- other zms 001688
+- other scm000445 accn 002015-000099 half box 000001
+reverse_shelfkey:
+- b6il8~0d7~zzytrr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- b6il8~7ndzzzvvu~pnnc~zzxzyu~zzzzqq~ipek~ob2~zzzzzy
+managed_purl_urls:
+- https://purl.stanford.edu/rc671ym6474
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+collection_type:
+- Digital Collection
+context_source_ssi: folio
+context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '007'
+- '008'
+- '005'
+- '020'
+- '029'
+- '035'
+- '040'
+- '050'
+- '099'
+- '245'
+- '250'
+- '256'
+- '260'
+- '300'
+- '538'
+- '500'
+- '505'
+- '506'
+- '520'
+- '521'
+- '524'
+- '540'
+- '536'
+- '650'
+- '655'
+- '700'
+- '710'
+- '740'
+- '856'
+- '938'
+- '994'
+- '999'
+- 020a
+- 020aq
+- '029ab'
+- 035a
+- 040abcdddddddddddd
+- 050ab
+- '099a'
+- 245abc
+- 250a
+- 256a
+- 260ababc
+- 300abce
+- 538a
+- 500a
+- 505a
+- 506a
+- 520a
+- 521a
+- 524a
+- 540a
+- 536a
+- 650axv
+- 650ax2
+- 655a20
+- 700a
+- 710a
+- 710a1
+- 740a
+- 8563u
+- 856uxx
+- 938abcdins
+- 938abn
+- 994ab
+- 999is
+- "?020a"
+- "?020q"
+- "?029a"
+- "?029b"
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040c"
+- "?040d"
+- "?050a"
+- "?050b"
+- "?099a"
+- "?245a"
+- "?245b"
+- "?245c"
+- "?250a"
+- "?256a"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?300e"
+- "?538a"
+- "?500a"
+- "?505a"
+- "?506a"
+- "?520a"
+- "?521a"
+- "?524a"
+- "?540a"
+- "?536a"
+- "?650a"
+- "?650x"
+- "?650v"
+- "?6502"
+- "?655a"
+- "?6552"
+- "?6550"
+- "?700a"
+- "?710a"
+- "?7101"
+- "?740a"
+- "?8563"
+- "?856u"
+- "?856x"
+- "?938a"
+- "?938b"
+- "?938c"
+- "?938d"
+- "?938i"
+- "?938n"
+- "?938s"
+- "?994a"
+- "?994b"
+- "?999i"
+- "?999s"
+bib_search: 'Virtual U : a simulation of university system management / Enlight Software
+  ; Jackson Hole Higher Education Group ; Digitalmill ; developed by William F. Massy
+  [and Trevor Chan]. [Hong Kong] : Enlight Software ; [Bolton, Mass.] : Anker Pub.
+  [distributor], ©2000. Massy, William F. Chan, Trevor. Salkind, Neil S. Rainwater,
+  Therese. Enlight Software. Jackson Hole Higher Education Group. Anker Publishing.
+  Digitalmill (Firm) Universities and colleges Software/Multimedia Archive/Manuscript'
+vern_bib_search: Software/Multimedia Archive/Manuscript
+uuid_ssi: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"93289e1f-8763-5dcd-8bd5-640af6f767d7","hrid":"a6631609","tags":{"tagList":[]},"notes":[{"note":"System
+  requirements: Windows 95/98/2000; 32 MB of RAM; 65 MB available hard disk space;
+  CD-ROM drive; DirectX 6.0 with compatible graphics card","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"},{"note":"Not
+  compatible with WindowsNT 3.5 or 4.0","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Title
+  from title screen","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Accompanying
+  guide: Virtual U strategy guide by Neil S. Salkind and Therese Rainwater","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Scenario
+  1. Pay faculty better -- 2. Allocate new money -- 3. Teach better -- 4. Improve
+  research performance -- 5. Win games -- 6. Reduce tuition -- 7. Respond to enrollment
+  shifts -- 8. Enroll more minority students -- 9. Hire more minority faculty members
+  -- 10. Balance the budget","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"},{"note":"Materials
+  are open for research use. Audio-visual materials are not available in original
+  format and must be reformatted to a digital use copy","staffOnly":false,"instanceNoteTypeId":"e814a32e-02da-4773-8f3a-6629cdb7ecdf"},{"note":"Virtual
+  U is a computer simulation game that engages participants in exercises designed
+  to improve understanding of universities as systems. Participants take the point
+  of view of a university president. They set institutional and departmental budgets
+  and make decisions in areas such as faculty hiring and compensation, enrollment
+  management, incentives for teaching and research, finance, facilities, and even
+  parking. Begun in 1994, Enlight Software of Hong Kong designed and developed the
+  game, which was first released in 1997. Trevor Chan, Enlight''s President, designed
+  the previous games Capitalism and Seven Kingdoms. The Jackson Hole Higher Education
+  Group developed the simulation engine, which was an entirely new model although
+  it does draw heavily on the work of William F. Massy. Data to drive the engine were
+  collected by the University of Pennsylvania''s Institute for Research in Higher
+  Education. The Alfred P. Sloan Foundation supported the project from its inception","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"University
+  administrators, deans, and department chairs; university faculty; educational organizations
+  and associations; educational consultants; business, management, and educational
+  students; higher education writers; student game-players; university alumni","staffOnly":false,"instanceNoteTypeId":"922fdcde-952d-45c2-b9ea-5fc8959ad116"},{"note":"[identification
+  of item], Virtual U [video game]: A Simulation of University System Management (SCM0445).
+  Dept. of Special Collections and University Archives, Stanford University Libraries,
+  Stanford, Calif","staffOnly":false,"instanceNoteTypeId":"09812302-92f7-497e-9120-ed25de458ea5"},{"note":"While
+  University Archives is the owner of the physical and/or digital items, permission
+  to examine collection materials is not an authorization to publish. These materials
+  are made available for use in research, teaching, and private study. Any transmission
+  or reproduction beyond that allowed by fair use requires permission from the owners
+  of rights, heir(s) or assigns","staffOnly":false,"instanceNoteTypeId":"f677d908-69c6-4450-94a6-abbcf94a1ee5"},{"note":"Support
+  provided by the Alfred P. Sloan Foundation","staffOnly":false,"instanceNoteTypeId":"f289c02b-9515-4c3f-b242-ffd071e82135"}],"title":"Virtual
+  U : a simulation of university system management / Enlight Software ; Jackson Hole
+  Higher Education Group ; Digitalmill ; developed by William F. Massy [and Trevor
+  Chan].","series":[],"source":"MARC","_version":10,"editions":["Administrator version."],"metadata":{"createdDate":"2023-08-21T09:58:43.187Z","updatedDate":"2025-02-25T20:39:54.761Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"e5094801-9452-4ca8-924c-d3e9a33512f5"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Universities
+  and colleges--Administration--Video games"},{"value":"Universities and colleges--Administration"},{"value":"Computer
+  games"}],"languages":["eng"],"indexTitle":"Virtual U : a simulation of university
+  system management /","identifiers":[{"value":"1882982398","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9781882982394","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"188298241X
+  (guide)","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9781882982417
+  (guide)","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(OCoLC-M)48227022","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  ocm48227022","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"[Hong
+  Kong] ; [Bolton, Mass.]","publisher":"Enlight Software ; Anker Pub. [distributor]","dateOfPublication":"©2000"}],"contributors":[{"name":"Massy,
+  William F.","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Chan,
+  Trevor","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Salkind,
+  Neil S.","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Rainwater,
+  Therese","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Enlight
+  Software","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"},{"name":"Jackson
+  Hole Higher Education Group","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"},{"name":"Anker
+  Publishing","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"},{"name":"Digitalmill
+  (Firm)","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2007-03-01","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"LB2341
+  .V57 2000","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://purl.stanford.edu/rc671ym6474","name":"Version
+  of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"},{"uri":"https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r","name":"Related
+  resource","relationshipId":"5bfe1b7b-f151-4501-8cfa-23b321d5cd1e","materialsSpecification":"Finding
+  Aid"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T09:58:42.692+0000","statisticalCodeIds":["36dfb19d-8d6b-4c4f-a8cc-8b403452bce5"],"administrativeNotes":[],"physicalDescriptions":["1
+  computer optical disc : sound, color ; 4 3/4 in. + 1 guide (viii, 132 pages ; 23
+  cm) + 1 user manual (v, 73 pages : illustrations ; 23 cm)"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-04-13T11:57:58Z'
+created: '2025-04-13T11:57:58Z'
+timestamp: '2025-04-13T11:57:58Z'
+author_struct:
+- contributors:
+  - link: Massy, William F.
+    search: Massy, William F.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Chan, Trevor.
+    search: Chan, Trevor.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Salkind, Neil S.
+    search: Salkind, Neil S.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Rainwater, Therese.
+    search: Rainwater, Therese.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Enlight Software.
+    search: Enlight Software.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Jackson Hole Higher Education Group.
+    search: Jackson Hole Higher Education Group.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Anker Publishing.
+    search: Anker Publishing.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Digitalmill (Firm)
+    search: Digitalmill (Firm)
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo:
+    - https://id.oclc.org/worldcat/entity/E39QH7JmpGgrCXTWVVr7yfcGTR
+marc_links_struct:
+- version: '0.2'
+  stanford_only: false
+  stanford_law_only: false
+  link_text: Finding Aid
+  link_title: ''
+  additional_text:
+  material_type: Finding Aid
+  note:
+  href: https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
+  sort:
+  casalini:
+  fulltext: false
+  finding_aid: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+- version: '0.2'
+  stanford_only: false
+  stanford_law_only: false
+  link_text:
+  link_title: ''
+  additional_text:
+  material_type:
+  note:
+  href: https://purl.stanford.edu/rc671ym6474
+  sort:
+  casalini:
+  fulltext: true
+  finding_aid: false
+  managed_purl: true
+  file_id:
+  druid: rc671ym6474
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Virtual U is a computer simulation game that engages participants in exercises
+      designed to improve understanding of universities as systems. Participants take
+      the point of view of a university president. They set institutional and departmental
+      budgets and make decisions in areas such as faculty hiring and compensation,
+      enrollment management, incentives for teaching and research, finance, facilities,
+      and even parking. Begun in 1994, Enlight Software of Hong Kong designed and
+      developed the game, which was first released in 1997. Trevor Chan, Enlight's
+      President, designed the previous games Capitalism and Seven Kingdoms. The Jackson
+      Hole Higher Education Group developed the simulation engine, which was an entirely
+      new model although it does draw heavily on the work of William F. Massy. Data
+      to drive the engine were collected by the University of Pennsylvania's Institute
+      for Research in Higher Education. The Alfred P. Sloan Foundation supported the
+      project from its inception.
+    vernacular:
+  unmatched_vernacular: []
+toc_struct:
+- label: Contents
+  fields:
+  - - Scenario 1. Pay faculty better
+    - 2. Allocate new money
+    - 3. Teach better
+    - 4. Improve research performance
+    - 5. Win games
+    - 6. Reduce tuition
+    - 7. Respond to enrollment shifts
+    - 8. Enroll more minority students
+    - 9. Hire more minority faculty members
+    - 10. Balance the budget.
+  vernacular:
+  unmatched_vernacular:
+holdings_json_struct:
+- holdings:
+  - id: 899784c8-9480-572f-b454-bb162bcc44c9
+    hrid: ah6631609_4
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T09:59:53.159Z'
+      updatedDate: '2023-08-21T09:59:53.159Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1b14e21c-8d47-45c7-bc49-456a0086422b
+    permanentLocationId: 1b14e21c-8d47-45c7-bc49-456a0086422b
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1b14e21c-8d47-45c7-bc49-456a0086422b
+        code: SUL-SDR
+        name: Stanford Digital Repository
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1b14e21c-8d47-45c7-bc49-456a0086422b
+        code: SUL-SDR
+        name: Stanford Digital Repository
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 6fd95978-f20f-549b-9154-2d9273c9b1db
+    hrid: ah6631609_3
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T09:59:51.856Z'
+      updatedDate: '2023-08-21T09:59:51.856Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SCM0445
+    instanceId: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+    holdingsType:
+      id: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+      name: Computer File
+      source: local
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    holdingsTypeId: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+    callNumberTypeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 93683a7a-ed92-5fe8-9050-2c389e83426b
+    hrid: ah6631609_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T09:59:51.856Z'
+      updatedDate: '2023-08-21T09:59:51.856Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: ZMS 1688
+    instanceId: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+    holdingsType:
+      id: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+      name: Computer File
+      source: local
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    holdingsTypeId: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+    callNumberTypeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: cbff46a6-58f9-4288-bc03-72aecca76469
+    permanentLocationId: cbff46a6-58f9-4288-bc03-72aecca76469
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: cbff46a6-58f9-4288-bc03-72aecca76469
+        code: MEDIA-CDCAB
+        name: Ask at Media Center desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: 0acfabb7-0a71-47be-82c0-c0200dd47952
+          code: MEDIA-CENTER
+          name: Media Center
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: cbff46a6-58f9-4288-bc03-72aecca76469
+        code: MEDIA-CDCAB
+        name: Ask at Media Center desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: 0acfabb7-0a71-47be-82c0-c0200dd47952
+          code: MEDIA-CENTER
+          name: Media Center
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 7ce38961-548d-5538-96ca-c6ab1a30bf58
+    hrid: ah6631609_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T09:59:51.856Z'
+      updatedDate: '2023-08-21T09:59:51.856Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: ZMS 1688
+    instanceId: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+    holdingsType:
+      id: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+      name: Computer File
+      source: local
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    holdingsTypeId: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+    callNumberTypeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+    permanentLocationId: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+        code: MEDIA-CAGE
+        name: Ask at Media Center desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: 0acfabb7-0a71-47be-82c0-c0200dd47952
+          code: MEDIA-CENTER
+          name: Media Center
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+        code: MEDIA-CAGE
+        name: Ask at Media Center desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: 0acfabb7-0a71-47be-82c0-c0200dd47952
+          code: MEDIA-CENTER
+          name: Media Center
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 92e4c04d-f8c5-5c50-9d26-a99de5af7298
+    hrid: ai6631609_1_1
+    notes: []
+    status: Available
+    barcode: '36105127681539'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T10:00:44.065Z'
+      updatedDate: '2023-08-21T10:00:44.065Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: ZMS 1688
+    copyNumber: '1'
+    yearCaption: []
+    materialType: multimedia
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 794de86f-ecbc-45ad-b790-f30eb19797ec
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 93683a7a-ed92-5fe8-9050-2c389e83426b
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: cbff46a6-58f9-4288-bc03-72aecca76469
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: ZMS 1688 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: ZMS 1688
+    location:
+      effectiveLocation:
+        id: cbff46a6-58f9-4288-bc03-72aecca76469
+        code: MEDIA-CDCAB
+        name: Ask at Media Center desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: 0acfabb7-0a71-47be-82c0-c0200dd47952
+          code: MEDIA-CENTER
+          name: Media Center
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 1653c0c6-a5d9-56a6-a0ec-d98f974ac7fd
+    hrid: ai6631609_2_1
+    notes: []
+    status: Available
+    barcode: '36105127681547'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T10:00:44.065Z'
+      updatedDate: '2023-08-21T10:00:44.065Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: ZMS 1688
+    copyNumber: '1'
+    enumeration: PRODUCT MANUAL
+    yearCaption: []
+    materialType: multimedia
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 794de86f-ecbc-45ad-b790-f30eb19797ec
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 7ce38961-548d-5538-96ca-c6ab1a30bf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: ZMS 1688 PRODUCT MANUAL 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: ZMS 1688
+    location:
+      effectiveLocation:
+        id: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+        code: MEDIA-CAGE
+        name: Ask at Media Center desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: 0acfabb7-0a71-47be-82c0-c0200dd47952
+          code: MEDIA-CENTER
+          name: Media Center
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 3a8c4575-b6a5-5b91-bad4-bb5e8a05945b
+    hrid: ai6631609_3_1
+    notes: []
+    status: Available
+    barcode: '36105125791397'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T10:00:44.065Z'
+      updatedDate: '2023-08-21T10:00:44.065Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SCM0445
+    copyNumber: '1'
+    enumeration: ACCN 2015-099 HALF BOX 1
+    yearCaption: []
+    materialType: electronic resource
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 615b8413-82d5-4203-aa6e-e37984cb5ac3
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 6fd95978-f20f-549b-9154-2d9273c9b1db
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SCM0445 ACCN 2015-099 HALF BOX 1 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SCM0445
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: afa51523-a7b0-59c6-89e3-10b2ab61970a
+    hrid: ai6631609_2_3
+    notes: []
+    status: Available
+    barcode: '36105127681554'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T10:00:44.065Z'
+      updatedDate: '2023-08-21T10:00:44.065Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: ZMS 1688
+    copyNumber: '1'
+    enumeration: STRATEGY & TECHNICAL GUIDE
+    yearCaption: []
+    materialType: multimedia
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 794de86f-ecbc-45ad-b790-f30eb19797ec
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 7ce38961-548d-5538-96ca-c6ab1a30bf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: ZMS 1688 STRATEGY & TECHNICAL GUIDE 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: ZMS 1688
+    location:
+      effectiveLocation:
+        id: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+        code: MEDIA-CAGE
+        name: Ask at Media Center desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: 0acfabb7-0a71-47be-82c0-c0200dd47952
+          code: MEDIA-CENTER
+          name: Media Center
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 92e4c04d-f8c5-5c50-9d26-a99de5af7298
+  barcode: '36105127681539'
+  library: MEDIA-CENTER
+  type: multimedia
+  note:
+  instance_id: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+  instance_hrid: a6631609
+  effective_permanent_location_code: MEDIA-CDCAB
+  temporary_location_code:
+  permanent_location_code: MEDIA-CDCAB
+  status: Available
+  effective_location_id: cbff46a6-58f9-4288-bc03-72aecca76469
+  material_type_id: 794de86f-ecbc-45ad-b790-f30eb19797ec
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: ZMS 1688
+  callnumber: ZMS 1688
+  full_shelfkey: other zms 001688
+- id: 1653c0c6-a5d9-56a6-a0ec-d98f974ac7fd
+  barcode: '36105127681547'
+  library: MEDIA-CENTER
+  type: multimedia
+  note:
+  instance_id: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+  instance_hrid: a6631609
+  effective_permanent_location_code: MEDIA-CAGE
+  temporary_location_code:
+  permanent_location_code: MEDIA-CAGE
+  status: Available
+  effective_location_id: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+  material_type_id: 794de86f-ecbc-45ad-b790-f30eb19797ec
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: ZMS 1688
+  callnumber: ZMS 1688 PRODUCT MANUAL
+  full_shelfkey: other zms 001688 product manual
+- id: 3a8c4575-b6a5-5b91-bad4-bb5e8a05945b
+  barcode: '36105125791397'
+  library: SPEC-COLL
+  type: electronic resource
+  note:
+  instance_id: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+  instance_hrid: a6631609
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 615b8413-82d5-4203-aa6e-e37984cb5ac3
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SCM0445
+  callnumber: SCM0445 ACCN 2015-099 HALF BOX 1
+  full_shelfkey: other scm000445 accn 002015-000099 half box 000001
+- id: afa51523-a7b0-59c6-89e3-10b2ab61970a
+  barcode: '36105127681554'
+  library: MEDIA-CENTER
+  type: multimedia
+  note:
+  instance_id: 93289e1f-8763-5dcd-8bd5-640af6f767d7
+  instance_hrid: a6631609
+  effective_permanent_location_code: MEDIA-CAGE
+  temporary_location_code:
+  permanent_location_code: MEDIA-CAGE
+  status: Available
+  effective_location_id: b3d15dd8-a053-4c06-93e9-e76e2dc59385
+  material_type_id: 794de86f-ecbc-45ad-b790-f30eb19797ec
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: ZMS 1688
+  callnumber: ZMS 1688 STRATEGY & TECHNICAL GUIDE
+  full_shelfkey: other zms 001688 strategy & technical guide
+browse_nearby_struct:
+- lopped_callnumber: ZMS 1688
+  shelfkey: other zms 001688
+  reverse_shelfkey: b6il8~0d7~zzytrr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: ZMS 1688
+  scheme: ALPHANUM
+  item_id: 92e4c04d-f8c5-5c50-9d26-a99de5af7298
+- lopped_callnumber: SCM0445
+  shelfkey: other scm000445 accn 002015-000099 half box 000001
+  reverse_shelfkey: b6il8~7ndzzzvvu~pnnc~zzxzyu~zzzzqq~ipek~ob2~zzzzzy
+  callnumber: SCM0445 ACCN 2015-099 HALF BOX 1
+  scheme: ALPHANUM
+  item_id: 3a8c4575-b6a5-5b91-bad4-bb5e8a05945b

@@ -18,5 +18,15 @@ module AccessPanels
     def location_request_link
       @location_request_link ||= LocationRequestLinkComponent.for(document:, library_code: library.code, location:)
     end
+
+    private
+
+    def consolidate_items?
+      document.has_finding_aid? && policy.aeon_pageable?
+    end
+
+    def policy
+      @policy ||= LocationRequestLinkPolicy.new(location:, library_code: library.code)
+    end
   end
 end

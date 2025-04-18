@@ -5,7 +5,7 @@ module AccessPanels
     with_collection_parameter :item
     attr_reader :item, :document, :classes, :counter
 
-    def initialize(item:, document:, item_counter:, classes: nil, render_item_note: true, render_item_level_request_link: true)
+    def initialize(item:, document:, item_counter:, item_iteration:, classes: nil, render_item_note: true, render_item_level_request_link: true, consolidate_for_finding_aid: false)
       super
 
       @item = item
@@ -13,10 +13,18 @@ module AccessPanels
       @document = document
       @render_item_note = render_item_note
       @render_item_level_request_link = render_item_level_request_link
+      @consolidate_for_finding_aid = consolidate_for_finding_aid
       @counter = item_counter
+      @iteration = item_iteration
     end
 
     delegate :bound_with_parent, to: :item
+
+    def callnumber
+      return item.truncated_callnumber if consolidate_for_finding_aid?
+
+      item.callnumber
+    end
 
     def has_bound_with_parent?
       bound_with_parent.present?
@@ -31,6 +39,16 @@ module AccessPanels
     end
 
     delegate :has_in_process_availability_class?, :temporary_location_text, :availability_text, to: :item
+
+    def render?
+      return false if consolidate_for_finding_aid? && !@iteration.first?
+
+      true
+    end
+
+    def consolidate_for_finding_aid?
+      @consolidate_for_finding_aid
+    end
 
     def render_item_note?
       @render_item_note
