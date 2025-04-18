@@ -36,6 +36,7 @@ Rails.application.routes.draw do
 
     member do
       get 'bound_with_children/:item_id', to: 'bound_with_children#index', as: 'bound_with_children'
+      get 'bound_with_children_modal/:item_id', to: 'bound_with_children#modal', as: 'bound_with_children_modal'
     end
   end
 

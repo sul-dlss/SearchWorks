@@ -1,0 +1,23 @@
+.bound-with-modal {
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    border-top: 1px solid var(--stanford-20-black);
+    padding-top: 0.5rem;
+  }
+
+  .bound-with-type {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+
+  }
+}
+
+.bound-with {
+  .btn {
+    padding: 2px 6px;
+  }
+}

@@ -1,17 +1,10 @@
 <%= turbo_frame_tag [:item, @item_id] do %>
   <% if @bound_with_children.present? %>
     <div class="bound-with p-2 mt-2">
-      <div class="bound-with-type">Bound with</div>
-      <ul class="list-unstyled mb-0">
-        <% @bound_with_children.each do |child| %>
-            <% child.items.select { |item| item.id == @item_id && !item.bound_with_principal? }.each do |item| %>
-              <li class="mb-2">
-                <div class="bound-with-title"><%= (@id == child.id ? tag.em('Same title') : link_to(child['title_full_display'], solr_document_path(child.id), data: { turbo: false })) %></div>
-                <div class="bound-with-callnumber"><%= item.callnumber %></div>
-              </li>
-            <% end %>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <%= render Record::BoundWithChildrenComponent.new(bound_with_children: @bound_with_children, item_id: @item_id, instance_id: @id) %>
+      <% if @number_of_results > @limit %>
+        <%= link_to "See all items bound with #{@instance_call_number}", bound_with_children_modal_solr_document_path(item_id: @item_id), data: { turbo_frame: "blacklight-modal", blacklight_modal: "trigger" }, class: 'btn btn-outline-primary p-1 text-left' %>
+      <% end %>
+    <% end %>
+  </div>
 <% end %>
