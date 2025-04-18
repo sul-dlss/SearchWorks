@@ -16,9 +16,9 @@
         <dt>Physical collection</dt>
         <dd><%= @collection.extent_sans_format %></dd>
       <% end %>
-      <% if @collection.marc_links.finding_aid.present? %>
+      <% if @collection.has_finding_aid? %>
         <dt>Finding aid</dt>
-        <dd><%= @collection.marc_links.finding_aid.first.html.html_safe %></dd>
+        <dd><%= @collection.preferred_finding_aid.html.html_safe %></dd>
       <% end %>
     </dl>
   <% end %>

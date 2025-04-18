@@ -16,6 +16,20 @@ module DocumentLinks
     marc_links&.finding_aid
   end
 
+  def preferred_finding_aid
+    finding_aid&.first
+  end
+
+  def additional_finding_aids?
+    has_finding_aid? && finding_aid.length > 1
+  end
+
+  def additional_finding_aids
+    return nil unless additional_finding_aids?
+
+    finding_aid.drop(1)
+  end
+
   private
 
   def sfx_links
