@@ -24,3 +24,6 @@ application.register("chat-hours", ChatHoursController)
 
 import ArticlesFacetMoreController from "./articles_facet_more_controller"
 application.register("articles-facet-more", ArticlesFacetMoreController)
+
+import ArticlesFacetPaginateController from "./articles_facet_paginate_controller"
+application.register("articles-facet-paginate", ArticlesFacetPaginateController)
