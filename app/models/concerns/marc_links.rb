@@ -56,8 +56,18 @@ module MarcLinks
       finding_aid? && link_struct[:href]&.include?('//archives.stanford.edu')
     end
 
+    def oac_finding_aid?
+      finding_aid? && link_struct[:href]&.include?('oac.cdlib.org')
+    end
+
     def finding_aid_link_text
-      archives_finding_aid? ? 'Archival Collections at Stanford' : 'Online Archive of California'
+      if archives_finding_aid?
+        'Archival Collections at Stanford'
+      elsif oac_finding_aid?
+        'Online Archive of California'
+      else
+        link_struct[:link_text] || link_host
+      end   
     end
 
     def finding_aid_sort
