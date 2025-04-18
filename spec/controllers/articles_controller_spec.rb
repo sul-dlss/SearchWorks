@@ -160,7 +160,7 @@ RSpec.describe ArticlesController do
     let(:eds_session) { instance_double(EBSCO::EDS::Session, session_token: 'abc') }
 
     before do
-      allow(controller).to receive_messages(session: user_session, on_campus_or_su_affiliated_user?: true)
+      allow(controller).to receive_messages(session: user_session, allowed_to?: true)
     end
 
     it 'creates a new session' do
