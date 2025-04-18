@@ -18,5 +18,34 @@ module AccessPanels
     def location_request_link
       @location_request_link ||= LocationRequestLinkComponent.for(document:, library_code: library.code, location:)
     end
+
+    def location_item_component
+      return AccessPanels::LocationConsolidatedItemComponent if consolidate_items?
+
+      AccessPanels::LocationItemComponent
+    end
+
+    def items
+      return consolidated_items if consolidate_items?
+
+      location.items
+    end
+
+    private
+
+    def consolidated_items
+      location.items
+              .group_by(&:truncated_callnumber)
+              .transform_values(&:first)
+              .values
+    end
+
+    def consolidate_items?
+      document.has_finding_aid? && policy.aeon_pageable?
+    end
+
+    def policy
+      @policy ||= LocationRequestLinkPolicy.new(location:, library_code: library.code)
+    end
   end
 end

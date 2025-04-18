@@ -24,6 +24,6 @@
     </tr>
   </thead>
   <tbody data-long-table-target="body">
-    <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, classes: 'availability-item', render_item_level_request_link: !location_request_link.render?) %>
+    <%= render location_item_component.with_collection(items, document:, classes: 'availability-item', render_item_level_request_link: !location_request_link.render?) %>
   </tbody>
 <% end %>

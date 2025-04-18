@@ -39,12 +39,11 @@ RSpec.feature "Results Toolbar", :js do
   end
   scenario "pagination links for multiple items but no pages should not have any number of results info" do
     visit root_path q: '34'
-
-    expect(page).to have_css('h2', text: '4 catalog results')
+    expect(page).to have_css('h2', text: '5 catalog results')
 
     within('.sul-toolbar .page_links') do
       expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Previous/)
-      expect(page).to have_css("span.page_entries", text: /1 - 4/)
+      expect(page).to have_css("span.page_entries", text: /1 - 5/)
       expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Next/)
     end
   end
