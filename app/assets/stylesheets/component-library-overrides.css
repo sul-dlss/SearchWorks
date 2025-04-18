@@ -1,7 +1,7 @@
 /* These are styles mostly copied from the component library. They can be removed once we fully move over. */
 .navbar-logo-cl,
 .prefooter-logo-cl {
-  mask-image: url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-02-20/styles/StanfordLibraries-logo.svg");
+  mask-image: url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/StanfordLibraries-logo.svg");
   mask-repeat: no-repeat;
   mask-position: 0 center;
   overflow: hidden;
@@ -12,7 +12,7 @@
   &.polychrome {
     background-color: transparent;
     mask-image: none;
-    background-image: url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-02-20/styles/StanfordLibraries-logo-poly.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/StanfordLibraries-logo-poly.svg");
     background-repeat: no-repeat;
     background-position: 0 center;
   }
@@ -56,4 +56,3 @@
     height: 164px;
   }
 }
-

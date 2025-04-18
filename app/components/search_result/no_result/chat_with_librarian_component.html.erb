@@ -1,0 +1,10 @@
+<%= tag.section class: 'chat' do %>
+  <%= tag.header class: "h4", data: chat_attrs do %>
+    <span class="bi bi-chat"></span>
+    <%= link_to "Chat with a librarian", "https://library.stanford.edu/contact-us", class: 'disabled start-chat' %>
+  <% end %>
+  <span data-controller="chat-hours" data-chat-hours-url-value="https://library-hours.stanford.edu/api/v1/library/green/location/reference/hours/for/today">
+    <span class="placeholder"></span>
+  </span>
+  <%= link_to 'All reference hours', 'https://library.stanford.edu/libraries/cecil-h-green-library', class: "ml-2 ms-2" %>
+<% end %>

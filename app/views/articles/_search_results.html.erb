@@ -23,7 +23,7 @@
         <%= render 'search_header' %>
         <%= render 'research_starters' %>
         <%= render_document_index @response.documents %>
-        <%= render 'alternate_catalog' if show_alternate_catalog? %>
+        <%= render 'alternate_catalog', close: true if show_alternate_catalog? %>
 
         <%- unless @response.empty? %>
           <%= render 'shared/side_nav_minimap' %>

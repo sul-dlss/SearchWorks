@@ -1,50 +1,64 @@
-<div class="zero-results-heading">
-  <h1 class="sr-only"><%= t('blacklight.search.zero_results.page_heading', search_type: search_type_name) %></h1>
-  <h2><%= t('blacklight.search.pagination_info.no_items_found', search_type: search_type_name).html_safe %></h2>
-</div>
-<div class='row'>
-  <div id="sidebar" class="col-md-4 col-sm-5">
-    <%= render 'shared/chat_librarian_sidebar' %>
-  </div>
-  <div id="content" class="col-md-8 col-sm-7">
-    <div class="card mb-3">
-      <div class="card-body zero-results">
-        <h3><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h3>
-        <dl>
-          <dt>
-            <%= t 'blacklight.search.zero_results.check_spelling' %>
-          </dt>
-          <dd>
-            <%= render 'catalog/constraints' %>
-          </dd>
-          <% if from_advanced_search? %>
-            <div>
-              <i class="fa fa-search-plus"></i>
-              <%= link_to t('blacklight.search.zero_results.return_to_advanced_search'), "JavaScript:history.back();" %>
-            </div>
-
-          <% else %>
-            <% if @search_modifier.has_filters? && @search_modifier.has_query? %>
-                <dt><%= t 'blacklight.search.zero_results.remove_all_limits' %></dt>
-                <dd>
-                  <%= link_to searchworks_search_action_path(@search_modifier.params_without_filters), data: {behavior: "backend-lookup", track: 'zero-results-remove-limit', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_filters))}"} do %>
-                    <%= content_tag :span, "#{search_field_label(params)} > #{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
-                <% end %>
-              </dd>
-            <% end %>
-            <% if @search_modifier.fielded_search? %>
-                <dt><%= t 'blacklight.search.zero_results.search_fields' %></dt>
-                <dd>
-                <%= link_to searchworks_search_action_path(@search_modifier.params_without_fielded_search_and_filters), data: {behavior: "backend-lookup", track: 'zero-results-search-all-fields', lookup: "#{url_for({controller: controller_name, action: 'backend_lookup'}.merge(@search_modifier.params_without_fielded_search_and_filters))}"} do %>
-                  <%= content_tag :span, "#{params[:q]}", class: 'btn btn-zero-results', role: 'button' %>
-                <% end %>
-              </dd>
-            <% end %>
-          <% end %>
-        </dl>
-      </div>
+<h1 class="h2 mb-4"><%= t('blacklight.search.zero_results.page_heading') %></h1>
+<div class='row zero-results'>
+  <div class="col-md-4">
+    <div class="border-before">
+      <h2 class="pl-3 ps-3"><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h2>
+      <ul>
+        <li>Remove filters <%= link_to 'Clear all', search_action_path(q: params[:q]), class: "text-primary ml-2 ms-2" %>
+          <%= render SearchResult::NoResult::FiltersComponent.new(search_state:) %>
+        </li>
+        <li>Check spelling.</li>
+        <li>Use fewer keywords or try different keywords that are broader in meaning.</li>
+        <% if from_advanced_search? %>
+          <li><%= link_to t('blacklight.search.zero_results.return_to_advanced_search'), :back, class: 'font-weight-bolder fw-semibold' %></li>
+        <% else %>
+          <li>Try <%= link_to 'advanced search', blacklight_advanced_search_engine.advanced_search_path %> to construct a targeted query.</li>
+        <% end %>
+        <li>Visit our <%= link_to 'SearchWorks Guide', 'https://guides.library.stanford.edu/searchworks' %> for more search tips.</li>
+      </ul>
     </div>
-    <%= render 'alternate_catalog' if show_alternate_catalog? %>
-    <%= render "shared/search_assistance_block"%>
+  </div>
+  <div class="col-md-4">
+    <div class="border-before pl-3">
+      <h2>Need more help?</h2>
+
+      <h3>Contact our reference team</h3>
+      <div class="mb-2">
+        <span class="bi bi-phone"></span>
+        <%= link_to '(650) 725-1064', 'tel:650-725-1064' %>
+      </div>
+      <div class="mb-2">
+        <span class="bi bi-envelope"></span>
+        <%= link_to 'library-reference@stanford.edu', 'mailto:library-reference@stanford.edu' %>
+      </div>
+
+      <h3 class="mt-4">Stanford affiliates <%= render StanfordOnlyPopoverComponent.new %></h3>
+
+      <%= render SearchResult::NoResult::ChatWithLibrarianComponent.new %>
+
+      <div class="mt-2">
+        Place a request via <%= link_to 'Interlibrary loan.', 'https://sulils.stanford.edu/' %>
+      </div>
+
+      <div class="mt-1">
+        Submit a <%= link_to 'purchase recommendation', 'https://stanforduniversity.qualtrics.com/jfe/form/SV_5iQABR6VSszIQMR' %>.
+      </div>
+
+      <h3 class="mt-3">Search other libraries</h3>
+      <ul>
+        <li>
+          <%= link_to 'WorldCat', "https://www.worldcat.org/search?qt=worldcat_org_all&q=#{params.fetch(:q, nil)}" %>
+          to search libraries across the globe
+        </li>
+      <li>
+          <%= link_to 'HathiTrust', "https://catalog.hathitrust.org/Search/Home?lookfor=#{params.fetch(:q, nil)}" %>
+          to search millions of digitized materials, especially helpful for government documents
+      </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <%= render 'alternate_catalog', close: false if show_alternate_catalog? %>
   </div>
 </div>

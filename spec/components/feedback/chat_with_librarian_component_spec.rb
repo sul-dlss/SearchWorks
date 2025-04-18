@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ChatWithLibrarianComponent, type: :component do
+RSpec.describe Feedback::ChatWithLibrarianComponent, type: :component do
   before do
     allow(vc_test_controller).to receive(:on_campus_or_su_affiliated_user?).and_return logged_in
     render_inline(described_class.new)

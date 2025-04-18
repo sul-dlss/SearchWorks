@@ -5,7 +5,6 @@ class ArticlesController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
   include EmailValidation
-  include BackendLookup
 
   before_action unless: -> { Settings.EDS_ENABLED } do
     flash[:alert] = 'Article+ search is not enabled'
