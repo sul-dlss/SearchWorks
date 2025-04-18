@@ -1,5 +1,4 @@
 import PreviewContent from './preview-content'
-
 (function($) {
 
   /*
@@ -110,20 +109,6 @@ import PreviewContent from './preview-content'
         if (!$galleryDoc.hasContent()){
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
             .done(function(data){
-              // just like Blacklight's doBookmarkToggleBehavior, but scoped to the embed container so we don't
-              // try to set the behavior multiple times
-              $('.embed-callnumber-browse-container').find(Blacklight.doBookmarkToggleBehavior.selector).blCheckboxSubmit({
-                 // cssClass is added to elements as a css class, but it is also used for generating an identifier.
-                 // Therefore, we don't want to use the default 'toggle-bookmark', but we will use something unique,
-                 // so that the browse documents don't have an id collision with the parent document.
-                 cssClass: 'browse-toggle-bookmark',
-                 success: function(checked, response) {
-                   if (response.bookmarks) {
-                     $('[data-role=bookmark-counter]').text(response.bookmarks.count);
-                   }
-                 }
-              });
-
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
               $galleryDoc.addBrowseLinkDivs();

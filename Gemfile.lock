@@ -89,7 +89,7 @@ GEM
       racc (~> 1.7)
     bigdecimal (3.1.9)
     bindex (0.8.1)
-    blacklight (8.9.0)
+    blacklight (8.10.1)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
@@ -180,7 +180,7 @@ GEM
     config (5.5.2)
       deep_merge (~> 1.2, >= 1.2.1)
       ostruct
-    connection_pool (2.5.2)
+    connection_pool (2.5.3)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -375,7 +375,7 @@ GEM
       uri
     net-http-persistent (4.0.5)
       connection_pool (~> 2.2)
-    net-imap (0.5.7)
+    net-imap (0.5.8)
       date
       net-protocol
     net-pop (0.1.2)

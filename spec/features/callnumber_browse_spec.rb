@@ -42,7 +42,7 @@ RSpec.describe 'Callnumber Browse', :js do
 
       page.driver.browser.navigate.refresh
 
-      expect(page).to have_css('.toggle-bookmark.checked')
+      expect(page).to have_css('input.toggle-bookmark[checked]')
 
       expect(page).to have_css('[data-behavior="recent-selections"]', text: 'Selections (2)')
     end

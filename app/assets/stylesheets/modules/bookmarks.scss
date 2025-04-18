@@ -1,29 +1,10 @@
- // Note that Blacklight uses .toggle-bookmark at three different levels!
+// Note that Blacklight uses .toggle-bookmark at three different levels!
 div.toggle-bookmark {
   label.toggle-bookmark {
     min-width: 0; // override blacklight
     cursor: pointer;
 
     input.toggle-bookmark {
-      margin-right: 3px;
-    }
-
-    span {
-      font-size: 0.9em;
-      display: inline-block;
-      margin-bottom: 4px;
-      vertical-align: middle;
-    }
-  }
-}
-
-// Note this is same as above, but with a slightly modified className
-// This is for the bookmark checkboxes in the browse section.
-div.browse-toggle-bookmark {
-  label.browse-toggle-bookmark {
-    cursor: pointer;
-
-    input.browse-toggle-bookmark {
       margin-right: 3px;
     }
 
@@ -48,7 +29,8 @@ div.browse-toggle-bookmark {
     display: none;
   }
 
-  .select-all, .unselect-all {
+  .select-all,
+  .unselect-all {
     i.fa {
       margin-right: 2px;
     }
@@ -61,7 +43,9 @@ div.browse-toggle-bookmark {
     display: inline;
   }
 
-  a:hover, a:focus, a:active {
+  a:hover,
+  a:focus,
+  a:active {
     border: 1px solid transparent;
   }
 }

@@ -28,7 +28,8 @@ h2 {
   letter-spacing: 0;
 }
 
-*:not(a) > h3 { // h3 that are inside links should be styled as links.
+*:not(a) > h3 {
+  // h3 that are inside links should be styled as links.
   color: $sul-h3-font-color;
 }
 
@@ -38,7 +39,7 @@ h4 {
 
 small,
 .small {
-  font-size: .937em;
+  font-size: 0.937em;
 }
 
 summary {
@@ -46,12 +47,14 @@ summary {
 }
 
 // make the button-style links in the Selections toolbar more compact than default .btn padding
-#bookmarksWidgets > *, #bookmarksWidgets > #tools-dropdown > .btn {
-    padding: 4px 10px;
+#bookmarksWidgets > *,
+#bookmarksWidgets > #tools-dropdown > .btn {
+  padding: 4px 10px;
 }
 
 // We use btn-outline-secondary to style the seleted filters
-.btn-secondary, .btn-outline-secondary {
+.btn-secondary,
+.btn-outline-secondary {
   @include button-variant($light-sandstone, $cloud);
   color: $warm-grey;
 }
@@ -66,13 +69,12 @@ summary {
   margin-bottom: 0;
 }
 
-.facet-values li {
-  max-width: 100%;
+.modal-body {
+  max-height: 86vh;
+  overflow: scroll;
 }
 
-// from Bootstrap 5:
-.modal[open] {
-  display: block;
-  background: none;
-  border: none;
+.modal-body:has(+ .modal-footer) {
+  /* provide enough space for the footer */
+  max-height: calc(86vh - 10rem);
 }
