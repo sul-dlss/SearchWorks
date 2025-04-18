@@ -63,7 +63,7 @@ class Holdings
     def present?
       @items.reject(&:suppressed?).any? ||
         (mhld.present? && mhld.any?(&:present?)) ||
-        locations.any?(&:bound_with?)
+        locations.any?(&:bound_with_child?)
     end
 
     def library_instructions

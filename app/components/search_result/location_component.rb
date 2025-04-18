@@ -20,8 +20,8 @@ module SearchResult
       link_to 'See full record for details', solr_document_path(document)
     end
 
-    def bound_with?
-      library.items.any?(&:bound_with?)
+    def bound_with_child?
+      library.items.any?(&:bound_with_child?)
     end
 
     def locations

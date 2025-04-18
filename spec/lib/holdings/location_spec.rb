@@ -85,7 +85,7 @@ RSpec.describe Holdings::Location do
     end
   end
 
-  describe "#bound_with?" do
+  describe "#bound_with_child?" do
     let(:document) { SolrDocument.new }
 
     context 'with items that are bound with' do
@@ -103,7 +103,7 @@ RSpec.describe Holdings::Location do
         ])
       end
 
-      it { is_expected.to be_bound_with }
+      it { is_expected.to be_bound_with_child }
     end
 
     context 'with items that are not bound with' do
@@ -116,7 +116,7 @@ RSpec.describe Holdings::Location do
         ])
       end
 
-      it { is_expected.not_to be_bound_with }
+      it { is_expected.not_to be_bound_with_child }
     end
   end
 
