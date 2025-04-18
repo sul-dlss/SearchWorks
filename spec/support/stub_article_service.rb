@@ -82,7 +82,7 @@ module StubArticleService
     end
   end
 
-  class StubArticleResponse < Blacklight::Solr::Response
+  class StubArticleResponse < Blacklight::Solr::Response # rubocop:disable Metrics/ClassLength
     attr_reader :documents
     delegate :empty?, to: :documents
 
@@ -95,12 +95,92 @@ module StubArticleService
       { numFound: documents.count }
     end
 
-    def facet_counts
+    def facet_counts # rubocop:disable Metrics/MethodLength
       {
         'facet_fields' => {
           'pub_year_tisim' => ['2001', 1, '2002', 1],
           'eds_publication_type_facet' => ['Academic journals', 1],
-          'eds_content_provider_facet' => ['Journal provider', 1]
+          'eds_content_provider_facet' => ['Journal provider', 1],
+          'eds_language_facet' => [
+            "english",
+            "477586",
+            "undetermined",
+            "69627",
+            "russian",
+            "5035",
+            "japanese",
+            "4179",
+            "chinese",
+            "3128",
+            "german",
+            "3092",
+            "french",
+            "3091",
+            "spanish; castilian",
+            "1976",
+            "portuguese",
+            "1593",
+            "italian",
+            "886",
+            "korean",
+            "884",
+            "spanish",
+            "668",
+            "swedish",
+            "611",
+            "no linguistic content; not applicable",
+            "601",
+            "other",
+            "550",
+            "czech",
+            "527",
+            "turkish",
+            "379",
+            "polish",
+            "377",
+            "한국어",
+            "298",
+            "繁體中文",
+            "191",
+            "英文",
+            "164",
+            "multiple languages",
+            "116",
+            "ukrainian",
+            "112",
+            "dutch; flemish",
+            "110",
+            "austronesian languages",
+            "95",
+            "arabic",
+            "94",
+            "latin",
+            "83",
+            "hungarian",
+            "79",
+            "indonesian",
+            "79",
+            "croatian",
+            "74",
+            "slovenian",
+            "66",
+            "persian",
+            "58",
+            "eng",
+            "57",
+            "romanian; moldavian; moldovan",
+            "55",
+            "hebrew",
+            "54",
+            "afrikaans",
+            "52",
+            "dutch",
+            "46",
+            "lithuanian",
+            "44",
+            "greek, ancient (to 1453)",
+            "42"
+          ]
         }
       }
     end
