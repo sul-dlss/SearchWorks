@@ -114,6 +114,11 @@ class Holdings
       item_display[:bound_with]
     end
 
+    # @return [Bool] true if this is a bound-with
+    def bound_with?
+      bound_with_child? || bound_with_principal?
+    end
+
     # @return [Bool] true if this is a bound-with child
     def bound_with_child?
       bound_with_parent.present?

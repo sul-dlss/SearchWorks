@@ -1,0 +1,4 @@
+.bound-with-note div {
+  padding: .25rem .5rem;
+  background-color: var(--stanford-fog-light);
+}
