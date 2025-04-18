@@ -12,7 +12,7 @@ RSpec.describe MarcLinks do
       SolrDocument.new(marc_links_struct: [
         { link_text: 'fulltext', fulltext: true },
         { link_text: 'stanford only',  stanford_only: true },
-        { href: 'http://example.com', link_text: 'finding aid', note: 'this is a finding aid' },
+        { href: 'http://oac.cdlib.org/findai/ark:/13030/an-ark', link_text: 'finding aid', note: 'this is a finding aid' },
         { link_text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc' }
       ])
     end
@@ -20,7 +20,7 @@ RSpec.describe MarcLinks do
     it 'decodes structured data in the document' do
       expect(document.marc_links.all.length).to eq 4
       expect(document.marc_links.fulltext.first.text).to eq 'fulltext'
-      expect(document.marc_links.finding_aid.first.html).to eq '<a href="http://example.com">Online Archive of California</a>'
+      expect(document.marc_links.finding_aid.first.html).to eq '<a href="http://oac.cdlib.org/findai/ark:/13030/an-ark">Online Archive of California</a>'
       expect(document.marc_links.supplemental.first).to be_stanford_only
       expect(document.marc_links.managed_purls.first.text).to eq 'druid'
       expect(document.marc_links.managed_purls.first.file_id).to eq 'x'

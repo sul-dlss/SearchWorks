@@ -67,7 +67,7 @@ module MarcLinks
         'Online Archive of California'
       else
         link_struct[:link_text] || link_host
-      end   
+      end
     end
 
     def finding_aid_sort
