@@ -10,7 +10,7 @@
 
       <% if has_bound_with_parent? %>
         <div class="bound-with p-2 mt-2">
-          <div class="bound-with-type">Bound and shelved with</div>
+          <div class="bound-with-type">Bound and shelved with:</div>
           <div class="bound-with-title"><%= item.bound_with_id == document.id ? tag.em('Same title') : link_to(bound_with_title, solr_document_path(item.bound_with_id)) %></div>
           <div class="bound-with-callnumber"><%= bound_with_callnumber %></div>
         </div>

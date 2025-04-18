@@ -1,0 +1,21 @@
+.bound-with {
+  .btn {
+    padding: 2px 6px;
+  }
+}
+
+.bound-with-modal {
+  table {
+    .bound-with-item {
+      border-top: 1px solid var(--stanford-20-black);
+    }
+
+    td.bound-with-title {
+      width: 80%;
+    }
+
+    td.bound-with-callnumber {
+      width: 20%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.with_header do %>
+    <span class="d-flex flex-column">
+      <h2 class="modal-title">
+        <%= @bound_with_children.first.items.first.bound_with_parent[:title] %>
+      </h2>
+      <%= @bound_with_children.first.items.first.bound_with_parent[:call_number] %>
+    </span>
+  <% end %>
+  <div class="bound-with-modal">
+    <%= render Record::BoundWithChildrenTableComponent.new(bound_with_children: @bound_with_children, item_id: @item_id, instance_id: @id) %>
+  </div>
+<% end %>

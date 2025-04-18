@@ -1,0 +1,432 @@
+---
+id: '2300812'
+hashed_id_ssi: 710294e0b34f47c61a8432788a455129
+marc_json_struct:
+- '{"leader":"01311nam a2200337   4500","fields":[{"001":"a2300812"},{"003":"SIRSI"},{"005":"19920715130631.0"},{"008":"920715s1919    ii
+  a         f000 0 eng c"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"agr20001104"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ALN2539"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Library, U.S. Dept. of Agriculture"},{"c":"STF"},{"d":"OrLoB"},{"d":"CSt"}]}},{"049":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"STFA"}]}},{"070":{"ind1":"0","ind2":" ","subfields":[{"a":"385"},{"b":"In2
+  vol.5 no.6"}]}},{"092":{"ind1":" ","ind2":" ","subfields":[{"a":"630.654"},{"b":".I39m
+  v.5"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Warth, Frederick John,"},{"d":"1879-"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Absorption
+  of lime by soils."},{"c":"By F.J. Warth ... and Maung Po Saw ..."}]}},{"260":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Calcutta,"},{"b":"Pub. for the Imperial Department
+  of Agriculture in India by Thacker, Spink & Co.;"},{"a":"London,"},{"b":"W. Thacker
+  & Co.,"},{"c":"1919."}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"1  p.
+  l., [157]-171, [1] p."},{"b":"diagrs."},{"c":"25 cm."}]}},{"490":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"India. Dept. of Agriculture. Memoirs. Chemical series."},{"v":"vol.
+  V, no. 6; Oct. 1919"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"31"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Lime."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Soil
+  absorption and adsorption."}]}},{"700":{"ind1":"1","ind2":" ","subfields":[{"a":"Saw,
+  Maung Po."}]}},{"810":{"ind1":"1","ind2":" ","subfields":[{"a":"India."},{"b":"Department
+  of Agriculture."},{"t":"Memoirs."},{"p":"Chemical series ;"},{"v":"v. 5, no. 6,
+  Oct. 1919"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)26190244"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-I)274415562"}]}},{"590":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Copy 1 bound with v. 5, no. 1."},{"c":"5488000 (parent record''s
+  ckey)."},{"b":"36105026515499 (item id)"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  ALN2539"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"7a68161f-8c08-57f9-ac91-69071e83a6fe"},{"s":"69aa7ba0-fec2-5823-b516-994784c47e30"}]}}]}'
+all_search: Warth, Frederick John, 1879- Absorption of lime by soils. By F.J. Warth
+  ... and Maung Po Saw ... Calcutta, Pub. for the Imperial Department of Agriculture
+  in India by Thacker, Spink & Co.; London, W. Thacker & Co., 1919. 1  p. l., [157]-171,
+  [1] p. diagrs. 25 cm. India. Dept. of Agriculture. Memoirs. Chemical series. vol.
+  V, no. 6; Oct. 1919 31 Lime. Soil absorption and adsorption. Saw, Maung Po. India.
+  Department of Agriculture. Memoirs. Chemical series ; v. 5, no. 6, Oct. 1919 Copy
+  1 bound with v. 5, no. 1. 5488000 (parent record's ckey). 36105026515499 (item id)
+title_245a_search: Absorption of lime by soils.
+title_245_search: Absorption of lime by soils.
+title_245a_display: Absorption of lime by soils
+title_245c_display: By F.J. Warth ... and Maung Po Saw ...
+title_display: Absorption of lime by soils
+title_full_display: Absorption of lime by soils. By F.J. Warth ... and Maung Po Saw
+  ...
+title_sort: Absorption of lime by soils
+series_search:
+- India. Dept. of Agriculture. Memoirs. Chemical series. vol. V, no. 6; Oct. 1919
+- India. Department of Agriculture. Memoirs. Chemical series ; v. 5, no. 6, Oct. 1919
+author_title_245ac_search:
+- Absorption of lime by soils. By F.J. Warth ... and Maung Po Saw ...
+author_title_1xx_search:
+- Warth, Frederick John Absorption of lime by soils.
+author_title_search:
+- Warth, Frederick John, 1879- Absorption of lime by soils.
+- India. Department of Agriculture. Memoirs. Chemical series ;
+best_author_title_search: Warth, Frederick John, 1879- Absorption of lime by soils.
+author_1xx_search: Warth, Frederick John, 1879-
+author_7xx_search:
+- Saw, Maung Po.
+author_8xx_search:
+- India. Department of Agriculture.
+author_person_facet:
+- Warth, Frederick John, 1879-
+- Saw, Maung Po.
+author_person_display:
+- Warth, Frederick John, 1879-
+author_person_full_display:
+- Warth, Frederick John, 1879-
+author_sort: Warth Frederick John 1879 Absorption of lime by soils
+topic_search:
+- Lime.
+- Soil absorption and adsorption.
+topic_display:
+- Lime.
+- Soil absorption and adsorption.
+subject_all_search:
+- Lime.
+- Soil absorption and adsorption.
+topic_facet:
+- Lime
+- Soil absorption and adsorption
+pub_search:
+- Calcutta, Pub. for the Imperial Department of Agriculture in India by Thacker, Spink
+  & Co.; London, W. Thacker & Co
+pub_display:
+- Calcutta, Pub. for the Imperial Department of Agriculture in India by Thacker, Spink
+  & Co.; London, W. Thacker & Co
+pub_country: India
+pub_date: '1919'
+pub_date_search: '1919'
+pub_date_sort: '1919'
+pub_year_tisim:
+- 1919
+pub_year_ss: '1919'
+publication_year_isi: 1919
+imprint_display:
+- Calcutta, Pub. for the Imperial Department of Agriculture in India by Thacker, Spink
+  & Co.; London, W. Thacker & Co., 1919.
+date_cataloged: '1992-08-20T00:00:00Z'
+language:
+- English
+oclc:
+- '26190244'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+genre_ssim:
+- Government document
+physical:
+- 1  p. l., [157]-171, [1] p. diagrs. 25 cm.
+lccn: agr20001104
+callnum_facet_hsim:
+- Dewey Classification|600s - Technology|630s - Agriculture & Related Technologies
+callnum_search:
+- 630.654 .I39M V.5:NO.6
+barcode_search:
+- '36105026515499'
+item_barcodes:
+- '36105026515499'
+preferred_barcode: '36105026515499'
+holdings_library_code_ssim:
+- SAL3
+library_code_facet_ssim:
+- SAL3
+location_code_facet_ssim:
+- SAL3-STACKS
+building_facet:
+- SAL3 (off-campus storage)
+building_location_facet_ssim:
+- SAL3/*
+- SAL3/SAL3-STACKS
+- SAL3/*/type/
+- SAL3/SAL3-STACKS/type/
+shelfkey:
+- dewey 630.65400000 i39m v.000005:no.000006
+reverse_shelfkey:
+- ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzt~~~~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '010'
+- '035'
+- '040'
+- '049'
+- '070'
+- '092'
+- '100'
+- '245'
+- '260'
+- '300'
+- '490'
+- '596'
+- '650'
+- '700'
+- '810'
+- '590'
+- '999'
+- 010a
+- 035a
+- 040acdd
+- '049a'
+- 070ab
+- '092ab'
+- 100ad
+- 245ac
+- 260ababc
+- 300abc
+- 490av
+- 596a
+- 650a
+- 700a
+- 810abtpv
+- 590acb
+- 999is
+- "?010a"
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040d"
+- "?049a"
+- "?070a"
+- "?070b"
+- "?092a"
+- "?092b"
+- "?100a"
+- "?100d"
+- "?245a"
+- "?245c"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?490a"
+- "?490v"
+- "?596a"
+- "?650a"
+- "?700a"
+- "?810a"
+- "?810b"
+- "?810t"
+- "?810p"
+- "?810v"
+- "?590a"
+- "?590c"
+- "?590b"
+- "?999i"
+- "?999s"
+bib_search: Warth, Frederick John, 1879- Absorption of lime by soils. By F.J. Warth
+  ... and Maung Po Saw ... Calcutta, Pub. for the Imperial Department of Agriculture
+  in India by Thacker, Spink & Co.; London, W. Thacker & Co., 1919. India. Dept. of
+  Agriculture. Memoirs. Chemical series. vol. V, no. 6; Oct. 1919 Saw, Maung Po. India.
+  Department of Agriculture. Memoirs. Chemical series ; v. 5, no. 6, Oct. 1919 Lime.
+  Soil absorption and adsorption. Book
+vern_bib_search: Book
+uuid_ssi: 7a68161f-8c08-57f9-ac91-69071e83a6fe
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"7a68161f-8c08-57f9-ac91-69071e83a6fe","hrid":"a2300812","notes":[],"title":"Absorption
+  of lime by soils. By F.J. Warth ... and Maung Po Saw ...","series":[{"value":"India.
+  Dept. of Agriculture. Memoirs. Chemical series. vol. V, no. 6; Oct. 1919"},{"value":"India.
+  Department of Agriculture. Memoirs. Chemical series ; v. 5, no. 6, Oct. 1919"}],"source":"MARC","_version":10,"editions":[],"metadata":{"createdDate":"2023-08-21T03:01:45.299Z","updatedDate":"2023-08-21T03:01:45.299Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Lime"},{"value":"Soil
+  absorption and adsorption"}],"languages":["eng"],"indexTitle":"Absorption of lime
+  by soils.","identifiers":[{"value":"agr20001104","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  ALN2539","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)26190244","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)274415562","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"place":"Calcutta
+  London","publisher":"Pub. for the Imperial Department of Agriculture in India by
+  Thacker, Spink & Co W. Thacker & Co","dateOfPublication":"1919"}],"contributors":[{"name":"Warth,
+  Frederick John, 1879-","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Saw,
+  Maung Po","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1992-08-20","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1919},"statusUpdatedDate":"2023-08-21T03:01:45.215+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1  p.
+  l., [157]-171, [1] p. diagrs. 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+bound_with_parent_item_ids_ssim:
+- f947bd93-a1eb-5613-8745-1063f948c461
+last_updated: '2025-04-20T11:10:16Z'
+created: '2025-04-20T11:10:16Z'
+timestamp: '2025-04-20T11:10:16Z'
+author_struct:
+- creator:
+  - link: Warth, Frederick John, 1879-
+    search: Warth, Frederick John, 1879-
+  contributors:
+  - link: Saw, Maung Po.
+    search: Saw, Maung Po.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+holdings_json_struct:
+- holdings:
+  - id: 75feceee-aeac-5028-8bd8-830699b587a9
+    hrid: ah2300812_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T03:03:54.983Z'
+      updatedDate: '2023-08-21T03:03:54.983Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    boundWith:
+      item:
+        id: f947bd93-a1eb-5613-8745-1063f948c461
+        hrid: ai5488000_1_3
+        status: Available
+        volume:
+        barcode: '36105026515499'
+        callNumber:
+          typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+          callNumber: 630.654 .I39M
+        chronology:
+        enumeration: V.5:NO.1,7-8
+        materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+        effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+        temporaryLoanTypeId:
+        suppressFromDiscovery: false
+        location:
+          effectiveLocation:
+            id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+            code: SAL3-STACKS
+            name: Stacks
+            campus:
+              id: c365047a-51f2-45ce-8601-e421ca3615c5
+              code: SUL
+              name: Stanford Libraries
+            details:
+              availabilityClass: Offsite
+              scanServicePointCode: SAL3
+            library:
+              id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+              code: SAL3
+              name: SAL3 (off-campus storage)
+            isActive: true
+            institution:
+              id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+              code: SU
+              name: Stanford University
+      holding:
+        effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        suppressFromDiscovery: false
+        location:
+          effectiveLocation:
+            id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+            code: SAL3-STACKS
+            name: Stacks
+            campus:
+              id: c365047a-51f2-45ce-8601-e421ca3615c5
+              code: SUL
+              name: Stanford Libraries
+            details:
+              availabilityClass: Offsite
+              scanServicePointCode: SAL3
+            library:
+              id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+              code: SAL3
+              name: SAL3 (off-campus storage)
+            isActive: true
+            institution:
+              id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+              code: SU
+              name: Stanford University
+      instance:
+        id: 9bf55756-7e18-52d8-81a6-84a62353e512
+        hrid: a5488000
+        title: The gases of swamp rice soils ... / by W.H. Harrison ... and P.A. Subramania
+          Aiyer ...
+        suppressFromDiscovery: false
+    formerIds: []
+    illPolicy:
+    callNumber: 630.654 .I39M V.5:NO.6
+    instanceId: 7a68161f-8c08-57f9-ac91-69071e83a6fe
+    holdingsType:
+      id: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+      name: Bound-with
+      source: local
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: system
+    holdingsTypeId: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    permanentLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
+item_display_struct:
+- id: f947bd93-a1eb-5613-8745-1063f948c461
+  barcode: '36105026515499'
+  library: SAL3
+  type:
+  note:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+    hrid: a5488000
+    title: The gases of swamp rice soils ... / by W.H. Harrison ... and P.A. Subramania
+      Aiyer ...
+    call_number: 630.654 .I39M
+    volume:
+    enumeration: V.5:NO.1,7-8
+    chronology:
+  is_bound_with_principal: false
+  lopped_callnumber: 630.654 .I39M
+  callnumber: 630.654 .I39M V.5:NO.6
+  full_shelfkey: dewey 630.65400000 i39m v.000005:no.000006
+browse_nearby_struct:
+- lopped_callnumber: 630.654 .I39M
+  shelfkey: dewey 630.65400000 i39m v.000005:no.000006
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzt~~~~~~~~
+  callnumber: 630.654 .I39M V.5:NO.6
+  scheme: DEWEY
+  item_id: f947bd93-a1eb-5613-8745-1063f948c461

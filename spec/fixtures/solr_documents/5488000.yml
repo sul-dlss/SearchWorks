@@ -175,7 +175,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
+context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
 
   '
 context_input_name_ssi: "/dev/null"
@@ -284,9 +284,9 @@ folio_json_struct:
   v. : ill. ; 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
 bound_with_parent_item_ids_ssim:
 - 8f6ee851-0584-54f2-9bb9-c2fcd881ee48
-last_updated: '2025-04-13T11:56:21Z'
-created: '2025-04-13T11:56:21Z'
-timestamp: '2025-04-13T11:56:21Z'
+last_updated: '2025-04-20T12:21:22Z'
+created: '2025-04-20T12:21:22Z'
+timestamp: '2025-04-20T12:21:22Z'
 author_struct:
 - creator:
   - link: Harrison, William Hudson.

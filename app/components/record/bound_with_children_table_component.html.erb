@@ -1,0 +1,13 @@
+<div class="bound-with-type h3">Bound with:</div>
+<table class="mb-0">
+  <th class="sr-only">Title</th>
+  <th class="sr-only">Call Number</th>
+  <% bound_with_children.each do |child| %>
+      <% child.items.each do |item| %>
+        <tr class="bound-with-item">
+          <td class="bound-with-title align-top py-2"><%= bound_with_title(child) %></td>
+          <td class="bound-with-callnumber align-top py-2"><%= item.callnumber %></td>
+        </tr>
+      <% end %>
+  <% end %>
+</table>

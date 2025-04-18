@@ -91,7 +91,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
+context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
 
   '
 context_input_name_ssi: "/dev/null"
@@ -167,9 +167,9 @@ folio_json_struct:
   Daniel","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2022-02-06","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://go.oreilly.com/stanford-university/library/view/-/9788328373464/?ar","name":"Resource","linkText":"Safari
   Books Online","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":2025},"statusUpdatedDate":"2023-08-21T21:08:33.602+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
   online resource"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-04-13T09:47:22Z'
-created: '2025-04-13T09:47:22Z'
-timestamp: '2025-04-13T09:47:22Z'
+last_updated: '2025-04-20T09:45:15Z'
+created: '2025-04-20T09:45:15Z'
+timestamp: '2025-04-20T09:45:15Z'
 author_struct:
 - creator:
   - link: Vaughan, Daniel.
