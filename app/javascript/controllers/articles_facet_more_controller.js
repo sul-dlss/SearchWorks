@@ -25,9 +25,14 @@ export default class extends Controller {
             <button class="btn btn-link" data-articles-facet-paginate-target="next" data-action="articles-facet-paginate#next"><span class="d-none d-sm-inline">Next</span> <i class="fa fa-arrow-right"></i></a>
           </div>
 
-          <div class="sort_options btn-group pull-right">
-            <a class="sort_change az btn btn-secondary" data-blacklight-modal="preserve" href="/catalog/facet/geographic_facet?facet.sort=index&amp;q=frog&amp;search_field=search">A-Z Sort</a>
-            <span class="active numeric btn btn-secondary">Numerical Sort</span>
+
+          <div class="btn-group btn-group-toggle pull-right" data-toggle="buttons">
+            <label class="btn btn-secondary">
+              <input type="radio" name="sort" id="alpha" data-action="change->articles-facet-paginate#sortAlpha"> A-Z Sort
+            </label>
+            <label class="btn btn-secondary active">
+              <input type="radio" name="sort" id="num" checked data-action="change->articles-facet-paginate#sortNum"> Numerical Sort
+            </label>
           </div>
         </div>
       </div>`

@@ -37,4 +37,35 @@ export default class extends Controller {
     this.nextTarget.disabled = this.currentPage >= this.maxPage
 
   }
+
+  sortAlpha() {
+    console.log("alpha")
+    this.items.sort((a, b) => {
+      const textA = a.textContent.toUpperCase()
+      const textB = b.textContent.toUpperCase()
+      return textA < textB ? -1 : textA > textB ? 1 : 0
+    })
+
+    this.listTarget.innerHTML = ''
+    this.items.forEach(item => this.listTarget.appendChild(item))
+    this.paginate()
+  }
+
+  sortNum() {
+    console.log('num')
+
+    this.items.sort((b, a) => {
+      const countA = this.intValue(a.querySelector('.facet-count').textContent)
+      const countB = this.intValue(b.querySelector('.facet-count').textContent)
+      return countA - countB
+    })
+
+    this.listTarget.innerHTML = '';
+    this.items.forEach(item => this.listTarget.appendChild(item))
+    this.paginate()
+  }
+
+  intValue(str) {
+    return Number.parseInt(str.replace(/,/g, ''))
+  }
 }
