@@ -3,13 +3,7 @@
 import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
 import "./vendor/jquery-scrollspy";
-// import "popper.js";
-// import "bootstrap";
 import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
-
-// undo Blacklight's count resizing (incompatible with Blacklight 8 markup)
-Blacklight.doResizeFacetLabelsAndCounts = function() {};
-
 
 import BlacklightRangeLimit from "blacklight-range-limit/app/assets/javascripts/blacklight_range_limit/blacklight_range_limit.esm";
 import "blacklight-range-limit/vendor/assets/javascripts/bootstrap-slider"
@@ -24,12 +18,7 @@ import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.satura
 import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.selection"
 import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.uiConstants"
 Blacklight.onLoad(function() {
-  modalSelector = Blacklight.modal?.modalSelector || Blacklight.Modal.modalSelector;
-  BlacklightRangeLimit.initialize(modalSelector);
-
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('[data-bl-dismiss="modal"]')) Blacklight.modal.hide();
-  });
+  BlacklightRangeLimit.initialize(Blacklight.Modal.modalSelector)
 });
 
 import "./alternate_catalog";
@@ -62,38 +51,6 @@ import "./tooltip";
 import "./popover";
 import "./truncate";
 import "./update-hidden-inputs-by-checkbox";
-
-// TODO: Remove this whole method when we upgrade to Blacklight 8, provided that
-//       https://github.com/projectblacklight/blacklight/pull/3133 is merged
-//
-// Add the passed in contents to the modal and display it.
-// We have specific handling so that scripts returned from the ajax call are executed.
-// This enables adding a script like recaptcha to prevent bots from sending emails.
-Blacklight.modal.receiveAjax = function (contents) {
-  const domparser = new DOMParser();
-  const dom = domparser.parseFromString(contents, "text/html")
-  // If there is a containerSelector on the document, use its children.
-  let elements = dom.querySelectorAll(`${Blacklight.modal.containerSelector} > *`)
-  const frag = document.createDocumentFragment()
-  if (elements.length == 0) {
-    // If the containerSelector wasn't found, use the whole document
-    elements = dom.body.childNodes
-  }
-  elements.forEach((el) => frag.appendChild(el))
-
-  // DOMParser doesn't allow scripts to be executed.  This fixes that.
-  frag.querySelectorAll('script').forEach((script) => {
-    const fixedScript = document.createElement('script')
-    fixedScript.src = script.src
-    fixedScript.async = false
-    script.parentNode.replaceChild(fixedScript, script)
-  })
-
-  document.querySelector(`${Blacklight.modal.modalSelector} .modal-content`).replaceChildren(frag)
-
-  Blacklight.modal.show();
-};
-
 
 // Prevent the back-button from trying to add a second instance of recaptcha
 // See https://github.com/ambethia/recaptcha/issues/217#issuecomment-615221808
