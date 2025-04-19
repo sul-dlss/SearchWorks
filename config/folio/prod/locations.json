@@ -7790,6 +7790,31 @@
     }
   },
   {
+    "id": "8d0adb54-d8c7-40e9-babe-4b17c4f54611",
+    "name": "SAL3 PAGE-EA Spec Coll",
+    "code": "SAL3-PAGE-EA-SPEC",
+    "discoveryDisplayName": "For use in East Asia Library",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "availabilityClass": "Offsite",
+      "pageServicePointCodes": "EAST-ASIA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-04-18T20:41:54.785+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-04-18T20:41:54.785+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "8d774062-28be-4e3a-8755-58ef972ec2d4",
     "name": "ARS migration error",
     "code": "ARS-MIGRATE-ERR",
