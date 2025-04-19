@@ -44,16 +44,7 @@
     </commitWithin>
   </updateHandler>
 
-
-  <!-- NOTE:  these 2 lib dirs are here for testing only and do NOT go in the prod file -->
-  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
-  <lib dir="${solr.install.dir:../../../..}/modules/analysis-extras/lib" />
-  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
-  <lib dir="${solr.install.dir:../../../..}/contrib" regex="CJKFilterUtils-v4.0.jar" />
-
   <dataDir>${solr.data.dir:}</dataDir>
-
-
 
   <query>
     <filterCache class="solr.search.CaffeineCache" size="50000" initialSize="12500" autowarmCount="48" cleanupThread="true"/>
