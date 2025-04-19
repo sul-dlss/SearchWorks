@@ -14,7 +14,12 @@ class FixtureHarvester
     '4085072', # A collection of images (TODO: merge with 24?)
     '13553090', # A uniform title (dotdotdotdot, TODO: merge with 18?)
     '2472159', # one hrid for multiple purl images (TODO: merge with 8923346, 20, or 23?)
-    'L210044' # Has a large number of online links.
+    'L210044', # Has a large number of online links.
+    '14059621', # Has an edition (marc 250)
+    'in00000149820', # 700 example with a translator
+    '12324130', # 710 example with a corporate name & subordinate unit
+    '10689066', # Has editor roles
+    '14434124' # Has duplicate author names and linking to alternative script
   ].freeze
 
   def self.harvest_all
