@@ -335,6 +335,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 8bab25f6-b762-4192-b88f-addc9016d30e,HILA migration error,HILA-MIGRATE-ERR,SU,HOOVER,HILA,Error during migration,true,HILA,HILA,,,,,,,,,,,,,,,
 8c25edbe-7a5e-496b-8cef-e7f9e2b7cabc,Education Reference,EDU-REF,SU,SUL,EDUCATION,Jonsson Social Sciences Reading Room: Education Reference,true,EDUCATION,EDUCATION,,,,,,,,,,,,,,,
 8cb70929-f4ec-439c-a263-6f6f6810a07f,Green Raub Numismatic,GRE-RAUB-NUM,SU,SUL,GREEN,Frank L. Kovacs Numismatic Library,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
+8d0adb54-d8c7-40e9-babe-4b17c4f54611,SAL3 PAGE-EA Spec Coll,SAL3-PAGE-EA-SPEC,SU,SUL,SAL3,For use in East Asia Library,true,SAL3,SAL3,,,,,EAST-ASIA,,,Offsite,,,,,,,
 8d774062-28be-4e3a-8755-58ef972ec2d4,ARS migration error,ARS-MIGRATE-ERR,SU,SUL,ARS,Error during migration,true,ARS,ARS,,,,,,,,,,,,,,,
 8e7ca4d1-4137-4e72-89eb-d78257db4819,Rumsey W7 Box Small,RUM-W7-BOX-SM,SU,SUL,RUMSEY-MAP,Map Center (W7 small box),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,
 8f16bbad-14db-4336-a7f6-4e65036de109,Marine Bio Reserves,MAR-CRES,SU,SUL,MARINE-BIO,On reserve: Ask at Marine Biology circulation desk,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,true,,,,,
