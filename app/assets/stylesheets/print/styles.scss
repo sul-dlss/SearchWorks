@@ -1,22 +1,9 @@
-.print-header {
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: right;
-  h1 {
-    font-size: floor(($font-size-base * 1.6))
-  }
-  h2 {
-    border: none;
-    font-size: floor(($font-size-base * 1.4))
-  }
-}
-
 .breadcrumb.row {
   float: left;
 }
 
 #appliedParams {
-  float:left;
+  float: left;
 }
 
 .search_num_of_results {
@@ -24,7 +11,27 @@
 }
 
 // Do not display these elements
-.navbar, #topnav, #search-navbar-container, #facets, .sort-and-per-page, .record-toolbar, a.remove, .index-document-functions, footer, #sul-footer-container, #global-footer, .additional-results, .pagination, .side-nav-minimap, .library-location-heading img, .record-browse-nearby, .tech-details a, a.btn, .gallery-buttons, .preview-button-container, .google-preview {
+.navbar,
+#topnav,
+#search-navbar-container,
+#facets,
+.sort-and-per-page,
+.record-toolbar,
+a.remove,
+.index-document-functions,
+footer,
+#sul-footer-container,
+#global-footer,
+.additional-results,
+.pagination,
+.side-nav-minimap,
+.library-location-heading img,
+.record-browse-nearby,
+.tech-details a,
+a.btn,
+.gallery-buttons,
+.preview-button-container,
+.google-preview {
   display: none !important;
 }
 a[href]:after {
@@ -37,18 +44,24 @@ h3.index_title {
   }
 }
 
-a,  a:visited {
-  text-decoration: none; border-bottom: none;
+a,
+a:visited {
+  text-decoration: none;
+  border-bottom: none;
 }
-#documents .document, #documents .brief-document, #documents .gallery-document {
+#documents .document,
+#documents .brief-document,
+#documents .gallery-document {
   border: 0;
-  border-bottom: 1px solid #ddd; margin: 0;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
 }
 .gallery .gallery-document {
   height: 350px;
 }
 .callnumber-bar {
-  font-weight: normal; font-size: 1.1em;
+  font-weight: normal;
+  font-size: 1.1em;
 }
 #appliedParams {
   padding: 0;
@@ -60,13 +73,16 @@ a,  a:visited {
   display: none;
 }
 .accordion-section .details {
-  display: block !important; border: 0;
+  display: block !important;
+  border: 0;
 }
 .details dl {
   margin-bottom: 0;
 }
 .accordion-section a.header {
-  text-align: left; padding-left: 0; font-weight: bold;
+  text-align: left;
+  padding-left: 0;
+  font-weight: bold;
 }
 .accordion-section a.header i {
   display: none;
@@ -75,7 +91,8 @@ a,  a:visited {
   padding-left: 0;
 }
 .document h1 {
-  margin-top: 0; padding-top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 .record-sections .section {
   padding-bottom: 0;
@@ -87,5 +104,5 @@ a,  a:visited {
   border: none;
 }
 #su-content {
-  padding-bottom: 0!important;
+  padding-bottom: 0 !important;
 }
