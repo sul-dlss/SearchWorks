@@ -264,6 +264,11 @@ module Constants
     'Nielsen' => '(source: Nielsen Book Data)',
     'AuxAmateurs' => '(source: Amalivre)'
   }
+
+  SUL_ICON_COMPONENTS = {
+    'Loose-leaf' => Icons::LooseLeafComponent
+  }
+
   SUL_ICONS = {
     'Object' => 'cube',
     'Academic Journal' => 'book-2',
