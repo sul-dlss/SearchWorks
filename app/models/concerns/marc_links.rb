@@ -30,22 +30,8 @@ module MarcLinks
       elsif link_struct[:sfx]
         'Find full text'
       else
-        link_struct[:link_text] || link_host
+        link_struct[:link_text]
       end
-    end
-
-    def link_host
-      return if link_struct[:href].blank?
-
-      uri = URI.parse(Addressable::URI.encode(link_struct[:href].strip))
-      host = uri.host
-      if host =~ Links::PROXY_REGEX && uri.query
-        query = CGI.parse(uri.query)
-        host = URI.parse(query['url'].first).host if query['url'].present?
-      end
-      host || link_struct[:href]
-    rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
-      link_struct[:href]
     end
 
     def finding_aid?
@@ -66,7 +52,7 @@ module MarcLinks
       elsif oac_finding_aid?
         'Online Archive of California'
       else
-        link_struct[:link_text] || link_host
+        link_struct[:link_text]
       end
     end
 

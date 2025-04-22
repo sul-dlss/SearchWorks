@@ -15,7 +15,8 @@
                 <% if purl.file_id %>
                   <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :thumbnail) %>">
                 <% end %>
-                <%= purl.text.presence || "part #{i + 1}" %>
+
+                <%= purl.part_label(index: i + 1) %>
               <% end %>
             </li>
           <% end %>

@@ -19,6 +19,10 @@ RSpec.describe 'PURL Embed', :js do
     it 'switches iframe src attributes on item selection' do
       expect(find('iframe')['src']).to include('purl.stanford.edu/ct493wg6431')
 
+      # provides placeholder labels for the buttons
+      expect(page).to have_button('part 1')
+      expect(page).to have_button('part 2')
+
       # Click the last item
       within('.managed-purl-panel') do
         find('button[data-embed-target="https://purl.stanford.edu/zg338xh5248"]').click

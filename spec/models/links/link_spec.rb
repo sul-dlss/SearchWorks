@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
+
 RSpec.describe 'Link' do
   let(:link) do
     Links::Link.new(
@@ -45,5 +47,35 @@ RSpec.describe 'Link' do
 
   it 'parses the managed_purl option' do
     expect(link).to be_managed_purl
+  end
+
+  context 'without link text' do
+    let(:link) do
+      Links::Link.new(
+        href: 'http://link.edu', fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
+      )
+    end
+
+    it 'generates a default based on the link host' do
+      expect(link.text).to eq 'link.edu'
+    end
+  end
+
+  describe '#part_label' do
+    it 'is the link text if it exists' do
+      expect(link.part_label(index: nil)).to eq 'Link Text'
+    end
+
+    context 'without link text' do
+      let(:link) do
+        Links::Link.new(
+          href: 'http://link.edu', link_text: nil, fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
+        )
+      end
+
+      it 'generates a part label based on the index' do
+        expect(link.part_label(index: 1)).to eq 'part 1'
+      end
+    end
   end
 end
