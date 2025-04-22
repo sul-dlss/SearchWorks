@@ -40,3 +40,7 @@
 .facet-hierarchy {
   --link-decoration-line: none;
 }
+
+facet-filters:not(:has(*)) {
+  display: none !important;
+}
