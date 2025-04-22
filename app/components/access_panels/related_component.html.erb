@@ -1,10 +1,13 @@
-<%= render @layout.new(classes: ['panel-related'], hidden: !oclc.present?) do |component| %>
+<%= render @layout.new(classes: ['panel-related'], hidden:) do |component| %>
   <% component.with_title do %>
     More options
   <% end %>
 
   <% component.with_body do %>
     <ul class="links">
+      <% if additional_finding_aids? %>
+        <%= additional_finding_aids.map { |link| content_tag(:li, link.html.html_safe, class: finding_aid_class(link)) }.join.html_safe %>
+      <% end %>
       <% if oclc.present? %>
         <li class="worldcat">
           <%= link_to("Find it at other libraries via WorldCat" ,"https://worldcat.org/oclc/#{oclc.first}") %>
