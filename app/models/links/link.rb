@@ -33,7 +33,11 @@ class Links
     end
 
     def text
-      @text ||= safe_join([@link_text, casalini_text, additional_text_html].compact, ' ')
+      @text ||= safe_join([@link_text || link_host, casalini_text, additional_text_html].compact, ' ')
+    end
+
+    def part_label(index:)
+      @link_text || ("part #{index}" if index) || "part"
     end
 
     def fulltext?
@@ -74,6 +78,20 @@ class Links
       'sfx' if @sfx
     end
 
+    def link_host
+      return if @href.blank?
+
+      uri = URI.parse(Addressable::URI.encode(@href.strip))
+      host = uri.host
+      if host =~ Links::PROXY_REGEX && uri.query
+        query = CGI.parse(uri.query)
+        host = URI.parse(query['url'].first).host if query['url'].present?
+      end
+      host || @href
+    rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
+      @href
+    end
+
     def link_html
       tooltip_attr = if @link_title.present? && !stanford_only?
                        {
@@ -83,7 +101,7 @@ class Links
                      else
                        {}
                      end
-      content_tag(:a, @link_text, href: @href, class: link_class, **tooltip_attr)
+      content_tag(:a, @link_text || link_host, href: @href, class: link_class, **tooltip_attr)
     end
   end
 end
