@@ -6,7 +6,8 @@ pipeline {
   }
 
   environment {
-    OKAPI_URL = credentials('OKAPI_PROD_URL')
+    OKAPI_PROD_URL = credentials('OKAPI_PROD_URL')
+    OKAPI_TEST_URL = credentials('OKAPI_TEST_URL')
   }
 
   stages {
@@ -26,10 +27,10 @@ pipeline {
           bundle install --without production
 
           # Harvest
-          SETTINGS__FOLIO__CONFIG_SET=prod bin/rake folio:update_types_cache || exit 1
+          OKAPI_URL=$OKAPI_PROD_URL SETTINGS__FOLIO__CONFIG_SET=prod bin/rake folio:update_types_cache || exit 1
 
           # TODO: Figure out how to set SETTINGS__FOLIO__URL/OKAPI_USER/OKAPI_PASSWORD for the test server
-          # SETTINGS__FOLIO__CONFIG_SET=test bin/rake folio:update_types_cache || exit 1
+          OKAPI_URL=$OKAPI_TEST_URL SETTINGS__FOLIO__CONFIG_SET=test bin/rake folio:update_types_cache || exit 1
 
           # Make a PR
           git checkout -B folio-policies-update
