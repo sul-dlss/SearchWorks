@@ -35,4 +35,19 @@ RSpec.describe Record::MarcContentAdviceComponent, type: :component do
       expect(page.to_html).to be_empty
     end
   end
+
+  context 'the summary_struct has a content advice field with unmatched vernacular' do
+    let(:summary_struct) do
+      [
+        { label: 'Summary', fields: [{ field: 'Summary of content' }] },
+        { label: 'Content advice', fields: [], unmatched_vernacular: 'Warning about the content in some other language' }
+      ]
+    end
+
+    it 'creates a content warning' do
+      expect(page).to have_css('.content-advice')
+      expect(page).to have_content('Warning about the content in some other language')
+      expect(page).to have_css('strong', text: 'Content advice: ')
+    end
+  end
 end

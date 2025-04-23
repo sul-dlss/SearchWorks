@@ -15,7 +15,9 @@ module Record
     end
 
     def content_advice_values
-      content_advice.flat_map { |h| h[:fields].map { |field| field[:field] } }
+      content_advice.flat_map do |h|
+        h[:fields].presence&.map { |field| field[:field].presence } || h[:unmatched_vernacular]
+      end.compact
     end
 
     def call
