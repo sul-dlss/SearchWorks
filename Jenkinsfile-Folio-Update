@@ -26,10 +26,10 @@ pipeline {
 
           bundle install --without production
 
-          # Harvest
+          # Harvest -prod
           OKAPI_URL=$OKAPI_PROD_URL SETTINGS__FOLIO__CONFIG_SET=prod bin/rake folio:update_types_cache || exit 1
 
-          # TODO: Figure out how to set SETTINGS__FOLIO__URL/OKAPI_USER/OKAPI_PASSWORD for the test server
+          # Harvest -test
           OKAPI_URL=$OKAPI_TEST_URL SETTINGS__FOLIO__CONFIG_SET=test bin/rake folio:update_types_cache || exit 1
 
           # Make a PR
