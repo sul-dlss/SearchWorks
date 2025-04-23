@@ -594,7 +594,6 @@ excerpts.contentreserve.com
 experiments.springernature.com
 extoxnet.orst.edu
 extremephysiolmed.biomedcentral.com
-ezproxy2.library.drexel.edu
 f1000research.com
 facultyopinions.com
 fanyun.dhcdb.com.tw
