@@ -87,6 +87,7 @@ class CatalogController < ApplicationController
     ## parameters included in the Blacklight-jetty document requestHandler.
     #
     config.document_solr_path = 'select'
+    config.json_solr_path = 'select'
     config.default_document_solr_params = {
      :qt => 'document',
     #  ## These are hard-coded in the blacklight 'document' requestHandler
