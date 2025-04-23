@@ -1,0 +1,11 @@
+<div class="bound-with-type">Bound with:</div>
+<ul class="list-unstyled mb-0">
+  <% bound_with_children.each do |child| %>
+      <% child.items.each do |item| %>
+        <li class="pb-2">
+          <div class="bound-with-title"><%= bound_with_title(child) %></div>
+          <div class="bound-with-callnumber"><%= item.callnumber %></div>
+        </li>
+      <% end %>
+  <% end %>
+</ul>

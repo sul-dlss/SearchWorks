@@ -1,0 +1,460 @@
+---
+id: '2308798'
+hashed_id_ssi: 57a3fe26f5886e10dd0bab4e4d3980c1
+marc_json_struct:
+- '{"leader":"01430nam a2200349   4500","fields":[{"001":"a2308798"},{"003":"SIRSI"},{"005":"19920729125415.0"},{"008":"920729s1921    ii
+  a         f000 0 eng c"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"agr21000913"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ALP0677"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Library, U.S. Dept. of Agriculture"},{"c":"STF"},{"d":"OrLoB"},{"d":"CSt"}]}},{"049":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"STFA"}]}},{"070":{"ind1":"0","ind2":" ","subfields":[{"a":"385"},{"b":"In2
+  vol.5, no.9"}]}},{"092":{"ind1":" ","ind2":" ","subfields":[{"a":"630.654"},{"b":".I39m
+  v.5"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Harrison, William Hudson."}]}},{"245":{"ind1":"0","ind2":"4","subfields":[{"a":"The
+  retention of soluble phosphates in calcareous and non-calcareous soils,"},{"c":"by
+  W.H. Harrison  ... and Surendralal Das ... Agricultural Research Institute, Pusa."}]}},{"260":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Calcutta,"},{"b":"Pub. for the Imperial Dept. of
+  Agriculture in India, by Thacker, Spink & Co.;"},{"a":"London,"},{"b":"W. Thacker
+  & Co."},{"c":"[1921]"}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"1 p.
+  l., p. 195-236."},{"b":"diagrs."},{"c":"25 cm."}]}},{"490":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"India. Dept. of Agriculture. Memoirs. Chemical series."},{"v":"vol.
+  V, no. 9"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"31"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Phosphates."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Soils."}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Das, Surendralal."}]}},{"710":{"ind1":"2","ind2":" ","subfields":[{"a":"Pusa,
+  India."},{"b":"Agricultural Research Institute (and College)"}]}},{"810":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"India."},{"b":"Department of Agriculture."},{"t":"Memoirs."},{"p":"Chemical
+  series ;"},{"v":"vol. V, no. 9"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)26281697"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-I)274441199"}]}},{"590":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Copy 1 bound with v. 5, no. 1."},{"c":"5488000 (parent record''s
+  ckey)."},{"b":"36105026515499 (item id)"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  ALP0677"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"e4f977f7-fd8f-5321-b960-99f8f54d32b0"},{"s":"e5d22c57-fc64-55dc-8ca2-3086e85caf96"}]}}]}'
+all_search: Harrison, William Hudson. The retention of soluble phosphates in calcareous
+  and non-calcareous soils, by W.H. Harrison  ... and Surendralal Das ... Agricultural
+  Research Institute, Pusa. Calcutta, Pub. for the Imperial Dept. of Agriculture in
+  India, by Thacker, Spink & Co.; London, W. Thacker & Co. [1921] 1 p. l., p. 195-236.
+  diagrs. 25 cm. India. Dept. of Agriculture. Memoirs. Chemical series. vol. V, no.
+  9 31 Phosphates. Soils. Das, Surendralal. Pusa, India. Agricultural Research Institute
+  (and College) India. Department of Agriculture. Memoirs. Chemical series ; vol.
+  V, no. 9 Copy 1 bound with v. 5, no. 1. 5488000 (parent record's ckey). 36105026515499
+  (item id)
+title_245a_search: The retention of soluble phosphates in calcareous and non-calcareous
+  soils,
+title_245_search: The retention of soluble phosphates in calcareous and non-calcareous
+  soils,
+title_245a_display: The retention of soluble phosphates in calcareous and non-calcareous
+  soils
+title_245c_display: by W.H. Harrison ... and Surendralal Das ... Agricultural Research
+  Institute, Pusa
+title_display: The retention of soluble phosphates in calcareous and non-calcareous
+  soils
+title_full_display: The retention of soluble phosphates in calcareous and non-calcareous
+  soils, by W.H. Harrison  ... and Surendralal Das ... Agricultural Research Institute,
+  Pusa.
+title_sort: retention of soluble phosphates in calcareous and noncalcareous soils
+series_search:
+- India. Dept. of Agriculture. Memoirs. Chemical series. vol. V, no. 9
+- India. Department of Agriculture. Memoirs. Chemical series ; vol. V, no. 9
+author_title_245ac_search:
+- The retention of soluble phosphates in calcareous and non-calcareous soils, by W.H.
+  Harrison  ... and Surendralal Das ... Agricultural Research Institute, Pusa.
+author_title_1xx_search:
+- Harrison, William Hudson The retention of soluble phosphates in calcareous and non-calcareous
+  soils,
+author_title_search:
+- Harrison, William Hudson The retention of soluble phosphates in calcareous and non-calcareous
+  soils,
+- India. Department of Agriculture. Memoirs. Chemical series ;
+best_author_title_search: Harrison, William Hudson The retention of soluble phosphates
+  in calcareous and non-calcareous soils,
+author_1xx_search: Harrison, William Hudson.
+author_7xx_search:
+- Das, Surendralal.
+- Pusa, India. Agricultural Research Institute (and College)
+author_8xx_search:
+- India. Department of Agriculture.
+author_person_facet:
+- Harrison, William Hudson
+- Das, Surendralal
+author_other_facet:
+- Pusa, India. Agricultural Research Institute (and College)
+author_person_display:
+- Harrison, William Hudson
+author_person_full_display:
+- Harrison, William Hudson.
+author_sort: Harrison William Hudson retention of soluble phosphates in calcareous
+  and noncalcareous soils
+topic_search:
+- Phosphates.
+- Soils.
+topic_display:
+- Phosphates.
+- Soils.
+subject_all_search:
+- Phosphates.
+- Soils.
+topic_facet:
+- Phosphates
+- Soils
+pub_search:
+- Calcutta, Pub. for the Imperial Dept. of Agriculture in India, by Thacker, Spink
+  & Co.; London, W. Thacker & Co
+pub_display:
+- Calcutta, Pub. for the Imperial Dept. of Agriculture in India, by Thacker, Spink
+  & Co.; London, W. Thacker & Co
+pub_country: India
+pub_date: '1921'
+pub_date_search: '1921'
+pub_date_sort: '1921'
+pub_year_tisim:
+- 1921
+pub_year_ss: '1921'
+publication_year_isi: 1921
+imprint_display:
+- Calcutta, Pub. for the Imperial Dept. of Agriculture in India, by Thacker, Spink
+  & Co.; London, W. Thacker & Co. [1921]
+date_cataloged: '1992-08-20T00:00:00Z'
+language:
+- English
+oclc:
+- '26281697'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+genre_ssim:
+- Government document
+physical:
+- 1 p. l., p. 195-236. diagrs. 25 cm.
+lccn: agr21000913
+callnum_facet_hsim:
+- Dewey Classification|600s - Technology|630s - Agriculture & Related Technologies
+callnum_search:
+- 630.654 .I39M V.5:NO.9
+barcode_search:
+- '36105026515499'
+item_barcodes:
+- '36105026515499'
+preferred_barcode: '36105026515499'
+holdings_library_code_ssim:
+- SAL3
+library_code_facet_ssim:
+- SAL3
+location_code_facet_ssim:
+- SAL3-STACKS
+building_facet:
+- SAL3 (off-campus storage)
+building_location_facet_ssim:
+- SAL3/*
+- SAL3/SAL3-STACKS
+- SAL3/*/type/
+- SAL3/SAL3-STACKS/type/
+shelfkey:
+- dewey 630.65400000 i39m v.000005:no.000009
+reverse_shelfkey:
+- ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzq~~~~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '010'
+- '035'
+- '040'
+- '049'
+- '070'
+- '092'
+- '100'
+- '245'
+- '260'
+- '300'
+- '490'
+- '596'
+- '650'
+- '700'
+- '710'
+- '810'
+- '590'
+- '999'
+- 010a
+- 035a
+- 040acdd
+- '049a'
+- 070ab
+- '092ab'
+- 100a
+- 245ac
+- 260ababc
+- 300abc
+- 490av
+- 596a
+- 650a
+- 700a
+- 710ab
+- 810abtpv
+- 590acb
+- 999is
+- "?010a"
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040d"
+- "?049a"
+- "?070a"
+- "?070b"
+- "?092a"
+- "?092b"
+- "?100a"
+- "?245a"
+- "?245c"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?490a"
+- "?490v"
+- "?596a"
+- "?650a"
+- "?700a"
+- "?710a"
+- "?710b"
+- "?810a"
+- "?810b"
+- "?810t"
+- "?810p"
+- "?810v"
+- "?590a"
+- "?590c"
+- "?590b"
+- "?999i"
+- "?999s"
+bib_search: Harrison, William Hudson. The retention of soluble phosphates in calcareous
+  and non-calcareous soils, by W.H. Harrison  ... and Surendralal Das ... Agricultural
+  Research Institute, Pusa. Calcutta, Pub. for the Imperial Dept. of Agriculture in
+  India, by Thacker, Spink & Co.; London, W. Thacker & Co. [1921] India. Dept. of
+  Agriculture. Memoirs. Chemical series. vol. V, no. 9 Das, Surendralal. Pusa, India.
+  Agricultural Research Institute (and College) India. Department of Agriculture.
+  Memoirs. Chemical series ; vol. V, no. 9 Phosphates. Soils. Book
+vern_bib_search: Book
+uuid_ssi: e4f977f7-fd8f-5321-b960-99f8f54d32b0
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"e4f977f7-fd8f-5321-b960-99f8f54d32b0","hrid":"a2308798","notes":[],"title":"The
+  retention of soluble phosphates in calcareous and non-calcareous soils, by W.H.
+  Harrison  ... and Surendralal Das ... Agricultural Research Institute, Pusa.","series":[{"value":"India.
+  Dept. of Agriculture. Memoirs. Chemical series. vol. V, no. 9"},{"value":"India.
+  Department of Agriculture. Memoirs. Chemical series ; vol. V, no. 9"}],"source":"MARC","_version":10,"editions":[],"metadata":{"createdDate":"2023-08-21T03:02:21.756Z","updatedDate":"2023-08-21T03:02:21.756Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Phosphates"},{"value":"Soils"}],"languages":["eng"],"indexTitle":"Retention
+  of soluble phosphates in calcareous and non-calcareous soils,","identifiers":[{"value":"agr21000913","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  ALP0677","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)26281697","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)274441199","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"place":"Calcutta
+  London","publisher":"Pub. for the Imperial Dept. of Agriculture in India, by Thacker,
+  Spink & Co W. Thacker & Co","dateOfPublication":"[1921]"}],"contributors":[{"name":"Harrison,
+  William Hudson","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Das,
+  Surendralal","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Pusa,
+  India. Agricultural Research Institute (and College)","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"1992-08-20","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1921},"statusUpdatedDate":"2023-08-21T03:02:21.746+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
+  p. l., p. 195-236. diagrs. 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+bound_with_parent_item_ids_ssim:
+- f947bd93-a1eb-5613-8745-1063f948c461
+last_updated: '2025-04-20T14:56:59Z'
+created: '2025-04-20T14:56:59Z'
+timestamp: '2025-04-20T14:56:59Z'
+author_struct:
+- creator:
+  - link: Harrison, William Hudson.
+    search: Harrison, William Hudson.
+  contributors:
+  - link: Das, Surendralal.
+    search: Das, Surendralal.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Pusa, India. Agricultural Research Institute (and College)
+    search: Pusa, India. Agricultural Research Institute (and College)
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+holdings_json_struct:
+- holdings:
+  - id: '009e7bb3-4cd5-5a70-9ed3-18027ad7da9a'
+    hrid: ah2308798_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T03:03:57.003Z'
+      updatedDate: '2023-08-21T03:03:57.003Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    boundWith:
+      item:
+        id: f947bd93-a1eb-5613-8745-1063f948c461
+        hrid: ai5488000_1_3
+        status: Available
+        volume:
+        barcode: '36105026515499'
+        callNumber:
+          typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+          callNumber: 630.654 .I39M
+        chronology:
+        enumeration: V.5:NO.1,7-8
+        materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+        effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+        temporaryLoanTypeId:
+        suppressFromDiscovery: false
+        location:
+          effectiveLocation:
+            id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+            code: SAL3-STACKS
+            name: Stacks
+            campus:
+              id: c365047a-51f2-45ce-8601-e421ca3615c5
+              code: SUL
+              name: Stanford Libraries
+            details:
+              availabilityClass: Offsite
+              scanServicePointCode: SAL3
+            library:
+              id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+              code: SAL3
+              name: SAL3 (off-campus storage)
+            isActive: true
+            institution:
+              id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+              code: SU
+              name: Stanford University
+      holding:
+        effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        suppressFromDiscovery: false
+        location:
+          effectiveLocation:
+            id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+            code: SAL3-STACKS
+            name: Stacks
+            campus:
+              id: c365047a-51f2-45ce-8601-e421ca3615c5
+              code: SUL
+              name: Stanford Libraries
+            details:
+              availabilityClass: Offsite
+              scanServicePointCode: SAL3
+            library:
+              id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+              code: SAL3
+              name: SAL3 (off-campus storage)
+            isActive: true
+            institution:
+              id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+              code: SU
+              name: Stanford University
+      instance:
+        id: 9bf55756-7e18-52d8-81a6-84a62353e512
+        hrid: a5488000
+        title: The gases of swamp rice soils ... / by W.H. Harrison ... and P.A. Subramania
+          Aiyer ...
+        suppressFromDiscovery: false
+    formerIds: []
+    illPolicy:
+    callNumber: 630.654 .I39M V.5:NO.9
+    instanceId: e4f977f7-fd8f-5321-b960-99f8f54d32b0
+    holdingsType:
+      id: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+      name: Bound-with
+      source: local
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: system
+    holdingsTypeId: 5b08b35d-aaa3-4806-998c-9cd85e5bc406
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    permanentLocationId: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 158168a3-ede4-4cc1-8c98-61f4feeb22ea
+        code: SAL3-SEE-OTHER
+        name: See linked record to request items bound together
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
+item_display_struct:
+- id: f947bd93-a1eb-5613-8745-1063f948c461
+  barcode: '36105026515499'
+  library: SAL3
+  type:
+  note:
+  instance_id: 9bf55756-7e18-52d8-81a6-84a62353e512
+  instance_hrid: a5488000
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+    hrid: a5488000
+    title: The gases of swamp rice soils ... / by W.H. Harrison ... and P.A. Subramania
+      Aiyer ...
+    call_number: 630.654 .I39M
+    volume:
+    enumeration: V.5:NO.1,7-8
+    chronology:
+  is_bound_with_principal: false
+  lopped_callnumber: 630.654 .I39M
+  callnumber: 630.654 .I39M V.5:NO.9
+  full_shelfkey: dewey 630.65400000 i39m v.000005:no.000009
+browse_nearby_struct:
+- lopped_callnumber: 630.654 .I39M
+  shelfkey: dewey 630.65400000 i39m v.000005:no.000009
+  reverse_shelfkey: ml3l1~twz}tuvzzzzz~hwqd~4}zzzzzu~cb}zzzzzq~~~~~~~~
+  callnumber: 630.654 .I39M V.5:NO.9
+  scheme: DEWEY
+  item_id: f947bd93-a1eb-5613-8745-1063f948c461

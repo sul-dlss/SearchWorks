@@ -207,7 +207,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
+context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
 
   '
 context_input_name_ssi: "/dev/null"
@@ -342,9 +342,9 @@ bib_search: '100 years of radio in South Africa. Volume 1, South African radio s
   editor. Motsaathebe, Gilbert, editor. ProQuest (Firm) Radio broadcasting Book'
 vern_bib_search: Book
 uuid_ssi: 3f1e6f2c-ab5c-4562-8784-96a2e1003c9c
-last_updated: '2025-04-13T10:10:40Z'
-created: '2025-04-13T10:10:40Z'
-timestamp: '2025-04-13T10:10:40Z'
+last_updated: '2025-04-20T10:18:39Z'
+created: '2025-04-20T10:18:39Z'
+timestamp: '2025-04-20T10:18:39Z'
 folio_json_struct:
 - '{"pieces":[null],"instance":{"id":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c","hrid":"in00000053236","tags":{"tagList":[]},"notes":[{"note":"1.
   Introduction: A Century Of South Africa''s Most Renowned Medium -- 2. 100 Years
@@ -413,7 +413,7 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text: Access limited to 1 user
   material_type:
-  note: Available to Stanford-affiliated users.
+  note: Available to Stanford-affiliated users. Access limited to 1 user
   href: https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
   sort:
   casalini:

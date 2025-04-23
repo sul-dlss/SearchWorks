@@ -6,20 +6,38 @@ class BoundWithChildrenController < ApplicationController
   copy_blacklight_config_from(CatalogController)
 
   class Builder
-    def initialize(item_id)
+    def initialize(item_id, limit)
       @item_id = item_id
+      @limit = limit
     end
 
     def reverse_merge(extra)
-      extra.merge(q: "bound_with_parent_item_ids_ssim:#{@item_id}", facet: false, rows: 100)
+      extra.merge(q: "bound_with_parent_item_ids_ssim:#{@item_id}", facet: false, rows: @limit)
     end
+  end
+
+  def modal
+    @id = params.require(:id)
+    @item_id = params.require(:item_id)
+    builder = Builder.new(@item_id, 100)
+    search = search_service.repository.search(builder)
+    @bound_with_children = filtered_children(search.docs)
   end
 
   def index
     @id = params.require(:id)
     @item_id = params.require(:item_id)
-    builder = Builder.new(@item_id)
+    @limit = params[:limit] ? params[:limit].to_i : 3
+    builder = Builder.new(@item_id, @limit)
     search = search_service.repository.search(builder)
-    @bound_with_children = search.docs
+    @number_of_results = search.response['numFound']
+    @bound_with_children = filtered_children(search.docs)
+    @instance_call_number = @bound_with_children.present? ? @bound_with_children.first.items.first.bound_with_parent[:call_number] : ''
+  end
+
+  def filtered_children(bound_with_children)
+    @filtered_children = bound_with_children.each do |child|
+      child.items.select { |item| item.id == @item_id && !item.bound_with_principal? }
+    end
   end
 end
