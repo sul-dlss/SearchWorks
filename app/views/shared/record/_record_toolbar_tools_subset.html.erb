@@ -42,11 +42,13 @@
     <%= link_to t('blacklight.tools.ris_html'),
                 articles_ris_path(@document, :format => 'ris'),
                 class: 'dropdown-item',
+                data: { turbo: false },
                 role: 'menuitem', tabindex: '-1' %>
   <% else %>
     <%= link_to t('blacklight.tools.ris_html'),
                 solr_document_path(@document, :format => 'ris'),
                 class: 'dropdown-item',
+                data: { turbo: false },
                 role: 'menuitem', tabindex: '-1' %>
   <% end %>
 <% end %>
@@ -54,6 +56,7 @@
   <%= link_to t('blacklight.tools.endnote_html'),
               solr_document_path(@document, :format => 'endnote'),
               role: 'menuitem', tabindex: '-1',
+              data: { turbo: false },
               class: 'dropdown-item' %>
 <% end %>
 <a role="menuitem" tabindex="-1" class="dropdown-item" href="javascript:if(window.print)window.print()"><%= t('blacklight.tools.printer_html') %></a>
