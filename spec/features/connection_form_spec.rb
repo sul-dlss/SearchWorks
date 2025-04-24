@@ -21,7 +21,6 @@ RSpec.feature 'Connection form (js)', :js do
       fill_in('to', with: 'test@kittenz.eu')
       click_button 'Send'
     end
-    wait_for_ajax
 
     expect(page).to have_css(
       'div.alert-success',
