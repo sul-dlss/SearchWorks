@@ -9,7 +9,6 @@
 # Offense count: 21
 Capybara/SpecificActions:
   Exclude:
-    - "spec/features/blacklight_customizations/emailing_records_spec.rb"
     - "spec/features/brief_view_spec.rb"
     - "spec/features/image_collection_spec.rb"
     - "spec/features/merged_file_collection_spec.rb"

@@ -29,30 +29,7 @@ RSpec.describe "Emailing Records", :js do
 
     before { login_as(user) }
 
-    it "is successful" do
-      visit solr_document_path('14')
-
-      within('.record-toolbar') do
-        within('li.dropdown') do
-          click_button 'Send to'
-          within('.dropdown-menu') do
-            click_link 'email'
-          end
-        end
-      end
-
-      expect(page).to have_css('h1', text: 'Email This', visible: true)
-      expect(URI(find_by_id('email_form')['action']).path).to eq(email_solr_document_path('14'))
-
-      within('.modal-dialog') do
-        fill_in 'to', with: 'email@example.com'
-        find('button[type="submit"]').click
-      end
-
-      expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
-    end
-
-    context 'article' do
+    context 'when on an article page' do
       before { stub_article_service(type: :single, docs: [document]) }
 
       let(:document) do
@@ -81,14 +58,14 @@ RSpec.describe "Emailing Records", :js do
 
         within('.modal-dialog') do
           fill_in 'to', with: 'email@example.com'
-          find('button[type="submit"]').click
+          click_button 'Send'
         end
 
         expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
       end
     end
 
-    context 'emailing a full record' do
+    context 'when viewing a catalog record' do
       before do
         visit solr_document_path('14')
 
@@ -100,27 +77,41 @@ RSpec.describe "Emailing Records", :js do
             end
           end
         end
+      end
 
-        within('.modal-dialog') do
-          fill_in 'to', with: 'email@example.com'
-          find_by_id('type_full').click
+      context 'when "brief record" is selected' do
+        it "sends the brief record" do
+          expect(page).to have_css('h1', text: 'Email This', visible: true)
 
-          find('button[type="submit"]').click
+          within('.modal-dialog') do
+            fill_in 'to', with: 'email@example.com'
+            click_button 'Send'
+          end
+
+          expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
         end
       end
 
-      it 'renders metadata from MARC/MODS' do
-        # triggers capybara to wait until email is sent
-        expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
-        email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
-        expect(email).to have_css('h3', text: /Bibliographic information/)
-        expect(email).to have_css('dd', text: /A quartely publication/)
-      end
+      context 'when "Full record" is selected' do
+        before do
+          within('.modal-dialog') do
+            fill_in 'to', with: 'email@example.com'
+            choose 'Full record'
 
-      it 'hides the side-nav-minimap' do
-        # triggers capybara to wait until email is sent
-        expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
-        expect(page).to have_css('.side-nav-minimap', visible: false)
+            click_button 'Send'
+          end
+        end
+
+        it 'emails a full record' do
+          # triggers capybara to wait until email is sent
+          expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
+          # hides the side-nav-minimap
+          expect(page).to have_css('.side-nav-minimap', visible: false)
+
+          email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
+          expect(email).to have_css('h3', text: /Bibliographic information/)
+          expect(email).to have_css('dd', text: /A quartely publication/)
+        end
       end
     end
   end
