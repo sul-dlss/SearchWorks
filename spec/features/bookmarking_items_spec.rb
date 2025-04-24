@@ -22,21 +22,15 @@ RSpec.feature 'Bookmarking Items' do
         find('input.toggle-bookmark').click
       end
 
-      wait_for_ajax
-
       within(all('.document').last) do
         find('input.toggle-bookmark').click
       end
-
-      wait_for_ajax
 
       visit '/selections'
 
       expect(page).to have_css('.document', count: 2)
 
       click_link 'Cite 1 - 2'
-
-      wait_for_ajax
 
       within('.modal-dialog') do
         expect(page).to have_css('div#all')

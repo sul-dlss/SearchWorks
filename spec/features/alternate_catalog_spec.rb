@@ -11,7 +11,6 @@ RSpec.feature 'Alterate catalog results', :js do
     expect(LibGuidesApi).to receive(:fetch).and_return([])
 
     visit search_catalog_path(q: '1*')
-    wait_for_ajax
     within '.alternate-catalog' do
       expect(page).to have_css 'h3', text: 'Your search also found results in'
       expect(page).to have_css 'a.btn', text: 'See 4 article+ results'
@@ -29,7 +28,6 @@ RSpec.feature 'Alterate catalog results', :js do
     expect(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
 
     visit search_catalog_path(q: '1*')
-    wait_for_ajax
     within '.alternate-catalog' do
       expect(page).to have_css('.lib-guides-alternate-catalog', visible: :visible)
       within('.lib-guides-alternate-catalog') do
@@ -44,7 +42,6 @@ RSpec.feature 'Alterate catalog results', :js do
     expect(LibGuidesApi).to receive(:fetch).and_return([])
 
     visit articles_path(q: '1*')
-    wait_for_ajax
     within '.alternate-catalog' do
       expect(page).to have_css 'h3', text: 'Your search also found results in'
       expect(page).to have_css 'a.btn', text: 'See 43 catalog results'
