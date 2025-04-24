@@ -16,7 +16,8 @@ $text-color: $sul-text-color;
 $link-color: $sul-link-color;
 $link-hover-color: $sul-link-color-hover;
 // $link-decoration: var(--link-decoration-line) var(--link-decoration-style);
-$link-hover-decoration: var(--link-hover-decoration-line) var(--link-hover-decoration-style);
+$link-hover-decoration: var(--link-hover-decoration-line)
+  var(--link-hover-decoration-style);
 
 // Components
 $component-active-bg: $digital-blue-dark;
@@ -64,17 +65,15 @@ $table-caption-color: $blackish;
 // Tooltip
 $tooltip-bg: $sul-tooltip-bg;
 
-
 // Typography
 $font-size-base: 0.875rem;
-$font-size-small: 0.75rem * 0.875;
+$font-size-small: 0.937em;
 $h1-font-size: $font-size-base * 2.323;
 $h2-font-size: $font-size-base * 1.793;
 $h3-font-size: $font-size-base * 1.383;
 $h4-font-size: $font-size-base * 1.215;
 $h5-font-size: $font-size-base * 1.138;
 $headings-font-weight: 400;
-
 
 // Bootstrap variables for print sheets
 
