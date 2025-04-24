@@ -2,7 +2,7 @@
 <% spines = document.browseable_spines.first(num_items_to_show) %>
 
 <div class="section record-browse-nearby container-fluid" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>">
-  <h2><span class="sul-icon sul-icon-books-3"></span> Browse related items</h2>
+  <h2><%= render Icons::Books3Component.new %> Browse related items</h2>
   <div class="row">
     <div class="col-md-9 col-sm-12">
       Start at call number:
