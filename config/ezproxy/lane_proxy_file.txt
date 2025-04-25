@@ -63,7 +63,6 @@ ajod.org
 ajp.mums.ac.ir
 ajp.psychiatryonline.org
 ajph.aphapublications.org
-akademiai.com
 akjournals.com
 alfama.sim.ucm.es
 all-imm.com
@@ -596,6 +595,7 @@ extoxnet.orst.edu
 extremephysiolmed.biomedcentral.com
 f1000research.com
 facultyopinions.com
+familymedicine.lwwhealthlibrary.com
 fanyun.dhcdb.com.tw
 faulkner.com
 fconline.foundationcenter.org
