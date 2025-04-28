@@ -28,7 +28,6 @@ $sul-icon-prefix: 'sul-icon';
   color: $black;
   display: table-cell;
   width: 30px;
-  vertical-align: middle;
   &::before, svg {
     height: 21px;
     width: 21px;
@@ -37,15 +36,13 @@ $sul-icon-prefix: 'sul-icon';
 }
 
 .#{$sul-icon-prefix}.blacklight-icons {
-  vertical-align: text-bottom;
-  svg {
-    height: 1rem;
-  }
+  vertical-align: text-top;
 }
 
 .facet-values .#{$sul-icon-prefix} + .facet-label {
   padding-left: 20px;
 }
 
-.sul-icon-refworks { color: $sul-icon-refworks-color; }
-.sul-icon-endnote { color: $sul-icon-endnote-color; }
+.sul-icon-refworks { color: var(--stanford-digital-red); }
+
+.sul-icon-endnote { color: var(--mostly-pure-orange); }
