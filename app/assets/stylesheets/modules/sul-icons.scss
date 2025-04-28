@@ -1,14 +1,19 @@
-$sul-icon-prefix: 'sul-icon';
+$sul-icon-prefix: "sul-icon";
 //Sizing
-.#{$sul-icon-prefix}-1-5x { font-size: 1.5em; }
-.#{$sul-icon-prefix}-2x { font-size: 2em; }
-.#{$sul-icon-prefix}-3x { font-size: 3em; }
-.#{$sul-icon-prefix}-4x { font-size: 4em; }
-.#{$sul-icon-prefix}-5x { font-size: 5em; }
-
-//Color - not coloring globally
-.#{$sul-icon-prefix} {
-
+.#{$sul-icon-prefix}-1-5x {
+  font-size: 1.5em;
+}
+.#{$sul-icon-prefix}-2x {
+  font-size: 2em;
+}
+.#{$sul-icon-prefix}-3x {
+  font-size: 3em;
+}
+.#{$sul-icon-prefix}-4x {
+  font-size: 4em;
+}
+.#{$sul-icon-prefix}-5x {
+  font-size: 5em;
 }
 
 .rss-icon {
@@ -18,31 +23,31 @@ $sul-icon-prefix: 'sul-icon';
   @extend .fa-rss-square;
 
   color: $sul-rss-icon-color;
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 
 // Style icons in facets
-.facet-values .#{$sul-icon-prefix}, .facet-values .#{$sul-icon-prefix}.blacklight-icons {
-  @extend .#{$sul-icon-prefix}-1-5x;
-  align-items: center;
-  color: $black;
-  display: table-cell;
-  width: 30px;
-  &::before, svg {
-    height: 21px;
-    width: 21px;
-    vertical-align: top;
+.facet-values {
+  .sul-icon {
+    color: black;
+    display: table-cell;
+    width: 30px;
+
+    svg {
+      height: 21px;
+      width: 21px;
+    }
+  }
+  .#{$sul-icon-prefix} + .facet-label {
+    padding-left: 20px;
+    padding-bottom: 0.7rem;
   }
 }
 
-.#{$sul-icon-prefix}.blacklight-icons {
-  vertical-align: text-top;
+.sul-icon-refworks {
+  color: var(--stanford-digital-red);
 }
 
-.facet-values .#{$sul-icon-prefix} + .facet-label {
-  padding-left: 20px;
+.sul-icon-endnote {
+  color: var(--mostly-pure-orange);
 }
-
-.sul-icon-refworks { color: var(--stanford-digital-red); }
-
-.sul-icon-endnote { color: var(--mostly-pure-orange); }
