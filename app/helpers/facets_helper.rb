@@ -8,8 +8,10 @@ module FacetsHelper
     values.delete("Database") if values.length > 1
     values.delete("Book") if values.length > 1
     value = values.first
-    if Constants::SUL_ICON_COMPONENTS.has_key?(value)
-      render Constants::SUL_ICON_COMPONENTS[value].new
+    if Constants::SUL_ICONS.has_key?(value)
+      content_tag(:span, "", class: "sul-icon sul-icon-#{Constants::SUL_ICONS[value]}")
+    elsif Constants::SUL_ICON_COMPONENTS.has_key?(value)
+      render Constants::SUL_ICON_COMPONENTS[value].new(classes: 'sul-icon')
     end
   end
 end

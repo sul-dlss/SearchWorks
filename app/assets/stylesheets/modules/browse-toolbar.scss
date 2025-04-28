@@ -10,8 +10,9 @@
   padding: 0;
 
   h2 {
-    .sul-icon svg {
-      height: 15px;
+    span.sul-icon {
+      font-size: 15px;
+      margin-right: 5px;
     }
   }
   .callnumber {
