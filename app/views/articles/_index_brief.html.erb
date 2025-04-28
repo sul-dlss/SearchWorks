@@ -1,3 +1,4 @@
+<% doc_presenter = document_presenter(document) %>
 <% # header bar for doc items in index view %>
 <div class="brief-document container-fluid">
   <div class="row row-eq-height brief-container">
@@ -5,7 +6,8 @@
 
       <div class="documentHeader">
         <h3 class="index_title">
-          <%= render_resource_icon doc_formats %>
+          <% counter = document_counter_with_offset(document_counter) %>
+          <%= render_resource_icon doc_presenter.formats %>
           <%= document.online_label %>
           <span class="document-counter">
             <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
@@ -41,3 +43,4 @@
 
   </div>
 </div>
+
