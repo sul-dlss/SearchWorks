@@ -1,6 +1,6 @@
 <% # container for all documents in index view -%>
 <div id="documents">
-  <% if controller_path == 'articles' %>
+  <% if controller_path == 'articles' || controller_path == 'article_selections' %>
     <%= render Articles::IndexBriefComponent.with_collection(documents) %>
   <% else %>
     <%= render :collection => documents, :as => :document, :partial => 'index_brief' %>
