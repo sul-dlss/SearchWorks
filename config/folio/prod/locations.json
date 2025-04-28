@@ -9804,7 +9804,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
-    "details": {},
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
       "3a306665-eec7-4a40-8f4d-608585b2a394"
@@ -9813,8 +9815,8 @@
     "metadata": {
       "createdDate": "2025-01-14T21:01:58.246+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-01-14T21:01:58.246+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-04-28T21:48:58.105+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
