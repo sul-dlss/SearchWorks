@@ -44,4 +44,38 @@ RSpec.describe "Library Location Access Panel" do
       expect(page).to have_css('.callnumber', text: 'MNO', visible: true)
     end
   end
+
+  context 'when a finding aid is present and items are aeon pageable' do
+    before do
+      visit solr_document_path '4085177'
+    end
+
+    it 'consolidates multiple items to their single base call number' do
+      within '.record-panels' do
+        expect(page).to have_css('.callnumber', text: 'SC0132', count: 1)
+        expect(page).to have_no_css('.callnumber', text: 'SC0132 1997-093 BOX 1')
+      end
+    end
+  end
+
+  context 'when a finding aid is present with both aeon pageable and non-pageable items' do
+    before do
+      visit solr_document_path '6631609'
+    end
+
+    it 'shows the base call number for the aeon pageable items' do
+      within '.record-panels' do
+        expect(page).to have_css('.callnumber', text: 'SCM0445', count: 1)
+        expect(page).to have_no_css('.callnumber', text: 'SCM0445 ACCN 2015-099 HALF BOX 1')
+      end
+    end
+
+    it 'shows the unconsolidated items with their full call number for items that are not aeon pageable' do
+      within '.record-panels' do
+        expect(page).to have_css('.callnumber', text: 'ZMS 1688')
+        expect(page).to have_css('.callnumber', text: 'ZMS 1688 PRODUCT MANUAL')
+        expect(page).to have_css('.callnumber', text: 'ZMS 1688 STRATEGY & TECHNICAL GUIDE')
+      end
+    end
+  end
 end

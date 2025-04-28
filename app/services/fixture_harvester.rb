@@ -19,7 +19,10 @@ class FixtureHarvester
     '2312336', # child of 5488000, for third holding
     '2300812', # child of 5488000, for third holding
     '2285763', # child of 5488000, for third holding
-    '2285756' # child of 5488000, for second holding
+    '2285756', # child of 5488000, for second holding
+    '4085177', # Finding aid with many call numbers
+    '6631609', # Mix of circulating and non-circulating w/finding aid
+    'L210044' # Has a large number of online links.
   ].freeze
 
   def self.harvest_all
