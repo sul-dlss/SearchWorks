@@ -266,34 +266,37 @@ module Constants
   }
 
   SUL_ICON_COMPONENTS = {
-    'Loose-leaf' => Icons::LooseLeafComponent,
-    'Object' => Icons::CubeComponent,
-    'Academic Journal' => Icons::Book2Component,
-    'Archive/Manuscript' => Icons::DocumentBox1Component,
-    'Archived website' => Icons::NetworkWebComponent,
-    'Article' => Icons::TextWrapping1Component,
-    'Book' => Icons::Book1Component,
-    'Dataset' => Icons::BusinessChart1Component,
-    'Database' => Icons::WindowSearchComponent,
-    'Equipment' => Icons::Plug2Component,
-    'Image' => Icons::Photos1Component,
-    'Journal/Periodical' => Icons::Book2Component,
-    'Map' => Icons::MapLocationComponent,
-    'Music recording' => Icons::GramophoneComponent,
-    'Music score' => Icons::FileMusicComponent,
-    'Newspaper' => Icons::Newspaper2Component,
-    'Software/Multimedia' => Icons::Mouse2Component,
-    'Sound recording' => Icons::Microphone2Component,
-    'Video' => Icons::Film2Component,
-    'Credits' => Icons::Contacts1Component,
-    'Subjects' => Icons::Tags1Component,
-    'Contents' => Icons::List4Component,
-    'Browse' => Icons::Books3Component,
-    'Chat' => Icons::Bubble2Component,
-    'Feedback' => Icons::Mail1Component,
-    'Cite' => Icons::QuoteComponent,
-    'Send To' => Icons::LinkComponent,
-    'Selections' => Icons::Check3Component
+    'Loose-leaf' => Icons::LooseLeafComponent
+  }
+
+  SUL_ICONS = {
+    'Object' => 'cube',
+    'Academic Journal' => 'book-2',
+    'Archive/Manuscript' => 'document-box-1',
+    'Archived website' => 'network-web',
+    'Article' => 'text-wrapping-1',
+    'Book' => 'book-1',
+    'Dataset' => 'business-chart-1',
+    'Database' => 'window-search',
+    'Equipment' => 'plug-2',
+    'Image' => 'photos-1',
+    'Journal/Periodical' => 'book-2',
+    'Map' => 'map-location',
+    'Music recording' => 'gramophone',
+    'Music score' => 'file-music',
+    'Newspaper' => 'newspaper-2',
+    'Software/Multimedia' => 'mouse-2',
+    'Sound recording' => 'microphone-2',
+    'Video' => 'film-2',
+    'Credits' => 'contacts-1',
+    'Subjects' => 'tags-1',
+    'Contents' => 'list-4',
+    'Browse' => 'books-3',
+    'Chat' => 'bubble-2',
+    'Feedback' => 'mail-1',
+    'Cite' => 'quote',
+    'Send To' => 'link',
+    'Selections' => 'check-3'
   }
 
   LIBRARY_INSTRUCTIONS = {

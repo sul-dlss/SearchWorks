@@ -1,0 +1,111 @@
+//
+// Icon Font: sul-icon
+//
+
+@font-face {
+  font-family: "sul-icon";
+  src: url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot");
+  src: url("sul-icon_60df2eb076c5383b3f69816f13986e67.eot?#iefix") format("embedded-opentype"),
+       url("sul-icon_60df2eb076c5383b3f69816f13986e67.woff") format("woff"),
+       url("sul-icon_60df2eb076c5383b3f69816f13986e67.ttf") format("truetype"),
+       url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "sul-icon";
+    src: url("sul-icon_60df2eb076c5383b3f69816f13986e67.svg#sul-icon") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.sul-icon-book-1:before,
+.sul-icon-book-2:before,
+.sul-icon-books-1:before,
+.sul-icon-books-3:before,
+.sul-icon-bubble-2:before,
+.sul-icon-business-chart-1:before,
+.sul-icon-check-3:before,
+.sul-icon-contacts-1:before,
+.sul-icon-cube:before,
+.sul-icon-database-search:before,
+.sul-icon-disc:before,
+.sul-icon-document-box-1:before,
+.sul-icon-file-music:before,
+.sul-icon-film-2:before,
+.sul-icon-film-3:before,
+.sul-icon-gramophone:before,
+.sul-icon-ipad-1:before,
+.sul-icon-link:before,
+.sul-icon-list-4:before,
+.sul-icon-mail-1:before,
+.sul-icon-map-location:before,
+.sul-icon-microphone-2:before,
+.sul-icon-mouse-2:before,
+.sul-icon-movie-play-2:before,
+.sul-icon-music-note-1:before,
+.sul-icon-network-web:before,
+.sul-icon-newspaper-1:before,
+.sul-icon-newspaper-2:before,
+.sul-icon-photos-1:before,
+.sul-icon-plug-2:before,
+.sul-icon-quote:before,
+.sul-icon-screen-4:before,
+.sul-icon-tags-1:before,
+.sul-icon-text-wrapping-1:before,
+.sul-icon-window-search:before,
+.sul-icon-window-selection:before {
+  display: inline-block;
+  font-family: "sul-icon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.sul-icon-book-1:before { content: "\f104"; }
+.sul-icon-book-2:before { content: "\f109"; }
+.sul-icon-books-1:before { content: "\f10a"; }
+.sul-icon-books-3:before { content: "\f11b"; }
+.sul-icon-bubble-2:before { content: "\f11c"; }
+.sul-icon-business-chart-1:before { content: "\f105"; }
+.sul-icon-check-3:before { content: "\f11d"; }
+.sul-icon-contacts-1:before { content: "\f11e"; }
+.sul-icon-cube:before { content: "\f101"; }
+.sul-icon-database-search:before { content: "\f107"; }
+.sul-icon-disc:before { content: "\f10b"; }
+.sul-icon-document-box-1:before { content: "\f102"; }
+.sul-icon-file-music:before { content: "\f10c"; }
+.sul-icon-film-2:before { content: "\f10d"; }
+.sul-icon-film-3:before { content: "\f10e"; }
+.sul-icon-gramophone:before { content: "\f10f"; }
+.sul-icon-ipad-1:before { content: "\f110"; }
+.sul-icon-link:before { content: "\f11f"; }
+.sul-icon-list-4:before { content: "\f120"; }
+.sul-icon-mail-1:before { content: "\f121"; }
+.sul-icon-map-location:before { content: "\f111"; }
+.sul-icon-microphone-2:before { content: "\f112"; }
+.sul-icon-mouse-2:before { content: "\f113"; }
+.sul-icon-movie-play-2:before { content: "\f114"; }
+.sul-icon-music-note-1:before { content: "\f115"; }
+.sul-icon-network-web:before { content: "\f124"; }
+.sul-icon-newspaper-1:before { content: "\f116"; }
+.sul-icon-newspaper-2:before { content: "\f117"; }
+.sul-icon-photos-1:before { content: "\f118"; }
+.sul-icon-plug-2:before { content: "\f108"; }
+.sul-icon-quote:before { content: "\f122"; }
+.sul-icon-screen-4:before { content: "\f119"; }
+.sul-icon-tags-1:before { content: "\f123"; }
+.sul-icon-text-wrapping-1:before { content: "\f103"; }
+.sul-icon-window-search:before { content: "\f106"; }
+.sul-icon-window-selection:before { content: "\f11a"; }
