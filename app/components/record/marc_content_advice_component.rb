@@ -23,7 +23,7 @@ module Record
     def call
       content_tag(:div, class: 'py-2 px-3 mb-2 content-advice') do
         tag.strong('Content advice: ') +
-          safe_join(content_advice_values, "<br>")
+          safe_join(content_advice_values, tag.br)
       end
     end
   end
