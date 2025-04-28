@@ -60,7 +60,7 @@ pipeline {
           bundle install --without production
 
           # Harvest -prod
-          SETTINGS__FOLIO__CONFIG_SET=prod bin/rake folio:update_types_cache || exit 1
+          SETTINGS__FOLIO__CONFIG_SET=test bin/rake folio:update_types_cache || exit 1
 
           # Make a PR
           git checkout -B folio-policies-update-test
