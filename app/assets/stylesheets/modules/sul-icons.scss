@@ -22,16 +22,24 @@ $sul-icon-prefix: 'sul-icon';
 }
 
 // Style icons in facets
-.facet-values .#{$sul-icon-prefix} {
+.facet-values .#{$sul-icon-prefix}, .facet-values .#{$sul-icon-prefix}.blacklight-icons {
   @extend .#{$sul-icon-prefix}-1-5x;
   align-items: center;
   color: $black;
   display: table-cell;
   width: 30px;
   vertical-align: middle;
-  &::before {
+  &::before, svg {
     height: 21px;
+    width: 21px;
     vertical-align: top;
+  }
+}
+
+.#{$sul-icon-prefix}.blacklight-icons {
+  vertical-align: text-bottom;
+  svg {
+    height: 1rem;
   }
 }
 
