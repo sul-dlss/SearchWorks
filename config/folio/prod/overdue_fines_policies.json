@@ -1,5 +1,37 @@
 [
   {
+    "name": "1.00/30.00 daily + recall overdue fines",
+    "description": "Daily overdue fine accruing at $1/day to a maximum of $30; includes overdue recall fines at $3/day up to $21 maximum. NOTE: Overdue fines are NOT forgiven when item is returned.",
+    "overdueFine": {
+      "quantity": 1.0,
+      "intervalId": "day"
+    },
+    "countClosed": true,
+    "maxOverdueFine": 30.0,
+    "forgiveOverdueFine": false,
+    "overdueRecallFine": {
+      "quantity": 3.0,
+      "intervalId": "day"
+    },
+    "gracePeriodRecall": true,
+    "maxOverdueRecallFine": 21.0,
+    "reminderFeesPolicy": {
+      "countClosed": false,
+      "ignoreGracePeriodRecall": false,
+      "ignoreGracePeriodHolds": false,
+      "allowRenewalOfItemsWithReminderFees": false,
+      "clearPatronBlockWhenPaid": false,
+      "reminderSchedule": []
+    },
+    "metadata": {
+      "createdDate": "2025-04-28T17:42:01.757+00:00",
+      "createdByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b",
+      "updatedDate": "2025-04-28T17:42:01.757+00:00",
+      "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
+    },
+    "id": "12d0d55b-bcb9-473e-9bd7-1a54d52c007f"
+  },
+  {
     "name": "1.00/30.00 hourly fine",
     "description": "$1 fine per hour to a maximum of $30",
     "overdueFine": {
