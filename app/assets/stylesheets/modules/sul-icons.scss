@@ -1,16 +1,3 @@
-$sul-icon-prefix: 'sul-icon';
-//Sizing
-.#{$sul-icon-prefix}-1-5x { font-size: 1.5em; }
-.#{$sul-icon-prefix}-2x { font-size: 2em; }
-.#{$sul-icon-prefix}-3x { font-size: 3em; }
-.#{$sul-icon-prefix}-4x { font-size: 4em; }
-.#{$sul-icon-prefix}-5x { font-size: 5em; }
-
-//Color - not coloring globally
-.#{$sul-icon-prefix} {
-
-}
-
 .rss-icon {
   // replace this extend when we have SUL Styles available to us
   @extend .fa;
@@ -18,34 +5,40 @@ $sul-icon-prefix: 'sul-icon';
   @extend .fa-rss-square;
 
   color: $sul-rss-icon-color;
-  margin-right: .3em;
+  margin-right: 0.3em;
 }
 
 // Style icons in facets
-.facet-values .#{$sul-icon-prefix}, .facet-values .#{$sul-icon-prefix}.blacklight-icons {
-  @extend .#{$sul-icon-prefix}-1-5x;
+.facet-values .sul-icon,
+.facet-values .sul-icon.blacklight-icons {
   align-items: center;
   color: $black;
   display: table-cell;
+  font-size: 1.5em;
   width: 30px;
   vertical-align: middle;
-  &::before, svg {
+  &::before,
+  svg {
     height: 21px;
     width: 21px;
     vertical-align: top;
   }
 }
 
-.#{$sul-icon-prefix}.blacklight-icons {
+.sul-icon.blacklight-icons {
   vertical-align: text-bottom;
   svg {
     height: 1rem;
   }
 }
 
-.facet-values .#{$sul-icon-prefix} + .facet-label {
+.facet-values .sul-icon + .facet-label {
   padding-left: 20px;
 }
 
-.sul-icon-refworks { color: $sul-icon-refworks-color; }
-.sul-icon-endnote { color: $sul-icon-endnote-color; }
+.sul-icon-refworks {
+  color: $sul-icon-refworks-color;
+}
+.sul-icon-endnote {
+  color: $sul-icon-endnote-color;
+}
