@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module Articles
-  class IndexBriefComponent < Blacklight::DocumentComponent
-    attr_reader :document, :counter
+  class IndexBriefComponent < Record::IndexBriefComponent
   end
 end
