@@ -5,13 +5,13 @@
 
       <div class="documentHeader">
         <h3 class="index_title">
-          <%= render_resource_icon doc_formats %>
+          <%= helpers.render_resource_icon presenter.formats %>
           <%= document.online_label %>
           <span class="document-counter">
-            <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
+            <%= t('blacklight.search.documents.counter', counter:) if counter %>
           </span>
-          <%= link_to_document document, counter: counter %>
-          <span class="main-title-date"><%= get_main_title_date(document) %></span>
+          <%= helpers.link_to_document document, counter: %>
+          <span class="main-title-date"><%= helpers.get_main_title_date(document) %></span>
         </h3>
       </div>
 
@@ -36,8 +36,7 @@
     </div>
 
     <div class="col-md-2 d-flex flex-lg-column justify-content-between align-items-lg-end pe-lg-1">
-      <%= render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
+      <%= helpers.render_index_doc_actions document, :wrapping_class => "index-document-functions" %>
     </div>
-
   </div>
 </div>

@@ -189,7 +189,7 @@ class ArticlesController < ApplicationController
 
     # View type group config
     config.view.list.icon = Searchworks::Icons::ListIcon
-    config.view.brief(icon: Searchworks::Icons::BriefIcon)
+    config.view.brief(icon: Searchworks::Icons::BriefIcon, document_component: Articles::IndexBriefComponent)
 
     # Sorting, using EDS sort keys
     config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
