@@ -1,8 +1,12 @@
 <% # header bar for doc items in index view %>
-<div class="brief-document container-fluid">
+<div class="<%= container_classes %>">
   <div class="row row-eq-height brief-container">
+  <% if eds_restricted? %>
+    <div class="col-12">
+      <%= render SearchResult::EdsRestrictedComponent.new(counter: counter, document: document) %>
+    </div>
+  <% else %>
     <div class="col-md-10">
-
       <div class="documentHeader">
         <h3 class="index_title">
           <%= resource_icon %>
@@ -37,5 +41,6 @@
     <div class="col-md-2 d-flex flex-lg-column justify-content-between align-items-lg-end pe-lg-1">
       <%= actions %>
     </div>
+    <% end %>
   </div>
 </div>
