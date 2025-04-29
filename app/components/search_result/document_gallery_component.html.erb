@@ -1,4 +1,4 @@
-<div class="gallery-document" <%= helpers.preview_data_attrs("preview-gallery", document[:id], ".#{preview_container_dom_class}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
+<div class="gallery-document" <%= preview_data_attrs("preview-gallery", document[:id], ".#{preview_container_dom_class}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
   <div class="item-thumb">
     <%= render Blacklight::Document::ThumbnailComponent.new(counter:, document:) %>
   </div>
