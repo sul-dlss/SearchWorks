@@ -1,46 +1,53 @@
 <% # header bar for doc items in index view %>
-<div class="<%= container_classes %>">
+<%= content_tag @component,
+  id: @id,
+  data: {
+    'document-id': @document.id.to_s.parameterize,
+    'document-counter': @counter,
+  },
+  itemscope: true,
+  itemtype: @document.itemtype,
+  class: classes.flatten.join(' ') do %>
   <div class="row row-eq-height brief-container">
-  <% if eds_restricted? %>
-    <div class="col-12">
-      <%= render SearchResult::EdsRestrictedComponent.new(counter: counter, document: document) %>
-    </div>
-  <% else %>
-    <div class="col-md-10">
-      <div class="documentHeader">
-        <h3 class="index_title">
-          <%= resource_icon %>
-          <span class="document-counter">
-            <%= t('blacklight.search.documents.counter', counter:) if counter %>
-          </span>
-          <%= helpers.link_to_document document, counter: %>
-          <span class="main-title-date"><%= helpers.get_main_title_date(document) %></span>
-        </h3>
+    <% if eds_restricted? %>
+      <div class="col-12">
+        <%= render Articles::EdsRestrictedComponent.new(counter: counter, document: document) %>
       </div>
+    <% else %>
+      <div class="col-md-10">
 
-      <% if document.preferred_online_links.present? && !document.eds_restricted? %>
-        <ul class='document-metadata'>
-          <% document.preferred_online_links.each do |link| %>
-            <li>
-              <% if link.href == 'detail' %>
-                <span class="online-label">Full text</span>
-                <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { turbo: false }) %>
-              <% elsif link.ill? -%>
-                <%= link_to(link.text, link.href, class: 'sfx') %>
-              <% else %>
-                <span class="online-label">Full text</span>
-                <%= link_to(link.text, link.href) %>
-              <% end %>
-              <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
-            </li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
+        <div class="documentHeader">
+          <h3 class="index_title">
+            <span class="document-counter">
+              <%= t('blacklight.search.documents.counter', counter:) if counter %>
+            </span>
+            <%= helpers.link_to_document document, counter: %>
+            <span class="main-title-date"><%= helpers.get_main_title_date(document) %></span>
+          </h3>
+        </div>
 
+        <% if document.preferred_online_links.present? && !document.eds_restricted? %>
+          <ul class='document-metadata'>
+            <% document.preferred_online_links.each do |link| %>
+              <li>
+                <% if link.href == 'detail' %>
+                  <span class="online-label">Full text</span>
+                  <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { turbo: false }) %>
+                <% elsif link.ill? -%>
+                  <%= link_to(link.text, link.href, class: 'sfx') %>
+                <% else %>
+                  <span class="online-label">Full text</span>
+                  <%= link_to(link.text, link.href) %>
+                <% end %>
+                <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
     <div class="col-md-2 d-flex flex-lg-column justify-content-between align-items-lg-end pe-lg-1">
       <%= actions %>
     </div>
     <% end %>
   </div>
-</div>
+<% end %>
