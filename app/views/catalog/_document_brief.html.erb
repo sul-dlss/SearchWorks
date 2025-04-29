@@ -1,8 +1,6 @@
-<% # container for all documents in index view -%>
+<% # container for all documents in brief index view -%>
+<% view_config = local_assigns[:view_config] || blacklight_config&.view_config(document_index_view_type) %>
 <div id="documents">
-  <% if controller_path == 'articles' || controller_path == 'article_selections' %>
-    <%= render Articles::IndexBriefComponent.with_collection(documents) %>
-  <% else %>
-    <%= render :collection => documents, :as => :document, :partial => 'index_brief' %>
-  <% end %>
+  <% document_presenters = documents.map { |doc| document_presenter(doc) } -%>
+  <%= render view_config.document_component.with_collection(document_presenters, partials: view_config.partials, counter_offset: @response&.start || 0) %>
 </div>
