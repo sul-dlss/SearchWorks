@@ -3,6 +3,10 @@
   margin-bottom: -1px;
   padding-left: 20px;
 
+  &.eds-restricted h3 {
+    margin-bottom: 0;
+  }
+
   h3.index_title {
     @include h3-index-title-small-font;
     word-wrap: break-word;

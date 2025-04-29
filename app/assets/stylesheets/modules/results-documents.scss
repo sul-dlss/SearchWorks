@@ -47,7 +47,7 @@
 }
 
 .eds-restricted {
-  border-left: 4px solid var(--stanford-cardinal);
+  border-left: 4px solid var(--stanford-cardinal)!important;
   .stanford-only {
     margin-left: 0;
   }
