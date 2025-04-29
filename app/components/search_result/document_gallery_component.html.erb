@@ -1,0 +1,39 @@
+<div class="gallery-document" <%= helpers.preview_data_attrs("preview-gallery", document[:id], ".#{preview_container_dom_class}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
+  <div class="item-thumb">
+    <%= render Blacklight::Document::ThumbnailComponent.new(counter:, document:) %>
+  </div>
+  <div class="caption">
+    <% # header bar for doc items in index view gallery %>
+    <div class="documentHeader">
+      <div class="callnumber-bar">
+        <% if document.items.present? %>
+          <%= document.preferred_item.callnumber %><br/>
+          <% if document.holdings.libraries.length == 1 %>
+            <%= document.holdings.libraries.first.name %>
+          <% else %>
+            in <%= document.holdings.libraries.length %> libraries
+          <% end %>
+        <% elsif document.mods? %>
+          <br/>Stanford Digital Repository
+        <% elsif document.preferred_online_links.present?  %>
+          eResource<br />
+          <%= document.eresources_library_display_name || 'Stanford Libraries' %>
+        <% end %>
+      </div>
+      <h3 class="index_title">
+        <span class="three-lines">
+          <%= resource_icon %>
+          <%= document.online_label %>
+          <%= helpers.link_to_document document, counter: counter %>
+        </span>
+        <span class="main-title-date"><%= helpers.get_main_title_date(document) %></span>
+      </h3>
+    </div>
+  </div>
+  <% # bookmark functions for items/docs and preview button %>
+  <div class="gallery-buttons">
+    <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger">Preview</button>
+    <%= actions %>
+  </div>
+</div>
+<div class="<%= preview_container_dom_class %> preview-container" data-document-id="<%= document[:id] %>"></div>

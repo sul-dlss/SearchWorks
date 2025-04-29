@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Articles
-  class IndexBriefComponent < Record::IndexBriefComponent
+  class IndexBriefComponent < SearchResult::IndexBriefComponent
     def container_classes
       classes = "brief-document container-fluid"
       classes += " eds-restricted" if eds_restricted?

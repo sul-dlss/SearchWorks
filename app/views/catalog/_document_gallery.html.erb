@@ -1,8 +1,12 @@
+<% view_config = local_assigns[:view_config] || blacklight_config&.view_config(document_index_view_type) %>
+<% document_presenters = documents.map { |doc| document_presenter(doc) } -%>
+
 <% # container for all documents in index view -%>
 <% if params[:controller] == "browse" && params[:action] == "nearby" %>
-  <%= render :collection => documents, :as => :document, :partial => 'index_gallery' %>
+  <%= render view_config.document_component.with_collection(document_presenters, partials: view_config.partials, counter_offset: @response&.start || 0) %>
 <% elsif %>
+  <% # container for all documents in brief index view -%>
   <div id="documents" class="row gallery">
-    <%= render :collection => documents, :as => :document, :partial => 'index_gallery' %>
+    <%= render view_config.document_component.with_collection(document_presenters, partials: view_config.partials, counter_offset: @response&.start || 0) %>
   </div>
 <% end %>
