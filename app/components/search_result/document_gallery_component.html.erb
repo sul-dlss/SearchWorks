@@ -1,4 +1,15 @@
-<div class="gallery-document" <%= preview_data_attrs("preview-gallery", document[:id], ".#{preview_container_dom_class}") %> data-preview-in-gallery="true" data-doc-id=<%= document.id %> >
+<%= tag.div id: @id,
+  data: {
+    'doc-id': @document.id,
+    'document-counter': @counter,
+    'behavior': 'preview-gallery',
+    'preview-url': preview_path(@document.id),
+    'preview-target': ".#{preview_container_dom_class}",
+    'preview-in-gallery': 'true'
+  },
+  itemscope: true,
+  itemtype: @document.itemtype,
+  class: classes.flatten.join(' ') do %>
   <div class="item-thumb">
     <%= render Blacklight::Document::ThumbnailComponent.new(counter:, document:) %>
   </div>
@@ -35,5 +46,5 @@
     <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger">Preview</button>
     <%= actions %>
   </div>
-</div>
+<% end %>
 <div class="<%= preview_container_dom_class %> preview-container" data-document-id="<%= document[:id] %>"></div>

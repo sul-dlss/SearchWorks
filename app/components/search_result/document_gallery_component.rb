@@ -6,8 +6,8 @@ module SearchResult
       "preview-container-#{document.id}"
     end
 
-    def preview_data_attrs(preview_type, id, target)
-      "data-behavior=\"#{preview_type}\" data-preview-url=\"#{preview_path(id)}\" data-preview-target=\"#{target}\"".html_safe
+    def classes
+      super - ['document'] + ['gallery-document']
     end
   end
 end
