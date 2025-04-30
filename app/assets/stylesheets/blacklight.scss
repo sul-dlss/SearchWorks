@@ -48,6 +48,7 @@ $remove-icon-font-family:
   }
 
   li {
+    max-width: unset;
     /* TODO: Remove if https://github.com/projectblacklight/blacklight/pull/3594 ends up in the version of Blacklight we use */
     padding-block: var(--bl-facet-value-padding-y);
   }
