@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe EdsSubjects do
   let(:document) do
-    SolrDocument.new(
+    EdsDocument.new(
       'eds_subjects' => '<searchLink fieldCode="SH" term="abc &amp; def">abc &amp; def</searchLink>' \
                         '<br>' \
                         '<searchLink fieldCode="SU" term="xyz">xyz</searchLink>' \

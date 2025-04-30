@@ -3,15 +3,15 @@
 require 'rails_helper'
 
 RSpec.describe 'Article Record Toolbar', :js do
-  let(:previous_document) { SolrDocument.new(id: 1, eds_title: 'My Prev Title') }
+  let(:previous_document) { EdsDocument.new(id: 1, eds_title: 'My Prev Title') }
   let(:document) do
-    SolrDocument.new(
+    EdsDocument.new(
       id: 2,
       eds_title: 'My Title',
       eds_citation_exports: [{ 'id' => 'RIS', 'data' => 'TI  - CatZ N Bagelz' }]
     )
   end
-  let(:next_document) { SolrDocument.new(id: 3, eds_title: 'My Next Title') }
+  let(:next_document) { EdsDocument.new(id: 3, eds_title: 'My Next Title') }
 
   before do
     stub_article_service(docs: [previous_document, document, next_document].compact)

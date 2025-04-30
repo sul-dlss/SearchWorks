@@ -2,7 +2,6 @@
 # frozen_string_literal: true
 
 class SolrDocument
-  EDS_RESTRICTED_PATTERN = /^This title is unavailable for guests, please login to see more information./
   FORMAT_KEY = 'format_main_ssim'
 
   include DocumentLinks
@@ -24,8 +23,6 @@ class SolrDocument
   include SolrBookplates
   include Citable
   include MarcMetadata
-  include EdsDocument
-  include EdsSubjects
   include MarcSubjects
   include IiifConcern
   include DorContentMetadata
@@ -33,7 +30,6 @@ class SolrDocument
 
   include Blacklight::Solr::Document
   include SchemaDotOrg
-  include EdsExport
   include Blacklight::Ris::DocumentFields
   include RisMapping
 
@@ -46,7 +42,11 @@ class SolrDocument
   end
 
   def eds_ris_export?
-    key?(:eds_citation_exports) && self['eds_citation_exports']&.any? { |e| e['id'] == 'RIS' }
+    false
+  end
+
+  def eds?
+    false
   end
 
   # The following shows how to setup this blacklight document to display marc documents
@@ -61,15 +61,11 @@ class SolrDocument
     document.key?(:marc_json_struct)
   end
 
-  use_extension(Blacklight::Ris::DocumentExport) do |document|
-    unless document.eds_ris_export?
-      ris_field_mappings.merge!(
-        RisMapping.field_mapping
-      )
-    end
+  use_extension(Blacklight::Ris::DocumentExport) do |_|
+    ris_field_mappings.merge!(
+      RisMapping.field_mapping
+    )
   end
-
-  use_extension(EdsExport, &:eds_ris_export?)
 
   use_extension(FolioJsonExport) do |document|
     document.key?(:folio_json_struct)
@@ -84,7 +80,7 @@ class SolrDocument
   end
 
   sw_field_semantics = {
-    title: %w[title_display eds_title],
+    title: %w[title_display],
     author: 'author_display',
     language: 'language_facet',
     format: 'format'
@@ -114,7 +110,7 @@ class SolrDocument
   # self.unique_key = 'id'
 
   # SMS uses the semantic field mappings below to generate the body of an SMS email.
-  SolrDocument.use_extension(Searchworks::Document::Sms)
+  use_extension(Searchworks::Document::Sms)
 
   # DublinCore uses the semantic field mappings below to assemble an OAI-compliant Dublin Core document
   # Semantic mappings of solr stored fields. Fields may be multi or

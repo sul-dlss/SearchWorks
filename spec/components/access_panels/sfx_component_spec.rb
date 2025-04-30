@@ -22,7 +22,7 @@ RSpec.describe AccessPanels::SfxComponent do
   describe '#sfx_url' do
     context 'when an sfx link is present' do
       let(:document) do
-        SolrDocument.new(
+        EdsDocument.new(
           'eds_fulltext_links' => [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
         )
       end
@@ -34,7 +34,7 @@ RSpec.describe AccessPanels::SfxComponent do
 
     context 'when no sfx links is present' do
       let(:document) do
-        SolrDocument.new(
+        EdsDocument.new(
           'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
         )
       end

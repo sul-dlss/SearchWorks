@@ -16,7 +16,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
     end.new
   end
 
-  let(:document) { SolrDocument.new }
+  let(:document) { EdsDocument.new }
 
   subject(:presenter) { described_class.new(document:, context:) }
 
@@ -29,7 +29,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
 
     context 'when the document has link' do
       let(:document) do
-        SolrDocument.new(
+        EdsDocument.new(
           'eds_fulltext_links' => [
             { 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }
           ]
@@ -47,7 +47,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
 
     context 'when the document has a stanford-only link' do
       let(:document) do
-        SolrDocument.new(
+        EdsDocument.new(
           'id' => '00001',
           'eds_fulltext_links' => [
             { 'url' => 'detail', 'label' => 'PDF Full Text', 'type' => 'pdf' }
@@ -67,7 +67,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
     end
 
     context 'when the document does not have a link but does include full-text' do
-      let(:document) { SolrDocument.new(id: 'abc123', 'eds_html_fulltext_available' => true) }
+      let(:document) { EdsDocument.new(id: 'abc123', 'eds_html_fulltext_available' => true) }
 
       it 'includes a link to the document to view the full text' do
         expect(presenter.links.length).to eq 1

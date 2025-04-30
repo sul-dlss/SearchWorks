@@ -30,7 +30,7 @@ RSpec.describe Eds::SearchService do
       it 'returns a single result' do
         results = instance.fetch('a')
         expect(results.id).to eq StubArticleService::SAMPLE_RESULTS.first.id
-        expect(results).to be_an SolrDocument
+        expect(results).to be_an EdsDocument
       end
     end
   end

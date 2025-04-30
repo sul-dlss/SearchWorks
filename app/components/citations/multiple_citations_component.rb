@@ -18,9 +18,12 @@ module Citations
     def citations(document)
       citation_hash = {}
 
-      citation_hash.merge!(document.mods_citations)
-      citation_hash.merge!(document.eds_citations)
-      citation_hash.merge!(oclc_citation(document))
+      if document.eds?
+        citation_hash.merge!(document.eds_citations)
+      else
+        citation_hash.merge!(document.mods_citations)
+        citation_hash.merge!(oclc_citation(document))
+      end
 
       citation_hash.presence || Citation::NULL_CITATION
     end

@@ -6,7 +6,6 @@ RSpec.describe Citation do
   include ModsFixtures
   let(:document) { SolrDocument.new }
   let(:mods_citation) { instance_double(Citations::ModsCitation, all_citations: { 'preferred' => 'Mods citation content' }) }
-  let(:eds_citation) { instance_double(Citations::EdsCitation, all_citations: { 'apa' => 'EDS citation content' }) }
   let(:oclc_citation) do
     instance_double(Citations::OclcCitation, citations_by_oclc_number: { '12345' => { 'harvard' => 'OCLC citation content' } })
   end
@@ -40,27 +39,6 @@ RSpec.describe Citation do
 
     it 'returns the OCLC citations' do
       expect(subject.citations).to eq({ 'harvard' => 'OCLC citation content' })
-    end
-  end
-
-  context 'when there is an EDS citation' do
-    let(:document) do
-      SolrDocument.new(
-        eds_title: 'The Title',
-        eds_citation_styles: [
-          { 'id': 'APA', 'data': 'Citation Content' }
-        ]
-      )
-    end
-
-    before do
-      allow(Citations::EdsCitation).to receive(:new).and_return(eds_citation)
-    end
-
-    it { expect(subject).to be_citable }
-
-    it 'returns the EDS citations' do
-      expect(subject.citations).to eq({ 'apa' => 'EDS citation content' })
     end
   end
 

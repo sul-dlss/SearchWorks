@@ -4,7 +4,7 @@
 # Module included for RSpec tests to stub the article search service
 module StubArticleService
   SAMPLE_RESULTS = [
-    SolrDocument.new(
+    EdsDocument.new(
       id: 'abc123',
       eds_title: 'The title of the document',
       eds_subjects: '<searchLink fieldCode="SU" term="Kittens">Kittens</searchLink>' \
@@ -14,7 +14,7 @@ module StubArticleService
                     '<searchLink fieldCode="SU" term="Companions">Companions</searchLink>',
       eds_html_fulltext_available: true
     ),
-    SolrDocument.new(
+    EdsDocument.new(
       id: '321cba',
       eds_title: 'Another title for the document',
       eds_html_fulltext_available: true,
@@ -24,7 +24,7 @@ module StubArticleService
         'type' => 'customlink-fulltext'
       }]
     ),
-    SolrDocument.new(
+    EdsDocument.new(
       id: 'wq/oeif.zzz',
       eds_title: 'Yet another title for the document',
       eds_fulltext_links: [{
@@ -33,7 +33,7 @@ module StubArticleService
         'type' => 'customlink-fulltext'
       }]
     ),
-    SolrDocument.new(
+    EdsDocument.new(
       id: 'pdfyyy',
       eds_title: 'Another title for the document',
       eds_html_fulltext_available: true,

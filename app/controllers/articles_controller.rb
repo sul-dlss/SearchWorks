@@ -47,6 +47,7 @@ class ArticlesController < ApplicationController
     config.repository_class = Eds::Repository
     config.search_builder_class = ArticleSearchBuilder
     config.default_per_page = 20
+    config.document_model = EdsDocument
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexEdsDocumentPresenter

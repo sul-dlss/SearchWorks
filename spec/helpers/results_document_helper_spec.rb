@@ -28,7 +28,7 @@ RSpec.describe ResultsDocumentHelper do
     @document_02 = SolrDocument.new(data_02)
     @document_03 = SolrDocument.new(data_03)
     @document_04 = SolrDocument.new
-    @document_05 = SolrDocument.new(
+    @document_05 = EdsDocument.new(
       eds_publication_year: '2017'
     )
   end
