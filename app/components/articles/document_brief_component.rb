@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Articles
-  class IndexBriefComponent < Articles::DocumentListComponent
+  class DocumentBriefComponent < Articles::DocumentListComponent
     def initialize(*, document:, document_counter: nil, **)
       super
 
