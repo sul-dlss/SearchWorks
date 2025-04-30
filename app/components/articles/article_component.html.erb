@@ -1,45 +1,60 @@
-<% return if @document.eds_restricted? %>
-
-<% mini_map_sections = {} %>
-
 <div class="article-record-metadata row">
   <div class="article-record-panels col-md-4">
-    <%= render "articles/record/metadata_panels", document: @document -%>
+    <div class="metadata-panels">
+      <%= render AccessPanels::OnlineEdsComponent.new(document: document) %>
+      <%= render AccessPanels::SfxComponent.new(document: document) %>
+    </div>
   </div>
   <div class="article-record-sections record-sections col-md-8">
-    <% sections = helpers.blacklight_config.show.sections %>
     <% if @document.html_fulltext? %>
       <div class="html-fulltext-container">
-        <%= render('articles/record/html_fulltext', document: @document, fields: sections["Fulltext"].keys)%>
+        <% if helpers.on_campus_or_su_affiliated_user? %>
+          <button class="section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-toggle="collapse" href="#toggleFulltext" aria-expanded="true" aria-controls="toggleFulltext">
+            <h2>Hide full text <i class='fa fa-chevron-down'></i></h2>
+          </button>
+          <div class='eds-full-text-section section-body collapse show' id="toggleFulltext">
+            <% metadata_fields_for_section('Fulltext').each do |field_presenter| -%>
+              <% if field_presenter.render_field? %>
+                <div class="blacklight-<%= field_presenter.key %>"><%= field_presenter.render %></div>
+              <% end -%>
+            <% end -%>
+          </div>
+        <% else %>
+          <div class='section-container-heading fulltext-toggle-bar'>
+            <%= link_to(new_user_session_path(referrer: request.original_url)) do %>
+              <h2>Log in to show fulltext <i class='fa fa-chevron-right'></i></h2>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     <% end %>
+
     <dl class="dl-horizontal dl-invert">
-      <% sections.each do |section_name, fields| -%>
-        <% if (section = render('articles/record/section_fields', document: @document, fields_to_render: fields, fields: fields.keys)) && html_present?(section) -%>
-          <% unless section_name == 'Fulltext' -%>
-            <% if section_name == 'Summary' -%>
-              <div class="section-container-heading">
-                <h2>About this article</h2>
-              </div>
-              <div class='section'>
-            <% else -%>
-              <div class='section'>
-                <div class='section-heading'>
-                  <% mini_map_sections[section_name.downcase] = true %>
-                  <h3 id="<%= section_name.downcase %>">
-                    <%= section_name -%>
-                  </h3>
-                </div>
-            <% end -%>
-              <div class='section-body'>
-                <%= section -%>
-              </div>
+      <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
+        <% if section_name == 'Summary' -%>
+          <div class="section-container-heading">
+            <h2>About this article</h2>
+          </div>
+          <div class='section'>
+            <div class='section-body'>
+              <%= render section -%>
             </div>
-          <% end -%>
-        <% end %>
+          </div>
+        <% else -%>
+          <div class='section'>
+            <div class='section-heading'>
+              <h3 id="<%= section_name.downcase %>">
+                <%= section_name -%>
+              </h3>
+            </div>
+            <div class='section-body'>
+              <%= render section -%>
+            </div>
+          </div>
+        <% end -%>
       <% end -%>
     </dl>
   </div>
 </div>
 
-<%= render 'shared/side_nav_minimap', has_data: mini_map_sections %>
+<%= render 'shared/side_nav_minimap', has_data: metadata_sections.keys.without('Summary').map(&:downcase).index_with { |k| true } %>

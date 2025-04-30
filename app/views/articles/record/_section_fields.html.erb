@@ -1,1 +1,0 @@
-<%= render Blacklight::MetadataFieldComponent.with_collection(document_presenter(document).field_presenters.select { |presenter| fields_to_render.keys.map(&:to_s).include? presenter.field_config.key.to_s }, layout: MetadataFieldLayoutComponent) %>
