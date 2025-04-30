@@ -8,6 +8,7 @@ RSpec.describe ResultsDocumentHelper do
   before(:all) do
     data_01 = {
       publication_year_isi: 1999,
+      pub_year_ss: '1999',
       title_display: "Car : a drama of the American workplace",
       isbn_display: ["0393040801x", "9780393040807"],
       lccn: "a 96049953",
@@ -15,6 +16,7 @@ RSpec.describe ResultsDocumentHelper do
     }
 
     data_02 = {
+      pub_year_ss: '1801 ... 1837',
       earliest_poss_year_isi: 1801,
       latest_poss_year_isi: 1837
     }

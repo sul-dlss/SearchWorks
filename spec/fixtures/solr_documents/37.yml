@@ -12,6 +12,7 @@ building_facet:
   - "Stanford Digital Repository"
 marc_json_struct: |
 <%= metadata1 %>
+pub_year_ss: '2004 - '
 pub_date: 2004
 beginning_year_isi: 2004
 imprint_display: 2012
