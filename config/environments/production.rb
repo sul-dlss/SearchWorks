@@ -11,7 +11,7 @@ Rails.application.configure do
   # Eager load code on boot for better performance and memory savings (ignored by Rake tasks).
   config.eager_load = true
 
-  # handle 404 exception in routes, not public/404.html
+  # handle specified exception in routes, not public/code.html
   config.exceptions_app = routes
 
   # Full error reports are disabled.
