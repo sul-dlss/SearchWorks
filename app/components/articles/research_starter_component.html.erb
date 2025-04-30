@@ -1,0 +1,26 @@
+<div class='research-starter'>
+  <div class="research-starter-header">
+    <div class="research-starter-title">
+      Topic overview
+    </div>
+    <a class="research-starter-close" role="button" data-toggle="collapse" href="#research-starter-body" aria-expanded="true" aria-controls="research-starter-body">
+      <span id='research-starter-close-icon' class='fa fa-times-circle research-starter-close-icon'></span>
+      <span class="sr-only">hide topic overview</span>
+    </a>
+  </div>
+
+  <div id='research-starter-body' class='collapse show'>
+    <h3>
+      <%= helpers.link_to_document(document) %>
+    </h3>
+    <% if research_starter['eds_cover_thumb_url'].present? -%>
+      <img src="<%= research_starter['eds_cover_thumb_url'] -%>" alt=""/>
+    <% end -%>
+    <p>
+      <%= truncate(sanitize(research_starter['eds_abstract']), length: 250, separator: ' ') -%>
+    </p>
+    <p>
+      <%= research_starter['eds_composed_title'] -%>
+    </p>
+  </div>
+</div>

@@ -21,7 +21,7 @@
           </div>
         </div>
         <%= render 'search_header' %>
-        <%= render 'research_starters' %>
+        <%= render Articles::ResearchStarterComponent.new(response: @response) if params[:page].blank? || params[:page] == '1' %>
         <%= render_document_index @response.documents %>
         <%= render 'alternate_catalog', close: true if show_alternate_catalog? %>
 
