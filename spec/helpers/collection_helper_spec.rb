@@ -30,25 +30,6 @@ RSpec.describe CollectionHelper do
     end
   end
 
-  describe "#collection_members_enumeration" do
-    let(:document) { SolrDocument.new }
-    let(:collection_members) { [SolrDocument.new, SolrDocument.new] }
-    let(:no_collection_doc) { SolrDocument.new }
-
-    before do
-      allow(collection_members).to receive(:total).and_return("5")
-      allow(document).to receive(:collection_members).and_return(collection_members)
-      allow(no_collection_doc).to receive(:collection_members).and_return([])
-    end
-
-    it "returns the correct number of document including the #total" do
-      expect(collection_members_enumeration(document)).to eq "5 items online"
-    end
-    it "does not return anything if an document does not have collection members" do
-      expect(collection_members_enumeration(no_collection_doc)).to be_nil
-    end
-  end
-
   describe '#text_for_inner_members_link' do
     let(:document) { SolrDocument.new }
     let(:collection_members) { [SolrDocument.new, SolrDocument.new] }
