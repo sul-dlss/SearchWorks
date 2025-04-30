@@ -20,7 +20,7 @@ graduate or postdoctoral or faculty or fellow,any,lckstk-expensive,,SUL,,,2hour-
 ,any,any,,,,SAL-LOCKED-PAGE-EA or SAL-PAGE-GR or SAL-TEMP or SAL-PAGE-EA,No loan,Allow paging,Send No Notices,No fines,$75 lost fee
 ,any,curricshortloan7,,,,EDU-CURRICULUM,7day-1renew-3daygrace,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,any,1-day reserve,,,LANE,,1day-norenew-15mingrace,No requests allowed,Course reserves,3.00/21.00 recall overdue fine,$250 lost fee
-,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,No requests allowed,Course reserves,3.00/21.00 recall overdue fine,$250 lost fee
+,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,No requests allowed,Course reserves,1.00/30.00 daily + recall overdue fines,$250 lost fee
 ,any,2-hour reserve,,,LANE,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$250 lost fee
 ,accessories 1 or game,8-hour reserve,,,BUSINESS,,8 hour - due at end of day - no renew,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$100 lost fee - 1 hr aged to lost
 ,book,Course reserves,,,BUSINESS,,28day-2renew-7daygrace,Allow paging,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
@@ -40,7 +40,7 @@ any,any,,,,,LANE-NEWB,28day-2renew-7daygrace,Allow paging/hold,Default notice,3.
 any,any,,,,,LANE-SAL3X,12hour-norenew-15mingrace,Allow paging,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-SOMCC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 any,any,,,,,LANE-REF,No loan,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
-any,any,,,,,LANE-ERQC,14day-2renew-1daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
+any,any,,,,,LANE-ERQC,14day-2renew-1daygrace,Allow All,Default notice,1.00/30.00 daily + recall overdue fines,$250 lost fee
 graduate or postdoctoral or courtesy,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,1qtr-3renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 faculty or staff or fellow,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,1yearfixed-2renew-7daygrace,No requests allowed,28-day notice,No fines,$150 lost fee
 graduate or postdoctoral or courtesy,book,,,,,LAW-BASEMENT or LAW-FOLIO-BASEMENT or LAW-LOCKED or LAW-STACKS1,1qtr-3renew-7daygrace,Allow All,Default notice,No fines,$150 lost fee

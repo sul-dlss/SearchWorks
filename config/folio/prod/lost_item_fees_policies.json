@@ -923,7 +923,7 @@
     },
     "chargeAmountItem": {
       "chargeType": "anotherCost",
-      "amount": 75.0
+      "amount": 65.0
     },
     "lostItemProcessingFee": 0.0,
     "chargeAmountItemPatron": false,
@@ -940,8 +940,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:02.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-03-11T18:26:42.781+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2025-04-29T20:57:34.709+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     },
     "id": "dd2fb6cd-cff1-4405-992d-78c2e7faca04"
   },
