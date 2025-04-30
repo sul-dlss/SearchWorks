@@ -6,7 +6,7 @@ module Articles
     attr_reader :document, :counter
 
     def actions
-      helpers.render_index_doc_actions document, wrapping_class: 'index-document-functions'
+      helpers.render_index_doc_actions document, wrapping_class: 'index-document-functions col'
     end
 
     delegate :eds_restricted?, to: :document

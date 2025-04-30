@@ -10,7 +10,7 @@ module SearchResult
     end
 
     def actions
-      helpers.render_index_doc_actions document, wrapping_class: 'index-document-functions'
+      helpers.render_index_doc_actions document, wrapping_class: 'index-document-functions col'
     end
 
     # NOTE: ideally this would override the metadata slot in Blacklight, but I'm not sure how to do that.
