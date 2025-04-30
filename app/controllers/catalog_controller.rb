@@ -486,7 +486,7 @@ class CatalogController < ApplicationController
     # View type group config
     config.view.list.icon = Searchworks::Icons::ListIcon
     config.view.gallery(icon: Searchworks::Icons::GalleryIcon, document_component: SearchResult::DocumentGalleryComponent)
-    config.view.brief(icon: Searchworks::Icons::BriefIcon, document_component: SearchResult::IndexBriefComponent)
+    config.view.brief(icon: Searchworks::Icons::BriefIcon, document_component: SearchResult::DocumentBriefComponent)
 
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }
