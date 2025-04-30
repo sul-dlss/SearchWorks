@@ -15,7 +15,7 @@
 
       <div id='research-starter-body' class='collapse show'>
         <h3>
-          <%= link_to_document(SolrDocument.new(starter.to_h.merge(id: "#{starter['eds_database_id']}__#{starter['eds_accession_number']}"))) %>
+          <%= link_to_document(EdsDocument.new(starter.to_h.merge(id: "#{starter['eds_database_id']}__#{starter['eds_accession_number']}"))) %>
         </h3>
         <% if starter['eds_cover_thumb_url'].present? -%>
           <img src="<%= starter['eds_cover_thumb_url'] -%>" alt=""/>
