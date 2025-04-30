@@ -5,8 +5,6 @@ module Record
   class DocumentComponent < Blacklight::DocumentComponent
     # NOTE: ideally this would override the metadata slot in Blacklight, but I'm not sure how to do that.
     def document_metadata
-      return render ArticleComponent.new(document: @document) if controller_name == 'articles'
-
       case @document.display_type
       when 'marc'
         render Item::Marc::MetadataComponent.new(document: @document)
@@ -22,8 +20,6 @@ module Record
     end
 
     def schema_dot_org
-      return if controller_name == 'articles'
-
       render 'catalog/schema_dot_org_default', document: @document
     end
   end

@@ -13,20 +13,8 @@ module SearchResult
       helpers.render_index_doc_actions document, wrapping_class: 'index-document-functions'
     end
 
-    def eds_restricted?
-      SolrDocument::EDS_RESTRICTED_PATTERN.match?(@document['eds_title'])
-    end
-
-    def classes
-      original = super
-      original.push('eds-restricted') if eds_restricted?
-      original
-    end
-
     # NOTE: ideally this would override the metadata slot in Blacklight, but I'm not sure how to do that.
     def document_metadata
-      return render ArticleComponent.new(document: @document) if controller_name == 'articles'
-
       case @document.display_type
       when 'marc'
         render Item::Marc::MetadataComponent.new(document: @document)

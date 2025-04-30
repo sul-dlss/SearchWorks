@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
 module Articles
-  class IndexBriefComponent < SearchResult::IndexBriefComponent
-    def container_classes
-      classes = "brief-document container-fluid"
-      classes += " eds-restricted" if eds_restricted?
-      classes
+  class IndexBriefComponent < Articles::DocumentListComponent
+    def initialize(*, document:, document_counter: nil, **)
+      super
+
+      @component = 'div'
+      @classes = ['brief-document', 'container-fluid']
     end
 
-    delegate :eds_restricted?, to: :document
+    def classes
+      super - ['document']
+    end
   end
 end

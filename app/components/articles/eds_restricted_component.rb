@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SearchResult
+module Articles
   class EdsRestrictedComponent < Blacklight::DocumentTitleComponent
   end
 end

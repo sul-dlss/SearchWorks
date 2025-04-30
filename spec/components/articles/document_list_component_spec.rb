@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe SearchResult::DocumentComponent, type: :component do
+RSpec.describe Articles::DocumentListComponent, type: :component do
   let(:component) { described_class.new(document: presenter) }
   let(:view_context) { vc_test_controller.view_context }
   let(:presenter) { IndexEdsDocumentPresenter.new(document, view_context) }
