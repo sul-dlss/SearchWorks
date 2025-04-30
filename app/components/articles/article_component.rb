@@ -7,6 +7,10 @@ module Articles
       super()
     end
 
+    def render?
+      !@document.eds_restricted?
+    end
+
     delegate :html_present?, to: :helpers
 
     attr_reader :document
