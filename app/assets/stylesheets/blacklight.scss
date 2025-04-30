@@ -57,8 +57,12 @@ $remove-icon-font-family:
   --link-decoration-line: none;
 }
 
-.sidenav {
+.sidenav, .facet-extended-list, #advanced_search_facets {
   --bl-facet-value-padding-y: 0.25rem; /* TODO: Consider for removal when on Bootstrap 5 */
+}
+
+.sidenav #facet-format_main_ssim {
+  --bl-facet-value-padding-y: 0;
 }
 
 .range_limit {
