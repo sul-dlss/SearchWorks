@@ -8,7 +8,7 @@
   itemscope: true,
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
-  <div class="row row-eq-height brief-container">
+  <div class="row brief-container">
     <% if eds_restricted? %>
       <div class="col-12">
         <%= render Articles::EdsRestrictedComponent.new(counter: counter, document: document) %>
