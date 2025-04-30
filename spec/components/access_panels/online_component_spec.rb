@@ -9,7 +9,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
   let(:supplemental) { described_class.new(document: SolrDocument.new) }
   let(:eds_links) do
     described_class.new(
-      document: SolrDocument.new(
+      document: EdsDocument.new(
         eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
       )
     )

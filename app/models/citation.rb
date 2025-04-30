@@ -13,7 +13,7 @@ class Citation
 
   # @return [Boolean] Whether or not the document is citable
   def citable?
-    show_oclc_citation? || citations_from_mods.present? || citations_from_eds.present?
+    show_oclc_citation? || citations_from_mods.present?
   end
 
   # @return [Hash] A hash of all citations for the document
@@ -29,13 +29,6 @@ class Citation
     citations_from_mods.presence || {}
   end
 
-  # @return [Hash] A hash of EDS citations for the document
-  #          Used when assembling citations for multiple documents
-  #          in the form of { citation_style => [citation_text] }
-  def eds_citations
-    citations_from_eds.presence || {}
-  end
-
   private
 
   attr_reader :document
@@ -47,7 +40,6 @@ class Citation
       citation_hash = {}
 
       citation_hash.merge!(citations_from_mods) if citations_from_mods.present?
-      citation_hash.merge!(citations_from_eds) if citations_from_eds.present?
       citation_hash.merge!(citations_from_oclc) if citations_from_oclc.present?
 
       citation_hash
@@ -64,12 +56,6 @@ class Citation
     return unless document.mods && document.mods.note.present?
 
     @citations_from_mods ||= Citations::ModsCitation.new(notes: document.mods.note).all_citations
-  end
-
-  def citations_from_eds
-    return unless document.eds? && document['eds_citation_styles'].present?
-
-    @citations_from_eds ||= Citations::EdsCitation.new(eds_citations: document['eds_citation_styles']).all_citations
   end
 
   def show_oclc_citation?

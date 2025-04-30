@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe EdsLinks do
   let(:document) do
-    SolrDocument.new(
+    EdsDocument.new(
       'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
     )
   end
@@ -126,7 +126,7 @@ RSpec.describe EdsLinks do
 
     context 'categories 1 and 2' do
       let(:document) do
-        SolrDocument.new('eds_fulltext_links' => all_link_categories)
+        EdsDocument.new('eds_fulltext_links' => all_link_categories)
       end
 
       it 'shows 1 and 2 only' do
@@ -138,7 +138,7 @@ RSpec.describe EdsLinks do
 
     context 'category 3' do
       let(:document) do
-        SolrDocument.new('eds_fulltext_links' => all_link_categories[2..4])
+        EdsDocument.new('eds_fulltext_links' => all_link_categories[2..4])
       end
 
       it 'shows 3 only' do
@@ -149,7 +149,7 @@ RSpec.describe EdsLinks do
 
     context 'category 4' do
       let(:document) do
-        SolrDocument.new('eds_fulltext_links' => all_link_categories[3..4])
+        EdsDocument.new('eds_fulltext_links' => all_link_categories[3..4])
       end
 
       it 'shows 4 only' do
@@ -160,7 +160,7 @@ RSpec.describe EdsLinks do
 
     context 'category 5' do
       let(:document) do
-        SolrDocument.new('eds_fulltext_links' => [all_link_categories[4]])
+        EdsDocument.new('eds_fulltext_links' => [all_link_categories[4]])
       end
 
       it 'shows 5 only' do

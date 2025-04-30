@@ -33,7 +33,7 @@ RSpec.describe "Emailing Records", :js do
       before { stub_article_service(type: :single, docs: [document]) }
 
       let(:document) do
-        SolrDocument.new(
+        EdsDocument.new(
           id: '123',
           eds_title: 'The title',
           eds_abstract: 'The Abstract',

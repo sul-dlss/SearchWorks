@@ -15,7 +15,7 @@ RSpec.describe "Searchworks::Document::Sms" do
     )
   }
   let(:eds_doc) do
-    SolrDocument.new(
+    EdsDocument.new(
       eds_title: 'holla back'
     )
   end

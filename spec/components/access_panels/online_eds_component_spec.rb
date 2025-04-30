@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
   let(:document) do
-    SolrDocument.new(
+    EdsDocument.new(
       eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
     )
   end
@@ -27,7 +27,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
 
   context 'fulltext PDF links (e.g. "detail" href)' do
     let(:document) do
-      SolrDocument.new(
+      EdsDocument.new(
         id: 'abc123',
         eds_fulltext_links: [{ 'label' => 'PDF full text', 'url' => 'detail', 'type' => 'pdf' }]
       )
@@ -47,7 +47,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
 
   context 'ILL links' do
     let(:document) do
-      SolrDocument.new(
+      EdsDocument.new(
         eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
       )
     end

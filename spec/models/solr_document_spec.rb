@@ -98,6 +98,16 @@ RSpec.describe SolrDocument do
     end
   end
 
+  describe '#export_as_ris' do
+    let(:document) { SolrDocument.new(id: '456') }
+
+    it 'returns computed ris when solr RIS citation is not available' do
+      expect(document.export_as_ris).to eq "TY  - GEN\n" \
+                                           "DP  - https://searchworks.stanford.edu/view/456\n" \
+                                           "UR  - https://searchworks.stanford.edu/view/456\nER  - "
+    end
+  end
+
   describe 'MarcBoundWithNote' do
     it 'is included' do
       expect(subject).to be_a MarcBoundWithNote
@@ -162,12 +172,9 @@ RSpec.describe SolrDocument do
   end
 
   describe 'EdsDocument' do
-    let(:eds) { SolrDocument.new(eds_title: 'yup') }
+    let(:eds) { EdsDocument.new(eds_title: 'yup') }
     let(:non_eds) { SolrDocument.new }
 
-    it 'is included' do
-      expect(subject).to be_a EdsDocument
-    end
     it 'eds?' do
       expect(eds.eds?).to be true
       expect(non_eds.eds?).to be false

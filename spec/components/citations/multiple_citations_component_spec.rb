@@ -10,10 +10,10 @@ RSpec.describe Citations::MultipleCitationsComponent, type: :component do
                     'apa' => ['APA Citation 1'] } }
   end
   let(:document_with_oclc_citations) do
-    instance_double(SolrDocument, oclc_number: '123456', eds_citations: {}, mods_citations: {}, fetch: 'OCLC Title')
+    instance_double(SolrDocument, oclc_number: '123456', eds?: false, mods_citations: {}, fetch: 'OCLC Title')
   end
   let(:document_with_mods_citations) do
-    instance_double(SolrDocument, oclc_number: nil, eds_citations: {},
+    instance_double(SolrDocument, oclc_number: nil, eds?: false,
                                   mods_citations: { 'preferred' => ['Preferred Citation 1'] },
                                   fetch: 'MODS Title')
   end

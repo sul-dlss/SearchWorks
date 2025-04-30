@@ -89,7 +89,7 @@ RSpec.feature 'Article Searching' do
 
     scenario 'authors, subjects, and abstracts are truncated', :js do
       long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
-      document = SolrDocument.new(
+      document = EdsDocument.new(
         id: '1234',
         eds_title: 'Some title',
         eds_authors:  long_data,

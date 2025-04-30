@@ -32,8 +32,8 @@ RSpec.describe SearchWorksRecordMailer do
     context 'article' do
       let(:documents) do
         [
-          SolrDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'],
-                           eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }])
+          EdsDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'],
+                          eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }])
         ]
       end
       let(:mail) { SearchWorksRecordMailer.article_email_record(documents, params, url_params) }

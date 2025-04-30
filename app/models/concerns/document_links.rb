@@ -2,10 +2,9 @@
 
 module DocumentLinks
   include MarcLinks
-  include EdsLinks
 
   def preferred_online_links
-    sfx_links || marc_fulltext_links || eds_links&.fulltext || []
+    sfx_links || marc_fulltext_links || []
   end
 
   def has_finding_aid?

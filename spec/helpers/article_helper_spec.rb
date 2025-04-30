@@ -228,7 +228,7 @@ RSpec.describe ArticleHelper do
   describe '#sanitize_research_starter' do
     subject(:result) { view.sanitize_research_starter(value: [value], document:) }
 
-    let(:document) { SolrDocument.new('eds_database_id' => 'xyz') }
+    let(:document) { EdsDocument.new('eds_database_id' => 'xyz') }
 
     context '#transform_research_starter_text' do
       let(:value) { 'abc' }
