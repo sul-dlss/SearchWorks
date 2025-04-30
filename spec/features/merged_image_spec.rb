@@ -12,6 +12,7 @@ RSpec.feature "Merged Images" do
     expect(page).to have_css(".main-title-date", text: "[2004 - ]") # Main title date
     expect(page).to have_css("ul.document-metadata") # metadata items
   end
+
   scenario "record view" do
     visit solr_document_path('37')
 
