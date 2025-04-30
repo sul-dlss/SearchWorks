@@ -5,5 +5,9 @@ module SearchResult
     def preview_container_dom_class
       "preview-container-#{document.id}"
     end
+
+    def classes
+      super - ['document'] + ['gallery-document']
+    end
   end
 end
