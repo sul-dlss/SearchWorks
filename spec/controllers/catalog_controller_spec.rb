@@ -94,10 +94,11 @@ RSpec.describe CatalogController do
           post :email, params: { to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '1' }
         end.to change { ActionMailer::Base.deliveries.count }.by(3)
       end
+
       describe 'validations' do
         it 'prevents incorrect email types from being sent' do
           expect do
-            post :email, params: { to: 'email@example.com', type: 'not-a-type' }
+            post :email, params: { to: 'email@example.com', type: 'not-a-type', id: '1' }
           end.not_to change { ActionMailer::Base.deliveries.count }
           expect(flash[:error]).to eq 'Invalid email type provided'
         end
@@ -108,7 +109,8 @@ RSpec.describe CatalogController do
               :email,
               params: {
                 to: 'email1@example.com, example.com',
-                type: 'full'
+                type: 'full',
+                id: '1'
               }
             )
           end.not_to change { ActionMailer::Base.deliveries.count }
@@ -127,7 +129,8 @@ RSpec.describe CatalogController do
                      email4@example.com,
                      email5@example.com,
                      email6@example.com',
-                type: 'full'
+                type: 'full',
+                id: '1'
               }
             )
           end.not_to change { ActionMailer::Base.deliveries.count }

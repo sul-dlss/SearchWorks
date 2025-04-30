@@ -116,10 +116,10 @@ import L from "leaflet";
 })(jQuery);
 
 
-Blacklight.onLoad(function() {
-  $('*[data-behavior=stackmap]').stackMap();
+Blacklight.onLoad(() => {
+  $('*[data-behavior=stackmap]').stackMap()
 
-  $('#blacklight-modal').on('shown.bs.modal', function() {
-    $('*[data-behavior=stackmap]').stackMap();
-  });
-});
+  document.addEventListener('show.blacklight.blacklight-modal', () => {
+    $('*[data-behavior=stackmap]').stackMap()
+  })
+})

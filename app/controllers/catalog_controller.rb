@@ -492,26 +492,8 @@ class CatalogController < ApplicationController
     config.fetch_many_document_params = { qt: 'document' }
 
     config.add_show_tools_partial :citation, if: false
-    config.add_show_tools_partial :email, callback: :email_action, validator: :validate_email_params
+    config.add_show_tools_partial :email, callback: :send_emails_to_all_recipients, validator: :validate_email_params_and_recaptcha
     config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
-  end
-
-  # Overridden from Blacklight to take a type parameter and render different a full or brief version of the record.
-  # Email Action (this will render the appropriate view on GET requests and process the form and send the email on POST requests)
-  def email
-    @documents = search_service.fetch(Array(params[:id]))
-
-    if request.post? && validate_email_params_and_recaptcha
-      send_emails_to_all_recipients
-
-      respond_to do |format|
-        format.html { render 'email_success', layout: !request.xhr? }
-      end and return
-    end
-
-    respond_to do |format|
-      format.html { render layout: !request.xhr? }
-    end
   end
 
   # Overridden from Blacklight to pre-fetch OCLC citations in bulk
@@ -531,14 +513,14 @@ class CatalogController < ApplicationController
 
   private
 
-  def send_emails_to_all_recipients
+  def send_emails_to_all_recipients(documents)
     email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
     email_addresses.each do |email_address|
       email_params[:to] = email_address
       email = if params[:type] == 'full'
-                SearchWorksRecordMailer.full_email_record(@documents, email_params, url_options)
+                SearchWorksRecordMailer.full_email_record(documents, email_params, url_options)
               else
-                SearchWorksRecordMailer.email_record(@documents, email_params, url_options)
+                SearchWorksRecordMailer.email_record(documents, email_params, url_options)
               end
       email.deliver_now
     end

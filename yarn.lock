@@ -239,19 +239,16 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.2.201.tgz#bfb3da01b3e2462f5a18f372c52dedd7de76037f"
   integrity sha512-wsTdWoZ5EfG5k3t7ORdyQF0ZmDEgN4aVPCanHAiNEwCROqibSZMXXmCbH7IDJUVri4FOeAVwwbPINI7HVHPKBw==
 
-blacklight-frontend@7:
-  version "7.38.0"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-7.38.0.tgz#0dce6531602c7bb3a0e3c5f99cea788158d19401"
-  integrity sha512-zsX+cMgeuUuKxwx1FydE4H1XzkTJoywmwGOznllyVYCatIlG2xCVM8IFbuv+VB9Qwoss9z0MjH87l2nMnSPKIA==
-  dependencies:
-    bootstrap ">=4.3.1 <6.0.0"
-    jquery "^3.5.1"
-    typeahead.js "^0.11.1"
-
 "blacklight-frontend@>=7.1 || 8.0":
   version "8.9.0"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.9.0.tgz#fb8561b4ff252c01574e202e9a303a3bfff7a82b"
-  integrity sha512-AIug8HllEHUinqgN5lpJMjqNWAxNY5avD9ig0E1WvgP0JOyWIzvMRjueObKKXl4EVm/885XlhiIN1vkTpmGSvQ==
+  resolved "https://codeload.github.com/projectblacklight/blacklight/tar.gz/18443f6d9804c1a9531ce91a8ef27742c6d01330"
+  dependencies:
+    bootstrap ">=4.3.1 <6.0.0"
+
+blacklight-frontend@^8.10.0:
+  version "8.10.1"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.10.1.tgz#dab19b6e06523fc04c32c50ca29365cdba6c5746"
+  integrity sha512-m9KfODRxygH49kXG6xelWuvSsHShtvGOfHJpv0G3LcyH+f2/NS8V/WPql0wwqSiet6mu2IXPMGA8eVYWLi3HUg==
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
 
@@ -367,7 +364,7 @@ is-number@^7.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
-jquery@>=1.7, jquery@>=3.0, jquery@^3.5.1:
+jquery@>=3.0:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
   integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
@@ -427,10 +424,3 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
-
-typeahead.js@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/typeahead.js/-/typeahead.js-0.11.1.tgz#4e64e671b22310a8606f4aec805924ba84b015b8"
-  integrity sha512-yGaLzGjVHyryZdNfrWz2NHXUwEO7hrlVmGMGCo5+6mH3nEEhcQ0Te3mK3G60uRnxfERu8twOWSU4WmwScbwhMg==
-  dependencies:
-    jquery ">=1.7"

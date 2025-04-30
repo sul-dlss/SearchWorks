@@ -20,47 +20,64 @@
 
       function init() {
         $element.on('click', function() {
-          var state = $selectAll.is(':visible');
+          const state = $selectAll.is(':visible');
           bookmarkSelectors = $(selectorSelectBookmarks);
-          var first = true;
-          var firstCheckboxIsDone = new $.Deferred();
-          var observer = new MutationObserver(function(mutationList) {
-            for (const mutation of mutationList) {
-              mutation.addedNodes.forEach(function(node) {
-                if (node.text != 'Saving...') {
-                  firstCheckboxIsDone.resolve();
-                }
-              });
-            }
-          });
+          let first = true;
+          const checkFirstBox = new Promise((resolve) => {
+            const observer = new MutationObserver(function(mutationList) {
+              for (const mutation of mutationList) {
 
-          bookmarkSelectors.each(function(i, checkbox) {
-            if (first) {
-              var $checkbox = $(checkbox);
-              if ($checkbox.is(':checked') !== state) {
-                first = false;
-                var span = $checkbox.next('span');
-                observer.observe(span[0], { childList: true, subtree: true });
-                $checkbox.prop('checked', !state).click();
+                mutation.addedNodes.forEach(function(node) {
+                  console.log("Mutation", node)
+                  if (node.data != 'Saving...') {
+                    console.log("starting the rest", node.data)
+
+                    resolve()
+                  }
+                })
               }
-            }
-          });
+            })
 
-          $.when(firstCheckboxIsDone).done(function(){
+            bookmarkSelectors.each(function(i, checkbox) {
+              if (first) {
+                if (checkbox.checked !== state) {
+                  console.log("first box checked")
+                  first = false;
+                  const span = checkbox.closest('form').querySelector('[data-checkboxsubmit-target="span"]')
+                  observer.observe(span, { childList: true, subtree: true });
+                  const event = new MouseEvent("click", {
+                    view: window,
+                    bubbles: true,
+                    cancelable: true,
+                  })
+                  checkbox.dispatchEvent(event)
+                }
+              }
+            })
+          })
+
+          checkFirstBox.then(() => {
+            // Check the rest of the boxes
             bookmarkSelectors.each(async function(i, checkbox) {
-              var $checkbox = $(checkbox);
-              if ($checkbox.is(':checked') !== state) {
-                $checkbox.prop('checked', !state).click();
+              if (checkbox.checked !== state) {
+                console.log("subsequent box checked")
+
+                const event = new MouseEvent("click", {
+                  view: window,
+                  bubbles: true,
+                  cancelable: true,
+                })
+                checkbox.dispatchEvent(event)
                 if (i > 20) {
                   // Avoid trigging DOS protection in the loadbalancer.
-                  await new Promise(r => setTimeout(r, 500));
+                  await new Promise(r => setTimeout(r, 500))
                 }
               }
-            });
-          });
-          
-          toggleActions();
-        });
+            })
+          })
+
+          toggleActions()
+        })
       }
 
       function setInitialAction() {

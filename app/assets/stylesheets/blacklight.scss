@@ -1,18 +1,27 @@
-@import 'bootstrap-variables';
-@import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-mixins';
+@import "bootstrap-variables";
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-mixins";
 
-@import 'bootstrap-overrides';
+@import "bootstrap-overrides";
 
-@import 'blacklight-frontend/app/assets/stylesheets/blacklight/blacklight.scss';
-@import 'blacklight_marc';
+@import "blacklight-frontend/app/assets/stylesheets/blacklight/blacklight.scss";
+@import "blacklight_marc";
 
-@import 'blacklight-hierarchy/app/assets/stylesheets/blacklight/hierarchy/hierarchy.scss';
+@import "blacklight-hierarchy/app/assets/stylesheets/blacklight/hierarchy/hierarchy.scss";
 
 // the default bootstrap font-family list includes "Segoe UI Emoji", which, on windows
 // renders our remove icon as an emoji-sized x instead of what we see on all other platforms...
 // so, for now (until we replace it with an SVG icon or something), we get to override bootstrap:
-$remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !default;
+$remove-icon-font-family:
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  "Noto Sans",
+  "Liberation Sans",
+  sans-serif !default;
 
 .remove-icon {
   font-family: $remove-icon-font-family;
@@ -28,7 +37,8 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
   --link-decoration-line: none;
 
   .remove {
-    &:hover,&:active {
+    &:hover,
+    &:active {
       border: none;
     }
 
@@ -36,10 +46,19 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
       padding-left: 0.3em;
     }
   }
+
+  li {
+    /* TODO: Remove if https://github.com/projectblacklight/blacklight/pull/3594 ends up in the version of Blacklight we use */
+    padding-block: var(--bl-facet-value-padding-y);
+  }
 }
 
 .more_facets {
   --link-decoration-line: none;
+}
+
+.sidenav {
+  --bl-facet-value-padding-y: 0.25rem; /* TODO: Consider for removal when on Bootstrap 5 */
 }
 
 .range_limit {
@@ -66,7 +85,6 @@ $remove-icon-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
     border-radius: 0px 3px 3px 0px;
   }
 }
-
 
 .dl-invert {
   dt {
