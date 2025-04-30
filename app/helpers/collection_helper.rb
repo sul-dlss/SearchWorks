@@ -13,12 +13,6 @@ module CollectionHelper
     search_catalog_path(f: { collection: [document.collection_id] })
   end
 
-  def collection_members_enumeration(document)
-    if document.collection_members.present?
-      "#{pluralize(document.collection_members.total, 'item')} online"
-    end
-  end
-
   def text_for_inner_members_link(document)
     return if document.collection_members.blank?
 
