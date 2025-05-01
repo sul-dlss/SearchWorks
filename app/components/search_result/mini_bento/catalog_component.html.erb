@@ -1,5 +1,5 @@
 <div class='alternate-catalog' data-alternate-catalog="<%= articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] }) %>">
-  <% if close %>
+  <% if close? %>
     <button type='button' class='alternate-catalog-close close' aria-label="Close">
       <i class='fa fa-times-circle'></i>
     </button>
@@ -30,5 +30,5 @@
     </div>
   </div>
 
-  <%= render 'lib_guides_alternate_catalog' if Settings.LIB_GUIDES.MINI_BENTO_ENABLED %>
+  <%= render 'catalog/lib_guides_alternate_catalog' if Settings.LIB_GUIDES.MINI_BENTO_ENABLED %>
 </div>
