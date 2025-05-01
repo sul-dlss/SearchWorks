@@ -1,6 +1,6 @@
 <h1 class="h2 mb-4"><%= t('blacklight.search.zero_results.page_heading') %></h1>
 <div class='row zero-results'>
-  <div class="col-md-4">
+  <div class="col-md-4 modify-search">
     <div class="border-before">
       <h2 class="ps-3"><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h2>
       <ul>
@@ -18,7 +18,7 @@
       </ul>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 more-help">
     <div class="border-before ps-3">
       <h2>Need more help?</h2>
 
@@ -58,7 +58,7 @@
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-4 zero-result-container">
     <%= render blacklight_config.index.mini_bento_component.new(close: false) %>
   </div>
 </div>

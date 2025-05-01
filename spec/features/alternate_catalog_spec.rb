@@ -7,51 +7,42 @@ RSpec.feature 'Alterate catalog results', :js do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end
 
-  scenario 'on catalog search' do
-    expect(LibGuidesApi).to receive(:fetch).and_return([])
-
-    visit search_catalog_path(q: '1*')
-    within '.alternate-catalog' do
-      expect(page).to have_css 'h3', text: 'Your search also found results in'
-      expect(page).to have_css 'a.btn', text: 'See 4 article+ results'
-      expect(page).to have_css(
-        'a[href="/articles?f%5Beds_search_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=1'\
-          '%2A&f[eds_publication_type_facet][]=Academic%20journals"]',
-        text: 'Academic journals (1)'
-      )
-
-      expect(page).to have_no_css('.lib-guides-alternate-catalog', visible: :visible)
+  context 'when on catalog search' do
+    before do
+      expect(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
     end
-  end
 
-  scenario 'LibGuides Results' do
-    expect(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
-
-    visit search_catalog_path(q: '1*')
-    within '.alternate-catalog' do
-      expect(page).to have_css('.lib-guides-alternate-catalog', visible: :visible)
-      within('.lib-guides-alternate-catalog') do
-        expect(page).to have_css('ol li', count: 1)
-
-        expect(page).to have_link('Guide 1', href: 'https://example.com/1')
+    it 'draws mini-bento' do
+      visit search_catalog_path(q: '1*')
+      within '.alternate-catalog' do
+        expect(page).to have_css 'h3', text: 'Your search also found results in'
+        expect(page).to have_link 'View all Articles+ results'
+        expect(page).to have_css '.alternate-catalog-count', text: '4'
+        expect(page).to have_link 'Academic journals 1',
+                                  href: "/articles?f%5Beds_search_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=1" \
+                                        "%2A&f[eds_publication_type_facet][]=Academic%20journals"
+        expect(page).to have_link 'Guides to collections, tools, and services', href: 'https://guides.library.stanford.edu/srch.php?q=1*'
       end
     end
   end
 
-  scenario 'on article search' do
-    expect(LibGuidesApi).to receive(:fetch).and_return([])
+  context 'when on article search' do
+    before do
+      expect(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
+    end
 
-    visit articles_path(q: '1*')
-    within '.alternate-catalog' do
-      expect(page).to have_css 'h3', text: 'Your search also found results in'
-      expect(page).to have_css 'a.btn', text: 'See 45 catalog results'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Book"]', text: 'Book (18)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Image"]', text: 'Image (7)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Database"]', text: 'Database (5)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Newspaper"]', text: 'Newspaper (4)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Video"]', text: 'Video (4)'
+    it 'draws mini-bento' do
+      visit articles_path(q: '1*')
+      within '.alternate-catalog' do
+        expect(page).to have_css 'h3', text: 'Your search also found results in'
+        expect(page).to have_link 'View all catalog results'
+        expect(page).to have_css '.alternate-catalog-count', text: '45'
+        expect(page).to have_link 'Book 18', href: "/catalog?q=1%2A&f[format_main_ssim][]=Book"
+        expect(page).to have_link 'Image 7', href: "/catalog?q=1%2A&f[format_main_ssim][]=Image"
+        expect(page).to have_link 'Database 5', href: "/catalog?q=1%2A&f[format_main_ssim][]=Database"
 
-      expect(page).to have_no_css('.lib-guides-alternate-catalog', visible: :visible)
+        expect(page).to have_link 'Guides to collections, tools, and services', href: 'https://guides.library.stanford.edu/srch.php?q=1*'
+      end
     end
   end
 end
