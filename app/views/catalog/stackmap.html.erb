@@ -7,12 +7,12 @@
 
     <div class="map-template">
       <div class="controls row">
-        <div class="zoom-controls col-md-7 col-xs-6">
+        <div class="zoom-controls col-md-7 col-6">
           <%= button_tag t('blacklight.tools.stackmap.zoom_in_html'), class: "zoom-in btn btn-link p-sm-1" %>
           <%= button_tag t('blacklight.tools.stackmap.zoom_out_html'), class: "zoom-out btn btn-link p-sm-1" %>
           <%= button_tag t('blacklight.tools.stackmap.reset_size_html'), class: "zoom-fit btn btn-link p-sm-1" %>
         </div>
-        <div class="show-description col-md-5 col-xs-6">
+        <div class="show-description col-md-5 col-6">
           <%= button_tag class: 'btn btn-link p-sm-1', data: { action: "reveal-text-directions" } do %>
             <i class="fa fa-list"></i> <span class="text-swap">Show</span> text directions
           <% end %>
