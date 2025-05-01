@@ -55,7 +55,7 @@ export default class extends Controller {
 
     if (this.buttonContextValue) {
       const srSpan = document.createElement("span");
-      srSpan.classList.add("sr-only", "visually-hidden");
+      srSpan.classList.add("visually-hidden");
       srSpan.innerText = this.buttonContextValue;
 
       this.buttonTarget.appendChild(srSpan);
@@ -71,7 +71,7 @@ export default class extends Controller {
 
     if (this.buttonContextValue) {
       const srSpan = document.createElement("span");
-      srSpan.classList.add("sr-only", "visually-hidden");
+      srSpan.classList.add("visually-hidden");
       srSpan.innerText = this.buttonContextValue;
 
       button.appendChild(srSpan);
@@ -98,7 +98,7 @@ export default class extends Controller {
 
   buildNotice() {
     const notice = document.createElement("span");
-    notice.classList.add("sr-only", "visually-hidden");
+    notice.classList.add("visually-hidden");
     notice.ariaAtomic = "true";
     notice.ariaLive = "polite";
     notice.profile = "status";

@@ -1,6 +1,4 @@
 <div class="<%= classes %>" role="alert">
   Stanford affiliates: <%= link_to 'Log in', new_user_session_path(referrer: request.original_url) %> to view all results and benefit from streamlined access to articles and more.
-  <button type="button" class="close py-3 px-3" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+  <button type="button" class="close btn-close py-3 px-3" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>

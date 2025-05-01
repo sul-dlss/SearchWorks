@@ -22,11 +22,11 @@
   <% if @spines.present? %>
     <div class="browse-toolbar mb-3">
       <%= link_to(browse_index_path(browse_params.merge(before: @spines.first.reverse_shelfkey, after: nil)), class: 'btn btn-secondary btn-sm') do %>
-        <i class="fa fa-arrow-left" aria-hidden="true"></i><span class="sr-only">Previous</span>
+        <i class="fa fa-arrow-left" aria-hidden="true"></i><span class="visually-hidden">Previous</span>
       <% end %>
       <%= @spines.first.callnumber %> - <%= @spines.last.callnumber %>
       <%= link_to(browse_index_path(browse_params.merge(before: nil, after: @spines.last.shelfkey)), class: 'btn btn-secondary btn-sm') do %>
-        <i class="fa fa-arrow-right" aria-hidden="true"></i><span class="sr-only">Next</span>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i><span class="visually-hidden">Next</span>
       <% end %>
       <div class='pull-right'>
         <%= render 'catalog/view_type_group' %>

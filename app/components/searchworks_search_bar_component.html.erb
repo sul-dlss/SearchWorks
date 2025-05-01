@@ -6,7 +6,7 @@
 
     <% if search_fields.length > 1 %>
       <span class="input-group-addon for-search-field">
-        <label for="search_field" class="sr-only visually-hidden"><%= scoped_t('search_field.label') %></label>
+        <label for="search_field" class="visually-hidden"><%= scoped_t('search_field.label') %></label>
         <%= select_tag(:search_field,
                        options_for_select(search_fields, h(@search_field)),
                        title: scoped_t('search_field.title'),
@@ -17,7 +17,7 @@
       <%= hidden_field_tag :search_field, search_fields.first.last %>
     <% end %>
 
-    <label for="<%= @prefix %><%= @query_param %>" class="sr-only visually-hidden"><%= t('blacklight.search.form_label') %></label>
+    <label for="<%= @prefix %><%= @query_param %>" class="visually-hidden"><%= t('blacklight.search.form_label') %></label>
 
     <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autofocus: @autofocus  %>
     <span class="input-group-btn">

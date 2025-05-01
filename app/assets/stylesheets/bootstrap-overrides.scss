@@ -1,3 +1,7 @@
+body {
+  background-color: $sul-body-bg;
+}
+
 // I believe the text-success color override can be removed after upgrading to BS5.
 .text-success {
   color: $state-success-text !important;
@@ -55,8 +59,19 @@ summary {
 // We use btn-outline-secondary to style the seleted filters
 .btn-secondary,
 .btn-outline-secondary {
-  @include button-variant($light-sandstone, $cloud);
+  @include button-variant(
+    $light-sandstone,
+    $cloud,
+    $hover-background: lighten($sandstone, 15%),
+    $hover-border: darken($cloud, 15%),
+    $active-background: lighten($sandstone, 15%),
+    $active-border: darken($cloud, 15%)
+  );
   color: $warm-grey;
+}
+
+.constraint-value:hover {
+  background-color: $light-sandstone;
 }
 
 #advanced_search_facets {
@@ -77,4 +92,19 @@ summary {
 .modal-body:has(+ .modal-footer) {
   /* provide enough space for the footer */
   max-height: calc(86vh - 10rem);
+}
+
+.dropdown-menu {
+  --bs-dropdown-item-padding-x: 1.5rem;
+}
+
+.btn, .sul-toolbar .btn-link, .prev_next_links .btn-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.index_title a, h3 a {
+  text-decoration: none;
 }

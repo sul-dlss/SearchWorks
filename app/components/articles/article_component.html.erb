@@ -9,7 +9,7 @@
     <% if @document.html_fulltext? %>
       <div class="html-fulltext-container">
         <% if helpers.on_campus_or_su_affiliated_user? %>
-          <button class="section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-toggle="collapse" href="#toggleFulltext" aria-expanded="true" aria-controls="toggleFulltext">
+          <button class="section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-bs-toggle="collapse" href="#toggleFulltext" aria-expanded="true" aria-controls="toggleFulltext">
             <h2>Hide full text <i class='fa fa-chevron-down'></i></h2>
           </button>
           <div class='eds-full-text-section section-body collapse show' id="toggleFulltext">

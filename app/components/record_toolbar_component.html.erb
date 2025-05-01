@@ -3,19 +3,19 @@
     <%= helpers.link_back_to_catalog class: 'btn btn-link btn-sul-toolbar back-to-results', label: t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
   </div>
-  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".toolbar-collapse">
-    <span class="sr-only">Toggle navigation</span>
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".toolbar-collapse">
+    <span class="visually-hidden">Toggle navigation</span>
     <span class="fa fa-bars"></span>
   </button>
   <div class="navbar-collapse collapse toolbar-collapse">
-    <ul class="nav navbar-nav ml-auto">
+    <ul class="nav navbar-nav ms-auto">
       <% if citable? %>
         <li>
           <%= link_to t('blacklight.tools.cite_html'), cite_path, id: 'citeLink', data: { blacklight_modal: "trigger" }, class: 'btn btn-link btn-sul-toolbar' %>
         </li>
       <% end %>
       <li class="dropdown">
-        <button class="btn btn-sul-toolbar dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-sul-toolbar dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= t('blacklight.tools.send_to_html').html_safe %>
         </button>
         <div class="dropdown-menu" role="menu">

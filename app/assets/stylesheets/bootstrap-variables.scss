@@ -8,7 +8,7 @@ $warning: $poppy;
 $danger: $bright-red;
 
 // Body
-$body-bg: $sul-body-bg;
+$body-bg: #fff;
 $body-color: $sul-text-color;
 
 // Text / Links
@@ -59,7 +59,6 @@ $pagination-active-border: $sul-pagination-active-bg;
 
 // Tables
 $table-cell-padding: 0.5rem;
-$table-accent-bg: $secondary; // background for .table-striped (This becomes $table-striped-color in BS 5)
 $table-caption-color: $stanford-black;
 
 // Tooltip

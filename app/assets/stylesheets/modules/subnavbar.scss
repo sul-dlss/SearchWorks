@@ -12,7 +12,7 @@
 
   .navbar-toggler {
     font-size: 20px;
-    @extend .pl-0;
+    @extend .ps-0;
   }
 
   #search-subnavbar-collapse .navbar-nav {
@@ -47,7 +47,7 @@
     }
     // Add the border on hover, or when the #connection-form is open
     a:hover,
-    a[data-target="#connection-form"][aria-expanded="true"] {
+    a[data-bs-target="#connection-form"][aria-expanded="true"] {
       text-decoration: underline;
     }
 
@@ -68,7 +68,7 @@
   }
 
   // the last menu item should be right-aligned
-  .navbar-nav.ml-auto > li:last-child > a {
+  .navbar-nav.ms-auto > li:last-child > a {
     margin-right: 0;
     padding-right: 0;
   }

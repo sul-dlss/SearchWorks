@@ -20,7 +20,7 @@ RSpec.describe SearchResult::LocationComponent, type: :component do
     end
 
     it "renders the table" do
-      expect(page).to have_css('caption.sr-only', text: 'Status of items at Green Library')
+      expect(page).to have_css('caption.visually-hidden', text: 'Status of items at Green Library')
       expect(page).to have_css('th[scope="col"]', text: 'Green Library')
       expect(page).to have_css('th[scope="col"]', text: 'Status')
       expect(page).to have_css('tbody th[scope="col"]', text: 'Stacks')

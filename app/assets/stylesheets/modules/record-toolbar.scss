@@ -3,11 +3,12 @@
 
   .navbar-nav > li {
     div.toggle-bookmark, .btn-sul-toolbar {
-      padding-top: 10px;
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
     }
   }
 
-  .navbar-nav.ml-auto form.bookmark-toggle {
+  .navbar-nav.ms-auto form.bookmark-toggle {
     padding-left: 10px;
   }
 }

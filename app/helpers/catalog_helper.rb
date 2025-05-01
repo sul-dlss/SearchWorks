@@ -69,7 +69,7 @@ module CatalogHelper
     link_to(
       link_url,
       class: 'iiif-dnd pull-right',
-      data: { turbo: false, toggle: 'tooltip', placement: position, manifest: },
+      data: { turbo: false, 'bs-toggle': 'tooltip', 'bs-placement': position, manifest: },
       title: 'Drag icon to any IIIF viewer. — Click icon to learn more.'
     ) do
       image_tag 'iiif-drag-n-drop.svg', width:, alt: 'IIIF Drag-n-drop'
