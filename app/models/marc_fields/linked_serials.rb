@@ -35,6 +35,17 @@ class LinkedSerials < MarcField
     end
   end
 
+  # Attempt to translate the language code (esp. for 775 fields), but fall back if it wasn't a language code
+  def e_subfield(_field, value)
+    translated_code = I18n.t(value, scope: :marc_languages, default: nil)
+
+    if translated_code
+      [{ text: "(#{translated_code})" }]
+    else
+      { text: value }
+    end
+  end
+
   def s_subfield(field, _)
     return if field_has_main_entry?(field)
 

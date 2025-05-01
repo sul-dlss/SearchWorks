@@ -97,6 +97,37 @@ RSpec.describe LinkedSerials do
       end
     end
 
+    context 'for language code ($e)' do
+      let(:marc) do
+        <<-JSON
+          {
+            "leader": "          22        4500",
+            "fields": [
+              {
+                "775": {
+                  "ind1": "0",
+                  "ind2": "0",
+                  "subfields": [
+                    {
+                      "a": "Senado de California"
+                    },
+                    {
+                      "e": "spa"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        JSON
+      end
+
+      it 'translates the language code' do
+        puts subject.values
+        expect(subject.values.last[:values].last[:text]).to eq '(Spanish)'
+      end
+    end
+
     describe 'title data' do
       context 'when main entry is present' do
         let(:marc) { main_entry_and_title_serial_fixture }
