@@ -1,5 +1,5 @@
-<div class='alternate-catalog' data-alternate-catalog="<%= articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] }) %>">
-  <% if close %>
+<div class='alternate-catalog' data-alternate-catalog="<%= search_catalog_path(q: params.fetch(:q)) %>">
+  <% if close? %>
     <button type='button' class='alternate-catalog-close btn-close close' aria-label="Close">
     </button>
   <% end %>
@@ -8,16 +8,15 @@
     <div class='row'>
       <div class='col-md-6'>
         <h4 class="alternate-catalog-name">
-          Articles+
+          Catalog
         </h4>
         <div class='alternate-catalog-desc'>
-          Journal articles, e-books, &amp; other e-resources
+          Books, media, physical &amp; digital resources
         </div>
       </div>
-      <%=  %>
       <div class='col-md-6'>
-        <%= link_to(articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] }), class: 'btn btn-primary') do %>
-          See <span class="alternate-catalog-count"%></span> article+ results
+        <%= link_to(search_catalog_path(q: params.fetch(:q)), class: 'btn btn-primary') do %>
+          See <span class="alternate-catalog-count"%></span> catalog results
         <% end %>
       </div>
     </div>
@@ -29,5 +28,5 @@
     </div>
   </div>
 
-  <%= render 'lib_guides_alternate_catalog' if Settings.LIB_GUIDES.MINI_BENTO_ENABLED %>
+  <%= render 'catalog/lib_guides_alternate_catalog' if Settings.LIB_GUIDES.MINI_BENTO_ENABLED %>
 </div>
