@@ -36,7 +36,7 @@ RSpec.describe "catalog/record/_callnumber_browse" do
     expect(rendered).to have_css('h2', text: /Browse related items/)
   end
   it "includes links to all unique callnumbers" do
-    expect(rendered).to have_css('.callnumber button', text: "callnumber")
-    expect(rendered).to have_css('.callnumber button', text: "callnumber2")
+    expect(rendered).to have_css('.btn-callnumber', text: "callnumber")
+    expect(rendered).to have_css('.btn-callnumber', text: "callnumber2")
   end
 end
