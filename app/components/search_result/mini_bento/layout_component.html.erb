@@ -1,4 +1,4 @@
-<div class='alternate-catalog' data-alternate-catalog="<%= articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] }) %>">
+<div class='alternate-catalog' data-alternate-catalog="<%= url %>">
   <% if close? %>
     <button type='button' class='alternate-catalog-close btn-close close' aria-label="Close">
     </button>
@@ -8,16 +8,15 @@
     <div class='row'>
       <div class='col-md-6'>
         <h4 class="alternate-catalog-name">
-          Articles+
+          <%= name %>
         </h4>
         <div class='alternate-catalog-desc'>
-          Journal articles, e-books, &amp; other e-resources
+          <%= description %>
         </div>
       </div>
-      <%=  %>
       <div class='col-md-6'>
-        <%= link_to(articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] }), class: 'btn btn-primary') do %>
-          See <span class="alternate-catalog-count"%></span> article+ results
+        <%= link_to(url, class: 'btn btn-primary') do %>
+          See <span class="alternate-catalog-count"></span> <%= result_singular %> results
         <% end %>
       </div>
     </div>

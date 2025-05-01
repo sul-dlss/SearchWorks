@@ -8,8 +8,14 @@ module SearchResult
         super
       end
 
-      def close?
-        @close
+      attr_reader :close
+
+      def call
+        render LayoutComponent.new(close:, i18n_key: :article, url:)
+      end
+
+      def url
+        search_catalog_path(q: params.fetch(:q))
       end
     end
   end
