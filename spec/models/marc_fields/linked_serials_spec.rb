@@ -123,7 +123,6 @@ RSpec.describe LinkedSerials do
       end
 
       it 'translates the language code' do
-        puts subject.values
         expect(subject.values.last[:values].last[:text]).to eq '(Spanish)'
       end
     end
