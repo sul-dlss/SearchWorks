@@ -15,17 +15,4 @@
       margin-right: 5px;
     }
   }
-  .callnumber {
-    margin-left: 10px;
-    line-height: 3em;
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .record-browse-nearby {
-    .callnumber {
-      display: block;
-      margin: 10px 10px 0 0;
-    }
-  }
 }
