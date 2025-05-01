@@ -34,6 +34,7 @@ Metrics/ClassLength:
   Exclude:
     - 'app/controllers/articles_controller.rb'
     - 'app/controllers/catalog_controller.rb'
+    - 'app/models/marc_fields/linked_serials.rb'
     - 'lib/holdings/item.rb'
   Max: 115
 
