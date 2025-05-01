@@ -61,7 +61,9 @@ $remove-icon-font-family:
   --bl-facet-limit-body-padding: 0.75rem 1rem;
 }
 
-.sidenav, .facet-extended-list, #advanced_search_facets {
+.sidenav,
+.facet-extended-list,
+#advanced_search_facets {
   --bl-facet-value-padding-y: 0.25rem; /* TODO: Consider for removal when on Bootstrap 5 */
 }
 
@@ -70,27 +72,8 @@ $remove-icon-font-family:
 }
 
 .range_limit {
-  input {
-    width: 14ch !important;
-  }
-
-  .input-group {
-    display: flex !important;
-    justify-content: center;
-  }
-
-  // Blacklight 6's range limit didn't have this button
-  .view_larger {
-    display: none;
-  }
-
-  .input-group-append {
-    display: flex;
-  }
-
   .submit {
-    @extend .btn-sm;
-    border-radius: 0px 3px 3px 0px;
+    width: 14ch;
   }
 }
 
