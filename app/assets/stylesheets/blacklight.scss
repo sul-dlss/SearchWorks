@@ -48,7 +48,6 @@ $remove-icon-font-family:
   }
 
   li {
-    max-width: unset;
     /* TODO: Remove if https://github.com/projectblacklight/blacklight/pull/3594 ends up in the version of Blacklight we use */
     padding-block: var(--bl-facet-value-padding-y);
   }
@@ -58,7 +57,9 @@ $remove-icon-font-family:
   --link-decoration-line: none;
 }
 
-.sidenav, .facet-extended-list, #advanced_search_facets {
+.sidenav,
+.facet-extended-list,
+#advanced_search_facets {
   --bl-facet-value-padding-y: 0.25rem; /* TODO: Consider for removal when on Bootstrap 5 */
 }
 
