@@ -22,6 +22,7 @@ class BoundWithChildrenController < ApplicationController
     builder = Builder.new(@item_id, 100)
     search = search_service.repository.search(builder)
     @bound_with_children = filtered_children(search.docs)
+    @bound_with_parent = @bound_with_children.first.bound_with_parent
   end
 
   def index
@@ -32,11 +33,11 @@ class BoundWithChildrenController < ApplicationController
     search = search_service.repository.search(builder)
     @number_of_results = search.response['numFound']
     @bound_with_children = filtered_children(search.docs)
-    @instance_call_number = @bound_with_children.present? ? @bound_with_children.first.items.first.bound_with_parent[:call_number] : ''
+    @bound_with_parent = @bound_with_children.first.bound_with_parent
   end
 
   def filtered_children(bound_with_children)
-    @filtered_children = bound_with_children.each do |child|
+    @filtered_children = bound_with_children.flat_map do |child|
       child.items.select { |item| item.id == @item_id && !item.bound_with_principal? }
     end
   end

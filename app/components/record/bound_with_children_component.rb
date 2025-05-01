@@ -11,8 +11,8 @@ module Record
 
     attr_reader :bound_with_children, :item_id, :instance_id
 
-    def bound_with_title(child)
-      (instance_id == child.id ? tag.em('Same title') : link_to(child['title_full_display'], solr_document_path(child.id), data: { turbo: false }))
+    def bound_with_title(document)
+      (instance_id == document.id ? tag.em('Same title') : link_to(document['title_full_display'], solr_document_path(document.id), data: { turbo: false }))
     end
   end
 end
