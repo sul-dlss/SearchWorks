@@ -10,3 +10,5 @@ format: Video
 format_main_ssim: Video
 access_facet: Online
 building_facet: Green
+library_code_facet_ssim:
+  - GREEN
