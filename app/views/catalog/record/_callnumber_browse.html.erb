@@ -7,7 +7,7 @@
     <div class="col-md-9 col-sm-12">
       Start at call number:
       <% spines.each_with_index do |spine, index| %>
-        <span class="callnumber">
+        <span class="btn-callnumber">
           <%= link_to_callnumber_browse(document, spine, index) %>
         </span>
       <% end %>
