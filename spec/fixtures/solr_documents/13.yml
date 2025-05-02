@@ -3,10 +3,12 @@ uuid_ssi: 6e5f00f8-ac2b-46f5-8e90-a424e2fc61d7
 hashed_id_ssi: c51ce410c124a10e0db5e4b97fc2af39
 pub_date: 1609
 author_person_display: Hahn, Adrian
-title_display:  "Radio drama : a comprehensive chronicle of American network programs"
-all_search:  "Radio drama : a comprehensive chronicle of American network programs"
+title_display: "Radio drama : a comprehensive chronicle of American network programs"
+all_search: "Radio drama : a comprehensive chronicle of American network programs"
 language: German
 format_hsim: Video/Film
 access_facet: At the Library
-building_facet: Hoover Library
+building_facet: Hoover Institution Library & Archives
+library_code_facet_ssim:
+  - HILA
 isbn_display: 078640051X

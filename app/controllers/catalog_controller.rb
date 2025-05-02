@@ -172,7 +172,8 @@ class CatalogController < ApplicationController
                            },
                            component: Blacklight::Facets::ListComponent
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
-    config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index,
+    config.add_facet_field "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
+                            helper_method: :translate_library_code,
                            component: Blacklight::Facets::ListComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
                            component: Searchworks4::FacetSearchComponent
@@ -225,7 +226,7 @@ class CatalogController < ApplicationController
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
 
     config.top_filters = {
-      :default => ['access_facet', 'format_hsim', 'building_facet'],
+      :default => ['access_facet', 'format_hsim', 'library_code_facet_ssim'],
       :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
       :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
     }
@@ -479,12 +480,12 @@ class CatalogController < ApplicationController
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {
-        "facet.field" => ["access_facet", "format_hsim", "format_physical_ssim", "building_facet", "language"],
+        "facet.field" => ["access_facet", "format_hsim", "format_physical_ssim", "library_code_facet_ssim", "language"],
          # return all facet values
         "f.access_facet.facet.limit" => -1,
         "f.format_hsim.facet.limit" => -1,
         "f.format_physical_ssim.facet.limit" => -1,
-        "f.building_facet.facet.limit" => -1,
+        "f.library_code_facet_ssim.facet.limit" => -1,
         "f.language.facet.limit" => -1,
         "facet.sort" => "index" # sort by byte order of values
       }

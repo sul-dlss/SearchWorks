@@ -12,7 +12,9 @@ physical: The physical statement
 marc_json_struct: |
 <%= marc_characteristics_fixture %>
 access_facet: At the Library
-building_facet: Hoover Library
+building_facet: Hoover Institution Library & Archives
+library_code_facet_ssim:
+  - HILA
 item_display_struct:
   - barcode: '123'
     library: GREEN

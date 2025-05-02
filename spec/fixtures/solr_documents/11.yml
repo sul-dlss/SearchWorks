@@ -16,3 +16,5 @@ marc_json_struct: |
 format_hsim: Newspaper
 access_facet: Online
 building_facet: SAL3 (off-campus storage)
+library_code_facet_ssim:
+  - SAL3

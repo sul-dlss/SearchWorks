@@ -14,3 +14,5 @@ marc_json_struct: |
 format_hsim: Newspaper
 access_facet: At the Library
 building_facet: Special Collections
+library_code_facet_ssim:
+  - SPEC-COLL

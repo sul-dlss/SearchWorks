@@ -14,3 +14,5 @@ format_hsim: Database
 db_az_subject: Engineering
 access_facet: At the Library
 building_facet: Law (Crown)
+library_code_facet_ssim:
+  - LAW

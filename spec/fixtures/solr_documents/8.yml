@@ -9,4 +9,6 @@ language: Spanish
 format: Newspaper
 format_hsim: Newspaper
 access_facet: Online
-building_facet: "Math & Statistics"
+building_facet: "Science (Li and Ma)"
+library_code_facet_ssim:
+  - SCIENCE
