@@ -69,3 +69,13 @@
     height: 164px;
   }
 }
+
+.stanford-digital-red-link {
+  font-weight: 600;
+  color: var(--stanford-digital-red);
+}
+
+.stanford-digital-red-link:hover {
+  color: var(--stanford-cardinal-dark);
+  text-decoration-color: var(--stanford-cardinal-dark);
+}
