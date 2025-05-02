@@ -9,14 +9,13 @@
 
   &:hover,
   &:focus {
-      li {
-          button {
-              .nav-label {
-                  display: inline-block;
-              }
-              
-          }  
+    li {
+      button {
+        .nav-label {
+          display: inline-block;
+        }
       }
+    }
   }
 
   li {
@@ -35,16 +34,17 @@
       white-space: nowrap;
 
       .nav-label {
-          padding-left: 10px;
-          display:none;
+        padding-left: 10px;
+        display: none;
       }
 
       &:focus,
       &:hover {
-          background-color: $sul-side-nav-minimap-active-btn-bg;
+        background-color: $sul-side-nav-minimap-active-btn-bg;
       }
 
-      i.fa, .sul-icon {
+      i.fa,
+      .sul-icon {
         display: inline-block;
         text-align: center;
         width: 35px;
@@ -53,17 +53,17 @@
 
     button.active {
       background-color: $sul-side-nav-minimap-active-btn-bg;
-      -webkit-box-shadow: inset 0 0 10px $sul-side-nav-minimap-active-btn-shadow;
-      -moz-box-shadow: inset 0 0 10px $sul-side-nav-minimap-active-btn-shadow;
       box-shadow: inset 0 0 10px $sul-side-nav-minimap-active-btn-shadow;
     }
 
-    &:last-child, &:last-child button {
+    &:last-child,
+    &:last-child button {
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px;
     }
 
-    &:first-child, &:first-child button {
+    &:first-child,
+    &:first-child button {
       border-top-right-radius: 5px;
       border-top-left-radius: 5px;
     }
