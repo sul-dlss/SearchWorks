@@ -71,7 +71,6 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'deprecation'
 gem 'blacklight', '~> 8.0'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
