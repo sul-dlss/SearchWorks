@@ -12,3 +12,5 @@ format_hsim: Database
 db_az_subject: History
 access_facet: At the Library
 building_facet: Green
+library_code_facet_ssim:
+  - GREEN

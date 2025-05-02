@@ -10,3 +10,5 @@ format: Newspaper
 format_hsim: Newspaper
 access_facet: Online
 building_facet: "SAL1&2 (on-campus shelving)"
+library_code_facet_ssim:
+  - SAL

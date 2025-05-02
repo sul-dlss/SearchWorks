@@ -80,6 +80,8 @@
           <str name="facet.field">author_other_facet</str>
           <str name="facet.field">building_facet</str>
             <str name="f.building_facet.facet.method">enum</str>
+          <str name="facet.field">library_code_facet_ssim</str>
+            <str name="f.library_code_facet_ssim.facet.method">enum</str>
           <str name="facet.field">callnum_facet_hsim</str>
             <str name="f.callnum_facet_hsim.facet.sort">index</str>
             <str name="f.callnum_facet_hsim.facet.method">enum</str>
@@ -122,6 +124,8 @@
           <str name="facet.field">author_other_facet</str>
           <str name="facet.field">building_facet</str>
             <str name="f.building_facet.facet.method">enum</str>
+          <str name="facet.field">library_code_facet_ssim</str>
+            <str name="f.library_code_facet_ssim.facet.method">enum</str>
           <str name="facet.field">callnum_facet_hsim</str>
             <str name="f.callnum_facet_hsim.facet.sort">index</str>
             <str name="f.callnum_facet_hsim.facet.method">enum</str>
@@ -174,6 +178,8 @@
             <str name="f.access_facet.facet.method">enum</str>
           <str name="facet.field">building_facet</str>
             <str name="f.building_facet.facet.method">enum</str>
+          <str name="facet.field">library_code_facet_ssim</str>
+            <str name="f.library_code_facet_ssim.facet.method">enum</str>
           <str name="facet.field">format_hsim</str>
             <str name="f.format_hsim.facet.method">enum</str>
           <str name="facet.field">language</str>

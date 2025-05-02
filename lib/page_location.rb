@@ -77,7 +77,7 @@ class PageLocation
   end
 
   def sdr_parameters?
-    filter(:building_facet).include?('Stanford Digital Repository')
+    filter(:library_code_facet_ssim).include?('SDR')
   end
 
   def dissertation_theses_parameters?

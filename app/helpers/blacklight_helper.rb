@@ -18,4 +18,20 @@ module BlacklightHelper
       [t(:'blacklight.search.per_page.label', count: count).html_safe, count]
     end
   end
+
+  # Find a display label for the library code facet. We no longer want the display label in the index, because this prevents us
+  # from changing the label without a full reindex.
+  # This displays the label from libraries.json
+  def translate_library_code(solr_value)
+    return 'Stanford Digital Repository' if solr_value == 'SDR'
+
+    library = Folio::Types.libraries.values.find { it['code'] == solr_value }
+    return solr_value unless library
+
+    folio_name = library.fetch('name')
+    # We strip 'Library' from the name because it appears in a facet called 'Library'.. except Hoover
+    return folio_name if folio_name.include?('Hoover')
+
+    folio_name.sub(' Library', '')
+  end
 end

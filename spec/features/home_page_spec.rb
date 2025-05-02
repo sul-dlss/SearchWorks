@@ -36,10 +36,10 @@ RSpec.feature "Home Page" do
     end
   end
 
-  scenario "should have the library facet hidden by default" do
-    within(".blacklight-building_facet") do
+  scenario "has the library facet hidden by default" do
+    within ".blacklight-library_code_facet_ssim" do
       expect(page).to have_button 'Library'
-      expect(page).to have_css('#facet-building_facet.collapse:not(.show)', visible: false)
+      expect(page).to have_css '#facet-library_code_facet_ssim.collapse:not(.show)', visible: false
     end
   end
 

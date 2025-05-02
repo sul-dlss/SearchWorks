@@ -9,3 +9,5 @@ language: English
 format_hsim: Video/Film
 access_facet: Online
 building_facet: Green
+library_code_facet_ssim:
+  - GREEN

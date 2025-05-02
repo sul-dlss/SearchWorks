@@ -10,3 +10,5 @@ format: Book
 format_hsim: Book
 access_facet: Online
 building_facet: Music
+library_code_facet_ssim:
+  - MUSIC
