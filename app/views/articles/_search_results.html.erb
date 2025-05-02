@@ -17,7 +17,13 @@
         <div class="search_num_of_results">
           <div class='results-heading'>
             <h1 class="visually-hidden"><%= t('blacklight.search.page_heading', search_type: search_type_name) %></h1>
-            <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %></h2>
+            <h2>
+              About <%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %>
+              <span class="duplicates">Duplicates removed</span>
+              <button class="btn duplicate-info" aria-label="More information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="<%= t('.duplicates') %>">
+                <span class="bi-info-circle"></span>
+              </button>
+            </h2>
           </div>
         </div>
         <%= render 'search_header' %>

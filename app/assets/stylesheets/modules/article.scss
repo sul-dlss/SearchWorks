@@ -1,16 +1,23 @@
-#documents {
-  &.article-search-results {
-    .document {
-      h3 {
-        padding-top: 10px;
-        &.index_title {
-          text-indent: -22px;
-        }
+.article-search-results {
+  .duplicates {
+    font-style: italic;
+    color: rgb(var(--stanford-stone-dark-rgb));
+    font-size: 1.125rem;
+    margin-inline-start: 1rem;
+  }
+  .duplicate-info {
+    padding: 0;
+  }
+  .document {
+    h3 {
+      padding-top: 10px;
+      &.index_title {
+        text-indent: -22px;
       }
+    }
 
-      span.sul-icon {
-        display: none;
-      }
+    span.sul-icon {
+      display: none;
     }
   }
 }
@@ -25,7 +32,7 @@
   }
 }
 
-// EDS markup
+/* EDS markup */
 searchLink {
   font-style: italic;
 }
