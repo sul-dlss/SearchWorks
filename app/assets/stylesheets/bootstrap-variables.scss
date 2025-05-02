@@ -16,7 +16,8 @@ $text-color: $sul-text-color;
 $link-color: $sul-link-color;
 $link-hover-color: $sul-link-color-hover;
 // $link-decoration: var(--link-decoration-line) var(--link-decoration-style);
-$link-hover-decoration: var(--link-hover-decoration-line) var(--link-hover-decoration-style);
+$link-hover-decoration: var(--link-hover-decoration-line)
+  var(--link-hover-decoration-style);
 
 // Components
 $component-active-bg: $digital-blue-dark;
@@ -59,11 +60,10 @@ $pagination-active-border: $sul-pagination-active-bg;
 // Tables
 $table-cell-padding: 0.5rem;
 $table-accent-bg: $secondary; // background for .table-striped (This becomes $table-striped-color in BS 5)
-$table-caption-color: $blackish;
+$table-caption-color: $stanford-black;
 
 // Tooltip
 $tooltip-bg: $sul-tooltip-bg;
-
 
 // Typography
 $font-size-base: 0.875rem;
@@ -74,7 +74,6 @@ $h3-font-size: $font-size-base * 1.383;
 $h4-font-size: $font-size-base * 1.215;
 $h5-font-size: $font-size-base * 1.138;
 $headings-font-weight: 400;
-
 
 // Bootstrap variables for print sheets
 
