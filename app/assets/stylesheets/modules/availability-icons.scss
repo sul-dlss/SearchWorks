@@ -10,6 +10,15 @@ $noncirc-color: darkorange;
   }
 }
 
+h1 .stanford-only {
+  height: 1.5rem;
+  margin-left: 0;
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
 .availability {
   .availability-icon {
     @extend .fa;
