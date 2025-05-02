@@ -175,8 +175,8 @@ RSpec.describe CatalogController do
       expect(keys.index("access_facet")).to be < keys.index("format_main_ssim")
       expect(keys.index("format_main_ssim")).to be < keys.index("format_physical_ssim")
       expect(keys.index("format_physical_ssim")).to be < keys.index("pub_year_tisim")
-      expect(keys.index("pub_year_tisim")).to be < keys.index("building_facet")
-      expect(keys.index("building_facet")).to be < keys.index("language")
+      expect(keys.index("pub_year_tisim")).to be < keys.index("library_code_facet_ssim")
+      expect(keys.index("library_code_facet_ssim")).to be < keys.index("language")
       expect(keys.index("language")).to be < keys.index("author_person_facet")
       expect(keys.index("author_person_facet")).to be < keys.index("callnum_facet_hsim")
       expect(keys.index("callnum_facet_hsim")).to be < keys.index("topic_facet")
@@ -190,8 +190,8 @@ RSpec.describe CatalogController do
       it 'sets an index sort for the resource type facet' do
         expect(config.facet_fields['format_main_ssim'].sort).to eq :index
       end
-      it 'sets an index sort for the building type facet' do
-        expect(config.facet_fields['building_facet'].sort).to eq :index
+      it 'sets an index sort for the library facet' do
+        expect(config.facet_fields['library_code_facet_ssim'].sort).to eq :index
       end
       it 'sets an index sort for the database topic facet' do
         expect(config.facet_fields['db_az_subject'].sort).to eq :index
@@ -199,8 +199,8 @@ RSpec.describe CatalogController do
     end
 
     describe "facet limits" do
-      it "sets a very high facet limit on building and format" do
-        ['building_facet', 'format_main_ssim'].each do |facet|
+      it "sets a very high facet limit on library and format" do
+        ['library_code_facet_ssim', 'format_main_ssim'].each do |facet|
           expect(config.facet_fields[facet].limit).to eq 100
         end
       end

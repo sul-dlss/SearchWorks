@@ -3,9 +3,7 @@
 ##
 # A mixin to add dynamic libary specific location facet support
 module LocationFacet
-  SUBLOCATION_LIBRARIES = ['Art & Architecture (Bowes)',
-                           'Education (at SAL1&2)',
-                           'Education (Cubberley)'].freeze
+  SUBLOCATION_LIBRARIES = ['ART', 'EDUCATION'].freeze
 
   extend ActiveSupport::Concern
 
@@ -18,7 +16,7 @@ module LocationFacet
   protected
 
   def add_location_facet
-    return unless building_facet_includes_library_with_sublocation?
+    return unless library_code_facet_includes_library_with_sublocation?
 
     blacklight_config.facet_fields['location_facet'].tap do |facet|
       facet.show = true
@@ -26,10 +24,10 @@ module LocationFacet
     end
   end
 
-  def building_facet_includes_library_with_sublocation?
+  def library_code_facet_includes_library_with_sublocation?
     params[:f] &&
-      params[:f][:building_facet] &&
-      Array.wrap(params[:f][:building_facet]).any? do |facet|
+      params[:f][:library_code_facet_ssim] &&
+      Array.wrap(params[:f][:library_code_facet_ssim]).any? do |facet|
         SUBLOCATION_LIBRARIES.include?(facet)
       end
   end
