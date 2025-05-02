@@ -46,8 +46,12 @@
   }
 }
 
-.eds-restricted {
-  border-left: 4px solid var(--stanford-cardinal)!important;
+.alert.eds-restricted {
+  border: 1px solid var(--stanford-cardinal);
+}
+
+#documents .document.eds-restricted, .alert.eds-restricted {
+  border-left: 4px solid var(--stanford-cardinal);
   .stanford-only {
     margin-left: 0;
   }
