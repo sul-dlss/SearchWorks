@@ -2073,7 +2073,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
-      "availabilityClass": "In_process"
+      "availabilityClass": "In_process_non_requestable"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -2083,7 +2083,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:43.024+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-22T04:39:05.522+00:00",
+      "updatedDate": "2025-05-02T16:49:12.949+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -3155,7 +3155,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
-      "availabilityClass": "In_process"
+      "availabilityClass": "In_process_non_requestable"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -3165,7 +3165,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:42.877+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-22T04:38:49.809+00:00",
+      "updatedDate": "2025-05-02T16:48:57.952+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -10875,7 +10875,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
-      "availabilityClass": "In_process"
+      "availabilityClass": "In_process_non_requestable"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -10885,7 +10885,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:43.180+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-22T04:39:21.874+00:00",
+      "updatedDate": "2025-05-02T16:49:23.910+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -12899,7 +12899,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
     "details": {
-      "availabilityClass": "In_process"
+      "availabilityClass": "In_process_non_requestable"
     },
     "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
     "servicePointIds": [
@@ -12909,8 +12909,8 @@
     "metadata": {
       "createdDate": "2024-07-08T21:09:15.666+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2024-07-08T21:09:15.666+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-05-02T16:48:45.367+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
