@@ -53,7 +53,7 @@ module SolrHoldings
     @folio_items ||= Array(holdings_json['items']).map do |item|
       holdings_record = folio_holdings_by_id[item['holdingsRecordId']]
       Folio::Item.from_dynamic(item, holdings_record:)
-    end
+    end.sort_by(&:effective_shelving_order)
   end
 
   def bound_with_folio_items

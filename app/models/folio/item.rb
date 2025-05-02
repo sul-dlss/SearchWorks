@@ -15,7 +15,7 @@ module Folio
 
     # rubocop:disable Metrics/ParameterLists
     def initialize(id:, status:, barcode:, material_type:, permanent_loan_type:, effective_location:,
-                   call_number:, volume:, enumeration:, chronology:,
+                   call_number:, volume:, enumeration:, chronology:, effective_shelving_order: nil,
                    permanent_location: nil, temporary_loan_type: nil)
       @id = id
       @barcode = barcode
@@ -29,6 +29,7 @@ module Folio
       @volume = volume
       @enumeration = enumeration
       @chronology = chronology
+      @effective_shelving_order = effective_shelving_order
     end
     # rubocop:enable Metrics/ParameterLists
 
@@ -52,8 +53,13 @@ module Folio
           enumeration: json['enumeration'], # only present for serials
           chronology: json['chronology'], # only present for serials
           call_number: CallNumber.from_dynamic(json['callNumber']),
+          effective_shelving_order: json['effectiveShelvingOrder'],
           effective_location: (Folio::Location.from_dynamic(json.dig('location', 'effectiveLocation')) if json.dig('location', 'effectiveLocation')),
           permanent_location: (Folio::Location.from_dynamic(json.dig('location', 'permanentLocation')) if json.dig('location', 'permanentLocation')) || holdings_record&.effective_location)
+    end
+
+    def effective_shelving_order
+      @effective_shelving_order ||= constructed_call_number || ''
     end
 
     def constructed_call_number
