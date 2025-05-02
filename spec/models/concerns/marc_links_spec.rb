@@ -13,7 +13,7 @@ RSpec.describe MarcLinks do
         { link_text: 'fulltext', fulltext: true },
         { link_text: 'stanford only',  stanford_only: true },
         { href: 'http://oac.cdlib.org/findai/ark:/13030/an-ark', link_text: 'finding aid', note: 'this is a finding aid' },
-        { link_text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc' }
+        { link_text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc', sort: 'zzz' }
       ])
     end
 
@@ -25,6 +25,7 @@ RSpec.describe MarcLinks do
       expect(document.marc_links.managed_purls.first.text).to eq 'druid'
       expect(document.marc_links.managed_purls.first.file_id).to eq 'x'
       expect(document.marc_links.managed_purls.first.druid).to eq 'abc'
+      expect(document.marc_links.managed_purls.first.sort).to eq 'zzz'
     end
   end
 

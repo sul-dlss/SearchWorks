@@ -19,7 +19,7 @@ module MarcLinks
     end
 
     def to_link
-      Links::Link.new(link_struct.merge({ href:, link_text:, finding_aid: finding_aid?, sort: finding_aid_sort }))
+      Links::Link.new(link_struct.merge({ href:, link_text:, finding_aid: finding_aid?, sort: }))
     end
 
     private
@@ -56,10 +56,12 @@ module MarcLinks
       end
     end
 
-    def finding_aid_sort
-      return nil unless finding_aid?
-
-      archives_finding_aid? ? 0 : 1
+    def sort
+      if finding_aid?
+        archives_finding_aid? ? '0' : '1'
+      else
+        link_struct[:sort].to_s
+      end
     end
 
     def href
