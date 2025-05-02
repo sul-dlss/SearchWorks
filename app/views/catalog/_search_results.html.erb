@@ -41,7 +41,7 @@
             <span class="sr-only">RSS feed for this result</span>
           <% end %>
         </div>
-        <%= render 'search_header' %>
+        <%= render blacklight_config.view_config(document_index_view_type).search_header_component.new %>
       </div>
 
       <%= render_document_index @response.documents %>

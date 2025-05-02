@@ -20,7 +20,8 @@
             <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %></h2>
           </div>
         </div>
-        <%= render 'search_header' %>
+        <%= render blacklight_config.view_config(document_index_view_type).search_header_component.new %>
+
         <%= render Articles::ResearchStarterComponent.new(response: @response) if params[:page].blank? || params[:page] == '1' %>
         <%= render_document_index @response.documents %>
         <%= render 'alternate_catalog', close: true if show_alternate_catalog? %>
