@@ -4,7 +4,7 @@
     tr.active {
       th {
         border-bottom: none;
-        background-color: $sul-availability-table-head-background;
+        background-color: $cloud;
       }
     }
   }
@@ -13,7 +13,7 @@
   tbody {
     tr {
       th {
-        border-top: 1px solid $sul-availability-table-cell-border;
+        border-top: 1px solid $cloud;
       }
 
       &.location-info th {
@@ -65,12 +65,12 @@
 }
 
 .status-text {
-  color: $sul-availability-status-text-color;
+  color: $cool-grey;
   font-size: 0.937em;
 }
 
 .temporary-location {
-  color: $sul-availability-notice-color;
+  color: $cardinal-red;
 }
 
 .availability-item {

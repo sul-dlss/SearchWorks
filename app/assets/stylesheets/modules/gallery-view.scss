@@ -11,11 +11,11 @@
   }
 
   .callnumber-bar {
-    background-color: $sul-gallery-callnumber-bar-bg;
-    color: $sul-gallery-callnumber-bar-color;
+    background-color: $clay;
+    color: white;
     height: 42px;
     font-weight: 400;
-    font-size: .937em;
+    font-size: 0.937em;
     padding: 3px;
     text-align: center;
     overflow: hidden;
@@ -35,11 +35,11 @@
 
     h3.index_title {
       @include h3-index-title-small-font;
-      margin: .5em;
+      margin: 0.5em;
       overflow: hidden;
       text-align: center;
       --link-decoration-line: none;
-      .three-lines {           
+      .three-lines {
         display: -webkit-box;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -104,8 +104,8 @@ span.fake-cover:not([hidden]) {
   height: $sul-gallery-cover-height;
   margin: 0 auto;
   display: flex;
-  background: $sul-gallery-fakecover-bg;
-  border: 1px solid $sul-gallery-fakecover-border;
+  background: white;
+  border: 1px solid transparent;
   align-items: center;
   justify-content: center;
 }
