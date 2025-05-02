@@ -705,7 +705,6 @@ DEPENDENCIES
   config
   cssbundling-rails (~> 1.4)
   debug
-  deprecation
   devise
   devise-guests
   devise-remote-user
