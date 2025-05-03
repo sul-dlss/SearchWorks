@@ -11,7 +11,7 @@ const AlternateCatalog = (function (global) {
       this.initCloseButton();
 
       // Insert between the 3rd and 4th document
-      this.injectAlternateCatalogInotResults();
+      this.injectAlternateCatalogIntoResults();
 
       // Update title
       this.titleElement.text('Searching...')
@@ -32,7 +32,7 @@ const AlternateCatalog = (function (global) {
       });
     },
 
-    injectAlternateCatalogInotResults: function() {
+    injectAlternateCatalogIntoResults: function() {
       var $documents = $('#documents');
       var afterThird = $documents.find('.document-position-2').after(this.container);
       var _this = this;
@@ -44,57 +44,67 @@ const AlternateCatalog = (function (global) {
     },
 
     fetchOtherCatalog: function() {
-      var alternateCatalogUrl = this.container.data().alternateCatalog;
-      var $body = this.container.find('.alternate-catalog-body');
-      var $count = this.container.find('.alternate-catalog-count');
-      var $facets = this.container.find('.alternate-catalog-facets');
-      var _this = this;
+      const alternateCatalogUrl = this.container.data().alternateCatalog;
+      const $body = this.container.find('.alternate-catalog-body');
+      const $count = this.container.find('.alternate-catalog-count');
+      const $facets = this.container.find('.alternate-catalog-facets');
 
-      $.getJSON({
-        url: alternateCatalogUrl
-      }).done(function (response) {
-        var count = response.response.pages.total_count;
-        if (count > 0) {
-          // Update title
-          _this.titleElement.text('Your search also found results in');
-          $count.text(parseInt(count).toLocaleString());
-          // Update body
-          var facetHtml = createFacets(response.response.facets, alternateCatalogUrl);
-          $facets.append(facetHtml);
-          $body.show();
-          _this.container.trigger('alternateResultsLoaded', $body);
-        } else {
-          _this.titleElement.text('No additional results were found in');
-          $body.find('a.btn').remove();
-          $facets.remove();
-          $body.show();
-        }
-      });
+      fetch(alternateCatalogUrl, { headers: { 'accept': 'application/json' } })
+        .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(response => {
+          const count = response.response.pages.total_count;
+          if (count > 0) {
+            // Update title
+            this.titleElement.text('Your search also found results in');
+            $count.text(parseInt(count).toLocaleString());
+            // Update body
+            var facetHtml = createFacets(response.response.facets, alternateCatalogUrl);
+            $facets.append(facetHtml);
+            $body.show();
+            this.container.trigger('alternateResultsLoaded', $body);
+          } else {
+            this.titleElement.text('No additional results were found in');
+            $body.find('a.btn').remove();
+            $facets.remove();
+            $body.show();
+          }
+        })
     },
 
     fetchLibGuides: function() {
-      var $guidesContainer = this.container.find('[data-lib-guides-api-url]');
+      const $guidesContainer = this.container.find('[data-lib-guides-api-url]');
       if ($guidesContainer.length === 0) {
         return;
       }
-      var $guideList = $guidesContainer.find('ol');
-      var libGuidesApiUrl = $guidesContainer.data('libGuidesApiUrl');
+      const $guideList = $guidesContainer.find('ol');
+      const libGuidesApiUrl = $guidesContainer.data('libGuidesApiUrl');
 
-      var _this = this;
-
-      $.getJSON({
-        url: libGuidesApiUrl
-      }).done(function (response) {
-        if (response.length > 0) {
-          response.forEach(function(guide) {
-            $guideList.append(
-              '<li><a href="' + guide.url + '">' + guide.name + '</a></li>'
-            );
-          });
-        } else {
-          $guidesContainer.remove();
-        }
-      });
+      fetch(libGuidesApiUrl, { headers: { 'accept': 'application/json' } })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(response => {
+           if (Array.isArray(response) && response.length > 0) {
+             response.forEach((guide) => {
+               $guideList.append(
+                 '<li><a href="' + guide.url + '">' + guide.name + '</a></li>'
+               )
+             })
+           } else {
+             $guidesContainer.remove()
+           }
+         })
+         .catch(error => {
+           console.error("Error fetching or processing ", error)
+         })
     }
   };
 
