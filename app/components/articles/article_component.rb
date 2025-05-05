@@ -24,7 +24,7 @@ module Articles
       end.compact
     end
 
-    delegate :html_present?, to: :helpers
+    delegate :html_present?, :allowed_to?, to: :helpers
 
     attr_reader :document
 

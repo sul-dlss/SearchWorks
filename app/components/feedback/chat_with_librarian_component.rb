@@ -2,10 +2,10 @@
 
 module Feedback
   class ChatWithLibrarianComponent < ViewComponent::Base
-    delegate :on_campus_or_su_affiliated_user?, to: :helpers
+    delegate :allowed_to?, to: :helpers
 
     def chat_attrs
-      return {} unless on_campus_or_su_affiliated_user?
+      return {} unless allowed_to?(:create?, with: OnlineChatPolicy)
 
       { library_h3lp: 'true', jid: "ic@chat.libraryh3lp.com" }
     end
