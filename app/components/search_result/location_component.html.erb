@@ -1,5 +1,5 @@
 <%= tag.table class: %w[table table-sm availability], data: { controller: 'long-table', longTableButtonContextValue: "items in #{library.name}" } do %>
-  <caption class='sr-only'>Status of items at <%= library.name %></caption>
+  <caption class='visually-hidden'>Status of items at <%= library.name %></caption>
   <thead>
     <tr class='active'>
       <th scope='col' class='w-50'><%= library.name %></th>

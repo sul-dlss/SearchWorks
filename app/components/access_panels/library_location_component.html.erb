@@ -15,11 +15,11 @@
   <% end %>
 <% end %>
 <%= tag.table class: %w[availability record-view], data: { controller: 'long-table', longTableButtonContextValue: "items in #{location.name}" } do %>
-  <caption class="sr-only">Items in <%= location.name %></caption>
+  <caption class="visually-hidden">Items in <%= location.name %></caption>
   <thead>
-    <tr class="sr-only">
+    <tr class="visually-hidden">
       <th scope="col">Call number</th>
-      <th class="sr-only" scope="col">Note</th>
+      <th class="visually-hidden" scope="col">Note</th>
       <th scope="col">Status</th>
     </tr>
   </thead>

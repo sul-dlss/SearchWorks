@@ -108,3 +108,17 @@ $balance-list-width: 10em;
 .facet-pagination {
   width: 100%;
 }
+
+// undo the upstream default to show the submit button
+.range_limit .input-group-append.visually-hidden {
+  width: auto !important;
+  height: auto !important;
+  clip: unset !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  position: relative !important;
+}
+
+.range_limit .sr-only {
+  @extend .visually-hidden;
+}

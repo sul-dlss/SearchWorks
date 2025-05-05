@@ -25,6 +25,11 @@
       padding-left: 4px;
       padding-top: 8px;
       padding-bottom: 5px;
+      &:hover {
+        background-color: $cardinal-red;
+        color: $white;
+        text-decoration: none;
+      }
     }
 
   }

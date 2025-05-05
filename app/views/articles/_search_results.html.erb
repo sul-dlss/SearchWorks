@@ -16,7 +16,7 @@
       <div id='documents' class="article-search-results">
         <div class="search_num_of_results">
           <div class='results-heading'>
-            <h1 class="sr-only"><%= t('blacklight.search.page_heading', search_type: search_type_name) %></h1>
+            <h1 class="visually-hidden"><%= t('blacklight.search.page_heading', search_type: search_type_name) %></h1>
             <h2><%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %></h2>
           </div>
         </div>

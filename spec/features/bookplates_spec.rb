@@ -11,12 +11,12 @@ RSpec.describe 'Bookplates' do
       expect(page).to have_css('.bookplate', count: 2)
 
       within(first('.bookplate')) do
-        expect(page).to have_css('img.mr-3')
+        expect(page).to have_css('img.me-3')
         expect(page).to have_css('.media-body a', text: 'Susan and Ruth Sharp Fund')
       end
 
       within(all('.bookplate').last) do
-        expect(page).to have_css('img.mr-3')
+        expect(page).to have_css('img.me-3')
         expect(page).to have_css('.media-body a', text: 'The Edgar Amos Boyles Centennial Book Fund')
       end
     end

@@ -6,10 +6,10 @@
   <div class='grouped-citations'>
     <ul class="nav nav-tabs" role="tablist">
       <li role="presentation" class="nav-item">
-        <button href="#all" aria-controls="all" role="tab" data-toggle="tab" class="nav-link active" id="by-title-button">By title</button>
+        <button href="#all" aria-controls="all" role="tab" data-bs-toggle="tab" class="nav-link active" id="by-title-button">By title</button>
       </li>
       <li role="presentation" class="nav-item">
-        <button href="#biblio" aria-controls="biblio" role="tab" data-toggle="tab" class="nav-link" id="by-format-button">By citation format</button>
+        <button href="#biblio" aria-controls="biblio" role="tab" data-bs-toggle="tab" class="nav-link" id="by-format-button">By citation format</button>
       </li>
     </ul>
     <%= render Citations::MultipleCitationsComponent.new(documents: @documents, oclc_citations: @oclc_citations) %>

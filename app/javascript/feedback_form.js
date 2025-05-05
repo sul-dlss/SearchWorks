@@ -73,7 +73,7 @@ Blacklight.onLoad(function(){
     function renderFlashMessages(response){
       $.each(response, function(i,val){
         const alertType = val[0] == 'error' ? 'danger' : val[0]
-        const flashHtml = `<div class="alert alert-${alertType}"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>${val[1]}</div>`
+        const flashHtml = `<div class="alert alert-${alertType}"><button type="button" class="close btn-close" data-bs-dismiss="alert" aria-hidden="true"></button>${val[1]}</div>`
 
         // Show the flash message
         document.querySelector('div.flash_messages').innerHTML = flashHtml
@@ -90,7 +90,7 @@ Blacklight.onLoad(function(){
           submitListener($el, $form);
 
           //Update href in nav link to '#'
-          $('*[data-target="#' + this.element.id +'"]').attr('href', '#');
+          $('*[data-bs-target="#' + this.element.id +'"]').attr('href', '#');
 
           //Updates reporting from fields for current location
           $('span.reporting-from-field').html(location.href);

@@ -59,7 +59,7 @@ class CatalogController < ApplicationController
   before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
   configure_blacklight do |config|
-    config.bootstrap_version = 4
+    config.bootstrap_version = 5
     config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params

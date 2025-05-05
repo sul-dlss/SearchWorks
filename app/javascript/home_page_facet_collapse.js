@@ -9,7 +9,7 @@
     function addHomePageFacetCollapseBehavior( container, resize ){
       container.each(function(){
         this.querySelectorAll(".facet-limit").forEach((facetLimit) => {
-          const button = facetLimit.querySelector('[data-toggle="collapse"]')
+          const button = facetLimit.querySelector('[data-bs-toggle="collapse"]')
           const target = document.querySelector(button.dataset.target)
 
           if(window.innerWidth <= 768) {

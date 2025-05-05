@@ -13,7 +13,7 @@
 
     return this.each(function() {
       var $input = $(this),
-          $clearIcon = $('<a class="clear-input-text"><span class="sr-only">Clear search box</span><i class="fa fa-times-circle"></i></a>');
+          $clearIcon = $('<a class="clear-input-text"><span class="visually-hidden">Clear search box</span><i class="fa fa-times-circle"></i></a>');
 
       init();
       attachEvents();

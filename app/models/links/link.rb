@@ -96,7 +96,7 @@ class Links
       tooltip_attr = if @link_title.present? && !stanford_only?
                        {
                          title: @link_title,
-                         data: { placement: 'right', toggle: 'tooltip' }
+                         data: { 'bs-placement': 'right', 'bs-toggle': 'tooltip' }
                        }
                      else
                        {}

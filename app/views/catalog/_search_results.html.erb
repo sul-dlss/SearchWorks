@@ -34,11 +34,11 @@
     <div id="content" class="col-md-8">
       <div class="search_num_of_results">
         <div class='results-heading'>
-          <h1 class="sr-only"><%= t('blacklight.search.page_heading') %></h1>
+          <h1 class="visually-hidden"><%= t('blacklight.search.page_heading') %></h1>
           <h2><%= pluralize(number_with_delimiter(@response.total), "#{search_type_name} result") %></h2>
           <%= link_to new_documents_feed_path do %>
             <i class="rss-icon" aria-hidden="true"></i>
-            <span class="sr-only">RSS feed for this result</span>
+            <span class="visually-hidden">RSS feed for this result</span>
           <% end %>
         </div>
         <%= render 'search_header' %>

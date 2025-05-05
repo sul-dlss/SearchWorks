@@ -35,7 +35,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
       safe_join([
         external_link_icon,
         link_text,
-        tag.span(' (opens in new tab)', class: 'sr-only')
+        tag.span(' (opens in new tab)', class: 'visually-hidden')
       ], '')
     end
   end

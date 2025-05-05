@@ -43,7 +43,7 @@
 						truncate.after("<a class='responsiveTruncatorToggle' href='#'>" + settings.more + "</a>");
 						var toggle_link = $(".responsiveTruncatorToggle", parent);
 						// popover initialization has to be done again because it is undone when the element is moved in truncation
-						const popoverElem = parent.find('[data-toggle="popover"]').popover();
+						const popoverElem = parent.find('[data-bs-toggle="popover"]').popover();
 						if (popoverElem) popoverElem.popover();
 						toggle_link.click(function(){
 						  var text = toggle_link.text() == settings.more ? settings.less : settings.more;
@@ -66,7 +66,7 @@
 				  $(this).html($(".responsiveTruncate", $(this)).html());
 				  $(".responsiveTruncatorToggle", $(this)).remove();
 					// popover initialization has to be done again because it is undone when the element is moved out of truncation
-					const popoverElem = $(this).find('[data-toggle="popover"]')
+					const popoverElem = $(this).find('[data-bs-toggle="popover"]')
 					if (popoverElem) popoverElem.popover();
 			  }
 		  });

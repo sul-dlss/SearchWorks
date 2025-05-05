@@ -24,7 +24,7 @@ module RequestLinks
 
     def link_params
       @link_params.merge(data: @link_params.fetch(:data, {}).reverse_merge(
-        toggle: 'tooltip',
+        'bs-toggle': 'tooltip',
         html: 'true',
         title: I18n.t('searchworks.request_link.aeon_note')
       ))

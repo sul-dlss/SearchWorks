@@ -38,6 +38,19 @@
   }
 }
 
+/* pin the library footer breakpoints to match the brand footer */
+@media screen and (min-width: 980px) {
+  #sul-footer-container .container {
+    width:940px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #sul-footer-container .container {
+    width: 1170px;
+  }
+}
+
 /* These are technically su-identity overrides, but for the same transitional phase before we move to the component library */
 #global-footer {
   margin-top: -220px;

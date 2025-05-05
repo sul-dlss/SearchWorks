@@ -2,9 +2,9 @@
 <div class='row zero-results'>
   <div class="col-md-4">
     <div class="border-before">
-      <h2 class="pl-3 ps-3"><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h2>
+      <h2 class="ps-3"><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h2>
       <ul>
-        <li>Remove filters <%= link_to 'Clear all', search_action_path(q: params[:q]), class: "text-primary ml-2 ms-2" %>
+        <li>Remove filters <%= link_to 'Clear all', search_action_path(q: params[:q]), class: "text-primary ms-2" %>
           <%= render SearchResult::NoResult::FiltersComponent.new(search_state:) %>
         </li>
         <li>Check spelling.</li>
@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="col-md-4">
-    <div class="border-before pl-3">
+    <div class="border-before ps-3">
       <h2>Need more help?</h2>
 
       <h3>Contact our reference team</h3>
