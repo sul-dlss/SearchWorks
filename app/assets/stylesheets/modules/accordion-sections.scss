@@ -9,29 +9,17 @@
       display: inline-flex;
       align-items: center;
       width: 100%;
-      button.header {
-        min-width: 147px;
-      }
     }
 
     .header {
-      @extend .btn;
-      color: $white;
+      --bs-btn-color: white;
+      --bs-btn-active-color: white;
+      --bs-btn-hover-color: white;
+
       margin-right: 1em;
-      cursor: pointer;
-      font-weight: normal;
-      white-space: nowrap;
-      width: 10.5em;
+      min-width: 147px; /* Prevent the open caret from wrapping */
+
       text-align: left;
-
-      &:hover, &:focus {
-        color: $white;
-      }
-
-      span.section-label {
-        float: left;
-        text-align: left;
-      }
 
       &::after {
         content: "❯";
@@ -40,12 +28,6 @@
 
       &.open::after {
         transform: rotate(90deg);
-      }
-    }
-
-    .remove-list-styles {
-      ul, ol {
-        margin-bottom: 0;
       }
     }
 
@@ -60,7 +42,6 @@
 
     .snippet {
       color: $sul-mini-accordion-text-color;
-      @extend .remove-list-styles;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -70,21 +51,16 @@
       border: 1px solid $sul-document-border-color;
       display: none;
       padding: 10px;
-      clear: left;
-      @extend .remove-list-styles;
     }
-
-    .details:target {
-      display: block;
-    }
-
   }
 
   .accordion-section.course-reserves {
     padding-top: 4px; // Add a little top padding for the Availability section above (which should always exist)
 
     .header {
-      @include buttonize($sul-accordion-course-reserves-bg, $sul-accordion-course-reserves-border);
+      --bs-btn-hover-bg: #{$sul-accordion-course-reserves-bg};
+      --bs-btn-bg: #{$sul-accordion-course-reserves-bg};
+      --bs-btn-active-bg: #{$sul-accordion-course-reserves-bg};
     }
 
     .details {
@@ -96,35 +72,17 @@
 
   .accordion-section.location {
     .header {
-      @include buttonize($sul-accordion-location-bg, $sul-accordion-location-border);
-    }
-
-    .location-header {
-      background-color: #eee;
-      padding: 5px;
-      margin: 0;
+      --bs-btn-hover-bg: #{$sul-accordion-location-bg};
+      --bs-btn-bg: #{$sul-accordion-location-bg};
+      --bs-btn-active-bg: #{$sul-accordion-location-bg};
     }
 
     .details {
       padding: 0;
-
-      .location-column {
-        padding: 10px 25px;
-      }
-
-      .stackmap-find-it {
-        font-weight: normal;
-      }
     }
   }
 }
 
 .selected-databases .accordion-sections {
   padding-left: 15px;
-}
-
-@include media-breakpoint-up(sm) {
-  .accordion-sections {
-    clear: right;
-  }
 }
