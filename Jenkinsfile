@@ -193,7 +193,7 @@ pipeline {
       }
 
       when {
-        branch "bootstrap-5"
+        branch "main"
       }
 
       steps {
@@ -202,7 +202,6 @@ pipeline {
         sshagent (['sul-devops-team', 'sul-continuous-deployment']){
           sh '''#!/bin/bash -l
           export DEPLOY=1
-          export BRANCH=bootstrap-5
 
           # Load RVM
           rvm use 3.4.1@searchworks --create
