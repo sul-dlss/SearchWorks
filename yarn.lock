@@ -239,13 +239,7 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.2.201.tgz#bfb3da01b3e2462f5a18f372c52dedd7de76037f"
   integrity sha512-wsTdWoZ5EfG5k3t7ORdyQF0ZmDEgN4aVPCanHAiNEwCROqibSZMXXmCbH7IDJUVri4FOeAVwwbPINI7HVHPKBw==
 
-"blacklight-frontend@>=7.1 || 8.0":
-  version "8.9.0"
-  resolved "https://codeload.github.com/projectblacklight/blacklight/tar.gz/18443f6d9804c1a9531ce91a8ef27742c6d01330"
-  dependencies:
-    bootstrap ">=4.3.1 <6.0.0"
-
-blacklight-frontend@^8.10.0:
+"blacklight-frontend@>=7.1 || 8.0", blacklight-frontend@^8.10.0:
   version "8.10.1"
   resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.10.1.tgz#dab19b6e06523fc04c32c50ca29365cdba6c5746"
   integrity sha512-m9KfODRxygH49kXG6xelWuvSsHShtvGOfHJpv0G3LcyH+f2/NS8V/WPql0wwqSiet6mu2IXPMGA8eVYWLi3HUg==
