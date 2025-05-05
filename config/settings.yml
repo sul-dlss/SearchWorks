@@ -175,7 +175,6 @@ libraries:
     hours_api_url: Rumsey/location/visitor-access
     name: David Rumsey Map Center
   SAL:
-    hours_api_url: sal12/location/sal12_library
     name: SAL1&2 (on-campus shelving)
   SAL3:
     name: SAL3 (off-campus storage)
