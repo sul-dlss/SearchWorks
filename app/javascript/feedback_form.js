@@ -54,6 +54,9 @@ Blacklight.onLoad(function(){
               renderFlashMessages(json);
             })
 
+            // Reset the recaptcha. Recaptcha doesn't permit the same token to be used twice.
+            grecaptcha.reset()
+
             return false;
           });
 
