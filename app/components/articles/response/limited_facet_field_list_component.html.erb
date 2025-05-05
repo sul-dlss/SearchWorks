@@ -1,0 +1,8 @@
+<%= render(@layout.new(facet_field: @facet_field)) do |component| %>
+  <% component.with_label do %>
+    <%= @facet_field.label %>
+  <% end %>
+  <% component.with_body do %>
+    <%= render Articles::Response::MoreFacetsListComponent.new(facet_field: @facet_field, layout: @layout) %>
+  <% end %>
+<% end %>

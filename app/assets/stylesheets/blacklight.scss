@@ -63,7 +63,8 @@ $remove-icon-font-family:
 
 .sidenav,
 .facet-extended-list,
-#advanced_search_facets {
+#advanced_search_facets,
+.modal-dialog {
   --bl-facet-value-padding-y: 0.25rem; /* TODO: Consider for removal when on Bootstrap 5 */
 }
 
