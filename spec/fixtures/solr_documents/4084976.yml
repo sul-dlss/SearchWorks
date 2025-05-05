@@ -1,0 +1,460 @@
+---
+id: '4084976'
+hashed_id_ssi: 8e53a58b6430d830799e389fffae20f4
+marc_json_struct:
+- '{"leader":"01640npc a2200325   4500","fields":[{"001":"a4084976"},{"003":"SIRSI"},{"008":"990106i19701995cau                 eng
+  d"},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) CSUR99-A2"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"CSt"},{"c":"CSt"},{"e":"appm"}]}},{"090":{"ind1":"
+  ","ind2":" ","subfields":[{"b":"Misc 599"},{"i":"01/06/99 CT"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Mirsky, Mark."}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"k":"Mark
+  Mirsky letters to Albert J. Guérard,"},{"f":"1970-1995."}]}},{"300":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"30 letters."}]}},{"545":{"ind1":" ","ind2":" ","subfields":[{"a":"Mirsky
+  was a student in Guérard''s writing class at Harvard. He was co-founder of the publishing
+  house Fiction Collective, and was the founder and is the editor of the magazine
+  Fiction. He has written novels and non-fiction books. He is Professor of English
+  at the City College of New York."}]}},{"520":{"ind1":" ","ind2":" ","subfields":[{"a":"Some
+  of the letters concern his efforts to help STILL TALKING find a publisher and some
+  with his own frustrations with publishers. Among Mirsky''s New York friends are
+  Grace Paley, Cynthia Ozick, the late Donald Barthelm, Jerome Charyn and (not in
+  New York) John Hawkes."}]}},{"561":{"ind1":" ","ind2":" ","subfields":[{"a":"Gift
+  of Albert G. Guérard, 1998."}]}},{"600":{"ind1":"1","ind2":"4","subfields":[{"a":"Barthelm,
+  Donald."}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Charyn, Jerome."}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Guérard,
+  Albert J."},{"q":"(Albert Joseph),"},{"d":"1914-2000"}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Hawkes,
+  John,"},{"d":"1925-1998."}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Mirskiĭ,
+  M."},{"q":"(Mark)"}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Ozick, Cynthia."}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Paley,
+  Grace."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"American literature"},{"y":"20th
+  century."}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"21"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)122445793"}]}},{"795":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Guérard collections"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"492c115b-afc4-5b9a-8adc-4a5f21a7a0b2"},{"s":"77900f45-8718-53fb-b711-65d4a69c5eb3"}]}}]}'
+all_search: Mirsky, Mark. Mark Mirsky letters to Albert J. Guérard, 1970-1995. 30
+  letters. Mirsky was a student in Guérard's writing class at Harvard. He was co-founder
+  of the publishing house Fiction Collective, and was the founder and is the editor
+  of the magazine Fiction. He has written novels and non-fiction books. He is Professor
+  of English at the City College of New York. Some of the letters concern his efforts
+  to help STILL TALKING find a publisher and some with his own frustrations with publishers.
+  Among Mirsky's New York friends are Grace Paley, Cynthia Ozick, the late Donald
+  Barthelm, Jerome Charyn and (not in New York) John Hawkes. Gift of Albert G. Guérard,
+  1998. Barthelm, Donald. Charyn, Jerome. Guérard, Albert J. (Albert Joseph), 1914-2000
+  Hawkes, John, 1925-1998. Mirskiĭ, M. (Mark) Ozick, Cynthia. Paley, Grace. American
+  literature 20th century. 21 Guérard collections
+title_245_search: Mark Mirsky letters to Albert J. Guérard, 1970-1995.
+title_display: Mark Mirsky letters to Albert J. Guérard, 1970-1995
+title_full_display: Mark Mirsky letters to Albert J. Guérard, 1970-1995.
+title_sort: Mark Mirsky letters to Albert J Guérard 19701995
+author_title_1xx_search:
+- Mirsky, Mark
+author_title_search:
+- Mirsky, Mark null
+best_author_title_search: Mirsky, Mark null
+author_1xx_search: Mirsky, Mark.
+author_person_facet:
+- Mirsky, Mark
+author_person_display:
+- Mirsky, Mark
+author_person_full_display:
+- Mirsky, Mark.
+author_sort: Mirsky Mark Mark Mirsky letters to Albert J Guérard 19701995
+topic_search:
+- American literature
+- Guérard collections
+topic_display:
+- American literature
+- Guérard collections
+subject_other_search:
+- Barthelm, Donald.
+- Charyn, Jerome.
+- Guérard, Albert J. (Albert Joseph), 1914-2000
+- Hawkes, John, 1925-1998.
+- Mirskiĭ, M. (Mark)
+- Ozick, Cynthia.
+- Paley, Grace.
+subject_other_display:
+- Barthelm, Donald.
+- Charyn, Jerome.
+- Guérard, Albert J. (Albert Joseph), 1914-2000
+- Hawkes, John, 1925-1998.
+- Mirskiĭ, M. (Mark)
+- Ozick, Cynthia.
+- Paley, Grace.
+subject_other_subvy_search:
+- 20th century.
+subject_all_search:
+- Barthelm, Donald.
+- Charyn, Jerome.
+- Guérard, Albert J. (Albert Joseph), 1914-2000
+- Hawkes, John, 1925-1998.
+- Mirskiĭ, M. (Mark)
+- Ozick, Cynthia.
+- Paley, Grace.
+- American literature 20th century.
+- Guérard collections
+topic_facet:
+- Barthelm, Donald
+- Charyn, Jerome
+- Guérard, Albert J. (Albert Joseph), 1914-2000
+- Hawkes, John, 1925-1998
+- Mirskiĭ, M. (Mark)
+- Ozick, Cynthia
+- Paley, Grace
+- American literature
+era_facet:
+- 20th century
+pub_country: California, United States
+pub_date: '1970'
+pub_date_search: '1970'
+pub_date_sort: '1970'
+pub_year_tisim:
+- 1970
+- 1995
+- 1971
+- 1972
+- 1973
+- 1974
+- 1975
+- 1976
+- 1977
+- 1978
+- 1979
+- 1980
+- 1981
+- 1982
+- 1983
+- 1984
+- 1985
+- 1986
+- 1987
+- 1988
+- 1989
+- 1990
+- 1991
+- 1992
+- 1993
+- 1994
+pub_year_ss: 1970 - 1995
+earliest_year_isi: 1970
+latest_year_isi: 1995
+date_cataloged: '1999-05-29T00:00:00Z'
+language:
+- English
+oclc:
+- '122445793'
+access_facet:
+- At the Library
+format_main_ssim:
+- Archive/Manuscript
+physical:
+- 30 letters.
+summary_search:
+- Some of the letters concern his efforts to help STILL TALKING find a publisher and
+  some with his own frustrations with publishers. Among Mirsky's New York friends
+  are Grace Paley, Cynthia Ozick, the late Donald Barthelm, Jerome Charyn and (not
+  in New York) John Hawkes.
+summary_display:
+- Some of the letters concern his efforts to help STILL TALKING find a publisher and
+  some with his own frustrations with publishers. Among Mirsky's New York friends
+  are Grace Paley, Cynthia Ozick, the late Donald Barthelm, Jerome Charyn and (not
+  in New York) John Hawkes.
+callnum_search:
+- MISC 599
+barcode_search:
+- 4084976-1001
+item_barcodes:
+- 4084976-1001
+preferred_barcode: 4084976-1001
+holdings_library_code_ssim:
+- SPEC-COLL
+library_code_facet_ssim:
+- SPEC-COLL
+location_code_facet_ssim:
+- SPEC-MANUSCRIPT
+building_facet:
+- Special Collections
+building_location_facet_ssim:
+- SPEC-COLL/*
+- SPEC-COLL/SPEC-MANUSCRIPT
+- SPEC-COLL/*/type/archival
+- SPEC-COLL/SPEC-MANUSCRIPT/type/archival
+shelfkey:
+- other misc 000599
+reverse_shelfkey:
+- b6il8~dh7n~zzzuqq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+marc_collection_title_ssim:
+- Guérard collections
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '008'
+- '035'
+- '040'
+- '090'
+- '100'
+- '245'
+- '300'
+- '545'
+- '520'
+- '561'
+- '600'
+- '650'
+- '596'
+- '795'
+- '999'
+- 035a
+- 040ace
+- '090bi'
+- 100a
+- 245kf
+- 300a
+- 545a
+- 520a
+- 561a
+- 600a
+- 600aqd
+- 600ad
+- 600aq
+- 650ay
+- 596a
+- 795a
+- 999is
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040e"
+- "?090b"
+- "?090i"
+- "?100a"
+- "?245k"
+- "?245f"
+- "?300a"
+- "?545a"
+- "?520a"
+- "?561a"
+- "?600a"
+- "?600q"
+- "?600d"
+- "?650a"
+- "?650y"
+- "?596a"
+- "?795a"
+- "?999i"
+- "?999s"
+bib_search: Mirsky, Mark. Mark Mirsky letters to Albert J. Guérard, 1970-1995. American
+  literature Guérard collections Archive/Manuscript
+vern_bib_search: Archive/Manuscript
+uuid_ssi: 492c115b-afc4-5b9a-8adc-4a5f21a7a0b2
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"492c115b-afc4-5b9a-8adc-4a5f21a7a0b2","hrid":"a4084976","notes":[{"note":"Mirsky
+  was a student in Guérard''s writing class at Harvard. He was co-founder of the publishing
+  house Fiction Collective, and was the founder and is the editor of the magazine
+  Fiction. He has written novels and non-fiction books. He is Professor of English
+  at the City College of New York","staffOnly":false,"instanceNoteTypeId":"c636881b-8927-4480-ad1b-8d7b27b4bbfe"},{"note":"Some
+  of the letters concern his efforts to help STILL TALKING find a publisher and some
+  with his own frustrations with publishers. Among Mirsky''s New York friends are
+  Grace Paley, Cynthia Ozick, the late Donald Barthelm, Jerome Charyn and (not in
+  New York) John Hawkes","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Guérard
+  collections","staffOnly":false,"instanceNoteTypeId":"fcf323dc-96d1-49a4-ae80-a9033a059cf9"}],"title":"Mark
+  Mirsky letters to Albert J. Guérard, 1970-1995.","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T06:44:46.011Z","updatedDate":"2023-08-21T06:44:46.011Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Barthelm,
+  Donald"},{"value":"Charyn, Jerome"},{"value":"Guérard, Albert J. (Albert Joseph),
+  1914-2000"},{"value":"Hawkes, John, 1925-1998"},{"value":"Mirskiĭ, M. (Mark)"},{"value":"Ozick,
+  Cynthia"},{"value":"Paley, Grace"},{"value":"American literature 20th century"}],"languages":["eng"],"identifiers":[{"value":"(Sirsi)
+  CSUR99-A2","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)122445793","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[],"contributors":[{"name":"Mirsky,
+  Mark","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1999-05-29","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"Misc
+  599","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:44:46.004+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["30
+  letters."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-04-20T10:33:54Z'
+created: '2025-04-20T10:33:54Z'
+timestamp: '2025-04-20T10:33:54Z'
+author_struct:
+- creator:
+  - link: Mirsky, Mark.
+    search: Mirsky, Mark.
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Some of the letters concern his efforts to help STILL TALKING find a publisher
+      and some with his own frustrations with publishers. Among Mirsky's New York
+      friends are Grace Paley, Cynthia Ozick, the late Donald Barthelm, Jerome Charyn
+      and (not in New York) John Hawkes.
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 2d397411-72d6-5f42-8883-0c117a25aa87
+    hrid: ah4084976_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:21.551Z'
+      updatedDate: '2023-08-21T06:46:21.551Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: MISC 599
+    instanceId: 492c115b-afc4-5b9a-8adc-4a5f21a7a0b2
+    holdingsType:
+      id: 06667eb8-8ac1-49f2-93ba-82e3935e50dc
+      name: Archival Collection
+      source: local
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    holdingsTypeId: 06667eb8-8ac1-49f2-93ba-82e3935e50dc
+    callNumberTypeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 891ca554-5109-419a-bd01-d647944a40ea
+    permanentLocationId: 891ca554-5109-419a-bd01-d647944a40ea
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 891ca554-5109-419a-bd01-d647944a40ea
+        code: SPEC-MANUSCRIPT
+        name: Manuscript Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 891ca554-5109-419a-bd01-d647944a40ea
+        code: SPEC-MANUSCRIPT
+        name: Manuscript Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 55471b94-9fd0-5207-94b4-f9e1c0a00f7f
+    hrid: ai4084976_1_1
+    notes: []
+    status: Available
+    barcode: 4084976-1001
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:46:38.095Z'
+      updatedDate: '2023-08-21T06:46:38.095Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: MISC 599
+    copyNumber: '1'
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 2d397411-72d6-5f42-8883-0c117a25aa87
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 891ca554-5109-419a-bd01-d647944a40ea
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: MISC 599 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: MISC 599
+    location:
+      effectiveLocation:
+        id: 891ca554-5109-419a-bd01-d647944a40ea
+        code: SPEC-MANUSCRIPT
+        name: Manuscript Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+collection_struct:
+- title: Guérard collections
+  source: marc
+item_display_struct:
+- id: 55471b94-9fd0-5207-94b4-f9e1c0a00f7f
+  barcode: 4084976-1001
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: 492c115b-afc4-5b9a-8adc-4a5f21a7a0b2
+  instance_hrid: a4084976
+  effective_permanent_location_code: SPEC-MANUSCRIPT
+  temporary_location_code:
+  permanent_location_code: SPEC-MANUSCRIPT
+  status: Available
+  effective_location_id: 891ca554-5109-419a-bd01-d647944a40ea
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: MISC 599
+  callnumber: MISC 599
+  full_shelfkey: other misc 000599
+browse_nearby_struct:
+- lopped_callnumber: MISC 599
+  shelfkey: other misc 000599
+  reverse_shelfkey: b6il8~dh7n~zzzuqq~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: MISC 599
+  scheme: ALPHANUM
+  item_id: 55471b94-9fd0-5207-94b4-f9e1c0a00f7f

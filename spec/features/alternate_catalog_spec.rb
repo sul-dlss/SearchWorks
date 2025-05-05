@@ -44,12 +44,13 @@ RSpec.feature 'Alterate catalog results', :js do
     visit articles_path(q: '1*')
     within '.alternate-catalog' do
       expect(page).to have_css 'h3', text: 'Your search also found results in'
-      expect(page).to have_css 'a.btn', text: 'See 45 catalog results'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Book"]', text: 'Book (18)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Image"]', text: 'Image (7)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Database"]', text: 'Database (5)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Newspaper"]', text: 'Newspaper (4)'
-      expect(page).to have_css 'a[href="/catalog?q=1%2A&f[format_main_ssim][]=Video"]', text: 'Video (4)'
+
+      expect(page).to have_link 'See 53 catalog results'
+      expect(page).to have_link 'Book (25)', href: "/catalog?q=1%2A&f[format_main_ssim][]=Book"
+      expect(page).to have_link 'Image (7)', href: "/catalog?q=1%2A&f[format_main_ssim][]=Image"
+      expect(page).to have_link 'Database (5)', href: "/catalog?q=1%2A&f[format_main_ssim][]=Database"
+      expect(page).to have_link 'Archive/Manuscript (4)', href: "/catalog?q=1%2A&f[format_main_ssim][]=Archive/Manuscript"
+      expect(page).to have_link 'Newspaper (4)', href: "/catalog?q=1%2A&f[format_main_ssim][]=Newspaper"
 
       expect(page).to have_no_css('.lib-guides-alternate-catalog', visible: :visible)
     end
