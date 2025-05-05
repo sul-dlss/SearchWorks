@@ -9,8 +9,13 @@
   class: classes.flatten.join(' ') do %>
   <%= header %>
   <div class="document-main-section">
-    <%= title %>
-    <%= document_metadata %>
+    <% if @document.eds_restricted? %>
+      <h1><%= I18n.t('searchworks.guest_message') %>
+      <%= render StanfordOnlyPopoverComponent.new %></h1>
+    <% else %>
+      <%= title %>
+      <%= document_metadata %>
+    <% end %>
   </div>
   <%= footer %>
 <% end %>

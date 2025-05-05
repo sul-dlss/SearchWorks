@@ -1,7 +1,7 @@
 <header class="documentHeader row">
   <h3 class="<%= @classes %>">
     <%= counter %>
-    This title cannot be displayed for guests.
+    <%= I18n.t('searchworks.guest_message') %>
     <%= render StanfordOnlyPopoverComponent.new %>
   </h3>
 </header>
