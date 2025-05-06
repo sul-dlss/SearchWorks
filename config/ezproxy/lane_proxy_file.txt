@@ -114,7 +114,6 @@ arbs.biblioteca.unesp.br
 arc.aiaa.org
 archive.ahrq.gov
 archive.org
-archive.samj.org.za
 archived-bulletin.stanford.mobi
 archives.datapages.com
 archivesphysiotherapy.biomedcentral.com
