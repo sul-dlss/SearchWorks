@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe "catalog/record/_callnumber_browse" do
+RSpec.describe Record::Item::Marc::CallnumberBrowseComponent, type: :component do
+  let(:component) { described_class.new(document:) }
   let(:document) {
     SolrDocument.new(
       id: 'abc123',
@@ -20,23 +21,15 @@ RSpec.describe "catalog/record/_callnumber_browse" do
   }
 
   before do
-    render 'catalog/record/callnumber_browse', document:
+    render_inline(component)
   end
 
-  it "renders a panel" do
-    expect(rendered).to have_css('div.record-browse-nearby')
-    expect(rendered).to have_css(".section#browse-nearby")
-  end
-  skip "should render browse index links with index url" do
-    expect(rendered).to have_link('View full page', href: '/browse?start=full_shelfkey&view=gallery')
-    expect(rendered).to have_link('Continue to full page', href: '/browse?start=full_shelfkey&view=gallery')
-    # Somehow we need to send in a fixture that will invoke the right ckey
-  end
-  it "renders a heading" do
-    expect(rendered).to have_css('h2', text: /Browse related items/)
-  end
-  it "includes links to all unique callnumbers" do
-    expect(rendered).to have_css('.btn-callnumber', text: "callnumber")
-    expect(rendered).to have_css('.btn-callnumber', text: "callnumber2")
+  it "renders the component" do
+    expect(page).to have_css('button.collapsed[data-behavior="embed-browse"][data-embed-viewport="#callnumber-1"][data-start="abc123"]', text: 'callnumber')
+    expect(page).to have_css('div.record-browse-nearby')
+    expect(page).to have_css(".section#browse-nearby")
+    expect(page).to have_css('h2', text: /Browse related items/)
+    expect(page).to have_css('.btn-callnumber', text: "callnumber")
+    expect(page).to have_css('.btn-callnumber', text: "callnumber2")
   end
 end

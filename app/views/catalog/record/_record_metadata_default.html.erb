@@ -13,6 +13,4 @@
   </div>
 </div>
 
-<% if Settings.browse_nearby.enabled && document.browseable_spines.present? %>
-  <%= render 'catalog/record/callnumber_browse', document: document %>
-<% end %>
+<%= render Record::Item::Marc::CallnumberBrowseComponent.new(document:) %>
