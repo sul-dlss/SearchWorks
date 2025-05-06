@@ -1,5 +1,3 @@
-<% num_items_to_show = 3 %>
-<% spines = document.browseable_spines.first(num_items_to_show) %>
 
 <div class="section record-browse-nearby container-fluid" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>">
   <h2><span class="sul-icon sul-icon-books-3"></span> Browse related items</h2>
@@ -8,7 +6,7 @@
       Start at call number:
       <% spines.each_with_index do |spine, index| %>
         <span class="btn-callnumber">
-          <%= link_to_callnumber_browse(document, spine, index) %>
+          <%= link_to_callnumber_browse(spine, index) %>
         </span>
       <% end %>
     </div>
