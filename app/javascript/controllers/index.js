@@ -27,3 +27,6 @@ application.register("articles-facet-more", ArticlesFacetMoreController)
 
 import ArticlesFacetPaginateController from "./articles_facet_paginate_controller"
 application.register("articles-facet-paginate", ArticlesFacetPaginateController)
+
+import AccordionSectionController from "./accordion_section_controller"
+application.register("accordion-section", AccordionSectionController)

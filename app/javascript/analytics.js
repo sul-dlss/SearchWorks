@@ -11,7 +11,7 @@ Blacklight.onLoad(function() {
   //See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
   if (document.head.querySelector("meta[name=analytics_debug]").getAttribute('value') === "true") {
     config.debug_mode = true;
-  }  
+  }
   gtag('config', 'G-FH5WNQS9B5', config);
 
   // Track engagement with IIIF icon
@@ -24,7 +24,7 @@ Blacklight.onLoad(function() {
       })
     })
   })
- 
+
   document.querySelectorAll('.iiif-dnd').forEach(function(el) {
     el.addEventListener('dragstart', function(e) {
       sendAnalyticsEvent({
@@ -47,7 +47,7 @@ Blacklight.onLoad(function() {
   })
 
   // Track an action when the user clicks on an accordion
-  document.querySelectorAll('[data-accordion-section-target]').forEach(function (el) {
+  document.querySelectorAll('[data-action="accordion-section#toggle"]').forEach(function (el) {
     el.addEventListener('click', function (e) {
       sendAnalyticsEvent({
         category: 'Accordion',
@@ -96,7 +96,7 @@ Blacklight.onLoad(function() {
       action: 'SW/loaded'
     })
   });
-  
+
   // Featured resources on home page
   document.querySelectorAll('.catalog-home-page .features a').forEach(function(el) {
     el.addEventListener('click', function(e) {
@@ -177,7 +177,7 @@ Blacklight.onLoad(function() {
       })
     })
   })
-  
+
   // // Browse-nearby
   document.querySelectorAll('.embedded-items .gallery-document a').forEach(function(el) {
     el.addEventListener('click', function(e) {
@@ -205,7 +205,7 @@ Blacklight.onLoad(function() {
       }, 1000);
     })
   })
-  
+
   // Select / Select all
   // Note: this is counted extra when select-all or unselect-all is also used
   document.querySelectorAll('input.toggle-bookmark').forEach(function(el) {
@@ -231,17 +231,6 @@ Blacklight.onLoad(function() {
       sendAnalyticsEvent({
         category: 'Selection',
         action: 'SW/select-all'
-      })
-    })
-  })
-
-  // Accordion selection / collapse
-  document.querySelectorAll('button[data-accordion-section-target]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Accordion selection',
-        action: 'SW/click',
-        label: getText(e)
       })
     })
   })
@@ -291,5 +280,5 @@ function sendAnalyticsEvent({ action, category, label, value }) {
     event_category: category,
     event_label: label,
     event_value: value
-  });  
+  });
 }

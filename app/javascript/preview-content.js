@@ -44,7 +44,6 @@ const PreviewContent = (function() {
         .append(content)
         .plugGoogleBookContent();
 
-      target.find('*[data-accordion-section-target]').accordionSection();
       deferred.resolve(content);
       break;
     case 'prepend':
@@ -52,7 +51,6 @@ const PreviewContent = (function() {
         .prepend(content)
         .plugGoogleBookContent();
 
-      target.find('*[data-accordion-section-target]').accordionSection();
       deferred.resolve(content);
       break;
     case 'returnOnly':

@@ -91,7 +91,6 @@ import PreviewContent from './preview-content'
         if ($galleryDoc.item.hasClass('collapsed')){
           $galleryDoc.item.removeClass('collapsed').addClass('active');
           $galleryDoc.item.attr('aria-expanded', 'true');
-          $galleryDoc.embedViewport.attr('aria-expanded', 'true');
           $galleryDoc.embedViewport.slideDown(function(){
             $galleryDoc.calculateDocsPerView();
             showGallery();
@@ -101,7 +100,6 @@ import PreviewContent from './preview-content'
           $galleryDoc.item.attr('aria-expanded', 'false');
           $galleryDoc.embedViewport.slideUp(function(){
           });
-          $galleryDoc.embedViewport.attr('aria-expanded', 'false');
         }
       }
 

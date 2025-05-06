@@ -4,16 +4,16 @@
 %>
 
 <% if document.course_reserves.present? %>
-  <div class="accordion-section course-reserves">
+  <div class="accordion-section course-reserves" data-controller="accordion-section">
     <div class="snippet-wrapper">
-      <button class="header btn" data-accordion-section-target=".<%= id %>-course-reserves" aria-expanded="false">
+      <button class="header btn" data-accordion-section-target="button" data-action="accordion-section#toggle" aria-controls="<%= id %>-course-reserves" aria-expanded="false">
         Course reserve
       </button>
-      <span class="snippet <%= id %>-course-reserves-snippet">
+      <span class="snippet" data-accordion-section-target="snippet">
         <%= document.course_reserves.map(&:course_number).join(', ') %>
       </span>
     </div>
-    <div class="details <%= id %>-course-reserves" aria-expanded="false">
+    <div class="details" data-accordion-section-target="details" id="<%= id %>-course-reserves">
       <%= render AccessPanels::CourseReservesListComponent.new(document: document) %>
     </div>
   </div>
