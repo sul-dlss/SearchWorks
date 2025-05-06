@@ -10,11 +10,7 @@ module SearchResult
 
       attr_reader :close
 
-      def call
-        render LayoutComponent.new(close:, i18n_key: :catalog, url:)
-      end
-
-      def url
+      def articles_url
         articles_path(q: params.fetch(:q), f: { eds_search_limiters_facet: ['Direct access to full text'] })
       end
     end

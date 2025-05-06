@@ -1,0 +1,17 @@
+<%= render LayoutComponent.new alternate_url: catalog_url, close: do |c| %>
+  <% c.with_alternate_catalog_body do %>
+    <div class='col-md-6'>
+      <h4 class="alternate-catalog-name">
+        <%= t('searchworks.mini_bento.catalog.name') %>
+      </h4>
+      <div class='alternate-catalog-desc'>
+        <%= t('searchworks.mini_bento.catalog.description') %>
+      </div>
+    </div>
+    <div class='col-md-6'>
+      <%= link_to(url, class: 'btn btn-primary') do %>
+        See <span class="alternate-catalog-count"></span> <%= t('searchworks.mini_bento.catalog.result_singular') %> results
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
