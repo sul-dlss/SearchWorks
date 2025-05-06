@@ -59,6 +59,10 @@
   </div>
 
   <div class="col-md-4">
-    <%= render 'alternate_catalog', close: false if show_alternate_catalog? %>
+    <% if controller_name == 'catalog' %>
+      <%= render SearchResult::MiniBento::CatalogComponent.new(close: false) if show_alternate_catalog? %>
+    <% else %>
+      <%= render SearchResult::MiniBento::ArticleComponent.new(close: false) if show_alternate_catalog? %>
+    <% end %>
   </div>
 </div>

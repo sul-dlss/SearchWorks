@@ -5,8 +5,7 @@ en:
         heading: "For a known citation, type author name and title in the main search box."
         body: "Example: Barbara Block Bioenergetics of captive yellowfin tuna"
       flashes:
-        additional_selections_warning_html:
-          Additional selections in this facet will <strong>expand</strong> (rather than narrow) your search result.
+        additional_selections_warning_html: Additional selections in this facet will <strong>expand</strong> (rather than narrow) your search result.
         fulltext_link:
           guest_html: Sorry, the PDF download was not successful because you are currently in guest mode.<br/>Log in to try the download again.
           non_guest_html: Sorry, the PDF download was not successful.<br/>We don't know the source of the error. Try again, and if it continues to fail, <a href=" http://library.stanford.edu/ask/email/connection-problems">please report it as a connection problem</a>.
@@ -27,7 +26,7 @@ en:
       in_process: In process
     bookmarks:
       clear_all:
-        action_confirm: 'Clear all your selection lists?'
+        action_confirm: "Clear all your selection lists?"
       article:
         clear:
           action_confirm: Clear your articles+ selections?
@@ -42,6 +41,15 @@ en:
         mla: MLA
         turabian: Turabian
         preferred: Preferred citation
+    mini_bento:
+      article:
+        name: Catalog
+        description: Books, media, physical & digital resources
+        result_singular: catalog
+      catalog:
+        name: Articles+
+        description: Journal articles, e-books, & other e-resources
+        result_singular: article+
     navigation:
       skip_links: Skip links
       search_bar: Search bar
@@ -70,9 +78,9 @@ en:
       "020":
         label: "ISBN"
       "022":
-        label: 'ISSN'
+        label: "ISSN"
       doi:
-        label: 'DOI'
+        label: "DOI"
       "028":
         label: "Publisher number"
       222:
@@ -102,17 +110,17 @@ en:
       321:
         label: "Former publication frequency"
       344:
-        label: 'Sound'
-        delimiter: '; '
+        label: "Sound"
+        delimiter: "; "
       345:
-        label: 'Projection'
-        delimiter: '; '
+        label: "Projection"
+        delimiter: "; "
       346:
-        label: 'Video'
-        delimiter: '; '
+        label: "Video"
+        delimiter: "; "
       347:
-        label: 'Digital'
-        delimiter: '; '
+        label: "Digital"
+        delimiter: "; "
       362:
         label: "Vol/date range"
       500:
@@ -212,11 +220,11 @@ en:
       592:
         label: "Note"
       600:
-        label: 'Subjects'
+        label: "Subjects"
       655:
-        label: 'Genre'
+        label: "Genre"
       690:
-        label: 'Local subject'
+        label: "Local subject"
       740:
         label: "Related Work"
       753:
@@ -251,24 +259,24 @@ en:
         meeting:
           label: Meeting
       linked_related_works:
-        label: 'Related Work'
+        label: "Related Work"
       linked_series:
         label: Series
       notation:
         label: Notation
       organization_and_arrangement:
-        label: 'Organization & arrangement'
+        label: "Organization & arrangement"
       752:
-        delimiter: ' -- '
-        label: 'Location'
+        delimiter: " -- "
+        label: "Location"
       340:
-        delimiter: '; '
-        label: 'Medium'
+        delimiter: "; "
+        label: "Medium"
       unlinked_series:
         label: Series
       default:
-        delimiter: ' '
-        label: 'Field'
+        delimiter: " "
+        label: "Field"
     request_link:
       aeon_note: Requires Aeon signup/login<br/>Opens in new tab
       default: Request
@@ -278,7 +286,7 @@ en:
     guest_message: This title cannot be displayed for guests.
   blacklight:
     advanced_search:
-      page_title: 'Advanced search in SearchWorks catalog'
+      page_title: "Advanced search in SearchWorks catalog"
       form:
         title: "Advanced search"
         query_criteria_heading_html: "Match %{select_menu} of the fields below"
@@ -290,24 +298,24 @@ en:
       page_title: "Course reserves in %{application_name}"
     email:
       form:
-        to: 'Email to:'
+        to: "Email to:"
         email_from:
-          label: 'Email from:'
-          placeholder: '(optional)'
+          label: "Email from:"
+          placeholder: "(optional)"
       errors:
-        type: 'Invalid email type provided'
+        type: "Invalid email type provided"
         to:
-          invalid: 'You must enter only valid email addresses.'
-          too_many: 'You have entered more than the maximum (%{max}) email addresses allowed.'
+          invalid: "You must enter only valid email addresses."
+          too_many: "You have entered more than the maximum (%{max}) email addresses allowed."
     search:
       page_heading: "%{search_type} search results"
       bookmarks:
         present: "Selected"
         absent: "Select"
       facets:
-        title: 'Refine your results'
+        title: "Refine your results"
       form:
-        q: ''
+        q: ""
       zero_results:
         modify_your_search: Modify your search
         page_heading: No results found
@@ -321,19 +329,19 @@ en:
         button: "Selected"
 
     tools:
-      endnote: 'EndNote'
-      refworks: 'RefWorks'
-      email: 'email'
-      sms: 'text'
-      printer: 'printer'
+      endnote: "EndNote"
+      refworks: "RefWorks"
+      email: "email"
+      sms: "text"
+      printer: "printer"
 
     back_to_search: '<i class="fa fa-fast-backward"></i><span class="d-none d-sm-inline">&nbsp; Back to results</span>'
     feedback_form:
-      success: '<strong>Thank you!</strong> Your feedback has been sent.'
+      success: "<strong>Thank you!</strong> Your feedback has been sent."
     connection_form:
-      success: '<strong>Thank you!</strong> Your connection problem report has been sent.'
+      success: "<strong>Thank you!</strong> Your connection problem report has been sent."
     range_limit:
-      submit_limit: 'Apply'
+      submit_limit: "Apply"
 
   record_side_nav:
     abstract:

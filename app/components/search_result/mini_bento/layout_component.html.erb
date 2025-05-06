@@ -1,5 +1,5 @@
-<div class='alternate-catalog' data-alternate-catalog="<%= search_catalog_path(q: params.fetch(:q)) %>">
-  <% if close %>
+<div class='alternate-catalog' data-alternate-catalog="<%= url %>">
+  <% if close? %>
     <button type='button' class='alternate-catalog-close btn-close close' aria-label="Close">
     </button>
   <% end %>
@@ -8,15 +8,15 @@
     <div class='row'>
       <div class='col-md-6'>
         <h4 class="alternate-catalog-name">
-          Catalog
+          <%= name %>
         </h4>
         <div class='alternate-catalog-desc'>
-          Books, media, physical &amp; digital resources
+          <%= description %>
         </div>
       </div>
       <div class='col-md-6'>
-        <%= link_to(search_catalog_path(q: params.fetch(:q)), class: 'btn btn-primary') do %>
-          See <span class="alternate-catalog-count"%></span> catalog results
+        <%= link_to(url, class: 'btn btn-primary') do %>
+          See <span class="alternate-catalog-count"></span> <%= result_singular %> results
         <% end %>
       </div>
     </div>
@@ -28,5 +28,5 @@
     </div>
   </div>
 
-  <%= render 'lib_guides_alternate_catalog' if Settings.LIB_GUIDES.MINI_BENTO_ENABLED %>
+  <%= render 'catalog/lib_guides_alternate_catalog' if Settings.LIB_GUIDES.MINI_BENTO_ENABLED %>
 </div>
