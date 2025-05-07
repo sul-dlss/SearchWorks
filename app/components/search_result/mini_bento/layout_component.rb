@@ -3,33 +3,18 @@
 module SearchResult
   module MiniBento
     class LayoutComponent < ViewComponent::Base
-      def initialize(close:, url:, i18n_key:)
+      renders_one :alternate_catalog_body
+
+      def initialize(close:, alternate_url:)
         @close = close
-        @url = url
-        @i18n_key = i18n_key
+        @alternate_url = alternate_url
         super
       end
 
-      attr_reader :url, :i18n_key
+      attr_reader :alternate_url
 
       def close?
         @close
-      end
-
-      def name
-        t(:name, scope: i18n_scope)
-      end
-
-      def description
-        t(:description, scope: i18n_scope)
-      end
-
-      def result_singular
-        t(:result_singular, scope: i18n_scope)
-      end
-
-      def i18n_scope
-        "searchworks.mini_bento.#{i18n_key}"
       end
     end
   end

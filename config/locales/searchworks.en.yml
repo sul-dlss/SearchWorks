@@ -45,14 +45,14 @@ en:
         turabian: Turabian
         preferred: Preferred citation
     mini_bento:
-      article:
-        name: Catalog
-        description: Books, media, physical & digital resources
-        result_singular: catalog
-      catalog:
+      articles:
         name: Articles+
         description: Journal articles, e-books, & other e-resources
         result_singular: article+
+      catalog:
+        name: Catalog
+        description: Books, media, physical & digital resources
+        result_singular: catalog
     navigation:
       skip_links: Skip links
       search_bar: Search bar
