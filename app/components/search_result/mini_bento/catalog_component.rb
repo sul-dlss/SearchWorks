@@ -10,6 +10,12 @@ module SearchResult
 
       attr_reader :close
 
+      delegate :current_view, to: :helpers
+
+      def render?
+        params.fetch(:q, nil).present? && current_view != 'gallery'
+      end
+
       def call
         render LayoutComponent.new(close:, i18n_key: :catalog, url:)
       end

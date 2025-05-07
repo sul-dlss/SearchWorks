@@ -10,6 +10,10 @@ module SearchResult
 
       attr_reader :close
 
+      def render?
+        params[:q].present?
+      end
+
       def call
         render LayoutComponent.new(close:, i18n_key: :article, url:)
       end

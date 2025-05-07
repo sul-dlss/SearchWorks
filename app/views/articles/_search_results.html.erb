@@ -29,7 +29,7 @@
         <%= render 'search_header' %>
         <%= render Articles::ResearchStarterComponent.new(response: @response) if params[:page].blank? || params[:page] == '1' %>
         <%= render_document_index @response.documents %>
-        <%= render blacklight_config.index.mini_bento_component.new(close: true) if show_alternate_catalog? %>
+        <%= render blacklight_config.index.mini_bento_component.new(close: true) %>
 
         <%- unless @response.empty? %>
           <%= render 'shared/side_nav_minimap' %>
