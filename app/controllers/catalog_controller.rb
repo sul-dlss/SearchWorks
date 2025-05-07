@@ -110,6 +110,7 @@ class CatalogController < ApplicationController
     config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_component = ThumbnailWithIiifComponent
     config.index.thumbnail_method = :render_cover_image
+    config.index.mini_bento_component = SearchResult::MiniBento::CatalogComponent
 
     config.index.search_field_mapping = { # Catalog -> Article
       search:         :search,

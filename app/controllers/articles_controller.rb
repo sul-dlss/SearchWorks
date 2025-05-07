@@ -53,6 +53,8 @@ class ArticlesController < ApplicationController
     config.index.document_presenter_class = IndexEdsDocumentPresenter
     config.index.document_component = Articles::DocumentListComponent
     config.index.facet_group_component = Articles::Response::FacetGroupComponent
+    config.index.mini_bento_component = SearchResult::MiniBento::ArticleComponent
+
     config.index.title_field = :eds_title
     config.index.show_link = 'eds_title'
     config.index.display_type_field = 'eds_publication_type'
