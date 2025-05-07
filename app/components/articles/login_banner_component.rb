@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SearchResult
+module Articles
   class LoginBannerComponent < ViewComponent::Base
     delegate :new_user_session_path, to: :helpers
 
