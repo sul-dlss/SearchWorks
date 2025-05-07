@@ -12,7 +12,7 @@
       <%= render 'search_sidebar' %>
     </div>
     <div id="content" class="col-md-8 col-sm-7">
-      <%= render SearchResult::LoginBannerComponent.new unless current_user %>
+      <%= render Articles::LoginBannerComponent.new unless current_user %>
       <div id='documents' class="article-search-results">
         <div class="search_num_of_results">
           <div class='results-heading'>
