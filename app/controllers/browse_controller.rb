@@ -7,6 +7,10 @@ class BrowseController < ApplicationController
 
   copy_blacklight_config_from(CatalogController)
 
+  configure_blacklight do |config|
+    config.search_state_fields += %i[start barcode before after call_number]
+  end
+
   before_action :fetch_orginal_document
   before_action :fetch_browse_items
   before_action :fetch_bookmarks

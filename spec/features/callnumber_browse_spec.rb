@@ -46,5 +46,22 @@ RSpec.describe 'Callnumber Browse', :js do
 
       expect(page).to have_css('[data-behavior="recent-selections"]', text: 'Selections (2)')
     end
+
+    it 'allows the user to pick the view type' do
+      visit solr_document_path('1')
+
+      within '.record-browse-nearby' do
+        click_link 'View full page'
+      end
+
+      expect(page).to have_text('Starting at call number: G70.212')
+
+      within '#view-type-dropdown' do
+        click_button 'View'
+        click_link 'brief'
+      end
+
+      expect(page).to have_text('Starting at call number: G70.212')
+    end
   end
 end
