@@ -196,4 +196,12 @@ RSpec.describe SolrDocument do
 
     it { is_expected.to eq '12345' }
   end
+
+  describe '#imprint_string' do
+    let(:document) { SolrDocument.new(imprint_display: ['a', 'b']) }
+
+    subject { document.imprint_string }
+
+    it { is_expected.to eq 'a' }
+  end
 end
