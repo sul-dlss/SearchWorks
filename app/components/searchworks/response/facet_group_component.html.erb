@@ -1,4 +1,4 @@
-<% # This is a copy of the Blacklight 8 version of this component. 
+<% # This is a copy of the Blacklight 8 version of this component.
    # We should be able to delete this local copy after we migrate to Blacklight 8 %>
 <% # main container for facets/limits menu -%>
 <%= content_tag :div, id: @id,  class: 'facets sidenav facets-toggleable-sm' do %>
@@ -6,7 +6,7 @@
     <%= content_tag :h2, @title, class: 'facets-heading' if @title %>
 
     <%= content_tag :button,
-      class:'navbar-toggler navbar-toggler-right',
+      class:'btn btn-outline-secondary facet-toggle-button d-block d-md-none',
       type: 'button',
       data: {
         'bs-toggle': 'collapse',
@@ -17,7 +17,8 @@
         expanded: 'false',
         label: t('blacklight.search.facets.group.toggle'),
       } do %>
-      <span class="navbar-toggler-icon"></span>
+        <span data-show-label><%= t('blacklight.search.facets.group.open') %></span>
+        <span data-hide-label><%= t('blacklight.search.facets.group.close') %></span>
     <% end %>
   </div>
 
