@@ -1,5 +1,5 @@
 <% # main container for facets/limits menu -%>
-<%= content_tag :div, id: @id,  class: 'facets sidenav facets-toggleable-sm' do %>
+<%= content_tag :div, id: @id, class: 'facets sidenav facets-toggleable-sm mt-1 border-0 px-0' do %>
   <% if limiters.present? %>
     <div class="top-panel-heading">
       <h2>
@@ -31,10 +31,10 @@
   <% end %>
 
   <div class="facets-header">
-    <%= content_tag :h2, @title, class: 'facets-heading' if @title %>
+    <%= content_tag :h2, @title, class: 'facets-heading my-0' if @title %>
 
     <%= content_tag :button,
-      class:'btn btn-outline-secondary facet-toggle-button d-block d-md-none',
+      class:'btn btn-outline-secondary facet-toggle-button fs-2 d-block d-md-none',
       type: 'button',
       data: {
         'bs-toggle': 'collapse',
@@ -42,11 +42,10 @@
       },
       aria: {
         controls: @panel_id,
-        expanded: 'false',
-        label: t('blacklight.search.facets.group.toggle'),
+        expanded: 'false'
       } do %>
-      <span data-show-label><%= t('blacklight.search.facets.group.open') %></span>
-      <span data-hide-label><%= t('blacklight.search.facets.group.close') %></span>
+        <span class="visually-hidden">Toggle facets</span>
+        <span class="fa fa-bars"></span>
     <% end %>
   </div>
 
