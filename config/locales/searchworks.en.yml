@@ -1,4 +1,7 @@
 en:
+  articles:
+    search_results:
+      duplicates: We search across a wide range of scholarly sources and remove duplicates from different providers. This may cause the number of displayed results to differ from the total found.
   searchworks:
     articles:
       search_tips:
