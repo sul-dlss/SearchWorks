@@ -2,9 +2,9 @@
   <% component.with_header do %>
     <span class="d-flex flex-column">
       <h2 class="modal-title">
-        <%= @bound_with_children.first.items.first.bound_with_parent[:title] %>
+        <%= @bound_with_parent['title'] %>
       </h2>
-      <%= @bound_with_children.first.items.first.bound_with_parent[:call_number] %>
+      <%= @bound_with_parent['call_number'] %>
     </span>
   <% end %>
   <div class="bound-with-modal">
