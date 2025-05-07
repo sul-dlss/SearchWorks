@@ -1,5 +1,5 @@
 .clear-input-text {
-  color: $sul-clear-input-icon-color;
+  color: $driftwood;
   cursor: pointer;
   font-size: 20px;
   padding: 0 12px 0 5px;
@@ -9,6 +9,6 @@
   z-index: 10000;
 
   :hover {
-    color: $sul-clear-input-icon-hover-color;
+    color: $cardinal-red;
   }
 }

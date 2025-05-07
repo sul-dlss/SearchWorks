@@ -11,8 +11,8 @@ ul.links {
 .online-label {
   @extend .badge;
 
-  background-color: $sul-accordion-online-bg;
-  border: 1px solid $sul-accordion-online-border;
+  background-color: $digital-green;
+  border: 1px solid transparent;
   border-radius: 2px;
   color: $white;
   display: inline-block;

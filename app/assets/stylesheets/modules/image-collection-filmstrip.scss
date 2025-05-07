@@ -5,8 +5,8 @@
 }
 
 .image-filmstrip {
-  border: 1px solid $sul-filmstrip-border;
-  background-color: $sul-filmstrip-bg;
+  border: 1px solid $cloud;
+  background-color: $light-sandstone;
   bottom: 0;
   box-sizing: border-box;
   position: relative;
@@ -52,7 +52,7 @@
         }
 
         a.collection-all-items-link {
-          line-height:1.5em;
+          line-height: 1.5em;
         }
       }
 

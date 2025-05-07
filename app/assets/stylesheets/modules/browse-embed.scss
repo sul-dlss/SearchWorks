@@ -10,10 +10,9 @@
   }
 }
 
-
 .embed-callnumber-browse-container {
   background-color: $white;
-  border: 1px solid $sul-browse-nearby-container-border;
+  border: 1px solid $cloud;
   margin-top: 15px;
   overflow: hidden;
   padding-top: 17px;
@@ -43,13 +42,13 @@
       top: 150px;
     }
 
-    .gallery-document .browse-link a:after{
+    .gallery-document .browse-link a:after {
       content: " \f053";
       font-family: FontAwesome;
       vertical-align: middle;
     }
 
-    .gallery-document:last-child .browse-link a:after{
+    .gallery-document:last-child .browse-link a:after {
       content: " \f054";
       font-family: FontAwesome;
     }
@@ -61,7 +60,7 @@
       }
 
       &.current-document {
-        border: 2px solid  $cardinal-red;
+        border: 2px solid $cardinal-red;
         box-shadow: 0 0 14px gray;
       }
     }

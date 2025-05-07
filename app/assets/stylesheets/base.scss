@@ -14,7 +14,7 @@ a {
 
 // Add a dotted underline text decoration to all links that are not within
 // headers and are not buttons, dropdown items, or pagination links.
-:not(h4,h3) > a:not(.btn, .dropdown-item, .page-link) {
+:not(h4, h3) > a:not(.btn, .dropdown-item, .page-link) {
   text-decoration-line: var(--link-decoration-line);
   text-decoration-style: var(--link-decoration-style);
   text-decoration-color: var(--link-text-decoration-color);
@@ -26,15 +26,16 @@ a {
 }
 
 a:not(.btn):not(.dropdown-item):not(.page-link):not(.remove).disabled {
-  color: $sul-btn-disabled-color;
+  color: $cool-grey;
   cursor: not-allowed;
 }
 
 body {
-  font-family: 'Source Sans Pro', 'SUL Override', 'Arial Unicode MS', Helvetica, sans-serif;
+  font-family: "Source Sans Pro", "SUL Override", "Arial Unicode MS", Helvetica,
+    sans-serif;
 }
 
-.page-item  {
+.page-item {
   --link-decoration-line: none;
 }
 
@@ -45,7 +46,7 @@ dt {
 
 dd {
   margin-left: 2em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 p,

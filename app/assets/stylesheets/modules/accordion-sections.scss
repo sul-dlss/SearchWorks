@@ -41,7 +41,7 @@
     }
 
     .snippet {
-      color: $sul-mini-accordion-text-color;
+      color: $cool-grey;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -58,9 +58,9 @@
     padding-top: 4px; // Add a little top padding for the Availability section above (which should always exist)
 
     .header {
-      --bs-btn-hover-bg: #{$sul-accordion-course-reserves-bg};
-      --bs-btn-bg: #{$sul-accordion-course-reserves-bg};
-      --bs-btn-active-bg: #{$sul-accordion-course-reserves-bg};
+      --bs-btn-hover-bg: #{$cardinal-red};
+      --bs-btn-bg: #{$cardinal-red};
+      --bs-btn-active-bg: #{$cardinal-red};
     }
 
     .details {
@@ -72,9 +72,9 @@
 
   .accordion-section.location {
     .header {
-      --bs-btn-hover-bg: #{$sul-accordion-location-bg};
-      --bs-btn-bg: #{$sul-accordion-location-bg};
-      --bs-btn-active-bg: #{$sul-accordion-location-bg};
+      --bs-btn-hover-bg: #{$clay};
+      --bs-btn-bg: #{$clay};
+      --bs-btn-active-bg: #{$clay};
     }
 
     .details {
