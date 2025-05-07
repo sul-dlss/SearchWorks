@@ -46,7 +46,7 @@
 
       <%= render_document_index @response.documents %>
       <% benchmark 'Alt results' do %>
-        <%= render SearchResult::MiniBento::CatalogComponent.new(close: true) if show_alternate_catalog? %>
+        <%= render blacklight_config.index.mini_bento_component.new(close: true) if show_alternate_catalog? %>
       <% end %>
 
       <%= render 'shared/side_nav_minimap' %>
