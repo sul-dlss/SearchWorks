@@ -80,4 +80,12 @@ class ArticleSelectionsController < ApplicationController
       flash[:notice] = I18n.t('blacklight.bookmarks.need_login') and raise Blacklight::Exceptions::AccessDenied
     end
   end
+
+  def search_service
+    eds_params = {
+      guest: session['eds_guest'],
+      session_token: session['eds_session_token']
+    }
+    Eds::SearchService.new(blacklight_config, params, eds_params)
+  end
 end
