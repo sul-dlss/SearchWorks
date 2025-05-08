@@ -4,16 +4,16 @@
   <%
     snippet = document.holdings.libraries.select(&:present?).map(&:name).join(', ')
   %>
-  <div class="accordion-section location">
+  <div class="accordion-section location" data-controller="accordion-section">
     <div class="snippet-wrapper">
-      <button class="header btn" data-accordion-section-target=".<%= id %>-location" aria-expanded="false">
+      <button class="header btn"  data-accordion-section-target="button" data-action="accordion-section#toggle" aria-controls="<%= id %>-location" aria-expanded="false">
         Check availability
       </button>
-      <span class="snippet <%= id %>-location-snippet">
+      <span class="snippet" data-accordion-section-target="snippet">
         <%= snippet %>
       </span>
     </div>
-    <div class="details <%= id %>-location" data-controller="live-lookup" data-live-lookup-url-value="<%= availability_index_path %>">
+    <div class="details" data-accordion-section-target="details" id="<%= id %>-location" data-controller="live-lookup" data-live-lookup-url-value="<%= availability_index_path %>">
       <% if document.holdings.present? %>
         <% document.holdings.libraries.select(&:present?).each do |library| %>
           <%= render SearchResult::LocationComponent.new(library:, document:) %>

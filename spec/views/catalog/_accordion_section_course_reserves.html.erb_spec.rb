@@ -24,7 +24,6 @@ RSpec.describe "catalog/_accordion_section_course_reserves" do
       expect(rendered).to have_css('.accordion-section.course-reserves button.header[aria-expanded="false"]', text: "Course reserve")
       expect(rendered).to have_css('.accordion-section.course-reserves span.snippet', text: courses.map(&:course_number).sort.join(', '))
 
-      expect(rendered).to have_css('.accordion-section.course-reserves .details[aria-expanded="false"]')
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd a', text: courses.first.name)
       expect(rendered).to have_css('.accordion-section.course-reserves .details dd a', text: courses.second.name)
 
