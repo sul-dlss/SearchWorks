@@ -1196,7 +1196,6 @@ plantmethods.biomedcentral.com
 platform.almanhal.com
 platform.marketintelligence.spglobal.com
 pm.nlx.com
-pmj.bmj.com
 pn.bmj.com
 pneumonia.biomedcentral.com
 policycommons.net
@@ -1578,7 +1577,6 @@ www.ajmb.org
 www.ajmc.com
 www.ajnd.us
 www.ajnmmi.us
-www.ajnr.org
 www.ajol.info
 www.ajpe.org
 www.ajronline.org
