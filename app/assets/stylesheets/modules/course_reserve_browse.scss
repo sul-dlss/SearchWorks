@@ -1,28 +1,18 @@
-.dataTables_wrapper {
-  .table-top-bar {
+.dt-container {
+  .row:first-child > .col-md {
     color: $white;
-    padding: 0.6rem 1.5rem;
+    margin-inline: 0.75rem;
+    padding-block: 0.5rem;
     @include sul-toolbar-bg-border;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+  }
 
-    label {
-      margin-bottom: 0;
-    }
-
-    .dataTables_info {
-      padding-top: 0;
-    }
+  .mt-2 {
+    margin-top: 0 !important;
   }
 
   .dataTable {
-    margin-top: 0 !important;
-
     // Override dataTables to restore bootstrap styling
-    &.table-striped > tbody > tr:nth-of-type(2n+1) {
+    &.table-striped > tbody > tr:nth-of-type(2n + 1) {
       td {
         background-color: $light-sandstone;
         box-shadow: none;
@@ -30,15 +20,8 @@
     }
   }
 
-
-  .dataTables_paginate {
+  .pagination {
     padding-top: 38px;
     padding-bottom: 38px;
-    .active {
-      span {
-        // This fixes a bug in datatables, where the active page doesn't have the page-link class.
-        @extend .page-link;
-      }
-    }
   }
 }

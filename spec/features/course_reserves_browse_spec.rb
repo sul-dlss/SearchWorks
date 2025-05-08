@@ -28,17 +28,24 @@ RSpec.feature 'Course reserves browse', :js do
     visit course_reserves_path
     expect(page).to have_css('select.search_field')
   end
-  scenario 'should activate the datatables plugin correctly' do
-    create(:reg_course)
-    visit course_reserves_path
-    expect(page).to have_css('#course-reserves-browse_info')
-    expect(page).to have_css('#course-reserves-browse_filter')
-    expect(page).to have_css('#course-reserves-browse_length')
-    expect(page).to have_css('#course-reserves-browse_paginate')
-    expect(page).to have_css('label', text: 'per page')
-    expect(page).to have_css('li.paginate_button.active span', text: 1)
-    expect(page).to have_css('ul.pagination li:nth-child(2)', text: 'Next')
+
+  context 'with courses' do
+    before do
+      create(:reg_course)
+      visit course_reserves_path
+    end
+
+    scenario 'activates the datatables plugin correctly' do
+      expect(page).to have_css('#course-reserves-browse_info')
+      expect(page).to have_text('Search by course ID, description, or instructor')
+      expect(page).to have_css('.dt-length')
+      expect(page).to have_css('.dt-paging')
+      expect(page).to have_css('label', text: 'per page')
+      expect(page).to have_css('li.page-item.active button', text: 1)
+      expect(page).to have_css('ul.pagination li:nth-child(2)', text: 'Next')
+    end
   end
+
   scenario 'it should have a custom masthead' do
     visit course_reserves_path
     expect(page).to have_css(".course-reserves-masthead")
