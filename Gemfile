@@ -15,7 +15,6 @@ gem 'puma', '~> 6.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-gem 'autoprefixer-rails'
 
 gem 'config'
 gem 'http'
