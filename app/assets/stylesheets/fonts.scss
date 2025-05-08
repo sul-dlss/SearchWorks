@@ -1,5 +1,5 @@
 /*
-- Chrome/Edge did not show the Tibetan characters when added to Source Sans Pro
+- Chrome/Edge did not show the Tibetan characters when added to Source Sans 3
 - Safari had rendering issues when using an "Overrides" specific font-family with just noto sans tibetan
 - So we are using a font-family of "SUL Override" for the tibetan characters, and
   using the "Arial Unicode MS" as a fallback for the rest of the characters.
@@ -20,4 +20,13 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notoseriftibetan/v22/gokzH7nwAEdtF9N45n0Vaz7O-pk0wsvbBMgmy2UTva2n.woff2) format('woff2');
   unicode-range: U+0F00-0FFF;
+}
+
+/* Deliver the Source Sans 3 font locally; google fonts subsets their fonts in ways that break ligature ties (e.g. t͡s) for us */
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(SourceSans3VF-Upright.ttf.woff2) format('woff2');
 }
