@@ -50,8 +50,8 @@ class SearchService
   BenchmarkLogger.formatter = Logger::Formatter.new
   def benchmark(message)
     result = nil
-    ms = Benchmark.ms { result = yield }
-    BenchmarkLogger.info '%s (%.1fms)' % [ message, ms ]
+    bench_result = Benchmark.realtime { result = yield }
+    BenchmarkLogger.info '%s (%.1fms)' % [ message, bench_result * 1000 ]
     result
   end
 
