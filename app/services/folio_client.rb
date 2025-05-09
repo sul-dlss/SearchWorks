@@ -54,7 +54,7 @@ class FolioClient # rubocop:disable Metrics/ClassLength
 
   # https://s3.amazonaws.com/foliodocs/api/mod-courses/r/courses.html#coursereserves_courses_get
   def courses
-    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }).fetch('courses', []).sort_by { |x| x['id'] }.map do |course|
+    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }, timeout: 60).fetch('courses', []).sort_by { |x| x['id'] }.map do |course|
       instructors = course.dig('courseListingObject', 'instructorObjects').map { |x| x.slice('name') }
       course['courseListingObject'] = course['courseListingObject'].merge({ 'instructorObjects' => instructors })
       course.slice('id', 'courseNumber', 'sectionName', 'name', 'description', 'metadata', 'courseListingObject')
@@ -154,9 +154,10 @@ class FolioClient # rubocop:disable Metrics/ClassLength
     request(path, headers: headers.merge('x-okapi-token': session_token), **other)
   end
 
-  def request(path, headers: {}, method: :get, **other)
+  def request(path, headers: {}, timeout: Settings.folio.timeout, method: :get, **other)
     HTTP
       .use(logging: { logger: logger })
+      .timeout(connect: timeout, write: timeout, read: timeout)
       .headers(default_headers.merge(headers))
       .request(method, base_url + path, **other)
   end
