@@ -4,9 +4,12 @@
     <div class="border-before">
       <h2 class="ps-3"><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h2>
       <ul>
-        <li>Remove filters <%= link_to 'Clear all', search_action_path(q: params[:q]), class: "text-primary ms-2" %>
-          <%= render SearchResult::NoResult::FiltersComponent.new(search_state:) %>
-        </li>
+        <% filters = SearchResult::NoResult::FiltersComponent.new(search_state:) %>
+        <% if filters.render? %>
+          <li>Remove filters <%= link_to 'Clear all', search_action_path(q: params[:q]), class: "text-primary ms-2" %>
+            <%= render filters %>
+          </li>
+        <% end %>
         <li>Check spelling.</li>
         <li>Use fewer keywords or try different keywords that are broader in meaning.</li>
         <% if from_advanced_search? %>
