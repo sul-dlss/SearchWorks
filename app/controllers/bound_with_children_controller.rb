@@ -37,8 +37,8 @@ class BoundWithChildrenController < ApplicationController
   end
 
   def filtered_children(bound_with_children)
-    @filtered_children = bound_with_children.flat_map do |child|
+    bound_with_children.flat_map do |child|
       child.items.select { |item| item.id == @item_id && !item.bound_with_principal? }
-    end
+    end.sort_by(&:full_shelfkey)
   end
 end
