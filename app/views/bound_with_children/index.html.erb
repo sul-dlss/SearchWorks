@@ -2,7 +2,7 @@
   <% if @bound_with_children.present? %>
     <div class="bound-with p-2 mt-2">
       <%= render Record::BoundWithChildrenComponent.new(bound_with_children: @bound_with_children, item_id: @item_id, instance_id: @id) %>
-      <% if @number_of_results > @limit %>
+      <% if @response.total_pages > 1 %>
         <%= link_to "See all items bound with #{@bound_with_parent['call_number']}", bound_with_children_modal_solr_document_path(item_id: @item_id), data: { turbo_frame: "blacklight-modal", blacklight_modal: "trigger" }, class: 'btn btn-outline-primary p-1 text-left' %>
       <% end %>
     <% end %>
