@@ -167,7 +167,9 @@ class CatalogController < ApplicationController
         label: 'On order', fq: 'access_facet:"On order"'
       }
     }, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value,
+                            filter_query_builder: CollectionFilterQuery,
+                            component: Blacklight::FacetFieldListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent, item_component: ResourceFacetItemComponent
