@@ -5,28 +5,14 @@ import "./vendor/responsiveTruncator";
 import "./vendor/jquery-scrollspy";
 import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 
-import BlacklightRangeLimit from "blacklight-range-limit/app/assets/javascripts/blacklight_range_limit/blacklight_range_limit.esm";
-import "blacklight-range-limit/vendor/assets/javascripts/bootstrap-slider"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.canvaswrapper"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.colorhelpers"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.event.drag"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.browser"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.drawSeries"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.hover"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.saturated"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.selection"
-import "blacklight-range-limit/vendor/assets/javascripts/flot/jquery.flot.uiConstants"
-Blacklight.onLoad(function() {
-  BlacklightRangeLimit.initialize(Blacklight.Modal.modalSelector)
-});
+import BlacklightRangeLimit from "blacklight-range-limit";
+BlacklightRangeLimit.init({ onLoadHandler: Blacklight.onLoad });
 
 import "./alternate_catalog";
 import "./analytics";
 import "./article";
 import "./async_collection_members";
 import "./course_reserves";
-import "./eds_range_limit";
 import "./embedded-call-number-browse";
 import "./exhibitPanel";
 import "./facet-options-checkboxes";

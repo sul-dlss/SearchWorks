@@ -73,6 +73,24 @@ $remove-icon-font-family:
 }
 
 .range_limit {
+  input {
+    width: 14ch !important;
+  }
+
+  .input-group {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  // Blacklight 6's range limit didn't have this button
+  .view_larger {
+    display: none;
+  }
+
+  .input-group-append {
+    display: flex;
+  }
+
   .submit {
     width: 14ch;
   }
