@@ -1,25 +1,11 @@
 .advanced-search-form {
-  .advanced {
-    @extend .my-3;
-  }
   .advanced-search-start-over {
     margin-left: 20px;
-  }
-  #advanced-search-sort-label {
-    @extend .h2; // Can be removed after https://github.com/projectblacklight/blacklight/pull/3089
   }
 
   .advanced-submit-group {
     padding-bottom: 30px;
     padding-top: 30px;
-  }
-
-  h2.query-criteria-heading {
-    padding-bottom: 4px;
-
-    select.input-small {
-      vertical-align: middle;
-    }
   }
 
   padding: 0;
@@ -38,10 +24,6 @@
     }
   }
 
-  .col-md-3.col-form-label {
-    @extend .col-sm-3;
-  }
-
   .adv-publication-year-range {
     margin-left: -34%;
 
@@ -49,16 +31,6 @@
       display: inline-block;
       width: 100px;
     }
-  }
-
-  h2.col-form-label {
-    text-align: left !important;
-    width: 100% !important;
-  }
-
-  .col {
-    @extend .col-md-9;  // Can be removed after https://github.com/projectblacklight/blacklight/pull/3089
-    @extend .pt-2;
   }
 
   #sort {
@@ -80,14 +52,7 @@
   }
 }
 
-
-@media only screen and (min-width : 768px) {
-  #advanced-search-form #advanced_search_facets .advanced-facet-limits {
-    padding-left: 5px;
-  }
-}
-
-@media only screen and (max-width : 981px) {
+@media only screen and (max-width: 981px) {
   .advanced-search-form {
     .adv-publication-year-range {
       margin-left: 0;
