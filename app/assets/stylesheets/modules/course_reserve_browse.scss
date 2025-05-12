@@ -6,7 +6,7 @@
     @include sul-toolbar-bg-border;
   }
 
-  .mt-2 {
+  .mt-2.dt-layout-table {
     margin-top: 0 !important;
   }
 
@@ -15,13 +15,8 @@
     &.table-striped > tbody > tr:nth-of-type(2n + 1) {
       td {
         background-color: $light-sandstone;
-        box-shadow: none;
+        box-shadow: none !important;
       }
     }
-  }
-
-  .pagination {
-    padding-top: 38px;
-    padding-bottom: 38px;
   }
 }
