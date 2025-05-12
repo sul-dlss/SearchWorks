@@ -152,7 +152,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
+context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
 
   '
 context_input_name_ssi: "/dev/null"
@@ -252,9 +252,9 @@ folio_json_struct:
   [117]-129. ; 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
 bound_with_parent_item_ids_ssim:
 - f947bd93-a1eb-5613-8745-1063f948c461
-last_updated: '2025-04-20T15:35:13Z'
-created: '2025-04-20T15:35:13Z'
-timestamp: '2025-04-20T15:35:13Z'
+last_updated: '2025-05-11T14:09:16Z'
+created: '2025-05-11T14:09:16Z'
+timestamp: '2025-05-11T14:09:16Z'
 author_struct:
 - creator:
   - link: Viswanath, Bhagavatula, 1889-
