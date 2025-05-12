@@ -24,7 +24,7 @@ class LibGuidesSearchService < AbstractSearchService
 
   class Response < AbstractSearchService::Response
     def results
-      json.collect do |doc|
+      json.first(num_results).collect do |doc|
         result = AbstractSearchService::Result.new
         result.title = doc['name']
         result.link = doc['url']
@@ -33,12 +33,20 @@ class LibGuidesSearchService < AbstractSearchService
       end
     end
 
+    def num_results
+      Settings.LIBGUIDES.NUM_RESULTS_SHOWN
+    end
+
     def facets
       []
     end
 
+    # The guides api will only return 100 results
+    # If there are more than 100 results there is no way of knowing the correct number
+    # Instead of displaying a correct number we don't display the number if the results == 100
+    # Otherwise we have a correct length and can display the number of results.
     def total
-      json.length
+      json.length == 100 ? '100+' : json.length
     end
 
     private
