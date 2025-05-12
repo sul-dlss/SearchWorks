@@ -6,10 +6,6 @@
 module CatalogHelper
   include Blacklight::CatalogHelperBehavior
 
-  def catalog_search?
-    controller_name == 'catalog'
-  end
-
   def current_view
     document_index_view_type.to_s || 'list'
   end
