@@ -145,7 +145,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
+context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
 
   '
 context_input_name_ssi: "/dev/null"
@@ -247,9 +247,9 @@ folio_json_struct:
   [149]-163. : fold. ill. ; 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
 bound_with_parent_item_ids_ssim:
 - 1193e6b3-3bfc-5c51-b1ac-7ef347cdc46f
-last_updated: '2025-04-20T15:15:11Z'
-created: '2025-04-20T15:15:11Z'
-timestamp: '2025-04-20T15:15:11Z'
+last_updated: '2025-05-11T14:03:12Z'
+created: '2025-05-11T14:03:12Z'
+timestamp: '2025-05-11T14:03:12Z'
 author_struct:
 - creator:
   - link: Viswanath, Bhagavatula, 1889-
