@@ -1,3 +1,6 @@
+<% content_for :skip_links do %>
+  <%= render blacklight_config.skip_link_item_component.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
+<% end %>
 <% # container for all documents in index list view -%>
 <div id="documents" class="documents-<%= document_index_view_type %>">
   <%= render documents, :as => :document %>

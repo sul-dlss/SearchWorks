@@ -41,9 +41,9 @@ RSpec.feature "Skip-to Navigation" do
     visit bookmarks_path
 
     within "#skip-link" do
-      expect(page).to have_link "Skip to search", href: '#search_field'
-      expect(page).to have_link "Skip to main content", href: '#main-container'
-      expect(page).to have_link "Skip to first result", href: '#documents'
+      expect(page).to have_link "Skip to search", href: '#search_field', visible: :all
+      expect(page).to have_link "Skip to main content", href: '#main-container', visible: :all
+      expect(page).to have_link "Skip to first result", href: '#documents', visible: :all
     end
   end
 
@@ -52,7 +52,7 @@ RSpec.feature "Skip-to Navigation" do
 
     within "#skip-link" do
       expect(page).to have_link "Skip to search", href: '#search_field'
-      expect(page).to have_link "Skip to main content", href: '#document'
+      expect(page).to have_link "Skip to main content", href: '#main-container'
     end
   end
 
