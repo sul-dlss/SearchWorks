@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # frozen_string_literal: true
 
 # adjust Solr params as required for CJK chars in user query string
