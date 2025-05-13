@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+# This is consumed by Bento
 docs = @presenter.documents.collect do |document|
-  link = ArticleFulltextLinkPresenter.new(document:, context: self).links.try(:first) # top priority one only
+  link = ArticleFulltextLinkPresenter.new(document:, context: self).links.first # top priority one only
   composed_title = document['eds_composed_title']
   data = document.to_h # avoids deprecation warning
   data['fulltext_link_html'] = link if link.present?

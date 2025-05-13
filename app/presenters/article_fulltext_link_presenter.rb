@@ -20,12 +20,21 @@ class ArticleFulltextLinkPresenter
 
   attr_reader :document, :context
 
+  delegate :request, to: :context
+  delegate :format, to: :request
+  delegate :html?, to: :format
+
   def online_label
     "<span class='online-label'>Full text</span>"
   end
 
   def stanford_only_icon
-    "<span class='stanford-only'></span>"
+    if html?
+      context.render StanfordOnlySpanComponent.new
+    else
+      # JSON result for bento
+      "<span class='stanford-only'></span>"
+    end
   end
 
   def online_access_panel?
