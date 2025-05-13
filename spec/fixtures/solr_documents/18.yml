@@ -12,7 +12,9 @@ marc_json_struct: |
 <%= uniform_title_fixture %>
 imprint_display: 1933
 access_facet: Online
-building_facet: "Math & Statistics"
+building_facet: "Science (Li and Ma)"
+library_code_facet_ssim:
+  - SCIENCE
 uniform_title_display_struct:
 - label: Uniform Title
   unmatched_vernacular:

@@ -176,7 +176,8 @@ class CatalogController < ApplicationController
       input_label_range_begin: "from year",
       input_label_range_end: "to year"
     }
-    config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent
+    # config.add_facet_field "building_facet", label: "Library1", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "library_code_facet_ssim", label: "Library", limit: 100, sort: :index, helper_method: :translate_library_code, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "language", label: "Language", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "author_person_facet", label: "Author", limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'callnum_facet_hsim',
@@ -459,12 +460,12 @@ class CatalogController < ApplicationController
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {
-        "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
+        "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "library_code_facet_ssim", "language"],
          # return all facet values
         "f.access_facet.facet.limit" => -1,
         "f.format_main_ssim.facet.limit" => -1,
         "f.format_physical_ssim.facet.limit" => -1,
-        "f.building_facet.facet.limit" => -1,
+        "f.library_code_facet_ssim.facet.limit" => -1,
         "f.language.facet.limit" => -1,
         "facet.sort" => "index" # sort by byte order of values
       }
