@@ -945,11 +945,6 @@ Style/EmptyMethod:
   Exclude:
     - "app/controllers/feedback_forms_controller.rb"
 
-# Offense count: 16
-# This cop supports safe autocorrection (--autocorrect).
-Style/Encoding:
-  Enabled: false
-
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
 Style/ExpandPathArguments:
