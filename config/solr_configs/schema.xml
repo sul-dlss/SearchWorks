@@ -202,6 +202,7 @@
     <!-- Item Info Fields (derived from 999) -->
     <!-- Call Number Fields -->
     <field name="callnum_search" type="callnum_ws" indexed="true" stored="true" multiValued="true"/>
+    <field name="sudoc_callnum_search" type="callnum_sudoc_ws" indexed="true" stored="true" multiValued="true"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
     <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
@@ -713,6 +714,34 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
 	      <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for SUDOC call number searching -->
+    <fieldType name="callnum_sudoc_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+      <analyzer type="index">
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
+        <!-- Add a space between letters and numbers -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([A-Za-z])(\d)" replacement="$1 $2"/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
+        <!-- Add a space between letters and numbers -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([A-Za-z])(\d)" replacement="$1 $2"/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+	<filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
 

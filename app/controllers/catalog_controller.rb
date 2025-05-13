@@ -350,7 +350,7 @@ class CatalogController < ApplicationController
       field.advanced_parse = false
       field.solr_parameters = { defType: 'lucene' }
       field.solr_local_parameters = {
-        df: 'callnum_search'
+        qf: 'callnum_search sudoc_callnum_search'
       }
     end
 
