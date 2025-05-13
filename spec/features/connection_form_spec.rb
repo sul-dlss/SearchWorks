@@ -12,7 +12,7 @@ RSpec.feature 'Connection form (js)', :js do
     skip('Passes locally, not on Travis.') if ENV['CI']
     find('.connection-problem').click
     expect(page).to have_css('#connection-form', visible: true)
-    expect(page).to have_css('button', text: 'Cancel')
+    expect(page).to have_button 'Cancel'
     within 'form.feedback-form' do
       fill_in('resource_name', with: 'Resource name')
       fill_in('problem_url', with: 'http://www.example.com/yolo')
