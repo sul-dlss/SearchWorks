@@ -205,6 +205,10 @@
     <!-- Item Info Fields (derived from 999) -->
     <!-- Call Number Fields -->
     <field name="callnum_search" type="callnum_ws" indexed="true" stored="true" multiValued="true"/>
+    <field name="alphanum_callnum_search" type="callnumAlphanum" indexed="true" stored="true" multiValued="true"/>
+    <field name="spec_callnum_search" type="callnumSpec" indexed="true" stored="true" multiValued="true"/>
+    <field name="sudoc_callnum_search" type="callnumSudoc" indexed="true" stored="true" multiValued="true"/>
+    <field name="undoc_callnum_search" type="callnumUndoc" indexed="true" stored="true" multiValued="true"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
     <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
@@ -747,6 +751,67 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
 	      <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for ALPHANUM (and CALDOC) call number searching -->
+    <fieldType name="callnumAlphanum" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
+      <analyzer>
+        <!-- Remove space between the first two terms, we want two or more terms to match -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter=" " />
+	<filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for SPEC call number searching -->
+    <fieldType name="callnumSpec" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
+      <analyzer>
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter=" " />
+	<filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for SUDOC call number searching -->
+    <fieldType name="callnumSudoc" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
+      <analyzer>
+        <!-- Remove space between letters and numbers -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([A-Za-z])\s+?(\d)" replacement="$1$2"/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter=" " />
+	<filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <fieldType name="callnumUndoc" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
+      <analyzer>
+        <!-- Normalize punctuation (except /) to a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory"
+                    pattern="([!\#$%&amp;'()*+,\-.:;&lt;=&gt;?@\[\\\]^_`{|}~])"
+                    replacement=" "/>
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
+        <!-- Remove whitespace after a slash -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="/\s+" replacement="/"/>
+        <!-- Remove whitespace before a slash -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+/" replacement="/"/>
+        <!-- Remove trailing whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+$" replacement=""/>
+        <!-- Remove the first slash in the string, to require at least two leading terms to match -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^([^/]*)/(.*)$" replacement="$1$2"/>
+        <!-- Add a slash after the first term if there are no slashes at all (some UNDOCs like ICAO are abbreviated, e.g., ICAO DOC 9161) -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^([^\s/]+?)\s+([^/]+)$" replacement="$1/$2"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter="/" />
       </analyzer>
     </fieldType>
 
