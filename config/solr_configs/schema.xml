@@ -720,8 +720,6 @@
     <!-- field designed for SUDOC call number searching -->
     <fieldType name="callnum_sudoc_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
       <analyzer type="index">
-        <!-- Normalize whitespace -->
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
         <!-- Add a space between letters and numbers -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([A-Za-z])(\d)" replacement="$1 $2"/>
         <!-- Replace punctuation with a space -->
