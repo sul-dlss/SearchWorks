@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # Overridden from Blacklight to inject content into documents
+# This is consumed by Bento
 json.response do
   json.docs augment_solr_document_json_response(@presenter.documents)
   json.facets do
