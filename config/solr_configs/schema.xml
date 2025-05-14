@@ -203,6 +203,9 @@
     <!-- Call Number Fields -->
     <field name="callnum_search" type="callnum_ws" indexed="true" stored="true" multiValued="true"/>
     <field name="sudoc_callnum_search" type="callnum_sudoc_ws" indexed="true" stored="true" multiValued="true"/>
+    <field name="all_callnum_search" type="text" indexed="true" stored="true" multiValued="true"/>
+    <copyField source="callnum_search" dest="all_callnum_search"/>
+    <copyField source="sudoc_callnum_search" dest="all_callnum_search"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
     <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
