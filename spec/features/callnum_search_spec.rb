@@ -42,4 +42,12 @@ RSpec.describe 'Call num search', :js do
       expect(page).to have_css('h1', text: object_title)
     end
   end
+
+  it 'searches SUDOC call numbers' do
+    visit search_catalog_path
+    fill_in 'q', with: 'Y 4 .AP 6/2:S.HRG.98-413'
+    select 'Call number', from: 'search_field'
+    click_button 'search'
+    expect(page).to have_text 'An object'
+  end
 end
