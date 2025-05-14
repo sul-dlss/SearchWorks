@@ -20,7 +20,7 @@
     <%= render 'marc_fields/linked_author_index', linked_author: document.linked_author(target) %>
   <% end %>
 
-  <% if (imprint = results_imprint_string(document)).present? %>
-    <li><%= imprint %></li>
+  <% if document.imprint_string %>
+    <li><%= document.imprint_string %></li>
   <% end %>
 </ul>

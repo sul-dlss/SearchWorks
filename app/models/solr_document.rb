@@ -122,6 +122,7 @@ class SolrDocument
   attribute :document_formats, :array, FORMAT_KEY
   attribute :live_lookup_id, :string, 'uuid_ssi'
   attribute :oclc_number, :string, 'oclc'
+  attribute :imprint_string, :string, :imprint_display
 
   def db_az_subject
     self[:db_az_subject] if is_a_database?
