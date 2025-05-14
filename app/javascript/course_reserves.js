@@ -42,7 +42,6 @@ Blacklight.onLoad(function(){
       return
 
     nextPaginateBtn.remove()
-    console.log("Drawing", nextPaginateBtn)
 
     const previousPaginateBtn = document.querySelector('#course-reserves-browse_wrapper .dt-paging-button:has(.previous)')
     previousPaginateBtn.after(nextPaginateBtn)

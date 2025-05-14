@@ -12,7 +12,7 @@ RSpec.describe 'course_reserves/index' do
   end
 
   it 'renders a table with course info' do
-    expect(rendered).to have_css('table')
+    expect(rendered).to have_table
     expect(rendered).to have_css('th', text: 'Course ID')
     expect(rendered).to have_css('th', text: 'Description')
     expect(rendered).to have_css('th', text: 'Instructor')

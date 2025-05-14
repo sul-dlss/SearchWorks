@@ -5,10 +5,6 @@ module MarcHelper
     render renderable if renderable.present?
   end
 
-  def results_imprint_string(document)
-    document.fetch(:imprint_display, []).first
-  end
-
   def get_uniform_title(doc)
     return unless doc['uniform_title_display_struct']
 

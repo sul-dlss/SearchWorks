@@ -871,7 +871,6 @@ callnum_search:
 - SC0122 SERIES 1 BOX 7
 - SC0122 ACCN 2003-119 BOX 2
 - SC0122 ACCN 2021-092 BOX 1
-- SC0122 ACCN 2025-528 HALF BOX 1
 - SC0122 ACCN 2024-039 CARTON 311
 - SC0122 ACCN 2024-039 CARTON 314
 - SC0122 ACCN 2024-039 CARTON 310
@@ -903,6 +902,7 @@ callnum_search:
 - SC0122 ACCN 1992-003 BOX 299
 - SC0122 ACCN 2024-039 CARTON 322
 - SC0122 ACCN 2010-061 BOX 4
+- SC0122 ACCN 2025-528 HALF BOX 1
 - SC0122 ACCN 2024-039 CARTON 313
 - SC0122 ACCN 2010-061 BOX 5
 - SC0122 ACCN 1992-003 BOX 307
@@ -1799,7 +1799,6 @@ barcode_search:
 - '36105116648192'
 - '36105116819975'
 - '36105116467940'
-- '36105125786462'
 - '36105116465035'
 - '36105116465068'
 - '36105116465027'
@@ -1831,6 +1830,7 @@ barcode_search:
 - '36105116830949'
 - '36105116465142'
 - '36105116505616'
+- '36105125786462'
 - '36105116465050'
 - '36105116505624'
 - '36105116831012'
@@ -2727,7 +2727,6 @@ item_barcodes:
 - '36105116648192'
 - '36105116819975'
 - '36105116467940'
-- '36105125786462'
 - '36105116465035'
 - '36105116465068'
 - '36105116465027'
@@ -2759,6 +2758,7 @@ item_barcodes:
 - '36105116830949'
 - '36105116465142'
 - '36105116505616'
+- '36105125786462'
 - '36105116465050'
 - '36105116505624'
 - '36105116831012'
@@ -3115,7 +3115,7 @@ collection_search:
 collection_type:
 - Digital Collection
 context_source_ssi: folio
-context_version_ssi: '258c05234082180f399e95f8444fd978cdefd83b
+context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
 
   '
 context_input_name_ssi: "/dev/null"
@@ -3255,9 +3255,9 @@ folio_json_struct:
   resource","relationshipId":"5bfe1b7b-f151-4501-8cfa-23b321d5cd1e","materialsSpecification":"Finding
   aid"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:44:48.463+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["800.5
   linear ft."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-04-20T09:27:18Z'
-created: '2025-04-20T09:27:18Z'
-timestamp: '2025-04-20T09:27:18Z'
+last_updated: '2025-05-11T09:26:09Z'
+created: '2025-05-11T09:26:09Z'
+timestamp: '2025-05-11T09:26:09Z'
 author_struct:
 - corporate_author:
   - link: Stanford News Service.
@@ -40269,92 +40269,6 @@ holdings_json_struct:
           code: SU
           name: Stanford University
     courses: []
-  - id: 5cf980ff-59b8-4fd5-beaf-04b3e4438bb1
-    hrid: it00000278234
-    tags:
-      tagList: []
-    notes: []
-    status: Available
-    barcode: '36105125786462'
-    request:
-    _version: 1
-    metadata:
-      createdDate: '2025-03-10T18:48:21.776Z'
-      updatedDate: '2025-03-10T18:48:21.776Z'
-      createdByUserId: b68ae85f-9b8c-4799-ad83-9831f1fa69ac
-      updatedByUserId: b68ae85f-9b8c-4799-ad83-9831f1fa69ac
-    formerIds: []
-    callNumber:
-      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
-      typeName: Shelving control number
-      callNumber: SC0122
-    copyNumber: '1'
-    enumeration: ACCN 2025-528 HALF BOX 1
-    yearCaption: []
-    materialType: archival
-    callNumberType:
-      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
-      name: Shelving control number
-      source: folio
-    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
-    numberOfPieces: '1'
-    circulationNotes: []
-    electronicAccess: []
-    holdingsRecordId: 90ce825f-0c6c-5b4c-adcd-fe639d220126
-    discoverySuppress: false
-    itemDamagedStatus:
-    permanentLoanType: Non-circulating
-    temporaryLoanType:
-    statisticalCodeIds: []
-    administrativeNotes: []
-    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
-    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
-    permanentLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
-    suppressFromDiscovery: false
-    effectiveShelvingOrder: SC0122 ACCN 2025-528 HALF BOX 1 1
-    effectiveCallNumberComponents:
-      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
-      callNumber: SC0122
-    location:
-      effectiveLocation:
-        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
-        code: SPEC-SAL3-U-ARCHIVES
-        name: University Archives
-        campus:
-          id: c365047a-51f2-45ce-8601-e421ca3615c5
-          code: SUL
-          name: Stanford Libraries
-        details:
-          pageAeonSite: SPECUA
-        library:
-          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
-          code: SPEC-COLL
-          name: Special Collections
-        isActive: true
-        institution:
-          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
-          code: SU
-          name: Stanford University
-      permanentLocation:
-        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
-        code: SPEC-SAL3-U-ARCHIVES
-        name: University Archives
-        campus:
-          id: c365047a-51f2-45ce-8601-e421ca3615c5
-          code: SUL
-          name: Stanford Libraries
-        details:
-          pageAeonSite: SPECUA
-        library:
-          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
-          code: SPEC-COLL
-          name: Special Collections
-        isActive: true
-        institution:
-          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
-          code: SU
-          name: Stanford University
-    courses: []
   - id: 5faa12cf-fa23-4bf0-919c-b791fa3df20f
     hrid: it00000070024
     tags:
@@ -43061,6 +42975,96 @@ holdings_json_struct:
     permanentLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
     suppressFromDiscovery: false
     effectiveShelvingOrder: SC0122 ACCN 2010-061 BOX 4 1
+    effectiveCallNumberComponents:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      callNumber: SC0122
+    location:
+      effectiveLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+        code: SPEC-SAL3-U-ARCHIVES
+        name: University Archives
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 5cf980ff-59b8-4fd5-beaf-04b3e4438bb1
+    hrid: it00000278234
+    tags:
+      tagList: []
+    notes: []
+    status: Available
+    barcode: '36105125786462'
+    request:
+    _version: 3
+    metadata:
+      createdDate: '2025-03-10T18:48:21.776Z'
+      updatedDate: '2025-05-02T20:19:51.426Z'
+      createdByUserId: b68ae85f-9b8c-4799-ad83-9831f1fa69ac
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+    formerIds: []
+    callNumber:
+      typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      typeName: Shelving control number
+      callNumber: SC0122
+    copyNumber: '1'
+    enumeration: ACCN 2025-528 HALF BOX 1
+    lastCheckIn:
+      dateTime: '2025-05-02T20:19:51.282+00:00'
+      staffMemberId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+      servicePointId: 3a306665-eec7-4a40-8f4d-608585b2a394
+    yearCaption: []
+    materialType: archival
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    materialTypeId: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 90ce825f-0c6c-5b4c-adcd-fe639d220126
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    permanentLocationId: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SC0122 ACCN 2025-528 HALF BOX 1 1
     effectiveCallNumberComponents:
       typeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
       callNumber: SC0122
@@ -83143,25 +83147,6 @@ item_display_struct:
   lopped_callnumber: SC0122
   callnumber: SC0122 ACCN 2021-092 BOX 1
   full_shelfkey: other sc000122 accn 002021-000092 box 000001
-- id: 5cf980ff-59b8-4fd5-beaf-04b3e4438bb1
-  barcode: '36105125786462'
-  library: SPEC-COLL
-  type: archival
-  note:
-  instance_id: 24bfd637-dc2c-5e09-8642-6c76ba145e0a
-  instance_hrid: a4085072
-  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
-  temporary_location_code:
-  permanent_location_code: SPEC-SAL3-U-ARCHIVES
-  status: Available
-  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
-  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
-  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
-  bound_with:
-  is_bound_with_principal: false
-  lopped_callnumber: SC0122
-  callnumber: SC0122 ACCN 2025-528 HALF BOX 1
-  full_shelfkey: other sc000122 accn 002025-000528 half box 000001
 - id: 5faa12cf-fa23-4bf0-919c-b791fa3df20f
   barcode: '36105116465035'
   library: SPEC-COLL
@@ -83751,6 +83736,25 @@ item_display_struct:
   lopped_callnumber: SC0122
   callnumber: SC0122 ACCN 2010-061 BOX 4
   full_shelfkey: other sc000122 accn 002010-000061 box 000004
+- id: 5cf980ff-59b8-4fd5-beaf-04b3e4438bb1
+  barcode: '36105125786462'
+  library: SPEC-COLL
+  type: archival
+  note:
+  instance_id: 24bfd637-dc2c-5e09-8642-6c76ba145e0a
+  instance_hrid: a4085072
+  effective_permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  temporary_location_code:
+  permanent_location_code: SPEC-SAL3-U-ARCHIVES
+  status: Available
+  effective_location_id: 150b8273-b10b-4907-b43f-a3d4f89bc79f
+  material_type_id: 69edaa1b-e40b-4f1c-8cb5-4b615ac6a664
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: SC0122
+  callnumber: SC0122 ACCN 2025-528 HALF BOX 1
+  full_shelfkey: other sc000122 accn 002025-000528 half box 000001
 - id: 68bc5523-8aa8-4e48-bdf8-4c765ba14bf3
   barcode: '36105116465050'
   library: SPEC-COLL

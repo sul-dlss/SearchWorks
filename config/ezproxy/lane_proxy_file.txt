@@ -1059,7 +1059,6 @@ muse.jhu.edu
 musicid.academicrightspress.com
 my.vitallaw.com
 nam.edu
-name.umdl.umich.edu
 nanoconvergencejournal.springeropen.com
 nanoengineeringmedical.asmedigitalcollection.asme.org
 nanophotonics.spiedigitallibrary.org
@@ -1520,7 +1519,6 @@ www.ClinicalKey.com
 www.aaas.org
 www.aac.amdigital.co.uk
 www.aaem.pl
-www.aaeportal.com
 www.aafp.org
 www.aaic.net.au
 www.aamc.org

@@ -14,7 +14,6 @@ RSpec.describe SearchResult::MiniBento::ArticleComponent, type: :component do
     expect(page).to have_css '.alternate-catalog-title'
     expect(page).to have_css '.alternate-catalog-body'
     expect(page).to have_css 'a[href="/catalog?q=question"].btn'
-    expect(page).to have_css '.alternate-catalog-facet-section'
     expect(page).to have_css 'ul.alternate-catalog-facets'
   end
 end

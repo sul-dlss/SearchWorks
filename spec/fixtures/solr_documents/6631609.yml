@@ -312,7 +312,7 @@ collection_search:
 collection_type:
 - Digital Collection
 context_source_ssi: folio
-context_version_ssi: 'd55784c71af16aa2679418e06f46e39588f66a0a
+context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
 
   '
 context_input_name_ssi: "/dev/null"
@@ -512,9 +512,9 @@ folio_json_struct:
   Aid"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T09:58:42.692+0000","statisticalCodeIds":["36dfb19d-8d6b-4c4f-a8cc-8b403452bce5"],"administrativeNotes":[],"physicalDescriptions":["1
   computer optical disc : sound, color ; 4 3/4 in. + 1 guide (viii, 132 pages ; 23
   cm) + 1 user manual (v, 73 pages : illustrations ; 23 cm)"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-04-13T11:57:58Z'
-created: '2025-04-13T11:57:58Z'
-timestamp: '2025-04-13T11:57:58Z'
+last_updated: '2025-05-11T11:26:43Z'
+created: '2025-05-11T11:26:43Z'
+timestamp: '2025-05-11T11:26:43Z'
 author_struct:
 - contributors:
   - link: Massy, William F.
@@ -574,7 +574,7 @@ marc_links_struct:
   link_title: ''
   additional_text:
   material_type: Finding Aid
-  note:
+  note: ''
   href: https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
   sort:
   casalini:
@@ -591,7 +591,7 @@ marc_links_struct:
   link_title: ''
   additional_text:
   material_type:
-  note:
+  note: ''
   href: https://purl.stanford.edu/rc671ym6474
   sort:
   casalini:

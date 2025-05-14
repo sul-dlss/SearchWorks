@@ -3,8 +3,11 @@
     border-left: 1px solid var(--stanford-20-black);
   }
 
-  li {
-    margin-bottom: 0.5rem;
+  .modify-search,
+  .more-help {
+    li {
+      margin-bottom: 0.5rem;
+    }
   }
 
   .constraints-container {

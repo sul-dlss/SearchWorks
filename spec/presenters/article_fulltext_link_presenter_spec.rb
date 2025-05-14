@@ -4,27 +4,26 @@ require 'rails_helper'
 
 RSpec.describe ArticleFulltextLinkPresenter do
   let(:context) do
-    Class.new do
-      include Rails.application.routes.url_helpers
-      include ActionView::Helpers::UrlHelper
-
-      # mapping this to path for tests so
-      # we don't have to provide a host
-      def article_url(args)
-        article_path(args)
-      end
-    end.new
+    controller = ArticlesController.new
+    controller.request = ActionController::TestRequest.create(controller.class)
+    controller.request.path_parameters[:format] = Mime[format]
+    controller.view_context
   end
+
+  let(:format) { :json }
 
   let(:document) { EdsDocument.new }
 
   subject(:presenter) { described_class.new(document:, context:) }
 
   describe '#links' do
+    subject(:links) { presenter.links }
+
+    let(:link) { links.first }
+    let(:page) { Capybara.string(link) }
+
     context 'when the document does not have links' do
-      it 'is an empty array' do
-        expect(presenter.links).to eq([])
-      end
+      it { is_expected.to be_empty }
     end
 
     context 'when the document has link' do
@@ -37,11 +36,10 @@ RSpec.describe ArticleFulltextLinkPresenter do
       end
 
       it 'includes a rendered link representing that data' do
-        expect(presenter.links.length).to eq 1
-        link = Capybara.string(presenter.links.first)
+        expect(links.length).to eq 1
 
-        expect(link).to have_css('span.online-label', text: 'Full text')
-        expect(link).to have_link('View on content provider\'s site', href: 'http://example.com')
+        expect(page).to have_css('span.online-label', text: 'Full text')
+        expect(page).to have_link('View on content provider\'s site', href: 'http://example.com')
       end
     end
 
@@ -55,14 +53,22 @@ RSpec.describe ArticleFulltextLinkPresenter do
         )
       end
 
-      before do
-        allow(presenter).to receive(:article_fulltext_link_url).and_return('http://example.com')
-        allow(presenter).to receive(:image_url)
-        allow(presenter).to receive(:image_tag)
+      context 'when format is json' do
+        it 'includes a span with stanford-only class' do
+          expect(page).to have_css 'span.online-label', text: 'Full text'
+          expect(page).to have_link 'View/download PDF'
+          expect(page).to have_css 'span.stanford-only'
+        end
       end
 
-      it 'includes a span with stanford-only class' do
-        expect(Capybara.string(presenter.links.first)).to have_css('span.stanford-only')
+      context 'when format is html' do
+        let(:format) { :html }
+
+        it 'includes the svg icon' do
+          expect(page).to have_css 'span.online-label', text: 'Full text'
+          expect(page).to have_link 'View/download PDF'
+          expect(page).to have_css 'span[aria-label="Stanford-only"] svg'
+        end
       end
     end
 
@@ -70,11 +76,10 @@ RSpec.describe ArticleFulltextLinkPresenter do
       let(:document) { EdsDocument.new(id: 'abc123', 'eds_html_fulltext_available' => true) }
 
       it 'includes a link to the document to view the full text' do
-        expect(presenter.links.length).to eq 1
-        link = Capybara.string(presenter.links.first)
+        expect(links.length).to eq 1
 
-        expect(link).to have_css('span.online-label', text: 'Full text')
-        expect(link).to have_link('View on detail page', href: '/articles/abc123')
+        expect(page).to have_css('span.online-label', text: 'Full text')
+        expect(page).to have_link('View on detail page', href: 'http://test.host/articles/abc123')
       end
     end
   end

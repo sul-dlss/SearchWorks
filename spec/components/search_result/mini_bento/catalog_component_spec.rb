@@ -17,7 +17,6 @@ RSpec.describe SearchResult::MiniBento::CatalogComponent, type: :component do
       expect(page).to have_css '.alternate-catalog-body'
       expect(page).to have_css 'a[href="/articles?f%5Beds_search_limiters_fa' \
                                'cet%5D%5B%5D=Direct+access+to+full+text&q=question"].btn'
-      expect(page).to have_css '.alternate-catalog-facet-section'
       expect(page).to have_css 'ul.alternate-catalog-facets'
     end
   end

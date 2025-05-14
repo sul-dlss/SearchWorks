@@ -30,3 +30,6 @@ application.register("articles-facet-paginate", ArticlesFacetPaginateController)
 
 import AccordionSectionController from "./accordion_section_controller"
 application.register("accordion-section", AccordionSectionController)
+
+import BlacklightResultCount from "./blacklight_result_count_controller"
+application.register("blacklight-result-count", BlacklightResultCount)

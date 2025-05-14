@@ -10,8 +10,8 @@ RSpec.feature "Skip-to Navigation" do
   scenario "has skip-to navigation links to search field and main container in home page" do
     visit root_url
     within "#skip-link" do
-      expect(page).to have_css("a[href='#search_field']", text: "Skip to search")
-      expect(page).to have_css("a[href='#main-container']", text: "Skip to main content")
+      expect(page).to have_link "Skip to search", href: '#search_field'
+      expect(page).to have_link "Skip to main content", href: '#main-container'
     end
   end
 
@@ -21,9 +21,9 @@ RSpec.feature "Skip-to Navigation" do
     click_button 'search'
 
     within "#skip-link" do
-      expect(page).to have_css("a[href='#search_field']", text: "Skip to search")
-      expect(page).to have_css("a[href='#main-container']", text: "Skip to main content")
-      expect(page).to have_css("a[href='#documents']", text: "Skip to first result")
+      expect(page).to have_link "Skip to search", href: '#search_field'
+      expect(page).to have_link "Skip to main content", href: '#main-container'
+      expect(page).to have_link "Skip to first result", href: '#documents'
     end
   end
 
@@ -37,9 +37,9 @@ RSpec.feature "Skip-to Navigation" do
     visit bookmarks_path
 
     within "#skip-link" do
-      expect(page).to have_css("a[href='#search_field']", text: "Skip to search")
-      expect(page).to have_css("a[href='#main-container']", text: "Skip to main content")
-      expect(page).to have_css("a[href='#documents']", text: "Skip to first result")
+      expect(page).to have_link "Skip to search", href: '#search_field'
+      expect(page).to have_link "Skip to main content", href: '#main-container'
+      expect(page).to have_link "Skip to first result", href: '#documents'
     end
   end
 
@@ -47,8 +47,8 @@ RSpec.feature "Skip-to Navigation" do
     visit solr_document_path 20
 
     within "#skip-link" do
-      expect(page).to have_css("a[href='#search_field']", text: "Skip to search")
-      expect(page).to have_css("a[href='#document']", text: "Skip to main content")
+      expect(page).to have_link "Skip to search", href: '#search_field'
+      expect(page).to have_link "Skip to main content", href: '#document'
     end
   end
 
@@ -56,7 +56,7 @@ RSpec.feature "Skip-to Navigation" do
     visit blacklight_advanced_search_engine.advanced_search_path
 
     within "#skip-link" do
-      expect(page).to have_css("a[href='#advanced-search-form']", text: "Skip to advanced search form")
+      expect(page).to have_link "Skip to advanced search form", href: '#advanced-search-form'
     end
   end
 end

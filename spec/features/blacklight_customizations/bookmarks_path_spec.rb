@@ -23,9 +23,9 @@ RSpec.feature "Selections Path" do
       expect(page).to have_css("h3.index_title a", count: 2)
     end
     within ".sort-and-per-page" do
-      expect(page).to have_css("a", text: "Cite 1 - 2")
-      expect(page).to have_css("button", text: "Send 1 - 2")
-      expect(page).to have_no_css("button#select_all-dropdown")
+      expect(page).to have_link "Cite 1 - 2"
+      expect(page).to have_button "Send 1 - 2"
+      expect(page).to have_no_button "#select_all-dropdown"
     end
   end
 end

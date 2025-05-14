@@ -16,6 +16,22 @@ module SearchResult
         @close
       end
 
+      def bento_url
+        "https://library.stanford.edu/all?q=#{params[:q]}"
+      end
+
+      def archive_search_url
+        "https://archives.stanford.edu/catalog?group=true&q=#{params[:q]}"
+      end
+
+      def exhibits_search_url
+        "https://exhibits.stanford.edu/search?q=#{params[:q]}"
+      end
+
+      def geo_search_url
+        "https://earthworks.stanford.edu/?q=#{params[:q]}"
+      end
+
       def name
         t(:name, scope: i18n_scope)
       end
