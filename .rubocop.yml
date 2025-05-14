@@ -539,3 +539,7 @@ Capybara/FindAllFirst: # new in 2.22
   Enabled: true
 Capybara/NegationMatcherAfterVisit: # new in 2.22
   Enabled: true
+RSpec/IncludeExamples: # new in 3.6
+  Enabled: true
+Capybara/SpecificMatcher: # new in 2.12
+  Enabled: true

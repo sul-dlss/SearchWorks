@@ -9,7 +9,7 @@ RSpec.feature 'Alterate catalog results', :js do
 
   context 'when on catalog search' do
     before do
-      expect(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
+      allow(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
     end
 
     it 'draws mini-bento' do
@@ -28,7 +28,7 @@ RSpec.feature 'Alterate catalog results', :js do
 
   context 'when on article search' do
     before do
-      expect(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
+      allow(LibGuidesApi).to receive(:fetch).and_return([{ name: 'Guide 1', url: 'https://example.com/1' }])
     end
 
     it 'draws mini-bento' do
