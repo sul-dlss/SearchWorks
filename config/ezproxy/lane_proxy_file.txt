@@ -1059,7 +1059,6 @@ muse.jhu.edu
 musicid.academicrightspress.com
 my.vitallaw.com
 nam.edu
-name.umdl.umich.edu
 nanoconvergencejournal.springeropen.com
 nanoengineeringmedical.asmedigitalcollection.asme.org
 nanophotonics.spiedigitallibrary.org
