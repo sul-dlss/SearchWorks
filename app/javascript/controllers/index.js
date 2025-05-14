@@ -33,3 +33,6 @@ application.register("accordion-section", AccordionSectionController)
 
 import BlacklightResultCount from "./blacklight_result_count_controller"
 application.register("blacklight-result-count", BlacklightResultCount)
+
+import AutoCompleteController from "./auto_complete_controller"
+application.register("auto-complete", AutoCompleteController)
