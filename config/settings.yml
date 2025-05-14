@@ -69,7 +69,6 @@ LIB_GUIDES:
   APP_SEARCH_URL: "https://guides.library.stanford.edu/srch.php?q=%{q}"
   KEY: 12345678123456781234567812345678
   MINI_BENTO_ENABLED: false
-  NUM_RESULTS: 3
   SITE_ID: 12345
 
 folio:
@@ -273,4 +272,4 @@ folio_unrequestable_statuses:
   - Withdrawn
 
 earthworks:
-  url: 'https://earthworks.stanford.edu'
+  url: "https://earthworks.stanford.edu"

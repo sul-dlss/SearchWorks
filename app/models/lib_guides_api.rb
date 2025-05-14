@@ -11,15 +11,12 @@ class LibGuidesApi
     @query = query
   end
 
+  # We make this response look like a blacklight catalog response
   def as_json(*)
-    guides
+    { meta: { pages: { total_count: json.count } } }
   end
 
   private
-
-  def guides
-    json.take(Settings.LIB_GUIDES.NUM_RESULTS)
-  end
 
   def json
     JSON.parse(response)

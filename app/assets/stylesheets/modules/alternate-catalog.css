@@ -1,0 +1,56 @@
+.alternate-catalog {
+  background-color: white;
+  border: 1px solid var(--stanford-cardinal);
+  font-size: 1rem;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+
+  h3 {
+    color: var(--stanford-cardinal);
+    font-size: 1.25rem;
+    padding-top: 10px;
+  }
+
+  .alternate-catalog-name {
+    font-size: 1.125rem;
+    margin-top: 0;
+  }
+
+  .alternate-catalog-desc {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .alternate-catalog-close {
+    padding-top: 1.5rem;
+    float: right;
+  }
+
+  .badge {
+    --bs-secondary-rgb: var(--stanford-10-black-rgb);
+    --bs-badge-font-weight: normal;
+  }
+
+  .col-md-7 {
+    border-left: 1px solid var(--stanford-30-black);
+  }
+}
+
+.zero-result-container,
+.documents-list {
+  container-type: inline-size;
+}
+
+/* This causes the alternate-catalog to stack when in a narrow container, like on the no-results page */
+@container (max-width: 636px) {
+  .alternate-catalog {
+    .col-md-7 {
+      border-left: none;
+    }
+    .col-md-5,
+    .col-md-7 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}
