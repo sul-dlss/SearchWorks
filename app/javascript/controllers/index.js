@@ -42,3 +42,6 @@ application.register("preview-brief", PreviewBriefController)
 
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
+
+import AutoCompleteController from "./auto_complete_controller"
+application.register("auto-complete", AutoCompleteController)

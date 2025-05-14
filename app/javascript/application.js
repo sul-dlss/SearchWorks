@@ -58,3 +58,4 @@ document.addEventListener("turbo:before-cache", function () {
 
 import "./controllers"
 import "./controllers/external"
+import githubAutoCompleteElement from "@github/auto-complete-element";

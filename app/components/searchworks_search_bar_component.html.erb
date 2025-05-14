@@ -1,7 +1,7 @@
 <%= form_tag @url, method: @method, class: @classes.join(' '), role: 'search' do %>
   <%= render Blacklight::HiddenSearchStateComponent.new(params: @params) %>
   <div id="dynamic-hidden-inputs-target"></div>
-  <div class="input-group">
+  <div class="input-group" data-controller='auto-complete'>
     <%= prepend %>
 
     <% if search_fields.length > 1 %>
@@ -9,6 +9,7 @@
         <label for="search_field" class="visually-hidden"><%= scoped_t('search_field.label') %></label>
         <%= select_tag(:search_field,
                        options_for_select(search_fields, h(@search_field)),
+                       data: {'action': 'change->auto-complete#onChange'},
                        title: scoped_t('search_field.title'),
                        id: "#{@prefix}search_field",
                        class: "custom-select form-select search-field search_field") %>
@@ -19,7 +20,14 @@
 
     <label for="<%= @prefix %><%= @query_param %>" class="visually-hidden"><%= t('blacklight.search.form_label') %></label>
 
-    <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autofocus: @autofocus  %>
+    <% if Settings.feature.autocomplete %>
+    <auto-complete data-auto-complete-target="autoComplete" data-auto-complete-src="<%= autocomplete_path %>" for="autocomplete-popup" class="search-autocomplete-wrapper form-control <%= rounded_border_class %>">
+      <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autofocus: @autofocus  %>
+      <ul id="autocomplete-popup" data-auto-complete-target="popup" class="dropdown-menu" role="listbox" aria-label="<%= scoped_t('search.label') %>" hidden></ul>
+    </auto-complete>
+    <% else %>
+      <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autofocus: @autofocus  %>
+    <% end %>
     <span class="input-group-btn">
       <button type="submit" class="btn btn-secondary search-btn" id="search">
         <%=t('blacklight.search.form.submit_html')%>

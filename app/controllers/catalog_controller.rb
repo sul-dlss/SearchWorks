@@ -497,6 +497,9 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial :citation, if: false
     config.add_show_tools_partial :email, callback: :send_emails_to_all_recipients, validator: :validate_email_params_and_recaptcha
     config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
+
+    config.autocomplete_enabled = true
+    config.autocomplete_path = 'suggest'
   end
 
   # Overridden from Blacklight to pre-fetch OCLC citations in bulk

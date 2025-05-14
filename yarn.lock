@@ -127,6 +127,18 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.4.tgz#0b17ec8a70b2385827d52314c1253160a0b9bacc"
   integrity sha512-nOT2vZNw6hJ+z43oP1SPea/G/6AbN6X+bGNhNuq8NtRHy4wsMhw765IKLNmnjek7GvjWBYQ8Q5VBoYTFg9y1UQ==
 
+"@github/auto-complete-element@^3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@github/auto-complete-element/-/auto-complete-element-3.8.0.tgz#8be0480b8412ffb4fb71b54a68513c5e29693d86"
+  integrity sha512-rS2Uj38V1BsenLvrIswV5IXfiYH2/KUhz6inot+JXho/fFOO+01tsW1HxqSdIXqh5EDuoY0f/GQsztZcH22AXQ==
+  dependencies:
+    "@github/combobox-nav" "^2.1.7"
+
+"@github/combobox-nav@^2.1.7":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@github/combobox-nav/-/combobox-nav-2.3.1.tgz#76da4c47f1e33af56392c5c9cf661a28d5b4168e"
+  integrity sha512-gwxPzLw8XKecy1nP63i9lOBritS3bWmxl02UX6G0TwMQZbMem1BCS1tEZgYd3mkrkiDrUMWaX+DbFCuDFo3K+A==
+
 "@hotwired/stimulus@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.2.2.tgz#071aab59c600fed95b97939e605ff261a4251608"
@@ -244,14 +256,7 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.2.201.tgz#bfb3da01b3e2462f5a18f372c52dedd7de76037f"
   integrity sha512-wsTdWoZ5EfG5k3t7ORdyQF0ZmDEgN4aVPCanHAiNEwCROqibSZMXXmCbH7IDJUVri4FOeAVwwbPINI7HVHPKBw==
 
-"blacklight-frontend@>=7.1 || 8.0":
-  version "8.10.1"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.10.1.tgz#dab19b6e06523fc04c32c50ca29365cdba6c5746"
-  integrity sha512-m9KfODRxygH49kXG6xelWuvSsHShtvGOfHJpv0G3LcyH+f2/NS8V/WPql0wwqSiet6mu2IXPMGA8eVYWLi3HUg==
-  dependencies:
-    bootstrap ">=4.3.1 <6.0.0"
-
-blacklight-frontend@^8.11.0:
+"blacklight-frontend@>=7.1 || 8.0", blacklight-frontend@^8.11.0:
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.11.0.tgz#bf0da92b29472d640c88170e1e39179e48d5da07"
   integrity sha512-ibtWYn9gUKJzcuQyBnUtGr1AASRl05iGwBmCibXdnZk13+96hzHLsOKbTOKq585eqN2QPc9axkO837TM5erDUA==
