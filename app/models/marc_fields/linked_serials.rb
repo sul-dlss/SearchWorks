@@ -21,7 +21,13 @@ class LinkedSerials < MarcField
 
   private
 
+  def ignored_subfields
+    # we don't want the 7 field (control subfield) which is always coded information
+    ['7']
+  end
+
   def process_subfield(field, subfield)
+    return if ignored_subfields.include?(subfield.code)
     return { text: subfield.value } unless respond_to?(:"#{subfield.code}_subfield", true)
 
     send(:"#{subfield.code}_subfield", field, subfield.value)

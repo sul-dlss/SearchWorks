@@ -159,5 +159,15 @@ RSpec.describe LinkedSerials do
         expect(subject.values.last[:values].first).to eq(text: 'Some text:')
       end
     end
+
+    context 'other subfields with 7' do
+      let(:marc) { entry_with_subfield_seven }
+      let(:text_subfields) { subject.values.flatten.map { |val| val[:values].filter { |e| e[:text] } }.flatten.compact }
+
+      it 'are described as text' do
+        expect(text_subfields.length).to eq 1
+        expect(text_subfields.first).to eq(text: 'Some text:')
+      end
+    end
   end
 end
