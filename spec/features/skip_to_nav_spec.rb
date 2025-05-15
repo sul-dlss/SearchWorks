@@ -33,7 +33,11 @@ RSpec.feature "Skip-to Navigation" do
     click_button 'search'
 
     expect(page).to have_css("article[data-document-id='20']")
-    find('[data-document-id="20"] input.toggle-bookmark[type="checkbox"]').set(true)
+    within '[data-document-id="20"]' do
+      find('input.toggle-bookmark[type="checkbox"]').set(true)
+      expect(page).to have_content 'Selected'
+    end
+
     visit bookmarks_path
 
     within "#skip-link" do
