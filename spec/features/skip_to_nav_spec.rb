@@ -34,7 +34,7 @@ RSpec.feature "Skip-to Navigation" do
 
     expect(page).to have_css("article[data-document-id='20']")
     within '[data-document-id="20"]' do
-      find('input.toggle-bookmark[type="checkbox"]').set(true)
+      page.first('.toggle-bookmark-label').click
       expect(page).to have_content 'Selected'
     end
 

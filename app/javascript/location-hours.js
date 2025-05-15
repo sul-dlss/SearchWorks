@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 Blacklight.onLoad(() => {
   document.querySelectorAll('[data-hours-route]').forEach(elem => locationHours(elem))
 })
