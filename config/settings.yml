@@ -76,6 +76,7 @@ folio:
   standard_patron_group_names: ["staff", "faculty", "undergrad", "graduate"]
   log_level: info
   config_set: prod
+  timeout: 30
 
 live_lookup_service: LiveLookup::Folio
 
