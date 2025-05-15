@@ -720,11 +720,15 @@
       </analyzer>
     </fieldType>
 
-    <!-- field designed for ALPHANUM call number searching -->
+    <!-- field designed for ALPHANUM (and CALDOC) call number searching -->
     <fieldType name="callnum_alphanum_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
       <analyzer type="index">
         <!-- Remove space between the first two terms -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
         <!-- prepend yyyy to string so searches can be left anchored -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
@@ -735,6 +739,10 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
         <!-- Remove space between the first two terms -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
         <!-- prepend yyyy to string so searches can be left anchored -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />

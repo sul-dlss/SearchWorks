@@ -95,6 +95,14 @@ RSpec.describe 'Call num search', :js do
         click_button 'search'
         expect(page).to have_text 'An object'
       end
+
+      it 'matches call numbers that look like CalDocs' do
+        visit search_catalog_path
+        fill_in 'q', with: 'CALIF E3000  S26 L3 2025'
+        select 'Call number', from: 'search_field'
+        click_button 'search'
+        expect(page).to have_text 'An object'
+      end
     end
   end
 
