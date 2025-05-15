@@ -45,7 +45,7 @@ RSpec.describe 'Call num search', :js do
   end
 
   context 'with ALPHANUM call numbers' do
-    context 'that are from SPEC' do
+    context 'when the item is from SPEC' do
       it 'matches exact call numbers' do
         visit search_catalog_path
         fill_in 'q', with: 'SC1003A BOX 1'
@@ -71,7 +71,7 @@ RSpec.describe 'Call num search', :js do
       end
     end
 
-    context 'that are not from SPEC' do
+    context 'when the item is not from SPEC' do
       it 'matches searches with at least the first two terms' do
         visit search_catalog_path
         fill_in 'q', with: 'ZVC 12345'
