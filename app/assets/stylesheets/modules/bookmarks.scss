@@ -1,18 +1,19 @@
-// Note that Blacklight uses .toggle-bookmark at three different levels!
-div.toggle-bookmark {
-  label.toggle-bookmark {
-    min-width: 0; // override blacklight
-    cursor: pointer;
+.bookmark-toggle {
+  .toggle-bookmark {
+    .toggle-bookmark-label {
+      min-width: 0; // override blacklight
+      cursor: pointer;
 
-    input.toggle-bookmark {
-      margin-right: 3px;
-    }
+      .toggle-bookmark-input {
+        margin-right: 3px;
+      }
 
-    span {
-      font-size: 0.9em;
-      display: inline-block;
-      margin-bottom: 4px;
-      vertical-align: middle;
+      span {
+        font-size: 0.9em;
+        display: inline-block;
+        margin-bottom: 4px;
+        vertical-align: middle;
+      }
     }
   }
 }

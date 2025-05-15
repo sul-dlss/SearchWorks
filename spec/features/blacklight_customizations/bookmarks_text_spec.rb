@@ -11,7 +11,7 @@ RSpec.feature "Bookmarks Select/UnSelect Text", :js do
 
   scenario "has bookmarks text as select" do
     within first("div.documentHeader") do
-      within "label.toggle-bookmark" do
+      within "label.toggle-bookmark-label" do
         expect(page).to have_css("span", text: "Select")
       end
     end
@@ -19,7 +19,7 @@ RSpec.feature "Bookmarks Select/UnSelect Text", :js do
 
   scenario "has bookmarks text as selected" do
     within first("div.documentHeader") do
-      check("Select")
+      find('.blacklight-icons-bookmark').click
     end
     within first("div.documentHeader") do
       expect(page).to have_css("span", text: "Selected", visible: true)
