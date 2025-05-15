@@ -25,5 +25,15 @@
     .access-panel-subsection {
       padding-bottom: 10px;
     }
+
+    .google-books {
+      margin-top: 10px;
+
+      .google-preview {
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
   }
 }

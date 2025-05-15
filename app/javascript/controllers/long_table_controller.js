@@ -13,7 +13,9 @@ export default class extends Controller {
 
   connect() {
     if (!this.children) return;
-    if (this.children.length <= this.rowsValue) return;
+    // It's possible that in the case of "Available online", one of the elements is a google book, which is hidden.
+    const nonIgnored = Array.from(this.children).filter(elem => elem.dataset.longTableControllerIgnore !== "true")
+    if (nonIgnored.length <= this.rowsValue) return;
 
     if (!this.hasButtonTarget) this.addControls();
     this.collapse()

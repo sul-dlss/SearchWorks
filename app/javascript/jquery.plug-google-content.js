@@ -125,12 +125,12 @@ import fetchJsonp from "fetch-jsonp"
           if (data.preview === 'full') {
             const $fullView = $googleBooks.find('.full-view')
             $fullView.attr('href', data.preview_url);
-            checkAndEnableOnlineAccordionSection($googleBooks, $fullView);
-            checkAndEnableAccessPanel($googleBooks, '.panel-online');
+            checkAndEnableOnlineAccordionSection($googleBooks[0], $fullView);
+            checkAndEnableAccessPanel($googleBooks[0], '.panel-online');
           } else if (data.preview === 'partial' || data.preview === 'noview') {
             const $limitedView = $googleBooks.find('.limited-preview')
             $limitedView.attr('href', data.preview_url);
-            checkAndEnableAccessPanel($googleBooks, '.panel-related');
+            checkAndEnableAccessPanel($googleBooks[0], '.panel-related');
           }
         });
       }
@@ -147,25 +147,30 @@ import fetchJsonp from "fetch-jsonp"
       }).filter(elm => elm).join(',')
     }
 
-    function checkAndEnableAccessPanel($googleBooks, selectorPanel) {
-      const $accessPanel = $googleBooks.parents(selectorPanel);
+    function checkAndEnableAccessPanel(googleBooks, panelSelector) {
+      const accessPanel = googleBooks.closest(panelSelector)
 
-      if ($accessPanel.length > 0) {
-        $accessPanel[0].hidden = false
-        $googleBooks.show()
-      }
+      if (!accessPanel)
+        return
+
+      accessPanel.hidden = false
+      googleBooks.hidden = false
+      // Tell the long table controller that another element has been added to it's list
+      googleBooks.dataset.longTableControllerIgnore = false
+      const event = new CustomEvent("item-added");
+      const longTable = googleBooks.closest('[data-controller="long-table"]')
+      longTable.dispatchEvent(event);
     }
 
-    function checkAndEnableOnlineAccordionSection($googleBooks, $fullViewLink) {
-      $resultsOnlineSection = $googleBooks.parents('[data-behavior="results-online-section"]');
+    function checkAndEnableOnlineAccordionSection(googleBooks, $fullViewLink) {
+      resultsOnlineSection = googleBooks.closest('[data-behavior="results-online-section"]');
 
-      if ($resultsOnlineSection.length > 0) {
-        $resultsOnlineSection[0].hidden = false
-        $googleBooks[0].hidden = false
+      if (resultsOnlineSection) {
+        resultsOnlineSection.hidden = false
+        googleBooks.hidden = false
         // Re-run responsive truncation on the list in case the google link takes us over the two-line threshold
-        $googleBooks
-          .parents("[data-behavior='truncate-results-metadata-links']")
-          .responsiveTruncate({lines: 2, more: 'more...', less: 'less...'})
+        const metadataLinks = googleBooks.closest("[data-behavior='truncate-results-metadata-links']")
+        $(metadataLinks).responsiveTruncate({lines: 2, more: 'more...', less: 'less...'})
       }
     }
 
