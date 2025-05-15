@@ -205,6 +205,7 @@
     <field name="alphanum_callnum_search" type="callnum_alphanum_ws" indexed="true" stored="true" multiValued="true"/>
     <field name="spec_callnum_search" type="callnum_spec_ws" indexed="true" stored="true" multiValued="true"/>
     <field name="sudoc_callnum_search" type="callnum_sudoc_ws" indexed="true" stored="true" multiValued="true"/>
+    <field name="undoc_callnum_search" type="callnum_undoc_ws" indexed="true" stored="true" multiValued="true"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
     <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
@@ -723,7 +724,7 @@
     <fieldType name="callnum_alphanum_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
       <analyzer type="index">
         <!-- Remove space between the first two terms -->
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="(\w+)\s+(\w+)" replacement="$1$2"/>
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
         <!-- prepend yyyy to string so searches can be left anchored -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
@@ -733,7 +734,7 @@
         <!-- Normalize whitespace -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
         <!-- Remove space between the first two terms -->
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="(\w+)\s+(\w+)" replacement="$1$2"/>
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
         <!-- prepend yyyy to string so searches can be left anchored -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
@@ -776,6 +777,38 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
         <!-- Add a space between letters and numbers -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([A-Za-z])(\d)" replacement="$1 $2"/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+	<filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for UNDOC call number searching -->
+    <fieldType name="callnum_undoc_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+      <analyzer type="index">
+        <!-- Remove whitespace before or after punctuation -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s*([\p{Punct}])\s*" replacement="$1"/>
+        <!-- Remove the first slash in the string. Require at least two callnum terms to match -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^([^/]*)/(.*)$" replacement="$1$2"/>
+        <!-- Replace all remaining slashes with spaces -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="/" replacement=" "/>
+        <!-- Replace punctuation with a space -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
+        <!-- Remove whitespace before or after punctuation -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s*([\p{Punct}])\s*" replacement="$1"/>
+        <!-- Remove the first slash in the string. Require at least two callnum terms to match -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^([^/]*)/(.*)$" replacement="$1$2"/>
         <!-- Replace punctuation with a space -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
         <!-- prepend yyyy to string so searches can be left anchored -->

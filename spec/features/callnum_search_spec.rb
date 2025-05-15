@@ -97,4 +97,38 @@ RSpec.describe 'Call num search', :js do
       end
     end
   end
+
+  context 'with UNDOC call numbers' do
+    it 'matches the full call number even with whitespace differences' do
+      visit search_catalog_path
+      fill_in 'q', with: 'E/ ESCWA/ED/SER. Z/2/2005/2006-2007/2008'
+      select 'Call number', from: 'search_field'
+      click_button 'search'
+      expect(page).to have_text 'An object'
+    end
+
+    it 'matches leading terms of the call number' do
+      visit search_catalog_path
+      fill_in 'q', with: 'E/ESCWA'
+      select 'Call number', from: 'search_field'
+      click_button 'search'
+      expect(page).to have_text 'An object'
+    end
+
+    it 'matches call numbers without slashes' do
+      visit search_catalog_path
+      fill_in 'q', with: 'ICAO'
+      select 'Call number', from: 'search_field'
+      click_button 'search'
+      expect(page).to have_text 'An object'
+    end
+
+    it 'does not match only one leading term prior to a slash' do
+      visit search_catalog_path
+      fill_in 'q', with: 'E'
+      select 'Call number', from: 'search_field'
+      click_button 'search'
+      expect(page).to have_text 'No results found'
+    end
+  end
 end
