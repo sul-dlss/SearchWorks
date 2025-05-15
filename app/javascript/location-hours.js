@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 Blacklight.onLoad(function(){
 
   //Finds all of the location panels and instantiates jQuery plugin for each one

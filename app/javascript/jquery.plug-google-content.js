@@ -1,3 +1,4 @@
+import Blacklight from 'blacklight-frontend'
 import fetchJsonp from "fetch-jsonp"
 
 (function($) {

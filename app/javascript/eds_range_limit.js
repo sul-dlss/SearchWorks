@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 const EdsRangeLimit = {
   init: function(el) {
     var $el = $(el);
@@ -6,10 +8,10 @@ const EdsRangeLimit = {
     var $end = $el.find('input.range_end');
     var min = data.edsDateMin;
     var max = data.edsDateMax;
-    var begin = data.edsDateBegin; 
+    var begin = data.edsDateBegin;
     var end = data.edsDateEnd;
     var $target = $($el.find('.eds-slider')[0]);
-    
+
     // Much of this is a copy from BlacklightRangeLimit so that the experience
     // stays consistant
     var placeholder_input = $('<input type="text" data-slider-placeholder="true" style="width:100%;">').appendTo($target);
@@ -25,7 +27,7 @@ const EdsRangeLimit = {
 
     // Update css to 100%
     $target.find('.slider').css('width', '100%');
-    
+
     $begin.val(begin);
     $end.val(end);
 
@@ -39,7 +41,7 @@ const EdsRangeLimit = {
     $begin.change(function() {
       var val = BlacklightRangeLimit.parseNum($(this).val());
       if ( isNaN(val)  || val < min) {
-        //for weird data, set slider at min           
+        //for weird data, set slider at min
         val = min;
       }
       var values = placeholder_input.data('slider').getValue();
@@ -50,7 +52,7 @@ const EdsRangeLimit = {
     $end.change(function() {
       var val = BlacklightRangeLimit.parseNum($(this).val());
       if ( isNaN(val)  || val > max) {
-        //for weird data, set slider at max           
+        //for weird data, set slider at max
         val = max;
       }
       var values = placeholder_input.data('slider').getValue();

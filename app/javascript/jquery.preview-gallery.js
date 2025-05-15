@@ -1,3 +1,4 @@
+import Blacklight from 'blacklight-frontend'
 import PreviewContent from './preview-content'
 
 (function($) {
@@ -124,8 +125,8 @@ import PreviewContent from './preview-content'
         var previewIndex = galleryDocs.index($(`.gallery-document[data-doc-id='${docId}']`)) + 1;
 
         $itemsPerRow = itemsPerRow();
-        /* 
-        / If $itemsPerRow is NaN or 0 we should return here. If not we are going 
+        /*
+        / If $itemsPerRow is NaN or 0 we should return here. If not we are going
         / to have a bad time with an infinite while loop. This only manifests
         / on the show page when using the "back" button to get back to a show
         / page using the browse nearby feature.

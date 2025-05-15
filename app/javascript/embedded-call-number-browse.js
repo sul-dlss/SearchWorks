@@ -1,4 +1,6 @@
+import Blacklight from 'blacklight-frontend'
 import PreviewContent from './preview-content'
+
 (function($) {
 
   /*
