@@ -1673,6 +1673,50 @@ module MarcMetadataFixtures
     json
   end
 
+  def entry_with_subfield_seven
+    <<-json
+      {
+        "leader": "          22        4500",
+        "fields": [
+          {
+            "780": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "a": "Serial Main Entry"
+                },
+                {
+                  "t": "Serial Title"
+                },
+                {
+                  "s": "Serial Uniform Title"
+                },
+                {
+                  "7": "control field"
+                }
+              ]
+            }
+          },
+          {
+            "774": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [
+                {
+                  "i": "Some text:"
+                },
+                {
+                  "7": "control field"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    json
+  end
+
   def main_entry_and_title_serial_fixture_with_issn
     <<-json
       {
