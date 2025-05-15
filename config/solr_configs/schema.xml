@@ -202,10 +202,9 @@
     <!-- Item Info Fields (derived from 999) -->
     <!-- Call Number Fields -->
     <field name="callnum_search" type="callnum_ws" indexed="true" stored="true" multiValued="true"/>
+    <field name="alphanum_callnum_search" type="callnum_alphanum_ws" indexed="true" stored="true" multiValued="true"/>
+    <field name="spec_callnum_search" type="callnum_spec_ws" indexed="true" stored="true" multiValued="true"/>
     <field name="sudoc_callnum_search" type="callnum_sudoc_ws" indexed="true" stored="true" multiValued="true"/>
-    <field name="all_callnum_search" type="text" indexed="true" stored="true" multiValued="true"/>
-    <copyField source="callnum_search" dest="all_callnum_search"/>
-    <copyField source="sudoc_callnum_search" dest="all_callnum_search"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
     <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
@@ -717,6 +716,46 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
         <tokenizer class="solr.WhitespaceTokenizerFactory" />
 	      <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for ALPHANUM call number searching -->
+    <fieldType name="callnum_alphanum_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+      <analyzer type="index">
+        <!-- Remove space between the first two terms -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="(\w+)\s+(\w+)" replacement="$1$2"/>
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
+        <!-- Remove space between the first two terms -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="(\w+)\s+(\w+)" replacement="$1$2"/>
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+	<filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for SPEC call number searching -->
+    <fieldType name="callnum_spec_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+      <analyzer type="index">
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <!-- Normalize whitespace -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+" replacement=" "/>
+        <!-- prepend yyyy to string so searches can be left anchored -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^\s*(\S{1})" replacement="yyyy$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+	<filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
 
