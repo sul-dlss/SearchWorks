@@ -103,6 +103,7 @@ class CatalogController < ApplicationController
     config.index.document_presenter_class = IndexDocumentPresenter
     config.index.document_component = SearchResult::DocumentComponent
     config.index.title_component = SearchResult::DocumentTitleComponent
+    config.index.constraints_component = Blacklight::ConstraintsComponent # can be removed after https://github.com/projectblacklight/blacklight/pull/3618
 
     config.index.facet_group_component = Searchworks::Response::FacetGroupComponent
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
