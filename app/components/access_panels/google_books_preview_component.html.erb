@@ -1,8 +1,6 @@
-<%= tag.li **@html_attrs do %>
-  <div class="row google-books <%= (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ') %>">
-    <div class="col-lg-12 col-md-12 google-preview">
-      <%= image_tag "gbs_preview_button.gif", alt:"" %>
-      <a href="" class="<%= @link_text.parameterize %>">(<%= @link_text %>)</a>
-    </div>
+<%= tag.li class: classes, hidden: true, data: { long_table_controller_ignore: true } do %>
+  <div class="google-preview">
+    <%= image_tag "gbs_preview_button.gif", alt:"" %>
+    <a href="" class="<%= @link_text.parameterize %>">(<%= @link_text %>)</a>
   </div>
 <% end %>
