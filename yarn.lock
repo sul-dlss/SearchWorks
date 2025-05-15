@@ -244,10 +244,17 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-8.0.200.tgz#1d27d9d55e45266e061190db045925e0b4d53d6b"
   integrity sha512-EDqWyxck22BHmv1e+mD8Kl6GmtNkhEPdRfGFT7kvsv1yoXd9iYrqHDVAaR8bKmU/syC5eEZ2I5aWWxtB73ukMw==
 
-"blacklight-frontend@>=7.1 || 8.0", blacklight-frontend@^8.11.0:
+"blacklight-frontend@>=7.1 || 8.0":
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.11.0.tgz#bf0da92b29472d640c88170e1e39179e48d5da07"
   integrity sha512-ibtWYn9gUKJzcuQyBnUtGr1AASRl05iGwBmCibXdnZk13+96hzHLsOKbTOKq585eqN2QPc9axkO837TM5erDUA==
+  dependencies:
+    bootstrap ">=4.3.1 <6.0.0"
+
+blacklight-frontend@^9.0.0-beta1:
+  version "9.0.0-beta1"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta1.tgz#792db40748c212a8b58a14a9806c14eabf151e1a"
+  integrity sha512-qa2VBHswemS+UxkzeGlMZAOfeMFLyYwOrvQCtc5p2e0dAvgJXfXaRS0XaQMipS5QMuFOxnv0ZrIA4gwiGoo94Q==
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
 

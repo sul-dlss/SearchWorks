@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 Blacklight.onLoad(() => {
   const fullText = document.querySelector('#toggleFulltext')
   fullText?.addEventListener('show.bs.collapse', () => {

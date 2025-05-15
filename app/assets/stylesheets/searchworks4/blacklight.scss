@@ -15,9 +15,9 @@ $remove-icon-font-family:
   "Liberation Sans",
   sans-serif !default;
 
-/* Restore default value from component library. After upgrading to blacklight 9,
-we will be able to set --bl-logo-width instead.
-*/
+/* Override blacklight 9. We may want to move this to the component library: */
 .navbar-logo {
-  width: 250px;
+  --bl-logo-image: none;
+  --bl-logo-width: 250px;
+  background-color: black;
 }

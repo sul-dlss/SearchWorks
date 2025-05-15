@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 Blacklight.onLoad(function(){
   $("[data-behavior='metadata-truncate']").responsiveTruncate(
     { lines: 2, more: 'more...', less: 'less...' }

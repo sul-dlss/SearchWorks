@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 Blacklight.onLoad(() => {
   document.querySelectorAll('[data-behavior="purl-embed"]').forEach((element) => purlEmbed(element))
 })

@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 // gtag initial setup
 window.dataLayer = window.dataLayer || [];
 window.gtag = function() { dataLayer.push(arguments); }

@@ -16,7 +16,7 @@ RSpec.describe "Brief View" do
       expect(page).to have_css(".brief-document h3.index_title", text: "An object")
       expect(page).to have_css('.brief-document ul li', text: 'Earth Sciences Library (Branner) : Stacks : G70.212 .A426 2011')
       expect(page).to have_css(".brief-document button.btn-preview", text: "Preview")
-      expect(page).to have_css("form.bookmark-toggle label.toggle-bookmark", text: "Select")
+      expect(page).to have_css("form.bookmark-toggle .toggle-bookmark-label", text: "Select")
     end
     within '[data-controller="preview-brief"]:has(a[href="/view/10"])' do
       expect(page).to have_css('.brief-document ul li', text: 'SAL3 (off-campus storage) : Stacks : HF1604 .G368 2024')
@@ -50,6 +50,6 @@ RSpec.describe "Brief View" do
       click_link 'brief'
     end
     expect(page).to have_css("i.fa.fa-align-justify")
-    expect(page).to have_css("form.bookmark-toggle label.toggle-bookmark", text: "Select")
+    expect(page).to have_css("form.bookmark-toggle .toggle-bookmark-label", text: "Select")
   end
 end

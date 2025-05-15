@@ -1,7 +1,7 @@
 // Entry point for the build script in your packageon
 
 import "@hotwired/turbo-rails";
-import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+import "blacklight-frontend";
 
 import "./libraryh3lp";
 import "./popover";
