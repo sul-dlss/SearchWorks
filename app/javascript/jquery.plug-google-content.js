@@ -159,7 +159,7 @@ import fetchJsonp from "fetch-jsonp"
       googleBooks.dataset.longTableControllerIgnore = false
       const event = new CustomEvent("item-added");
       const longTable = googleBooks.closest('[data-controller="long-table"]')
-      longTable.dispatchEvent(event);
+      longTable?.dispatchEvent(event);
     }
 
     function checkAndEnableOnlineAccordionSection(googleBooks, $fullViewLink) {
