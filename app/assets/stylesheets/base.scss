@@ -5,6 +5,10 @@
   --link-hover-decoration-line: underline;
   --link-hover-decoration-style: solid;
   --link-text-decoration-color: gray;
+
+  /* Bootstrap 5 sets scroll-behavior to `smooth` when `prefers-reduced-motion` is `no-preference`
+    Some found this undesirable for turbo page transitions. See https://github.com/sul-dlss/SearchWorks/issues/4941 */
+  scroll-behavior: auto;
 }
 
 a {
