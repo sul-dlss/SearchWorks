@@ -143,5 +143,7 @@ import PreviewContent from './preview-content'
 
 
 Blacklight.onLoad(function() {
+  if ($('*[data-behavior="embed-browse"]').hasClass('active')) return;
+
   $('*[data-behavior="embed-browse"]').embedBrowse();
 });
