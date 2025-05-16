@@ -335,7 +335,6 @@ ccforum.biomedcentral.com
 ccinfoweb.ccohs.ca
 ccj.springeropen.com
 cdnsciencepub.com
-ceb.nlm.nih.gov
 cebp.aacrjournals.org
 cellandbioscience.biomedcentral.com
 cellandchromosome.biomedcentral.com
@@ -1845,7 +1844,6 @@ www.e-jyms.org
 www.e-mjm.org
 www.e-neurospine.org
 www.e-periodica.ch
-www.e-rara.ch
 www.e-roj.org
 www.e-streams.com
 www.e-tjo.org
