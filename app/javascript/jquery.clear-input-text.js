@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 (function($) {
   /*
     jQuery plugin to add clear text functionality to an input box

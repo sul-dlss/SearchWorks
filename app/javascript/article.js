@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 Blacklight.onLoad(function(){
   $('#toggleFulltext').on('show.bs.collapse', function(){
     $('#fulltextToggleBar').html('<h2>Hide full text <i class="fa fa-chevron-down"></i></h2>')

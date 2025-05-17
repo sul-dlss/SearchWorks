@@ -19,10 +19,10 @@ RSpec.feature 'Gallery View' do
 
     expect(page).to have_css('.gallery-document a div.fake-cover-text', text: 'Car : a drama of the American workplace', visible: :hidden)
 
-    expect(page).to have_css('.gallery-document h3.index_title', text: 'An object')
-    expect(page).to have_css('.gallery-document button.btn-preview', text: 'Preview')
-    expect(page).to have_css('form.bookmark-toggle label.toggle-bookmark', text: 'Select')
-    expect(page).to have_css("div[data-doc-id='1'] label.toggle-bookmark input[type='checkbox']")
+    expect(page).to have_css '.gallery-document h3.index_title', text: 'An object'
+    expect(page).to have_css '.gallery-document button.btn-preview', text: 'Preview'
+    expect(page).to have_css 'form.bookmark-toggle .toggle-bookmark-label', text: 'Select'
+    expect(page).to have_css "div[data-doc-id='1'] .toggle-bookmark-label input[type='checkbox']", visible: :hidden
     page.first('button.btn.docid-1').click
     within '.preview-container' do
       expect(page).to have_css('h3', text: 'An object')

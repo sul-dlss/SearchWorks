@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 (function( $ ){
   $.fn.homePageFacetCollapse = function() {
     var container = this
