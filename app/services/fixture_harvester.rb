@@ -22,7 +22,8 @@ class FixtureHarvester
     '2285756', # child of 5488000, for second holding
     '4085177', # Finding aid with many call numbers
     '6631609', # Mix of circulating and non-circulating w/finding aid
-    'L210044' # Has a large number of online links.
+    'L210044', # Has a large number of online links.
+    '2757487' # Has punctuation in the title
   ].freeze
 
   def self.harvest_all
