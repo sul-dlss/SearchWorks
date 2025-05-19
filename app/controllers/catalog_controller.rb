@@ -152,9 +152,9 @@ class CatalogController < ApplicationController
     config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'stanford_work_facet_hsim',
-                            label: 'Stanford student work',
-                            component: Blacklight::Hierarchy::FacetFieldListComponent,
-                            sort: 'count', collapse: false, show: false
+                           label: 'Stanford student work',
+                           component: Blacklight::Hierarchy::FacetFieldListComponent,
+                           sort: 'count', collapse: false, show: false
     config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'access_facet', label: 'Access', query: {
       'At the Library': {

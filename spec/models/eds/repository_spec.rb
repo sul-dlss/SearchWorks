@@ -20,10 +20,10 @@ RSpec.describe Eds::Repository do
 
   it '#find' do
     session = instance_double(EBSCO::EDS::Session,
-      retrieve: instance_double(EBSCO::EDS::Record,
-        to_solr: instance_double(SolrDocument)
-      )
-    )
+                              retrieve: instance_double(EBSCO::EDS::Record,
+                                                        to_solr: instance_double(SolrDocument)
+                                                       )
+                             )
     expect(EBSCO::EDS::Session).to receive(:new).twice.and_return(session)
     expect(instance.find('123__abc')).to be_truthy
     expect(instance.find('123__abc__def')).to be_truthy
@@ -129,7 +129,7 @@ RSpec.describe Eds::Repository do
       let(:session) do
         instance_double(
           Eds::Session,
-            solr_retrieve_list: []
+          solr_retrieve_list: []
         )
       end
 
