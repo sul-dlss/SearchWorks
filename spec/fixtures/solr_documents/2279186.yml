@@ -127,7 +127,7 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
+context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
 
   '
 context_input_name_ssi: "/dev/null"
@@ -223,9 +223,9 @@ folio_json_struct:
   p. l., [33]-68 p. diagr. 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
 bound_with_parent_item_ids_ssim:
 - f947bd93-a1eb-5613-8745-1063f948c461
-last_updated: '2025-05-11T09:08:36Z'
-created: '2025-05-11T09:08:36Z'
-timestamp: '2025-05-11T09:08:36Z'
+last_updated: '2025-05-18T09:08:36Z'
+created: '2025-05-18T09:08:36Z'
+timestamp: '2025-05-18T09:08:36Z'
 author_struct:
 - creator:
   - link: Finlow, Robert Steel, 1877-

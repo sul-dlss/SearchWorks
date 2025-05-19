@@ -3003,7 +3003,7 @@ iiif_manifest_url_ssim:
 - https://purl.stanford.edu/kc617sy2062/iiif/manifest
 - https://purl.stanford.edu/ym220zf7271/iiif/manifest
 context_source_ssi: folio
-context_version_ssi: '41e475767d7d2eac82058dc2358ce5c8e5bb08f8
+context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
 
   '
 context_input_name_ssi: "/dev/null"
@@ -3401,9 +3401,9 @@ folio_json_struct:
   of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"},{"uri":"https://purl.stanford.edu/zy709tp1294","name":"Version
   of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1958},"statusUpdatedDate":"2023-08-21T03:25:59.207+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["    maps
   : col. ; 48 x 72 cm. or smaller."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-11T10:01:43Z'
-created: '2025-05-11T10:01:43Z'
-timestamp: '2025-05-11T10:01:43Z'
+last_updated: '2025-05-18T10:05:53Z'
+created: '2025-05-18T10:05:53Z'
+timestamp: '2025-05-18T10:05:53Z'
 author_struct:
 - corporate_author:
   - link: Great Britain. Directorate of Military Survey.
@@ -3428,6 +3428,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 547C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zv259pb5958
@@ -3445,6 +3446,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 447D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cd631zf4501
@@ -3462,6 +3464,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 90D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zc476rj7392
@@ -3479,6 +3482,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 318C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yz979xr1774
@@ -3496,6 +3500,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 347C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bd307zj8956
@@ -3513,6 +3518,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 319A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ck970ff7198
@@ -3530,6 +3536,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 231C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jv858wk2213
@@ -3547,6 +3554,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 323D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bb990np9908
@@ -3564,6 +3572,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 153D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sq996hr4261
@@ -3581,6 +3590,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 342A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wz300mx8841
@@ -3598,6 +3608,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 325D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tg722fc1868
@@ -3615,6 +3626,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 326D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fz959hz0265
@@ -3632,6 +3644,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 170C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mw751sb3938
@@ -3649,6 +3662,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 547B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/db031pn8686
@@ -3666,6 +3680,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 324C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jb945yf4411
@@ -3683,6 +3698,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 428A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bv196dj3866
@@ -3700,6 +3716,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 343B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hc959mf2544
@@ -3717,6 +3734,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 429A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tp741mw5352
@@ -3734,6 +3752,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 445D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pr273mp0020
@@ -3751,6 +3770,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 231A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kr780qv0806
@@ -3768,6 +3788,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 248D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rc234kj5074
@@ -3785,6 +3806,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 446B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rd073tj7208
@@ -3802,6 +3824,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 446C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qw919gr8929
@@ -3819,6 +3842,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 252C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mz862tx7460
@@ -3836,6 +3860,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 318B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qt941wg6276
@@ -3853,6 +3878,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 320D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gq837gz5775
@@ -3870,6 +3896,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 340A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vg722dr5718
@@ -3887,6 +3914,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 340C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/nb380xn4095
@@ -3904,6 +3932,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 233B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zg954fr2885
@@ -3921,6 +3950,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 105C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kp508rp7728
@@ -3938,6 +3968,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 687B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pc773bx5690
@@ -3955,6 +3986,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 254C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jx415pn5419
@@ -3972,6 +4004,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 544A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pb730jg5377
@@ -3989,6 +4022,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 171A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kj396rg2346
@@ -4006,6 +4040,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 169C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mz332mc7808
@@ -4023,6 +4058,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 104A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cr758kb6547
@@ -4040,6 +4076,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 567B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qq849fz5464
@@ -4057,6 +4094,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 448D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gh530qf3086
@@ -4074,6 +4112,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 341D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zd797ts4877
@@ -4091,6 +4130,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 568C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rv029km2605
@@ -4108,6 +4148,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 248C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zb103wm9178
@@ -4125,6 +4166,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 569B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xv262zs8703
@@ -4142,6 +4184,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 546C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/np551rt6095
@@ -4159,6 +4202,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 426B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qb437qt6449
@@ -4176,6 +4220,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 320B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hg271cx3701
@@ -4193,6 +4238,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 347D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ww517ph3381
@@ -4210,6 +4256,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 52B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wr773cn8918
@@ -4227,6 +4274,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 339B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xq694ch4202
@@ -4244,6 +4292,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 153B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vp804vb9013
@@ -4261,6 +4310,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 324D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sw854nv7473
@@ -4278,6 +4328,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 342C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/nx931qg0415
@@ -4295,6 +4346,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 789C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cg546fw9584
@@ -4312,6 +4364,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 150B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hr345xn8169
@@ -4329,6 +4382,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 445A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yr430kv0524
@@ -4346,6 +4400,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 251B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jg197zd5264
@@ -4363,6 +4418,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 426D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tk423gr2066
@@ -4380,6 +4436,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 567A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cv875dt8410
@@ -4397,6 +4454,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 234C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mp102gw4390
@@ -4414,6 +4472,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 102C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fv864rm5905
@@ -4431,6 +4490,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 422D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jj322wf8843
@@ -4448,6 +4508,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 247C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yj629cw7955
@@ -4465,6 +4526,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 51D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jx088nt3682
@@ -4482,6 +4544,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 169D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yf282xt2882
@@ -4499,6 +4562,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 421A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bw273kq6634
@@ -4516,6 +4580,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 347B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bj455dk7466
@@ -4533,6 +4598,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 253B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sf302rg8787
@@ -4550,6 +4616,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 166D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pv377xn2125
@@ -4567,6 +4634,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 320A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wr594cm0777
@@ -4584,6 +4652,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 232A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zq795tz0734
@@ -4601,6 +4670,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 451A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tz876rq8529
@@ -4618,6 +4688,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 166C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gc010sg6062
@@ -4635,6 +4706,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 338B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/nn940tv1782
@@ -4652,6 +4724,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 420C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gs696vd5988
@@ -4669,6 +4742,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 342D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fw833dy5935
@@ -4686,6 +4760,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 566A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tr118jz8475
@@ -4703,6 +4778,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 321C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qh720pr6164
@@ -4720,6 +4796,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 428D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/nd071mt6356
@@ -4737,6 +4814,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 547A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qx210rh0316
@@ -4754,6 +4832,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 342B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gw204jr3220
@@ -4771,6 +4850,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 687A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tc886rp1280
@@ -4788,6 +4868,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 232D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hw622pp5563
@@ -4805,6 +4886,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 790C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kg564qf9800
@@ -4822,6 +4904,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 443D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wb724hb2740
@@ -4839,6 +4922,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 346A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rc015hz8157
@@ -4856,6 +4940,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 545A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hv500zg9212
@@ -4873,6 +4958,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 543C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cq375xn3118
@@ -4890,6 +4976,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 568A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cy635bw5681
@@ -4907,6 +4994,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 321D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kz468kh7995
@@ -4924,6 +5012,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 103B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kj574bj2708
@@ -4941,6 +5030,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 687D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fd304rq0926
@@ -4958,6 +5048,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 447B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wm440tr8325
@@ -4975,6 +5066,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 563C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yc801gp6049
@@ -4992,6 +5084,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 420D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/dm971cd2457
@@ -5009,6 +5102,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 323A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xy299xf2369
@@ -5026,6 +5120,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 790D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rx689zc6468
@@ -5043,6 +5138,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 170D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fv932wf7145
@@ -5060,6 +5156,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 232C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/nn865zd2425
@@ -5077,6 +5174,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 91D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mm037vq5489
@@ -5094,6 +5192,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 339D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xb215cp4260
@@ -5111,6 +5210,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 544B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gz397zx1281
@@ -5128,6 +5228,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 446A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zb861zj8179
@@ -5145,6 +5246,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 543A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vd663hy9800
@@ -5162,6 +5264,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 247B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fb841hv3754
@@ -5179,6 +5282,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 250C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wc052fq2312
@@ -5196,6 +5300,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 344B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cv302tz9694
@@ -5213,6 +5318,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 102A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bs790mz9075
@@ -5230,6 +5336,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 548C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vd103kn4564
@@ -5247,6 +5354,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 249D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wd610cq4739
@@ -5264,6 +5372,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 153A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mc091kj9901
@@ -5281,6 +5390,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 92D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fv108rb7559
@@ -5298,6 +5408,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 445B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ck235bm1454
@@ -5315,6 +5426,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 326A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hx426xz1887
@@ -5332,6 +5444,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 339C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tt168fw2965
@@ -5349,6 +5462,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 454B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fc216kw5871
@@ -5366,6 +5480,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 234A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zn834fh4458
@@ -5383,6 +5498,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 326B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pq194kf2455
@@ -5400,6 +5516,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 340B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gf276kk8083
@@ -5417,6 +5534,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 167D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rc844bp6280
@@ -5434,6 +5552,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 91A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hy339rq8880
@@ -5451,6 +5570,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 427B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bf399nz2935
@@ -5468,6 +5588,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 253C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bd744jb7945
@@ -5485,6 +5606,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 320C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yt988jr2056
@@ -5502,6 +5624,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 167C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xm609pb8297
@@ -5519,6 +5642,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 252A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rn179nw9748
@@ -5536,6 +5660,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 444D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tp033xh6017
@@ -5553,6 +5678,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 251C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wc941dk6580
@@ -5570,6 +5696,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 339A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kp466jy0313
@@ -5587,6 +5714,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 168B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gp597cn9923
@@ -5604,6 +5732,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 346D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kv772qj2096
@@ -5621,6 +5750,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 548D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kc495hj1258
@@ -5638,6 +5768,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 426C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qh090vz0025
@@ -5655,6 +5786,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 105-D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zy442wh0352
@@ -5672,6 +5804,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 686A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yc950gh3274
@@ -5689,6 +5822,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 443B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fs092hd8318
@@ -5706,6 +5840,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 443A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vt127wx0106
@@ -5723,6 +5858,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 445C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zn705sn5448
@@ -5740,6 +5876,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 790A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jd918gv5091
@@ -5757,6 +5894,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 543D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hf517vd8477
@@ -5774,6 +5912,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 253A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fj711dw4324
@@ -5791,6 +5930,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 563D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rn067hh0016
@@ -5808,6 +5948,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 338A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sg317zj9980
@@ -5825,6 +5966,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 444A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mv503wh8831
@@ -5842,6 +5984,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 343A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pz492yv5209
@@ -5859,6 +6002,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 427D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ns527wc3196
@@ -5876,6 +6020,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 233C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pk564nh0796
@@ -5893,6 +6038,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 103C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/dj333fj8330
@@ -5910,6 +6056,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 229B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ts827yd3657
@@ -5927,6 +6074,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 324B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fr234md9031
@@ -5944,6 +6092,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 103A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sp755qz8775
@@ -5961,6 +6110,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 106C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cp439jj7055
@@ -5978,6 +6128,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 346C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vg357dn8737
@@ -5995,6 +6146,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 91C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yk902nt9924
@@ -6012,6 +6164,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 427A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vj850ss6169
@@ -6029,6 +6182,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 424B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zy709tp1294
@@ -6046,6 +6200,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 343D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tr776sz9129
@@ -6063,6 +6218,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 429B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qz825nw5015
@@ -6080,6 +6236,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 451B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xw981xm1000
@@ -6097,6 +6254,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 343C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wv770gm9639
@@ -6114,6 +6272,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 421C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pb742hz0143
@@ -6131,6 +6290,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 543B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mx453vv4125
@@ -6148,6 +6308,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 429D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ry026kz5476
@@ -6165,6 +6326,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 447C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mm758mm9723
@@ -6182,6 +6344,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 169B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/nw512sb7644
@@ -6199,6 +6362,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 168A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mk382jc0555
@@ -6216,6 +6380,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 152B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kb879bp8405
@@ -6233,6 +6398,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 420B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ts483rj4187
@@ -6250,6 +6416,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 152A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sq138dh1918
@@ -6267,6 +6434,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 250A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vd645qz4130
@@ -6284,6 +6452,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 444C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hd204pf8381
@@ -6301,6 +6470,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 52D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yt720yh7147
@@ -6318,6 +6488,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 428B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kn748rc6337
@@ -6335,6 +6506,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 448C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jd818fm5829
@@ -6352,6 +6524,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 153C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mj983yr1955
@@ -6369,6 +6542,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 230C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gv943kr7154
@@ -6386,6 +6560,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 686B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tb590cy7704
@@ -6403,6 +6578,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 319B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xz091fb5900
@@ -6420,6 +6596,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 344A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ck642tc6974
@@ -6437,6 +6614,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 344C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hy422nc5946
@@ -6454,6 +6632,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 546B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tb281jy8644
@@ -6471,6 +6650,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 325B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tf332yz0882
@@ -6488,6 +6668,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 567D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cc673kt9187
@@ -6505,6 +6686,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 426A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vr445th2217
@@ -6522,6 +6704,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 547D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ky808mb7492
@@ -6539,6 +6722,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 169A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pc924bn1065
@@ -6556,6 +6740,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 90B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sk151sj6914
@@ -6573,6 +6758,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 249C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fv118cv5989
@@ -6590,6 +6776,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 568B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vn264zf9946
@@ -6607,6 +6794,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 235D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sm836sn7356
@@ -6624,6 +6812,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 544C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jn865qw7522
@@ -6641,6 +6830,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 150C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zr517pb4699
@@ -6658,6 +6848,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 152D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cv358gm6312
@@ -6675,6 +6866,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 338D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zq563vm9120
@@ -6692,6 +6884,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 154A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jd912zb7905
@@ -6709,6 +6902,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 347A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ys979yp0046
@@ -6726,6 +6920,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 321A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jb378nb7043
@@ -6743,6 +6938,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 446D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bj998yw7802
@@ -6760,6 +6956,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 91B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qq935bs1386
@@ -6777,6 +6974,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 322B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tn607cg4546
@@ -6794,6 +6992,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 248A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jg979gn6436
@@ -6811,6 +7010,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 52C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vk176df6059
@@ -6828,6 +7028,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 152C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ss574qc5343
@@ -6845,6 +7046,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 230B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xw541rj8817
@@ -6862,6 +7064,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 249A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mj016mv8648
@@ -6879,6 +7082,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 425A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kv156qq4091
@@ -6896,6 +7100,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 790B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cp929yj5391
@@ -6913,6 +7118,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 346B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xp774dj5044
@@ -6930,6 +7136,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 563B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qy235fd6062
@@ -6947,6 +7154,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 340D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bf069jg5362
@@ -6964,6 +7172,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 247A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kr969gz5480
@@ -6981,6 +7190,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 544D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bk109yq1352
@@ -6998,6 +7208,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 448A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wm669fz6860
@@ -7015,6 +7226,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 251D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qg481kc9194
@@ -7032,6 +7244,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 233A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hb912md1619
@@ -7049,6 +7262,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 325A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/by698fk0037
@@ -7066,6 +7280,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 102B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sk854dn4181
@@ -7083,6 +7298,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 341C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zp854tt7387
@@ -7100,6 +7316,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 250B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rp196mf8398
@@ -7117,6 +7334,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 232B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tp856yb2179
@@ -7134,6 +7352,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 104D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ms925wb3241
@@ -7151,6 +7370,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 90A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zy545sj9994
@@ -7168,6 +7388,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 546D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yk963zt0936
@@ -7185,6 +7406,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 325C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hm722wm1938
@@ -7202,6 +7424,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 250D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ws060sg3883
@@ -7219,6 +7442,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 566D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tw995gh2699
@@ -7236,6 +7460,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 345B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rm050rz3143
@@ -7253,6 +7478,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 687C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vb663ns7841
@@ -7270,6 +7496,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 233D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gn784vr8553
@@ -7287,6 +7514,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 247D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wq951sv8861
@@ -7304,6 +7532,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 252D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vj861rw7639
@@ -7321,6 +7550,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 427C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ff452xd7294
@@ -7338,6 +7568,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 564B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mz856ht4084
@@ -7355,6 +7586,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 319D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wc841sm3770
@@ -7372,6 +7604,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 344D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mt845ww5175
@@ -7389,6 +7622,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 428C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rq825rp9994
@@ -7406,6 +7640,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 791D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ny225ht7536
@@ -7423,6 +7658,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 448B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/rs865ry7756
@@ -7440,6 +7676,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 235A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yh413wd9320
@@ -7457,6 +7694,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 447A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ts068qw2491
@@ -7474,6 +7712,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 168D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sd287dx3201
@@ -7491,6 +7730,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 338C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tw005jg5205
@@ -7508,6 +7748,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 321B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/dn746mp2313
@@ -7525,6 +7766,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 322C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bw346jc9152
@@ -7542,6 +7784,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 168C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ms952zq2581
@@ -7559,6 +7802,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 92C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/km812jb0344
@@ -7576,6 +7820,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 546A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yp406hw0799
@@ -7593,6 +7838,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 231D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fv266zp1328
@@ -7610,6 +7856,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 563A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/dn808kf7429
@@ -7627,6 +7874,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 104C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/qt145yx2100
@@ -7644,6 +7892,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 248B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wr750sn7886
@@ -7661,6 +7910,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 92A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kr602cx5372
@@ -7678,6 +7928,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 789B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kj294bf2927
@@ -7695,6 +7946,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 92B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ty609yd9778
@@ -7712,6 +7964,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 326C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kh947ry9472
@@ -7729,6 +7982,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 167A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mq895fz3143
@@ -7746,6 +8000,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 230A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mx314gb6704
@@ -7763,6 +8018,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 345D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wr033pv3485
@@ -7780,6 +8036,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 253D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/jm902pd8686
@@ -7797,6 +8054,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 231B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cf100sj3790
@@ -7814,6 +8072,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 319C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/tp666bv2047
@@ -7831,6 +8090,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 420A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/dx459bp8431
@@ -7848,6 +8108,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 791A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/nf292pm2980
@@ -7865,6 +8126,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 341A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/hx302ky7941
@@ -7882,6 +8144,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 234B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yb509gh9115
@@ -7899,6 +8162,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 51A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cp585vg8898
@@ -7916,6 +8180,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 322A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/vy082nx1910
@@ -7933,6 +8198,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 152B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ns994kd7849
@@ -7950,6 +8216,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 105B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/gh052kj8756
@@ -7967,6 +8234,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 567C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xc586dt7980
@@ -7984,6 +8252,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 235B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wy716vc1430
@@ -8001,6 +8270,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 235C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mz020kf6288
@@ -8018,6 +8288,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 322D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/bw189wt3697
@@ -8035,6 +8306,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 345C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xw889tg0001
@@ -8052,6 +8324,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 341B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/mn736jz5953
@@ -8069,6 +8342,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 104B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sd331kn4612
@@ -8086,6 +8360,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 249B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/dt756gb0113
@@ -8103,6 +8378,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 251A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/cr722wd5520
@@ -8120,6 +8396,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 171C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kc529jr3169
@@ -8137,6 +8414,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 103D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/dm929wk5145
@@ -8154,6 +8432,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 444B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/zr543sy3395
@@ -8171,6 +8450,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 564C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ny688yg0044
@@ -8188,6 +8468,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 151C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sd627sz0663
@@ -8205,6 +8486,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 429C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kj593hy7743
@@ -8222,6 +8504,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 423A
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/sc105gf0196
@@ -8239,6 +8522,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 568D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/np150mh1543
@@ -8256,6 +8540,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 170B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/xy913sm0271
@@ -8273,6 +8558,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 234D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/km290mw3096
@@ -8290,6 +8576,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 443C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/fv146qy3984
@@ -8307,6 +8594,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 51C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kj513ns1986
@@ -8324,6 +8612,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 154D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/wh951xs7762
@@ -8341,6 +8630,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 167B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/yq059pc0900
@@ -8358,6 +8648,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 90C
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kb791bg1420
@@ -8375,6 +8666,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 254B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/pk879vt9282
@@ -8392,6 +8684,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 545D
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/kc617sy2062
@@ -8409,6 +8702,7 @@ marc_links_struct:
   link_text: G3200 S500 .G7 SHEET 252B
   link_title: ''
   additional_text:
+  additional_links: []
   material_type:
   note: ''
   href: https://purl.stanford.edu/ym220zf7271
