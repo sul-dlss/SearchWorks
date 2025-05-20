@@ -13,7 +13,7 @@ class Citation
 
   # @return [Boolean] Whether or not the document is citable
   def citable?
-    show_oclc_citation? || citations_from_mods.present? || document.respond_to?(:load_marc)
+    show_oclc_citation? || citations_from_mods.present? || citations_from_marc.present?
   end
 
   # @return [Hash] A hash of all citations for the document
@@ -64,7 +64,7 @@ class Citation
   end
 
   def citations_from_marc
-    return unless citeproc_item
+    return unless Settings.citeproc_citations.enabled && document.respond_to?(:load_marc) && citeproc_item
 
     @citations_from_marc ||= Citations::MarcCitation.new(citeproc_item:).all_citations
   end

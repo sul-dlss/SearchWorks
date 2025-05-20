@@ -80,6 +80,9 @@ folio:
 
 live_lookup_service: LiveLookup::Folio
 
+citeproc_citations:
+  enabled: false
+
 oclc_discovery:
   citations:
     enabled: false
