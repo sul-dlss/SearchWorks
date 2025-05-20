@@ -18,7 +18,7 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
   delegate :id, to: :document
 
   def item
-    return unless document.respond_to?(:load_marc) && title.present?
+    return unless marc.present? && title.present?
 
     CiteProc::Item.new(item_attributes)
   end
@@ -36,7 +36,7 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
   end
 
   def marc
-    @marc ||= document.load_marc
+    document.to_marc
   end
 
   # NOTE: 1XX fields should have precidence over 7XX fields. See 4635402
