@@ -1013,7 +1013,6 @@ medpix.nlm.nih.gov
 mefj.springeropen.com
 mehdijournal.com
 mejdd.org
-mem.lyellcollection.org
 mental.jmir.org
 meridian.allenpress.com
 methods.sagepub.com
@@ -1245,7 +1244,6 @@ publikationen.ub.uni-frankfurt.de
 publish.ancientbooks.cn
 publisher.abc-clio.com
 publishing.rcseng.ac.uk
-publishing.vt.edu
 pubmed.ncbi.nlm.nih.gov
 pubs.acs.org
 pubs.aip.org
