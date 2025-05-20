@@ -44,11 +44,11 @@ en:
         mla: MLA
         turabian: Turabian
         preferred: Preferred citation
-        marc_apa: APA (from MARC)
-        chicago-author-date: Chicago (from MARC)
-        harvard-cite-them-right: Harvard (from MARC)
-        modern-language-association: MLA (from MARC)
-        turabian-author-date: Turabian (from MARC)
+        marc_apa: APA
+        chicago-author-date: Chicago
+        harvard-cite-them-right: Harvard
+        modern-language-association: MLA
+        turabian-author-date: Turabian
     mini_bento:
       article:
         name: Catalog
