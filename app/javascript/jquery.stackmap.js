@@ -37,10 +37,8 @@ import L from "leaflet";
         $container.find('.callnumber').html(data.results.callno);
 
         $.each(maps, function(index, map) {
-          var $tpl = $tplMap.clone(),
-              $rangeInfo = $tpl.find('.range-info'),
-              $zoomControls = $tpl.find('.zoom-controls'),
-              range = map.ranges[0];
+          const $tpl = $tplMap.clone()
+          const $zoomControls = $tpl.find('.zoom-controls')
 
           $container.find('.library').html(map.library);
           $container.find('.floorname').html(map.floorname);
@@ -66,7 +64,7 @@ import L from "leaflet";
           attributionControl: false
         });
         var bounds = [[0, 0], [map.height, map.width]];
-        var image = L.imageOverlay(
+        L.imageOverlay(
           map.mapurl + '&marker=1&type=.png',
           bounds
         ).addTo(viewer);
