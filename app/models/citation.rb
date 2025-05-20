@@ -64,7 +64,7 @@ class Citation
   end
 
   def citations_from_marc
-    return unless Settings.citeproc_citations.enabled && document.to_marc && citeproc_item
+    return unless Settings.citeproc_citations.enabled && document.respond_to?(:to_marc) && document.to_marc && citeproc_item
 
     @citations_from_marc ||= Citations::MarcCitation.new(citeproc_item:).all_citations
   end
