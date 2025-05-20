@@ -4,20 +4,26 @@
   <div class="row">
     <div class="col-md-9 col-sm-12">
       Start at call number:
-      <% spines.each_with_index do |spine, index| %>
-        <span class="btn-callnumber">
-          <%= link_to_callnumber_browse(spine, index) %>
-        </span>
-      <% end %>
+      <ul class="list-inline d-inline ms-3" role="tablist">
+        <% spines.each_with_index do |spine, index| %>
+          <li class="d-inline" role="presentation">
+            <%= link_to_callnumber_browse(spine, index) %>
+          </li>
+        <% end %>
+      </ul>
+
     </div>
     <div class="view-full-page col-md-3 col-sm-12">
-      <%= link_to "View full page", "#" %>
+      <%= link_to "View full page", "#", hidden: true %>
     </div>
   </div>
 
-  <% spines.each_with_index do |item, index| %>
-    <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container" style="<%= 'display:none;' unless index == 0 %>">
-      <div class="embedded-items"><div class="gallery"></div></div>
-    </div>
-  <% end %>
+
+  <div class="tab-content">
+    <% spines.each_with_index do |item, index| %>
+      <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
+        <div class="embedded-items"><div class="gallery"></div></div>
+      </div>
+    <% end %>
+  </div>
 </div>

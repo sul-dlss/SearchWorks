@@ -22,11 +22,17 @@ module Record
         def link_to_callnumber_browse(spine, index = 0)
           button_tag(
             spine.base_callnumber,
-            class: "collapsed btn btn-secondary",
+            class: "btn btn-secondary #{'active' if index.zero?}",
             id: "callnumber-browse-#{index}",
-            "aria-controls" => "callnumber-browse-#{index}",
-            "aria-expanded" => "true",
+            type: "button",
+            role: "tab",
+            aria: {
+              controls: "callnumber-#{index}",
+              selected: index.zero?
+            },
             data: { behavior: "embed-browse",
+                    bs_toggle: "tab",
+                    bs_target: "#callnumber-#{index}",
                     start: document[:id],
                     embed_viewport: "#callnumber-#{index}",
                     index_path: browse_index_path(
