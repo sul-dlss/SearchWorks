@@ -8,6 +8,8 @@ module Citeproc
     # See https://www.loc.gov/marc/bibliographic/bd008a.html
     # See https://www.oclc.org/bibformats/en/fixedfield/dates.html for how OCLC uses this.
     def self.find(field008)
+      return unless field008
+
       type_of_date = field008.value[6]
       date1_raw = field008.value[7..10]
       date1 = date1_raw.to_i

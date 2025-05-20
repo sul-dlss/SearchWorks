@@ -132,10 +132,10 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
   end
 
   def title
-    @title ||= marc['245'].select { |subfield| %w[a b].include?(subfield.code) }
-                          .map { strip_trailing_punct(it.value) }
-                          .join(' ')
-                          .delete_suffix(' /')
+    @title ||= (marc['245'] || []).select { |subfield| %w[a b].include?(subfield.code) }
+                                  .map { strip_trailing_punct(it.value) }
+                                  .join(' ')
+                                  .delete_suffix(' /')
   end
 
   # Type is important because the CSL may
