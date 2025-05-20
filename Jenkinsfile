@@ -53,11 +53,10 @@ pipeline {
     stage('UAT deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'uat'
-        BRANCH = 'citeproc'
       }
 
       when {
-        branch 'citeproc'
+        branch 'main'
       }
 
       steps {
