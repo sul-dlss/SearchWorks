@@ -13,7 +13,7 @@
 			removeTruncation($this);
 			addTruncation($this);
 		});
-		
+
  		addTruncation($this);
 
 	  function addTruncation(el){
@@ -22,7 +22,6 @@
 				  var parent = $(this);
 				  var fontSize = $(this).css('font-size');
 				  var lineHeight = $(this).css("line-height") ? $(this).css("line-height").replace('px','') : Math.floor(parseInt(fontSize.replace('px','')) * 1.5);
-					var total_lines = Math.ceil(parent.height() / lineHeight);
 					var settings = $.extend({
 						'lines'  : 3,
 						'height' : null,
@@ -33,7 +32,7 @@
 					if(settings.height){
 						truncate_height = settings.height;
 					}else{
-					  truncate_height = (lineHeight * settings.lines);	
+					  truncate_height = (lineHeight * settings.lines);
 					}
 				  if(parent.height() > truncate_height) {
 					  var orig_content = parent.html();
@@ -59,7 +58,7 @@
 			  }
 		  });
 	  }
-	
+
 	  function removeTruncation(el){
 		  el.each(function(){
 			  if($(".responsiveTruncate", $(this)).length > 0){
