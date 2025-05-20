@@ -6,6 +6,17 @@ class FacetOptionsPresenter
     @context = context
   end
 
+  def month_facets
+    (0..2).map do |i|
+      date = Time.zone.today << i
+      PubDateLimiter.new({
+                           'Id' => 'DT1',
+                           'SearchField' => "#{date.strftime('%Y-%m')}/#{Time.zone.today.strftime('%Y-%m')}",
+                           'Label' => "Since #{date.strftime('%B %Y')}"
+                         }, params, context)
+    end
+  end
+
   def limiters
     @limiters ||= available_limiters.map do |limiter|
       Limiter.new(limiter, params, context)
@@ -34,7 +45,6 @@ class FacetOptionsPresenter
   end
 
   class Limiter
-    FACET_FIELD = 'eds_search_limiters_facet'
     delegate :facet_item_presenter, :search_action_path, :search_state, :facet_configuration_for_field, to: :context
 
     def initialize(limiter, params, context)
@@ -43,12 +53,20 @@ class FacetOptionsPresenter
       @context = context
     end
 
+    def facet_field
+      'eds_search_limiters_facet'
+    end
+
     def id
       limiter['Id']
     end
 
     def label
       limiter['Label']
+    end
+
+    def search_value
+      label
     end
 
     def type
@@ -64,23 +82,33 @@ class FacetOptionsPresenter
     end
 
     def selected?
-      search_state.filter(config).include?(label)
+      search_state.filter(config).include?(search_value)
     end
 
     def search_url
       if selected?
-        search_action_path(search_state.filter(FACET_FIELD).remove(label).to_h)
+        search_action_path(search_state.filter(facet_field).remove(search_value).to_h)
       else
-        (config.item_presenter || Blacklight::FacetItemPresenter).new(label, config, context, FACET_FIELD).href
+        (config.item_presenter || Blacklight::FacetItemPresenter).new(search_value, config, context, facet_field).href
       end
     end
 
     def config
-      facet_configuration_for_field(FACET_FIELD)
+      facet_configuration_for_field(facet_field)
     end
 
     private
 
     attr_reader :limiter, :params, :context
+  end
+
+  class PubDateLimiter < Limiter
+    def facet_field
+      'eds_pub_date_facet'
+    end
+
+    def search_value
+      limiter['SearchField']
+    end
   end
 end

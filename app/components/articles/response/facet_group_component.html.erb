@@ -13,7 +13,7 @@
             <%= label_tag("eds_limiter_#{limiter.id}") do %>
               <%= check_box(
                     'f',
-                    'eds_search_limiters_facet',
+                    limiter.facet_field,
                     { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected? },
                     limiter.label,
                     nil
