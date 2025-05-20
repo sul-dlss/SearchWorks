@@ -698,8 +698,10 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rvm
   capybara (~> 3.0)
+  citeproc (~> 1.1)
   coderay
   config
+  csl-styles (~> 1.0)
   cssbundling-rails (~> 1.4)
   debug
   devise

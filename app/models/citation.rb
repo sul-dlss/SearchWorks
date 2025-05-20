@@ -13,7 +13,7 @@ class Citation
 
   # @return [Boolean] Whether or not the document is citable
   def citable?
-    show_oclc_citation? || citations_from_mods.present?
+    show_oclc_citation? || citations_from_mods.present? || citations_from_marc.present?
   end
 
   # @return [Hash] A hash of all citations for the document
@@ -29,6 +29,10 @@ class Citation
     citations_from_mods.presence || {}
   end
 
+  def citeproc_item
+    @citeproc_item ||= CiteprocItemService.create(document)
+  end
+
   private
 
   attr_reader :document
@@ -41,6 +45,7 @@ class Citation
 
       citation_hash.merge!(citations_from_mods) if citations_from_mods.present?
       citation_hash.merge!(citations_from_oclc) if citations_from_oclc.present?
+      citation_hash.merge!(citations_from_marc) if citations_from_marc.present?
 
       citation_hash
     end
@@ -56,6 +61,12 @@ class Citation
     return unless document.mods && document.mods.note.present?
 
     @citations_from_mods ||= Citations::ModsCitation.new(notes: document.mods.note).all_citations
+  end
+
+  def citations_from_marc
+    return unless Settings.citeproc_citations.enabled && document.respond_to?(:to_marc) && document.to_marc && citeproc_item
+
+    @citations_from_marc ||= Citations::MarcCitation.new(citeproc_item:).all_citations
   end
 
   def show_oclc_citation?

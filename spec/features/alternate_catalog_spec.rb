@@ -36,8 +36,8 @@ RSpec.feature 'Alterate catalog results', :js do
       within '.alternate-catalog' do
         expect(page).to have_css 'h3', text: 'Your search also found results in'
         expect(page).to have_link 'View all catalog results'
-        expect(page).to have_css '.alternate-catalog-count', text: '45'
-        expect(page).to have_link 'Book 18', href: "/catalog?q=1%2A&f[format_main_ssim][]=Book"
+        expect(page).to have_css '.alternate-catalog-count', text: '52'
+        expect(page).to have_link 'Book 25', href: "/catalog?q=1%2A&f[format_main_ssim][]=Book"
         expect(page).to have_link 'Image 7', href: "/catalog?q=1%2A&f[format_main_ssim][]=Image"
         expect(page).to have_link 'Database 5', href: "/catalog?q=1%2A&f[format_main_ssim][]=Database"
 

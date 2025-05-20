@@ -1,0 +1,542 @@
+---
+id: '14434124'
+hashed_id_ssi: de1e7b47796e6a582d44b92557a42808
+marc_json_struct:
+- '{"leader":"02312cam a2200493 i 4500","fields":[{"001":"a14434124"},{"003":"SIRSI"},{"005":"20250512175802.4"},{"008":"191223t20212021fr            000
+  j eng d"},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"9791096677092"},{"q":"(paperback)"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a14434124"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"LUN"},{"b":"eng"},{"e":"rda"},{"c":"LUN"},{"d":"TEF"},{"d":"J9U"},{"d":"STF"},{"d":"UtOrBLW"}]}},{"041":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"eng"},{"a":"yid"},{"h":"yid"}]}},{"049":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"STFA"}]}},{"050":{"ind1":" ","ind2":"4","subfields":[{"a":"PJ5129.N6"},{"b":"T813
+  2021"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Nomberg, Hersh David,"},{"d":"1876-1927,"},{"e":"author."},{"0":"http://id.loc.gov/authorities/names/n82247757"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Between
+  parents /"},{"c":"Hersh Dovid Nomberg ; translated by Ollie Elkus and Daniel Kennedy"}]}},{"246":{"ind1":"3","ind2":"1","subfields":[{"6":"880-01"},{"a":"Tsṿishn
+  ṭaṭe-mame"}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"6":"880-02"},{"a":"Ṭur
+  :"},{"b":"Farlag Press,"},{"c":"[2021]"}]}},{"264":{"ind1":" ","ind2":"4","subfields":[{"c":"©2021"}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"61 pages ;"},{"c":"18 cm"}]}},{"336":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"unmediated"},{"b":"n"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"volume"},{"b":"nc"},{"2":"rdacarrier"}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"\"Originally published in Der Yud, Krakow, 1902.\"--Title
+  page verso"}]}},{"500":{"ind1":" ","ind2":" ","subfields":[{"a":"\"Yiddish/English
+  bilingual edition\"--Cover"}]}},{"520":{"ind1":" ","ind2":" ","subfields":[{"a":"\"A
+  child of divorced parents, eleven-year-old Yitskhok, finds himself adrift when his
+  mother decides to remarry and he is sent to live with his estranged father in the
+  big city.\" --Back cover"}]}},{"546":{"ind1":" ","ind2":" ","subfields":[{"a":"Texts
+  in Yiddish and English on facing pages"}]}},{"655":{"ind1":" ","ind2":"7","subfields":[{"a":"Short
+  stories."},{"2":"lcgft"},{"0":"http://id.loc.gov/authorities/genreForms/gf2014026542"}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Fiction."},{"2":"lcgft"},{"0":"http://id.loc.gov/authorities/genreForms/gf2014026339"}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Elkus, Ollie,"},{"e":"translator."}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Kennedy, Daniel,"},{"d":"1981-"},{"e":"translator."},{"0":"http://id.loc.gov/authorities/names/no2022072963"}]}},{"700":{"ind1":"1","ind2":"2","subfields":[{"i":"Container
+  of (work):"},{"a":"Nomberg, Hersh David,"},{"d":"1876-1927."},{"t":"Tvishn tate-mame."}]}},{"700":{"ind1":"1","ind2":"2","subfields":[{"i":"Container
+  of (expression):"},{"a":"Nomberg, Hersh David,"},{"d":"1876-1927."},{"t":"Tvishn
+  tate-mame."},{"l":"English."}]}},{"880":{"ind1":"3","ind2":"1","subfields":[{"6":"246-01/r"},{"a":"צווישן
+  טאטע־מאמע"}]}},{"880":{"ind1":" ","ind2":"1","subfields":[{"6":"264-02/r"},{"a":"טור
+  :"},{"b":"פארלאג,"},{"c":"[2021]"}]}},{"994":{"ind1":" ","ind2":" ","subfields":[{"a":"C0"},{"b":"STF"}]}},{"596":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"31"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)1324660300"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) on1324660300"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"b60c5a35-7a85-5189-90fc-1010c0f1b17b"},{"s":"0d79c0fc-691c-5245-9ae1-a833fcf7cb66"}]}}]}'
+all_search: 'Nomberg, Hersh David, 1876-1927, author. http://id.loc.gov/authorities/names/n82247757
+  Between parents / Hersh Dovid Nomberg ; translated by Ollie Elkus and Daniel Kennedy
+  880-01 Tsṿishn ṭaṭe-mame 880-02 Ṭur : Farlag Press, [2021] ©2021 61 pages ; 18 cm
+  text txt rdacontent unmediated n rdamedia volume nc rdacarrier "Originally published
+  in Der Yud, Krakow, 1902."--Title page verso "Yiddish/English bilingual edition"--Cover
+  "A child of divorced parents, eleven-year-old Yitskhok, finds himself adrift when
+  his mother decides to remarry and he is sent to live with his estranged father in
+  the big city." --Back cover Texts in Yiddish and English on facing pages Short stories.
+  lcgft http://id.loc.gov/authorities/genreForms/gf2014026542 Fiction. lcgft http://id.loc.gov/authorities/genreForms/gf2014026339
+  Elkus, Ollie, translator. Kennedy, Daniel, 1981- translator. http://id.loc.gov/authorities/names/no2022072963
+  Container of (work): Nomberg, Hersh David, 1876-1927. Tvishn tate-mame. Container
+  of (expression): Nomberg, Hersh David, 1876-1927. Tvishn tate-mame. English. 246-01/r
+  צווישן טאטע־מאמע 264-02/r טור : פארלאג, [2021] 31'
+vern_all_search: 'צווישן טאטע־מאמע טור : פארלאג, [2021]'
+title_245a_search: Between parents /
+title_245_search: Between parents /
+title_variant_search:
+- Tsṿishn ṭaṭe-mame
+title_variant_display:
+- Tsṿishn ṭaṭe-mame
+vern_title_variant_search:
+- צווישן טאטע־מאמע
+title_related_search:
+- Tvishn tate-mame.
+- Tvishn tate-mame. English.
+title_245a_display: Between parents
+title_245c_display: Hersh Dovid Nomberg ; translated by Ollie Elkus and Daniel Kennedy
+title_display: Between parents
+title_full_display: Between parents / Hersh Dovid Nomberg ; translated by Ollie Elkus
+  and Daniel Kennedy
+title_sort: Between parents
+author_title_245ac_search:
+- Between parents / Hersh Dovid Nomberg ; translated by Ollie Elkus and Daniel Kennedy
+author_title_1xx_search:
+- Nomberg, Hersh David Between parents /
+author_title_search:
+- Nomberg, Hersh David, 1876-1927 Between parents /
+- Nomberg, Hersh David, 1876-1927. Tvishn tate-mame.
+- Nomberg, Hersh David, 1876-1927. Tvishn tate-mame. English.
+best_author_title_search: Nomberg, Hersh David, 1876-1927 Between parents /
+author_1xx_search: Nomberg, Hersh David, 1876-1927,
+author_7xx_search:
+- Elkus, Ollie,
+- Kennedy, Daniel, 1981-
+- Nomberg, Hersh David, 1876-1927.
+author_person_facet:
+- Nomberg, Hersh David, 1876-1927
+- Elkus, Ollie
+- Kennedy, Daniel, 1981-
+author_person_display:
+- Nomberg, Hersh David, 1876-1927
+author_person_full_display:
+- Nomberg, Hersh David, 1876-1927, author.
+author_sort: Nomberg Hersh David 18761927 Between parents
+works_struct:
+- '{"included":[{"link":"Nomberg, Hersh David, 1876-1927. Tvishn tate-mame.","search":"Nomberg,
+  Hersh David, 1876-1927. Tvishn tate-mame.","pre_text":"Container of (work):","post_text":"","authorities":[],"rwo":[]},{"link":"Nomberg,
+  Hersh David, 1876-1927. Tvishn tate-mame. English.","search":"Nomberg, Hersh David,
+  1876-1927. Tvishn tate-mame. English.","pre_text":"Container of (expression):","post_text":"","authorities":[],"rwo":[]}],"related":[{"link":"Nomberg,
+  Hersh David, 1876-1927. Tvishn tate-mame.","search":"Nomberg, Hersh David, 1876-1927.
+  Tvishn tate-mame.","pre_text":"Container of (work):","post_text":"","authorities":[],"rwo":[]},{"link":"Nomberg,
+  Hersh David, 1876-1927. Tvishn tate-mame. English.","search":"Nomberg, Hersh David,
+  1876-1927. Tvishn tate-mame. English.","pre_text":"Container of (expression):","post_text":"","authorities":[],"rwo":[]}]}'
+author_authorities_ssim:
+- http://id.loc.gov/authorities/names/n82247757
+- http://id.loc.gov/authorities/names/no2022072963
+subject_other_search:
+- Short stories.
+- Fiction.
+subject_other_display:
+- Short stories.
+- Fiction.
+subject_all_search:
+- Short stories.
+- Fiction.
+pub_search:
+- 'Ṭur : Farlag Press'
+pub_display:
+- 'Ṭur : Farlag Press'
+vern_pub_search:
+- 'טור : פארלאג,'
+pub_country: France
+pub_date: '2021'
+pub_date_search: '2021'
+pub_date_sort: '2021'
+pub_year_tisim:
+- 2021
+pub_year_ss: '2021'
+publication_year_isi: 2021
+copyright_year_isi: 2021
+imprint_display:
+- 'Ṭur : Farlag Press, [2021] טור : פארלאג, [2021]'
+date_cataloged: '2023-01-25T00:00:00Z'
+language:
+- English
+- Yiddish
+oclc:
+- '1324660300'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+genre_ssim:
+- Short stories
+- Fiction
+physical:
+- 61 pages ; 18 cm
+summary_search:
+- '"A child of divorced parents, eleven-year-old Yitskhok, finds himself adrift when
+  his mother decides to remarry and he is sent to live with his estranged father in
+  the big city." --Back cover'
+summary_display:
+- '"A child of divorced parents, eleven-year-old Yitskhok, finds himself adrift when
+  his mother decides to remarry and he is sent to live with his estranged father in
+  the big city." --Back cover'
+isbn_search:
+- '9791096677092'
+isbn_display:
+- '9791096677092'
+callnum_facet_hsim:
+- LC Classification|P - Philology, Linguistics (General)|PJ - Oriental Philology &
+  Literature
+callnum_search:
+- PJ5129 .N6 T813 2021
+lc_assigned_callnum_ssim:
+- PJ5129.N6 T813 2021
+barcode_search:
+- '36105235818098'
+item_barcodes:
+- '36105235818098'
+preferred_barcode: '36105235818098'
+holdings_library_code_ssim:
+- SAL3
+library_code_facet_ssim:
+- SAL3
+location_code_facet_ssim:
+- SAL3-STACKS
+building_facet:
+- SAL3 (off-campus storage)
+building_location_facet_ssim:
+- SAL3/*
+- SAL3/SAL3-STACKS
+- SAL3/*/type/book
+- SAL3/SAL3-STACKS/type/book
+shelfkey:
+- lc pj  5129.000000 n0.600000 t0.813000 002021
+reverse_shelfkey:
+- en~ag~~uyxq}zzzzzz~cz}tzzzzz~6z}rywzzz~zzxzxy~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '020'
+- '035'
+- '040'
+- '041'
+- '049'
+- '050'
+- '100'
+- '245'
+- '246'
+- '264'
+- '300'
+- '336'
+- '337'
+- '338'
+- '500'
+- '520'
+- '546'
+- '655'
+- '700'
+- '880'
+- '994'
+- '596'
+- '999'
+- 020aq
+- 035a
+- 040abecdddd
+- 041aah
+- '049a'
+- 050ab
+- 100ade0
+- 245ac
+- 2466a
+- 2646abc
+- 264c
+- 300ac
+- 336ab2
+- 337ab2
+- 338ab2
+- 500a
+- 520a
+- 546a
+- 655a20
+- 700ae
+- 700ade0
+- 700iadt
+- 700iadtl
+- 8806a
+- 8806abc
+- 994ab
+- 596a
+- 999is
+- "?020a"
+- "?020q"
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?041a"
+- "?041h"
+- "?049a"
+- "?050a"
+- "?050b"
+- "?100a"
+- "?100d"
+- "?100e"
+- "?1000"
+- "?245a"
+- "?245c"
+- "?2466"
+- "?246a"
+- "?2646"
+- "?264a"
+- "?264b"
+- "?264c"
+- "?300a"
+- "?300c"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?500a"
+- "?520a"
+- "?546a"
+- "?655a"
+- "?6552"
+- "?6550"
+- "?700a"
+- "?700e"
+- "?700d"
+- "?7000"
+- "?700i"
+- "?700t"
+- "?700l"
+- "?8806"
+- "?880a"
+- "?880b"
+- "?880c"
+- "?994a"
+- "?994b"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Nomberg, Hersh David, 1876-1927, author. Between parents / Hersh Dovid
+  Nomberg ; translated by Ollie Elkus and Daniel Kennedy Tsṿishn ṭaṭe-mame Ṭur : Farlag
+  Press, [2021] ©2021 Elkus, Ollie, translator. Kennedy, Daniel, 1981- translator.
+  Container of (work): Nomberg, Hersh David, 1876-1927. Tvishn tate-mame. Container
+  of (expression): Nomberg, Hersh David, 1876-1927. Tvishn tate-mame. English. Book'
+vern_bib_search: 'צווישן טאטע־מאמע טור : פארלאג, [2021] Book'
+uuid_ssi: b60c5a35-7a85-5189-90fc-1010c0f1b17b
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"b60c5a35-7a85-5189-90fc-1010c0f1b17b","hrid":"a14434124","tags":{"tagList":[]},"notes":[{"note":"\"Originally
+  published in Der Yud, Krakow, 1902.\"--Title page verso","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"\"Yiddish/English
+  bilingual edition\"--Cover","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"\"A
+  child of divorced parents, eleven-year-old Yitskhok, finds himself adrift when his
+  mother decides to remarry and he is sent to live with his estranged father in the
+  big city.\" --Back cover","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Texts
+  in Yiddish and English on facing pages","staffOnly":false,"instanceNoteTypeId":"7356cde5-ec6b-4961-9cb0-961c48a37af4"}],"title":"Between
+  parents / Hersh Dovid Nomberg ; translated by Ollie Elkus and Daniel Kennedy","series":[],"source":"MARC","_version":4,"editions":[],"metadata":{"createdDate":"2023-08-21T21:40:13.897Z","updatedDate":"2025-05-12T17:58:03.199Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"c4f1bf13-36e4-4a78-aaee-180d28c2662a"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Short
+  stories"},{"value":"Fiction"}],"languages":["eng","yid"],"indexTitle":"Between parents
+  /","identifiers":[{"value":"9791096677092 (paperback)","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(Sirsi)
+  a14434124","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)1324660300","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  on1324660300","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"role":"Publication","place":"Ṭur","publisher":"Farlag
+  Press","dateOfPublication":"[2021]"},{"dateOfPublication":"©2021"},{"role":"Publication","place":"טור","publisher":"פארלאג","dateOfPublication":"[2021]"}],"contributors":[{"name":"Nomberg,
+  Hersh David, 1876-1927","primary":true,"contributorTypeId":"6e09d47d-95e2-4d8a-831b-f777b8ef6d81","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Elkus,
+  Ollie","primary":false,"contributorTypeId":"3322b734-ce38-4cd4-815d-8983352837cc","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Kennedy,
+  Daniel, 1981-","primary":false,"contributorTypeId":"3322b734-ce38-4cd4-815d-8983352837cc","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Nomberg,
+  Hersh David, 1876-1927. Tvishn tate-mame","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Nomberg,
+  Hersh David, 1876-1927. Tvishn tate-mame. English","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2023-01-25","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"PJ5129.N6
+  T813 2021","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Tsṿishn
+  ṭaṭe-mame","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"צווישן
+  טאטע־מאמע","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"statusUpdatedDate":"2023-08-21T21:40:13.804+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["61
+  pages ; 18 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-05-18T12:15:43Z'
+created: '2025-05-18T12:15:43Z'
+timestamp: '2025-05-18T12:15:43Z'
+author_struct:
+- creator:
+  - link: Nomberg, Hersh David, 1876-1927,
+    search: Nomberg, Hersh David, 1876-1927,
+    post_text: author.
+    authorities:
+    - http://id.loc.gov/authorities/names/n82247757
+  contributors:
+  - link: Elkus, Ollie,
+    search: Elkus, Ollie,
+    pre_text: ''
+    post_text: translator.
+    authorities: []
+    rwo: []
+  - link: Kennedy, Daniel, 1981-
+    search: Kennedy, Daniel, 1981-
+    pre_text: ''
+    post_text: translator.
+    authorities:
+    - http://id.loc.gov/authorities/names/no2022072963
+    rwo: []
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - '"A child of divorced parents, eleven-year-old Yitskhok, finds himself adrift
+      when his mother decides to remarry and he is sent to live with his estranged
+      father in the big city." --Back cover'
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 993accbe-4d75-55cc-9f0f-b12f47046e56
+    hrid: ah14434124_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T21:44:19.391Z'
+      updatedDate: '2023-08-21T21:44:19.391Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: PJ5129 .N6 T813 2021
+    instanceId: b60c5a35-7a85-5189-90fc-1010c0f1b17b
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 2585e888-7abf-59f9-b870-ea9eb15ee248
+    hrid: ai14434124_1_1
+    notes: []
+    status: Available
+    barcode: '36105235818098'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T21:45:11.843Z'
+      updatedDate: '2023-08-21T21:45:11.843Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: PJ5129 .N6 T813 2021
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 993accbe-4d75-55cc-9f0f-b12f47046e56
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: PJ 45129 N6 T813 42021 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: PJ5129 .N6 T813 2021
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 2585e888-7abf-59f9-b870-ea9eb15ee248
+  barcode: '36105235818098'
+  library: SAL3
+  type: book
+  note:
+  instance_id: b60c5a35-7a85-5189-90fc-1010c0f1b17b
+  instance_hrid: a14434124
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: PJ5129 .N6 T813 2021
+  callnumber: PJ5129 .N6 T813 2021
+  full_shelfkey: lc pj  5129.000000 n0.600000 t0.813000 002021
+browse_nearby_struct:
+- lopped_callnumber: PJ5129 .N6 T813 2021
+  shelfkey: lc pj  5129.000000 n0.600000 t0.813000 002021
+  reverse_shelfkey: en~ag~~uyxq}zzzzzz~cz}tzzzzz~6z}rywzzz~zzxzxy~~~~~
+  callnumber: PJ5129 .N6 T813 2021
+  scheme: LC
+  item_id: 2585e888-7abf-59f9-b870-ea9eb15ee248

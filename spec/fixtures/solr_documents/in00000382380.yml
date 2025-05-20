@@ -1,0 +1,436 @@
+---
+id: in00000382380
+hashed_id_ssi: a9c7e8a69a84d3a856d01bb99ac81dfd
+marc_json_struct:
+- '{"leader":"02351nam a22003373i 4500","fields":[{"001":"in00000382380"},{"006":"m        d        "},{"007":"cr
+  un         "},{"008":"250314t20252025cau     om    000 0 eng d"},{"005":"20250317235027.3"},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"dorbp098kt2063"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)1509352419"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"CSt"},{"b":"eng"},{"e":"rda"},{"c":"CSt"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Mutlu, Onur Cezmi,"},{"e":"author."}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Adaptation
+  and regularization of deep neural networks under temporal smoothness assumption
+  /"},{"c":"Onur Cezmi Mutlu."}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"[Stanford,
+  California] :"},{"b":"[Stanford University],"},{"c":"2025."}]}},{"264":{"ind1":"
+  ","ind2":"4","subfields":[{"c":"©2025"}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"1
+  online resource."}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"text"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"2":"rdacarrier"}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Submitted to the Department of Electrical Engineering."}]}},{"502":{"ind1":"
+  ","ind2":" ","subfields":[{"g":"Thesis"},{"b":"Ph.D."},{"c":"Stanford University"},{"d":"2025."}]}},{"520":{"ind1":"3","ind2":"
+  ","subfields":[{"a":"Deep neural networks face challenges in real-world deployment
+  due to domain shifts and computational constraints. This dissertation presents TempT,
+  a self-supervised method that leverages temporal smoothness in predictions to improve
+  model robustness without labeled data. By suppressing high-frequency fluctuations,
+  TempT enhances generalization, particularly in sequential tasks. We also explore
+  selective adaptation using persistent homology to determine when adaptation is beneficial
+  and introduce a regularization framework that enforces smoothness constraints during
+  training. Experimental results demonstrate TempT''s effectiveness over existing
+  adaptation techniques while maintaining efficiency for edge computing and privacy-sensitive
+  applications. This work unifies domain adaptation, self-supervised learning, and
+  regularization to provide a scalable solution for deep learning in dynamic environments."}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Wall, Dennis Paul,"},{"e":"degree supervisor."},{"4":"ths"}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Nishimura, Dwight George,"},{"e":"degree committee member."},{"4":"ths"}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Pauly, John"},{"q":"(John M.),"},{"e":"degree committee member."},{"4":"ths"}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"Stanford University."},{"b":"School of Engineering."},{"0":"http://id.loc.gov/authorities/names/n82220006"}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"Stanford University."},{"b":"Department of Electrical Engineering."}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"s":"f8bba27b-113a-42f8-ae45-d43dd79c0f9c"},{"i":"4991c685-3832-4811-ac32-4843e33f36ea"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"u":"https://purl.stanford.edu/bp098kt2063"},{"x":"SDR-PURL"},{"x":"item"},{"x":"rights:world"}]}}]}'
+all_search: 'Mutlu, Onur Cezmi, author. Adaptation and regularization of deep neural
+  networks under temporal smoothness assumption / Onur Cezmi Mutlu. [Stanford, California]
+  : [Stanford University], 2025. ©2025 1 online resource. text rdacontent computer
+  rdamedia online resource rdacarrier Submitted to the Department of Electrical Engineering.
+  Thesis Ph.D. Stanford University 2025. Deep neural networks face challenges in real-world
+  deployment due to domain shifts and computational constraints. This dissertation
+  presents TempT, a self-supervised method that leverages temporal smoothness in predictions
+  to improve model robustness without labeled data. By suppressing high-frequency
+  fluctuations, TempT enhances generalization, particularly in sequential tasks. We
+  also explore selective adaptation using persistent homology to determine when adaptation
+  is beneficial and introduce a regularization framework that enforces smoothness
+  constraints during training. Experimental results demonstrate TempT''s effectiveness
+  over existing adaptation techniques while maintaining efficiency for edge computing
+  and privacy-sensitive applications. This work unifies domain adaptation, self-supervised
+  learning, and regularization to provide a scalable solution for deep learning in
+  dynamic environments. Wall, Dennis Paul, degree supervisor. ths Nishimura, Dwight
+  George, degree committee member. ths Pauly, John (John M.), degree committee member.
+  ths Stanford University. School of Engineering. http://id.loc.gov/authorities/names/n82220006
+  Stanford University. Department of Electrical Engineering. https://purl.stanford.edu/bp098kt2063
+  SDR-PURL item rights:world'
+title_245a_search: Adaptation and regularization of deep neural networks under temporal
+  smoothness assumption /
+title_245_search: Adaptation and regularization of deep neural networks under temporal
+  smoothness assumption /
+title_245a_display: Adaptation and regularization of deep neural networks under temporal
+  smoothness assumption
+title_245c_display: Onur Cezmi Mutlu
+title_display: Adaptation and regularization of deep neural networks under temporal
+  smoothness assumption
+title_full_display: Adaptation and regularization of deep neural networks under temporal
+  smoothness assumption / Onur Cezmi Mutlu.
+title_sort: Adaptation and regularization of deep neural networks under temporal smoothness
+  assumption
+author_title_245ac_search:
+- Adaptation and regularization of deep neural networks under temporal smoothness
+  assumption / Onur Cezmi Mutlu.
+author_title_1xx_search:
+- Mutlu, Onur Cezmi Adaptation and regularization of deep neural networks under temporal
+  smoothness assumption /
+author_title_search:
+- Mutlu, Onur Cezmi Adaptation and regularization of deep neural networks under temporal
+  smoothness assumption /
+best_author_title_search: Mutlu, Onur Cezmi Adaptation and regularization of deep
+  neural networks under temporal smoothness assumption /
+author_1xx_search: Mutlu, Onur Cezmi,
+author_7xx_search:
+- Wall, Dennis Paul,
+- Nishimura, Dwight George,
+- Pauly, John (John M.),
+- Stanford University. School of Engineering.
+- Stanford University. Department of Electrical Engineering.
+author_person_facet:
+- Mutlu, Onur Cezmi
+- Wall, Dennis Paul
+- Nishimura, Dwight George
+- Pauly, John (John M.)
+author_other_facet:
+- Stanford University. School of Engineering
+- Stanford University. Department of Electrical Engineering
+author_person_display:
+- Mutlu, Onur Cezmi
+author_person_full_display:
+- Mutlu, Onur Cezmi, author.
+author_sort: Mutlu Onur Cezmi Adaptation and regularization of deep neural networks
+  under temporal smoothness assumption
+author_authorities_ssim:
+- http://id.loc.gov/authorities/names/n82220006
+pub_search:
+- "[Stanford, California] : [Stanford University]"
+pub_display:
+- "[Stanford, California] : [Stanford University]"
+pub_country: California, United States
+pub_date: '2025'
+pub_date_search: '2025'
+pub_date_sort: '2025'
+pub_year_tisim:
+- 2025
+pub_year_ss: '2025'
+publication_year_isi: 2025
+copyright_year_isi: 2025
+imprint_display:
+- "[Stanford, California] : [Stanford University], 2025."
+date_cataloged: '2025-03-17T00:00:00Z'
+language:
+- English
+url_fulltext:
+- https://purl.stanford.edu/bp098kt2063
+oclc:
+- '1509352419'
+access_facet:
+- Online
+format_main_ssim:
+- Book
+genre_ssim:
+- Thesis/Dissertation
+physical:
+- 1 online resource.
+summary_search:
+- Deep neural networks face challenges in real-world deployment due to domain shifts
+  and computational constraints. This dissertation presents TempT, a self-supervised
+  method that leverages temporal smoothness in predictions to improve model robustness
+  without labeled data. By suppressing high-frequency fluctuations, TempT enhances
+  generalization, particularly in sequential tasks. We also explore selective adaptation
+  using persistent homology to determine when adaptation is beneficial and introduce
+  a regularization framework that enforces smoothness constraints during training.
+  Experimental results demonstrate TempT's effectiveness over existing adaptation
+  techniques while maintaining efficiency for edge computing and privacy-sensitive
+  applications. This work unifies domain adaptation, self-supervised learning, and
+  regularization to provide a scalable solution for deep learning in dynamic environments.
+summary_display:
+- Deep neural networks face challenges in real-world deployment due to domain shifts
+  and computational constraints. This dissertation presents TempT, a self-supervised
+  method that leverages temporal smoothness in predictions to improve model robustness
+  without labeled data. By suppressing high-frequency fluctuations, TempT enhances
+  generalization, particularly in sequential tasks. We also explore selective adaptation
+  using persistent homology to determine when adaptation is beneficial and introduce
+  a regularization framework that enforces smoothness constraints during training.
+  Experimental results demonstrate TempT's effectiveness over existing adaptation
+  techniques while maintaining efficiency for edge computing and privacy-sensitive
+  applications. This work unifies domain adaptation, self-supervised learning, and
+  regularization to provide a scalable solution for deep learning in dynamic environments.
+stanford_work_facet_hsim:
+- Thesis/Dissertation|Doctoral|Doctor of Philosophy (PhD)
+stanford_dept_sim:
+- School of Engineering
+- Department of Electrical Engineering
+holdings_library_code_ssim:
+- SUL
+building_facet:
+- Stanford Digital Repository
+managed_purl_urls:
+- https://purl.stanford.edu/bp098kt2063
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '006'
+- '007'
+- '008'
+- '005'
+- '035'
+- '040'
+- '100'
+- '245'
+- '264'
+- '300'
+- '336'
+- '337'
+- '338'
+- '500'
+- '502'
+- '520'
+- '700'
+- '710'
+- '999'
+- '856'
+- 035a
+- 040abec
+- 100ae
+- 245ac
+- 264abc
+- 264c
+- 300a
+- 336a2
+- 337a2
+- 338a2
+- 500a
+- 502gbcd
+- 520a
+- 700ae4
+- 700aqe4
+- 710ab0
+- 710ab
+- 999si
+- 856uxxx
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?100a"
+- "?100e"
+- "?245a"
+- "?245c"
+- "?264a"
+- "?264b"
+- "?264c"
+- "?300a"
+- "?336a"
+- "?3362"
+- "?337a"
+- "?3372"
+- "?338a"
+- "?3382"
+- "?500a"
+- "?502g"
+- "?502b"
+- "?502c"
+- "?502d"
+- "?520a"
+- "?700a"
+- "?700e"
+- "?7004"
+- "?700q"
+- "?710a"
+- "?710b"
+- "?7100"
+- "?999s"
+- "?999i"
+- "?856u"
+- "?856x"
+bib_search: 'Mutlu, Onur Cezmi, author. Adaptation and regularization of deep neural
+  networks under temporal smoothness assumption / Onur Cezmi Mutlu. [Stanford, California]
+  : [Stanford University], 2025. ©2025 Wall, Dennis Paul, degree supervisor. ths Nishimura,
+  Dwight George, degree committee member. ths Pauly, John (John M.), degree committee
+  member. ths Stanford University. School of Engineering. Stanford University. Department
+  of Electrical Engineering. Book'
+vern_bib_search: Book
+uuid_ssi: 4991c685-3832-4811-ac32-4843e33f36ea
+last_updated: '2025-05-18T10:36:22Z'
+created: '2025-05-18T10:36:22Z'
+timestamp: '2025-05-18T10:36:22Z'
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"4991c685-3832-4811-ac32-4843e33f36ea","hrid":"in00000382380","tags":{"tagList":[]},"notes":[{"note":"Submitted
+  to the Department of Electrical Engineering","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Thesis
+  Ph.D. Stanford University 2025","staffOnly":false,"instanceNoteTypeId":"b73cc9c2-c9fa-49aa-964f-5ae1aa754ecd"},{"note":"Deep
+  neural networks face challenges in real-world deployment due to domain shifts and
+  computational constraints. This dissertation presents TempT, a self-supervised method
+  that leverages temporal smoothness in predictions to improve model robustness without
+  labeled data. By suppressing high-frequency fluctuations, TempT enhances generalization,
+  particularly in sequential tasks. We also explore selective adaptation using persistent
+  homology to determine when adaptation is beneficial and introduce a regularization
+  framework that enforces smoothness constraints during training. Experimental results
+  demonstrate TempT''s effectiveness over existing adaptation techniques while maintaining
+  efficiency for edge computing and privacy-sensitive applications. This work unifies
+  domain adaptation, self-supervised learning, and regularization to provide a scalable
+  solution for deep learning in dynamic environments","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"}],"title":"Adaptation
+  and regularization of deep neural networks under temporal smoothness assumption
+  / Onur Cezmi Mutlu.","series":[],"source":"MARC","_version":7,"editions":[],"metadata":{"createdDate":"2025-03-14T20:37:20.177Z","updatedDate":"2025-03-18T10:38:46.544Z","createdByUserId":"709fdac6-d3f3-5784-8839-fe36ad6ed0b3","updatedByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[],"languages":["eng"],"indexTitle":"Adaptation
+  and regularization of deep neural networks under temporal smoothness assumption
+  /","identifiers":[{"value":"dorbp098kt2063","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)1509352419","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"role":"Publication","place":"[Stanford,
+  California]","publisher":"[Stanford University]","dateOfPublication":"2025"},{"dateOfPublication":"©2025"}],"contributors":[{"name":"Mutlu,
+  Onur Cezmi","primary":true,"contributorTypeId":"6e09d47d-95e2-4d8a-831b-f777b8ef6d81","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Wall,
+  Dennis Paul","primary":false,"contributorTypeId":"cce475f7-ccfa-4e15-adf8-39f907788515","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Nishimura,
+  Dwight George","primary":false,"contributorTypeId":"cce475f7-ccfa-4e15-adf8-39f907788515","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Pauly,
+  John (John M.)","primary":false,"contributorTypeId":"cce475f7-ccfa-4e15-adf8-39f907788515","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Stanford
+  University. School of Engineering","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"},{"name":"Stanford
+  University. Department of Electrical Engineering","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2025-03-17","instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://purl.stanford.edu/bp098kt2063","name":"Resource","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2025-03-17T23:27:57.476Z","statisticalCodeIds":["0f328803-cd6a-47c0-8e76-f3a775d56884","ae9ce864-f50c-47ce-a5f1-6579f7057fc5"],"administrativeNotes":[],"physicalDescriptions":["1
+  online resource."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+author_struct:
+- creator:
+  - link: Mutlu, Onur Cezmi,
+    search: Mutlu, Onur Cezmi,
+    post_text: author.
+  contributors:
+  - link: Wall, Dennis Paul,
+    search: Wall, Dennis Paul,
+    pre_text: ''
+    post_text: degree supervisor. Thesis advisor
+    authorities: []
+    rwo: []
+  - link: Nishimura, Dwight George,
+    search: Nishimura, Dwight George,
+    pre_text: ''
+    post_text: degree committee member. Thesis advisor
+    authorities: []
+    rwo: []
+  - link: Pauly, John (John M.),
+    search: Pauly, John (John M.),
+    pre_text: ''
+    post_text: degree committee member. Thesis advisor
+    authorities: []
+    rwo: []
+  - link: Stanford University. School of Engineering.
+    search: Stanford University. School of Engineering.
+    pre_text: ''
+    post_text: ''
+    authorities:
+    - http://id.loc.gov/authorities/names/n82220006
+    rwo: []
+  - link: Stanford University. Department of Electrical Engineering.
+    search: Stanford University. Department of Electrical Engineering.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+marc_links_struct:
+- version: '0.2'
+  stanford_only: false
+  stanford_law_only: false
+  link_text:
+  link_title: ''
+  additional_text:
+  additional_links: []
+  material_type:
+  note: ''
+  href: https://purl.stanford.edu/bp098kt2063
+  sort:
+  casalini:
+  fulltext: true
+  finding_aid: false
+  managed_purl: true
+  file_id:
+  druid: bp098kt2063
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Deep neural networks face challenges in real-world deployment due to domain
+      shifts and computational constraints. This dissertation presents TempT, a self-supervised
+      method that leverages temporal smoothness in predictions to improve model robustness
+      without labeled data. By suppressing high-frequency fluctuations, TempT enhances
+      generalization, particularly in sequential tasks. We also explore selective
+      adaptation using persistent homology to determine when adaptation is beneficial
+      and introduce a regularization framework that enforces smoothness constraints
+      during training. Experimental results demonstrate TempT's effectiveness over
+      existing adaptation techniques while maintaining efficiency for edge computing
+      and privacy-sensitive applications. This work unifies domain adaptation, self-supervised
+      learning, and regularization to provide a scalable solution for deep learning
+      in dynamic environments.
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 5b7b1c4c-c804-41fa-acf3-f827a4c86f8e
+    hrid: ho00000413013
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2025-03-14T20:37:20.756Z'
+      updatedDate: '2025-03-14T20:37:20.756Z'
+      createdByUserId: 709fdac6-d3f3-5784-8839-fe36ad6ed0b3
+      updatedByUserId: 709fdac6-d3f3-5784-8839-fe36ad6ed0b3
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 4991c685-3832-4811-ac32-4843e33f36ea
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1b14e21c-8d47-45c7-bc49-456a0086422b
+    permanentLocationId: 1b14e21c-8d47-45c7-bc49-456a0086422b
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1b14e21c-8d47-45c7-bc49-456a0086422b
+        code: SUL-SDR
+        name: Stanford Digital Repository
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1b14e21c-8d47-45c7-bc49-456a0086422b
+        code: SUL-SDR
+        name: Stanford Digital Repository
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
