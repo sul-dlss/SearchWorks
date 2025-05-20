@@ -1,4 +1,5 @@
 import L from "leaflet";
+import fetchJsonp from 'fetch-jsonp';
 
 (function($) {
 
@@ -17,19 +18,25 @@ import L from "leaflet";
           location = $container.data('location'),
           $tplMap = $container.find('.map-template');
 
-      var params = {
+      const params = {
         "callno": $container.data('callnumber'),
         "library": $container.data('library'),
         "location": location
       };
 
-      $.getJSON(stackMapApiUrl + '?callback=?', params, function (response) {
-        if (response.stat === "OK" && response.results.maps.length > 0) {
-          plugContent(response);
-        } else {
-          $container.html('<p>No map available for this item</p>');
-        }
-      });
+      const queryString = Object.keys(params)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(params[key]))
+        .join('&')
+
+      fetchJsonp(stackMapApiUrl + '?' + queryString)
+        .then(response => response.json())
+        .then(response => {
+          if (response.stat === "OK" && response.results.maps.length > 0) {
+            plugContent(response)
+          } else {
+            $container.html('<p>No map available for this item</p>')
+          }
+        })
 
       function plugContent(data) {
         var maps = data.results.maps;
