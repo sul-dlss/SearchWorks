@@ -30,7 +30,7 @@ RSpec.feature "Aria Landmarks", :js do
   end
 
   scenario "should have main container landmark" do
-    expect(page).to have_xpath("//section[@role='main']")
+    expect(page).to have_xpath("//main")
   end
 
   scenario "should have footer landmark" do
