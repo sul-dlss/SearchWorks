@@ -9,6 +9,3 @@ LIB_GUIDES:
   MINI_BENTO_ENABLED: true
 
 live_lookup_service: LiveLookup::Testing
-
-citeproc_citations:
-  enabled: true
