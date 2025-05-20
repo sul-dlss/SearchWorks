@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 /*
   JavaScript module to fetch SFX Content into the SFX panel.
  */

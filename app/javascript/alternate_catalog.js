@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 const AlternateCatalog = (function (global) {
   return {
     container: null,

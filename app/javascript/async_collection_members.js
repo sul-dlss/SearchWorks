@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 var AsyncCollectionMembers = (function() {
   var selector = '[data-behavior="async-collection-members"]';
 
@@ -22,7 +24,7 @@ var AsyncCollectionMembers = (function() {
         .then((response) => response.json())
         .then((json) => {
           element.hide().html(json.html).fadeIn(500);
-  
+
           _this.showAndUpdateDigitalContentCount(json);
         })
     },

@@ -1,3 +1,5 @@
+import Blacklight from 'blacklight-frontend'
+
 /*
   JavaScript module to handle the behavior of the "Search settings" checkbox options
  */

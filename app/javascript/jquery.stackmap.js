@@ -1,3 +1,4 @@
+import Blacklight from 'blacklight-frontend'
 import L from "leaflet";
 
 (function($) {

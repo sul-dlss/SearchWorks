@@ -16,11 +16,12 @@ RSpec.describe 'Callnumber Browse', :js do
       expect(page).to have_css('.embedded-items')
 
       within '.current-document' do
-        check 'Select'
+        first('.toggle-bookmark-label').click
       end
 
       expect(page).to have_css '[data-behavior="recent-selections"]', text: 'Selections (1)'
-      expect(page).to have_field 'Selected', checked: true
+      expect(page).to have_checked_field visible: :hidden
+      expect(page).to have_css('.bookmark-checked')
     end
   end
 
@@ -34,15 +35,15 @@ RSpec.describe 'Callnumber Browse', :js do
 
       expect(page).to have_css('h1', text: 'Browse related items')
 
-      bookmarks = all('.toggle-bookmark')
+      bookmarks = all('.toggle-bookmark-label')
       bookmarks.first.click
       bookmarks.last.click
 
-      expect(page).to have_css('.toggle-bookmark.checked')
+      expect(page).to have_css('.bookmark-checked')
 
       page.driver.browser.navigate.refresh
 
-      expect(page).to have_css('input.toggle-bookmark[checked]')
+      expect(page).to have_checked_field visible: :hidden
 
       expect(page).to have_css('[data-behavior="recent-selections"]', text: 'Selections (2)')
     end
