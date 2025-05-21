@@ -38,8 +38,8 @@ class SearchController < ApplicationController
 
         render :json => { :endpoint => endpoint,
                           :total => searcher.total,
-                          :results => result_list
-        }
+                          :app_link => searcher.loaded_link,
+                          :results => result_list }
       }
     end
   end
