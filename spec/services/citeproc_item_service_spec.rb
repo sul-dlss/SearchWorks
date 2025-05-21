@@ -170,5 +170,19 @@ RSpec.describe CiteprocItemService do
                         '<i>Adaptation and regularization of deep neural networks under temporal smoothness assumption</i> ' \
                         '[Dissertation]. [Stanford University]. https://purl.stanford.edu/bp098kt2063'
     end
+
+    context 'when requesting Chicago' do
+      let(:processor) { CiteProc::Processor.new(style: 'chicago-author-date', format: 'html') }
+      let(:chicago) do
+        processor.tap { it.import item }.render(:bibliography, id:).first
+      end
+
+      it "has title in quotes" do
+        expect(chicago).to eq 'Mutlu, Onur Cezmi, Dennis Paul Wall, Dwight George Nishimura, John Pauly, Stanford University School of Engineering, ' \
+                              'and Stanford University Department of Electrical Engineering. 2025. ' \
+                              '“Adaptation and Regularization of Deep Neural Networks under Temporal Smoothness Assumption.” ' \
+                              'Dissertation. [Stanford, California] : [Stanford University]. https://purl.stanford.edu/bp098kt2063.'
+      end
+    end
   end
 end

@@ -140,6 +140,8 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
 
   # Type is important because the CSL may
   def type
+    return 'report' if genre == 'dissertation'
+
     # https://www.loc.gov/marc/bibliographic/bdleader.html
     case marc.leader[6]
     when 'a'
