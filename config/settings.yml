@@ -64,12 +64,6 @@ RECAPTCHA:
   SECRET_KEY: 6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx
 IIIF_DND_BASE_URL: https://library.stanford.edu/iiif?%{query}
 REVISION: <%= File.read("#{Rails.root}/REVISION").chomp if File.exist?("#{Rails.root}/REVISION") %>
-LIB_GUIDES:
-  API_URL: "http://example.com/1.1/guides"
-  APP_SEARCH_URL: "https://guides.library.stanford.edu/srch.php?q=%{q}"
-  KEY: 12345678123456781234567812345678
-  MINI_BENTO_ENABLED: false
-  SITE_ID: 12345
 
 folio:
   url: <%= ENV['OKAPI_URL'] || 'http://okapi-test.stanford.edu' %>
