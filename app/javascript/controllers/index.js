@@ -40,5 +40,8 @@ application.register("meta-json-check", MetaJsonCheckController)
 import PreviewBriefController from "./preview_brief_controller"
 application.register("preview-brief", PreviewBriefController)
 
+import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
+application.register("preview-embed-browse", PreviewEmbedBrowseController)
+
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)

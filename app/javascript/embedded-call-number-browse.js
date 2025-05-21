@@ -84,7 +84,6 @@ import PreviewContent from './preview-content'
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
             .done(function (data) {
               reorderPreviewElements();
-              $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
               $galleryDoc.addBrowseLinkDivs();
               scrollOver($galleryDoc.currentDocumentTarget(), $galleryDoc.galleryTarget)
             })
