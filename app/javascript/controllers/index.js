@@ -13,6 +13,9 @@ application.register("articles-facet-more", ArticlesFacetMoreController)
 import ArticlesFacetPaginateController from "./articles_facet_paginate_controller"
 application.register("articles-facet-paginate", ArticlesFacetPaginateController)
 
+import AsyncCollectionMembersController from "./async_collection_members_controller"
+application.register("async-collection-members", AsyncCollectionMembersController)
+
 import BentoResultCountController from "./bento_result_count_controller"
 application.register("bento-result-count", BentoResultCountController)
 

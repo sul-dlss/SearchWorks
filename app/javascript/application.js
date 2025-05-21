@@ -24,7 +24,6 @@ Blacklight.onLoad(function() {
 import "./alternate_catalog";
 import "./analytics";
 import "./article";
-import "./async_collection_members";
 import "./eds_range_limit";
 import "./embedded-call-number-browse";
 import "./exhibitPanel";

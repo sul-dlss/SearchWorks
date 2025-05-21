@@ -1,3 +1,3 @@
-<div class="async-collection-members col-md-12" data-behavior="async-collection-members" data-collection-members-path="<%= collection_member_path(document[:id], type: action_name, format: :json) %>" aria-live="polite">
+<div class="async-collection-members col-md-12" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document[:id], type: action_name, format: :json) %>" aria-live="polite">
   <%= link_to_collection_members('View all items', document) %>
 </div>
