@@ -1,2 +1,4 @@
-<%= render_document_partial @document, 'show_header' %>
-<%= render_document_partial @document, 'show' %>
+<turbo-frame id="preview_<%= @document[:id] %>">
+  <%= render_document_partial @document, 'show_header' %>
+  <%= render_document_partial @document, 'show' %>
+</turbo-frame>

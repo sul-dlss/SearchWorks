@@ -1,4 +1,4 @@
-<div data-controller="preview-brief" data-preview-brief-url-value="<%= preview_path(document[:id]) %>">
+<div data-controller="preview-brief">
   <div class="brief-document container-fluid">
     <div class="row brief-container">
       <div class="col-md-10">
@@ -44,5 +44,6 @@
   </div>
   <div class="container-fluid preview-container brief-preview-container" data-preview-brief-target="preview">
     <div class='preview-arrow'></div>
+    <turbo-frame id="preview_<%= document[:id] %>" src="<%= preview_path(document[:id]) %>" loading="lazy"></turbo-frame>
   </div>
 </div>
