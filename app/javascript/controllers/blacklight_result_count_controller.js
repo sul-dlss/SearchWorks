@@ -5,7 +5,7 @@ export default class extends Controller {
     url: String
   }
 
-  static targets = ["count"]
+  static targets = ["count", "link"]
 
   // We don't use connect() here, because this node gets moved in the DOM, which results in 2 calls to connect()
   initialize() {
@@ -16,8 +16,9 @@ export default class extends Controller {
   }
 
   handleResponse(data) {
-   const count = data.meta.pages.total_count
+   const count = data.total
 
+   this.linkTarget.href = data.app_link
    this.countTarget.innerHTML = count.toLocaleString()
   }
 }

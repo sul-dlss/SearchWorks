@@ -20,16 +20,8 @@ module SearchResult
         "https://library.stanford.edu/all?q=#{params[:q]}"
       end
 
-      def archive_search_url
-        "https://archives.stanford.edu/catalog?group=true&q=#{params[:q]}"
-      end
-
-      def exhibits_search_url
-        "https://exhibits.stanford.edu/search?q=#{params[:q]}"
-      end
-
-      def geo_search_url
-        "https://earthworks.stanford.edu/?q=#{params[:q]}"
+      def bento_search_url(endpoint)
+        "https://library.stanford.edu/all/xhr_search/#{endpoint}.json?q=#{params[:q]}"
       end
 
       def name

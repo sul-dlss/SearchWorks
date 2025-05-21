@@ -34,30 +34,30 @@
       </div>
 
       <% if false %>
-      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
-        <%= link_to archive_search_url do %>
+      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= bento_search_url('archives') %>">
+        <%= link_to '', data: {'blacklight-result-count-link-target': 'link'} do %>
           Archival Collections at Stanford <span class="bi-box-arrow-up-right"></span>
         <% end %>
         <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
       </div>
       <% end %>
 
-      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
-        <%= link_to geo_search_url do %>
+      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= bento_search_url('earthworks') %>">
+        <%= link_to '', data: {'blacklight-result-count-target': 'link'} do %>
           EarthWorks for geospatial data and maps <span class="bi-box-arrow-up-right"></span>
         <% end %>
         <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
       </div>
 
-      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= lib_guides_path(q: params[:q]) %>">
-        <%= link_to(Settings.LIB_GUIDES.APP_SEARCH_URL % { q: params[:q] }) do %>
+      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= bento_search_url('lib_guides') %>">
+        <%= link_to '', data: {'blacklight-result-count-target': 'link'} do %>
           Guides to collections, tools, and services <span class="bi-box-arrow-up-right"></span>
         <% end %>
         <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
       </div>
 
-      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= exhibits_search_url %>">
-        <%= link_to exhibits_search_url do %>
+      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= bento_search_url('exhibits') %>">
+        <%= link_to '', data: {'blacklight-result-count-target': 'link'} do %>
           Spotlight Exhibits <span class="bi-box-arrow-up-right"></span>
         <% end %>
         <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
