@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import PreviewContent from '../preview-content'
 
+// Filmstrip view for an image collection e.g. https://searchworks.stanford.edu/view/13156376
 export default class extends Controller {
   static values = {
     url: String,
