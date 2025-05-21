@@ -34,6 +34,12 @@
   vertical-align: text-bottom;
 }
 
+.index_title .sul-icon.blacklight-icons {
+  vertical-align: middle;
+  svg {
+    vertical-align: initial;
+  }
+}
 
 .facet-values .sul-icon + .facet-label {
   padding-left: 20px;
