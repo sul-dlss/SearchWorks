@@ -32,7 +32,7 @@ export default class extends Controller {
     const divContent = $('<div class="preview-content"></div>')
     console.log("Now Preview target is ", this.preview)
 
-    this.preview.addClass('preview').empty();
+    this.preview.empty();
 
     this.appendPointer()
 
