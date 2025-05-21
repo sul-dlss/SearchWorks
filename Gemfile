@@ -89,7 +89,7 @@ gem "config"
 gem "mods_display", "~> 1.1"
 gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
-gem 'ebsco-eds'
+gem 'ebsco-eds', github: 'jcoyne/edsapi-ruby', branch: 'csl-styles'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'recaptcha', '~> 5.17'
@@ -113,4 +113,4 @@ gem 'blacklight-ris', '~> 0.2.0'
 
 gem "citeproc", "~> 1.1"
 
-gem "csl-styles", "~> 1.0"
+gem "csl-styles", "~> 2.0"
