@@ -20,6 +20,10 @@ module SearchResult
         "https://library.stanford.edu/all?q=#{params[:q]}"
       end
 
+      def bento_search_url(endpoint)
+        "https://library.stanford.edu/all/xhr_search/#{endpoint}.json?q=#{params[:q]}"
+      end
+
       def archive_search_url
         "https://archives.stanford.edu/catalog?group=true&q=#{params[:q]}"
       end

@@ -49,11 +49,11 @@
         <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
       </div>
 
-      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= lib_guides_path(q: params[:q]) %>">
-        <%= link_to(Settings.LIB_GUIDES.APP_SEARCH_URL % { q: params[:q] }) do %>
+      <div data-controller="bento-result-count" data-bento-result-count-url-value="<%= bento_search_url('lib_guides') %>">
+        <%= link_to '', data: {'bento-result-count-target': 'link'} do %>
           Guides to collections, tools, and services <span class="bi-box-arrow-up-right"></span>
         <% end %>
-        <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
+        <span class="badge rounded-pill text-bg-secondary" data-bento-result-count-target="count"></span>
       </div>
 
       <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= exhibits_search_url %>">
