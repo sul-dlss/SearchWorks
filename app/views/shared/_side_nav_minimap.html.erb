@@ -10,12 +10,15 @@
 <% has_data.each do |section, section_present| %>
     <% if section_present %>
     <% id = t("record_side_nav.#{section}.id").html_safe %>
-    <% icon = t("record_side_nav.#{section}.icon").html_safe %>
     <% label = t("record_side_nav.#{section}.label").html_safe %>
     <li>
         <button data-target-id="<%= id %>" class="<%= id %>" aria-label="Jump to <%= label %>">
         <span class="nav-label"><%= label %></span>
-        <%= icon %>
+        <% if I18n.exists?("record_side_nav.#{section}.icon")  %>
+          <%= t("record_side_nav.#{section}.icon").html_safe %>
+        <% else %>
+          <%= render Constants::SUL_ICON_COMPONENTS[label].new %>
+        <% end %>
         </button>
     </li>
     <% end %>
