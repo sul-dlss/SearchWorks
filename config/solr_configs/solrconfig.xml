@@ -287,6 +287,7 @@
         isbn_search^1.6
         issn_search^1.6
         id_search
+        callnum_search
         druid
         oclc
         item_barcodes_search
@@ -535,6 +536,8 @@
         series_exact_search^10
         series_unstem_search^5
         series_search^2                vern_series_search^2                cjk_series_search^2                 ja_series_search^2
+
+        callnum_search
 
         author_title_unstem_search^150
         author_title_search^100
