@@ -28,6 +28,9 @@ application.register("chat-hours", ChatHoursController)
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
+import GalleryPreviewController from "./gallery_preview_controller"
+application.register("gallery-preview", GalleryPreviewController)
+
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)
 

@@ -32,7 +32,6 @@ import "./feedback_form";
 import "./jquery.clear-input-text";
 import "./jquery.managed-purl";
 import "./jquery.plug-google-content";
-import "./jquery.preview-gallery";
 import "./jquery.side-nav-minimap";
 import "./jquery.stackmap";
 import "./libraryh3lp";

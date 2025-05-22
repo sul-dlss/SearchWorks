@@ -14,16 +14,22 @@ module SearchResult
       {
         doc_id: @document.id,
         document_counter: @counter
-      }.tap do |h|
-        if browse_nearby?
-          h[:controller] = 'preview-embed-browse'
-          h[:preview_embed_browse_url_value] = preview_path(@document.id)
-          h[:preview_embed_browse_preview_selector_value] = ".#{preview_container_dom_class}"
-        else
-          h[:behavior] = 'preview-gallery'
-          h[:preview_target] = ".#{preview_container_dom_class}"
-          h[:preview_url] = preview_path(@document.id)
-        end
+      }.merge(stimulus_attributes)
+    end
+
+    def stimulus_attributes
+      if browse_nearby?
+        {
+          controller: 'preview-embed-browse',
+          preview_embed_browse_url_value: preview_path(@document.id),
+          preview_embed_browse_preview_selector_value: ".#{preview_container_dom_class}"
+        }
+      else
+        {
+          controller: 'gallery-preview',
+          gallery_preview_url_value: preview_path(@document.id),
+          gallery_preview_preview_selector_value: ".#{preview_container_dom_class}"
+        }
       end
     end
 
