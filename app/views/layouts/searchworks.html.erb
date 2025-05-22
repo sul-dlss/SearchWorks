@@ -53,7 +53,9 @@
     <%= content_for(:head) %>
   </head>
   <body class="<%= render_body_class %>">
-    <%= render 'shared/skip_to_nav' %>
+    <%= render blacklight_config.skip_link_component.new do %>
+      <%= content_for(:skip_links) %>
+    <% end %>
 
     <div id="su-wrap"> <!-- #su-wrap start -->
       <div id="su-content"> <!-- #su-content start -->
