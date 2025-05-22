@@ -46,13 +46,6 @@ import PreviewContent from './preview-content'
       this.scrollOffset = (width/2) - (DOC_WIDTH/2) - DOC_WIDTH;
     };
 
-    GalleryDocs.prototype.addBrowseLinkDivs = function() {
-      let html = `<div class="gallery-document"><div class="browse-link">` +
-                 `<a href="${this.browseUrl}" class="text-center"> Continue to full page</a></div></div>`
-      this.embedContainer.append(html);
-      this.embedContainer.prepend(html);
-    };
-
     return this.each(function() {
       var $item = $(this),
           $galleryDoc = new GalleryDocs($item),
@@ -109,7 +102,6 @@ import PreviewContent from './preview-content'
             .done(function(data){
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
-              $galleryDoc.addBrowseLinkDivs();
               scrollOver();
           });
         }
