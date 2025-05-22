@@ -44,9 +44,11 @@
 
     <!-- Title Search Fields -->
     <field name="title_245a_exact_search" type="text_anchored" indexed="true" stored="false" />
+    <field name="title_245a_ws_search" type="text_ws" indexed="true" stored="false" />
     <field name="title_245a_search" type="text" indexed="true" stored="true" />
     <field name="vern_title_245a_search" type="textNoStem" indexed="true" stored="true" />
     <field name="title_245a_unstem_search" type="textNoStem" indexed="true" stored="false" />
+    <field name="title_245_ws_search" type="text_ws" indexed="true" stored="false" />
     <field name="title_245_search" type="text" indexed="true" stored="true" />
     <field name="vern_title_245_search" type="textNoStem" indexed="true" stored="true" />
     <field name="title_245_unstem_search" type="textNoStem" indexed="true" stored="false" />
@@ -89,6 +91,7 @@
     <field name="author_title_search" type="text" indexed="true" stored="true" multiValued="true" />
     <field name="author_title_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
     <field name="best_author_title_search" type="text" indexed="true" stored="true" multiValued="false" />
+    <field name="best_author_title_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="false" />
 
     <!-- Author Search Fields -->
     <field name="author_1xx_search" type="text" indexed="true" stored="true" />
@@ -288,6 +291,7 @@
     <dynamicField name="*_hsim" type="string_hierarch" stored="true" indexed="true" multiValued="true" />
     <dynamicField name="*_struct" type="string" stored="true" indexed="false" multiValued="true" omitNorms="true" />
     <dynamicField name="*_dtsi" type="date" stored="true" indexed="false" omitNorms="true" />
+    <dynamicField name="*suggest" type="textSuggest" indexed="true" stored="false" multiValued="true" />
   </fields>
 
   <!-- copy fields -->
@@ -299,14 +303,17 @@
   <copyField source="barcode_search" dest="item_barcodes" />
   <!-- unstemmed and anchored search fields: title -->
   <copyField source="title_245a_search" dest="title_245a_exact_search" />
+  <copyField source="title_245a_search" dest="title_245a_ws_search" />
   <copyField source="title_245a_search" dest="title_245a_unstem_search" />
   <copyField source="title_245_search" dest="title_245_unstem_search" />
+  <copyField source="title_245_search" dest="title_245_ws_search" />
   <copyField source="title_uniform_search" dest="title_uniform_unstem_search" />
   <copyField source="title_variant_search" dest="title_variant_unstem_search" />
   <copyField source="title_related_search" dest="title_related_unstem_search" />
   <copyField source="author_title_search" dest="author_title_unstem_search" />
   <copyField source="author_title_245ac_search" dest="author_title_245ac_unstem_search" />
   <copyField source="author_title_1xx_search" dest="author_title_1xx_unstem_search" />
+  <copyField source="best_author_title_search" dest="best_author_title_unstem_search" />
   <!-- unstemmed search fields: author -->
   <copyField source="author_1xx_search" dest="author_1xx_unstem_search" />
   <copyField source="author_7xx_search" dest="author_7xx_unstem_search" />
@@ -494,6 +501,24 @@
       </analyzer>
     </fieldtype>
 
+    <!-- Analyzed Text, exact string matching -->
+    <fieldtype name="text_ws" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="true">
+      <analyzer type="index">
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+(\p{Punct}+)\s+" replacement=" " />
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+([&quot;\[{(])" replacement=" " />
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([;:.,&quot;\]})]+)\s+" replacement=" " />
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.ICUNormalizer2FilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+(\p{Punct}+)\s+" replacement=" " />
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s+(&quot;)" replacement=" " />
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([;:.,&quot;]+}+)\s+" replacement=" " />
+        <tokenizer class="solr.WhitespaceTokenizerFactory" />
+        <filter class="solr.ICUNormalizer2FilterFactory" />
+      </analyzer>
+    </fieldtype>
+
     <!-- Left and Right Anchored Analyzed Text, no Stemming -->
     <fieldtype name="text_anchored" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="true">
       <analyzer type="index">
@@ -626,6 +651,15 @@
         <filter class="solr.JapaneseKatakanaStemFilterFactory" minimumLength="4"/>
         <!-- Lower-cases romaji characters -->
         <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+    <!-- for suggestions -->
+    <fieldType class="solr.TextField" name="textSuggest" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.KeywordTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
       </analyzer>
     </fieldType>
 
