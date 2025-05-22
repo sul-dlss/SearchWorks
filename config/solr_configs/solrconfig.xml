@@ -15,13 +15,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
-<!--
- This is a stripped down config file used for a simple example...
- It is *not* a good example to work from.
--->
 <config>
-  <luceneMatchVersion>8.0.0</luceneMatchVersion>
+  <luceneMatchVersion>8.11.2</luceneMatchVersion>
   <!--  The DirectoryFactory to use for indexes.
         solr.StandardDirectoryFactory, the default, is filesystem based.
         solr.RAMDirectoryFactory is memory based, not persistent, and doesn't work with replication. -->
@@ -261,10 +256,16 @@
       <!-- in case lucene query parser -->
       <str name="df">all_search</str>
       <str name="q.op">AND</str>
-      <str name="sow">true</str>
+      <str name="sow">false</str>
+
+      <!-- bump up results with a single-term matching in the 245a -->
+      <str name="bq">{!dismax sow=true qf=title_245a_exact_search^500 pf='' pf2='' pf3='' bf='' bq='' v=$q mm=1}</str>
+
       <str name="qf">
         title_245a_exact_search^1700
+        title_245a_ws_search^700
         title_245a_unstem_search^500
+        title_245_ws_search^85
         title_245_unstem_search^75
         title_245_search^50            vern_title_245_search^50
         series_search^10
@@ -278,6 +279,9 @@
         topic_unstem_search^50
         topic_search^20
         db_az_subject_search^5
+
+        bib_unstem_search^20
+        bib_search^10 vern_bib_search^5
 
         pub_date_search^2
         isbn_search^1.6
@@ -293,8 +297,10 @@
 
       <str name="qf_single_term">
         title_245a_exact_search^1000
+        title_245a_ws_search^700
         title_245a_unstem_search^500
         title_245a_search^75           vern_title_245a_search^75
+        title_245_ws_search^85
         title_245_unstem_search^75
         title_245_search^50            vern_title_245_search^50
         title_uniform_unstem_search^50
@@ -308,8 +314,10 @@
         series_search^2                vern_series_search^2
 
         <!-- give some boosts to push them on par with titles + phrase boosts -->
+        best_author_title_unstem_search^500
         author_title_1xx_unstem_search^250
         author_title_245ac_unstem_search^100
+        best_author_title_search^75
         author_title_1xx_search^50
         author_title_245ac_search^30
         author_title_unstem_search^75
@@ -362,8 +370,10 @@
       </str>
       <str name="pf"> <!-- (phrase boost within result set) -->
         title_245a_exact_search^5000
+        title_245a_ws_search^3000
         title_245a_unstem_search^2500
         title_245a_search^375          vern_title_245a_search^375
+        title_245_ws_search^425
         title_245_unstem_search^375
         title_245_search^250           vern_title_245_search^250
         title_uniform_unstem_search^250
@@ -372,12 +382,14 @@
         title_variant_search^75        vern_title_variant_search^75
         title_related_unstem_search^75
         title_related_search^50        vern_title_related_search^50
-        series_exact_search^50
-        series_unstem_search^25
+        series_exact_search^300
+        series_unstem_search^275
         series_search^10               vern_series_search^10
 
+        best_author_title_unstem_search^2000
         author_title_1xx_unstem_search^1000
         author_title_245ac_unstem_search^500
+        best_author_title_search^375
         author_title_1xx_search^300
         author_title_245ac_search^270
         author_title_unstem_search^250
@@ -424,7 +436,11 @@
         all_search^5                   vern_all_search^5
       </str>
       <str name="pf3">  <!-- (token trigrams boost within result set) -->
-        title_245a_search^2200         vern_title_245a_search^2200
+        title_245a_ws_search^2700
+        title_245a_unstem_search^2500
+        title_245_ws_search^1500
+        title_245_unstem_search^1200
+        title_245a_search^1400         vern_title_245a_search^1400
         title_245_search^225           vern_title_245_search^225
         title_uniform_search^150       vern_title_uniform_search^150
         title_variant_search^60        vern_title_variant_search^60
@@ -462,7 +478,11 @@
         all_search^3                   vern_all_search^3
       </str>
       <str name="pf2"> <!--(token bigrams boost within result set) -->
-        title_245a_search^1700         vern_title_245a_search^1700
+        title_245a_ws_search^2000
+        title_245a_unstem_search^1700
+        title_245_ws_search^1250
+        title_245_unstem_search^1000
+        title_245a_search^500         vern_title_245a_search^500
         title_245_search^150           vern_title_245_search^150
         title_uniform_search^100       vern_title_uniform_search^100
         title_variant_search^40        vern_title_variant_search^40
@@ -686,8 +706,10 @@
 
       <str name="qf_title">
         title_245a_exact_search^380
+        title_245a_ws_search^170
         title_245a_unstem_search^130
         title_245a_search^75           vern_title_245a_search^75
+        title_245_ws_search^85
         title_245_unstem_search^75
         title_245_search^50            vern_title_245_search^50
         title_uniform_unstem_search^50
@@ -1110,8 +1132,8 @@
         url_suppl,
         url_sfx,
         managed_purl_urls,
-        characteristics_ssim,
         holdings_library_code_ssim,
+        characteristics_ssim,
         holdings_json_struct:[json],
         author_struct:[json],
         marc_links_struct:[json],
@@ -1171,5 +1193,26 @@
       <str name="sort">score desc, pub_date_sort desc, title_sort asc</str>
       <int name="facet.mincount">1</int>
     </lst>
+  </requestHandler>
+
+  <searchComponent name="suggest" class="solr.SuggestComponent">
+    <lst name="suggester">
+      <str name="name">mySuggester</str>
+      <str name="lookupImpl">FuzzyLookupFactory</str>
+      <str name="suggestAnalyzerFieldType">textSuggest</str>
+      <str name="buildOnCommit">true</str>
+      <str name="field">suggest</str>
+    </lst>
+  </searchComponent>
+
+  <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
+    <lst name="defaults">
+      <str name="suggest">true</str>
+      <str name="suggest.count">5</str>
+      <str name="suggest.dictionary">mySuggester</str>
+    </lst>
+    <arr name="components">
+      <str>suggest</str>
+    </arr>
   </requestHandler>
 </config>
