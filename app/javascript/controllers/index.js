@@ -4,23 +4,8 @@
 
 import { application } from "./application"
 
-import LiveLookupController from "./live_lookup_controller"
-application.register("live-lookup", LiveLookupController)
-
-import LongTableController from "./long_table_controller"
-application.register("long-table", LongTableController)
-
-import PreviewBriefController from "./preview_brief_controller"
-application.register("preview-brief", PreviewBriefController)
-
-import PreviewFilmstripController from "./preview_filmstrip_controller"
-application.register("preview-filmstrip", PreviewFilmstripController)
-
-import MetaJsonCheckController from "./meta_json_check_controller"
-application.register("meta-json-check", MetaJsonCheckController)
-
-import ChatHoursController from "./chat_hours_controller"
-application.register("chat-hours", ChatHoursController)
+import AccordionSectionController from "./accordion_section_controller"
+application.register("accordion-section", AccordionSectionController)
 
 import ArticlesFacetMoreController from "./articles_facet_more_controller"
 application.register("articles-facet-more", ArticlesFacetMoreController)
@@ -28,11 +13,29 @@ application.register("articles-facet-more", ArticlesFacetMoreController)
 import ArticlesFacetPaginateController from "./articles_facet_paginate_controller"
 application.register("articles-facet-paginate", ArticlesFacetPaginateController)
 
-import AccordionSectionController from "./accordion_section_controller"
-application.register("accordion-section", AccordionSectionController)
+import BentoResultCountController from "./bento_result_count_controller"
+application.register("bento-result-count", BentoResultCountController)
 
-import BlacklightResultCount from "./blacklight_result_count_controller"
-application.register("blacklight-result-count", BlacklightResultCount)
+import BlacklightResultCountController from "./blacklight_result_count_controller"
+application.register("blacklight-result-count", BlacklightResultCountController)
 
-import BentoResultCount from "./bento_result_count_controller"
-application.register("bento-result-count", BentoResultCount)
+import ChatHoursController from "./chat_hours_controller"
+application.register("chat-hours", ChatHoursController)
+
+import CourseReservesController from "./course_reserves_controller"
+application.register("course-reserves", CourseReservesController)
+
+import LiveLookupController from "./live_lookup_controller"
+application.register("live-lookup", LiveLookupController)
+
+import LongTableController from "./long_table_controller"
+application.register("long-table", LongTableController)
+
+import MetaJsonCheckController from "./meta_json_check_controller"
+application.register("meta-json-check", MetaJsonCheckController)
+
+import PreviewBriefController from "./preview_brief_controller"
+application.register("preview-brief", PreviewBriefController)
+
+import PreviewFilmstripController from "./preview_filmstrip_controller"
+application.register("preview-filmstrip", PreviewFilmstripController)
