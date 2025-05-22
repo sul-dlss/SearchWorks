@@ -12,7 +12,7 @@ RSpec.describe SearchResult::MiniBento::CatalogComponent, type: :component do
     it 'draws the page' do
       expect(page).to have_css '[data-alternate-catalog="/articles?f%5Beds_s' \
                                'earch_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=question"]'
-      expect(page).to have_css 'button.close'
+      expect(page).to have_css 'button.btn-close'
       expect(page).to have_css '.alternate-catalog-title'
       expect(page).to have_css '.alternate-catalog-body'
       expect(page).to have_css 'a[href="/articles?f%5Beds_search_limiters_fa' \

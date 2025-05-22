@@ -22,7 +22,7 @@ import PreviewContent from './preview-content'
       const $item = $(this)
       const $previewTarget = $($item.data('preview-target'))
       const $triggerBtn = $item.find('*[data-behavior="preview-button-trigger"]');
-      const $closeBtn = $(`<button type="button" class="preview-close btn-close close" aria-label="Close">
+      const $closeBtn = $(`<button type="button" class="preview-close btn-close" aria-label="Close">
         <span aria-hidden="true" class="visually-hidden">×</span>
         </button>`)
       const $arrow = $('<div class="preview-arrow"></div>');
