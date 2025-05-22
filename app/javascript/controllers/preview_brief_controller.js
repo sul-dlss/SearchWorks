@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import PreviewContent from '../preview-content'
 
 export default class extends Controller {
   static targets = ["preview", "showButton", "hideButton"]
