@@ -1,5 +1,3 @@
-import PreviewContent from './preview-content'
-
 (function($) {
 
   /*
@@ -30,7 +28,8 @@ import PreviewContent from './preview-content'
 
         $previewTarget.addClass('preview').empty();
 
-        PreviewContent.append(previewUrl, $previewTarget);
+        const id = previewUrl.split('/').pop()
+        $previewTarget[0].innerHTML = `<turbo-frame src="${previewUrl}" id="preview_${id}"></turbo-frame>`
 
         appendPointer($previewTarget);
 
@@ -124,8 +123,8 @@ import PreviewContent from './preview-content'
         var previewIndex = galleryDocs.index($(`.gallery-document[data-doc-id='${docId}']`)) + 1;
 
         $itemsPerRow = itemsPerRow();
-        /* 
-        / If $itemsPerRow is NaN or 0 we should return here. If not we are going 
+        /*
+        / If $itemsPerRow is NaN or 0 we should return here. If not we are going
         / to have a bad time with an infinite while loop. This only manifests
         / on the show page when using the "back" button to get back to a show
         / page using the browse nearby feature.
@@ -169,12 +168,9 @@ import PreviewContent from './preview-content'
         });
       }
     });
-
   };
 
+  function init() { $('*[data-behavior="preview-gallery"]').previewGallery() }
+  document.addEventListener("DOMContentLoaded", init)
+  document.addEventListener("turbo:load", init)
 })(jQuery);
-
-
-Blacklight.onLoad(function() {
-  $('*[data-behavior="preview-gallery"]').previewGallery();
-});

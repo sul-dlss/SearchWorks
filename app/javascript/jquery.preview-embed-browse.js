@@ -1,5 +1,3 @@
-import PreviewContent from './preview-content'
-
 (function($) {
 
   /*
@@ -32,7 +30,8 @@ import PreviewContent from './preview-content'
       function showPreview() {
         const previewUrl = $item.data('preview-url')
         $previewTarget.addClass('preview').empty()
-        PreviewContent.append(previewUrl, $previewTarget);
+        const id = previewUrl.split('/').pop()
+        $previewTarget[0].innerHTML = `<turbo-frame src="${previewUrl}" id="preview_${id}"></turbo-frame>`
         $previewTarget.css('display', 'inline-block');
         $previewTarget.append($closeBtn).show();
         appendPointer($previewTarget);
