@@ -1,20 +1,22 @@
-<ul class='document-metadata' >
-  <% @sfx_data.targets.each do |target| %>
-    <li>
-      <%= link_to(target.name, target.url) %>
-      <% if target.coverage.present? || target.embargo.present? || target.note.present? %>
-        <ul>
-          <% target.coverage.each do |coverage| %>
-            <li><%= coverage %></li>
-          <% end %>
-          <% target.embargo.each do |embargo| %>
-            <li><%= embargo %></li>
-          <% end %>
-          <% target.note.each do |note| %>
-            <li><%= note %></li>
-          <% end %>
-        </ul>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+<turbo-frame id="sfx-data">
+  <ul class='document-metadata' >
+    <% @sfx_data.targets.each do |target| %>
+      <li>
+        <%= link_to(target.name, target.url) %>
+        <% if target.coverage.present? || target.embargo.present? || target.note.present? %>
+          <ul>
+            <% target.coverage.each do |coverage| %>
+              <li><%= coverage %></li>
+            <% end %>
+            <% target.embargo.each do |embargo| %>
+              <li><%= embargo %></li>
+            <% end %>
+            <% target.note.each do |note| %>
+              <li><%= note %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</turbo-frame>

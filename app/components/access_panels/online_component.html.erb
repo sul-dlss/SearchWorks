@@ -20,12 +20,11 @@
         <strong> <%= document.eresources_library_display_name %> </strong>
       <% end %>
       <% if sfx_links&.any? %>
-        <% sfx_url = sfx_links.first.href %>
-        <% # Intentionally not encoding sfx_url here as the URLs from the catalog appear to already be encoded %>
-        <div class='sfx-panel' data-behavior="sfx-panel" data-sfx-url="<%= sfx_data_path(url: sfx_url) %>">
-          <div data-behavior="sfx-panel-body">
+        <div class='sfx-panel'>
+          <% sfx_url = sfx_links.first.href %>
+          <turbo-frame src="<%= sfx_data_path(url: sfx_url) %>" id="sfx-data">
             <div class='loading-spinner'></div>
-          </div>
+          </turbo-frame>
         </div>
       <% else %>
         <%= render AccessPanels::OnlineLinkListComponent.new(document:, links:) %>

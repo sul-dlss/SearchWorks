@@ -1,9 +1,9 @@
-<%= render @layout.new(classes: ['panel-online', 'sfx-panel'], data: { behavior: 'sfx-panel', 'sfx-url': sfx_data_path(url: Addressable::URI.encode(sfx_url)) }) do |component| %>
+<%= render @layout.new(classes: ['panel-online', 'sfx-panel']) do |component| %>
   <% component.with_title { 'All available sources' } %>
 
   <% component.with_body do %>
-    <div data-behavior="sfx-panel-body">
+    <turbo-frame src="<%= sfx_data_path(url: Addressable::URI.encode(sfx_url)) %>" id="sfx-data">
       <div class='loading-spinner'></div>
-    </div>
+    </turbo-frame>
   <% end %>
 <% end %>
