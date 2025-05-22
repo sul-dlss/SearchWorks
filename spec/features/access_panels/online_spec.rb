@@ -49,7 +49,7 @@ RSpec.feature "Online Access Panel" do
         end
 
         within('.card-body') do
-          within('[data-behavior="sfx-panel"]') do
+          within('turbo-frame#sfx-data') do
             expect(page).to have_css('ul li a', text: 'TargetName')
             expect(page).to have_css('li ul li', text: 'Statement 1')
             expect(page).to have_css('li ul li', text: 'Statement 2')
