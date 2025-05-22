@@ -36,7 +36,12 @@
   </div>
   <% # bookmark functions for items/docs and preview button %>
   <div class="gallery-buttons">
-    <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>" data-behavior="preview-button-trigger">Preview</button>
+    <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>"
+            data-behavior="preview-button-trigger"
+            data-preview-embed-browse-target="button"
+            data-gallery-preview-target="button"
+            data-action="preview-embed-browse#togglePreview gallery-preview#togglePreview"
+            >Preview</button>
     <%= actions %>
   </div>
 <% end %>

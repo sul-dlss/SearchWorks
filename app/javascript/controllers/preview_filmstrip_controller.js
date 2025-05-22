@@ -1,10 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
-import PreviewContent from '../preview-content'
 
 // Filmstrip view for an image collection e.g. https://searchworks.stanford.edu/view/13156376
 export default class extends Controller {
   static values = {
     url: String,
+    id: String,
     selector: String
   }
 
@@ -31,13 +31,11 @@ export default class extends Controller {
 
   showPreview() {
     const divContent = $('<div class="preview-content"></div>')
-    console.log("Now Preview target is ", this.preview)
 
     this.preview.empty();
 
     this.appendPointer()
-
-    PreviewContent.append(this.urlValue, divContent);
+    divContent[0].innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
 
     this.preview
       .append(divContent)

@@ -1,16 +1,17 @@
 import { Controller } from "@hotwired/stimulus"
-import PreviewContent from '../preview-content'
 
 // Controls a single tile in the browse nearby ribbon
 export default class extends Controller {
   static values = {
+    id: String,
     url: String,
     previewSelector: String
   }
+  static targets = [ "button" ]
+  static outlets = [ "preview-embed-browse" ]
 
   connect() {
     this.previewTarget = document.querySelector(this.previewSelectorValue)
-    this.triggerBtn = this.element.querySelector('*[data-behavior="preview-button-trigger"]')
     this.closeBtn = document.createElement('button')
     this.closeBtn.type = 'button'
     this.closeBtn.className = 'preview-close btn-close'
@@ -18,19 +19,16 @@ export default class extends Controller {
     this.closeBtn.innerHTML = '<span aria-hidden="true" class="visually-hidden">×</span>'
     this.arrow = document.createElement('div')
     this.arrow.className = 'preview-arrow'
-
-    this.attachTriggerEvents()
   }
 
   showPreview() {
     this.previewTarget.classList.add('preview')
-    this.previewTarget.innerHTML = ''
-    PreviewContent.append(this.urlValue, $(this.previewTarget))
+    this.previewTarget.innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
     this.previewTarget.appendChild(this.closeBtn)
     this.previewTarget.style.display = 'block'
     this.appendPointer(this.previewTarget)
-    this.triggerBtn.textContent = 'Close'
-    this.triggerBtn.classList.add('preview-open')
+    this.buttonTarget.textContent = 'Close'
+    this.buttonTarget.classList.add('preview-open')
     this.attachPreviewEvents()
   }
 
@@ -46,22 +44,20 @@ export default class extends Controller {
     this.arrow.style.left = arrowLeft + 'px'
   }
 
-  attachTriggerEvents() {
-    this.triggerBtn.addEventListener('click', (e) => {
-      if (this.previewOpen()){
-        this.closePreview()
-      } else {
-        this.showPreview()
-      }
-    })
+  togglePreview(e) {
+    if (this.previewOpen()){
+      this.closePreview()
+    } else {
+      // Close the others
+      this.previewEmbedBrowseOutlets.forEach((tile) => {
+        if (tile !== this) {
+          tile.closePreview()
+        }
+      })
 
-    const content = document.getElementById('content')
+      this.showPreview()
 
-    content.addEventListener('click', (e) => {
-      if (!this.currentPreview(e) && (typeof e.target.dataset.accordionSectionTarget === 'undefined')){
-          this.closePreview()
-      }
-    })
+    }
   }
 
   currentPreview(e){
@@ -69,12 +65,12 @@ export default class extends Controller {
     if (e.target.closest('.preview-container')){
       return true
     } else {
-      return e.target === this.triggerBtn
+      return e.target === this.buttonTarget
     }
   }
 
   previewOpen(){
-    return this.triggerBtn.classList.contains('preview-open')
+    return this.buttonTarget.classList.contains('preview-open')
   }
 
   attachPreviewEvents() {
@@ -85,8 +81,8 @@ export default class extends Controller {
 
   closePreview() {
     this.previewTarget.classList.remove('preview')
-    this.triggerBtn.classList.remove('preview-open')
+    this.buttonTarget.classList.remove('preview-open')
     this.previewTarget.style.display = 'none'
-    this.triggerBtn.textContent = 'Preview'
+    this.buttonTarget.textContent = 'Preview'
   }
 }
