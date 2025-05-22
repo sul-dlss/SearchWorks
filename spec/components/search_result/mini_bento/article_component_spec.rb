@@ -10,7 +10,7 @@ RSpec.describe SearchResult::MiniBento::ArticleComponent, type: :component do
 
   it 'draws the page' do
     expect(page).to have_css '[data-alternate-catalog="/catalog?q=question"]'
-    expect(page).to have_css 'button.close'
+    expect(page).to have_css 'button.btn-close'
     expect(page).to have_css '.alternate-catalog-title'
     expect(page).to have_css '.alternate-catalog-body'
     expect(page).to have_css 'a[href="/catalog?q=question"].btn'

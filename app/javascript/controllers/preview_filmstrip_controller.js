@@ -17,7 +17,7 @@ export default class extends Controller {
     this.filmstrip = $(this.element).closest('.image-filmstrip');
     this.viewport = this.filmstrip.find('.viewport');
     this.preview = $(this.selectorValue)
-    this.closeBtn = $(`<button type="button" class="preview-close btn-close close" aria-label="Close">
+    this.closeBtn = $(`<button type="button" class="preview-close btn-close" aria-label="Close">
     <span aria-hidden="true" class="visually-hidden">×</span>
     </button>`);
 

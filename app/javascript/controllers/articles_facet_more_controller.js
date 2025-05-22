@@ -24,7 +24,7 @@ export default class extends Controller {
     return `
       <div class="modal-header">
         <h1 class="modal-title">${title}</h1>
-        <button type="button" class="blacklight-modal-close btn-close close" data-bl-dismiss="modal" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="blacklight-modal-close btn-close" data-bl-dismiss="modal" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="visually-hidden">×</span>
         </button>
       </div>

@@ -76,7 +76,7 @@ Blacklight.onLoad(function(){
     function renderFlashMessages(response){
       $.each(response, function(i,val){
         const alertType = val[0] == 'error' ? 'danger' : val[0]
-        const flashHtml = `<div class="alert alert-${alertType}"><button type="button" class="close btn-close" data-bs-dismiss="alert" aria-hidden="true"></button>${val[1]}</div>`
+        const flashHtml = `<div class="alert alert-${alertType}"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-hidden="true"></button>${val[1]}</div>`
 
         // Show the flash message
         document.querySelector('div.flash_messages').innerHTML = flashHtml
