@@ -31,7 +31,6 @@ import "./embedded-call-number-browse";
 import "./exhibitPanel";
 import "./facet-options-checkboxes";
 import "./feedback_form";
-import "./home_page_facet_collapse";
 import "./jquery.clear-input-text";
 import "./jquery.managed-purl";
 import "./jquery.plug-google-content";
