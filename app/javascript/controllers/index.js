@@ -28,6 +28,9 @@ application.register("chat-hours", ChatHoursController)
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
+import GalleryPreviewController from "./gallery_preview_controller"
+application.register("gallery-preview", GalleryPreviewController)
+
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)
 
@@ -39,6 +42,9 @@ application.register("meta-json-check", MetaJsonCheckController)
 
 import PreviewBriefController from "./preview_brief_controller"
 application.register("preview-brief", PreviewBriefController)
+
+import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
+application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
