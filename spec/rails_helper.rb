@@ -13,7 +13,6 @@ require 'selenium-webdriver'
 require 'webmock/rspec'
 
 WebMock.disable_net_connect!(allow_localhost: true, allow: [
-  'api.newrelic.com',
   'eds-api.ebscohost.com',
   'chromedriver.storage.googleapis.com'
 ])
