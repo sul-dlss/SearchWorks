@@ -169,6 +169,10 @@ import PreviewContent from './preview-content'
 })(jQuery);
 
 
-Blacklight.onLoad(function() {
+document.addEventListener('DOMContentLoaded', ()=> {
   $('*[data-behavior="preview-gallery"]').previewGallery();
-});
+})
+
+document.addEventListener('turbo:load', ()=> {
+  $('*[data-behavior="preview-gallery"]').previewGallery();
+})

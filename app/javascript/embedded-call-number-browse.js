@@ -1,4 +1,3 @@
-import PreviewContent from './preview-content'
 (function($) {
 
   /*
@@ -80,14 +79,14 @@ import PreviewContent from './preview-content'
       function init() {
         if (!$galleryDoc.hasContent()) {
           displayLink()
-
-          PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
-            .done(function (data) {
+          $galleryDoc.embedContainer[0].addEventListener('turbo:frame-load', () => {
+            if (!$galleryDoc.embedContainer[0].querySelector('.browse-link')) {
               reorderPreviewElements();
               $galleryDoc.embedContainer.find('*[data-behavior="preview-gallery"]').previewEmbedBrowse();
               $galleryDoc.addBrowseLinkDivs();
               scrollOver($galleryDoc.currentDocumentTarget(), $galleryDoc.galleryTarget)
-            })
+            }
+          }, true)
         }
       }
 
