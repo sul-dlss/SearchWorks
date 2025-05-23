@@ -25,6 +25,11 @@ RSpec.describe SfxDataController do
   end
 
   context 'when a URL does not have SFX data' do
+    before do
+      stub_request(:get, "http://example.com&sfx.response_type=multi_obj_xml/")
+        .to_return(status: 200, body: "", headers: {})
+    end
+
     it 'returns a 404/Not Found' do
       get :show, params: { url: Addressable::URI.encode('http://example.com') }
 
