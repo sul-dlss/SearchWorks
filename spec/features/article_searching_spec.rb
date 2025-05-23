@@ -141,15 +141,6 @@ RSpec.feature 'Article Searching' do
     end
   end
 
-  describe 'sidenav mini-map' do
-    it 'top/bottom buttons are present in search results' do
-      article_search_for('kittens')
-
-      expect(page).to have_button('Top')
-      expect(page).to have_button('Bottom')
-    end
-  end
-
   describe 'JSON API' do
     it 'includes the fulltext_link_html data' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)

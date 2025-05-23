@@ -2,7 +2,6 @@
 
 import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
-import "./vendor/jquery-scrollspy";
 import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 
 import BlacklightRangeLimit from "blacklight-range-limit/app/assets/javascripts/blacklight_range_limit/blacklight_range_limit.esm";
@@ -32,7 +31,6 @@ import "./feedback_form";
 import "./jquery.clear-input-text";
 import "./jquery.managed-purl";
 import "./jquery.plug-google-content";
-import "./jquery.side-nav-minimap";
 import "./libraryh3lp";
 import "./location-hours";
 import "./preview-content";

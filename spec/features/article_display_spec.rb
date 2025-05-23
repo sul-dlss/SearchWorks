@@ -63,30 +63,6 @@ RSpec.feature 'Article Record Display' do
     end
   end
 
-  describe 'sidenav mini-map' do
-    let(:document) do
-      EdsDocument.new(
-        id: '123',
-        eds_title: 'The title of the document',
-        eds_abstract: 'The Abstract',
-        eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>',
-        eds_volume: 'The Volumne'
-      )
-    end
-
-    it 'is present for each section on the page (+ top/bottom)' do
-      visit article_path(document[:id])
-
-      within '.side-nav-minimap' do
-        expect(page).to have_button('Top')
-        expect(page).to have_button('Abstract')
-        expect(page).to have_button('Subjects')
-        expect(page).to have_button('Details')
-        expect(page).to have_button('Bottom')
-      end
-    end
-  end
-
   describe 'Embedded SFX Menu', :js do
     let(:document) do
       EdsDocument.new(
