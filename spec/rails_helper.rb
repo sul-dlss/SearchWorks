@@ -31,6 +31,10 @@ Capybara.register_driver :headless_chrome do |app|
     opts.args << '--headless'
     opts.args << '--disable-gpu'
     opts.args << '--window-size=1000,700'
+    # Working around https://github.com/teamcapybara/capybara/issues/2800
+    opts.args << '--disable-background-timer-throttling'
+    opts.args << '--disable-backgrounding-occluded-windows'
+    opts.args << '--disable-renderer-backgrounding'
   end
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
 end
