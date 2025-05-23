@@ -108,17 +108,6 @@ Blacklight.onLoad(function() {
     })
   })
 
-  // Side mini-nav
-  document.querySelectorAll('.side-nav-minimap button').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Side mini nav',
-        action: 'SW/clicked-side-nav',
-        label: getText(e)
-      })
-    })
-  })
-
   // Facet collapse and expand events
   // I tried to move this file off Jquery but keeping these facet events requires it
   // Bootstrap 3 and 4 event detection depends on Jquery
