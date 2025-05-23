@@ -14,6 +14,9 @@ RSpec.feature 'EDS Facets', :js do
       within '.blacklight-eds_language_facet' do
         click_link 'more'
       end
+
+      expect(page).to have_field 'A-Z Sort'
+
       within 'dialog' do
         expect(page).to have_link 'swedish'
         expect(page).to have_no_link 'slovenian'
