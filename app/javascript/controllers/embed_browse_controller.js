@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import PreviewContent from '../preview-content'
 import scrollOver from "../scroll-over"
 
 // Connects to data-controller="embed-browse"
@@ -15,14 +14,12 @@ export default class extends Controller {
     this.item = $(this.element)
     this.viewportTarget = document.querySelector(this.viewportSelectorValue)
     this.galleryTarget = this.viewportTarget.querySelector('.gallery')
-    this.embedContainer = $(this.galleryTarget)
     if (!this.hasContent()) {
       this.displayLink()
-      PreviewContent.append(this.urlValue, this.embedContainer)
-        .done((data) => {
-          this.reorderPreviewElements();
-          scrollOver(this.currentDocumentTarget(), this.galleryTarget)
-        })
+      this.galleryTarget.addEventListener('turbo:frame-load', () => {
+        this.reorderPreviewElements();
+        scrollOver(this.currentDocumentTarget(), this.galleryTarget)
+      }, true)
     }
   }
 
@@ -46,7 +43,9 @@ export default class extends Controller {
   }
 
   reorderPreviewElements() {
-    const previewElements = this.embedContainer.find('.preview-container')
+    const embedContainer = $(this.galleryTarget)
+
+    const previewElements = embedContainer.find('.preview-container')
     $(this.viewportTarget).append(previewElements);
   }
 }

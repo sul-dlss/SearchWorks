@@ -32,7 +32,6 @@ import "./jquery.clear-input-text";
 import "./jquery.managed-purl";
 import "./libraryh3lp";
 import "./location-hours";
-import "./preview-content";
 import "./purl-embed";
 import "./recent-selections";
 import "./select-all";
