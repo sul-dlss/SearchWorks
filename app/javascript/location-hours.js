@@ -41,4 +41,7 @@ function locationHours(element) {
       const isClosed = data[0].closed
       hoursElement.innerHTML = formatTimeRange({ openTime, closeTime, isClosed })
     })
+    .catch(error => {
+      console.error("Problem getting hours", libLocation, error)
+    })
 }
