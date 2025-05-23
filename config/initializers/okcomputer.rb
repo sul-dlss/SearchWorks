@@ -79,11 +79,13 @@ Rails.application.reloader.to_prepare do
     OkComputer.make_optional(%w[oclc_citation_service])
   end
 
-  Settings.NEW_RELIC_API.policies.each do |policy|
-    OkComputer::Registry.register policy.key, PerformanceCheck.new(policy)
-  end
+  if Rails.env.production?
+    Settings.NEW_RELIC_API.policies.each do |policy|
+      OkComputer::Registry.register policy.key, PerformanceCheck.new(policy)
+    end
 
-  OkComputer.make_optional(%w[live_lookups]).concat(
-    Settings.NEW_RELIC_API.policies.map(&:key)
-  )
+    OkComputer.make_optional(%w[live_lookups]).concat(
+      Settings.NEW_RELIC_API.policies.map(&:key)
+    )
+  end
 end

@@ -57,6 +57,11 @@ RSpec.describe PerformanceAlerts do
 
     # We don't check in an API key so we should be getting a 401 from them by default
     context 'when the API returns an unsuccessful response' do
+      before do
+        stub_request(:get, "https://api.newrelic.com/v2/alerts_violations.json")
+          .to_return(status: 401, body: "", headers: {})
+      end
+
       it 'returns no alerts' do
         expect(alerts.open).to be_blank
       end
