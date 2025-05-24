@@ -1,5 +1,3 @@
-import PreviewContent from './preview-content'
-
 (function($) {
 
   /*
@@ -30,7 +28,8 @@ import PreviewContent from './preview-content'
 
         $previewTarget.addClass('preview').empty();
 
-        PreviewContent.append(previewUrl, $previewTarget);
+        const id = previewUrl.split('/').pop()
+        $previewTarget[0].innerHTML = `<turbo-frame src="${previewUrl}" id="preview_${id}"></turbo-frame>`
 
         appendPointer($previewTarget);
 
@@ -163,12 +162,9 @@ import PreviewContent from './preview-content'
         });
       }
     });
-
   };
 
+  function init() { $('*[data-behavior="preview-gallery"]').previewGallery() }
+  document.addEventListener("DOMContentLoaded", init)
+  document.addEventListener("turbo:load", init)
 })(jQuery);
-
-
-Blacklight.onLoad(function() {
-  $('*[data-behavior="preview-gallery"]').previewGallery();
-});
