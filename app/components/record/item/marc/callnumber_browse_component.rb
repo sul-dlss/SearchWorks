@@ -30,21 +30,31 @@ module Record
               controls: "callnumber-#{index}",
               selected: index.zero?
             },
-            data: { behavior: "embed-browse",
-                    bs_toggle: "tab",
-                    bs_target: "#callnumber-#{index}",
-                    start: document[:id],
-                    embed_viewport: "#callnumber-#{index}",
-                    index_path: browse_index_path(
-                      start: document[:id],
-                      call_number: spine.base_callnumber,
-                      view: :gallery
-                    ),
-                    url: browse_nearby_path(
-                      start: document[:id],
-                      call_number: spine.base_callnumber,
-                      view: :gallery
-                    ) }
+            data: {
+              behavior: "embed-browse",
+              bs_toggle: "tab",
+              bs_target: "#callnumber-#{index}",
+              start: document[:id],
+              embed_viewport: "#callnumber-#{index}",
+              index_path: full_page_path(spine.base_callnumber),
+              url: filmstrip_path(spine.base_callnumber)
+            }
+          )
+        end
+
+        def filmstrip_path(call_number)
+          browse_nearby_path(
+            start: document[:id],
+            call_number:,
+            view: :gallery
+          )
+        end
+
+        def full_page_path(call_number)
+          browse_index_path(
+            start: document[:id],
+            call_number:,
+            view: :gallery
           )
         end
 
