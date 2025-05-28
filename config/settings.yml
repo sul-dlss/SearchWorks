@@ -46,3 +46,6 @@ quick_search:
   doi_loaded_link: "http://doi.org/"
 analytics_debug: true
 user_agent: 'sul-bento-app'
+
+throttling:
+  redis_url:
