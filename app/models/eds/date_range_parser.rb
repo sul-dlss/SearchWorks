@@ -42,7 +42,7 @@ module Eds
     ##
     # Acccessing from https://github.com/ebsco/edsapi-ruby/blob/bc825c1d89844bab2936c51d4b827c4fd1ddde97/lib/ebsco/eds/results.rb#L527
     def date_range
-      response['date_range']
+      response['date_range'] || {}
     end
   end
 end
