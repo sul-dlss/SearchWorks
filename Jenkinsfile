@@ -189,10 +189,11 @@ pipeline {
     stage('gryphon uat/preview deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'preview_gryphon'
+        BRANCH = '4879-autocomplete'
       }
 
       when {
-        branch "main"
+        branch "4879-autocomplete"
       }
 
       steps {
