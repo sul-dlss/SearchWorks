@@ -136,6 +136,14 @@ class EdsDocument
     "#{bib_publication_date['Y']}-#{bib_publication_date['M']}-#{bib_publication_date['D']}"
   end
 
+  def eds_publication_year
+    bib_publication_date = dig(*bib_part_path, 'BibEntity', 'Dates').find { |x| x['Type'] == 'published' && x.key?('Y') && x.key?('M') && x.key?('D') }
+
+    return find_item_data(name: 'DatePub') unless bib_publication_date
+
+    bib_publication_date['Y']
+  end
+
   def eds_publication_type
     dig('Header', 'PubType') || find_item_data(name: 'TypePub')
   end
