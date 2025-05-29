@@ -63,7 +63,7 @@ module Eds
     end
 
     def available_select_limiters
-      info.dig('AvailableSearchCriteria', 'AvailableLimiters').select { limiter | limiter['Type'] == 'select' }
+      info.dig('AvailableSearchCriteria', 'AvailableLimiters').select { |limiter| limiter['Type'] == 'select' }
     end
 
     def add_pagination(eds_params)
