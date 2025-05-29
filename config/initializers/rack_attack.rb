@@ -1,3 +1,5 @@
+Rack::Attack.cache.store = ActiveSupport::Cache::RedisCacheStore.new(url: Settings.throttling.redis_url) if Settings.throttling.redis_url
+
 Rack::Attack.throttle('req/ip/1m', limit: 15, period: 1.minutes) do |req|
   req.ip if req.path == '/all'
 end
