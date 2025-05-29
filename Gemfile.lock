@@ -208,7 +208,6 @@ GEM
     marcel (1.0.4)
     matrix (0.4.2)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.9)
     minitest (5.25.5)
     msgpack (1.8.0)
     net-imap (0.5.8)
@@ -226,9 +225,6 @@ GEM
       net-protocol
     net-ssh (7.3.0)
     nio4r (2.7.4)
-    nokogiri (1.18.8)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.18.8-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.18.8-x86_64-linux-gnu)
@@ -303,6 +299,10 @@ GEM
     rdoc (6.14.0)
       erb
       psych (>= 4.0.0)
+    redis (5.4.0)
+      redis-client (>= 0.22.0)
+    redis-client (0.24.0)
+      connection_pool
     regexp_parser (2.10.0)
     reline (0.6.1)
       io-console (~> 0.5)
@@ -370,8 +370,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sqlite3 (2.6.0)
-      mini_portile2 (~> 2.8.0)
     sqlite3 (2.6.0-arm64-darwin)
     sqlite3 (2.6.0-x86_64-linux-gnu)
     sshkit (1.24.0)
@@ -410,8 +408,8 @@ GEM
     zeitwerk (2.7.3)
 
 PLATFORMS
+  arm64-darwin-23
   arm64-darwin-24
-  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -438,6 +436,7 @@ DEPENDENCIES
   puma (~> 6.0)
   rack-attack
   rails (~> 8.0.1)
+  redis (~> 5.4)
   rspec
   rspec-rails
   rubocop
