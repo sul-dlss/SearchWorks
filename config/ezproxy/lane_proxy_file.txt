@@ -6,6 +6,7 @@ PA-Rotations.lwwhealthlibrary.com
 aacijournal.biomedcentral.com
 aacnjournals.org
 aacrjournals.org
+aaeportal.com
 aalas.publisher.ingentaconnect.com
 aao-hnsfjournals.onlinelibrary.wiley.com
 aapm.onlinelibrary.wiley.com
@@ -1517,6 +1518,7 @@ www.ClinicalKey.com
 www.aaas.org
 www.aac.amdigital.co.uk
 www.aaem.pl
+www.aaeportal.com
 www.aafp.org
 www.aaic.net.au
 www.aamc.org
