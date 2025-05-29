@@ -322,7 +322,33 @@ class EdsDocument
       data = add_subject_searchlinks(data) if group == 'Su'
     end
 
-    data
+    html_decode_and_sanitize(data)
+  end
+
+  # Decode any html elements and then run it through sanitize to preserve entities (eg: ampersand) and strip out
+  # elements/attributes that aren't explicitly whitelisted.
+  # The RELAXED config: https://github.com/rgrove/sanitize/blob/master/lib/sanitize/config/relaxed.rb
+  def html_decode_and_sanitize(data, config = nil)
+    default_config = Sanitize::Config.merge(Sanitize::Config::RELAXED,
+                                            elements: Sanitize::Config::RELAXED[:elements] +
+                                                %w[relatesto searchlink ephtml],
+                                            attributes: Sanitize::Config::RELAXED[:attributes].merge(
+                                              'searchlink' => %w[fieldcode term]
+                                            ))
+    sanitize_config = config.nil? ? default_config : config
+
+    html = CGI.unescapeHTML(data.to_s)
+    # need to double-unescape data with an ephtml section
+    if /<ephtml>/.match?(html)
+      html = CGI.unescapeHTML(html)
+      html = html.gsub('\"', '"')
+      html = html.gsub("\\n ", '')
+    end
+
+    sanitized_html = Sanitize.fragment(html, sanitize_config)
+    # sanitize 5.0 fails to restore element case after doing lowercase
+    sanitized_html = sanitized_html.gsub('<searchlink', '<searchLink')
+    sanitized_html.gsub('</searchlink>', '</searchLink>')
   end
 
   # add searchlinks when they don't exist
