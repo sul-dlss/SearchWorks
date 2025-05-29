@@ -7,14 +7,10 @@ module EdsLinks
 
   private
 
-  def eds_fulltext_links
-    fetch('eds_fulltext_links', []).map do |link_field|
-      EdsLinks::FulltextLink.new(link_field)
-    end.compact_blank
-  end
-
   def eds_fulltext_links_as_searchworks_links
-    links = eds_fulltext_links
+    links = fetch('eds_fulltext_links', []).map do |link_field|
+      EdsLinks::FulltextLink.new(link_field)
+    end
 
     categories = links.filter_map(&:category).map(&:to_i)
 

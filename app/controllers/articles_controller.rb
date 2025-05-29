@@ -185,13 +185,13 @@ class ArticlesController < ApplicationController
     # a facet but we still can apploy our configured label to the breadcrumbs
     config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false, eds_limiter: true
     config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true, eds_limiter: true
-    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::AdditionalSelectionsFacetComponent, eds_id: 'SourceType'
-    config.add_facet_field 'eds_language_facet', label: 'Language', component: Articles::Response::LimitedFacetFieldListComponent, eds_id: 'Language'
-    config.add_facet_field 'eds_subject_topic_facet', label: 'Topic', component: Articles::Response::LimitedFacetFieldListComponent, eds_id: 'SubjectEDS'
-    config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography', component: Articles::Response::LimitedFacetFieldListComponent, eds_id: 'SubjectGeographic'
-    config.add_facet_field 'eds_journal_facet', label: 'Journal title', component: Articles::Response::LimitedFacetFieldListComponent, eds_id: 'Journal'
-    config.add_facet_field 'eds_publisher_facet', label: 'Publisher', component: Articles::Response::LimitedFacetFieldListComponent, eds_id: 'Publisher'
-    config.add_facet_field 'eds_content_provider_facet', label: 'Database', component: Articles::Response::AdditionalSelectionsFacetComponent, eds_id: 'ContentProvider'
+    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::AdditionalSelectionsFacetComponent, field: 'SourceType'
+    config.add_facet_field 'eds_language_facet', label: 'Language', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Language'
+    config.add_facet_field 'eds_subject_topic_facet', label: 'Topic', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectEDS'
+    config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectGeographic'
+    config.add_facet_field 'eds_journal_facet', label: 'Journal title', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Journal'
+    config.add_facet_field 'eds_publisher_facet', label: 'Publisher', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Publisher'
+    config.add_facet_field 'eds_content_provider_facet', label: 'Database', component: Articles::Response::AdditionalSelectionsFacetComponent, field: 'ContentProvider'
 
     # Other available facets
     # config.add_facet_field 'eds_publication_year_facet', label: 'Publication Year'

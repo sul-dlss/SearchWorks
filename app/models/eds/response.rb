@@ -72,8 +72,27 @@ module Eds
       I18n.t('blacklight.entry_name.default', count: options[:count])
     end
 
+    class FacetField
+      attr_reader :name, :items, :options
+
+      def initialize(name, items, options = {})
+        @name = name
+        @items = items
+        @options = options
+      end
+
+      def sort = nil
+      def offset = 0
+      def prefix = nil
+    end
+
     def aggregations
-      {}
+      dig('SearchResult', 'AvailableFacets').index_by { |facet| facet['Id'] }.transform_values do |facet|
+        values = facet['AvailableFacetValues'].map do |value|
+          OpenStruct.new(value: value['Value'], hits: value['Count'])
+        end
+        FacetField.new(facet['Id'], values)
+      end
     end
 
     def documents

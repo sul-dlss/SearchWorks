@@ -50,12 +50,58 @@ class EdsDocument
   end
 
   def fulltext_links
-    dig('FullText', 'Links')&.select { |x| x['Type'] == 'pdflink' }&.map do |link|
-      link_label = 'PDF Full Text'
-      link_icon = 'PDF Full Text Icon'
+    fulltext_links = []
+
+    fulltext_links += (dig('FullText', 'Links') || []).filter_map do |link|
+      case link['Type']
+      when 'pdflink'
+        link_label = 'PDF Full Text'
+        link_icon = 'PDF Full Text Icon'
+      when 'ebook-pdf'
+        link_label = 'PDF eBook Full Text'
+        link_icon = 'PDF eBook Full Text Icon'
+      when 'ebook-epub'
+        link_label = 'ePub eBook Full Text'
+        link_icon = 'ePub eBook Full Text Icon'
+      when 'other'
+        link_label = 'Linked Full Text'
+        link_icon = 'Linked Full Text Icon'
+      end
+
       link_url = link['Url'] || 'detail'
-      { url: link_url, label: link_label, icon: link_icon, type: 'pdf', expires: true }
+      { url: link_url, label: link_label, icon: link_icon, type: 'pdf', expires: true } if link_label
     end
+
+    fulltext_links += (dig('Item') || []).select { |x| x['Group'] == 'URL' }.map do |item|
+      if item['Data'].include? 'linkTerm=&quot;'
+        link_start = item['Data'].index('linkTerm=&quot;') + 15
+        link_url = item['Data'][link_start..]
+        link_end = link_url.index('&quot;') - 1
+        link_url = link_url[0..link_end]
+        if item['Label']
+          link_label = item['Label']
+        else
+          link_label_start = item['Data'].index('link&gt;') + 8
+          link_label = item['Data'][link_label_start..]
+          link_label = link_label.strip
+        end
+      else
+        link_url = item['Data']
+        link_label = item['Label']
+      end
+      link_icon = 'Catalog Link Icon'
+      { url: link_url, label: link_label, icon: link_icon, type: 'cataloglink', expires: false }
+    end
+
+    fulltext_links += (dig('FullText', 'CustomLinks') || []).map do |link|
+      link_url = link['Url']
+      link_url = add_protocol(link_url)
+      link_label = link['Text']
+      link_icon = link['Icon']
+      { url: link_url, label: link_label, icon: link_icon, type: 'customlink-fulltext', expires: false }
+    end
+
+    fulltext_links
   end
 
   def non_fulltext_links

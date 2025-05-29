@@ -38,12 +38,12 @@ module Eds
 
       filters = search_state.filters.reject { |filter| filter.config.eds_limiter }.flat_map do |filter|
         filter.values.compact_blank.map do |v|
-          { Id: filter.config.eds_id, Value: v }
+          { Id: filter.config.field, Value: v }
         end
       end
 
       filters.each_with_index do |filter, index|
-        eds_params[:SearchCriteria][:FacetFields] << {
+        eds_params[:SearchCriteria][:FacetFilters] << {
           FilterId: index,
           FacetValues: [filter]
         }
