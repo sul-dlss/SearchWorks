@@ -65,16 +65,14 @@
     </div>
   </div>
 
-  <div class="row mb-3">
+  <div class="row">
     <div class="col-md-6">
       <div class="card mb-3">
-        <div class="card-body p-1">
-          <div class="home-page-search-all media">
-            <span aria-hidden="true" class="media-object mx-3">🍱</span>
-            <div class="search-tools-body media-body">
-              <h3><%= link_to 'Search all', 'https://library.stanford.edu/all' %></h3>
-              <p class="d-none d-sm-block">See an overview of what's available for your topic in all these sources.</p>
-            </div>
+        <div class="card-body p-3 d-flex align-items-center">
+          <span aria-hidden="true" class="flex-shrink-0 search-all-icon">🍱</span>
+          <div class="flex-grow-1 ps-3">
+            <h3><%= link_to 'Search all', 'https://library.stanford.edu/all' %></h3>
+            <p class="d-none d-sm-block">See an overview of what's available for your topic in all these sources.</p>
           </div>
         </div>
       </div>
@@ -82,13 +80,11 @@
 
     <div class="col-md-6">
       <div class="card mb-3">
-        <div class="card-body p-1">
-          <div class="home-page-search-tools media">
-            <%= image_tag 'homepage/search.jpg', class: 'media-object mx-3', alt: '', aria: { hidden: true } %>
-            <div class="search-tools-body media-body">
-              <h3><%= link_to 'More search tools', 'https://guides.library.stanford.edu/search-services' %></h3>
-              <p class="d-none d-sm-block">Tools to help you discover resources at Stanford and beyond.</p>
-            </div>
+        <div class="card-body p-3 d-flex align-items-center">
+          <%= image_tag 'homepage/search.jpg', class: 'flex-shrink-0 search-tools-icon', alt: '', aria: { hidden: true } %>
+          <div class="flex-grow-1 ps-3">
+            <h3><%= link_to 'More search tools', 'https://guides.library.stanford.edu/search-services' %></h3>
+            <p class="d-none d-sm-block">Tools to help you discover resources at Stanford and beyond.</p>
           </div>
         </div>
       </div>
