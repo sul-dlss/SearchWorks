@@ -52,22 +52,6 @@ module Eds
                                            blacklight_config:)
     end
 
-    # # Some data providers in EDS don't have the data that populates the pub_year_tisim field
-    # # (although we can query against the data), so this forces the pub_year_tisim field to be populated
-    # # when the response from EDS still contains date range data.
-    # # https://github.com/sul-dlss/SearchWorks/issues/1721
-    # def eds_results_with_date_range(results)
-    #   return results if results.dig('facet_counts', 'facet_fields', 'pub_year_tisim').present?
-    #   return results unless results.key?('date_range')
-
-    #   results['facet_counts']['facet_fields']['pub_year_tisim'] = [
-    #     results['date_range'][:minyear],
-    #     results['date_range'][:maxyear]
-    #   ]
-
-    #   results
-    # end
-
     def build_connection
       Eds::Session.new({})
     end

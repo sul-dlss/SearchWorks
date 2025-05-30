@@ -86,13 +86,33 @@ module Eds
       def prefix = nil
     end
 
+    FacetValue = Struct.new(:value, :hits, keyword_init: true)
+
     def aggregations
-      dig('SearchResult', 'AvailableFacets').index_by { |facet| facet['Id'] }.transform_values do |facet|
+      available_facets_aggregations
+    end
+
+    def available_facets_aggregations
+      @available_facets_aggregations ||= dig('SearchResult', 'AvailableFacets').index_by { |facet| facet['Id'] }.transform_values do |facet|
         values = facet['AvailableFacetValues'].map do |value|
-          OpenStruct.new(value: value['Value'], hits: value['Count'])
+          FacetValue.new(value: value['Value'], hits: value['Count'])
         end
         FacetField.new(facet['Id'], values)
       end
+    end
+
+    def date_range_stats
+      mindate = dig('SearchResult', 'AvailableCriteria', 'DateRange', 'MinDate')
+      maxdate = dig('SearchResult', 'AvailableCriteria', 'DateRange', 'MaxDate')
+
+      minyear = mindate[0..3].to_i
+      maxyear = maxdate[0..3].to_i
+
+      # cap maxdate/maxyear to current year + 1 (to filter any erroneous database metadata)
+      current_year = Time.zone.now.year
+      maxyear = current_year + 1 if maxyear > current_year
+
+      { minyear: minyear, maxyear: maxyear }
     end
 
     def documents
