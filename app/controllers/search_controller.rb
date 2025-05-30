@@ -1,4 +1,6 @@
 class SearchController < ApplicationController
+  allow_browser versions: :modern, block: :handle_outdated_browser
+
   def index
     @search_form_placeholder = I18n.t "defaults_search.search_form_placeholder"
     @page_title = I18n.t "defaults_search.display_name"
@@ -45,6 +47,12 @@ class SearchController < ApplicationController
   end
 
   private
+
+  def handle_outdated_browser
+    return if Rack::Attack.configuration.safelisted?(request)
+
+    render file: Rails.public_path.join('406-unsupported-browser.html'), layout: false, status: :not_acceptable
+  end
 
   def params_q_scrubbed
     params[:q]&.scrub
