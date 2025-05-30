@@ -8,6 +8,19 @@ Rack::Attack.throttle('req/ip/5m', limit: 50, period: 5.minutes) do |req|
   req.ip if req.path == '/all'
 end
 
+Rack::Attack.throttle('req/search/cidr/24', limit: 30, period: 1.minute) do |req|
+  next if req.ip.start_with?('171.', '172.', '10.')
+
+  req.ip.slice(/^\d+\.\d+\.\d+\./) if req.path == '/all'
+end
+
+Rack::Attack.throttle('req/search/cidr/16', limit: 60, period: 1.minute) do |req|
+  next if req.ip.start_with?('171.', '172.', '10.')
+
+  req.ip.slice(/^\d+\.\d+\./) if req.path == '/all'
+end
+
+
 # Throttle catalog search and result requests by IP (10rpm over 1 minute)
   Rack::Attack.throttle('req/ip/catalog/1m', limit: 10, period: 1.minutes) do |req|
     req.ip if req.path.start_with?('/all/xhr_search/catalog')
@@ -16,6 +29,18 @@ end
   Rack::Attack.throttle('req/ip/article/1m', limit: 10, period: 1.minutes) do |req|
     req.ip if req.path.start_with?('/all/xhr_search/article')
   end
+
+Rack::Attack.throttle('req/article/cidr/24', limit: 30, period: 1.minute) do |req|
+  next if req.ip.start_with?('171.', '172.', '10.')
+
+  req.ip.slice(/^\d+\.\d+\.\d+\./) if req.path.start_with?('/all/xhr_search/article')
+end
+
+Rack::Attack.throttle('req/article/cidr/16', limit: 60, period: 1.minute) do |req|
+  next if req.ip.start_with?('171.', '172.', '10.')
+
+  req.ip.slice(/^\d+\.\d+\./) if req.path.start_with?('/all/xhr_search/article')
+end
 
   Rack::Attack.throttle('req/ip/earthworks/1m', limit: 10, period: 1.minutes) do |req|
     req.ip if req.path.start_with?('/all/xhr_search/earthworks')
