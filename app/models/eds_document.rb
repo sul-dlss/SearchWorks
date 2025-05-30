@@ -117,7 +117,9 @@ class EdsDocument
 
   # add protocol if needed
   def add_protocol(url)
-    "https://#{url}" unless url[%r{\Ahttp://}] || url[%r{\Ahttps://}]
+    return url if url[%r{\Ahttps?://}]
+
+    "https://#{url}"
   end
 
   def eds_database_id
