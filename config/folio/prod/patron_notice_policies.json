@@ -118,14 +118,14 @@
   },
   {
     "id": "3fce32f6-b761-4110-95b3-64f4336680a7",
-    "name": "28-day notice ",
-    "description": "Courtesy due date reminder for annual loans sent 28 days before the due date",
+    "name": "Qtrly/Annual notice",
+    "description": "Courtesy due date reminder for annual loans sent 21 days before the due date",
     "active": true,
     "metadata": {
       "createdDate": "2024-05-28T19:49:34.157+00:00",
       "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
-      "updatedDate": "2024-10-31T23:51:25.344+00:00",
-      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+      "updatedDate": "2025-05-29T20:41:25.447+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
       {
@@ -137,7 +137,7 @@
           "sendHow": "Before",
           "sendWhen": "Due date",
           "sendBy": {
-            "duration": 28,
+            "duration": 21,
             "intervalId": "Days"
           }
         }
