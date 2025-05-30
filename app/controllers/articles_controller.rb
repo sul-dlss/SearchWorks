@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
   include Blacklight::Configurable
   include EmailValidation
 
+  allow_browser versions: :modern, block: :handle_outdated_browser
+
   before_action unless: -> { Settings.EDS_ENABLED } do
     flash[:alert] = 'Article+ search is not enabled'
 
@@ -312,5 +314,11 @@ class ArticlesController < ApplicationController
     return I18n.t("#{base_key}.guest_html") if session['eds_guest']
 
     I18n.t("#{base_key}.non_guest_html")
+  end
+
+  def handle_outdated_browser
+    return if Rack::Attack.configuration.safelisted?(request)
+
+    render file: Rails.public_path.join('406-unsupported-browser.html'), layout: false, status: :not_acceptable
   end
 end
