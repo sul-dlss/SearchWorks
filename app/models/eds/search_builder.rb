@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Eds
+  # Map Blacklight's search parameters to EDS request parameters
   class SearchBuilder < Blacklight::SearchBuilder
     self.default_processor_chain = %i[add_default_parameters add_date_slider add_query_parameters add_sort_parameter add_facet_parameters add_limiters add_pagination]
 

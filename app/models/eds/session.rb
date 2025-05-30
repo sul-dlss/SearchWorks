@@ -5,7 +5,7 @@ module Eds
   # A class to wrap the EBSCO::EDS::Session class.
   # We are wrapping this class so that we can easily instantiate a session object
   # without having to pass in all the session options every time (which is very versbose).
-  class Session
+  class Session # rubocop:disable Metrics/ClassLength
     attr_reader :eds_params
 
     def initialize(eds_params)
@@ -16,17 +16,18 @@ module Eds
       @info ||= get('/edsapi/rest/Info').body
     end
 
-    def retrieve(dbid:, an:, highlight: nil, ebook: 'ebook-pdf')
-      doc_response = post('/edsapi/rest/Retrieve', { DbId: dbid, An: an, HighlightTerms: highlight, EbookPreferredFormat: ebook }).body.dig('Record')
+    def retrieve(dbid:, accession_number:, highlight: nil, ebook: 'ebook-pdf')
+      response = post('/edsapi/rest/Retrieve', { DbId: dbid, An: an, HighlightTerms: highlight, EbookPreferredFormat: ebook }).body
+      record = response['Record'] if response.is_a?(Hash)
 
       exports = begin
-        citation_exports(dbid:, an:)
+        citation_exports(dbid:, accession_number:)
       rescue StandardError
         []
       end
 
       styles = begin
-        citation_styles(dbid:, an:)
+        citation_styles(dbid:, accession_number:)
       rescue StandardError
         []
       end
@@ -34,7 +35,7 @@ module Eds
       {
         'SearchResult' => {
           'Data' => {
-            'Records' => [doc_response]
+            'Records' => [record.merge('exports' => exports, 'styles' => styles)]
           }
         }
       }
@@ -42,12 +43,12 @@ module Eds
       # [doc_response, exports, styles]
     end
 
-    def citation_exports(dbid:, an:, format: 'all')
-      get('/edsapi/rest/ExportFormat', { dbid:, an:, format: }).body
+    def citation_exports(dbid:, accession_number:, format: 'all')
+      get('/edsapi/rest/ExportFormat', { dbid:, an: accession_number, format: }).body
     end
 
-    def citation_styles(dbid:, an:, styles: 'all')
-      get('/edsapi/rest/CitationStyles', { dbid:, an:, styles: }).body
+    def citation_styles(dbid:, accession_number:, styles: 'all')
+      get('/edsapi/rest/CitationStyles', { dbid:, an: accession_number, styles: }).body
     end
 
     def search(params)

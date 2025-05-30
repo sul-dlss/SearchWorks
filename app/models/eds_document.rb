@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class EdsDocument
+class EdsDocument # rubocop:disable Metrics/ClassLength
   EDS_RESTRICTED_PATTERN = /^This title is unavailable for guests, please login to see more information./
 
   delegate :dig, to: :@_source
@@ -49,7 +49,7 @@ class EdsDocument
     }
   end
 
-  def fulltext_links
+  def fulltext_links # rubocop:disable Metrics/MethodLength
     fulltext_links = []
 
     fulltext_links += (dig('FullText', 'Links') || []).filter_map do |link|
@@ -341,7 +341,7 @@ class EdsDocument
 
     html = CGI.unescapeHTML(data.to_s)
     # need to double-unescape data with an ephtml section
-    if /<ephtml>/.match?(html)
+    if html.include?('<ephtml>')
       html = CGI.unescapeHTML(html)
       html = html.gsub('\"', '"')
       html = html.gsub("\\n ", '')
@@ -359,12 +359,12 @@ class EdsDocument
     if data.include? '&lt;link '
       subjects = eds_bib_subjects
       subjects = subjects.map do |su|
-        '&lt;searchLink fieldCode=&quot;DE&quot; term=&quot;%22' + su + '%22&quot;&gt;' + su + '&lt;/searchLink&gt;'
+        "&lt;searchLink fieldCode=&quot;DE&quot; term=&quot;%22#{su}%22&quot;&gt;#{su}&lt;/searchLink&gt;"
       end.join('&lt;br /&gt;')
     end
     unless subjects.include? 'searchLink'
       subjects = subjects.split('&lt;br /&gt;').map do |su|
-        '&lt;searchLink fieldCode=&quot;DE&quot; term=&quot;%22' + su + '%22&quot;&gt;' + su + '&lt;/searchLink&gt;'
+        "&lt;searchLink fieldCode=&quot;DE&quot; term=&quot;%22#{su}%22&quot;&gt;#{su}&lt;/searchLink&gt;"
       end.join('&lt;br /&gt;')
     end
     subjects

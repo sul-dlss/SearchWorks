@@ -2,19 +2,19 @@
 
 module Eds
   class Repository < Blacklight::AbstractRepository
-    def search(search_builder = {}, eds_params = {})
+    def search(search_builder = {})
       benchmark('EDS search', level: :info) do
-        eds_search(search_builder, eds_params)
+        eds_search(search_builder)
       end
     end
 
-    def find(id, params = {}, eds_params = {})
+    def find(id, params = {})
       benchmark('EDS find', level: :info) do
-        eds_find(id, params, eds_params)
+        eds_find(id, params)
       end
     end
 
-    def find_by_ids(ids, eds_params = {})
+    def find_by_ids(ids)
       results = connection.solr_retrieve_list(list: ids)
       blacklight_config.response_model.new(
         results,
@@ -26,7 +26,7 @@ module Eds
 
     private
 
-    def eds_search(search_builder = {}, eds_params = {})
+    def eds_search(search_builder = {})
       bl_params = search_builder.to_hash
 
       if bl_params.dig('q', 'id')
@@ -42,10 +42,10 @@ module Eds
                                            blacklight_config:)
     end
 
-    def eds_find(id, params, eds_params)
+    def eds_find(id, params)
       dbid = id.split('__', 2).first
-      accession = id.split('__', 2).last.gsub('%2F', '/')
-      record = connection.retrieve(dbid:, an: accession)
+      accession_number = id.split('__', 2).last.gsub('%2F', '/')
+      record = connection.retrieve(dbid:, accession_number: accession_number)
       blacklight_config.response_model.new(record,
                                            params,
                                            document_model: blacklight_config.document_model,

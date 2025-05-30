@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Eds
+  # Map EDS responses to Blacklight's model
   class Response < ActiveSupport::HashWithIndifferentAccess
     include Kaminari::PageScopeMethods
     include Kaminari::ConfigurationMethods::ClassMethods
