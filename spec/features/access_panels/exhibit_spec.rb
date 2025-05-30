@@ -33,9 +33,9 @@ RSpec.describe 'Exhibit Access Panel', :js do
       expect(page).to have_css('h2', text: 'Context', visible: true)
       within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('h3', text: 'Item is featured in an exhibit')
-        expect(page).to have_css('.media', count: 1)
+        expect(page).to have_css('.d-flex', count: 1)
 
-        within '.media-heading' do
+        within '.exhibit-heading' do
           expect(page).to have_link('Exhibit Title')
         end
       end
@@ -67,7 +67,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
       expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
       within '[data-behavior="exhibits-panel"]' do
-        expect(page).to have_css('.media-heading', text: /The subtitle$/)
+        expect(page).to have_css('.exhibit-heading', text: /The subtitle$/)
       end
     end
   end
@@ -94,10 +94,10 @@ RSpec.describe 'Exhibit Access Panel', :js do
       expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
       within '[data-behavior="exhibits-panel"]' do
-        expect(page).to have_css('.media', count: 5, visible: true)
+        expect(page).to have_css('.d-flex', count: 5, visible: true)
         expect(page).to have_button('show all 7 exhibits')
         click_button('show all 7 exhibits')
-        expect(page).to have_css('.media', count: 7, visible: true)
+        expect(page).to have_css('.d-flex', count: 7, visible: true)
         expect(page).to have_no_button('show all 7 exhibits')
       end
     end
