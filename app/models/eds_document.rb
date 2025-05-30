@@ -20,7 +20,7 @@ class EdsDocument
   end
 
   def eds_source_title
-    source_title = dig(*bib_part_path, 'BibEntitiy', 'Titles')&.find { |item| item['Type'] == 'main' }&.dig('TitleFull') ||
+    source_title = dig(*bib_part_path, 'BibEntity', 'Titles')&.find { |item| item['Type'] == 'main' }&.dig('TitleFull') ||
                    eds_composed_title
 
     return if source_title == eds_title
