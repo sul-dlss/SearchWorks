@@ -11,7 +11,7 @@ const ExhibitsPanel = {
       this.exhibitsHost = this.panel.data('exhibitsHost');
       this.isCollection = this.panel.data('isCollection');
 
-      if (panel.find('.media').length === 0) { // Only run the fetch if the panel has no exhibits yet
+      if (panel.find('[data-exhibit-panel-target]').length === 0) { // Only run the fetch if the panel has no exhibits yet
         this.fetchExhibits();
       } else {
         this.addToggleButtonBehavior(); // Add toggleButtonBehavior if inited with exhibits already (e.g. back button click)
@@ -32,7 +32,7 @@ const ExhibitsPanel = {
         _this.showAppropriatePanelHeading(data.length);
 
         $.each(data, function(i, exhibit) {
-          _this.panel.find('.card-body').append(_this.exhibitMediaObject(exhibit));
+          _this.createExhibitMediaObject(exhibit, _this.panel.find('.card-body')[0])
         });
 
         _this.addToggleButtonBehavior();
@@ -62,19 +62,19 @@ const ExhibitsPanel = {
     addToggleButtonBehavior: function() {
       var _this = this;
       var container = _this.panel.find('.card-body');
-      var exhibitMediaObjects = container.find('.media');
-      var exhibitCount = exhibitMediaObjects.length;
-      if (exhibitCount >= _this.exhibitToggleThreshold) {
+      const exhibitMediaObjects = container[0].querySelectorAll('[data-exhibit-panel-target]')
+      const exhibitCount = exhibitMediaObjects.length;
+      if (exhibitCount > _this.exhibitToggleThreshold) {
         if (container.find('button.see-all-exhibits').length > 0) {
           var toggleButton = container.find('button.see-all-exhibits');
         } else {
           var toggleButton = $('<button class="see-all-exhibits btn btn-secondary btn-xs" href="#">show all ' + exhibitCount + ' exhibits</button>');
         }
 
-        var exhibitMediaObjects = container.find('.media');
-        exhibitMediaObjects.each(function(i) {
+        exhibitMediaObjects.forEach((element, i) => {
           if (i >= _this.exhibitToggleThreshold) {
-            $(this).hide();
+            element.classList.remove('d-flex')
+            element.hidden = true
           }
         });
         toggleButton.on('click.see-all-exhibits-button', function(e) {
@@ -83,12 +83,15 @@ const ExhibitsPanel = {
           // We don't have good text for a toggle off link.
           // When we do we can remove this and update the text appropriately
           toggleButton.remove();
-          exhibitMediaObjects.each(function(i) {
+          exhibitMediaObjects.forEach((element, i) => {
             if (i >= _this.exhibitToggleThreshold) {
-              if($(this).is(':visible')) {
-                $(this).hide(); // Will be used when we have a toggle closed link
+              if(!element.hidden) {
+                // Will be used when we have a toggle closed link
+                element.classList.remove('d-flex')
+                element.hidden = true
               } else {
-                $(this).show();
+                element.classList.add('d-flex')
+                element.hidden = true
               }
             }
           });
@@ -102,37 +105,32 @@ const ExhibitsPanel = {
       }
     },
 
-    exhibitMediaObject: function(exhibit) {
-      var exhibitUrl = this.exhibitsUrl(exhibit.slug);
-      var wrapper = $('<div class="media"></div>');
-      var image = $(`
-          <a href="${exhibitUrl}" tabindex="-1" aria-hidden="true">
-            <img alt="" src="" class="me-3" />
-          </a>
-        `
-      );
-      var body = $('<div class="media-body"></div>');
-      var heading = $('<div class="media-heading"></div>');
-      if (exhibit.thumbnail_url) {
-        wrapper.append(image);
-        image.find('img').prop('src', exhibit.thumbnail_url);
-      }
-      wrapper.append(body);
-      body.append(heading);
-      heading.append(
-        '<h4><a href="' + exhibitUrl + '">' + exhibit.title + '</a></h4> '
-      );
-      if (exhibit.subtitle && exhibit.subtitle !== '') {
-        heading.append(exhibit.subtitle)
-      }
-      // Exhibit link clicked, add a custom event
-      wrapper.find('a').on('click', function(e) {
-        ga('send', 'event', 'Exhibit link', 'clicked', heading.text(), {
-          'transport': 'beacon'
-        });
-      });
+    createExhibitMediaObject: function(exhibit, parentNode) {
+      const exhibitUrl = this.exhibitsUrl(exhibit.slug)
+      const wrapper = document.createElement('div')
+      wrapper.dataset.exhibitPanelTarget = 'exhibit'
+      wrapper.className = 'd-flex mb-2'
+      const subtitle = exhibit.subtitle || ''
+      const body = `<div><div class="exhibit-heading"><h4><a href="${exhibitUrl}">${exhibit.title}</a></h4>${subtitle}</div></div>`
 
-      return wrapper;
+      if (exhibit.thumbnail_url) {
+        wrapper.innerHTML = `<a href="${exhibitUrl}" tabindex="-1" aria-hidden="true">
+          <img alt="" src="${exhibit.thumbnail_url}" class="me-3" />
+        </a>${body}`
+      } else {
+        wrapper.innerHTML = body
+      }
+
+      // Exhibit link clicked, add a custom event
+      wrapper.querySelectorAll('a').forEach((imageLink) => {
+        imageLink.addEventListener('click', (_e) => {
+          ga('send', 'event', 'Exhibit link', 'clicked', [exhibit.title, exhibit.subtitle].join(' '), {
+            'transport': 'beacon'
+          });
+        })
+      })
+
+      parentNode.appendChild(wrapper)
     }
 }
 
