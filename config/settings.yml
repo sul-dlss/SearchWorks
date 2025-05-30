@@ -12,7 +12,6 @@ PURL_EMBED_PROVIDER: "https://embed.stanford.edu/embed"
 PURL_EMBED_URL_SCHEME: "https://purl.stanford.edu/*"
 PURL_EMBED_RESOURCE: "https://purl.stanford.edu/"
 EXHIBITS_ACCESS_PANEL:
-  enabled: false
   exhibits_host: http://example.com
 GLOBAL_ALERT: <%= false %>
 GOOGLE_SITE_VERIFICATION: "654321sitever"

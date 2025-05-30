@@ -3,8 +3,6 @@ HOURS_API:
   enabled: false
 SU_AFFILIATIONS:
   - test-stanford:test
-EXHIBITS_ACCESS_PANEL:
-  enabled: true
 LIB_GUIDES:
   MINI_BENTO_ENABLED: true
 
