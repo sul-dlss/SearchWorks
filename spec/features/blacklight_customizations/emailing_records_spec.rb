@@ -105,8 +105,6 @@ RSpec.describe "Emailing Records", :js do
         it 'emails a full record' do
           # triggers capybara to wait until email is sent
           expect(page).to have_css('.alert-success', text: 'Email Sent', visible: true)
-          # hides the side-nav-minimap
-          expect(page).to have_css('.side-nav-minimap', visible: false)
 
           email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
           expect(email).to have_css('h3', text: /Bibliographic information/)
