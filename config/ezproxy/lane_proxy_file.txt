@@ -962,7 +962,6 @@ link-springer-com.stanford.idm.oclc.org
 link.gale.com
 link.galegroup.com
 link.overdrive.com
-link.spie.org
 link.springer.com
 link.springer.com.
 lipidworld.biomedcentral.com
@@ -995,7 +994,6 @@ meded.lwwhealthlibrary.com
 mededu.jmir.org
 media3.criterionpic.com
 medical.med.tokushima-u.ac.jp
-medicaldevices.asmedigitalcollection.asme.org
 medicaleconomics.modernmedicine.com
 medicalgasresearch.biomedcentral.com
 medicalimaging.spiedigitallibrary.org
@@ -1184,7 +1182,6 @@ pharmrev.aspetjournals.org
 phaseonline.ceramics.org
 phcfm.org
 phil.cdc.gov
-physicstoday.scitation.org
 physoc.onlinelibrary.wiley.com
 pi.lib.uchicago.edu
 pilotfeasibilitystudies.biomedcentral.com
@@ -1574,6 +1571,7 @@ www.ajmb.org
 www.ajmc.com
 www.ajnd.us
 www.ajnmmi.us
+www.ajnr.org
 www.ajol.info
 www.ajpe.org
 www.ajronline.org
@@ -2562,7 +2560,6 @@ www.sphinxsai.com
 www.spiedigitallibrary.org
 www.spiedl.org
 www.springer.com
-www.springerlink.com
 www.springeropen.com
 www.springerprotocols.com
 www.srm-ejournal.com
