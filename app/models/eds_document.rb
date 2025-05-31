@@ -1,9 +1,378 @@
 # frozen_string_literal: true
 
-class EdsDocument
+class EdsDocument # rubocop:disable Metrics/ClassLength
   EDS_RESTRICTED_PATTERN = /^This title is unavailable for guests, please login to see more information./
 
-  include Blacklight::Solr::Document
+  delegate :dig, to: :@_source
+
+  def eds_citation_exports
+    # @eds_citation_exports.items
+  end
+
+  def eds_citation_styles
+    # @eds_citation_styles.items
+  end
+
+  def eds_title(default: 'This title is unavailable for guests, please login to see more information.')
+    dig(*bib_entity_path, 'Titles').find { |item| item['Type'] == 'main' }&.dig('TitleFull') ||
+      find_item_data(name: 'Title') ||
+      default
+  end
+
+  def eds_source_title
+    source_title = dig(*bib_part_path, 'BibEntity', 'Titles')&.find { |item| item['Type'] == 'main' }&.dig('TitleFull') ||
+                   eds_composed_title
+
+    return if source_title == eds_title
+
+    source_title
+  end
+
+  def eds_fulltext_links
+    Array(fulltext_links)
+  end
+
+  def eds_html_fulltext
+    return unless eds_html_fulltext_available
+
+    dig('FullText', 'Text', 'Value')
+  end
+
+  def eds_html_fulltext_available
+    dig('FullText', 'Text', 'Availability') == '1'
+  end
+
+  def eds_fulltext_link
+    {
+      'id' => eds_database_id,
+      'links' => fulltext_links + non_fulltext_links
+    }
+  end
+
+  def fulltext_links # rubocop:disable Metrics/MethodLength
+    fulltext_links = []
+
+    fulltext_links += (dig('FullText', 'Links') || []).filter_map do |link|
+      case link['Type']
+      when 'pdflink'
+        link_label = 'PDF Full Text'
+        link_icon = 'PDF Full Text Icon'
+      when 'ebook-pdf'
+        link_label = 'PDF eBook Full Text'
+        link_icon = 'PDF eBook Full Text Icon'
+      when 'ebook-epub'
+        link_label = 'ePub eBook Full Text'
+        link_icon = 'ePub eBook Full Text Icon'
+      when 'other'
+        link_label = 'Linked Full Text'
+        link_icon = 'Linked Full Text Icon'
+      end
+
+      link_url = link['Url'] || 'detail'
+      { url: link_url, label: link_label, icon: link_icon, type: 'pdf', expires: true } if link_label
+    end
+
+    fulltext_links += (dig('Item') || []).select { |x| x['Group'] == 'URL' }.map do |item|
+      if item['Data'].include? 'linkTerm=&quot;'
+        link_start = item['Data'].index('linkTerm=&quot;') + 15
+        link_url = item['Data'][link_start..]
+        link_end = link_url.index('&quot;') - 1
+        link_url = link_url[0..link_end]
+        if item['Label']
+          link_label = item['Label']
+        else
+          link_label_start = item['Data'].index('link&gt;') + 8
+          link_label = item['Data'][link_label_start..]
+          link_label = link_label.strip
+        end
+      else
+        link_url = item['Data']
+        link_label = item['Label']
+      end
+      link_icon = 'Catalog Link Icon'
+      { url: link_url, label: link_label, icon: link_icon, type: 'cataloglink', expires: false }
+    end
+
+    fulltext_links += (dig('FullText', 'CustomLinks') || []).map do |link|
+      link_url = link['Url']
+      link_url = add_protocol(link_url)
+      link_label = link['Text']
+      link_icon = link['Icon']
+      { url: link_url, label: link_label, icon: link_icon, type: 'customlink-fulltext', expires: false }
+    end
+
+    fulltext_links
+  end
+
+  def non_fulltext_links
+    dig('CustomLinks')&.map do |link|
+      link_url = link['Url']
+      link_url = add_protocol(link_url)
+      link_label = link['Text']
+      link_icon = link['Icon']
+
+      { url: link_url, label: link_label, icon: link_icon, type: 'customlink-other', expires: false }
+    end
+  end
+
+  # add protocol if needed
+  def add_protocol(url)
+    return url if url[%r{\Ahttps?://}]
+
+    "https://#{url}"
+  end
+
+  def eds_database_id
+    dig('Header', 'DbId')
+  end
+
+  def eds_authors
+    deep_find_all(dig(*bib_relationshps_path), 'NameFull')&.to_a
+  end
+
+  def eds_publication_date
+    bib_publication_date = dig(*bib_part_path, 'BibEntity', 'Dates').find { |x| x['Type'] == 'published' && x.key?('Y') && x.key?('M') && x.key?('D') }
+
+    return find_item_data(name: 'DatePub') unless bib_publication_date
+
+    "#{bib_publication_date['Y']}-#{bib_publication_date['M']}-#{bib_publication_date['D']}"
+  end
+
+  def eds_publication_year
+    bib_publication_date = dig(*bib_part_path, 'BibEntity', 'Dates').find { |x| x['Type'] == 'published' && x.key?('Y') && x.key?('M') && x.key?('D') }
+
+    return find_item_data(name: 'DatePub') unless bib_publication_date
+
+    bib_publication_date['Y']
+  end
+
+  def eds_publication_type
+    dig('Header', 'PubType') || find_item_data(name: 'TypePub')
+  end
+
+  def eds_document_doi
+    find_item_data(name: 'DOI') || dig(*bib_entity_path, 'Identifiers')&.find { |x| x['Type'] == 'doi' }&.dig('Value')
+  end
+
+  def eds_database_name
+    dig('Header', 'DbLabel')
+  end
+
+  def eds_languages
+    find_item_data(name: 'Language') || dig(*bib_entity_path, 'Languages')&.pluck('Text')
+  end
+
+  def bib_part_path
+    [:RecordInfo, :BibRecord, :BibRelationships, :IsPartOfRelationships, 0]
+  end
+
+  def bib_entity_path
+    %i[RecordInfo BibRecord BibEntity]
+  end
+
+  def bib_relationshps_path
+    %i[RecordInfo BibRecord BibRelationships]
+  end
+
+  def items_path
+    %i[Items]
+  end
+
+  def eds_author_affiliations
+    find_item_data(name: 'AffiliationAuthor')
+  end
+
+  def eds_composed_title
+    find_item_data(name: 'TitleSource')
+  end
+
+  def eds_abstract
+    find_item_data(name: 'Abstract')
+  end
+
+  def eds_notes
+    find_item_data(name: 'Notes')
+  end
+
+  def eds_subjects_person
+    Subject.from(find_item_data(name: 'SubjectPerson'))
+  end
+
+  def eds_series
+    find_item_data(name: 'SeriesInfo')
+  end
+
+  def eds_publisher
+    find_item_data(name: 'Publisher')
+  end
+
+  def eds_document_oclc
+    find_item_data(name: 'OCLC')
+  end
+
+  def eds_document_type
+    find_item_data(name: 'TypeDocument')
+  end
+
+  def eds_other_titles
+    find_item_data(name: 'TitleAlt')
+  end
+
+  def eds_physical_description
+    find_item_data(name: 'PhysDesc')
+  end
+
+  def eds_author_supplied_keywords
+    Subject.from(find_item_data(name: 'Keyword'))
+  end
+
+  def eds_publication_info
+    find_item_data(label: 'Publication Information')
+  end
+
+  def eds_publication_status
+    find_item_data(label: 'Publication Status')
+  end
+
+  def eds_subjects
+    Subject.from(Array(find_item_data(name: 'Subject', label: 'Subject Terms', group: 'Su') ||
+      find_item_data(name: 'Subject', label: 'Subject Indexing', group: 'Su') ||
+      find_item_data(name: 'Subject', label: 'Subject Category', group: 'Su') ||
+      find_item_data(name: 'Subject', label: 'KeyWords Plus', group: 'Su') ||
+      eds_bib_subjects))
+  end
+
+  def deep_find_all(object, key, &)
+    return to_enum(:deep_find_all, object, key) unless block_given?
+
+    case object
+    when Hash
+      object.each do |k, v|
+        if k.to_s == key.to_s
+          yield v
+        elsif v.is_a?(Hash) || v.is_a?(Array)
+          deep_find_all(v, key, &)
+        end
+      end
+    when Array
+      object.each do |item|
+        deep_find_all(item, key, &) if item.is_a?(Hash) || item.is_a?(Array)
+      end
+    end
+  end
+
+  def eds_bib_subjects
+    deep_find_all(dig(*bib_entity_path), :SubjectFull)&.to_a
+  end
+
+  def eds_subjects_geographic
+    Subject.from(find_item_data(name: 'SubjectGeographic', label: 'Geographic Terms', group: 'Su') ||
+      find_item_data(name: 'Subject', label: 'Subject Geographic', group: 'Su'))
+  end
+
+  def find_item_data(name: nil, label: nil, group: nil)
+    sanitize_data(dig(*items_path)&.find { |item| (name.nil? || item['Name'] == name) && (label.nil? || item['Label'] == label) && (group.nil? || item['Group'] == group) })
+  end
+
+  def eds_volume
+    dig(*bib_part_path, :Numbering)&.find { |x| x['Type'] == 'volume' }&.dig('Value')
+  end
+
+  def eds_issue
+    dig(*bib_part_path, :Numbering)&.find { |x| x['Type'] == 'issue' }&.dig('Value')
+  end
+
+  def eds_page_start
+    deep_find_all(dig(*bib_entity_path), :StartPage)&.first
+  end
+
+  def eds_page_count
+    deep_find_all(dig(*bib_entity_path), :PageCount)&.first
+  end
+
+  def eds_isbns
+    eds_bib_entity_isbns.presence || eds_related_isbns
+  end
+
+  def eds_issns
+    dig(*bib_part_path, :BibEntity, :Identifiers)&.select { |x| x['Type'] == 'issn' && x['Type'].exclude?('locals') }&.pluck('Value')
+  end
+
+  def eds_bib_entity_isbns
+    dig(*bib_part_path, :BibEntity, :Identifiers)&.select { |x| x['Type'] == 'isbn' && x['Type'].exclude?('locals') }&.pluck('Value')
+  end
+
+  def eds_related_isbns
+    isbns = find_item_data(label: 'Related ISBNs')
+
+    return unless isbns
+
+    isbns.split.map do |item|
+      item.gsub(/\.$/, '')
+    end
+  end
+
+  # decode & sanitize html tags found in item data; apply any special transformations
+  def sanitize_data(item)
+    return unless item&.dig('Data')
+
+    data = item['Data']
+
+    # group-specific transformations
+    if item['Group']
+      group = item['Group']
+      data = add_subject_searchlinks(data) if group == 'Su'
+    end
+
+    html_decode_and_sanitize(data)
+  end
+
+  # Decode any html elements and then run it through sanitize to preserve entities (eg: ampersand) and strip out
+  # elements/attributes that aren't explicitly whitelisted.
+  # The RELAXED config: https://github.com/rgrove/sanitize/blob/master/lib/sanitize/config/relaxed.rb
+  def html_decode_and_sanitize(data, config = nil)
+    default_config = Sanitize::Config.merge(Sanitize::Config::RELAXED,
+                                            elements: Sanitize::Config::RELAXED[:elements] +
+                                                %w[relatesto searchlink ephtml],
+                                            attributes: Sanitize::Config::RELAXED[:attributes].merge(
+                                              'searchlink' => %w[fieldcode term]
+                                            ))
+    sanitize_config = config.nil? ? default_config : config
+
+    html = CGI.unescapeHTML(data.to_s)
+    # need to double-unescape data with an ephtml section
+    if html.include?('<ephtml>')
+      html = CGI.unescapeHTML(html)
+      html = html.gsub('\"', '"')
+      html = html.gsub("\\n ", '')
+    end
+
+    sanitized_html = Sanitize.fragment(html, sanitize_config)
+    # sanitize 5.0 fails to restore element case after doing lowercase
+    sanitized_html = sanitized_html.gsub('<searchlink', '<searchLink')
+    sanitized_html.gsub('</searchlink>', '</searchLink>')
+  end
+
+  # add searchlinks when they don't exist
+  def add_subject_searchlinks(data)
+    subjects = data
+    if data.include? '&lt;link '
+      subjects = eds_bib_subjects
+      subjects = subjects.map do |su|
+        "&lt;searchLink fieldCode=&quot;DE&quot; term=&quot;%22#{su}%22&quot;&gt;#{su}&lt;/searchLink&gt;"
+      end.join('&lt;br /&gt;')
+    end
+    unless subjects.include? 'searchLink'
+      subjects = subjects.split('&lt;br /&gt;').map do |su|
+        "&lt;searchLink fieldCode=&quot;DE&quot; term=&quot;%22#{su}%22&quot;&gt;#{su}&lt;/searchLink&gt;"
+      end.join('&lt;br /&gt;')
+    end
+    subjects
+  end
+
+  include Blacklight::Document
+  include Blacklight::Document::ActiveModelShim
+
   delegate :empty?, :blank?, to: :to_h
 
   include EdsLinks
@@ -53,9 +422,19 @@ class EdsDocument
     semantic_value_hash || {}
   end
 
+  def key?(key)
+    respond_to?(key)
+  end
+
+  def [](key)
+    return unless respond_to?(key)
+
+    public_send(key)
+  end
+
   # TODO: change this to #to_param when we have upgraded to Blacklight 6.11.1
   def id
-    (super || '').to_s.gsub('/', '%2F')
+    [@_source.dig('Header', 'DbId'), @_source.dig('Header', 'An')].join('__')
   end
 
   def eds?
