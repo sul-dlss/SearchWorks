@@ -3,6 +3,24 @@
     <%= @facet_field.label %>
   <% end %>
   <% component.with_body do %>
+    <% if month_facets.present? %>
+      <div class="facet-options mt-1 ms-1" data-behavior='facet-options-checkboxes'>
+        <ul class="checkbox-facet-list">
+          <% month_facets.each do |limiter| %>
+            <li data-behavior='facet-options-checkbox'>
+              <%= label_tag("eds_limiter_#{limiter.id}") do %>
+                <%= radio_button('f', limiter.facet_field,
+                                limiter.label,
+                                { id: "eds_limiter_#{limiter.id}", checked: limiter.selected? })%>
+                <%= link_to(limiter.search_url, data: { turbo: false }) do %>
+                  <%= limiter.label %>
+                <% end %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <% if @facet_field.selected_range_facet_item %>
       <%= render BlacklightRangeLimit::RangeSegmentsComponent.new(facet_field: @facet_field, facet_items: [@facet_field.selected_range_facet_item], classes: ['current']) %>
     <% end %>
