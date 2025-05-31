@@ -46,6 +46,21 @@ module AccessPanels
       true
     end
 
+    def availability_class
+      state = item.status.availability_class
+
+      case state
+      when 'available', 'noncirc'
+        "#{state} bi-check-lg"
+      when 'deliver-from-offsite', 'noncirc_page'
+        "#{state} bi-truck"
+      when 'unavailable', 'in_process'
+        "#{state} bi-x"
+      else
+        "#{state} bi-question"
+      end
+    end
+
     def consolidate_for_finding_aid?
       @consolidate_for_finding_aid
     end

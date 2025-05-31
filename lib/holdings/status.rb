@@ -22,6 +22,8 @@ class Holdings
       I18n.t(availability_class, scope: 'searchworks.availability')
     end
 
+    private
+
     def folio_availability_class
       case
       when ['In process', 'In process (non-requestable)'].include?(item.folio_status), ['In_process', 'In_process_non_requestable'].include?(item.location_provided_availability)
