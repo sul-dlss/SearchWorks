@@ -1,11 +1,5 @@
 <%= tag.div id: @id,
-  data: {
-    'doc-id': @document.id,
-    'document-counter': @counter,
-    'behavior': 'preview-gallery',
-    'preview-url': preview_path(@document.id),
-    'preview-target': ".#{preview_container_dom_class}"
-  },
+  data:,
   itemscope: true,
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
