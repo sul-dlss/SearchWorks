@@ -23,8 +23,8 @@ Blacklight.onLoad(function() {
 import "./alternate_catalog";
 import "./analytics";
 import "./article";
+import "./call-number-browse-tabs";
 import "./eds_range_limit";
-import "./embedded-call-number-browse";
 import "./exhibitPanel";
 import "./facet-options-checkboxes";
 import "./feedback_form";

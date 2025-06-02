@@ -25,8 +25,8 @@ RSpec.describe Record::Item::Marc::CallnumberBrowseComponent, type: :component d
   end
 
   it "renders the component" do
-    expect(page).to have_css('button[data-behavior="embed-browse"][data-embed-viewport="#callnumber-0"][data-start="abc123"]', text: 'callnumber')
-    expect(page).to have_css('button[data-behavior="embed-browse"][data-embed-viewport="#callnumber-1"][data-start="abc123"]', text: 'callnumber2')
+    expect(page).to have_css('button[data-controller="embed-browse"][data-embed-browse-viewport-selector-value="#callnumber-0"][data-start="abc123"]', text: 'callnumber')
+    expect(page).to have_css('button[data-controller="embed-browse"][data-embed-browse-viewport-selector-value="#callnumber-1"][data-start="abc123"]', text: 'callnumber2')
     expect(page).to have_css('div.record-browse-nearby')
     expect(page).to have_css(".section#browse-nearby")
     expect(page).to have_css('h2', text: /Browse related items/)
