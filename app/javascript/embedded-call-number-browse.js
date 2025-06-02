@@ -58,14 +58,6 @@ import PreviewContent from './preview-content'
         .querySelector(`.gallery-document[data-doc-id="${this.currentDoc}"]`)
     };
 
-    // Add the first and last item in the list, that goes to full page browse
-    GalleryDocs.prototype.addBrowseLinkDivs = function() {
-      let html = `<div class="gallery-document"><div class="browse-link">` +
-                 `<a href="${this.browseUrl}" class="text-center"> Continue to full page</a></div></div>`
-      this.embedContainer.append(html);
-      this.embedContainer.prepend(html);
-    }
-
     return this.each(function() {
       var $item = $(this)
       const $galleryDoc = new GalleryDocs($item)
@@ -84,7 +76,6 @@ import PreviewContent from './preview-content'
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
             .done(function (data) {
               reorderPreviewElements();
-              $galleryDoc.addBrowseLinkDivs();
               scrollOver($galleryDoc.currentDocumentTarget(), $galleryDoc.galleryTarget)
             })
         }
