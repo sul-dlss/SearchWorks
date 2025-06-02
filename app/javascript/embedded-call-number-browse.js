@@ -32,9 +32,6 @@ import PreviewContent from './preview-content'
   }
 
   $.fn.embedBrowse = function() {
-
-    var DOC_WIDTH = 194;
-
     GalleryDocs = function(item) {
       this.item = item
       this.viewportTarget = document.querySelector(item.data('embed-viewport'))
