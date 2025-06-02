@@ -1,0 +1,156 @@
+import { Controller } from "@hotwired/stimulus"
+import fetchJsonp from "fetch-jsonp"
+
+// Connects to data-controller="google-cover-image"
+export default class extends Controller {
+  static targets = ["image"]
+
+  static booksPerAjaxCall = 15
+  static booksApiUrl = 'https://books.google.com/books?jscmd=viewapi&bibkeys='
+
+  connect() {
+    const currentCovers = Array.from(this.imageTargets)
+    const batches = []
+
+    // batch by batch-cutoff value
+    while (currentCovers.length) {
+      batches.push(currentCovers.splice(0, this.constructor.booksPerAjaxCall))
+    }
+
+    this.addBookCoversByBatch(batches)
+  }
+
+
+   addBookCoversByBatch(batches) {
+    batches.forEach((batch) => {
+      const batchBooksApiUrl = this.constructor.booksApiUrl + this.getBibKeysForBatch(batch)
+
+      fetchJsonp(batchBooksApiUrl)
+        .then((response) => response.json())
+        .then((json) => this.renderCoverAndAccessPanel(json))
+        .catch((e) => console.error(e))
+    })
+  }
+
+  renderCoverAndAccessPanel(json) {
+    // Loop through all the relevant cover elements and if the cover
+    // element has a standard number (order of precidence: OCLC, LCCN, then ISBN)
+    // that exists in the json response and render the cover image for it.
+    this.imageTargets.forEach((coverImg) => {
+      const data = this.bestResponseForNumber(json, coverImg);
+      if (typeof data !== 'undefined') {
+        this.renderCoverImage(data.bibkey, data.data);
+        this.renderAccessPanel(data.bibkey, data.data);
+      }
+    })
+  }
+
+  bestResponseForNumber(json, coverImg) {
+    let data
+    const oclcKeys = coverImg.dataset.oclc.split(',')
+    const lccnKeys = coverImg.dataset.lccn.split(',')
+    const isbnKeys = coverImg.dataset.isbn.split(',')
+    oclcKeys.forEach((oclc) => {
+      if (json[oclc] && typeof json[oclc].thumbnail_url !== 'undefined') {
+        data = { bibkey: oclc, data: json[oclc] }
+        return
+      }
+    })
+    if (typeof data === 'undefined') {
+      lccnKeys.forEach((lccn) => {
+        if (json[lccn] && typeof json[lccn].thumbnail_url !== 'undefined') {
+          data = { bibkey: lccn, data: json[lccn] }
+          return
+        }
+      })
+    }
+    if (typeof data === 'undefined') {
+      isbnKeys.forEach((isbn) => {
+        if (json[isbn] && typeof json[isbn].thumbnail_url !== 'undefined') {
+          data = { bibkey: isbn, data: json[isbn] }
+          return
+        }
+      })
+    }
+    return data
+  }
+
+  renderCoverImage(bibkey, data) {
+    if (typeof data.thumbnail_url !== 'undefined') {
+      let thumbUrl = data.thumbnail_url
+      const selectorCoverImg = `img.${bibkey}`
+
+      thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1')
+      thumbUrl = thumbUrl.replace(/&?edge=curl/, '')
+
+      const imageEl = this.element.querySelector(selectorCoverImg)
+
+      // Only set the thumb src if it's not already set
+      if (imageEl.src === '') {
+        imageEl.src = thumbUrl
+        imageEl.hidden = false
+
+        const fakeCover = imageEl.parentElement.querySelector('span.fake-cover')
+        if (fakeCover) {
+          fakeCover.hidden = true
+        }
+      }
+    }
+  }
+
+  renderAccessPanel(bibkey, data) {
+    if (typeof data.info_url !== 'undefined') {
+      const listGoogleBooks = this.element.querySelectorAll(`.google-books.${bibkey}`)
+
+      listGoogleBooks.forEach((googleBooks) => {
+        const $googleBooks = $(googleBooks)
+        if (data.preview === 'full') {
+          this.checkAndEnableOnlineAccordionSection($googleBooks[0]);
+          this.checkAndEnableAccessPanel($googleBooks[0], '.panel-online');
+        } else if (data.preview === 'partial' || data.preview === 'noview') {
+          const $limitedView = $googleBooks.find('.limited-preview')
+          $limitedView.attr('href', data.preview_url);
+          this.checkAndEnableAccessPanel($googleBooks[0], '.panel-related');
+        }
+      })
+    }
+  }
+
+  // Return a comma delimited string of identifiers
+  getBibKeysForBatch(batch) {
+    return batch.flatMap((coverImg) => {
+      const isbn = coverImg.dataset.isbn.split(',')
+      const oclc = coverImg.dataset.oclc.split(',')
+      const lccn = coverImg.dataset.lccn.split(',')
+
+      return isbn.concat(oclc).concat(lccn)
+    }).filter(elm => elm).join(',')
+  }
+
+  checkAndEnableAccessPanel(googleBooks, panelSelector) {
+    const accessPanel = googleBooks.closest(panelSelector)
+
+    if (!accessPanel)
+      return
+
+    accessPanel.hidden = false
+    googleBooks.hidden = false
+    // Tell the long table controller that another element has been added to it's list
+    googleBooks.dataset.longTableControllerIgnore = false
+    const event = new CustomEvent("item-added");
+    const longTable = googleBooks.closest('[data-controller="long-table"]')
+    longTable?.dispatchEvent(event);
+  }
+
+  checkAndEnableOnlineAccordionSection(googleBooks) {
+    resultsOnlineSection = googleBooks.closest('[data-behavior="results-online-section"]');
+
+    if (resultsOnlineSection) {
+      resultsOnlineSection.hidden = false
+      googleBooks.hidden = false
+      // Re-run responsive truncation on the list in case the google link takes us over the two-line threshold
+      const metadataLinks = googleBooks.closest("[data-behavior='truncate-results-metadata-links']")
+      $(metadataLinks).responsiveTruncate({lines: 2, more: 'more...', less: 'less...'})
+    }
+  }
+}
