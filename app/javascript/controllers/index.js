@@ -37,6 +37,9 @@ application.register("live-lookup", LiveLookupController)
 import LongTableController from "./long_table_controller"
 application.register("long-table", LongTableController)
 
+import ManagedPurlController from "./managed_purl_controller"
+application.register("managed-purl", ManagedPurlController)
+
 import MetaJsonCheckController from "./meta_json_check_controller"
 application.register("meta-json-check", MetaJsonCheckController)
 

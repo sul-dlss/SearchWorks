@@ -30,7 +30,6 @@ import "./exhibitPanel";
 import "./facet-options-checkboxes";
 import "./feedback_form";
 import "./jquery.clear-input-text";
-import "./jquery.managed-purl";
 import "./jquery.plug-google-content";
 import "./jquery.side-nav-minimap";
 import "./libraryh3lp";
