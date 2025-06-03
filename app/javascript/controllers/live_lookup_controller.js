@@ -39,14 +39,18 @@ export default class extends Controller {
           target.attr('title', status_text.data('unavailable-text'))
         }
         if (dom_item.data('request-url') && live_data.is_requestable_status) {
-          const link = `<a rel='nofollow' class='btn btn-xs request-button' title='Opens in new tab' target='_blank' href="${dom_item.data('request-url')}">Request <span class='visually-hidden'>(opens in new tab)</span></a>`
+          const requestUrl = dom_item.data('request-url');
+          const link = `<a rel='nofollow' class='btn btn-xs request-button' title='Opens in new tab' target='_blank' href="${requestUrl}">
+            Request <span class='visually-hidden'>(opens in new tab)</span>
+          </a>`;
           $('.request-link', dom_item).html(link);
         }
       }
-      if (live_data.is_available && dom_item.length > 0  && target.hasClass('unknown')) {
+      if (live_data.is_available && dom_item.length > 0 && target.hasClass('unknown')) {
         target.removeClass('unknown');
         target.addClass('available');
         status_text.text(status_text.data('available-text'));
+
         if (target.attr('title')) {
           target.attr('title', status_text.data('available-text'));
         }
@@ -54,9 +58,10 @@ export default class extends Controller {
     })
   }
 
-  liveLookupURL(container) {
+  liveLookupURL() {
     const root_path = this.urlValue
     const ids = this.listOfIds().map((id) => `ids[]=${id}`)
+
     return `${root_path}?${ids.join('&')}`
   }
 

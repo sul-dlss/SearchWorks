@@ -9,8 +9,16 @@ export default class extends Controller {
   }
 
   connect() {
-    this.triggerBtn = $('<div class="preview-trigger-btn preview-opacity" data-action="click->preview-filmstrip#showPreview"><span class="bi-chevron-down small"></span></div>')
-    this.triggerFocus = $('<div class="preview-trigger-focus preview-opacity" data-action="click->preview-filmstrip#showPreview">Preview <span class="bi-chevron-down small"></span></div>')
+    this.triggerBtn = $(
+      '<div class="preview-trigger-btn preview-opacity" data-action="click->preview-filmstrip#showPreview">' +
+      '<span class="bi-chevron-down small"></span>' +
+      '</div>'
+    )
+    this.triggerFocus = $(
+      '<div class="preview-trigger-focus preview-opacity" data-action="click->preview-filmstrip#showPreview">' +
+      'Preview <span class="bi-chevron-down small"></span>' +
+      '</div>'
+    )
     this.arrow = $('<div class="preview-arrow"></div>');
 
     // NOTE: The filmstrip, viewport, prevew ,and closeBtn are outside of the controller.
@@ -31,7 +39,6 @@ export default class extends Controller {
 
   showPreview() {
     const divContent = $('<div class="preview-content"></div>')
-    console.log("Now Preview target is ", this.preview)
 
     this.preview.empty();
 

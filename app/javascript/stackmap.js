@@ -53,7 +53,7 @@ import fetchJsonp from 'fetch-jsonp';
 
         tplMap.replaceWith(tpl)
         addOsd(map, index, zoomControls)
-        attachEvents(container, index)
+        attachEvents(container)
       })
     }
 
@@ -85,7 +85,7 @@ import fetchJsonp from 'fetch-jsonp';
       })
     }
 
-    function attachEvents(container, index) {
+    function attachEvents(container) {
       container.querySelectorAll('[data-action="reveal-text-directions"]').forEach(button => {
         button.addEventListener('click', (e) => {
           const textSwap = button.querySelector('.text-swap')

@@ -33,7 +33,6 @@ import PreviewContent from './preview-content'
 
   $.fn.embedBrowse = function() {
 
-    var DOC_WIDTH = 194;
 
     GalleryDocs = function(item) {
       this.item = item
@@ -74,7 +73,7 @@ import PreviewContent from './preview-content'
           displayLink()
 
           PreviewContent.append($galleryDoc.url, $galleryDoc.embedContainer)
-            .done(function (data) {
+            .done(function () {
               reorderPreviewElements();
               scrollOver($galleryDoc.currentDocumentTarget(), $galleryDoc.galleryTarget)
             })
