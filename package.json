@@ -19,6 +19,7 @@
     "eslint": "^9.0.0",
     "eslint-plugin-import": "^2.29.1"
   },
+  "type": "module",
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
     "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css ./app/assets/stylesheets/print.scss:./app/assets/builds/print.css --no-source-map --quiet-deps --load-path=node_modules",
