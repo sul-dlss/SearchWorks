@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "import/no-extraneous-dependencies": "off",
+    "no-param-reassign": "off",
+    "max-len": ["error", { "code": 120 }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+  },
+  "globals": {
+    "Blacklight": "readonly",
+    "Turbo": "readonly"
+  }
+}
