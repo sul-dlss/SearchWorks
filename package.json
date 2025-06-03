@@ -23,6 +23,7 @@
     "eslint": "^9.0.0",
     "eslint-plugin-import": "^2.29.1"
   },
+  "type": "module",
   "scripts": {
     "build": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --minify --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
     "build:dev": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
