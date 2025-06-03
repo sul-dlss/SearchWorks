@@ -7,13 +7,13 @@
     padding-left: 18px;
 
     .no-thumbnail {
-      border-bottom: 1px solid $su-cloud;
+      border-bottom: 1px solid var(--stanford-20-black);
       margin-bottom: 15px;
       padding-bottom: 5px;
     }
 
     .with-thumbnail {
-      border-bottom: 1px solid $su-cloud;
+      border-bottom: 1px solid var(--stanford-20-black);
       margin-bottom: 15px;
       padding-bottom: 0;
     }
@@ -66,7 +66,7 @@
 }
 
 .etas-results-block {
-  border: 3px solid $sul-temp-access-alert-box-border-color;
+  border: 3px solid rgb(var(--stanford-poppy-rgb));
   padding: 8px;
 }
 

@@ -1,19 +1,37 @@
 @import "application/deja-vu-font";
-@import "identity/bootstrap-variables";
-@import "application/sul-variables";
-@import "application/bootstrap-variables";
+// Typography
+$h1-font-size: 2.323rem;
+$h2-font-size: 1.793rem;
+$h3-font-size: 1.383rem;
+$h4-font-size: 1.215rem;
+$headings-font-weight: 400;
+
 @import "bootstrap/scss/bootstrap";
+
+.container-fluid {
+  --container-fluid-padding: 100px;
+  width: calc(100% - var(--container-fluid-padding) + var(--bs-gutter-x));
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    --container-fluid-padding: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid {
+    --container-fluid-padding: 200px;
+  }
+}
+
 @import "application/quick_search_overrides";
-@import "application/base";
 
 @import "modules/homepage";
-@import "modules/masthead";
-@import "modules/subnavbar";
 @import "modules/global-alert";
+@import "modules/masthead";
 
 @import "modules/results";
 @import "modules/stanford-only";
 @import "modules/highlighted_facet";
 @import "modules/online-label";
-@import "modules/libweb";
 @import "modules/searcher-anchors";

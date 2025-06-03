@@ -11,7 +11,7 @@ describe 'layouts/application' do
   end
   describe 'contains skip links' do
     it do
-      expect(rendered).to have_link('Skip to search', href: '#params-q')
+      expect(rendered).to have_link('Skip to search', href: '#q')
       expect(rendered).to have_link('Skip to main content', href: '#main-content')
     end
   end
