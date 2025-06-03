@@ -755,7 +755,7 @@
     </fieldType>
 
     <!-- field designed for ALPHANUM (and CALDOC) call number searching -->
-    <fieldType name="callnumAlphanum" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+    <fieldType name="callnumAlphanum" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
       <analyzer>
         <!-- Remove space between the first two terms, we want two or more terms to match -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
@@ -763,36 +763,36 @@
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
         <!-- Normalize whitespace -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
-        <tokenizer name="pathHierarchy" delimiter=" " />
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter=" " />
 	<filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
 
     <!-- field designed for SPEC call number searching -->
-    <fieldType name="callnumSpec" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
+    <fieldType name="callnumSpec" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
       <analyzer>
         <!-- Normalize whitespace -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
-        <tokenizer name="pathHierarchy" delimiter=" " />
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter=" " />
 	<filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
 
     <!-- field designed for SUDOC call number searching -->
-    <fieldType name="callnumSudoc" class="solr.TextField" omitNorms="true" positionIncrementGap="100" autoGeneratePhraseQueries="true">
-      <analyzer type="query">
-        <!-- Add a space between letters and numbers -->
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([A-Za-z])(\d)" replacement="$1 $2"/>
+    <fieldType name="callnumSudoc" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
+      <analyzer>
+        <!-- Remove space between letters and numbers -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([A-Za-z])\s+?(\d)" replacement="$1$2"/>
         <!-- Replace punctuation with a space -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
         <!-- Normalize whitespace -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
-        <tokenizer name="pathHierarchy" delimiter=" " />
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter=" " />
 	<filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
     </fieldType>
 
-    <fieldType name="callnumUndoc" class="solr.TextField" omitNorms="true">
+    <fieldType name="callnumUndoc" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
       <analyzer>
         <!-- Normalize punctuation (except /) to a space -->
         <charFilter class="solr.PatternReplaceCharFilterFactory"
@@ -811,7 +811,7 @@
         <!-- Add a slash after the first term if there are no slashes at all (some UNDOCs like ICAO are abbreviated, e.g., ICAO DOC 9161) -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^([^\s/]+?)\s+([^/]+)$" replacement="$1/$2"/>
         <filter class="solr.LowerCaseFilterFactory"/>
-        <tokenizer name="pathHierarchy" delimiter="/" />
+        <tokenizer class="solr.PathHierarchyTokenizerFactory" delimiter="/" />
       </analyzer>
     </fieldType>
 
