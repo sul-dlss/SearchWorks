@@ -1,6 +1,6 @@
-;(function ($, window, document, undefined ) {
+;(function ($, window, document) {
   'use strict';
-  
+
   // Create the defaults once
   var pluginName = "managedPurl";
   var defaults = {};
@@ -8,11 +8,11 @@
 
   function Plugin(element, options) {
     $el = $(element);
-    
+
     this.options = $.extend({}, defaults, options);
     this._defaults = defaults;
     this._name = pluginName;
-    
+
     this.init();
   }
 

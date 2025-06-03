@@ -7,7 +7,7 @@ Blacklight.onLoad(function(){
 })
 
 
-;(function ( $, window, document, undefined ) {
+;(function ( $, window, document)  {
   /*
     jQuery plugin that handles some of the feedback form functionality
 
@@ -25,7 +25,6 @@ Blacklight.onLoad(function(){
 
     function Plugin( element, options ) {
         this.element = element;
-        var $el, $form;
 
         this.options = $.extend( {}, options) ;
         this._name = pluginName;
@@ -64,14 +63,6 @@ Blacklight.onLoad(function(){
       });
     }
 
-    function isSuccess(response){
-      switch(response[0][0]){
-      case 'success':
-        return true;
-      default:
-        return false;
-      }
-    }
 
     function renderFlashMessages(response){
       $.each(response, function(i,val){
