@@ -1,0 +1,10 @@
+node_modules/
+app/assets/
+public/
+vendor/
+coverage/
+tmp/
+log/
+db/
+bin/
+app/javascript/vendor/

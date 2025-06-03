@@ -19,9 +19,15 @@
     "react-dom": "^19.1.0",
     "sass": "^1.72.0"
   },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1"
+  },
   "scripts": {
     "build": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --minify --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
     "build:dev": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
-    "build:css": "sass ./app/assets/stylesheets/searchworks4.scss:./app/assets/builds/searchworks4.css --no-source-map --quiet-deps --load-path=node_modules"
+    "build:css": "sass ./app/assets/stylesheets/searchworks4.scss:./app/assets/builds/searchworks4.css --no-source-map --quiet-deps --load-path=node_modules",
+    "lint": "eslint app/javascript/",
+    "lint:fix": "eslint app/javascript/ --fix"
   }
 }
