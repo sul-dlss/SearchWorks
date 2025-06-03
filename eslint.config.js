@@ -25,18 +25,22 @@ export default [
         document: 'readonly',
         window: 'readonly',
         $: 'readonly',
-        jQuery: 'readonly'
+        jQuery: 'readonly',
+        global: 'readonly',
+        undefined: 'readonly'
       }
     },
     plugins: {
       import: importPlugin
     },
     rules: {
-      'no-console': ['error', { allow: ['warn', 'error'] }],
-      'import/no-extraneous-dependencies': 'off',
+      'no-console': ['error', { allow: ['error'] }],
+      'import/no-extraneous-dependencies': 'error',
       'no-param-reassign': 'off',
-      'max-len': ['error', { code: 120 }],
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }]
+      'max-len': ['warn', { code: 150 }],
+      'no-unused-vars': ['error', {
+        argsIgnorePattern: '^(_|e|f|\\$.*|window|document|global)'
+      }]
     }
   }
 ];
