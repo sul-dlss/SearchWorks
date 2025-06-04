@@ -3,7 +3,10 @@
 <div class="search-area-image-bg">
   <div class="container">
     <search class="search-card px-4 py-3">
-      Search area
+      <%= render SearchworksSearchBarComponent.new url: search_action_url,
+                                                   advanced_search_url: search_action_url(action: 'advanced_search'),
+                                                   params: search_state.params_for_search.except(:qt),
+                                                   autocomplete_path: suggest_index_catalog_path %>
     </search>
   </div>
 </div>
