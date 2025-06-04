@@ -4,3 +4,26 @@
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
   }
 }
+
+.search-area-image-bg {
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 80%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(catalog-image.jpg);
+    z-index: -1;
+  }
+
+  position: relative;
+  height: 350px;
+  padding-block: 80px;
+
+  .search-card {
+    background-color: white;
+    width: 645px;
+  }
+}

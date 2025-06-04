@@ -107,17 +107,7 @@
       <%= content_for(:skip_links) %>
     <% end %>
     <%= render 'shared/top_navbar' %>
-
-    <div class="container-fluid">
-
-      <%= render 'shared/modal' %>
-      <main id="main-container">
-        <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
-        <%= render '/flash_msg', layout: 'shared/flash_messages' %>
-
-        <%= yield %>
-      </main>
-    </div>
+    <%= yield %>
     <%= render 'shared/su_footer' %>
   </body>
 </html>
