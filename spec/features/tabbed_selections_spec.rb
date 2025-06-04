@@ -18,21 +18,6 @@ RSpec.describe 'Tabbed selections UI' do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end
 
-  describe 'selections drop down', :js do
-    it 'renders a drop down with counts for each type of record selection' do
-      visit '/'
-
-      within('#search-subnavbar') do
-        click_link 'Selections (7)'
-
-        within('.recent-selections') do
-          expect(page).to have_link('Catalog selections (3)')
-          expect(page).to have_link('Articles+ selections (4)')
-        end
-      end
-    end
-  end
-
   describe 'selections send to', :js do
     it 'renders export formats' do
       visit '/selections'
@@ -102,20 +87,6 @@ RSpec.describe 'Tabbed selections UI' do
 
       expect(page).to have_css('.btn', text: '0 catalog items')
       expect(page).to have_css('.btn', text: '4 articles+ items')
-    end
-
-    it 'clears both lists' do
-      visit '/selections'
-
-      expect(page).to have_css('.btn', text: '3 catalog items')
-      expect(page).to have_css('.btn', text: '4 articles+ items')
-
-      within('#search-subnavbar .recent-selections') do
-        click_link 'Clear all lists'
-      end
-
-      expect(page).to have_css('.btn', text: '0 catalog items')
-      expect(page).to have_css('.btn', text: '0 articles+ items')
     end
   end
 end

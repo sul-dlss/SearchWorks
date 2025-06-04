@@ -19,8 +19,12 @@ RSpec.describe 'Callnumber Browse', :js do
         check 'Select'
       end
 
-      expect(page).to have_css '[data-behavior="recent-selections"]', text: 'Selections (1)'
       expect(page).to have_field 'Selected', checked: true
+
+      click_link "Bookmarks"
+      expect(page).to have_text 'Selection lists'
+
+      expect(page).to have_link 'An object'
     end
   end
 
@@ -44,7 +48,13 @@ RSpec.describe 'Callnumber Browse', :js do
 
       expect(page).to have_css('input.toggle-bookmark[checked]')
 
-      expect(page).to have_css('[data-behavior="recent-selections"]', text: 'Selections (2)')
+      expect(page).to have_field 'Selected', checked: true
+
+      click_link "Bookmarks"
+      expect(page).to have_text 'Selection lists'
+
+      expect(page).to have_link 'Virtual U : a simulation of university system management'
+      expect(page).to have_link 'The gases of swamp rice soils ...'
     end
 
     it 'allows the user to pick the view type' do
