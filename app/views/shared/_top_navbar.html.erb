@@ -45,7 +45,11 @@
           >
             <div>
               <div class="h1 my-0">
-                <a href="/">SearchWorks <span class="fw-bold">Catalog</span></a>
+                <% if controller.is_a? ArticlesController %>
+                  <a href="/articles">SearchWorks <span class="fw-bold">Articles+</span></a>
+                <% else %>
+                  <a href="/">SearchWorks <span class="fw-bold">Catalog</span></a>
+                <% end %>
               </div>
               <span class="fs-6 d-block my-1"
                 >Books, journals, media, and more from the Library’s physical and online collections</span>
