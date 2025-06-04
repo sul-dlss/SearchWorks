@@ -2,4 +2,7 @@
   --stanford-illuminating-dark: #fec51d1a;
   --stanford-cardinal-dark: #820000;
   --mostly-pure-orange: #ff8000;
+
+  --identity-bar-bg-color: var(--stanford-cardinal);
+  --identity-bar-color: white;
 }

@@ -1,25 +1,114 @@
-<div id="topnav-container">
-  <header id="topnav" class="header-logo" role="banner">
-    <div class="d-flex flex-wrap align-items-center justify-content-between">
-      <a
-        class="mb-0 navbar-brand navbar-logo-cl polychrome"
-        href="https://library.stanford.edu"
-        >Stanford University Libraries</a
-      >
-      <div class="header-links">
-        <% if current_user %>
-        <%= link_to "#{current_user.sunet}: Logout", destroy_user_session_path, class: 'first' %>
-        <% else %>
-        <%= link_to 'Login', new_user_session_path(referrer: request.original_url), class: 'first', data: { turbo: false } %>
-        <% end %>
-        <%= link_to "My Account", "https://mylibrary.stanford.edu/" %>
-        <%= link_to feedback_path, data: { 'bs-toggle':"collapse", 'bs-target':"#feedback-form"} do %>
-        Feedback
-        <% end %>
+    <header>
+      <div class="identity-bar">
+        <div class="container">
+          <a
+            class="su-brand-bar__logo"
+            href="https://www.stanford.edu"
+            >Stanford University</a
+          >
+        </div>
       </div>
-    </div>
-  </header>
-</div>
-<div id="feedback-form" class="feedback-form-container collapse">
-  <%= render_feedback_form('feedback') if show_feedback_form? %>
-</div>
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+          <a
+            class="mb-0 navbar-brand navbar-logo"
+            href="https://library.stanford.edu"
+            >Stanford University Libraries</a
+          >
+          <button
+            class="navbar-toggler navbar-toggler-right collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-bs-toggle="collapse"
+            data-target="#user-util-collapse"
+            data-bs-target="#user-util-collapse"
+            aria-controls="user-util-collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="d-md-block d-none">
+            <%= render 'shared/user_util_links', extra_classes: '' %>
+          </div>
+        </div>
+      </nav>
+
+      <div id="feedback" class="collapse">
+        <%= render_feedback_form('feedback') if show_feedback_form? %>
+      </div>
+      <div class="masthead">
+        <div class="container">
+          <div
+            class="d-flex flex-wrap align-items-end justify-content-between pt-3 pb-1 pb-md-3 gap-3"
+          >
+            <div>
+              <div class="h1 my-0">
+                <a href="/">SearchWorks <span class="fw-bold">Catalog</span></a>
+              </div>
+              <span class="fs-6 d-block my-1"
+                >Books, journals, media, and more from the Library’s physical and online collections</span>
+            </div>
+            <div class="navbars ms-md-auto">
+              <nav
+                class="collapse navbar-collapse align-items-start justify-content-md-end navbar-expand-md d-md-flex flex-column flex-md-row"
+                aria-label="browse"
+                id="user-util-collapse"
+              >
+                <hr class="d-md-none vw-100 my-0" />
+                <ul
+                  class="navbar-nav justify-content-md-end gap-0 gap-md-4 w-100 fw-semibold"
+                >
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Featured resources
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'dropdown-item' %>
+                      </li>
+                      <li>
+                        <%= link_to 'Government documents', govdocs_path, class: 'dropdown-item' %>
+                      </li>
+                      <li>
+                        <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'dropdown-item' %>
+                      </li>
+                      <li>
+                        <%= link_to 'Course reserves', course_reserves_path, class: 'dropdown-item' %>
+                      </li>
+                      <li>
+                        <%= link_to 'Databases', databases_path, class: 'dropdown-item' %>
+                      </li>
+                      <li>
+                        <%= link_to 'IIIF resources', search_catalog_path(f: {iiif_resources: ['available'] }), class: 'dropdown-item' %>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Help
+                    </a>
+                    <%= render 'shared/search_navbar_services_menu' %>
+                  </li>
+                </ul>
+                <hr class="d-md-none vw-100 my-0" />
+                <%= render 'shared/user_util_links', extra_classes: 'd-md-none gap-0 w-100' %>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>

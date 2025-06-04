@@ -1,7 +1,5 @@
 // Import all individual stylesheets here
-@import "base";
-@import "layout";
-
+@import url("masthead.css");
 @import "modules/access-panel";
 @import "modules/access-panel-course-reserve";
 @import "modules/access-panel-exhibit";
@@ -32,8 +30,6 @@
 @import "modules/file-collection-members";
 @import "modules/gallery-view";
 @import "modules/global-alert";
-@import "modules/home-page";
-@import "modules/home-page-notice";
 @import "modules/collection-result-preview";
 @import "modules/facet-options";
 @import "modules/image-collection-filmstrip";
@@ -54,15 +50,12 @@
 @import "modules/record-toolbar";
 @import "modules/research-starter";
 @import "modules/results-documents";
-@import "modules/search-bar";
 @import "modules/sfx-panel";
 @import "modules/spinner";
-@import "modules/subnavbar";
 @import "modules/selected-databases";
 @import "modules/show_page";
 @import "modules/sort-and-per-page-toolbar";
 @import "modules/stackmap";
-@import "modules/sul-footer";
 @import "modules/sul-icons";
 @import "modules/sul-toolbar";
 @import "modules/top-navbar";
