@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <%= render "shared/feedback_forms/reporting_from" %>
 
-    <% if target == '#feedback-form' %>
+    <% if target == '#feedback' %>
       <div class="col-sm-12 offset-sm-3">
         <%= render Feedback::ChatWithLibrarianComponent.new %>
         <div class="row mt-3">

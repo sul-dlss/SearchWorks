@@ -2,8 +2,8 @@ Blacklight.onLoad(function(){
 
   //Instantiates plugin for feedback form
 
-  $("#feedback-form").feedbackForm();
-  $("#connection-form").feedbackForm();
+  $("#feedback").feedbackForm()
+  $("#connection-form").feedbackForm()
 })
 
 
