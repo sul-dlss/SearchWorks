@@ -1,38 +1,50 @@
 <% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{I18n.t('blacklight.application_name')} articles") %>
-<div class="breadcrumb row">
-  <div class="col-md-12">
-    <%= render blacklight_config.view_config(document_index_view_type).constraints_component.new(search_state:) %>
-  </div>
-</div>
-<% if @response.empty? %>
-  <%= render "shared/zero_results" %>
-<% else %>
-  <div class='row'>
-    <div id="sidebar" class="col-md-4 col-sm-5">
-      <%= render 'search_sidebar' %>
-    </div>
-    <div id="content" class="col-md-8 col-sm-7">
-      <%= render Articles::LoginBannerComponent.new unless current_user %>
-      <div id='documents' class="article-search-results">
-        <div class="search_num_of_results">
-          <div class='results-heading'>
-            <h1 class="visually-hidden"><%= t('blacklight.search.page_heading', search_type: search_type_name) %></h1>
-            <h2>
-              About <%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %>
-              <span class="duplicates">Duplicates removed</span>
-              <button class="btn duplicate-info" aria-label="More information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="<%= t('.duplicates') %>">
-                <span class="bi-info-circle"></span>
-              </button>
-            </h2>
-          </div>
-        </div>
-        <%= render blacklight_config.view_config(document_index_view_type).search_header_component.new %>
 
-        <%= render Articles::ResearchStarterComponent.new(response: @response) if params[:page].blank? || params[:page] == '1' %>
-        <%= render_document_index @response.documents %>
-        <%= render blacklight_config.index.mini_bento_component.new(close: true) %>
-        <%= render 'search_footer' %>
+<%= render Articles::SearchNavbarComponent.new blacklight_config: %>
+
+<div class="container-fluid">
+  <%= render 'shared/modal' %>
+  <main id="main-container">
+    <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
+    <%= render '/flash_msg', layout: 'shared/flash_messages' %>
+
+    <div class="breadcrumb row">
+      <div class="col-md-12">
+        <%= render blacklight_config.view_config(document_index_view_type).constraints_component.new(search_state:) %>
       </div>
     </div>
-  </div>
-<% end %>
+    <% if @response.empty? %>
+      <%= render "shared/zero_results" %>
+    <% else %>
+      <div class='row'>
+        <div id="sidebar" class="col-md-4 col-sm-5">
+          <%= render 'search_sidebar' %>
+        </div>
+        <div id="content" class="col-md-8 col-sm-7">
+          <%= render Articles::LoginBannerComponent.new unless current_user %>
+          <div id='documents' class="article-search-results">
+            <div class="search_num_of_results">
+              <div class='results-heading'>
+                <h1 class="visually-hidden"><%= t('blacklight.search.page_heading', search_type: search_type_name) %></h1>
+                <h2>
+                  About <%= pluralize(number_with_delimiter(@response.response[:numFound]), "#{search_type_name} result") %>
+                  <span class="duplicates">Duplicates removed</span>
+                  <button class="btn duplicate-info" aria-label="More information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="<%= t('.duplicates') %>">
+                    <span class="bi-info-circle"></span>
+                  </button>
+                </h2>
+              </div>
+            </div>
+            <%= render blacklight_config.view_config(document_index_view_type).search_header_component.new %>
+
+            <%= render Articles::ResearchStarterComponent.new(response: @response) if params[:page].blank? || params[:page] == '1' %>
+            <%= render_document_index @response.documents %>
+            <%= render blacklight_config.index.mini_bento_component.new(close: true) %>
+            <%= render 'search_footer' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </main>
+</div>

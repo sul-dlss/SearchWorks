@@ -1,66 +1,84 @@
 <% @page_title= t 'blacklight.articles.home.title' %>
 
-<div class="article-home-page">
-  <h1 class="my-4">Journal articles &amp; other e-resources</h1>
-  <div class="row">
-    <div class="col-sm-4 home-page-settings">
-      <div class="card">
-        <div class="card-body">
-          <h2>Search settings</h2>
-          <div class="home-settings">
-            <% limiters = facet_options_presenter.limiters %>
-            <ul class="checkbox-facet-list">
-              <% limiters.each do |limiter| %>
-                <li>
-                  <%= label_tag("eds_limiter_#{limiter.id}") do %>
-                    <%= check_box(
-                          'f',
-                          'eds_search_limiters_facet',
-                          {
-                            multiple: true,
-                            id: "eds_limiter_#{limiter.id}",
-                            checked: limiter.enabled_by_default?,
-                            'aria-describedby': "limiter_tip_#{limiter.id}",
-                            data: { behavior: 'update-hidden-inputs-by-checkbox', 'target-selector': '#dynamic-hidden-inputs-target' }
-                          },
-                          limiter.label,
-                          nil
-                        )
-                    %>
-                    <%= limiter.label %>
-                  <% end %>
-                  <p id="limiter_tip_<%= limiter.id %>" class='setting-tip help-block'><%= t("searchworks.articles.facets.options.#{limiter.id}.tip") %></p>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-8 home-page-tips">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h2>How do I access articles?</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <h3>On campus</h3>
-              <p>No configuration required. Just click the links in the search results or detail page.</p>
-            </div>
-            <div class="col-md-6">
-              <h3>Off campus</h3>
-              <p>You’ll need to log in. You can <%= link_to 'log in now', new_user_session_path(referrer: request.original_url) %>, or when you find an article of interest.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h2>Search tip</h2>
-          <%= render SearchTips.random %>
-          <p class="text-right"><%= link_to 'More article search tips', 'https://library.stanford.edu/article-search-tips' %></p>
-        </div>
-      </div>
-    </div>
+<div class="search-area-image-bg">
+  <div class="container">
+    <search class="search-card px-4 py-3">
+      <%= render SearchworksSearchBarComponent.new url: search_action_url,
+                                                   params: search_state.params_for_search.except(:qt),
+                                                   autocomplete_path: suggest_index_catalog_path %>
+    </search>
   </div>
-  <%= render 'shared/home_page_bento' %>
+</div>
+
+<div class="container-fluid">
+  <%= render 'shared/modal' %>
+  <main id="main-container">
+    <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
+    <%= render '/flash_msg', layout: 'shared/flash_messages' %>
+
+    <div class="article-home-page">
+      <h1 class="my-4">Journal articles &amp; other e-resources</h1>
+      <div class="row">
+        <div class="col-sm-4 home-page-settings">
+          <div class="card">
+            <div class="card-body">
+              <h2>Search settings</h2>
+              <div class="home-settings">
+                <% limiters = facet_options_presenter.limiters %>
+                <ul class="checkbox-facet-list">
+                  <% limiters.each do |limiter| %>
+                    <li>
+                      <%= label_tag("eds_limiter_#{limiter.id}") do %>
+                        <%= check_box(
+                              'f',
+                              'eds_search_limiters_facet',
+                              {
+                                multiple: true,
+                                id: "eds_limiter_#{limiter.id}",
+                                checked: limiter.enabled_by_default?,
+                                'aria-describedby': "limiter_tip_#{limiter.id}",
+                                data: { behavior: 'update-hidden-inputs-by-checkbox', 'target-selector': '#dynamic-hidden-inputs-target' }
+                              },
+                              limiter.label,
+                              nil
+                            )
+                        %>
+                        <%= limiter.label %>
+                      <% end %>
+                      <p id="limiter_tip_<%= limiter.id %>" class='setting-tip help-block'><%= t("searchworks.articles.facets.options.#{limiter.id}.tip") %></p>
+                    </li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 home-page-tips">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2>How do I access articles?</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <h3>On campus</h3>
+                  <p>No configuration required. Just click the links in the search results or detail page.</p>
+                </div>
+                <div class="col-md-6">
+                  <h3>Off campus</h3>
+                  <p>You’ll need to log in. You can <%= link_to 'log in now', new_user_session_path(referrer: request.original_url) %>, or when you find an article of interest.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h2>Search tip</h2>
+              <%= render SearchTips.random %>
+              <p class="text-right"><%= link_to 'More article search tips', 'https://library.stanford.edu/article-search-tips' %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= render 'shared/home_page_bento' %>
+    </div>
+  </main>
 </div>

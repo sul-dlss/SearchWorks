@@ -5,6 +5,12 @@
   }
 }
 
+.blacklight-catalog {
+  --banner-image: url(catalog-image.jpg);
+}
+.blacklight-articles {
+  --banner-image: url(research-papers-reading-v1.jpg);
+}
 .search-area-image-bg {
   &::before {
     content: "";
@@ -14,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(catalog-image.jpg);
+    background-image: var(--banner-image);
     z-index: -1;
   }
 
