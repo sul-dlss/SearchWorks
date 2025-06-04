@@ -11,6 +11,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'selenium-webdriver'
 require 'webmock/rspec'
+require 'axe-rspec'
 
 WebMock.disable_net_connect!(allow_localhost: true, allow: [
   'eds-api.ebscohost.com',
