@@ -12,9 +12,10 @@ RSpec.feature 'Course reserves browse', :js do
       end
       expect(page).to have_css("h1", text: "Browse course reserves")
     end
-    scenario "should be accessible from the subnavbar" do
-      within '#search-subnavbar-container' do
-        find_link('Course reserves').click
+    scenario "reachable from the subnavbar" do
+      click_link "Featured resources"
+      within '.dropdown-menu' do
+        click_link('Course reserves')
       end
       expect(page).to have_css("h1", text: "Browse course reserves")
     end
@@ -23,10 +24,6 @@ RSpec.feature 'Course reserves browse', :js do
   scenario 'should have correct manual route' do # TODO: move to routing spec?
     visit '/reserves'
     expect(page).to have_css('h1', text: 'Browse course reserves')
-  end
-  scenario 'should have search fields dropdown' do
-    visit course_reserves_path
-    expect(page).to have_css('select.search_field')
   end
 
   context 'with courses' do
