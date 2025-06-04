@@ -9,10 +9,6 @@ module ApplicationHelper
     render partial: 'catalog/search_bar_selections_widget'
   end
 
-  def render_search_targets_widget
-    render partial: 'catalog/search_targets_widget'
-  end
-
   def get_data_with_label(doc, label, field_string)
     items = []
     if doc[field_string]
