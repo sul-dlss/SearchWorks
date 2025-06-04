@@ -33,7 +33,7 @@ pipeline {
           git add config/folio
           git commit -m "Update FOLIO types" &&
           git push git@github.com:sul-dlss/SearchWorks.git folio-policies-update-prod &&
-          hub pull-request -f -m "Update FOLIO types" --base main
+          hub pull-request -f -m "Update FOLIO types" --base release
           echo 'Done!'
           '''
         }
@@ -67,7 +67,7 @@ pipeline {
           git add config/folio
           git commit -m "Update FOLIO types" &&
           git push git@github.com:sul-dlss/SearchWorks.git folio-policies-update-test &&
-          hub pull-request -f -m "Update FOLIO types" --base main
+          hub pull-request -f -m "Update FOLIO types" --base release
           echo 'Done!'
           '''
         }
