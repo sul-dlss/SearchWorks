@@ -38,6 +38,7 @@ group :deployment do
 end
 
 group :development, :test do
+  gem "axe-core-rspec"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'capybara', '~> 3.0'
