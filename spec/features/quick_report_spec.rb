@@ -4,12 +4,10 @@ require 'rails_helper'
 
 RSpec.feature 'Quick report form (js)', :js do
   before do
-    visit root_path
+    visit solr_document_path('1')
   end
 
-  scenario 'Quick report should only be available on show page' do
-    click_link 'Feedback'
-    expect(page).to have_no_css('button.btn-quick-report')
+  scenario 'Quick report is available on show page' do
     visit solr_document_path('1')
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
@@ -20,13 +18,10 @@ end
 
 RSpec.feature 'Quick report form (no js)' do
   before do
-    visit root_path
+    visit solr_document_path('1')
   end
 
-  scenario 'Quick report should only be available on show page' do
-    click_link 'Feedback'
-    expect(page).to have_no_css('button.btn-quick-report')
-    visit solr_document_path('1')
+  scenario 'Quick report is available on show page' do
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
     click_button 'Report wrong cover image'

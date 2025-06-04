@@ -3,9 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe "Search toolbar", :feature, :js do
-  before { visit root_path }
-
   describe "has SearchWorks customizations" do
+    before do
+      visit solr_document_path('mf774fs2413')
+    end
+
     it "displays correct subnavbar elements" do
       within '#search-navbar-container' do
         expect(page).to have_css("button.btn.btn-secondary.search-btn", text: "")
