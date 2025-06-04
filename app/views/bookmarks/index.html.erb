@@ -1,24 +1,26 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: t('blacklight.bookmarks.page_heading'), application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-<h1 class="my-4">Selection lists</h1>
+<%= render MainContainerComponent.new do %>
+  <h1 class="my-4">Selection lists</h1>
 
-<nav class="selections-nav">
-  <% if article_selections? %>
-    <%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg') %>
-    <h2><%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
-  <% else %>
-    <h2><%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
-    <%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg') %>
-  <% end %>
-</nav>
+  <nav class="selections-nav">
+    <% if article_selections? %>
+      <%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg') %>
+      <h2><%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
+    <% else %>
+      <h2><%= link_to(pluralize(@catalog_count, 'catalog items'), bookmarks_path, class: 'btn btn-lg btn-primary', 'aria-current': 'page') %></h2>
+      <%= link_to(pluralize(@article_count, 'articles+ items'), article_selections_path, class: 'btn btn-lg') %>
+    <% end %>
+  </nav>
 
-<div id="content" class="col-md-12">
-  <% if current_or_guest_user.blank? %>
-    <h2><%= t('blacklight.bookmarks.need_login') %></h2>
-  <% elsif @document_list.blank? %>
-    <h3><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
-  <% else %>
-    <%= render 'sort_and_per_page' %>
-    <%= render_document_index @response.documents %>
-    <%= render 'results_pagination' %>
-  <% end %>
-</div>
+  <div id="content" class="col-md-12">
+    <% if current_or_guest_user.blank? %>
+      <h2><%= t('blacklight.bookmarks.need_login') %></h2>
+    <% elsif @document_list.blank? %>
+      <h3><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
+    <% else %>
+      <%= render 'sort_and_per_page' %>
+      <%= render_document_index @response.documents %>
+      <%= render 'results_pagination' %>
+    <% end %>
+  </div>
+<% end %>

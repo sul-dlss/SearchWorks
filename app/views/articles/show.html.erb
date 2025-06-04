@@ -1,7 +1,9 @@
 <% @page_title = t 'blacklight.search.show.title_html', document_title: document_presenter(@document).html_title, application_name: "#{I18n.t('blacklight.application_name')} articles" %>
 
-<div class="row">
-  <div id="content" class="col-md-12 show-document">
-    <%= render 'show_main_content' %>
+<%= render MainContainerComponent.new do %>
+  <div class="row">
+    <div id="content" class="col-md-12 show-document">
+      <%= render 'show_main_content' %>
+    </div>
   </div>
-</div>
+<% end %>
