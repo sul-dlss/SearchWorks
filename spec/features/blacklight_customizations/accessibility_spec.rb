@@ -9,16 +9,12 @@ RSpec.feature "Aria Landmarks", :js do
     click_button 'search'
   end
 
-  scenario "should have header landmark" do
-    expect(page).to have_xpath("//header[@id='topnav' and @role='banner']")
+  it "has header landmark" do
+    expect(page).to have_xpath("//header")
   end
 
   scenario "should have feedback landmark" do
     skip("should have feedback landmark")
-  end
-
-  scenario "should have SearchWorks navbar landmark" do
-    expect(page).to have_xpath("//nav[@id='search-navbar']")
   end
 
   scenario "should have search form landmark" do

@@ -10,10 +10,6 @@ $btn-preview-border: darken($sul-btn-preview-bg, 9.8%);
   border-radius: 3px;
 }
 
-.btn-preview {
-  @include button-variant($btn-preview-bg, $btn-preview-border);
-}
-
 .btn-sul-toolbar {
   --link-hover-decoration-line: underline;
   color: $btn-sul-toolbar-bar-color !important;

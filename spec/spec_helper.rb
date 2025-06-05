@@ -127,12 +127,6 @@ def article_search_for(query)
   stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   visit articles_path
 
-  within '.search-form' do
-    fill_in 'q', with: query
-    if Capybara.current_driver == :headless_chrome
-      find_by_id('search').click
-    else
-      click_button 'Search'
-    end
-  end
+  fill_in 'q', with: query
+  click_button 'Search'
 end

@@ -1,0 +1,26 @@
+            <ul class="navbar-nav <%= extra_classes %>">
+              <li class="nav-item">
+                <a class="nav-link" href="/selections">
+                  Bookmarks
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/search_history">Search history</a>
+              </li>
+              <li class="nav-item">
+                <% if current_user %>
+                  <%= link_to "#{current_user.sunet}: Logout", destroy_user_session_path, class: 'nav-link' %>
+                <% else %>
+                  <%= link_to 'Login', new_user_session_path(referrer: request.original_url), class: 'nav-link', data: { turbo: false } %>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#feedback"
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#feedback"
+                  >Feedback</a
+                >
+              </li>
+            </ul>

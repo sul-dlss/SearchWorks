@@ -1,10 +1,6 @@
-@import "bootstrap-variables";
 @import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-mixins";
-
-@import "bootstrap-overrides";
-
 @import "blacklight-frontend/app/assets/stylesheets/blacklight/blacklight.scss";
+
 @import "blacklight_marc";
 
 @import "blacklight-hierarchy/app/assets/stylesheets/blacklight/hierarchy/hierarchy.scss";
@@ -22,6 +18,13 @@ $remove-icon-font-family:
   "Noto Sans",
   "Liberation Sans",
   sans-serif !default;
+
+/* Restore default value from component library. After upgrading to blacklight 9,
+we will be able to set --bl-logo-width instead.
+*/
+.navbar-logo {
+  width: 250px;
+}
 
 .remove-icon {
   font-family: $remove-icon-font-family;

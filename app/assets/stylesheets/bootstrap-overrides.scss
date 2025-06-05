@@ -1,12 +1,3 @@
-body {
-  background-color: $sul-body-bg;
-}
-
-// I believe the text-success color override can be removed after upgrading to BS5.
-.text-success {
-  color: $state-success-text !important;
-}
-
 .alert {
   padding: 10px 15px;
   margin: 10px 0;
@@ -22,25 +13,6 @@ body {
   }
 }
 
-h1 {
-  color: $sul-h1-font-color;
-  font-weight: 300;
-}
-
-h2 {
-  color: $sul-h2-font-color;
-  letter-spacing: 0;
-}
-
-*:not(a) > h3 {
-  // h3 that are inside links should be styled as links.
-  color: $sul-h3-font-color;
-}
-
-h4 {
-  color: $sul-h4-font-color;
-}
-
 summary {
   display: list-item;
 }
@@ -49,24 +21,6 @@ summary {
 #bookmarksWidgets > *,
 #bookmarksWidgets > #tools-dropdown > .btn {
   padding: 4px 10px;
-}
-
-// We use btn-outline-secondary to style the seleted filters
-.btn-secondary,
-.btn-outline-secondary {
-  @include button-variant(
-    $light-sandstone,
-    $cloud,
-    $hover-background: lighten($sandstone, 15%),
-    $hover-border: darken($cloud, 15%),
-    $active-background: lighten($sandstone, 15%),
-    $active-border: darken($cloud, 15%)
-  );
-  color: $warm-grey;
-}
-
-.constraint-value:hover {
-  background-color: $light-sandstone;
 }
 
 #advanced_search_facets {
@@ -93,13 +47,16 @@ summary {
   --bs-dropdown-item-padding-x: 1.5rem;
 }
 
-.btn, .sul-toolbar .btn-link, .prev_next_links .btn-link {
+.btn,
+.sul-toolbar .btn-link,
+.prev_next_links .btn-link {
   text-decoration: none;
   &:hover {
     text-decoration: none;
   }
 }
 
-.index_title a, h3 a {
+.index_title a,
+h3 a {
   text-decoration: none;
 }

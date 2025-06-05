@@ -9,7 +9,7 @@
 }
 
 .facet-values li .selected {
-  color: $state-success-text;
+  color: rgb(var(--bs-success-rgb));
 }
 
 .facet-limit-active {
@@ -17,8 +17,8 @@
 }
 
 .facet-limit-active .card-header {
-  background-color: $light-sage !important;
-  border-bottom: 1px solid $state-success-border;
+  background-color: #8ab8a7 !important;
+  border-bottom: 1px solid #417865;
 }
 
 .facet-limit-active .card-header .btn {

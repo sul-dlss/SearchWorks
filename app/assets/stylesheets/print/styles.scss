@@ -12,8 +12,6 @@
 
 // Do not display these elements
 .navbar,
-#topnav,
-#search-navbar-container,
 #facets,
 .sort-and-per-page,
 .record-toolbar,
@@ -24,7 +22,6 @@ footer,
 #global-footer,
 .additional-results,
 .pagination,
-.side-nav-minimap,
 .library-location-heading img,
 .record-browse-nearby,
 .tech-details a,
@@ -50,7 +47,6 @@ a:visited {
   border-bottom: none;
 }
 #documents .document,
-#documents .brief-document,
 #documents .gallery-document {
   border: 0;
   border-bottom: 1px solid #ddd;

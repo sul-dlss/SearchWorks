@@ -1,7 +1,5 @@
 // Import all individual stylesheets here
-@import "base";
-@import "layout";
-
+@import url("masthead.css");
 @import "modules/access-panel";
 @import "modules/access-panel-course-reserve";
 @import "modules/access-panel-exhibit";
@@ -18,11 +16,9 @@
 @import "modules/bookplates";
 @import "modules/bound-withs";
 @import "modules/breadcrumb";
-@import "modules/brief-view";
 @import "modules/browse-embed";
 @import "modules/browse-toolbar";
 @import "modules/buttons";
-@import "modules/clear-input-text";
 @import "modules/constraints";
 @import "modules/course_reserve_browse";
 @import "modules/eds_range_slider";
@@ -32,8 +28,6 @@
 @import "modules/file-collection-members";
 @import "modules/gallery-view";
 @import "modules/global-alert";
-@import "modules/home-page";
-@import "modules/home-page-notice";
 @import "modules/collection-result-preview";
 @import "modules/facet-options";
 @import "modules/image-collection-filmstrip";
@@ -51,22 +45,17 @@
 @import "modules/record-view";
 @import "modules/record-metadata-section";
 @import "modules/results-online-section";
-@import "modules/side-nav-minimap";
 @import "modules/record-toolbar";
 @import "modules/research-starter";
 @import "modules/results-documents";
-@import "modules/search-bar";
 @import "modules/sfx-panel";
 @import "modules/spinner";
-@import "modules/subnavbar";
 @import "modules/selected-databases";
 @import "modules/show_page";
 @import "modules/sort-and-per-page-toolbar";
 @import "modules/stackmap";
-@import "modules/sul-footer";
 @import "modules/sul-icons";
 @import "modules/sul-toolbar";
-@import "modules/top-navbar";
 @import "modules/tech-details";
 @import "modules/thumbnail";
 @import "modules/zero-results";

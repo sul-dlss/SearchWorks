@@ -5,46 +5,30 @@ require 'rails_helper'
 RSpec.feature 'Article Searching' do
   describe 'Search bar dropdown', :js do
     scenario 'allows the user to switch to the article search context' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit root_path
 
-      within '.search-dropdown' do
-        click_link 'Select search scope, currently: catalog'
-
-        expect(page).to have_css('.dropdown-menu', visible: true)
-
-        expect(page).to have_css('a.highlight', text: /catalog/)
-        expect(page).to have_no_css('.highlight', text: /articles/)
-
-        click_link 'articles+'
-      end
+      choose 'Articles+', from: 'Search mode'
 
       expect(page).to have_current_path(articles_path) # the landing page for Article Search
       expect(page).to have_title('SearchWorks articles+ : Stanford Libraries')
     end
 
     scenario 'does not allow selecting current search context' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit articles_path
 
-      within '.search-dropdown' do
-        click_link 'Select search scope, currently: articles+'
-        expect(page).to have_css('.dropdown-menu', visible: true)
-        expect(page).to have_no_css('a.highlight', text: /catalog/)
-        expect(page).to have_css('.highlight', text: /articles/)
-      end
+      choose 'Catalog', from: 'Search mode'
+
+      expect(page).to have_current_path(root_path)
+      expect(page).to have_title('SearchWorks Catalog : Stanford Libraries')
     end
   end
 
-  describe 'subnavbar' do
+  describe 'header' do
     scenario 'catalog-specific sub-menus are not rendered' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit articles_path
 
       expect(page).to have_css('a', text: /Help/)
-      expect(page).to have_no_css('a', text: /Advanced search/)
-      expect(page).to have_no_css('a', text: /Course reserves/)
-      expect(page).to have_css('a', text: /Selections \(\d+\)/)
+      expect(page).to have_no_css('a', text: /Featured resources/)
     end
   end
 
@@ -138,15 +122,6 @@ RSpec.feature 'Article Searching' do
       first(:css, 'a.remove').click
       expect(page).to have_no_css('.applied-filter', text: /kittens/)
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
-    end
-  end
-
-  describe 'sidenav mini-map' do
-    it 'top/bottom buttons are present in search results' do
-      article_search_for('kittens')
-
-      expect(page).to have_button('Top')
-      expect(page).to have_button('Bottom')
     end
   end
 
