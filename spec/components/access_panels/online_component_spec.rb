@@ -10,7 +10,11 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
   let(:eds_links) do
     described_class.new(
       document: EdsDocument.new(
-        eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
+        'FullText' => {
+          'CustomLinks' => [
+            { 'Text' => 'HTML full text', 'Url' => 'http://example.com' }
+          ]
+        }
       )
     )
   end

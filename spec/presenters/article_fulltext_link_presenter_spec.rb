@@ -28,11 +28,14 @@ RSpec.describe ArticleFulltextLinkPresenter do
 
     context 'when the document has link' do
       let(:document) do
-        EdsDocument.new(
-          'eds_fulltext_links' => [
-            { 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }
-          ]
-        )
+        EdsDocument.new({
+                          'FullText' => {
+                            'CustomLinks' => [{
+                              'Text' => 'Check SFX for full text',
+                              'Url' => 'http://example.com'
+                            }]
+                          }
+                        })
       end
 
       it 'includes a rendered link representing that data' do
@@ -45,12 +48,14 @@ RSpec.describe ArticleFulltextLinkPresenter do
 
     context 'when the document has a stanford-only link' do
       let(:document) do
-        EdsDocument.new(
-          'id' => '00001',
-          'eds_fulltext_links' => [
-            { 'url' => 'detail', 'label' => 'PDF Full Text', 'type' => 'pdf' }
-          ]
-        )
+        EdsDocument.new({
+                          'id' => '00001',
+                          'FullText' => {
+                            'Links' => [{
+                              'Type' => 'pdflink'
+                            }]
+                          }
+                        })
       end
 
       context 'when format is json' do
@@ -73,7 +78,16 @@ RSpec.describe ArticleFulltextLinkPresenter do
     end
 
     context 'when the document does not have a link but does include full-text' do
-      let(:document) { EdsDocument.new(id: 'abc123', 'eds_html_fulltext_available' => true) }
+      let(:document) do
+        EdsDocument.new({
+                          'id' => 'abc123',
+                          'FullText' => {
+                            'Text' => {
+                              'Availability' => '1'
+                            }
+                          }
+                        })
+      end
 
       it 'includes a link to the document to view the full text' do
         expect(links.length).to eq 1
