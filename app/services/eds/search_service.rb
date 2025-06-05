@@ -8,7 +8,7 @@ module Eds
     def initialize(blacklight_config, user_params = {}, eds_params = {})
       @blacklight_config = blacklight_config
       @user_params = user_params
-      @repository = @blacklight_config.repository_class.new(@blacklight_config)
+      @repository = @blacklight_config.repository_class.new(@blacklight_config, eds_params:)
       @eds_params = eds_params
       @context = {}
     end

@@ -22,12 +22,11 @@ class FacetOptionsPresenter
   end
 
   def eds_session
-    @eds_session ||= Eds::Session.new(eds_params)
+    @eds_session ||= Eds::Session.new(**eds_params)
   end
 
   def eds_params
     {
-      caller: 'bl-search',
       guest: context.session['eds_guest'],
       session_token: context.session['eds_session_token']
     }
