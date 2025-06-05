@@ -40,17 +40,11 @@ const PreviewContent = (function() {
   function plugContentAndPlugins(target, content, deferred) {
     switch (insertType){
     case 'append':
-      target
-        .append(content)
-        .plugGoogleBookContent();
-
+      target.append(content)
       deferred.resolve(content);
       break;
     case 'prepend':
-      target
-        .prepend(content)
-        .plugGoogleBookContent();
-
+      target.prepend(content)
       deferred.resolve(content);
       break;
     case 'returnOnly':

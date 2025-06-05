@@ -14,7 +14,7 @@ import PreviewContent from './preview-content'
 
   // Scroll to the current document
   const scrollOver = function(element, gallery) {
-    const parentWidth = element.parentNode.offsetWidth
+    const galleryWidth = gallery.offsetWidth
     const elementWidth = element.offsetWidth
 
     // Get the element's position relative to its offsetParent.
@@ -25,7 +25,7 @@ import PreviewContent from './preview-content'
       currentElement = currentElement.offsetParent
     }
 
-    const scrollAmount = left - parentWidth / 2 + elementWidth / 2
+    const scrollAmount = left - galleryWidth / 2 + elementWidth / 2
     element.classList.add('current-document')
 
     gallery.scrollTo({ left: scrollAmount })
