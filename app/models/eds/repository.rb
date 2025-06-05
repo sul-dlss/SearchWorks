@@ -2,6 +2,11 @@
 
 module Eds
   class Repository < Blacklight::AbstractRepository
+    def initialize(blacklight_config, eds_params: {})
+      super(blacklight_config)
+      @eds_params = eds_params
+    end
+
     def search(search_builder = {})
       benchmark('EDS search', level: :info) do
         eds_search(search_builder)
@@ -44,7 +49,7 @@ module Eds
     end
 
     def build_connection
-      Eds::Session.new({})
+      Eds::Session.new(**@eds_params)
     end
   end
 end

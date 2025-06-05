@@ -8,8 +8,9 @@ module Eds
   class Session # rubocop:disable Metrics/ClassLength
     attr_reader :eds_params
 
-    def initialize(eds_params)
-      @eds_params = default_session_options.merge(eds_params)
+    def initialize(session_token: nil, **kwargs)
+      @eds_params = default_session_options.merge(kwargs)
+      @session_token = session_token
     end
 
     def info(*)
@@ -148,7 +149,7 @@ module Eds
 
     def default_session_options
       {
-        guest: false,
+        guest:                        true,
         user:                         Settings.EDS_USER,
         pass:                         Settings.EDS_PASS,
         profile:                      Settings.EDS_PROFILE,
