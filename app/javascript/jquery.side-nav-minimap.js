@@ -32,7 +32,7 @@
           $section.legacyScrollspy({
             min: position,
             max: position + $(this).height(),
-            onEnter: function(element, position) {
+            onEnter: function(_element, _position) {
               highlightActiveButton($sideNavButton);
             }
           });
@@ -68,9 +68,6 @@
 
   };
 
-  function is_touch_device() {
-    return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
-  }
 
 
 })(jQuery);

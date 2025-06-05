@@ -32,7 +32,7 @@ const PreviewContent = (function() {
     });
 
     request.fail(function(jqXhr, textStatus) {
-      console.log('GET request for ' + url + ' failed: ' + textStatus);
+      console.error('GET request for ' + url + ' failed: ' + textStatus);
     });
   }
 

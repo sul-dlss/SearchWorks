@@ -5,7 +5,7 @@ Blacklight.onLoad(function(){
 })
 
 
-;(function ( $, window, document, undefined ) {
+;(function ( $, window, document ) {
   /*
     jQuery plugin to get and update the last 3 recently selected items
 
