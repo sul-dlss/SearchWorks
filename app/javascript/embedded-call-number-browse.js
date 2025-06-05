@@ -88,7 +88,7 @@ import PreviewContent from './preview-content'
     })
   }
 
-  Blacklight.onLoad(function () {
+  function init() {
     $('*[data-behavior="embed-browse"]').embedBrowse()
 
     // Set up scroll behavior for tabs, when they are shown
@@ -100,5 +100,8 @@ import PreviewContent from './preview-content'
         scrollOver(element, gallery)
       })
     })
-  })
+  }
+  document.addEventListener("DOMContentLoaded", init)
+  document.addEventListener("turbo:load", init)
+
 })(jQuery);
