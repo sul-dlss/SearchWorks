@@ -29,16 +29,15 @@ RSpec.describe FacetOptionsPresenter do
   let(:eds_session) do
     double(
       'Eds::Session',
-      info: double(
-        'Info',
-        available_search_criteria: {
+      info: {
+        'AvailableSearchCriteria' => {
           'AvailableLimiters' => [
             { 'Id' => 'FT', 'Label' => 'Facet Label2', 'Type' => 'select', 'Order' => '100' },
             { 'Id' => 'MT', 'Label' => 'Not Displayed', 'Type' => 'not-select', 'Order' => '101' },
             { 'Id' => 'LT', 'Label' => 'Facet Label1', 'Type' => 'select', 'Order' => '10' }
           ]
         }
-      )
+      }
     )
   end
 

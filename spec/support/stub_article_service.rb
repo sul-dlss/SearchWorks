@@ -2,42 +2,117 @@
 
 ##
 # Module included for RSpec tests to stub the article search service
-module StubArticleService
+module StubArticleService # rubocop:disable Metrics/ModuleLength
+  def self.full_text_document
+    EdsDocument.new(
+      {
+        'id' => 'abc123',
+        'RecordInfo' => {
+          'BibRecord' => {
+            'BibEntity' => {
+              'Titles' => [
+                { 'Type' => 'main', 'TitleFull' => 'The title of the document' }
+              ]
+            }
+          }
+        },
+        "Items" => [
+          {
+            "Data" => '<searchLink fieldCode="SU" term="Kittens">Kittens</searchLink>' \
+                      '<br/>' \
+                      '<searchLink fieldCode="SU" term="Felines">Felines</searchLink>' \
+                      '<br/>' \
+                      '<searchLink fieldCode="SU" term="Companions">Companions</searchLink>',
+            "Group" => "Su",
+            "Label" => "Subject Terms",
+            "Name" => "Subject"
+          }
+        ],
+        'FullText' => {
+          'Text' => {
+            'Availability' => '1'
+          }
+        }
+      }
+    )
+  end
+
+  def self.non_fulltext_document
+    EdsDocument.new(
+      {
+        'id' => 'wq/oeif.zzz',
+        'RecordInfo' => {
+          'BibRecord' => {
+            'BibEntity' => {
+              'Titles' => [
+                { 'Type' => 'main', 'TitleFull' => 'Yet another title for the document' }
+              ]
+            }
+          }
+        },
+        'FullText' => {
+          'CustomLinks' => [
+            {
+              'Text' => 'View request options',
+              'Url' => 'http://example.com'
+            }
+          ]
+        }
+      }
+    )
+  end
+
   SAMPLE_RESULTS = [
+    full_text_document,
     EdsDocument.new(
-      id: 'abc123',
-      eds_title: 'The title of the document',
-      eds_subjects: '<searchLink fieldCode="SU" term="Kittens">Kittens</searchLink>' \
-                    '<br/>' \
-                    '<searchLink fieldCode="SU" term="Felines">Felines</searchLink>' \
-                    '<br/>' \
-                    '<searchLink fieldCode="SU" term="Companions">Companions</searchLink>',
-      eds_html_fulltext_available: true
+      {
+        'id' => '321cba',
+        'RecordInfo' => {
+          'BibRecord' => {
+            'BibEntity' => {
+              'Titles' => [
+                { 'Type' => 'main', 'TitleFull' => 'Another title for the document' }
+              ]
+            }
+          }
+        },
+        'FullText' => {
+          'CustomLinks' => [
+            {
+              'Text' => 'HTML full text',
+              'Url' => 'http://example.com'
+            }
+          ],
+          'Text' => {
+            'Availability' => '1'
+          }
+        }
+      }
     ),
+    non_fulltext_document,
     EdsDocument.new(
-      id: '321cba',
-      eds_title: 'Another title for the document',
-      eds_html_fulltext_available: true,
-      eds_fulltext_links: [{
-        'label' => 'HTML full text',
-        'url' => 'http://example.com',
-        'type' => 'customlink-fulltext'
-      }]
-    ),
-    EdsDocument.new(
-      id: 'wq/oeif.zzz',
-      eds_title: 'Yet another title for the document',
-      eds_fulltext_links: [{
-        'label' => 'View request options',
-        'url' => 'http://example.com',
-        'type' => 'customlink-fulltext'
-      }]
-    ),
-    EdsDocument.new(
-      id: 'pdfyyy',
-      eds_title: 'Another title for the document',
-      eds_html_fulltext_available: true,
-      eds_fulltext_links: [{ 'label' => 'PDF full text', 'url' => 'detail', 'type' => 'pdf' }]
+      {
+        'id' => 'pdfyyy',
+        'RecordInfo' => {
+          'BibRecord' => {
+            'BibEntity' => {
+              'Titles' => [
+                { 'Type' => 'main', 'TitleFull' => 'Another title for the document' }
+              ]
+            }
+          }
+        },
+        'FullText' => {
+          'Links' => [
+            {
+              'Type' => 'pdflink'
+            }
+          ],
+          'Text' => {
+            'Availability' => '1'
+          }
+        }
+      }
     )
   ]
 
@@ -54,7 +129,7 @@ module StubArticleService
     raise 'Article search service stubbed without any documents.' unless docs
 
     allow_any_instance_of(Eds::Session).to receive_messages(
-      info: double(available_search_criteria:),
+      info: { 'AvailableSearchCriteria' => available_search_criteria },
       session_token: 'abc123'
     )
 
@@ -64,7 +139,7 @@ module StubArticleService
         StubArticleResponse.new(docs)
       )
       allow_any_instance_of(Eds::Repository).to receive(:find_by_ids).and_return(
-        StubArticleResponse.new(docs)
+        docs
       )
     when :single
       raise "Single document response requsted but #{docs.length} provided." if docs.many?
@@ -76,137 +151,82 @@ module StubArticleService
         StubArticleResponse.new([docs.first])
       )
     when :error
-      allow_any_instance_of(Eds::Repository).to receive(:search).and_raise(EBSCO::EDS::BadRequest)
+      allow_any_instance_of(Eds::Repository).to receive(:search).and_raise(Faraday::Error)
     else
       raise "Unknown article stub type #{type} provided."
     end
   end
 
-  class StubArticleResponse < Blacklight::Solr::Response # rubocop:disable Metrics/ClassLength
+  class StubArticleResponse < SimpleDelegator
     attr_reader :documents
     delegate :empty?, to: :documents
 
     def initialize(documents)
       @documents = documents
-      super({ date_range: { minyear: '1501', maxyear: '2018' } }, {})
+      @stub_eds_response = Eds::Response.new({
+                                               'SearchResult' => {
+                                                 'AvailableFacets' => self.class.stub_facet_counts,
+                                                 'Statistics' => {
+                                                   'TotalHits' => documents.count
+                                                 }
+                                               }
+                                             }, Eds::SearchBuilder.new([], ArticlesController.new).with({}))
+      super(@stub_eds_response)
     end
 
-    def response
-      { numFound: documents.count }
-    end
-
-    def facet_counts # rubocop:disable Metrics/MethodLength
-      {
-        'facet_fields' => {
-          'pub_year_tisim' => ['2001', 1, '2002', 1],
-          'eds_publication_type_facet' => ['Academic journals', 1],
-          'eds_content_provider_facet' => ['Journal provider', 1],
-          'eds_language_facet' => [
-            "english",
-            "477586",
-            "undetermined",
-            "69627",
-            "russian",
-            "5035",
-            "japanese",
-            "4179",
-            "chinese",
-            "3128",
-            "german",
-            "3092",
-            "french",
-            "3091",
-            "spanish; castilian",
-            "1976",
-            "portuguese",
-            "1593",
-            "italian",
-            "886",
-            "korean",
-            "884",
-            "spanish",
-            "668",
-            "swedish",
-            "611",
-            "no linguistic content; not applicable",
-            "601",
-            "other",
-            "550",
-            "czech",
-            "527",
-            "turkish",
-            "379",
-            "polish",
-            "377",
-            "한국어",
-            "298",
-            "繁體中文",
-            "191",
-            "英文",
-            "164",
-            "multiple languages",
-            "116",
-            "ukrainian",
-            "112",
-            "dutch; flemish",
-            "110",
-            "austronesian languages",
-            "95",
-            "arabic",
-            "94",
-            "latin",
-            "83",
-            "hungarian",
-            "79",
-            "indonesian",
-            "79",
-            "croatian",
-            "74",
-            "slovenian",
-            "66",
-            "persian",
-            "58",
-            "eng",
-            "57",
-            "romanian; moldavian; moldovan",
-            "55",
-            "hebrew",
-            "54",
-            "afrikaans",
-            "52",
-            "dutch",
-            "46",
-            "lithuanian",
-            "44",
-            "greek, ancient (to 1453)",
-            "42"
+    def self.stub_facet_counts # rubocop:disable Metrics/MethodLength
+      [
+        {
+          'Id' => 'SourceType',
+          'AvailableFacetValues' => [
+            { 'Value' => 'Academic journals', 'Count' => 1 }
+          ]
+        },
+        {
+          'Id' => 'Language',
+          'AvailableFacetValues' => [
+            { 'Value' => 'english', 'Count' => 477586 },
+            { 'Value' => 'undetermined', 'Count' => 69627 },
+            { 'Value' => 'russian', 'Count' => 5035 },
+            { 'Value' => 'japanese', 'Count' => 4179 },
+            { 'Value' => 'chinese', 'Count' => 3128 },
+            { 'Value' => 'german', 'Count' => 3092 },
+            { 'Value' => 'french', 'Count' => 3091 },
+            { 'Value' => 'spanish; castilian', 'Count' => 1976 },
+            { 'Value' => 'portuguese', 'Count' => 1593 },
+            { 'Value' => 'italian', 'Count' => 886 },
+            { 'Value' => 'korean', 'Count' => 884 },
+            { 'Value' => 'spanish', 'Count' => 668 },
+            { 'Value' => 'swedish', 'Count' => 611 },
+            { 'Value' => 'no linguistic content; not applicable', 'Count' => 601 },
+            { 'Value' => 'other', 'Count' => 550 },
+            { 'Value' => 'czech', 'Count' => 527 },
+            { 'Value' => 'turkish', 'Count' => 379 },
+            { 'Value' => 'polish', 'Count' => 377 },
+            { 'Value' => '한국어', 'Count' => 298 },
+            { 'Value' => '繁體中文', 'Count' => 191 },
+            { 'Value' => '英文', 'Count' => 164 },
+            { 'Value' => 'multiple languages', 'Count' => 116 },
+            { 'Value' => 'ukrainian', 'Count' => 112 },
+            { 'Value' => 'dutch; flemish', 'Count' => 110 },
+            { 'Value' => 'austronesian languages', 'Count' => 95 },
+            { 'Value' => 'arabic', 'Count' => 94 },
+            { 'Value' => 'latin', 'Count' => 83 },
+            { 'Value' => 'hungarian', 'Count' => 79 },
+            { 'Value' => 'indonesian', 'Count' => 79 },
+            { 'Value' => 'croatian', 'Count' => 74 },
+            { 'Value' => 'slovenian', 'Count' => 66 },
+            { 'Value' => 'persian', 'Count' => 58 },
+            { 'Value' => 'eng', 'Count' => 57 },
+            { 'Value' => 'romanian; moldavian; moldovan', 'Count' => 55 },
+            { 'Value' => 'hebrew', 'Count' => 54 },
+            { 'Value' => 'afrikaans', 'Count' => 52 },
+            { 'Value' => 'dutch', 'Count' => 46 },
+            { 'Value' => 'lithuanian', 'Count' => 44 },
+            { 'Value' => 'greek, ancient (to 1453)', 'Count' => 42 }
           ]
         }
-      }
-    end
-
-    def limit_value
-      0
-    end
-
-    def total_pages
-      1
-    end
-
-    def current_page
-      0
-    end
-
-    def start
-      0
-    end
-
-    def rows
-      documents.count
-    end
-
-    def sort
-      'score desc'
+      ]
     end
   end
 end

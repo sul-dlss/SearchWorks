@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  rescue_from 'EBSCO::EDS::BadRequest' do |exception|
+  rescue_from 'Faraday::Error' do |exception|
     raise exception if params[:q].present?
     raise ActionController::RoutingError, 'Not Found' if params[:action] == 'show'
 
@@ -47,7 +47,8 @@ class ArticlesController < ApplicationController
 
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
-    config.search_builder_class = ArticleSearchBuilder
+    config.response_model = Eds::Response
+    config.search_builder_class = Eds::SearchBuilder
     config.default_per_page = 20
     config.document_model = EdsDocument
 

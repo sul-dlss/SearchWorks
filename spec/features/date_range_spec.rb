@@ -17,7 +17,7 @@ RSpec.feature 'Date Range', :js do
     click_button 'Date'
     within '.blacklight-pub_year_tisim' do
       expect(page).to have_field 'range[pub_year_tisim][begin]', with: 1501
-      expect(page).to have_field 'range[pub_year_tisim][end]', with: 2018
+      expect(page).to have_field 'range[pub_year_tisim][end]', with: Time.zone.now.year + 1
       fill_in 'range_pub_year_tisim_begin', with: 1900
       click_button 'Apply'
     end

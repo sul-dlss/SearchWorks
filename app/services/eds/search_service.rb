@@ -26,7 +26,7 @@ module Eds
     def search_results
       builder = search_builder.with(user_params)
       builder = yield(builder) if block_given?
-      @repository.search(builder, @eds_params)
+      @repository.search(builder)
     end
 
     def previous_and_next_documents_for_search(index, request_params, extra_controller_params = {})
@@ -55,9 +55,7 @@ module Eds
     # @param [Array] ids
     # @param [HashWithIndifferentAccess] extra_controller_params
     def fetch_many(ids, extra_controller_params = {})
-      solr_response = @repository.find_by_ids(ids, @eds_params)
-
-      solr_response.documents
+      @repository.find_by_ids(ids) # rubocop:disable Rails/DynamicFindBy
     end
 
     ##
@@ -65,7 +63,7 @@ module Eds
     # @param [String] id
     # @param [HashWithIndifferentAccess] extra_controller_params
     def fetch_one(id, extra_controller_params)
-      solr_response = @repository.find id, extra_controller_params, @eds_params
+      solr_response = @repository.find id, extra_controller_params
       solr_response.documents.first
     end
 
