@@ -113,5 +113,6 @@ gem "cssbundling-rails", "~> 1.4"
 gem 'blacklight-ris', '~> 0.2.0'
 
 gem "citeproc", "~> 1.1"
-
-gem "csl-styles", "~> 1.0"
+gem 'citeproc-ruby', '~> 2.0'
+gem 'csl', '~> 2.0'
+gem "csl-styles", "~> 2.0"
