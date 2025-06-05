@@ -30,17 +30,18 @@ module Record
               controls: "callnumber-#{index}",
               selected: index.zero?
             },
-            data: { behavior: "embed-browse",
+            data: { controller: "embed-browse",
                     bs_toggle: "tab",
                     bs_target: "#callnumber-#{index}",
                     start: document[:id],
-                    embed_viewport: "#callnumber-#{index}",
-                    index_path: browse_index_path(
+                    embed_browse_current_doc_value: document[:id],
+                    embed_browse_viewport_selector_value: "#callnumber-#{index}",
+                    embed_browse_browse_url_value: browse_index_path(
                       start: document[:id],
                       call_number: spine.base_callnumber,
                       view: :gallery
                     ),
-                    url: browse_nearby_path(
+                    embed_browse_url_value: browse_nearby_path(
                       start: document[:id],
                       call_number: spine.base_callnumber,
                       view: :gallery
