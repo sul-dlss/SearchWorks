@@ -9,6 +9,7 @@ pipeline {
     stage('Stage deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'stage'
+        BRANCH = 'main'
       }
 
       when {
