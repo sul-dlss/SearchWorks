@@ -18,7 +18,7 @@ json.response do
       json.name facet_config.key
       json.items do
         json.array! facet.items do |item|
-          json.label item.label || item.value
+          json.label item.try(:label) || item.value
           json.value item.value
           json.hits item.hits
         end
