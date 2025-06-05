@@ -39,15 +39,17 @@
           </li>
         </ul>
       </section>
-      <div class="home-page-facets sidenav">
+      <section class="home-page-facets sidenav">
+        <header class="h3">Browse by</header>
+
         <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
-      </div>
+      </section>
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-4">
       <section class="p-3" style="border-left: 1px solid gray">
-        <header class="h3 d-flex justify-content-between">Search tips
-          <a href="https://guides.library.stanford.edu/searchworks" class="btn btn-outline-primary">Visit SearchWorks Guide</a>
+        <header class="h3 d-flex justify-content-between flex-wrap"><span class="text-nowrap">Search tips</span>
+          <a href="https://guides.library.stanford.edu/searchworks" class="btn btn-outline-primary text-nowrap">Visit SearchWorks Guide</a>
         </header>
         <ul class="list-unstyled">
           <li class="mb-3">

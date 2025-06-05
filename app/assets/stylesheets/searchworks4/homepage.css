@@ -23,7 +23,7 @@
 
   .search-card {
     background-color: white;
-    width: 645px;
+    max-width: 645px;
 
     .search-query-form {
       border: 1px solid #ababa9;
