@@ -1,3 +1,11 @@
+.page_links .btn-sul-toolbar {
+  --bs-btn-hover-bg: #{$sul-toolbar-bg};
+
+  &:hover {
+    text-decoration: var(--link-hover-decoration-line) var(--link-hover-decoration-style);
+  }
+}
+
 .sul-toolbar.sort-and-per-page { 
   padding: 4px 0;
   margin-top: .8em;
