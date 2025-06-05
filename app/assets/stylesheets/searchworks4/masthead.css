@@ -1,0 +1,6 @@
+.masthead {
+  .h1 {
+    --sul-link-font-weight: 300;
+    --bs-link-color-rgb: var(--stanford-cardinal-rgb);
+  }
+}

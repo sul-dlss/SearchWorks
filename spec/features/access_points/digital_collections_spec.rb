@@ -5,7 +5,9 @@ require 'rails_helper'
 RSpec.describe 'Digital Collections Access Point' do
   before do
     visit root_path
-    click_link "Digital collections"
+    within '.features' do
+      click_link "Digital collections"
+    end
   end
 
   it 'includes the digital collections masthead' do

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CatalogController < ApplicationController
+  layout proc { |controller| controller.action_name != 'index' || controller.has_search_parameters? ? "searchworks" : "searchworks4" }
+
   include AllCapsParams
 
   include ReplaceSpecialQuotes
@@ -39,10 +41,6 @@ class CatalogController < ApplicationController
 
   before_action only: :index do
     blacklight_config.max_per_page = 10000 if params[:export]
-  end
-
-  before_action only: :index do
-    blacklight_config.facet_fields['access_facet'].collapse = false unless has_search_parameters?
   end
 
   # Upstream opensearch action doesn't handle our complex title field well.

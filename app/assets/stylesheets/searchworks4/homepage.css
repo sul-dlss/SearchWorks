@@ -1,0 +1,74 @@
+.blacklight-catalog {
+  --banner-image: url(/searchworks4/catalog-image.jpg);
+}
+.blacklight-articles {
+  --banner-image: url(/searchworks4/research-papers-reading-v1.jpg);
+}
+.search-area-image-bg {
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 80%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--banner-image);
+    z-index: -1;
+  }
+
+  position: relative;
+  height: 350px;
+  padding-block: 80px;
+
+  .search-card {
+    background-color: white;
+    max-width: 645px;
+
+    .search-query-form {
+      border: 1px solid #ababa9;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      background-color: white;
+      width: 100%; /* overrides https://github.com/projectblacklight/blacklight/blob/69373f202753f04ec6aca179fdf8fa01248a9edf/app/assets/stylesheets/blacklight/_header.scss#L32 */
+
+      .input-group {
+        &::before {
+          content: "";
+          height: 2rem;
+          width: 2rem;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E")
+            no-repeat left;
+        }
+      }
+      .search-btn {
+        border-radius: 0.25rem !important;
+        padding: 2px 6px;
+        align-items: center;
+      }
+
+      input:focus,
+      select:focus {
+        box-shadow: none;
+      }
+
+      .custom-select {
+        width: 7rem;
+        border: 0;
+      }
+
+      .search-q {
+        border: 0;
+        border-inline-start: 1px solid var(--stanford-40-black);
+        outline: none;
+      }
+    }
+  }
+}
+
+.catalog-home-page {
+  .what-header {
+    font-weight: 700;
+    color: var(--stanford-cardinal);
+  }
+}

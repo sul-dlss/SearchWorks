@@ -1,0 +1,89 @@
+    <header>
+      <div class="identity-bar">
+        <div class="container">
+          <a
+            class="su-brand-bar__logo"
+            href="https://www.stanford.edu"
+            >Stanford University</a
+          >
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+          <a
+            class="mb-0 navbar-brand navbar-logo"
+            href="https://library.stanford.edu"
+            >Stanford University Libraries</a
+          >
+          <button
+            class="navbar-toggler navbar-toggler-right collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-bs-toggle="collapse"
+            data-target="#user-util-collapse"
+            data-bs-target="#user-util-collapse"
+            aria-controls="user-util-collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="d-md-block d-none">
+            <%= render 'shared/searchworks4/user_util_links', extra_classes: '' %>
+          </div>
+        </div>
+      </nav>
+
+      <div id="feedback-form" class="collapse">
+        <%= render_feedback_form('feedback') if show_feedback_form? %>
+      </div>
+      <div class="masthead">
+        <div class="container">
+          <div
+            class="d-flex flex-wrap align-items-end justify-content-between pt-3 pb-1 pb-md-3 gap-3"
+          >
+            <div>
+              <div class="h1 my-0">
+                <% if controller.is_a? ArticlesController %>
+                  <a href="/articles">SearchWorks <span class="fw-bold">Articles+</span></a>
+                <% else %>
+                  <a href="/">SearchWorks <span class="fw-bold">Catalog</span></a>
+                <% end %>
+              </div>
+              <span class="fs-6 d-block my-1"
+                >Books, journals, media, and more from the Library’s physical and online collections</span>
+            </div>
+            <div class="navbars ms-md-auto">
+              <nav
+                class="collapse navbar-collapse align-items-start justify-content-md-end navbar-expand-md d-md-flex flex-column flex-md-row"
+                aria-label="browse"
+                id="user-util-collapse"
+              >
+                <hr class="d-md-none vw-100 my-0" />
+                <ul
+                  class="navbar-nav justify-content-md-end gap-0 gap-md-4 w-100 fw-semibold"
+                >
+                  <%= render 'shared/searchworks4/catalog_featured_resources' unless controller.is_a? ArticlesController %>
+
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Help
+                    </a>
+                    <%= render 'shared/search_navbar_services_menu' %>
+                  </li>
+                </ul>
+                <hr class="d-md-none vw-100 my-0" />
+                <%= render 'shared/searchworks4/user_util_links', extra_classes: 'd-md-none gap-0 w-100' %>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
