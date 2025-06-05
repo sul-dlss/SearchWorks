@@ -1,4 +1,11 @@
 @import "searchworks4/blacklight";
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+
 @import "bootstrap-icons";
 @import url("searchworks4/variables.css");
 @import url("searchworks4/facets.css");
