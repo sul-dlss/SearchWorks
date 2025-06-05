@@ -2,11 +2,6 @@
 <p><%= @message.html_safe unless @message.nil? %></p>
 
 <html>
-  <head>
-    <style>
-      .side-nav-minimap { display: none; }
-    </style>
-  </head>
   <body>
     <ol>
       <% @documents.each do |document| %>
