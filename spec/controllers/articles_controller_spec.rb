@@ -34,7 +34,7 @@ RSpec.describe ArticlesController do
         it 'raises the error' do
           expect do
             get :index, params: { q: 'A query' }
-          end.to raise_error(EBSCO::EDS::BadRequest)
+          end.to raise_error(Faraday::Error)
         end
       end
     end
@@ -157,14 +157,14 @@ RSpec.describe ArticlesController do
 
   context 'EDS Session Management' do
     let(:user_session) { {} }
-    let(:eds_session) { instance_double(EBSCO::EDS::Session, session_token: 'abc') }
+    let(:eds_session) { instance_double(Eds::Session, session_token: 'abc') }
 
     before do
       allow(controller).to receive_messages(session: user_session, on_campus_or_su_affiliated_user?: true)
     end
 
     it 'creates a new session' do
-      expect(EBSCO::EDS::Session).to receive(:new).with(
+      expect(Eds::Session).to receive(:new).with(
         hash_including(caller: 'new-session', guest: false)
       ).and_return(eds_session)
       controller.eds_init
@@ -172,12 +172,12 @@ RSpec.describe ArticlesController do
     it 'reuses the session if in the user session data' do
       user_session['eds_guest'] = false
       user_session['eds_session_token'] = 'def'
-      expect(EBSCO::EDS::Session).not_to receive(:new)
+      expect(Eds::Session).not_to receive(:new)
       controller.eds_init
     end
     it 'requires the session token in the user session data' do
       user_session['eds_guest'] = false
-      expect(EBSCO::EDS::Session).to receive(:new).and_return(eds_session)
+      expect(Eds::Session).to receive(:new).and_return(eds_session)
       controller.eds_init
     end
   end
