@@ -5,12 +5,17 @@ require 'rails_helper'
 RSpec.describe Eds::DateRangeParser do
   let(:response_values) do
     {
-      'date_range' => {
-        mindate: '1501-01', maxdate: '2018-04', minyear: '1501', maxyear: '2018'
+      'SearchResult' => {
+        'AvailableCriteria' => {
+          'DateRange' => {
+            'MinDate' => '1501-01',
+            'MaxDate' => '2018-04'
+          }
+        }
       }
     }
   end
-  let(:response) { Blacklight::Solr::Response.new(response_values, {}) }
+  let(:response) { Eds::Response.new(response_values, {}) }
   let(:params) { ActionController::Parameters.new }
   let(:solr_field) { 'custom_field' }
   let(:subject) { described_class.new(response, params, solr_field) }

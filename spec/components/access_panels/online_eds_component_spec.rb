@@ -4,9 +4,13 @@ require 'rails_helper'
 
 RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
   let(:document) do
-    EdsDocument.new(
-      eds_fulltext_links: [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
-    )
+    EdsDocument.new({
+                      'FullText' => {
+                        'CustomLinks' => [
+                          { 'Text' => 'HTML full text', 'Url' => 'http://example.com' }
+                        ]
+                      }
+                    })
   end
 
   before do
@@ -28,8 +32,14 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
   context 'fulltext PDF links (e.g. "detail" href)' do
     let(:document) do
       EdsDocument.new(
-        id: 'abc123',
-        eds_fulltext_links: [{ 'label' => 'PDF full text', 'url' => 'detail', 'type' => 'pdf' }]
+        'id' => 'abc123',
+        'FullText' => {
+          'Links' => [
+            {
+              'Type' => 'pdflink'
+            }
+          ]
+        }
       )
     end
 
@@ -47,9 +57,13 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
 
   context 'ILL links' do
     let(:document) do
-      EdsDocument.new(
-        eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
-      )
+      EdsDocument.new({
+                        'FullText' => {
+                          'CustomLinks' => [
+                            { 'Text' => 'View request options', 'Url' => 'http://example.com' }
+                          ]
+                        }
+                      })
     end
 
     it 'includes label icon' do

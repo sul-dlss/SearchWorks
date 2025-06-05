@@ -1,22 +1,6 @@
 # frozen_string_literal: true
 
 module EdsSubjects
-  def eds_subjects
-    @eds_subjects ||= Subject.from(self['eds_subjects'])
-  end
-
-  def eds_subjects_geographic
-    @eds_subjects_geographic ||= Subject.from(self['eds_subjects_geographic'])
-  end
-
-  def eds_subjects_person
-    @eds_subjects_person ||= Subject.from(self['eds_subjects_person'])
-  end
-
-  def eds_author_supplied_keywords
-    @eds_author_supplied_keywords ||= Subject.from(self['eds_author_supplied_keywords'])
-  end
-
   # EDS-centric subject with linking capability
   class Subject
     attr_reader :terms
@@ -47,7 +31,7 @@ module EdsSubjects
     end
 
     def initialize(terms)
-      @terms = terms
+      @terms = Array(terms)
     end
 
     def to_s

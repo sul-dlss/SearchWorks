@@ -7,14 +7,10 @@ module EdsLinks
 
   private
 
-  def eds_fulltext_links
-    fetch('eds_fulltext_links', []).map do |link_field|
-      EdsLinks::FulltextLink.new(link_field)
-    end.compact_blank
-  end
-
   def eds_fulltext_links_as_searchworks_links
-    links = eds_fulltext_links
+    links = eds_fulltext_links.map do |link_field|
+      EdsLinks::FulltextLink.new(link_field)
+    end
 
     categories = links.filter_map(&:category).map(&:to_i)
 
@@ -23,7 +19,7 @@ module EdsLinks
 
   # EDS-centric full text link
   class FulltextLink
-    attr_reader :url, :type, :label
+    attr_reader :url, :label
 
     def initialize(link_field)
       link_field = link_field.symbolize_keys
@@ -35,6 +31,12 @@ module EdsLinks
 
     def present?
       %w[customlink-fulltext pdf ebook-pdf ebook-epub].include?(type) && label.present?
+    end
+
+    def type
+      return 'pdf' if @type == 'pdflink'
+
+      @type
     end
 
     def blank?
