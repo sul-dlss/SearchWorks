@@ -16,14 +16,14 @@ module Citations
     # @return [Hash] A hash with citation styles as keys and citation text as values.
     def all_citations
       matching_styles.index_with do |id|
-        eds_citations.select { |style| style.fetch('id', nil) == id }.pick('data')&.html_safe # rubocop:disable Rails/OutputSafety
+        eds_citations.select { |style| style['Id'] == id }.pick('Data')&.html_safe # rubocop:disable Rails/OutputSafety
       end.compact
     end
 
     private
 
     def matching_styles
-      eds_citations.pluck('id').select { |id| CITATION_STYLES.include?(id) }
+      eds_citations.pluck('Id').select { |id| CITATION_STYLES.include?(id) }
     end
   end
 end

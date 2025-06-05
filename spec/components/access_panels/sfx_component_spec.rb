@@ -20,11 +20,17 @@ RSpec.describe AccessPanels::SfxComponent do
   end
 
   describe '#sfx_url' do
+    let(:document) do
+      EdsDocument.new(
+        'FullText' => {
+          'CustomLinks' => [link]
+        }
+      )
+    end
+
     context 'when an sfx link is present' do
-      let(:document) do
-        EdsDocument.new(
-          'eds_fulltext_links' => [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
-        )
+      let(:link) do
+        { 'Text' => 'Check SFX for full text', 'Url' => 'http://example.com' }
       end
 
       it 'returns an eds sfx link' do
@@ -33,10 +39,8 @@ RSpec.describe AccessPanels::SfxComponent do
     end
 
     context 'when no sfx links is present' do
-      let(:document) do
-        EdsDocument.new(
-          'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
-        )
+      let(:link) do
+        { 'Text' => 'HTML full text', 'Url' => 'http://example.com' }
       end
 
       it 'does not return any links' do

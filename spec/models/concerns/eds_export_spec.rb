@@ -4,13 +4,18 @@ require 'rails_helper'
 
 RSpec.describe EdsExport do
   let(:document) do
-    EdsDocument.new(
-      id: '123',
-      eds_citation_exports: [{ 'id' => 'RIS', 'data' => 'TI  - CatZ N Bagelz' }]
-    )
+    EdsDocument.new({
+                      'id' => '123',
+                      'exports' => {
+                        'Data' => 'TI  - CatZ N Bagelz',
+                        'Format' => 'RIS'
+                      }
+                    })
   end
   let(:empty_document) do
-    EdsDocument.new(id: '456', eds_citation_exports: [])
+    EdsDocument.new({
+                      'id' => '456'
+                    })
   end
 
   describe '#eds_ris_export?' do

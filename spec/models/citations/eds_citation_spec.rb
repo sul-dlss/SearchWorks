@@ -5,11 +5,11 @@ require 'rails_helper'
 RSpec.describe Citations::EdsCitation do
   let(:eds_citations) do
     [
-      { 'id' => 'apa', 'data' => 'Citation Content' },
+      { 'Id' => 'apa', 'Data' => 'Citation Content' },
       { 'status' => 'error', 'description' => 'Could not do a thing' },
-      { 'id' => 'somestyle', 'data' => 'Citation that should not display' },
-      { 'id' => 'mla' },
-      { 'data' => 'Citation that should not display' }
+      { 'Id' => 'somestyle', 'Data' => 'Citation that should not display' },
+      { 'Id' => 'mla' },
+      { 'Data' => 'Citation that should not display' }
     ]
   end
 
