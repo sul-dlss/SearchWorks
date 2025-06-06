@@ -16,7 +16,7 @@ module Eds
       begin_year = blacklight_params.dig('range', 'pub_year_tisim', 'begin')
       end_year = blacklight_params.dig('range', 'pub_year_tisim', 'end')
 
-      return unless begin_year.blank? && end_year.blank?
+      return if begin_year.blank? && end_year.blank?
 
       pub_year_tisim_range = "#{begin_year}-01/#{end_year}-01"
 
