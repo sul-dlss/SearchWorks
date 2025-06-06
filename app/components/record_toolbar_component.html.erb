@@ -1,6 +1,8 @@
 <div class="record-toolbar sul-toolbar navbar navbar-expand-md px-3 my-4" role="navigation">
   <div>
-    <%= helpers.link_back_to_catalog class: 'btn btn-link btn-sul-toolbar back-to-results', label: t('blacklight.back_to_search').html_safe %>
+    <%= helpers.link_back_to_catalog class: 'btn btn-link btn-sul-toolbar back-to-results',
+                                     label: t('blacklight.back_to_search').html_safe,
+                                     data: { behavior: 'last-search' } %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
   </div>
   <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".toolbar-collapse">
