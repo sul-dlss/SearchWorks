@@ -11,7 +11,6 @@ export default class extends Controller {
   }
 
   connect() {
-    this.item = $(this.element)
     this.viewportTarget = document.querySelector(this.viewportSelectorValue)
     this.galleryTarget = this.viewportTarget.querySelector('.gallery')
     if (!this.hasContent()) {
@@ -43,9 +42,11 @@ export default class extends Controller {
   }
 
   reorderPreviewElements() {
-    const embedContainer = $(this.galleryTarget)
+    const previewElements = this.galleryTarget.querySelectorAll('.preview-container')
 
-    const previewElements = embedContainer.find('.preview-container')
-    $(this.viewportTarget).append(previewElements);
+    // Append each preview element to the viewport target
+    previewElements.forEach(element => {
+      this.viewportTarget.appendChild(element)
+    })
   }
 }
