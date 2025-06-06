@@ -4,8 +4,6 @@ class RecentSelectionsController < ApplicationController
   include SelectionsCount
 
   def index
-    redirect_to(root_url) unless request.xhr?
-
     @catalog_count = selections_counts.catalog
     @article_count = selections_counts.articles
 
