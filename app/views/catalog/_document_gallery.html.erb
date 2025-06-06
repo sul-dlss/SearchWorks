@@ -10,7 +10,7 @@
           start: params[:start],
           call_number: params[:call_number],
           view: :gallery
-        ), class: 'text-center' %>
+        ), class: 'text-center', data: { turbo_frame: '_top'} %>
       </div>
     </div>
     <%= render view_config.document_component.with_collection(document_presenters, partials: view_config.partials, counter_offset: @response&.start || 0) %>
@@ -20,7 +20,7 @@
           start: params[:start],
           call_number: params[:call_number],
           view: :gallery
-        ), class: 'text-center' %>
+        ), class: 'text-center', data: { turbo_frame: '_top'} %>
       </div>
     </div>
   </div>
