@@ -3,7 +3,7 @@
 require "rails_helper"
 
 RSpec.describe SearchResult::MiniBento::CatalogComponent, type: :component do
-  context 'with q params and non-gallery view' do
+  context 'with q params' do
     before do
       vc_test_controller.params[:q] = 'question'
       render_inline(described_class.new(close: true))
@@ -23,18 +23,6 @@ RSpec.describe SearchResult::MiniBento::CatalogComponent, type: :component do
 
   context 'without a q param' do
     before do
-      render_inline(described_class.new(close: true))
-    end
-
-    it 'draws nothing' do
-      expect(page).to have_no_css '*'
-    end
-  end
-
-  context 'with gallery view' do
-    before do
-      vc_test_controller.params[:q] = 'question'
-      vc_test_controller.params[:view] = 'gallery'
       render_inline(described_class.new(close: true))
     end
 
