@@ -46,6 +46,8 @@ RSpec.describe 'Bookplates' do
         expect(page).to have_content masthead_text
       end
 
+      expect(current_url).to include 'sort=new-to-libs'
+
       within('.constraint') do
         expect(page).to have_css('.filter-name', text: 'Acquired with support from')
         expect(page).to have_css('.filter-value', text: 'Susan and Ruth Sharp Fund')
@@ -69,17 +71,6 @@ RSpec.describe 'Bookplates' do
       end
 
       expect(page).to have_css('h2', text: '1 catalog result')
-    end
-
-    it 'returns a gallery view search result sorted by "new to the Libraries"' do
-      visit solr_document_path('45')
-
-      click_link 'Susan and Ruth Sharp Fund'
-
-      expect(page).to have_css('#documents.gallery')
-      expect(current_url).to include 'view=gallery'
-
-      expect(current_url).to include 'sort=new-to-libs'
     end
   end
 end

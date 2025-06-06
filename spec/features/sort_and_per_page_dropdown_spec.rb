@@ -3,32 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Sort and per page toolbar', :feature, :js do
-  describe 'View dropdown' do
-    before do
-      visit root_path
-      fill_in 'q', with: ''
-      click_button 'search'
-    end
-
-    it 'displays active icon on the current active view' do
-      within '.sort-and-per-page' do
-        page.find('button.btn.btn-sul-toolbar', text: 'View').click
-
-        expect(page).to have_css('a.view-type-list i.active-icon')
-      end
-
-      visit search_catalog_path(q: '', view: 'gallery', search_field: 'search')
-
-      within '.sort-and-per-page' do
-        page.find('button.btn.btn-sul-toolbar', text: 'View').click
-
-        expect(page).to have_no_css('a.view-type-list i.active-icon')
-
-        expect(page).to have_css('a.view-type-gallery i.active-icon')
-      end
-    end
-  end
-
   describe 'Sort dropdown' do
     before do
       visit root_path

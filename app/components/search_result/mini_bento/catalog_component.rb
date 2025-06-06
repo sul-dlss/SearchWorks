@@ -10,10 +10,8 @@ module SearchResult
 
       attr_reader :close
 
-      delegate :current_view, to: :helpers
-
       def render?
-        params.fetch(:q, nil).present? && current_view != 'gallery'
+        params.fetch(:q, nil).present?
       end
 
       def call

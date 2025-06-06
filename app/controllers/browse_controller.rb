@@ -9,6 +9,7 @@ class BrowseController < ApplicationController
 
   configure_blacklight do |config|
     config.search_state_fields += %i[start barcode before after call_number]
+    config.view.gallery(icon: Blacklight::Icons::IconComponent, document_component: SearchResult::DocumentGalleryComponent)
   end
 
   before_action :fetch_orginal_document
