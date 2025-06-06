@@ -1,4 +1,5 @@
 :root {
   --identity-bar-bg-color: var(--stanford-cardinal);
   --identity-bar-color: white;
+  --sul-shadow-color: rgba(0, 0, 0, 0.2);
 }
