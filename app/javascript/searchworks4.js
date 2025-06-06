@@ -5,7 +5,6 @@ import "blacklight-frontend";
 
 import "./libraryh3lp";
 import "./popover";
-import "./feedback_form";
 
 // Prevent the back-button from trying to add a second instance of recaptcha
 // See https://github.com/ambethia/recaptcha/issues/217#issuecomment-615221808
