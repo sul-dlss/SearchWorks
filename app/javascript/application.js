@@ -27,7 +27,6 @@ import "./call-number-browse-tabs";
 import "./eds_range_limit";
 import "./exhibitPanel";
 import "./facet-options-checkboxes";
-import "./feedback_form";
 import "./jquery.managed-purl";
 import "./libraryh3lp";
 import "./location-hours";

@@ -31,6 +31,9 @@ application.register("course-reserves", CourseReservesController)
 import EmbedBrowseController from "./embed_browse_controller"
 application.register("embed-browse", EmbedBrowseController)
 
+import FeedbackFormController from "./feedback_form_controller"
+application.register("feedback-form", FeedbackFormController)
+
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 
