@@ -37,7 +37,7 @@
   </nav>
 </div>
 <% if article_search? || current_page?(feedback_path) # For JS enabled and disabled %>
-  <div id="connection-form" class="feedback-form-container collapse">
+  <div id="connection-form" class="feedback-form-container collapse" data-controller="feedback-form">
     <%= render_feedback_form('connection') if show_feedback_form? %>
     <hr>
   </div>
