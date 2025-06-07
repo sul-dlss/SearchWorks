@@ -76,7 +76,8 @@
     color: var(--stanford-cardinal);
   }
   @media (min-width: 768px) {
-    .col-md-4 section {
+    .tips,
+    .features {
       border-inline-start: 1px solid var(--stanford-40-black);
     }
   }

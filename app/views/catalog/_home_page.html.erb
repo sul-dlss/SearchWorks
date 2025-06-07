@@ -25,85 +25,92 @@
 
 <%= render MainContainerComponent.new do %>
   <div class="row mt-5 catalog-home-page">
-    <div class="col-md-3">
-      <section class="bg-light p-3 mb-3">
-        <header class="h3">What are you searching for?</header>
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            <div class="what-header">Catalog</div>
-            Catalog allows you to search for books, journals,  media and other formats in the Libraries’ physical collection. When there is an online version available, it’s also displayed.
-          </li>
-          <li>
-        <div class="what-header">Articles+</div>
-        Search Articles+ for academic articles, , ebooks, and the Libraries’ digital subscriptions. Full-text search and
-          </li>
-        </ul>
-      </section>
-      <section class="home-page-facets sidenav">
-        <header class="h3">Browse by</header>
+    <div class="col-lg-6 col-xl-4">
+      <div class="row">
+        <div class="col-xxl-10 col-xl-12">
+          <section class="bg-light p-3 mb-3">
+            <header class="h3">What are you searching for?</header>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <div class="what-header">Catalog</div>
+                Catalog allows you to search for books, journals,  media and other formats in the Libraries’ physical collection. When there is an online version available, it’s also displayed.
+              </li>
+              <li>
+            <div class="what-header">Articles+</div>
+            Search Articles+ for academic articles, , ebooks, and the Libraries’ digital subscriptions. Full-text search and
+              </li>
+            </ul>
+          </section>
+          <section class="home-page-facets sidenav">
+            <header class="h3">Browse by</header>
 
-        <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
-      </section>
+            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
+          </section>
+        </div>
+      </div>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-4">
-      <section class="p-3">
-        <header class="d-flex justify-content-between flex-wrap"><span class="h3 text-nowrap">Search tips</span>
-          <a href="https://guides.library.stanford.edu/searchworks" class="btn btn-sm btn-outline-primary text-nowrap align-self-start">Visit SearchWorks Guide</a>
-        </header>
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            <div class="fw-bold">Start with a simple keyword search</div>
-            Examples: “the new york times” or “stephan graham thesis”
-          </li>
+    <div class="col-lg-6 col-xl-8">
+      <div class="row">
+        <div class="col-xl-6 col-lg-12">
+          <section class="p-3 tips">
+            <header class="d-flex justify-content-between flex-wrap"><span class="h3 text-nowrap">Search tips</span>
+              <a href="https://guides.library.stanford.edu/searchworks" class="btn btn-sm btn-outline-primary text-nowrap align-self-start">Visit SearchWorks Guide</a>
+            </header>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <div class="fw-bold">Start with a simple keyword search</div>
+                Examples: “the new york times” or “stephan graham thesis”
+              </li>
 
-          <li class="mb-3">
-            <div class="fw-bold">Refine with filters</div>
-          </li>
+              <li class="mb-3">
+                <div class="fw-bold">Refine with filters</div>
+              </li>
 
-          <li class="mb-3">
-         <div class="fw-bold">Results are sorted by relevance</div>
-          </li>
+              <li class="mb-3">
+             <div class="fw-bold">Results are sorted by relevance</div>
+              </li>
 
-          <li class="mb-3">
-         <div class="fw-bold">All words are significant</div>
-         Examples: distinguish between “archaeology and literature” and “archaeology in literature”
-          </li>
+              <li class="mb-3">
+             <div class="fw-bold">All words are significant</div>
+             Examples: distinguish between “archaeology and literature” and “archaeology in literature”
+              </li>
 
-          <li class="mb-3">
-            <div class="fw-bold">Wildcards</div>
-            Example: créat* will find création(s), créateur(s), créatrice(s)
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div class="col-md-4">
-      <section class="p-3 features">
-        <header class="h3">Featured resources</header>
+              <li class="mb-3">
+                <div class="fw-bold">Wildcards</div>
+                Example: créat* will find création(s), créateur(s), créatrice(s)
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="col-xl-6 col-lg-12">
+          <section class="p-3 features">
+            <header class="h3">Featured resources</header>
 
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            <%= link_to 'Course reserves', course_reserves_path, class: 'd-block' %>
-            Books, media and digital resources set aside for classes
-          </li>
-          <li class="mb-3">
-            <%= link_to 'Databases', databases_path, class: 'd-block' %>
-            Topic specific databases containing full-text journal articles
-          </li>
-          <li class="mb-3">
-            <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'd-block' %>
-            Images, maps, data and more in the Stanford Digital repository
-          </li>
-          <li class="mb-3">
-            <%= link_to 'Government documents', govdocs_path, class: 'd-block' %>
-            State, federal, United Nations and European government documents
-          </li>
-          <li class="mb-3">
-            <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block' %>
-            Student work held in the Stanford Digital repository
-          </li>
-        </ul>
-      </section>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <%= link_to 'Course reserves', course_reserves_path, class: 'd-block' %>
+                Books, media and digital resources set aside for classes
+              </li>
+              <li class="mb-3">
+                <%= link_to 'Databases', databases_path, class: 'd-block' %>
+                Topic specific databases containing full-text journal articles
+              </li>
+              <li class="mb-3">
+                <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'd-block' %>
+                Images, maps, data and more in the Stanford Digital repository
+              </li>
+              <li class="mb-3">
+                <%= link_to 'Government documents', govdocs_path, class: 'd-block' %>
+                State, federal, United Nations and European government documents
+              </li>
+              <li class="mb-3">
+                <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block' %>
+                Student work held in the Stanford Digital repository
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </div>
   </div>
 
