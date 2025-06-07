@@ -54,3 +54,6 @@ application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
+
+import LookupTitleController from "./lookup_title_controller"
+application.register("lookup-title", LookupTitleController)
