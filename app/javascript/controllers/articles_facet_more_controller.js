@@ -1,3 +1,4 @@
+import Blacklight from "blacklight-frontend"
 import { Controller } from "@hotwired/stimulus"
 
 // Opens long facet lists in a modal
