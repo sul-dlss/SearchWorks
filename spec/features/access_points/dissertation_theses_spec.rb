@@ -5,7 +5,9 @@ require 'rails_helper'
 RSpec.describe 'Dissertation Theses Access Point' do
   before do
     visit root_path
-    click_link 'Theses & dissertations'
+    within '.features' do
+      click_link 'Theses & dissertations'
+    end
   end
 
   it 'has a custom page title' do

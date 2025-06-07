@@ -9,6 +9,7 @@ pipeline {
     stage('Stage deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'stage'
+        BRANCH = 'main'
       }
 
       when {
@@ -56,7 +57,7 @@ pipeline {
       }
 
       when {
-        branch 'main'
+        branch 'release'
       }
 
       steps {
@@ -234,11 +235,11 @@ pipeline {
     stage('folio-dev deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'preview_folio'
-        BRANCH = 'main'
+        BRANCH = 'release'
       }
 
       when {
-        branch 'main'
+        branch 'release'
       }
 
       steps {
@@ -276,7 +277,7 @@ pipeline {
       }
     }
 
-    stage('Prod deploy (on release)') {
+    stage('Prod deploy (on tagged release)') {
       environment {
         DEPLOY_ENVIRONMENT = 'prod'
       }

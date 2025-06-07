@@ -8,18 +8,12 @@ RSpec.feature 'Article Searching' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit root_path
 
-      within '.search-dropdown' do
-        click_link 'Select search scope, currently: catalog'
-
-        expect(page).to have_css('.dropdown-menu', visible: true)
-
-        expect(page).to have_css('a.highlight', text: /catalog/)
-        expect(page).to have_no_css('.highlight', text: /articles/)
-
-        click_link 'articles+'
+      within '.search-card' do
+        choose 'Articles+'
+        click_button 'Search'
       end
 
-      expect(page).to have_current_path(articles_path) # the landing page for Article Search
+      expect(page).to have_current_path('/articles?search_field=search&q=') # the landing page for Article Search
       expect(page).to have_title('SearchWorks articles+ : Stanford Libraries')
     end
 
@@ -138,15 +132,6 @@ RSpec.feature 'Article Searching' do
       first(:css, 'a.remove').click
       expect(page).to have_no_css('.applied-filter', text: /kittens/)
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
-    end
-  end
-
-  describe 'sidenav mini-map' do
-    it 'top/bottom buttons are present in search results' do
-      article_search_for('kittens')
-
-      expect(page).to have_button('Top')
-      expect(page).to have_button('Bottom')
     end
   end
 

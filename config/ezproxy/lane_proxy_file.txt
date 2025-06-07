@@ -798,7 +798,6 @@ jacketsearch.tandf.co.uk
 jaclinicalreports.springeropen.com
 jad.tums.ac.ir
 jag.igr.poznan.pl
-jama.jamanetwork.com
 jamanetwork.com
 jamba.org.za
 jambo.africa.kyoto-u.ac.jp
@@ -2504,7 +2503,6 @@ www.rsc.org
 www.rsfjournal.org
 www.ruralneuropractice.com
 www.sage-hindawi.com
-www.sanger.ac.uk
 www.sanp.ch
 www.sapj.co.za
 www.sarsreference.com

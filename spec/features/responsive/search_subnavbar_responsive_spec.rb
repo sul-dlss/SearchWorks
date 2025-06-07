@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Responsive subnavbar (gray banner)', :feature, :js, :responsive, page_width: 700 do
   scenario 'collapses menu options in mobile view' do
-    visit root_path
+    visit solr_document_path('1')
 
     expect(page).to have_css('a', text: /Help/, visible: false)
     expect(page).to have_css('a', text: /Advanced search/, visible: false)

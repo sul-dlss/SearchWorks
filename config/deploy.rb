@@ -3,9 +3,9 @@
 set :application, 'SearchWorks'
 set :repo_url, 'https://github.com/sul-dlss/SearchWorks.git'
 
-# Default branch is :master so we need to update to main
+# Default branch is :master so we need to update to release
 if ENV['DEPLOY']
-  set :branch, ENV.fetch('BRANCH', 'main')
+  set :branch, ENV.fetch('BRANCH', 'release')
 else
   ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 end

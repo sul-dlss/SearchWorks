@@ -1,0 +1,14 @@
+.facet-values .sul-icon {
+  align-items: center;
+  color: $black;
+  display: table-cell;
+  font-size: 1.5em;
+  width: 30px;
+  vertical-align: middle;
+  &::before,
+  svg {
+    height: 21px;
+    width: 21px;
+    vertical-align: top;
+  }
+}

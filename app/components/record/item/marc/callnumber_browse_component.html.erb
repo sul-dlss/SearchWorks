@@ -22,7 +22,9 @@
   <div class="tab-content">
     <% spines.each_with_index do |item, index| %>
       <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
-        <div class="embedded-items"><div class="gallery"></div></div>
+        <div class="embedded-items">
+          <%= helpers.turbo_frame_tag "filmstrip_#{item.base_callnumber.gsub(' ', '-')}", src: filmstrip_path(item.base_callnumber), class: 'gallery' %>
+        </div>
       </div>
     <% end %>
   </div>

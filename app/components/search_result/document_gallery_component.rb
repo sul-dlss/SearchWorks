@@ -21,13 +21,17 @@ module SearchResult
       if browse_nearby?
         {
           controller: 'preview-embed-browse',
+          preview_embed_browse_id_value: @document.id,
           preview_embed_browse_url_value: preview_path(@document.id),
+          preview_embed_browse_preview_embed_browse_outlet: '.gallery-document',
           preview_embed_browse_preview_selector_value: ".#{preview_container_dom_class}"
         }
       else
         {
           controller: 'gallery-preview',
+          gallery_preview_id_value: @document.id,
           gallery_preview_url_value: preview_path(@document.id),
+          gallery_preview_gallery_preview_outlet: '.gallery-document',
           gallery_preview_preview_selector_value: ".#{preview_container_dom_class}"
         }
       end

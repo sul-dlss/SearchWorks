@@ -2,6 +2,8 @@ $available-color: green;
 $noncirc-color: darkorange;
 
 .stanford-only {
+  --bs-btn-focus-box-shadow: 192, 12, 12;
+
   height: 1rem;
   margin-left: 0.5rem;
   padding: 0;

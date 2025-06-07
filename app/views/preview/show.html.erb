@@ -1,4 +1,4 @@
-<turbo-frame id="preview_<%= @document[:id] %>">
+<turbo-frame id="preview_<%= @document[:id] %>" data-controller="google-cover-image">
   <%= render_document_partial @document, 'show_header' %>
   <%= render_document_partial @document, 'show' %>
 </turbo-frame>

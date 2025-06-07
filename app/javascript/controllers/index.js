@@ -28,8 +28,14 @@ application.register("chat-hours", ChatHoursController)
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
+import EmbedBrowseController from "./embed_browse_controller"
+application.register("embed-browse", EmbedBrowseController)
+
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
+
+import GoogleCoverImageController from "./google_cover_image_controller"
+application.register("google-cover-image", GoogleCoverImageController)
 
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)

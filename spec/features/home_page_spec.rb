@@ -9,7 +9,6 @@ RSpec.feature "Home Page" do
 
   scenario "facets should display" do
     expect(page).to have_title("SearchWorks catalog : Stanford Libraries")
-    expect(page).to have_css('h2', text: "Find materials by…")
     expect(page).to have_css(".card-header", text: "Resource type")
     expect(page).to have_css(".card-header", text: "Access")
     expect(page).to have_css(".card-header", text: "Library")
@@ -21,12 +20,10 @@ RSpec.feature "Home Page" do
     expect(page).to have_css('.features a', text: 'Government documents')
     expect(page).to have_css(".features a", text: "Databases")
     expect(page).to have_css(".features a", text: "Course reserves")
-    expect(page).to have_css(".features a", text: "IIIF resources")
   end
 
   scenario "Logo and catalog images should display" do
     expect(page).to have_css("a.navbar-brand")
-    expect(page).to have_css(".navbar-text.search-target", text: "catalog")
   end
 
   scenario "there should be no more link on any facets" do

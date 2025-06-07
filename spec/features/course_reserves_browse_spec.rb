@@ -13,8 +13,9 @@ RSpec.feature 'Course reserves browse', :js do
       expect(page).to have_css("h1", text: "Browse course reserves")
     end
     scenario "should be accessible from the subnavbar" do
-      within '#search-subnavbar-container' do
-        find_link('Course reserves').click
+      click_link 'Featured resources'
+      within '.dropdown-menu' do
+        click_link 'Course reserves'
       end
       expect(page).to have_css("h1", text: "Browse course reserves")
     end

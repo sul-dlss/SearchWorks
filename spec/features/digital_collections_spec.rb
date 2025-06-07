@@ -5,7 +5,9 @@ require 'rails_helper'
 RSpec.feature "Digital Collections Search" do
   before do
     visit root_path
-    click_link "Digital collections"
+    within '.features' do
+      click_link "Digital collections"
+    end
   end
 
   scenario "should have the filter applied" do

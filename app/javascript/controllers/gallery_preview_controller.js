@@ -1,47 +1,44 @@
 import { Controller } from "@hotwired/stimulus"
-import PreviewContent from '../preview-content'
 
 // Connects to data-controller="gallery-preview"
 export default class extends Controller {
   static values = {
+    id: String,
     url: String,
     previewSelector: String
   }
 
-  connect() {
-    this.$item = $(this.element)
-    this.$previewTarget = $(this.previewSelectorValue)
+  static targets = [ "button" ]
 
-    this.itemWidth = this.$item.outerWidth() + 10
-    this.$triggerBtn = this.$item.find('*[data-behavior="preview-button-trigger"]')
-    this.$closeBtn = $(`<button type="button" class="preview-close btn-close" aria-label="Close">
-    <span aria-hidden="true" class="visually-hidden">×</span>
-    </button>`)
-    this.$arrow = $('<div class="preview-arrow"></div>')
-    this.$gallery = $('.gallery-document')
+  static outlets = [ "gallery-preview" ]
+
+  connect() {
+    this.previewTarget = document.querySelector(this.previewSelectorValue)
+
+    this.closeBtn = document.createElement('button')
+    this.closeBtn.type = 'button'
+    this.closeBtn.className = 'preview-close btn-close'
+    this.closeBtn.setAttribute('aria-label', 'Close')
+    this.closeBtn.innerHTML = '<span aria-hidden="true" class="visually-hidden">×</span>'
+    this.arrow = document.createElement('div')
+    this.arrow.className = 'preview-arrow'
+    this.gallery = document.querySelectorAll('.gallery-document')
     this.reorderPreviewDivs()
     $(window).resize(() => this.reorderPreviewDivs())
-    this.attachTriggerEvents()
   }
 
   showPreview() {
-    const previewUrl = this.urlValue
-
-    this.$previewTarget.addClass('preview').empty()
-
-    PreviewContent.append(previewUrl, this.$previewTarget)
+    this.previewTarget.classList.add('preview')
+    this.previewTarget.innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
+    this.previewTarget.appendChild(this.closeBtn)
+    this.previewTarget.style.display = 'block'
 
     this.appendPointer()
 
-    this.$previewTarget.css('display', 'inline-block')
-
-    this.$previewTarget.append(this.$closeBtn).show()
-
-    this.$triggerBtn.html('Close')
+    this.buttonTarget.textContent = 'Close'
+    this.buttonTarget.classList.add('preview-open')
 
     this.attachPreviewEvents()
-
-    this.$triggerBtn.addClass('preview-open')
   }
 
   clamp(x, min, max) {
@@ -49,30 +46,30 @@ export default class extends Controller {
   }
 
   appendPointer() {
-    this.$previewTarget.append(this.$arrow)
+    this.previewTarget.appendChild(this.arrow)
 
-    const maxLeft = this.$previewTarget.width() - this.$arrow.width() - 1
+    const maxLeft = this.previewTarget.offsetWidth - this.arrow.offsetWidth - 1
     const { left, width } = this.element.getBoundingClientRect()
     const docsLeft = document.getElementById('documents').getBoundingClientRect().left
     const arrowLeft = this.clamp(left - docsLeft + width / 2 - 10, 0, maxLeft)
 
-    this.$arrow.css('left', arrowLeft);
+    this.arrow.style.left = arrowLeft + 'px'
   }
 
-  attachTriggerEvents() {
-    this.$item.find(this.$triggerBtn).on('click', $.proxy(function(e) {
-      if (this.previewOpen()){
-        this.closePreview()
-      } else {
-        this.showPreview()
-      }
-    }, this))
+  togglePreview(e) {
+    if (this.previewOpen()){
+      this.closePreview()
+    } else {
+      // Close the others
+      this.galleryPreviewOutlets.forEach((tile) => {
+        if (tile !== this) {
+          tile.closePreview()
+        }
+      })
 
-    $("#documents").on('click', $.proxy(function(e) {
-      if (!this.currentPreview(e)){
-        this.closePreview();
-      }
-    }, this))
+      this.showPreview()
+
+    }
   }
 
   currentPreview(e){
@@ -80,7 +77,7 @@ export default class extends Controller {
     if ($(e.target).parents('.preview-container').length > 0){
       return true
     } else {
-      if (e.target === this.$triggerBtn[0]) {
+      if (e.target === this.buttonTarget) {
         return true
       } else {
         return false
@@ -88,30 +85,32 @@ export default class extends Controller {
     }
   }
 
-  previewOpen() {
-    return this.$triggerBtn.hasClass('preview-open')
+  previewOpen(){
+    return this.buttonTarget.classList.contains('preview-open')
   }
 
   attachPreviewEvents() {
-    this.$previewTarget.find(this.$closeBtn).on('click', $.proxy(function() {
+    this.closeBtn.addEventListener('click', () => {
       this.closePreview()
-    }, this))
+    })
   }
 
   closePreview() {
-    this.$previewTarget.removeClass('preview')
-    this.$triggerBtn.removeClass('preview-open')
-    this.$previewTarget.hide()
-    this.$triggerBtn.html('Preview')
+    this.previewTarget.classList.remove('preview')
+    this.buttonTarget.classList.remove('preview-open')
+    this.previewTarget.style.display = 'none'
+    this.buttonTarget.textContent = 'Preview'
   }
 
   itemsPerRow() {
+    const itemWidth = this.element.offsetWidth + 10
     const width = $('#documents').width()
-    return Math.floor(width/this.itemWidth)
+    return Math.floor(width/itemWidth)
   }
 
+  // Depending on how narrow the screen is, we may need to move the preview div location.
   reorderPreviewDivs() {
-    const docId = this.$previewTarget.data('document-id');
+    const docId = this.previewTarget.dataset.documentId
     const galleryDocs = $(`.gallery-document`)
     let previewIndex = galleryDocs.index($(`.gallery-document[data-doc-id='${docId}']`)) + 1
 
@@ -132,7 +131,7 @@ export default class extends Controller {
       return
     }
 
-    if (this.$previewTarget.find(this.$arrow)) {
+    if (this.arrow) {
       this.appendPointer()
     }
 
@@ -142,7 +141,8 @@ export default class extends Controller {
     if (previewIndex > galleryDocs.length) {
       previewIndex = galleryDocs.length
     }
-    this.$previewTarget.detach()
-    $(this.$gallery[(previewIndex-1)]).after(this.$previewTarget)
+    this.previewTarget.parentNode.removeChild(this.previewTarget)
+    const galleryItem = this.gallery[(previewIndex-1)]
+    galleryItem.parentNode.insertBefore(this.previewTarget, galleryItem.nextSibling)
   }
 }

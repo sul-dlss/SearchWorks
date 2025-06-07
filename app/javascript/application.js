@@ -2,7 +2,6 @@
 
 import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
-import "./vendor/jquery-scrollspy";
 import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
 
 import BlacklightRangeLimit from "blacklight-range-limit/app/assets/javascripts/blacklight_range_limit/blacklight_range_limit.esm";
@@ -24,18 +23,14 @@ Blacklight.onLoad(function() {
 import "./alternate_catalog";
 import "./analytics";
 import "./article";
+import "./call-number-browse-tabs";
 import "./eds_range_limit";
-import "./embedded-call-number-browse";
 import "./exhibitPanel";
 import "./facet-options-checkboxes";
 import "./feedback_form";
-import "./jquery.clear-input-text";
 import "./jquery.managed-purl";
-import "./jquery.plug-google-content";
-import "./jquery.side-nav-minimap";
 import "./libraryh3lp";
 import "./location-hours";
-import "./preview-content";
 import "./purl-embed";
 import "./recent-selections";
 import "./select-all";

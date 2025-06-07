@@ -3,11 +3,10 @@
 require 'rails_helper'
 
 RSpec.feature "Top Navigation" do
-  scenario "should have navigational links and top menu" do
+  it "has navigational links and top menu" do
     visit root_path
-    within "#topnav .header-links" do
+    within "header > nav" do
       expect(page).to have_link "Login"
-      expect(page).to have_link "My Account"
       expect(page).to have_link "Feedback"
     end
   end

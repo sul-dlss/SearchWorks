@@ -2,7 +2,7 @@
 <% if thumbnail_src.present? %>
   <%= image_tag(thumbnail_src, class: 'stacks-image', alt: '') %>
 <% else %>
-  <img class="cover-image center-block <%= css_class %>" hidden alt="" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
+  <img class="cover-image center-block <%= css_class %>" hidden alt="" data-google-cover-image-target="image" data-isbn="<%= isbn %>" data-oclc="<%= oclc %>" data-lccn="<%= lccn %>">
 
   <% if document_index_view_type == :gallery %>
     <%= content_tag(:span, class:"fake-cover") do %>
