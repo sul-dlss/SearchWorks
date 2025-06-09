@@ -180,7 +180,6 @@ Blacklight.onLoad(function() {
   // embedded-call-number-browse.js has code that scrolls to the currently selected item in the gallery on load
   // We want to ignore this initial scroll and only record user actions
   let initial_scroll_complete = false
-  const gallery_el =  document.querySelector('.embedded-items .gallery')
   document.querySelectorAll('.embedded-items .gallery').forEach(function(el) {
     el.addEventListener('scroll', function(e) {
       if (initial_scroll_complete) {
