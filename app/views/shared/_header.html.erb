@@ -1,0 +1,162 @@
+      <nav id="skip-link" class="visually-hidden-focusable" aria-label="Skip links">
+        <div class="container-fluid">
+          <a class="d-inline-flex m-1 py-2 px-3" href="#q">Skip to search</a>
+          <a class="d-inline-flex m-1 py-2 px-3" href="#main-content">Skip to main content</a>
+        </div>
+      </nav>
+      <header class="position-relative z-1">
+        <div class="identity-bar">
+          <div class="container-fluid">
+            <a class="su-brand-bar__logo" href="https://www.stanford.edu">Stanford University</a>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg pb-2" id="user-links">
+          <div class="container-fluid">
+            <a class="mb-0 navbar-brand navbar-logo polychrome" href="https://library.stanford.edu">Stanford University Libraries</a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#user-util-collapse" data-bs-target="#user-util-collapse" aria-controls="user-util-collapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-lg-block d-none">
+              <ul class="navbar-nav gap-4 align-items-baseline">
+                <li class="nav-item flex flex-shrink-0">
+                  <a class="su-underline nav-link" href="https://searchworks.stanford.edu">SearchWorks Catalog</a>
+                  <a class="su-underline nav-link ps-2 ms-2" href="https://searchworks.stanford.edu/articles">Articles+</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link su-underline text-nowrap" href="https://library.stanford.edu/contact-us">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link su-underline text-nowrap" href="https://mylibrary.stanford.edu">My Account</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="btn btn-secondary text-nowrap" href="https://give.stanford.edu/?kwoDCPreselect=KDC-29V9KK0&olc=10734">Donate now</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="masthead lg-shadow">
+          <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
+              <div class="navbars ms-lg-auto">
+                <nav class="collapse navbar-collapse align-items-start justify-content-lg-end navbar-expand-lg d-lg-flex flex-column flex-lg-row" aria-label="Main menu" id="user-util-collapse">
+                  <hr class="d-lg-none vw-100 my-0">
+                  <ul class="navbar-nav justify-content-lg-end w-100 fw-semibold">
+                    <li class="nav-item">
+                      <a class="nav-link fs-5" href="https://library.stanford.edu/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown text-nowrap">
+                      <a class="nav-link fs-5" href="https://library.stanford.edu/services">
+                        Services
+                      </a
+                      ><button class="dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= render 'shared/chevron' %><span class="visually-hidden">Services submenu</span></button>
+                      <ul class="dropdown-menu dropdown-menu-end lg-shadow">
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/all_services">Services A-Z</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/services/search-and-find">Search and find</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/services/borrow-and-request">Borrow and request</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5 " href="https://library.stanford.edu/services/off-campus-access">Off-campus access</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown text-nowrap">
+                      <a class="nav-link fs-5" href="https://library.stanford.edu/research-support">
+                        Research support
+                      </a
+                      ><button class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= render 'shared/chevron' %><span class="visually-hidden">Research support submenu</span></button>
+                      <ul class="dropdown-menu dropdown-menu-end lg-shadow">
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/research-support/subject-specialists">Subject specialists</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/research-support/workshops">Workshops</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/research/subject-areas">Subjects A-Z</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5 " href="https://guides.library.stanford.edu/">Guides</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5 " href="https://library.stanford.edu/research-support/increase-your-research-impact">Increase your research impact</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5 " href="https://library.stanford.edu/research-support/data-support-and-services">Data support and services</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown text-nowrap">
+                      <a class="nav-link fs-5" href="https://library.stanford.edu/libraries-0">
+                        Libraries
+                      </a
+                      ><button class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= render 'shared/chevron' %><span class="visually-hidden">Libraries submenu</span></button>
+                      <ul class="dropdown-menu dropdown-menu-end lg-shadow">
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/libraries/branches-and-centers">Branches and centers</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/libraries/places-to-study">Places to study</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-5" href="https://library.stanford.edu/news-and-events">News and events</a>
+                    </li>
+                    <li class="nav-item dropdown text-nowrap">
+                      <a class="nav-link fs-5" href="https://library.stanford.edu/about-stanford-libraries">
+                        About us
+                      </a
+                      ><button class="nav-link dropdown-toggle fs-5 p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= render 'shared/chevron' %><span class="visually-hidden">About us submenu</span></button>
+                      <ul class="dropdown-menu lg-shadow">
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/about-stanford-libraries/about-libraries">About the Libraries</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/about-stanford-libraries/visit-us">Visit us</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5" href="https://library.stanford.edu/about-stanford-libraries/meet-our-leadership">Leadership</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5 " href="https://library.stanford.edu/support-stanford-libraries">Support the Libraries</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item fs-5 " href="https://library.stanford.edu/about-stanford-libraries/explore-collection-highlights">Collection highlights</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <hr class="d-lg-none vw-100 my-0">
+                  <ul class="navbar-nav d-lg-none gap-0 w-100">
+                    <li class="nav-item">
+                      <a class="nav-link fs-5 su-underline" href="https://library.stanford.edu/library-accessibility">Library accessibility</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-5 su-underline" href="https://mylibrary.stanford.edu">My Account</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-5 su-underline" href="https://library.stanford.edu/contact-us">Contact us</a>
+                    </li>
+                    <li class="nav-item mt-1">
+                      <a class="fs-5 btn btn-secondary" href="https://give.stanford.edu/?kwoDCPreselect=KDC-29V9KK0&olc=10734">Donate now</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>

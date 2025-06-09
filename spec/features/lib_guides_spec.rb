@@ -11,7 +11,7 @@ feature 'LibGuides', :js do
   end
 
   scenario 'is present on index page' do
-    fill_in 'params-q', with: 'geology'
+    fill_in 'search for', with: 'geology'
     click_button 'Search'
     expect(page).to have_css 'h2', text: 'Guides'
   end

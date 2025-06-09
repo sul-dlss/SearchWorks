@@ -1,0 +1,118 @@
+.navbar {
+  a.nav-link + a.nav-link {
+    border-inline-start: 1px solid var(--bs-body-color);
+  }
+}
+.lg-shadow {
+  box-shadow:
+    0 0 #0000,
+    0 0 #0000,
+    0 10px 15px -3px rgb(0 0 0/0.1),
+    0 4px 6px -4px rgb(0 0 0/0.1);
+}
+
+.fs-5 {
+  font-size: 1.125rem !important;
+}
+
+.navbar-toggler {
+  border: 0;
+  &::after {
+    content: "Menu";
+    display: block;
+  }
+}
+
+.nav-item {
+  .nav-link {
+    display: inline-block;
+  }
+  .dropdown-toggle {
+    --dropdown-hover-border-color: transparent;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    background: none;
+    transition: transform 0.5s;
+    width: 40px;
+
+    &:hover {
+      --dropdown-hover-border-color: rgb(93 75 60);
+    }
+
+    .hover-wrapper {
+      border-bottom: 2px solid var(--dropdown-hover-border-color);
+      width: fit-content;
+    }
+
+    &[aria-expanded="true"] svg {
+      transform: rotateX(180deg);
+    }
+    &::after {
+      display: none;
+      border: 0;
+    }
+  }
+  .btn-secondary {
+    --bs-btn-border-radius: 2rem;
+    --bs-btn-padding-y: 0.3125rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-bg: rgb(177, 4, 14);
+  }
+}
+
+.search-query-form {
+  border: 1px solid var(--stanford-40-black);
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: white;
+  width: 100%;
+
+  .search-q {
+    border: 0;
+    padding: 0 0 0 2rem;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E")
+      no-repeat left;
+    background-size: 1rem;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .btn {
+    --bs-btn-border-radius: 2rem;
+    --bs-btn-bg: rgb(177, 4, 14);
+  }
+}
+
+header {
+  .navbar {
+    --bs-navbar-padding-y: 1.25rem;
+    padding-bottom: 0;
+  }
+
+  #user-links {
+    .nav-link {
+      --bs-nav-link-padding-y: 0;
+    }
+  }
+
+  #user-util-collapse {
+    margin-top: 0.75rem;
+    a.nav-link {
+      --bs-nav-link-padding-y: 1rem;
+      --bs-navbar-nav-link-padding-x: 1.25rem;
+
+      vertical-align: middle;
+    }
+    a:has(+ button) {
+      padding-inline-end: 0.3125rem;
+    }
+  }
+  .navbar-nav {
+    --bs-navbar-nav-link-padding-x: 0;
+  }
+}
+
+.subtitle {
+  font-weight: 100;
+}
