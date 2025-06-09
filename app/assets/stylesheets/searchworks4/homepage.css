@@ -75,7 +75,7 @@
     font-weight: 700;
     color: var(--stanford-cardinal);
   }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .tips,
     .features {
       border-inline-start: 1px solid var(--stanford-40-black);
