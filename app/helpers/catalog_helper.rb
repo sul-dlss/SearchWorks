@@ -6,10 +6,6 @@
 module CatalogHelper
   include Blacklight::CatalogHelperBehavior
 
-  def current_view
-    document_index_view_type.to_s || 'list'
-  end
-
   def stackmap_link(document, location)
     item = location.items.first
     stackmap_path(title: (document['title_display'] || '').html_safe,
@@ -29,7 +25,7 @@ module CatalogHelper
   def link_to_bookplate_search(bookplate, link_opts = {})
     link_to(
       bookplate.text,
-      search_catalog_path(bookplate.params_for_search.merge(view: 'gallery', sort: 'new-to-libs')),
+      search_catalog_path(bookplate.params_for_search.merge(sort: 'new-to-libs')),
       link_opts
     )
   end
