@@ -270,3 +270,6 @@ folio_unrequestable_statuses:
 
 earthworks:
   url: "https://earthworks.stanford.edu"
+
+feature:
+  autocomplete: false

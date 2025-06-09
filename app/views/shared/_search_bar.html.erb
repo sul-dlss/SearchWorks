@@ -8,6 +8,7 @@
       <%= render SearchworksSearchBarComponent.new(
         url: search_action_url,
         classes: ['navbar-form'],
+        autocomplete_path: suggest_index_catalog_path,
         params: search_state.params_for_search.except(:qt)) %>
     </div>
   </nav>

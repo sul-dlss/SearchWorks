@@ -429,6 +429,10 @@
   <copyField source="vern_author_title_245ac_search" dest="ko_author_title_245ac_search" />
   <copyfield source="vern_author_title_1xx_search" dest="ko_vern_author_title_1xx_search" />
 
+  <!-- for suggestions -->
+  <copyField source="author_person_facet" dest="suggest"/>
+  <copyField source="author_other_facet" dest="suggest"/>
+
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
     <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true" />
