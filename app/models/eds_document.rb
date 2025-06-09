@@ -101,7 +101,7 @@ class EdsDocument
   end
 
   # These stub methods are used by components shared with SolrDocument:
-  def is_a_database? = false # rubocop:disable Naming/PredicateName
+  def is_a_database? = false
   def druid = nil
   def eresources_library_display_name = nil
   def mods = nil
