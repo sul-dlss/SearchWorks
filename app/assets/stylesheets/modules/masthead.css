@@ -84,6 +84,10 @@
   }
 }
 
+.pages-home .search-query-form{
+  width: 50%;
+}
+
 header {
   .navbar {
     --bs-navbar-padding-y: 1.25rem;
