@@ -4,9 +4,6 @@ en:
       duplicates: We search across a wide range of scholarly sources and remove duplicates from different providers. This may cause the number of displayed results to differ from the total found.
   searchworks:
     articles:
-      search_tips:
-        heading: "For a known citation, type author name and title in the main search box."
-        body: "Example: Barbara Block Bioenergetics of captive yellowfin tuna"
       flashes:
         additional_selections_warning_html: Additional selections in this facet will <strong>expand</strong> (rather than narrow) your search result.
         fulltext_link:
