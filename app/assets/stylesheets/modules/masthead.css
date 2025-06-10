@@ -84,10 +84,6 @@
   }
 }
 
-.pages-home .search-query-form{
-  width: 50%;
-}
-
 header {
   .navbar {
     --bs-navbar-padding-y: 1.25rem;
@@ -119,4 +115,16 @@ header {
 
 .subtitle {
   font-weight: 100;
+}
+
+@media (min-width: 768px) {
+  .pages-home .search-query-form{
+    width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pages-home .search-query-form{
+    width: 729px;
+  }
 }
