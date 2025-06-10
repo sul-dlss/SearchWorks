@@ -5,30 +5,6 @@ class SearchService
     @query = query
   end
 
-  def all(threads: true, searchers: Settings.ENABLED_SEARCHERS, except: [])
-    searches = searchers.each_with_object({}) do |searcher, hash|
-      hash[searcher] = nil
-    end
-
-    benchmark "%s ALL" % CGI.escape(query.to_str) do
-      search_threads = searches.keys.excluding(except).shuffle.map do |search_method|
-        # Use auto-loading outside the threadpool
-        klass = "QuickSearch::#{search_method.camelize}Searcher".constantize
-
-        Thread.new(search_method) do |sm|
-          begin
-            searches[search_method] = one(klass, timeout: Settings.quick_search.http_timeout)
-          rescue StandardError => e
-            logger.info "FAILED SEARCH: #{search_method} | #{query} | #{e}"
-          end
-        end
-      end
-      search_threads.each {|t| t.join}
-    end
-
-    searches
-  end
-
   def one(searcher, timeout: 30)
     benchmark "%s #{searcher}" % CGI.escape(query.to_str) do
       klass = case searcher

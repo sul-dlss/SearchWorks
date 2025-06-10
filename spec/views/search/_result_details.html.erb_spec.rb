@@ -10,7 +10,7 @@ describe 'search/_result_details' do
       r.link = 'http://example.com'
       r.description = description
       r.author = 'The Author'
-      r.imprint = 'The Imprint Statement'
+      r.imprint = 'Oxford : Oxford University Press, 2013.'
       r.fulltext_link_html = '<a href="#">Link</a>'
     end
   end
@@ -34,7 +34,7 @@ describe 'search/_result_details' do
   end
 
   it 'renders the imprint' do
-    expect(rendered).to have_content('The Imprint Statement')
+    expect(rendered).to have_content 'Oxford : Oxford University Press, 2013.'
   end
 
   it 'renders the description' do

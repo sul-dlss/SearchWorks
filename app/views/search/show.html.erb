@@ -1,0 +1,3 @@
+<%= turbo_frame_tag "#{params[:endpoint]}_module" do %>
+  <%= render_module(@searcher, params[:endpoint]) unless @no_answer %>
+<% end %>

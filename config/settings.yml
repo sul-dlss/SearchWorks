@@ -1,51 +1,49 @@
 MAX_RESULTS: 3
 
-LIBRARY_WEBSITE_HOME_URL: 'https://library.stanford.edu'
+LIBRARY_WEBSITE_HOME_URL: "https://library.stanford.edu"
 GLOBAL_ALERT: <%= false %>
 ENABLED_SEARCHERS:
   - catalog
   - article
-  - lib_guides
-  - library_website_api
   - exhibits
   - earthworks
+  - library_website_api
+  - lib_guides
 CATALOG:
-  API_URL: 'https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json'
-  QUERY_URL: 'https://searchworks.stanford.edu/?q=%{q}'
-  FETCH_URL: 'https://searchworks.stanford.edu/view/%{id}'
-  HOME_URL: 'https://searchworks.stanford.edu'
+  API_URL: "https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json"
+  QUERY_URL: "https://searchworks.stanford.edu/?q=%{q}"
+  FETCH_URL: "https://searchworks.stanford.edu/view/%{id}"
+  HOME_URL: "https://searchworks.stanford.edu"
 ARTICLE:
-  API_URL: 'https://searchworks.stanford.edu/articles?guest=true&q=%{q}&rows=%{max}&format=json'
-  QUERY_URL: 'https://searchworks.stanford.edu/articles?q=%{q}'
-  FETCH_URL: 'https://searchworks.stanford.edu/articles/%{id}'
-  HOME_URL: 'https://searchworks.stanford.edu/articles'
+  API_URL: "https://searchworks.stanford.edu/articles?guest=true&q=%{q}&rows=%{max}&format=json"
+  QUERY_URL: "https://searchworks.stanford.edu/articles?q=%{q}"
+  FETCH_URL: "https://searchworks.stanford.edu/articles/%{id}"
+  HOME_URL: "https://searchworks.stanford.edu/articles"
 LIBGUIDES:
-  API_URL: 'https://example.com/1.1/guides'
+  API_URL: "https://example.com/1.1/guides"
   SITE_ID: 123456
   KEY: abc1234
   NUM_RESULTS_SHOWN: 3
-  QUERY_URL: 'https://guides.library.stanford.edu/srch.php?q=%{q}'
-  HOME_URL: 'https://guides.library.stanford.edu'
+  QUERY_URL: "https://guides.library.stanford.edu/srch.php?q=%{q}"
+  HOME_URL: "https://guides.library.stanford.edu"
 EXHIBITS:
-  API_URL: 'https://exhibits.stanford.edu/exhibit_finder?q=%{q}'
-  HOME_URL: 'https://exhibits.stanford.edu'
-  LINK_URL: 'https://exhibits.stanford.edu/%{id}'
+  API_URL: "https://exhibits.stanford.edu/exhibit_finder?q=%{q}"
+  HOME_URL: "https://exhibits.stanford.edu"
+  LINK_URL: "https://exhibits.stanford.edu/%{id}"
   NUM_RESULTS_SHOWN: 3
-  QUERY_URL: 'https://exhibits.stanford.edu/search?q=%{q}'
+  QUERY_URL: "https://exhibits.stanford.edu/search?q=%{q}"
 LIBRARY_WEBSITE:
   API_URL: "https://library.sites-pro.stanford.edu/jsonapi/index/full_site_content?fields[node--stanford_page]=path,title,su_page_description&filter[fulltext]=%{q}&page[limit]=%{max}"
   QUERY_URL: "https://library.stanford.edu/search/?q=%{q}"
 EARTHWORKS:
-  API_URL: 'https://earthworks.stanford.edu?q=%{q}&rows=%{max}&format=json'
-  QUERY_URL: 'https://earthworks.stanford.edu?q=%{q}'
-  FETCH_URL: 'https://earthworks.stanford.edu/catalog/%{id}'
-  HOME_URL: 'https://earthworks.stanford.edu'
+  API_URL: "https://earthworks.stanford.edu?q=%{q}&rows=%{max}&format=json"
+  QUERY_URL: "https://earthworks.stanford.edu?q=%{q}"
+  FETCH_URL: "https://earthworks.stanford.edu/catalog/%{id}"
+  HOME_URL: "https://earthworks.stanford.edu"
 quick_search:
-  http_timeout: 1.5
-  xhr_http_timeout: 15
   doi_loaded_link: "http://doi.org/"
 analytics_debug: true
-user_agent: 'sul-bento-app'
+user_agent: "sul-bento-app"
 
 throttling:
   redis_url:

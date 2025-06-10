@@ -2,7 +2,7 @@ en:
   default_title: "Stanford Libraries"
   exhibits_search:
     short_display_name: Exhibits
-    display_name: Exhibits
+    display_name_html: Exhibits
     micro_display_name: exhibits
     no_results_service_message: "a different search"
     no_results_link: "https://exhibits.stanford.edu/"
@@ -14,53 +14,43 @@ en:
     title_name: Search
   organization_name: Stanford Libraries
   catalog_search:
-    display_name: "Catalog"
+    display_name_html: '<span class="fw-light">SearchWorks</span> Catalog'
     short_display_name: "Catalog"
-    sub_heading_html: Physical and digital books, media, journals, archives, and databases.
+    sub_heading_html: Books, journals, media, and more from the Library’s physical and online collections
     micro_display_name: "catalog"
-    search_form_placeholder: "Search SearchWorks catalog"
-    module_callout: "Search SearchWorks catalog"
     error_service_mesasge: "searching SearchWorks catalog"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/"
   article_search:
-    display_name: "Articles+"
+    display_name_html: '<span class="fw-light">SearchWorks</span> Articles+'
     short_display_name: "Articles+"
-    sub_heading_html: Journal articles, e-books, and other e-resources.
+    sub_heading_html: Journal articles, eBooks, and more from the Library’s digital subscriptions
     micro_display_name: "articles+"
-    search_form_placeholder: "Search SearchWorks articles+"
-    module_callout: "Search SearchWorks articles+"
     error_service_mesasge: "searching SearchWorks articles+"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/articles"
   lib_guides_search:
     short_display_name: Guides
-    display_name: Guides
+    display_name_html: Guides
     micro_display_name: guide
     no_results_service_message: "a different search"
     no_results_link: "https://guides.library.stanford.edu"
     pass_on_search_link_text: Search "%{query}" in all guide pages
-    sub_heading_html: Course- and topic-based guides to collections, tools, and services.
+    sub_heading_html: Course- and topic-based guides to collections, tools and services
     toggle_button_text: Show %{total} guides
   library_website_api_search:
-    display_name: "Library website"
+    display_name_html: Library website
     short_display_name: "Website"
-    sub_heading_html: "Library info; guides & content by subject specialists"
+    sub_heading_html: Wayfinder for all library services
     micro_display_name: "website"
-    search_form_placeholder: "Search Library website"
-    module_callout: "Search Library website"
     error_service_mesasge: "searching library website"
     no_results_service_message: "a different search"
     no_results_link: "http://library.stanford.edu/search/website"
-  search_form:
-    placeholder: "catalog + articles + website + more"
   earthworks_search:
-    display_name: EarthWorks
+    display_name_html: EarthWorks
     short_display_name: EarthWorks
-    sub_heading_html: Geospatial content, including GIS datasets, digitized maps, and census data.
+    sub_heading_html: Geospatial content, including GIS datasets, digitized maps, and census data
     micro_display_name: earthworks
-    search_form_placeholder: "Search EarthWorks catalog"
-    module_callout: "Search EarthWorks catalog"
     error_service_mesasge: "searching EarthWorks catalog"
     no_results_service_message: "a different search"
     no_results_link: "https://earthworks.stanford.edu/"

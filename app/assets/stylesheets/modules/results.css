@@ -1,0 +1,91 @@
+.searcher-anchors {
+  --bs-secondary-rgb: var(--stanford-10-black-rgb);
+
+  .badge {
+    --bs-badge-font-weight: normal;
+    --bs-badge-padding-y: 0.5em;
+
+    color: var(--bs-body-color) !important;
+  }
+}
+
+.stanford-only::after {
+  content: url("/stanford-only.svg");
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.online-label {
+  background-color: rgb(var(--stanford-illuminating-light-rgb));
+
+  --bs-badge-font-weight: 600;
+  --bs-badge-color: var(--bs-body-color);
+  --bs-badge-border-radius: 2rem;
+}
+
+.result-title {
+  font-family: "dejavu_sansextralight";
+  letter-spacing: -0.03em;
+}
+
+.result-set-subheading {
+  color: var(--stanford-90-black);
+}
+
+.module-container {
+  width: 100%;
+
+  @media (min-width: 800px) {
+    max-width: 39vw;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 29vw;
+  }
+}
+
+.module-contents {
+  .btn-outline-secondary {
+    --bs-btn-border-radius: 2rem;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: var(--stanford-cardinal);
+    &:hover {
+      box-shadow:
+        0 0 #0000,
+        0 0 #0000,
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .icon {
+    height: 1rem;
+  }
+  .text-green {
+    color: var(--stanford-digital-green);
+  }
+  ol {
+    li {
+      border-top: 1px solid var(--stanford-20-black);
+    }
+
+    .no-thumbnail {
+      padding-bottom: 5px;
+    }
+
+    .with-thumbnail {
+      padding-bottom: 0;
+    }
+  }
+
+  .line-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+#exhibits.module-contents {
+  ol {
+    list-style-type: none;
+  }
+}

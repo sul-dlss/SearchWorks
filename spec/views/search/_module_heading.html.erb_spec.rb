@@ -16,6 +16,6 @@ describe 'search/_module_heading' do
 
   it 'renders if there are no results' do
     expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-    expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital/)
+    expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
   end
 end

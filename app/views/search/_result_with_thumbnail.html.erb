@@ -4,7 +4,7 @@
           <%= image_tag result.thumbnail, class: 'thumbnail img-fluid', alt: '' %>
       <% end %>
   </div>
-  <div class="col-sm-9 pl-0 columns">
-      <%= render partial: 'result_details', locals: { result: result } %>
+  <div class="col-sm-9">
+      <%= render 'result_details', { result: } %>
   </div>
 </div>

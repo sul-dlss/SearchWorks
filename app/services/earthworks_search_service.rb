@@ -22,16 +22,12 @@ class EarthworksSearchService < AbstractSearchService
         result.title = doc.dig('attributes', 'title')
         result.link = format(Settings.EARTHWORKS.FETCH_URL.to_s, id: doc['id'])
         result.author = doc.dig('attributes', 'dc_creator_sm', 'attributes', 'value')
-        result.imprint = doc.dig('attributes', 'solr_year_i', 'attributes', 'value')
+        # result.year = doc.dig('attributes', 'solr_year_i', 'attributes', 'value')
         result.id = doc['id']
 
         result.description = doc.dig('attributes', 'dc_description_s', 'attributes', 'value')
         result
       end
-    end
-
-    def facets
-      []
     end
 
     private

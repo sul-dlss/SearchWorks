@@ -81,13 +81,6 @@ RSpec.describe LibraryWebsiteApiSearchService do
     end
   end
 
-  describe '#facets' do
-    it 'returns an empty array' do
-      facets = service.search(query).facets
-      expect(facets).to eq []
-    end
-  end
-
   describe '#total' do
     it 'returns the total' do
       count = service.search(query).total

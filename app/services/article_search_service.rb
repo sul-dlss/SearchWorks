@@ -20,19 +20,28 @@ class ArticleSearchService < AbstractSearchService
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
         result = AbstractSearchService::Result.new
-        result.title = doc['eds_title']
         result.link = format(Settings.ARTICLE.FETCH_URL.to_s, id: doc['id'])
         result.id = doc['id']
-        result.fulltext_link_html = doc['fulltext_link_html']
+        result.title = doc['eds_title']
+        result.format = doc['eds_publication_type']
+        result.journal = doc['eds_source_title']
+        result.icon = 'notebook.svg'
+
+        # Break up the HTML string into the pieces we use
+        html = Nokogiri::HTML(doc['fulltext_link_html'])
+        online_label = html.css('.online-label').first
+        if online_label
+          online_label['class'] += ' badge rounded-pill ms-2'
+          result.title += online_label.to_html
+        end
+        stanford_only = html.css('.stanford-only').first
+        result.fulltext_link_html = html.css('a').first&.to_html
+        result.fulltext_link_html += stanford_only.to_html if stanford_only
         result.author = doc['eds_authors']&.first
-        result.imprint = doc['eds_composed_title']&.html_safe
+        # result.year = doc['pub_year_tisim']&.html_safe
         result.description = doc['eds_abstract']
         result
       end
-    end
-
-    def facets
-      json['response']['facets']
     end
 
     private

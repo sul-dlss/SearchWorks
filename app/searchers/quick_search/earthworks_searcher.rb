@@ -2,7 +2,7 @@
 
 module QuickSearch
   class EarthworksSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, :facets, to: :search
+    delegate :results, :total, to: :search
 
     def search
       @search ||= ::EarthworksSearchService.new(http: http).search(q)

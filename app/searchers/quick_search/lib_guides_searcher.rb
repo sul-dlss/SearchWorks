@@ -2,7 +2,7 @@
 
 module QuickSearch
   class LibGuidesSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, :facets, to: :@response
+    delegate :results, :total, to: :@response
 
     def search
       @response ||= ::LibGuidesSearchService.new(http: http).search(q)
