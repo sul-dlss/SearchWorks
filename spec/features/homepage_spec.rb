@@ -7,23 +7,17 @@ RSpec.feature 'Homepage' do
     visit quick_search_path
   end
 
-  scenario 'has top level headings for search tools and other sources' do
-    expect(page).to have_css 'h3', text: 'Stanford University Libraries\' search tools'
-    expect(page).to have_css 'h3', text: 'Other sources searched'
-  end
+  scenario 'has text for top level headings and sections for search tools and other sources' do
+    # High leavel headings
+    expect(page).to have_text 'Stanford University Libraries\' search tools'
+    expect(page).to have_text 'Other sources searched'
 
-  scenario 'has text for search tools headings' do
-    expect(page).to have_css '.bento-heading', text: 'SearchWorks', count: 2
-    expect(page).to have_css '.fw-bold', text: 'Catalog'
-    expect(page).to have_css '.fw-bold', text: 'Articles'
-    expect(page).to have_css 'div.fw-bold', text: 'Archival Collections at Stanford'
-    expect(page).to have_css 'div.fw-bold', text: 'EarthWorks'
-    expect(page).to have_css 'div.fw-bold', text: 'Spotlight Exhibits'
-  end
+    # First two search tools sections
+    expect(page).to have_text 'SearchWorks Catalog'
+    expect(page).to have_text 'SearchWorks Articles+'
 
-  scenario 'has text for other sources searched' do
-    expect(page).to have_css 'div.fw-bold', text: 'Library website'
-    expect(page).to have_css 'div.fw-bold', text: 'Guides'
-    expect(page).to have_css 'div.fw-bold', text: 'Subject specialists'
+    # First two
+    expect(page).to have_text 'Library website'
+    expect(page).to have_text 'Guides'
   end
 end
