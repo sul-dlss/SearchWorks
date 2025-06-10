@@ -7,15 +7,17 @@ RSpec.feature 'Homepage' do
     visit quick_search_path
   end
 
-  scenario 'has links to various search contexts' do
-    within '.bento-panels' do
-      expect(page).to have_link 'Catalog', href: 'https://searchworks.stanford.edu'
-      expect(page).to have_link 'Articles+', href: 'https://searchworks.stanford.edu/articles'
-      expect(page).to have_link 'Guides', href: 'https://guides.library.stanford.edu'
-      expect(page).to have_link 'Library website', href: 'https://library.stanford.edu'
-      expect(page).to have_link 'Exhibits', href: 'https://exhibits.stanford.edu'
-    end
+  scenario 'has text for top level headings and sections for search tools and other sources' do
+    # High leavel headings
+    expect(page).to have_text 'Stanford University Libraries\' search tools'
+    expect(page).to have_text 'Other sources searched'
 
-    expect(page).to have_link 'More search tools', href: 'https://guides.library.stanford.edu/search-services'
+    # First two search tools sections
+    expect(page).to have_text 'SearchWorks Catalog'
+    expect(page).to have_text 'SearchWorks Articles+'
+
+    # First two
+    expect(page).to have_text 'Library website'
+    expect(page).to have_text 'Guides'
   end
 end
