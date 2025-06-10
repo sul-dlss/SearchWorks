@@ -1,7 +1,3 @@
-.bento-heading {
-  font-weight: 500;
-}
-
 .homepage-panels {
   .card {
     border: 1px solid var(--stanford-20-black);
@@ -46,15 +42,6 @@
   .more-search-tools {
     img {
       width: 30px;
-    }
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .bento-panels {
-    .card {
-      max-width: 48%;
-      min-width: 48%;
     }
   }
 }
