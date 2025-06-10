@@ -2,12 +2,14 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Homepage' do
+RSpec.feature 'Homepage', :js do
   before do
     visit search_path
   end
 
   scenario 'has text for top level headings and sections for search tools and other sources' do
+    expect(page).to be_accessible
+
     # High leavel headings
     expect(page).to have_text 'Stanford University Libraries\' search tools'
     expect(page).to have_text 'Other sources searched'

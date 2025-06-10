@@ -154,10 +154,6 @@ RSpec/ExpectInHook:
 RSpec/MessageSpies:
   EnforcedStyle: receive
 
-# Offense count: 12
-RSpec/MultipleExpectations:
-  Max: 6
-
 # Offense count: 1
 # Configuration parameters: IgnoreNameless, IgnoreSymbolicNames.
 RSpec/VerifiedDoubles:

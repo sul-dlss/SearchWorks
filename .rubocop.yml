@@ -26,6 +26,9 @@ Metrics/BlockLength:
 RSpec/ExampleLength:
   Max: 12
 
+RSpec/MultipleExpectations:
+  Max: 12
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes

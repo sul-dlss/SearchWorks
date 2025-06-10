@@ -27,6 +27,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem "axe-core-rspec"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]
   # Adds support for Capybara system testing and selenium driver
