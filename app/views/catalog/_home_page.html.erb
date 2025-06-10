@@ -43,7 +43,7 @@
             </ul>
           </section>
           <section class="home-page-facets sidenav">
-            <header class="h3">Browse by</header>
+            <h2 class="h3">Browse by</h2>
             <div class="accordion">
               <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
             </div>
