@@ -382,7 +382,6 @@ cnjournal.biomedcentral.com
 cocatalog.loc.gov
 cognet.mit.edu
 cognitiveresearchjournal.springeropen.com
-collections.nlm.nih.gov
 collections.plos.org
 coloproctol.org
 companions.digitalhumanities.org
@@ -1088,7 +1087,6 @@ npcd.oversea.cnki.net
 npepjournal.biomedcentral.com
 nph.onlinelibrary.wiley.com
 nrs.harvard.edu
-nsf-gov-resources.nsf.gov
 nuclear-receptor.biomedcentral.com
 nursing.jmir.org
 nutrirejournal.biomedcentral.com
@@ -1424,7 +1422,6 @@ tdtmvjournal.biomedcentral.com
 tech.snmjournals.org
 tehj.springeropen.com
 telerehab.pitt.edu
-texashistory.unt.edu
 tgc.amegroups.com
 tgh.amegroups.com
 thailand.digitaljournals.org
@@ -1460,7 +1457,6 @@ tvst.arvojournals.org
 uclibs.org
 udbstat.eastview.com
 udndata.com
-ufdc.ufl.edu
 ugeskriftet.dk
 ulrichsweb.serialssolutions.com
 upload.wikimedia.org
@@ -1894,7 +1890,6 @@ www.epschinadata.com
 www.epwrfits.in
 www.erudit.org
 www.esaim-m2an.org
-www.esp.org
 www.eugenicsarchive.org
 www.eurannallergyimm.com
 www.eurjbreasthealth.com
@@ -2318,7 +2313,6 @@ www.mygcronline.org
 www.na.infn.it
 www.nal.usda.gov
 www.nap.edu
-www.nasonline.org
 www.nationalacademies.org
 www.nationalnursesunited.org
 www.nature.com
@@ -2638,7 +2632,6 @@ www.usrds.org
 www.utpjournals.press
 www.uworld.com
 www.vasculardiseasemanagement.com
-www.vaughan.org
 www.vdb.org
 www.veterinaryworld.org
 www.vetsci.org
