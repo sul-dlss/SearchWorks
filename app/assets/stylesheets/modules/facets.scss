@@ -1,11 +1,17 @@
-.facet-field-heading {
+.facet-limit {
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-btn-color: var(--bs-btn-color);
+  --bs-accordion-btn-padding-y: 0.5rem;
+  --bs-accordion-btn-focus-box-shadow: 0;
+  --bs-btn-active-bg: #{$cloud};
+  --bs-btn-active-border-color: black;
+}
+.facet-field-heading .btn {
   background-color: $cloud;
-  border-bottom: 1px solid $cloud;
 
-  .btn {
-    font-size: 1rem;
-    padding-left: 1rem !important;
-  }
+  font-size: 1rem;
+  padding-left: 1rem !important;
 }
 
 .facet-values li .selected {

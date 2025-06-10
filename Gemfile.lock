@@ -87,14 +87,14 @@ GEM
       racc (~> 1.7)
     bigdecimal (3.2.2)
     bindex (0.8.1)
-    blacklight (8.11.0)
+    blacklight (9.0.0.beta1)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
       kaminari (>= 0.15)
       ostruct (>= 0.3.2)
-      rails (>= 6.1, < 9)
-      view_component (>= 2.74, < 4)
+      rails (>= 7.0, < 9)
+      view_component (~> 3.9)
       zeitwerk
     blacklight-hierarchy (6.5.0)
       blacklight (>= 7.18, < 9)
@@ -671,7 +671,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  blacklight (~> 8.0)
+  blacklight (~> 9.0.0.beta1)
   blacklight-hierarchy (~> 6.0)
   blacklight-marc (~> 8.0)
   blacklight-ris (~> 0.2.0)

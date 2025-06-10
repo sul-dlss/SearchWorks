@@ -2,7 +2,7 @@
 
 import "@hotwired/turbo-rails";
 import "./vendor/responsiveTruncator";
-import "blacklight-frontend/app/assets/javascripts/blacklight/blacklight";
+import Blacklight from "blacklight-frontend";
 
 import BlacklightRangeLimit from "blacklight-range-limit/app/assets/javascripts/blacklight_range_limit/blacklight_range_limit.esm";
 import "blacklight-range-limit/vendor/assets/javascripts/bootstrap-slider"

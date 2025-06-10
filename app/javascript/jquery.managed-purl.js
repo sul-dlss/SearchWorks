@@ -1,6 +1,8 @@
-;(function ($, window, document, undefined ) {
+import Blacklight from 'blacklight-frontend'
+
+(function ($, window, document, undefined ) {
   'use strict';
-  
+
   // Create the defaults once
   var pluginName = "managedPurl";
   var defaults = {};
@@ -8,11 +10,11 @@
 
   function Plugin(element, options) {
     $el = $(element);
-    
+
     this.options = $.extend({}, defaults, options);
     this._defaults = defaults;
     this._name = pluginName;
-    
+
     this.init();
   }
 

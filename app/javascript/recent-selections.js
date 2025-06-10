@@ -1,7 +1,9 @@
+import Blacklight from 'blacklight-frontend'
+
 Blacklight.onLoad(function() {
   // Initialize recent selections functionality
-  initRecentSelections();
-});
+  initRecentSelections()
+})
 
 /**
  * Recent selections functionality

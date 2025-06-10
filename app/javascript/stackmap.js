@@ -1,5 +1,6 @@
 import L from "leaflet"
 import fetchJsonp from 'fetch-jsonp';
+import Blacklight from 'blacklight-frontend'
 
 (function() {
   function stackMap(element) {

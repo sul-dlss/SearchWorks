@@ -9,9 +9,9 @@ RSpec.feature "Home Page" do
 
   scenario "facets should display" do
     expect(page).to have_title("SearchWorks catalog : Stanford Libraries")
-    expect(page).to have_css(".card-header", text: "Resource type")
-    expect(page).to have_css(".card-header", text: "Access")
-    expect(page).to have_css(".card-header", text: "Library")
+    expect(page).to have_css(".accordion-header", text: "Resource type")
+    expect(page).to have_css(".accordion-header", text: "Access")
+    expect(page).to have_css(".accordion-header", text: "Library")
   end
 
   scenario "'Featured sets' section should display" do

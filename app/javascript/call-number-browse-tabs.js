@@ -1,4 +1,5 @@
 import scrollOver from "./scroll-over"
+import Blacklight from "blacklight-frontend"
 
 Blacklight.onLoad(function () {
   // Set up scroll behavior for tabs, when they are shown

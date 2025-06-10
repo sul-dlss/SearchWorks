@@ -13,9 +13,9 @@ RSpec.feature "Selections Path" do
   scenario "renders some bookmarks and toolbar", :js do
     skip('Passes locally, not on Travis.') if ENV['CI']
     visit search_catalog_path f: { format: ["Book"] }, view: "default"
-    page.first('label.toggle-bookmark').click
-    page.all('label.toggle-bookmark')[1].click
-    expect(page).to have_css("label.toggle-bookmark span", text: "Selected", count: 2)
+    page.first('.toggle-bookmark-label').click
+    page.all('.toggle-bookmark-label')[1].click
+    expect(page).to have_css(".toggle-bookmark-label span", text: "Selected", count: 2)
     visit bookmarks_path
     expect(page).to have_css('h2', text: '2 catalog items')
     expect(page).to have_css('a', text: '0 articles+ items')

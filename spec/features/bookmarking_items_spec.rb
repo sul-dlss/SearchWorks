@@ -19,11 +19,11 @@ RSpec.feature 'Bookmarking Items' do
       click_button 'search'
 
       within(first('.document')) do
-        find('input.toggle-bookmark').click
+        find('.toggle-bookmark-label').click
       end
 
       within(all('.document').last) do
-        find('input.toggle-bookmark').click
+        find('.toggle-bookmark-label').click
       end
 
       visit '/selections'
