@@ -20,6 +20,12 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 3.0'
   gem "letter_opener"
+  # listen and actioncable enable live reload for Lookbook in development
+  gem "listen"
+  gem "actioncable"
+end
+group :development, :test, :production do
+  gem "lookbook", ">= 2.3.9"
 end
 
 gem 'ruby-oembed'

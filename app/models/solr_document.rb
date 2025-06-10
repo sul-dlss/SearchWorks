@@ -159,4 +159,10 @@ class SolrDocument
   def prefixed_id
     self[:id].to_s.sub(/^(\d+)$/, 'a\1')
   end
+
+  # For use in the in the Lookbook component previews, `with_json` is false
+  def self.from_fixture(filename, with_json: false)
+    solr_data = SolrFixtureLoader.load(filename, with_json: with_json)
+    new(solr_data)
+  end
 end
