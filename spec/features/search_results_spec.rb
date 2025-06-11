@@ -22,7 +22,8 @@ RSpec.describe 'Search results', :js do
       )
     end
 
-    it 'updates the anchor link with the total count' do
+    it 'draws the page' do
+      expect(page).to be_accessible
       expect(page).to have_css('.btn-outline-secondary')
       expect(page).to have_css('#article a', text: /See all 666,666\sarticle\sresults/)
       within '.searcher-anchors' do
