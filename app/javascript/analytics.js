@@ -70,14 +70,6 @@ Blacklight.onLoad(function() {
     })
   })
 
-  // Just track when a zero results page gets loaded, no need for event handler
-  document.querySelectorAll('.zero-results').forEach(function(el) {
-    sendAnalyticsEvent({
-      category: 'Zero results',
-      action: 'SW/loaded'
-    })
-  });
-
   // Featured resources on home page
   document.querySelectorAll('.catalog-home-page .features a').forEach(function(el) {
     el.addEventListener('click', function(e) {
