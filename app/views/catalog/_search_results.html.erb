@@ -14,6 +14,7 @@
   <%= render '/catalog/opensearch_response_metadata' %>
   <%= rss_feed_link_tag %>
   <%= atom_feed_link_tag %>
+  <%= json_api_link_tag %>
 <% end -%>
 
 
@@ -26,6 +27,10 @@
 <% if @response.empty? %>
    <%= render "shared/zero_results" %>
 <% else %>
+  <% content_for(:skip_links) do -%>
+    <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
+  <% end %>
+
   <div class="row">
     <div id="sidebar" class="col-md-4">
       <%= render 'search_sidebar' %>
