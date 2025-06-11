@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-between align-items-center flex-wrap">
-    <h2 class='result-set-heading h4 fw-semibold text-nowrap'>
+<div class="d-flex justify-content-between align-items-center flex-wrap column-gap-1 mb-1">
+    <h2 class='result-set-heading h4 mb-0 fw-semibold text-nowrap'>
       <%= t("#{service_name}_search.display_name_html") %>
     </h2>
     <%= render '/search/see_all', { service_name: service_name, total: total, module_link: searcher.loaded_link } %>
