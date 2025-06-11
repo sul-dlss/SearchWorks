@@ -30,6 +30,7 @@ RSpec.describe 'Search results', :js do
         within '.searcher-anchors' do
           expect(page).to have_link('Articles+', href: '#article').and have_css '#article_count', text: '666,666'
         end
+        expect(page).to have_css 'h2', text: 'Guides'
       end
     end
   end
