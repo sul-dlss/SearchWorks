@@ -75,9 +75,11 @@ RSpec.describe LibraryWebsiteApiSearchService do
     it 'sets the title, description, and link in the document' do
       results = service.search(query).results
       expect(results.length).to eq 2
-      expect(results.first.title).to eq 'Work with data'
-      expect(results.first.description).to eq 'First result description'
-      expect(results.first.link).to eq '/services/work-data'
+      expect(results.first).to have_attributes(
+        title: 'Work with data',
+        description: 'First result description',
+        link: '/services/work-data'
+      )
     end
   end
 
