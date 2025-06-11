@@ -1,5 +1,4 @@
 @import "bootstrap/scss/bootstrap.scss";
-@import "blacklight-frontend/app/assets/stylesheets/blacklight/blacklight.scss";
 
 // the default bootstrap font-family list includes "Segoe UI Emoji", which, on windows
 // renders our remove icon as an emoji-sized x instead of what we see on all other platforms...
@@ -20,4 +19,54 @@ $remove-icon-font-family:
   --bl-logo-image: none;
   --bl-logo-width: 250px;
   background-color: black;
+}
+
+.input-group > .search-q {
+  flex-grow: 4;
+}
+
+
+.facet-limit {
+  --bs-accordion-btn-bg: var(--bs-gray-100);
+  --bs-btn-hover-bg: var(--bs-gray-200);
+  --bs-accordion-active-bg: var(--bs-accordion-btn-bg);
+}
+
+.facet-values {
+  --bl-facet-active-item-color: var(--bs-success);
+  --bl-facet-remove-color: var(--bs-secondary-color);
+  --bl-facet-remove-hover-color: var(--bs-danger);
+
+  margin-bottom: 0;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3px 0;
+
+    .selected {
+      color: var(--bl-facet-active-item-color);
+    }
+  }
+
+  .facet-count {
+    margin-inline-start: auto;
+  }
+
+  .remove {
+    color: var(--bl-facet-remove-color);
+    font-weight: bold;
+    padding-left: 0.5rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--bl-facet-remove-hover-color);
+      text-decoration: none;
+    }
+  }
+
+  .facet-label {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
 }

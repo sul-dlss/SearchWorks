@@ -1,10 +1,11 @@
+.facet-limit {
+  --bs-accordion-btn-padding-x: 0.5rem;
+  --bs-accordion-body-padding-x: 0.5rem;
+}
+
 .facet-values .sul-icon {
-  align-items: center;
-  color: $black;
-  display: table-cell;
   font-size: 1.5em;
   width: 30px;
-  vertical-align: middle;
   &::before,
   svg {
     height: 21px;
