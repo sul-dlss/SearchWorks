@@ -1,0 +1,1017 @@
+{
+  "links": {
+    "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3",
+    "last": "https://archives.stanford.edu/catalog.json?page=1\u0026q=my+query\u0026rows=3"
+  },
+  "meta": {
+    "pages": {
+      "current_page": 1,
+      "next_page": null,
+      "prev_page": null,
+      "total_pages": 1,
+      "limit_value": 3,
+      "offset_value": 0,
+      "total_count": 1,
+      "first_page?": true,
+      "last_page?": true
+    }
+  },
+  "data": [
+    {
+      "id": "m1136_aspace_6c625d4af28bacf807b51eca39d07ebe",
+      "type": "File",
+      "attributes": {
+        "title": "Poetry Now v.6 n.4",
+        "highlight": {
+          "id": "https://archives.stanford.edu/catalog/m1136_aspace_6c625d4af28bacf807b51eca39d07ebe#highlight",
+          "type": "document_value",
+          "attributes": {
+            "value": "RAY, David. A.L.s. Nd. \u003cem\u003eQueries\u003c/em\u003e if EVG still interested in interview\u003cbr/\u003eKOERTGE, Ronald. THE TIME I PUT ON \u003cem\u003eMY\u003c/em\u003e MOTHER'S UNDERWEAR. l pp. I.MS. ",
+            "label": "Highlight"
+          }
+        },
+        "abstract_or_scope": {
+          "id": "https://archives.stanford.edu/catalog/m1136_aspace_6c625d4af28bacf807b51eca39d07ebe#abstract_or_scope",
+          "type": "document_value",
+          "attributes": {
+            "value": "\u003cp\u003ePOETRY NOW #34 1982 DAVID RAY ISSUE\u003c/p\u003e",
+            "label": "Abstract Or Scope"
+          }
+        },
+        "breadcrumbs": {
+          "id": "https://archives.stanford.edu/catalog/m1136_aspace_6c625d4af28bacf807b51eca39d07ebe#breadcrumbs",
+          "type": "document_value",
+          "attributes": {
+            "value": {
+              "sul_ark_id_ssi": "ark:/22236/s1a6e77193-8db2-4b30-9eb6-02902548383c",
+              "ref_ssi": "aspace_6c625d4af28bacf807b51eca39d07ebe",
+              "ref_ssm": [
+                "aspace_6c625d4af28bacf807b51eca39d07ebe",
+                "aspace_6c625d4af28bacf807b51eca39d07ebe"
+              ],
+              "id": "m1136_aspace_6c625d4af28bacf807b51eca39d07ebe",
+              "title_filing_ssi": "Poetry Now v.6 n.4",
+              "title_ssm": ["Poetry Now v.6 n.4"],
+              "title_tesim": ["Poetry Now v.6 n.4"],
+              "normalized_title_ssm": ["Poetry Now v.6 n.4"],
+              "text": [
+                "Poetry Now v.6 n.4",
+                "E.V. Griffith papers, circa 1945-1999",
+                "Series 1. Poetry Now",
+                "1.1. Poetry Now - poet submissions",
+                "English .",
+                "Box 9",
+                "folder 2",
+                "POETRY NOW #34\t1982\tDAVID RAY ISSUE",
+                "9pp. materials for PN34 ",
+                "25 original photographs as used in PN34",
+                "RAY, David. lpp. T.L.s. 5/81 To do with his profile in PN34",
+                "RAY, David. 4pp. T.L.s. 7/18/81. Detailed biographical/literary responses to EVG questionnaire",
+                "RAY, David. 2pp. T.L.s. 11/4/81. Sent from India, discusses forthcoming profile in PN34",
+                "RAY, Dave. T.L.s. Nd. Preparation for profile in PN34.",
+                "RAY, David. A.L.s. Nd. Queries if EVG still interested in interview",
+                "RAY, David. 2pp. T.MS. Early draft of EVG profile of David Ray",
+                "RAY, David. 3 Printed sheets with information on David Ray.",
+                "RAY, David. 3pp. T.MS. \u0026 A.MS. Early draft by EVG of David Ray profile",
+                "RAY, David. 7pp. T.MS. EVG profile of David Ray.",
+                "RAY, David. TIIE LAST CLASS (SYRACUSE). lpp. T.MS. ",
+                "RAY, David. AT A PARKING LOTIN TENNESSEE. lpp. photocopy I.MS. in ink.",
+                "RAY, David. CUSTER'S SEVENTH. lpp. photocopy I.MS.",
+                "RAY, David. WITH APOLOGIES FOR MRS. WEBSTER. lpp. photocopy T.MS. ",
+                "RAY, David. THE ADVENTURESOME LATER YEARS. lpp. photocopy I.MS.",
+                "RAY, David. THE GINGERBREAD HOUSE. l pp. T.MS. ",
+                "EBERHART, Richard. CONFIGURATION. lpp. I.MS. ",
+                "URDANG, Constance. THE FOURTH DAY. 1pp. I.MS. Poet's stamp ",
+                "GLAZE, Andrew. DOUBLEKNIT SOCKS. lpp. T.MS. Poet's label ",
+                "GLAZE, Andrew. DELMORE. 2pp. T.MS. Poet's label",
+                "CHILDRESS, William. THE BROWN HOUSE. lpp. I.MS. ",
+                "ROOT, William Pitt. MIDNIGHT BULLETIN. lpp. I.MS. Poet's stamp ",
+                "BURSK, Christopher. FATHER AND SON ROCK HOPPING. 1pp. I.MS.",
+                "BURSK, Christopher. LITTLE HARBOR. l pp. T.MS.",
+                "STEPANCHEV, Stephen. LOVE IS A DESIRE TO PROCREATE IN BEAUTY. l pp. I.MS. ",
+                "HALPERIN, Mark. TIME'S ARROW. 1pp. I.MS. ",
+                "HALPERIN, Mark. A LETTER. lpp. I.MS. ",
+                "DARR, Ann. AT SIXTEEN. lpp. photocopy I.MS. ",
+                "HATHAWAY, William. NATE'S DIMPLE. l pp. T.MS. ",
+                "STOUTENBURG, Adrien. OBLIQUE. lpp. T.MS. Poet's stamp",
+                "MORGAN, John. AT LINDBERGH'S GRAVE. 1pp. I.MS. ",
+                "TAGLIABUE, John. DUBROVNIK NOTES I A TRAVEL JOURNAL (1, 2, 3). lpp. I.MS",
+                "HELLO. lpp. T.MS.s.",
+                "HILTON, David. WE LIE BACK. lpp. photocopy T.MS.",
+                "SCHEVILL, James. THE NO-NAME WOMAN IN SAN FRANCISCO. lpp. T.MS. ",
+                "SCHEVILL, James. AMERICAN GIGANTISM: GUTZON BORGLUM AT MT. RUSHMORE. 2pp. I.MS. ",
+                "KOOSER, Ted. VOYAGER JI. lpp. I.MS. ",
+                "MOSES, W.R. LONG, LONG TRAIL. 2pp. I.MS. ",
+                "MOSES, W.R. RIVAL IN THE DOORYARD. 1pp. T.MS. ",
+                "MOSES, W.R. GLEANING. lpp. I.MS. ",
+                "GOLD, Herman. SOLOMON AND DAVID. 3pp. T.MS. ",
+                "HOGAN, Michael. TWO CHILDHOOD FRIENDS. 1pp. T.MS. ",
+                "EDSON, Russell. ELEPHANT TEARS. 1pp. photocopy I.MS.",
+                "LUNDE, David. LUMP. lpp. I.MS. ",
+                "LUNDE, David. THE LESSON. lpp. T.MS. ",
+                "MARCUS, Morton. CREDO. lpp. I.MS. ",
+                "BENNETT, Bruce. LITTLE RED MARKS. l pp. T.MS.s.",
+                "BENNETT, Bruce. THE FINAL DANCE. 1pp. T.MS.s.",
+                "LOWRY, John. SPECIAL FORCES. 1pp. I.MS. ",
+                "LONDON, Jonathan. THE RETIRED CONTRACTOR. 1pp. I.MS. d by EVG",
+                "DELP, Michael. TIIE WOMEN ARE COMING. 9pp. T.MS. ",
+                "KROLL, Ernest. AFTERMATH. 1pp. I.MS. ",
+                "STOCK, Robert. PERFORMANCE BY A MELANCHOLY BASSOONIST. 1pp. I.MS, lpp. I.MS.",
+                "CONGDON, Kirby. THE TRAIN. lpp. T.MS. ",
+                "SHUTTLEWORTH, Paul. THE SMALL RUSTLE. l pp. T.MS.",
+                "PAYACK, Peter. MONICA'S FAVORITE RECIPE. l pp. T.MS. ",
+                "ZINNES, Harriet. \"Rising above the snow in the lift at Verbier\". lpp. I.MS. with poet's stamp Two final sections were not published",
+                "NORSE, Harold. WATER SPORTS AND SUCKING THUMBS. l pp. T.MS.s.",
+                "SPINGARN, Lawrence P. DIAGNOSTIC. l pp. photocopy T.MS. Poet's stamp ",
+                "WICKLUND, Willie Mae. THE DESERTION. l pp. T.MS. with poet's stamp ",
+                "BLAZEK, Douglas. THE TREE CLIMBER'S SONG. lpp. I.MS.",
+                "JENKINS, Louis. INVISIBLE. lpp. photocopy T.MS.",
+                "KOMUNYAKAA, Yusef. IN THE LABOR CAMP OF GOOD INTENTIONS. l pp. I.MS.",
+                "KOMUNYAKAA, Yusef. THE THORN MERCHANT'S WIFE. l pp. photocopy T.MS.",
+                "CONTOSKI, Victor. FLUTE MUSIC. l pp. T.MS. Poet's stamp LEVANT, Howard. THE NOVELIST. lpp. T.MS. ",
+                "WINCKEL, Nance Van. AMERICAN PROMISES. lpp. I.MS. ",
+                "WINCKEL, Nance Van. THE MARKING. l pp. I.MS. ",
+                "FLANDERS, Jane. SPECIAL FRIENDS. l pp. I.MS. ",
+                "SIMON, John Oliver. UP. lpp. photocopy I.MS.",
+                "DWYER, Cynthia B. IN A PERSIAN GARDEN. l pp. T.MS. [with] lpp. T.L.s. 11/19/81. Ms. Dwyer was one of the hostages held in Tehran \u0026 poems were written while she was a prisoner",
+                "DWYER, Cynthia B. THE BLUE-EYED PERSIAN PLUMBER. 1pp. T.MS. ",
+                "DWYER, Cynthia B. JANUARY 20, 1981. 1pp. T.MS.",
+                "PIERCY, Marge. CHARM FOR ATTRACTING WILD MONEY. 1pp. I. MS. ",
+                "DOVE, Rita. LINES MUTTERED IN SLEEP. l pp. photocopy I.MS. ",
+                "FRUMKIN, Gene. THE TAPE. 1pp. I.MS. ",
+                "FRUMKIN, Gene. THE WOMAN. lpp. I.MS. ",
+                "UNTERECKER, John. BIRTHDAY POEM (DECEMBER 29). 1pp. T.MS. ",
+                "HESTER, M.L. LURLENE. l pp. T.MS. ",
+                "BALDERSTON, Jean. AFTER THE FUNERAL. 1pp. T.MS. ",
+                "BRUCHAC, Joseph. THIS CAR CLIMBED MT. WASHINGTON. 1pp. T.MS. ",
+                "KOERTGE, Ronald. THE TIME I PUT ON MY MOTHER'S UNDERWEAR. l pp. I.MS. ",
+                "KOERTGE, Ronald. WEST COAST ROMANCE. l pp. I.MS. ",
+                "HOGAN, Michael. HOW A PLANET STAYS IN ORBIT. 1pp. T.MS. ",
+                "JELLEMA, Rod. ON EDGE. 1pp. photocopy T.MS.",
+                "JELLEMA, Rod. FLIEGER'S BARN. 1pp. photocopy T.MS.",
+                "SCHREIBER, Ron. HOUSES. lpp. I.MS. ",
+                "GLASS, Malcolm. P-38 LIGHTNING. 2pp. photocopy T.MS. ",
+                "GLASS, Malcolm. SIXTH GRADE. 1pp. photocopy I.MS.",
+                "COFFIN, Lyn.\tESCAPE FROM THE LOCKER ROOM. 2pp. I.MS.",
+                "HUFF, Robert. ON THE MORNING OF THE DEATH OF ROBERT HILLYER. 1pp. T.MS. ",
+                "BERLIND, Bruce. THE DAY NOBODY DIED. 1pp. photocopy T.MS.",
+                "WITT, Harold. MRS. GLADYS TARBELL. 1pp. I.MS. ",
+                "EIGNER, Larry. \"Between bedrooms\". lpp. T.MS. ",
+                "GHIGNA, Charles. THE BLUE HAIRED LADIES. lpp. I.MS. ",
+                "GHIGNA, Charles. BAREBACK CITY NIGHTS. 1pp. T.MS. ",
+                "AJAY, Stephen. COMING TO IN HAWAII. l pp. photocopy T.MS.",
+                "KISSICK, Gary. HONOLULU. lpp. photocopy T.MS. With T.L.s. ",
+                "ELON, Florence. THE NO-NECK MONSTER. l pp. photocopy I.MS. ",
+                "IKAN, Ron. THE MAN WHO SPRANG FROM CLAY. lpp. I.MS. ",
+                "IKAN, Ron. ALL-NITE DINER. 1pp. I.MS.",
+                "DYBEK, Stuart. PAPAYAS. lpp. I. MS. ",
+                "REVELL, Donald. THE GINGER TOURS. l pp. I.MS. ",
+                "STOKES, Terry. WHAT DOES IT GET YOU? lpp. photocopy T.MS.",
+                "TORGERSEN, Eric. LOVE ON THE FRIENDSHIP QUILT. l pp. T.MS. ",
+                "MILLER, Vassar. PROGRESSION. 1pp. I.MS. ",
+                "FROST, Richard. THE ANSWER. 1pp. T.MS. ",
+                "GJELSNESS, Barent.\tTWO WHITE SNOWBIRDS. lpp. I.MS.",
+                "HARRIS, Marie. KILLING TIME. 1pp. T.MS. ",
+                "SANER, Reg. ED \u0026 ME.\tlpp. T.MS. ",
+                "COLBY, Joan. THE FAT MAN. 1pp. T.MS. ",
+                "CURTIS, Jack. THE BUILDER. 1pp. photocopy T.MS.",
+                "THALMAN, Mark. APRIL POEM. l pp. photocopy I.MS.",
+                "THALMAN, Mark. CONSTRUCTING THE RINBOW. lpp. I.MS. ",
+                "THALMAN, Mark. ON THE DOCK AT THE EVENING. lpp. I.MS. ",
+                "LIFSHIN, Lyn. VINCENT. l pp. I.MS. ",
+                "LIFSHIN, Lyn. HOTEL LIFSHIN. lpp. T.MS. ",
+                "FARBER, Norma. A NEW HAGGADAH. 7pp. photocopy T.MS. Poet's label",
+                "KELLY, Dave. THREE MEDITATIONS. 1pp. T.MS. ",
+                "BURROWS, E.G. THE MISNAMED. lpp. T.MS. ",
+                "YOTS, Michael. THE OBLIGATORY QUICKSAND SCENE. l pp. T.MS.",
+                "LIGNELL, Kathleen. TARZAN IN THE HOME FOR RETIRED ACTORS. 2pp. T.MS. ",
+                "MONTGOMERY, George. THE RECIPE. 1pp. photocopy T.MS.",
+                "MONTGOMERY, George. ABOUT YOU - FOR LINDA. 1pp. photocopy A.MS., 1pp. T.MS",
+                "NORTHSUN, Nila.. MOTHER/ DAUGHTER. 1pp. T.MS. ",
+                "HEARST, James. HOW GOOD IS GOOD ENOUGH. 2pp. I. MS. Poet's stamp",
+                "Di PIERO, W.S. THE ARRIVAL. 2pp. I.MS. ",
+                "LERNER, Linda. WHEN THE MIND. l pp. photocopy T.MS.",
+                "JARMAN, Mark. WHEN THE TIME COMES. lpp. T.MS. ",
+                "FERIC ANO, Paul. CHANNEL SEVEN NEW SCENE. lpp. I.MS. ",
+                "MORGAN, Robert. PEERS. l pp. T.MS. ",
+                "PASTAN, Linda. THE ORDERLY TRANSFER OF POWER. lpp. I.MS. ",
+                "COLEMAN, Wanda. HIGH TIME LOVERS. l pp. I.MS. With l pp. T.L.s. 8/21/81. \u0026 A.PC.s. 6/3/82.",
+                "HANDKE, Peter. See Francis Golffing for translation",
+                "GOLFFING, Francis. Poem by Peter Handke. MISSED OPPORTUNITIES FOR DYING. 2pp. photocopy I.MS.",
+                "POULIOS, Lefteris. See Kirnon Friar for translation",
+                "FRIAR, Kirnon. Poem by Lefteris Poulios. SONOROUS PAGE. lpp. T.MS. ",
+                "QUASIMODO, Salvatore. See Rina Ferrarelli for translation",
+                "FERRARELLI, Rina. Poem by Salvatore Quasimodo. MIRROR. 1pp. I.MS. ",
+                "FERRARELLI, Rina. Poem by Salvatore Quasimodo. AND SUDDENLY IT'S EVENING. l pp. I.MS. ",
+                "FERRARELLI, Rina. Poem by Salvatore Quasimodo. GREEN DRIFT. 2pp. T.MS. ",
+                "SCOTELLERO, Rocco. See Ruth Feldman for translation",
+                "FELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. TICKET FOR TURIN. lpp. photocopy I.MS. ",
+                "FELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. RETURN TRIP. 1pp. photocopy I.MS. ",
+                "FELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. BEGGARS. l pp. photocopy T.MS. ",
+                "RABIKOVICH, Daliah. See Bernhard Frank for translation",
+                "FRANK, Bernhard. Poem by Daliah Rabikovich. THE END OF THE FALL. l pp. I.MS. ",
+                "JOZSEF, Attila. See John Batki for translation",
+                "BATKI, John. Poem by AttilaJozsef. DUMB POET. l pp. photocopy T.MS. ",
+                "De ANDRADE, Eugene. See Alexis Levitin for translation",
+                "LEVITIN, Alexis. Poem by Eugene de Andrade. ARIADNE. 1pp. photocopy I.MS. ",
+                "PETROSKI, Henry. WINDOWS ARE MIRRORS. l pp. I.MS. ",
+                "PETROSKI, Henry. STATE STREET'S LAST PARADE. l pp. T.MS. ",
+                "PETROSKI, Henry. AVE ATQUE VALE! l pp. T.MS. with poet's stamp",
+                "MAILMAN, Leo. THE STR1PPER. 1pp. T.MS. ",
+                "PACERNICK, Gary. SANDBOX BURIAL. 1pp. photocopy T.MS.",
+                "HOLLAND, Barbara A. UFO. 1pp. T.MS. ",
+                "MEISSNER, Bill. CHAMPIONS. lpp. T.MS. ",
+                "SARGENT, Dana. VICTOR AT REST. 1pp. T.MS. ",
+                "ETTER, Dave. TANYA. 1pp. T.MS. ",
+                "ALBERT, Samuel L. WEIGHT-LIFTER. 1pp. T.MS. ",
+                "ALBERT, Samuel L. HOCKEY. lpp. T.MS. ",
+                "JACKSON, Haywood. ON THE PLAYING FIELDS WITH BOSWELL. lpp. T.MS. ",
+                "COSTANZO, Gerald. THE RIOT OF NICKLE BEER NIGHT. 2pp. T.MS. ",
+                "ASTOR, Susan. IN LOCO PARENTIS. lpp. T.MS. ",
+                "ASTOR, Susan. STEPSISTERS. lpp. T.MS. ",
+                "DAVIS, William Virgil. THE WITNESS. l pp. T.MS. ",
+                "DAVIS, William Virgil. THE LIBRARIAN. l pp. T.MS. ",
+                "ASKEW, Judy. THE GLASS SCULPTOR. 1pp. photocopyX T.MS.",
+                "RASCHKE, Suzanne. DOG WITH TWO HEADS. 1pp. T.MS. With T.L.s. 8/29/81 \u0026 A.L.s. 12/24/81",
+                "CETTERILL, Sarah. HITCHHIKER IN WINTER. lpp. T.MS. ",
+                "DAMACION, Zamora. WOMAN WITH A CAMERA. 1pp. photocopy T.MS.",
+                "TRUJILLO, Paul. ELFEGO BACA. 1pp. T.MS. ",
+                "HOLMGREN, Mark. WHILE WAITING FOR EGGS. 1pp. T.MS.s."
+              ],
+              "component_level_isim": [3],
+              "parent_ssim": [
+                "m1136",
+                "aspace_60b5a9eeb3877cd0d32b84c5e6ed6fb1",
+                "aspace_eede9e84785747dcb393a1afaf5eb157"
+              ],
+              "parent_ssi": "aspace_eede9e84785747dcb393a1afaf5eb157",
+              "parent_ids_ssim": [
+                "m1136",
+                "m1136_aspace_60b5a9eeb3877cd0d32b84c5e6ed6fb1",
+                "m1136_aspace_eede9e84785747dcb393a1afaf5eb157"
+              ],
+              "parent_unittitles_ssm": [
+                "E.V. Griffith papers, circa 1945-1999",
+                "Series 1. Poetry Now",
+                "1.1. Poetry Now - poet submissions"
+              ],
+              "parent_unittitles_tesim": [
+                "E.V. Griffith papers, circa 1945-1999",
+                "Series 1. Poetry Now",
+                "1.1. Poetry Now - poet submissions"
+              ],
+              "parent_levels_ssm": ["collection", "Series", "Subseries"],
+              "repository_ssim": ["Manuscripts"],
+              "collection_ssim": ["E.V. Griffith papers, circa 1945-1999"],
+              "has_online_content_ssim": ["false"],
+              "child_component_count_isi": 0,
+              "level_ssm": ["File"],
+              "level_ssim": ["File"],
+              "sort_isi": 33,
+              "parent_access_restrict_tesm": [
+                "Open for research. Note that material must be requested at least 36 hours in advance of intended use."
+              ],
+              "parent_access_terms_tesm": [
+                "While Special Collections is the owner of the physical and digital items, permission to examine collection materials is not an authorization to publish. These materials are made available for use in research, teaching, and private study. Any transmission or reproduction beyond that allowed by fair use requires permission from the owners of rights, heir(s) or assigns."
+              ],
+              "language_ssim": ["English ."],
+              "containers_ssim": ["Box 9", "folder 2"],
+              "scopecontent_html_tesm": [
+                "\u003cp\u003ePOETRY NOW #34\t1982\tDAVID RAY ISSUE\u003c/p\u003e",
+                "\u003cp\u003e9pp. materials for PN34 \u003c/p\u003e",
+                "\u003cp\u003e25 original photographs as used in PN34\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. lpp. T.L.s. 5/81 To do with his profile in PN34\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. 4pp. T.L.s. 7/18/81. Detailed biographical/literary responses to EVG questionnaire\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. 2pp. T.L.s. 11/4/81. Sent from India, discusses forthcoming profile in PN34\u003c/p\u003e",
+                "\u003cp\u003eRAY, Dave. T.L.s. Nd. Preparation for profile in PN34.\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. A.L.s. Nd. Queries if EVG still interested in interview\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. 2pp. T.MS. Early draft of EVG profile of David Ray\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. 3 Printed sheets with information on David Ray.\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. 3pp. T.MS. \u0026amp; A.MS. Early draft by EVG of David Ray profile\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. 7pp. T.MS. EVG profile of David Ray.\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. TIIE LAST CLASS (SYRACUSE). lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eRAY, David. AT A PARKING LOTIN TENNESSEE. lpp. photocopy I.MS. in ink.\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. CUSTER'S SEVENTH. lpp. photocopy I.MS.\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. WITH APOLOGIES FOR MRS. WEBSTER. lpp. photocopy T.MS. \u003c/p\u003e",
+                "\u003cp\u003eRAY, David. THE ADVENTURESOME LATER YEARS. lpp. photocopy I.MS.\u003c/p\u003e",
+                "\u003cp\u003eRAY, David. THE GINGERBREAD HOUSE. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eEBERHART, Richard. CONFIGURATION. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eURDANG, Constance. THE FOURTH DAY. 1pp. I.MS. Poet's stamp \u003c/p\u003e",
+                "\u003cp\u003eGLAZE, Andrew. DOUBLEKNIT SOCKS. lpp. T.MS. Poet's label \u003c/p\u003e",
+                "\u003cp\u003eGLAZE, Andrew. DELMORE. 2pp. T.MS. Poet's label\u003c/p\u003e",
+                "\u003cp\u003eCHILDRESS, William. THE BROWN HOUSE. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eROOT, William Pitt. MIDNIGHT BULLETIN. lpp. I.MS. Poet's stamp \u003c/p\u003e",
+                "\u003cp\u003eBURSK, Christopher. FATHER AND SON ROCK HOPPING. 1pp. I.MS.\u003c/p\u003e",
+                "\u003cp\u003eBURSK, Christopher. LITTLE HARBOR. l pp. T.MS.\u003c/p\u003e",
+                "\u003cp\u003eSTEPANCHEV, Stephen. LOVE IS A DESIRE TO PROCREATE IN BEAUTY. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eHALPERIN, Mark. TIME'S ARROW. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eHALPERIN, Mark. A LETTER. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eDARR, Ann. AT SIXTEEN. lpp. photocopy I.MS. \u003c/p\u003e",
+                "\u003cp\u003eHATHAWAY, William. NATE'S DIMPLE. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eSTOUTENBURG, Adrien. OBLIQUE. lpp. T.MS. Poet's stamp\u003c/p\u003e",
+                "\u003cp\u003eMORGAN, John. AT LINDBERGH'S GRAVE. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eTAGLIABUE, John. DUBROVNIK NOTES I A TRAVEL JOURNAL (1, 2, 3). lpp. I.MS\u003c/p\u003e",
+                "\u003cp\u003eHELLO. lpp. T.MS.s.\u003c/p\u003e",
+                "\u003cp\u003eHILTON, David. WE LIE BACK. lpp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eSCHEVILL, James. THE NO-NAME WOMAN IN SAN FRANCISCO. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eSCHEVILL, James. AMERICAN GIGANTISM: GUTZON BORGLUM AT MT. RUSHMORE. 2pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eKOOSER, Ted. VOYAGER JI. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eMOSES, W.R. LONG, LONG TRAIL. 2pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eMOSES, W.R. RIVAL IN THE DOORYARD. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eMOSES, W.R. GLEANING. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eGOLD, Herman. SOLOMON AND DAVID. 3pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eHOGAN, Michael. TWO CHILDHOOD FRIENDS. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eEDSON, Russell. ELEPHANT TEARS. 1pp. photocopy I.MS.\u003c/p\u003e",
+                "\u003cp\u003eLUNDE, David. LUMP. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eLUNDE, David. THE LESSON. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eMARCUS, Morton. CREDO. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eBENNETT, Bruce. LITTLE RED MARKS. l pp. T.MS.s.\u003c/p\u003e",
+                "\u003cp\u003eBENNETT, Bruce. THE FINAL DANCE. 1pp. T.MS.s.\u003c/p\u003e",
+                "\u003cp\u003eLOWRY, John. SPECIAL FORCES. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eLONDON, Jonathan. THE RETIRED CONTRACTOR. 1pp. I.MS. d by EVG\u003c/p\u003e",
+                "\u003cp\u003eDELP, Michael. TIIE WOMEN ARE COMING. 9pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eKROLL, Ernest. AFTERMATH. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eSTOCK, Robert. PERFORMANCE BY A MELANCHOLY BASSOONIST. 1pp. I.MS, lpp. I.MS.\u003c/p\u003e",
+                "\u003cp\u003eCONGDON, Kirby. THE TRAIN. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eSHUTTLEWORTH, Paul. THE SMALL RUSTLE. l pp. T.MS.\u003c/p\u003e",
+                "\u003cp\u003ePAYACK, Peter. MONICA'S FAVORITE RECIPE. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eZINNES, Harriet. \"Rising above the snow in the lift at Verbier\". lpp. I.MS. with poet's stamp Two final sections were not published\u003c/p\u003e",
+                "\u003cp\u003eNORSE, Harold. WATER SPORTS AND SUCKING THUMBS. l pp. T.MS.s.\u003c/p\u003e",
+                "\u003cp\u003eSPINGARN, Lawrence P. DIAGNOSTIC. l pp. photocopy T.MS. Poet's stamp \u003c/p\u003e",
+                "\u003cp\u003eWICKLUND, Willie Mae. THE DESERTION. l pp. T.MS. with poet's stamp \u003c/p\u003e",
+                "\u003cp\u003eBLAZEK, Douglas. THE TREE CLIMBER'S SONG. lpp. I.MS.\u003c/p\u003e",
+                "\u003cp\u003eJENKINS, Louis. INVISIBLE. lpp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eKOMUNYAKAA, Yusef. IN THE LABOR CAMP OF GOOD INTENTIONS. l pp. I.MS.\u003c/p\u003e",
+                "\u003cp\u003eKOMUNYAKAA, Yusef. THE THORN MERCHANT'S WIFE. l pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eCONTOSKI, Victor. FLUTE MUSIC. l pp. T.MS. Poet's stamp LEVANT, Howard. THE NOVELIST. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eWINCKEL, Nance Van. AMERICAN PROMISES. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eWINCKEL, Nance Van. THE MARKING. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFLANDERS, Jane. SPECIAL FRIENDS. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eSIMON, John Oliver. UP. lpp. photocopy I.MS.\u003c/p\u003e",
+                "\u003cp\u003eDWYER, Cynthia B. IN A PERSIAN GARDEN. l pp. T.MS. [with] lpp. T.L.s. 11/19/81. Ms. Dwyer was one of the hostages held in Tehran \u0026amp; poems were written while she was a prisoner\u003c/p\u003e",
+                "\u003cp\u003eDWYER, Cynthia B. THE BLUE-EYED PERSIAN PLUMBER. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eDWYER, Cynthia B. JANUARY 20, 1981. 1pp. T.MS.\u003c/p\u003e",
+                "\u003cp\u003ePIERCY, Marge. CHARM FOR ATTRACTING WILD MONEY. 1pp. I. MS. \u003c/p\u003e",
+                "\u003cp\u003eDOVE, Rita. LINES MUTTERED IN SLEEP. l pp. photocopy I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFRUMKIN, Gene. THE TAPE. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFRUMKIN, Gene. THE WOMAN. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eUNTERECKER, John. BIRTHDAY POEM (DECEMBER 29). 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eHESTER, M.L. LURLENE. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eBALDERSTON, Jean. AFTER THE FUNERAL. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eBRUCHAC, Joseph. THIS CAR CLIMBED MT. WASHINGTON. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eKOERTGE, Ronald. THE TIME I PUT ON MY MOTHER'S UNDERWEAR. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eKOERTGE, Ronald. WEST COAST ROMANCE. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eHOGAN, Michael. HOW A PLANET STAYS IN ORBIT. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eJELLEMA, Rod. ON EDGE. 1pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eJELLEMA, Rod. FLIEGER'S BARN. 1pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eSCHREIBER, Ron. HOUSES. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eGLASS, Malcolm. P-38 LIGHTNING. 2pp. photocopy T.MS. \u003c/p\u003e",
+                "\u003cp\u003eGLASS, Malcolm. SIXTH GRADE. 1pp. photocopy I.MS.\u003c/p\u003e",
+                "\u003cp\u003eCOFFIN, Lyn.\tESCAPE FROM THE LOCKER ROOM. 2pp. I.MS.\u003c/p\u003e",
+                "\u003cp\u003eHUFF, Robert. ON THE MORNING OF THE DEATH OF ROBERT HILLYER. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eBERLIND, Bruce. THE DAY NOBODY DIED. 1pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eWITT, Harold. MRS. GLADYS TARBELL. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eEIGNER, Larry. \"Between bedrooms\". lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eGHIGNA, Charles. THE BLUE HAIRED LADIES. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eGHIGNA, Charles. BAREBACK CITY NIGHTS. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eAJAY, Stephen. COMING TO IN HAWAII. l pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eKISSICK, Gary. HONOLULU. lpp. photocopy T.MS. With T.L.s. \u003c/p\u003e",
+                "\u003cp\u003eELON, Florence. THE NO-NECK MONSTER. l pp. photocopy I.MS. \u003c/p\u003e",
+                "\u003cp\u003eIKAN, Ron. THE MAN WHO SPRANG FROM CLAY. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eIKAN, Ron. ALL-NITE DINER. 1pp. I.MS.\u003c/p\u003e",
+                "\u003cp\u003eDYBEK, Stuart. PAPAYAS. lpp. I. MS. \u003c/p\u003e",
+                "\u003cp\u003eREVELL, Donald. THE GINGER TOURS. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eSTOKES, Terry. WHAT DOES IT GET YOU? lpp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eTORGERSEN, Eric. LOVE ON THE FRIENDSHIP QUILT. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eMILLER, Vassar. PROGRESSION. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFROST, Richard. THE ANSWER. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eGJELSNESS, Barent.\tTWO WHITE SNOWBIRDS. lpp. I.MS.\u003c/p\u003e",
+                "\u003cp\u003eHARRIS, Marie. KILLING TIME. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eSANER, Reg. ED \u0026amp; ME.\tlpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eCOLBY, Joan. THE FAT MAN. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eCURTIS, Jack. THE BUILDER. 1pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eTHALMAN, Mark. APRIL POEM. l pp. photocopy I.MS.\u003c/p\u003e",
+                "\u003cp\u003eTHALMAN, Mark. CONSTRUCTING THE RINBOW. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eTHALMAN, Mark. ON THE DOCK AT THE EVENING. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eLIFSHIN, Lyn. VINCENT. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eLIFSHIN, Lyn. HOTEL LIFSHIN. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eFARBER, Norma. A NEW HAGGADAH. 7pp. photocopy T.MS. Poet's label\u003c/p\u003e",
+                "\u003cp\u003eKELLY, Dave. THREE MEDITATIONS. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eBURROWS, E.G. THE MISNAMED. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eYOTS, Michael. THE OBLIGATORY QUICKSAND SCENE. l pp. T.MS.\u003c/p\u003e",
+                "\u003cp\u003eLIGNELL, Kathleen. TARZAN IN THE HOME FOR RETIRED ACTORS. 2pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eMONTGOMERY, George. THE RECIPE. 1pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eMONTGOMERY, George. ABOUT YOU - FOR LINDA. 1pp. photocopy A.MS., 1pp. T.MS\u003c/p\u003e",
+                "\u003cp\u003eNORTHSUN, Nila.. MOTHER/ DAUGHTER. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eHEARST, James. HOW GOOD IS GOOD ENOUGH. 2pp. I. MS. Poet's stamp\u003c/p\u003e",
+                "\u003cp\u003eDi PIERO, W.S. THE ARRIVAL. 2pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eLERNER, Linda. WHEN THE MIND. l pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eJARMAN, Mark. WHEN THE TIME COMES. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eFERIC ANO, Paul. CHANNEL SEVEN NEW SCENE. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eMORGAN, Robert. PEERS. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003ePASTAN, Linda. THE ORDERLY TRANSFER OF POWER. lpp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eCOLEMAN, Wanda. HIGH TIME LOVERS. l pp. I.MS. With l pp. T.L.s. 8/21/81. \u0026amp; A.PC.s. 6/3/82.\u003c/p\u003e",
+                "\u003cp\u003eHANDKE, Peter. See Francis Golffing for translation\u003c/p\u003e",
+                "\u003cp\u003eGOLFFING, Francis. Poem by Peter Handke. MISSED OPPORTUNITIES FOR DYING. 2pp. photocopy I.MS.\u003c/p\u003e",
+                "\u003cp\u003ePOULIOS, Lefteris. See Kirnon Friar for translation\u003c/p\u003e",
+                "\u003cp\u003eFRIAR, Kirnon. Poem by Lefteris Poulios. SONOROUS PAGE. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eQUASIMODO, Salvatore. See Rina Ferrarelli for translation\u003c/p\u003e",
+                "\u003cp\u003eFERRARELLI, Rina. Poem by Salvatore Quasimodo. MIRROR. 1pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFERRARELLI, Rina. Poem by Salvatore Quasimodo. AND SUDDENLY IT'S EVENING. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFERRARELLI, Rina. Poem by Salvatore Quasimodo. GREEN DRIFT. 2pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eSCOTELLERO, Rocco. See Ruth Feldman for translation\u003c/p\u003e",
+                "\u003cp\u003eFELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. TICKET FOR TURIN. lpp. photocopy I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. RETURN TRIP. 1pp. photocopy I.MS. \u003c/p\u003e",
+                "\u003cp\u003eFELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. BEGGARS. l pp. photocopy T.MS. \u003c/p\u003e",
+                "\u003cp\u003eRABIKOVICH, Daliah. See Bernhard Frank for translation\u003c/p\u003e",
+                "\u003cp\u003eFRANK, Bernhard. Poem by Daliah Rabikovich. THE END OF THE FALL. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003eJOZSEF, Attila. See John Batki for translation\u003c/p\u003e",
+                "\u003cp\u003eBATKI, John. Poem by AttilaJozsef. DUMB POET. l pp. photocopy T.MS. \u003c/p\u003e",
+                "\u003cp\u003eDe ANDRADE, Eugene. See Alexis Levitin for translation\u003c/p\u003e",
+                "\u003cp\u003eLEVITIN, Alexis. Poem by Eugene de Andrade. ARIADNE. 1pp. photocopy I.MS. \u003c/p\u003e",
+                "\u003cp\u003ePETROSKI, Henry. WINDOWS ARE MIRRORS. l pp. I.MS. \u003c/p\u003e",
+                "\u003cp\u003ePETROSKI, Henry. STATE STREET'S LAST PARADE. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003ePETROSKI, Henry. AVE ATQUE VALE! l pp. T.MS. with poet's stamp\u003c/p\u003e",
+                "\u003cp\u003eMAILMAN, Leo. THE STR1PPER. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003ePACERNICK, Gary. SANDBOX BURIAL. 1pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eHOLLAND, Barbara A. UFO. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eMEISSNER, Bill. CHAMPIONS. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eSARGENT, Dana. VICTOR AT REST. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eETTER, Dave. TANYA. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eALBERT, Samuel L. WEIGHT-LIFTER. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eALBERT, Samuel L. HOCKEY. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eJACKSON, Haywood. ON THE PLAYING FIELDS WITH BOSWELL. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eCOSTANZO, Gerald. THE RIOT OF NICKLE BEER NIGHT. 2pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eASTOR, Susan. IN LOCO PARENTIS. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eASTOR, Susan. STEPSISTERS. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eDAVIS, William Virgil. THE WITNESS. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eDAVIS, William Virgil. THE LIBRARIAN. l pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eASKEW, Judy. THE GLASS SCULPTOR. 1pp. photocopyX T.MS.\u003c/p\u003e",
+                "\u003cp\u003eRASCHKE, Suzanne. DOG WITH TWO HEADS. 1pp. T.MS. With T.L.s. 8/29/81 \u0026amp; A.L.s. 12/24/81\u003c/p\u003e",
+                "\u003cp\u003eCETTERILL, Sarah. HITCHHIKER IN WINTER. lpp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eDAMACION, Zamora. WOMAN WITH A CAMERA. 1pp. photocopy T.MS.\u003c/p\u003e",
+                "\u003cp\u003eTRUJILLO, Paul. ELFEGO BACA. 1pp. T.MS. \u003c/p\u003e",
+                "\u003cp\u003eHOLMGREN, Mark. WHILE WAITING FOR EGGS. 1pp. T.MS.s.\u003c/p\u003e"
+              ],
+              "scopecontent_heading_ssm": ["Scope and Contents"],
+              "scopecontent_tesim": [
+                "POETRY NOW #34\t1982\tDAVID RAY ISSUE",
+                "9pp. materials for PN34 ",
+                "25 original photographs as used in PN34",
+                "RAY, David. lpp. T.L.s. 5/81 To do with his profile in PN34",
+                "RAY, David. 4pp. T.L.s. 7/18/81. Detailed biographical/literary responses to EVG questionnaire",
+                "RAY, David. 2pp. T.L.s. 11/4/81. Sent from India, discusses forthcoming profile in PN34",
+                "RAY, Dave. T.L.s. Nd. Preparation for profile in PN34.",
+                "RAY, David. A.L.s. Nd. Queries if EVG still interested in interview",
+                "RAY, David. 2pp. T.MS. Early draft of EVG profile of David Ray",
+                "RAY, David. 3 Printed sheets with information on David Ray.",
+                "RAY, David. 3pp. T.MS. \u0026 A.MS. Early draft by EVG of David Ray profile",
+                "RAY, David. 7pp. T.MS. EVG profile of David Ray.",
+                "RAY, David. TIIE LAST CLASS (SYRACUSE). lpp. T.MS. ",
+                "RAY, David. AT A PARKING LOTIN TENNESSEE. lpp. photocopy I.MS. in ink.",
+                "RAY, David. CUSTER'S SEVENTH. lpp. photocopy I.MS.",
+                "RAY, David. WITH APOLOGIES FOR MRS. WEBSTER. lpp. photocopy T.MS. ",
+                "RAY, David. THE ADVENTURESOME LATER YEARS. lpp. photocopy I.MS.",
+                "RAY, David. THE GINGERBREAD HOUSE. l pp. T.MS. ",
+                "EBERHART, Richard. CONFIGURATION. lpp. I.MS. ",
+                "URDANG, Constance. THE FOURTH DAY. 1pp. I.MS. Poet's stamp ",
+                "GLAZE, Andrew. DOUBLEKNIT SOCKS. lpp. T.MS. Poet's label ",
+                "GLAZE, Andrew. DELMORE. 2pp. T.MS. Poet's label",
+                "CHILDRESS, William. THE BROWN HOUSE. lpp. I.MS. ",
+                "ROOT, William Pitt. MIDNIGHT BULLETIN. lpp. I.MS. Poet's stamp ",
+                "BURSK, Christopher. FATHER AND SON ROCK HOPPING. 1pp. I.MS.",
+                "BURSK, Christopher. LITTLE HARBOR. l pp. T.MS.",
+                "STEPANCHEV, Stephen. LOVE IS A DESIRE TO PROCREATE IN BEAUTY. l pp. I.MS. ",
+                "HALPERIN, Mark. TIME'S ARROW. 1pp. I.MS. ",
+                "HALPERIN, Mark. A LETTER. lpp. I.MS. ",
+                "DARR, Ann. AT SIXTEEN. lpp. photocopy I.MS. ",
+                "HATHAWAY, William. NATE'S DIMPLE. l pp. T.MS. ",
+                "STOUTENBURG, Adrien. OBLIQUE. lpp. T.MS. Poet's stamp",
+                "MORGAN, John. AT LINDBERGH'S GRAVE. 1pp. I.MS. ",
+                "TAGLIABUE, John. DUBROVNIK NOTES I A TRAVEL JOURNAL (1, 2, 3). lpp. I.MS",
+                "HELLO. lpp. T.MS.s.",
+                "HILTON, David. WE LIE BACK. lpp. photocopy T.MS.",
+                "SCHEVILL, James. THE NO-NAME WOMAN IN SAN FRANCISCO. lpp. T.MS. ",
+                "SCHEVILL, James. AMERICAN GIGANTISM: GUTZON BORGLUM AT MT. RUSHMORE. 2pp. I.MS. ",
+                "KOOSER, Ted. VOYAGER JI. lpp. I.MS. ",
+                "MOSES, W.R. LONG, LONG TRAIL. 2pp. I.MS. ",
+                "MOSES, W.R. RIVAL IN THE DOORYARD. 1pp. T.MS. ",
+                "MOSES, W.R. GLEANING. lpp. I.MS. ",
+                "GOLD, Herman. SOLOMON AND DAVID. 3pp. T.MS. ",
+                "HOGAN, Michael. TWO CHILDHOOD FRIENDS. 1pp. T.MS. ",
+                "EDSON, Russell. ELEPHANT TEARS. 1pp. photocopy I.MS.",
+                "LUNDE, David. LUMP. lpp. I.MS. ",
+                "LUNDE, David. THE LESSON. lpp. T.MS. ",
+                "MARCUS, Morton. CREDO. lpp. I.MS. ",
+                "BENNETT, Bruce. LITTLE RED MARKS. l pp. T.MS.s.",
+                "BENNETT, Bruce. THE FINAL DANCE. 1pp. T.MS.s.",
+                "LOWRY, John. SPECIAL FORCES. 1pp. I.MS. ",
+                "LONDON, Jonathan. THE RETIRED CONTRACTOR. 1pp. I.MS. d by EVG",
+                "DELP, Michael. TIIE WOMEN ARE COMING. 9pp. T.MS. ",
+                "KROLL, Ernest. AFTERMATH. 1pp. I.MS. ",
+                "STOCK, Robert. PERFORMANCE BY A MELANCHOLY BASSOONIST. 1pp. I.MS, lpp. I.MS.",
+                "CONGDON, Kirby. THE TRAIN. lpp. T.MS. ",
+                "SHUTTLEWORTH, Paul. THE SMALL RUSTLE. l pp. T.MS.",
+                "PAYACK, Peter. MONICA'S FAVORITE RECIPE. l pp. T.MS. ",
+                "ZINNES, Harriet. \"Rising above the snow in the lift at Verbier\". lpp. I.MS. with poet's stamp Two final sections were not published",
+                "NORSE, Harold. WATER SPORTS AND SUCKING THUMBS. l pp. T.MS.s.",
+                "SPINGARN, Lawrence P. DIAGNOSTIC. l pp. photocopy T.MS. Poet's stamp ",
+                "WICKLUND, Willie Mae. THE DESERTION. l pp. T.MS. with poet's stamp ",
+                "BLAZEK, Douglas. THE TREE CLIMBER'S SONG. lpp. I.MS.",
+                "JENKINS, Louis. INVISIBLE. lpp. photocopy T.MS.",
+                "KOMUNYAKAA, Yusef. IN THE LABOR CAMP OF GOOD INTENTIONS. l pp. I.MS.",
+                "KOMUNYAKAA, Yusef. THE THORN MERCHANT'S WIFE. l pp. photocopy T.MS.",
+                "CONTOSKI, Victor. FLUTE MUSIC. l pp. T.MS. Poet's stamp LEVANT, Howard. THE NOVELIST. lpp. T.MS. ",
+                "WINCKEL, Nance Van. AMERICAN PROMISES. lpp. I.MS. ",
+                "WINCKEL, Nance Van. THE MARKING. l pp. I.MS. ",
+                "FLANDERS, Jane. SPECIAL FRIENDS. l pp. I.MS. ",
+                "SIMON, John Oliver. UP. lpp. photocopy I.MS.",
+                "DWYER, Cynthia B. IN A PERSIAN GARDEN. l pp. T.MS. [with] lpp. T.L.s. 11/19/81. Ms. Dwyer was one of the hostages held in Tehran \u0026 poems were written while she was a prisoner",
+                "DWYER, Cynthia B. THE BLUE-EYED PERSIAN PLUMBER. 1pp. T.MS. ",
+                "DWYER, Cynthia B. JANUARY 20, 1981. 1pp. T.MS.",
+                "PIERCY, Marge. CHARM FOR ATTRACTING WILD MONEY. 1pp. I. MS. ",
+                "DOVE, Rita. LINES MUTTERED IN SLEEP. l pp. photocopy I.MS. ",
+                "FRUMKIN, Gene. THE TAPE. 1pp. I.MS. ",
+                "FRUMKIN, Gene. THE WOMAN. lpp. I.MS. ",
+                "UNTERECKER, John. BIRTHDAY POEM (DECEMBER 29). 1pp. T.MS. ",
+                "HESTER, M.L. LURLENE. l pp. T.MS. ",
+                "BALDERSTON, Jean. AFTER THE FUNERAL. 1pp. T.MS. ",
+                "BRUCHAC, Joseph. THIS CAR CLIMBED MT. WASHINGTON. 1pp. T.MS. ",
+                "KOERTGE, Ronald. THE TIME I PUT ON MY MOTHER'S UNDERWEAR. l pp. I.MS. ",
+                "KOERTGE, Ronald. WEST COAST ROMANCE. l pp. I.MS. ",
+                "HOGAN, Michael. HOW A PLANET STAYS IN ORBIT. 1pp. T.MS. ",
+                "JELLEMA, Rod. ON EDGE. 1pp. photocopy T.MS.",
+                "JELLEMA, Rod. FLIEGER'S BARN. 1pp. photocopy T.MS.",
+                "SCHREIBER, Ron. HOUSES. lpp. I.MS. ",
+                "GLASS, Malcolm. P-38 LIGHTNING. 2pp. photocopy T.MS. ",
+                "GLASS, Malcolm. SIXTH GRADE. 1pp. photocopy I.MS.",
+                "COFFIN, Lyn.\tESCAPE FROM THE LOCKER ROOM. 2pp. I.MS.",
+                "HUFF, Robert. ON THE MORNING OF THE DEATH OF ROBERT HILLYER. 1pp. T.MS. ",
+                "BERLIND, Bruce. THE DAY NOBODY DIED. 1pp. photocopy T.MS.",
+                "WITT, Harold. MRS. GLADYS TARBELL. 1pp. I.MS. ",
+                "EIGNER, Larry. \"Between bedrooms\". lpp. T.MS. ",
+                "GHIGNA, Charles. THE BLUE HAIRED LADIES. lpp. I.MS. ",
+                "GHIGNA, Charles. BAREBACK CITY NIGHTS. 1pp. T.MS. ",
+                "AJAY, Stephen. COMING TO IN HAWAII. l pp. photocopy T.MS.",
+                "KISSICK, Gary. HONOLULU. lpp. photocopy T.MS. With T.L.s. ",
+                "ELON, Florence. THE NO-NECK MONSTER. l pp. photocopy I.MS. ",
+                "IKAN, Ron. THE MAN WHO SPRANG FROM CLAY. lpp. I.MS. ",
+                "IKAN, Ron. ALL-NITE DINER. 1pp. I.MS.",
+                "DYBEK, Stuart. PAPAYAS. lpp. I. MS. ",
+                "REVELL, Donald. THE GINGER TOURS. l pp. I.MS. ",
+                "STOKES, Terry. WHAT DOES IT GET YOU? lpp. photocopy T.MS.",
+                "TORGERSEN, Eric. LOVE ON THE FRIENDSHIP QUILT. l pp. T.MS. ",
+                "MILLER, Vassar. PROGRESSION. 1pp. I.MS. ",
+                "FROST, Richard. THE ANSWER. 1pp. T.MS. ",
+                "GJELSNESS, Barent.\tTWO WHITE SNOWBIRDS. lpp. I.MS.",
+                "HARRIS, Marie. KILLING TIME. 1pp. T.MS. ",
+                "SANER, Reg. ED \u0026 ME.\tlpp. T.MS. ",
+                "COLBY, Joan. THE FAT MAN. 1pp. T.MS. ",
+                "CURTIS, Jack. THE BUILDER. 1pp. photocopy T.MS.",
+                "THALMAN, Mark. APRIL POEM. l pp. photocopy I.MS.",
+                "THALMAN, Mark. CONSTRUCTING THE RINBOW. lpp. I.MS. ",
+                "THALMAN, Mark. ON THE DOCK AT THE EVENING. lpp. I.MS. ",
+                "LIFSHIN, Lyn. VINCENT. l pp. I.MS. ",
+                "LIFSHIN, Lyn. HOTEL LIFSHIN. lpp. T.MS. ",
+                "FARBER, Norma. A NEW HAGGADAH. 7pp. photocopy T.MS. Poet's label",
+                "KELLY, Dave. THREE MEDITATIONS. 1pp. T.MS. ",
+                "BURROWS, E.G. THE MISNAMED. lpp. T.MS. ",
+                "YOTS, Michael. THE OBLIGATORY QUICKSAND SCENE. l pp. T.MS.",
+                "LIGNELL, Kathleen. TARZAN IN THE HOME FOR RETIRED ACTORS. 2pp. T.MS. ",
+                "MONTGOMERY, George. THE RECIPE. 1pp. photocopy T.MS.",
+                "MONTGOMERY, George. ABOUT YOU - FOR LINDA. 1pp. photocopy A.MS., 1pp. T.MS",
+                "NORTHSUN, Nila.. MOTHER/ DAUGHTER. 1pp. T.MS. ",
+                "HEARST, James. HOW GOOD IS GOOD ENOUGH. 2pp. I. MS. Poet's stamp",
+                "Di PIERO, W.S. THE ARRIVAL. 2pp. I.MS. ",
+                "LERNER, Linda. WHEN THE MIND. l pp. photocopy T.MS.",
+                "JARMAN, Mark. WHEN THE TIME COMES. lpp. T.MS. ",
+                "FERIC ANO, Paul. CHANNEL SEVEN NEW SCENE. lpp. I.MS. ",
+                "MORGAN, Robert. PEERS. l pp. T.MS. ",
+                "PASTAN, Linda. THE ORDERLY TRANSFER OF POWER. lpp. I.MS. ",
+                "COLEMAN, Wanda. HIGH TIME LOVERS. l pp. I.MS. With l pp. T.L.s. 8/21/81. \u0026 A.PC.s. 6/3/82.",
+                "HANDKE, Peter. See Francis Golffing for translation",
+                "GOLFFING, Francis. Poem by Peter Handke. MISSED OPPORTUNITIES FOR DYING. 2pp. photocopy I.MS.",
+                "POULIOS, Lefteris. See Kirnon Friar for translation",
+                "FRIAR, Kirnon. Poem by Lefteris Poulios. SONOROUS PAGE. lpp. T.MS. ",
+                "QUASIMODO, Salvatore. See Rina Ferrarelli for translation",
+                "FERRARELLI, Rina. Poem by Salvatore Quasimodo. MIRROR. 1pp. I.MS. ",
+                "FERRARELLI, Rina. Poem by Salvatore Quasimodo. AND SUDDENLY IT'S EVENING. l pp. I.MS. ",
+                "FERRARELLI, Rina. Poem by Salvatore Quasimodo. GREEN DRIFT. 2pp. T.MS. ",
+                "SCOTELLERO, Rocco. See Ruth Feldman for translation",
+                "FELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. TICKET FOR TURIN. lpp. photocopy I.MS. ",
+                "FELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. RETURN TRIP. 1pp. photocopy I.MS. ",
+                "FELDMAN, Ruth [with Brian Swann]. Poem by Rocco Scotellero. BEGGARS. l pp. photocopy T.MS. ",
+                "RABIKOVICH, Daliah. See Bernhard Frank for translation",
+                "FRANK, Bernhard. Poem by Daliah Rabikovich. THE END OF THE FALL. l pp. I.MS. ",
+                "JOZSEF, Attila. See John Batki for translation",
+                "BATKI, John. Poem by AttilaJozsef. DUMB POET. l pp. photocopy T.MS. ",
+                "De ANDRADE, Eugene. See Alexis Levitin for translation",
+                "LEVITIN, Alexis. Poem by Eugene de Andrade. ARIADNE. 1pp. photocopy I.MS. ",
+                "PETROSKI, Henry. WINDOWS ARE MIRRORS. l pp. I.MS. ",
+                "PETROSKI, Henry. STATE STREET'S LAST PARADE. l pp. T.MS. ",
+                "PETROSKI, Henry. AVE ATQUE VALE! l pp. T.MS. with poet's stamp",
+                "MAILMAN, Leo. THE STR1PPER. 1pp. T.MS. ",
+                "PACERNICK, Gary. SANDBOX BURIAL. 1pp. photocopy T.MS.",
+                "HOLLAND, Barbara A. UFO. 1pp. T.MS. ",
+                "MEISSNER, Bill. CHAMPIONS. lpp. T.MS. ",
+                "SARGENT, Dana. VICTOR AT REST. 1pp. T.MS. ",
+                "ETTER, Dave. TANYA. 1pp. T.MS. ",
+                "ALBERT, Samuel L. WEIGHT-LIFTER. 1pp. T.MS. ",
+                "ALBERT, Samuel L. HOCKEY. lpp. T.MS. ",
+                "JACKSON, Haywood. ON THE PLAYING FIELDS WITH BOSWELL. lpp. T.MS. ",
+                "COSTANZO, Gerald. THE RIOT OF NICKLE BEER NIGHT. 2pp. T.MS. ",
+                "ASTOR, Susan. IN LOCO PARENTIS. lpp. T.MS. ",
+                "ASTOR, Susan. STEPSISTERS. lpp. T.MS. ",
+                "DAVIS, William Virgil. THE WITNESS. l pp. T.MS. ",
+                "DAVIS, William Virgil. THE LIBRARIAN. l pp. T.MS. ",
+                "ASKEW, Judy. THE GLASS SCULPTOR. 1pp. photocopyX T.MS.",
+                "RASCHKE, Suzanne. DOG WITH TWO HEADS. 1pp. T.MS. With T.L.s. 8/29/81 \u0026 A.L.s. 12/24/81",
+                "CETTERILL, Sarah. HITCHHIKER IN WINTER. lpp. T.MS. ",
+                "DAMACION, Zamora. WOMAN WITH A CAMERA. 1pp. photocopy T.MS.",
+                "TRUJILLO, Paul. ELFEGO BACA. 1pp. T.MS. ",
+                "HOLMGREN, Mark. WHILE WAITING FOR EGGS. 1pp. T.MS.s."
+              ],
+              "hashed_id_ssi": "c21bed45c851b9d764b9fa7d47e2788b",
+              "_nest_path_": "/components#0/components#0/components#30",
+              "_nest_parent_": "m1136_aspace_eede9e84785747dcb393a1afaf5eb157",
+              "_root_": "m1136",
+              "_version_": 1834734057325330400,
+              "timestamp": "2025-06-12T14:32:27.880Z",
+              "collection": {
+                "numFound": 1,
+                "start": 0,
+                "numFoundExact": true,
+                "docs": [
+                  {
+                    "sul_ark_id_ssi": "ark:/22236/s1de65f870-7d0b-4a2b-a494-bc5fdd3e94db",
+                    "sul_ark_shoulder_ssi": "s1",
+                    "id": "m1136",
+                    "title_filing_ssi": "Griffith (E.V.) papers",
+                    "title_ssm": ["E.V. Griffith papers"],
+                    "title_tesim": ["E.V. Griffith papers"],
+                    "ead_ssi": "m1136.xml",
+                    "unitdate_ssm": ["circa 1945-1999"],
+                    "unitdate_inclusive_ssm": ["circa 1945-1999"],
+                    "level_ssm": ["collection"],
+                    "level_ssim": ["Collection"],
+                    "unitid_ssm": ["M1136"],
+                    "text": [
+                      "M1136",
+                      "E.V. Griffith papers, circa 1945-1999",
+                      "American literature -- 20th century.",
+                      "Poets, American -- 20th century",
+                      "Periodicals",
+                      "poetry -- 20th century",
+                      "American poetry -- 20th century -- Periodicals",
+                      "Little magazines -- United States",
+                      "Open for research. Note that material must be requested at least 36 hours in advance of intended use.",
+                      "Included are working files for the magazines and small press books Griffith edited and published between 1945 and 1995, consisting of manuscripts, correspondence, ephemera, some photographs and audiocassettes, as well as most of the publications themselves.",
+                      "Some correspondence and other files involve Griffith's associates William Childress (especially for  Poetry Now ) and Lloyd Zimpel (Griffith's co-editor at  Minnesota Quarterly , largely pre-dating the collection].",
+                      "Griffith's own writings and manuscripts, including a novel-length work, are also included.",
+                      "The collection was extensively described prior to receipt by Stanford, with listings of nearly every manuscript or letter from each poet over a period of over forty years.",
+                      "While Special Collections is the owner of the physical and digital items, permission to examine collection materials is not an authorization to publish. These materials are made available for use in research, teaching, and private study. Any transmission or reproduction beyond that allowed by fair use requires permission from the owners of rights, heir(s) or assigns.",
+                      "E.V. Griffith was a small press publisher of poetry from the 1950s into the early 1990s. He edited several little magazines, including  Sheaf ,  Hearse , and  Poetry Now .",
+                      "Special Collections and University Archives materials are stored offsite and must be paged three business days in advance. For more information on paging collections, see the department's website: https://library.stanford.edu/libraries/special-collections.",
+                      "Department of Special Collections and University Archives",
+                      "Griffith, E.V.",
+                      "English \n.    "
+                    ],
+                    "unitid_tesim": ["M1136", "Archival Resource Key"],
+                    "normalized_date_ssm": ["circa 1945-1999"],
+                    "normalized_title_ssm": [
+                      "E.V. Griffith papers, circa 1945-1999"
+                    ],
+                    "collection_title_tesim": [
+                      "E.V. Griffith papers, circa 1945-1999"
+                    ],
+                    "collection_ssim": [
+                      "E.V. Griffith papers, circa 1945-1999"
+                    ],
+                    "repository_ssm": ["Manuscripts"],
+                    "repository_ssim": ["Manuscripts"],
+                    "creator_ssm": ["Griffith, E.V."],
+                    "creator_ssim": ["Griffith, E.V."],
+                    "creator_persname_ssim": ["Griffith, E.V."],
+                    "creators_ssim": ["Griffith, E.V."],
+                    "access_terms_ssm": [
+                      "While Special Collections is the owner of the physical and digital items, permission to examine collection materials is not an authorization to publish. These materials are made available for use in research, teaching, and private study. Any transmission or reproduction beyond that allowed by fair use requires permission from the owners of rights, heir(s) or assigns."
+                    ],
+                    "acqinfo_ssim": [
+                      "Purchased, 2000. Addenda purchased 2007, 2008."
+                    ],
+                    "access_subjects_ssim": [
+                      "American literature -- 20th century.",
+                      "Poets, American -- 20th century",
+                      "Periodicals",
+                      "poetry -- 20th century",
+                      "American poetry -- 20th century -- Periodicals",
+                      "Little magazines -- United States"
+                    ],
+                    "access_subjects_ssm": [
+                      "American literature -- 20th century.",
+                      "Poets, American -- 20th century",
+                      "Periodicals",
+                      "poetry -- 20th century",
+                      "American poetry -- 20th century -- Periodicals",
+                      "Little magazines -- United States"
+                    ],
+                    "has_online_content_ssim": ["true"],
+                    "extent_ssm": ["12 Linear Feet (27 boxes)"],
+                    "extent_tesim": ["12 Linear Feet (27 boxes)"],
+                    "date_range_isim": [
+                      1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953,
+                      1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962,
+                      1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971,
+                      1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980,
+                      1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989,
+                      1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999
+                    ],
+                    "accessrestrict_html_tesm": [
+                      "\u003cp\u003eOpen for research. Note that material must be requested at least 36 hours in advance of intended use.\u003c/p\u003e"
+                    ],
+                    "accessrestrict_heading_ssm": [
+                      "Conditions Governing Access"
+                    ],
+                    "accessrestrict_tesim": [
+                      "Open for research. Note that material must be requested at least 36 hours in advance of intended use."
+                    ],
+                    "prefercite_html_tesm": [
+                      "\u003cp\u003e[identification of item], E.V. Griffith papers (M1136). Dept. of Special Collections and University Archives, Stanford Libraries, Stanford, Calif.\u003c/p\u003e"
+                    ],
+                    "prefercite_tesim": [
+                      "[identification of item], E.V. Griffith papers (M1136). Dept. of Special Collections and University Archives, Stanford Libraries, Stanford, Calif."
+                    ],
+                    "scopecontent_html_tesm": [
+                      "\u003cp\u003eIncluded are working files for the magazines and small press books Griffith edited and published between 1945 and 1995, consisting of manuscripts, correspondence, ephemera, some photographs and audiocassettes, as well as most of the publications themselves.\u003c/p\u003e",
+                      "\u003cp\u003eSome correspondence and other files involve Griffith's associates William Childress (especially for \u003ctitle\u003ePoetry Now\u003c/title\u003e) and Lloyd Zimpel (Griffith's co-editor at \u003ctitle\u003eMinnesota Quarterly\u003c/title\u003e, largely pre-dating the collection].\u003c/p\u003e",
+                      "\u003cp\u003eGriffith's own writings and manuscripts, including a novel-length work, are also included.\u003c/p\u003e",
+                      "\u003cp\u003eThe collection was extensively described prior to receipt by Stanford, with listings of nearly every manuscript or letter from each poet over a period of over forty years.\u003c/p\u003e"
+                    ],
+                    "scopecontent_heading_ssm": ["Scope and Contents"],
+                    "scopecontent_tesim": [
+                      "Included are working files for the magazines and small press books Griffith edited and published between 1945 and 1995, consisting of manuscripts, correspondence, ephemera, some photographs and audiocassettes, as well as most of the publications themselves.",
+                      "Some correspondence and other files involve Griffith's associates William Childress (especially for  Poetry Now ) and Lloyd Zimpel (Griffith's co-editor at  Minnesota Quarterly , largely pre-dating the collection].",
+                      "Griffith's own writings and manuscripts, including a novel-length work, are also included.",
+                      "The collection was extensively described prior to receipt by Stanford, with listings of nearly every manuscript or letter from each poet over a period of over forty years."
+                    ],
+                    "userestrict_html_tesm": [
+                      "\u003cp\u003eWhile Special Collections is the owner of the physical and digital items, permission to examine collection materials is not an authorization to publish. These materials are made available for use in research, teaching, and private study. Any transmission or reproduction beyond that allowed by fair use requires permission from the owners of rights, heir(s) or assigns.\u003c/p\u003e"
+                    ],
+                    "userestrict_heading_ssm": ["Conditions Governing Use"],
+                    "userestrict_tesim": [
+                      "While Special Collections is the owner of the physical and digital items, permission to examine collection materials is not an authorization to publish. These materials are made available for use in research, teaching, and private study. Any transmission or reproduction beyond that allowed by fair use requires permission from the owners of rights, heir(s) or assigns."
+                    ],
+                    "abstract_html_tesm": [
+                      "\u003cabstract id=\"aspace_3efc13eb801f13a008424298a86ee888\"\u003eE.V. Griffith was a small press publisher of poetry from the 1950s into the early 1990s. He edited several little magazines, including \u003ctitle\u003eSheaf\u003c/title\u003e, \u003ctitle\u003eHearse\u003c/title\u003e, and \u003ctitle\u003ePoetry Now\u003c/title\u003e.\u003c/abstract\u003e"
+                    ],
+                    "abstract_tesim": [
+                      "E.V. Griffith was a small press publisher of poetry from the 1950s into the early 1990s. He edited several little magazines, including  Sheaf ,  Hearse , and  Poetry Now ."
+                    ],
+                    "physloc_html_tesm": [
+                      "\u003cphysloc id=\"aspace_e9fe92cc881bf928a0fb7dec040fb85a\"\u003eSpecial Collections and University Archives materials are stored offsite and must be paged three business days in advance. For more information on paging collections, see the department's website: https://library.stanford.edu/libraries/special-collections.\u003c/physloc\u003e"
+                    ],
+                    "physloc_tesim": [
+                      "Special Collections and University Archives materials are stored offsite and must be paged three business days in advance. For more information on paging collections, see the department's website: https://library.stanford.edu/libraries/special-collections."
+                    ],
+                    "names_ssim": [
+                      "Department of Special Collections and University Archives",
+                      "Griffith, E.V."
+                    ],
+                    "corpname_ssim": [
+                      "Department of Special Collections and University Archives"
+                    ],
+                    "persname_ssim": ["Griffith, E.V."],
+                    "language_ssim": ["English \n.    "],
+                    "descrules_ssm": [
+                      "Describing Archives: A Content Standard"
+                    ],
+                    "total_component_count_is": 178,
+                    "online_item_count_is": 18,
+                    "component_level_isim": [0],
+                    "sort_isi": 0,
+                    "hashed_id_ssi": "19a6a6d616e01cd42b8e144fac7d4a3c",
+                    "_version_": 1834734057325330400,
+                    "_root_": "m1136",
+                    "timestamp": "2025-06-12T14:32:27.880Z"
+                  }
+                ]
+              }
+            },
+            "label": "Breadcrumbs"
+          }
+        }
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog/m1136_aspace_6c625d4af28bacf807b51eca39d07ebe"
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "facet",
+      "id": "collection_ssim",
+      "attributes": {
+        "label": "Collection",
+        "items": [
+          {
+            "attributes": {
+              "label": "E.V. Griffith papers, circa 1945-1999",
+              "value": "E.V. Griffith papers, circa 1945-1999",
+              "hits": 1
+            },
+            "links": {
+              "self": "https://archives.stanford.edu/catalog.json?f%5Bcollection%5D%5B%5D=E.V.+Griffith+papers%2C+circa+1945-1999\u0026q=my+query\u0026rows=3"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog/facet/collection_ssim.json?q=my+query\u0026rows=3"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "level_ssim",
+      "attributes": {
+        "label": "Level",
+        "items": [
+          {
+            "attributes": {
+              "label": "File",
+              "value": "File",
+              "hits": 1
+            },
+            "links": {
+              "self": "https://archives.stanford.edu/catalog.json?f%5Blevel%5D%5B%5D=File\u0026q=my+query\u0026rows=3"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog/facet/level_ssim.json?q=my+query\u0026rows=3"
+      }
+    },
+    {
+      "type": "facet",
+      "id": "repository_ssim",
+      "attributes": {
+        "label": "Repository",
+        "items": [
+          {
+            "attributes": {
+              "label": "Manuscripts",
+              "value": "Manuscripts",
+              "hits": 1
+            },
+            "links": {
+              "self": "https://archives.stanford.edu/catalog.json?f%5Brepository%5D%5B%5D=Manuscripts\u0026q=my+query\u0026rows=3"
+            }
+          }
+        ]
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog/facet/repository_ssim.json?q=my+query\u0026rows=3"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "keyword",
+      "attributes": {
+        "label": "Keyword"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026search_field=keyword"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "name",
+      "attributes": {
+        "label": "Name"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026search_field=name"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "place",
+      "attributes": {
+        "label": "Place"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026search_field=place"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "subject",
+      "attributes": {
+        "label": "Subject"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026search_field=subject"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "title",
+      "attributes": {
+        "label": "Title"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026search_field=title"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "container",
+      "attributes": {
+        "label": "Container"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026search_field=container"
+      }
+    },
+    {
+      "type": "search_field",
+      "id": "call_number",
+      "attributes": {
+        "label": "Call number"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026search_field=call_number"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "relevance",
+      "attributes": {
+        "label": "relevance"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026sort=relevance"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "date_sort asc",
+      "attributes": {
+        "label": "date (ascending)"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026sort=date_sort+asc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "date_sort desc",
+      "attributes": {
+        "label": "date (descending)"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026sort=date_sort+desc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "creator_sort asc",
+      "attributes": {
+        "label": "creator (A-Z)"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026sort=creator_sort+asc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "creator_sort desc",
+      "attributes": {
+        "label": "creator (Z-A)"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026sort=creator_sort+desc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "title_sort asc",
+      "attributes": {
+        "label": "title (A-Z)"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026sort=title_sort+asc"
+      }
+    },
+    {
+      "type": "sort",
+      "id": "title_sort desc",
+      "attributes": {
+        "label": "title (Z-A)"
+      },
+      "links": {
+        "self": "https://archives.stanford.edu/catalog.json?q=my+query\u0026rows=3\u0026sort=title_sort+desc"
+      }
+    }
+  ]
+}

@@ -2,14 +2,10 @@
 
 module QuickSearch
   class ExhibitsSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, to: :search
+    self.search_service = ::ExhibitsSearchService
 
-    def search
-      @search ||= ::ExhibitsSearchService.new(http: http).search(q)
-    end
-
-    def loaded_link
-      format(Settings.EXHIBITS.QUERY_URL.to_s, q: CGI.escape(q.to_s))
+    def see_all_url_template
+      Settings.EXHIBITS.QUERY_URL
     end
   end
 end

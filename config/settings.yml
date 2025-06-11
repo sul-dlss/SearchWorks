@@ -4,6 +4,7 @@ GLOBAL_ALERT: <%= false %>
 enabled_searchers:
   - catalog
   - article
+  - archives
   - exhibits
   - earthworks
   - library_website_api
@@ -39,6 +40,11 @@ EARTHWORKS:
   QUERY_URL: "https://earthworks.stanford.edu?q=%{q}"
   FETCH_URL: "https://earthworks.stanford.edu/catalog/%{id}"
   HOME_URL: "https://earthworks.stanford.edu"
+archives:
+  api_url: https://archives.stanford.edu/catalog.json?q=%{q}&rows=3
+  home_url: https://archives.stanford.edu
+  link_url: https://archives.stanford.edu/catalog/%{id}
+  query_url: https://archives.stanford.edu/catalog?q=%{q}&rows=3
 quick_search:
   doi_loaded_link: "http://doi.org/"
 analytics_debug: true

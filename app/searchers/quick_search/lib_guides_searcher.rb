@@ -2,14 +2,10 @@
 
 module QuickSearch
   class LibGuidesSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, to: :search
+    self.search_service = ::LibGuidesSearchService
 
-    def search
-      @search ||= ::LibGuidesSearchService.new(http: http).search(q)
-    end
-
-    def loaded_link
-      format(Settings.LIBGUIDES.QUERY_URL.to_s, q: CGI.escape(q.to_s))
+    def see_all_url_template
+      Settings.LIBGUIDES.QUERY_URL
     end
   end
 end

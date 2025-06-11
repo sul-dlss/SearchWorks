@@ -2,14 +2,10 @@
 
 module QuickSearch
   class CatalogSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, to: :search
+    self.search_service = ::CatalogSearchService
 
-    def search
-      @search ||= ::CatalogSearchService.new(http: http).search(q)
-    end
-
-    def loaded_link
-      format(Settings.CATALOG.QUERY_URL.to_s, q: CGI.escape(q.to_s))
+    def see_all_url_template
+      Settings.CATALOG.QUERY_URL
     end
   end
 end
