@@ -37,17 +37,6 @@ Blacklight.onLoad(function() {
     })
   })
 
-  // Track external link clicks
-  document.querySelectorAll('a[href*="://"]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'External link',
-        action: 'SW/clicked',
-        label: this.href
-      })
-    })
-  })
-
   // Track an action when the user clicks on an accordion
   document.querySelectorAll('[data-action="accordion-section#toggle"]').forEach(function (el) {
     el.addEventListener('click', function (e) {
