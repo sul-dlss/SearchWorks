@@ -12,3 +12,15 @@
     vertical-align: top;
   }
 }
+/* TODO: Move this to the component library */
+.accordion:has(.accordion-item) {
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-border-color: transparent;
+
+  .accordion-item {
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-inner-border-radius: 0;
+
+    border-top: 1px solid var(--stanford-30-black);
+  }
+}
