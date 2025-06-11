@@ -23,10 +23,12 @@ RSpec.describe ExhibitsSearchService do
     it 'returns the relevant metadata from the API' do
       results = service.search(query).results
       expect(results.length).to eq 3
-      expect(results.first.title).to eq '!Women Art Revolution'
-      expect(results.first.description).to eq 'Voices of a Movement'
-      expect(results.first.link).to eq 'https://exhibits.stanford.edu/women-art-revolution'
-      expect(results.first.thumbnail).to eq 'https://exhibits.stanford.edu/images/670/31,22,462,462/400,400/0/default.jpg'
+      expect(results.first).to have_attributes(
+        title: '!Women Art Revolution',
+        description: 'Voices of a Movement',
+        link: 'https://exhibits.stanford.edu/women-art-revolution',
+        thumbnail: 'https://exhibits.stanford.edu/images/670/31,22,462,462/400,400/0/default.jpg'
+      )
     end
   end
 end

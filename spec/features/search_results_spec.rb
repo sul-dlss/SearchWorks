@@ -27,8 +27,7 @@ RSpec.describe 'Search results', :js do
       expect(page).to have_css('.btn-outline-secondary')
       expect(page).to have_css('#article a', text: /See all 666,666\sarticle\sresults/)
       within '.searcher-anchors' do
-        expect(page).to have_link 'Articles+', href: '#article'
-        expect(page).to have_css '#article_count', text: '666,666'
+        expect(page).to have_link('Articles+', href: '#article').and have_css '#article_count', text: '666,666'
       end
     end
   end
