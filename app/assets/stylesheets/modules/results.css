@@ -49,6 +49,7 @@
     --bs-btn-border-radius: 2rem;
     --bs-btn-hover-color: white;
     --bs-btn-hover-bg: var(--stanford-cardinal);
+    --bs-btn-padding-x: 1.25rem;
     &:hover {
       box-shadow:
         0 0 #0000,
