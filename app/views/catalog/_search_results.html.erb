@@ -1,28 +1,11 @@
-<% if page_location.access_point? %>
-  <% if page_location.collection? && get_collection.present? %>
-    <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-  <% elsif page_location.sdr? %>
-    <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-  <% else %>
-    <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.to_s.gsub(/_/, ' ').capitalize.pluralize, application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-  <% end %>
-<% else %>
-  <% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{I18n.t('blacklight.application_name')} catalog") %>
-<% end %>
-
+<% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{I18n.t('blacklight.application_name')} catalog") %>
+<% view_config = blacklight_config.view_config(document_index_view_type, action_name: action_name) %>
 <% content_for(:head) do -%>
   <%= render '/catalog/opensearch_response_metadata' %>
   <%= rss_feed_link_tag %>
   <%= atom_feed_link_tag %>
   <%= json_api_link_tag %>
 <% end -%>
-
-
-<div class="breadcrumb row">
-  <div class="col-md-12">
-    <%= render blacklight_config.view_config(document_index_view_type).constraints_component.new(search_state:) %>
-  </div>
-</div>
 
 <% if @response.empty? %>
    <%= render "shared/zero_results" %>
@@ -31,30 +14,26 @@
     <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
   <% end %>
 
-  <div class="row">
-    <div id="sidebar" class="col-md-4">
+  <div class="search-results">
+    <div class="breadcrumb constraints">
+      <%= render view_config.constraints_component.new(search_state:) %>
+    </div>
+
+    <div class="facets" class="col-md-4">
       <%= render 'search_sidebar' %>
     </div>
 
-    <div id="content" class="col-md-8">
-      <div class="search_num_of_results">
-        <div class='results-heading'>
-          <h1 class="visually-hidden"><%= t('blacklight.search.page_heading') %></h1>
-          <h2><%= pluralize(number_with_delimiter(@response.total), "#{search_type_name} result") %></h2>
-          <%= link_to new_documents_feed_path do %>
-            <i class="rss-icon" aria-hidden="true"></i>
-            <span class="visually-hidden">RSS feed for this result</span>
-          <% end %>
-        </div>
-        <%= render blacklight_config.view_config(document_index_view_type).search_header_component.new %>
+    <div class="results">
+      <%= render view_config.search_header_component.new %>
+      <% # container for all documents in index list view -%>
+      <div class="documents-<%= document_index_view_type %>">
+        <%= render view_config.document_component.with_collection(@response.documents.map { |document| document_presenter(document) }, counter_offset: document_counter_with_offset(0)) %>
       </div>
-
-      <%= render_document_index @response.documents %>
-      <% benchmark 'Alt results' do %>
-        <%= render blacklight_config.index.mini_bento_component.new(close: true) %>
-      <% end %>
-
       <%= render 'results_pagination' %>
     </div>
+
+    <% benchmark 'Alt results' do %>
+      <%= render view_config.mini_bento_component.new(close: true) %>
+    <% end %>
   </div>
 <% end %>
