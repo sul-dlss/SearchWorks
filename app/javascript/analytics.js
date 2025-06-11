@@ -18,16 +18,6 @@ Blacklight.onLoad(function() {
 
   // Track engagement with IIIF icon
   document.querySelectorAll('.iiif-dnd').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'IIIF DnD',
-        action: 'SW/clicked',
-        label: (e.currentTarget).data().manifest
-      })
-    })
-  })
-
-  document.querySelectorAll('.iiif-dnd').forEach(function(el) {
     el.addEventListener('dragstart', function(e) {
       sendAnalyticsEvent({
         category: 'IIIF DnD',
