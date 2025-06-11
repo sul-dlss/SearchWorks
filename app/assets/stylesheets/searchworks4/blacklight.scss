@@ -56,7 +56,7 @@ $remove-icon-font-family:
   .remove {
     color: var(--bl-facet-remove-color);
     font-weight: bold;
-    padding-left: $spacer * 0.5;
+    padding-left: 0.5rem;
     text-decoration: none;
 
     &:hover {
