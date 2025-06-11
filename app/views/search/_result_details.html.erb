@@ -1,41 +1,32 @@
-<h3 class="result-title">
-  <%= link_to result.title, result.link %>
-</h3>
+<div class="result-title fs-1125 pt-2 pb-1">
+  <%= link_to result.title.html_safe, result.link %>
+</div>
 
-<% if result.author.present? || result.imprint.present? %>
-  <p>
-    <% if result.author.present? %>
-      <div><%= result.author %></div>
+
+<% if result.icon.present? || result.physical %>
+  <div class="pb-1">
+    <%= image_tag result.icon, aria: { hidden: true }, class: 'icon' %>
+    <span class="fw-semibold"><%= result.format %></span>
+    <% if result.physical %>
+      &mdash; <%= result.physical %>
     <% end %>
-    <% if result.imprint.present? %>
-      <div><%= result.imprint %></div>
-    <% end %>
-  </p>
+  </div>
+<% end %>
+<% if result.author.present? %>
+  <div class="pb-1"><%= result.author %></div>
+<% end %>
+<% if result.imprint.present? %>
+  <div class="pb-1"><%= result.imprint %></div>
+<% end %>
+<% if result.journal.present? %>
+  <div class="pb-1"><%= result.journal %></div>
 <% end %>
 
 <% if result.description.present? %>
-  <p class="description"><%= result.description.html_safe %></p>
+  <p class="description line-clamp"><%= result.description.html_safe %></p>
 <% end %>
 
-<% if result.temporary_access_link_html.present? %>
-  <%= result.temporary_access_link_html.html_safe %>
-  <div class="etas-results-block">
-    <p class="etas-notice">Available to students, faculty, and staff, by special arrangement in response to COVID-19. To protect our access to ETAS, the physical copy is temporarily not requestable.</p>
-    <%= link_to('More about HathiTrust ETAS', 'https://www.hathitrust.org/ETAS-User-Information') %>
-  </div>
-<% end %>
 
 <% if result.fulltext_link_html %>
   <p><%= result.fulltext_link_html.html_safe %></p>
-<% end %>
-
-<% if result.breadcrumbs.present? %>
-  <ol aria-label="breadcrumb" class="libweb-breadcrumb">
-    <% result.breadcrumbs.each do |breadcrumb| %>
-      <li>
-        <span aria-hidden="true">&raquo;</span>
-        <%= link_to breadcrumb["label"], breadcrumb["url"] %>
-      </li>
-    <% end %>
-  </ol>
 <% end %>

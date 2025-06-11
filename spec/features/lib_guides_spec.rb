@@ -7,7 +7,7 @@ feature 'LibGuides', :js do
     response = instance_double(AbstractSearchService::Response, results: [], total: 0)
     allow_any_instance_of(AbstractSearchService).to receive(:search)
       .and_return response
-    visit quick_search_path
+    visit search_path
   end
 
   scenario 'is present on index page' do

@@ -2,7 +2,7 @@
 
 module QuickSearch
   class ArticleSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, :facets, to: :search
+    delegate :results, :total, to: :search
 
     def search
       @response ||= ::ArticleSearchService.new(http: http).search(q)

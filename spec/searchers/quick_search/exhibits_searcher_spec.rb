@@ -13,8 +13,6 @@ RSpec.describe QuickSearch::ExhibitsSearcher do
   end
 
   it { expect(searcher.search).to be_an(ExhibitsSearchService::Response) }
-  it { expect(searcher).to be_toggleable }
-  it { expect(searcher.toggle_threshold).to be 3 }
 
   it do
     searcher.search # loads response

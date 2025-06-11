@@ -8,15 +8,7 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     super
   end
 
-  class HighlightedFacetItem < AbstractSearchService::HighlightedFacetItem
-    def facet_field_to_param
-      "f[0]=#{CGI.escape(value)}"
-    end
-  end
-
   class Response < AbstractSearchService::Response
-    HIGHLIGHTED_FACET_FIELD = 'format_facet'
-    HIGHLIGHTED_FACET_CLASS = LibraryWebsiteApiSearchService::HighlightedFacetItem
     QUERY_URL = Settings.LIBRARY_WEBSITE.QUERY_URL.freeze
 
     def results
@@ -31,14 +23,6 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
           result.description = sanitizer.sanitize(doc.dig('attributes', 'su_page_description'))
           result
         end
-    end
-
-    # Drupal 9 data for the library website does not support facets currently.
-    # We still need to implement the method to override AbstractSearchService's facet method
-    # which throws a NotImplementedError if not implemented.
-    # So we are implementing it here to return an empty array.
-    def facets
-      []
     end
 
     def total

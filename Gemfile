@@ -64,10 +64,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'okcomputer'
 gem 'global_alerts'
 
-gem "cssbundling-rails", "~> 1.1"
-
 gem 'rack-attack'
 
 gem "importmap-rails", "~> 2.0"
 
 gem "redis", "~> 5.4"
+
+gem "turbo-rails", "~> 2.0"
+
+gem "stimulus-rails", "~> 1.3"

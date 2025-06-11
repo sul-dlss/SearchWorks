@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.feature 'Homepage' do
   before do
-    visit quick_search_path
+    visit search_path
   end
 
   scenario 'has text for top level headings and sections for search tools and other sources' do

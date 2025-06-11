@@ -37,10 +37,6 @@ class LibGuidesSearchService < AbstractSearchService
       Settings.LIBGUIDES.NUM_RESULTS_SHOWN
     end
 
-    def facets
-      []
-    end
-
     # The guides api will only return 100 results
     # If there are more than 100 results there is no way of knowing the correct number
     # Instead of displaying a correct number we don't display the number if the results == 100

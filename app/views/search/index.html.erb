@@ -1,32 +1,37 @@
 <% title %>
 <section class="bg-secondary py-4">
-  <div class="container-fluid" style="max-width: 1242px">
-    <header class="h2">Search the catalog, journal articles and other resources</header>
+  <div class="container-fluid" style="max-width: 600px">
     <form class="search-query-form d-flex" action="/all" accept-charset="UTF-8" method="get">
       <label class="visually-hidden" for="q">search for</label>
-      <input class="search-q q form-control rounded-left rounded-start" aria-label="search for" type="search" name="q" id="q" autocomplete="off" spellcheck="false">
+      <%= text_field_tag 'q', params[:q], class: "search-q q form-control rounded-left rounded-start", type: 'search', autocomplete: 'off', spellcheck: false %>
       <button class="btn btn-secondary search-btn" type="submit" id="search"><span class="submit-search-text">Search</span></button>
     </form>
   </div>
 </section>
 
 <div class="container-fluid">
-  <div class="quicksearch-ga-click-tracking">
-    <div id="result-types" class="row">
-      <div class="col result-types">
-        <%= render partial: 'layouts/quick_search/found_types' %>
-      </div>
+  <div id="result-types" class="row">
+    <div class="col result-types">
+      <%= render 'found_types' %>
     </div>
   </div>
-  <div class="quicksearch-ga-click-tracking row row-cols-1 row-cols-md-2">
-    <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
-      <div class="col module">
-        <%= render_module(@searches[searcher], searcher) %>
-      </div>
-    <% end %>
-  </div>
 
-  <div class="quicksearch-ga-click-tracking">
-    <%= render partial: 'shared/more_search_tools' %>
+  <div class="row">
+    <div class="col-xl-9 col-lg-12">
+      <div class="d-flex flex-wrap gap-5 mt-3" id="modules">
+        <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
+          <turbo-frame id="<%= searcher.underscore %>_module" src="/all/<%= searcher %>?q=<%= params[:q] %>" class="module-container">
+            <div class="module-contents me-3" style="height: 500px;">
+              Loading ...
+            </div>
+          </turbo-frame>
+        <% end %>
+      </div>
+    </div>
+
+    <aside class="d-none d-xl-block col-xl-3 bg-secondary py-3 px-4">
+      <div id="webside-aside" class="pb-5"></div>
+      <div id="guides-aside"></div>
+    </aside>
   </div>
 </div>

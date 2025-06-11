@@ -2,7 +2,7 @@
 
 module QuickSearch
   class LibraryWebsiteApiSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, :facets, to: :@response
+    delegate :results, :total, to: :@response
 
     def search
       @response ||= ::LibraryWebsiteApiSearchService.new(http: http).search(q)
