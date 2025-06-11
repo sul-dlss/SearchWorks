@@ -24,7 +24,7 @@ Metrics/BlockLength:
     - 'spec/**/*'
 
 RSpec/ExampleLength:
-  Max: 12
+  Max: 13
 
 RSpec/MultipleExpectations:
   Max: 3
