@@ -14,17 +14,9 @@ $remove-icon-font-family:
   "Liberation Sans",
   sans-serif !default;
 
-/* Override blacklight 9. We may want to move this to the component library: */
-.navbar-logo {
-  --bl-logo-image: none;
-  --bl-logo-width: 250px;
-  background-color: black;
-}
-
 .input-group > .search-q {
   flex-grow: 4;
 }
-
 
 .facet-limit {
   --bs-accordion-btn-bg: var(--bs-gray-100);
