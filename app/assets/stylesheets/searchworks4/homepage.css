@@ -75,6 +75,9 @@
     font-weight: 700;
     color: var(--stanford-cardinal);
   }
+  .tips span {
+    color: var(--stanford-black);
+  }
   @media (min-width: 992px) {
     .tips,
     .features {
