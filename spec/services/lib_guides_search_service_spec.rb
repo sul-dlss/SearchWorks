@@ -27,7 +27,7 @@ RSpec.describe LibGuidesSearchService do
       }
     ])
   end
-  let(:query) { LibGuidesSearchService::Request.new('my query') }
+  let(:query) { 'my query' }
 
   before do
     stub_request(:get, /.*/).to_return(body: response)

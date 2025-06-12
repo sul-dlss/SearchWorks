@@ -15,7 +15,7 @@ RSpec.describe ArticleSearchService do
                 }
               })
   end
-  let(:query) { ArticleSearchService::Request.new('my query') }
+  let(:query) { 'my query' }
 
   before do
     stub_request(:get, /.*/).to_return(body: response)

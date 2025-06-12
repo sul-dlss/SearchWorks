@@ -62,7 +62,7 @@ RSpec.describe LibraryWebsiteApiSearchService do
       }
     )
   end
-  let(:query) { LibraryWebsiteApiSearchService::Request.new('chinese art') }
+  let(:query) { 'chinese art' }
 
   before do
     stub_request(:get, /.*/).to_return(body: response)
