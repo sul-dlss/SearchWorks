@@ -20,10 +20,11 @@ class SearchService
     end
   end
 
-  private
-
   BenchmarkLogger = ActiveSupport::Logger.new(Rails.root.join('log/benchmark.log'))
   BenchmarkLogger.formatter = Logger::Formatter.new
+
+  private
+
   def benchmark(message)
     result = nil
     bench_result = Benchmark.realtime { result = yield }
