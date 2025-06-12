@@ -2,10 +2,10 @@
 
 module QuickSearch
   class ExhibitsSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, to: :@response
+    delegate :results, :total, to: :search
 
     def search
-      @response ||= ::ExhibitsSearchService.new(http: http).search(q)
+      @search ||= ::ExhibitsSearchService.new(http: http).search(q)
     end
 
     def loaded_link
