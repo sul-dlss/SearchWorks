@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'layouts/application' do
+RSpec.describe 'layouts/application' do
   before do
     without_partial_double_verification do
       allow(view).to receive_messages(opensearch_path: '', body_class: '')
