@@ -5,7 +5,7 @@ module QuickSearch
     self.search_service = ::ExhibitsSearchService
 
     def see_all_url_template
-      Settings.EXHIBITS.QUERY_URL
+      Settings.exhibits.query_url
     end
   end
 end

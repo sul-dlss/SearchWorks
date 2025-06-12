@@ -3,14 +3,13 @@
 # Uses the Blacklight JSON API to search and then extracts select EDS fields
 class ArticleSearchService < AbstractSearchService
   def initialize(options = {})
-    options[:query_url] ||= Settings.ARTICLE.API_URL.to_s
+    options[:query_url] ||= Settings.article.api_url.to_s
     options[:response_class] ||= Response
     super
   end
 
   class Response < AbstractSearchService::Response
     HIGHLIGHTED_FACET_FIELD = 'eds_publication_type_facet'
-    QUERY_URL = Settings.ARTICLE.QUERY_URL
 
     def total
       json['response']['pages']['total_count'].to_i
@@ -20,7 +19,7 @@ class ArticleSearchService < AbstractSearchService
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
         result = SearchResult.new(
-          link: format(Settings.ARTICLE.FETCH_URL.to_s, id: doc['id']),
+          link: format(Settings.article.fetch_url, id: doc['id']),
           title: doc['eds_title'],
           format: doc['eds_publication_type'],
           journal: doc['eds_source_title'],

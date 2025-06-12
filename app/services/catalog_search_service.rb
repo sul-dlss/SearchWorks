@@ -3,14 +3,12 @@
 # Uses the Blacklight JSON API to search and then extracts select Catalog fields
 class CatalogSearchService < AbstractSearchService
   def initialize(options = {})
-    options[:query_url] ||= Settings.CATALOG.API_URL.to_s
+    options[:query_url] ||= Settings.catalog.api_url.to_s
     options[:response_class] ||= Response
     super
   end
 
   class Response < AbstractSearchService::Response
-    QUERY_URL = Settings.CATALOG.QUERY_URL
-
     def total
       json['response']['pages']['total_count'].to_i
     end
@@ -20,7 +18,7 @@ class CatalogSearchService < AbstractSearchService
       solr_docs.collect do |doc|
         result = SearchResult.new(
           title: doc['title_display'] || doc['title_full_display'],
-          link: format(Settings.CATALOG.FETCH_URL.to_s, id: doc['id']),
+          link: format(Settings.catalog.fetch_url, id: doc['id']),
           physical: doc['physical']&.first,
           author: doc['author_person_display']&.first,
           format: doc['format_main_ssim']&.first,

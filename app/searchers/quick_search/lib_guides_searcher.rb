@@ -5,7 +5,7 @@ module QuickSearch
     self.search_service = ::LibGuidesSearchService
 
     def see_all_url_template
-      Settings.LIBGUIDES.QUERY_URL
+      Settings.libguides.query_url
     end
   end
 end

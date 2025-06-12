@@ -5,7 +5,7 @@ module QuickSearch
     self.search_service = ::CatalogSearchService
 
     def see_all_url_template
-      Settings.CATALOG.QUERY_URL
+      Settings.catalog.query_url
     end
   end
 end

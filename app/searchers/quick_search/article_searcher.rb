@@ -5,7 +5,7 @@ module QuickSearch
     self.search_service = ::ArticleSearchService
 
     def see_all_url_template
-      Settings.ARTICLE.QUERY_URL
+      Settings.article.query_url
     end
   end
 end
