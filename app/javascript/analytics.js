@@ -79,15 +79,7 @@ Blacklight.onLoad(function() {
   });
 
   // Featured resources on home page
-  document.querySelectorAll('.catalog-home-page .features a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Featured resource',
-        action: 'SW/clicked',
-        label: this.href
-      })
-    })
-  })
+  trackInternalLinkClicks('.catalog-home-page .features a', 'featured-resource')
 
   // Facet collapse and expand events
   // I tried to move this file off Jquery but keeping these facet events requires it
@@ -120,24 +112,12 @@ Blacklight.onLoad(function() {
     })
   })
 
-  // Stacks Map Tool
-  document.querySelectorAll('.stackmap-find-it').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Stacks Map',
-        action: 'SW/Stacks Map Opened (from find-it button)'
-      })
-    })
-  })
+  // Stacks Map Tool Events
+  // Stacks Map Opened (from find-it button)
+  trackInternalLinkClicks('.stackmap-find-it', 'find-it-button', { includeLinkUrl: false })
 
-  document.querySelectorAll('.location-name a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Stacks Map',
-        action: 'SW/Stacks Map Opened (from location link)'
-      })
-    })
-  })
+  // Stacks Map Opened (from location link)
+  trackInternalLinkClicks('.location-name a', 'find-it-location', { includeLinkUrl: false })
 
   document.querySelectorAll('.show-description a').forEach(function(el) {
     el.addEventListener('click', function(e) {
@@ -148,15 +128,8 @@ Blacklight.onLoad(function() {
     })
   })
 
-  // // Browse-nearby
-  document.querySelectorAll('.embedded-items .gallery-document a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Browse nearby',
-        action: 'SW/recommendation clicked'
-      })
-    })
-  })
+  // Browse-nearby
+  trackInternalLinkClicks('.embedded-items .gallery-document a', 'browse-nearby', { includeLinkUrl: false, includeLinkText: false })
 
   // embedded-call-number-browse.js has code that scrolls to the currently selected item in the gallery on load
   // We want to ignore this initial scroll and only record user actions
@@ -250,5 +223,38 @@ function sendAnalyticsEvent({ action, category, label, value }) {
     event_category: category,
     event_label: label,
     event_value: value
+  });
+}
+
+// GA4 tracks outbound links by default. This function can be used to track
+// internal link clicks utilizing the exact same set of dimensions. Please
+// be judicious. GA4 warns that performance and reporting capabilities may
+// be reduced when reaching 50,000+ unique values. For example it would be
+// bad practice to use this function to track catalog result links without
+// disabling the link_url dimension, as those links would have many unique
+// values in that dimension.
+// Despite looking like a boolean, outbound is a text field.
+// GA4 sets outbound to the literal string "true" for outgoing links.
+// https://support.google.com/analytics/table/13594742#query=link
+function trackInternalLinkClicks(selector, type = "false", options = {}) {
+  const defaultOptions = {
+    includeLinkDomain: true,
+    includeLinkUrl: true,
+    includeLinkId: true,
+    includeLinkClasses: true,
+    includeLinkText: true
+  }
+  const config = { ...defaultOptions, ...options }
+
+  document.querySelectorAll(selector).forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      const dimensions = { outbound: type }
+      if (config.includeLinkDomain) dimensions.link_domain = window.location.hostname
+      if (config.includeLinkUrl) dimensions.link_url = e.currentTarget.href
+      if (config.includeLinkId && e.currentTarget.id) dimensions.link_id = e.currentTarget.id
+      if (config.includeLinkClasses) dimensions.link_classes = e.currentTarget.className
+      if (config.includeLinkText) dimensions.link_text = e.currentTarget.innerText.trim()
+      window.gtag && window.gtag('event', 'click', dimensions)
+    });
   });
 }
