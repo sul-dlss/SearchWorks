@@ -2,6 +2,8 @@
 
 # ArticleController is the controller for Article Search
 class ArticlesController < ApplicationController
+  layout 'searchworks'
+
   include Blacklight::Catalog
   include Blacklight::Configurable
   include EmailValidation
