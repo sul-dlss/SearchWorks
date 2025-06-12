@@ -2,7 +2,7 @@ MAX_RESULTS: 3
 
 LIBRARY_WEBSITE_HOME_URL: "https://library.stanford.edu"
 GLOBAL_ALERT: <%= false %>
-ENABLED_SEARCHERS:
+enabled_searchers:
   - catalog
   - article
   - exhibits

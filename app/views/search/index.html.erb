@@ -20,7 +20,7 @@
   <div class="row my-3">
     <div class="col-xl-9 col-lg-12">
       <div class="d-flex flex-wrap gap-5 mt-3" id="modules">
-        <% Settings.ENABLED_SEARCHERS.each do |searcher| %>
+        <% Settings.enabled_searchers.each do |searcher| %>
           <turbo-frame id="<%= searcher.underscore %>_module" src="/all/<%= searcher %>?q=<%= params[:q] %>" class="module-container">
             <div class="module-contents me-3" style="height: 500px;">
               Loading ...
