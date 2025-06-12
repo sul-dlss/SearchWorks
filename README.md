@@ -13,7 +13,7 @@
 
 ```
 client = HTTP.timeout(30)
-article_search = QuickSearch::ArticleSearcher.new(client, "covid").search
+article_search = ArticleSearcher.new(client, "covid").search
 # could also be CatalogSearcher or ExhibitsSearcher
 article_search.total # total number of search results
 article_search.results.size # total number of results actually returned for display, configurable with num_results_shown in settings.yml

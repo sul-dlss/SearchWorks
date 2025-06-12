@@ -23,7 +23,7 @@ module ApplicationHelper
     content_for :title, page_title.compact.join
   end
 
-  # @param [QuickSearch::ApplicationSearcher] searcher
+  # @param [ApplicationSearcher] searcher
   # @param [String] service_name
   def render_module(searcher, service_name)
     if searcher
