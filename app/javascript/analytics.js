@@ -68,15 +68,8 @@ function addPageLoadAnalytics() {
     })
   })
 
-  // Cite link
-  document.querySelectorAll('#citeLink').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Cite',
-        action: 'SW/citation tool opened'
-      })
-    })
-  })
+  // Citation tool links
+  trackInternalLinkClicks('#citeLink', 'cite', { includeLinkUrl: false })
 
   // Stacks Map Tool Events
   // Stacks Map Opened (from find-it button)
