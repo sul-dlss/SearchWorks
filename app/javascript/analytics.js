@@ -30,27 +30,6 @@ function addPageLoadAnalytics() {
     })
   })
 
-  // Track actions when search returns zero results
-  document.querySelectorAll('a[data-track="zero-results-remove-limit"]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Zero results',
-        action: 'SW/clicked-remove-limit',
-        label: this.href
-      })
-    })
-  })
-
-  document.querySelectorAll('a[data-track="zero-results-search-all-fields"]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Zero results',
-        action: 'SW/clicked-search-all-fields',
-        label: this.href
-      })
-    })
-  })
-
   // When an alternate catalog is loaded, track those link clicks
   document.querySelectorAll('[data-alternate-catalog]').forEach(function(el) {
     el.addEventListener('click', function(e) {
