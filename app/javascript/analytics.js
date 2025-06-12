@@ -227,14 +227,17 @@ function trackInternalLinkClicks(selector, type = "false", options = {}) {
   const config = { ...defaultOptions, ...options }
 
   document.querySelectorAll(selector).forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      const dimensions = { outbound: type }
-      if (config.includeLinkDomain) dimensions.link_domain = window.location.hostname
-      if (config.includeLinkUrl) dimensions.link_url = e.currentTarget.href
-      if (config.includeLinkId && e.currentTarget.id) dimensions.link_id = e.currentTarget.id
-      if (config.includeLinkClasses) dimensions.link_classes = e.currentTarget.className
-      if (config.includeLinkText) dimensions.link_text = e.currentTarget.innerText.trim()
-      window.gtag && window.gtag('event', 'click', dimensions)
-    });
+    if (el.hostname == window.location.hostname) {
+      el.addEventListener('click', function(e) {
+        console.log("click", type)
+        const dimensions = { outbound: type }
+        if (config.includeLinkDomain) dimensions.link_domain = window.location.hostname
+        if (config.includeLinkUrl) dimensions.link_url = e.currentTarget.href
+        if (config.includeLinkId && e.currentTarget.id) dimensions.link_id = e.currentTarget.id
+        if (config.includeLinkClasses) dimensions.link_classes = e.currentTarget.className
+        if (config.includeLinkText) dimensions.link_text = e.currentTarget.innerText.trim()
+        window.gtag && window.gtag('event', 'click', dimensions)
+      });
+    }
   });
 }
