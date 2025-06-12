@@ -13,10 +13,10 @@ RSpec.feature "Results Toolbar", :js do
     click_button 'search'
 
     within ".sort-and-per-page" do
-      within "div.page_links" do
-        expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Previous/)
-        expect(page).to have_css("span.page_entries", text: /1 - 20/, visible: true)
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text: /Next/, visible: true)
+      within ".page_links" do
+        expect(page).to have_no_link('Previous')
+        expect(page).to have_css(".page_entries", text: /1 - 20/, visible: true)
+        expect(page).to have_link('Next', visible: true)
       end
       expect(page).to have_css("div#view-type-dropdown button.dropdown-toggle")
       expect(page).to have_css("div#sort-dropdown", text: "Sort by relevance", visible: true)
@@ -41,10 +41,10 @@ RSpec.feature "Results Toolbar", :js do
   scenario "pagination links don't display when there is only one page of results" do
     visit root_path q: '34'
 
-    within('.sul-toolbar .page_links') do
-      expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Previous/)
-      expect(page).to have_css("span.page_entries", text: /1 - 6/)
-      expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Next/)
+    within('.page_links') do
+      expect(page).to have_no_link('Previous')
+      expect(page).to have_css(".page_entries", text: /1 - 6/)
+      expect(page).to have_no_link('Next')
     end
   end
 end
