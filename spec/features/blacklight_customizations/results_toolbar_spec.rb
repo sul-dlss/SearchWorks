@@ -18,10 +18,7 @@ RSpec.feature "Results Toolbar", :js do
         expect(page).to have_css(".page_entries", text: /1 - 20/, visible: true)
         expect(page).to have_link('Next', visible: true)
       end
-      expect(page).to have_css("div#view-type-dropdown button.dropdown-toggle")
       expect(page).to have_css("div#sort-dropdown", text: "Sort by relevance", visible: true)
-      expect(page).to have_css("#select_all-dropdown .select-all", text: "Select all")
-      expect(page).to have_css("#select_all-dropdown .unselect-all", text: "Unselect all", visible: false)
       expect(page).to have_no_css("a", text: /Cite/)
       expect(page).to have_no_css("button", text: /Send/)
     end

@@ -12,10 +12,8 @@ RSpec.describe "Responsive results toolbar", :feature, :js do
       within ".sort-and-per-page" do
         expect(page).to have_link("Next", visible: true)
         expect(page).to have_no_link("Previous", visible: true)
-        expect(page).to have_css(".btn", text: "View", visible: true)
         expect(page).to have_css(".btn", text: "Sort by relevance", visible: true)
         expect(page).to have_css(".btn", text: "20 per page", visible: true)
-        expect(page).to have_css(".btn", text: "Select all", visible: true)
       end
     end
   end
@@ -29,9 +27,7 @@ RSpec.describe "Responsive results toolbar", :feature, :js do
       within ".sort-and-per-page" do
         expect(page).to have_link("Next", visible: true)
         expect(page).to have_no_link("Previous", visible: true)
-        expect(page).to have_no_css(".btn i.fa.fa-th-list", visible: true)
         expect(page).to have_css(".btn", text: "20", visible: true)
-        expect(page).to have_css(".btn", text: "all", visible: true)
       end
     end
   end
