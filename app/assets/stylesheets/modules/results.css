@@ -16,7 +16,7 @@
 }
 
 .online-label {
-  background-color: rgb(var(--stanford-illuminating-light-rgb));
+  background-color: rgb(var(--stanford-illuminating-light-rgb), 0.5);
 
   --bs-badge-font-weight: 600;
   --bs-badge-color: var(--bs-body-color);
