@@ -59,19 +59,6 @@ class AbstractSearchService
     end
   end
 
-  class Result
-    ATTRS = %i[title format icon physical author journal imprint description online_badge link id thumbnail fulltext_link_html].freeze
-    attr_accessor *ATTRS
-
-    def to_h
-      h = {}
-      ATTRS.each do |k|
-        h[k] = send(k)
-      end
-      h.compact
-    end
-  end
-
   def initialize(options = {})
     @query_url = options[:query_url]
     @response_class = options[:response_class].to_s.constantize

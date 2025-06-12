@@ -18,15 +18,12 @@ class EarthworksSearchService < AbstractSearchService
     def results
       solr_docs = json['data']
       solr_docs.collect do |doc|
-        result = AbstractSearchService::Result.new
-        result.title = doc.dig('attributes', 'title')
-        result.link = format(Settings.EARTHWORKS.FETCH_URL.to_s, id: doc['id'])
-        result.author = doc.dig('attributes', 'dc_creator_sm', 'attributes', 'value')
-        # result.year = doc.dig('attributes', 'solr_year_i', 'attributes', 'value')
-        result.id = doc['id']
-
-        result.description = doc.dig('attributes', 'dc_description_s', 'attributes', 'value')
-        result
+        SearchResult.new(
+          title: doc.dig('attributes', 'title'),
+          link: format(Settings.EARTHWORKS.FETCH_URL.to_s, id: doc['id']),
+          author: doc.dig('attributes', 'dc_creator_sm', 'attributes', 'value'),
+          description: doc.dig('attributes', 'dc_description_s', 'attributes', 'value')
+        )
       end
     end
 

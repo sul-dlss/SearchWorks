@@ -19,13 +19,14 @@ class ArticleSearchService < AbstractSearchService
     def results
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
-        result = AbstractSearchService::Result.new
-        result.link = format(Settings.ARTICLE.FETCH_URL.to_s, id: doc['id'])
-        result.id = doc['id']
-        result.title = doc['eds_title']
-        result.format = doc['eds_publication_type']
-        result.journal = doc['eds_source_title']
-        result.icon = 'notebook.svg'
+        result = SearchResult.new(
+          link: format(Settings.ARTICLE.FETCH_URL.to_s, id: doc['id']),
+          title: doc['eds_title'],
+          format: doc['eds_publication_type'],
+          journal: doc['eds_source_title'],
+          icon: 'notebook.svg',
+          description: doc['eds_abstract']
+        )
 
         # Break up the HTML string into the pieces we use
         html = Nokogiri::HTML(doc['fulltext_link_html'])

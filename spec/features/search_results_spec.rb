@@ -16,7 +16,7 @@ RSpec.describe 'Search results', :js do
       instance_double(
         ArticleSearchService::Response,
         results: [
-          instance_double(AbstractSearchService::Result)
+          SearchResult.new
         ],
         total: 666_666
       )

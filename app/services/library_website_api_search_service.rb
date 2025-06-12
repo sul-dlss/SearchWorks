@@ -16,13 +16,13 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
 
       return unless json['data']
 
-        json['data'].map do |doc|
-          result = AbstractSearchService::Result.new
-          result.title = doc.dig('attributes', 'title')
-          result.link = doc.dig('attributes', 'path', 'alias')
-          result.description = sanitizer.sanitize(doc.dig('attributes', 'su_page_description'))
-          result
-        end
+      json['data'].map do |doc|
+        SearchResult.new(
+          title: doc.dig('attributes', 'title'),
+          link: doc.dig('attributes', 'path', 'alias'),
+          description: sanitizer.sanitize(doc.dig('attributes', 'su_page_description'))
+        )
+      end
     end
 
     def total
