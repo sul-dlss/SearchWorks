@@ -5,7 +5,7 @@ module QuickSearch
     delegate :results, :total, to: :search
 
     def search
-      @response ||= ::ArticleSearchService.new(http: http).search(q)
+      @search ||= ::ArticleSearchService.new(http: http).search(q)
     end
 
     def loaded_link

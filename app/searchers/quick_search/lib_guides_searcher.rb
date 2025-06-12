@@ -2,10 +2,10 @@
 
 module QuickSearch
   class LibGuidesSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, to: :@response
+    delegate :results, :total, to: :search
 
     def search
-      @response ||= ::LibGuidesSearchService.new(http: http).search(q)
+      @search ||= ::LibGuidesSearchService.new(http: http).search(q)
     end
 
     def loaded_link
