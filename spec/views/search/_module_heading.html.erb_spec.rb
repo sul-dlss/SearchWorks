@@ -4,18 +4,60 @@ require 'rails_helper'
 
 RSpec.describe 'search/_module_heading' do
   let(:catalog) do
-    double('QuickSearch::CatalogSearcher', see_all_link: 'https://searchworks.stanford.edu/articles?q=climate%20change')
+    instance_double(QuickSearch::CatalogSearcher, total: total, see_all_link: 'https://searchworks.stanford.edu/articles?q=climate%20change')
   end
 
   before do
-    without_partial_double_verification do
-      allow(view).to receive_messages(service_name: 'catalog', total: 0, searcher: catalog)
-    end
-    render
+    render 'search/module_heading', service_name: 'catalog', searcher: catalog
   end
 
-  it 'renders if there are no results' do
-    expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-    expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+  context 'with no results' do
+    let(:total) { 0 }
+
+    it 'renders' do
+      expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
+      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_no_link
+    end
+  end
+
+  context 'with 1 result' do
+    let(:total) { 1 }
+
+    it 'renders' do
+      expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
+      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_link 'See 1 catalog result'
+    end
+  end
+
+  context 'with 2 result' do
+    let(:total) { 2 }
+
+    it 'renders' do
+      expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
+      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_link 'See 2 catalog results'
+    end
+  end
+
+  context 'with 3 results' do
+    let(:total) { 3 }
+
+    it 'renders' do
+      expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
+      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_link 'See 3 catalog results'
+    end
+  end
+
+  context 'with 4 results' do
+    let(:total) { 4 }
+
+    it 'renders' do
+      expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
+      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_link 'See all 4 catalog results'
+    end
   end
 end

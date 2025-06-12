@@ -1,12 +1,10 @@
 <%= link_to see_all_link, class: "btn btn-outline-secondary text-nowrap" do %>
-    <% short_display_name = t("#{service_name}_search.short_display_name") %>
-    <% if total == '1' %>
-        <%= t("#{service_name}_search.see_all_message", default: "See #{total}<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> result".html_safe) %>
-    <% elsif total == '2' or total == '3' %>
-        <%= t("#{service_name}_search.see_all_message", default: "See #{total}<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
-    <% elsif total.nil? %>
-        <%= t("#{service_name}_search.see_all_message", default: "See all<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
-    <% else %>
-        <%= t("#{service_name}_search.see_all_message", default: "See all #{total}<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> results".html_safe) %>
-    <% end %>
+ 	<% case total -%>
+	<% when 1 %>
+    See <%= number_with_delimiter(total) %> <%= visually_hidden_service(service_name) %> result
+	<% when 2, 3 %>
+	  See <%= number_with_delimiter(total) %> <%= visually_hidden_service(service_name) %> results
+  <% else %>
+    See all <%= number_with_delimiter(total) %> <%= visually_hidden_service(service_name) %> results
+  <% end %>
 <% end %>
