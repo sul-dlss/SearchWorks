@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CatalogController < ApplicationController
-  layout 'searchworks4', action: 'index'
+  layout proc { |controller| controller.action_name == 'index' ? 'searchworks4' : 'searchworks' }
 
   include AllCapsParams
 
@@ -99,7 +99,7 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
-    config.index.document_component = SearchResult::DocumentComponent
+    config.index.document_component = Searchworks4::DocumentComponent
     config.index.title_component = SearchResult::DocumentTitleComponent
     config.index.constraints_component = Blacklight::ConstraintsComponent # can be removed after https://github.com/projectblacklight/blacklight/pull/3618
 

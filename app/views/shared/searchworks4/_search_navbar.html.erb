@@ -1,8 +1,8 @@
-<div id="search-navbar" class="bg-light py-2 mb-3">
+<nav id="search-navbar" class="bg-light py-2 mb-3" aria-label="<%= t('searchworks.navigation.search_bar') %>">
   <div class="container search-form">
       <%= render HomepageSearchComponent.new url: search_action_url,
                                              advanced_search_url: search_action_url(action: 'advanced_search'),
                                              params: search_state.params_for_search.except(:qt),
                                              autocomplete_path: suggest_index_catalog_path %>
                                              </div>
-</div>
+</nav>

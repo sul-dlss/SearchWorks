@@ -56,3 +56,63 @@
     overflow-wrap: break-word;
   }
 }
+
+.constraints-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.25rem;
+}
+
+.applied-filter {
+  --bs-border-radius: 99px;
+  --separator-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
+
+  .constraint-value {
+    --bs-btn-hover-color: var(--stanford-black);
+    --btn-hover-decoration: none;
+
+    cursor: default;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-inline: 0.75rem 0.25rem; /* Keeping the default top/bottom padding */
+    white-space: nowrap;
+    max-width: clamp(288px, calc(30vw), 500px);
+
+    .filter-name:after {
+      background-color: var(--bs-btn-color);
+      content: "";
+      mask: var(--separator-icon);
+      mask-repeat: no-repeat;
+      display: inline-block;
+      height: 0.8rem;
+      width: 1.25rem;
+      vertical-align: middle;
+      margin-right: -0.2rem;
+      margin-left: 0.25rem;
+      transition: background-color 0.15s ease-in-out;
+    }
+  }
+
+  .remove {
+    --bs-btn-hover-color: var(--stanford-digital-red);
+    --bs-btn-hover-bg: var(--bl-constraint-remove-hover-bg);
+    --bs-btn-hover-border-color: var(--bl-constraint-remove-hover-border-color);
+    --bs-btn-active-bg: var(--bl-constraint-remove-hover-bg);
+    --bs-btn-active-border-color: var(
+      --bl-constraint-remove-hover-border-color
+    );
+  }
+
+  .constraint-value,
+  .remove {
+    /* overriding .btn-outline-secondary, which is in the default Blacklight markup */
+    --bs-btn-border-color: var(--stanford-fog-light);
+    --bs-btn-color: var(--stanford-black);
+    --bs-btn-bg: var(--stanford-fog-light);
+    --bs-btn-hover-bg: var(--stanford-fog-light);
+    --bs-btn-hover-border-color: var(--stanford-fog-light);
+    --bs-btn-active-border-color: var(--stanford-fog-light);
+    --bs-btn-active-color: var(--stanford-black);
+    --bs-btn-padding-y: 0.25rem;
+  }
+}

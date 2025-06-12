@@ -37,7 +37,7 @@ en:
       pagination_info:
         pages:
           one: '%{start_num} - %{end_num}'
-          other: '%{start_num} - %{end_num}'
+          other: '%{start_num} - %{end_num} of %{total_num}'
         single_item_found: ''
         no_items_found: "<h2>No %{search_type} results found</h2>"
       entry_pagination_info:

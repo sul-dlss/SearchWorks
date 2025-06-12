@@ -6,14 +6,17 @@ const AlternateCatalog = (function (global) {
     titleElement: null,
 
     init: function (el) {
+      console.log(el);
       this.element = el
       this.titleElement = this.element.querySelector('.alternate-catalog-title')
 
       // Setup close click handler
       this.initCloseButton()
 
-      // Insert between the 3rd and 4th document
-      this.injectAlternateCatalogIntoResults()
+      // Insert between the 3rd and 4th document for articles
+      if (document.querySelector('.blacklight-articles')) {
+        this.injectAlternateCatalogIntoResults()
+      }
 
       // Update title
       this.titleElement.innerHTML = 'Searching...'

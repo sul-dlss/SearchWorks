@@ -1,0 +1,73 @@
+<%= content_tag @component,
+  id: @id,
+  data: {
+    'document-id': @document.id.to_s.parameterize,
+    'document-counter': @counter,
+  },
+  itemscope: true,
+  itemtype: @document.itemtype,
+  class: classes.flatten.join(' ') do %>
+  <%= header %>
+  <div class="document-main-section">
+    <% # header bar for doc items in index view %>
+    <div class="documentHeader d-flex justify-content-between">
+      <h3 class="index_title">
+        <%=  content_tag :span, class: 'document-counter' do
+        t('blacklight.search.documents.counter', counter:)
+      end %>
+        <%= helpers.link_to_document document, counter:, itemprop: 'name' %>
+      </h3>
+
+      <%= render Blacklight::Document::BookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
+    </div>
+
+    <div class="d-flex">
+      <div class="results-metadata-sections">
+
+        <% if document[:vern_title_display].present? %>
+          <div><%= document[:vern_title_display].html_safe %></div>
+        <% end %>
+
+        <%- uniform_title = helpers.get_uniform_title(document) -%>
+        <%- if uniform_title -%>
+          <% uniform_title[:fields]&.each do |field| %>
+            <div><%= helpers.auto_link(field[:field]) %></div>
+            <% if field[:vernacular].present? %>
+              <div><%= field[:vernacular] %></div>
+            <% end %>
+          <% end %>
+          <% uniform_title[:unmatched_vernacular]&.each do |field| %>
+            <div><%= field %></div>
+          <% end %>
+        <%- end -%>
+
+        <div>
+          <%= resource_icon %> <%= document.document_formats.first %>
+          <span class="main-title-date"><%= "(#{document.first('pub_year_ss')})" if document.key? 'pub_year_ss' %></span>
+        </div>
+
+        <% if document.mods? %>
+          <dl>
+            <%= render SummaryDataComponent.new(document:) %>
+          </dl>
+        <% else %>
+          <ul class="document-metadata list-unstyled">
+            <% %i[creator corporate_author meeting].each do |target| %>
+              <%= render 'marc_fields/linked_author_index', linked_author: document.linked_author(target) %>
+            <% end %>
+          </ul>
+          
+          <div class="truncate-2 col-10">
+            <%= render TocAndSummaryComponent.new(document:) %>
+          </div>
+        <% end %>
+
+      </div>
+      <div class="ms-auto">
+        <%= thumbnail %>
+      </div>
+    </div>
+    <%= render Searchworks4::AvailabilityComponent.new(document:) %>
+  </div>
+  <%= footer %>
+<% end %>

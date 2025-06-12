@@ -1,0 +1,88 @@
+.document {
+  border-top: 1px solid var(--stanford-30-black);
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+
+.index_title {
+  font-size: 1.12rem;
+}
+
+.bookmark-toggle {
+  --bl-icon-color: var(--bs-primary);
+
+  .no-js & {
+    input[type="submit"] {
+      display: inline;
+    }
+
+    .toggle-bookmark {
+      display: none;
+    }
+  }
+
+  input[type="submit"] {
+    display: none;
+  }
+
+  .toggle-bookmark {
+    cursor: pointer;
+
+    .toggle-bookmark-label {
+      font-weight: inherit;
+
+      .blacklight-icons svg {
+        height: 1.25rem;
+        width: 1.25rem;
+        overflow: visible;
+        fill: var(--bl-icon-color);
+
+        &.bookmark-checked {
+          display: none;
+        }
+      }
+    }
+
+    .toggle-bookmark-input:checked + span svg {
+      &.bookmark-checked {
+        display: inherit;
+      }
+
+      &.bookmark-unchecked {
+        display: none;
+      }
+    }
+  }
+
+  /* override for line 21.
+      Creates weird spacing in toolbar when min-width is set to 8rem */
+  .header-tools .toggle-bookmark-label {
+    min-width: 2rem;
+  }
+}
+
+.stacks-image {
+  display: block;
+  max-height: 200px;
+  max-width: 80px;
+}
+
+.page-entries-info .bi {
+  vertical-align: baseline;
+}
+
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.active-icon::before {
+  content: "✓"
+}
+
+.constraints-container .btn-reset {
+  display: none;
+}

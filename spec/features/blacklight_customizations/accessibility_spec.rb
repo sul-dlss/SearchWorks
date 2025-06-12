@@ -22,7 +22,7 @@ RSpec.feature "Aria Landmarks", :js do
   end
 
   scenario "should have search form landmark" do
-    expect(page).to have_xpath("//form[@role='search']")
+    expect(page).to have_xpath("//search/form")
   end
 
   scenario "should have context toolbar landmark" do

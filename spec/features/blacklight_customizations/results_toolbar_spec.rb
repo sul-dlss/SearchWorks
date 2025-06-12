@@ -28,7 +28,6 @@ RSpec.feature "Results Toolbar", :js do
     visit root_path
     fill_in "q", with: '24'
     click_button 'search'
-
     within('.sul-toolbar') do
       expect(page).to have_css('.page_links')
       expect(page).to have_no_content('1 entry')
