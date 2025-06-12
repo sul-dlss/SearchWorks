@@ -46,9 +46,6 @@ application.register("long-table", LongTableController)
 import MetaJsonCheckController from "./meta_json_check_controller"
 application.register("meta-json-check", MetaJsonCheckController)
 
-import PreviewBriefController from "./preview_brief_controller"
-application.register("preview-brief", PreviewBriefController)
-
 import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
 application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
