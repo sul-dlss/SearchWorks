@@ -7,6 +7,10 @@ RSpec.feature "Home Page" do
     visit root_path
   end
 
+  scenario 'does not duplicate the search form' do
+    expect(page).to have_no_css('#search-navbar')
+  end
+
   scenario "facets should display" do
     expect(page).to have_title("SearchWorks catalog : Stanford Libraries")
     expect(page).to have_css(".accordion-header", text: "Resource type")
