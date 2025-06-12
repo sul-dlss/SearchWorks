@@ -41,6 +41,9 @@ function addPageLoadAnalytics() {
     })
   })
 
+  // Track clicks in zero results content
+  trackInternalLinkClicks('.zero-results a', 'zero-results', { includeLinkUrl: false })
+
   // Featured resources on home page
   trackInternalLinkClicks('.catalog-home-page .features a', 'featured-resource')
 
