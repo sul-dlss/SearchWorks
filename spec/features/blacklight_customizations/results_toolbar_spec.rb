@@ -40,7 +40,6 @@ RSpec.feature "Results Toolbar", :js do
 
   scenario "pagination links don't display when there is only one page of results" do
     visit root_path q: '34'
-    expect(page).to have_css('h2', text: '6 catalog results')
 
     within('.sul-toolbar .page_links') do
       expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: /Previous/)

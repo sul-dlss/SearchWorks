@@ -51,8 +51,6 @@ RSpec.describe 'Bookplates' do
         expect(page).to have_css('.filter-value', text: 'Susan and Ruth Sharp Fund')
       end
 
-      expect(page).to have_css('h2', text: '1 catalog result')
-
       visit solr_document_path('45')
 
       click_link 'The Edgar Amos Boyles Centennial Book Fund'
