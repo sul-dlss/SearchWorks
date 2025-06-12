@@ -20,7 +20,7 @@
 /node_modules
 /yarn-error.log
 
-.byebug_history
+spec/examples.txt
 
 config/settings.local.yml
 config/settings/*.local.yml
