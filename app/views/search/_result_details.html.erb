@@ -4,8 +4,8 @@
 
 
 <% if result.icon.present? || result.physical %>
-  <div class="pb-1">
-    <%= image_tag result.icon, aria: { hidden: true }, class: 'icon' %>
+  <div class="pb-1 d-flex align-items-center">
+    <%= image_tag result.icon, aria: { hidden: true }, class: 'icon mx-1' %>
     <span class="fw-semibold"><%= result.format %></span>
     <% if result.physical %>
       &mdash; <%= result.physical %>
