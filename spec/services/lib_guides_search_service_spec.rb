@@ -7,25 +7,25 @@ RSpec.describe LibGuidesSearchService do
 
   let(:response) do
     JSON.dump([
-      {
-        id: "1050350",
-        name: "World languages education",
-        description: "This guide is for those interested in the teaching of world languages, both research and practice.",
-        redirect_url: "",
-        status: "1",
-        published: "2020-06-15 18:20:56",
-        created: "2020-06-15 16:20:25",
-        updated: "2020-06-15 18:20:56",
-        slug_id: "2081241",
-        slug: "world_languages_ed",
-        friendly_url: "world_languages_ed",
-        nav_type: "0",
-        count_hit: "12",
-        url: "https://guides.library.stanford.edu/c.php?g=1050350",
-        status_label: "Published",
-        type_label: "Topic Guide"
-      }
-    ])
+                {
+                  id: "1050350",
+                  name: "World languages education",
+                  description: "This guide is for those interested in the teaching of world languages, both research and practice.",
+                  redirect_url: "",
+                  status: "1",
+                  published: "2020-06-15 18:20:56",
+                  created: "2020-06-15 16:20:25",
+                  updated: "2020-06-15 18:20:56",
+                  slug_id: "2081241",
+                  slug: "world_languages_ed",
+                  friendly_url: "world_languages_ed",
+                  nav_type: "0",
+                  count_hit: "12",
+                  url: "https://guides.library.stanford.edu/c.php?g=1050350",
+                  status_label: "Published",
+                  type_label: "Topic Guide"
+                }
+              ])
   end
   let(:query) { 'my query' }
 

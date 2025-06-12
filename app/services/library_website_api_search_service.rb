@@ -34,6 +34,5 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     def json
       @json ||= JSON.parse(@body)
     end
-
   end
 end

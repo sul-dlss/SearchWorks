@@ -35,7 +35,7 @@ module QuickSearch
 
     def filter_query(query)
       if query.match(/ -$/)
-        query = query.sub(/ -$/,"")
+        query = query.sub(/ -$/, "")
       end
       query.gsub!('*', ' ')
       query.gsub!('!', ' ')
