@@ -16,26 +16,6 @@
 class AbstractSearchService
   class NoResults < StandardError; end
 
-  class Request
-    def initialize(search_terms, max_results = Settings.MAX_RESULTS)
-      @search_terms = search_terms.respond_to?(:join) ? search_terms.join(' ') : search_terms
-      @max_results = max_results
-    end
-
-    # @param [String] `base` is a URL that has format parameters `q` and `max`
-    def url(base)
-      format(base.to_s, q: CGI.escape(q), max: max)
-    end
-
-    def q
-      @search_terms.to_s
-    end
-
-    def max
-      @max_results.to_i
-    end
-  end
-
   ##
   # The AbstractSearchService::Response class is intended to be subclassed by various AbstractSearchService subclasses
   # Various methods or constants will need to be overriden in order for the subclassed response class to work properly
@@ -78,15 +58,11 @@ class AbstractSearchService
     @http = options.fetch(:http, HTTP)
   end
 
-  # @param [Request | String]
-  def search(request_or_query)
-    url = if request_or_query.respond_to?(:url)
-            request_or_query.url(@query_url.to_s)
-          else
-            format(@query_url.to_s, q: CGI.escape(request_or_query.to_s), max: Settings.MAX_RESULTS)
-          end
+  # @param [String] query
+  def search(query)
+    url = format(@query_url, q: CGI.escape(query), max: Settings.MAX_RESULTS)
 
-    response = @http.get(url.to_s)
+    response = @http.get(url)
 
     raise NoResults unless response.status.success? && response.body.present?
 
