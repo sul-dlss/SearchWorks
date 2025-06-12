@@ -25,11 +25,10 @@ class LibGuidesSearchService < AbstractSearchService
   class Response < AbstractSearchService::Response
     def results
       json.first(num_results).collect do |doc|
-        result = AbstractSearchService::Result.new
-        result.title = doc['name']
-        result.link = doc['url']
-        result.id = doc['slug_id']
-        result
+        SearchResult.new(
+          title: doc['name'],
+          link: doc['url']
+        )
       end
     end
 

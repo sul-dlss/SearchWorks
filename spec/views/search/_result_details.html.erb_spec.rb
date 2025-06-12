@@ -5,14 +5,14 @@ require 'rails_helper'
 RSpec.describe 'search/_result_details' do
   let(:description) { 'The Description' }
   let(:result) do
-    ArticleSearchService::Result.new.tap do |r|
-      r.title = 'Title'
-      r.link = 'http://example.com'
-      r.description = description
-      r.author = 'The Author'
-      r.imprint = 'Oxford : Oxford University Press, 2013.'
-      r.fulltext_link_html = '<a href="#">Link</a>'
-    end
+    SearchResult.new(
+      title: 'Title',
+      link: 'http://example.com',
+      description: description,
+      author: 'The Author',
+      imprint: 'Oxford : Oxford University Press, 2013.',
+      fulltext_link_html: '<a href="#">Link</a>'
+    )
   end
 
   before do

@@ -17,12 +17,12 @@ class ExhibitsSearchService < AbstractSearchService
   class Response < AbstractSearchService::Response
     def results
       json.first(num_results).collect do |exhibit|
-        result = AbstractSearchService::Result.new
-        result.title = exhibit['title']
-        result.link = format(settings.LINK_URL.to_s, id: exhibit['slug'])
-        result.description = exhibit['subtitle']
-        result.thumbnail = exhibit['thumbnail_url']
-        result
+        SearchResult.new(
+          title: exhibit['title'],
+          link: format(settings.LINK_URL.to_s, id: exhibit['slug']),
+          description: exhibit['subtitle'],
+          thumbnail: exhibit['thumbnail_url']
+        )
       end
     end
 
