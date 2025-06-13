@@ -69,6 +69,8 @@ const AlternateCatalog = (function (global) {
             // Update body
             const facetHtml = createFacets(response.response.facets, alternateCatalogUrl)
             facets.innerHTML = facetHtml
+            // Dispatch an event so that features like our custom analytics can take action
+            document.dispatchEvent(new CustomEvent('alternate-catalog:updated-body'))
           }
         })
     }

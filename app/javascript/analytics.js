@@ -7,6 +7,10 @@ document.addEventListener('turbo:frame-load', function() {
   addTurboFrameAnalytics()
 })
 
+document.addEventListener('alternate-catalog:updated-body', function() {
+  trackInternalLinkClicks('[data-alternate-catalog] a', 'alternate-catalog', { includeLinkUrl: false })
+})
+
 function addPageLoadAnalytics() {
   // Track engagement with IIIF icon
   document.querySelectorAll('.iiif-dnd').forEach(function(el) {
@@ -30,37 +34,8 @@ function addPageLoadAnalytics() {
     })
   })
 
-  // Track actions when search returns zero results
-  document.querySelectorAll('a[data-track="zero-results-remove-limit"]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Zero results',
-        action: 'SW/clicked-remove-limit',
-        label: this.href
-      })
-    })
-  })
-
-  document.querySelectorAll('a[data-track="zero-results-search-all-fields"]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Zero results',
-        action: 'SW/clicked-search-all-fields',
-        label: this.href
-      })
-    })
-  })
-
-  // When an alternate catalog is loaded, track those link clicks
-  document.querySelectorAll('[data-alternate-catalog]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: document.querySelector(".zero-results") ? 'Zero results' : 'Alternate Results',
-        action: 'SW/clicked-alternate-results',
-        label: this.href
-      })
-    })
-  })
+  // Track clicks in zero results content
+  trackInternalLinkClicks('.zero-results a', 'zero-results', { includeLinkUrl: false })
 
   // Featured resources on home page
   trackInternalLinkClicks('.catalog-home-page .features a', 'featured-resource')
@@ -86,15 +61,8 @@ function addPageLoadAnalytics() {
     })
   })
 
-  // Cite link
-  document.querySelectorAll('#citeLink').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Cite',
-        action: 'SW/citation tool opened'
-      })
-    })
-  })
+  // Citation tool links
+  trackInternalLinkClicks('#citeLink', 'cite', { includeLinkUrl: false })
 
   // Stacks Map Tool Events
   // Stacks Map Opened (from find-it button)
@@ -160,37 +128,13 @@ function addPageLoadAnalytics() {
   })
 
   // View type dropdown
-  document.querySelectorAll('#view-type-dropdown a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'View selection',
-        action: 'SW/click',
-        label: getText(e)
-      })
-    })
-  })
+  trackInternalLinkClicks('#view-type-dropdown a', 'view-type', { includeLinkUrl: false })
 
   // Sort by dropdown
-  document.querySelectorAll('#sort-dropdown a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Sort selection',
-        action: 'SW/click',
-        label: getText(e)
-      })
-    })
-  })
+  trackInternalLinkClicks('#sort-dropdown a', 'sort-type', { includeLinkUrl: false })
 
   // Per page dropdown
-  document.querySelectorAll('#per_page-dropdown a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Per page selection',
-        action: 'SW/click',
-        label: getText(e)
-      })
-    })
-  })
+  trackInternalLinkClicks('#per_page-dropdown a', 'per-page', { includeLinkUrl: false })
 }
 
 function addTurboFrameAnalytics() {
@@ -248,14 +192,16 @@ function trackInternalLinkClicks(selector, type = "false", options = {}) {
   const config = { ...defaultOptions, ...options }
 
   document.querySelectorAll(selector).forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      const dimensions = { outbound: type }
-      if (config.includeLinkDomain) dimensions.link_domain = window.location.hostname
-      if (config.includeLinkUrl) dimensions.link_url = e.currentTarget.href
-      if (config.includeLinkId && e.currentTarget.id) dimensions.link_id = e.currentTarget.id
-      if (config.includeLinkClasses) dimensions.link_classes = e.currentTarget.className
-      if (config.includeLinkText) dimensions.link_text = e.currentTarget.innerText.trim()
-      window.gtag && window.gtag('event', 'click', dimensions)
-    });
+    if (el.hostname == window.location.hostname) {
+      el.addEventListener('click', function(e) {
+        const dimensions = { outbound: type }
+        if (config.includeLinkDomain) dimensions.link_domain = window.location.hostname
+        if (config.includeLinkUrl) dimensions.link_url = e.currentTarget.href
+        if (config.includeLinkId && e.currentTarget.id) dimensions.link_id = e.currentTarget.id
+        if (config.includeLinkClasses) dimensions.link_classes = e.currentTarget.className
+        if (config.includeLinkText) dimensions.link_text = e.currentTarget.innerText.trim()
+        window.gtag && window.gtag('event', 'click', dimensions)
+      });
+    }
   });
 }
