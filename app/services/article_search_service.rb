@@ -34,9 +34,8 @@ class ArticleSearchService < AbstractSearchService
           online_label['class'] += ' badge rounded-pill ms-2'
           result.title += online_label.to_html
         end
-        stanford_only = html.css('.stanford-only').first
         result.fulltext_link_html = html.css('a').first&.to_html
-        result.fulltext_link_html += stanford_only.to_html if stanford_only
+        result.fulltext_link_html += stanford_only(html)
         result.author = doc['eds_authors']&.first
         # result.year = doc['pub_year_tisim']&.html_safe
         result.description = doc['eds_abstract']
@@ -45,6 +44,14 @@ class ArticleSearchService < AbstractSearchService
     end
 
     private
+
+    def stanford_only(html)
+      # Rip out html.css('.stanford-only').first when https://github.com/sul-dlss/SearchWorks/pull/5129 is merged
+      stanford_only = html.css('[aria-label="Stanford-only"]').first || html.css('.stanford-only').first
+      return stanford_only.to_html if stanford_only
+
+      ''
+    end
 
     def json
       @json ||= JSON.parse(@body)

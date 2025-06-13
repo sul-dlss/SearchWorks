@@ -5,5 +5,7 @@ export default class extends Controller {
 
   connect() {
     document.getElementById(this.countIdValue).innerText = this.totalValue;
+    const popovers = document.querySelectorAll('[data-bs-toggle="popover"]')
+    popovers.forEach(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
   }
 }
