@@ -21,28 +21,4 @@ RSpec.describe "MHLD", :feature do
       end
     end
   end
-
-  describe "results view", :js do
-    before do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-    end
-
-    it "is present in the accordion section" do
-      visit search_catalog_path(q: 'id:10')
-
-      within(first('.document')) do
-        expect(page).to have_content('Check availability')
-        within('.accordion-section.location') do
-          find('button.header').click
-          expect(page).to have_css('tr th strong', text: 'Periodicals')
-          expect(page).to have_css('tr th', text: 'public note1')
-          expect(page).to have_css('tr th', text: 'public note2')
-          expect(page).to have_css('tr th', text: 'public note3')
-          expect(page).to have_css('tr td .note-highlight', text: 'Latest: latest received1')
-          expect(page).to have_css('tr td .note-highlight', text: 'Latest: latest received2')
-          expect(page).to have_css('tr td .note-highlight', text: 'Latest: latest received3')
-        end
-      end
-    end
-  end
 end

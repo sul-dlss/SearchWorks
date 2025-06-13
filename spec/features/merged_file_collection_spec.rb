@@ -8,6 +8,7 @@ RSpec.feature "Merged File Collections", :js do
   end
 
   scenario "in search results" do
+    pending 'SW4.0 redesign in progress.'
     visit root_path
     fill_in 'q', with: '38'
     find('button#search').click

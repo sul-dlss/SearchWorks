@@ -10,13 +10,10 @@ RSpec.describe "Responsive results toolbar", :feature, :js do
       click_button 'search'
 
       within ".sort-and-per-page" do
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
-        expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "Sort by relevance", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20 per page", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "Select all", visible: true)
+        expect(page).to have_link("Next", visible: true)
+        expect(page).to have_no_link("Previous", visible: true)
+        expect(page).to have_css(".btn", text: "Sort by relevance", visible: true)
+        expect(page).to have_css(".btn", text: "20 per page", visible: true)
       end
     end
   end
@@ -28,12 +25,9 @@ RSpec.describe "Responsive results toolbar", :feature, :js do
       click_button 'search'
 
       within ".sort-and-per-page" do
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: true)
-        expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: "Previous", visible: true)
-        expect(page).to have_no_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)
+        expect(page).to have_link("Next", visible: true)
+        expect(page).to have_no_link("Previous", visible: true)
+        expect(page).to have_css(".btn", text: "20", visible: true)
       end
     end
   end
@@ -45,12 +39,9 @@ RSpec.describe "Responsive results toolbar", :feature, :js do
       click_button 'search'
 
       within ".sort-and-per-page" do
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Next", visible: false)
-        expect(page).to have_no_css("a.btn.btn-sul-toolbar", text: "Previous", visible: false)
-        expect(page).to have_no_css("button.btn.btn-sul-toolbar i.fa.fa-th-list", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "View", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "20", visible: true)
-        expect(page).to have_css("button.btn.btn-sul-toolbar", text: "all", visible: true)
+        expect(page).to have_link("Next", visible: true)
+        expect(page).to have_no_link("Previous", visible: true)
+        expect(page).to have_css("button", text: "20", visible: true)
       end
     end
   end

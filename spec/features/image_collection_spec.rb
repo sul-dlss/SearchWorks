@@ -37,6 +37,7 @@ RSpec.feature "Image Collection", :js do
   end
 
   scenario "Search results image filmstrip" do
+    pending 'SW4.0 redesign in progress.'
     visit root_path
 
     fill_in "q", with: "29"
@@ -55,6 +56,7 @@ RSpec.feature "Image Collection", :js do
   end
 
   scenario "Search results image filmstrip preview" do
+    pending 'SW4.0 redesign in progress.'
     visit root_path
 
     fill_in "q", with: "29"

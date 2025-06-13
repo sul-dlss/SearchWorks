@@ -12,9 +12,7 @@ RSpec.feature "Search Results Page" do
 
     within(first('.document')) do
       expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")
-      within('.document-metadata') do
-        expect(page).to have_css('li', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
-      end
+      expect(page).to have_css('div', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
     end
   end
 end

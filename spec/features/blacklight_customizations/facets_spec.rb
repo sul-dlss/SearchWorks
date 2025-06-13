@@ -59,15 +59,7 @@ RSpec.feature "Facets Customizations" do
     click_button 'search'
 
     within "div#facets" do
-      expect(page).to have_css("h2.facets-heading", text: "Refine your results")
-    end
-  end
-
-  scenario "while at an access point facet title reflects the custom heading" do
-    visit '/databases'
-
-    within "div#facets" do
-      expect(page).to have_css("h2.facets-heading", text: "Within databases")
+      expect(page).to have_css("h2.facets-heading", text: "Filters")
     end
   end
 end

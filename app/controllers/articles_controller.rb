@@ -2,6 +2,8 @@
 
 # ArticleController is the controller for Article Search
 class ArticlesController < ApplicationController
+  layout 'searchworks'
+
   include Blacklight::Catalog
   include Blacklight::Configurable
   include EmailValidation
@@ -204,7 +206,6 @@ class ArticlesController < ApplicationController
 
     # View type group config
     config.view.list.icon = Searchworks::Icons::ListIcon
-    config.view.brief(icon: Searchworks::Icons::BriefIcon, document_component: Articles::DocumentBriefComponent)
 
     # Sorting, using EDS sort keys
     config.add_sort_field 'relevance', sort: 'relevance', label: 'relevance'

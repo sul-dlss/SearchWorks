@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CatalogController < ApplicationController
-  layout proc { |controller| controller.action_name != 'index' || controller.has_search_parameters? ? "searchworks" : "searchworks4" }
+  layout proc { |controller| controller.action_name == 'index' ? 'searchworks4' : 'searchworks' }
 
   include AllCapsParams
 
@@ -99,7 +99,7 @@ class CatalogController < ApplicationController
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
-    config.index.document_component = SearchResult::DocumentComponent
+    config.index.document_component = Searchworks4::DocumentComponent
     config.index.title_component = SearchResult::DocumentTitleComponent
     config.index.constraints_component = Blacklight::ConstraintsComponent # can be removed after https://github.com/projectblacklight/blacklight/pull/3618
 
@@ -487,7 +487,6 @@ class CatalogController < ApplicationController
     # View type group config
     config.view.list.icon = Searchworks::Icons::ListIcon
     config.view.gallery(icon: Searchworks::Icons::GalleryIcon, document_component: SearchResult::DocumentGalleryComponent)
-    config.view.brief(icon: Searchworks::Icons::BriefIcon, document_component: SearchResult::DocumentBriefComponent)
 
     config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }

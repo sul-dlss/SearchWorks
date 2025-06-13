@@ -3,6 +3,7 @@
 import "@hotwired/turbo-rails";
 import "blacklight-frontend";
 
+import './alternate_catalog';
 import "./libraryh3lp";
 import "./popover";
 import "./feedback_form";
@@ -16,3 +17,4 @@ document.addEventListener("turbo:before-cache", function () {
 });
 
 import "./controllers"
+import "./controllers/external"
