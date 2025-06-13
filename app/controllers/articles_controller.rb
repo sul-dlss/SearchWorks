@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  rescue_from 'EBSCO::EDS::BadRequest' do |exception|
+  rescue_from 'Faraday::Error' do |exception|
     raise exception if params[:q].present?
     raise ActionController::RoutingError, 'Not Found' if params[:action] == 'show'
 
@@ -47,7 +47,8 @@ class ArticlesController < ApplicationController
 
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
-    config.search_builder_class = ArticleSearchBuilder
+    config.response_model = Eds::Response
+    config.search_builder_class = Eds::SearchBuilder
     config.default_per_page = 20
     config.document_model = EdsDocument
 
@@ -76,38 +77,46 @@ class ArticlesController < ApplicationController
 
     config.add_search_field('search') do |field|
       field.label = 'All fields'
+      field.eds_field_code = nil
     end
 
     config.add_search_field('author') do |field|
       field.label = 'Author'
+      field.eds_field_code = 'AU'
     end
 
     config.add_search_field('title') do |field|
       field.label = 'Title'
+      field.eds_field_code = 'TI'
     end
 
     config.add_search_field('subject') do |field|
       field.label = 'Subject'
+      field.eds_field_code = 'SU'
     end
 
     config.add_search_field('source') do |field|
       field.label = 'Journal/Source'
+      field.eds_field_code = 'SO'
     end
 
     # Additional "subject"-based searches as EDS uses multiple field codes
     config.add_search_field('subject_heading') do |field| # SH field code
       field.label = 'Keyword'
       field.include_in_simple_select = false
+      field.eds_field_code = 'SH'
     end
 
     config.add_search_field('descriptor') do |field| # DE field code
       field.label = 'Keyword'
       field.include_in_simple_select = false
+      field.eds_field_code = 'DE'
     end
 
     config.add_search_field('keyword') do |field| # KW field code
       field.label = 'Keyword'
       field.include_in_simple_select = false
+      field.eds_field_code = 'KW'
     end
 
     # solr field configuration for document/show views
@@ -176,15 +185,15 @@ class ArticlesController < ApplicationController
     # Facet field configuration
     # Setting `if: false` for the limiters facet so the facet does not render as
     # a facet but we still can apploy our configured label to the breadcrumbs
-    config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false
-    config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true
-    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::AdditionalSelectionsFacetComponent
-    config.add_facet_field 'eds_language_facet', label: 'Language', component: Articles::Response::LimitedFacetFieldListComponent
-    config.add_facet_field 'eds_subject_topic_facet', label: 'Topic', component: Articles::Response::LimitedFacetFieldListComponent
-    config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography', component: Articles::Response::LimitedFacetFieldListComponent
-    config.add_facet_field 'eds_journal_facet', label: 'Journal title', component: Articles::Response::LimitedFacetFieldListComponent
-    config.add_facet_field 'eds_publisher_facet', label: 'Publisher', component: Articles::Response::LimitedFacetFieldListComponent
-    config.add_facet_field 'eds_content_provider_facet', label: 'Database', component: Articles::Response::AdditionalSelectionsFacetComponent
+    config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false, eds_limiter: true
+    config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true, eds_limiter: true
+    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SourceType'
+    config.add_facet_field 'eds_language_facet', label: 'Language', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Language'
+    config.add_facet_field 'eds_subject_topic_facet', label: 'Topic', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectEDS'
+    config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectGeographic'
+    config.add_facet_field 'eds_journal_facet', label: 'Journal title', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Journal'
+    config.add_facet_field 'eds_publisher_facet', label: 'Publisher', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Publisher'
+    config.add_facet_field 'eds_content_provider_facet', label: 'Database', component: Articles::Response::LimitedFacetFieldListComponent, field: 'ContentProvider'
 
     # Other available facets
     # config.add_facet_field 'eds_publication_year_facet', label: 'Publication Year'
@@ -198,9 +207,9 @@ class ArticlesController < ApplicationController
     config.view.brief(icon: Searchworks::Icons::BriefIcon, document_component: Articles::DocumentBriefComponent)
 
     # Sorting, using EDS sort keys
-    config.add_sort_field 'relevance', sort: 'score desc', label: 'relevance'
-    config.add_sort_field 'newest', sort: 'newest', label: 'date (most recent)'
-    config.add_sort_field 'oldest', sort: 'oldest', label: 'date (oldest)'
+    config.add_sort_field 'relevance', sort: 'relevance', label: 'relevance'
+    config.add_sort_field 'newest', sort: 'date', label: 'date (most recent)'
+    config.add_sort_field 'oldest', sort: 'date2', label: 'date (oldest)'
   end
 
   def fulltext_link
@@ -210,7 +219,7 @@ class ArticlesController < ApplicationController
   rescue => e
     if current_user
       # We only care if there's a user, otherwise it's definitely a data problem?
-      context = current_user.to_honeybadger_context.merge(eds_guest: session['eds_guest'], eds_session_token: session['eds_session_token'])
+      context = current_user.to_honeybadger_context.merge(eds_guest: session['eds_guest'], eds_session_token: session[Settings.EDS_SESSION_TOKEN_KEY])
       Honeybadger.notify(e, context:)
     end
 
@@ -263,7 +272,7 @@ class ArticlesController < ApplicationController
   def search_service
     eds_params = {
       guest:          session['eds_guest'],
-      session_token:  session['eds_session_token']
+      session_token:  session[Settings.EDS_SESSION_TOKEN_KEY]
     }
     Eds::SearchService.new(blacklight_config, params, eds_params)
   end
@@ -275,11 +284,11 @@ class ArticlesController < ApplicationController
   # Reuse the EDS session token if available in the user's session data,
   # otherwise establish a session
   def setup_eds_session(session)
-    return if session['eds_session_token'].present?
+    return if session[Settings.EDS_SESSION_TOKEN_KEY].present?
 
     session['eds_guest'] = !on_campus_or_su_affiliated_user?
 
-    session['eds_session_token'] = Eds::Session.new(
+    session[Settings.EDS_SESSION_TOKEN_KEY] = Eds::Session.new(
       guest: session['eds_guest'],
       caller: 'new-session'
     ).session_token
@@ -287,7 +296,7 @@ class ArticlesController < ApplicationController
     if current_user
       Honeybadger.add_breadcrumb('Established EDS session', metadata: {
         eds_guest: session['eds_guest'],
-        eds_session_token: session['eds_session_token'],
+        eds_session_token: session[Settings.EDS_SESSION_TOKEN_KEY],
         request_ip: request.remote_ip,
         affiliations: current_user.affiliations,
         person_affiliations: current_user.person_affiliations,

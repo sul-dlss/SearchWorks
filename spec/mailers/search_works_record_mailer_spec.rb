@@ -33,7 +33,12 @@ RSpec.describe SearchWorksRecordMailer do
       let(:documents) do
         [
           EdsDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'],
-                          eds_fulltext_links: [{ 'label' => 'View request options', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }])
+                          'FullText' => {
+                            'CustomLinks' => [{
+                              'Text' => 'View request options',
+                              'Url' => 'http://example.com'
+                            }]
+                          })
         ]
       end
       let(:mail) { SearchWorksRecordMailer.article_email_record(documents, params, url_params) }

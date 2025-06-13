@@ -5,18 +5,35 @@ require 'rails_helper'
 RSpec.describe EdsSubjects do
   let(:document) do
     EdsDocument.new(
-      'eds_subjects' => '<searchLink fieldCode="SH" term="abc &amp; def">abc &amp; def</searchLink>' \
-                        '<br>' \
-                        '<searchLink fieldCode="SU" term="xyz">xyz</searchLink>' \
-                        '<br/>' \
-                        '<searchLink fieldCode="DE" term="zyx">zyx</searchLink>' \
-                        '<br />' \
-                        '<searchLink fieldCode="KW" term="abc">abc</searchLink>',
-      'eds_subjects_person' => %w[Person1 Person2],
-      'eds_subjects_geographic' => %w[Paris France],
-      'eds_author_supplied_keywords' => '<searchLink fieldcode="KW" term="%22income+inequality%22">income inequality</searchLink>' \
-                                        '<br>' \
-                                        '<searchLink fieldcode="KW" term="%22taxation%22">taxation</searchLink>'
+      "Items" => [
+        {
+          "Name" => "Subject", "Label" => "Subject Terms", "Group" => "Su",
+          "Data" => '<searchLink fieldCode="SH" term="abc &amp; def">abc &amp; def</searchLink>' \
+                    '<br>' \
+                    '<searchLink fieldCode="SU" term="xyz">xyz</searchLink>' \
+                    '<br/>' \
+                    '<searchLink fieldCode="DE" term="zyx">zyx</searchLink>' \
+                    '<br />' \
+                    '<searchLink fieldCode="KW" term="abc">abc</searchLink>'
+        },
+        {
+          "Name" => "SubjectPerson",
+          "Data" => '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>'
+        },
+        {
+          "Name" => "SubjectGeographic",
+          "Label" => "Geographic Terms",
+          "Group" => "Su",
+          "Data" => '<searchLink fieldCode="SU" term="Paris">Paris</searchLink><br/><searchLink fieldCode="SU" term="France">France</searchLink>'
+        },
+        {
+          "Name" => "Keyword",
+          "Data" => '<searchLink fieldcode="KW" term="%22income+inequality%22">income inequality</searchLink>' \
+                    '<br>' \
+                    '<searchLink fieldcode="KW" term="%22taxation%22">taxation</searchLink>'
+        }
+
+      ]
     )
   end
 

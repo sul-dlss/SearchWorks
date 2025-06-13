@@ -34,7 +34,7 @@ if Rails.env.production?
     user.person_affiliations = auth.env['unscoped-affiliation']
     user.entitlements = auth.env['eduPersonEntitlement']
     # Reset EDS session token so that a new session is established
-    auth.env['rack.session']['eds_session_token'] = nil
+    auth.env['rack.session'][Settings.EDS_SESSION_TOKEN_KEY] = nil
   end
 
   # re-hydrate the user's affiliations from the session data for each request.
@@ -50,7 +50,7 @@ if Rails.env.production?
     auth.session(:user)['suAffiliation'] = nil
     auth.session(:user)['unscoped-affiliation'] = nil
     auth.session(:user)['eduPersonEntitlement'] = nil
-    auth.env['rack.session']['eds_session_token'] = nil
+    auth.env['rack.session'][Settings.EDS_SESSION_TOKEN_KEY] = nil
   end
 end
 

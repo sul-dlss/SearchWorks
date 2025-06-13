@@ -42,7 +42,6 @@ RSpec.describe Eds::SearchService do
 
     it '#search_results' do
       results = instance.search_results
-      expect(results).to be_an(Blacklight::Solr::Response)
       expect(results.documents).to eq StubArticleService::SAMPLE_RESULTS
     end
 

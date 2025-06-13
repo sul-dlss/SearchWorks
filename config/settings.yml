@@ -40,11 +40,12 @@ EDS_LOGDIR: <%= Rails.root.join('log') %>
 EDS_TIMEOUT: 15
 EDS_OPEN_TIMEOUT: 10
 EDS_HOSTS:
-  - eds-api.ebscohost.com
+  - https://eds-api.ebscohost.com
 EDS_CITATION_LINK_PATTERN: '[.,]\s+(&lt;i&gt;EBSCOhost|viewed|Available|Retrieved from|(?:https?:\/\/)?stanford\.idm\.oclc\.org|Disponível em).+$'
 EDS_CITATION_LINK_REPLACE: "."
 EDS_CITATION_DB_PATTERN: '\s+<i>EBSCOhost<\/i>\.?'
 EDS_SMARTTEXT_FAILOVER: false
+EDS_SESSION_TOKEN_KEY: 'eds_session_token_2025'
 SU_AFFILIATIONS: []
 UNSCOPED_AFFILIATION: "member"
 ACCESS_ENTITLEMENT: "stanford:library-eresources-eligible"

@@ -83,13 +83,28 @@ RSpec.feature 'Article Searching' do
 
     scenario 'authors, subjects, and abstracts are truncated', :js do
       long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
-      document = EdsDocument.new(
-        id: '1234',
-        eds_title: 'Some title',
-        eds_authors:  long_data,
-        eds_abstract: long_data,
-        eds_subjects: "<searchLink fieldCode=\"SU\" term=\"#{long_data}\">#{long_data}</searchLink>"
-      )
+      document = EdsDocument.new({
+                                   id: '123',
+                                    eds_title: 'The title of the document',
+                                    "Items" => [
+                                      {
+                                        "Name" => "Abstract", "Data" => long_data
+                                      },
+                                      {
+                                        "Name" => "Subject", "Label" => "Subject Terms", "Group" => "Su",
+                                        "Data" => "<searchLink fieldCode=\"SU\" term=\"#{long_data}\">#{long_data}</searchLink>"
+                                      }
+                                    ],
+                                    "RecordInfo" => {
+                                      "BibRecord" => {
+                                        "BibRelationships" => {
+                                          "IsPartOfRelationships" => [{
+                                            "NameFull" => long_data
+                                          }]
+                                        }
+                                      }
+                                    }
+                                 })
       stub_article_service(docs: [document])
 
       visit articles_path(q: 'Example Search')

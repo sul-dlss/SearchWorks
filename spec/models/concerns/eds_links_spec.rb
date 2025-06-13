@@ -4,9 +4,14 @@ require 'rails_helper'
 
 RSpec.describe EdsLinks do
   let(:document) do
-    EdsDocument.new(
-      'eds_fulltext_links' => [{ 'label' => 'HTML full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }]
-    )
+    EdsDocument.new({
+                      'FullText' => {
+                        'CustomLinks' => [{
+                          'Text' => 'HTML full text',
+                          'Url' => 'http://example.com'
+                        }]
+                      }
+                    })
   end
 
   context '#eds_links' do
@@ -22,112 +27,212 @@ RSpec.describe EdsLinks do
       expect(document.eds_links.fulltext).to be_present
     end
 
-    it 'does not consider links full-text when label is missing' do
-      document['eds_fulltext_links'].first.delete('label')
-      expect(document.eds_links.fulltext).not_to be_present
+    context 'with a link without a label' do
+      let(:document) do
+        EdsDocument.new({
+                          'FullText' => {
+                            'CustomLinks' => [{
+                              'Url' => 'http://example.com'
+                            }]
+                          }
+                        })
+      end
+
+      it 'is not a fulltext link' do
+        expect(document.eds_links.fulltext).not_to be_present
+      end
     end
 
-    it 'does not consider links full-text when type is not correct' do
-      document['eds_fulltext_links'].first['type'] = 'unknown'
-      expect(document.eds_links.fulltext).not_to be_present
+    context 'with a cataloglink' do
+      let(:document) do
+        EdsDocument.new({
+                          'Item' => [{
+                            'Group' => 'URL',
+                            'Data' => 'whatever',
+                            'Label' => 'Something'
+                          }]
+                        })
+      end
+
+      it 'is not a fulltext link' do
+        expect(document.eds_links.fulltext).not_to be_present
+      end
     end
   end
 
-  context 'rewriting labels' do
-    it 'handles HTML full text' do
-      document['eds_fulltext_links'].first['label'] = 'HTML full text'
-      expect(document.eds_links.all.first.text).to eq('View full text')
+  context 'with a HTML full text link' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'CustomLinks' => [{
+                            'Text' => 'HTML full text',
+                            'Url' => 'http://example.com'
+                          }]
+                        }
+                      })
+    end
+
+    it 'relabels it to "View full text"' do
+      expect(document.eds_links.all.first).to have_attributes(text: 'View full text', stanford_only?: false)
+    end
+  end
+
+  context 'with a PDF full text link' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'Links' => [
+                            {
+                              'Type' => 'pdflink'
+                            }
+                          ]
+                        }
+                      })
     end
 
     it 'handles PDF full text variants' do
-      document['eds_fulltext_links'].first['label'] = 'PDF full text'
-      document['eds_fulltext_links'].first['type'] = 'pdf'
-      expect(document.eds_links.all.first.text).to eq('View/download PDF')
+      expect(document.eds_links.all.first).to have_attributes(text: 'View/download PDF', stanford_only?: true)
+    end
+  end
 
-      document['eds_fulltext_links'].first['label'] = 'PDF eBook Full Text'
-      document['eds_fulltext_links'].first['type'] = 'ebook-pdf'
-      expect(document.eds_links.all.first.text).to eq('View/download PDF')
+  context 'with a PDF ebook link' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'Links' => [
+                            {
+                              'Type' => 'ebook-pdf'
+                            }
+                          ]
+                        }
+                      })
     end
 
-    it 'retains label for ebook-epub links' do
-      document['eds_fulltext_links'].first['label'] = 'ePub eBook Full Text'
-      document['eds_fulltext_links'].first['type'] = 'ebook-epub'
-      expect(document.eds_links.all.first.text).to eq('ePub eBook Full Text')
+    it 'handles PDF full text variants' do
+      expect(document.eds_links.all.first).to have_attributes(text: 'View/download PDF', stanford_only?: true)
+    end
+  end
+
+  context 'with an epub ebook link' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'Links' => [
+                            {
+                              'Type' => 'ebook-epub'
+                            }
+                          ]
+                        }
+                      })
     end
 
-    it 'handles Check SFX for full text' do
-      document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
-      expect(document.eds_links.all.first.text).to eq('View on content provider&#39;s site')
+    it 'handles PDF full text variants' do
+      expect(document.eds_links.all.first).to have_attributes(text: 'ePub eBook Full Text')
+    end
+  end
+
+  context 'with a SFX link' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'CustomLinks' => [{
+                            'Text' => 'Check SFX for full text',
+                            'Url' => 'http://sfx.example.com'
+                          }]
+                        }
+                      })
     end
 
-    it 'handles View request options' do
-      document['eds_fulltext_links'].first['label'] = 'View request options'
+    it 'relabels it to "View full text"' do
+      expect(document.eds_links.all.first).to have_attributes(text: 'View on content provider&#39;s site', stanford_only?: false)
+    end
+  end
+
+  context 'with a "View request options" link' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'CustomLinks' => [{
+                            'Text' => 'View request options',
+                            'Url' => 'http://example.com'
+                          }]
+                        }
+                      })
+    end
+
+    it 'relabels it to "Find full text"' do
       expect(document.eds_links.all.first.text).to eq('Find full text or request')
     end
 
-    it 'handles Open Access' do
-      document['eds_fulltext_links'].first['label'] = 'View in HathiTrust Open Access'
-      expect(document.eds_links.all.first.text).to eq('View in HathiTrust Open Access')
+    context 'with some other label without special handling' do
+      let(:document) do
+        EdsDocument.new({
+                          'FullText' => {
+                            'CustomLinks' => [{
+                              'Text' => 'View in HathiTrust Open Access',
+                              'Url' => 'http://example.com'
+                            }]
+                          }
+                        })
+      end
+
+      it 'uses the original label' do
+        expect(document.eds_links.all.first.text).to eq('View in HathiTrust Open Access')
+      end
     end
 
     context 'omits unwanted links' do
-      it 'skips Access URL' do
-        document['eds_fulltext_links'].first['label'] = 'ACCESS URL'
-        expect(document.eds_links.fulltext).to be_blank
+      let(:link_text) { '' }
+      let(:document) do
+        EdsDocument.new({
+                          'FullText' => {
+                            'CustomLinks' => [{
+                              'Text' => link_text,
+                              'Url' => 'http://example.com'
+                            }]
+                          }
+                        })
       end
 
-      it 'skips Availability' do
-        document['eds_fulltext_links'].first['label'] = 'AVAILABILITY'
-        expect(document.eds_links.fulltext).to be_blank
+      context 'with "Access URL"' do
+        let(:link_text) { 'Access URL' }
+
+        it 'skips the link' do
+          expect(document.eds_links.fulltext).to be_blank
+        end
       end
-    end
-  end
 
-  context 'stanford only links' do
-    it 'sets PDF download links to stanford only' do
-      document['eds_fulltext_links'].first['label'] = 'PDF full text'
-      expect(document.eds_links.all.first).to be_stanford_only
-    end
+      context 'with "AVAILABILITY"' do
+        let(:link_text) { 'AVAILABILITY' }
 
-    it 'sets eBook PDF download links to stanford only' do
-      document['eds_fulltext_links'].first['label'] = 'PDF eBook Full Text'
-      expect(document.eds_links.all.first).to be_stanford_only
-    end
-
-    it 'does not set HTML links to stanford only' do
-      document['eds_fulltext_links'].first['label'] = 'HTML full text'
-      expect(document.eds_links.all.first).not_to be_stanford_only
-    end
-
-    it 'does not set SFX links to stanford only' do
-      document['eds_fulltext_links'].first['label'] = 'Check SFX for full text'
-      expect(document.eds_links.all.first).not_to be_stanford_only
-    end
-  end
-
-  context 'non customlink-fulltext links' do
-    it 'ignores other link types' do
-      document['eds_fulltext_links'].first['type'] = 'unknown'
-      expect(document.eds_links.all).not_to be_present
+        it 'skips the link' do
+          expect(document.eds_links.fulltext).to be_blank
+        end
+      end
     end
   end
 
   context 'prioritizing links' do
-    let(:all_link_categories) do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'CustomLinks' => links
+                        }
+                      })
+    end
+    let(:all_custom_links) do
       [
-        { 'label' => 'HTML FULL TEXT',          'url' => 'http://example.com/1', 'type' => 'customlink-fulltext' },
-        { 'label' => 'PDF FULL TEXT',           'url' => 'http://example.com/2', 'type' => 'customlink-fulltext' },
-        { 'label' => 'CHECK SFX FOR FULL TEXT', 'url' => 'http://example.com/3', 'type' => 'customlink-fulltext' },
-        { 'label' => 'OPEN ACCESS',             'url' => 'http://example.com/4', 'type' => 'customlink-fulltext' },
-        { 'label' => 'VIEW REQUEST OPTIONS',    'url' => 'http://example.com/5', 'type' => 'customlink-fulltext' },
-        { 'label' => 'ACCESS URL',              'url' => 'http://example.com/6', 'type' => 'customlink-fulltext' } # ignored
+        { 'Text' => 'HTML FULL TEXT',          'Url' => 'http://example.com/1' },
+        { 'Text' => 'PDF FULL TEXT',           'Url' => 'http://example.com/2' },
+        { 'Text' => 'CHECK SFX FOR FULL TEXT', 'Url' => 'http://example.com/3' },
+        { 'Text' => 'OPEN ACCESS',             'Url' => 'http://example.com/4' },
+        { 'Text' => 'VIEW REQUEST OPTIONS',    'Url' => 'http://example.com/5' },
+        { 'Text' => 'ACCESS URL',              'Url' => 'http://example.com/6' } # ignored
       ]
     end
 
     context 'categories 1 and 2' do
-      let(:document) do
-        EdsDocument.new('eds_fulltext_links' => all_link_categories)
-      end
+      let(:links) { all_custom_links }
 
       it 'shows 1 and 2 only' do
         expect(document.eds_links.fulltext.length).to eq 2
@@ -137,9 +242,7 @@ RSpec.describe EdsLinks do
     end
 
     context 'category 3' do
-      let(:document) do
-        EdsDocument.new('eds_fulltext_links' => all_link_categories[2..4])
-      end
+      let(:links) { all_custom_links[2..4] }
 
       it 'shows 3 only' do
         expect(document.eds_links.fulltext.length).to eq 1
@@ -148,9 +251,7 @@ RSpec.describe EdsLinks do
     end
 
     context 'category 4' do
-      let(:document) do
-        EdsDocument.new('eds_fulltext_links' => all_link_categories[3..4])
-      end
+      let(:links) { all_custom_links[3..4] }
 
       it 'shows 4 only' do
         expect(document.eds_links.fulltext.length).to eq 1
@@ -159,9 +260,7 @@ RSpec.describe EdsLinks do
     end
 
     context 'category 5' do
-      let(:document) do
-        EdsDocument.new('eds_fulltext_links' => [all_link_categories[4]])
-      end
+      let(:links) { all_custom_links[4..4] }
 
       it 'shows 5 only' do
         expect(document.eds_links.fulltext.length).to eq 1
