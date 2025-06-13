@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe QuickSearch::LibGuidesSearcher do
-  subject(:searcher) { described_class.new(HTTP, query, 10) }
+  subject(:searcher) { described_class.new(HTTP, query) }
 
   let(:query) { 'my query' }
   let(:response_hash) { { name: 'name' } }
