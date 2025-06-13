@@ -84,6 +84,11 @@
     --bs-btn-bg: var(--stanford-digital-red);
     --bs-btn-border-color: var(--stanford-digital-red);
   }
+
+  .btn#search {
+    --bs-btn-padding-x: 1.25rem;
+    --bs-btn-padding-y: 0.625rem;
+  }
 }
 
 header {
