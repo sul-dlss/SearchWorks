@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'search/_module_heading' do
   let(:catalog) do
-    double('QuickSearch::CatalogSearcher', loaded_link: 'https://searchworks.stanford.edu/articles?q=climate%20change')
+    double('QuickSearch::CatalogSearcher', see_all_link: 'https://searchworks.stanford.edu/articles?q=climate%20change')
   end
 
   before do

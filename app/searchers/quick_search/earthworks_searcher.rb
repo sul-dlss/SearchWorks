@@ -2,14 +2,10 @@
 
 module QuickSearch
   class EarthworksSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, to: :search
+    self.search_service = ::EarthworksSearchService
 
-    def search
-      @search ||= ::EarthworksSearchService.new(http: http).search(q)
-    end
-
-    def loaded_link
-      format(Settings.EARTHWORKS.QUERY_URL.to_s, q: CGI.escape(q.to_s))
+    def see_all_url_template
+      Settings.EARTHWORKS.QUERY_URL
     end
   end
 end

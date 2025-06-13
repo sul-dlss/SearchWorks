@@ -21,6 +21,13 @@ en:
     error_service_mesasge: "searching SearchWorks catalog"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/"
+  archives_search:
+    display_name_html: Archival Collections at Stanford
+    short_display_name: Archival Collections at Stanford
+    sub_heading_html: Unique, original or rare materials in Stanford’s special collections.
+    micro_display_name: archives
+    no_results_service_message: "a different search"
+    no_results_link: "http://archives.stanford.edu/"
   article_search:
     display_name_html: '<span class="fw-light">SearchWorks</span> Articles+'
     short_display_name: "Articles+"

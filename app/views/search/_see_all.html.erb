@@ -1,4 +1,4 @@
-<%= link_to (module_link), class: "btn btn-outline-secondary text-nowrap" do %>
+<%= link_to see_all_link, class: "btn btn-outline-secondary text-nowrap" do %>
     <% short_display_name = t("#{service_name}_search.short_display_name") %>
     <% if total == '1' %>
         <%= t("#{service_name}_search.see_all_message", default: "See #{total}<span class='visually-hidden'> #{service_name.humanize(capitalize: false)}</span> result".html_safe) %>

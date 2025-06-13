@@ -8,7 +8,8 @@
     <%= image_tag result.icon, aria: { hidden: true }, class: 'icon mx-1' %>
     <span class="fw-semibold"><%= result.format %></span>
     <% if result.physical %>
-      &mdash; <%= result.physical %>
+      <% if result.format %>&mdash; <% end %>
+      <%= result.physical %>
     <% end %>
   </div>
 <% end %>

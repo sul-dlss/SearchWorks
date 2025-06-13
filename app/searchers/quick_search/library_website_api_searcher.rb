@@ -2,14 +2,10 @@
 
 module QuickSearch
   class LibraryWebsiteApiSearcher < QuickSearch::ApplicationSearcher
-    delegate :results, :total, to: :search
+    self.search_service = ::LibraryWebsiteApiSearchService
 
-    def search
-      @search ||= ::LibraryWebsiteApiSearchService.new(http: http).search(q)
-    end
-
-    def loaded_link
-      format(Settings.LIBRARY_WEBSITE.QUERY_URL.to_s, q: CGI.escape(q.to_s))
+    def see_all_url_template
+      Settings.LIBRARY_WEBSITE.QUERY_URL
     end
   end
 end
