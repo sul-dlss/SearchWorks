@@ -57,7 +57,8 @@
     --bs-btn-border-radius: 2rem;
     --bs-btn-padding-y: 0.3125rem;
     --bs-btn-padding-x: 1rem;
-    --bs-btn-bg: rgb(177, 4, 14);
+    --bs-btn-bg: var(--stanford-digital-red);
+    --bs-btn-border-color: var(--stanford-digital-red);
   }
 }
 
@@ -80,7 +81,8 @@
   }
   .btn {
     --bs-btn-border-radius: 2rem;
-    --bs-btn-bg: rgb(177, 4, 14);
+    --bs-btn-bg: var(--stanford-digital-red);
+    --bs-btn-border-color: var(--stanford-digital-red);
   }
 }
 
