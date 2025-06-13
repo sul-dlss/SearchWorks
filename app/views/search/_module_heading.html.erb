@@ -2,7 +2,7 @@
     <h2 class='result-set-heading h4 mb-0 fw-semibold text-nowrap'>
       <%= t("#{service_name}_search.display_name_html") %>
     </h2>
-    <%= render '/search/see_all', { service_name: service_name, total: searcher.total, see_all_link: searcher.see_all_link } unless searcher.total.zero? %>
+    <%= render '/search/see_all', { service_name:, total: searcher.total, see_all_link: searcher.see_all_link } unless searcher.total.zero? %>
 </div>
 <small class='result-set-subheading d-block mb-3'>
   <%= t("#{service_name}_search.sub_heading_html") %>
