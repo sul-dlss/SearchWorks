@@ -134,15 +134,7 @@ function addPageLoadAnalytics() {
   trackInternalLinkClicks('#sort-dropdown a', 'sort-type', { includeLinkUrl: false })
 
   // Per page dropdown
-  document.querySelectorAll('#per_page-dropdown a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Per page selection',
-        action: 'SW/click',
-        label: getText(e)
-      })
-    })
-  })
+  trackInternalLinkClicks('#per_page-dropdown a', 'per-page', { includeLinkUrl: false })
 }
 
 function addTurboFrameAnalytics() {
@@ -202,7 +194,6 @@ function trackInternalLinkClicks(selector, type = "false", options = {}) {
   document.querySelectorAll(selector).forEach(function(el) {
     if (el.hostname == window.location.hostname) {
       el.addEventListener('click', function(e) {
-        console.log("click", type)
         const dimensions = { outbound: type }
         if (config.includeLinkDomain) dimensions.link_domain = window.location.hostname
         if (config.includeLinkUrl) dimensions.link_url = e.currentTarget.href
