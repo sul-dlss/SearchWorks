@@ -61,12 +61,12 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   end
 
   def eds_html_fulltext
-    return unless eds_html_fulltext_available
+    return unless eds_html_fulltext_available?
 
     dig('FullText', 'Text', 'Value')
   end
 
-  def eds_html_fulltext_available
+  def eds_html_fulltext_available?
     dig('FullText', 'Text', 'Availability') == '1'
   end
 
