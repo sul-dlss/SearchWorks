@@ -1,9 +1,9 @@
 en:
   default_title: "Stanford Libraries"
   exhibits_search:
-    short_display_name: Exhibits
-    display_name_html: Exhibits
-    micro_display_name: exhibits
+    short_display_name: Spotlight Exhibits
+    display_name_html: Spotlight Exhibits
+    micro_display_name: Spotlight exhibits
     no_results_service_message: "a different search"
     no_results_link: "https://exhibits.stanford.edu/"
     pass_on_search_link_text: Search "%{query}" in all exhibit items
