@@ -30,7 +30,7 @@ class ArticleFulltextLinkPresenter
 
   def stanford_only_icon
     if html?
-      context.render StanfordOnlySpanComponent.new
+      context.render StanfordOnlyPopoverComponent.new
     else
       # JSON result for bento
       "<span class='stanford-only'></span>"
