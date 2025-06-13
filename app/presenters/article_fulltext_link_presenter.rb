@@ -29,12 +29,7 @@ class ArticleFulltextLinkPresenter
   end
 
   def stanford_only_icon
-    if html?
-      context.render StanfordOnlySpanComponent.new
-    else
-      # JSON result for bento
-      "<span class='stanford-only'></span>"
-    end
+    context.render StanfordOnlyPopoverComponent.new
   end
 
   def online_access_panel?
