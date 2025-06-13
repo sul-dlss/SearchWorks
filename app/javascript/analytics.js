@@ -131,15 +131,7 @@ function addPageLoadAnalytics() {
   trackInternalLinkClicks('#view-type-dropdown a', 'view-type', { includeLinkUrl: false })
 
   // Sort by dropdown
-  document.querySelectorAll('#sort-dropdown a').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: 'Sort selection',
-        action: 'SW/click',
-        label: getText(e)
-      })
-    })
-  })
+  trackInternalLinkClicks('#sort-dropdown a', 'sort-type', { includeLinkUrl: false })
 
   // Per page dropdown
   document.querySelectorAll('#per_page-dropdown a').forEach(function(el) {
