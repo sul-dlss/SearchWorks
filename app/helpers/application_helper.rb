@@ -34,4 +34,8 @@ module ApplicationHelper
       end
     end
   end
+
+  def visually_hidden_service(service_name)
+    tag.span service_name.humanize(capitalize: false), class: 'visually-hidden'
+  end
 end

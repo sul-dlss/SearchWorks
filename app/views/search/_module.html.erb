@@ -1,10 +1,9 @@
-<% total = searcher.total.present? ? number_with_delimiter(searcher.total) : nil %>
-<div id="<%= service_name.underscore %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= service_name.underscore %>_count" data-module-total-value="<%= total %>">
+<div id="<%= service_name.underscore %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= service_name.underscore %>_count" data-module-total-value="<%= number_with_delimiter(searcher.total) %>">
     <% if searcher.results.blank? %>
-        <%= render 'module_heading', { service_name:, total:, searcher: } %>
+        <%= render 'module_heading', { service_name:, searcher: } %>
         <%= render 'no_results', { service_name:, searcher: } %>
     <% else %>
-        <%= render 'module_heading', { service_name:, total:, searcher: } %>
+        <%= render 'module_heading', { service_name:, searcher: } %>
 
         <ol class="list-unstyled">
           <%= render partial: 'result', collection: searcher.results %>
