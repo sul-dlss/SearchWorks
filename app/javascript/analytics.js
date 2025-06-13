@@ -23,17 +23,6 @@ function addPageLoadAnalytics() {
     })
   })
 
-  // Track an action when the user clicks on an accordion
-  document.querySelectorAll('[data-action="accordion-section#toggle"]').forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      sendAnalyticsEvent({
-        category: 'Accordion',
-        action: 'SW/accordion-toggle',
-        label: getText(e)
-      })
-    })
-  })
-
   // Track clicks in zero results content
   trackInternalLinkClicks('.zero-results a', 'zero-results', { includeLinkUrl: false })
 
@@ -77,24 +66,6 @@ function addPageLoadAnalytics() {
         category: 'Stacks Map',
         action: 'SW/Text Description Opened'
       })
-    })
-  })
-
-  // embedded-call-number-browse.js has code that scrolls to the currently selected item in the gallery on load
-  // We want to ignore this initial scroll and only record user actions
-  let initial_scroll_complete = false
-  const gallery_el =  document.querySelector('.embedded-items .gallery')
-  document.querySelectorAll('.embedded-items .gallery').forEach(function(el) {
-    el.addEventListener('scroll', function(e) {
-      if (initial_scroll_complete) {
-        sendAnalyticsEvent({
-          category: 'Browse nearby',
-          action: 'SW/scrolled'
-        })
-      }
-      setTimeout(() => {
-        initial_scroll_complete = true
-      }, 1000);
     })
   })
 
