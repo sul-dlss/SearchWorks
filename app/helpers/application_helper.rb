@@ -22,4 +22,10 @@ module ApplicationHelper
   def visually_hidden_service(service_name)
     tag.span service_name.humanize(capitalize: false), class: 'visually-hidden'
   end
+
+  def enabled_searchers
+    @enabled_searchers ||= Settings.enabled_searchers.map do |name|
+      Service.new(name)
+    end
+  end
 end
