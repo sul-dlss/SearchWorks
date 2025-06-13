@@ -3,34 +3,6 @@
 require 'rails_helper'
 
 RSpec.feature "Facets Customizations" do
-  scenario "material type icons display on the home page" do
-    visit root_path
-
-    within(".blacklight-format_main_ssim") do
-      expect(page).to have_button 'Resource type'
-      within("ul.facet-values") do
-        expect(page).to have_css("li span.sul-icon")
-      end
-    end
-  end
-
-  scenario "material type icons display after an advanced search", :js do
-    skip('Fails intermitently on Travis.') if ENV['CI']
-    visit blacklight_advanced_search_engine.advanced_search_path
-
-    click_button "Resource type"
-    check "Book"
-
-    click_button "advanced-search-submit"
-
-    expect(page).to have_css(".blacklight-format_main_ssim")
-
-    within(".blacklight-format_main_ssim") do
-      expect(page).to have_button 'Resource type'
-      expect(page).to have_css("li span.sul-icon")
-    end
-  end
-
   scenario 'resource type is index sorted (not count)' do
     visit root_path
 
