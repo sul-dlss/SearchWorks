@@ -1,21 +1,13 @@
-import Blacklight from 'blacklight-frontend'
+document.addEventListener('turbo:load', function() {
+  initializeAnalytics()
+  addPageLoadAnalytics()
+})
 
-// gtag initial setup
-window.dataLayer = window.dataLayer || [];
-window.gtag = function() { dataLayer.push(arguments); }
-gtag('js', new Date());
+document.addEventListener('turbo:frame-load', function() {
+  addTurboFrameAnalytics()
+})
 
-
-Blacklight.onLoad(function() {
-  // gtag set property and config
-  const config = { cookie_flags: 'SameSite=None;Secure' }
-  // To turn off analytics debug mode, exclude the parameter altogether (cannot just set to false)
-  //See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
-  if (document.head.querySelector("meta[name=analytics_debug]").getAttribute('value') === "true") {
-    config.debug_mode = true;
-  }
-  gtag('config', 'G-FH5WNQS9B5', config);
-
+function addPageLoadAnalytics() {
   // Track engagement with IIIF icon
   document.querySelectorAll('.iiif-dnd').forEach(function(el) {
     el.addEventListener('dragstart', function(e) {
@@ -120,9 +112,6 @@ Blacklight.onLoad(function() {
     })
   })
 
-  // Browse-nearby
-  trackInternalLinkClicks('.embedded-items .gallery-document a', 'browse-nearby', { includeLinkUrl: false, includeLinkText: false })
-
   // embedded-call-number-browse.js has code that scrolls to the currently selected item in the gallery on load
   // We want to ignore this initial scroll and only record user actions
   let initial_scroll_complete = false
@@ -202,7 +191,12 @@ Blacklight.onLoad(function() {
       })
     })
   })
-});
+}
+
+function addTurboFrameAnalytics() {
+  // Browse-nearby
+  trackInternalLinkClicks('.embedded-items .gallery-document a', 'browse-nearby', { includeLinkUrl: false, includeLinkText: false })
+}
 
 // Trim the innerHTML text and return
 function getText(event) {
@@ -216,6 +210,21 @@ function sendAnalyticsEvent({ action, category, label, value }) {
     event_label: label,
     event_value: value
   });
+}
+
+function initializeAnalytics() {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  // gtag set property and config
+  const config = { cookie_flags: 'SameSite=None;Secure' }
+  // To turn off analytics debug mode, exclude the parameter altogether (cannot just set to false)
+  //See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
+  if (document.head.querySelector("meta[name=analytics_debug]").getAttribute('value') === "true") {
+    config.debug_mode = true;
+  }
+  gtag('config', 'G-FH5WNQS9B5', config);
 }
 
 // GA4 tracks outbound links by default. This function can be used to track
