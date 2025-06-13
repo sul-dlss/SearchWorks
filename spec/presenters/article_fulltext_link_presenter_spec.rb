@@ -59,20 +59,20 @@ RSpec.describe ArticleFulltextLinkPresenter do
       end
 
       context 'when format is json' do
-        it 'includes a span with stanford-only class' do
+        it 'includes the svg popover' do
           expect(page).to have_css 'span.online-label', text: 'Full text'
           expect(page).to have_link 'View/download PDF'
-          expect(page).to have_css 'span.stanford-only'
+          expect(page).to have_css 'button[aria-label="Stanford-only"] svg'
         end
       end
 
       context 'when format is html' do
         let(:format) { :html }
 
-        it 'includes the svg icon' do
+        it 'includes the svg popover' do
           expect(page).to have_css 'span.online-label', text: 'Full text'
           expect(page).to have_link 'View/download PDF'
-          expect(page).to have_css 'span[aria-label="Stanford-only"] svg'
+          expect(page).to have_css 'button[aria-label="Stanford-only"] svg'
         end
       end
     end
