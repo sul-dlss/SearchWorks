@@ -14,7 +14,7 @@ AllCops:
     - 'config/**/*'
     - 'spec/spec_helper.rb'
     - 'vendor/**/*'
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.4
 
 Rails:
   Enabled: true
