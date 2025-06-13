@@ -11,7 +11,7 @@ class SearchService
               when Class
                 searcher
               else
-                "QuickSearch::#{searcher.camelize}Searcher".constantize
+                "#{searcher.camelize}Searcher".constantize
               end
 
       client = HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")

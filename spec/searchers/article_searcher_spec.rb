@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe QuickSearch::ArticleSearcher do
+RSpec.describe ArticleSearcher do
   subject(:searcher) { described_class.new(HTTP, query) }
 
   let(:query) { 'my query' }

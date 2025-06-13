@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe QuickSearch::CatalogSearcher do
+RSpec.describe CatalogSearcher do
   subject(:searcher) { described_class.new(HTTP, query) }
 
   let(:query) { 'my query' }
