@@ -219,7 +219,7 @@ class ArticlesController < ApplicationController
   rescue => e
     if current_user
       # We only care if there's a user, otherwise it's definitely a data problem?
-      context = current_user.to_honeybadger_context.merge(eds_guest: session['eds_guest'], eds_session_token: session['eds_session_token'])
+      context = current_user.to_honeybadger_context.merge(eds_guest: session['eds_guest'], eds_session_token: session[Settings.EDS_SESSION_TOKEN_KEY])
       Honeybadger.notify(e, context:)
     end
 
@@ -272,7 +272,7 @@ class ArticlesController < ApplicationController
   def search_service
     eds_params = {
       guest:          session['eds_guest'],
-      session_token:  session['eds_session_token']
+      session_token:  session[Settings.EDS_SESSION_TOKEN_KEY]
     }
     Eds::SearchService.new(blacklight_config, params, eds_params)
   end
@@ -284,11 +284,11 @@ class ArticlesController < ApplicationController
   # Reuse the EDS session token if available in the user's session data,
   # otherwise establish a session
   def setup_eds_session(session)
-    return if session['eds_session_token'].present?
+    return if session[Settings.EDS_SESSION_TOKEN_KEY].present?
 
     session['eds_guest'] = !on_campus_or_su_affiliated_user?
 
-    session['eds_session_token'] = Eds::Session.new(
+    session[Settings.EDS_SESSION_TOKEN_KEY] = Eds::Session.new(
       guest: session['eds_guest'],
       caller: 'new-session'
     ).session_token
@@ -296,7 +296,7 @@ class ArticlesController < ApplicationController
     if current_user
       Honeybadger.add_breadcrumb('Established EDS session', metadata: {
         eds_guest: session['eds_guest'],
-        eds_session_token: session['eds_session_token'],
+        eds_session_token: session[Settings.EDS_SESSION_TOKEN_KEY],
         request_ip: request.remote_ip,
         affiliations: current_user.affiliations,
         person_affiliations: current_user.person_affiliations,

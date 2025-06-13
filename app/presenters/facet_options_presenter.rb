@@ -28,7 +28,7 @@ class FacetOptionsPresenter
   def eds_params
     {
       guest: context.session['eds_guest'],
-      session_token: context.session['eds_session_token']
+      session_token: context.session[Settings.EDS_SESSION_TOKEN_KEY]
     }
   end
 
