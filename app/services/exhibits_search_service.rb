@@ -3,7 +3,7 @@
 # Uses the LibGuides API to search
 class ExhibitsSearchService < AbstractSearchService
   def initialize(options = {})
-    options[:query_url] ||= settings.API_URL.to_s
+    options[:query_url] ||= settings.api_url.to_s
     options[:response_class] ||= Response
     super
   end
@@ -11,7 +11,7 @@ class ExhibitsSearchService < AbstractSearchService
   private
 
   def settings
-    Settings.EXHIBITS
+    Settings.exhibits
   end
 
   class Response < AbstractSearchService::Response
@@ -19,7 +19,7 @@ class ExhibitsSearchService < AbstractSearchService
       json.first(num_results).collect do |exhibit|
         SearchResult.new(
           title: exhibit['title'],
-          link: format(settings.LINK_URL.to_s, id: exhibit['slug']),
+          link: format(settings.link_url, id: exhibit['slug']),
           description: exhibit['subtitle'],
           thumbnail: exhibit['thumbnail_url']
         )
@@ -27,7 +27,7 @@ class ExhibitsSearchService < AbstractSearchService
     end
 
     def num_results
-      settings.NUM_RESULTS_SHOWN
+      settings.num_results_shown
     end
 
     # NOTE: This will never return more than 8 results.
@@ -38,7 +38,7 @@ class ExhibitsSearchService < AbstractSearchService
     private
 
     def settings
-      Settings.EXHIBITS
+      Settings.exhibits
     end
 
     def json

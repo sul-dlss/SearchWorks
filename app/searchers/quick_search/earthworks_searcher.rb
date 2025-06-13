@@ -5,7 +5,7 @@ module QuickSearch
     self.search_service = ::EarthworksSearchService
 
     def see_all_url_template
-      Settings.EARTHWORKS.QUERY_URL
+      Settings.earthworks.query_url
     end
   end
 end

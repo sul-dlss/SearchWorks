@@ -20,8 +20,6 @@ class AbstractSearchService
   # The AbstractSearchService::Response class is intended to be subclassed by various AbstractSearchService subclasses
   # Various methods or constants will need to be overriden in order for the subclassed response class to work properly
   class Response
-    QUERY_URL = nil
-
     attr_reader :body
 
     # @param [String] `body` is the HTTP response body

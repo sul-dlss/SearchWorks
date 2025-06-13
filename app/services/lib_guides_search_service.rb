@@ -10,11 +10,11 @@ class LibGuidesSearchService < AbstractSearchService
 
   def query_url
     [
-      Settings.LIBGUIDES.API_URL.to_s,
+      Settings.libguides.api_url.to_s,
       '?',
       {
-        site_id: Settings.LIBGUIDES.SITE_ID,
-        key: Settings.LIBGUIDES.KEY,
+        site_id: Settings.libguides.site_id,
+        key: Settings.libguides.key,
         status: 1,
         sort_by: 'relevance',
       }.to_query,
@@ -33,7 +33,7 @@ class LibGuidesSearchService < AbstractSearchService
     end
 
     def num_results
-      Settings.LIBGUIDES.NUM_RESULTS_SHOWN
+      Settings.libguides.num_results_shown
     end
 
     # The guides api will only return 100 results

@@ -3,14 +3,12 @@
 # Uses the Library Website API to search
 class LibraryWebsiteApiSearchService < AbstractSearchService
   def initialize(options = {})
-    options[:query_url] ||= Settings.LIBRARY_WEBSITE.API_URL.to_s
+    options[:query_url] ||= Settings.library_website.api_url.to_s
     options[:response_class] ||= Response
     super
   end
 
   class Response < AbstractSearchService::Response
-    QUERY_URL = Settings.LIBRARY_WEBSITE.QUERY_URL.freeze
-
     def results
       sanitizer = Rails::Html::FullSanitizer.new
 

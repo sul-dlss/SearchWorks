@@ -5,7 +5,7 @@ module QuickSearch
     self.search_service = ::LibraryWebsiteApiSearchService
 
     def see_all_url_template
-      Settings.LIBRARY_WEBSITE.QUERY_URL
+      Settings.library_website.query_url
     end
   end
 end
