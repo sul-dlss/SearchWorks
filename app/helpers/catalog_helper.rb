@@ -7,7 +7,7 @@ module CatalogHelper
   include Blacklight::CatalogHelperBehavior
 
   def current_view
-    document_index_view_type.to_s || 'list'
+    document_index_view_type.to_s
   end
 
   def stackmap_link(document, location)
