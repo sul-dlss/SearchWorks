@@ -98,4 +98,115 @@ RSpec.describe ArticleFulltextLinkPresenter do
       end
     end
   end
+
+  describe '#bento_html' do
+    subject(:link) { presenter.bento_html }
+
+    context 'when the document does not have links' do
+      it { is_expected.to be_nil }
+    end
+
+    context 'when the document has link' do
+      let(:document) do
+        EdsDocument.new(
+          'eds_fulltext_links' => [
+            { 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }
+          ]
+        )
+      end
+
+      it { is_expected.to eq "<a href=\"http://example.com\">View on content provider&#39;s site</a>" }
+    end
+
+    context 'when the document has a stanford-only link' do
+      let(:document) do
+        EdsDocument.new(
+          'id' => '00001',
+          'eds_fulltext_links' => [
+            { 'url' => 'detail', 'label' => 'PDF Full Text', 'type' => 'pdf' }
+          ]
+        )
+      end
+
+      it { is_expected.to eq "<a href=\"http://test.host/articles/00001/pdf/fulltext\">View/download PDF</a>" }
+    end
+
+    context 'when the document does not have a link but does include full-text' do
+      let(:document) { EdsDocument.new(id: 'abc123', 'eds_html_fulltext_available' => true) }
+
+      it { is_expected.to eq "<a href=\"http://test.host/articles/abc123\">View on detail page</a>" }
+    end
+  end
+
+  describe '#stanford_only?' do
+    subject(:stanford_only) { presenter.stanford_only? }
+
+    context 'when the document does not have links' do
+      it { is_expected.to be false }
+    end
+
+    context 'when the document has link' do
+      let(:document) do
+        EdsDocument.new(
+          'eds_fulltext_links' => [
+            { 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }
+          ]
+        )
+      end
+
+      it { is_expected.to be false }
+    end
+
+    context 'when the document has a stanford-only link' do
+      let(:document) do
+        EdsDocument.new(
+          'id' => '00001',
+          'eds_fulltext_links' => [
+            { 'url' => 'detail', 'label' => 'PDF Full Text', 'type' => 'pdf' }
+          ]
+        )
+      end
+
+      it { is_expected.to be true }
+    end
+  end
+
+  describe '#full_text?' do
+    subject(:stanford_only) { presenter.full_text? }
+
+    context 'when the document does not have links' do
+      it { is_expected.to be false }
+    end
+
+    context 'when the document has link' do
+      let(:document) do
+        EdsDocument.new(
+          'eds_fulltext_links' => [
+            { 'label' => 'Check SFX for full text', 'url' => 'http://example.com', 'type' => 'customlink-fulltext' }
+          ]
+        )
+      end
+
+      it { is_expected.to be true }
+    end
+
+    context 'when the document has a stanford-only link' do
+      let(:document) do
+        EdsDocument.new(
+          'id' => '00001',
+          'eds_fulltext_links' => [
+            { 'url' => 'detail', 'label' => 'PDF Full Text', 'type' => 'pdf' }
+          ]
+        )
+      end
+
+      it { is_expected.to be true }
+    end
+
+    context 'when the document does not have a link but does include full-text' do
+      let(:document) { EdsDocument.new(id: 'abc123', 'eds_html_fulltext_available' => true) }
+
+      it { is_expected.to be true }
+    end
+  end
 end

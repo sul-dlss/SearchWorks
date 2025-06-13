@@ -10,10 +10,51 @@ class ArticleFulltextLinkPresenter
   end
 
   def links
-    return [] unless online_access_panel? || document_has_fulltext?
+    return [] unless links?
     return access_panel_links.map { |link| render_fulltext_link(link) } if online_access_panel?
 
     ["#{online_label} #{link_to('View on detail page', eds_document_url(document))}"]
+  end
+
+  def links?
+    online_access_panel? || document_has_fulltext?
+  end
+
+  # Bento should display "Full text"
+  def full_text?
+    return false unless links?
+    return true if document_has_fulltext? && !online_access_panel?
+
+    !access_panel_links.first.ill?
+  end
+
+  # Bento should display "Stanford only"
+  def stanford_only?
+    return false unless online_access_panel?
+
+    access_panel_links.first.stanford_only?
+  end
+
+  # Bento should display "PDF"
+  def pdf?
+    online_access_panel? && access_panel_links.first.href == 'detail'
+  end
+
+  # just returns an anchor tag for use by bento
+  def bento_html
+    return unless links?
+    return link_to('View on detail page', article_url(document)) unless online_access_panel?
+
+    link = access_panel_links.first
+    if link.href == 'detail' # PDFs
+      if document_has_fulltext?
+        link_to('View on detail page', article_url(document))
+      else
+        link_to(link.text, article_fulltext_link_url(id: document.id, type: link.type))
+      end
+    else
+      link_to(link.text, link.href)
+    end
   end
 
   private
