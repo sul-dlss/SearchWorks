@@ -13,6 +13,7 @@ RSpec.describe QuickSearch::CatalogSearcher do
   end
 
   it { expect(searcher.search).to be_an(CatalogSearchService::Response) }
+
   it do
     searcher.search # loads response
     expect(searcher.results).to be_an(Array)

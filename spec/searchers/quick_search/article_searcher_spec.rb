@@ -13,6 +13,7 @@ RSpec.describe QuickSearch::ArticleSearcher do
   end
 
   it { expect(searcher.search).to be_an(ArticleSearchService::Response) }
+
   it do
     searcher.search # loads response
     expect(searcher.results).to be_an(Array)

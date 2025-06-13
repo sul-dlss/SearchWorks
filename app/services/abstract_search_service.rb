@@ -23,6 +23,7 @@ class AbstractSearchService
     QUERY_URL = nil
 
     attr_reader :body
+
     # @param [String] `body` is the HTTP response body
     def initialize(body)
       @body = body

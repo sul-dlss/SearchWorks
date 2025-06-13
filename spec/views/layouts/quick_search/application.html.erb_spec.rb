@@ -9,6 +9,7 @@ RSpec.describe 'layouts/application' do
     end
     render
   end
+
   describe 'contains skip links' do
     it do
       expect(rendered).to have_link('Skip to search', href: '#q')
