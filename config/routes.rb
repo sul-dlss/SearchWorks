@@ -115,4 +115,8 @@ Rails.application.routes.draw do
   %w(404 500).each do |code|
     match code, to: 'errors#show', code: code, via: :all
   end
+
+  Rails.application.routes.draw do
+    mount Lookbook::Engine, at: "/lookbook"
+  end
 end
