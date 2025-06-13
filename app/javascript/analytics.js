@@ -7,6 +7,10 @@ document.addEventListener('turbo:frame-load', function() {
   addTurboFrameAnalytics()
 })
 
+document.addEventListener('alternate-catalog:updated-body', function() {
+  trackInternalLinkClicks('[data-alternate-catalog] a', 'alternate-catalog', { includeLinkUrl: false })
+})
+
 function addPageLoadAnalytics() {
   // Track engagement with IIIF icon
   document.querySelectorAll('.iiif-dnd').forEach(function(el) {
@@ -26,17 +30,6 @@ function addPageLoadAnalytics() {
         category: 'Accordion',
         action: 'SW/accordion-toggle',
         label: getText(e)
-      })
-    })
-  })
-
-  // When an alternate catalog is loaded, track those link clicks
-  document.querySelectorAll('[data-alternate-catalog]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      sendAnalyticsEvent({
-        category: document.querySelector(".zero-results") ? 'Zero results' : 'Alternate Results',
-        action: 'SW/clicked-alternate-results',
-        label: this.href
       })
     })
   })
