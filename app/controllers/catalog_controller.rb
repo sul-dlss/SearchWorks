@@ -86,11 +86,11 @@ class CatalogController < ApplicationController
     config.document_solr_path = 'select'
     config.json_solr_path = 'select'
     config.default_document_solr_params = {
-     :qt => 'document',
-    #  ## These are hard-coded in the blacklight 'document' requestHandler
-    #  # :fl => '*',
-    #  # :rows => 1
-    #  # :q => '{!raw f=id v=$id}'
+      :qt => 'document',
+      #  ## These are hard-coded in the blacklight 'document' requestHandler
+      #  # :fl => '*',
+      #  # :rows => 1
+      #  # :q => '{!raw f=id v=$id}'
     }
 
     if Settings.DISABLE_SESSIONS
@@ -146,14 +146,18 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
-    config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true, advanced_search_component: AdvancedSearchRangeLimitComponent
-    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true,
+                                                  advanced_search_component: AdvancedSearchRangeLimitComponent
+    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, suggest: true, sort: :index,
+                                            component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20, suggest: true,
+                                             component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'stanford_work_facet_hsim',
                            label: 'Stanford student work',
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'count', collapse: false, show: false
-    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20, suggest: true,
+                                                component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'access_facet', label: 'Access', query: {
       'At the Library': {
         label: 'At the Library', fq: 'access_facet:"At the Library"'
@@ -169,16 +173,18 @@ class CatalogController < ApplicationController
                             filter_query_builder: CollectionFilterQuery,
                             component: Blacklight::FacetFieldListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent, item_component: ResourceFacetItemComponent
-    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value,
+                                         component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, suggest: true, sort: :index, component: Blacklight::FacetFieldListComponent,
+                                               item_component: ResourceFacetItemComponent
+    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, suggest: true, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "pub_year_tisim", label: "Date", range: true, range_config: {
       input_label_range_begin: "from year",
       input_label_range_end: "to year"
     }
-    config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "language", label: "Language", limit: 20, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "author_person_facet", label: "Author", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "building_facet", label: "Library", limit: 100, suggest: true, sort: :index, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "language", label: "Language", limit: 20, suggest: true, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "author_person_facet", label: "Author", limit: 20, suggest: true, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'callnum_facet_hsim',
                            label: 'Call number',
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
@@ -189,20 +195,21 @@ class CatalogController < ApplicationController
         'stanford_work_facet' => [['hsim'], '|']
       }
     }
-    config.add_facet_field "topic_facet", label: "Topic", limit: 20, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "genre_ssim", label: "Genre", limit: 20, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "topic_facet", label: "Topic", limit: 20, suggest: true, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "genre_ssim", label: "Genre", limit: 20, suggest: true, component: Blacklight::FacetFieldListComponent
     # TODO: remove "course" and "instructor" after a time. These have been replaced by courses_folio_id_ssim.
     # We just don't want to break any bookmarks that people may have. Perhaps wait for a semester or so.
     config.add_facet_field "course", label: "Course", show: false, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "instructor", label: "Instructor", show: false, component: Blacklight::FacetFieldListComponent
     config.add_facet_field "courses_folio_id_ssim", label: "Course", show: false,
-                           component: Blacklight::FacetFieldListComponent,
-                           item_presenter: FolioCourseFacetItemPresenter
+                                                    component: Blacklight::FacetFieldListComponent,
+                                                    item_presenter: FolioCourseFacetItemPresenter
 
-                           # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
-    config.add_facet_field "geographic_facet", label: "Region", limit: 20, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "era_facet", label: "Era", limit: 20, component: Blacklight::FacetFieldListComponent
-    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, component: Blacklight::FacetFieldListComponent
+    # Should be shown under the "more..." section see https://github.com/sul-dlss/SearchWorks/issues/257
+    config.add_facet_field "geographic_facet", label: "Region", limit: 20, suggest: true, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "era_facet", label: "Era", limit: 20, suggest: true, component: Blacklight::FacetFieldListComponent
+    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, suggest: true,
+                                                 component: Blacklight::FacetFieldListComponent
     config.add_facet_field "format", label: "Format", show: false, component: Blacklight::FacetFieldListComponent
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
@@ -460,7 +467,7 @@ class CatalogController < ApplicationController
       url_key: 'advanced',
       form_solr_parameters: {
         "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
-         # return all facet values
+        # return all facet values
         "f.access_facet.facet.limit" => -1,
         "f.format_main_ssim.facet.limit" => -1,
         "f.format_physical_ssim.facet.limit" => -1,
