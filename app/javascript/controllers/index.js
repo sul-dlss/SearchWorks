@@ -7,6 +7,9 @@ import { application } from "./application"
 import AccordionSectionController from "./accordion_section_controller"
 application.register("accordion-section", AccordionSectionController)
 
+import AnalyticsController from "./analytics_controller"
+application.register("analytics", AnalyticsController)
+
 import ArticlesFacetMoreController from "./articles_facet_more_controller"
 application.register("articles-facet-more", ArticlesFacetMoreController)
 
