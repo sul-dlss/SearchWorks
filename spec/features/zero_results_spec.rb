@@ -8,6 +8,8 @@ RSpec.feature "Zero results" do
       visit search_catalog_path(q: 'sdfsda', search_field: 'search_author')
       expect(page).to have_css("h2", text: "Modify your search")
       expect(page).to have_link 'sdfsda'
+      expect(page).to have_css('[data-controller="analytics"][data-analytics-category-value="zero-results"]')
+      expect(page).to have_css('[data-action="click->analytics#trackLink"]')
     end
   end
 

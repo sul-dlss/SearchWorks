@@ -1,7 +1,7 @@
 <% # This is a copy of the Blacklight 8 version of this component.
    # We should be able to delete this local copy after we migrate to Blacklight 8 %>
 <% # main container for facets/limits menu -%>
-<%= content_tag :div, id: @id,  class: 'facets sidenav facets-toggleable-sm mt-1 border-0 px-0' do %>
+<%= content_tag :div, id: @id, data: { action: 'hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow', controller: 'analytics' }, class: 'facets sidenav facets-toggleable-sm mt-1 border-0 px-0' do %>
   <div class="facets-header align-items-baseline">
     <%= content_tag :h2, @title, class: 'facets-heading my-0' if @title %>
 
