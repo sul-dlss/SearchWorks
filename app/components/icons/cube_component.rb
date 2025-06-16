@@ -3,9 +3,20 @@
 module Icons
   class CubeComponent < Icons::SulIconsComponent
     self.svg = <<~SVG
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="1em" width="1em" viewBox="-24 0 560 512">
-      	<path d="M-14 94l270 77l270 -77l-270 -77zM256 153l-208 -59l208 -60l208 60zM247 472l-221 -85v-293h-17v304l247 98l247 -98v-315l-256 73v316zM265 474v-305l221 -64v282z" />
-      </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1em"
+      	 height="1em" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+      <g id="Filled_Icons_1_">
+      	<g id="Filled_Icons">
+      		<g>
+      						<path d="M12.126,1.016c-0.083-0.022-0.17-0.022-0.252,0L0.972,3.86l10.564,3.103l11.256-3.165L12.126,1.016z"/>
+      			<polygon points="12,7.874 12,22.856 23.664,18.972 24,18.5 24,4.484 			"/>
+      			<polygon points="0,18.5 0.336,18.972 11,22.856 11,7.878 0,4.624 			"/>
+      		</g>
+      	</g>
+
+      </g>
+
+      	    </svg>
     SVG
   end
 end
