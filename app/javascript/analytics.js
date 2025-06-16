@@ -1,33 +1,33 @@
 document.addEventListener('turbo:load', function() {
-  initializeAnalytics()
-  addPageLoadAnalytics()
+//  initializeAnalytics()
+  // addPageLoadAnalytics()
 })
 
 document.addEventListener('turbo:frame-load', function() {
-  addTurboFrameAnalytics()
+  // addTurboFrameAnalytics()
 })
 
 document.addEventListener('alternate-catalog:updated-body', function() {
-  trackInternalLinkClicks('[data-alternate-catalog] a', 'alternate-catalog', { includeLinkUrl: false })
+  // trackInternalLinkClicks('[data-alternate-catalog] a', 'alternate-catalog', { includeLinkUrl: false })
 })
 
 function addPageLoadAnalytics() {
   // Track engagement with IIIF icon
-  document.querySelectorAll('.iiif-dnd').forEach(function(el) {
-    el.addEventListener('dragstart', function(e) {
-      sendAnalyticsEvent({
-        category: 'IIIF DnD',
-        action: 'SW/dragged',
-        label: (e.currentTarget).data().manifest
-      })
-    })
-  })
+  // document.querySelectorAll('.iiif-dnd').forEach(function(el) {
+  //   el.addEventListener('dragstart', function(e) {
+  //     sendAnalyticsEvent({
+  //       category: 'IIIF DnD',
+  //       action: 'SW/dragged',
+  //       label: (e.currentTarget).data().manifest
+  //     })
+  //   })
+  // })
 
   // Track clicks in zero results content
-  trackInternalLinkClicks('.zero-results a', 'zero-results', { includeLinkUrl: false })
+  // trackInternalLinkClicks('.zero-results a', 'zero-results', { includeLinkUrl: false })
 
   // Featured resources on home page
-  trackInternalLinkClicks('.catalog-home-page .features a', 'featured-resource')
+  // trackInternalLinkClicks('.catalog-home-page .features a', 'featured-resource')
 
   // Facet collapse and expand events
   // I tried to move this file off Jquery but keeping these facet events requires it
@@ -35,30 +35,30 @@ function addPageLoadAnalytics() {
   // Bootstrap 5 allows for native .addEventListener detection, but only if Jquery is not present at all
   // See https://getbootstrap.com/docs/5.0/getting-started/javascript/ heading "Jquery events"
   // Once this application is on Bootstrap 5, and Jquery is removed, we can change this Bootstrap event detection to pure JS
-  $('.facet-content').on('hide.bs.collapse', function(e) {
-    sendAnalyticsEvent({
-      category: 'Facet',
-      action: 'SW/closed-facet',
-      label: $(e.currentTarget).parent().find('h3').text().trim()
-    })
-  })
-  $('.facet-content').on('show.bs.collapse', function(e) {
-    sendAnalyticsEvent({
-      category: 'Facet',
-      action: 'SW/expanded-facet',
-      label: $(e.currentTarget).parent().find('h3').text().trim()
-    })
-  })
+  // $('.facet-content').on('hide.bs.collapse', function(e) {
+  //   sendAnalyticsEvent({
+  //     category: 'Facet',
+  //     action: 'SW/closed-facet',
+  //     label: $(e.currentTarget).parent().find('h3').text().trim()
+  //   })
+  // })
+  // $('.facet-content').on('show.bs.collapse', function(e) {
+  //   sendAnalyticsEvent({
+  //     category: 'Facet',
+  //     action: 'SW/expanded-facet',
+  //     label: $(e.currentTarget).parent().find('h3').text().trim()
+  //   })
+  // })
 
   // Citation tool links
-  trackInternalLinkClicks('#citeLink', 'cite', { includeLinkUrl: false })
+  // trackInternalLinkClicks('#citeLink', 'cite', { includeLinkUrl: false })
 
   // Stacks Map Tool Events
   // Stacks Map Opened (from find-it button)
-  trackInternalLinkClicks('.stackmap-find-it', 'find-it-button', { includeLinkUrl: false })
+//  trackInternalLinkClicks('.stackmap-find-it', 'find-it-button', { includeLinkUrl: false })
 
   // Stacks Map Opened (from location link)
-  trackInternalLinkClicks('.location-name a', 'find-it-location', { includeLinkUrl: false })
+  // trackInternalLinkClicks('.location-name a', 'find-it-location', { includeLinkUrl: false })
 
   document.querySelectorAll('.show-description a').forEach(function(el) {
     el.addEventListener('click', function(e) {
@@ -99,18 +99,18 @@ function addPageLoadAnalytics() {
   })
 
   // View type dropdown
-  trackInternalLinkClicks('#view-type-dropdown a', 'view-type', { includeLinkUrl: false })
+  // trackInternalLinkClicks('#view-type-dropdown a', 'view-type', { includeLinkUrl: false })
 
   // Sort by dropdown
-  trackInternalLinkClicks('#sort-dropdown a', 'sort-type', { includeLinkUrl: false })
+  // trackInternalLinkClicks('#sort-dropdown a', 'sort-type', { includeLinkUrl: false })
 
   // Per page dropdown
-  trackInternalLinkClicks('#per_page-dropdown a', 'per-page', { includeLinkUrl: false })
+  // trackInternalLinkClicks('#per_page-dropdown a', 'per-page', { includeLinkUrl: false })
 }
 
 function addTurboFrameAnalytics() {
   // Browse-nearby
-  trackInternalLinkClicks('.embedded-items .gallery-document a', 'browse-nearby', { includeLinkUrl: false, includeLinkText: false })
+  // trackInternalLinkClicks('.embedded-items .gallery-document a', 'browse-nearby', { includeLinkUrl: false, includeLinkText: false })
 }
 
 // Trim the innerHTML text and return
@@ -127,20 +127,20 @@ function sendAnalyticsEvent({ action, category, label, value }) {
   });
 }
 
-function initializeAnalytics() {
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+// function initializeAnalytics() {
+//   window.dataLayer = window.dataLayer || [];
+//   window.gtag = function() { dataLayer.push(arguments); }
+//   gtag('js', new Date());
 
-  // gtag set property and config
-  const config = { cookie_flags: 'SameSite=None;Secure' }
-  // To turn off analytics debug mode, exclude the parameter altogether (cannot just set to false)
-  //See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
-  if (document.head.querySelector("meta[name=analytics_debug]").getAttribute('value') === "true") {
-    config.debug_mode = true;
-  }
-  gtag('config', 'G-FH5WNQS9B5', config);
-}
+//   // gtag set property and config
+//   const config = { cookie_flags: 'SameSite=None;Secure' }
+//   // To turn off analytics debug mode, exclude the parameter altogether (cannot just set to false)
+//   //See https://support.google.com/analytics/answer/7201382?hl=en#zippy=%2Cgoogle-tag-websites
+//   if (document.head.querySelector("meta[name=analytics_debug]").getAttribute('value') === "true") {
+//     config.debug_mode = true;
+//   }
+//   gtag('config', 'G-FH5WNQS9B5', config);
+// }
 
 // GA4 tracks outbound links by default. This function can be used to track
 // internal link clicks utilizing the exact same set of dimensions. Please

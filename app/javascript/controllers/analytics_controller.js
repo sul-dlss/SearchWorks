@@ -19,6 +19,38 @@ export default class extends Controller {
     gtag('config', 'G-FH5WNQS9B5', config);
   }
 
+  trackBookmark(event) {
+    const bookmark = event.currentTarget
+    const eventName = bookmark.checked ? 'bookmark_added' : 'bookmark_removed'
+    window.gtag('event', eventName)
+  }
+
+  // A basic "thing" happened. capture the category as the event name and the classes/id/text of the element
+  trackEvent(event) {
+    const eventName = this.categoryValue || "searchworks"
+    const element = event.currentTarget
+    const dimensions = {
+      link_classes: element.className,
+      link_id: element.id,
+      link_text: element.innerText.trim()
+    }
+    window.gtag('event', eventName, dimensions)
+  }
+
+  trackFacetHide(event) {
+    const dimensions = {
+      facet_name: event.target.parentNode.querySelector('.facet-field-heading').textContent.trim()
+    }
+    window.gtag('event', 'facet_hide', dimensions)
+  }
+
+  trackFacetShow(event) {
+    const dimensions = {
+      facet_name: event.target.parentNode.querySelector('.facet-field-heading').textContent.trim()
+    }
+    window.gtag('event', 'facet_show', dimensions)
+  }
+
   trackLink(event) {
     const link = event.currentTarget
 
@@ -26,13 +58,12 @@ export default class extends Controller {
     if (link.hostname !== window.location.hostname) return
 
     const dimensions = {
-      outbound: this.categoryValue || "false",
+      outbound: this.categoryValue || 'false',
       link_classes: link.className,
       link_domain: window.location.hostname,
       link_id: link.id,
       link_text: link.innerText.trim()
     }
-    console.log(dimensions)
     window.gtag('event', 'click', dimensions)
   }
 }
