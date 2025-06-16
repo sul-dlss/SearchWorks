@@ -50,7 +50,9 @@ class AbstractSearchService
 
     response = @http.get(url)
 
-    raise NoResults unless response.status.success? && response.body.present?
+    unless response.status.success? && response.body.present?
+      raise NoResults, "Search response failed: #{url} status: #{response.status} body #{response.body}"
+    end
 
     @response_class.new(response.body.to_s)
   end

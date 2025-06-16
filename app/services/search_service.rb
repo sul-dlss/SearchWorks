@@ -5,6 +5,7 @@ class SearchService
     @query = query
   end
 
+  # @raises [HTTP::TimeoutError] if a timeout occurs during the search
   def one(searcher, timeout: 30)
     benchmark "%s #{searcher}" % CGI.escape(query.to_str) do
       klass = case searcher

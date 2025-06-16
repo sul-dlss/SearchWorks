@@ -12,7 +12,8 @@ class SearchController < ApplicationController
 
     begin
       @searcher = search_service.one(endpoint)
-    rescue AbstractSearchService::NoResults
+    rescue AbstractSearchService::NoResults, HTTP::TimeoutError => e
+      logger.error(e.message)
       @no_answer = true
     end
   end

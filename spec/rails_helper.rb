@@ -11,7 +11,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 
 Capybara.javascript_driver = :selenium_chrome_headless
-Capybara.default_max_wait_time = 15
+Capybara.default_max_wait_time = ENV['CI'] ? 15 : 5
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
