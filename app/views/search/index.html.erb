@@ -22,11 +22,16 @@
       <div class="d-flex flex-wrap gap-5 mt-3" id="modules">
         <% Settings.enabled_searchers.each do |searcher| %>
           <turbo-frame id="<%= searcher.underscore %>_module" src="/all/<%= searcher %>?q=<%= params[:q] %>" class="module-container">
-            <div class="module-contents me-3" style="height: 500px;">
+            <div class="module-contents" style="height: 500px;">
               Loading ...
             </div>
           </turbo-frame>
         <% end %>
+        <div class="module-container" id="specialist-main">
+          <div class="module-contents">
+            <%= render 'specialist', specialist: @specialist if @specialist %>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -34,6 +39,7 @@
       <div class="bg-secondary py-3 px-4">
         <div id="webside-aside" class="pb-5"></div>
         <div id="guides-aside"></div>
+        <div id="specialist-aside"></div>
       </div>
     </aside>
   </div>

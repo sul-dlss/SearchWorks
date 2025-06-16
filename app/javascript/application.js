@@ -13,3 +13,9 @@ document.addEventListener('turbo:frame-render', (event) => {
     event.target.classList.add('d-xl-none')
   }
 })
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const specialist = document.getElementById('specialist-main')
+  document.getElementById('specialist-aside').innerHTML = specialist.innerHTML
+  specialist.classList.add('d-xl-none')
+})
