@@ -41,18 +41,17 @@
         <div class="masthead lg-shadow">
           <div class="container-fluid">
             <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
-              <div class="navbar ms-lg-auto">
+              <div class="navbar w-100 ms-lg-auto border-light">
                 <nav class="collapse navbar-collapse align-items-start justify-content-lg-end navbar-expand-lg d-lg-flex flex-column flex-lg-row" aria-label="Main menu" id="user-util-collapse">
-                  <hr class="d-lg-none vw-100 my-0">
                   <ul class="navbar-nav justify-content-lg-end w-100 fw-semibold">
                     <li class="nav-item">
                       <a class="nav-link fs-5" href="https://library.stanford.edu/">Home</a>
                     </li>
-                    <li class="nav-item dropdown text-nowrap">
-                      <a class="nav-link fs-5" href="https://library.stanford.edu/services">
+                    <li class="nav-item dropdown text-nowrap d-lg-block d-flex justify-content-between flex-wrap">
+                      <a class="nav-link fs-5 me-auto" href="https://library.stanford.edu/services">
                         Services
                       </a
-                      ><button class="dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      ><button class="dropdown-toggle bg-sm-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <%= render 'shared/chevron' %><span class="visually-hidden">Services submenu</span></button>
                       <ul class="dropdown-menu dropdown-menu-end lg-shadow">
                         <li>
@@ -69,11 +68,11 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="nav-item dropdown text-nowrap">
+                    <li class="nav-item dropdown text-nowrap d-lg-block d-flex justify-content-between flex-wrap">
                       <a class="nav-link fs-5" href="https://library.stanford.edu/research-support">
                         Research support
                       </a
-                      ><button class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      ><button class="nav-link dropdown-toggle bg-sm-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <%= render 'shared/chevron' %><span class="visually-hidden">Research support submenu</span></button>
                       <ul class="dropdown-menu dropdown-menu-end lg-shadow">
                         <li>
@@ -96,11 +95,11 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="nav-item dropdown text-nowrap">
+                    <li class="nav-item dropdown text-nowrap d-lg-block d-flex justify-content-between flex-wrap">
                       <a class="nav-link fs-5" href="https://library.stanford.edu/libraries-0">
                         Libraries
                       </a
-                      ><button class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      ><button class="dropdown-toggle bg-sm-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <%= render 'shared/chevron' %><span class="visually-hidden">Libraries submenu</span></button>
                       <ul class="dropdown-menu dropdown-menu-end lg-shadow">
                         <li>
@@ -112,13 +111,13 @@
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link fs-5" href="https://library.stanford.edu/news-and-events">News and events</a>
+                      <a class="nav-link fs-5 text-nowrap" href="https://library.stanford.edu/news-and-events">News and events</a>
                     </li>
-                    <li class="nav-item dropdown text-nowrap">
+                    <li class="nav-item dropdown text-nowrap d-lg-block d-flex justify-content-between flex-wrap">
                       <a class="nav-link fs-5" href="https://library.stanford.edu/about-stanford-libraries">
                         About us
                       </a
-                      ><button class="nav-link dropdown-toggle fs-5 p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      ><button class="dropdown-toggle bg-sm-light fs-5 p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <%= render 'shared/chevron' %><span class="visually-hidden">About us submenu</span></button>
                       <ul class="dropdown-menu lg-shadow">
                         <li>
@@ -139,18 +138,18 @@
                       </ul>
                     </li>
                   </ul>
-                  <hr class="d-lg-none vw-100 my-0">
                   <ul class="navbar-nav d-lg-none gap-0 w-100">
-                    <li class="nav-item">
-                      <a class="nav-link fs-5 su-underline" href="https://library.stanford.edu/library-accessibility">Library accessibility</a>
+                    <li class="nav-item border-0">
+                      <a class="nav-link fs-5 su-underline" href="https://searchworks.stanford.edu">SearchWorks Catalog</a>
+                      <a class="nav-link fs-5 su-underline py-0 ps-2 ms-2" href="https://searchworks.stanford.edu/articles">Articles+</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item border-0">
                       <a class="nav-link fs-5 su-underline" href="https://mylibrary.stanford.edu">My Account</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item border-0">
                       <a class="nav-link fs-5 su-underline" href="https://library.stanford.edu/contact-us">Contact us</a>
                     </li>
-                    <li class="nav-item mt-1">
+                    <li class="nav-item mt-1 border-0">
                       <a class="fs-5 btn btn-secondary" href="https://give.stanford.edu/?kwoDCPreselect=KDC-29V9KK0&olc=10734">Donate now</a>
                     </li>
                   </ul>
