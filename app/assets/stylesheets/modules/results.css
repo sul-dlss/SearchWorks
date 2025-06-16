@@ -39,6 +39,7 @@
 .result-title {
   font-family: "dejavu_sansextralight";
   letter-spacing: -0.03em;
+  --bs-body-line-height: 1.15;
 }
 
 .result-set-subheading {
