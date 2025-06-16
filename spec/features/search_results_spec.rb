@@ -15,6 +15,7 @@ RSpec.describe 'Search results', :js do
     end
 
     before do
+      allow_any_instance_of(LibGuidesSearchService).to receive(:search).and_return(response)
       allow_any_instance_of(AbstractSearchService).to receive(:search).and_return(response)
 
       visit search_path
@@ -37,6 +38,7 @@ RSpec.describe 'Search results', :js do
 
   context 'when a searcher times out' do
     before do
+      allow_any_instance_of(LibGuidesSearchService).to receive(:search).and_return(response)
       allow_any_instance_of(ArticleSearchService).to receive(:search).and_raise(HTTP::TimeoutError)
       allow_any_instance_of(AbstractSearchService).to receive(:search).and_return(response)
 
