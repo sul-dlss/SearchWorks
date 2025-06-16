@@ -1,5 +1,3 @@
-@import "bootstrap/scss/bootstrap.scss";
-
 /* Override blacklight 9. We may want to move this to the component library: */
 .navbar-logo {
   --bl-logo-image: none;
@@ -10,7 +8,6 @@
 .input-group > .search-q {
   flex-grow: 4;
 }
-
 
 .facet-limit {
   --bs-accordion-btn-bg: var(--bs-gray-100);
