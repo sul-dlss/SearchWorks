@@ -15,10 +15,10 @@ catalog:
   fetch_url: "https://searchworks.stanford.edu/view/%{id}"
   home_url: "https://searchworks.stanford.edu"
 archives:
-  api_url: https://archives.stanford.edu/catalog.json?q=%{q}&rows=3
+  api_url: https://archives.stanford.edu/catalog.json?q=%{q}&f%%5Blevel%%5D%%5B%%5D=Collection&rows=3
   home_url: https://archives.stanford.edu
   link_url: https://archives.stanford.edu/catalog/%{id}
-  query_url: https://archives.stanford.edu/catalog?q=%{q}&rows=3
+  query_url: https://archives.stanford.edu/catalog?q=%{q}&f%%5Blevel%%5D%%5B%%5D=Collection&rows=3
 article:
   api_url: "https://searchworks.stanford.edu/articles?q=%{q}&rows=%{max}&f%%5Beds_search_limiters_facet%%5D%%5B%%5D=Direct+access+to+full+text&search_field=search&format=json"
   query_url: "https://searchworks.stanford.edu/articles?q=%{q}&f%%5Beds_search_limiters_facet%%5D%%5B%%5D=Direct+access+to+full+text"
