@@ -9,23 +9,14 @@
   }
 }
 
-/* Rip out when https://github.com/sul-dlss/SearchWorks/pull/5129 is merged */
-.stanford-only:not(.btn)::after {
-  content: url("/stanford-only.svg");
-  margin-left: 5px;
-  vertical-align: middle;
-}
-
-.stanford-only.btn-primary {
-  --bs-btn-bg: none;
-  --bs-btn-border-color: none;
-  --bs-btn-hover-bg: none;
-  --bs-btn-active-bg: none;
-  --bs-btn-active-border-color: none;
-  --bs-btn-padding-y: 0;
+.stanford-only.btn {
   --bs-btn-padding-x: 0.25rem;
 
   vertical-align: baseline;
+
+  img {
+    vertical-align: sub;
+  }
 }
 
 .online-label {
