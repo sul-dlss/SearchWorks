@@ -9,10 +9,6 @@ module ApplicationHelper
     I18n.t 'organization_name'
   end
 
-  def body_class
-    "#{[controller_name, action_name].join('-')} d-flex flex-column"
-  end
-
   def title(page_title = nil)
     query = @query.blank? ? "" : truncate(@query, length: 40, separator: ' ', escape: false)
     page_title ||= []

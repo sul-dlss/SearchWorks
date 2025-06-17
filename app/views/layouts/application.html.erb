@@ -38,7 +38,7 @@
 
     <script type="module" src="https://unpkg.com/@github/auto-complete-element@latest/dist/bundle.js"></script>
   </head>
-  <%= content_tag :body, class: body_class, data: { 'quicksearch-ga-query': strip_tags(@query || '') } do %>
+  <%= content_tag :body, class: 'd-flex flex-column' do %>
     <%= render 'shared/header' %>
 
     <main id="main-content" role="main" class="flex-1 mb-auto">
