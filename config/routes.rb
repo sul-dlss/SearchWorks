@@ -40,5 +40,6 @@ Rails.application.routes.draw do
   end
   root to: 'search#index'
   get '/all/opensearch' => 'opensearch#opensearch', as: 'opensearch', :defaults => { :format => 'xml' }
+  get '/all/xhr_search/lib_guides' => 'search#lib_guides',  defaults: { format: 'json' }
   get '/all/:endpoint' => 'search#show'
 end

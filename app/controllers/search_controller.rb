@@ -19,6 +19,17 @@ class SearchController < ApplicationController
     end
   end
 
+  # JSON API for Searchworks' mini-bento
+  def lib_guides
+    @query = params_q_scrubbed
+
+    begin
+      @searcher = search_service.one('lib_guides')
+    rescue AbstractSearchService::NoResults
+      @no_answer = true
+    end
+  end
+
   private
 
   def handle_outdated_browser
