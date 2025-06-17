@@ -33,11 +33,12 @@ Rails.application.routes.draw do
 
   constraints(lambda { |request| request.params[:q].blank? || request.params[:q].scrub.blank? }) do
     get '/' => 'pages#home'
-    get '/all' => 'pages#home'
+    get '/all' => 'pages#home', as: 'homepage'
   end
-
+  constraints(lambda { |request| request.params[:q]&.scrub&.present? }) do
+    get '/all' => 'search#index', as: 'search'
+  end
   root to: 'search#index'
-  get '/all' => 'search#index', as: 'search'
   get '/all/opensearch' => 'opensearch#opensearch', as: 'opensearch', :defaults => { :format => 'xml' }
   get '/all/:endpoint' => 'search#show'
 end
