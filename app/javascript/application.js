@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 document.addEventListener('turbo:load', (event) => {
   const specialist = document.getElementById('specialist-main')
+
+  if (specialist.classList.contains('d-xl-none')) return;
+
   document.getElementById('specialist-aside').innerHTML = specialist.innerHTML
   specialist.classList.add('d-xl-none')
 })
