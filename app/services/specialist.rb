@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Specialist < Data.define(:title, :research_areas, :photo_url, :email)
+Specialist = Data.define(:title, :research_areas, :photo_url, :email) do
   def self.find(query)
     specialists.find { |specialist| specialist.research_areas.any? { |area| area.downcase.include?(query.downcase) } }
   end
