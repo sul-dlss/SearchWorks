@@ -1,7 +1,7 @@
 <% title %>
 <section class="bg-secondary py-5">
   <div class="container-fluid" style="max-width: 1242px">
-    <h1 class="h2">Search for books, articles, and more</h1>
+    <h1 class="h2 fw-semibold">Search for books, articles, and more</h1>
     <form class="search-query-form d-flex vw-75" style="max-width: 729px" action="/all" accept-charset="UTF-8" method="get">
       <label class="visually-hidden" for="q">search for</label>
       <input class="search-q q form-control rounded-left rounded-start" aria-label="search for" type="search" name="q" id="q" autocomplete="off" spellcheck="false" required>
@@ -13,24 +13,25 @@
 <div class="container-fluid py-5" style="max-width: 1242px">
   <div class="row">
     <div class="col-xl-7 col-md-8">
-      <header class="h3 fw-semibold">Stanford University Libraries' search tools</header>
-      <div class="mb-3">
-        <div class="mb-1"> SearchWorks <span class="fw-semibold">Catalog</span> </div>
+      <header class="h3 fw-semibold mb-3">Stanford University Libraries' search tools</header>
+      <div class="mb-125">
+        <div class="mb-1 fw-medium"> SearchWorks <span class="fw-bold">Catalog</span> </div>
         <div><%= t('catalog_search.sub_heading_html') %></div>
       </div>
 
       <div class="mb-3">
-        <div class="mb-1"> SearchWorks <span class="fw-semibold">Articles+</span> </div>
+        <div class="mb-1 fw-medium"> SearchWorks <span class="fw-bold">Articles+</span> </div>
         <div><%= t('article_search.sub_heading_html') %></div>
       </div>
 
       <% %w[archives_search earthworks_search exhibits_search].each do |scope| %>
-        <div class="mb-3">
-          <div class="mb-1 fw-semibold"><%= t('display_name_html', scope:) %></div>
+        <div class="mb-125">
+          <div class="mb-1 fw-bold"><%= t('display_name_html', scope:) %></div>
           <div><%= t('sub_heading_html', scope:) %></div>
         </div>
       <% end %>
     </div>
+
     <div class="col-xl-4 offset-xl-1 col-md-4 ps-xxl-5">
       <aside class="p-3 bg-secondary">
         <header class="h3 fw-semibold mb-3">Other sources searched</header>

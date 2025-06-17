@@ -42,6 +42,10 @@ body {
   font-size: 1.125rem;
 }
 
+.mb-125 {
+  margin-block-end: 1.25rem;
+}
+
 .result-set-heading {
   color: var(--stanford-black);
 }
