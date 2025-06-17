@@ -3,12 +3,16 @@
 require 'rails_helper'
 
 RSpec.describe 'search/_module_heading' do
-  let(:catalog) do
+  let(:result) do
     instance_double(CatalogSearcher, total: total, see_all_link: 'https://searchworks.stanford.edu/articles?q=climate%20change')
+  end
+  let(:service) { Service.new('catalog') }
+  let(:presenter) do
+    SearchPresenter.new(service, result)
   end
 
   before do
-    render 'search/module_heading', service_name: 'catalog', searcher: catalog
+    render 'search/module_heading', presenter:
   end
 
   context 'with no results' do
@@ -58,6 +62,17 @@ RSpec.describe 'search/_module_heading' do
       expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
       expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital collections/)
       expect(rendered).to have_link 'See all 4 catalog results'
+    end
+  end
+
+  context 'with 100 results for lib_guides' do
+    let(:total) { 100 }
+    let(:service) { Service.new('lib_guides') }
+
+    it 'renders' do
+      expect(rendered).to have_css('.result-set-heading', text: 'Guides')
+      expect(rendered).to have_css('.result-set-subheading', text: /Course and topic guides/)
+      expect(rendered).to have_link 'See 100+ lib guides results'
     end
   end
 end

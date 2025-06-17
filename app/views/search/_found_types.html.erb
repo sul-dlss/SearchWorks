@@ -1,11 +1,11 @@
 <nav class="searcher-anchors my-4 d-flex justify-content-center gap-4" aria-label="Results found in">
   <span class="fw-semibold fs-1125 text-nowrap align-self-start">Results from:</span>
   <ul class="d-flex flex-wrap align-self-center list-inline column-gap-4 row-gap-2 mb-0">
-    <% Settings.enabled_searchers.each do |searcher| %>
+    <% enabled_searchers.each do |searcher| %>
       <li class="d-flex position-relative">
-        <a href="#<%= searcher.underscore %>" class="stretched-link"><%= t("#{searcher}_search.short_display_name") %></a>
+        <a href="#<%= searcher.name %>" class="stretched-link"><%= t("short_display_name", scope: searcher.i18n_key) %></a>
         <span class="badge rounded-pill text-bg-secondary ms-1">
-          <turbo-frame id="<%= searcher.underscore %>_count">&nbsp;</turbo-frame>
+          <turbo-frame id="<%= searcher.name %>_count">&nbsp;</turbo-frame>
         </span>
       </li>
     <% end %>

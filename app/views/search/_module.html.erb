@@ -1,12 +1,12 @@
-<div id="<%= service_name.underscore %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= service_name.underscore %>_count" data-module-total-value="<%= number_with_delimiter(searcher.total) %>">
-    <% if searcher.results.blank? %>
-        <%= render 'module_heading', { service_name:, searcher: } %>
-        <%= render 'no_results', { service_name:, searcher: } %>
+<div id="<%= presenter.service_name %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= presenter.service_name %>_count" data-module-total-value="<%= number_with_delimiter(presenter.result.total) %>">
+    <% if presenter.no_results? %>
+        <%= render 'module_heading', presenter: %>
+        <%= render 'no_results', presenter: %>
     <% else %>
-        <%= render 'module_heading', { service_name:, searcher: } %>
+        <%= render 'module_heading', presenter: %>
 
         <ol class="list-unstyled">
-          <%= render partial: 'result', collection: searcher.results %>
+          <%= render partial: 'result', collection: @presenter.result.results %>
         </ol>
     <% end %>
 </div>

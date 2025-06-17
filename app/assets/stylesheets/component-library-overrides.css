@@ -22,8 +22,20 @@
     --navbar-logo-width: 308px;
   }
 }
-.su-underline {
-  --bs-link-decoration: underline solid var(--underline-color) 1px;
+
+a.su-underline {
+  /*
+  https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration 
+  Safari doesn't support text-decoration-thickness
+  (breaks --bs-link-decoration: underline var(--underline-color) solid 1px)
+  It says it supports shorthand color and style but it isn't working
+  Above page examples shows warning for all shorthand in Safari despite browser compatibility table
+  */
+  --bs-link-decoration: underline;
+  text-decoration-color: var(--underline-color);
+  text-decoration-style: solid;
+
+  text-decoration-thickness: 1px;
 }
 
 header {
@@ -39,10 +51,12 @@ header {
   --bs-dropdown-padding-y: 0;
   --bs-dropdown-item-padding-y: 1.25rem;
   --bs-dropdown-item-padding-x: 1.25rem;
+  --bs-dropdown-link-hover-bg: var(--stanford-10-black);
   --bs-dropdown-link-hover-color: var(--stanford-archway);
+  --bs-dropdown-link-active-bg: var(--stanford-10-black);
+  --bs-dropdown-link-active-color: var(--stanford-archway);
   --bs-dropdown-border-width: 0;
   --bs-dropdown-border-radius: 0;
-  --bs-dropdown-link-hover-bg: var(--stanford-10-black);
   .dropdown-item {
     font-weight: 600;
   }
