@@ -18,8 +18,8 @@
   --stanford-90-black: #43423e;
 }
 
-#main-content {
-  min-height: calc(100vh - 478px);
+body {
+  min-height: 100vh;
 }
 
 .container-fluid {

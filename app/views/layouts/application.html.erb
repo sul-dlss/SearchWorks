@@ -41,7 +41,7 @@
   <%= content_tag :body, class: body_class, data: { 'quicksearch-ga-query': strip_tags(@query || '') } do %>
     <%= render 'shared/header' %>
 
-    <main id="main-content" role="main">
+    <main id="main-content" role="main" class="flex-1 mb-auto">
       <%= render '/shared/global_alert' %>
       <%= yield %>
     </main>
