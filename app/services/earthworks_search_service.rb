@@ -16,8 +16,13 @@ class EarthworksSearchService < AbstractSearchService
     def results
       solr_docs = json['data']
       solr_docs.collect do |doc|
+        format = doc.dig('attributes', 'gbl_resourceClass_sm', 'attributes', 'value')
         SearchResult.new(
           title: doc.dig('attributes', 'title'),
+          format: format,
+          date: date(doc),
+          coverage: coverage(doc),
+          icon: "earthworks/#{format.gsub(' ', '_').downcase}.svg",
           link: format(Settings.earthworks.fetch_url, id: doc['id']),
           author: doc.dig('attributes', 'dc_creator_sm', 'attributes', 'value'),
           description: doc.dig('attributes', 'dc_description_s', 'attributes', 'value')
@@ -27,8 +32,20 @@ class EarthworksSearchService < AbstractSearchService
 
     private
 
-    def json
-      @json ||= JSON.parse(@body)
+    def date(doc)
+      date = doc.dig('attributes', 'gbl_indexYear_im', 'attributes', 'value')
+
+      return if date.blank?
+
+      "Temporal Coverage: #{date}"
+    end
+
+    def coverage(doc)
+      coverage = doc.dig('attributes', 'dct_spatial_sm', 'attributes', 'value')
+
+      return if coverage.blank?
+
+      "Place: #{coverage}"
     end
   end
 end

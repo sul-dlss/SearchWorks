@@ -36,6 +36,12 @@ class AbstractSearchService
     def results
       raise NotImplementedError
     end
+
+    private
+
+    def json
+      @json ||= JSON.parse(@body)
+    end
   end
 
   def initialize(options = {})
@@ -46,14 +52,16 @@ class AbstractSearchService
 
   # @param [String] query
   def search(query)
-    url = format(@query_url, q: CGI.escape(query), max: Settings.MAX_RESULTS)
-
-    response = @http.get(url)
+    response = @http.get(url(query))
 
     unless response.status.success? && response.body.present?
-      raise NoResults, "Search response failed: #{url} status: #{response.status} body #{response.body}"
+      raise NoResults, "Search response failed: #{url(query)} status: #{response.status} body #{response.body}"
     end
 
     @response_class.new(response.body.to_s)
+  end
+
+  def url(query)
+    format(@query_url, q: CGI.escape(query), max: Settings.MAX_RESULTS)
   end
 end

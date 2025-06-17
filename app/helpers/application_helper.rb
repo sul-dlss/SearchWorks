@@ -19,6 +19,26 @@ module ApplicationHelper
     content_for :title, page_title.compact.join
   end
 
+  def format_year(date_string)
+    return nil if date_string.blank?
+
+    date = Date.parse(date_string)
+    year = date.strftime('%Y')
+    "(#{year})"
+  rescue Date::Error
+    nil
+  end
+
+  def journal_details(composed_title)
+    return '' if composed_title.blank?
+
+    search_link_match = composed_title.match(%r{</searchlink>(.*)}i)
+    return search_link_match[1] if search_link_match
+
+    italic_match = composed_title.match(%r{\u003C/i\u003E(.*)}i)
+    italic_match ? italic_match[1] : ''
+  end
+
   def visually_hidden_service(service_name)
     tag.span service_name.humanize(capitalize: false), class: 'visually-hidden'
   end
