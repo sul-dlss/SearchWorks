@@ -9,20 +9,23 @@ class CatalogSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
+    include IconMappingHelper
+
     def total
       json['response']['pages']['total_count'].to_i
     end
 
-    def results
+    def results # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
+        format = doc['format_main_ssim']&.first
         result = SearchResult.new(
           title: doc['title_display'] || doc['title_full_display'],
           link: format(Settings.catalog.fetch_url, id: doc['id']),
           physical: doc['physical']&.first,
           author: doc['author_person_display']&.first,
           format: doc['format_main_ssim']&.first,
-          icon: 'notebook.svg',
+          icon: IconMappingHelper::HASH[format] || 'notebook.svg',
           description: doc['summary_display'].try(:join),
           pub_year: doc['pub_year_ss']
         )
