@@ -9,22 +9,25 @@ class ArticleSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
+    include IconMappingHelper
+
     HIGHLIGHTED_FACET_FIELD = 'eds_publication_type_facet'
 
     def total
       json['response']['pages']['total_count'].to_i
     end
 
-    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
     def results
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
+        format = doc['eds_publication_type']
         result = SearchResult.new(
           link: format(Settings.article.fetch_url, id: doc['id']),
           title: doc['eds_title'],
-          format: doc['eds_publication_type'],
+          format:,
           journal: doc['eds_source_title'],
-          icon: 'notebook.svg',
+          icon: IconMappingHelper::HASH[format] || 'notebook.svg',
           description: doc['eds_abstract'],
           pub_date: doc['eds_publication_date'],
           composed_title: doc['eds_composed_title']
@@ -45,7 +48,7 @@ class ArticleSearchService < AbstractSearchService
         result
       end
     end
-    # rubocop:enable Metrics/MethodLength
+    # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
     private
 
