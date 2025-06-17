@@ -10,5 +10,9 @@ RSpec.describe Specialist do
     it 'returns a specialist using a partial match' do
       expect(described_class.find('Rare unmatchedtoken Curator')).to have_attributes(title: 'Benjamin Albritton')
     end
+
+    it 'returns nothing if no terms match' do
+      expect(described_class.find('cats')).to be_nil
+    end
   end
 end

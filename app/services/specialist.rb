@@ -8,7 +8,8 @@ Specialist = Data.define(:title, :full_title, :research_areas, :photo_url, :emai
   def self.find(query)
     query_tokens = Specialist.tokenize(query)
 
-    specialists.shuffle.max_by { |specialist| (specialist.search_tokens & query_tokens).map { |token| Specialist.idf[token] || 0 }.sum }
+    specialists.map { |specialist| [specialist, (specialist.search_tokens & query_tokens).map { |token| Specialist.idf[token] || 0 }.sum] }
+               .filter { |_, score| score.positive? }.max_by { |_, score| score }&.first
   end
 
   def self.specialists
