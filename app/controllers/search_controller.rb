@@ -7,27 +7,18 @@ class SearchController < ApplicationController
   end
 
   def show
-    endpoint = params[:endpoint]
+    service = Service.new(params[:endpoint])
 
-    @query = params_q_scrubbed
-
-    begin
-      @searcher = search_service.one(endpoint)
-    rescue AbstractSearchService::NoResults, HTTP::TimeoutError => e
-      logger.error(e.message)
-      @no_answer = true
-    end
+    result = service.query(params_q_scrubbed)
+    @presenter = SearchPresenter.new(service, result)
   end
 
   # JSON API for Searchworks' mini-bento
   def lib_guides
-    @query = params_q_scrubbed
+    service = Service.new('lib_guides')
 
-    begin
-      @searcher = search_service.one('lib_guides')
-    rescue AbstractSearchService::NoResults
-      @no_answer = true
-    end
+    result = service.query(params_q_scrubbed)
+    @presenter = SearchPresenter.new(service, result)
   end
 
   private
@@ -40,9 +31,5 @@ class SearchController < ApplicationController
 
   def params_q_scrubbed
     params[:q]&.scrub
-  end
-
-  def search_service
-    SearchService.new(@query)
   end
 end

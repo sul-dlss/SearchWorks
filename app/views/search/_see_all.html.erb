@@ -1,14 +1,14 @@
-<%= link_to see_all_link, class: "btn btn-outline-secondary text-nowrap" do %>
-  <% if service_name == 'lib_guides' && total == 100 %>
-    See 100+ <%= visually_hidden_service(service_name) %> results
+<%= link_to presenter.see_all_link, class: "btn btn-outline-secondary text-nowrap" do %>
+  <% if presenter.service_name == 'lib_guides' && presenter.total == 100 %>
+    See 100+ <%= visually_hidden_service(presenter.service_name) %> results
   <% else %>
-   	<% case total -%>
+   	<% case presenter.total -%>
   	<% when 1 %>
-      See <%= number_with_delimiter(total) %> <%= visually_hidden_service(service_name) %> result
+      See <%= number_with_delimiter(presenter.total) %> <%= visually_hidden_service(presenter.service_name) %> result
   	<% when 2, 3 %>
-  	  See <%= number_with_delimiter(total) %> <%= visually_hidden_service(service_name) %> results
+  	  See <%= number_with_delimiter(presenter.total) %> <%= visually_hidden_service(presenter.service_name) %> results
     <% else %>
-      See all <%= number_with_delimiter(total) %> <%= visually_hidden_service(service_name) %> results
+      See all <%= number_with_delimiter(presenter.total) %> <%= visually_hidden_service(presenter.service_name) %> results
     <% end %>
   <% end %>
 <% end %>

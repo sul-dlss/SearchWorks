@@ -1,9 +1,9 @@
 <div class="d-flex justify-content-between align-items-center flex-wrap column-gap-1 mb-1">
     <h2 class='result-set-heading h4 mb-0 fw-semibold text-nowrap'>
-      <%= t("#{service_name}_search.display_name_html") %>
+      <%= t("display_name_html", scope: presenter.i18n_key) %>
     </h2>
-    <%= render '/search/see_all', { service_name:, total: searcher.total, see_all_link: searcher.see_all_link } unless searcher.total.zero? %>
+    <%= render('/search/see_all', presenter:) unless presenter.no_results? %>
 </div>
 <small class='result-set-subheading d-block mb-3'>
-  <%= t("#{service_name}_search.sub_heading_html") %>
+  <%= t("sub_heading_html", scope: presenter.i18n_key) %>
 </small>
