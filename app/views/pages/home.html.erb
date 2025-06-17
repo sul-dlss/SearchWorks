@@ -16,49 +16,31 @@
       <header class="h3 fw-semibold">Stanford University Libraries' search tools</header>
       <div class="mb-3">
         <div class="mb-1 fw-medium"> SearchWorks <span class="fw-bold">Catalog</span> </div>
-        <div> Books, journals, media, and more from the Library's physical and online collections </div>
+        <div><%= t('catalog_search.sub_heading_html') %></div>
       </div>
 
       <div class="mb-3">
         <div class="mb-1 fw-medium"> SearchWorks <span class="fw-bold">Articles+</span> </div>
-        <div> Journal articles, eBooks, and more from the Library's digital subscriptions </div>
+        <div><%= t('article_search.sub_heading_html') %></div>
       </div>
 
-      <div class="mb-3">
-        <div class="mb-1 fw-bold"> Archival Collections at Stanford </div>
-        <div> Photographs, rare books, maps, personal papers of scientists, artists, and writers, and more </div>
-      </div>
-
-      <div class="mb-3">
-        <div class="mb-1 fw-bold"> EarthWorks </div>
-        <div> Geospatial datasets (GIS data) and georeferenced and scanned maps provided by Stanford University Libraries and many
-              other institutions
+      <% %w[archives_search earthworks_search exhibits_search].each do |scope| %>
+        <div class="mb-3">
+          <div class="mb-1 fw-bold"><%= t('display_name_html', scope:) %></div>
+          <div><%= t('sub_heading_html', scope:) %></div>
         </div>
-      </div>
-
-      <div class="mb-3">
-        <div class="mb-1 fw-bold"> Spotlight Exhibits </div>
-        <div> Curated, thematic digital exhibits featuring hundreds of Stanford's online collections </div>
-      </div>
+      <% end %>
     </div>
     <div class="col-xxl-4 col-md-4 ps-xxl-5 ms-xxl-5">
-      <div class="ml-2 p-3 bg-secondary">
-        <header class="h3 fw-semibold">Other sources searched</header>
-        <div class="mb-3">
-          <div class="mb-1 fw-bold"> Library website </div>
-          <div> Wayfinder for all library services </div>
-        </div>
-
-        <div class="mb-3">
-          <div class="mb-1 fw-bold"> Guides </div>
-          <div> Course- and topic-based guides to collections, tools and services </div>
-        </div>
-
-        <div class="mb-3">
-          <div class="mb-1 fw-bold"> Subject specialists </div>
-          <div> Over fifty subject specialists </div>
-        </div>
-      </div>
+      <aside class="p-3 bg-secondary">
+        <header class="h3 fw-semibold mb-3">Other sources searched</header>
+        <% %w[library_website_api_search lib_guides_search subject_specialist_search].each do |scope| %>
+          <div class="mb-3">
+            <div class="mb-1 fw-bold"><%= t('display_name_html', scope:) %></div>
+            <div><%= t('sub_heading_html', scope:) %></div>
+          </div>
+        <% end %>
+      </aside>
     </div>
   </div>
 </div>

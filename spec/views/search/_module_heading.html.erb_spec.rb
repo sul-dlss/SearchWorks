@@ -16,7 +16,7 @@ RSpec.describe 'search/_module_heading' do
 
     it 'renders' do
       expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital collections/)
       expect(rendered).to have_no_link
     end
   end
@@ -26,7 +26,7 @@ RSpec.describe 'search/_module_heading' do
 
     it 'renders' do
       expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital collections/)
       expect(rendered).to have_link 'See 1 catalog result'
     end
   end
@@ -36,7 +36,7 @@ RSpec.describe 'search/_module_heading' do
 
     it 'renders' do
       expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital collections/)
       expect(rendered).to have_link 'See 2 catalog results'
     end
   end
@@ -46,7 +46,7 @@ RSpec.describe 'search/_module_heading' do
 
     it 'renders' do
       expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital collections/)
       expect(rendered).to have_link 'See 3 catalog results'
     end
   end
@@ -56,7 +56,7 @@ RSpec.describe 'search/_module_heading' do
 
     it 'renders' do
       expect(rendered).to have_css('.result-set-heading', text: 'Catalog')
-      expect(rendered).to have_css('.result-set-subheading', text: /Books, journals, media, and more/)
+      expect(rendered).to have_css('.result-set-subheading', text: /Physical and digital collections/)
       expect(rendered).to have_link 'See all 4 catalog results'
     end
   end
