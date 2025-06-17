@@ -1354,6 +1354,7 @@ server.wenzibase.com
 services.igi-global.com
 setac.onlinelibrary.wiley.com
 shop.seg.org
+shs.cairn.info
 sigmapubs.onlinelibrary.wiley.com
 silencejournal.biomedcentral.com
 sit.bmj.com
@@ -1760,7 +1761,6 @@ www.cnbksy.com
 www.cochranelibrary.com
 www.collantropol.hr
 www.colonialamerica.amdigital.co.uk
-www.colonialcaribbean.amdigital.co.uk
 www.coloproctol.org
 www.columbia.edu
 www.comp-index.com
