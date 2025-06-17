@@ -23,7 +23,21 @@
         <% enabled_searchers.each do |searcher| %>
           <turbo-frame id="<%= searcher.name %>_module" src="/all/<%= searcher.name %>?q=<%= params[:q] %>" class="module-container">
             <div class="module-contents" style="height: 500px;">
-              Loading ...
+              <div class="d-flex justify-content-between align-items-center flex-wrap column-gap-1 mb-1">
+                  <h2 class='result-set-heading h4 mb-0 fw-semibold text-nowrap'>
+                    <%= t("display_name_html", scope: searcher.i18n_key) %>
+                  </h2>
+              </div>
+              <small class='result-set-subheading d-block mb-3'>
+                <%= t("sub_heading_html", scope: searcher.i18n_key) %>
+              </small>
+
+              <div class="text-uppercase text-cardinal fs-6 d-flex align-items-center placeholder-glow">
+                Searching
+                  <span aria-hidden class="ms-2 rounded-circle placeholder placeholder-dot bg-dark"></span>
+                  <span aria-hidden class="ms-2 rounded-circle placeholder placeholder-dot bg-dark"></span>
+                  <span aria-hidden class="ms-2 rounded-circle placeholder placeholder-dot bg-dark"></span>
+              </div>
             </div>
           </turbo-frame>
         <% end %>

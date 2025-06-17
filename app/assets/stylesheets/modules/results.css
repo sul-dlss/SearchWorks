@@ -104,3 +104,22 @@
     list-style-type: none;
   }
 }
+
+.placeholder-glow {
+  .placeholder-dot:first-child {
+    animation-delay: -0.3s;
+  }
+  .placeholder-dot:last-child {
+    animation-delay: 0.3s;
+  }
+}
+
+.placeholder-dot {
+  height: 0.5em !important;
+  min-height: 0.5em !important;
+  width: 0.5em !important;
+}
+
+.text-cardinal {
+  color: var(--stanford-cardinal);
+}
