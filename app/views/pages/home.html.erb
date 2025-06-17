@@ -15,18 +15,18 @@
     <div class="col-xl-7 col-md-8">
       <header class="h3 fw-semibold">Stanford University Libraries' search tools</header>
       <div class="mb-3">
-        <div class="mb-1 fw-medium"> SearchWorks <span class="fw-bold">Catalog</span> </div>
+        <div class="mb-1"> SearchWorks <span class="fw-semibold">Catalog</span> </div>
         <div><%= t('catalog_search.sub_heading_html') %></div>
       </div>
 
       <div class="mb-3">
-        <div class="mb-1 fw-medium"> SearchWorks <span class="fw-bold">Articles+</span> </div>
+        <div class="mb-1"> SearchWorks <span class="fw-semibold">Articles+</span> </div>
         <div><%= t('article_search.sub_heading_html') %></div>
       </div>
 
       <% %w[archives_search earthworks_search exhibits_search].each do |scope| %>
         <div class="mb-3">
-          <div class="mb-1 fw-bold"><%= t('display_name_html', scope:) %></div>
+          <div class="mb-1 fw-semibold"><%= t('display_name_html', scope:) %></div>
           <div><%= t('sub_heading_html', scope:) %></div>
         </div>
       <% end %>
@@ -36,7 +36,7 @@
         <header class="h3 fw-semibold mb-3">Other sources searched</header>
         <% %w[library_website_api_search lib_guides_search subject_specialist_search].each do |scope| %>
           <div class="mb-3">
-            <div class="mb-1 fw-bold"><%= t('display_name_html', scope:) %></div>
+            <div class="mb-1 fw-semibold"><%= t('display_name_html', scope:) %></div>
             <div><%= t('sub_heading_html', scope:) %></div>
           </div>
         <% end %>
