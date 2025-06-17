@@ -1,0 +1,3372 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "dct_description_sm": {
+          "attributes": {
+            "label": "Dct Description Sm",
+            "value": "Groundwater Basins for Marin County.  Data was downloaded from http://gis.ca.gov/data_index.epl and reprojected from NAD 27 meters.  Attributes not..."
+          },
+          "id": "https://earthworks.stanford.edu/catalog/ark28722-s73k54#dct_description_sm",
+          "type": "document_value"
+        },
+        "dct_publisher_sm": {
+          "attributes": {
+            "label": "Dct Publisher Sm",
+            "value": "San Rafael (Calif.). County Of Marin."
+          },
+          "id": "https://earthworks.stanford.edu/catalog/ark28722-s73k54#dct_publisher_sm",
+          "type": "document_value"
+        },
+        "dct_spatial_sm": {
+          "attributes": {
+            "label": "Dct Spatial Sm",
+            "value": "Marin County (Calif.)"
+          },
+          "id": "https://earthworks.stanford.edu/catalog/ark28722-s73k54#dct_spatial_sm",
+          "type": "document_value"
+        },
+        "gbl_indexYear_im": {
+          "attributes": {
+            "label": "Gbl Index Year Im",
+            "value": 2003
+          },
+          "id": "https://earthworks.stanford.edu/catalog/ark28722-s73k54#gbl_indexYear_im",
+          "type": "document_value"
+        },
+        "gbl_resourceClass_sm": {
+          "attributes": {
+            "label": "Gbl Resource Class Sm",
+            "value": "Polygon"
+          },
+          "id": "https://earthworks.stanford.edu/catalog/ark28722-s73k54#gbl_resourceClass_sm",
+          "type": "document_value"
+        },
+        "title": "Groundwater"
+      },
+      "id": "ark28722-s73k54",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/ark28722-s73k54"
+      },
+      "type": null
+    },
+    {
+      "attributes": {
+        "dct_creator_sm": {
+          "attributes": {
+            "label": "Dct Creator Sm",
+            "value": "Decius, L. C."
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-jt832dj5846#dct_creator_sm",
+          "type": "document_value"
+        },
+        "dct_description_sm": {
+          "attributes": {
+            "label": "Dct Description Sm",
+            "value": "Relief shown by form lines. Photocopy."
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-jt832dj5846#dct_description_sm",
+          "type": "document_value"
+        },
+        "gbl_resourceClass_sm": {
+          "attributes": {
+            "label": "Gbl Resource Class Sm",
+            "value": "Maps"
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-jt832dj5846#gbl_resourceClass_sm",
+          "type": "document_value"
+        },
+        "title": "Geology"
+      },
+      "id": "stanford-jt832dj5846",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/stanford-jt832dj5846"
+      },
+      "type": null
+    },
+    {
+      "attributes": {
+        "dct_creator_sm": {
+          "attributes": {
+            "label": "Dct Creator Sm",
+            "value": "California. Department of Water Resources"
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-mw789rk2571#dct_creator_sm",
+          "type": "document_value"
+        },
+        "dct_description_sm": {
+          "attributes": {
+            "label": "Dct Description Sm",
+            "value": "This point shapefile represents changes in groundwater levels in California. These data represent groundwater changes between spring 2009 and sprin..."
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-mw789rk2571#dct_description_sm",
+          "type": "document_value"
+        },
+        "dct_publisher_sm": {
+          "attributes": {
+            "label": "Dct Publisher Sm",
+            "value": "California. Department of Water Resources"
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-mw789rk2571#dct_publisher_sm",
+          "type": "document_value"
+        },
+        "dct_spatial_sm": {
+          "attributes": {
+            "label": "Dct Spatial Sm",
+            "value": "California"
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-mw789rk2571#dct_spatial_sm",
+          "type": "document_value"
+        },
+        "gbl_indexYear_im": {
+          "attributes": {
+            "label": "Gbl Index Year Im",
+            "value": 2016
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-mw789rk2571#gbl_indexYear_im",
+          "type": "document_value"
+        },
+        "gbl_resourceClass_sm": {
+          "attributes": {
+            "label": "Gbl Resource Class Sm",
+            "value": "Point"
+          },
+          "id": "https://earthworks.stanford.edu/catalog/stanford-mw789rk2571#gbl_resourceClass_sm",
+          "type": "document_value"
+        },
+        "title": "Groundwater Elevation Change, California, Spring 2009 to Spring 2012"
+      },
+      "id": "stanford-mw789rk2571",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/stanford-mw789rk2571"
+      },
+      "type": null
+    }
+  ],
+  "included": [
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 3366,
+              "label": "Maps",
+              "value": "Maps"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceClass_sm%5D%5B%5D=Maps\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 885,
+              "label": "Datasets",
+              "value": "Datasets"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceClass_sm%5D%5B%5D=Datasets\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 15,
+              "label": "Web services",
+              "value": "Web services"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceClass_sm%5D%5B%5D=Web+services\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 10,
+              "label": "Collections",
+              "value": "Collections"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceClass_sm%5D%5B%5D=Collections\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "Imagery",
+              "value": "Imagery"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceClass_sm%5D%5B%5D=Imagery\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "Other",
+              "value": "Other"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceClass_sm%5D%5B%5D=Other\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "Websites",
+              "value": "Websites"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceClass_sm%5D%5B%5D=Websites\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Resource Class"
+      },
+      "id": "gbl_resourceClass_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/gbl_resourceClass_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1692,
+              "label": "Cadastral maps",
+              "value": "Cadastral maps"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Cadastral+maps\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 254,
+              "label": "Polygon data",
+              "value": "Polygon data"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Polygon+data\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 246,
+              "label": "Point data",
+              "value": "Point data"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Point+data\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 228,
+              "label": "Thematic maps",
+              "value": "Thematic maps"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Thematic+maps\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 181,
+              "label": "Raster data",
+              "value": "Raster data"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Raster+data\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 157,
+              "label": "Line data",
+              "value": "Line data"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Line+data\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 135,
+              "label": "Geological maps",
+              "value": "Geological maps"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Geological+maps\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 67,
+              "label": "Topographic maps",
+              "value": "Topographic maps"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Topographic+maps\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 48,
+              "label": "Bathymetric maps",
+              "value": "Bathymetric maps"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bgbl_resourceType_sm%5D%5B%5D=Bathymetric+maps\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Genre/Data Type"
+      },
+      "id": "gbl_resourceType_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/gbl_resourceType_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1696,
+              "label": "Property",
+              "value": "Property"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Property\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 593,
+              "label": "Geology",
+              "value": "Geology"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Geology\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 500,
+              "label": "Environment",
+              "value": "Environment"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Environment\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 297,
+              "label": "Inland Waters",
+              "value": "Inland Waters"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Inland+Waters\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 297,
+              "label": "Land cover",
+              "value": "Land cover"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Land+cover\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 228,
+              "label": "Oceans",
+              "value": "Oceans"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Oceans\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 139,
+              "label": "Imagery",
+              "value": "Imagery"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Imagery\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 135,
+              "label": "Climate",
+              "value": "Climate"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Climate\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 129,
+              "label": "Land Cover",
+              "value": "Land Cover"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdcat_theme_sm%5D%5B%5D=Land+Cover\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Theme"
+      },
+      "id": "dcat_theme_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dcat_theme_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1718,
+              "label": "Iowa",
+              "value": "Iowa"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=Iowa\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 678,
+              "label": "California",
+              "value": "California"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=California\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 463,
+              "label": "Minnesota",
+              "value": "Minnesota"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=Minnesota\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 222,
+              "label": "Ohio",
+              "value": "Ohio"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=Ohio\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 208,
+              "label": "Pacific Ocean",
+              "value": "Pacific Ocean"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=Pacific+Ocean\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 132,
+              "label": "Pennsylvania",
+              "value": "Pennsylvania"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=Pennsylvania\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 116,
+              "label": "Indiana",
+              "value": "Indiana"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=Indiana\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 85,
+              "label": "Marin County (Calif.)",
+              "value": "Marin County (Calif.)"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=Marin+County+%28Calif.%29\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 71,
+              "label": "California, Northern",
+              "value": "California, Northern"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_spatial_sm%5D%5B%5D=California%2C+Northern\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Location"
+      },
+      "id": "dct_spatial_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dct_spatial_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1700-1799",
+              "value": "1700-1799"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1700-1799\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1700-1799:1790-1799",
+              "value": "1700-1799:1790-1799"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1700-1799%3A1790-1799\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1700-1799:1790-1799:1795",
+              "value": "1700-1799:1790-1799:1795"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1700-1799%3A1790-1799%3A1795\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1814,
+              "label": "1800-1899",
+              "value": "1800-1899"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1820-1829",
+              "value": "1800-1899:1820-1829"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1820-1829\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1820-1829:1828",
+              "value": "1800-1899:1820-1829:1828"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1820-1829%3A1828\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 304,
+              "label": "1800-1899:1830-1839",
+              "value": "1800-1899:1830-1839"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1830-1839\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1830-1839:1832",
+              "value": "1800-1899:1830-1839:1832"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1830-1839%3A1832\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1830-1839:1835",
+              "value": "1800-1899:1830-1839:1835"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1830-1839%3A1835\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 55,
+              "label": "1800-1899:1830-1839:1836",
+              "value": "1800-1899:1830-1839:1836"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1830-1839%3A1836\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 242,
+              "label": "1800-1899:1830-1839:1837",
+              "value": "1800-1899:1830-1839:1837"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1830-1839%3A1837\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "1800-1899:1830-1839:1838",
+              "value": "1800-1899:1830-1839:1838"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1830-1839%3A1838\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1830-1839:1839",
+              "value": "1800-1899:1830-1839:1839"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1830-1839%3A1839\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 878,
+              "label": "1800-1899:1840-1849",
+              "value": "1800-1899:1840-1849"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 19,
+              "label": "1800-1899:1840-1849:1840",
+              "value": "1800-1899:1840-1849:1840"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1840\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 38,
+              "label": "1800-1899:1840-1849:1841",
+              "value": "1800-1899:1840-1849:1841"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1841\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 17,
+              "label": "1800-1899:1840-1849:1842",
+              "value": "1800-1899:1840-1849:1842"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1842\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 176,
+              "label": "1800-1899:1840-1849:1843",
+              "value": "1800-1899:1840-1849:1843"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1843\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1840-1849:1844",
+              "value": "1800-1899:1840-1849:1844"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1844\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 96,
+              "label": "1800-1899:1840-1849:1845",
+              "value": "1800-1899:1840-1849:1845"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1845\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 124,
+              "label": "1800-1899:1840-1849:1846",
+              "value": "1800-1899:1840-1849:1846"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1846\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 15,
+              "label": "1800-1899:1840-1849:1847",
+              "value": "1800-1899:1840-1849:1847"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1847\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 202,
+              "label": "1800-1899:1840-1849:1848",
+              "value": "1800-1899:1840-1849:1848"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1848\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 190,
+              "label": "1800-1899:1840-1849:1849",
+              "value": "1800-1899:1840-1849:1849"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1840-1849%3A1849\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 532,
+              "label": "1800-1899:1850-1859",
+              "value": "1800-1899:1850-1859"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1850-1859:1850",
+              "value": "1800-1899:1850-1859:1850"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1850\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 144,
+              "label": "1800-1899:1850-1859:1851",
+              "value": "1800-1899:1850-1859:1851"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1851\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 55,
+              "label": "1800-1899:1850-1859:1852",
+              "value": "1800-1899:1850-1859:1852"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1852\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 180,
+              "label": "1800-1899:1850-1859:1853",
+              "value": "1800-1899:1850-1859:1853"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1853\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 63,
+              "label": "1800-1899:1850-1859:1854",
+              "value": "1800-1899:1850-1859:1854"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1854\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 62,
+              "label": "1800-1899:1850-1859:1855",
+              "value": "1800-1899:1850-1859:1855"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1855\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1800-1899:1850-1859:1856",
+              "value": "1800-1899:1850-1859:1856"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1856\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1850-1859:1857",
+              "value": "1800-1899:1850-1859:1857"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1857\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 20,
+              "label": "1800-1899:1850-1859:1858",
+              "value": "1800-1899:1850-1859:1858"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1850-1859%3A1858\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 7,
+              "label": "1800-1899:1860-1869",
+              "value": "1800-1899:1860-1869"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1860-1869\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1860-1869:1860",
+              "value": "1800-1899:1860-1869:1860"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1860-1869%3A1860\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1860-1869:1861",
+              "value": "1800-1899:1860-1869:1861"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1860-1869%3A1861\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1860-1869:1863",
+              "value": "1800-1899:1860-1869:1863"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1860-1869%3A1863\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1860-1869:1866",
+              "value": "1800-1899:1860-1869:1866"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1860-1869%3A1866\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "1800-1899:1860-1869:1869",
+              "value": "1800-1899:1860-1869:1869"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1860-1869%3A1869\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 32,
+              "label": "1800-1899:1870-1879",
+              "value": "1800-1899:1870-1879"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "1800-1899:1870-1879:1870",
+              "value": "1800-1899:1870-1879:1870"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1870\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "1800-1899:1870-1879:1872",
+              "value": "1800-1899:1870-1879:1872"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1872\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1870-1879:1873",
+              "value": "1800-1899:1870-1879:1873"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1873\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 4,
+              "label": "1800-1899:1870-1879:1874",
+              "value": "1800-1899:1870-1879:1874"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1874\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1870-1879:1875",
+              "value": "1800-1899:1870-1879:1875"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1875\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1800-1899:1870-1879:1876",
+              "value": "1800-1899:1870-1879:1876"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1876\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1800-1899:1870-1879:1877",
+              "value": "1800-1899:1870-1879:1877"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1877\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1870-1879:1878",
+              "value": "1800-1899:1870-1879:1878"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1878\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1800-1899:1870-1879:1879",
+              "value": "1800-1899:1870-1879:1879"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1870-1879%3A1879\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 21,
+              "label": "1800-1899:1880-1889",
+              "value": "1800-1899:1880-1889"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1800-1899:1880-1889:1881",
+              "value": "1800-1899:1880-1889:1881"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1881\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1880-1889:1882",
+              "value": "1800-1899:1880-1889:1882"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1882\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1880-1889:1884",
+              "value": "1800-1899:1880-1889:1884"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1884\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1880-1889:1885",
+              "value": "1800-1899:1880-1889:1885"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1885\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1880-1889:1886",
+              "value": "1800-1899:1880-1889:1886"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1886\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1800-1899:1880-1889:1887",
+              "value": "1800-1899:1880-1889:1887"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1887\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "1800-1899:1880-1889:1888",
+              "value": "1800-1899:1880-1889:1888"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1888\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1880-1889:1889",
+              "value": "1800-1899:1880-1889:1889"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1880-1889%3A1889\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 39,
+              "label": "1800-1899:1890-1899",
+              "value": "1800-1899:1890-1899"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1,
+              "label": "1800-1899:1890-1899:1890",
+              "value": "1800-1899:1890-1899:1890"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1890\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "1800-1899:1890-1899:1891",
+              "value": "1800-1899:1890-1899:1891"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1891\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1800-1899:1890-1899:1892",
+              "value": "1800-1899:1890-1899:1892"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1892\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 4,
+              "label": "1800-1899:1890-1899:1893",
+              "value": "1800-1899:1890-1899:1893"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1893\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 4,
+              "label": "1800-1899:1890-1899:1894",
+              "value": "1800-1899:1890-1899:1894"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1894\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 7,
+              "label": "1800-1899:1890-1899:1895",
+              "value": "1800-1899:1890-1899:1895"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1895\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1890-1899:1896",
+              "value": "1800-1899:1890-1899:1896"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1896\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 7,
+              "label": "1800-1899:1890-1899:1897",
+              "value": "1800-1899:1890-1899:1897"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1897\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1800-1899:1890-1899:1898",
+              "value": "1800-1899:1890-1899:1898"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1898\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 8,
+              "label": "1800-1899:1890-1899:1899",
+              "value": "1800-1899:1890-1899:1899"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1800-1899%3A1890-1899%3A1899\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1104,
+              "label": "1900-1999",
+              "value": "1900-1999"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 92,
+              "label": "1900-1999:1900-1909",
+              "value": "1900-1999:1900-1909"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 11,
+              "label": "1900-1999:1900-1909:1900",
+              "value": "1900-1999:1900-1909:1900"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1900\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1900-1999:1900-1909:1901",
+              "value": "1900-1999:1900-1909:1901"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1901\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 18,
+              "label": "1900-1999:1900-1909:1902",
+              "value": "1900-1999:1900-1909:1902"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1902\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 8,
+              "label": "1900-1999:1900-1909:1903",
+              "value": "1900-1999:1900-1909:1903"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1903\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 7,
+              "label": "1900-1999:1900-1909:1904",
+              "value": "1900-1999:1900-1909:1904"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1904\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 2,
+              "label": "1900-1999:1900-1909:1905",
+              "value": "1900-1999:1900-1909:1905"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1905\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 7,
+              "label": "1900-1999:1900-1909:1906",
+              "value": "1900-1999:1900-1909:1906"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1906\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 15,
+              "label": "1900-1999:1900-1909:1907",
+              "value": "1900-1999:1900-1909:1907"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1907\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1900-1999:1900-1909:1908",
+              "value": "1900-1999:1900-1909:1908"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1908\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 25,
+              "label": "1900-1999:1900-1909:1909",
+              "value": "1900-1999:1900-1909:1909"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1900-1909%3A1909\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 105,
+              "label": "1900-1999:1910-1919",
+              "value": "1900-1999:1910-1919"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 18,
+              "label": "1900-1999:1910-1919:1910",
+              "value": "1900-1999:1910-1919:1910"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1910\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 21,
+              "label": "1900-1999:1910-1919:1911",
+              "value": "1900-1999:1910-1919:1911"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1911\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 11,
+              "label": "1900-1999:1910-1919:1912",
+              "value": "1900-1999:1910-1919:1912"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1912\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 13,
+              "label": "1900-1999:1910-1919:1913",
+              "value": "1900-1999:1910-1919:1913"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1913\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 11,
+              "label": "1900-1999:1910-1919:1914",
+              "value": "1900-1999:1910-1919:1914"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1914\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 11,
+              "label": "1900-1999:1910-1919:1915",
+              "value": "1900-1999:1910-1919:1915"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1915\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 20,
+              "label": "1900-1999:1910-1919:1916",
+              "value": "1900-1999:1910-1919:1916"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1916\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 4,
+              "label": "1900-1999:1910-1919:1917",
+              "value": "1900-1999:1910-1919:1917"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1917\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 9,
+              "label": "1900-1999:1910-1919:1918",
+              "value": "1900-1999:1910-1919:1918"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1918\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1900-1999:1910-1919:1919",
+              "value": "1900-1999:1910-1919:1919"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1910-1919%3A1919\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 61,
+              "label": "1900-1999:1920-1929",
+              "value": "1900-1999:1920-1929"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 10,
+              "label": "1900-1999:1920-1929:1920",
+              "value": "1900-1999:1920-1929:1920"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1920\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 11,
+              "label": "1900-1999:1920-1929:1921",
+              "value": "1900-1999:1920-1929:1921"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1921\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1900-1999:1920-1929:1922",
+              "value": "1900-1999:1920-1929:1922"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1922\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1900-1999:1920-1929:1923",
+              "value": "1900-1999:1920-1929:1923"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1923\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 7,
+              "label": "1900-1999:1920-1929:1924",
+              "value": "1900-1999:1920-1929:1924"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1924\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 11,
+              "label": "1900-1999:1920-1929:1925",
+              "value": "1900-1999:1920-1929:1925"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1925\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 9,
+              "label": "1900-1999:1920-1929:1926",
+              "value": "1900-1999:1920-1929:1926"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1926\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1900-1999:1920-1929:1927",
+              "value": "1900-1999:1920-1929:1927"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1927\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 9,
+              "label": "1900-1999:1920-1929:1928",
+              "value": "1900-1999:1920-1929:1928"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1928\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1900-1999:1920-1929:1929",
+              "value": "1900-1999:1920-1929:1929"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1920-1929%3A1929\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 117,
+              "label": "1900-1999:1930-1939",
+              "value": "1900-1999:1930-1939"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 9,
+              "label": "1900-1999:1930-1939:1930",
+              "value": "1900-1999:1930-1939:1930"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1930\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "1900-1999:1930-1939:1931",
+              "value": "1900-1999:1930-1939:1931"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1931\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "1900-1999:1930-1939:1932",
+              "value": "1900-1999:1930-1939:1932"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1932\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 4,
+              "label": "1900-1999:1930-1939:1933",
+              "value": "1900-1999:1930-1939:1933"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1933\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 75,
+              "label": "1900-1999:1930-1939:1934",
+              "value": "1900-1999:1930-1939:1934"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1934\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 7,
+              "label": "1900-1999:1930-1939:1935",
+              "value": "1900-1999:1930-1939:1935"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1935\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 16,
+              "label": "1900-1999:1930-1939:1936",
+              "value": "1900-1999:1930-1939:1936"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1936\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 6,
+              "label": "1900-1999:1930-1939:1937",
+              "value": "1900-1999:1930-1939:1937"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1937\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 10,
+              "label": "1900-1999:1930-1939:1938",
+              "value": "1900-1999:1930-1939:1938"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1938\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 19,
+              "label": "1900-1999:1930-1939:1939",
+              "value": "1900-1999:1930-1939:1939"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1930-1939%3A1939\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 101,
+              "label": "1900-1999:1940-1949",
+              "value": "1900-1999:1940-1949"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 35,
+              "label": "1900-1999:1940-1949:1940",
+              "value": "1900-1999:1940-1949:1940"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1940\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 32,
+              "label": "1900-1999:1940-1949:1941",
+              "value": "1900-1999:1940-1949:1941"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1941\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 33,
+              "label": "1900-1999:1940-1949:1942",
+              "value": "1900-1999:1940-1949:1942"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1942\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 33,
+              "label": "1900-1999:1940-1949:1943",
+              "value": "1900-1999:1940-1949:1943"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1943\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 33,
+              "label": "1900-1999:1940-1949:1944",
+              "value": "1900-1999:1940-1949:1944"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1944\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 60,
+              "label": "1900-1999:1940-1949:1945",
+              "value": "1900-1999:1940-1949:1945"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1945\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 33,
+              "label": "1900-1999:1940-1949:1946",
+              "value": "1900-1999:1940-1949:1946"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1946\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 39,
+              "label": "1900-1999:1940-1949:1947",
+              "value": "1900-1999:1940-1949:1947"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1947\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 38,
+              "label": "1900-1999:1940-1949:1948",
+              "value": "1900-1999:1940-1949:1948"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1948\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 60,
+              "label": "1900-1999:1940-1949:1949",
+              "value": "1900-1999:1940-1949:1949"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1940-1949%3A1949\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 108,
+              "label": "1900-1999:1950-1959",
+              "value": "1900-1999:1950-1959"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 38,
+              "label": "1900-1999:1950-1959:1950",
+              "value": "1900-1999:1950-1959:1950"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1950\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 39,
+              "label": "1900-1999:1950-1959:1951",
+              "value": "1900-1999:1950-1959:1951"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1951\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 37,
+              "label": "1900-1999:1950-1959:1952",
+              "value": "1900-1999:1950-1959:1952"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1952\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 39,
+              "label": "1900-1999:1950-1959:1953",
+              "value": "1900-1999:1950-1959:1953"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1953\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 42,
+              "label": "1900-1999:1950-1959:1954",
+              "value": "1900-1999:1950-1959:1954"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1954\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 47,
+              "label": "1900-1999:1950-1959:1955",
+              "value": "1900-1999:1950-1959:1955"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1955\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 45,
+              "label": "1900-1999:1950-1959:1956",
+              "value": "1900-1999:1950-1959:1956"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1956\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 44,
+              "label": "1900-1999:1950-1959:1957",
+              "value": "1900-1999:1950-1959:1957"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1957\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 48,
+              "label": "1900-1999:1950-1959:1958",
+              "value": "1900-1999:1950-1959:1958"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1958\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 80,
+              "label": "1900-1999:1950-1959:1959",
+              "value": "1900-1999:1950-1959:1959"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1950-1959%3A1959\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 176,
+              "label": "1900-1999:1960-1969",
+              "value": "1900-1999:1960-1969"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 74,
+              "label": "1900-1999:1960-1969:1960",
+              "value": "1900-1999:1960-1969:1960"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1960\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 59,
+              "label": "1900-1999:1960-1969:1961",
+              "value": "1900-1999:1960-1969:1961"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1961\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 86,
+              "label": "1900-1999:1960-1969:1962",
+              "value": "1900-1999:1960-1969:1962"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1962\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 47,
+              "label": "1900-1999:1960-1969:1963",
+              "value": "1900-1999:1960-1969:1963"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1963\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 49,
+              "label": "1900-1999:1960-1969:1964",
+              "value": "1900-1999:1960-1969:1964"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1964\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 50,
+              "label": "1900-1999:1960-1969:1965",
+              "value": "1900-1999:1960-1969:1965"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1965\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 53,
+              "label": "1900-1999:1960-1969:1966",
+              "value": "1900-1999:1960-1969:1966"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1966\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 55,
+              "label": "1900-1999:1960-1969:1967",
+              "value": "1900-1999:1960-1969:1967"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1967\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 65,
+              "label": "1900-1999:1960-1969:1968",
+              "value": "1900-1999:1960-1969:1968"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1968\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 62,
+              "label": "1900-1999:1960-1969:1969",
+              "value": "1900-1999:1960-1969:1969"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1960-1969%3A1969\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 170,
+              "label": "1900-1999:1970-1979",
+              "value": "1900-1999:1970-1979"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 74,
+              "label": "1900-1999:1970-1979:1970",
+              "value": "1900-1999:1970-1979:1970"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1970\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 61,
+              "label": "1900-1999:1970-1979:1971",
+              "value": "1900-1999:1970-1979:1971"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1971\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 65,
+              "label": "1900-1999:1970-1979:1972",
+              "value": "1900-1999:1970-1979:1972"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1972\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 62,
+              "label": "1900-1999:1970-1979:1973",
+              "value": "1900-1999:1970-1979:1973"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1973\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 83,
+              "label": "1900-1999:1970-1979:1974",
+              "value": "1900-1999:1970-1979:1974"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1974\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 82,
+              "label": "1900-1999:1970-1979:1975",
+              "value": "1900-1999:1970-1979:1975"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1975\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 76,
+              "label": "1900-1999:1970-1979:1976",
+              "value": "1900-1999:1970-1979:1976"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1976\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 92,
+              "label": "1900-1999:1970-1979:1977",
+              "value": "1900-1999:1970-1979:1977"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1977\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 81,
+              "label": "1900-1999:1970-1979:1978",
+              "value": "1900-1999:1970-1979:1978"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1978\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 96,
+              "label": "1900-1999:1970-1979:1979",
+              "value": "1900-1999:1970-1979:1979"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1970-1979%3A1979\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 215,
+              "label": "1900-1999:1980-1989",
+              "value": "1900-1999:1980-1989"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 111,
+              "label": "1900-1999:1980-1989:1980",
+              "value": "1900-1999:1980-1989:1980"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1980\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 96,
+              "label": "1900-1999:1980-1989:1981",
+              "value": "1900-1999:1980-1989:1981"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1981\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 107,
+              "label": "1900-1999:1980-1989:1982",
+              "value": "1900-1999:1980-1989:1982"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1982\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 101,
+              "label": "1900-1999:1980-1989:1983",
+              "value": "1900-1999:1980-1989:1983"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1983\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 117,
+              "label": "1900-1999:1980-1989:1984",
+              "value": "1900-1999:1980-1989:1984"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1984\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 115,
+              "label": "1900-1999:1980-1989:1985",
+              "value": "1900-1999:1980-1989:1985"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1985\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 115,
+              "label": "1900-1999:1980-1989:1986",
+              "value": "1900-1999:1980-1989:1986"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1986\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 111,
+              "label": "1900-1999:1980-1989:1987",
+              "value": "1900-1999:1980-1989:1987"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1987\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 111,
+              "label": "1900-1999:1980-1989:1988",
+              "value": "1900-1999:1980-1989:1988"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1988\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 114,
+              "label": "1900-1999:1980-1989:1989",
+              "value": "1900-1999:1980-1989:1989"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1980-1989%3A1989\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 295,
+              "label": "1900-1999:1990-1999",
+              "value": "1900-1999:1990-1999"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 136,
+              "label": "1900-1999:1990-1999:1990",
+              "value": "1900-1999:1990-1999:1990"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1990\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 117,
+              "label": "1900-1999:1990-1999:1991",
+              "value": "1900-1999:1990-1999:1991"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1991\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 107,
+              "label": "1900-1999:1990-1999:1992",
+              "value": "1900-1999:1990-1999:1992"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1992\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 109,
+              "label": "1900-1999:1990-1999:1993",
+              "value": "1900-1999:1990-1999:1993"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1993\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 101,
+              "label": "1900-1999:1990-1999:1994",
+              "value": "1900-1999:1990-1999:1994"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1994\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 104,
+              "label": "1900-1999:1990-1999:1995",
+              "value": "1900-1999:1990-1999:1995"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1995\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 94,
+              "label": "1900-1999:1990-1999:1996",
+              "value": "1900-1999:1990-1999:1996"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1996\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 102,
+              "label": "1900-1999:1990-1999:1997",
+              "value": "1900-1999:1990-1999:1997"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1997\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 111,
+              "label": "1900-1999:1990-1999:1998",
+              "value": "1900-1999:1990-1999:1998"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1998\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 119,
+              "label": "1900-1999:1990-1999:1999",
+              "value": "1900-1999:1990-1999:1999"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=1900-1999%3A1990-1999%3A1999\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 828,
+              "label": "2000-2099",
+              "value": "2000-2099"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 485,
+              "label": "2000-2099:2000-2009",
+              "value": "2000-2099:2000-2009"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 112,
+              "label": "2000-2099:2000-2009:2000",
+              "value": "2000-2099:2000-2009:2000"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2000\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 92,
+              "label": "2000-2099:2000-2009:2001",
+              "value": "2000-2099:2000-2009:2001"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2001\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 87,
+              "label": "2000-2099:2000-2009:2002",
+              "value": "2000-2099:2000-2009:2002"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2002\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 74,
+              "label": "2000-2099:2000-2009:2003",
+              "value": "2000-2099:2000-2009:2003"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2003\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 96,
+              "label": "2000-2099:2000-2009:2004",
+              "value": "2000-2099:2000-2009:2004"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2004\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 132,
+              "label": "2000-2099:2000-2009:2005",
+              "value": "2000-2099:2000-2009:2005"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2005\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 164,
+              "label": "2000-2099:2000-2009:2006",
+              "value": "2000-2099:2000-2009:2006"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2006\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 197,
+              "label": "2000-2099:2000-2009:2007",
+              "value": "2000-2099:2000-2009:2007"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2007\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 163,
+              "label": "2000-2099:2000-2009:2008",
+              "value": "2000-2099:2000-2009:2008"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2008\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 166,
+              "label": "2000-2099:2000-2009:2009",
+              "value": "2000-2099:2000-2009:2009"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2000-2009%3A2009\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 448,
+              "label": "2000-2099:2010-2019",
+              "value": "2000-2099:2010-2019"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 125,
+              "label": "2000-2099:2010-2019:2010",
+              "value": "2000-2099:2010-2019:2010"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2010\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 61,
+              "label": "2000-2099:2010-2019:2011",
+              "value": "2000-2099:2010-2019:2011"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2011\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 174,
+              "label": "2000-2099:2010-2019:2012",
+              "value": "2000-2099:2010-2019:2012"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2012\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 106,
+              "label": "2000-2099:2010-2019:2013",
+              "value": "2000-2099:2010-2019:2013"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2013\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 82,
+              "label": "2000-2099:2010-2019:2014",
+              "value": "2000-2099:2010-2019:2014"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2014\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 71,
+              "label": "2000-2099:2010-2019:2015",
+              "value": "2000-2099:2010-2019:2015"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2015\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 29,
+              "label": "2000-2099:2010-2019:2016",
+              "value": "2000-2099:2010-2019:2016"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2016\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 3,
+              "label": "2000-2099:2010-2019:2017",
+              "value": "2000-2099:2010-2019:2017"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2017\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "2000-2099:2010-2019:2018",
+              "value": "2000-2099:2010-2019:2018"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2018\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "2000-2099:2010-2019:2019",
+              "value": "2000-2099:2010-2019:2019"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2010-2019%3A2019\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "2000-2099:2020-2029",
+              "value": "2000-2099:2020-2029"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2020-2029\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 5,
+              "label": "2000-2099:2020-2029:2020",
+              "value": "2000-2099:2020-2029:2020"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdate_hierarchy_sm%5D%5B%5D=2000-2099%3A2020-2029%3A2020\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Date"
+      },
+      "id": "date_hierarchy_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/date_hierarchy_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 314,
+              "label": "Dibblee, T. W. (Thomas Wilson), 1911-2004",
+              "value": "Dibblee, T. W. (Thomas Wilson), 1911-2004"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=Dibblee%2C+T.+W.+%28Thomas+Wilson%29%2C+1911-2004\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 201,
+              "label": "Golden, Nadine E.",
+              "value": "Golden, Nadine E."
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=Golden%2C+Nadine+E.\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 183,
+              "label": "Pacific Coastal and Marine Science Center",
+              "value": "Pacific Coastal and Marine Science Center"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=Pacific+Coastal+and+Marine+Science+Center\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 133,
+              "label": "International Association of Seismology and Physics of the Earth's Interior",
+              "value": "International Association of Seismology and Physics of the Earth's Interior"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=International+Association+of+Seismology+and+Physics+of+the+Earth%27s+Interior\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 133,
+              "label": "International Heat Flow Commission",
+              "value": "International Heat Flow Commission"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=International+Heat+Flow+Commission\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 133,
+              "label": "Oklahoma State University. Department of Geography. Cartography Service",
+              "value": "Oklahoma State University. Department of Geography. Cartography Service"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=Oklahoma+State+University.+Department+of+Geography.+Cartography+Service\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 124,
+              "label": "California. Department of Water Resources",
+              "value": "California. Department of Water Resources"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=California.+Department+of+Water+Resources\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 102,
+              "label": "ML InfoMap (Firm)",
+              "value": "ML InfoMap (Firm)"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=ML+InfoMap+%28Firm%29\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 98,
+              "label": "Dartnell, Peter",
+              "value": "Dartnell, Peter"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_creator_sm%5D%5B%5D=Dartnell%2C+Peter\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Author"
+      },
+      "id": "dct_creator_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dct_creator_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1691,
+              "label": "United States Surveyor General",
+              "value": "United States Surveyor General"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=United+States+Surveyor+General\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 350,
+              "label": "Minnesota Geological Survey",
+              "value": "Minnesota Geological Survey"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=Minnesota+Geological+Survey\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 278,
+              "label": "Santa Barbara Museum of Natural History",
+              "value": "Santa Barbara Museum of Natural History"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=Santa+Barbara+Museum+of+Natural+History\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 232,
+              "label": "Geological Survey (U.S.)",
+              "value": "Geological Survey (U.S.)"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=Geological+Survey+%28U.S.%29\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 133,
+              "label": "International Heat Flow Commission",
+              "value": "International Heat Flow Commission"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=International+Heat+Flow+Commission\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 123,
+              "label": "California. Department of Water Resources",
+              "value": "California. Department of Water Resources"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=California.+Department+of+Water+Resources\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 122,
+              "label": "Ohio. Division of Water",
+              "value": "Ohio. Division of Water"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=Ohio.+Division+of+Water\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 102,
+              "label": "ML InfoMap (Firm)",
+              "value": "ML InfoMap (Firm)"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=ML+InfoMap+%28Firm%29\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 71,
+              "label": "Works Progress Administration of Pennsylvania",
+              "value": "Works Progress Administration of Pennsylvania"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_publisher_sm%5D%5B%5D=Works+Progress+Administration+of+Pennsylvania\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Publisher"
+      },
+      "id": "dct_publisher_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dct_publisher_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1700,
+              "label": "Iowa",
+              "value": "Iowa"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Iowa\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1324,
+              "label": "Stanford",
+              "value": "Stanford"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Stanford\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 576,
+              "label": "Minnesota",
+              "value": "Minnesota"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Minnesota\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 198,
+              "label": "Ohio State",
+              "value": "Ohio State"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Ohio+State\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 99,
+              "label": "Penn State",
+              "value": "Penn State"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Penn+State\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 96,
+              "label": "Indiana",
+              "value": "Indiana"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Indiana\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 50,
+              "label": "Rutgers",
+              "value": "Rutgers"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Rutgers\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 47,
+              "label": "Michigan",
+              "value": "Michigan"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=Michigan\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 33,
+              "label": "NYU",
+              "value": "NYU"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bschema_provider_s%5D%5B%5D=NYU\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Provider"
+      },
+      "id": "schema_provider_s",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/schema_provider_s.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 3776,
+              "label": "Public",
+              "value": "Public"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_accessRights_s%5D%5B%5D=Public\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 450,
+              "label": "Restricted",
+              "value": "Restricted"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_accessRights_s%5D%5B%5D=Restricted\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Access"
+      },
+      "id": "dct_accessRights_s",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dct_accessRights_s.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1692,
+              "label": "77f-0001",
+              "value": "77f-0001"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=77f-0001\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 1127,
+              "label": "64bd8c4c-8e60-4956-b43d-bdc3f93db488",
+              "value": "64bd8c4c-8e60-4956-b43d-bdc3f93db488"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=64bd8c4c-8e60-4956-b43d-bdc3f93db488\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 315,
+              "label": "stanford-zy568zf7838",
+              "value": "stanford-zy568zf7838"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=stanford-zy568zf7838\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 207,
+              "label": "stanford-ng324gh5570",
+              "value": "stanford-ng324gh5570"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=stanford-ng324gh5570\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 133,
+              "label": "stanford-pv411wm0035",
+              "value": "stanford-pv411wm0035"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=stanford-pv411wm0035\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 123,
+              "label": "stanford-cz385jp1958",
+              "value": "stanford-cz385jp1958"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=stanford-cz385jp1958\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 102,
+              "label": "stanford-pf830fj1392",
+              "value": "stanford-pf830fj1392"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=stanford-pf830fj1392\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 42,
+              "label": "b35f927e-9051-4d7f-9ca3-ad5b19024e0b",
+              "value": "b35f927e-9051-4d7f-9ca3-ad5b19024e0b"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=b35f927e-9051-4d7f-9ca3-ad5b19024e0b\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 35,
+              "label": "dc8c18df-7d64-4ff4-a754-d18d0891187d",
+              "value": "dc8c18df-7d64-4ff4-a754-d18d0891187d"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=dc8c18df-7d64-4ff4-a754-d18d0891187d\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 22,
+              "label": "stanford-cv275yx9215",
+              "value": "stanford-cv275yx9215"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bpcdm_memberOf_sm%5D%5B%5D=stanford-cv275yx9215\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Member Of"
+      },
+      "id": "pcdm_memberOf_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/pcdm_memberOf_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1700,
+              "label": "03d-01",
+              "value": "03d-01"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=03d-01\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 383,
+              "label": "05d-05",
+              "value": "05d-05"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=05d-05\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 197,
+              "label": "11d-02",
+              "value": "11d-02"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=11d-02\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 140,
+              "label": "05d-01",
+              "value": "05d-01"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=05d-01\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 107,
+              "label": "p16022coll230",
+              "value": "p16022coll230"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=p16022coll230\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 96,
+              "label": "01d-01",
+              "value": "01d-01"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=01d-01\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 71,
+              "label": "08d-03",
+              "value": "08d-03"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=08d-03\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 50,
+              "label": "14d-01",
+              "value": "14d-01"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=14d-01\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 47,
+              "label": "07d-01",
+              "value": "07d-01"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=07d-01\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 38,
+              "label": "05d-04",
+              "value": "05d-04"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_isPartOf_sm%5D%5B%5D=05d-04\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Is Part Of"
+      },
+      "id": "dct_isPartOf_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dct_isPartOf_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1691,
+              "label": "8888-003",
+              "value": "8888-003"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_relation_sm%5D%5B%5D=8888-003\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 42,
+              "label": "8888-002",
+              "value": "8888-002"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_relation_sm%5D%5B%5D=8888-002\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Related"
+      },
+      "id": "dct_relation_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dct_relation_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "items": [
+          {
+            "attributes": {
+              "hits": 1691,
+              "label": "Surveying--Public lands",
+              "value": "Surveying--Public lands"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Surveying--Public+lands\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 596,
+              "label": "Geology",
+              "value": "Geology"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Geology\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 397,
+              "label": "Geoscientific Information",
+              "value": "Geoscientific Information"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Geoscientific+Information\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 348,
+              "label": "Groundwater",
+              "value": "Groundwater"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Groundwater\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 297,
+              "label": "Inland Waters",
+              "value": "Inland Waters"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Inland+Waters\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 228,
+              "label": "Oceans",
+              "value": "Oceans"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Oceans\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 211,
+              "label": "Rivers",
+              "value": "Rivers"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Rivers\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 210,
+              "label": "Ocean bottom",
+              "value": "Ocean bottom"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Ocean+bottom\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 186,
+              "label": "Coasts",
+              "value": "Coasts"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Coasts\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          },
+          {
+            "attributes": {
+              "hits": 135,
+              "label": "Climatology, Meteorology and Atmosphere",
+              "value": "Climatology, Meteorology and Atmosphere"
+            },
+            "links": {
+              "self": "https://earthworks.stanford.edu/catalog.json?f%5Bdct_subject_sm%5D%5B%5D=Climatology%2C+Meteorology+and+Atmosphere\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields"
+            }
+          }
+        ],
+        "label": "Subject"
+      },
+      "id": "dct_subject_sm",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog/facet/dct_subject_sm.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "facet"
+    },
+    {
+      "attributes": {
+        "label": "All Fields"
+      },
+      "id": "all_fields",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+      },
+      "type": "search_field"
+    },
+    {
+      "attributes": {
+        "label": "relevance"
+      },
+      "id": "score desc, dct_title_sort asc",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog.json?q=groundwater\u0026rows=3\u0026search_field=all_fields\u0026sort=score+desc%2C+dct_title_sort+asc"
+      },
+      "type": "sort"
+    },
+    {
+      "attributes": {
+        "label": "year"
+      },
+      "id": "gbl_indexYear_im desc, dct_title_sort asc",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog.json?q=groundwater\u0026rows=3\u0026search_field=all_fields\u0026sort=gbl_indexYear_im+desc%2C+dct_title_sort+asc"
+      },
+      "type": "sort"
+    },
+    {
+      "attributes": {
+        "label": "title"
+      },
+      "id": "dct_title_sort asc",
+      "links": {
+        "self": "https://earthworks.stanford.edu/catalog.json?q=groundwater\u0026rows=3\u0026search_field=all_fields\u0026sort=dct_title_sort+asc"
+      },
+      "type": "sort"
+    }
+  ],
+  "links": {
+    "last": "https://earthworks.stanford.edu/catalog.json?page=1409\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields",
+    "next": "https://earthworks.stanford.edu/catalog.json?page=2\u0026q=groundwater\u0026rows=3\u0026search_field=all_fields",
+    "self": "https://earthworks.stanford.edu/catalog.json?q=groundwater\u0026rows=3\u0026search_field=all_fields"
+  },
+  "meta": {
+    "pages": {
+      "current_page": 1,
+      "first_page?": true,
+      "last_page?": false,
+      "limit_value": 3,
+      "next_page": 2,
+      "offset_value": 0,
+      "prev_page": null,
+      "total_count": 4226,
+      "total_pages": 1409
+    }
+  }
+}

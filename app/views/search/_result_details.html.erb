@@ -4,7 +4,7 @@
 
 
 <% if result.icon.present? || result.physical %>
-  <div class="pb-1 ">
+  <div class="pb-1">
     <%= image_tag result.icon, aria: { hidden: true }, class: 'icon mx-1' %>
     <span class="fw-semibold"><%= result.format %></span>
     <% case result.format %>
@@ -23,6 +23,13 @@
         <% if result.format %>&mdash; <% end %>
         physical <%= result.physical %>
       <% end %>
+    <% end %>
+
+    <% if result.date.present? %>
+      <span class="ms-4"><%= result.date %></span>
+    <% end %>
+    <% if result.coverage.present? %>
+      <span class="ms-4"><%= result.coverage %></span>
     <% end %>
   </div>
 <% end %>
