@@ -49,4 +49,34 @@ RSpec.describe LibGuidesSearchService do
       expect(results.first.title).to eq 'World languages education'
     end
   end
+
+  describe '#search' do
+    subject(:search) { service.search(query) }
+
+    context 'when response is successful' do
+      it 'returns a response object' do
+        expect(search).to be_an LibGuidesSearchService::Response
+      end
+    end
+
+    context 'when response is 404' do
+      before do
+        stub_request(:get, /.*/).to_return(status: 404)
+      end
+
+      it 'returns a empty result' do
+        expect(search).to be_an LibGuidesSearchService::Response
+      end
+    end
+
+    context 'when response is an error' do
+      before do
+        stub_request(:get, /.*/).to_return(status: 500)
+      end
+
+      it 'raises an error' do
+        expect { search }.to raise_error(AbstractSearchService::NoResults)
+      end
+    end
+  end
 end

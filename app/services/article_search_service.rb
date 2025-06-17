@@ -56,9 +56,5 @@ class ArticleSearchService < AbstractSearchService
 
       ''
     end
-
-    def json
-      @json ||= JSON.parse(@body)
-    end
   end
 end

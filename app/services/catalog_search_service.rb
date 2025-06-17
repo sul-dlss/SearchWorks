@@ -35,11 +35,5 @@ class CatalogSearchService < AbstractSearchService
         result
       end
     end
-
-    private
-
-    def json
-      @json ||= JSON.parse(@body)
-    end
   end
 end

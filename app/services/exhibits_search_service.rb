@@ -40,9 +40,5 @@ class ExhibitsSearchService < AbstractSearchService
     def settings
       Settings.exhibits
     end
-
-    def json
-      @json ||= JSON.parse(@body)
-    end
   end
 end

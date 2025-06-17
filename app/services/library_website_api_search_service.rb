@@ -26,11 +26,5 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
     def total
       json.dig('meta', 'count')
     end
-
-    private
-
-    def json
-      @json ||= JSON.parse(@body)
-    end
   end
 end

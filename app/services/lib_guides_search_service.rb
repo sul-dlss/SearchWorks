@@ -22,6 +22,21 @@ class LibGuidesSearchService < AbstractSearchService
     ].join()
   end
 
+  # @param [String] query
+  def search(query)
+    response = @http.get(url(query))
+
+    body = if response.status.success? && response.body.present?
+             response.body.to_s
+           elsif response.status == 404
+             '[]'
+           else
+             raise NoResults
+           end
+
+    @response_class.new(body)
+  end
+
   class Response < AbstractSearchService::Response
     def results
       json.first(num_results).collect do |doc|
@@ -42,12 +57,6 @@ class LibGuidesSearchService < AbstractSearchService
     # Otherwise we have a correct length and can display the number of results.
     def total
       json.length
-    end
-
-    private
-
-    def json
-      @json ||= JSON.parse(@body)
     end
   end
 end
