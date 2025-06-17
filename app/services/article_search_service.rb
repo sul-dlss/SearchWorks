@@ -15,6 +15,7 @@ class ArticleSearchService < AbstractSearchService
       json['response']['pages']['total_count'].to_i
     end
 
+    # rubocop:disable Metrics/MethodLength
     def results
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
@@ -24,7 +25,9 @@ class ArticleSearchService < AbstractSearchService
           format: doc['eds_publication_type'],
           journal: doc['eds_source_title'],
           icon: 'notebook.svg',
-          description: doc['eds_abstract']
+          description: doc['eds_abstract'],
+          pub_date: doc['eds_publication_date'],
+          composed_title: doc['eds_composed_title']
         )
 
         # Break up the HTML string into the pieces we use
@@ -42,6 +45,7 @@ class ArticleSearchService < AbstractSearchService
         result
       end
     end
+    # rubocop:enable Metrics/MethodLength
 
     private
 
