@@ -7,9 +7,22 @@
   <div class="pb-1 ">
     <%= image_tag result.icon, aria: { hidden: true }, class: 'icon mx-1' %>
     <span class="fw-semibold"><%= result.format %></span>
-    <% if result.physical %>
-      <% if result.format %>&mdash; <% end %>
-      <%= result.physical %>
+    <% case result.format %>
+    <% when 'Book' %>
+      <% if result.pub_year %>
+        (<%= result.pub_year %>)
+      <% else %>
+        <%= format_year(result.pub_date) %>
+      <% end %>
+    <% when 'eBook' %>
+      <%= format_year(result.pub_date) %>
+    <% else %>
+      <% if result.journal.present? %>
+        &mdash; <span class="fst-italic"><%= result.journal %></span><%= journal_details(result.composed_title) %>
+      <% elsif result.physical %>
+        <% if result.format %>&mdash; <% end %>
+        physical <%= result.physical %>
+      <% end %>
     <% end %>
   </div>
 <% end %>
@@ -18,9 +31,6 @@
 <% end %>
 <% if result.imprint.present? %>
   <div class="pb-1"><%= result.imprint %></div>
-<% end %>
-<% if result.journal.present? %>
-  <div class="pb-1"><%= result.journal %></div>
 <% end %>
 
 <% if result.description.present? %>

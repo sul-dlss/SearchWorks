@@ -43,7 +43,7 @@
     transition: transform 0.5s;
     width: 40px;
 
-    &:hover {
+    &:hover, &:focus {
       --dropdown-hover-border-color: rgb(93 75 60);
     }
 
@@ -111,7 +111,9 @@ header {
   }
 
   #user-util-collapse {
-    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.8rem;
+
     a.nav-link {
       --bs-nav-link-padding-y: 1rem;
       --bs-navbar-nav-link-padding-x: 1.25rem;

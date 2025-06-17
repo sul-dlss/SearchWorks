@@ -41,7 +41,7 @@ class LibGuidesSearchService < AbstractSearchService
     # Instead of displaying a correct number we don't display the number if the results == 100
     # Otherwise we have a correct length and can display the number of results.
     def total
-      json.length == 100 ? '100+' : json.length
+      json.length
     end
 
     private

@@ -23,7 +23,8 @@ class CatalogSearchService < AbstractSearchService
           author: doc['author_person_display']&.first,
           format: doc['format_main_ssim']&.first,
           icon: 'notebook.svg',
-          description: doc['summary_display'].try(:join)
+          description: doc['summary_display'].try(:join),
+          pub_year: doc['pub_year_ss']
         )
 
         # Break up the HTML string into the pieces we use
