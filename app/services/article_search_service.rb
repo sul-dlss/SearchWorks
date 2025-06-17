@@ -34,7 +34,7 @@ class ArticleSearchService < AbstractSearchService
           online_label['class'] += ' badge rounded-pill ms-2'
           result.title += online_label.to_html
         end
-        result.fulltext_link_html = html.css('a').first&.to_html
+        result.fulltext_link_html = html.css('a').first&.to_html || ''
         result.fulltext_link_html += stanford_only(html)
         result.author = doc['eds_authors']&.first
         # result.year = doc['pub_year_tisim']&.html_safe
