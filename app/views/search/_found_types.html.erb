@@ -2,8 +2,8 @@
   <span class="fw-semibold fs-1125 text-nowrap align-self-start">Results from:</span>
   <ul class="d-flex flex-wrap align-self-center list-inline column-gap-4 row-gap-2 mb-0">
     <% Settings.enabled_searchers.each do |searcher| %>
-      <li class="d-flex">
-        <a href="#<%= searcher.underscore %>"><%= t("#{searcher}_search.short_display_name") %></a>
+      <li class="d-flex position-relative">
+        <a href="#<%= searcher.underscore %>" class="stretched-link"><%= t("#{searcher}_search.short_display_name") %></a>
         <span class="badge rounded-pill text-bg-secondary ms-1">
           <turbo-frame id="<%= searcher.underscore %>_count">&nbsp;</turbo-frame>
         </span>
