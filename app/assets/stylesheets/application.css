@@ -23,8 +23,14 @@ body {
 }
 
 .container-fluid {
-  --container-fluid-padding: 100px;
+  --container-fluid-padding: 50px;
   width: calc(100% - var(--container-fluid-padding) + var(--bs-gutter-x));
+}
+
+@media (min-width: 7682px) {
+  .container-fluid {
+    --container-fluid-padding: 100px;
+  }
 }
 
 @media (min-width: 992px) {
