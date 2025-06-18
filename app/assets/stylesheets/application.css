@@ -1,18 +1,6 @@
 @import url("modules/masthead.css");
 @import url("modules/results.css");
 
-@font-face {
-  font-family: "dejavu_sansextralight";
-  src: url("DejaVuSans-ExtraLight-webfont.eot");
-  src:
-    url("DejaVuSans-ExtraLight-webfont.eot?#iefix") format("embedded-opentype"),
-    url("DejaVuSans-ExtraLight-webfont.woff") format("woff"),
-    url("DejaVuSans-ExtraLight-webfont.ttf") format("truetype"),
-    url("DejaVuSans-ExtraLight-webfont.svg#dejavu_sansextralight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   /* remove after https://github.com/sul-dlss/component-library/pull/132 is released */
   --stanford-90-black: #43423e;
@@ -62,25 +50,22 @@ body {
   padding: 10px;
 }
 
-.card {
+.specialist-card {
   --bs-card-border-radius: 0;
   border: 1px solid var(--stanford-digital-red);
   border-top: 5px solid var(--stanford-digital-red);
   width: 80%;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 50px;
   position: relative;
-  .position-absolute {
-    left: calc(50% - 50px);
-  }
+
   .photo {
     height: 100px;
     max-width: 100px;
     aspect-ratio: 1/1;
     border-radius: 9999px;
     overflow: hidden;
-    position: relative;
-    top: calc(-50px - 1.5rem);
+    top: -50px;
     img {
       width: 100%;
       height: 100%;
@@ -97,6 +82,6 @@ body {
     color: var(--stanford-black);
   }
 }
-aside .card {
+aside .specialist-card {
   width: 100%;
 }

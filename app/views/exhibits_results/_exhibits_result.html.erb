@@ -1,0 +1,16 @@
+<div class="row mb-3">
+  <div class="col-sm-3">
+      <%= link_to exhibits_result.link, aria: { hidden: true }, tabindex: '-1' do %>
+          <%= image_tag exhibits_result.thumbnail, class: 'thumbnail img-fluid', alt: '' %>
+      <% end %>
+  </div>
+  <div class="col-sm-9">
+      <div class="result-title fs-1125 fw-medium pt-2 pb-1">
+        <%= link_to exhibits_result.title.html_safe, exhibits_result.link %>
+      </div>
+
+      <% if exhibits_result.description.present? %>
+        <p class="description line-clamp"><%= exhibits_result.description.html_safe %></p>
+      <% end %>
+  </div>
+</div>

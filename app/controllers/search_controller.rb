@@ -15,14 +15,6 @@ class SearchController < ApplicationController
     @presenter = SearchPresenter.new(service, result, params_q_scrubbed)
   end
 
-  # JSON API for Searchworks' mini-bento
-  def lib_guides
-    service = Service.new('lib_guides')
-
-    result = service.search_service.search(params_q_scrubbed)
-    @presenter = SearchPresenter.new(service, result, params_q_scrubbed)
-  end
-
   private
 
   def handle_failed_search

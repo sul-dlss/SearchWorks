@@ -2,7 +2,7 @@
 
 class SearchPresenter
   delegate :i18n_key, :see_all_url_template, to: :@service
-  delegate :total, :results, to: :@result
+  delegate :total, :results, to: :@result, allow_nil: true
 
   def initialize(service, result, query_text)
     @service = service
@@ -14,8 +14,14 @@ class SearchPresenter
     @service.name
   end
 
+  def formatted_total
+    return '100+' if service_name == 'lib_guides' && total == 100
+
+    ActiveSupport::NumberHelper.number_to_delimited(total)
+  end
+
   def no_results?
-    total.zero?
+    total.nil? || total.zero?
   end
 
   def no_answer?

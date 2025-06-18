@@ -15,7 +15,7 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
       return unless json['data']
 
       json['data'].map do |doc|
-        SearchResult.new(
+        LibraryWebsiteResult.new(
           title: doc.dig('attributes', 'title'),
           link: doc.dig('attributes', 'path', 'alias'),
           description: sanitizer.sanitize(doc.dig('attributes', 'su_page_description'))

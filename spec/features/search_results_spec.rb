@@ -8,7 +8,7 @@ RSpec.describe 'Search results', :js do
       instance_double(
         ArticleSearchService::Response,
         results: [
-          SearchResult.new
+          ArticleResult.new(title: 'Sample Article Title')
         ],
         total: 666_666
       )
@@ -53,7 +53,7 @@ RSpec.describe 'Search results', :js do
       instance_double(
         CatalogSearchService::Response,
         results: [
-          SearchResult.new
+          CatalogResult.new(title: 'Sample Article Title')
         ],
         total: 666_666
       )

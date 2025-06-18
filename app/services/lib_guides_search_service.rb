@@ -40,7 +40,7 @@ class LibGuidesSearchService < AbstractSearchService
   class Response < AbstractSearchService::Response
     def results
       json.first(num_results).collect do |doc|
-        SearchResult.new(
+        LibGuidesResult.new(
           title: doc['name'],
           link: doc['url']
         )

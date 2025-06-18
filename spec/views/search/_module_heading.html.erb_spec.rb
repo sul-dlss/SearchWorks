@@ -73,7 +73,7 @@ RSpec.describe 'search/_module_heading' do
     it 'renders' do
       expect(rendered).to have_css('.result-set-heading', text: 'Guides')
       expect(rendered).to have_css('.result-set-subheading', text: /Course and topic guides/)
-      expect(rendered).to have_link 'See 100+ lib guides results'
+      expect(rendered).to have_link 'See all 100+ lib guides results'
     end
   end
 end

@@ -1,9 +1,3 @@
 <%= turbo_frame_tag "#{@presenter.service_name}_module" do %>
-  <% if @presenter.no_answer? %>
-    <div class="alert alert-danger">
-      There was an error retrieving your <%= t("#{params[:endpoint]}_search.micro_display_name") %> results.
-    </div>
-  <% else %>
-    <%= render 'module', presenter: @presenter %>
-  <% end %>
+  <%= render 'module', presenter: @presenter %>
 <% end %>

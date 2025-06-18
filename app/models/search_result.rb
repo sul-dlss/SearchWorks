@@ -4,5 +4,7 @@ class SearchResult
   include ActiveModel::API
   attr_accessor :title, :format, :icon, :physical, :author, :journal, :imprint, :description,
                 :online_badge, :link, :thumbnail, :fulltext_link_html, :pub_date, :pub_year,
-                :composed_title, :coverage, :date
+                :composed_title, :coverage, :date, :fulltext_stanford_only
+
+  alias fulltext_stanford_only? fulltext_stanford_only
 end

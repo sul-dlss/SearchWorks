@@ -17,7 +17,7 @@ class ExhibitsSearchService < AbstractSearchService
   class Response < AbstractSearchService::Response
     def results
       json.first(num_results).collect do |exhibit|
-        SearchResult.new(
+        ExhibitsResult.new(
           title: exhibit['title'],
           link: format(settings.link_url, id: exhibit['slug']),
           description: exhibit['subtitle'],

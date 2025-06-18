@@ -1,0 +1,36 @@
+<li class='no-thumbnail'>
+  <div class="result">
+    <div class="result-title fs-1125 fw-medium pt-2 pb-1">
+      <%= link_to article_result.title.html_safe, article_result.link %>
+    </div>
+
+
+    <div class="pb-1">
+      <%= image_tag article_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' if article_result.icon.present? %>
+      <span class="fw-semibold"><%= article_result.format %></span>
+      <% case article_result.format %>
+      <% when 'eBook' %>
+        <%= format_year(article_result.pub_date) %>
+      <% else %>
+        <% if article_result.journal.present? %>
+          &mdash; <span class="fst-italic"><%= article_result.journal %></span><%= journal_details(article_result.composed_title) %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <% if article_result.author.present? %>
+      <div class="pb-1"><%= article_result.author %></div>
+    <% end %>
+
+    <% if article_result.description.present? %>
+      <p class="description line-clamp"><%= article_result.description.html_safe %></p>
+    <% end %>
+
+
+    <% if article_result.fulltext_link_html %>
+      <p><%= article_result.fulltext_link_html.html_safe %>
+        <%= render 'shared/stanford_only_button' if article_result.fulltext_stanford_only? %></p>
+    <% end %>
+
+  </div>
+</li>

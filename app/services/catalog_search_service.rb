@@ -9,8 +9,6 @@ class CatalogSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
-    include IconMappingHelper
-
     def total
       json['response']['pages']['total_count'].to_i
     end
@@ -18,14 +16,12 @@ class CatalogSearchService < AbstractSearchService
     def results # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
-        format = doc['format_main_ssim']&.first
-        result = SearchResult.new(
+        result = CatalogResult.new(
           title: doc['title_display'] || doc['title_full_display'],
           link: format(Settings.catalog.fetch_url, id: doc['id']),
           physical: doc['physical']&.first,
           author: doc['author_person_display']&.first,
           format: doc['format_main_ssim']&.first,
-          icon: IconMappingHelper::HASH[format] || 'notebook.svg',
           description: doc['summary_display'].try(:join),
           pub_year: doc['pub_year_ss']
         )
@@ -33,6 +29,7 @@ class CatalogSearchService < AbstractSearchService
         # Break up the HTML string into the pieces we use
         html = Nokogiri::HTML(doc['fulltext_link_html']&.first)
         link = html.css('a').first&.to_html
+        result.fulltext_stanford_only = (html.css('[aria-label="Stanford-only"]').first || html.css('.stanford-only').first).present?
         result.fulltext_link_html = "<span class=\"text-green\">Available online ⮕</span> #{link}" if link
 
         result
