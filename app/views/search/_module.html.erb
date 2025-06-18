@@ -1,10 +1,8 @@
 <div id="<%= presenter.service_name %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= presenter.service_name %>_count" data-module-total-value="<%= number_with_delimiter(presenter.total) %>">
+    <%= render 'module_heading', presenter: %>
     <% if presenter.no_results? %>
-        <%= render 'module_heading', presenter: %>
         <%= render 'no_results', presenter: %>
     <% else %>
-        <%= render 'module_heading', presenter: %>
-
         <ol class="list-unstyled">
           <% presenter.results.each do |result| %>
             <%= render result %>
