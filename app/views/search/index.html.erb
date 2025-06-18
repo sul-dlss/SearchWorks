@@ -3,7 +3,7 @@
   <div class="container-fluid" style="max-width: 600px">
     <form class="search-query-form d-flex" action="/all" accept-charset="UTF-8" method="get">
       <label class="visually-hidden" for="q">search for</label>
-      <%= text_field_tag 'q', params[:q], class: "search-q q form-control rounded-left rounded-start", type: 'search', autocomplete: 'off', spellcheck: false, required: true %>
+      <%= text_field_tag 'q', params[:q], class: "search-q q form-control rounded-left rounded-start pe-2", type: 'search', autocomplete: 'off', spellcheck: false, required: true %>
       <button class="btn btn-secondary search-btn d-flex align-items-center justify-content-center" type="submit" id="search"><span class="submit-search-text">Search</span></button>
     </form>
   </div>
