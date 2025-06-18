@@ -1,56 +1,56 @@
 en:
   blacklight:
-    application_name: 'SearchWorks'
+    application_name: "SearchWorks"
     entry_name:
-      default: 'result'
+      default: "result"
     home:
-      title: 'SearchWorks catalog : Stanford Libraries'
+      title: "SearchWorks catalog : Stanford Libraries"
     articles:
       home:
-        title: 'SearchWorks articles+ : Stanford Libraries'
+        title: "SearchWorks articles+ : Stanford Libraries"
     search:
       facets:
         access_point:
           databases:
-            title: 'Within %{access_point}'
+            title: "Within %{access_point}"
         more_html: 'more <span class="visually-hidden">%{field_name}</span> <i class="fa fa-angle-double-right"></i>'
       form:
         submit_html: '<span class="visually-hidden">Search</span><span class="bi-search"></span>'
-        submit: ''
-      form_label: 'search for'
+        submit: ""
+      form_label: "search for"
       librarian_view:
-        empty: 'No librarian view available'
-      masthead_title: '%{title} in %{application_name}'
+        empty: "No librarian view available"
+      masthead_title: "%{title} in %{application_name}"
       show:
-        title: '%{document_title} in %{application_name}'
-        title_html: '%{document_title} in %{application_name}'
+        title: "%{document_title} in %{application_name}"
+        title_html: "%{document_title} in %{application_name}"
       sort:
         label_html: 'Sort<span class="d-none d-lg-inline"> by %{field}</span>'
-      searchworks_results_title: '%{num_results} in %{application_name}'
+      searchworks_results_title: "%{num_results} in %{application_name}"
       view:
-        label: 'View'
-        brief: 'brief'
-        gallery: 'gallery'
-        list: 'normal'
+        label: "View"
+        brief: "brief"
+        gallery: "gallery"
+        list: "normal"
       per_page:
         button_label_html: '%{count}<span class="d-none d-lg-inline"> per page</span>'
       pagination_info:
         pages:
-          one: '%{start_num} - %{end_num}'
-          other: '%{start_num} - %{end_num} of %{total_num}'
-        single_item_found: ''
+          one: "%{start_num} - %{end_num}"
+          other: "%{start_num} - %{end_num} of %{total_num}"
+        single_item_found: ""
         no_items_found: "<h2>No %{search_type} results found</h2>"
       entry_pagination_info:
-        other: '%{current} of %{total}'
+        other: "%{current} of %{total}"
       highlight:
         active_html: '<i class="fa fa-check active-icon"></i>'
     bookmarks:
-      no_bookmarks: 'You have no selections'
+      no_bookmarks: "You have no selections"
       select_all: '<i class="fa fa-square-o"></i> <span class="d-none d-lg-inline">Select </span>all'
       unselect_all: '<i class="fa fa-check-square-o"></i> <span class="d-none d-lg-inline">Unselect </span>all'
-      selection_title: 'selection'
+      selection_title: "selection"
       clear:
-        success: 'Your selections have been deleted.'
+        success: "Your selections have been deleted."
     tools:
       cite_html: '<i class="fa fa-quote-left"></i> Cite'
       send_to_html: '<i class=" fa fa-share-alt"></i> Send to'
@@ -62,7 +62,7 @@ en:
       printer_html: '<span class="bi-printer-fill"></span> printer'
       cite_entries: '<i class="fa fa-quote-left"></i> Cite %{current_range}'
       send_entries: '<i class=" fa fa-share-alt"></i> Send %{current_range} to'
-      librarian_view: 'Librarian view'
+      librarian_view: "Librarian view"
       find_it_html: '<i class="fa fa-map-marker"></i> Find it'
       stackmap:
         zoom_in_html: '<i class="fa fa-plus-circle"></i><span class="d-none d-sm-inline"> Zoom in</span>'
@@ -70,15 +70,8 @@ en:
         reset_size_html: '<i class="fa fa-compress"></i><span class="d-none d-sm-inline">  Reset size</span>'
     sms:
       text:
-        title: '%{value}'
-        author: ' by %{value}'
-        library_location: '%{library} - %{location}'
-        callnumber: '%{value}'
-        url: '%{url}'
-  views:
-    pagination_compact:
-      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'
-      previous: '<i class="fa fa-arrow-left"></i><span class="d-none d-sm-inline"> Previous</span>'
-    pagination:
-      previous: '<i class="fa fa-arrow-left"></i> <span class="d-none d-sm-inline"> Previous</span>'
-      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'
+        title: "%{value}"
+        author: " by %{value}"
+        library_location: "%{library} - %{location}"
+        callnumber: "%{value}"
+        url: "%{url}"
