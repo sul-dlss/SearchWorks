@@ -6,9 +6,7 @@
 
 
   <div class="specialist-card card p-4">
-    <div class="position-absolute">
-      <div class="photo"><img src="<%= specialist.photo_url %>" alt="Subject Specialist Photo"></img></div>
-    </div>
+    <div class="photo position-absolute start-50 translate-middle-x"><img src="<%= specialist.photo_url %>" alt="Subject Specialist Photo"></img></div>
     <div class="text">
       <div class="name h5 fw-semibold"><%= specialist.title %></div>
       <div><%= specialist.research_areas.to_sentence %></div>
