@@ -28,9 +28,11 @@
 }
 
 .result-title {
-  font-family: "dejavu_sansextralight";
-  letter-spacing: -0.03em;
   --bs-body-line-height: 1.15;
+
+  a {
+    font-weight: inherit; /* the component library really wants links to be 400.. */
+  }
 }
 
 .result-set-subheading {
