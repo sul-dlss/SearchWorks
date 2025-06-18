@@ -2,29 +2,44 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-// Copy library and guides to the sidebar that appears for XL
-document.addEventListener('turbo:frame-render', (event) => {
-  if (event.target.id === 'library_website_api_module') {
-    document.getElementById('webside-aside').innerHTML = event.target.innerHTML
-    event.target.classList.add('d-xl-none')
+window.addEventListener('resize', handleResponsiveAside);
+document.addEventListener('turbo:load', resetAndHandleResponsiveAside);
+document.addEventListener('DOMContentLoaded', resetAndHandleResponsiveAside);
+
+
+let lastAsideVisibility = false;
+
+function resetAndHandleResponsiveAside() {
+  lastAsideVisibility = false;
+  handleResponsiveAside();
+}
+
+function handleResponsiveAside() {
+  const aside = document.getElementById('modules-aside');
+
+  if (aside === undefined || aside.checkVisibility === undefined) return;
+
+  const newVisibility = aside.checkVisibility();
+
+  if (newVisibility !== lastAsideVisibility) {
+    lastAsideVisibility = newVisibility;
+
+    if (newVisibility) {
+      reparentAsideModules('modules-aside');
+    } else {
+      reparentAsideModules('modules');
+    }
   }
-  if (event.target.id === 'lib_guides_module') {
-    document.getElementById('guides-aside').innerHTML = event.target.innerHTML
-    event.target.classList.add('d-xl-none')
-  }
-})
+};
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  const specialist = document.getElementById('specialist-main')
-  document.getElementById('specialist-aside').innerHTML = specialist.innerHTML
-  specialist.classList.add('d-xl-none')
-})
+function reparentAsideModules(parentId) {
+  const els = [
+    document.getElementById('library_website_api_module'),
+    document.getElementById('lib_guides_module'),
+    document.getElementById('specialist-main')
+  ];
 
-document.addEventListener('turbo:load', (event) => {
-  const specialist = document.getElementById('specialist-main')
-
-  if (specialist.classList.contains('d-xl-none')) return;
-
-  document.getElementById('specialist-aside').innerHTML = specialist.innerHTML
-  specialist.classList.add('d-xl-none')
-})
+  els.forEach((el) => {
+    document.getElementById(parentId).appendChild(el);
+  })
+}
