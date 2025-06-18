@@ -17,7 +17,7 @@ class ArticleSearchService < AbstractSearchService
       json['response']['pages']['total_count'].to_i
     end
 
-    # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+    # rubocop:disable Metrics/MethodLength
     def results
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
@@ -41,23 +41,20 @@ class ArticleSearchService < AbstractSearchService
           result.title += online_label.to_html
         end
         result.fulltext_link_html = html.css('a').first&.to_html || ''
-        result.fulltext_link_html += stanford_only(html)
+        result.fulltext_stanford_only = stanford_only(html)
         result.author = doc['eds_authors']&.first
         # result.year = doc['pub_year_tisim']&.html_safe
         result.description = doc['eds_abstract']
         result
       end
     end
-    # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
+    # rubocop:enable Metrics/MethodLength
 
     private
 
     def stanford_only(html)
-      # Rip out html.css('.stanford-only').first when https://github.com/sul-dlss/SearchWorks/pull/5129 is merged
       stanford_only = html.css('[aria-label="Stanford-only"]').first || html.css('.stanford-only').first
-      return stanford_only.to_html if stanford_only
-
-      ''
+      stanford_only.present?
     end
   end
 end
