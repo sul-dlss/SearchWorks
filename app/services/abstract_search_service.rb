@@ -44,10 +44,8 @@ class AbstractSearchService
     end
   end
 
-  def initialize(options = {})
-    @query_url = options[:query_url]
-    @response_class = options[:response_class].to_s.constantize
-    @http = options.fetch(:http, HTTP)
+  def initialize(http: HTTP)
+    @http = http
   end
 
   # @param [String] query

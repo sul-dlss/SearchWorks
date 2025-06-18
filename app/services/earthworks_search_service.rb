@@ -2,9 +2,9 @@
 
 # Uses the Blacklight JSON API to search and then extracts select Catalog fields
 class EarthworksSearchService < AbstractSearchService
-  def initialize(options = {})
-    options[:query_url] ||= Settings.earthworks.api_url.to_s
-    options[:response_class] ||= Response
+  def initialize(**)
+    @query_url = Settings.earthworks.api_url.to_s
+    @response_class = Response
     super
   end
 
