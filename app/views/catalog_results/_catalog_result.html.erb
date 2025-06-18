@@ -33,7 +33,8 @@
     <% end %>
 
     <% if catalog_result.fulltext_link_html %>
-      <p><%= catalog_result.fulltext_link_html.html_safe %></p>
+      <p><%= catalog_result.fulltext_link_html.html_safe %>
+        <%= render 'shared/stanford_only_button' if catalog_result.fulltext_stanford_only? %></p>
     <% end %>
   </div>
 </li>

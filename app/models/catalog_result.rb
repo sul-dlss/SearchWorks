@@ -2,7 +2,9 @@
 
 class CatalogResult
   include ActiveModel::API
-  attr_accessor :title, :format, :physical, :author, :description, :link, :pub_year, :fulltext_link_html
+  attr_accessor :title, :format, :physical, :author, :description, :link, :pub_year, :fulltext_link_html, :fulltext_stanford_only
+
+  alias fulltext_stanford_only? fulltext_stanford_only
 
   FORMAT_TO_ICON = {
     'Archive/Manuscript' => 'box-1.svg',
