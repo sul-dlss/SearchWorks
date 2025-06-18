@@ -1,0 +1,10 @@
+<div class="row mb-3">
+  <div class="col-sm-3">
+      <%= link_to exhibits_result.link, aria: { hidden: true }, tabindex: '-1' do %>
+          <%= image_tag exhibits_result.thumbnail, class: 'thumbnail img-fluid', alt: '' %>
+      <% end %>
+  </div>
+  <div class="col-sm-9">
+      <%= render 'result_details', { result: exhibits_result } %>
+  </div>
+</div>

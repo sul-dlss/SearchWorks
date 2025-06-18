@@ -6,7 +6,7 @@
         <%= render 'module_heading', presenter: %>
 
         <ol class="list-unstyled">
-          <%= @presenter.results.each do |result| %>
+          <% presenter.results.each do |result| %>
             <%= render result %>
           <% end %>
         </ol>

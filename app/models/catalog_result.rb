@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
-module IconMappingHelper
-  HASH = {
+class CatalogResult < SearchResult
+  FORMAT_TO_ICON = {
     'Loose-leaf' => 'notepad-1.svg',
     'Report' => 'notepad-1.svg',
     'Object' => 'box-3.svg',
     'Academic Journal' => 'book-open-4.svg',
-    'Archive/Manuscript' => 'box-1.svg',
+    'Archive/Manuscript' => 'box1.svg',
     'Archived website' => 'network-web.svg',
     'Article' => 'wrap-text-around.svg',
     'Book' => 'notebook.svg',
@@ -28,4 +26,8 @@ module IconMappingHelper
     'Video' => 'camera-film-1.svg',
     'Videos' => 'camera-film-1.svg'
   }.freeze
+
+  def icon
+    FORMAT_TO_ICON.fetch(format, 'notebook.svg')
+  end
 end

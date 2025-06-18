@@ -1,0 +1,2 @@
+class ArchivesResult < SearchResult
+end

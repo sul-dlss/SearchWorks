@@ -1,0 +1,1 @@
+class ExhibitsResult < SearchResult; end

@@ -1,0 +1,1 @@
+class EarthworksResult < SearchResult; end

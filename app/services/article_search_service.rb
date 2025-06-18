@@ -9,8 +9,6 @@ class ArticleSearchService < AbstractSearchService
   end
 
   class Response < AbstractSearchService::Response
-    include IconMappingHelper
-
     HIGHLIGHTED_FACET_FIELD = 'eds_publication_type_facet'
 
     def total
@@ -22,12 +20,11 @@ class ArticleSearchService < AbstractSearchService
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
         format = doc['eds_publication_type']
-        result = SearchResult.new(
+        result = ArticleResult.new(
           link: format(Settings.article.fetch_url, id: doc['id']),
           title: doc['eds_title'],
           format:,
           journal: doc['eds_source_title'],
-          icon: IconMappingHelper::HASH[format] || 'notebook.svg',
           description: doc['eds_abstract'],
           pub_date: doc['eds_publication_date'],
           composed_title: doc['eds_composed_title']
