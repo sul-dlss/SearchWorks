@@ -3,9 +3,20 @@
 module Icons
   class Mail1Component < Icons::SulIconsComponent
     self.svg = <<~SVG
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="1em" width="1em" viewBox="-10 0 522 512">
-      	<path d="M495 367v-222q0 -22 -14.5 -36.5t-36.5 -14.5h-376q-22 0 -36.5 14.5t-14.5 36.5v222q0 21 14 36t36 15h377q21 0 36 -15t15 -36zM478 367q0 14 -10 24t-24 10h-377q-7 0 -13 -2.5t-10.5 -7t-7 -11t-2.5 -13.5v-222q0 -16 9 -25t25 -9h376q16 0 25 9t9 25v222zM480 121 l-10 -13l-206 163l-222 -163l-10 13l233 171z" />
-      </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1em"
+      	 height="1em" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+      <g id="Filled_Icons_1_">
+      	<g id="Filled_Icons">
+      		<g>
+      						<path d="M12.002,12.36l10.095-8.03C21.782,4.123,21.406,4,21.001,4h-18C2.614,4,2.255,4.115,1.948,4.307L12.002,12.36z"/>
+      						<path d="M22.764,5.076l-10.468,8.315c-0.178,0.134-0.416,0.134-0.594-0.001L1.26,5.036C1.1,5.323,1.001,5.648,1,6v11
+      				c0.001,1.103,0.898,2,2.001,2h17.998c1.103,0,2-0.897,2.001-2V6C23,5.665,22.91,5.353,22.764,5.076z"/>
+      		</g>
+      	</g>
+
+      </g>
+
+      	    </svg>
     SVG
   end
 end

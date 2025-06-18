@@ -1,0 +1,7 @@
+/* Chart icons aligns weird because it is only ~10px tall */
+.results-metadata-sections .blacklight-icons-business_chart1 {
+  svg { vertical-align: inherit; }
+  svg g {
+    vertical-align: middle;
+  }
+}
