@@ -13,7 +13,14 @@ class Service
   end
 
   def settings
-    @settings ||= Settings.public_send(@name)
+    case @name
+    when 'lib_guides'
+      Settings.libguides
+    when 'library_website_api'
+      Settings.library_website
+    else
+      Settings.public_send(@name)
+    end
   end
 
   def searcher
@@ -32,6 +39,10 @@ class Service
   rescue AbstractSearchService::NoResults, HTTP::TimeoutError => e
     logger.error(e.message)
     nil
+  end
+
+  def see_all_url_template
+    settings.query_url
   end
 
   BenchmarkLogger = ActiveSupport::Logger.new(Rails.root.join('log/benchmark.log'))

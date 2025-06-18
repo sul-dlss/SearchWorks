@@ -15,8 +15,4 @@ class ApplicationSearcher
   def search
     @search ||= search_service.new(http: http).search(q)
   end
-
-  def see_all_link
-    format(see_all_url_template, q: CGI.escape(q))
-  end
 end
