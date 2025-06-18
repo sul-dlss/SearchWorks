@@ -10,7 +10,7 @@ class SearchController < ApplicationController
     service = Service.new(params[:endpoint])
 
     result = service.query(params_q_scrubbed)
-    @presenter = SearchPresenter.new(service, result)
+    @presenter = SearchPresenter.new(service, result, params_q_scrubbed)
   end
 
   # JSON API for Searchworks' mini-bento
@@ -18,7 +18,7 @@ class SearchController < ApplicationController
     service = Service.new('lib_guides')
 
     result = service.query(params_q_scrubbed)
-    @presenter = SearchPresenter.new(service, result)
+    @presenter = SearchPresenter.new(service, result, params_q_scrubbed)
   end
 
   private

@@ -23,8 +23,8 @@ class Service
     end
   end
 
-  def searcher
-    "#{name.camelize}Searcher".constantize
+  def search_service_class
+    "#{name.camelize}SearchService".constantize
   end
 
   # @param [String] query_text
@@ -32,9 +32,9 @@ class Service
   # @returns [Array<Hash>, NilClass] an array of search results or nil if there was an error
   def query(query_text, timeout: 30)
     benchmark format("%s #{name}", CGI.escape(query_text)) do
-      client = HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
+      http = HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
 
-      searcher.new(client, query_text).tap(&:search)
+      search_service_class.new(http: http).search(query_text)
     end
   rescue AbstractSearchService::NoResults, HTTP::TimeoutError => e
     logger.error(e.message)

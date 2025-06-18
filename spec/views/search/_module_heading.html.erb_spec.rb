@@ -4,11 +4,11 @@ require 'rails_helper'
 
 RSpec.describe 'search/_module_heading' do
   let(:result) do
-    instance_double(CatalogSearcher, total: total)
+    instance_double(CatalogSearchService::Response, total: total)
   end
   let(:service) { Service.new('catalog') }
   let(:presenter) do
-    SearchPresenter.new(service, result)
+    SearchPresenter.new(service, result, 'climate change')
   end
 
   before do

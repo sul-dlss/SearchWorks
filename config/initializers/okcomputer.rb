@@ -14,7 +14,7 @@ class SearcherCheck < OkComputer::Check
 
 
   def check
-    search = searcher.new(HTTP, 'status-check', 1).search
+    search = Service.new(searcher).query('status-check', 1)
 
     mark_message "#{searcher} found #{search.total.inspect} results"
   rescue => e
@@ -25,10 +25,10 @@ class SearcherCheck < OkComputer::Check
 end
 
 Rails.application.config.after_initialize do
-  OkComputer::Registry.register 'search_articles', SearcherCheck.new(ArticleSearcher)
-  OkComputer::Registry.register 'search_catalog', SearcherCheck.new(CatalogSearcher)
-  OkComputer::Registry.register 'search_lib_guides', SearcherCheck.new(LibGuidesSearcher)
-  OkComputer::Registry.register 'search_library_website', SearcherCheck.new(LibraryWebsiteApiSearcher)
+  OkComputer::Registry.register 'search_articles', SearcherCheck.new('article')
+  OkComputer::Registry.register 'search_catalog', SearcherCheck.new('catalog')
+  OkComputer::Registry.register 'search_lib_guides', SearcherCheck.new('lib_guides')
+  OkComputer::Registry.register 'search_library_website', SearcherCheck.new('library_website_api')
 
   OkComputer.make_optional(%w[search_articles search_catalog search_lib_guides search_library_website])
 end
