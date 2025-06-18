@@ -6,7 +6,7 @@ module IconMappingHelper
     'Report' => 'notepad-1.svg',
     'Object' => 'box-3.svg',
     'Academic Journal' => 'book-open-4.svg',
-    'Archive/Manuscript' => 'box1.svg',
+    'Archive/Manuscript' => 'box-1.svg',
     'Archived website' => 'network-web.svg',
     'Article' => 'wrap-text-around.svg',
     'Book' => 'notebook.svg',
