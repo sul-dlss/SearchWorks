@@ -23,17 +23,8 @@ class Service
     end
   end
 
-  def search_service_class
-    "#{name.camelize}SearchService".constantize
-  end
-
-  # @param [String] query_text
-  # @raises [HTTP::TimeoutError] if a timeout occurs during the search
-  # @returns [Array<Hash>, NilClass] an array of search results or nil if there was an error
-  def query(query_text, timeout: 30)
-    http = HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
-
-    search_service_class.new(http: http).search(query_text)
+  def search_service
+    "#{name.camelize}SearchService".constantize.new
   end
 
   def see_all_url_template

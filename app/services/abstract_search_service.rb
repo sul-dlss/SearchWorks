@@ -44,8 +44,8 @@ class AbstractSearchService
     end
   end
 
-  def initialize(http: HTTP)
-    @http = http
+  def initialize(http: nil, timeout: 30)
+    @http = http || HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
   end
 
   # @param [String] query

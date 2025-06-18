@@ -11,7 +11,7 @@ class SearchController < ApplicationController
   def show
     service = Service.new(params[:endpoint])
 
-    result = service.query(params_q_scrubbed)
+    result = service.search_service.search(params_q_scrubbed)
     @presenter = SearchPresenter.new(service, result, params_q_scrubbed)
   end
 
@@ -19,7 +19,7 @@ class SearchController < ApplicationController
   def lib_guides
     service = Service.new('lib_guides')
 
-    result = service.query(params_q_scrubbed)
+    result = service.search_service.search(params_q_scrubbed)
     @presenter = SearchPresenter.new(service, result, params_q_scrubbed)
   end
 
