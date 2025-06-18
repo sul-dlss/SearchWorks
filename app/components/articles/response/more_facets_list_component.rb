@@ -2,7 +2,7 @@
 
 module Articles
   module Response
-    class MoreFacetsListComponent < Blacklight::FacetFieldListComponent
+    class MoreFacetsListComponent < Blacklight::Facets::ListComponent
       LIMIT = 20
 
       def cached_presenters
