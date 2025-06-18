@@ -13,11 +13,18 @@ class Service
   end
 
   def settings
-    @settings ||= Settings.public_send(@name)
+    case @name
+    when 'lib_guides'
+      Settings.libguides
+    when 'library_website_api'
+      Settings.library_website
+    else
+      Settings.public_send(@name)
+    end
   end
 
-  def searcher
-    "#{name.camelize}Searcher".constantize
+  def search_service_class
+    "#{name.camelize}SearchService".constantize
   end
 
   # @param [String] query_text
@@ -25,13 +32,17 @@ class Service
   # @returns [Array<Hash>, NilClass] an array of search results or nil if there was an error
   def query(query_text, timeout: 30)
     benchmark format("%s #{name}", CGI.escape(query_text)) do
-      client = HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
+      http = HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
 
-      searcher.new(client, query_text).tap(&:search)
+      search_service_class.new(http: http).search(query_text)
     end
   rescue AbstractSearchService::NoResults, HTTP::TimeoutError => e
     logger.error(e.message)
     nil
+  end
+
+  def see_all_url_template
+    settings.query_url
   end
 
   BenchmarkLogger = ActiveSupport::Logger.new(Rails.root.join('log/benchmark.log'))
