@@ -11,15 +11,11 @@
       <% when 'Book' %>
         <% if catalog_result.pub_year %>
           (<%= catalog_result.pub_year %>)
-        <% else %>
-          <%= format_year(catalog_result.pub_date) %>
         <% end %>
-      <% when 'eBook' %>
-        <%= format_year(catalog_result.pub_date) %>
       <% else %>
         <% if catalog_result.physical %>
           <% if catalog_result.format %>&mdash; <% end %>
-          physical <%= catalog_result.physical %>
+           <%= catalog_result.physical %>
         <% end %>
       <% end %>
     </div>
