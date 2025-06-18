@@ -1,18 +1,6 @@
 @import url("modules/masthead.css");
 @import url("modules/results.css");
 
-@font-face {
-  font-family: "dejavu_sansextralight";
-  src: url("DejaVuSans-ExtraLight-webfont.eot");
-  src:
-    url("DejaVuSans-ExtraLight-webfont.eot?#iefix") format("embedded-opentype"),
-    url("DejaVuSans-ExtraLight-webfont.woff") format("woff"),
-    url("DejaVuSans-ExtraLight-webfont.ttf") format("truetype"),
-    url("DejaVuSans-ExtraLight-webfont.svg#dejavu_sansextralight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
   /* remove after https://github.com/sul-dlss/component-library/pull/132 is released */
   --stanford-90-black: #43423e;
