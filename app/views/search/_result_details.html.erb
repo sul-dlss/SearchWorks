@@ -5,7 +5,7 @@
 
 <% if result.icon.present? || result.physical %>
   <div class="pb-1">
-    <%= image_tag result.icon, aria: { hidden: true }, class: 'icon mx-1' %>
+    <%= image_tag result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' %>
     <span class="fw-semibold"><%= result.format %></span>
     <% case result.format %>
     <% when 'Book' %>
