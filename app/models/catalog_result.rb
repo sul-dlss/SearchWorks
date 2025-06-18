@@ -2,7 +2,7 @@
 
 class CatalogResult
   include ActiveModel::API
-  attr_accessor :title, :format, :physical, :author, :description, :link, :pub_year
+  attr_accessor :title, :format, :physical, :author, :description, :link, :pub_year, :fulltext_link_html
 
   FORMAT_TO_ICON = {
     'Archive/Manuscript' => 'box-1.svg',
