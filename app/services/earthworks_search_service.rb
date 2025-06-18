@@ -22,7 +22,6 @@ class EarthworksSearchService < AbstractSearchService
           format: format,
           date: date(doc),
           coverage: coverage(doc),
-          icon: "earthworks/#{format.gsub(' ', '_').downcase}.svg",
           link: format(Settings.earthworks.fetch_url, id: doc['id']),
           author: doc.dig('attributes', 'dc_creator_sm', 'attributes', 'value'),
           description: doc.dig('attributes', 'dc_description_s', 'attributes', 'value')
