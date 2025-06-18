@@ -18,24 +18,13 @@ class ArchivesSearchService < AbstractSearchService
       solr_docs.collect do |doc|
         attributes = doc['attributes']
         values = attributes.dig('breadcrumbs', 'attributes', 'value')
-        SearchResult.new(
+        ArchivesResult.new(
           link: doc['links']['self'],
-          icon: icon(doc['type']),
           title: attributes['title'],
           description: values['scopecontent_tesim']&.first,
-          physical: values['extent_ssm']&.first || doc['type']
+          physical: values['extent_ssm']&.first || doc['type'],
+          type: doc['type']
         )
-      end
-    end
-
-    def icon(type)
-      case type
-      when 'collection'
-        'archive.svg'
-      when 'Series'
-        'folder.svg'
-      when 'File', 'Item'
-        'file.svg'
       end
     end
   end

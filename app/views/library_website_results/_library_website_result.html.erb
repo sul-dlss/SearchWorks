@@ -1,0 +1,11 @@
+<li class='no-thumbnail'>
+  <div class="result">
+    <div class="result-title fs-1125 fw-medium pt-2 pb-1">
+      <%= link_to library_website_result.title.html_safe, library_website_result.link %>
+    </div>
+
+    <% if library_website_result.description.present? %>
+      <p class="description line-clamp"><%= library_website_result.description.html_safe %></p>
+    <% end %>
+  </div>
+</li>

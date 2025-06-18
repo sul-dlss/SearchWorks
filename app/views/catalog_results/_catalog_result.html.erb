@@ -1,0 +1,40 @@
+<li class='no-thumbnail'>
+  <div class="result">
+    <div class="result-title fs-1125 fw-medium pt-2 pb-1">
+      <%= link_to catalog_result.title.html_safe, catalog_result.link %>
+    </div>
+
+    <div class="pb-1">
+      <%= image_tag catalog_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' if catalog_result.icon %>
+      <span class="fw-semibold"><%= catalog_result.format %></span>
+      <% case catalog_result.format %>
+      <% when 'Book' %>
+        <% if catalog_result.pub_year %>
+          (<%= catalog_result.pub_year %>)
+        <% else %>
+          <%= format_year(catalog_result.pub_date) %>
+        <% end %>
+      <% when 'eBook' %>
+        <%= format_year(catalog_result.pub_date) %>
+      <% else %>
+        <% if catalog_result.physical %>
+          <% if catalog_result.format %>&mdash; <% end %>
+          physical <%= catalog_result.physical %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <% if catalog_result.author.present? %>
+      <div class="pb-1"><%= catalog_result.author %></div>
+    <% end %>
+
+    <% if catalog_result.description.present? %>
+      <p class="description line-clamp"><%= catalog_result.description.html_safe %></p>
+    <% end %>
+
+    <% if catalog_result.fulltext_link_html %>
+      <p><%= catalog_result.fulltext_link_html.html_safe %>
+        <%= render 'shared/stanford_only_button' if catalog_result.fulltext_stanford_only? %></p>
+    <% end %>
+  </div>
+</li>

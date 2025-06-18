@@ -6,7 +6,9 @@
         <%= render 'module_heading', presenter: %>
 
         <ol class="list-unstyled">
-          <%= render partial: 'result', collection: @presenter.results %>
+          <% presenter.results.each do |result| %>
+            <%= render result %>
+          <% end %>
         </ol>
     <% end %>
 </div>
