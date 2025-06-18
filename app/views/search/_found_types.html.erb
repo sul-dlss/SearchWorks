@@ -2,7 +2,7 @@
   <span class="fw-semibold fs-1125 text-nowrap align-self-start">Results from:</span>
   <ul class="d-flex flex-wrap align-self-center list-inline column-gap-4 row-gap-2 mb-0">
     <% enabled_searchers.each do |searcher| %>
-      <li class="d-flex position-relative">
+      <li class="d-flex position-relative align-items-start">
         <a href="#<%= searcher.name %>" class="stretched-link"><%= t("short_display_name", scope: searcher.i18n_key) %></a>
         <span class="badge rounded-pill text-bg-secondary ms-1">
           <turbo-frame id="<%= searcher.name %>_count">&nbsp;</turbo-frame>
