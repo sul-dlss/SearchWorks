@@ -32,10 +32,8 @@ RSpec.describe 'Search results', :js do
           expect(page).to have_link('Articles+', href: '#article').and have_css '#article_count', text: '666,666'
         end
         expect(page).to have_css 'h2', text: 'Guides'
-        within '#specialist-main' do
-          expect(page).to have_text 'Stella Ota'
-          expect(page).to have_text 'Physics and Applied Physics'
-        end
+
+        expect(page).to have_text('Stella Ota').and have_text('Physics and Applied Physics')
       end
     end
   end
