@@ -2,37 +2,35 @@
   <%= link_to result.title.html_safe, result.link %>
 </div>
 
-
-<% if result.icon.present? || result.physical %>
-  <div class="pb-1">
-    <%= image_tag result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' %>
-    <span class="fw-semibold"><%= result.format %></span>
-    <% case result.format %>
-    <% when 'Book' %>
-      <% if result.pub_year %>
-        (<%= result.pub_year %>)
-      <% else %>
-        <%= format_year(result.pub_date) %>
-      <% end %>
-    <% when 'eBook' %>
-      <%= format_year(result.pub_date) %>
+<div class="pb-1">
+  <%= image_tag result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' if result.icon %>
+  <span class="fw-semibold"><%= result.format %></span>
+  <% case result.format %>
+  <% when 'Book' %>
+    <% if result.pub_year %>
+      (<%= result.pub_year %>)
     <% else %>
-      <% if result.journal.present? %>
-        &mdash; <span class="fst-italic"><%= result.journal %></span><%= journal_details(result.composed_title) %>
-      <% elsif result.physical %>
-        <% if result.format %>&mdash; <% end %>
-        <%= result.physical %>
-      <% end %>
+      <%= format_year(result.pub_date) %>
     <% end %>
+  <% when 'eBook' %>
+    <%= format_year(result.pub_date) %>
+  <% else %>
+    <% if result.journal.present? %>
+      &mdash; <span class="fst-italic"><%= result.journal %></span><%= journal_details(result.composed_title) %>
+    <% elsif result.physical %>
+      <% if result.format %>&mdash; <% end %>
+      <%= result.physical %>
+    <% end %>
+  <% end %>
 
-    <% if result.date.present? %>
-      <span class="ms-4"><%= result.date %></span>
-    <% end %>
-    <% if result.coverage.present? %>
-      <span class="ms-4"><%= result.coverage %></span>
-    <% end %>
-  </div>
-<% end %>
+  <% if result.date.present? %>
+    <span class="ms-4"><%= result.date %></span>
+  <% end %>
+  <% if result.coverage.present? %>
+    <span class="ms-4"><%= result.coverage %></span>
+  <% end %>
+</div>
+
 <% if result.author.present? %>
   <div class="pb-1"><%= result.author %></div>
 <% end %>
