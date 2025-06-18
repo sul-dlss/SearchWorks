@@ -21,7 +21,7 @@
         &mdash; <span class="fst-italic"><%= result.journal %></span><%= journal_details(result.composed_title) %>
       <% elsif result.physical %>
         <% if result.format %>&mdash; <% end %>
-        physical <%= result.physical %>
+        <%= result.physical %>
       <% end %>
     <% end %>
 
