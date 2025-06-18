@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
 class SearchPresenter
-  attr_reader :service, :result
-
-  delegate :i18n_key, to: :service
-  delegate :name, to: :service, prefix: true
-  delegate :see_all_link, :total, to: :result
+  delegate :i18n_key, to: :@service
+  delegate :see_all_link, :total, :results, to: :@result
 
   def initialize(service, result)
     @service = service
     @result = result
+  end
+
+  def service_name
+    @service.name
   end
 
   def no_results?

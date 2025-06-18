@@ -1,4 +1,4 @@
-<div id="<%= presenter.service_name %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= presenter.service_name %>_count" data-module-total-value="<%= number_with_delimiter(presenter.result.total) %>">
+<div id="<%= presenter.service_name %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= presenter.service_name %>_count" data-module-total-value="<%= number_with_delimiter(presenter.total) %>">
     <% if presenter.no_results? %>
         <%= render 'module_heading', presenter: %>
         <%= render 'no_results', presenter: %>
@@ -6,7 +6,7 @@
         <%= render 'module_heading', presenter: %>
 
         <ol class="list-unstyled">
-          <%= render partial: 'result', collection: @presenter.result.results %>
+          <%= render partial: 'result', collection: @presenter.results %>
         </ol>
     <% end %>
 </div>
