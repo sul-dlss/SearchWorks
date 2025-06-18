@@ -5,18 +5,17 @@
     </div>
 
 
-    <% if earthworks_result.icon.present? %>
-      <div class="pb-1">
-        <%= image_tag earthworks_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' %>
-        <span class="fw-semibold"><%= earthworks_result.format %></span>
-        <% if earthworks_result.date.present? %>
-          <span class="ms-4"><%= earthworks_result.date %></span>
-        <% end %>
-        <% if earthworks_result.coverage.present? %>
-          <span class="ms-4"><%= earthworks_result.coverage %></span>
-        <% end %>
-      </div>
-    <% end %>
+    <div class="pb-1">
+      <%= image_tag earthworks_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' if earthworks_result.icon %>
+      <span class="fw-semibold"><%= earthworks_result.format %></span>
+      <% if earthworks_result.date.present? %>
+        <span class="ms-4"><%= earthworks_result.date %></span>
+      <% end %>
+      <% if earthworks_result.coverage.present? %>
+        <span class="ms-4"><%= earthworks_result.coverage %></span>
+      <% end %>
+    </div>
+
     <% if earthworks_result.author.present? %>
       <div class="pb-1"><%= earthworks_result.author %></div>
     <% end %>

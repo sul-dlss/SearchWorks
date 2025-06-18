@@ -5,16 +5,14 @@
     </div>
 
 
-    <% if archives_result.icon.present? || archives_result.physical %>
-      <div class="pb-1">
-        <%= image_tag archives_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' %>
-        <span class="fw-semibold"><%= archives_result.format %></span>
-        <% if archives_result.physical %>
-          <% if archives_result.format %>&mdash; <% end %>
-          physical <%= archives_result.physical %>
-        <% end %>
-      </div>
-    <% end %>
+    <div class="pb-1">
+      <%= image_tag archives_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' if archives_result.icon %>
+      <span class="fw-semibold"><%= archives_result.format %></span>
+      <% if archives_result.physical %>
+        <% if archives_result.format %>&mdash; <% end %>
+        physical <%= archives_result.physical %>
+      <% end %>
+    </div>
 
     <% if archives_result.description.present? %>
       <p class="description line-clamp"><%= archives_result.description.html_safe %></p>

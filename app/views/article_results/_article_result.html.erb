@@ -5,20 +5,19 @@
     </div>
 
 
-    <% if article_result.icon.present? %>
-      <div class="pb-1">
-        <%= image_tag article_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' %>
-        <span class="fw-semibold"><%= article_result.format %></span>
-        <% case article_result.format %>
-        <% when 'eBook' %>
-          <%= format_year(article_result.pub_date) %>
-        <% else %>
-          <% if article_result.journal.present? %>
-            &mdash; <span class="fst-italic"><%= article_result.journal %></span><%= journal_details(article_result.composed_title) %>
-          <% end %>
+    <div class="pb-1">
+      <%= image_tag article_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' if article_result.icon.present? %>
+      <span class="fw-semibold"><%= article_result.format %></span>
+      <% case article_result.format %>
+      <% when 'eBook' %>
+        <%= format_year(article_result.pub_date) %>
+      <% else %>
+        <% if article_result.journal.present? %>
+          &mdash; <span class="fst-italic"><%= article_result.journal %></span><%= journal_details(article_result.composed_title) %>
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+
     <% if article_result.author.present? %>
       <div class="pb-1"><%= article_result.author %></div>
     <% end %>
