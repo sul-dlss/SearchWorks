@@ -1,5 +1,28 @@
 <li class='no-thumbnail'>
   <div class="result">
-    <%= render 'result_details', { result: earthworks_result } %>
+    <div class="result-title fs-1125 fw-medium pt-2 pb-1">
+      <%= link_to earthworks_result.title.html_safe, earthworks_result.link %>
+    </div>
+
+
+    <% if earthworks_result.icon.present? %>
+      <div class="pb-1">
+        <%= image_tag earthworks_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' %>
+        <span class="fw-semibold"><%= earthworks_result.format %></span>
+        <% if earthworks_result.date.present? %>
+          <span class="ms-4"><%= earthworks_result.date %></span>
+        <% end %>
+        <% if earthworks_result.coverage.present? %>
+          <span class="ms-4"><%= earthworks_result.coverage %></span>
+        <% end %>
+      </div>
+    <% end %>
+    <% if earthworks_result.author.present? %>
+      <div class="pb-1"><%= earthworks_result.author %></div>
+    <% end %>
+
+    <% if earthworks_result.description.present? %>
+      <p class="description line-clamp"><%= earthworks_result.description.html_safe %></p>
+    <% end %>
   </div>
 </li>

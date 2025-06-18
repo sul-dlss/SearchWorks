@@ -1,4 +1,9 @@
-class CatalogResult < SearchResult
+# frozen_string_literal: true
+
+class CatalogResult
+  include ActiveModel::API
+  attr_accessor :title, :format, :physical, :author, :description, :link, :pub_year
+
   FORMAT_TO_ICON = {
     'Loose-leaf' => 'notepad-1.svg',
     'Report' => 'notepad-1.svg',
