@@ -8,7 +8,7 @@
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
   <% if eds_restricted? %>
-    <%= render Articles::EdsRestrictedComponent.new(counter: @counter, document: @document) %>
+    <%= render Articles::EdsRestrictedComponent.new(counter: @counter, presenter: @presenter) %>
   <% else %>
     <%= header %>
     <div class="document-main-section">
@@ -19,7 +19,7 @@
             <%= t('blacklight.search.documents.counter', counter:) if counter %>
           </span>
           <%= helpers.link_to_document document, counter: %>
-          <span class="main-title-date"><%= helpers.get_main_title_date(@document) %></span>
+          <span class="main-title-date"><%= helpers.p(@document) %></span>
         </h3>
 
         <% # bookmark functions for items/docs -%>

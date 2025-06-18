@@ -5,6 +5,8 @@ class ShowDocumentPresenter < Blacklight::ShowPresenter
 
   delegate :sanitize, to: :view_context
 
+  delegate :vernacular_title, to: :document
+
   def html_title
     sanitize super, tags: []
   end
