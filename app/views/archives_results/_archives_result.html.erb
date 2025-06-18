@@ -7,10 +7,8 @@
 
     <div class="pb-1">
       <%= image_tag archives_result.icon, aria: { hidden: true }, alt: '', class: 'icon mx-1' if archives_result.icon %>
-      <span class="fw-semibold"><%= archives_result.format %></span>
       <% if archives_result.physical %>
-        <% if archives_result.format %>&mdash; <% end %>
-        physical <%= archives_result.physical %>
+        <%= archives_result.physical %>
       <% end %>
     </div>
 
