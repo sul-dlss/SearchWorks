@@ -3,10 +3,16 @@
 class ArticleResult
   FORMAT_TO_ICON = {
     'Academic Journal' => 'book-open-4.svg',
+    'Article' => 'wrap-text-around.svg',
+    'Audio' => 'microphone-3.svg',
     'Books' => 'notebook.svg',
+    'eBooks' => 'notebook.svg',
+    'Maps' => 'map-pin-1.svg',
+    'Music scores' => 'file-music-1.svg',
     'News' => 'newspaper.svg',
-    'eBook' => 'notebook.svg',
-    'Video Recording' => 'camera-film-1.svg'
+    'Report' => 'notepad-1.svg',
+    'Video Recording' => 'camera-film-1.svg',
+    'Videos' => 'camera-film-1.svg'
   }.freeze
 
   include ActiveModel::API
