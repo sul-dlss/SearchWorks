@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
 Specialist = Data.define(:title, :full_title, :research_areas, :photo_url, :email) do
+  def self.stopwords
+    %w[a an and are as at be by for from has have in is it of on or that the to with]
+  end
+
   def self.tokenize(term)
-    term.downcase.gsub(/[[:punct:]]/, ' ').split(/\s+/)
+    term.downcase.gsub(/[[:punct:]]/, ' ').split(/\s+/).excluding(stopwords)
   end
 
   def self.find(query)
