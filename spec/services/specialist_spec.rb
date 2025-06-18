@@ -14,5 +14,9 @@ RSpec.describe Specialist do
     it 'returns nothing if no terms match' do
       expect(described_class.find('cats')).to be_nil
     end
+
+    it 'returns nothing if the query term was a stopword' do
+      expect(described_class.find('the')).to be_nil
+    end
   end
 end
