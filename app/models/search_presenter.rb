@@ -2,7 +2,7 @@
 
 class SearchPresenter
   delegate :i18n_key, :see_all_url_template, to: :@service
-  delegate :total, :results, to: :@result
+  delegate :total, :results, to: :@result, allow_nil: true
 
   def initialize(service, result, query_text)
     @service = service
@@ -21,7 +21,7 @@ class SearchPresenter
   end
 
   def no_results?
-    total.zero?
+    total.nil? || total.zero?
   end
 
   def no_answer?
