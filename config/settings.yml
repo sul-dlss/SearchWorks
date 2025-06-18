@@ -40,6 +40,7 @@ exhibits:
 library_website:
   api_url: "https://library.sites-pro.stanford.edu/jsonapi/index/full_site_content?fields[node--stanford_page]=path,title,su_page_description&filter[fulltext]=%{q}&page[limit]=%{max}"
   query_url: "https://library.stanford.edu/search/?q=%{q}"
+  link_url: "https://library.stanford.edu/%{id}"
 earthworks:
   api_url: "https://earthworks.stanford.edu?q=%{q}&rows=%{max}&format=json"
   query_url: "https://earthworks.stanford.edu?q=%{q}"

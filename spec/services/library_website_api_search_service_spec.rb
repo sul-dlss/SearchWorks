@@ -78,7 +78,7 @@ RSpec.describe LibraryWebsiteApiSearchService do
       expect(results.first).to have_attributes(
         title: 'Work with data',
         description: 'First result description',
-        link: '/services/work-data'
+        link: 'https://library.stanford.edu/services/work-data'
       )
     end
   end

@@ -17,7 +17,7 @@ class LibraryWebsiteApiSearchService < AbstractSearchService
       json['data'].map do |doc|
         LibraryWebsiteResult.new(
           title: doc.dig('attributes', 'title'),
-          link: doc.dig('attributes', 'path', 'alias'),
+          link: format(Settings.library_website.link_url, id: doc.dig('attributes', 'path', 'alias').delete_prefix('/')),
           description: sanitizer.sanitize(doc.dig('attributes', 'su_page_description'))
         )
       end
