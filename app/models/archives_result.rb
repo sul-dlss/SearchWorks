@@ -5,12 +5,12 @@ class ArchivesResult
   attr_accessor :title, :type, :physical, :description, :link
 
   def icon
-    case type
+    case type.downcase
     when 'collection'
       'archive.svg'
-    when 'Series'
+    when 'series'
       'folder.svg'
-    when 'File', 'Item'
+    when 'file', 'item'
       'file.svg'
     end
   end
