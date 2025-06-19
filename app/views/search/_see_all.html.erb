@@ -1,4 +1,4 @@
-<%= link_to presenter.see_all_link, class: "btn btn-outline-secondary text-nowrap" do %>
+<%= link_to presenter.see_all_link, class: "btn btn-outline-secondary text-nowrap", data: { turbo: false } do %>
   <% case presenter.total -%>
   <% when 1 %>
     See <%= presenter.formatted_total %> <%= visually_hidden_service(presenter.service_name) %> result
