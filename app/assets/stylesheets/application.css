@@ -1,11 +1,6 @@
 @import url("modules/masthead.css");
 @import url("modules/results.css");
 
-:root {
-  /* remove after https://github.com/sul-dlss/component-library/pull/132 is released */
-  --stanford-90-black: #43423e;
-}
-
 body {
   min-height: 100vh;
 }
