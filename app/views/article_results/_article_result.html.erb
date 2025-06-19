@@ -13,7 +13,7 @@
         <%= format_year(article_result.pub_date) %>
       <% else %>
         <% if article_result.journal.present? %>
-          &mdash; <span class="fst-italic"><%= article_result.journal %></span><%= journal_details(article_result.composed_title) %>
+          &mdash; <span class="fst-italic"><%= sanitize(article_result.journal) %></span><%= sanitize(journal_details(article_result.composed_title)) %>
         <% end %>
       <% end %>
     </div>
