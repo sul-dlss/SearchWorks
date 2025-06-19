@@ -1,6 +1,5 @@
 <%= form_tag @url, method: @method, class: @classes.join(' '), role: 'search' do %>
   <%= render Blacklight::HiddenSearchStateComponent.new(params: @params) %>
-  <div id="dynamic-hidden-inputs-target"></div>
   <div class="input-group">
     <%= prepend %>
 
