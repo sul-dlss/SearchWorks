@@ -1,4 +1,4 @@
-<div id="<%= presenter.service_name %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= presenter.service_name %>_count" data-module-total-value="<%= number_with_delimiter(presenter.total.to_i) %>">
+<div id="<%= presenter.service_name %>" class="module-contents mb-3" data-controller="module" data-module-count-id-value="<%= presenter.service_name %>_count" data-module-total-value="<%= presenter.formatted_total %>">
     <%= render 'module_heading', presenter: %>
     <% if presenter.no_answer? %>
       <div class="alert alert-danger">
