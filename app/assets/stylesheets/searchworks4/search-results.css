@@ -81,7 +81,3 @@
 .active-icon::before {
   content: "✓";
 }
-
-.constraints-container .btn-reset {
-  display: none;
-}

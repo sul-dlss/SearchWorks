@@ -23,17 +23,7 @@
   <% if has_search_parameters? %>
     <div class="row">
       <div class="constraints col d-flex">
-        <% constraints = capture do %>
-            <%= render view_config.constraints_component.new(search_state:) %>
-        <% end %>
-
-        <% if constraints.present? %>
-          <span class="fw-bold py-1">Your selections:</span>
-
-          <div class="breadcrumb d-inline-flex">
-            <%= constraints %>
-          </div>
-        <% end %>
+        <%= render view_config.constraints_component.new(search_state:, classes: 'breadcrumb d-inline-flex') %>
       </div>
     </div>
   <% end %>
