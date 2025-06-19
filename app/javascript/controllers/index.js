@@ -43,6 +43,9 @@ application.register("course-reserves", CourseReservesController)
 import EmbedBrowseController from "./embed_browse_controller"
 application.register("embed-browse", EmbedBrowseController)
 
+import FacetListController from "./facet_list_controller"
+application.register("facet-list", FacetListController)
+
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 
