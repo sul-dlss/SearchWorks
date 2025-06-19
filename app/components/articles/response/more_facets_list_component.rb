@@ -14,7 +14,7 @@ module Articles
       end
 
       def facet_items(wrapping_element: :li, **item_args)
-        @visible_presenters = cached_presenters.values_at(..LIMIT - 1).compact
+        @visible_presenters = cached_presenters.values_at(..(LIMIT - 1)).compact
         facet_item_component_class.with_collection(@visible_presenters, wrapping_element: wrapping_element, **item_args.merge(hidden: false))
       end
 
