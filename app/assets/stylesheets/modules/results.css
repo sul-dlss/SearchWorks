@@ -35,6 +35,10 @@
   }
 }
 
+.result-set-heading {
+  color: var(--stanford-black);
+}
+
 .result-set-subheading {
   color: var(--stanford-90-black);
 }
@@ -115,4 +119,40 @@
 
 .text-cardinal {
   color: var(--stanford-cardinal);
+}
+
+.specialist-card {
+  --bs-card-border-radius: 0;
+  border: 1px solid var(--stanford-digital-red);
+  border-top: 5px solid var(--stanford-digital-red);
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+
+  .photo {
+    height: 100px;
+    max-width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 9999px;
+    overflow: hidden;
+    top: -50px;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+  .text {
+    position: relative;
+    top: 2.75rem;
+    padding-bottom: 2rem;
+  }
+  .name {
+    color: var(--stanford-black);
+  }
+}
+aside .specialist-card {
+  width: 100%;
 }
