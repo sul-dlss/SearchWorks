@@ -18,8 +18,6 @@ class FeedbackFormsController < ApplicationController
           FeedbackMailer.submit_connection(params, request.remote_ip).deliver_now
           flash[:success] = t('blacklight.connection_form.success')
         else
-          puts "FEEDBACK PARAMS"
-          puts params.inspect
           FeedbackMailer.submit_feedback(params, request.remote_ip).deliver_now
           flash[:success] = t('blacklight.feedback_form.success')
         end
