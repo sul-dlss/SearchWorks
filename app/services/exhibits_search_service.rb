@@ -2,9 +2,9 @@
 
 # Uses the LibGuides API to search
 class ExhibitsSearchService < AbstractSearchService
-  def initialize(options = {})
-    options[:query_url] ||= settings.api_url.to_s
-    options[:response_class] ||= Response
+  def initialize(**)
+    @query_url = settings.api_url.to_s
+    @response_class = Response
     super
   end
 

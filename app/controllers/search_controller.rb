@@ -1,6 +1,8 @@
 class SearchController < ApplicationController
   allow_browser versions: :modern, block: :handle_outdated_browser
 
+  rescue_from AbstractSearchService::NoResults, HTTP::TimeoutError, with: :handle_failed_search
+
   def index
     @query = params_q_scrubbed
     @specialist = Specialist.find(@query)
@@ -9,11 +11,17 @@ class SearchController < ApplicationController
   def show
     service = Service.new(params[:endpoint])
 
-    result = service.query(params_q_scrubbed)
+    result = service.search_service.search(params_q_scrubbed)
     @presenter = SearchPresenter.new(service, result, params_q_scrubbed)
   end
 
   private
+
+  def handle_failed_search
+    @service = Service.new(params[:endpoint])
+
+    render 'failed_search'
+  end
 
   def handle_outdated_browser
     return if Rack::Attack.configuration.safelisted?(request)

@@ -2,9 +2,9 @@
 
 # Uses the Library Website API to search
 class LibraryWebsiteApiSearchService < AbstractSearchService
-  def initialize(options = {})
-    options[:query_url] ||= Settings.library_website.api_url.to_s
-    options[:response_class] ||= Response
+  def initialize(**)
+    @query_url = Settings.library_website.api_url.to_s
+    @response_class = Response
     super
   end
 

@@ -44,15 +44,15 @@ class AbstractSearchService
     end
   end
 
-  def initialize(options = {})
-    @query_url = options[:query_url]
-    @response_class = options[:response_class].to_s.constantize
-    @http = options.fetch(:http, HTTP)
+  def initialize(http: nil, timeout: 30)
+    @http = http || HTTP.timeout(timeout).headers(user_agent: "#{HTTP::Request::USER_AGENT} (#{Settings.user_agent})")
   end
 
   # @param [String] query
   def search(query)
-    response = @http.get(url(query))
+    response = benchmark format("%s #{benchmark_name}", CGI.escape(query)) do
+      @http.get(url(query))
+    end
 
     unless response.status.success? && response.body.present?
       raise NoResults, "Search response failed: #{url(query)} status: #{response.status} body #{response.body}"
@@ -63,5 +63,23 @@ class AbstractSearchService
 
   def url(query)
     format(@query_url, q: CGI.escape(query), max: Settings.MAX_RESULTS)
+  end
+
+  BenchmarkLogger = ActiveSupport::Logger.new(Rails.root.join('log/benchmark.log'))
+  BenchmarkLogger.formatter = Logger::Formatter.new
+
+  private
+
+  delegate :logger, to: :Rails
+
+  def benchmark(message)
+    result = nil
+    bench_result = Benchmark.realtime { result = yield }
+    BenchmarkLogger.info format('%<message>s (%<time>.1fms)', message:, time: bench_result * 1000)
+    result
+  end
+
+  def benchmark_name
+    self.class.name.demodulize.underscore.sub('search_service', '')
   end
 end

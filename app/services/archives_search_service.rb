@@ -2,9 +2,9 @@
 
 # Uses the Blacklight JSON API to search and then extracts fields
 class ArchivesSearchService < AbstractSearchService
-  def initialize(options = {})
-    options[:query_url] ||= Settings.archives.api_url
-    options[:response_class] ||= Response
+  def initialize(**)
+    @query_url = Settings.archives.api_url
+    @response_class = Response
     super
   end
 
