@@ -86,7 +86,7 @@ RSpec/DescribeClass:
     - 'spec/requests/**/*'
     - 'spec/routing/**/*'
 
-Naming/PredicateName:
+Naming/PredicatePrefix:
   ForbiddenPrefixes:
     - is_
 
