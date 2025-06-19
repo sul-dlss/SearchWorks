@@ -111,6 +111,14 @@ Blacklight.onLoad(function(){
           $('#' + this.element.id).on('shown.bs.collapse', function () {
             $form.find('.form-control').first().focus();
           });
+
+          // Feedback forms can show up in a standalone page or a modal.
+          // If a modal, we need to display modal specific components
+          if ($('div[data-blacklight-modal').length > 0) {
+            $('div.new-link').addClass('d-none');
+            $('button.close').addClass('d-none');
+          }
+         
         }
     };
 
