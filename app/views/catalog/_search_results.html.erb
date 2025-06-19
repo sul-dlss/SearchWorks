@@ -35,7 +35,7 @@
       <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
     <% end %>
     <div class="row">
-      <div class="sidebar col-12 col-md-4" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
+      <div class="sidebar col-12 col-md-4 col-xl-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
         <!-- TODO: search mode toggle -->
 
         <%= render Blacklight::Response::FacetGroupComponent.new(id: nil, title: 'Filters') do |component| %>
@@ -49,7 +49,7 @@
         <% end %>
       </div>
 
-      <div id="content" class="results col">
+      <div id="content" class="results col col-xl-6">
         <div class="sul-toolbar page-entries-info sort-and-per-page d-flex justify-content-between align-items-center">
           <%= tag.nav class: 'page_links' do %>
             <% previous_label = capture do %>
@@ -90,6 +90,11 @@
         </div>
         <%= render 'results_pagination' %>
       </div>
+
+      <aside class="col-xl-3 d-none d-xl-block">
+        <div id="modules-aside">
+        </div>
+      </aside>
     </div>
   <% end %>
 <% end %>
