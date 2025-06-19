@@ -33,14 +33,12 @@
         <% end %>
       </div>
 
-      <% if false %>
       <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
         <%= link_to archive_search_url do %>
           Archival Collections at Stanford <span class="bi-box-arrow-up-right"></span>
         <% end %>
         <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
       </div>
-      <% end %>
 
       <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
         <%= link_to geo_search_url do %>

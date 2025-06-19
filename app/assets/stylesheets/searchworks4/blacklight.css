@@ -1,12 +1,21 @@
-/* Override blacklight 9. We may want to move this to the component library: */
-.navbar-logo {
-  --bl-logo-image: none;
-  --bl-logo-width: 250px;
-  background-color: black;
-}
+.sidenav {
+  .facet-toggle-button {
+    [data-hide-label] {
+      display: inline;
+    }
+    [data-show-label] {
+      display: none;
+    }
 
-.input-group > .search-q {
-  flex-grow: 4;
+    &[aria-expanded="false"] {
+      [data-hide-label] {
+        display: none;
+      }
+      [data-show-label] {
+        display: inline;
+      }
+    }
+  }
 }
 
 .facet-limit {
@@ -52,6 +61,10 @@
     hyphens: auto;
     overflow-wrap: break-word;
   }
+}
+
+.input-group > .search-q {
+  flex-grow: 4;
 }
 
 .constraints-container {
