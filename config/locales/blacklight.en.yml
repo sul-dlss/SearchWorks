@@ -18,6 +18,9 @@ en:
         submit_html: '<span class="visually-hidden">Search</span><span class="bi-search"></span>'
         submit: ''
       form_label: 'search for'
+      filters:
+          title: 'Your selections: '
+      start_over: 'Clear all'
       librarian_view:
         empty: 'No librarian view available'
       masthead_title: '%{title} in %{application_name}'
