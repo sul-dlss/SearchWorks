@@ -1,14 +1,6 @@
 # frozen_string_literal: true
 
 module ResultsDocumentHelper
-  def get_main_title_date(document)
-    # Data is indexed with the display date in Solr field pub_year_ss
-    date = document["pub_year_ss"] || document['eds_publication_year']
-    return if date.blank?
-
-    "[#{date}]"
-  end
-
   def get_book_ids(document)
     isbn = add_prefix_to_elements(Array(document['isbn_display']), 'ISBN')
     oclc = add_prefix_to_elements(Array(document['oclc']), 'OCLC')
