@@ -19,7 +19,7 @@
             <%= t('blacklight.search.documents.counter', counter:) if counter %>
           </span>
           <%= helpers.link_to_document document, counter: %>
-          <span class="main-title-date"><%= helpers.p(@document) %></span>
+          <span class="main-title-date"><%= helpers.get_main_title_date(@document) %></span>
         </h3>
 
         <% # bookmark functions for items/docs -%>
