@@ -1,0 +1,43 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-size: var(--sul-header-font-size);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+h1,
+.h1 {
+  --sul-header-font-size: 1.75rem;
+}
+
+h2,
+.h2 {
+  --sul-header-font-size: 1.375rem;
+}
+
+h3,
+.h3 {
+  --sul-header-font-size: 1.125rem;
+}
+
+h4,
+.h4 {
+  --sul-header-font-size: 1rem;
+}
+
+h5,
+.h5 {
+  --sul-header-font-size: 0.9rem;
+}
+
+dt {
+  font-weight: 600;
+}

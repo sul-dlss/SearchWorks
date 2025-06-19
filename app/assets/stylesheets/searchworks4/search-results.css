@@ -6,7 +6,6 @@
 }
 
 .index_title {
-  font-size: 1.12rem;
 }
 
 .bookmark-toggle {
@@ -80,7 +79,7 @@
 }
 
 .active-icon::before {
-  content: "✓"
+  content: "✓";
 }
 
 .constraints-container .btn-reset {
