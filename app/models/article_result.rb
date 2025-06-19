@@ -25,4 +25,24 @@ class ArticleResult
   def icon
     FORMAT_TO_ICON.fetch(format, 'notebook.svg')
   end
+
+  def formatted_year
+    return nil if pub_date.blank?
+
+    date = Date.parse(pub_date)
+    year = date.strftime('%Y')
+    "(#{year})"
+  rescue Date::Error
+    nil
+  end
+
+  def journal_details
+    return '' if composed_title.blank?
+
+    search_link_match = composed_title.match(%r{</searchlink>(.*)}i)
+    return search_link_match[1] if search_link_match
+
+    italic_match = composed_title.match(%r{\u003C/i\u003E(.*)}i)
+    italic_match ? italic_match[1] : ''
+  end
 end
