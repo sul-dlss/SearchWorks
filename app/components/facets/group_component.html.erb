@@ -1,0 +1,23 @@
+<% # main container for facets/limits menu -%>
+<%= content_tag :div, id: @id, class: 'facets sidenav facets-toggleable-md',
+  data: { controller: 'facet-list', action: 'resize-above@window->facet-list#deactivate resize-below@window->facet-list#activate' } do %>
+  <div class="facets-header">
+    <%= content_tag :h2, @title, class: 'facets-heading h4' if @title %>
+
+    <%= collapse_toggle_button(@panel_id) %>
+  </div>
+
+  <div id="<%= @panel_id %>" class="<%= body_classes %>" data-facet-list-target="facet">
+    <%= body %>
+
+    <div class="text-center mt-2 d-xxl-none">
+      <button class="btn btn-primary" data-facet-list-target="showButton" data-action="facet-list#show" hidden>
+        <i class="bi bi-sliders" aria-hidden="true"></i> Show all filters
+      </button>
+
+      <button class="btn btn-primary" data-facet-list-target="hideButton" data-action="facet-list#hide">
+        <i class="bi bi-sliders" aria-hidden="true"></i> Hide filters
+      </button>
+    </div>
+  </div>
+<% end %>
