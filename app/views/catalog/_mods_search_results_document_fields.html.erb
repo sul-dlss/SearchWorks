@@ -1,6 +1,6 @@
 <ul class="document-metadata results-metadata-section col-md-8">
-  <% if document[:vern_title_display].present? %>
-    <li><%= document[:vern_title_display].html_safe %></li>
+  <% if document.vernacular_title.present? %>
+    <li><%= document.vernacular_title.html_safe %></li>
   <% end %>
   <% if document.mods_display_name.present? %>
     <li>
