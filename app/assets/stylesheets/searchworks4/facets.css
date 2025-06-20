@@ -14,14 +14,22 @@
   }
 }
 /* TODO: Move this to the component library */
-.accordion:has(.accordion-item) {
-  --bs-accordion-border-radius: 0;
-  --bs-accordion-border-color: transparent;
+.facets {
+  --bs-btn-font-weight: 400;
 
   .accordion-item {
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-border-color: transparent;
     --bs-accordion-btn-bg: transparent;
     --bs-accordion-inner-border-radius: 0;
 
     border-top: 1px solid var(--stanford-30-black);
   }
+
+   .accordion {
+    --bs-accordion-btn-padding-y: 0.5rem;
+    --bs-accordion-body-padding-y: 0 0.5rem;
+    --bs-link-color-rgb: var(--bs-accordion-color);
+    --bs-accordion-active-color: var(--bs-accordion-color);
+   }
 }
