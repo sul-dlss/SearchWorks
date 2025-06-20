@@ -7,8 +7,6 @@ export default class extends Controller {
   // For the modal, connect is fired once the modal is opened
   // For the standalone page, connect is fired on page load
   connect() {
-    console.log("Feedback form controller connect")
-    //this.feedbackForm = document.getElementById("feedback-form")
     // For a standalone form, certain elements need to be hidden
     this.handleStandaloneDisplay()
     
@@ -29,24 +27,19 @@ export default class extends Controller {
 
   // Attached to the "Send" button
   submitForm() {
-    console.log("Form submission")
     this.setHiddenFieldValues()
+    this.postForm()
   }
 
   // Set values for specific fields that are not filled in and must be computed
   setHiddenFieldValues() {
     this.agentTarget.value = navigator.userAgent
-    console.log(this.agentTarget.value)
     this.viewportTarget.value = 'width:' + window.innerWidth + ' height:' + innerHeight
-    console.log(this.viewportTarget.value)
     // Last search values are available on an item view page
     const lastSearchValue = this.lastSearch()
     if (lastSearchValue != null) {
       this.lastSearchTarget.value = lastSearchValue
     }
-    console.log(this.lastSearchTarget.value)
-
-    this.postForm()
   }
 
   lastSearch() {
@@ -59,10 +52,7 @@ export default class extends Controller {
   }
 
   async postForm() {
-    console.log(this.element)
-    console.log(this.element.action)
     const valuesToSubmit = new URLSearchParams(new FormData(this.element))
-    console.log(valuesToSubmit)
     const response = await fetch(this.element.action, {
       method: 'POST',
       body: valuesToSubmit
@@ -70,8 +60,8 @@ export default class extends Controller {
 
     this.displayResponse(await response.json())
       
-      // Reset the recaptcha. Recaptcha doesn't permit the same token to be used twice.
-      //grecaptcha.reset()
+    // Reset the recaptcha. Recaptcha doesn't permit the same token to be used twice.
+    //grecaptcha.reset()
   }
 
   // If success, we need an alert or a toast object to show up
