@@ -1,0 +1,57 @@
+<div class="border rounded p-2 mt-3">
+  <% if document.holdings.items.one? %>
+    <% document.holdings.libraries.each do |library| %>
+      <% library.locations.each do |location| %>
+        <% location.items.each do |item| %>
+          <div class="d-flex gap-3 align-items-center">
+            <%= tag.span item.library, class: 'library fw-semibold fs-15' %>
+            <%= tag.span item.callnumber, class: 'callnumber' %>
+            <%= tag.span item.status.status_text, class: item.status.availability_class %>
+            <% if item.request_link.render? %>
+              <%= render item.request_link %>
+            <% else %>
+              <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code) %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <details>
+      <summary>
+        <div class="d-flex gap-3 align-items-center">
+          <span class="bg-light p-1 rounded-pill">
+            <%= pluralize(document.holdings.items.count, 'item') %>
+          </span>
+          <% if document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
+            <%= render LocationRequestLinkComponent.new(document:, location: document.holdings.libraries.first.locations.first, library_code: document.holdings.libraries.first.code) %>
+          <% end %>
+          </div>
+      </summary>
+      <div>
+        <% document.holdings.libraries.each do |library| %>
+          <div class="d-flex flex-column">
+            <div class="bg-light fw-semibold fs-15"><%= library.name %></div>
+          <% library.locations.each do |location| %>
+            <div class="d-flex gap-3 p-2">
+              <div><%= location.name %></div>
+              <div>
+              <% location.items.each do |item| %>
+                <div>
+                  <%= tag.span item.library, class: 'library' %>
+                  <%= tag.span item.callnumber, class: 'callnumber' %>
+                  <%= tag.span item.status.status_text, class: item.status.availability_class %>
+                  <% if item.request_link.render? %>
+                    <%= render item.request_link %>
+                  <% end %>
+                </div>
+              <% end %>
+              </div>
+            </div>
+          <% end %>
+          </div>
+        <% end %>
+      </div>
+    </details>
+  <% end %>
+</div>
