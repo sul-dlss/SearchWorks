@@ -38,9 +38,12 @@
       <div class="sidebar col-12 col-md-4">
         <!-- TODO: search mode toggle -->
 
-        <%= render Blacklight::Response::FacetGroupComponent.new(id: nil, title: 'Filters') do |component| %>
+        <%= render Facets::GroupComponent.new(id: nil, title: 'Filters') do |component| %>
           <% component.with_body do %>
-            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group('non-collapsable'), response: @response) %>
+            <div data-facet-list-target="hideFacets">
+              <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+            </div>
           <% end %>
         <% end %>
 
