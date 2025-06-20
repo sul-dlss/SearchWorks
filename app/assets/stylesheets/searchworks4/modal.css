@@ -57,14 +57,14 @@ dialog.modal[open] {
     margin-top: 25%;
 }
 
-div[data-blacklight-modal] {
+/* data-blacklight-modal is the containing div with what goes in modal contents on the standalone page */
+div[data-blacklight-modal], .feedback-alert {
     --bs-gutter-x: 7rem;
     max-width: 1500px;
     --bs-gutter-y: 0;
-    width: 100%;
+    width: 60%;
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-right: auto;
     margin-left: auto;
 }
-
