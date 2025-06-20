@@ -1,0 +1,10 @@
+/* 
+#43423E
+*/
+
+.toast {
+    --bs-toast-bg: #43423E;
+    --bs-toast-color: white;
+    --bs-toast-padding-x: 1rem;
+    --bs-toast-padding-y: 1rem;
+}
