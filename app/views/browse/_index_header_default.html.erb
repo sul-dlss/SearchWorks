@@ -5,7 +5,7 @@
   <h3 class="index_title col-sm-9 col-lg-10">
     <%= render_resource_icon doc_presenter.formats %>
     <%= link_to_document document %>
-    <span class="main-title-date"><%= get_main_title_date(document) %></span>
+    <%= render MainTitleDateComponent.new(document:) %>
     <%= document.online_label %>
   </h3>
   <% # bookmark functions for items/docs -%>

@@ -123,6 +123,7 @@ class SolrDocument
   attribute :live_lookup_id, :string, 'uuid_ssi'
   attribute :oclc_number, :string, 'oclc'
   attribute :imprint_string, :string, :imprint_display
+  attribute :main_title_date, :string, :pub_year_ss
 
   def db_az_subject
     self[:db_az_subject] if is_a_database?

@@ -5,7 +5,7 @@
     <%= @document.online_label %>
     <%= counter %>
     <%= title %>
-    <span class="main-title-date"><%= helpers.get_main_title_date(@document) %></span>
+    <%= render MainTitleDateComponent.new(document:) %>
   </h3>
 
   <% # bookmark functions for items/docs -%>

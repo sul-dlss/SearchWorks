@@ -30,7 +30,7 @@
           <%= document.online_label %>
           <%= helpers.link_to_document document, counter: counter %>
         </span>
-        <span class="main-title-date"><%= helpers.get_main_title_date(document) %></span>
+        <%= render MainTitleDateComponent.new(document:) %>
       </h3>
     </div>
   </div>
