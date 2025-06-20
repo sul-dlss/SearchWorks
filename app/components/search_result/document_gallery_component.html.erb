@@ -4,7 +4,7 @@
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
   <div class="item-thumb">
-    <%= render Blacklight::Document::ThumbnailComponent.new(counter:, document:) %>
+    <%= render Blacklight::Document::ThumbnailComponent.new(counter:, presenter:) %>
   </div>
   <div class="caption">
     <% # header bar for doc items in index view gallery %>

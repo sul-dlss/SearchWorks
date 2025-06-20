@@ -251,12 +251,12 @@
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
 
-blacklight-frontend@^9.0.0-beta1:
-  version "9.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta1.tgz#792db40748c212a8b58a14a9806c14eabf151e1a"
-  integrity sha512-qa2VBHswemS+UxkzeGlMZAOfeMFLyYwOrvQCtc5p2e0dAvgJXfXaRS0XaQMipS5QMuFOxnv0ZrIA4gwiGoo94Q==
+blacklight-frontend@^9.0.0-beta2:
+  version "9.0.0-beta2"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta2.tgz#be7931ec33ad1665661528e597f6025e2f93a739"
+  integrity sha512-fymHeWRX5uugggXnp6UbwCN7J6Kjqmegln3UHWlpXmmVHIjK7WwKgL7xTfxu+wp189BS3hHHiIXTVkXHz6q7Ug==
   dependencies:
-    bootstrap ">=4.3.1 <6.0.0"
+    bootstrap ">=5.3.5 <6.0.0"
 
 blacklight-hierarchy@^6.1.2:
   version "6.4.0"
@@ -275,6 +275,11 @@ bootstrap@5, "bootstrap@>=4.3.1 <6.0.0":
   version "5.3.6"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.6.tgz#fbd91ebaff093f5b191a1c01a8c866d24f9fa6e1"
   integrity sha512-jX0GAcRzvdwISuvArXn3m7KZscWWFAf1MKBcnzaN02qWMb3jpMoUX4/qgeiGzqyIb4ojulRzs89UCUmGcFSzTA==
+
+"bootstrap@>=5.3.5 <6.0.0":
+  version "5.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.7.tgz#8640065036124d961d885d80b5945745e1154d90"
+  integrity sha512-7KgiD8UHjfcPBHEpDNg+zGz8L3LqR3GVwqZiBRFX04a1BCArZOz1r2kjly2HQ0WokqTO0v1nF+QAt8dsW4lKlw==
 
 braces@^3.0.3:
   version "3.0.3"

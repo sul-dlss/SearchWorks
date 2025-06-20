@@ -56,7 +56,7 @@ RSpec.describe NearbyOnShelf do
     it 'queries solr to get the documents that contain the next call numbers' do
       service.spines('A', incl: true, per: 3)
 
-      expect(repository).to have_received(:search).with(have_attributes(to_h: hash_including('q' => '{!lucene}shelfkey:(A OR B OR C)')))
+      expect(repository).to have_received(:search).with(params: have_attributes(to_h: hash_including('q' => '{!lucene}shelfkey:(A OR B OR C)')))
     end
 
     it 'de-dupes shelfkeys + documents' do

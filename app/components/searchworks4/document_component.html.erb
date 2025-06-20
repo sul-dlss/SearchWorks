@@ -24,8 +24,8 @@
     <div class="d-flex">
       <div class="results-metadata-sections">
 
-        <% if document[:vern_title_display].present? %>
-          <div><%= document[:vern_title_display].html_safe %></div>
+        <% if document.vernacular_title..present? %>
+          <div><%= document.vernacular_title.html_safe %></div>
         <% end %>
 
         <%- uniform_title = helpers.get_uniform_title(document) -%>
