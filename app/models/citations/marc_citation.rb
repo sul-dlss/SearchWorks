@@ -30,6 +30,11 @@ module Citations
       cp = CiteProc::Processor.new style:, format: 'html'
       cp.import citeproc_item
       cp.render(:bibliography, id: citeproc_item.id).first
+    rescue StandardError => e
+      # Don't let an error in this process prevent the page from rendering
+      Rails.logger.error("Error generating citation for #{citeproc_item.id}: #{e.message}")
+      Honeybadger.notify(e, context: { item: citeproc_item.to_h, style: })
+      ''
     end
   end
 end
