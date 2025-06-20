@@ -113,4 +113,4 @@ gem 'blacklight-ris', '~> 0.2.0'
 
 gem "citeproc", "~> 1.1"
 
-gem "csl-styles", "~> 1.0"
+gem "csl-styles", "~> 2.0"
