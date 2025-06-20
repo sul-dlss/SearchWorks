@@ -41,3 +41,7 @@ h5,
 dt {
   font-weight: 600;
 }
+
+.fs-15 {
+  --bs-body-font-size: 0.9375rem;
+}
