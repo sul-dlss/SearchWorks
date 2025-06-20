@@ -25,7 +25,7 @@ module Eds
     end
 
     def add_query_parameters(eds_params)
-      eds_params[:SearchCriteria][:Queries] = if search_field.eds_field_code
+      eds_params[:SearchCriteria][:Queries] = if search_field&.eds_field_code
                                                 [{ Term: blacklight_params[:q], FieldCode: search_field.eds_field_code }]
                                               else
                                                 [{ Term: blacklight_params[:q] }]
