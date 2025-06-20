@@ -49,6 +49,9 @@ application.register("embed-browse", EmbedBrowseController)
 import FacetListController from "./facet_list_controller"
 application.register("facet-list", FacetListController)
 
+import FeedbackFormController from "./feedback_form_controller"
+application.register("feedback-form", FeedbackFormController)
+
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 

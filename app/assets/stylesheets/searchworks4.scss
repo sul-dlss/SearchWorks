@@ -25,6 +25,8 @@ layer(components);
 @import url("searchworks4/variables.css") layer(local);
 @import url("modules/chat.css") layer(local);
 @import url("searchworks4/alerts.css") layer(local);
+@import url("searchworks4/toasts.css") layer(local);
+
 
 @layer local {
   @media (min-width: 1400px) {
