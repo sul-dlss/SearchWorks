@@ -18,7 +18,7 @@
         <%= helpers.link_to_document document, counter:, itemprop: 'name' %>
       </h3>
 
-      <%= render Blacklight::Document::BookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
+      <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
     </div>
 
     <div class="d-flex">

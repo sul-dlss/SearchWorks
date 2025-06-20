@@ -16,10 +16,6 @@
     </label>
   </div>
 
-  <%= hidden_field_tag('bookmarks[][document_id]', document.id) %>
-  <%= hidden_field_tag('bookmarks[][record_type]', 'article') %>
-  <%= hidden_field_tag('bookmarks[][document_type]', document.class) %>
-
   <%= submit_tag(t(bookmarked? ? 'remove.button' : 'add.button', scope: 'blacklight.bookmarks'),
                  class: "bookmark-#{bookmarked? ? 'remove' : 'add'} btn btn-outline-secondary") %>
 <% end %>

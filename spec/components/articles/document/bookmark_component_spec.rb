@@ -19,4 +19,8 @@ RSpec.describe Articles::Document::BookmarkComponent, type: :component do
     expect(page).to have_field('bookmarks[][record_type]', type: :hidden)
     expect(page).to have_field('bookmarks[][document_type]', type: :hidden)
   end
+
+  it 'gathers analytics' do
+    expect(page).to have_css('input[data-action="click->analytics#trackBookmark"]')
+  end
 end

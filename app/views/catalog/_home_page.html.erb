@@ -32,7 +32,7 @@
         <div class="col-xxl-10 col-xl-12">
           <section class="home-page-facets sidenav">
             <h2 class="h3">Browse by</h2>
-            <div class="accordion">
+            <div class="accordion" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
               <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
             </div>
           </section>
@@ -72,25 +72,25 @@
       <section class="px-lg-3 py-xl-1 py-3 features">
         <header class="h3">Featured resources</header>
 
-        <ul class="list-unstyled">
+        <ul class="list-unstyled" data-controller="analytics" data-analytics-category-value="featured-resource">
           <li class="mb-3">
-            <%= link_to 'Course reserves', course_reserves_path, class: 'd-block' %>
+            <%= link_to 'Course reserves', course_reserves_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
             Books, media and digital resources set aside for classes
           </li>
           <li class="mb-3">
-            <%= link_to 'Databases', databases_path, class: 'd-block' %>
+            <%= link_to 'Databases', databases_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
             Topic specific databases containing full-text journal articles
           </li>
           <li class="mb-3">
-            <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'd-block' %>
+            <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
             Images, maps, data and more in the Stanford Digital repository
           </li>
           <li class="mb-3">
-            <%= link_to 'Government documents', govdocs_path, class: 'd-block' %>
+            <%= link_to 'Government documents', govdocs_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
             State, federal, United Nations and European government documents
           </li>
           <li class="mb-3">
-            <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block' %>
+            <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
             Student work held in the Stanford Digital repository
           </li>
         </ul>

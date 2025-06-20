@@ -35,7 +35,7 @@
       <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
     <% end %>
     <div class="row">
-      <div class="sidebar col-12 col-md-4">
+      <div class="sidebar col-12 col-md-4" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
         <!-- TODO: search mode toggle -->
 
         <%= render Blacklight::Response::FacetGroupComponent.new(id: nil, title: 'Filters') do |component| %>

@@ -46,4 +46,11 @@ RSpec.feature "Home Page" do
   it 'has schema.org markup for searching' do
     expect(page).to have_css('script[type="application/ld+json"]', text: %r{http://schema.org}, visible: false)
   end
+
+  it 'gathers analytics' do
+    expect(page).to have_css('[data-controller="analytics"][data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow"]')
+    within('.features') do
+      expect(page).to have_css('[data-controller="analytics"] [data-action="click->analytics#trackLink"]', count: 5)
+    end
+  end
 end
