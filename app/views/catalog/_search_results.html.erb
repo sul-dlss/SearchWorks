@@ -19,7 +19,7 @@
 <% end -%>
 
 
-<div class="container">
+<%= render MainContainerComponent.new do %>
   <% if has_search_parameters? %>
     <div class="row">
       <div class="constraints col d-flex">
@@ -92,4 +92,4 @@
       </div>
     </div>
   <% end %>
-</div>
+<% end %>
