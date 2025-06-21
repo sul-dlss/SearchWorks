@@ -15,40 +15,63 @@
 # quickly. If so, enable the condition to exclude them from tracking.
 
 if Settings.THROTTLE_TRAFFIC
-  Rack::Attack.cache.store = ActiveSupport::Cache::RedisCacheStore.new(url: Settings.throttling.redis_url) if Settings.throttling.redis_url
-
-  Rack::Attack.throttle('req/search/ip', limit: 15, period: 1.minute) do |req|
+  def request_matches?(req, controller: nil, actions: [])
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}
     rescue StandardError
       {}
     end
 
-    req.ip if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+    (controller.nil? || route[:controller] == controller) && (actions.blank? || actions.include?(route[:action]))
+  end
+
+  Rack::Attack.cache.store = ActiveSupport::Cache::RedisCacheStore.new(url: Settings.throttling.redis_url) if Settings.throttling.redis_url
+
+  # the allow2ban filters are used to block IPs that repeatedly would hit throttle limits
+  Rack::Attack.blocklist('allow2ban catalog scrapers') do |req|
+    next if req.ip.start_with?('171.', '172.', '10.')
+
+    Rack::Attack::Allow2Ban.filter(req.ip, maxretry: 50, findtime: 5.minutes, bantime: 1.hour) do
+      request_matches?(req, controller: 'catalog', actions: ['index', 'facet'])
+    end ||
+      Rack::Attack::Allow2Ban.filter(req.ip.slice(/^\d+\.\d+\.\d+\./), maxretry: 200, findtime: 5.minutes, bantime: 1.hour) do
+        request_matches?(req, controller: 'catalog', actions: ['index', 'facet'])
+      end ||
+      Rack::Attack::Allow2Ban.filter(req.ip.slice(/^\d+\.\d+\./), maxretry: 400, findtime: 5.minutes, bantime: 1.hour) do
+        request_matches?(req, controller: 'catalog', actions: ['index', 'facet'])
+      end ||
+      Rack::Attack::Allow2Ban.filter(req.ip, maxretry: 2000, findtime: 30.minutes, bantime: 1.hour) do
+        req.path.start_with?('/view')
+      end
+  end
+
+  Rack::Attack.blocklist('allow2ban articles scrapers') do |req|
+    next if req.ip.start_with?('171.', '172.', '10.')
+
+    Rack::Attack::Allow2Ban.filter(req.ip, maxretry: 120, findtime: 15.minutes, bantime: 1.hour) do
+      request_matches?(req, controller: 'articles', actions: ['index'])
+    end ||
+      Rack::Attack::Allow2Ban.filter(req.ip, maxretry: 2000, findtime: 30.minutes, bantime: 1.hour) do
+        request_matches?(req, controller: 'articles', actions: ['show'])
+      end
+  end
+
+  Rack::Attack.throttle('req/search/ip', limit: 15, period: 1.minute) do |req|
+    next if req.ip.start_with?('171.', '172.', '10.')
+
+    req.ip if request_matches?(req, controller: 'catalog', actions: ['index', 'facet'])
   end
 
   Rack::Attack.throttle('req/search/cidr/24', limit: 50, period: 1.minute) do |req|
-    route = begin
-      Rails.application.routes.recognize_path(req.path) || {}
-    rescue StandardError
-      {}
-    end
-
     next if req.ip.start_with?('171.', '172.', '10.')
 
-    req.ip.slice(/^\d+\.\d+\.\d+\./) if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+    req.ip.slice(/^\d+\.\d+\.\d+\./) if request_matches?(req, controller: 'catalog', actions: ['index', 'facet'])
   end
 
   Rack::Attack.throttle('req/search/cidr/16', limit: 100, period: 1.minute) do |req|
-    route = begin
-      Rails.application.routes.recognize_path(req.path) || {}
-    rescue StandardError
-      {}
-    end
-
     next if req.ip.start_with?('171.', '172.', '10.')
 
-    req.ip.slice(/^\d+\.\d+\./) if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+    req.ip.slice(/^\d+\.\d+\./) if request_matches?(req, controller: 'catalog', actions: ['index', 'facet'])
   end
 
   Rack::Attack.throttle('req/view/ip', limit: 500, period: 5.minutes) do |req|
@@ -57,33 +80,15 @@ if Settings.THROTTLE_TRAFFIC
 
   # Throttle article searching more aggressively
   Rack::Attack.throttle('articles/search/ip', limit: 50, period: 5.minutes) do |req|
-    route = begin
-      Rails.application.routes.recognize_path(req.path) || {}
-    rescue StandardError
-      {}
-    end
-
-    req.ip if route[:controller] == 'articles' && route[:action] == 'index'
+    req.ip if request_matches?(req, controller: 'articles', actions: ['index'])
   end
 
   Rack::Attack.throttle('articles/view/ip', limit: 500, period: 5.minutes) do |req|
-    route = begin
-      Rails.application.routes.recognize_path(req.path) || {}
-    rescue StandardError
-      {}
-    end
-
-    req.ip if route[:controller] == 'articles' && route[:action] == 'show'
+    req.ip if request_matches?(req, controller: 'articles', actions: ['show'])
   end
 
   Rack::Attack.throttle('req/actions/ip', limit: 15, period: 1.minute) do |req|
-    route = begin
-      Rails.application.routes.recognize_path(req.path) || {}
-    rescue StandardError
-      {}
-    end
-
-    req.ip if route[:action].in? %w[email sms citation fulltext_link]
+    req.ip if request_matches?(req, actions: %w[email sms citation fulltext_link])
   end
 
   # Throttle article searching based on badly behaved user agent (device farm)?
