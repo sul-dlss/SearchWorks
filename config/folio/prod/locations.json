@@ -7801,6 +7801,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
+      "pageAeonSite": "EASTASIA",
       "availabilityClass": "Offsite",
       "pageServicePointCodes": "EAST-ASIA"
     },
@@ -7812,8 +7813,8 @@
     "metadata": {
       "createdDate": "2025-04-18T20:41:54.785+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-04-18T20:41:54.785+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-06-20T21:23:37.411+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
