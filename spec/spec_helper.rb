@@ -93,16 +93,6 @@ def total_results
   page.find("h2", text: number_pattern).text.gsub(/\D+/, '').to_i
 end
 
-def results_all_on_page ids
-  ids.all? do |id|
-    result_on_page id
-  end
-end
-
-def result_on_page id
-  !all_docs_on_page.index(id).nil?
-end
-
 def document_index id
   all_docs_on_page.index(id)
 end
