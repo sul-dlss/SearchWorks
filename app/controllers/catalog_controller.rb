@@ -104,6 +104,9 @@ class CatalogController < ApplicationController
     config.index.constraints_component = Searchworks4::ConstraintsComponent
 
     config.index.facet_group_component = Searchworks::Response::FacetGroupComponent
+    config.index.facet_filters_component = Facets::FiltersComponent
+
+    config.index.facet_pagination_component = FacetFieldPaginationComponent
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
     config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_component = ThumbnailWithIiifComponent
