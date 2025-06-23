@@ -27,7 +27,7 @@ class ArticleSearchService < AbstractSearchService
           journal: doc['eds_source_title'],
           description: doc['eds_abstract'],
           fulltext_link_html: html.css('a').first&.to_html || '',
-          fulltext_stanford_only: stanford_only(html),
+          fulltext_stanford_only: stanford_only?(html),
           author: doc['eds_authors']&.first,
           pub_date: doc['eds_publication_date'],
           composed_title: doc['eds_composed_title']
@@ -45,7 +45,7 @@ class ArticleSearchService < AbstractSearchService
 
     private
 
-    def stanford_only(html)
+    def stanford_only?(html)
       stanford_only = html.css('[aria-label="Stanford-only"]').first || html.css('.stanford-only').first
       stanford_only.present?
     end
