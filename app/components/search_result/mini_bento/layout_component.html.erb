@@ -7,58 +7,57 @@
     <% end %>
   </div>
   <div class="alternate-catalog-body row d-none">
-    <div class="col-md-5">
-      <h4 class="alternate-catalog-name">
+    <div class="col-12">
+      <h4 class="alternate-catalog-name mb-0">
         <%= name %>
-        <span class="badge rounded-pill text-bg-secondary alternate-catalog-count"></span>
+        <span class="badge rounded-pill alternate-catalog-count"></span>
       </h4>
       <div class='alternate-catalog-desc'>
         <%= description %>
       </div>
       <div>
-        <%= link_to(url, class: 'btn btn-outline-primary', data: { action: "click->analytics#trackLink"}) do %>
+        <%= link_to(url, class: 'btn btn-outline-secondary', data: { action: "click->analytics#trackLink"}) do %>
           View all <%= result_singular %> results
         <% end %>
       </div>
-      <ul class="alternate-catalog-facets list-unstyled mt-2 mb-4"></ul>
     </div>
 
-    <div class="col-md-7">
-      <h4 class="alternate-catalog-name">
+    <div class="col-12">
+      <h4 class="alternate-catalog-name mt-3 mb-1">
         Other search tools
       </h4>
       <div class="mb-2">
-        <%= link_to(bento_url, class: 'btn btn-outline-primary') do %>
+        <%= link_to(bento_url) do %>
           View results from all tools
         <% end %>
       </div>
 
       <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
-        <%= link_to archive_search_url do %>
-          Archival Collections at Stanford <span class="bi-box-arrow-up-right"></span>
+        <%= link_to archive_search_url, class: 'su-underline' do %>
+          Archival Collections at Stanford
         <% end %>
-        <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
+        <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
       </div>
 
       <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
-        <%= link_to geo_search_url do %>
-          EarthWorks for geospatial data and maps <span class="bi-box-arrow-up-right"></span>
+        <%= link_to geo_search_url,  class: 'su-underline' do %>
+          EarthWorks for geospatial data and maps
         <% end %>
-        <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
+        <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
       </div>
 
       <div data-controller="bento-result-count" data-bento-result-count-url-value="<%= bento_search_url('lib_guides') %>">
-        <%= link_to '', data: {'bento-result-count-target': 'link'} do %>
-          Guides to collections, tools, and services <span class="bi-box-arrow-up-right"></span>
+        <%= link_to '', class: 'su-underline', data: {'bento-result-count-target': 'link'} do %>
+          Guides to collections, tools, and services
         <% end %>
-        <span class="badge rounded-pill text-bg-secondary" data-bento-result-count-target="count"></span>
+        <span class="badge rounded-pill" data-bento-result-count-target="count"></span>
       </div>
 
       <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= exhibits_search_url %>">
-        <%= link_to exhibits_search_url do %>
-          Spotlight Exhibits <span class="bi-box-arrow-up-right"></span>
+        <%= link_to exhibits_search_url, class: 'su-underline' do %>
+          Spotlight Exhibits
         <% end %>
-        <span class="badge rounded-pill text-bg-secondary" data-blacklight-result-count-target="count"></span>
+        <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
       </div>
     </div>
   </div>

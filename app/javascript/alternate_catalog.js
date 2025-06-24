@@ -52,7 +52,6 @@ const AlternateCatalog = (function (global) {
       const alternateCatalogUrl = this.element.dataset.alternateCatalog
       const body = this.element.querySelector('.alternate-catalog-body')
       const countElement = this.element.querySelector('.alternate-catalog-count')
-      const facets = this.element.querySelector('.alternate-catalog-facets')
 
       fetch(alternateCatalogUrl, { headers: { 'accept': 'application/json' } })
         .then(response => {
@@ -67,37 +66,8 @@ const AlternateCatalog = (function (global) {
           this.titleElement.innerHTML = 'Your search also found results in'
           countElement.innerHTML = parseInt(count).toLocaleString()
           body.classList.remove('d-none')
-
-          if (count > 0) {
-            // Update body
-            const facetHtml = createFacets(response.response.facets, alternateCatalogUrl)
-            facets.innerHTML = facetHtml
-            // Dispatch an event so that features like our custom analytics can take action
-            document.dispatchEvent(new CustomEvent('alternate-catalog:updated-body'))
-          }
         })
     }
-  }
-
-  function createFacets(facets, url) {
-    const facetLinks = []
-    // Iterating over everything here would be too slow
-    const sourceOrResouce = facets.filter( function(facet) {
-      return facet.label === 'Source type' || facet.label === 'Resource type'
-    })
-    sourceOrResouce.forEach(function (facet) {
-      // Iterating over everything here would be even slower.. sort it and take the top 3
-      const topThree = facet.items.sort(function(a, b) {
-        return b.hits - a.hits
-      }).slice(0, 3)
-      topThree.forEach(function (item) {
-        linkedUrl = url + '&f[' + facet.name + '][]=' + encodeURI(item.value);
-        const count = parseInt(item.hits).toLocaleString()
-        linkText = `${item.label} <span class="badge rounded-pill text-bg-secondary">${count}</span>`
-        facetLinks.push(`<li><a href="${linkedUrl}">${linkText}</a></li>`)
-      })
-    })
-    return facetLinks.join("")
   }
 
 }(this));
