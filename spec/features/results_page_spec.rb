@@ -3,16 +3,26 @@
 require 'rails_helper'
 
 RSpec.feature "Search Results Page" do
-  scenario "should have correct page title" do
-    visit search_catalog_path f: { format: ["Book"] }
-    expect(page).to have_title(/.*\d (result|results) in SearchWorks catalog/)
-  end
   scenario "vernacular title" do
     visit search_catalog_path(q: 'id:11')
 
     within(first('.document')) do
       expect(page).to have_css('h3', text: "Amet ad & adipisicing ex mollit pariatur minim dolore.")
       expect(page).to have_css('div', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
+    end
+  end
+
+  context 'when there are many results' do
+    before do
+      visit search_catalog_path f: { access_facet: ['Online'] }
+    end
+
+    it 'draws the page' do
+      expect(page).to have_title(/.*\d (result|results) in SearchWorks catalog/)
+
+      within('ul.pagination') do
+        expect(page).to have_link 'Previous'
+      end
     end
   end
 end

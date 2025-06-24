@@ -78,10 +78,3 @@ en:
         library_location: '%{library} - %{location}'
         callnumber: '%{value}'
         url: '%{url}'
-  views:
-    pagination_compact:
-      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'
-      previous: '<i class="fa fa-arrow-left"></i><span class="d-none d-sm-inline"> Previous</span>'
-    pagination:
-      previous: '<i class="fa fa-arrow-left"></i> <span class="d-none d-sm-inline"> Previous</span>'
-      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'
