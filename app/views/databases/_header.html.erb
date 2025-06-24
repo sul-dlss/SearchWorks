@@ -1,0 +1,28 @@
+<div class="database-search-area-bg mb-4">
+  <div class="container ">
+      <div class="row">
+        <section class="col-md-5" aria-label="Search for databases">
+          <h1>Databases</h1>
+          <%= render HomepageSearchComponent.new url: search_action_url,
+                                                 params: search_state.params_for_search.except(:qt),
+                                                 autocomplete_path: suggest_index_catalog_path %>
+
+        </section>
+        <div class="col-md-1"></div>
+        <section class="col-md-6 pt-3 ps-4" aria-labelledby="about-databases">
+          <heading class="h3"id="about-databases">About Databases</heading>
+          <p class="mt-2">A database is a curated collection of digital scholarly journal articles, typically organized by discipline,
+            with tools that let users search by keyword, author, topic, or other filters to find relevant articles.
+            It serves as a centralized platform for accessing articles from numerous academic journals, facilitating
+            efficient research and discovery.</p>
+
+          <span class="fw-semibold">Other helpful resources:</span>
+          <ul class="list-inline d-inline ms-3">
+            <li class="list-inline-item me-3"><a href="https://sfx-01stanford.hosted.exlibrisgroup.com/01stanford/az">List of Journals A-Z <span class="bi-arrow-up-right"></span></a></li>
+            <li class="list-inline-item me-3"><a href="/articles">Articles+ <span class="bi-arrow-up-right"></span></a></li>
+            <li class="list-inline-item"><a href="https://library.stanford.edu/services/off-campus-access">Off-campus access <span class="bi-arrow-up-right"></span></a></li>
+          </ul>
+        </section>
+      </div>
+  </div>
+</div>

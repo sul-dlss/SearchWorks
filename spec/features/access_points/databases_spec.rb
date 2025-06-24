@@ -4,37 +4,42 @@ require 'rails_helper'
 
 RSpec.feature "Databases Access Point" do
   before do
-    visit databases_path
+    visit root_path
   end
 
-  scenario "should have a custom masthead" do
-    expect(page).to have_title("Databases in SearchWorks catalog")
-    within("#masthead") do
-      expect(page).to have_css("h1", text: "Databases")
-      expect(page).to have_css("a", text: "Articles+")
-      expect(page).to have_css("a", text: "Connecting to e-resources")
-      expect(page).to have_css("a", text: "Report a connection problem")
+  scenario "searching for a particular database" do
+    within '.features' do
+      click_link "Databases"
     end
+
+    expect(page).to have_title "Databases in SearchWorks catalog"
+    within(".database-search-area-bg") do
+      expect(page).to have_css "h1", text: "Databases"
+      expect(page).to have_link "List of Journals A-Z"
+      expect(page).to have_link "Articles+"
+      expect(page).to have_link "Off-campus access"
+    end
+    expect(page).to have_link "Back to catalog search"
+    expect(page).to have_text "Popular Databases"
+
+    fill_in "search for", with: "Database"
+    click_button "Search"
+
+    expect(page).to have_link "Selected Database 4"
+
+    expect(page).to have_text "Popular Databases"
   end
-  scenario "Database Topic facet should be present and uncollapsed" do
-    within("#facets") do
-      within(".blacklight-db_az_subject") do
-        expect(page).to have_no_css(".collapsed")
-        expect(page).to have_button 'Database topic'
-      end
-    end
-  end
 
-  scenario 'databases should be able to be prefix filtered' do
-    within '.database-prefix' do
-      click_link 'S'
+  scenario "searching for a particular database, but no results" do
+    within '.features' do
+      click_link "Databases"
     end
 
-    expect(page).to have_text('1 - 4 of 4')
-    expect(page).to have_css('h3', text: /Selected Database \d/, count: 4)
+    expect(page).to have_title "Databases in SearchWorks catalog"
 
-    within '#sort-dropdown' do
-      expect(page).to have_content('Sort by title')
-    end
+    fill_in "search for", with: "foo"
+    click_button "Search"
+
+    expect(page).to have_text "No results found"
   end
 end

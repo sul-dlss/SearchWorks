@@ -1,0 +1,17 @@
+.blacklight-databases-index {
+  .database-search-area-bg {
+    min-height: 212px;
+    padding-block: 2.5rem;
+    background-color: var(--stanford-fog-light);
+
+    .col-md-6 {
+      border-inline-start: 1px solid var(--stanford-40-black);
+    }
+  }
+  aside {
+    background-color: var(--stanford-fog-light);
+    .h2 {
+      --sul-header-font-size: 1.25rem;
+    }
+  }
+}

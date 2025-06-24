@@ -15,8 +15,6 @@ class CatalogController < ApplicationController
 
   include BlacklightRangeLimit::ControllerOverride
 
-  include DatabaseAccessPoint
-
   include CallnumberSearch
 
   include LocationFacet
