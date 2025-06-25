@@ -63,4 +63,14 @@ function initializeLibraryH3lp() {
   elements.forEach(element => libraryH3lp(element))
 }
 
-Blacklight.onLoad(initializeLibraryH3lp);
+function addEventListeners() {
+  document.addEventListener('initialize-library-help', function() {
+    initializeLibraryH3lp();
+  })
+}
+
+Blacklight.onLoad(function() {
+  initializeLibraryH3lp();
+  // For modals, the element is not available until modal load when the custom event is triggered
+  addEventListeners();
+});

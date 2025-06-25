@@ -9,7 +9,8 @@ export default class extends Controller {
   connect() {
     // For a standalone form, certain elements need to be hidden
     this.handleStandaloneDisplay()
-    
+    // Dispatch event to initialize library help
+    document.dispatchEvent(new CustomEvent("initialize-library-help"));
   }
 
   handleStandaloneDisplay() {

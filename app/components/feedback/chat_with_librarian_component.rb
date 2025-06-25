@@ -6,6 +6,7 @@ module Feedback
 
     # The default may change but this maintains the old design in other parts of the site
     def initialize(header_class = "h3")
+      super
       @header_class = header_class
     end
 
