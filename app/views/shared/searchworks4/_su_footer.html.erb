@@ -1,34 +1,62 @@
-
 <footer>
-  <section id="pre-footer" class="py-3">
+  <section id="pre-footer" class="py-4" aria-label="Library footer">
     <div class="container">
-      <div class="row gap-3 gap-lg-0">
+      <div class="row row-gap-3">
         <div
           id="sul-footer-img"
-          class="col-sm-12 col-lg-4 col-xl-3 d-flex justify-content-center justify-content-lg-start"
+          class="d-none d-md-flex d-lg-none d-xl-flex col-sm-12 col-lg-3 col-xl-3 d-flex align-items-start justify-content-lg-start justify-content-md-center"
         >
-          <a href="https://library.stanford.edu" class="prefooter-logo"
+          <a
+            href="https://library.stanford.edu"
+            class="prefooter-logo stacked-lg"
             >Stanford University Libraries</a
           >
         </div>
-        <div
-          class="col d-flex justify-content-center justify-content-lg-start align-items-center"
+        <section
+          class="col-md-4 col-xl-3 primary-menu"
+          aria-label="Main links"
         >
-          <ul
-            class="list-unstyled d-flex text-center my-0 gap-3"
-          >
+          <div class="d-block d-md-none d-lg-block d-xl-none mb-3">
+            <a href="https://library.stanford.edu" class="prefooter-logo"
+              >Stanford University Libraries</a
+            >
+          </div>
+          <ul class="list-unstyled fw-semibold">
             <li>
-              <a
-                href="https://library.stanford.edu/libraries-0/branches-and-centers"
-                >Hours &amp; locations</a
-              >
+              <a href="https://library.stanford.edu/all-locations-and-hours"
+                >All locations and hours
+                <i class="bi bi-arrow-right-short"></i
+              ></a>
             </li>
             <li>
-              <a href="https://mylibrary.stanford.edu">My Account</a>
+              <a href="https://library.stanford.edu/"
+                >Library website <i class="bi bi-arrow-right-short"></i
+              ></a>
             </li>
+            <li>
+              <a href="https://mylibrary.stanford.edu"
+                >My Account <i class="bi bi-arrow-right-short"></i
+              ></a>
+            </li>
+          </ul>
+        </section>
+
+        <section
+          class="col-md-4 col-xl-3 secondary-menu"
+          aria-labelledby="get-help-header"
+        >
+          <header id="get-help-header" class="fw-semibold fs-5 mb-2">
+            Get help
+          </header>
+          <ul class="list-unstyled">
             <li>
               <a href="https://library.stanford.edu/contact-us"
                 >Contact us</a
+              >
+            </li>
+            <li>
+              <a href="https://library.stanford.edu/library-accessibility"
+                >Library accessibility</a
               >
             </li>
             <li>
@@ -36,12 +64,58 @@
                 >System status</a
               >
             </li>
+            <li>
+              <a
+                href="https://library.stanford.edu/ask/email/connection-problems"
+                >Report a connection problem</a
+              >
+            </li>
           </ul>
-        </div>
+        </section>
+
+        <section
+          class="col-md-4 col-xl-3 secondary-menu"
+          aria-labelledby="search-header"
+        >
+          <header id="search-header" class="fw-semibold fs-5 mb-2">
+            Search
+          </header>
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://searchworks.stanford.edu/"
+                >SearchWorks Catalog</a
+              >
+              |
+              <a href="https://searchworks.stanford.edu/articles"
+                >Articles+</a
+              >
+            </li>
+            <li>
+              <a href="https://archives.stanford.edu/"
+                >Archival collections at Stanford</a
+              >
+            </li>
+            <li>
+              <a href="https://spotlight.stanford.edu/"
+                >Spotlight Exhibits</a
+              >
+            </li>
+            <li>
+              <a href="https://earthworks.stanford.edu/">EarthWorks</a>
+            </li>
+            <li>
+              <a href="https://guides.library.stanford.edu/">Guides </a>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   </section>
-  <div id="su-footer" class="text-white bg-dark pt-4 pb-4">
+  <section
+    id="su-footer"
+    class="text-white bg-dark pt-4 pb-4"
+    aria-label="Stanford University footer"
+  >
     <div
       class="container d-flex flex-column flex-lg-row align-items-center align-md-normal"
       title="Common Stanford resources"
@@ -163,5 +237,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </footer>
