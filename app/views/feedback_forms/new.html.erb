@@ -1,1 +1,6 @@
-<%= render Feedback::FeedbackModalComponent.new %>
+
+<% if @form_type == "connection" %>
+    <%= render_feedback_form("connection") %>
+<% else %>
+    <%= render Feedback::FeedbackModalComponent.new %>
+<% end %>
