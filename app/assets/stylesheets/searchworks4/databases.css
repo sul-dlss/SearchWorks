@@ -4,8 +4,10 @@
     padding-block: 2.5rem;
     background-color: var(--stanford-fog-light);
 
-    .col-md-6 {
-      border-inline-start: 1px solid var(--stanford-40-black);
+    @media (min-width: 992px) {
+      .about-section {
+        border-inline-start: 1px solid var(--stanford-40-black);
+      }
     }
   }
   aside {

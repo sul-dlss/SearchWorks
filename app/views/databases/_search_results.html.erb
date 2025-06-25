@@ -12,6 +12,13 @@
 <%= render 'header' %>
 
 <%= render MainContainerComponent.new do %>
+  <div class="mb-3">
+    <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-forward-fill ps-1" viewBox="0 0 16 16" style="transform: rotate(180deg);">
+          <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557"/>
+        </svg>Back to catalog search</a>
+  </div>
+
   <% if has_search_parameters? %>
     <div class="row">
       <div class="constraints col d-flex">
@@ -68,8 +75,8 @@
         </div>
         <%= render 'results_pagination' %>
       </div>
-      <div class="col-md-1"></div>
-      <aside class="sidebar col-12 col-md-4 col-xxl-3 pt-4 px-3">
+      <div class="col-xl-1 d-none d-xl-block"></div>
+      <aside class="d-none d-lg-block col-lg-4 col-xxl-3 pt-4 px-3">
         <%= render 'popular_databases' %>
       </aside>
     </div>
