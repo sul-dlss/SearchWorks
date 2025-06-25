@@ -11,7 +11,7 @@ module Searchworks4
       attr_reader :document
 
       def cite_path
-        "/documents/#{document.id}/cite"
+        citation_solr_document_path(document)
       end
 
       def email_path

@@ -1,0 +1,14 @@
+<div class="bg-light p-4 record-summary">
+  <div class="d-flex gap-3">
+    <%= presenter.thumbnail.render %>
+    <div>
+      <div class="fw-semibold"><%= presenter.heading %></div>
+      <div><%= resource_icon %> <%= presenter.document_format %> <%= presenter.main_title_date %></div>
+      <ul class="list-unstyled">
+        <% authors.each do |author| %>
+          <li><%= author %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

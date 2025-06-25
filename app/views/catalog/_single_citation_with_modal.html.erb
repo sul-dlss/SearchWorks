@@ -1,6 +1,9 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h3 class="modal-title"><%= document_presenter(document).heading %></h3>
+    <h3 class="modal-title">Cite</h3>
   <% end %>
-  <%= render Citations::CitationComponent.new(citations: document.citations) %>
+  <%= render Searchworks4::Citations::CitationComponent.new(presenter:) %>
+  <% component.with_footer do %>
+    <button type="button" class="btn btn-outline-primary" data-bl-dismiss="modal">Close</button>
+  <% end %>
 <% end %>
