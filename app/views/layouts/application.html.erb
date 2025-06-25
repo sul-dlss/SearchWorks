@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <title><%= content_for(:title) %></title>
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-10/styles/icon.png" type="image/png">
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-10/styles/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-10/styles/icon.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-25/styles/icon.png" type="image/png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-25/styles/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-25/styles/icon.png">
 
     <link rel="search" type="application/opensearchdescription+xml" href="<%= opensearch_path %>" title="<%= t('opensearch_description') %>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,11 +15,15 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
 
     <%= stylesheet_link_tag "application", media: "all", 'data-turbo-track' => true %>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-19/styles/sul.css"
+      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-25/styles/sul.css"
     />
     <%= stylesheet_link_tag "component-library-overrides", media: "all", 'data-turbo-track' => true %>
     <!-- Google tag (gtag.js) -->

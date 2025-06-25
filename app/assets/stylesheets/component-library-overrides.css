@@ -1,7 +1,7 @@
 :root {
   --identity-bar-bg-color: var(--stanford-cardinal);
   --identity-bar-color: white;
-  --bs-secondary-rgb: 244, 244, 244; /* fog light */
+  --bs-secondary-rgb: var(--stanford-fog-light-rgb);
   --sul-link-font-weight: 400;
   --stanford-archway: #5d4b3c;
 }
@@ -25,7 +25,7 @@
 
 a.su-underline {
   /*
-  https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
   Safari doesn't support text-decoration-thickness
   (breaks --bs-link-decoration: underline var(--underline-color) solid 1px)
   It says it supports shorthand color and style but it isn't working
