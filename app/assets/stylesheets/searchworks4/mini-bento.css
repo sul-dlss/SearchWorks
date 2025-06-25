@@ -1,0 +1,21 @@
+.alternate-catalog {
+  background-color: rgb(var(--stanford-fog-light-rgb), 0.7);
+  padding: 1.5rem 1rem;
+
+  .alternate-catalog-body {
+    .alternate-catalog-desc, .btn {
+      font-size: 0.875rem;
+    }
+
+    .btn {
+      padding: 0.125rem 0.375rem;
+    }
+  }
+
+  .badge.rounded-pill {
+    --bs-badge-color: var(--stanford-black);
+    --bs-badge-font-weight: 400;
+
+    background-color: var(--stanford-10-black);
+  }
+}

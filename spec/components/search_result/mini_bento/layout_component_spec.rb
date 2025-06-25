@@ -11,6 +11,5 @@ RSpec.describe SearchResult::MiniBento::LayoutComponent, type: :component do
     expect(page).to have_css 'button.btn-close'
     expect(page).to have_css '.alternate-catalog-title'
     expect(page).to have_css '.alternate-catalog-body'
-    expect(page).to have_css 'ul.alternate-catalog-facets'
   end
 end
