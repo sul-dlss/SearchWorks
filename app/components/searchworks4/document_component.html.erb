@@ -18,7 +18,10 @@
         <%= helpers.link_to_document document, counter:, itemprop: 'name' %>
       </h3>
 
-      <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
+      <div class="d-flex gap-1">
+        <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
+        <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
+      </div>
     </div>
 
     <div class="d-flex">

@@ -1,0 +1,17 @@
+.toast {
+  --bs-toast-bg: var(--stanford-90-black);
+  --bs-toast-color: white;
+  --bs-toast-padding-x: 1rem;
+  --bs-toast-padding-y: 1rem;
+  --bs-toast-border-radius: 0rem;
+  --bs-toast-border-color: transparent;
+
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.25, 1.35);
+  &.show {
+    transform: translateX(0);
+  }
+  &.showing {
+    opacity: 1;
+  }
+}

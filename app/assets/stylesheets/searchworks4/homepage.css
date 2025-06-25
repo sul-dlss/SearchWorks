@@ -24,7 +24,7 @@
   .search-card {
     background-color: white;
     max-width: 645px;
-    box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
+    box-shadow: var(--bs-box-shadow);
   }
 }
 
