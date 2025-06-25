@@ -32,6 +32,6 @@ RSpec.describe Feedback::FeedbackModalComponent, type: :component do
   end
 
   it 'has link for opening a new tab' do
-    expect(page).to have_link("Open in new tab", href:"/feedback")
+    expect(page).to have_link("Open in new tab", href: "/feedback")
   end
 end

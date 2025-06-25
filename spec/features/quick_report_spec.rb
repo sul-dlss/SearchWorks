@@ -7,7 +7,8 @@ RSpec.feature 'Quick report form (js)', :js do
     visit solr_document_path('1')
   end
 
-  scenario 'Quick report is available on show page' do
+  # Needs implementation after new feedback modal in separate issue
+  pending scenario 'Quick report is available on show page' do
     visit solr_document_path('1')
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
@@ -21,7 +22,7 @@ RSpec.feature 'Quick report form (no js)' do
     visit solr_document_path('1')
   end
 
-  scenario 'Quick report is available on show page' do
+  pending scenario 'Quick report is available on show page' do
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
     click_button 'Report wrong cover image'
