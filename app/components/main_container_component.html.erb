@@ -4,5 +4,13 @@
     <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
     <%= render '/flash_msg', layout: 'shared/flash_messages' %>
     <%= content %>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="toast" class="toast d-block" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body d-flex justify-content-between">
+          <div class="toast-text"></div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
   </main>
 </div>

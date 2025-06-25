@@ -2,4 +2,10 @@
   --identity-bar-bg-color: var(--stanford-cardinal);
   --identity-bar-color: white;
   --sul-shadow-color: rgba(0, 0, 0, 0.2);
+  --bs-box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
+}
+
+/* TODO: Remove after https://github.com/twbs/bootstrap/issues/41569 is resolved*/
+.dropdown-menu {
+  box-shadow: var(--bs-dropdown-box-shadow);
 }

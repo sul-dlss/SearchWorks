@@ -28,6 +28,9 @@ application.register("blacklight-result-count", BlacklightResultCountController)
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
 
+import CopyLinkController from "./copy_link_controller"
+application.register("copy-link", CopyLinkController)
+
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
