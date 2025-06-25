@@ -72,8 +72,6 @@ Rails.application.routes.draw do
 
   get 'govdocs' => 'catalog#index', defaults: { f: { genre_ssim: ['Government document'] } }, as: :govdocs
 
-  resources :selected_databases, only: :index
-
   resources :hours, only: :show
 
   resource :feedback_form, path: "feedback", only: [:new, :create]

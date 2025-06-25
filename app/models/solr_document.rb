@@ -74,10 +74,6 @@ class SolrDocument
     document.key?(:modsxml)
   end
 
-  use_extension(SelectedDatabase) do |document|
-    Settings.selected_databases[document.id].present?
-  end
-
   sw_field_semantics = {
     title: %w[title_display],
     author: 'author_display',
