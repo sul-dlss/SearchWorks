@@ -8,6 +8,8 @@ class DatabasesController < ApplicationController
   end
 
   include Blacklight::Catalog
+  include EmailValidation
+  include CatalogEmailSending
 
   before_action only: :index do
     if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
@@ -15,10 +17,6 @@ class DatabasesController < ApplicationController
         "You have paginated too deep into the result set. Please contact us using the feedback form if you have a need to view results past page #{Settings.PAGINATION_THRESHOLD}."
       redirect_to root_path
     end
-  end
-
-  before_action only: :index do
-    blacklight_config.max_per_page = 10000 if params[:export]
   end
 
   # Upstream opensearch action doesn't handle our complex title field well.
@@ -135,22 +133,5 @@ class DatabasesController < ApplicationController
     config.add_show_tools_partial :citation, if: false
     config.add_show_tools_partial :email, callback: :send_emails_to_all_recipients, validator: :validate_email_params_and_recaptcha
     config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
-  end
-
-  private
-
-  def send_emails_to_all_recipients(documents)
-    email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
-    email_addresses.each do |email_address|
-      email_params[:to] = email_address
-      email = if params[:type] == 'full'
-                SearchWorksRecordMailer.full_email_record(documents, email_params, url_options)
-              else
-                SearchWorksRecordMailer.email_record(documents, email_params, url_options)
-              end
-      email.deliver_now
-    end
-
-    flash[:success] = I18n.t('blacklight.email.success')
   end
 end

@@ -3,6 +3,7 @@
       <div class="row">
         <section class="col-lg-5 pb-3" aria-label="Search for databases">
           <h1>Databases</h1>
+          <div>Search for databases by title or subject area</div>
           <%= render HomepageSearchComponent.new url: search_action_url,
                                                  params: search_state.params_for_search.except(:qt),
                                                  autocomplete_path: suggest_index_catalog_path %>
@@ -16,9 +17,9 @@
             It serves as a centralized platform for accessing articles from numerous academic journals, facilitating
             efficient research and discovery.</p>
 
-          <div class="d-flex">
-            <span class="fw-semibold text-nowrap">Other helpful resources:</span>
-            <ul class="list-inline d-inline ms-3">
+          <div class="d-flex flex-wrap">
+            <span class="fw-semibold text-nowrap me-3">Other helpful resources:</span>
+            <ul class="list-inline d-inline">
               <li class="list-inline-item me-3 text-nowrap"><a href="https://sfx-01stanford.hosted.exlibrisgroup.com/01stanford/az">List of Journals A-Z <span class="bi-arrow-up-right"></span></a></li>
               <li class="list-inline-item me-3 text-nowrap"><a href="/articles">Articles+ <span class="bi-arrow-up-right"></span></a></li>
               <li class="list-inline-item text-nowrap"><a href="https://library.stanford.edu/services/off-campus-access">Off-campus access <span class="bi-arrow-up-right"></span></a></li>
