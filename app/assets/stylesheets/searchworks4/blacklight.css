@@ -173,3 +173,11 @@ dialog.modal[open] {
     background-color: var(--bl-modal-backdrop-bg);
   }
 }
+
+#search-navbar search {
+    width: 75%;
+
+  @media (width < 767.98px) { 
+    width: 100%;
+  }
+}
