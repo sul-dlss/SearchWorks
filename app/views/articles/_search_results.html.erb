@@ -8,7 +8,7 @@
   <%= render "shared/zero_results" %>
 <% else %>
   <div class='row'>
-    <div id="sidebar" class="col-md-4 col-sm-5">
+    <div id="sidebar" class="col-md-4 col-sm-5" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
       <%= render 'search_sidebar' %>
     </div>
     <div id="content" class="col-md-8 col-sm-7">

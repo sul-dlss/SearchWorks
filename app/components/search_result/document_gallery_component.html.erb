@@ -4,7 +4,7 @@
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
   <div class="item-thumb">
-    <%= render Blacklight::Document::ThumbnailComponent.new(counter:, presenter:) %>
+    <%= render Document::TrackingThumbnailComponent.new(counter:, presenter:) %>
   </div>
   <div class="caption">
     <% # header bar for doc items in index view gallery %>
@@ -28,7 +28,7 @@
         <span class="three-lines">
           <%= resource_icon %>
           <%= document.online_label %>
-          <%= helpers.link_to_document document, counter: counter %>
+          <%= helpers.link_to_document document, counter: counter, data: { action: "click->analytics#trackLink"} %>
         </span>
         <span class="main-title-date"><%= helpers.get_main_title_date(document) %></span>
       </h3>

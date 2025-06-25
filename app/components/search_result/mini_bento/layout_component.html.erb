@@ -1,4 +1,4 @@
-<div class='alternate-catalog' data-alternate-catalog="<%= url %>">
+<div class='alternate-catalog' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
   <div class="row">
     <h3 class="alternate-catalog-title col"></h3>
     <% if close? %>
@@ -16,7 +16,7 @@
         <%= description %>
       </div>
       <div>
-        <%= link_to(url, class: 'btn btn-outline-primary') do %>
+        <%= link_to(url, class: 'btn btn-outline-primary', data: { action: "click->analytics#trackLink"}) do %>
           View all <%= result_singular %> results
         <% end %>
       </div>

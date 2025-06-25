@@ -1,7 +1,7 @@
 <% value = presenter.thumbnail.render(@image_options) %>
 
 <% if value %>
-  <div class="document-thumbnail">
+  <div class="document-thumbnail" data-controller="analytics" data-analytics-category-value="iiif-drag">
     <%= helpers.link_to_document(presenter.document, value, 'aria-hidden': true, tabindex: -1, counter: @counter) %>
   </div>
 <% end %>

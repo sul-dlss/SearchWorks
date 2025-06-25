@@ -21,6 +21,9 @@ RSpec.feature "Results Toolbar", :js do
       expect(page).to have_css("div#sort-dropdown", text: "Sort by relevance", visible: true)
       expect(page).to have_no_css("a", text: /Cite/)
       expect(page).to have_no_css("button", text: /Send/)
+      expect(page).to have_css('[data-controller="analytics"][data-analytics-category-value="per-page"]')
+      expect(page).to have_css('[data-controller="analytics"][data-analytics-category-value="sort-type"]')
+      expect(page).to have_css('a[data-action="click->analytics#trackLink"]', visible: :all, count: 10)
     end
   end
 
