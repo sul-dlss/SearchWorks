@@ -236,7 +236,7 @@ class ArticlesController < ApplicationController
     @response, @documents = fetch(params[:id])
     @documents = Array.wrap(@documents)
     if request.post? && validate_email_params_and_recaptcha
-      send_emails_to_all_recipients
+      send_emails_to_all_recipients(@documents)
 
       respond_to do |format|
         format.html { render 'email_success', layout: !request.xhr? }
@@ -250,8 +250,7 @@ class ArticlesController < ApplicationController
 
   protected
 
-  def send_emails_to_all_recipients
-    documents = Array.wrap(@documents)
+  def send_emails_to_all_recipients(documents)
     email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
     email_addresses.each do |email_address|
       email_params[:to] = email_address
