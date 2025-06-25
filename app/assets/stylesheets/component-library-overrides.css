@@ -12,14 +12,19 @@
 }
 
 .navbar-logo {
-  --navbar-logo-width: 360px;
-  height: 34px;
-  width: var(--navbar-logo-width);
+  --sul-logo-width: 360px;
+  --sul-logo-height: 34px;
+
+  @media (width < 575.98px) {
+    &.stacked-mobile {
+      --sul-logo-height: 58px;
+    }
+  }
 }
 
 @media (width <= 1250px) {
   .navbar-logo {
-    --navbar-logo-width: 308px;
+    --sul-logo-width: 308px;
   }
 }
 
