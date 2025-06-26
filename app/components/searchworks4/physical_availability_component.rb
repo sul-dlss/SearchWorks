@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 module Searchworks4
-  class AvailabilityComponent < Blacklight::Component
+  class PhysicalAvailabilityComponent < Blacklight::Component
     attr_reader :document
+
+    delegate :link_to_document, to: :helpers
 
     def initialize(document:)
       @document = document
@@ -10,11 +12,19 @@ module Searchworks4
     end
 
     def render?
-      document.holdings.present? || document.preferred_online_links.any?
+      document.holdings.present?
+    end
+
+    def single_item?
+      document.holdings.items.one?
     end
 
     def truncated_display?
       document.holdings.items.count > 20
+    end
+
+    def single_location?
+      document.holdings.libraries.one? && document.holdings.libraries.first.locations.one?
     end
 
     class LocationComponent < ViewComponent::Base

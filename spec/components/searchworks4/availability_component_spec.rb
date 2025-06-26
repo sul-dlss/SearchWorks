@@ -82,7 +82,7 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
     let(:document) { SolrDocument.from_fixture("402381.yml") }
 
     before do
-      allow(component).to receive(:link_to_document).and_return('See availability') # rubocop:disable RSpec/SubjectStub
+      allow_any_instance_of(Searchworks4::PhysicalAvailabilityComponent).to receive(:link_to_document).and_return('See availability') # rubocop:disable RSpec/AnyInstance
     end
 
     it 'renders the item count and details' do
