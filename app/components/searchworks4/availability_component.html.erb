@@ -40,7 +40,7 @@
 
         <%= render ItemCountComponent.new(document.holdings.items.count) %>
       </div>
-      <%= helpers.link_to_document document, 'See availability', counter: nil, class: 'ms-3 fs-15' %>
+      <%= link_to_document document, 'See availability', counter: nil, class: 'ms-3 fs-15' %>
     </div>
   <% elsif document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
     <% library = document.holdings.libraries.first %>
@@ -65,7 +65,7 @@
           </div>
           <table class="table w-auto">
             <caption class="visually-hidden">
-              <%= pluralize(document.holdings.items.count, 'item') %> in <%= location.name %> at <%= library.name %>
+              <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
             </caption>
             <thead class="visually-hidden">
               <tr>
@@ -119,8 +119,8 @@
                 <% end %>
               </div>
               <table class="table w-auto">
-                <caption class="visually-hidden">>
-                  <%= pluralize(document.holdings.items.count, 'item') %> in <%= location.name %> at <%= library.name %>
+                <caption class="visually-hidden">
+                  <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
                 </caption>
                 <thead class="visually-hidden">
                   <tr>

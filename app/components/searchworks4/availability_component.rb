@@ -4,6 +4,8 @@ module Searchworks4
   class AvailabilityComponent < Blacklight::Component
     attr_reader :document
 
+    delegate :link_to_document, to: :helpers
+
     def initialize(document:)
       @document = document
       super()
