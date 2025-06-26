@@ -55,7 +55,7 @@ module Searchworks4
       end
 
       def call
-        tag.span pluralize(@count, 'item'), class: 'bg-light rounded-pill small px-2 lh-sm'
+        tag.span pluralize(@count, 'item'), class: 'bg-light rounded-pill small px-2 lh-sm text-nowrap'
       end
     end
   end

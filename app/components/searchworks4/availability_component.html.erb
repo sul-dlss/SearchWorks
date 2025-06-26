@@ -15,7 +15,7 @@
 <% if document.holdings.present? %>
   <div data-controller="availability">
   <% if document.holdings.items.one? %>
-    <div class="availability-component d-inline-flex gap-4 align-items-center border rounded p-2 fs-15 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+    <div class="availability-component d-inline-flex gap-4 align-items-center border rounded p-2 fs-15 suppress-item-level-request-button-if-there-is-a-location-level-request-button flex-wrap flex-sm-nowrap">
       <% library = document.holdings.libraries.first %>
       <% location = library.locations.first %>
       <% item = location.items.first %>
@@ -46,7 +46,7 @@
     <% library = document.holdings.libraries.first %>
     <% location = library.locations.first %>
     <details class="availability-component border rounded p-2 fs-15 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
-      <summary class="d-flex justify-content-between align-items-center">
+      <summary class="d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap">
         <div class="d-inline-flex gap-4 align-items-center">
           <%= tag.span library.name, class: 'library fw-semibold' %>
           <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
@@ -60,7 +60,7 @@
       </summary>
       <div>
         <div class="d-flex gap-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
-          <div class="pt-2">
+          <div class="pt-2 d-none d-sm-block">
             <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %>
           </div>
           <table class="table w-auto">
@@ -90,7 +90,7 @@
     </details>
   <% else %>
     <details class="availability-component border rounded p-2 fs-15">
-      <summary class="d-flex justify-content-between align-items-center">
+      <summary class="d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap">
         <div class="d-inline-flex gap-4 align-items-center">
           <% if document.holdings.libraries.one? %>
             <% library = document.holdings.libraries.first %>
@@ -111,7 +111,7 @@
             <div class="bg-light fw-semibold"><%= library.name %></div>
             <% end %>
           <% library.locations.each do |location| %>
-            <div class="d-flex gap-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+            <div class="d-flex flex-column flex-sm-row gap-2 gap-sm-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
               <div class="pt-2" data-availability-target="location">
                 <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></div>
                 <% unless document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
