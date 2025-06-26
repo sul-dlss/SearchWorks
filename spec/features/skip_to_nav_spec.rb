@@ -35,7 +35,7 @@ RSpec.feature "Skip-to Navigation" do
     expect(page).to have_css("article[data-document-id='20']")
     within '[data-document-id="20"]' do
       page.first('.toggle-bookmark-label').click
-      expect(page).to have_content 'Selected'
+      expect(page).to have_css("span", text: "In Bookmarks", visible: :hidden)
     end
 
     visit bookmarks_path

@@ -3,14 +3,14 @@
   margin-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-top: 1rem;
+  --bl-icon-color: var(--stanford-80-black);
 }
 
-.index_title {
+.bi-three-dots-vertical {
+  color: var(--bl-icon-color);
 }
 
 .bookmark-toggle {
-  --bl-icon-color: var(--bs-primary);
-
   .no-js & {
     input[type="submit"] {
       display: inline;
@@ -35,6 +35,7 @@
 
         &.bookmark-checked {
           display: none;
+          --bl-icon-color: var(--stanford-cardinal);
         }
       }
     }
@@ -57,10 +58,11 @@
   }
 }
 
-.stacks-image {
+.stacks-image, .cover-image {
   display: block;
   max-height: 200px;
   max-width: 80px;
+  border-radius: 0.125rem;
 }
 
 .page-entries-info .bi {
