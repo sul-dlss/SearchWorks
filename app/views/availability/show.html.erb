@@ -1,0 +1,9 @@
+<turbo-frame id="availability_<%= dom_id(@document) %>">
+  <% @rtac.map { |rtac| [rtac, @items[rtac[:item_id]]] }.select { |(_, item)| item }.each do |(rtac, item)| %>
+    <turbo-stream action="replace" target="availability_item_<%= rtac[:item_id] %>" method="morph">
+      <template>
+        <%= render Searchworks4::ItemStatusComponent.new(item: item, rtac: rtac) %>
+      </template>
+    </turbo-stream>
+  <% end %>
+</turbo-frame>

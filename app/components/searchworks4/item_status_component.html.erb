@@ -1,0 +1,18 @@
+<div id="availability_item_<%= item.live_lookup_item_id %><%= '_rtac' if rtac %>" class="d-inline-flex gap-4">
+  <% if item.folio_status == 'Available' && !rtac && location_provided_availability_as_status.blank? && status_text == 'Available' %>
+    <p class="card-text placeholder-wave">
+      <span class="placeholder placeholder-sm ">Available?</span>
+    </p>
+  <% else %>
+    <% if status_text %>
+      <%= tag.span class:  "availability #{availability_class} d-inline-flex align-items-center" do %>
+        <%= tag.i(class: "bi #{availability_icon} me-1") %>
+        <%= status_text %>
+        <%= tag.span "Due #{rtac[:due_date]}", class: 'due-date' if rtac&.dig(:due_date) %>
+      <% end %>
+      <% end %>
+    <%= tag.span temporary_location_text, class: 'temporary-location text-poppy ms-3' if temporary_location_text %>
+  <% end %>
+
+  <%= render(ItemRequestLinkComponent.new(item: item, classes: %w[btn btn-sm btn-secondary item-request-link], rtac: rtac)) %>
+</div>

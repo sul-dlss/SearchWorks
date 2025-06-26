@@ -92,7 +92,7 @@ Rails.application.routes.draw do
 
   resources :preview, only: :show
 
-  resources :availability, only: :index
+  resources :availability, only: [:index, :show]
 
   resources :recent_selections, only: :index
 
