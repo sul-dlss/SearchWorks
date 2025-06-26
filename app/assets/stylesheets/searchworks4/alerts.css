@@ -1,0 +1,18 @@
+.alert.eds-restricted {
+  /* Needed until https://github.com/sul-dlss/component-library/pull/134 is merged */
+  --stanford-cardinal-dark: #820000;
+
+  border: 1px solid var(--stanford-cardinal);
+  border-left: 4px solid var(--stanford-cardinal);
+  a {
+    --sul-link-font-weight: 600;
+    --bs-alert-color: var(--stanford-digital-red);
+    &:hover {
+      --bs-alert-color: var(--stanford-cardinal-dark);
+      text-decoration-color: var(--stanford-cardinal-dark);
+    }
+  }
+  .stanford-only {
+    margin-left: 0;
+  }
+}

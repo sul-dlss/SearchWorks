@@ -8,6 +8,7 @@ layer(components);
 
 @import "blacklight-hierarchy/app/assets/stylesheets/blacklight/hierarchy/hierarchy.scss";
 
+@import url("searchworks4/alerts.css") layer(local);
 @import url("searchworks4/availability-icons.css") layer(local);
 @import url("searchworks4/blacklight.css") layer(local);
 @import url("searchworks4/databases.css") layer(local);

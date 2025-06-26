@@ -41,7 +41,7 @@
 /* pin the library footer breakpoints to match the brand footer */
 @media screen and (min-width: 980px) {
   #sul-footer-container .container {
-    width:940px;
+    width: 940px;
   }
 }
 
@@ -68,14 +68,4 @@
     margin-top: -164px;
     height: 164px;
   }
-}
-
-.stanford-digital-red-link {
-  font-weight: 600;
-  color: var(--stanford-digital-red);
-}
-
-.stanford-digital-red-link:hover {
-  color: var(--stanford-cardinal-dark);
-  text-decoration-color: var(--stanford-cardinal-dark);
 }
