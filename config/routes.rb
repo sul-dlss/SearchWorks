@@ -64,11 +64,13 @@ Rails.application.routes.draw do
     match '/sso/logout' => 'devise/sessions#destroy', :as => :destroy_user_session, :via => Devise.mappings[:user].sign_out_via
   end
 
-  get "databases" => "catalog#index", :defaults => { f: { format_main_ssim: ["Database"] } }
+  resources :databases, only: [:index] do
+    concerns :searchable
+    concerns :range_searchable
+  end
+  post 'databases/:id/track' => 'databases#track', as: :track_databases
 
   get 'govdocs' => 'catalog#index', defaults: { f: { genre_ssim: ['Government document'] } }, as: :govdocs
-
-  resources :selected_databases, only: :index
 
   resources :hours, only: :show
 

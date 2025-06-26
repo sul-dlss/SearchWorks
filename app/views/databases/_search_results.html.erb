@@ -1,0 +1,84 @@
+<% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+<% suppress_search_navbar! %>
+
+<% view_config = blacklight_config.view_config(document_index_view_type, action_name: action_name) %>
+<% content_for(:head) do -%>
+  <%= render '/catalog/opensearch_response_metadata' %>
+  <%= rss_feed_link_tag %>
+  <%= atom_feed_link_tag %>
+  <%= json_api_link_tag %>
+<% end -%>
+
+<%= render 'header' %>
+
+<%= render MainContainerComponent.new do %>
+  <div class="mb-3">
+    <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-forward-fill ps-1" viewBox="0 0 16 16" style="transform: rotate(180deg);">
+          <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557"/>
+        </svg>Back to catalog search</a>
+  </div>
+
+  <% if has_search_parameters? %>
+    <div class="row">
+      <div class="constraints col d-flex">
+        <%= render view_config.constraints_component.new(search_state:, classes: 'breadcrumb d-inline-flex') %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @response.empty? %>
+    <%= render "shared/zero_results" %>
+  <% else %>
+    <% content_for(:skip_links) do -%>
+      <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
+    <% end %>
+    <div class="row">
+      <div id="content" class="results col">
+        <div class="sul-toolbar page-entries-info sort-and-per-page d-flex justify-content-between align-items-center">
+          <%= tag.nav class: 'page_links' do %>
+            <% previous_label = capture do %>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+              </svg>
+              Previous
+            <% end %>
+            <%= link_to_previous_page @response, previous_label, class: 'me-2' %>
+            <span class="page_entries">
+              <% if @response.total_count == 1 %>
+                <%= page_entries_info(@response) %>
+              <% else %>
+                <strong><%= number_with_delimiter(@response.offset_value + 1) %></strong> - <strong><%= number_with_delimiter([@response.offset_value + @response.limit_value, @response.total_count].min) %></strong> of <strong><%= number_with_delimiter(@response.total_count) %></strong>
+              <% end %>
+            </span>
+
+            <% next_label = capture do %>
+              Next
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708"/>
+                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708"/>
+              </svg>
+              <% end %>
+            <%= link_to_next_page @response, next_label, class: 'ms-2' %>
+          <% end %>
+
+          <span class="d-flex flex-row gap-2">
+            <%= render partial: 'sort_widget' %>
+            <%= render partial: 'shared/per_page_widget' %>
+          </span>
+        </div>
+
+        <% # container for all documents in index list view -%>
+        <div id="documents" class="documents-<%= document_index_view_type %>">
+          <%= render view_config.document_component.with_collection(@response.documents.map { |document| document_presenter(document) }, counter_offset: document_counter_with_offset(-1)) %>
+        </div>
+        <%= render 'results_pagination' %>
+      </div>
+      <div class="col-xl-1 d-none d-xl-block"></div>
+      <aside class="d-none d-lg-block col-lg-4 col-xxl-3 pt-4 px-3">
+        <%= render 'popular_databases' %>
+      </aside>
+    </div>
+  <% end %>
+<% end %>

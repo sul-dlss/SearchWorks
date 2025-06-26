@@ -1,7 +1,7 @@
 <% if show_sort_and_per_page? and !blacklight_config.per_page.blank? %>
   <span class="visually-hidden"><%= t('blacklight.search.per_page.title') %></span>
   <div id="per_page-dropdown" class="btn-group" data-controller="analytics" data-analytics-category-value="per-page">
-    <button type="button" class="btn <%= controller_name == 'catalog' ? 'btn-sm btn-outline-primary' : 'btn-sul-toolbar' %> dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn <%= %w[catalog databases].include?(controller_name) ? 'btn-sm btn-outline-primary' : 'btn-sul-toolbar' %> dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <%= t(:'blacklight.search.per_page.button_label_html', :count => sw_current_per_page(@response)).html_safe %>
     </button>
     <div class="dropdown-menu" role="menu">
