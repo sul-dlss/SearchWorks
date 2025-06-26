@@ -100,5 +100,6 @@ RSpec.configure do |config|
   config.include Capybara::RSpecMatchers, type: :component
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :request
   config.include Factories::Methods
 end

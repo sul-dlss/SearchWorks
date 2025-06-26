@@ -40,6 +40,9 @@ application.register("copy-text", CopyTextController)
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
+import EmailSentController from "./email_sent_controller"
+application.register("email-sent", EmailSentController)
+
 import EmbedBrowseController from "./embed_browse_controller"
 application.register("embed-browse", EmbedBrowseController)
 
