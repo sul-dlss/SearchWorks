@@ -3,13 +3,20 @@
 require "rails_helper"
 
 RSpec.describe Searchworks4::RecordSummaryComponent, type: :component do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    with_controller_class CatalogController do
+      presenter = vc_test_controller.helpers.document_presenter(document)
+      render_inline(described_class.new(presenter:))
+    end
+  end
 
-  # it "renders something useful" do
-  #   expect(
-  #     render_inline(described_class.new(attr: "value")) { "Hello, components!" }.css("p").to_html
-  #   ).to include(
-  #     "Hello, components!"
-  #   )
-  # end
+  context 'with no authors' do
+    let(:document) { SolrDocument.find('2') }
+
+    it "renders the description" do
+      expect(page).to have_content "Another object"
+      expect(page).to have_css "ul"
+      expect(page).to have_no_content "ul li"
+    end
+  end
 end
