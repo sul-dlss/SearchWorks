@@ -14,7 +14,7 @@
   function handleResponsiveAside() {
     const aside = document.getElementById('modules-aside')
 
-    if (aside === undefined || aside.checkVisibility === undefined) return
+    if (aside === null || aside.checkVisibility === undefined) return
 
     const newVisibility = aside.checkVisibility()
 
@@ -30,10 +30,6 @@
   };
 
   function reparentAsideModules(parent) {
-    const els = [
-      document.querySelector('.alternate-catalog')
-    ]
-
-    els.forEach(el => parent.appendChild(el))
+    document.querySelector('.alternate-catalog')?.forEach(el => parent.appendChild(el))
   }
 })();
