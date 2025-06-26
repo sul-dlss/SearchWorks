@@ -10,6 +10,10 @@ module Searchworks4
       super
     end
 
+    def dom_id
+      "availability_item_#{item.live_lookup_item_id}"
+    end
+
     def availability_icon
       case item_status
       when 'Aged to lost', 'Claimed returned', 'Checked out', 'Awaiting delivery', 'Awaiting pickup', 'Missing', 'In transit', 'Paged'
