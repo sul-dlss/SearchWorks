@@ -20,12 +20,12 @@ h1,
 
 h2,
 .h2 {
-  --sul-header-font-size: 1.375rem;
+  --sul-header-font-size: 1.5rem;
 }
 
 h3,
 .h3 {
-  --sul-header-font-size: 1.125rem;
+  --sul-header-font-size: 1.25rem;
 }
 
 h4,
@@ -40,4 +40,26 @@ h5,
 
 dt {
   font-weight: 600;
+}
+
+.sidebar {
+  h2,
+  .h2 {
+    --sul-header-font-size: 1.25rem;
+  }
+
+  h3,
+  .h3 {
+    --sul-header-font-size: 1rem;
+  }
+
+  h4,
+  .h4 {
+    --sul-header-font-size: 0.9375rem;
+  }
+}
+
+.index_title {
+  --sul-header-font-size: 1.125rem;
+  --sul-link-font-weight: 500;
 }
