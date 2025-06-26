@@ -6,7 +6,6 @@ const AlternateCatalog = (function (global) {
     titleElement: null,
 
     init: function (el) {
-      console.log(el);
       this.element = el
       this.titleElement = this.element.querySelector('.alternate-catalog-title')
 
@@ -16,6 +15,10 @@ const AlternateCatalog = (function (global) {
       // Insert between the 3rd and 4th document for articles
       if (document.querySelector('.blacklight-articles')) {
         this.injectAlternateCatalogIntoResults()
+      }
+
+      if (window.innerWidth > 768) {
+        this.element.classList.add('show');
       }
 
       // Update title
@@ -30,7 +33,9 @@ const AlternateCatalog = (function (global) {
       if (!close)
         return // There is no close on the no-results page
 
-      close.addEventListener('click', () => this.element.remove())
+      close.addEventListener("click", () => {
+        new bootstrap.Collapse(this.element);
+      })
     },
 
     injectAlternateCatalogIntoResults: function () {
@@ -63,7 +68,7 @@ const AlternateCatalog = (function (global) {
         .then(response => {
           const count = response.response.pages.total_count
           // Update title
-          this.titleElement.innerHTML = 'Your search also found results in'
+          this.titleElement.innerHTML = 'Looking for more?'
           countElement.innerHTML = parseInt(count).toLocaleString()
           body.classList.remove('d-none')
         })

@@ -1,8 +1,15 @@
-<div class='alternate-catalog' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
+<% unless show? %>
+  <div class="d-md-none d-block mb-2 mini-bento-btn-wrapper">
+    <button class="mini-bento btn btn-outline-primary col-12" data-bs-toggle="collapse" data-bs-target=".alternate-catalog" aria-expanded="false" aria-controls="alternate-catalog">
+      <span>Looking for more?</span>
+    </button>
+  </div>
+<% end %>
+<div class='alternate-catalog accordion accordion-collapse collapse d-md-block' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
   <div class="row">
     <h3 class="alternate-catalog-title col"></h3>
     <% if close? %>
-      <button type='button' class='alternate-catalog-close btn-close col-2 me-2' aria-label="Close">
+      <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' aria-label="Close">
       </button>
     <% end %>
   </div>

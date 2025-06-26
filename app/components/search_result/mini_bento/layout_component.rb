@@ -3,10 +3,11 @@
 module SearchResult
   module MiniBento
     class LayoutComponent < ViewComponent::Base
-      def initialize(close:, url:, i18n_key:)
+      def initialize(close:, url:, i18n_key:, show: nil)
         @close = close
         @url = url
         @i18n_key = i18n_key
+        @show = show
         super
       end
 
@@ -14,6 +15,10 @@ module SearchResult
 
       def close?
         @close
+      end
+
+      def show?
+        @show || !close?
       end
 
       def bento_url
