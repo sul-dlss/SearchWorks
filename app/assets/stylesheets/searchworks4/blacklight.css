@@ -1,19 +1,35 @@
-.sidenav {
-  .facet-toggle-button {
+.facet-toggle-button {
+  [data-hide-label] {
+    display: inline;
+  }
+  [data-show-label] {
+    display: none;
+  }
+
+  &[aria-expanded="false"] {
     [data-hide-label] {
-      display: inline;
-    }
-    [data-show-label] {
       display: none;
     }
+    [data-show-label] {
+      display: inline;
+    }
+  }
 
-    &[aria-expanded="false"] {
-      [data-hide-label] {
-        display: none;
-      }
-      [data-show-label] {
-        display: inline;
-      }
+  &:not([aria-expanded="true"])::before {
+    font-family: 'bootstrap-icons';
+    content: "\F56B";
+    margin-right: 0.25em;
+    vertical-align: top;
+  }
+
+  &[aria-expanded="true"]{
+    border: none;
+    text-align: left;
+    &::after{
+      font-family: 'bootstrap-icons';
+      content: "\F62A";
+      float: right;
+      font-size: 1.25rem;
     }
   }
 }

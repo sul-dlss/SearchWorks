@@ -39,7 +39,7 @@
       <div class="sidebar col-12 col-md-4 col-xl-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
         <!-- TODO: search mode toggle -->
 
-        <%= render Blacklight::Response::FacetGroupComponent.new(id: nil, title: 'Filters') do |component| %>
+        <%= render blacklight_config&.view_config(document_index_view_type)&.facet_group_component.new(id: nil, title: 'Filters') do |component| %>
           <% component.with_body do %>
             <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
           <% end %>
