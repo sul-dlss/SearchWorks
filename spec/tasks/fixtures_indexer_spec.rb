@@ -25,29 +25,6 @@ RSpec.describe FixturesIndexer do
     end
   end
 
-  describe "#fixtures" do
-    it "is an array" do
-      expect(subject.fixtures).to be_an Array
-    end
-    it "is an array of solr document hashes" do
-      subject.fixtures.each do |fixture|
-        expect(fixture).to be_a Hash
-        expect(fixture).to have_key 'id'
-      end
-    end
-  end
-
-  describe "#file_list" do
-    it "is an array" do
-      expect(subject.file_list).to be_an Array
-    end
-    it "is an array of fixture file references" do
-      subject.file_list.each do |file|
-        expect(file).to match /\/fixtures\/solr_documents\/.*.yml$/
-      end
-    end
-  end
-
   context 'when trying to index to something other than what is configured in the solr_wraper.yml' do
     before do
       allow_any_instance_of(described_class).to receive(:configured_blacklight_collection).and_return('might-be-prod')

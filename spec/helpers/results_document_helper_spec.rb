@@ -29,9 +29,24 @@ RSpec.describe ResultsDocumentHelper do
     @document_01 = SolrDocument.new(data_01)
     @document_02 = SolrDocument.new(data_02)
     @document_03 = SolrDocument.new(data_03)
-    @document_04 = SolrDocument.new
     @document_05 = EdsDocument.new(
-      eds_publication_year: '2017'
+      {
+        'RecordInfo' => {
+          'BibRecord' => {
+            'BibRelationships' => {
+              'IsPartOfRelationships' => [
+                {
+                  'BibEntity' => {
+                    'Dates' => [
+                      { 'Type' => 'published', 'Y' => '2017', 'M' => '01', 'D' => '01' }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
     )
   end
 

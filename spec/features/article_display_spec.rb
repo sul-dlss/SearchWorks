@@ -7,8 +7,16 @@ RSpec.feature 'Article Record Display' do
 
   describe 'Subjects' do
     let(:document) do
-      EdsDocument.new(id: '123', eds_title: 'TITLE',
-                      eds_subjects_person: '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>')
+      EdsDocument.new({
+                        id: '123',
+                        eds_title: 'The title of the document',
+                        "Items" => [
+                          {
+                            "Name" => "SubjectPerson",
+                            "Data" => '<searchLink fieldCode="SU" term="Person1">Person1</searchLink><br/><searchLink fieldCode="SU" term="Person2">Person2</searchLink>'
+                          }
+                        ]
+                      })
     end
 
     it 'are linked' do
@@ -23,7 +31,16 @@ RSpec.feature 'Article Record Display' do
 
   describe 'Fulltext', :js do
     let(:document) do
-      EdsDocument.new(id: '123', eds_title: 'TITLE', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
+      EdsDocument.new({
+                        'id' => '123',
+                        'eds_title' => 'TITLE',
+                        'FullText' => {
+                          'Text' => {
+                            'Value' => '<anid>09dfa;</anid><p>This Journal</p>, 10(1)',
+                            'Availability' => '1'
+                          }
+                        }
+                      })
     end
 
     context 'when a user has access' do
@@ -65,11 +82,16 @@ RSpec.feature 'Article Record Display' do
 
   describe 'Embedded SFX Menu', :js do
     let(:document) do
-      EdsDocument.new(
-        id: 'abc123',
-        eds_title: 'TITLE',
-        eds_fulltext_links: [{ 'label' => 'Check SFX for full text', 'url' => 'http://example.com?param=abc&sid=xyz', 'type' => 'customlink-fulltext' }]
-      )
+      EdsDocument.new({
+                        'id' => 'abc123',
+                        'eds_title' => 'TITLE',
+                        'FullText' => {
+                          'CustomLinks' => [{
+                            'Text' => 'Check SFX for full text',
+                            'Url' => 'http://example.com?param=abc&sid=xyz'
+                          }]
+                        }
+                      })
     end
     let(:sfx_xml) { Nokogiri::XML.parse('') }
 

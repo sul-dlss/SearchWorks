@@ -13,65 +13,10 @@
 
     <title><%= render_page_title %></title>
     <%= opensearch_description_tag I18n.t('blacklight.application_name'), opensearch_catalog_path(format: 'xml') %>
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/icon.png" type="image/png">
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/icon.png">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/palette.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/colors.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/header.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/footer.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/alert.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/toast.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/selected-item.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/accessibility.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/facets.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/pagination.css"
-    />
-
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-25/styles/icon.png" type="image/png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-25/styles/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-06-25/styles/icon.png">
     <%= stylesheet_link_tag "searchworks4", media: "all", 'data-turbo-track' => true %>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/links.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/button.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-04-17/styles/typography.css"
-    />
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
 			      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -102,6 +47,13 @@
       <%= content_for(:skip_links) %>
     <% end %>
     <%= render 'shared/searchworks4/top_navbar' %>
+
+    <% if content_for?(:search_navbar) %>
+      <%= content_for(:search_navbar) %>
+    <% else %>
+      <%= render 'shared/searchworks4/search_navbar' %>
+    <% end %>
+
     <%= yield %>
     <%= render 'shared/searchworks4/su_footer' %>
   </body>

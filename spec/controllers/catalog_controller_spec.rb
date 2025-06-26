@@ -8,9 +8,6 @@ RSpec.describe CatalogController do
   it 'includes the AdvancedSearchParamsMapping concern' do
     expect(subject).to be_a(AdvancedSearchParamsMapping)
   end
-  it "includes the DatabaseAccessPoint concern" do
-    expect(subject).to be_a(DatabaseAccessPoint)
-  end
   it "includes the CallnumberSearch concern" do
     expect(subject).to be_a(CallnumberSearch)
   end
@@ -157,12 +154,6 @@ RSpec.describe CatalogController do
       end
       it "routes the stackmap view properly" do
         expect({ get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
-      end
-    end
-
-    describe "/databases" do
-      it "routes to the database format" do
-        expect({ get: "/databases" }).to route_to(controller: 'catalog', action: 'index', f: { "format_main_ssim" => ["Database"] })
       end
     end
   end

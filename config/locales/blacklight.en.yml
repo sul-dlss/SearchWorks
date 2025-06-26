@@ -13,11 +13,17 @@ en:
         access_point:
           databases:
             title: 'Within %{access_point}'
+        group:
+          open: Filters
+          close: Filters
         more_html: 'more <span class="visually-hidden">%{field_name}</span> <i class="fa fa-angle-double-right"></i>'
       form:
         submit_html: '<span class="visually-hidden">Search</span><span class="bi-search"></span>'
         submit: ''
       form_label: 'search for'
+      filters:
+          title: 'Your selections: '
+      start_over: 'Clear all'
       librarian_view:
         empty: 'No librarian view available'
       masthead_title: '%{title} in %{application_name}'
@@ -37,7 +43,7 @@ en:
       pagination_info:
         pages:
           one: '%{start_num} - %{end_num}'
-          other: '%{start_num} - %{end_num}'
+          other: '%{start_num} - %{end_num} of %{total_num}'
         single_item_found: ''
         no_items_found: "<h2>No %{search_type} results found</h2>"
       entry_pagination_info:
@@ -75,10 +81,3 @@ en:
         library_location: '%{library} - %{location}'
         callnumber: '%{value}'
         url: '%{url}'
-  views:
-    pagination_compact:
-      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'
-      previous: '<i class="fa fa-arrow-left"></i><span class="d-none d-sm-inline"> Previous</span>'
-    pagination:
-      previous: '<i class="fa fa-arrow-left"></i> <span class="d-none d-sm-inline"> Previous</span>'
-      next: '<span class="d-none d-sm-inline">Next </span><i class="fa fa-arrow-right"></i>'

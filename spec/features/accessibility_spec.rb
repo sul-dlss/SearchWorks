@@ -3,31 +3,47 @@
 require 'rails_helper'
 
 RSpec.describe 'Site Accessibility', :js do
-  it 'has an accessible home page, including the header and footer' do
-    visit root_path
-    expect(page).to be_accessible
+  describe 'the home page' do
+    before { visit root_path }
+
+    it 'is accessible, including the header and footer' do
+      expect(page).to be_accessible
+    end
   end
 
-  context 'with the catalog', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the catalog search results' do
     before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
 
-    it 'has an accessible index page' do
-      visit search_catalog_path
+    context 'with results' do
+      before { visit search_catalog_path f: { access_facet: ['Online'] } }
+
+      it 'is accessible' do
+        expect(page).to be_accessible.within('main')
+      end
+    end
+
+    context 'with zero results', skip: "Contrast issue for start-chat" do
+      before { visit search_catalog_path q: 'sdfsda', search_field: 'search_author' }
+
+      it 'is accessible' do
+        expect(page).to be_accessible.within('main')
+      end
+    end
+  end
+
+  describe 'the catalog record view page', skip: "Pending SearchWorks 4.0 designs" do
+    it 'has an accessible view' do
+      visit solr_document_path('28')
       expect(page).to be_accessible.within('main')
     end
 
-    it 'has an accessible search results page' do
-      visit search_catalog_path f: { access_facet: ['Online'] }
-      expect(page).to be_accessible.within('main')
-    end
-
-    it 'has an accessible zero results page' do
-      visit search_catalog_path(q: 'sdfsda', search_field: 'search_author')
+    it 'has an accessible view with filmstrips' do
+      visit solr_document_path('34')
       expect(page).to be_accessible.within('main')
     end
   end
 
-  context 'with articles', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the articles', skip: "Pending SearchWorks 4.0 designs" do
     before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
 
     it 'has an accessible index page' do
@@ -56,26 +72,14 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  context 'with a record', skip: "Pending SearchWorks 4.0 designs" do
-    it 'has an accessible view' do
-      visit solr_document_path('28')
-      expect(page).to be_accessible.within('main')
+  describe 'the selections page', skip: "Pending SearchWorks 4.0 designs" do
+    before do
+      visit '/selections'
     end
 
-    it 'has an accessible view with filmstrips' do
-      visit solr_document_path('34')
+    it 'is accessible' do
       expect(page).to be_accessible.within('main')
     end
-  end
-
-  it 'has an accessible bookmarks page', skip: "Pending SearchWorks 4.0 designs" do
-    visit bookmarks_path
-    expect(page).to be_accessible.within('main')
-  end
-
-  it 'has an accessible selections page', skip: "Pending SearchWorks 4.0 designs" do
-    visit '/selections'
-    expect(page).to be_accessible.within('main')
   end
 
   it 'has an accessible advanced search page', skip: "Pending SearchWorks 4.0 designs" do
@@ -83,12 +87,24 @@ RSpec.describe 'Site Accessibility', :js do
     expect(page).to be_accessible.within('main')
   end
 
-  it 'has an accessible course reserves page', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the course reserves page', skip: "Pending SearchWorks 4.0 designs" do
     before do
       create(:reg_course)
       visit course_reserves_path
     end
 
-    expect(page).to be_accessible.within('main')
+    it 'is accessible' do
+      expect(page).to be_accessible.within('main')
+    end
+  end
+
+  describe 'the database page' do
+    before do
+      visit databases_path
+    end
+
+    it 'is accessible' do
+      expect(page).to be_accessible.within('main')
+    end
   end
 end

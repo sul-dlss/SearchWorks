@@ -11,7 +11,7 @@ module AccessPanels
 
     private
 
-    def hidden
+    def hidden # rubocop:disable Naming/PredicateMethod
       oclc.blank?
     end
 

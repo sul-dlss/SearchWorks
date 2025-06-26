@@ -4,10 +4,10 @@ require 'rails_helper'
 
 RSpec.describe EdsDocument do
   let(:document) do
-    described_class.new(id: '123', eds_html_fulltext_available: true, eds_html_fulltext: '<anid>09dfa;</anid><p>This Journal</p>, 10(1)')
+    StubArticleService.full_text_document
   end
   let(:empty_document) do
-    described_class.new(id: '456', eds_html_fulltext: '')
+    StubArticleService.non_fulltext_document
   end
 
   describe '#html_fulltext_available' do
@@ -22,12 +22,16 @@ RSpec.describe EdsDocument do
 
   context 'when there is an EDS citation' do
     let(:document) do
-      EdsDocument.new(
-        eds_title: 'The Title',
-        eds_citation_styles: [
-          { id: 'apa', data: 'EDS citation content' }
-        ]
-      )
+      EdsDocument.new({
+                        'styles' => {
+                          'Citations' => [
+                            {
+                              'Id' => 'apa',
+                              'Data' => 'EDS citation content'
+                            }
+                          ]
+                        }
+                      })
     end
 
     it { expect(document).to be_citable }

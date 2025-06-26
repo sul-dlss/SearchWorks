@@ -1,0 +1,199 @@
+.facet-toggle-button {
+  [data-hide-label] {
+    display: inline;
+  }
+  [data-show-label] {
+    display: none;
+  }
+
+  &[aria-expanded="false"] {
+    [data-hide-label] {
+      display: none;
+    }
+    [data-show-label] {
+      display: inline;
+    }
+  }
+
+  &:not([aria-expanded="true"])::before {
+    font-family: 'bootstrap-icons';
+    content: "\F56B";
+    margin-right: 0.25em;
+    vertical-align: top;
+  }
+
+  &[aria-expanded="true"]{
+    border: none;
+    text-align: left;
+    &::after{
+      font-family: 'bootstrap-icons';
+      content: "\F62A";
+      float: right;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.facet-limit {
+  --bs-accordion-btn-bg: var(--bs-gray-100);
+  --bs-btn-hover-bg: var(--bs-gray-200);
+  --bs-accordion-active-bg: var(--bs-accordion-btn-bg);
+}
+
+.facet-values {
+  --bl-facet-active-item-color: var(--bs-success);
+  --bl-facet-remove-color: var(--bs-secondary-color);
+  --bl-facet-remove-hover-color: var(--bs-danger);
+
+  margin-bottom: 0;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3px 0;
+
+    .selected {
+      color: var(--bl-facet-active-item-color);
+    }
+  }
+
+  .facet-count {
+    margin-inline-start: auto;
+  }
+
+  .remove {
+    color: var(--bl-facet-remove-color);
+    font-weight: bold;
+    padding-left: 0.5rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--bl-facet-remove-hover-color);
+      text-decoration: none;
+    }
+  }
+
+  .facet-label {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+.input-group > .search-q {
+  flex-grow: 4;
+}
+
+.constraints-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.25rem;
+}
+
+.applied-filter {
+  --bs-border-radius: 99px;
+  --separator-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e");
+
+  .constraint-value {
+    --bs-btn-hover-color: var(--stanford-black);
+    --btn-hover-decoration: none;
+
+    cursor: default;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-inline: 0.75rem 0.25rem; /* Keeping the default top/bottom padding */
+    white-space: nowrap;
+    max-width: clamp(288px, calc(30vw), 500px);
+
+    .filter-name:after {
+      background-color: var(--bs-btn-color);
+      content: "";
+      mask: var(--separator-icon);
+      mask-repeat: no-repeat;
+      display: inline-block;
+      height: 0.8rem;
+      width: 1.25rem;
+      vertical-align: middle;
+      margin-right: -0.2rem;
+      margin-left: 0.25rem;
+      transition: background-color 0.15s ease-in-out;
+    }
+  }
+
+  .remove {
+    --bs-btn-hover-color: var(--stanford-digital-red);
+    --bs-btn-hover-bg: var(--bl-constraint-remove-hover-bg);
+    --bs-btn-hover-border-color: var(--bl-constraint-remove-hover-border-color);
+    --bs-btn-active-bg: var(--bl-constraint-remove-hover-bg);
+    --bs-btn-active-border-color: var(
+      --bl-constraint-remove-hover-border-color
+    );
+  }
+
+  .constraint-value,
+  .remove {
+    /* overriding .btn-outline-secondary, which is in the default Blacklight markup */
+    --bs-btn-border-color: var(--stanford-fog-light);
+    --bs-btn-color: var(--stanford-black);
+    --bs-btn-bg: var(--stanford-fog-light);
+    --bs-btn-hover-bg: var(--stanford-fog-light);
+    --bs-btn-hover-border-color: var(--stanford-fog-light);
+    --bs-btn-active-border-color: var(--stanford-fog-light);
+    --bs-btn-active-color: var(--stanford-black);
+    --bs-btn-padding-y: 0.25rem;
+  }
+}
+
+.modal-dialog {
+  border-radius: 5px;
+}
+
+.modal-content {
+  .page-sidebar {
+    display: none;
+  }
+
+  .blacklight-modal-close {
+    display: block;
+  }
+}
+
+/* app/views/catalog/facet.html.erb may be rendered as a modal or a whole page.
+/ When it's a whole page, don't show the close button. */
+.blacklight-modal-close {
+  display: none;
+}
+
+/* When modal content is rendered outside of a modal, Bootstrap css variables like
+// --bs-modal-footer-border-width are undefined (only in .modal scope). So we apply
+// light styling to the modal footer when it's not in a modal. */
+.modal-footer:not(.modal .modal-footer) {
+  border-top: var(--bs-border-width) solid var(--bs-border-color);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Blacklight's decision to try to use bootstrap modal CSS with an html5 dialog --
+   in such a way the <dialog> element actually serves as the modal backdrop --
+   requires some fixes to both bootstrap CSS and user-agent default css */
+dialog.modal[open] {
+  /* override bootstrap .modal class default display: none
+     since we aren't using bootstrap JS that sets and unsets the display */
+  display: block;
+  background: none;
+  border: none;
+
+  max-height: unset; /*override user-agent dialog */
+  max-width: unset; /* override user-agent dialog */
+
+  &::backdrop {
+    background-color: var(--bl-modal-backdrop-bg);
+  }
+}
+
+#search-navbar search {
+    width: 75%;
+
+  @media (width < 767.98px) { 
+    width: 100%;
+  }
+}

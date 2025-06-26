@@ -3,7 +3,7 @@
 module EmailValidation
   extend ActiveSupport::Concern
 
-  def validate_email_params
+  def email_params_valid?
     case
     when %w(full brief).exclude?(params[:type])
       flash[:error] = I18n.t('blacklight.email.errors.type')
@@ -34,7 +34,7 @@ module EmailValidation
   end
 
   def validate_email_params_and_recaptcha
-    validate_email_params && verify_recaptcha_if_no_user
+    email_params_valid? && verify_recaptcha_if_no_user
   end
 
   def verify_recaptcha_if_no_user

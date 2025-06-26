@@ -3,7 +3,7 @@
 require "rails_helper"
 
 RSpec.describe CollectionFilterQuery do
-  subject(:collection_filter_query) { described_class.call({}, search_state.filter('collection'), {}) }
+  subject(:collection_filter_query) { described_class.new(blacklight_config:).call(search_state.filter('collection'), {}) }
 
   let(:params) { { f: { collection: collection_id } } }
   let(:blacklight_config) do
@@ -17,7 +17,7 @@ RSpec.describe CollectionFilterQuery do
     let(:collection_id) { 'a123456' }
 
     it "creates an OR query" do
-      expect(collection_filter_query).to eq 'collection: (123456 OR a123456)'
+      expect(collection_filter_query).to eq [['collection: (123456 OR a123456)'], {}]
     end
   end
 
@@ -25,7 +25,7 @@ RSpec.describe CollectionFilterQuery do
     let(:collection_id) { '123456' }
 
     it "creates an OR query" do
-      expect(collection_filter_query).to eq 'collection: (123456 OR a123456)'
+      expect(collection_filter_query).to eq [['collection: (123456 OR a123456)'], {}]
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe CollectionFilterQuery do
     let(:collection_id) { 'in123456' }
 
     it "creates a single query" do
-      expect(collection_filter_query).to eq 'collection: in123456'
+      expect(collection_filter_query).to eq [['collection: in123456'], {}]
     end
   end
 
@@ -41,7 +41,7 @@ RSpec.describe CollectionFilterQuery do
     let(:collection_id) { 'L123456' }
 
     it "creates a single query" do
-      expect(collection_filter_query).to eq 'collection: L123456'
+      expect(collection_filter_query).to eq [['collection: L123456'], {}]
     end
   end
 end

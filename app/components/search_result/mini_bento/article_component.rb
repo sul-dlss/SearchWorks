@@ -15,7 +15,7 @@ module SearchResult
       end
 
       def call
-        render LayoutComponent.new(close:, i18n_key: :article, url:)
+        render LayoutComponent.new(close:, i18n_key: :article, url:, show: true)
       end
 
       def url

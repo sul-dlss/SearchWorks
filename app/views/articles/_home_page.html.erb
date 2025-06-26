@@ -1,66 +1,81 @@
 <% @page_title= t 'blacklight.articles.home.title' %>
+<% suppress_search_navbar! %>
 
-<div class="article-home-page">
-  <h1 class="my-4">Journal articles &amp; other e-resources</h1>
-  <div class="row">
-    <div class="col-sm-4 home-page-settings">
-      <div class="card">
-        <div class="card-body">
-          <h2>Search settings</h2>
-          <div class="home-settings">
-            <% limiters = facet_options_presenter.limiters %>
-            <ul class="checkbox-facet-list">
-              <% limiters.each do |limiter| %>
-                <li>
-                  <%= label_tag("eds_limiter_#{limiter.id}") do %>
-                    <%= check_box(
-                          'f',
-                          'eds_search_limiters_facet',
-                          {
-                            multiple: true,
-                            id: "eds_limiter_#{limiter.id}",
-                            checked: limiter.enabled_by_default?,
-                            'aria-describedby': "limiter_tip_#{limiter.id}",
-                            data: { behavior: 'update-hidden-inputs-by-checkbox', 'target-selector': '#dynamic-hidden-inputs-target' }
-                          },
-                          limiter.label,
-                          nil
-                        )
-                    %>
-                    <%= limiter.label %>
-                  <% end %>
-                  <p id="limiter_tip_<%= limiter.id %>" class='setting-tip help-block'><%= t("searchworks.articles.facets.options.#{limiter.id}.tip") %></p>
-                </li>
-              <% end %>
-            </ul>
-          </div>
+<div class="search-area-image-bg">
+  <div class="container">
+    <search class="search-card px-4 py-3 rounded">
+      <div class="mb-3">
+        <span class="fw-bold">Search mode:</span>
+        <div class="form-check form-check-inline mx-3">
+          <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" onclick="document.querySelector('.search-query-form').action = '/'">
+          <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" checked onclick="document.querySelector('.search-query-form').action = '<%= search_action_url %>'">
+          <label class="form-check-label" for="searchTypeArticle">Articles+</label>
+        </div>
+      </div>
+      <%= render HomepageSearchComponent.new url: search_action_url,
+                                             params: search_state.params_for_search.except(:qt),
+                                             autocomplete_path: suggest_index_catalog_path %>
+      <p class="mt-3">Articles+ -- search over eleven million physical volumes, over three million e-books, over  65,000 serial licenses, and enumerable digital resources, including  datasets...</p>
+    </search>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+  <%= render Articles::LoginBannerComponent.new %>
+</div>
+
+<%= render MainContainerComponent.new do %>
+  <div class="row mt-2 article-home-page">
+    <h1 class="visually-hidden">Articles+ Search</h1>
+    <div class="col-lg-6 col-xl-4">
+      <div class="row">
+        <div class="col-xxl-10 col-xl-12">
+          <%= render 'shared/searchworks4/what_are_you_searching_for' %>
         </div>
       </div>
     </div>
-    <div class="col-sm-8 home-page-tips">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h2>How do I access articles?</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <h3>On campus</h3>
-              <p>No configuration required. Just click the links in the search results or detail page.</p>
-            </div>
-            <div class="col-md-6">
-              <h3>Off campus</h3>
-              <p>You’ll need to log in. You can <%= link_to 'log in now', new_user_session_path(referrer: request.original_url) %>, or when you find an article of interest.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h2>Search tip</h2>
-          <%= render SearchTips.random %>
-          <p class="text-right"><%= link_to 'More article search tips', 'https://library.stanford.edu/article-search-tips' %></p>
-        </div>
-      </div>
+    <div class="col-lg-6 col-xl-8">
+      <section class="p-3 tips">
+        <header class="d-flex justify-content-between flex-wrap"><span class="h3 text-nowrap">Search tips</span>
+          <a href="https://guides.library.stanford.edu/searchworks" class="btn btn-sm btn-outline-primary text-nowrap align-self-start">Visit SearchWorks Guide</a>
+        </header>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <div class="fw-medium">For a known article, type author name and title in the main search box - or copy/paste from a citation.</div>
+            Example: block bioenergetics of captive yellowfin tuna
+          </li>
+
+          <li class="mb-3">
+            <div class="fw-medium">Start with keywords in the "All fields" search; add more keywords to refine.</div>
+            In Articles+, adding more keywords to your search is often more effective than using facets.
+          </li>
+
+          <li class="mb-3">
+            <div class="fw-medium">Enter your search in lower case or mixed case, never in ALL CAPS.</div>
+            Some upper-case words in your search may be interpreted as Boolean operators or field codes and will cause the search to fail.
+          </li>
+
+          <li class="mb-3">
+            <div class="fw-medium">For authors with common names, searching last name, first name brings the most relevant results to the top.</div>
+            Example : cornell, eric rather than eric cornell
+          </li>
+
+          <li class="mb-3">
+            <div class="fw-medium">Boolean operators AND, OR, and NOT (upper-case) can be combined with parentheses.</div>
+            Example : tuna (yellowfin OR bluefin)
+          </li>
+
+          <li class="mb-3">
+            <div class="fw-medium">Use wildcards to search for spelling or word variations</div>
+            Example : comput* (finds computer, computing, computation)<br>
+            Example : colo#r (finds color, colour)<br>
+            Example : ne?t (finds next, nest, neat... but not net)
+          </li>
+        </ul>
+      </section>
     </div>
   </div>
-  <%= render 'shared/home_page_bento' %>
-</div>
+<% end %>

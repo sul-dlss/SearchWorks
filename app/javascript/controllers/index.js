@@ -7,6 +7,9 @@ import { application } from "./application"
 import AccordionSectionController from "./accordion_section_controller"
 application.register("accordion-section", AccordionSectionController)
 
+import AnalyticsController from "./analytics_controller"
+application.register("analytics", AnalyticsController)
+
 import ArticlesFacetMoreController from "./articles_facet_more_controller"
 application.register("articles-facet-more", ArticlesFacetMoreController)
 
@@ -24,6 +27,15 @@ application.register("blacklight-result-count", BlacklightResultCountController)
 
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
+
+import CitationStylePickerController from "./citation_style_picker_controller"
+application.register("citation-style-picker", CitationStylePickerController)
+
+import CopyLinkController from "./copy_link_controller"
+application.register("copy-link", CopyLinkController)
+
+import CopyTextController from "./copy_text_controller"
+application.register("copy-text", CopyTextController)
 
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
@@ -46,11 +58,11 @@ application.register("long-table", LongTableController)
 import MetaJsonCheckController from "./meta_json_check_controller"
 application.register("meta-json-check", MetaJsonCheckController)
 
-import PreviewBriefController from "./preview_brief_controller"
-application.register("preview-brief", PreviewBriefController)
-
 import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
 application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
+
+import BookmarkToastController from "./bookmark_toast_controller"
+application.register("bookmark-toast", BookmarkToastController)

@@ -15,9 +15,7 @@ RSpec.describe "Searchworks::Document::Sms" do
     )
   }
   let(:eds_doc) do
-    EdsDocument.new(
-      eds_title: 'holla back'
-    )
+    StubArticleService.full_text_document
   end
 
   before(:all) do
@@ -33,7 +31,7 @@ RSpec.describe "Searchworks::Document::Sms" do
 
   context 'eds document' do
     it 'uses the eds title' do
-      expect(eds_doc.to_sms_text).to eq 'holla back'
+      expect(eds_doc.to_sms_text).to eq 'The title of the document'
     end
   end
 end

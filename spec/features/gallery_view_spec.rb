@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.feature 'Gallery View' do
   scenario 'Search results are rendered properly', :js do
+    pending 'SW4.0 - Gallery view is not implemented'
     visit search_catalog_path f: { format: ['Book'] }
     within '#view-type-dropdown' do
       click_button 'View'

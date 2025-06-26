@@ -8,7 +8,10 @@ RSpec.describe 'Article Record Toolbar', :js do
     EdsDocument.new(
       id: 2,
       eds_title: 'My Title',
-      eds_citation_exports: [{ 'id' => 'RIS', 'data' => 'TI  - CatZ N Bagelz' }]
+      'exports' => {
+        'Format' => 'RIS',
+        'Data' => "TI  - CatZ N Bagelz\n"
+      }
     )
   end
   let(:next_document) { EdsDocument.new(id: 3, eds_title: 'My Next Title') }

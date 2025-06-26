@@ -8,6 +8,7 @@ RSpec.feature "Merged Image Collections", :js do
   end
 
   scenario "in search results" do
+    pending 'SW4.0 redesign in progress.'
     visit root_path
     fill_in 'q', with: '34'
     page.find('button#search').click

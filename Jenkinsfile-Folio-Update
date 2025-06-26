@@ -23,6 +23,8 @@ pipeline {
           rvm use 3.4.1@searchworks --create
           gem install bundler
 
+          git switch release
+
           bundle install --without production
 
           # Harvest -prod

@@ -8,4 +8,8 @@ class HomepageSearchComponent < Blacklight::SearchBarComponent
   def advanced_search_enabled?
     false
   end
+
+  def rounded_border_class
+    ''
+  end
 end

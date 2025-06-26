@@ -18,18 +18,17 @@ class FacetOptionsPresenter
   attr_reader :params, :context
 
   def available_limiters
-    eds_session.info.available_search_criteria['AvailableLimiters'] || []
+    eds_session.info.dig('AvailableSearchCriteria', 'AvailableLimiters') || []
   end
 
   def eds_session
-    @eds_session ||= Eds::Session.new(eds_params)
+    @eds_session ||= Eds::Session.new(**eds_params)
   end
 
   def eds_params
     {
-      caller: 'bl-search',
       guest: context.session['eds_guest'],
-      session_token: context.session['eds_session_token']
+      session_token: context.session[Settings.EDS_SESSION_TOKEN_KEY]
     }
   end
 

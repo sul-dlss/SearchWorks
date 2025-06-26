@@ -12,8 +12,14 @@ const AlternateCatalog = (function (global) {
       // Setup close click handler
       this.initCloseButton()
 
-      // Insert between the 3rd and 4th document
-      this.injectAlternateCatalogIntoResults()
+      // Insert between the 3rd and 4th document for articles
+      if (document.querySelector('.blacklight-articles')) {
+        this.injectAlternateCatalogIntoResults()
+      }
+
+      if (window.innerWidth > 768) {
+        this.element.classList.add('show');
+      }
 
       // Update title
       this.titleElement.innerHTML = 'Searching...'
@@ -27,7 +33,9 @@ const AlternateCatalog = (function (global) {
       if (!close)
         return // There is no close on the no-results page
 
-      close.addEventListener('click', () => this.element.remove())
+      close.addEventListener("click", () => {
+        new bootstrap.Collapse(this.element);
+      })
     },
 
     injectAlternateCatalogIntoResults: function () {
@@ -49,7 +57,6 @@ const AlternateCatalog = (function (global) {
       const alternateCatalogUrl = this.element.dataset.alternateCatalog
       const body = this.element.querySelector('.alternate-catalog-body')
       const countElement = this.element.querySelector('.alternate-catalog-count')
-      const facets = this.element.querySelector('.alternate-catalog-facets')
 
       fetch(alternateCatalogUrl, { headers: { 'accept': 'application/json' } })
         .then(response => {
@@ -61,38 +68,11 @@ const AlternateCatalog = (function (global) {
         .then(response => {
           const count = response.response.pages.total_count
           // Update title
-          this.titleElement.innerHTML = 'Your search also found results in'
+          this.titleElement.innerHTML = 'Looking for more?'
           countElement.innerHTML = parseInt(count).toLocaleString()
           body.classList.remove('d-none')
-
-          if (count > 0) {
-            // Update body
-            const facetHtml = createFacets(response.response.facets, alternateCatalogUrl)
-            facets.innerHTML = facetHtml
-          }
         })
     }
-  }
-
-  function createFacets(facets, url) {
-    const facetLinks = []
-    // Iterating over everything here would be too slow
-    const sourceOrResouce = facets.filter( function(facet) {
-      return facet.label === 'Source type' || facet.label === 'Resource type'
-    })
-    sourceOrResouce.forEach(function (facet) {
-      // Iterating over everything here would be even slower.. sort it and take the top 3
-      const topThree = facet.items.sort(function(a, b) {
-        return b.hits - a.hits
-      }).slice(0, 3)
-      topThree.forEach(function (item) {
-        linkedUrl = url + '&f[' + facet.name + '][]=' + encodeURI(item.value);
-        const count = parseInt(item.hits).toLocaleString()
-        linkText = `${item.label} <span class="badge rounded-pill text-bg-secondary">${count}</span>`
-        facetLinks.push(`<li><a href="${linkedUrl}">${linkText}</a></li>`)
-      })
-    })
-    return facetLinks.join("")
   }
 
 }(this));

@@ -8,7 +8,7 @@
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
   <% if eds_restricted? %>
-    <%= render Articles::EdsRestrictedComponent.new(counter: @counter, document: @document) %>
+    <%= render Articles::EdsRestrictedComponent.new(counter: @counter, presenter: @presenter) %>
   <% else %>
     <%= header %>
     <div class="document-main-section">

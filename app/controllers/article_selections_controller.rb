@@ -84,7 +84,7 @@ class ArticleSelectionsController < ApplicationController
   def search_service
     eds_params = {
       guest: session['eds_guest'],
-      session_token: session['eds_session_token']
+      session_token: session[Settings.EDS_SESSION_TOKEN_KEY]
     }
     Eds::SearchService.new(blacklight_config, params, eds_params)
   end

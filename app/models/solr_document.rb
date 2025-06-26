@@ -74,10 +74,6 @@ class SolrDocument
     document.key?(:modsxml)
   end
 
-  use_extension(SelectedDatabase) do |document|
-    Settings.selected_databases[document.id].present?
-  end
-
   sw_field_semantics = {
     title: %w[title_display],
     author: 'author_display',
@@ -123,6 +119,7 @@ class SolrDocument
   attribute :live_lookup_id, :string, 'uuid_ssi'
   attribute :oclc_number, :string, 'oclc'
   attribute :imprint_string, :string, :imprint_display
+  attribute :vernacular_title, :string, :vern_title_display
 
   def db_az_subject
     self[:db_az_subject] if is_a_database?
@@ -158,5 +155,11 @@ class SolrDocument
   # after FOLIO migration, all ILS-derived ids should be prefixed with 'a'
   def prefixed_id
     self[:id].to_s.sub(/^(\d+)$/, 'a\1')
+  end
+
+  # For use in the in the Lookbook component previews, `with_json` is false
+  def self.from_fixture(filename, with_json: false)
+    solr_data = SolrFixtureLoader.load(filename, with_json: with_json)
+    new(solr_data)
   end
 end

@@ -3,40 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe "MARC Metadata in search results" do
-  describe "uniform title" do
-    before do
-      visit root_path
-      fill_in 'q', with: '18'
-      click_button 'search'
-    end
-
-    it "links the uniform title (but not $h)" do
-      within(first('.document')) do
-        within('ul.document-metadata') do
-          expect(page).to have_css('li', text: 'Instrumental music Selections [print/digital].')
-          expect(page).to have_css('li a', text: 'Instrumental music Selections')
-        end
-      end
-    end
-  end
-
-  describe "characteristics" do
-    before do
-      visit root_path
-      fill_in 'q', with: 'id:4'
-      click_button 'search'
-    end
-
-    it 'joins the characteristics with the physical statement' do
-      # this item is the 2nd search result
-      within(first('.document')) do
-        expect(page).to have_css('dt', text: 'Description')
-        expect(page).to have_css('dd',
-                                 text: 'Video — The physical statement Sound: digital; optical; surround; stereo; Dolby. Video: NTSC. Digital: video file; DVD video; Region 1.')
-      end
-    end
-  end
-
   describe "author/creator" do
     before do
       visit root_path

@@ -3,9 +3,17 @@
 module Icons
   class Bubble2Component < Icons::SulIconsComponent
     self.svg = <<~SVG
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="1em" width="1em" viewBox="-10 0 532 512">
-      	<path d="M512 213q0 -71 -50.5 -125t-120.5 -54h-170q-70 0 -120.5 54t-50.5 125q0 70 50 120t120 50l-1 -1l10 1v97l106 -96h56q70 0 120.5 -50.5t50.5 -120.5zM495 213q0 63 -45.5 108.5t-108.5 45.5h-63l-82 75v-74l-26 -3q-63 0 -108 -44.5t-45 -107.5q0 -32 12.5 -61.5 t33 -51.5t49 -35.5t59.5 -13.5h170q62 0 108 49t46 113z" />
-      </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1em"
+      	 height="1em" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+      <g id="Filled_Icons_1_">
+      	<g id="Filled_Icons">
+      					<path d="M16,2H8c-4.411,0-8,3.589-8,8s3.589,8,8,8h1v3.5c0,0.444,0.54,0.668,0.854,0.354L13.707,18H16c4.411,0,8-3.589,8-8
+      			S20.411,2,16,2z"/>
+      	</g>
+
+      </g>
+
+      	    </svg>
     SVG
   end
 end

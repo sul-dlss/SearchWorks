@@ -17,6 +17,10 @@
   <% elsif @document_list.blank? %>
     <h3><%= t('blacklight.bookmarks.no_bookmarks') %></h3>
   <% else %>
+    <% content_for(:skip_links) do -%>
+      <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
+    <% end %>
+
     <%= render 'sort_and_per_page' %>
     <%= render_document_index @response.documents %>
     <%= render 'results_pagination' %>

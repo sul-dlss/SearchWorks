@@ -56,13 +56,6 @@ RSpec.describe 'Callnumber Browse', :js do
       end
 
       expect(page).to have_text('Starting at call number: G70.212')
-
-      within '#view-type-dropdown' do
-        click_button 'View'
-        click_link 'brief'
-      end
-
-      expect(page).to have_text('Starting at call number: G70.212')
     end
   end
 end

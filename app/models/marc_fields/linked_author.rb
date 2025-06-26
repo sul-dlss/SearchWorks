@@ -24,7 +24,7 @@ class LinkedAuthor < MarcField
   end
 
   def values
-    return {} unless document[:author_struct]
+    return [] unless document[:author_struct]
 
     document[:author_struct].first[target] || []
   end

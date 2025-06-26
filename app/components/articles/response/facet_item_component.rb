@@ -2,7 +2,7 @@
 
 module Articles
   module Response
-    class FacetItemComponent < Blacklight::FacetItemComponent
+    class FacetItemComponent < Blacklight::Facets::ItemComponent
       def initialize(hidden:, facet_item:, wrapping_element: 'li', suppress_link: false)
         super(facet_item:, wrapping_element:, suppress_link:)
         @hidden = hidden

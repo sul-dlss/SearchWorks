@@ -10,7 +10,7 @@ class FeedbackFormsController < ApplicationController
 
   def create
     if request.post?
-      if validate
+      if valid?
         case @form_type
         when 'connection'
           FeedbackMailer.submit_connection(params, request.remote_ip).deliver_now
@@ -37,7 +37,7 @@ class FeedbackFormsController < ApplicationController
     @form_type = params.permit(:type)[:type] || 'feedback'
   end
 
-  def validate
+  def valid?
     errors = []
 
     errors << 'You must pass the reCAPTCHA challenge' if current_user.blank? && !verify_recaptcha

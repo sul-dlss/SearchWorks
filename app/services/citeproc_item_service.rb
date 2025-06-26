@@ -29,8 +29,10 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
   private
 
   def item_attributes
-    # TODO: For future optimization: we don't need accessed unless we have a URL. We don't need a URL if we have a DOI.
-    { id:, author:, issued:, title:, type:, publisher:, genre:,
+    # NOTE: we're removing "<" and ">" because it causes https://github.com/inukshuk/citeproc-ruby/issues/89
+    publisher_clean = publisher.tr('<>', '')
+    # TODO: For future optimization: We don't need a URL if we have a DOI.
+    { id:, author:, issued:, title:, type:, publisher: publisher_clean, genre:,
       'publisher-place' => publisher_place, 'DOI' => doi, 'URL' => url,
       edition:, translator:, editor: }.compact_blank
   end

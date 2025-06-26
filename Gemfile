@@ -20,6 +20,12 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 3.0'
   gem "letter_opener"
+  # listen and actioncable enable live reload for Lookbook in development
+  gem "listen"
+  gem "actioncable"
+end
+group :development, :test, :production do
+  gem "lookbook", ">= 2.3.9"
 end
 
 gem 'ruby-oembed'
@@ -72,7 +78,7 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'blacklight', '~> 9.0.0.beta1'
+gem 'blacklight', github: 'projectblacklight/blacklight' #'~> 9.0.0.beta2'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
 gem "blacklight_range_limit", "~> 8.0"
@@ -90,7 +96,6 @@ gem "config"
 gem "mods_display", "~> 1.1"
 gem 'roadie-rails', '~> 3'
 gem 'rack-utf8_sanitizer'
-gem 'ebsco-eds'
 gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'recaptcha', '~> 5.17'
@@ -113,5 +118,6 @@ gem "cssbundling-rails", "~> 1.4"
 gem 'blacklight-ris', '~> 0.2.0'
 
 gem "citeproc", "~> 1.1"
-
-gem "csl-styles", "~> 1.0"
+gem 'citeproc-ruby', '~> 2.0'
+gem 'csl', '~> 2.0'
+gem "csl-styles", "~> 2.0"

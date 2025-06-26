@@ -6,6 +6,6 @@ module EdsExport
   end
 
   def export_as_ris
-    self['eds_citation_exports']&.select { |e| e['id'] == 'RIS' }&.first&.[]('data')
+    dig('exports', 'Data') if dig('exports', 'Format') == 'RIS'
   end
 end

@@ -7,7 +7,7 @@ module CatalogHelper
   include Blacklight::CatalogHelperBehavior
 
   def current_view
-    document_index_view_type.to_s || 'list'
+    document_index_view_type.to_s
   end
 
   def stackmap_link(document, location)
@@ -65,7 +65,7 @@ module CatalogHelper
     link_to(
       link_url,
       class: 'iiif-dnd pull-right',
-      data: { turbo: false, 'bs-toggle': 'tooltip', 'bs-placement': position, manifest: },
+      data: { turbo: false, action: "dragstart->analytics#trackEvent", 'bs-toggle': 'tooltip', 'bs-placement': position, manifest: },
       title: 'Drag icon to any IIIF viewer. — Click icon to learn more.'
     ) do
       image_tag 'iiif-drag-n-drop.svg', width:, alt: 'IIIF Drag-n-drop'

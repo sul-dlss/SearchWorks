@@ -6,6 +6,8 @@ RSpec.describe 'Request Links' do
   context 'in search results' do
     context 'with Hoover links' do
       it 'renders a link to the detail/record view instead of holdings' do
+        pending 'SW4.0 redesign in progress.'
+
         visit search_catalog_path(q: '56')
 
         within 'table.availability' do
@@ -18,6 +20,8 @@ RSpec.describe 'Request Links' do
 
     context 'with a bound-with record' do
       it 'renders a link to the detail/record view instead of holdings' do
+        pending 'SW4.0 redesign in progress.'
+
         visit search_catalog_path(q: '2279186')
 
         within 'table.availability' do
