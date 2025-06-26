@@ -30,6 +30,8 @@
   };
 
   function reparentAsideModules(parent) {
-    document.querySelector('.alternate-catalog')?.forEach(el => parent.appendChild(el))
+    const altCatalog = document.querySelector('.alternate-catalog')
+    if (altCatalog)
+      parent.appendChild(altCatalog)
   }
 })();
