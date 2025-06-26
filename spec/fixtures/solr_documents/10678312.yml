@@ -1,0 +1,773 @@
+---
+id: '10678312'
+hashed_id_ssi: f60a890b3d70cbb853546c7bb88666e2
+marc_json_struct:
+- '{"leader":"01595cam a2200409 i 4500","fields":[{"001":"a10678312"},{"003":"SIRSI"},{"005":"20150228012234.0"},{"008":"150105t20142014enkab    b    001
+  0 eng d"},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"9781848934351"},{"q":"hardback"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1848934351"},{"q":"hardback"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"z":"9781781447499"},{"q":"Web-PDF"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) cis26084283"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"YDXCP"},{"e":"rda"},{"c":"YDXCP"},{"d":"BTCTA"},{"d":"OCLCQ"},{"d":"CaONFJC"},{"d":"UtOrBLW"}]}},{"043":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"cc-----"}]}},{"050":{"ind1":" ","ind2":"4","subfields":[{"a":"F2161"},{"b":".E27
+  2014"}]}},{"082":{"ind1":"0","ind2":"4","subfields":[{"a":"972.9/02"},{"2":"23"}]}},{"245":{"ind1":"0","ind2":"4","subfields":[{"a":"The
+  early English Caribbean, 1570-1700 /"},{"c":"edited by Carla Gardina Pestana and
+  Sharon V. Salinger."}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"London
+  :"},{"b":"Pickering & Chatto,"},{"c":"2014."}]}},{"264":{"ind1":" ","ind2":"4","subfields":[{"c":"©2014"}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"4 volumes :"},{"b":"illustrations, maps ;"},{"c":"24
+  cm"}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"unmediated"},{"b":"n"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"volume"},{"b":"nc"},{"2":"rdacarrier"}]}},{"504":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Includes bibliographical references and index."}]}},{"505":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Volume 1. Conceptualizing the West Indies -- Volume 2. Fitting
+  into the empire --Volume 3. Living in the Caribbean -- Volume 4. Making meaning."}]}},{"651":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Caribbean Area"},{"x":"History"},{"y":"16th century."}]}},{"651":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Caribbean Area"},{"x":"History"},{"y":"17th century."}]}},{"651":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Caribbean Area"},{"x":"History"},{"y":"18th century."}]}},{"999":{"ind1":"
+  ","ind2":" ","subfields":[{"c":"0"},{"h":"GREEN-H"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)900305637"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"1"}]}},{"979":{"ind1":"
+  ","ind2":" ","subfields":[{"f":"FIELD"},{"b":"druid:gr825vc7143"},{"c":"gr825vc7143_00_0001.jp2"},{"d":"Field
+  Family Fund for History and the Humanities"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  cis26084283"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) cis26084283"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"0ae8b991-8510-565d-845f-bf75dad04c77"},{"s":"b36a0dfd-a56b-5320-b18e-35f040deb797"}]}}]}'
+all_search: 'The early English Caribbean, 1570-1700 / edited by Carla Gardina Pestana
+  and Sharon V. Salinger. London : Pickering & Chatto, 2014. ©2014 4 volumes : illustrations,
+  maps ; 24 cm text txt rdacontent unmediated n rdamedia volume nc rdacarrier Includes
+  bibliographical references and index. Volume 1. Conceptualizing the West Indies
+  -- Volume 2. Fitting into the empire --Volume 3. Living in the Caribbean -- Volume
+  4. Making meaning. Caribbean Area History 16th century. Caribbean Area History 17th
+  century. Caribbean Area History 18th century. 1 FIELD druid:gr825vc7143 gr825vc7143_00_0001.jp2
+  Field Family Fund for History and the Humanities'
+title_245a_search: The early English Caribbean, 1570-1700 /
+title_245_search: The early English Caribbean, 1570-1700 /
+title_245a_display: The early English Caribbean, 1570-1700
+title_245c_display: edited by Carla Gardina Pestana and Sharon V. Salinger
+title_display: The early English Caribbean, 1570-1700
+title_full_display: The early English Caribbean, 1570-1700 / edited by Carla Gardina
+  Pestana and Sharon V. Salinger.
+title_sort: early English Caribbean 15701700
+author_title_245ac_search:
+- The early English Caribbean, 1570-1700 / edited by Carla Gardina Pestana and Sharon
+  V. Salinger.
+author_sort: "\U0010FFFF early English Caribbean 15701700"
+topic_subx_search:
+- History
+geographic_search:
+- Caribbean Area
+subject_other_subvy_search:
+- 16th century.
+- 17th century.
+- 18th century.
+subject_all_search:
+- Caribbean Area History 16th century.
+- Caribbean Area History 17th century.
+- Caribbean Area History 18th century.
+geographic_facet:
+- Caribbean Area
+era_facet:
+- 16th century
+- 17th century
+- 18th century
+pub_search:
+- 'London : Pickering & Chatto'
+pub_display:
+- 'London : Pickering & Chatto'
+pub_country: England, United Kingdom
+pub_date: '2014'
+pub_date_search: '2014'
+pub_date_sort: '2014'
+pub_year_tisim:
+- 2014
+pub_year_ss: '2014'
+publication_year_isi: 2014
+copyright_year_isi: 2014
+imprint_display:
+- 'London : Pickering & Chatto, 2014.'
+date_cataloged: '2015-02-25T00:00:00Z'
+language:
+- English
+oclc:
+- '900305637'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+physical:
+- '4 volumes : illustrations, maps ; 24 cm'
+toc_search:
+- Volume 1. Conceptualizing the West Indies -- Volume 2. Fitting into the empire --Volume
+  3. Living in the Caribbean -- Volume 4. Making meaning.
+isbn_search:
+- '9781848934351'
+- '1848934351'
+- '9781781447499'
+isbn_display:
+- '9781848934351'
+- '1848934351'
+callnum_facet_hsim:
+- LC Classification|F - United States, British, Dutch, French, Latin America (Local
+  History)|F - United States, British, Dutch, French, Latin America (Local History)
+callnum_search:
+- F2161 .E27 2014 V.2
+- F2161 .E27 2014 V.3
+- F2161 .E27 2014 V.1
+- F2161 .E27 2014 V.4
+lc_assigned_callnum_ssim:
+- F2161 .E27 2014
+barcode_search:
+- '36105212963149'
+- '36105212963131'
+- '36105212963156'
+- '36105212963123'
+item_barcodes:
+- '36105212963149'
+- '36105212963131'
+- '36105212963156'
+- '36105212963123'
+preferred_barcode: '36105212963156'
+holdings_library_code_ssim:
+- GREEN
+library_code_facet_ssim:
+- GREEN
+location_code_facet_ssim:
+- GRE-STACKS
+building_facet:
+- Green
+building_location_facet_ssim:
+- GREEN/*
+- GREEN/GRE-STACKS
+- GREEN/*/type/book
+- GREEN/GRE-STACKS/type/book
+shelfkey:
+- lc f   2161.000000 e0.270000 002014 v.000001
+reverse_shelfkey:
+- en~k~~~xyty}zzzzzz~lz}xszzzz~zzxzyv~4}zzzzzy~~~~~~
+mhld_display:
+- 'GREEN -|- GRE-STACKS -|-  -|- v.1-4 -|- '
+bookplates_display:
+- FIELD -|- gr825vc7143 -|- gr825vc7143_00_0001.jp2 -|- Field Family Fund for History
+  and the Humanities
+fund_facet:
+- FIELD
+- gr825vc7143
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '020'
+- '035'
+- '040'
+- '043'
+- '050'
+- '082'
+- '245'
+- '264'
+- '300'
+- '336'
+- '337'
+- '338'
+- '504'
+- '505'
+- '651'
+- '999'
+- '596'
+- '979'
+- 020aq
+- 020zq
+- 035a
+- 040aecdddd
+- 043a
+- 050ab
+- '082a2'
+- 245ac
+- 264abc
+- 264c
+- 300abc
+- 336ab2
+- 337ab2
+- 338ab2
+- 504a
+- 505a
+- 651axy
+- 999ch
+- 596a
+- 979fbcd
+- 999is
+- "?020a"
+- "?020q"
+- "?020z"
+- "?035a"
+- "?040a"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?043a"
+- "?050a"
+- "?050b"
+- "?082a"
+- "?0822"
+- "?245a"
+- "?245c"
+- "?264a"
+- "?264b"
+- "?264c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?504a"
+- "?505a"
+- "?651a"
+- "?651x"
+- "?651y"
+- "?999c"
+- "?999h"
+- "?596a"
+- "?979f"
+- "?979b"
+- "?979c"
+- "?979d"
+- "?999i"
+- "?999s"
+bib_search: 'The early English Caribbean, 1570-1700 / edited by Carla Gardina Pestana
+  and Sharon V. Salinger. London : Pickering & Chatto, 2014. ©2014 Book'
+vern_bib_search: Book
+uuid_ssi: 0ae8b991-8510-565d-845f-bf75dad04c77
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"0ae8b991-8510-565d-845f-bf75dad04c77","hrid":"a10678312","notes":[{"note":"Includes
+  bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"},{"note":"Volume
+  1. Conceptualizing the West Indies -- Volume 2. Fitting into the empire --Volume
+  3. Living in the Caribbean -- Volume 4. Making meaning","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"}],"title":"The
+  early English Caribbean, 1570-1700 / edited by Carla Gardina Pestana and Sharon
+  V. Salinger.","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T15:38:20.697Z","updatedDate":"2023-08-21T15:38:20.697Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Caribbean
+  Area History 16th century"},{"value":"Caribbean Area History 17th century"},{"value":"Caribbean
+  Area History 18th century"}],"languages":["eng"],"indexTitle":"Early english caribbean,
+  1570-1700","identifiers":[{"value":"9781848934351 hardback","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"1848934351
+  hardback","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9781781447499
+  Web-PDF","identifierTypeId":"fcca2643-406a-482a-b760-7a7f8aec640e"},{"value":"(Sirsi)
+  cis26084283","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)900305637","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"role":"Publication","place":"London","publisher":"Pickering
+  & Chatto","dateOfPublication":"2014"},{"role":"Copyright notice date","place":"","publisher":"","dateOfPublication":"©2014"}],"contributors":[],"catalogedDate":"2015-02-25","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"F2161
+  .E27 2014","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"972.902","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"start":2014},"statusUpdatedDate":"2023-08-21T15:38:20.010+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["4
+  volumes : illustrations, maps ; 24 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-06-22T09:14:51Z'
+created: '2025-06-22T09:14:51Z'
+timestamp: '2025-06-22T09:14:51Z'
+toc_struct:
+- label: Contents
+  fields:
+  - - Volume 1. Conceptualizing the West Indies
+    - Volume 2. Fitting into the empire --Volume 3. Living in the Caribbean
+    - Volume 4. Making meaning.
+  vernacular:
+  unmatched_vernacular:
+holdings_json_struct:
+- holdings:
+  - id: 30db829b-7242-54ad-a568-ab3c302e2a0a
+    hrid: ah10678312_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:39:34.592Z'
+      updatedDate: '2023-08-21T15:39:34.592Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: MARC Holdings
+    instanceId: 0ae8b991-8510-565d-845f-bf75dad04c77
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements:
+    - statement: v.1-4
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 3a4984a9-feba-50d9-a979-2c26af2818d9
+    hrid: ah10678312_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:39:22.992Z'
+      updatedDate: '2023-08-21T15:39:22.992Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: F2161 .E27 2014
+    instanceId: 0ae8b991-8510-565d-845f-bf75dad04c77
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 2bccec81-5f9e-5506-a7f9-ee190db07acc
+    hrid: ai10678312_1_5
+    notes: []
+    status: Available
+    barcode: '36105212963149'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:40:17.193Z'
+      updatedDate: '2023-08-21T15:40:17.193Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: F2161 .E27 2014
+    copyNumber: '1'
+    enumeration: V.2
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 3a4984a9-feba-50d9-a979-2c26af2818d9
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: F 42161 E27 42014 V 12 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: F2161 .E27 2014
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 355ac629-d719-5fff-a0f4-1b986e155058
+    hrid: ai10678312_1_7
+    notes: []
+    status: Available
+    barcode: '36105212963131'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:40:17.193Z'
+      updatedDate: '2023-08-21T15:40:17.193Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: F2161 .E27 2014
+    copyNumber: '1'
+    enumeration: V.3
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 3a4984a9-feba-50d9-a979-2c26af2818d9
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: F 42161 E27 42014 V 13 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: F2161 .E27 2014
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 474868e0-d529-5b58-85a5-d88d49f7fa04
+    hrid: ai10678312_1_3
+    notes: []
+    status: Available
+    barcode: '36105212963156'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:40:17.193Z'
+      updatedDate: '2023-08-21T15:40:17.193Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: F2161 .E27 2014
+    copyNumber: '1'
+    enumeration: V.1
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 3a4984a9-feba-50d9-a979-2c26af2818d9
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: F 42161 E27 42014 V 11 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: F2161 .E27 2014
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: fb902cab-645a-55cc-a96f-004684aa08ae
+    hrid: ai10678312_1_1
+    notes: []
+    status: Available
+    barcode: '36105212963123'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:40:17.193Z'
+      updatedDate: '2023-08-21T15:40:17.193Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: F2161 .E27 2014
+    copyNumber: '1'
+    enumeration: V.4
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 3a4984a9-feba-50d9-a979-2c26af2818d9
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: F 42161 E27 42014 V 14 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: F2161 .E27 2014
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 2bccec81-5f9e-5506-a7f9-ee190db07acc
+  barcode: '36105212963149'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 0ae8b991-8510-565d-845f-bf75dad04c77
+  instance_hrid: a10678312
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: F2161 .E27 2014
+  callnumber: F2161 .E27 2014 V.2
+  full_shelfkey: lc f   2161.000000 e0.270000 002014 v.000002
+- id: 355ac629-d719-5fff-a0f4-1b986e155058
+  barcode: '36105212963131'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 0ae8b991-8510-565d-845f-bf75dad04c77
+  instance_hrid: a10678312
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: F2161 .E27 2014
+  callnumber: F2161 .E27 2014 V.3
+  full_shelfkey: lc f   2161.000000 e0.270000 002014 v.000003
+- id: 474868e0-d529-5b58-85a5-d88d49f7fa04
+  barcode: '36105212963156'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 0ae8b991-8510-565d-845f-bf75dad04c77
+  instance_hrid: a10678312
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: F2161 .E27 2014
+  callnumber: F2161 .E27 2014 V.1
+  full_shelfkey: lc f   2161.000000 e0.270000 002014 v.000001
+- id: fb902cab-645a-55cc-a96f-004684aa08ae
+  barcode: '36105212963123'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 0ae8b991-8510-565d-845f-bf75dad04c77
+  instance_hrid: a10678312
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: F2161 .E27 2014
+  callnumber: F2161 .E27 2014 V.4
+  full_shelfkey: lc f   2161.000000 e0.270000 002014 v.000004
+browse_nearby_struct:
+- lopped_callnumber: F2161 .E27 2014
+  shelfkey: lc f   2161.000000 e0.270000 002014 v.000001
+  reverse_shelfkey: en~k~~~xyty}zzzzzz~lz}xszzzz~zzxzyv~4}zzzzzy~~~~~~
+  callnumber: F2161 .E27 2014 V.1
+  scheme: LC
+  item_id: 474868e0-d529-5b58-85a5-d88d49f7fa04

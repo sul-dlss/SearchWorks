@@ -42,7 +42,7 @@ RSpec.feature "Results Toolbar", :js do
 
     within('.page_links') do
       expect(page).to have_no_link('Previous')
-      expect(page).to have_css(".page_entries", text: /1 - 6/)
+      expect(page).to have_css(".page_entries", text: /1 - 7/)
       expect(page).to have_no_link('Next')
     end
   end

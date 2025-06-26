@@ -29,7 +29,17 @@ class FixtureHarvester
     '10689066', # Has editor roles
     '14434124', # Has duplicate author names and linking to alternative script
     '219330', # has a 700t which indicates an included work
-    'in00000382380' # a dissertation
+    'in00000382380', # a dissertation
+
+    '1391872', # single item in Green Stacks
+    '10678312', # multiple items in Green Stacks
+    '13840972', # lots of items
+    '402381', # multiple items in multiple locations
+    'in00000444367', # online item
+    '10838998', # small number of items in multiple libraries and available online
+    '3402192', # lots of copies, some checked out
+    '14239755', # temporary location
+    '342324' # serial on-exhibit
   ].freeze
 
   def self.harvest_all

@@ -1,0 +1,410 @@
+---
+id: '1391872'
+hashed_id_ssi: 32dd53a201d14db17d719a14f61fb35f
+marc_json_struct:
+- '{"leader":"01144cam a2200349   4500","fields":[{"001":"a1391872"},{"003":"SIRSI"},{"005":"19910716000000.0"},{"008":"731114|||||||||enk           |||
+  | eng  "},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   73173421"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"0198253125"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"c":"L6.00
+  ($19.95 U.S.)"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"9780198253129"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) AGM1403"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(CStRLIN)CSUG92592-B"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)648719"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-I)273595416"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"d":"OrLoB"}]}},{"050":{"ind1":" ","ind2":" ","subfields":[{"a":"LAW"}]}},{"082":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"345/.496/00903"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Heyd, Uriel,"},{"d":"1913-1968"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Studies
+  in old Ottoman criminal law;"},{"c":"edited by V. L. Menage."}]}},{"260":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Oxford, Clarendon Press,"},{"c":"1973."}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"xxxii, 340 p."},{"c":"23 cm."}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"\"The Ottoman criminal code, text [and] translation\":
+  p. [54]-131."}]}},{"504":{"ind1":" ","ind2":" ","subfields":[{"a":"Includes bibliographical
+  references and index."}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"1"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Criminal law"},{"z":"Turkey."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Criminal justice, Administration of"},{"z":"Turkey."}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Ménage, V. L."}]}},{"730":{"ind1":"0","ind2":" ","subfields":[{"a":"Kanun-i
+  sultani ve ayin-i resm-i Osmani."},{"l":"Turkish & English."},{"f":"1973."}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"b0e0445b-dc19-5e05-a85c-5ecbad784255"},{"s":"27e391c3-cdea-5f9c-abd9-9ff86ac49764"}]}}]}'
+all_search: 'Heyd, Uriel, 1913-1968 Studies in old Ottoman criminal law; edited by
+  V. L. Menage. Oxford, Clarendon Press, 1973. xxxii, 340 p. 23 cm. "The Ottoman criminal
+  code, text [and] translation": p. [54]-131. Includes bibliographical references
+  and index. 1 Criminal law Turkey. Criminal justice, Administration of Turkey. Ménage,
+  V. L. Kanun-i sultani ve ayin-i resm-i Osmani. Turkish & English. 1973.'
+title_245a_search: Studies in old Ottoman criminal law;
+title_245_search: Studies in old Ottoman criminal law;
+title_related_search:
+- Kanun-i sultani ve ayin-i resm-i Osmani. Turkish & English. 1973.
+title_245a_display: Studies in old Ottoman criminal law
+title_245c_display: edited by V. L. Menage
+title_display: Studies in old Ottoman criminal law
+title_full_display: Studies in old Ottoman criminal law; edited by V. L. Menage.
+title_sort: Studies in old Ottoman criminal law
+author_title_245ac_search:
+- Studies in old Ottoman criminal law; edited by V. L. Menage.
+author_title_1xx_search:
+- Heyd, Uriel Studies in old Ottoman criminal law;
+author_title_search:
+- Heyd, Uriel, 1913-1968 Studies in old Ottoman criminal law;
+best_author_title_search: Heyd, Uriel, 1913-1968 Studies in old Ottoman criminal law;
+author_1xx_search: Heyd, Uriel, 1913-1968
+author_7xx_search:
+- Ménage, V. L.
+author_person_facet:
+- Heyd, Uriel, 1913-1968
+- Ménage, V. L.
+author_person_display:
+- Heyd, Uriel, 1913-1968
+author_person_full_display:
+- Heyd, Uriel, 1913-1968
+author_sort: Heyd Uriel 19131968 Studies in old Ottoman criminal law
+works_struct:
+- '{"included":[{"link":"Kanun-i sultani ve ayin-i resm-i Osmani. Turkish & English.
+  1973.","search":"Kanun-i sultani ve ayin-i resm-i Osmani. Turkish & English. 1973.","pre_text":"","post_text":"","authorities":[],"rwo":[]}],"related":[{"link":"Kanun-i
+  sultani ve ayin-i resm-i Osmani. Turkish & English. 1973.","search":"Kanun-i sultani
+  ve ayin-i resm-i Osmani. Turkish & English. 1973.","pre_text":"","post_text":"","authorities":[],"rwo":[]}]}'
+topic_search:
+- Criminal law
+- Criminal justice, Administration of
+topic_display:
+- Criminal law
+- Criminal justice, Administration of
+geographic_subz_search:
+- Turkey.
+subject_all_search:
+- Criminal law Turkey.
+- Criminal justice, Administration of Turkey.
+topic_facet:
+- Criminal law
+- Criminal justice, Administration of
+geographic_facet:
+- Turkey
+pub_search:
+- Oxford, Clarendon Press
+pub_display:
+- Oxford, Clarendon Press
+pub_country: England, United Kingdom
+pub_date: '1973'
+pub_date_search: '1973'
+pub_date_sort: '1973'
+pub_year_tisim:
+- 1973
+imprint_display:
+- Oxford, Clarendon Press, 1973.
+date_cataloged: '1991-08-24T00:00:00Z'
+language:
+- English
+oclc:
+- '648719'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+physical:
+- xxxii, 340 p. 23 cm.
+isbn_search:
+- '0198253125'
+- '9780198253129'
+isbn_display:
+- '0198253125'
+- '9780198253129'
+lccn: '73173421'
+callnum_facet_hsim:
+- LC Classification|K - Law|KKX - Law of Turkey
+callnum_search:
+- KKX3800 .H49 1973
+barcode_search:
+- '36105025440939'
+item_barcodes:
+- '36105025440939'
+preferred_barcode: '36105025440939'
+holdings_library_code_ssim:
+- GREEN
+library_code_facet_ssim:
+- GREEN
+location_code_facet_ssim:
+- GRE-STACKS
+building_facet:
+- Green
+building_location_facet_ssim:
+- GREEN/*
+- GREEN/GRE-STACKS
+- GREEN/*/type/book
+- GREEN/GRE-STACKS/type/book
+shelfkey:
+- lc kkx 3800.000000 h0.490000 001973
+reverse_shelfkey:
+- en~ff2~wrzz}zzzzzz~iz}vqzzzz~zzyqsw~~~~~~~~~~~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '010'
+- '020'
+- '035'
+- '040'
+- '050'
+- '082'
+- '100'
+- '245'
+- '260'
+- '300'
+- '500'
+- '504'
+- '596'
+- '650'
+- '700'
+- '730'
+- '999'
+- 010a
+- 020a
+- 020c
+- 035a
+- 040d
+- 050a
+- '082a'
+- 100ad
+- 245ac
+- 260ac
+- 300ac
+- 500a
+- 504a
+- 596a
+- 650az
+- 700a
+- 730alf
+- 999is
+- "?010a"
+- "?020a"
+- "?020c"
+- "?035a"
+- "?040d"
+- "?050a"
+- "?082a"
+- "?100a"
+- "?100d"
+- "?245a"
+- "?245c"
+- "?260a"
+- "?260c"
+- "?300a"
+- "?300c"
+- "?500a"
+- "?504a"
+- "?596a"
+- "?650a"
+- "?650z"
+- "?700a"
+- "?730a"
+- "?730l"
+- "?730f"
+- "?999i"
+- "?999s"
+bib_search: Heyd, Uriel, 1913-1968 Studies in old Ottoman criminal law; edited by
+  V. L. Menage. Oxford, Clarendon Press, 1973. Ménage, V. L. Criminal law Criminal
+  justice, Administration of Book
+vern_bib_search: Book
+uuid_ssi: b0e0445b-dc19-5e05-a85c-5ecbad784255
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"b0e0445b-dc19-5e05-a85c-5ecbad784255","hrid":"a1391872","notes":[{"note":"\"The
+  Ottoman criminal code, text [and] translation\": p. [54]-131","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Includes
+  bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"}],"title":"Studies
+  in old Ottoman criminal law; edited by V. L. Menage.","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T00:25:50.092Z","updatedDate":"2023-08-21T00:25:50.092Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Criminal
+  law Turkey"},{"value":"Criminal justice, Administration of Turkey"}],"languages":["eng"],"indexTitle":"Studies
+  in old ottoman criminal law;","identifiers":[{"value":"73173421","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"0198253125","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9780198253129","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(Sirsi)
+  AGM1403","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(CStRLIN)CSUG92592-B","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)648719","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)273595416","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"place":"Oxford,
+  Clarendon Press","publisher":"","dateOfPublication":"1973"}],"contributors":[{"name":"Heyd,
+  Uriel, 1913-1968","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Ménage,
+  V. L","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1991-08-24","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"LAW","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"345.49600903","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1973},"statusUpdatedDate":"2023-08-21T00:25:49.515+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["xxxii,
+  340 p. 23 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-06-23T15:11:06Z'
+created: '2025-06-23T15:11:06Z'
+timestamp: '2025-06-23T15:11:06Z'
+author_struct:
+- creator:
+  - link: Heyd, Uriel, 1913-1968
+    search: Heyd, Uriel, 1913-1968
+  contributors:
+  - link: Ménage, V. L.
+    search: Ménage, V. L.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+holdings_json_struct:
+- holdings:
+  - id: 275a6dfb-9c9b-53cb-80eb-2ce3b8ad5581
+    hrid: ah1391872_1
+    notes: []
+    _version: 3
+    metadata:
+      createdDate: '2023-08-21T00:27:47.487Z'
+      updatedDate: '2025-06-23T15:08:50.016Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 4038fd97-5e51-4041-ab31-1131cefb4cea
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: KKX3800 .H49 1973
+    instanceId: b0e0445b-dc19-5e05-a85c-5ecbad784255
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 217453b4-0585-517f-859c-bab10d948554
+    hrid: ai1391872_1_1
+    tags:
+      tagList: []
+    notes: []
+    status: Available
+    barcode: '36105025440939'
+    request:
+    _version: 4
+    metadata:
+      createdDate: '2023-08-21T00:28:32.369Z'
+      updatedDate: '2025-06-23T15:09:15.000Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 4038fd97-5e51-4041-ab31-1131cefb4cea
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: KKX3800 .H49 1973
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 275a6dfb-9c9b-53cb-80eb-2ce3b8ad5581
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: KKX 43800 H49 41973 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: KKX3800 .H49 1973
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 217453b4-0585-517f-859c-bab10d948554
+  barcode: '36105025440939'
+  library: GREEN
+  type: book
+  note:
+  instance_id: b0e0445b-dc19-5e05-a85c-5ecbad784255
+  instance_hrid: a1391872
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: KKX3800 .H49 1973
+  callnumber: KKX3800 .H49 1973
+  full_shelfkey: lc kkx 3800.000000 h0.490000 001973
+browse_nearby_struct:
+- lopped_callnumber: KKX3800 .H49 1973
+  shelfkey: lc kkx 3800.000000 h0.490000 001973
+  reverse_shelfkey: en~ff2~wrzz}zzzzzz~iz}vqzzzz~zzyqsw~~~~~~~~~~~~~~~
+  callnumber: KKX3800 .H49 1973
+  scheme: LC
+  item_id: 217453b4-0585-517f-859c-bab10d948554

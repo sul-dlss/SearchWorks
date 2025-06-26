@@ -1,0 +1,4918 @@
+---
+id: '402381'
+hashed_id_ssi: 5803ba99e9881485cbb083a4147eb429
+marc_json_struct:
+- '{"leader":"02481cas a2200529 a 4500","fields":[{"001":"a402381"},{"008":"760322c19729999dcu
+  x m      f0   a0eng  "},{"005":"20241108170703.8"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   72600309"}]}},{"022":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"0091-7338"},{"l":"0091-7338"},{"2":"1"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ACA5123"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC)2061037"},{"z":"(OCoLC)3225129"},{"z":"(OCoLC)173760828"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(CStRLIN)CSUP071890-S"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)2061037"}]}},{"037":{"ind1":" ","ind2":" ","subfields":[{"b":"University
+  Press of New England, 17 1/2 Lebanon St., Hanover, NH 03755"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"DLC"},{"b":"eng"},{"c":"PIT"},{"d":"MUL"},{"d":"DLC"},{"d":"OCL"},{"d":"NSD"},{"d":"NST"},{"d":"AIP"},{"d":"NST"},{"d":"AIP"},{"d":"NST"},{"d":"NSD"},{"d":"NST"},{"d":"NYG"},{"d":"NST"},{"d":"EBZ"},{"d":"NST"},{"d":"WAU"},{"d":"SYS"},{"d":"DLC"},{"d":"OCLCQ"},{"d":"ZYU"},{"d":"NLGGC"},{"d":"OCLCQ"},{"d":"GBVCP"},{"d":"UKMGB"},{"d":"OCLCQ"},{"d":"OCLCF"},{"d":"CUV"},{"d":"EYM"},{"d":"NYP"},{"d":"ZCU"}]}},{"042":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"pcc"},{"a":"nsdp"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"N386.U5"},{"b":"S78"}]}},{"082":{"ind1":"0","ind2":"4","subfields":[{"a":"709"}]}},{"130":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Studies in the history of art (Washington, D.C.)"}]}},{"210":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Stud. hist. art"}]}},{"222":{"ind1":" ","ind2":"0","subfields":[{"a":"Studies
+  in the history of art"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Studies
+  in the history of art."}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"Washington,
+  D.C. :"},{"b":"National Gallery of Art,"},{"c":"©1972-"}]}},{"300":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"volumes :"},{"b":"illustrations ;"},{"c":"25-29 cm"}]}},{"310":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Irregular"}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"unmediated"},{"b":"n"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"volume"},{"b":"nc"},{"2":"rdacarrier"}]}},{"362":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"1971,1972-"}]}},{"500":{"ind1":" ","ind2":" ","subfields":[{"a":"Distributed
+  by University Press of New England, Hanover, N.H., v. 12-<51> ; vols. for <2005->
+  distributed by Yale University Press, New Haven, Conn."}]}},{"515":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Vols. for 1971/72-1973 lack vol. numbering but constitute v.
+  4-5."}]}},{"515":{"ind1":" ","ind2":" ","subfields":[{"a":"Vol. 8-<68> lack chronological
+  designation."}]}},{"515":{"ind1":" ","ind2":" ","subfields":[{"a":"Some issues published
+  out of chronological order."}]}},{"580":{"ind1":" ","ind2":" ","subfields":[{"a":"With:
+  National Gallery of Art (U.S.). Annual report, continues: National Gallery of Art
+  (U.S.). Report and studies in the history of art."}]}},{"588":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Latest issue consulted: 68, published in 2005."}]}},{"596":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1 2 31"}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Art"},{"x":"Historiography."}]}},{"650":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Art"},{"x":"Historiography."},{"2":"fast"},{"0":"(OCoLC)fst00815259"}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Periodicals."},{"2":"fast"},{"0":"(OCoLC)fst01411641"}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"National Gallery of Art (U.S.)"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"i":"Online
+  version:"},{"t":"Studies in the history of art (Washington, D.C.)"},{"w":"(OCoLC)649595715"}]}},{"780":{"ind1":"0","ind2":"1","subfields":[{"a":"National
+  Gallery of Art (U.S.)."},{"t":"Report and studies in the history of art"},{"x":"0080-1240"},{"w":"(DLC)   68060053"},{"w":"(OCoLC)1471867"}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Z0"},{"b":"STF"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"848640f1-4ad7-5437-8239-c340ad0d0e6b"},{"s":"f816258b-1cba-523a-ab20-4b8316761f16"}]}}]}'
+all_search: 'Studies in the history of art (Washington, D.C.) Stud. hist. art Studies
+  in the history of art Studies in the history of art. Washington, D.C. : National
+  Gallery of Art, ©1972- volumes : illustrations ; 25-29 cm Irregular text txt rdacontent
+  unmediated n rdamedia volume nc rdacarrier 1971,1972- Distributed by University
+  Press of New England, Hanover, N.H., v. 12-<51> ; vols. for <2005-> distributed
+  by Yale University Press, New Haven, Conn. Vols. for 1971/72-1973 lack vol. numbering
+  but constitute v. 4-5. Vol. 8-<68> lack chronological designation. Some issues published
+  out of chronological order. With: National Gallery of Art (U.S.). Annual report,
+  continues: National Gallery of Art (U.S.). Report and studies in the history of
+  art. Latest issue consulted: 68, published in 2005. 1 2 31 Art Historiography. Art
+  Historiography. fast (OCoLC)fst00815259 Periodicals. fast (OCoLC)fst01411641 National
+  Gallery of Art (U.S.) Online version: Studies in the history of art (Washington,
+  D.C.) (OCoLC)649595715 National Gallery of Art (U.S.). Report and studies in the
+  history of art 0080-1240 (DLC)   68060053 (OCoLC)1471867'
+title_245a_search: Studies in the history of art.
+title_245_search: Studies in the history of art.
+title_uniform_search: Studies in the history of art (Washington, D.C.)
+title_variant_search:
+- Stud. hist. art
+- Studies in the history of art
+title_variant_display:
+- Stud. hist. art
+- Studies in the history of art
+title_related_search:
+- Studies in the history of art (Washington, D.C.)
+- Report and studies in the history of art
+title_245a_display: Studies in the history of art.
+title_display: Studies in the history of art.
+title_full_display: Studies in the history of art.
+title_sort: Studies in the history of art Washington DC Studies in the history of
+  art
+author_title_245ac_search:
+- Studies in the history of art.
+author_7xx_search:
+- National Gallery of Art (U.S.)
+author_other_facet:
+- National Gallery of Art (U.S.)
+author_sort: "\U0010FFFF Studies in the history of art"
+topic_search:
+- Art
+topic_display:
+- Art
+topic_subx_search:
+- Historiography.
+subject_other_search:
+- Periodicals.
+subject_other_display:
+- Periodicals.
+subject_all_search:
+- Art Historiography.
+- Periodicals.
+topic_facet:
+- Art
+pub_search:
+- 'Washington, D.C. : National Gallery of Art'
+pub_display:
+- 'Washington, D.C. : National Gallery of Art'
+pub_country: District of Columbia, United States
+pub_date: '1972'
+pub_date_search: '1972'
+pub_date_sort: '1972'
+pub_year_tisim:
+- 1972
+- 1973
+- 1974
+- 1975
+- 1976
+- 1977
+- 1978
+- 1979
+- 1980
+- 1981
+- 1982
+- 1983
+- 1984
+- 1985
+- 1986
+- 1987
+- 1988
+- 1989
+- 1990
+- 1991
+- 1992
+- 1993
+- 1994
+- 1995
+- 1996
+- 1997
+- 1998
+- 1999
+- 2000
+- 2001
+- 2002
+- 2003
+- 2004
+- 2005
+- 2006
+- 2007
+- 2008
+- 2009
+- 2010
+- 2011
+- 2012
+- 2013
+- 2014
+- 2015
+- 2016
+- 2017
+- 2018
+- 2019
+- 2020
+- 2021
+- 2022
+- 2023
+- 2024
+- 2025
+pub_year_ss: 1972 -
+beginning_year_isi: 1972
+imprint_display:
+- 'Washington, D.C. : National Gallery of Art, ©1972-'
+date_cataloged: '1992-01-29T00:00:00Z'
+language:
+- English
+oclc:
+- '2061037'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+genre_ssim:
+- Periodicals
+- Government document
+physical:
+- 'volumes : illustrations ; 25-29 cm'
+issn_search:
+- '0091-7338'
+- '0080-1240'
+issn_display:
+- '0091-7338'
+lccn: '72600309'
+callnum_facet_hsim:
+- LC Classification|N - Visual Arts|N - Visual Arts
+- Government Document|Federal
+callnum_search:
+- 'SI 8.9: 40'
+- 'SI 8.9: 9'
+- 'SI 8.9: 19'
+- 'SI 8.9: 5'
+- 'SI 8.9: 30'
+- 'SI 8.9: 4'
+- 'SI 8.9: 6'
+- 'SI 8.9: 27'
+- 'SI 8.9: 7'
+- 'SI 8.9: 33'
+- 'SI 8.9:'
+- 'SI 8.9: 21'
+- 'SI 8.9: 13'
+- 'SI 8.9: 56'
+- 'SI 8.9: 28'
+- 'SI 8.9: 14'
+- 'SI 8.9: 22'
+- 'SI 8.9: 29'
+- 'SI 8.9: 15'
+- 'SI 8.9: 36'
+- N380 .S75 V.8
+- N380 .S75 V.7
+- N380 .S75 V.9
+- N380 .S75 V.73
+- N380 .S75 V.4-6 1971/1972-1974
+- N380 .S75 V.12
+- N380 .S75 V.64
+- N380 .S75 V.24
+- N380 .S75 V.18
+- N380 .S75 V.74
+lc_assigned_callnum_ssim:
+- N386.U5 S78
+barcode_search:
+- '36105130119253'
+- '36105130119220'
+- '36105130118867'
+- '36105130119618'
+- '36105130119295'
+- '36105130119626'
+- '36105130119600'
+- '36105132171609'
+- '36105130119238'
+- '36105130119303'
+- 002ACA5123
+- '36105130118859'
+- '36105130118891'
+- '36105019645550'
+- '36105131859857'
+- '36105130118883'
+- '36105130119212'
+- '36105130119378'
+- '36105130118875'
+- '36105130119311'
+- '36105012712415'
+- '36105012712357'
+- '36105012712423'
+- '36105210048596'
+- '36105031002905'
+- '36105012712431'
+- '36105022895374'
+- '36105012712456'
+- '36105012712449'
+- '36105210052556'
+item_barcodes:
+- '36105130119253'
+- '36105130119220'
+- '36105130118867'
+- '36105130119618'
+- '36105130119295'
+- '36105130119626'
+- '36105130119600'
+- '36105132171609'
+- '36105130119238'
+- '36105130119303'
+- 002ACA5123
+- '36105130118859'
+- '36105130118891'
+- '36105019645550'
+- '36105131859857'
+- '36105130118883'
+- '36105130119212'
+- '36105130119378'
+- '36105130118875'
+- '36105130119311'
+- '36105012712415'
+- '36105012712357'
+- '36105012712423'
+- '36105210048596'
+- '36105031002905'
+- '36105012712431'
+- '36105022895374'
+- '36105012712456'
+- '36105012712449'
+- '36105210052556'
+preferred_barcode: 002ACA5123
+holdings_library_code_ssim:
+- GREEN
+- ART
+- SAL3
+library_code_facet_ssim:
+- GREEN
+- SAL3
+- ART
+location_code_facet_ssim:
+- GRE-FED-DOCS
+- SAL3-STACKS
+- ART-STACKS
+building_facet:
+- Green
+- SAL3 (off-campus storage)
+- Art & Architecture (Bowes)
+building_location_facet_ssim:
+- GREEN/*
+- GREEN/GRE-FED-DOCS
+- GREEN/*/type/book
+- GREEN/GRE-FED-DOCS/type/book
+- SAL3/*
+- SAL3/SAL3-STACKS
+- SAL3/*/type/periodical
+- SAL3/SAL3-STACKS/type/periodical
+- ART/*
+- ART/ART-STACKS
+- ART/*/type/book
+- ART/ART-STACKS/type/book
+shelfkey:
+- sudoc si0 000008 s000009 a !
+- lc n   0380.000000 s0.750000 v.000004-000006 001971/001972-001974
+reverse_shelfkey:
+- 75mbn~7hz~zzzzzr~7zzzzzq~p~~~~~~~~~~~~~~~~~~~~~~~~
+- en~c~~~zwrz}zzzzzz~7z}suzzzz~4}zzzzzv~zzzzzt~zzyqsy~zzyqsx~zzyqsv
+mhld_display:
+- 'GREEN -|- GRE-FED-DOCS -|-  -|- 1971/1972-1979 -|- '
+- 'SAL3 -|- SAL3-STACKS -|- Some individual volumes of this title also cataloged separately.
+  -|- v.4(1971/1972)-v.15(1985),v.17(1986)-v.33(1992),v.35(1990)-v.50(1995),v.52(1996)-v.55(1998),v.57(1997)-v.58(2000),v.60(2001)-v.66(2005),v.68(2005)-v.73(2009)
+  -|- '
+- 'ART -|- ART-STACKS -|- Some individual volumes of this title also cataloged separately.
+  -|- v.16(1985),v.51(1995),v.56(1999),v.59(2003),v.74(2009)- -|- '
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '008'
+- '005'
+- '010'
+- '022'
+- '035'
+- '037'
+- '040'
+- '042'
+- '050'
+- '082'
+- '130'
+- '210'
+- '222'
+- '245'
+- '260'
+- '300'
+- '310'
+- '336'
+- '337'
+- '338'
+- '362'
+- '500'
+- '515'
+- '580'
+- '588'
+- '596'
+- '650'
+- '655'
+- '710'
+- '776'
+- '780'
+- '994'
+- '999'
+- 010a
+- 022al2
+- 035a
+- 035azz
+- 037b
+- 040abcdddddddddddddddddddddddddddddd
+- 042aa
+- 050ab
+- '082a'
+- 130a
+- 210a
+- 222a
+- 245a
+- 260abc
+- 300abc
+- 310a
+- 336ab2
+- 337ab2
+- 338ab2
+- 362a
+- 500a
+- 515a
+- 580a
+- 588a
+- 596a
+- 650ax
+- 650ax20
+- 655a20
+- 710a
+- 776itw
+- 780atxww
+- 994ab
+- 999is
+- "?010a"
+- "?022a"
+- "?022l"
+- "?0222"
+- "?035a"
+- "?035z"
+- "?037b"
+- "?040a"
+- "?040b"
+- "?040c"
+- "?040d"
+- "?042a"
+- "?050a"
+- "?050b"
+- "?082a"
+- "?130a"
+- "?210a"
+- "?222a"
+- "?245a"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?310a"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?362a"
+- "?500a"
+- "?515a"
+- "?580a"
+- "?588a"
+- "?596a"
+- "?650a"
+- "?650x"
+- "?6502"
+- "?6500"
+- "?655a"
+- "?6552"
+- "?6550"
+- "?710a"
+- "?776i"
+- "?776t"
+- "?776w"
+- "?780a"
+- "?780t"
+- "?780x"
+- "?780w"
+- "?994a"
+- "?994b"
+- "?999i"
+- "?999s"
+bib_search: 'Studies in the history of art (Washington, D.C.) Stud. hist. art Studies
+  in the history of art Studies in the history of art. Washington, D.C. : National
+  Gallery of Art, ©1972- National Gallery of Art (U.S.) Art Book'
+vern_bib_search: Book
+uuid_ssi: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"848640f1-4ad7-5437-8239-c340ad0d0e6b","hrid":"a402381","tags":{"tagList":["sulacq:govdoc-fed"]},"notes":[{"note":"Distributed
+  by University Press of New England, Hanover, N.H., v. 12-<51> ; vols. for <2005->
+  distributed by Yale University Press, New Haven, Conn","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Vols.
+  for 1971/72-1973 lack vol. numbering but constitute v. 4-5","staffOnly":false,"instanceNoteTypeId":"cf635f41-29e7-4dd0-8598-33f230157074"},{"note":"Vol.
+  8-<68> lack chronological designation","staffOnly":false,"instanceNoteTypeId":"cf635f41-29e7-4dd0-8598-33f230157074"},{"note":"Some
+  issues published out of chronological order","staffOnly":false,"instanceNoteTypeId":"cf635f41-29e7-4dd0-8598-33f230157074"},{"note":"With:
+  National Gallery of Art (U.S.). Annual report, continues: National Gallery of Art
+  (U.S.). Report and studies in the history of art","staffOnly":false,"instanceNoteTypeId":"779c22a2-311c-4ebb-b71e-b246c7ee574d"},{"note":"Latest
+  issue consulted: 68, published in 2005","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"}],"title":"Studies
+  in the history of art.","series":[],"source":"MARC","_version":8,"editions":[],"metadata":{"createdDate":"2023-08-20T18:42:13.795Z","updatedDate":"2024-11-08T17:07:04.022Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"d43a28c3-e9d6-44a3-8927-0063924982f1"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Art--Historiography"},{"value":"Periodicals"}],"languages":["eng"],"indexTitle":"Studies
+  in the history of art.","identifiers":[{"value":"72600309","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"0091-7338","identifierTypeId":"913300b2-03ed-469a-8179-c1092c991227"},{"value":"0091-7338","identifierTypeId":"5860f255-a27f-4916-a830-262aa900a6b9"},{"value":"(Sirsi)
+  ACA5123","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC)2061037","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC)3225129","identifierTypeId":"fc4e3f2a-887a-46e5-8057-aeeb271a4e56"},{"value":"(OCoLC)173760828","identifierTypeId":"fc4e3f2a-887a-46e5-8057-aeeb271a4e56"},{"value":"(CStRLIN)CSUP071890-S","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)2061037","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"place":"Washington,
+  D.C.","publisher":"National Gallery of Art","dateOfPublication":"©1972-"}],"contributors":[{"name":"National
+  Gallery of Art (U.S.)","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"1992-01-29","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"N386.U5
+  S78","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"709","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"068b5344-e2a6-40df-9186-1829e13cd344","publicationRange":["1971,1972-"],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Studies
+  in the history of art (Washington, D.C.)","alternativeTitleTypeId":"30512027-cdc9-4c79-af75-1565b3bd888d"},{"alternativeTitle":"Stud.
+  hist. art","alternativeTitleTypeId":"bba5b222-1cc8-4745-9a75-3f1d3b5c3a67"}],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"statusUpdatedDate":"2023-08-20T18:42:13.714+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["volumes
+  : illustrations ; 25-29 cm"],"publicationFrequency":["Irregular"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"f17b0b90-7ce0-43c4-9d26-02aa28b4e145","orderType":"Ongoing","orderStatus":"Open","poLineNumber":"3ACA5123-1","orderSentDate":"1997-08-30T07:00:00.000+00:00","orderCloseReason":null,"polReceiptStatus":"Ongoing"}]}'
+last_updated: '2025-06-22T11:21:45Z'
+created: '2025-06-22T11:21:45Z'
+timestamp: '2025-06-22T11:21:45Z'
+author_struct:
+- contributors:
+  - link: National Gallery of Art (U.S.)
+    search: National Gallery of Art (U.S.)
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+uniform_title_display_struct:
+- label: Uniform Title
+  unmatched_vernacular:
+  fields:
+  - uniform_title_tag: '130'
+    field:
+      pre_text: ''
+      link_text: Studies in the history of art (Washington, D.C.)
+      author: ''
+      post_text: ''
+    vernacular:
+      vern:
+    authorities: []
+    rwo: []
+holdings_json_struct:
+- holdings:
+  - id: 0ba080a9-87f2-5f0a-a8c0-4a1dfa0d8eb4
+    hrid: ah402381_9
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:22
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 2d681633-94fd-5de6-9672-bfad8a01b5d9
+    hrid: ah402381_19
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:6
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 4a8a739a-d881-5ca2-9dc2-a324efc2cb92
+    hrid: ah402381_7
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:21
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 5575b16e-41ef-518b-a526-4eabb30d2e9b
+    hrid: ah402381_21
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:28
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 6be0c1e6-3210-5791-9923-5a3d0b43a4f7
+    hrid: ah402381_15
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:36
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 739c4a6e-b6a5-5972-b0e8-b6700e083896
+    hrid: ah402381_5
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:15
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 74f3dc36-5b8f-579a-be89-2ae5aa5f9e5c
+    hrid: ah402381_8
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:27
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 7d210698-1cd5-5e67-bf78-af088d15adc9
+    hrid: ah402381_16
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:29
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 821e46f7-a88d-564e-9aa8-7fc565483687
+    hrid: ah402381_11
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:7
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 8acae8a5-bc68-5a90-8920-5a71b3ab0134
+    hrid: ah402381_4
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:14
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 9ee036b0-0b30-58e4-ad12-fe2f9c5b13fc
+    hrid: ah402381_20
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: N380 .S75
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: c751516d-6ea6-4fe5-a366-a009ebe62f18
+    permanentLocationId: c751516d-6ea6-4fe5-a366-a009ebe62f18
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: c751516d-6ea6-4fe5-a366-a009ebe62f18
+        code: ART-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: 'https://stanford.stackmap.com/json/ '
+        library:
+          id: 2926c7ed-ed36-4385-8503-58cd6cee73e8
+          code: ART
+          name: Art & Architecture Library (Bowes)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: c751516d-6ea6-4fe5-a366-a009ebe62f18
+        code: ART-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: 'https://stanford.stackmap.com/json/ '
+        library:
+          id: 2926c7ed-ed36-4385-8503-58cd6cee73e8
+          code: ART
+          name: Art & Architecture Library (Bowes)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: afac9665-60ae-50e1-b846-02c63c1d162c
+    hrid: ah402381_13
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:30
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: b6dafca6-2e6d-5447-aa51-af3c5c1047a6
+    hrid: ah402381_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: 'SI 8.9:'
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: bb7391e9-7f4b-5004-b10f-c76d379fc919
+    hrid: ah402381_6
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:19
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: cb22954e-2180-573b-aff1-e6e9215d728a
+    hrid: ah402381_17
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:4
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: d00125eb-75e7-592b-80b0-c73c1962958d
+    hrid: ah402381_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:56
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: d177051a-b868-5bd6-80b7-d1b15a93cbe3
+    hrid: ah402381_12
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:40
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: dfa36315-1270-5a97-bcbb-ed3307a0095c
+    hrid: ah402381_10
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:9
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: e093ef0b-6b6d-525b-85a0-93e4b11cb3ad
+    hrid: ah402381_18
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:5
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: e83029ab-a67f-5e1d-98b3-90e9263e5a89
+    hrid: ah402381_3
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:13
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: fe2014ab-ec99-57f1-a01e-602dfa2ba634
+    hrid: ah402381_14
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: SI 8.9:33
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 1fab480c-c3f6-5594-806f-2f1b1f837f6b
+    hrid: ah402381_25
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:45:17.210Z'
+      updatedDate: '2023-08-20T18:45:17.210Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: MARC Holdings
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements:
+    - statement: 1971/1972-1979
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: a36dc6f9-b398-5653-95db-9d1d319ecddd
+    hrid: ah402381_24
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:45:17.210Z'
+      updatedDate: '2023-08-20T18:45:17.210Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: MARC Holdings
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements:
+    - note: Some individual volumes of this title also cataloged separately.
+    - statement: v.4(1971/1972)-v.15(1985),v.17(1986)-v.33(1992),v.35(1990)-v.50(1995),v.52(1996)-v.55(1998),v.57(1997)-v.58(2000),v.60(2001)-v.66(2005),v.68(2005)-v.73(2009)
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: e6d09a60-18f2-5dcb-ad66-597d8922a1d7
+    hrid: ah402381_26
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:45:17.210Z'
+      updatedDate: '2023-08-20T18:45:17.210Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: MARC Holdings
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements:
+    - note: Some individual volumes of this title also cataloged separately.
+    - statement: v.16(1985),v.51(1995),v.56(1999),v.59(2003),v.74(2009)-
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: c751516d-6ea6-4fe5-a366-a009ebe62f18
+    permanentLocationId: c751516d-6ea6-4fe5-a366-a009ebe62f18
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: c751516d-6ea6-4fe5-a366-a009ebe62f18
+        code: ART-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: 'https://stanford.stackmap.com/json/ '
+        library:
+          id: 2926c7ed-ed36-4385-8503-58cd6cee73e8
+          code: ART
+          name: Art & Architecture Library (Bowes)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: c751516d-6ea6-4fe5-a366-a009ebe62f18
+        code: ART-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: 'https://stanford.stackmap.com/json/ '
+        library:
+          id: 2926c7ed-ed36-4385-8503-58cd6cee73e8
+          code: ART
+          name: Art & Architecture Library (Bowes)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    hrid: ah402381_22
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:43:46.198Z'
+      updatedDate: '2023-08-20T18:43:46.198Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: N380 .S75
+    instanceId: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 31991a44-3531-56c3-a792-db8560072d89
+    hrid: ai402381_12_1
+    notes: []
+    status: Available
+    barcode: '36105130119253'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:40
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: d177051a-b868-5bd6-80b7-d1b15a93cbe3
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 240 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:40
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 42674798-2ef3-527a-908f-e621de0c2b7b
+    hrid: ai402381_10_1
+    notes: []
+    status: Available
+    barcode: '36105130119220'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:9
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: dfa36315-1270-5a97-bcbb-ed3307a0095c
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 19 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:9
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 4279138d-fbce-5576-af53-820364f3e117
+    hrid: ai402381_6_1
+    notes: []
+    status: Available
+    barcode: '36105130118867'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:19
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: bb7391e9-7f4b-5004-b10f-c76d379fc919
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 219 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:19
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 5ee11569-d7e3-54be-a8f3-073c74e502c4
+    hrid: ai402381_18_1
+    notes: []
+    status: Available
+    barcode: '36105130119618'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:5
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e093ef0b-6b6d-525b-85a0-93e4b11cb3ad
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 15 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:5
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 60fca03b-f0ef-5c76-a5b0-0490076677ab
+    hrid: ai402381_13_1
+    notes: []
+    status: Available
+    barcode: '36105130119295'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:30
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: afac9665-60ae-50e1-b846-02c63c1d162c
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 230 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:30
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 677d8f65-d518-55e3-a293-b09af728bde0
+    hrid: ai402381_17_1
+    notes: []
+    status: Available
+    barcode: '36105130119626'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:4
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: cb22954e-2180-573b-aff1-e6e9215d728a
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 14 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:4
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 6baf4721-e873-54f4-b702-8071027df90f
+    hrid: ai402381_19_1
+    notes: []
+    status: Available
+    barcode: '36105130119600'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:6
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 2d681633-94fd-5de6-9672-bfad8a01b5d9
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 16 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:6
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 6cdce74d-9833-545e-99eb-cd84a843d6b5
+    hrid: ai402381_8_1
+    notes: []
+    status: Available
+    barcode: '36105132171609'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:27
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 74f3dc36-5b8f-579a-be89-2ae5aa5f9e5c
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 227 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:27
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 7afd7d2a-7b3e-5c72-8a79-b6ea38ff9d44
+    hrid: ai402381_11_1
+    notes: []
+    status: Available
+    barcode: '36105130119238'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:7
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 821e46f7-a88d-564e-9aa8-7fc565483687
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 17 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:7
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 8a424d08-b21e-5b9b-ba88-8a152d565736
+    hrid: ai402381_14_1
+    notes: []
+    status: Available
+    barcode: '36105130119303'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:33
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: fe2014ab-ec99-57f1-a01e-602dfa2ba634
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 233 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:33
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 8cf222d3-9c2f-5872-8f9b-93b22bcae10e
+    hrid: ai402381_1_1
+    notes: []
+    status: Available
+    barcode: 002ACA5123
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: 'SI 8.9:'
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: b6dafca6-2e6d-5447-aa51-af3c5c1047a6
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: 'SI 8.9:'
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: b0811d20-34bb-59b1-aa62-59f76e66e26a
+    hrid: ai402381_7_1
+    notes: []
+    status: Available
+    barcode: '36105130118859'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:21
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 4a8a739a-d881-5ca2-9dc2-a324efc2cb92
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 221 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:21
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: b371ad72-6cd9-50e2-b487-a013a4c321c5
+    hrid: ai402381_3_1
+    notes: []
+    status: Available
+    barcode: '36105130118891'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:13
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e83029ab-a67f-5e1d-98b3-90e9263e5a89
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 213 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:13
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: cc3a3c3d-8b90-52de-8b7f-0b2dc3df6a9f
+    hrid: ai402381_2_1
+    notes: []
+    status: Available
+    barcode: '36105019645550'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:56
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: d00125eb-75e7-592b-80b0-c73c1962958d
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 256 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:56
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: cda936c7-3b4d-5b4a-b651-7f68635d141d
+    hrid: ai402381_21_1
+    notes: []
+    status: Available
+    barcode: '36105131859857'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:28
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 5575b16e-41ef-518b-a526-4eabb30d2e9b
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 228 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:28
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: d693fff6-eb6e-59f1-8556-59d1628ecbd5
+    hrid: ai402381_4_1
+    notes: []
+    status: Available
+    barcode: '36105130118883'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:14
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 8acae8a5-bc68-5a90-8920-5a71b3ab0134
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 214 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:14
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: dc9d5d0e-419b-5ae0-b642-5a9273a24fab
+    hrid: ai402381_9_1
+    notes: []
+    status: Available
+    barcode: '36105130119212'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:22
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 0ba080a9-87f2-5f0a-a8c0-4a1dfa0d8eb4
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 222 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:22
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: e9958455-a6c2-5042-bb56-60d59dd75521
+    hrid: ai402381_16_1
+    notes: []
+    status: Available
+    barcode: '36105130119378'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:29
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 7d210698-1cd5-5e67-bf78-af088d15adc9
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 229 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:29
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: ebb3f91e-0018-5613-8f15-7f9a225ea660
+    hrid: ai402381_5_1
+    notes: []
+    status: Available
+    barcode: '36105130118875'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:15
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 739c4a6e-b6a5-5972-b0e8-b6700e083896
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 215 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:15
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: fbb39788-e83c-5542-ac7b-6aa6b4d3c0c4
+    hrid: ai402381_15_1
+    notes: []
+    status: Available
+    barcode: '36105130119311'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      typeName: Superintendent of Documents classification
+      callNumber: SI 8.9:36
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      name: Superintendent of Documents classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 6be0c1e6-3210-5791-9923-5a3d0b43a4f7
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: SI 18 19 236 11
+    effectiveCallNumberComponents:
+      typeId: fc388041-6cd0-4806-8a74-ebe3b9ab4c6e
+      callNumber: SI 8.9:36
+    location:
+      effectiveLocation:
+        id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+        code: GRE-FED-DOCS
+        name: US Federal Documents
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+          searchworksGovDocsClassification: Federal
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 035ede35-f898-5b55-b85b-5a7d79732e05
+    hrid: ai402381_22_1
+    notes: []
+    status: Available
+    barcode: '36105012712415'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '2'
+    enumeration: V.8
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 18 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: '08ce63f8-e225-5e56-98a2-8f6d0df7322e'
+    hrid: ai402381_22_13
+    notes: []
+    status: Available
+    barcode: '36105012712357'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '2'
+    enumeration: V.7
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 17 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 2560cfee-5231-540e-a608-0f4be4ffe5b9
+    hrid: ai402381_22_15
+    notes: []
+    status: Available
+    barcode: '36105012712423'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '2'
+    enumeration: V.9
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 19 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 27e75184-57fd-5587-a4fe-3e4ed1bbb0a2
+    hrid: ai402381_22_11
+    notes: []
+    status: Available
+    barcode: '36105210048596'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '1'
+    enumeration: V.73
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 273 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 2a748667-02f2-50a6-b391-a7426ab5fd55
+    hrid: ai402381_22_9
+    notes: []
+    status: Available
+    barcode: '36105031002905'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '2'
+    enumeration: V.4-6 1971/1972-1974
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 14 16 41971 41972 41974 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 820b9020-3a74-5ea2-972e-36f6a2901543
+    hrid: ai402381_22_7
+    notes: []
+    status: Available
+    barcode: '36105012712431'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '2'
+    enumeration: V.12
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 212 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 8fdaa0cf-7c72-570a-98a7-95bff1b32570
+    hrid: ai402381_22_17
+    notes: []
+    status: Available
+    barcode: '36105022895374'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '1'
+    enumeration: V.64
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 264 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: df67c2df-c10a-5f6d-9c13-052859dca05a
+    hrid: ai402381_22_3
+    notes: []
+    status: Available
+    barcode: '36105012712456'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '2'
+    enumeration: V.24
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 224 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: f924d45b-3193-5de3-9520-cefc6a3f419a
+    hrid: ai402381_22_5
+    notes: []
+    status: Available
+    barcode: '36105012712449'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '2'
+    enumeration: V.18
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: e95cde43-0567-5ca1-9254-5e5b28efbf58
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 218 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: fb74641c-2a56-535a-be22-131cc7e79b27
+    hrid: ai402381_20_1
+    notes: []
+    status: Available
+    barcode: '36105210052556'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T18:46:46.101Z'
+      updatedDate: '2023-08-20T18:46:46.101Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: N380 .S75
+    copyNumber: '1'
+    enumeration: V.74
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 9ee036b0-0b30-58e4-ad12-fe2f9c5b13fc
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - 8be8d577-1cd7-4b84-ae71-d9472fc4d2b1
+    administrativeNotes: []
+    effectiveLocationId: c751516d-6ea6-4fe5-a366-a009ebe62f18
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: N 3380 S75 V 274 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: N380 .S75
+    location:
+      effectiveLocation:
+        id: c751516d-6ea6-4fe5-a366-a009ebe62f18
+        code: ART-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: 'https://stanford.stackmap.com/json/ '
+        library:
+          id: 2926c7ed-ed36-4385-8503-58cd6cee73e8
+          code: ART
+          name: Art & Architecture Library (Bowes)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 31991a44-3531-56c3-a792-db8560072d89
+  barcode: '36105130119253'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 40'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000040
+- id: 42674798-2ef3-527a-908f-e621de0c2b7b
+  barcode: '36105130119220'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 9'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000009
+- id: 4279138d-fbce-5576-af53-820364f3e117
+  barcode: '36105130118867'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 19'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000019
+- id: 5ee11569-d7e3-54be-a8f3-073c74e502c4
+  barcode: '36105130119618'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 5'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000005
+- id: 60fca03b-f0ef-5c76-a5b0-0490076677ab
+  barcode: '36105130119295'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 30'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000030
+- id: 677d8f65-d518-55e3-a293-b09af728bde0
+  barcode: '36105130119626'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 4'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000004
+- id: 6baf4721-e873-54f4-b702-8071027df90f
+  barcode: '36105130119600'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 6'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000006
+- id: 6cdce74d-9833-545e-99eb-cd84a843d6b5
+  barcode: '36105132171609'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 27'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000027
+- id: 7afd7d2a-7b3e-5c72-8a79-b6ea38ff9d44
+  barcode: '36105130119238'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 7'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000007
+- id: 8a424d08-b21e-5b9b-ba88-8a152d565736
+  barcode: '36105130119303'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 33'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000033
+- id: 8cf222d3-9c2f-5872-8f9b-93b22bcae10e
+  barcode: 002ACA5123
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: '
+  full_shelfkey: sudoc si0 000008 s000009 a !
+- id: b0811d20-34bb-59b1-aa62-59f76e66e26a
+  barcode: '36105130118859'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 21'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000021
+- id: b371ad72-6cd9-50e2-b487-a013a4c321c5
+  barcode: '36105130118891'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 13'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000013
+- id: cc3a3c3d-8b90-52de-8b7f-0b2dc3df6a9f
+  barcode: '36105019645550'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 56'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000056
+- id: cda936c7-3b4d-5b4a-b651-7f68635d141d
+  barcode: '36105131859857'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 28'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000028
+- id: d693fff6-eb6e-59f1-8556-59d1628ecbd5
+  barcode: '36105130118883'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 14'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000014
+- id: dc9d5d0e-419b-5ae0-b642-5a9273a24fab
+  barcode: '36105130119212'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 22'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000022
+- id: e9958455-a6c2-5042-bb56-60d59dd75521
+  barcode: '36105130119378'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 29'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000029
+- id: ebb3f91e-0018-5613-8f15-7f9a225ea660
+  barcode: '36105130118875'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 15'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000015
+- id: fbb39788-e83c-5542-ac7b-6aa6b4d3c0c4
+  barcode: '36105130119311'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: GRE-FED-DOCS
+  temporary_location_code:
+  permanent_location_code: GRE-FED-DOCS
+  status: Available
+  effective_location_id: 203882d5-acd0-40b6-bc73-1cf8d64832cb
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 'SI 8.9:'
+  callnumber: 'SI 8.9: 36'
+  full_shelfkey: sudoc si0 000008 s000009 a ! 000036
+- id: 035ede35-f898-5b55-b85b-5a7d79732e05
+  barcode: '36105012712415'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.8
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000008
+- id: '08ce63f8-e225-5e56-98a2-8f6d0df7322e'
+  barcode: '36105012712357'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.7
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000007
+- id: 2560cfee-5231-540e-a608-0f4be4ffe5b9
+  barcode: '36105012712423'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.9
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000009
+- id: 27e75184-57fd-5587-a4fe-3e4ed1bbb0a2
+  barcode: '36105210048596'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.73
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000073
+- id: 2a748667-02f2-50a6-b391-a7426ab5fd55
+  barcode: '36105031002905'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.4-6 1971/1972-1974
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000004-000006 001971/001972-001974
+- id: 820b9020-3a74-5ea2-972e-36f6a2901543
+  barcode: '36105012712431'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.12
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000012
+- id: 8fdaa0cf-7c72-570a-98a7-95bff1b32570
+  barcode: '36105022895374'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.64
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000064
+- id: df67c2df-c10a-5f6d-9c13-052859dca05a
+  barcode: '36105012712456'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.24
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000024
+- id: f924d45b-3193-5de3-9520-cefc6a3f419a
+  barcode: '36105012712449'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.18
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000018
+- id: fb74641c-2a56-535a-be22-131cc7e79b27
+  barcode: '36105210052556'
+  library: ART
+  type: book
+  note:
+  instance_id: 848640f1-4ad7-5437-8239-c340ad0d0e6b
+  instance_hrid: a402381
+  effective_permanent_location_code: ART-STACKS
+  temporary_location_code:
+  permanent_location_code: ART-STACKS
+  status: Available
+  effective_location_id: c751516d-6ea6-4fe5-a366-a009ebe62f18
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: N380 .S75
+  callnumber: N380 .S75 V.74
+  full_shelfkey: lc n   0380.000000 s0.750000 v.000074
+browse_nearby_struct:
+- lopped_callnumber: 'SI 8.9:'
+  shelfkey: sudoc si0 000008 s000009 a !
+  reverse_shelfkey: 75mbn~7hz~zzzzzr~7zzzzzq~p~~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: 'SI 8.9: '
+  scheme: SUDOC
+  item_id: 8cf222d3-9c2f-5872-8f9b-93b22bcae10e
+- lopped_callnumber: N380 .S75
+  shelfkey: lc n   0380.000000 s0.750000 v.000004-000006 001971/001972-001974
+  reverse_shelfkey: en~c~~~zwrz}zzzzzz~7z}suzzzz~4}zzzzzv~zzzzzt~zzyqsy~zzyqsx~zzyqsv
+  callnumber: N380 .S75 V.4-6 1971/1972-1974
+  scheme: LC
+  item_id: 2a748667-02f2-50a6-b391-a7426ab5fd55

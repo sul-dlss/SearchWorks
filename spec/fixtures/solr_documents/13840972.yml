@@ -1,0 +1,1342 @@
+---
+id: '13840972'
+hashed_id_ssi: 1f3cb2387a8311cd957b6b99a8e6fde4
+marc_json_struct:
+- '{"leader":"02356cam a22004691i 4500","fields":[{"001":"a13840972"},{"003":"SIRSI"},{"005":"20210424010858.0"},{"007":"tu"},{"008":"800325m19711979sz
+  a     b    001 0dger  "},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   72344260"}]}},{"015":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Sw72-A-256"},{"q":"(v. 1)"}]}},{"015":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"75,A17,0618"},{"2":"dnb"}]}},{"016":{"ind1":"7","ind2":"
+  ","subfields":[{"a":"540532347"},{"2":"DE-101"}]}},{"016":{"ind1":"7","ind2":" ","subfields":[{"2":"DE-101"},{"a":"550393455"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a13840972"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"DLC"},{"b":"eng"},{"c":"DLC"},{"d":"NLGGC"},{"d":"OCLCG"},{"d":"CLU"},{"d":"HEBIS"},{"d":"OCLCQ"},{"d":"OCLCF"},{"d":"OCLCQ"},{"d":"AU@"},{"d":"GWDNB"},{"d":"OCLCO"},{"d":"OCLCQ"},{"d":"WLU"},{"d":"OCLCO"},{"d":"OCL"},{"d":"NJT"},{"d":"OCLCO"},{"d":"OCLCA"},{"d":"OCLCQ"},{"d":"OCLCO"},{"d":"IL4J6"},{"d":"CSt"},{"d":"UtOrBLW"}]}},{"050":{"ind1":"0","ind2":"4","subfields":[{"a":"CT153"},{"b":".G7"}]}},{"084":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"01.31"},{"2":"bcl"}]}},{"084":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"14a"},{"a":"01a"},{"a":"390"},{"a":"900"},{"a":"910"},{"a":"914.3"},{"a":"920"},{"a":"930"},{"a":"940"},{"a":"943"},{"a":"950"},{"a":"960"},{"a":"970"},{"a":"980"},{"a":"990"},{"2":"sdnb"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Fassmann, Kurt,"},{"d":"1927-"},{"0":"http://id.loc.gov/authorities/names/n84203164"}]}},{"245":{"ind1":"1","ind2":"4","subfields":[{"a":"Die
+  Grossen der Weltgeschichte /"},{"c":"Hrg. von Kurt Fassmann unter Mitw. von Max
+  Bill [u.a.] (Red.: Jeremias Wolf"}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"Zürich)
+  :"},{"b":"Kindler,"},{"c":"1971-1979"}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"12
+  volumes :"},{"b":"illustrations (some color) ;"},{"c":"27 cm"}]}},{"336":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"unmediated"},{"b":"n"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"volume"},{"b":"nc"},{"2":"rdacarrier"}]}},{"504":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Includes bibliographical references and index"}]}},{"505":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Bd. 1. Imhotep bis Cicero.--Bd. 2. Cäsar bis Karl der Grosse.--Bd.
+  3. Harun ar-Raschid bis Petrarca.-- Bd. 4. Boccaccio bis Palladio.--Bd. 5. Calvin
+  bis Huygens.--Bd. 6. Spinoza bis Laplace.--Bd. 7. Geothe bis Lincoln.--Bd. 8. Darwin
+  bis Nietzsche.--Bd. 9. Röntgen bis Churchill.--Bd. 10. Mann bis Johannes XXIII.--Bd.
+  11. Einstein bis King.--Bd. 12. Register"}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Biography."},{"0":"http://id.loc.gov/authorities/subjects/sh85014152"}]}},{"650":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Biography."},{"2":"fast"},{"0":"(OCoLC)fst00832149"},{"0":"http://id.worldcat.org/fast/832149"}]}},{"650":{"ind1":"1","ind2":"7","subfields":[{"a":"Wereldgeschiedenis."},{"2":"gtt"}]}},{"650":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Biography."},{"2":"nli"}]}},{"655":{"ind1":" ","ind2":"7","subfields":[{"a":"Biographies."},{"2":"fast"},{"0":"(OCoLC)fst01919896"},{"0":"http://id.worldcat.org/fast/1919896"}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"0":"(DE-588)4006804-3"},{"0":"https://d-nb.info/gnd/4006804-3"},{"0":"(DE-101)040068048"},{"a":"Biografie."},{"2":"gnd-content"}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Biographies."},{"2":"lcgft"},{"0":"http://id.loc.gov/authorities/genreForms/gf2014026049"}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Z0"},{"b":"STF"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)504092"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"1"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ocm00504092"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"d0b2299c-d86c-5e80-a3c2-5003c1e8310e"},{"s":"de11f622-1139-5d2a-99aa-080799cdd5d9"}]}}]}'
+all_search: 'Fassmann, Kurt, 1927- http://id.loc.gov/authorities/names/n84203164 Die
+  Grossen der Weltgeschichte / Hrg. von Kurt Fassmann unter Mitw. von Max Bill [u.a.]
+  (Red.: Jeremias Wolf Zürich) : Kindler, 1971-1979 12 volumes : illustrations (some
+  color) ; 27 cm text txt rdacontent unmediated n rdamedia volume nc rdacarrier Includes
+  bibliographical references and index Bd. 1. Imhotep bis Cicero.--Bd. 2. Cäsar bis
+  Karl der Grosse.--Bd. 3. Harun ar-Raschid bis Petrarca.-- Bd. 4. Boccaccio bis Palladio.--Bd.
+  5. Calvin bis Huygens.--Bd. 6. Spinoza bis Laplace.--Bd. 7. Geothe bis Lincoln.--Bd.
+  8. Darwin bis Nietzsche.--Bd. 9. Röntgen bis Churchill.--Bd. 10. Mann bis Johannes
+  XXIII.--Bd. 11. Einstein bis King.--Bd. 12. Register Biography. http://id.loc.gov/authorities/subjects/sh85014152
+  Biography. fast (OCoLC)fst00832149 http://id.worldcat.org/fast/832149 Wereldgeschiedenis.
+  gtt Biography. nli Biographies. fast (OCoLC)fst01919896 http://id.worldcat.org/fast/1919896
+  (DE-588)4006804-3 https://d-nb.info/gnd/4006804-3 (DE-101)040068048 Biografie. gnd-content
+  Biographies. lcgft http://id.loc.gov/authorities/genreForms/gf2014026049 1'
+title_245a_search: Die Grossen der Weltgeschichte /
+title_245_search: Die Grossen der Weltgeschichte /
+title_245a_display: Die Grossen der Weltgeschichte
+title_245c_display: 'Hrg. von Kurt Fassmann unter Mitw. von Max Bill [u.a.] Red.:
+  Jeremias Wolf'
+title_display: Die Grossen der Weltgeschichte
+title_full_display: 'Die Grossen der Weltgeschichte / Hrg. von Kurt Fassmann unter
+  Mitw. von Max Bill [u.a.] (Red.: Jeremias Wolf'
+title_sort: Grossen der Weltgeschichte
+author_title_245ac_search:
+- 'Die Grossen der Weltgeschichte / Hrg. von Kurt Fassmann unter Mitw. von Max Bill
+  [u.a.] (Red.: Jeremias Wolf'
+author_title_1xx_search:
+- Fassmann, Kurt Die Grossen der Weltgeschichte /
+author_title_search:
+- Fassmann, Kurt, 1927- Die Grossen der Weltgeschichte /
+best_author_title_search: Fassmann, Kurt, 1927- Die Grossen der Weltgeschichte /
+author_1xx_search: Fassmann, Kurt, 1927-
+author_person_facet:
+- Fassmann, Kurt, 1927-
+author_person_display:
+- Fassmann, Kurt, 1927-
+author_person_full_display:
+- Fassmann, Kurt, 1927-
+author_sort: Fassmann Kurt 1927 Grossen der Weltgeschichte
+author_authorities_ssim:
+- http://id.loc.gov/authorities/names/n84203164
+topic_search:
+- Biography.
+- Wereldgeschiedenis.
+topic_display:
+- Biography.
+- Wereldgeschiedenis.
+subject_other_search:
+- Biographies.
+- Biografie.
+subject_other_display:
+- Biographies.
+- Biografie.
+subject_all_search:
+- Biography.
+- Wereldgeschiedenis.
+- Biographies.
+- Biografie.
+topic_facet:
+- Biography
+- Wereldgeschiedenis
+pub_search:
+- 'Zürich) : Kindler'
+pub_display:
+- 'Zürich) : Kindler'
+pub_country: Switzerland
+pub_date: '1971'
+pub_date_search: '1971'
+pub_date_sort: '1971'
+pub_year_tisim:
+- 1971
+- 1979
+- 1972
+- 1973
+- 1974
+- 1975
+- 1976
+- 1977
+- 1978
+pub_year_ss: 1971 - 1979
+beginning_year_isi: 1971
+ending_year_isi: 1979
+imprint_display:
+- 'Zürich) : Kindler, 1971-1979'
+date_cataloged: '2021-04-16T00:00:00Z'
+language:
+- German
+oclc:
+- '504092'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+genre_ssim:
+- Biographies
+- Biografie
+physical:
+- '12 volumes : illustrations (some color) ; 27 cm'
+toc_search:
+- Bd. 1. Imhotep bis Cicero.--Bd. 2. Cäsar bis Karl der Grosse.--Bd. 3. Harun ar-Raschid
+  bis Petrarca.-- Bd. 4. Boccaccio bis Palladio.--Bd. 5. Calvin bis Huygens.--Bd.
+  6. Spinoza bis Laplace.--Bd. 7. Geothe bis Lincoln.--Bd. 8. Darwin bis Nietzsche.--Bd.
+  9. Röntgen bis Churchill.--Bd. 10. Mann bis Johannes XXIII.--Bd. 11. Einstein bis
+  King.--Bd. 12. Register
+lccn: '72344260'
+callnum_facet_hsim:
+- LC Classification|C - Auxiliary Sciences of History|CT - Biography
+callnum_search:
+- CT153 .G7 V.5
+- CT153 .G7 V.6
+- CT153 .G7 V.11
+- CT153 .G7 V.3
+- CT153 .G7 V.4
+- CT153 .G7 V.7
+- CT153 .G7 V.12
+- CT153 .G7 V.9
+- CT153 .G7 V.10
+- CT153 .G7 V.1
+lc_assigned_callnum_ssim:
+- CT153 .G7
+barcode_search:
+- '36105233225163'
+- '36105233225171'
+- '36105026362827'
+- '36105233225148'
+- '36105233225155'
+- '36105233225189'
+- '36105026362835'
+- '36105233225197'
+- '36105026362819'
+- '36105233225130'
+item_barcodes:
+- '36105233225163'
+- '36105233225171'
+- '36105026362827'
+- '36105233225148'
+- '36105233225155'
+- '36105233225189'
+- '36105026362835'
+- '36105233225197'
+- '36105026362819'
+- '36105233225130'
+preferred_barcode: '36105233225130'
+holdings_library_code_ssim:
+- GREEN
+library_code_facet_ssim:
+- GREEN
+location_code_facet_ssim:
+- GRE-STACKS
+building_facet:
+- Green
+building_location_facet_ssim:
+- GREEN/*
+- GREEN/GRE-STACKS
+- GREEN/*/type/book
+- GREEN/GRE-STACKS/type/book
+shelfkey:
+- lc ct  0153.000000 g0.700000 v.000001
+reverse_shelfkey:
+- en~n6~~zyuw}zzzzzz~jz}szzzzz~4}zzzzzy~~~~~~~~~~~~~
+mhld_display:
+- 'GREEN -|- GRE-STACKS -|-  -|- v.1,v.3-7,v.9-12 -|- '
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '007'
+- '008'
+- '010'
+- '015'
+- '016'
+- '035'
+- '040'
+- '050'
+- '084'
+- '100'
+- '245'
+- '260'
+- '300'
+- '336'
+- '337'
+- '338'
+- '504'
+- '505'
+- '650'
+- '655'
+- '994'
+- '596'
+- '999'
+- 010a
+- 015aq
+- 015a2
+- 016a2
+- 0162a
+- 035a
+- 040abcdddddddddddddddddddddd
+- 050ab
+- '084a2'
+- '084aaaaaaaaaaaaaaa2'
+- 100ad0
+- 245ac
+- 260abc
+- 300abc
+- 336ab2
+- 337ab2
+- 338ab2
+- 504a
+- 505a
+- 650a0
+- 650a200
+- 650a2
+- 655a200
+- 655000a2
+- 655a20
+- 994ab
+- 596a
+- 999is
+- "?010a"
+- "?015a"
+- "?015q"
+- "?0152"
+- "?016a"
+- "?0162"
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040c"
+- "?040d"
+- "?050a"
+- "?050b"
+- "?084a"
+- "?0842"
+- "?100a"
+- "?100d"
+- "?1000"
+- "?245a"
+- "?245c"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?504a"
+- "?505a"
+- "?650a"
+- "?6500"
+- "?6502"
+- "?655a"
+- "?6552"
+- "?6550"
+- "?994a"
+- "?994b"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Fassmann, Kurt, 1927- Die Grossen der Weltgeschichte / Hrg. von Kurt
+  Fassmann unter Mitw. von Max Bill [u.a.] (Red.: Jeremias Wolf Zürich) : Kindler,
+  1971-1979 Biography. Wereldgeschiedenis. Book'
+vern_bib_search: Book
+uuid_ssi: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"d0b2299c-d86c-5e80-a3c2-5003c1e8310e","hrid":"a13840972","notes":[{"note":"Includes
+  bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"},{"note":"Bd.
+  1. Imhotep bis Cicero.--Bd. 2. Cäsar bis Karl der Grosse.--Bd. 3. Harun ar-Raschid
+  bis Petrarca.-- Bd. 4. Boccaccio bis Palladio.--Bd. 5. Calvin bis Huygens.--Bd.
+  6. Spinoza bis Laplace.--Bd. 7. Geothe bis Lincoln.--Bd. 8. Darwin bis Nietzsche.--Bd.
+  9. Röntgen bis Churchill.--Bd. 10. Mann bis Johannes XXIII.--Bd. 11. Einstein bis
+  King.--Bd. 12. Register","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"}],"title":"Die
+  Grossen der Weltgeschichte / Hrg. von Kurt Fassmann unter Mitw. von Max Bill [u.a.]
+  (Red.: Jeremias Wolf","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T20:42:38.105Z","updatedDate":"2023-08-21T20:42:38.105Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Biography"},{"value":"Wereldgeschiedenis"},{"value":"Genre:
+  Biographies"},{"value":"Genre: Biografie"}],"languages":["ger"],"indexTitle":"Grossen
+  der weltgeschichte","identifiers":[{"value":"72344260","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  a13840972","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)504092","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  ocm00504092","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"Zürich)","publisher":"Kindler","dateOfPublication":"1971-1979"}],"contributors":[{"name":"Fassmann,
+  Kurt, 1927-","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2021-04-16","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"CT153
+  .G7","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"end":1979,"start":1971},"statusUpdatedDate":"2023-08-21T20:42:38.094+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["12
+  volumes : illustrations (some color) ; 27 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-06-22T13:40:09Z'
+created: '2025-06-22T13:40:09Z'
+timestamp: '2025-06-22T13:40:09Z'
+author_struct:
+- creator:
+  - link: Fassmann, Kurt, 1927-
+    search: Fassmann, Kurt, 1927-
+    authorities:
+    - http://id.loc.gov/authorities/names/n84203164
+toc_struct:
+- label: Contents
+  fields:
+  - - Bd. 1. Imhotep bis Cicero.--Bd. 2. Cäsar bis Karl der Grosse.--Bd. 3. Harun
+      ar-Raschid bis Petrarca.
+    - Bd. 4. Boccaccio bis Palladio.--Bd. 5. Calvin bis Huygens.--Bd. 6. Spinoza bis
+      Laplace.--Bd. 7. Geothe bis Lincoln.--Bd. 8. Darwin bis Nietzsche.--Bd. 9. Röntgen
+      bis Churchill.--Bd. 10. Mann bis Johannes XXIII.--Bd. 11. Einstein bis King.--Bd.
+      12. Register
+  vernacular:
+  unmatched_vernacular:
+holdings_json_struct:
+- holdings:
+  - id: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    hrid: ah13840972_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:43:59.472Z'
+      updatedDate: '2023-08-21T20:43:59.472Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: CT153 .G7
+    instanceId: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 6a517341-87ba-5e6b-b61f-7d1ccdac559f
+    hrid: ah13840972_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:44:17.158Z'
+      updatedDate: '2023-08-21T20:44:17.158Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: MARC Holdings
+    instanceId: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements:
+    - statement: v.1,v.3-7,v.9-12
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: '06928014-e265-5c57-ba70-90891a7aa360'
+    hrid: ai13840972_1_11
+    notes: []
+    status: Available
+    barcode: '36105233225163'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.5
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 15 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 227efb4c-ecfc-50f7-a439-15f6fae59d5e
+    hrid: ai13840972_1_13
+    notes: []
+    status: Available
+    barcode: '36105233225171'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.6
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 16 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 3d3dffb9-82c6-5ec7-9ad2-34871c840d12
+    hrid: ai13840972_1_1
+    notes: []
+    status: Available
+    barcode: '36105026362827'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.11
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 211 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 3e5f5b38-7fff-5374-92d8-812f01141cc6
+    hrid: ai13840972_1_7
+    notes: []
+    status: Available
+    barcode: '36105233225148'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.3
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 13 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 4a11f8da-8a74-5a70-9ed2-832ec3858fcd
+    hrid: ai13840972_1_9
+    notes: []
+    status: Available
+    barcode: '36105233225155'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.4
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 14 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 7711eba7-ae35-59fe-9bf0-a8b783d937a4
+    hrid: ai13840972_1_15
+    notes: []
+    status: Available
+    barcode: '36105233225189'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.7
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 17 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 7f53bfbb-b6e7-5d2b-a9d7-688aa3161f4a
+    hrid: ai13840972_1_3
+    notes: []
+    status: Available
+    barcode: '36105026362835'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.12
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 212 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 9b7c116b-81ef-56ff-a24f-8396e0017492
+    hrid: ai13840972_1_17
+    notes: []
+    status: Available
+    barcode: '36105233225197'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.9
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 19 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: ace3f72a-da14-5989-9703-721e99eb4887
+    hrid: ai13840972_1_19
+    notes: []
+    status: Available
+    barcode: '36105026362819'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.10
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 210 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: b82e3626-5fd9-5ecc-83ee-6d6a64696b0c
+    hrid: ai13840972_1_5
+    notes: []
+    status: Available
+    barcode: '36105233225130'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T20:45:08.451Z'
+      updatedDate: '2023-08-21T20:45:08.451Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: CT153 .G7
+    copyNumber: '1'
+    enumeration: V.1
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 55ea1f57-75f1-51ea-bdd8-6f90f4534a05
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: CT 3153 G7 V 11 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: CT153 .G7
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: '06928014-e265-5c57-ba70-90891a7aa360'
+  barcode: '36105233225163'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.5
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000005
+- id: 227efb4c-ecfc-50f7-a439-15f6fae59d5e
+  barcode: '36105233225171'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.6
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000006
+- id: 3d3dffb9-82c6-5ec7-9ad2-34871c840d12
+  barcode: '36105026362827'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.11
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000011
+- id: 3e5f5b38-7fff-5374-92d8-812f01141cc6
+  barcode: '36105233225148'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.3
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000003
+- id: 4a11f8da-8a74-5a70-9ed2-832ec3858fcd
+  barcode: '36105233225155'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.4
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000004
+- id: 7711eba7-ae35-59fe-9bf0-a8b783d937a4
+  barcode: '36105233225189'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.7
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000007
+- id: 7f53bfbb-b6e7-5d2b-a9d7-688aa3161f4a
+  barcode: '36105026362835'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.12
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000012
+- id: 9b7c116b-81ef-56ff-a24f-8396e0017492
+  barcode: '36105233225197'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.9
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000009
+- id: ace3f72a-da14-5989-9703-721e99eb4887
+  barcode: '36105026362819'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.10
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000010
+- id: b82e3626-5fd9-5ecc-83ee-6d6a64696b0c
+  barcode: '36105233225130'
+  library: GREEN
+  type: book
+  note:
+  instance_id: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
+  instance_hrid: a13840972
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: CT153 .G7
+  callnumber: CT153 .G7 V.1
+  full_shelfkey: lc ct  0153.000000 g0.700000 v.000001
+browse_nearby_struct:
+- lopped_callnumber: CT153 .G7
+  shelfkey: lc ct  0153.000000 g0.700000 v.000001
+  reverse_shelfkey: en~n6~~zyuw}zzzzzz~jz}szzzzz~4}zzzzzy~~~~~~~~~~~~~
+  callnumber: CT153 .G7 V.1
+  scheme: LC
+  item_id: b82e3626-5fd9-5ecc-83ee-6d6a64696b0c

@@ -7,7 +7,7 @@ RSpec.describe 'JSON API Responses' do
     get '/catalog', params: { q: '57', format: 'json' }
     documents = response.parsed_body.dig('response', 'docs')
 
-    expect(documents.length).to be 1
+    expect(documents.length).to be 2
     expect(documents.first['fulltext_link_html']).to be_present
     expect(documents.first['fulltext_link_html'].first).to include('sfx.example.com')
   end

@@ -24,7 +24,7 @@ RSpec.feature 'Alterate catalog results', :js do
       within '.alternate-catalog' do
         expect(page).to have_css 'h3', text: 'Looking for more?'
         expect(page).to have_link 'View all catalog results'
-        expect(page).to have_css '.alternate-catalog-count', text: '52'
+        expect(page).to have_css '.alternate-catalog-count', text: '61'
       end
     end
   end
