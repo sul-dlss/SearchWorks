@@ -1,0 +1,68 @@
+<%= render Searchworks4::RecordSummaryComponent.new(presenter:) %>
+
+<div class="p-4">
+  <div data-controller="citation-style-picker">
+  <h4 class="fs-5">Copy citation</h4>
+
+  <div class="row mb-3">
+    <div class="col-auto">
+      <label for="citation-style-select" class="col-form-label fw-bold">Select format</label>
+    </div>
+    <div class="col-auto">
+      <select id="citation-style-select" data-citation-style-picker-target="select" data-action="citation-style-picker#switch" class="form-select" style="width: unset;">
+        <% citations.keys.each do |style| %>
+          <option value="tab-<%= style %>" ><%= t("searchworks.citations.styles.#{style}") %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+
+  <% citations.each do |style, citation| %>
+    <div class="mb-4 bg-light p-2" data-citation-style-picker-target="tab" data-controller="copy-text" id="tab-<%= style %>" hidden>
+      <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm ms-4" data-action="copy-text#copy">Copy</button></h5>
+      <% Array(citation).each do |cite| %>
+        <div class="mb-2" data-copy-text-target="text">
+          <%= cite %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+
+  <h4 class="fs-5">Export citation</h4>
+  <ul class="list-unstyled">
+    <% if exports_ris? %>
+      <li>
+      <% if eds_ris_export? %>
+        <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); $(this).next('form').submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
+        <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
+          <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
+        <% end %>
+        <%= link_to 'In RIS format (Zotero)',
+                    articles_ris_path(presenter.document, format: 'ris'),
+                    data: { turbo: false } %>
+      <% else %>
+        <%= link_to 'In RIS format (Zotero)',
+                    solr_document_path(presenter.document, format: 'ris'),
+                    data: { turbo: false } %>
+      <% end %>
+    </li>
+    <% end %>
+    <% if exports_endnote? %>
+      <li>
+      <%= link_to 'To EndNote',
+                  solr_document_path(presenter.document, format: 'endnote'),
+                  data: { turbo: false } %>
+      </li>
+    <% end %>
+    <% if exports_refworks? %>
+      <li>
+        <%= link_to 'To RefWorks', '', onclick: "event.preventDefault(); document.getElementById('refworks-form').submit();", class: 'refworks' %>
+        <%= form_tag(refworks_export_url, id: 'refworks-form', aria: { hidden: true }) do %>
+          <% # TODO: Remove send when Blacklight::Marc exposes this as a public method projectblacklight/blacklight-marc#64 %>
+          <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: presenter.document.send(:export_as_refworks_marc_txt)) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

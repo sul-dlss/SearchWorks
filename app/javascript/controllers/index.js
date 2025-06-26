@@ -28,8 +28,14 @@ application.register("blacklight-result-count", BlacklightResultCountController)
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
 
+import CitationStylePickerController from "./citation_style_picker_controller"
+application.register("citation-style-picker", CitationStylePickerController)
+
 import CopyLinkController from "./copy_link_controller"
 application.register("copy-link", CopyLinkController)
+
+import CopyTextController from "./copy_text_controller"
+application.register("copy-text", CopyTextController)
 
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)

@@ -27,7 +27,7 @@
     <div class="d-flex">
       <div class="results-metadata-sections">
 
-        <% if document.vernacular_title..present? %>
+        <% if document.vernacular_title.present? %>
           <div><%= document.vernacular_title.html_safe %></div>
         <% end %>
 
@@ -45,8 +45,8 @@
         <%- end -%>
 
         <div>
-          <%= resource_icon %> <%= document.document_formats.first %>
-          <span class="main-title-date"><%= "(#{document.first('pub_year_ss')})" if document.key? 'pub_year_ss' %></span>
+          <%= resource_icon %> <%= presenter.document_format %>
+          <span class="main-title-date"><%= presenter.main_title_date %></span>
         </div>
 
         <% if document.mods? %>
