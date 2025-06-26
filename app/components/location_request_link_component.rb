@@ -17,7 +17,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
     link_type.new(document:, library_code:, location:, **)
   end
 
-  def initialize(document:, library_code:, location:, classes: %w[btn btn-xs request-button], **link_params)
+  def initialize(document:, library_code:, location:, hide_icon: false, classes: %w[btn btn-xs request-button], **link_params)
     super
 
     @document = document
@@ -26,6 +26,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
 
     @classes = classes
     @link_params = link_params
+    @hide_icon = hide_icon
 
     @render = nil
   end
@@ -36,7 +37,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
         external_link_icon,
         link_text,
         tag.span(' (opens in new tab)', class: 'visually-hidden')
-      ], '')
+      ].compact, '')
     end
   end
 
@@ -59,6 +60,8 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def external_link_icon
+    return if @hide_icon
+
     tag.span('', class: 'bi bi-box-arrow-up-right', aria: { hidden: true })
   end
 
