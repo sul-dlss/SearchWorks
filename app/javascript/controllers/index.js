@@ -63,3 +63,6 @@ application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
+
+import BookmarkToastController from "./bookmark_toast_controller"
+application.register("bookmark-toast", BookmarkToastController)

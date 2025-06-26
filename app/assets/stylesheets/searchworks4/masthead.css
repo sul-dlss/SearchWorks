@@ -10,3 +10,11 @@
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
   }
 }
+
+.navbar {
+  .badge {
+    --bs-badge-color: var(--stanford-black);
+
+    background-color: var(--stanford-fog-light);
+  }
+}
