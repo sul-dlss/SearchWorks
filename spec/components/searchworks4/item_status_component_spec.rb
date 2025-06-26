@@ -17,7 +17,7 @@ RSpec.describe Searchworks4::ItemStatusComponent, type: :component do
 
       aggregate_failures do
         expect(page).to have_css('#availability_item_someuuid')
-        expect(page).to have_css('.placeholder-wave', text: 'Available?')
+        expect(page).to have_css('.placeholder-wave .likely-available')
       end
     end
   end

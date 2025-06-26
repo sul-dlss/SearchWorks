@@ -1,0 +1,152 @@
+<div class="mt-3 d-flex flex-column gap-2 fs-15">
+<% if document.preferred_online_links.any? %>
+  <div>
+    <div class="availability-component d-inline-flex border rounded p-2 gap-3">
+      <span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span>
+      <% link = document.preferred_online_links.first %>
+      <span>
+        <%= link.html&.html_safe %>
+        <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
+      </span>
+    </div>
+  </div>
+<% end %>
+
+<% if document.holdings.present? %>
+  <div data-controller="availability">
+  <% if document.holdings.items.one? %>
+    <div class="availability-component d-inline-flex gap-4 align-items-center border rounded p-2 fs-15 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+      <% library = document.holdings.libraries.first %>
+      <% location = library.locations.first %>
+      <% item = location.items.first %>
+      <%= tag.span library.name, class: 'library fw-semibold' %>
+      <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
+      <%= tag.span item.callnumber, class: 'callnumber' %>
+      <%= render Searchworks4::ItemStatusComponent.new(item:) %>
+      <% unless item.request_link.render? %>
+        <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+      <% end %>
+    </div>
+    <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document) %>
+  <% elsif truncated_display? %>
+    <div class="availability-component d-inline-flex gap-5 align-items-center border rounded p-2 fs-15">
+      <div class="d-inline-flex gap-4 align-items-center">
+        <% if document.holdings.libraries.one? %>
+          <% library = document.holdings.libraries.first %>
+
+          <%= tag.span library.name, class: 'library fw-semibold' %>
+          <%= render LocationComponent.new(location: library.locations.first, document: document, suppress_off_campus: true) if library.locations.one? %>
+        <% end %>
+
+        <%= render ItemCountComponent.new(document.holdings.items.count) %>
+      </div>
+      <%= helpers.link_to_document document, 'See availability', counter: nil, class: 'ms-3 fs-15' %>
+    </div>
+  <% elsif document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
+    <% library = document.holdings.libraries.first %>
+    <% location = library.locations.first %>
+    <details class="availability-component border rounded p-2 fs-15 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+      <summary class="d-flex justify-content-between align-items-center">
+        <div class="d-inline-flex gap-4 align-items-center">
+          <%= tag.span library.name, class: 'library fw-semibold' %>
+          <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
+          <%= render ItemCountComponent.new(document.holdings.items.count) %>
+          <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+        </div>
+        <div class="btn btn-outline-primary btn-sm">
+          <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
+          <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
+        </div>
+      </summary>
+      <div>
+        <div class="d-flex gap-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+          <div class="pt-2">
+            <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %>
+          </div>
+          <table class="table w-auto">
+            <caption class="visually-hidden">
+              <%= pluralize(document.holdings.items.count, 'item') %> in <%= location.name %> at <%= library.name %>
+            </caption>
+            <thead class="visually-hidden">
+              <tr>
+                <th>Call number</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% location.items.each do |item| %>
+              <tr>
+                <th scope="row" class="fw-normal"><%= tag.span item.callnumber, class: 'callnumber' %></th>
+                <td>
+                  <%= render Searchworks4::ItemStatusComponent.new(item:) %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+        <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
+      </div>
+    </details>
+  <% else %>
+    <details class="availability-component border rounded p-2 fs-15">
+      <summary class="d-flex justify-content-between align-items-center">
+        <div class="d-inline-flex gap-4 align-items-center">
+          <% if document.holdings.libraries.one? %>
+            <% library = document.holdings.libraries.first %>
+            <%= tag.span library.name, class: 'library fw-semibold' %>
+          <% end %>
+
+          <%= render ItemCountComponent.new(document.holdings.items.count) %>
+        </div>
+        <div class="btn btn-outline-primary btn-sm">
+          <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
+          <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
+        </div>
+      </summary>
+      <div>
+        <% document.holdings.libraries.each do |library| %>
+          <div class="d-flex flex-column my-2">
+            <% unless document.holdings.libraries.one? %>
+            <div class="bg-light fw-semibold"><%= library.name %></div>
+            <% end %>
+          <% library.locations.each do |location| %>
+            <div class="d-flex gap-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+              <div class="pt-2" data-availability-target="location">
+                <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></div>
+                <% unless document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
+                  <%= render LocationRequestLinkComponent.new(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+                <% end %>
+              </div>
+              <table class="table w-auto">
+                <caption class="visually-hidden">>
+                  <%= pluralize(document.holdings.items.count, 'item') %> in <%= location.name %> at <%= library.name %>
+                </caption>
+                <thead class="visually-hidden">
+                  <tr>
+                    <th>Call number</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% location.items.each do |item| %>
+                  <tr>
+                    <th scope="row" class="fw-normal"><%= tag.span item.callnumber, class: 'callnumber' %></th>
+                    <td>
+                      <%= render Searchworks4::ItemStatusComponent.new(item:) %>
+                    </td>
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+            </div>
+          <% end %>
+          </div>
+        <% end %>
+        <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
+      </div>
+    </details>
+  <% end %>
+  </div>
+<% end %>
+</div>
