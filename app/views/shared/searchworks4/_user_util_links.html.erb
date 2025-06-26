@@ -2,6 +2,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/selections">
                   Bookmarks
+                  <span class="badge rounded-pill" data-role="bookmark-counter"><%= current_or_guest_user.bookmarks.count %></span>
                 </a>
               </li>
               <li class="nav-item">
