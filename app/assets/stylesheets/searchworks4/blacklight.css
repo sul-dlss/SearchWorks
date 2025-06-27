@@ -16,17 +16,17 @@
   }
 
   &:not([aria-expanded="true"])::before {
-    font-family: 'bootstrap-icons';
+    font-family: "bootstrap-icons";
     content: "\F56B";
     margin-right: 0.25em;
     vertical-align: top;
   }
 
-  &[aria-expanded="true"]{
+  &[aria-expanded="true"] {
     border: none;
     text-align: left;
-    &::after{
-      font-family: 'bootstrap-icons';
+    &::after {
+      font-family: "bootstrap-icons";
       content: "\F62A";
       float: right;
       font-size: 1.25rem;
@@ -100,7 +100,7 @@
     cursor: default;
     text-overflow: ellipsis;
     overflow: hidden;
-    padding-inline: 0.75rem 0.25rem; /* Keeping the default top/bottom padding */
+    padding-inline: 0.75rem 0rem; /* Keeping the default top/bottom padding */
     white-space: nowrap;
     max-width: clamp(288px, calc(30vw), 500px);
 
@@ -127,6 +127,7 @@
     --bs-btn-active-border-color: var(
       --bl-constraint-remove-hover-border-color
     );
+    padding-inline-start: 0.25rem;
   }
 
   .constraint-value,
@@ -191,9 +192,9 @@ dialog.modal[open] {
 }
 
 #search-navbar search {
-    width: 75%;
+  width: 75%;
 
-  @media (width < 767.98px) { 
+  @media (width < 767.98px) {
     width: 100%;
   }
 }

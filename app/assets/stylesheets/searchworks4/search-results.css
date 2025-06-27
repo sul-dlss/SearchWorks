@@ -83,3 +83,7 @@
 .sort-and-per-page .dropdown-menu {
   --bs-dropdown-item-padding-x: 1.5rem;
 }
+
+.constraint .remove .bi-x::before {
+  vertical-align: -0.18em;
+}
