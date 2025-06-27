@@ -196,9 +196,17 @@ dialog.modal[open] {
 }
 
 #search-navbar search {
-  width: 75%;
+  width: 100%;
+}
 
-  @media (width < 767.98px) {
-    width: 100%;
+@media (width >= 767.98px) {
+  #search-navbar search {
+    width: 60%;
+  }
+}
+
+@media (width >= 1199.98px) {
+  #search-navbar search {
+    width: 50%;
   }
 }
