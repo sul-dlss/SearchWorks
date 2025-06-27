@@ -2,5 +2,9 @@
 
 module Facets
   class GroupComponent < Blacklight::Response::FacetGroupComponent
+    def collapse_toggle_button(panel_id)
+      render button_component.new(panel_id: panel_id,
+                                  classes: "btn btn-outline-primary col-12 facet-toggle-button d-block d-md-none")
+    end
   end
 end
