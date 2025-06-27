@@ -75,3 +75,6 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 
 import BookmarkToastController from "./bookmark_toast_controller"
 application.register("bookmark-toast", BookmarkToastController)
+
+import MiniBentoController from "./mini_bento_controller"
+application.register("mini-bento", MiniBentoController)
