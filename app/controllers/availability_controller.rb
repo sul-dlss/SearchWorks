@@ -15,8 +15,7 @@ class AvailabilityController < ApplicationController
     # Unfortunately, FOLIO doesn't provide enough information in the RTAC lookup to drive all of our logic,
     # so we also need to retrieve the solr document too.
     @document = search_service.fetch(params[:id])
-    @rtac = LiveLookup.new(params[:uuid_ssi]).records
-    @items = @document.holdings.items.index_by(&:live_lookup_item_id)
+    @rtac = LiveLookup.new(@document[:uuid_ssi]).records.index_by { |record| record[:item_id] }
   end
 
   private
