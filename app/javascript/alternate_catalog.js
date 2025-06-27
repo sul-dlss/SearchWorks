@@ -72,6 +72,9 @@ const AlternateCatalog = (function (global) {
           countElement.innerHTML = parseInt(count).toLocaleString()
           body.classList.remove('d-none')
         })
+        .catch((error) => {
+          console.error(error)
+        })
     }
   }
 
