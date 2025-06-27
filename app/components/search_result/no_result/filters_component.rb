@@ -2,7 +2,7 @@
 
 module SearchResult
   module NoResult
-    class FiltersComponent < Blacklight::ConstraintsComponent
+    class FiltersComponent < Searchworks4::ConstraintsComponent
       def query_constraints; end
 
       def render?

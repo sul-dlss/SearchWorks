@@ -77,3 +77,7 @@
 .active-icon::before {
   content: "✓";
 }
+
+.constraint .remove .bi-x::before {
+  vertical-align: -0.18em;
+}
