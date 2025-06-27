@@ -54,6 +54,7 @@ module Eds
       post('/edsapi/rest/Search', params).body
     rescue Faraday::Error => e
       eds_code = e.response_body['ErrorNumber'] || e.response_body['ErrorCode']
+
       case eds_code
       when '138'
         # deep paging
@@ -103,8 +104,7 @@ module Eds
         raise if session_token_retries >= 1
 
         session_token_retries += 1
-
-        @session_token = nil
+        reset_session_token!
 
         retry
       when '104', '107'
@@ -115,7 +115,7 @@ module Eds
         auth_token_retries += 1
 
         @auth_token = nil
-        @session_token = nil
+        reset_session_token!
 
         retries += 1
 
@@ -125,8 +125,14 @@ module Eds
       raise
     end
 
+    def reset_session_token!
+      @session_token = nil
+      @authorized_connection = nil
+      @connection = nil
+    end
+
     def authorized_connection
-      Faraday.new(url: eds_params[:host]) do |f|
+      @authorized_connection ||= Faraday.new(url: eds_params[:host]) do |f|
         f.headers['Accept'] = 'application/json'
         f.request :json
         f.response :raise_error
@@ -138,7 +144,7 @@ module Eds
     end
 
     def connection
-      Faraday.new(url: eds_params[:host]) do |f|
+      @connection ||= Faraday.new(url: eds_params[:host]) do |f|
         f.headers['Accept'] = 'application/json'
         f.headers['User-Agent'] = eds_params[:user_agent]
         f.request :json

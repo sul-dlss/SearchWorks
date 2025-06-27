@@ -28,10 +28,25 @@ class ArticlesController < ApplicationController
 
   before_action :set_search_query_modifier, only: :index
 
-  before_action :eds_init
-  # TODO: probably need to move this into an Eds::SearchService initializer
-  def eds_init
-    setup_eds_session(session) if action_name != 'index' || has_search_parameters?
+  around_action :manage_eds_session_token
+  # EDS uses the session token to maintain some kind of state across requests (and also uses it
+  # to handle guest state). Therefore, we need to establish a session token before making EDS requests,
+  # and also update the session token if EDS tells us the session token expired after making the request(s).
+  def manage_eds_session_token
+    # we don't need to mint a token for the home page
+    if action_name == 'index' && !has_search_parameters?
+      yield
+      return
+    end
+
+    setup_eds_session
+
+    yield
+
+    # Update the EDS session token in the user's session
+    used_token = search_service.session_token
+
+    session[Settings.EDS_SESSION_TOKEN_KEY] = used_token if session[Settings.EDS_SESSION_TOKEN_KEY] != used_token
   end
 
   BREAKS = {
@@ -276,7 +291,7 @@ class ArticlesController < ApplicationController
       guest:          session['eds_guest'],
       session_token:  session[Settings.EDS_SESSION_TOKEN_KEY]
     }
-    Eds::SearchService.new(blacklight_config, params, eds_params)
+    @search_service ||= Eds::SearchService.new(blacklight_config, params, eds_params)
   end
 
   def set_search_query_modifier
@@ -285,7 +300,7 @@ class ArticlesController < ApplicationController
 
   # Reuse the EDS session token if available in the user's session data,
   # otherwise establish a session
-  def setup_eds_session(session)
+  def setup_eds_session
     return if session[Settings.EDS_SESSION_TOKEN_KEY].present?
 
     session['eds_guest'] = !on_campus_or_su_affiliated_user?

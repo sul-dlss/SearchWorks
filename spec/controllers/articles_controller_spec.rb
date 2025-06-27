@@ -149,24 +149,36 @@ RSpec.describe ArticlesController do
 
     before do
       allow(controller).to receive_messages(session: user_session, on_campus_or_su_affiliated_user?: true)
+      allow(controller).to receive(:search_service).and_return(double(session_token: 'abc'))
     end
 
     it 'creates a new session' do
       expect(Eds::Session).to receive(:new).with(
         hash_including(caller: 'new-session', guest: false)
       ).and_return(eds_session)
-      controller.eds_init
+      controller.manage_eds_session_token { true }
     end
     it 'reuses the session if in the user session data' do
       user_session['eds_guest'] = false
       user_session[Settings.EDS_SESSION_TOKEN_KEY] = 'def'
       expect(Eds::Session).not_to receive(:new)
-      controller.eds_init
+      controller.manage_eds_session_token { true }
     end
     it 'requires the session token in the user session data' do
       user_session['eds_guest'] = false
       expect(Eds::Session).to receive(:new).and_return(eds_session)
-      controller.eds_init
+      controller.manage_eds_session_token { true }
+    end
+
+    it 'rotates the session key if the session token changes' do
+      expect(Eds::Session).to receive(:new).with(
+        hash_including(caller: 'new-session', guest: false)
+      ).and_return(eds_session)
+
+      allow(controller).to receive(:search_service).and_return(double(session_token: 'xyz'))
+      controller.manage_eds_session_token { true }
+
+      expect(user_session[Settings.EDS_SESSION_TOKEN_KEY]).to eq 'xyz'
     end
   end
 
