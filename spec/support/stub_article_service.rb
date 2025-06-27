@@ -152,6 +152,8 @@ module StubArticleService # rubocop:disable Metrics/ModuleLength
       )
     when :error
       allow_any_instance_of(Eds::Repository).to receive(:search).and_raise(Faraday::Error)
+      allow_any_instance_of(Eds::Repository).to receive(:find).and_raise(Faraday::Error)
+
     else
       raise "Unknown article stub type #{type} provided."
     end
