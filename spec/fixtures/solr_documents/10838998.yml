@@ -1,0 +1,851 @@
+---
+id: '10838998'
+hashed_id_ssi: d3c7fb6c04db350d075f7281c84dcfa2
+marc_json_struct:
+- '{"leader":"03734cam a2200457 i 4500","fields":[{"001":"a10838998"},{"003":"SIRSI"},{"005":"20150516012126.0"},{"008":"140807t20152015maua     b    001
+  0 eng  "},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"  2014031506"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"9780262028769"},{"q":"hardcover"},{"q":"alkaline
+  paper"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"026202876X"},{"q":"hardcover"},{"q":"alkaline
+  paper"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) cis29999701"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"DLC"},{"e":"rda"},{"c":"DLC"},{"d":"YDX"},{"d":"BDX"},{"d":"BTCTA"},{"d":"OCLCF"},{"d":"MYG"},{"d":"CDX"},{"d":"CaONFJC"},{"d":"UtOrBLW"}]}},{"042":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"pcc"}]}},{"043":{"ind1":" ","ind2":" ","subfields":[{"a":"n-us-ca"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"ML33.S73"},{"b":"C464
+  2015"}]}},{"082":{"ind1":"0","ind2":"0","subfields":[{"a":"786.7/60979473"},{"2":"23"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Nelson, Andrew J.,"},{"e":"author."}]}},{"245":{"ind1":"1","ind2":"4","subfields":[{"a":"The
+  sound of innovation :"},{"b":"Stanford and the computer music revolution /"},{"c":"Andrew
+  J. Nelson."}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"Cambridge, Massachusetts  :"},{"b":"The
+  MIT Press,"},{"c":"[2015]"}]}},{"264":{"ind1":" ","ind2":"4","subfields":[{"c":"©2015"}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"ix, 236 pages :"},{"b":"illustrations ;"},{"c":"24
+  cm."}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"unmediated"},{"b":"n"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"volume"},{"b":"nc"},{"2":"rdacarrier"}]}},{"490":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Inside technology"}]}},{"504":{"ind1":" ","ind2":" ","subfields":[{"a":"Includes
+  bibliographical references (pages 209-226) and index."}]}},{"610":{"ind1":"2","ind2":"0","subfields":[{"a":"Stanford
+  University."},{"b":"Center for Computer Research in Music and Acoustics."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Computer music"},{"x":"History and criticism."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Music"},{"x":"Computer programs"},{"x":"History."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Music and technology"},{"x":"History."}]}},{"830":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Inside technology."}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)886382268"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"1
+  18"}]}},{"920":{"ind1":" ","ind2":" ","subfields":[{"b":"How a team of musicians,
+  engineers, computer scientists, and psychologists developed computer music as an
+  academic field and ushered in the era of digital music.    In the 1960s, a team
+  of Stanford musicians, engineers, computer scientists, and psychologists used computing
+  in an entirely novel way: to produce and manipulate sound and create the sonic basis
+  of new musical compositions. This group of interdisciplinary researchers at the
+  nascent Center for Computer Research in Music and Acoustics (CCRMA, pronounced \"karma\")
+  helped to develop computer music as an academic field, invent the technologies that
+  underlie it, and usher in the age of digital music. In The Sound of Innovation,
+  Andrew Nelson chronicles the history of CCRMA, tracing its origins in Stanford''s
+  Artificial Intelligence Laboratory through its present-day influence on Silicon
+  Valley and digital music groups worldwide.     Nelson emphasizes CCRMA''s interdisciplinarity,
+  which stimulates creativity at the intersections of fields; its commitment to open
+  sharing and users; and its pioneering commercial engagement. He shows that Stanford''s
+  outsized influence on the emergence of digital music came from the intertwining
+  of these three modes, which brought together diverse supporters with different aims
+  around a field of shared interest. Nelson thus challenges long-standing assumptions
+  about the divisions between art and science, between the humanities and technology,
+  and between academic research and commercial applications, showing how the story
+  of a small group of musicians reveals substantial insights about innovation.     Nelson
+  draws on extensive archival research and dozens of interviews with digital music
+  pioneers; the book''s website provides access to original historic documents and
+  other material."},{"1":"Nielsen"},{"x":"9780262028769"},{"x":"20190128"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy"},{"y":"MIT
+  Press Direct"},{"x":"Provider: MIT Press Direct"},{"x":"Collection: Complete Backfile
+  Monographs D2O"},{"x":"eLoaderURL"},{"x":"mk4"},{"x":"mk10086"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) cis29999701"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"bc081cad-b601-59c3-96ac-34fd7b1e6e8b"},{"s":"2dce256d-e4aa-51c7-86df-aa968f38b225"}]}}]}'
+all_search: 'Nelson, Andrew J., author. The sound of innovation : Stanford and the
+  computer music revolution / Andrew J. Nelson. Cambridge, Massachusetts  : The MIT
+  Press, [2015] ©2015 ix, 236 pages : illustrations ; 24 cm. text txt rdacontent unmediated
+  n rdamedia volume nc rdacarrier Inside technology Includes bibliographical references
+  (pages 209-226) and index. Stanford University. Center for Computer Research in
+  Music and Acoustics. Computer music History and criticism. Music Computer programs
+  History. Music and technology History. Inside technology. 1 18 How a team of musicians,
+  engineers, computer scientists, and psychologists developed computer music as an
+  academic field and ushered in the era of digital music.    In the 1960s, a team
+  of Stanford musicians, engineers, computer scientists, and psychologists used computing
+  in an entirely novel way: to produce and manipulate sound and create the sonic basis
+  of new musical compositions. This group of interdisciplinary researchers at the
+  nascent Center for Computer Research in Music and Acoustics (CCRMA, pronounced "karma")
+  helped to develop computer music as an academic field, invent the technologies that
+  underlie it, and usher in the age of digital music. In The Sound of Innovation,
+  Andrew Nelson chronicles the history of CCRMA, tracing its origins in Stanford''s
+  Artificial Intelligence Laboratory through its present-day influence on Silicon
+  Valley and digital music groups worldwide.     Nelson emphasizes CCRMA''s interdisciplinarity,
+  which stimulates creativity at the intersections of fields; its commitment to open
+  sharing and users; and its pioneering commercial engagement. He shows that Stanford''s
+  outsized influence on the emergence of digital music came from the intertwining
+  of these three modes, which brought together diverse supporters with different aims
+  around a field of shared interest. Nelson thus challenges long-standing assumptions
+  about the divisions between art and science, between the humanities and technology,
+  and between academic research and commercial applications, showing how the story
+  of a small group of musicians reveals substantial insights about innovation.     Nelson
+  draws on extensive archival research and dozens of interviews with digital music
+  pioneers; the book''s website provides access to original historic documents and
+  other material. Nielsen 9780262028769 20190128 Available to Stanford-affiliated
+  users. https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy MIT Press
+  Direct Provider: MIT Press Direct Collection: Complete Backfile Monographs D2O eLoaderURL
+  mk4 mk10086'
+title_245a_search: 'The sound of innovation :'
+title_245_search: 'The sound of innovation : Stanford and the computer music revolution
+  /'
+title_245a_display: The sound of innovation
+title_245c_display: Andrew J. Nelson
+title_display: 'The sound of innovation : Stanford and the computer music revolution'
+title_full_display: 'The sound of innovation : Stanford and the computer music revolution
+  / Andrew J. Nelson.'
+title_sort: sound of innovation Stanford and the computer music revolution
+series_search:
+- Inside technology
+author_title_245ac_search:
+- 'The sound of innovation : Andrew J. Nelson.'
+author_title_1xx_search:
+- 'Nelson, Andrew J. The sound of innovation :'
+author_title_search:
+- 'Nelson, Andrew J. The sound of innovation :'
+best_author_title_search: 'Nelson, Andrew J. The sound of innovation :'
+author_1xx_search: Nelson, Andrew J.,
+author_person_facet:
+- Nelson, Andrew J.
+author_person_display:
+- Nelson, Andrew J.
+author_person_full_display:
+- Nelson, Andrew J., author.
+author_sort: Nelson Andrew J sound of innovation Stanford and the computer music revolution
+topic_search:
+- Computer music
+- Music
+- Music and technology
+topic_display:
+- Computer music
+- Music
+- Music and technology
+topic_subx_search:
+- History and criticism.
+- Computer programs
+- History.
+subject_other_search:
+- Stanford University. Center for Computer Research in Music and Acoustics.
+subject_other_display:
+- Stanford University. Center for Computer Research in Music and Acoustics.
+subject_all_search:
+- Stanford University. Center for Computer Research in Music and Acoustics.
+- Computer music History and criticism.
+- Music Computer programs History.
+- Music and technology History.
+topic_facet:
+- Stanford University. Center for Computer Research in Music and Acoustics
+- Computer music
+- Music
+- Music and technology
+pub_search:
+- 'Cambridge, Massachusetts  : The MIT Press'
+pub_display:
+- 'Cambridge, Massachusetts  : The MIT Press'
+pub_country: Massachusetts, United States
+pub_date: '2015'
+pub_date_search: '2015'
+pub_date_sort: '2015'
+pub_year_tisim:
+- 2015
+pub_year_ss: '2015'
+publication_year_isi: 2015
+copyright_year_isi: 2015
+imprint_display:
+- 'Cambridge, Massachusetts  : The MIT Press, [2015]'
+date_cataloged: '2015-05-12T00:00:00Z'
+language:
+- English
+url_fulltext:
+- https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy
+url_restricted:
+- https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy
+oclc:
+- '886382268'
+access_facet:
+- Online
+- At the Library
+format_main_ssim:
+- Book
+physical:
+- 'ix, 236 pages : illustrations ; 24 cm.'
+summary_search:
+- 'How a team of musicians, engineers, computer scientists, and psychologists developed
+  computer music as an academic field and ushered in the era of digital music.    In
+  the 1960s, a team of Stanford musicians, engineers, computer scientists, and psychologists
+  used computing in an entirely novel way: to produce and manipulate sound and create
+  the sonic basis of new musical compositions. This group of interdisciplinary researchers
+  at the nascent Center for Computer Research in Music and Acoustics (CCRMA, pronounced
+  "karma") helped to develop computer music as an academic field, invent the technologies
+  that underlie it, and usher in the age of digital music. In The Sound of Innovation,
+  Andrew Nelson chronicles the history of CCRMA, tracing its origins in Stanford''s
+  Artificial Intelligence Laboratory through its present-day influence on Silicon
+  Valley and digital music groups worldwide.     Nelson emphasizes CCRMA''s interdisciplinarity,
+  which stimulates creativity at the intersections of fields; its commitment to open
+  sharing and users; and its pioneering commercial engagement. He shows that Stanford''s
+  outsized influence on the emergence of digital music came from the intertwining
+  of these three modes, which brought together diverse supporters with different aims
+  around a field of shared interest. Nelson thus challenges long-standing assumptions
+  about the divisions between art and science, between the humanities and technology,
+  and between academic research and commercial applications, showing how the story
+  of a small group of musicians reveals substantial insights about innovation.     Nelson
+  draws on extensive archival research and dozens of interviews with digital music
+  pioneers; the book''s website provides access to original historic documents and
+  other material.'
+summary_display:
+- 'How a team of musicians, engineers, computer scientists, and psychologists developed
+  computer music as an academic field and ushered in the era of digital music.    In
+  the 1960s, a team of Stanford musicians, engineers, computer scientists, and psychologists
+  used computing in an entirely novel way: to produce and manipulate sound and create
+  the sonic basis of new musical compositions. This group of interdisciplinary researchers
+  at the nascent Center for Computer Research in Music and Acoustics (CCRMA, pronounced
+  "karma") helped to develop computer music as an academic field, invent the technologies
+  that underlie it, and usher in the age of digital music. In The Sound of Innovation,
+  Andrew Nelson chronicles the history of CCRMA, tracing its origins in Stanford''s
+  Artificial Intelligence Laboratory through its present-day influence on Silicon
+  Valley and digital music groups worldwide.     Nelson emphasizes CCRMA''s interdisciplinarity,
+  which stimulates creativity at the intersections of fields; its commitment to open
+  sharing and users; and its pioneering commercial engagement. He shows that Stanford''s
+  outsized influence on the emergence of digital music came from the intertwining
+  of these three modes, which brought together diverse supporters with different aims
+  around a field of shared interest. Nelson thus challenges long-standing assumptions
+  about the divisions between art and science, between the humanities and technology,
+  and between academic research and commercial applications, showing how the story
+  of a small group of musicians reveals substantial insights about innovation.     Nelson
+  draws on extensive archival research and dozens of interviews with digital music
+  pioneers; the book''s website provides access to original historic documents and
+  other material.'
+isbn_search:
+- '9780262028769'
+- '026202876X'
+isbn_display:
+- '9780262028769'
+- '026202876X'
+lccn: '2014031506'
+callnum_facet_hsim:
+- LC Classification|M - Music|ML - Literature on Music
+callnum_search:
+- ML33 .S73 C464 2015
+lc_assigned_callnum_ssim:
+- ML33.S73 C464 2015
+barcode_search:
+- '36105223254660'
+- '36105212803857'
+item_barcodes:
+- '36105223254660'
+- '36105212803857'
+preferred_barcode: '36105223254660'
+holdings_library_code_ssim:
+- SUL
+- MUSIC
+- GREEN
+library_code_facet_ssim:
+- GREEN
+- MUSIC
+location_code_facet_ssim:
+- GRE-STACKS
+- MUS-STACKS
+building_facet:
+- Green
+- Music
+building_location_facet_ssim:
+- GREEN/*
+- GREEN/GRE-STACKS
+- GREEN/*/type/book
+- GREEN/GRE-STACKS/type/book
+- MUSIC/*
+- MUSIC/MUS-STACKS
+- MUSIC/*/type/book
+- MUSIC/MUS-STACKS/type/book
+shelfkey:
+- lc ml  0033.000000 s0.730000 c0.464000 002015
+reverse_shelfkey:
+- en~de~~zzww}zzzzzz~7z}swzzzz~nz}vtvzzz~zzxzyu~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '010'
+- '020'
+- '035'
+- '040'
+- '042'
+- '043'
+- '050'
+- '082'
+- '100'
+- '245'
+- '264'
+- '300'
+- '336'
+- '337'
+- '338'
+- '490'
+- '504'
+- '610'
+- '650'
+- '830'
+- '596'
+- '920'
+- '856'
+- '999'
+- 010a
+- 020aqq
+- 035a
+- 040aecdddddddd
+- 042a
+- 043a
+- 050ab
+- '082a2'
+- 100ae
+- 245abc
+- 264abc
+- 264c
+- 300abc
+- 336ab2
+- 337ab2
+- 338ab2
+- 490a
+- 504a
+- 610ab
+- 650ax
+- 650axx
+- 830a
+- 596a
+- 920b1xx
+- 856zuyxxxxx
+- 999is
+- "?010a"
+- "?020a"
+- "?020q"
+- "?035a"
+- "?040a"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?042a"
+- "?043a"
+- "?050a"
+- "?050b"
+- "?082a"
+- "?0822"
+- "?100a"
+- "?100e"
+- "?245a"
+- "?245b"
+- "?245c"
+- "?264a"
+- "?264b"
+- "?264c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?490a"
+- "?504a"
+- "?610a"
+- "?610b"
+- "?650a"
+- "?650x"
+- "?830a"
+- "?596a"
+- "?920b"
+- "?9201"
+- "?920x"
+- "?856z"
+- "?856u"
+- "?856y"
+- "?856x"
+- "?999i"
+- "?999s"
+bib_search: 'Nelson, Andrew J., author. The sound of innovation : Stanford and the
+  computer music revolution / Andrew J. Nelson. Cambridge, Massachusetts  : The MIT
+  Press, [2015] ©2015 Inside technology Computer music Music Music and technology
+  Book'
+vern_bib_search: Book
+uuid_ssi: bc081cad-b601-59c3-96ac-34fd7b1e6e8b
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"bc081cad-b601-59c3-96ac-34fd7b1e6e8b","hrid":"a10838998","notes":[{"note":"Includes
+  bibliographical references (pages 209-226) and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"}],"title":"The
+  sound of innovation : Stanford and the computer music revolution / Andrew J. Nelson.","series":[{"value":"Inside
+  technology"}],"source":"MARC","_version":4,"editions":[],"metadata":{"createdDate":"2023-08-21T15:45:32.888Z","updatedDate":"2023-08-21T15:45:32.888Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Stanford
+  University. Center for Computer Research in Music and Acoustics"},{"value":"Computer
+  music History and criticism"},{"value":"Music Computer programs History"},{"value":"Music
+  and technology History"}],"languages":["eng"],"indexTitle":"Sound of innovation
+  : stanford and the computer music revolution","identifiers":[{"value":"2014031506","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"9780262028769
+  hardcover","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9780262028769
+  alkaline paper","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"026202876X
+  hardcover","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"026202876X
+  alkaline paper","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(Sirsi)
+  cis29999701","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)886382268","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"role":"Publication","place":"Cambridge,
+  Massachusetts","publisher":"The MIT Press","dateOfPublication":"[2015]"},{"role":"Copyright
+  notice date","place":"","publisher":"","dateOfPublication":"©2015"}],"contributors":[{"name":"Nelson,
+  Andrew J.","primary":true,"contributorTypeId":"6e09d47d-95e2-4d8a-831b-f777b8ef6d81","contributorTypeText":"author.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2015-05-12","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"ML33.S73
+  C464 2015","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"786.760979473","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy","name":"Version
+  of resource","linkText":"MIT Press Direct","publicNote":"Available to Stanford-affiliated
+  users","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"start":2015},"statusUpdatedDate":"2023-08-21T15:45:32.800+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["ix,
+  236 pages : illustrations ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-06-22T13:21:24Z'
+created: '2025-06-22T13:21:24Z'
+timestamp: '2025-06-22T13:21:24Z'
+author_struct:
+- creator:
+  - link: Nelson, Andrew J.,
+    search: Nelson, Andrew J.,
+    post_text: author.
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: MIT Press Direct
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  additional_links: []
+  material_type:
+  note: Available to Stanford-affiliated users.
+  href: https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Publisher's summary
+  fields:
+  - field:
+    - 'How a team of musicians, engineers, computer scientists, and psychologists
+      developed computer music as an academic field and ushered in the era of digital
+      music.    In the 1960s, a team of Stanford musicians, engineers, computer scientists,
+      and psychologists used computing in an entirely novel way: to produce and manipulate
+      sound and create the sonic basis of new musical compositions. This group of
+      interdisciplinary researchers at the nascent Center for Computer Research in
+      Music and Acoustics (CCRMA, pronounced "karma") helped to develop computer music
+      as an academic field, invent the technologies that underlie it, and usher in
+      the age of digital music. In The Sound of Innovation, Andrew Nelson chronicles
+      the history of CCRMA, tracing its origins in Stanford''s Artificial Intelligence
+      Laboratory through its present-day influence on Silicon Valley and digital music
+      groups worldwide.     Nelson emphasizes CCRMA''s interdisciplinarity, which
+      stimulates creativity at the intersections of fields; its commitment to open
+      sharing and users; and its pioneering commercial engagement. He shows that Stanford''s
+      outsized influence on the emergence of digital music came from the intertwining
+      of these three modes, which brought together diverse supporters with different
+      aims around a field of shared interest. Nelson thus challenges long-standing
+      assumptions about the divisions between art and science, between the humanities
+      and technology, and between academic research and commercial applications, showing
+      how the story of a small group of musicians reveals substantial insights about
+      innovation.     Nelson draws on extensive archival research and dozens of interviews
+      with digital music pioneers; the book''s website provides access to original
+      historic documents and other material.'
+    - source: "(source: Nielsen Book Data)"
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 7e7eb9e2-f20c-53e2-a425-68f36025ecf5
+    hrid: ah10838998_3
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:46:20.087Z'
+      updatedDate: '2023-08-21T15:46:20.087Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: bc081cad-b601-59c3-96ac-34fd7b1e6e8b
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 5410a2fd-a3d6-501b-89d7-1ebed2c2b0be
+    hrid: ah10838998_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:46:20.852Z'
+      updatedDate: '2023-08-21T15:46:20.852Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: ML33 .S73 C464 2015
+    instanceId: bc081cad-b601-59c3-96ac-34fd7b1e6e8b
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 00ae4182-8c62-47d7-a27a-1b23fc931d77
+    permanentLocationId: 00ae4182-8c62-47d7-a27a-1b23fc931d77
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 00ae4182-8c62-47d7-a27a-1b23fc931d77
+        code: MUS-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: 45d4bfcc-439b-4ae3-8c62-a8f975be1d5b
+          code: MUSIC
+          name: Music Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 00ae4182-8c62-47d7-a27a-1b23fc931d77
+        code: MUS-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: 45d4bfcc-439b-4ae3-8c62-a8f975be1d5b
+          code: MUSIC
+          name: Music Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: db24a780-e68a-5838-9f85-cc7f12e96d45
+    hrid: ah10838998_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:46:20.852Z'
+      updatedDate: '2023-08-21T15:46:20.852Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: ML33 .S73 C464 2015
+    instanceId: bc081cad-b601-59c3-96ac-34fd7b1e6e8b
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: '08266135-6b34-5da7-91fb-48f431cf465f'
+    hrid: ai10838998_2_1
+    notes: []
+    status: Available
+    barcode: '36105223254660'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T15:46:40.486Z'
+      updatedDate: '2023-08-21T15:46:40.486Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: ML33 .S73 C464 2015
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: db24a780-e68a-5838-9f85-cc7f12e96d45
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: ML 233 S73 C464 42015 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: ML33 .S73 C464 2015
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 8a150495-d61b-5e11-8951-8317208730c4
+    hrid: ai10838998_1_1
+    notes: []
+    status: Available
+    barcode: '36105212803857'
+    request:
+    _version: 4
+    metadata:
+      createdDate: '2023-08-21T15:46:40.486Z'
+      updatedDate: '2025-03-03T19:22:23.604Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 649b7b6c-24e2-4c00-8889-4daa7fc6cdc3
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: ML33 .S73 C464 2015
+    copyNumber: '1'
+    lastCheckIn:
+      dateTime: '2025-03-03T19:22:23.341+00:00'
+      staffMemberId: 649b7b6c-24e2-4c00-8889-4daa7fc6cdc3
+      servicePointId: 4d77d74b-271e-421a-91c6-992afa9afb3c
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 5410a2fd-a3d6-501b-89d7-1ebed2c2b0be
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 00ae4182-8c62-47d7-a27a-1b23fc931d77
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: ML 233 S73 C464 42015 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: ML33 .S73 C464 2015
+    location:
+      effectiveLocation:
+        id: 00ae4182-8c62-47d7-a27a-1b23fc931d77
+        code: MUS-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: 45d4bfcc-439b-4ae3-8c62-a8f975be1d5b
+          code: MUSIC
+          name: Music Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: '08266135-6b34-5da7-91fb-48f431cf465f'
+  barcode: '36105223254660'
+  library: GREEN
+  type: book
+  note:
+  instance_id: bc081cad-b601-59c3-96ac-34fd7b1e6e8b
+  instance_hrid: a10838998
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: ML33 .S73 C464 2015
+  callnumber: ML33 .S73 C464 2015
+  full_shelfkey: lc ml  0033.000000 s0.730000 c0.464000 002015
+- id: 8a150495-d61b-5e11-8951-8317208730c4
+  barcode: '36105212803857'
+  library: MUSIC
+  type: book
+  note:
+  instance_id: bc081cad-b601-59c3-96ac-34fd7b1e6e8b
+  instance_hrid: a10838998
+  effective_permanent_location_code: MUS-STACKS
+  temporary_location_code:
+  permanent_location_code: MUS-STACKS
+  status: Available
+  effective_location_id: 00ae4182-8c62-47d7-a27a-1b23fc931d77
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: ML33 .S73 C464 2015
+  callnumber: ML33 .S73 C464 2015
+  full_shelfkey: lc ml  0033.000000 s0.730000 c0.464000 002015
+browse_nearby_struct:
+- lopped_callnumber: ML33 .S73 C464 2015
+  shelfkey: lc ml  0033.000000 s0.730000 c0.464000 002015
+  reverse_shelfkey: en~de~~zzww}zzzzzz~7z}swzzzz~nz}vtvzzz~zzxzyu~~~~~
+  callnumber: ML33 .S73 C464 2015
+  scheme: LC
+  item_id: '08266135-6b34-5da7-91fb-48f431cf465f'

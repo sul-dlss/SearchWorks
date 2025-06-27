@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
 class ItemRequestLinkComponent < ViewComponent::Base
-  attr_reader :item, :classes
+  attr_reader :item, :classes, :rtac
 
   delegate :document, :library, :effective_permanent_location_code, :barcode, to: :item
 
-  def initialize(item:, classes: %w[btn btn-xs request-button])
+  def initialize(item:, classes: %w[btn btn-xs request-button], rtac: nil)
     super
 
     @item = item
     @classes = classes
+    @rtac = rtac
   end
 
   def call
@@ -29,7 +30,7 @@ class ItemRequestLinkComponent < ViewComponent::Base
   private
 
   def policy
-    ItemRequestLinkPolicy.new(item:)
+    ItemRequestLinkPolicy.new(item:, rtac:)
   end
 
   def link_href

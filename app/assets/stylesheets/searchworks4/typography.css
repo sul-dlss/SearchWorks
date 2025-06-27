@@ -63,4 +63,15 @@ aside,
 .index_title {
   --sul-header-font-size: 1.125rem;
   --sul-link-font-weight: 500;
+.fs-15 {
+  --bs-body-font-size: 15px;
+  font-size: var(--bs-body-font-size);
+
+  .small {
+    font-size: 0.93333rem;
+  }
+}
+
+.text-poppy {
+  color: var(--stanford-poppy-dark);
 }

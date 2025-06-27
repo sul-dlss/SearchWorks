@@ -2,8 +2,9 @@
 
 # This determines whether we should display a request link to the user
 class ItemRequestLinkPolicy
-  def initialize(item:)
+  def initialize(item:, rtac: nil)
     @item = item
+    @rtac = rtac
   end
 
   def show?
@@ -24,10 +25,14 @@ class ItemRequestLinkPolicy
 
   private
 
-  attr_reader :item
+  attr_reader :item, :rtac
 
   def folio_holdable?
-    return false unless Settings.folio_hold_recall_statuses.include?(item.folio_status)
+    if rtac
+      return false unless Settings.folio_hold_recall_statuses.include?(rtac[:status])
+    else
+      return false unless Settings.folio_hold_recall_statuses.include?(item.folio_status)
+    end
 
     item_allows_hold_recall?
   end

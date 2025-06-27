@@ -1,0 +1,337 @@
+---
+id: in00000444367
+hashed_id_ssi: a40e5c08f7c037391a4ce2601c89e350
+marc_json_struct:
+- '{"leader":"01480njm a22003857i 4500","fields":[{"001":"in00000444367"},{"005":"20250603203845.6"},{"006":"m        h        "},{"007":"sz
+  zunnnnnuneu"},{"007":"cr nnannnuuuuu"},{"008":"250515s2025    xx uunn o         n
+  zxx d"},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"nmon1519822650"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"NAXOS"},{"b":"eng"},{"e":"rda"},{"e":"pn"},{"c":"NAXOS"},{"d":"OCLCO"},{"d":"CSt"}]}},{"024":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"ES17B2500088"}]}},{"028":{"ind1":"0","ind2":"2","subfields":[{"a":"E-308-HR"},{"b":"HR
+  Recordings"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)1519822650"}]}},{"045":{"ind1":"1","ind2":"
+  ","subfields":[{"b":"d1952"}]}},{"100":{"ind1":"1","ind2":" ","subfields":[{"a":"Cage,
+  John,"},{"e":"composer,"},{"e":"instrumentalist."},{"1":"https://id.oclc.org/worldcat/entity/E39PBJymDV7Xgy3mYTT9Wcrcyd"}]}},{"240":{"ind1":"1","ind2":"0","subfields":[{"a":"4''33\","},{"n":"no.
+  1"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"4:33 /"},{"c":"John Cage."}]}},{"264":{"ind1":"
+  ","ind2":"1","subfields":[{"a":"[Place of publication not identified] :"},{"b":"HR
+  Recordings,"},{"c":"[2025]"}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"1
+  online resource (1 audio file)"}]}},{"306":{"ind1":" ","ind2":" ","subfields":[{"a":"000433"}]}},{"336":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"performed music"},{"b":"prm"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"344":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"digital"},{"2":"rdatr"}]}},{"347":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"audio file"},{"2":"rdaft"}]}},{"511":{"ind1":"0","ind2":" ","subfields":[{"a":"John
+  Cage, piano."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Piano music."}]}},{"650":{"ind1":"
+  ","ind2":"6","subfields":[{"a":"Piano, Musique de."},{"0":"(CaQQLa)201-0008260"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"http://stanford.naxosmusiclibrary.com/catalogue/item.asp?cid=E-308-HR"},{"y":"Naxos
+  Music Library"},{"x":"Provider: Naxos"},{"x":"Collection: Naxos Music Library"},{"x":"subscribed"},{"x":"eLoaderURL"},{"x":"nm4"},{"x":"nmon1519822650"}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"C0"},{"b":"TEF"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"a1405b53-ce77-4962-8e0c-dbe8a5818e78"},{"s":"307b42cf-9ef6-415c-bd6d-175e6d9c2dfe"}]}}]}'
+all_search: 'ES17B2500088 E-308-HR HR Recordings Cage, John, composer, instrumentalist.
+  https://id.oclc.org/worldcat/entity/E39PBJymDV7Xgy3mYTT9Wcrcyd 4''33", no. 1 4:33
+  / John Cage. [Place of publication not identified] : HR Recordings, [2025] 1 online
+  resource (1 audio file) 000433 performed music prm rdacontent computer c rdamedia
+  online resource cr rdacarrier digital rdatr audio file rdaft John Cage, piano. Piano
+  music. Piano, Musique de. (CaQQLa)201-0008260 Available to Stanford-affiliated users.
+  http://stanford.naxosmusiclibrary.com/catalogue/item.asp?cid=E-308-HR Naxos Music
+  Library Provider: Naxos Collection: Naxos Music Library subscribed eLoaderURL nm4
+  nmon1519822650'
+title_245a_search: 4:33 /
+title_245_search: 4:33 /
+title_uniform_search: 4'33", no. 1
+title_245a_display: '4:33'
+title_245c_display: John Cage
+title_display: '4:33'
+title_full_display: 4:33 / John Cage.
+title_sort: '433'
+author_title_245ac_search:
+- 4:33 / John Cage.
+author_title_1xx_search:
+- Cage, John 4'33", no. 1
+author_title_search:
+- Cage, John 4'33", no. 1
+- Cage, John 4:33 /
+best_author_title_search: Cage, John 4'33", no. 1
+author_1xx_search: Cage, John,
+author_person_facet:
+- Cage, John
+author_person_display:
+- Cage, John
+author_person_full_display:
+- Cage, John, composer, instrumentalist.
+author_sort: Cage John 433 no 1 433
+author_authorities_ssim:
+- https://id.oclc.org/worldcat/entity/E39PBJymDV7Xgy3mYTT9Wcrcyd
+topic_search:
+- Piano music.
+- Piano, Musique de.
+topic_display:
+- Piano music.
+- Piano, Musique de.
+subject_all_search:
+- Piano music.
+- Piano, Musique de.
+topic_facet:
+- Piano music
+- Piano, Musique de.
+pub_search:
+- HR Recordings
+pub_display:
+- HR Recordings
+pub_date: '2025'
+pub_date_search: '2025'
+pub_date_sort: '2025'
+pub_year_tisim:
+- 2025
+pub_year_ss: '2025'
+publication_year_isi: 2025
+imprint_display:
+- "[Place of publication not identified] : HR Recordings, [2025]"
+date_cataloged: '2025-06-03T00:00:00Z'
+url_fulltext:
+- http://stanford.naxosmusiclibrary.com/catalogue/item.asp?cid=E-308-HR
+url_restricted:
+- http://stanford.naxosmusiclibrary.com/catalogue/item.asp?cid=E-308-HR
+oclc:
+- '1519822650'
+access_facet:
+- Online
+format_main_ssim:
+- Music recording
+characteristics_ssim:
+- 'Sound: digital.'
+- 'Digital: audio file.'
+physical:
+- 1 online resource (1 audio file)
+holdings_library_code_ssim:
+- SUL
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '005'
+- '006'
+- '007'
+- '008'
+- '035'
+- '040'
+- '024'
+- '028'
+- '045'
+- '100'
+- '240'
+- '245'
+- '264'
+- '300'
+- '306'
+- '336'
+- '337'
+- '338'
+- '344'
+- '347'
+- '511'
+- '650'
+- '856'
+- '994'
+- '999'
+- 035a
+- 040abeecdd
+- 024a
+- '028ab'
+- 045b
+- 100aee1
+- 240an
+- 245ac
+- 264abc
+- 300a
+- 306a
+- 336ab2
+- 337ab2
+- 338ab2
+- 344a2
+- 347a2
+- 511a
+- 650a
+- 650a0
+- 856zuyxxxxxx
+- 994ab
+- 999is
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?024a"
+- "?028a"
+- "?028b"
+- "?045b"
+- "?100a"
+- "?100e"
+- "?1001"
+- "?240a"
+- "?240n"
+- "?245a"
+- "?245c"
+- "?264a"
+- "?264b"
+- "?264c"
+- "?300a"
+- "?306a"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?344a"
+- "?3442"
+- "?347a"
+- "?3472"
+- "?511a"
+- "?650a"
+- "?6500"
+- "?856z"
+- "?856u"
+- "?856y"
+- "?856x"
+- "?994a"
+- "?994b"
+- "?999i"
+- "?999s"
+bib_search: 'Cage, John, composer, instrumentalist. 4:33 / John Cage. [Place of publication
+  not identified] : HR Recordings, [2025] Piano music. Piano, Musique de. Music recording'
+vern_bib_search: Music recording
+uuid_ssi: a1405b53-ce77-4962-8e0c-dbe8a5818e78
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"a1405b53-ce77-4962-8e0c-dbe8a5818e78","hrid":"in00000444367","tags":{"tagList":[]},"notes":[{"note":"John
+  Cage, piano","staffOnly":false,"instanceNoteTypeId":"9b56b954-7f3b-4e4b-8ed0-cf40aef13975"}],"title":"4:33
+  / John Cage.","series":[],"source":"MARC","_version":2,"editions":[],"metadata":{"createdDate":"2025-06-03T20:38:45.689Z","updatedDate":"2025-06-04T11:11:09.099Z","createdByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77","updatedByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Piano
+  music"},{"value":"Piano, Musique de"}],"languages":["zxx"],"indexTitle":"4:33 /","identifiers":[{"value":"nmon1519822650","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"ES17B2500088","identifierTypeId":"2e8b3b6c-0e7d-4e48-bca2-b0b23b376af5"},{"value":"E-308-HR
+  HR Recordings","identifierTypeId":"b5d8cdc4-9441-487c-90cf-0c7ec97728eb"},{"value":"(OCoLC-M)1519822650","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"role":"Publication","place":"[Place
+  of publication not identified]","publisher":"HR Recordings","dateOfPublication":"[2025]"}],"contributors":[{"name":"Cage,
+  John","primary":true,"contributorTypeId":"901d01e5-66b1-48f0-99f9-b5e92e3d2d15","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2025-06-03","instanceTypeId":"3be24c14-3551-4180-9292-26a786649c8b","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"http://stanford.naxosmusiclibrary.com/catalogue/item.asp?cid=E-308-HR","name":"Resource","linkText":"Naxos
+  Music Library","publicNote":"Available to Stanford-affiliated users.","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"4''33\",
+  no. 1","alternativeTitleTypeId":"30512027-cdc9-4c79-af75-1565b3bd888d"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2025-06-03T20:38:45.689+0000","statisticalCodeIds":["66189d25-82fc-4f14-a55a-2b4996979bb8"],"administrativeNotes":[],"physicalDescriptions":["1
+  online resource (1 audio file)","digital","audio file"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-06-22T12:03:46Z'
+created: '2025-06-22T12:03:46Z'
+timestamp: '2025-06-22T12:03:46Z'
+author_struct:
+- creator:
+  - link: Cage, John,
+    search: Cage, John,
+    post_text: composer, instrumentalist.
+    rwo:
+    - https://id.oclc.org/worldcat/entity/E39PBJymDV7Xgy3mYTT9Wcrcyd
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: Naxos Music Library
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  additional_links: []
+  material_type:
+  note: Available to Stanford-affiliated users.
+  href: http://stanford.naxosmusiclibrary.com/catalogue/item.asp?cid=E-308-HR
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+uniform_title_display_struct:
+- label: Uniform Title
+  unmatched_vernacular:
+  fields:
+  - uniform_title_tag: '240'
+    field:
+      pre_text: ''
+      link_text: 4'33", no. 1
+      author: Cage, John,
+      post_text: ''
+    vernacular:
+      vern:
+    authorities: []
+    rwo: []
+holdings_json_struct:
+- holdings:
+  - id: 37eaea04-cbe2-4c40-8b4a-a23e647a8698
+    hrid: ho00000476411
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2025-06-03T20:38:46.691Z'
+      updatedDate: '2025-06-03T20:38:46.691Z'
+      createdByUserId: 07e8be0e-1cf5-5061-b5b3-4517d9a74d77
+      updatedByUserId: 07e8be0e-1cf5-5061-b5b3-4517d9a74d77
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: a1405b53-ce77-4962-8e0c-dbe8a5818e78
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []

@@ -1,20 +1,37 @@
 # frozen_string_literal: true
 
 module Searchworks4
-  class AvailabilityComponent < Blacklight::Component
-    attr_reader :document
+  class PhysicalAvailabilityComponent < Blacklight::Component
+    attr_reader :document, :header_classes
 
-    def initialize(document:)
+    delegate :link_to_document, to: :helpers
+
+    def initialize(document:, classes: %w[availability-component border rounded p-2 fs-15], header_classes: %w[gap-4 row-gap-3 align-items-center flex-wrap flex-sm-nowrap])
       @document = document
+      @classes = classes
+      @header_classes = header_classes
+
       super()
     end
 
     def render?
-      document.holdings.present? || document.preferred_online_links.any?
+      document.holdings.present?
+    end
+
+    def container_tag(tag_name = 'div', classes: nil, **, &)
+      tag.public_send(tag_name, data: { controller: 'availability' }, class: @classes + (tag_name == 'details' ? [] : @header_classes) + Array(classes), **, &)
+    end
+
+    def single_item?
+      document.holdings.items.one?
     end
 
     def truncated_display?
       document.holdings.items.count > 20
+    end
+
+    def single_location?
+      document.holdings.libraries.one? && document.holdings.libraries.first.locations.one?
     end
 
     class LocationComponent < ViewComponent::Base
@@ -37,7 +54,7 @@ module Searchworks4
 
       def call
         if stackmappable?
-          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger' }, class: 'stackmap-find-it location-name' do
+          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger' }, class: 'stackmap-find-it location-name text-nowrap' do
             tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
           end
         else

@@ -1,9 +1,22 @@
 # frozen_string_literal: true
 
 class AvailabilityController < ApplicationController
-  before_action :redirect_bots, :redirect_no_ids
+  before_action :redirect_bots
+  before_action :redirect_no_ids, only: [:index]
+  include Blacklight::Searchable
+  layout false, only: [:index]
+  layout 'turbo_rails/frame', only: [:show]
+
   def index
     render json: LiveLookup.new(params[:ids]).as_json, layout: false
+  end
+
+  def show
+    # Unfortunately, FOLIO doesn't provide enough information in the RTAC lookup to drive all of our logic,
+    # so we also need to retrieve the solr document too.
+    @document = search_service.fetch(params[:id])
+    @rtac = LiveLookup.new(params[:id]).records
+    @items = @document.holdings.items.index_by(&:live_lookup_item_id)
   end
 
   private

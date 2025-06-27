@@ -56,19 +56,17 @@ class LiveLookup
       def as_json
         {
           item_id:,
-          barcode: item_id,
           due_date: nil, # No due date available in the Solr document
           status:,
-          current_location: temporary_location_code,
-          temporary_location: temporary_location_code,
-          is_available: available?
+          is_available: available?,
+          is_requestable_status: requestable_status?
         }
       end
 
       private
 
       def item_id
-        item['barcode']
+        item['id']
       end
 
       def available?
@@ -83,12 +81,10 @@ class LiveLookup
         item['library']
       end
 
-      def temporary_location_code
-        @temporary_location_code ||= item['temporary_location_code']
-      end
-
-      def temporary_location
-        @temporary_location ||= Holdings::Location.new(temporary_location_code)
+      # Check to see if we can add a request button based on the status in folio
+      # and predetermined list of status that can be recalled
+      def requestable_status?
+        Settings.folio_hold_recall_statuses.include?(status)
       end
     end
   end

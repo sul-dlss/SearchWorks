@@ -87,3 +87,55 @@
 .constraint .remove .bi-x::before {
   vertical-align: -0.18em;
 }
+
+details {
+  .open-hidden {
+    display: inline-block;
+  }
+  .open-visible {
+    display: none;
+  }
+}
+
+details[open] {
+  .open-visible {
+    display: inline-block;
+  }
+  .open-hidden {
+    display: none;
+  }
+}
+
+.likely-available {
+  width: 10ch;
+}
+
+.available-online {
+  color: var(--stanford-digital-green);
+}
+
+.availability-component {
+  .btn-sm {
+    --bs-btn-padding-y: 0.125rem;
+  }
+}
+
+.suppress-item-level-request-button-if-there-is-a-location-level-request-button {
+  &:has(.location-request-link) {
+    .item-request-link {
+      display: none;
+    }
+  }
+}
+
+.availability {
+  &.available {
+    color: var(--stanford-digital-green);
+  }
+  &.unavailable {
+    color: var(--stanford-digital-red);
+  }
+  &.unknown {
+    color: var(--stanford-80-black);
+  }
+}
