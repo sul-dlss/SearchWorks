@@ -6,7 +6,7 @@ module Searchworks4
 
     delegate :link_to_document, to: :helpers
 
-    def initialize(document:, classes: %w[availability-component border rounded p-2 fs-15], header_classes: %w[gap-4 row-gap-3 align-items-center flex-wrap flex-sm-nowrap])
+    def initialize(document:, classes: %w[availability-component border rounded p-2 fs-15], header_classes: %w[gap-4 row-gap-3 align-items-center flex-wrap])
       @document = document
       @classes = classes
       @header_classes = header_classes
@@ -58,7 +58,7 @@ module Searchworks4
             tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
           end
         else
-          tag.span location.name, class: 'location-name'
+          tag.span location.name, class: 'location-name text-nowrap'
         end
       end
     end
