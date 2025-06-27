@@ -101,10 +101,10 @@ export default class extends Controller {
   // but unclear how "this.element" would resolve
   displayToast(messageType, message) {
     const toast = document.getElementById('toast')
-    const toastBody = document.getElementById('toast-body')
+    const toastText = toast.querySelector('.toast-text')
     const iconClass = this.messageIcon(messageType)
     const brokenOutMessage = this.breakoutMessageForToast(message)
-    toastBody.innerHTML = `<i class="bi ${iconClass} me-2"></i> ${brokenOutMessage}`
+    toastText.innerHTML = `<i class="bi ${iconClass} me-2"></i> ${brokenOutMessage}`
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast)
     toastBootstrap.show()
   }
