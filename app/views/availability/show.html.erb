@@ -1,5 +1,5 @@
 <turbo-frame id="availability_<%= dom_id(@document) %>">
-  <% @rtac.map { |rtac| [rtac, @items[rtac[:item_id]]] }.select { |(_, item)| item }.each do |(rtac, item)| %>
+  <% @document.holdings.items.map { |item| [item, @rtac[item.live_lookup_item_id]] }.each do |(item, rtac)| %>
     <% component = Searchworks4::ItemStatusComponent.new(item: item, rtac: rtac) %>
     <turbo-stream action="replace" target="<%= component.dom_id %>" method="morph">
       <template>
