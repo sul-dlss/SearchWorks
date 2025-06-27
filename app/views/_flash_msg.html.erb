@@ -1,4 +1,4 @@
-<% #Remove this if BL accepts pull #913 https://github.com/projectblacklight/blacklight/pull/913 %>
+<% # The quick report javascript requires this node to be on the page %>
 <div class="flash_messages">
   <% [:success, :notice, :error, :alert, :recaptcha_error].each do |type| %>
     <%- alert_class = case type
@@ -9,6 +9,7 @@
       else "alert-#{type}"
       end
     -%>
+
     <% if flash[type] %>
       <div class="alert <%=alert_class %> alert-dismissible shadow-sm d-flex align-items-center">
         <div class="text-body">
