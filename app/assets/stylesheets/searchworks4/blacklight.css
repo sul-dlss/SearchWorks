@@ -144,6 +144,10 @@
   }
 }
 
+.modal {
+  --bl-modal-backdrop-bg: rgba(var(--stanford-black-rgb), 0.2)
+}
+
 .modal-dialog {
   border-radius: 5px;
 }
