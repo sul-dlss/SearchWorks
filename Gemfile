@@ -78,7 +78,7 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'blacklight', github: 'projectblacklight/blacklight' #'~> 9.0.0.beta2'
+gem 'blacklight', '~> 9.0.0.beta3'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
 gem "blacklight_range_limit", "~> 8.0"
