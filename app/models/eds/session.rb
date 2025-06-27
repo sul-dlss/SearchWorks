@@ -126,7 +126,7 @@ module Eds
     end
 
     def authorized_connection
-      @authorized_connection ||= Faraday.new(url: eds_params[:host]) do |f|
+      Faraday.new(url: eds_params[:host]) do |f|
         f.headers['Accept'] = 'application/json'
         f.request :json
         f.response :raise_error
@@ -138,7 +138,7 @@ module Eds
     end
 
     def connection
-      @connection ||= Faraday.new(url: eds_params[:host]) do |f|
+      Faraday.new(url: eds_params[:host]) do |f|
         f.headers['Accept'] = 'application/json'
         f.headers['User-Agent'] = eds_params[:user_agent]
         f.request :json
