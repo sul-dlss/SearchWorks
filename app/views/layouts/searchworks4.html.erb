@@ -42,7 +42,7 @@
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
   </head>
-  <body class="<%= render_body_class %>">
+  <body class="<%= render_body_class %> d-flex flex-column">
     <%= render blacklight_config.skip_link_component.new do %>
       <%= content_for(:skip_links) %>
     <% end %>
