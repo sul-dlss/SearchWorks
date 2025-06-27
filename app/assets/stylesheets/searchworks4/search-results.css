@@ -6,6 +6,11 @@
   --bl-icon-color: var(--stanford-80-black);
 }
 
+.dropdown-toggle::after {
+  /* Override bootstrap's default caret to bring it to the middle of the text*/
+  vertical-align: 0.125em;
+}
+
 .bi-three-dots-vertical {
   color: var(--bl-icon-color);
 }
