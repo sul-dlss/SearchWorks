@@ -93,4 +93,22 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
       expect(page).to have_text('See availability')
     end
   end
+
+  context 'with a single item with an MHLD somewhere else' do
+    let(:document) { SolrDocument.from_fixture("513384.yml") }
+
+    it 'renders the pill with the item count' do
+      render_inline(described_class.new(document: document))
+
+      expect(page).to have_css('.availability-component', text: '1 item')
+      expect(page).to have_css('table caption', text: '1 item in SAL3', visible: :all)
+    end
+
+    it 'renders the MHLD data' do
+      pending 'Not currently rendering the MHLD data'
+      render_inline(described_class.new(document: document))
+
+      expect(page).to have_css('table caption', text: 'Library has: 1972/76', visible: :all)
+    end
+  end
 end

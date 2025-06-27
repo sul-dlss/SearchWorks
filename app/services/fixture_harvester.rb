@@ -39,6 +39,7 @@ class FixtureHarvester
     '10838998', # small number of items in multiple libraries and available online
     '3402192', # lots of copies, some checked out
     '14239755', # temporary location
+    '513384', # single item with an MHLD in another library
     '342324' # serial on-exhibit
   ].freeze
 

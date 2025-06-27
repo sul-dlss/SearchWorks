@@ -23,7 +23,7 @@ module Searchworks4
     end
 
     def single_item?
-      document.holdings.items.one?
+      document.holdings.items.one? && document.holdings.libraries.one?
     end
 
     def truncated_display?

@@ -82,6 +82,13 @@ module Searchworks4
 
       render Searchworks4::AvailabilityComponent.new(document: document)
     end
+
+    # @label Single item with an MHLD in another library (513384)
+    def single_item_with_an_mhld_in_another_library
+      document = SolrDocument.from_fixture("513384.yml")
+
+      render Searchworks4::AvailabilityComponent.new(document: document)
+    end
   end
   # @!endgroup
 end
