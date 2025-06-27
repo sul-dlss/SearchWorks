@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .modal-content:has(.record-summary) {
   --bs-modal-header-border-width: 0;
   --bs-modal-padding: 0;
@@ -12,6 +13,9 @@
 }
 
 .modal {
+=======
+.modal, div[data-blacklight-modal] {
+>>>>>>> 4758679b (styling for standalone feedback)
 
     .modal-content {
         padding: 0rem 1.75rem;
@@ -63,4 +67,25 @@ dialog.modal[open] {
 
 .new-link {
     font-size: 1rem;
+<<<<<<< HEAD
 }
+=======
+}
+
+.modal-content {
+    padding: 0rem 1.75rem;
+    margin-top: 25%;
+}
+
+div[data-blacklight-modal] {
+    --bs-gutter-x: 7rem;
+    max-width: 1500px;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+>>>>>>> 4758679b (styling for standalone feedback)
