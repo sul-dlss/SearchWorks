@@ -251,10 +251,10 @@
   dependencies:
     bootstrap ">=4.3.1 <6.0.0"
 
-blacklight-frontend@^9.0.0-beta2:
-  version "9.0.0-beta2"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta2.tgz#be7931ec33ad1665661528e597f6025e2f93a739"
-  integrity sha512-fymHeWRX5uugggXnp6UbwCN7J6Kjqmegln3UHWlpXmmVHIjK7WwKgL7xTfxu+wp189BS3hHHiIXTVkXHz6q7Ug==
+blacklight-frontend@^9.0.0-beta3:
+  version "9.0.0-beta3"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta3.tgz#6f29319072f03006ca30b423b79d628d3b8651e4"
+  integrity sha512-BpahIimwfQLX0cvg9I4i/qwovVhlIK3g4VwgWX2fhdsUzzNISn5E3m9vbXwHCdBLZwWts4g7cvr5c2D/AnInOA==
   dependencies:
     bootstrap ">=5.3.5 <6.0.0"
 
