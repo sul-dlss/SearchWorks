@@ -1,0 +1,437 @@
+---
+id: '513384'
+hashed_id_ssi: c2c65369ad9ef540b95617ffb82c76bc
+marc_json_struct:
+- '{"leader":"00677nas a2200241   4500","fields":[{"001":"a513384"},{"003":"SIRSI"},{"008":"800715|        ctu
+  |         |    |eng  "},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   87640299
+  "},{"z":"sn 79001676"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  ACQ1726"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(CSt-H)notisACQ1726"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(CStRLIN)CSUX17080924-S"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)4098726"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-I)272657571"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"d":"OrLoB"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Cumulative
+  microform reviews."},{"c":"1972/76-  ."}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"Westport.
+  Conn., Microform Review."}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"     v.
+  ;"},{"c":"24 cm."}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"20"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Microforms"},{"x":"Reviews"},{"x":"Indexes."}]}},{"022":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"0162-0940"},{"l":"0162-0940"},{"2":"1"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ACQ1726"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"17e623cd-cfcb-56e3-a889-ca1e133026f1"},{"s":"04610ae2-bd34-5834-bf17-80620efad2da"}]}}]}'
+all_search: Cumulative microform reviews. 1972/76-  . Westport. Conn., Microform Review.      v.
+  ; 24 cm. 20 Microforms Reviews Indexes.
+title_245a_search: Cumulative microform reviews.
+title_245_search: Cumulative microform reviews.
+title_245a_display: Cumulative microform reviews
+title_245c_display: 1972/76- .
+title_display: Cumulative microform reviews
+title_full_display: Cumulative microform reviews. 1972/76-  .
+title_sort: Cumulative microform reviews
+author_title_245ac_search:
+- Cumulative microform reviews. 1972/76-  .
+author_sort: "\U0010FFFF Cumulative microform reviews"
+topic_search:
+- Microforms
+topic_display:
+- Microforms
+topic_subx_search:
+- Reviews
+- Indexes.
+subject_all_search:
+- Microforms Reviews Indexes.
+topic_facet:
+- Microforms
+pub_search:
+- Westport. Conn., Microform Review
+pub_display:
+- Westport. Conn., Microform Review
+pub_country: Connecticut, United States
+imprint_display:
+- Westport. Conn., Microform Review.
+date_cataloged: '1996-05-23T00:00:00Z'
+language:
+- English
+oclc:
+- '4098726'
+access_facet:
+- At the Library
+format_main_ssim:
+- Journal/Periodical
+physical:
+- v. ; 24 cm.
+issn_search:
+- 0162-0940
+issn_display:
+- 0162-0940
+lccn: '87640299'
+callnum_facet_hsim:
+- LC Classification|Z - Bibliography, Library Science, Information Resources|Z - Bibliography,
+  Library Science, Information Resources
+callnum_search:
+- Z1033.M5 C8 1972/76
+barcode_search:
+- '36105080423341'
+item_barcodes:
+- '36105080423341'
+preferred_barcode: '36105080423341'
+holdings_library_code_ssim:
+- SAL3
+- SAL
+library_code_facet_ssim:
+- SAL3
+location_code_facet_ssim:
+- SAL3-STACKS
+building_facet:
+- SAL3 (off-campus storage)
+building_location_facet_ssim:
+- SAL3/*
+- SAL3/SAL3-STACKS
+- SAL3/*/type/periodical
+- SAL3/SAL3-STACKS/type/periodical
+shelfkey:
+- lc z   1033.000000 m0.500000 c0.800000 zzyqsx~zzzzst~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+reverse_shelfkey:
+- en~0~~~yzww}zzzzzz~dz}uzzzzz~nz}rzzzzz~001972 000076
+mhld_display:
+- 'SAL -|- SAL-PAGE -|-  -|- 1972/76 -|- '
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '008'
+- '010'
+- '035'
+- '040'
+- '245'
+- '260'
+- '300'
+- '596'
+- '650'
+- '022'
+- '999'
+- 010az
+- 035a
+- 040d
+- 245ac
+- 260a
+- 300ac
+- 596a
+- 650axx
+- 022al2
+- 999is
+- "?010a"
+- "?010z"
+- "?035a"
+- "?040d"
+- "?245a"
+- "?245c"
+- "?260a"
+- "?300a"
+- "?300c"
+- "?596a"
+- "?650a"
+- "?650x"
+- "?022a"
+- "?022l"
+- "?0222"
+- "?999i"
+- "?999s"
+bib_search: Cumulative microform reviews. 1972/76-  . Westport. Conn., Microform Review.
+  Microforms Journal/Periodical
+vern_bib_search: Journal/Periodical
+uuid_ssi: 17e623cd-cfcb-56e3-a889-ca1e133026f1
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"17e623cd-cfcb-56e3-a889-ca1e133026f1","hrid":"a513384","notes":[],"title":"Cumulative
+  microform reviews. 1972/76-  .","series":[],"source":"MARC","_version":7,"editions":[],"metadata":{"createdDate":"2023-08-20T17:32:07.747Z","updatedDate":"2023-08-20T17:32:07.747Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Microforms
+  Reviews Indexes"}],"languages":["eng"],"indexTitle":"Cumulative microform reviews.","identifiers":[{"value":"87640299","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  ACQ1726","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(CSt-H)notisACQ1726","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(CStRLIN)CSUX17080924-S","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)4098726","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)272657571","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"0162-0940","identifierTypeId":"913300b2-03ed-469a-8179-c1092c991227"},{"value":"0162-0940","identifierTypeId":"5860f255-a27f-4916-a830-262aa900a6b9"}],"publication":[{"place":"Westport.
+  Conn., Microform Review","publisher":"","dateOfPublication":""}],"contributors":[],"catalogedDate":"1996-05-23","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"068b5344-e2a6-40df-9186-1829e13cd344","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-20T17:32:07.154+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["     v.
+  ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-06-22T09:14:56Z'
+created: '2025-06-22T09:14:56Z'
+timestamp: '2025-06-22T09:14:56Z'
+holdings_json_struct:
+- holdings:
+  - id: 23a079c2-9cbe-5d2e-82b3-fe8d3e85ec7f
+    hrid: ah513384_1
+    notes: []
+    _version: 2
+    metadata:
+      createdDate: '2023-08-20T17:33:24.809Z'
+      updatedDate: '2024-08-07T22:11:20.083Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: Z1033.M5 C8
+    instanceId: 17e623cd-cfcb-56e3-a889-ca1e133026f1
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: e304deb8-9e1c-5a39-a2e1-95ffaf2b624d
+    hrid: ah513384_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-20T17:33:26.999Z'
+      updatedDate: '2023-08-20T17:33:26.999Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: 036ee84a-6afd-4c3c-9ad3-4a12ab875f59
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: MARC Holdings
+    instanceId: 17e623cd-cfcb-56e3-a889-ca1e133026f1
+    holdingsType:
+      id: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+      name: Serial
+      source: folio
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: e6da6c98-6dd0-41bc-8b4b-cfd4bbd9c3ae
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements:
+    - statement: 1972/76
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+    permanentLocationId: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+        code: SAL-PAGE
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pagePreferSendIlliad: 'true'
+          scanServicePointCode: GREEN
+        library:
+          id: 00d012b4-d5ee-422c-9f38-3457e0ddd1ed
+          code: SAL
+          name: SAL1&2 (on-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+        code: SAL-PAGE
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pagePreferSendIlliad: 'true'
+          scanServicePointCode: GREEN
+        library:
+          id: 00d012b4-d5ee-422c-9f38-3457e0ddd1ed
+          code: SAL
+          name: SAL1&2 (on-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 12801102-8f1c-5ae5-b575-b47d08811fec
+    hrid: ai513384_1_1
+    tags:
+      tagList: []
+    notes: []
+    status: Available
+    barcode: '36105080423341'
+    request:
+    _version: 4
+    metadata:
+      createdDate: '2023-08-20T17:35:44.059Z'
+      updatedDate: '2024-08-08T00:10:46.383Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: Z1033.M5 C8
+    copyNumber: '1'
+    enumeration: 1972/76
+    lastCheckIn:
+      dateTime: '2024-08-08T00:10:46.246+00:00'
+      staffMemberId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+      servicePointId: 3a306665-eec7-4a40-8f4d-608585b2a394
+    yearCaption: []
+    materialType: periodical
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: d934e614-215d-4667-b231-aed97887f289
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 23a079c2-9cbe-5d2e-82b3-fe8d3e85ec7f
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: Z 41033 M5 C8 41972 276 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: Z1033.M5 C8
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 12801102-8f1c-5ae5-b575-b47d08811fec
+  barcode: '36105080423341'
+  library: SAL3
+  type: periodical
+  note:
+  instance_id: 17e623cd-cfcb-56e3-a889-ca1e133026f1
+  instance_hrid: a513384
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: d934e614-215d-4667-b231-aed97887f289
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: Z1033.M5 C8
+  callnumber: Z1033.M5 C8 1972/76
+  full_shelfkey: lc z   1033.000000 m0.500000 c0.800000 zzyqsx~zzzzst~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+browse_nearby_struct:
+- lopped_callnumber: Z1033.M5 C8
+  shelfkey: lc z   1033.000000 m0.500000 c0.800000 zzyqsx~zzzzst~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  reverse_shelfkey: en~0~~~yzww}zzzzzz~dz}uzzzzz~nz}rzzzzz~001972 000076
+  callnumber: Z1033.M5 C8 1972/76
+  scheme: LC
+  item_id: 12801102-8f1c-5ae5-b575-b47d08811fec
