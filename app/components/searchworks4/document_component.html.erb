@@ -10,7 +10,7 @@
   <%= header %>
   <div class="document-main-section d-flex">
     <% # header bar for doc items in index view %>
-    <div class="col-10">
+    <div class="col-10 pe-4">
       <div class="documentHeader">
         <h3 class="index_title">
           <%=  content_tag :span, class: 'document-counter fw-light' do
@@ -39,7 +39,7 @@
         <%- end -%>
 
         <div>
-          <%= resource_icon %> <%= presenter.document_format %>
+          <span class="me-1"><%= resource_icon %></span> <%= presenter.document_format %>
           <span class="main-title-date"><%= presenter.main_title_date %></span>
         </div>
 
@@ -54,21 +54,21 @@
             <% end %>
           </ul>
 
-          <div class="truncate-2 col-10">
+          <div class="truncate-2">
             <%= render TocAndSummaryComponent.new(document:) %>
           </div>
         <% end %>
 
       </div>
-      <%= render Searchworks4::AvailabilityComponent.new(document:) %>
     </div>
     <div class="col-2 d-flex flex-column align-items-center">
-      <div class="d-flex flex-row">
+      <div class="d-flex flex-row gap-2 mb-3">
         <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
         <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
       </div>
       <%= thumbnail %>
     </div>
   </div>
+  <%= render Searchworks4::AvailabilityComponent.new(document:) %>
   <%= footer %>
 <% end %>

@@ -40,13 +40,13 @@
 
 /* pin the library footer breakpoints to match the brand footer */
 @media screen and (min-width: 980px) {
-  #sul-footer-container .container {
+  #sul-footer-container .container-lg {
     width: 940px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #sul-footer-container .container {
+  #sul-footer-container .container-lg {
     width: 1170px;
   }
 }
