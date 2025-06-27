@@ -1,6 +1,6 @@
 <div class="container">
   <%= render 'shared/modal' %>
-  <main id="main-container">
+  <main id="main-container" data-controller="google-cover-image">
     <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
     <%= render '/flash_msg', layout: 'shared/flash_messages' %>
     <%= content %>
