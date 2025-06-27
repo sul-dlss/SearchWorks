@@ -30,7 +30,7 @@ class LiveLookup
     end
 
     def query_params
-      { q: "id:(#{document_ids})",
+      { q: "uuid_ssi:(#{document_ids})",
         fl: 'id, item_display_struct',
         facet: false,
         rows: 100 }
