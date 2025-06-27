@@ -49,7 +49,7 @@ en:
       entry_pagination_info:
         other: '%{current} of %{total}'
       highlight:
-        active_html: '<i class="fa fa-check active-icon"></i>'
+        active_html: '<i class="bi bi-check-lg active-icon align-middle"></i>'
     bookmarks:
       no_bookmarks: 'You have no selections'
       select_all: '<i class="fa fa-square-o"></i> <span class="d-none d-lg-inline">Select </span>all'
