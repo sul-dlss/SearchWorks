@@ -39,3 +39,7 @@
 .sidebar:has(.alternate-catalog.show) .mini-bento.btn[aria-expanded="true"] {
   display: none;
 }
+
+.sidebar:has(.mini-bento.btn[aria-expanded="false"]) .alternate-catalog.show {
+  display: none;
+}
