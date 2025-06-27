@@ -52,7 +52,13 @@
                 <% end %>
               </div>
               <span class="fs-6 d-block my-1"
-                >Books, journals, media, and more from the Library’s physical and online collections</span>
+                >
+                  <% if controller.is_a? ArticlesController %>
+                    Journal articles, eBooks, and more from the Library’s digital subscriptions
+                  <% else %>
+                    Books, journals, media, and more from the Library’s physical and online collections
+                  <% end %>
+                </span>
             </div>
             <div class="navbars ms-md-auto">
               <nav

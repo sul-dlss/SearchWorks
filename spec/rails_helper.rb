@@ -13,10 +13,8 @@ require 'selenium-webdriver'
 require 'webmock/rspec'
 require 'axe-rspec'
 
-WebMock.disable_net_connect!(allow_localhost: true, allow: [
-  'eds-api.ebscohost.com',
-  'chromedriver.storage.googleapis.com'
-])
+WebMock.disable_net_connect!(allow_localhost: true,
+                             allow: ['chromedriver.storage.googleapis.com'])
 
 Capybara.javascript_driver = :headless_chrome
 
@@ -100,5 +98,6 @@ RSpec.configure do |config|
   config.include Capybara::RSpecMatchers, type: :component
   config.include Warden::Test::Helpers
   config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :request
   config.include Factories::Methods
 end

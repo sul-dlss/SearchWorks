@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.feature 'Connection form (js)', :js do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-    visit articles_path
+    visit articles_path(q: 'kittens')
   end
 
   scenario 'connection form should be shown filled out and submitted' do
@@ -33,7 +33,7 @@ end
 RSpec.feature 'Connection form (no js)' do
   before do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-    visit articles_path
+    visit articles_path(q: 'kittens')
   end
 
   scenario 'connection form should be shown filled out and submitted' do

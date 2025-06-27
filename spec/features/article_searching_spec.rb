@@ -3,52 +3,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Article Searching' do
-  describe 'Search bar dropdown', :js do
-    scenario 'allows the user to switch to the article search context' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit root_path
-
-      within '.search-card' do
-        choose 'Articles+'
-        click_button 'Search'
-      end
-
-      expect(page).to have_current_path('/articles?search_field=search&q=') # the landing page for Article Search
-      expect(page).to have_title('SearchWorks articles+ : Stanford Libraries')
-    end
-
-    scenario 'does not allow selecting current search context' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit articles_path
-
-      within '.search-dropdown' do
-        click_link 'Select search scope, currently: articles+'
-        expect(page).to have_css('.dropdown-menu', visible: true)
-        expect(page).to have_no_css('a.highlight', text: /catalog/)
-        expect(page).to have_css('.highlight', text: /articles/)
-      end
-    end
-  end
-
-  describe 'subnavbar' do
-    scenario 'catalog-specific sub-menus are not rendered' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit articles_path
-
-      expect(page).to have_css('a', text: /Help/)
-      expect(page).to have_no_css('a', text: /Advanced search/)
-      expect(page).to have_no_css('a', text: /Course reserves/)
-      expect(page).to have_css('a', text: /Selections \(\d+\)/)
-    end
-  end
-
   describe 'articles index page' do
-    scenario 'renders home page if no search parameters are present' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit articles_path
-      expect(page).to have_css('h1', text: /Journal articles . other e-resources/)
-    end
-
     scenario 'renders results page if search parameters are present' do
       article_search_for('Kittens')
 
@@ -164,9 +119,5 @@ RSpec.feature 'Article Searching' do
 
       expect(Capybara.string(results['response']['docs'][3]['fulltext_link_html'])).to have_link('View/download PDF')
     end
-  end
-
-  it 'displays the appropriate fields in the search' do
-    skip 'we need some EDS fixtures'
   end
 end

@@ -15,7 +15,7 @@ module Searchworks4
       end
 
       def email_path
-        "/documents/#{document.id}/email"
+        email_solr_document_path(document)
       end
 
       def copy_url
