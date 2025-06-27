@@ -51,7 +51,7 @@ en:
         description: Books, media, physical & digital resources
         result_singular: catalog
       catalog:
-        name: SearchWorks Articles+
+        name: Articles+
         description: Journal articles, eBooks, and more from the Library’s digital subscriptions
         result_singular: Articles+
     navigation:

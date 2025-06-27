@@ -11,8 +11,8 @@ RSpec.feature 'Alterate catalog results', :js do
     it 'draws mini-bento' do
       visit search_catalog_path(q: '1*')
       within '.alternate-catalog' do
-        expect(page).to have_css 'h3', text: 'Looking for more?'
-        expect(page).to have_link 'View all Articles+ results'
+        expect(page).to have_css 'h2', text: 'Looking for more?'
+        expect(page).to have_link 'View Articles+ results'
         expect(page).to have_css '.alternate-catalog-count', text: '4'
       end
     end
@@ -22,8 +22,8 @@ RSpec.feature 'Alterate catalog results', :js do
     it 'draws mini-bento' do
       visit articles_path(q: '1*')
       within '.alternate-catalog' do
-        expect(page).to have_css 'h3', text: 'Looking for more?'
-        expect(page).to have_link 'View all catalog results'
+        expect(page).to have_css 'h2', text: 'Looking for more?'
+        expect(page).to have_link 'View catalog results'
         expect(page).to have_css '.alternate-catalog-count', text: '52'
       end
     end

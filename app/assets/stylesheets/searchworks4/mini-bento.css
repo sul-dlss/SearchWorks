@@ -3,8 +3,14 @@
   padding: 1.5rem 1rem;
 
   .alternate-catalog-body {
-    .alternate-catalog-desc, .btn {
+    .alternate-catalog-desc,
+    .alternate-catalog-other-tools .alternate-catalog-view-all,
+    .btn {
       font-size: 0.875rem;
+    }
+
+    .alternate-catalog-primary-tools .alternate-catalog-name {
+      --bs-heading-color: var(--stanford-cardinal);
     }
 
     .btn {
@@ -14,6 +20,7 @@
 
   .badge.rounded-pill {
     --bs-badge-color: var(--stanford-black);
+    --bs-badge-font-size: 0.875rem;
     --bs-badge-font-weight: 400;
 
     background-color: var(--stanford-10-black);
