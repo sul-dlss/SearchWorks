@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .modal-content:has(.record-summary) {
   --bs-modal-header-border-width: 0;
   --bs-modal-padding: 0;
@@ -10,7 +9,8 @@
   .modal-footer {
     --bs-modal-padding: 1rem;
   }
-=======
+}
+
 .modal {
 
     .modal-content {
@@ -63,5 +63,4 @@ dialog.modal[open] {
 
 .new-link {
     font-size: 1rem;
->>>>>>> 099dac63 (replacing feedback form with modal)
 }
