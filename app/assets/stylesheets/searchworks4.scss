@@ -33,6 +33,10 @@ layer(components);
     }
   }
 
+  body {
+    min-height: 100vh;
+  }
+
   #pre-footer {
     margin-top: 1rem;
   }
