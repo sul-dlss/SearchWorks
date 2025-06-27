@@ -314,9 +314,6 @@ en:
           other: SearchWorks records
     search:
       page_heading: "%{search_type} search results"
-      bookmarks:
-        present: "Selected"
-        absent: "Select"
       facets:
         title: "Refine your results"
       form:

@@ -8,23 +8,17 @@
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
   <%= header %>
-  <div class="document-main-section">
+  <div class="document-main-section d-flex">
     <% # header bar for doc items in index view %>
-    <div class="documentHeader d-flex justify-content-between">
-      <h3 class="index_title">
-        <%=  content_tag :span, class: 'document-counter fw-light' do
-        t('blacklight.search.documents.counter', counter:)
-      end %>
-        <%= helpers.link_to_document document, counter:, itemprop: 'name' %>
-      </h3>
-
-      <div class="d-flex gap-1">
-        <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
-        <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
+    <div class="col-10">
+      <div class="documentHeader">
+        <h3 class="index_title">
+          <%=  content_tag :span, class: 'document-counter fw-light' do
+          t('blacklight.search.documents.counter', counter:)
+        end %>
+          <%= helpers.link_to_document document, counter:, itemprop: 'name', class: 'fw-medium' %>
+        </h3>
       </div>
-    </div>
-
-    <div class="d-flex">
       <div class="results-metadata-sections">
 
         <% if document.vernacular_title.present? %>
@@ -66,10 +60,14 @@
         <% end %>
 
       </div>
-      <div class="ms-auto">
-        <%= thumbnail %>
-      </div>
     </div>
+    <div class="col-2 d-flex flex-column align-items-center">
+      <div class="d-flex flex-row">
+        <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
+        <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
+      </div>
+      <%= thumbnail %>
+      </div>
     <%= render Searchworks4::AvailabilityComponent.new(document:) %>
   </div>
   <%= footer %>

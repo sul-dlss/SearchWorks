@@ -47,7 +47,7 @@ RSpec.describe "Record toolbar", :feature, :js do
 
           within "div.navbar-collapse" do
             expect(page).to have_css("li button", text: "Send to")
-            expect(page).to have_css("form label", text: "Select")
+            expect(page).to have_css("form label", text: "Bookmark")
           end
         end
       end
@@ -100,7 +100,7 @@ RSpec.describe "Record toolbar", :feature, :js do
 
           within "div.navbar-collapse" do
             expect(page).to have_css("li button", text: "Send to", visible: true)
-            expect(page).to have_css("form label", text: "Select", visible: true)
+            expect(page).to have_css("form label", text: "Bookmark", visible: true)
             expect(page).to have_no_css("li a", text: "text", visible: true)
             expect(page).to have_no_css("li a", text: "email", visible: true)
             expect(page).to have_no_css("li a", text: "printer", visible: true)
