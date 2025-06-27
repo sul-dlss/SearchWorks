@@ -6,7 +6,7 @@
       <ul>
         <% filters = SearchResult::NoResult::FiltersComponent.new(search_state:) %>
         <% if filters.render? %>
-          <li>Remove filters <%= link_to 'Clear all', search_action_path(q: params[:q]), class: "text-primary ms-2",
+          <li>Remove filters <%= link_to 'Clear all', search_action_path(q: params[:q]), class: "clear-all text-primary ms-2",
                                  data: { action: "click->analytics#trackLink" } %>
             <%= render filters %>
           </li>
