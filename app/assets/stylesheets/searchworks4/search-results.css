@@ -54,7 +54,8 @@
   }
 }
 
-.stacks-image {
+.stacks-image,
+.cover-image {
   display: block;
   max-height: 200px;
   max-width: 80px;
