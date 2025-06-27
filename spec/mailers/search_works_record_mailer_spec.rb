@@ -55,7 +55,7 @@ RSpec.describe SearchWorksRecordMailer do
         skip('Need to update subject_from_details ')
         params[:subject] = nil
         mail = SearchWorksRecordMailer.email_record(documents, params, url_params)
-        expect(mail.subject).to eq 'Item Record: N/A'
+        expect(mail.subject).to eq 'SearchWorks Record: N/A'
       end
 
       it 'includes the Email From text when present' do
@@ -93,7 +93,7 @@ RSpec.describe SearchWorksRecordMailer do
       it 'has the subject that from the document when none was passed in' do
         params[:subject] = nil
         mail = SearchWorksRecordMailer.email_record([documents.first], params, url_params)
-        expect(mail.subject).to eq 'Item Record: Title1'
+        expect(mail.subject).to eq 'SearchWorks Record: Title1'
       end
 
       it 'includes the Email From text when present' do

@@ -6,4 +6,7 @@
   .modal-title {
     font-size: 1.5rem;
   }
+  .modal-footer {
+    --bs-modal-padding: 1rem;
+  }
 }
