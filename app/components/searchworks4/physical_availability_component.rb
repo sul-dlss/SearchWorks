@@ -2,17 +2,24 @@
 
 module Searchworks4
   class PhysicalAvailabilityComponent < Blacklight::Component
-    attr_reader :document
+    attr_reader :document, :header_classes
 
     delegate :link_to_document, to: :helpers
 
-    def initialize(document:)
+    def initialize(document:, classes: %w[availability-component border rounded p-2 fs-15], header_classes: %w[gap-4 row-gap-3 align-items-center flex-wrap flex-sm-nowrap])
       @document = document
+      @classes = classes
+      @header_classes = header_classes
+
       super()
     end
 
     def render?
       document.holdings.present?
+    end
+
+    def container_tag(tag_name = 'div', classes: nil, **, &)
+      tag.public_send(tag_name, data: { controller: 'availability' }, class: @classes + (tag_name == 'details' ? [] : @header_classes) + Array(classes), **, &)
     end
 
     def single_item?
@@ -47,7 +54,7 @@ module Searchworks4
 
       def call
         if stackmappable?
-          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger' }, class: 'stackmap-find-it location-name' do
+          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger' }, class: 'stackmap-find-it location-name text-nowrap' do
             tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
           end
         else

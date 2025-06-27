@@ -1,6 +1,6 @@
 <% if single_item? %>
   <%# Instances with a single item collapse the item information %>
-  <div data-controller="availability" class="availability-component d-inline-flex gap-4 align-items-center border rounded p-2 fs-15 suppress-item-level-request-button-if-there-is-a-location-level-request-button flex-wrap flex-sm-nowrap">
+  <%= container_tag(classes: %w[d-inline-flex suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
     <% library = document.holdings.libraries.first %>
     <% location = library.locations.first %>
     <% item = location.items.first %>
@@ -11,40 +11,37 @@
     <% unless item.request_link.render? %>
       <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
     <% end %>
-  </div>
+  <% end %>
   <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document) %>
 <% elsif truncated_display? %>
   <%# Instances with lots of items get an abbreviated treatment %>
-  <div data-controller="availability" class="availability-component d-inline-flex gap-5 align-items-center border rounded p-2 fs-15">
-    <div class="d-inline-flex gap-4 align-items-center">
-      <% if document.holdings.libraries.one? %>
-        <% library = document.holdings.libraries.first %>
+  <%= container_tag(classes: %w[d-inline-flex]) do %>
+    <% if document.holdings.libraries.one? %>
+      <% library = document.holdings.libraries.first %>
 
-        <%= tag.span library.name, class: 'library fw-semibold' %>
-        <%= render LocationComponent.new(location: library.locations.first, document: document, suppress_off_campus: true) if library.locations.one? %>
-      <% end %>
+      <%= tag.span library.name, class: 'library fw-semibold' %>
+      <%= render LocationComponent.new(location: library.locations.first, document: document, suppress_off_campus: true) if library.locations.one? %>
+    <% end %>
 
-      <%= render ItemCountComponent.new(document.holdings.items.count) %>
-    </div>
+    <%= render ItemCountComponent.new(document.holdings.items.count) %>
     <%= link_to_document document, 'See availability', counter: nil, class: 'ms-3 fs-15' %>
-  </div>
+  <% end %>
 <% elsif single_location? %>
   <%# If the instance only has items in one location, we can pull some of the library + location information to the top %>
   <% library = document.holdings.libraries.first %>
   <% location = library.locations.first %>
-  <details data-controller="availability" class="availability-component border rounded p-2 fs-15 w-100 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
-    <summary class="d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap">
-      <div class="d-inline-flex gap-4 align-items-center me-5">
-        <%= tag.span library.name, class: 'library fw-semibold' %>
-        <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
-        <%= render ItemCountComponent.new(document.holdings.items.count) %>
-        <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
-      </div>
-      <div class="btn btn-outline-primary btn-sm">
+  <%= container_tag('details', classes: %w[w-100 suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
+    <%= tag.summary class: header_classes + ['d-flex'] do %>
+      <%= tag.span library.name, class: 'library fw-semibold' %>
+      <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
+      <%= render ItemCountComponent.new(document.holdings.items.count) %>
+      <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+
+      <div class="btn btn-outline-primary btn-sm ms-auto text-nowrap">
         <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
         <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
       </div>
-    </summary>
+    <% end %>
     <div>
       <div class="d-flex gap-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
         <div class="pt-2 d-none d-sm-block">
@@ -74,24 +71,23 @@
       </div>
       <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
     </div>
-  </details>
+  <% end %>
 <% else %>
   <%# With multiple locations, we just require the user expand the whole table to see any item details %>
-  <details data-controller="availability" class="availability-component border rounded p-2 fs-15 w-100">
-    <summary class="d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap">
-      <div class="d-inline-flex gap-4 align-items-center me-5">
-        <% if document.holdings.libraries.one? %>
-          <% library = document.holdings.libraries.first %>
-          <%= tag.span library.name, class: 'library fw-semibold' %>
-        <% end %>
+  <%= container_tag('details', classes: %w[w-100]) do %>
+    <%= tag.summary class: header_classes + ['d-flex'] do %>
+      <% if document.holdings.libraries.one? %>
+        <% library = document.holdings.libraries.first %>
+        <%= tag.span library.name, class: 'library fw-semibold' %>
+      <% end %>
 
-        <%= render ItemCountComponent.new(document.holdings.items.count) %>
-      </div>
-      <div class="btn btn-outline-primary btn-sm">
+      <%= render ItemCountComponent.new(document.holdings.items.count) %>
+
+      <div class="btn btn-outline-primary btn-sm ms-auto text-nowrap">
         <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
         <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
       </div>
-    </summary>
+    <% end %>
     <div>
       <% document.holdings.libraries.each do |library| %>
         <div class="d-flex flex-column my-2">
@@ -133,5 +129,5 @@
       <% end %>
       <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
     </div>
-  </details>
+  <% end %>
 <% end %>
