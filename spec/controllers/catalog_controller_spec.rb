@@ -76,21 +76,36 @@ RSpec.describe CatalogController do
     let(:config) { controller.blacklight_config }
 
     it "has the correct facet order" do
-      keys = config.facet_fields.keys
-      expect(keys.index("access_facet")).to be < keys.index("format_main_ssim")
-      expect(keys.index("format_main_ssim")).to be < keys.index("format_physical_ssim")
-      expect(keys.index("format_physical_ssim")).to be < keys.index("pub_year_tisim")
-      expect(keys.index("pub_year_tisim")).to be < keys.index("building_facet")
-      expect(keys.index("building_facet")).to be < keys.index("language")
-      expect(keys.index("language")).to be < keys.index("author_person_facet")
-      expect(keys.index("author_person_facet")).to be < keys.index("callnum_facet_hsim")
-      expect(keys.index("callnum_facet_hsim")).to be < keys.index("topic_facet")
-      expect(keys.index("topic_facet")).to be < keys.index("genre_ssim")
-      expect(keys.index("genre_ssim")).to be < keys.index("geographic_facet")
-      expect(keys.index("geographic_facet")).to be < keys.index("era_facet")
-      expect(keys.index("era_facet")).to be < keys.index("author_other_facet")
-      expect(keys.index("author_other_facet")).to be < keys.index("format")
+      expect(config.facet_fields.keys).to eq [
+        "access_facet",
+        "format_main_ssim",
+        "building_facet",
+        "genre_ssim",
+        "pub_year_tisim",
+        "language",
+        "author_person_facet",
+        "topic_facet",
+        "geographic_facet",
+        "callnum_facet_hsim",
+        "pub_year_adv_search",
+        "db_az_subject",
+        "location_facet",
+        "stanford_work_facet_hsim",
+        "stanford_dept_sim",
+        "collection",
+        "collection_type",
+        "fund_facet",
+        "format_physical_ssim",
+        "course",
+        "instructor",
+        "courses_folio_id_ssim",
+        "era_facet",
+        "author_other_facet",
+        "format",
+        "iiif_resources"
+      ]
     end
+
     describe 'facet sort' do
       it 'sets an index sort for the resource type facet' do
         expect(config.facet_fields['format_main_ssim'].sort).to eq :index

@@ -39,9 +39,12 @@
       <div class="sidebar col-12 col-md-4 col-xl-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
         <!-- TODO: search mode toggle -->
 
-        <%= render blacklight_config&.view_config(document_index_view_type)&.facet_group_component.new(id: nil, title: 'Filters', header_classes: 'facets-heading') do |component| %>
+        <%= render Facets::GroupComponent.new(id: nil, title: 'Filters', header_classes: 'facets-heading') do |component| %>
           <% component.with_body do %>
-            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group('non-collapsable'), response: @response) %>
+            <div data-facet-list-target="hideFacets" id="hidden-facets">
+              <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+            </div>
           <% end %>
         <% end %>
 

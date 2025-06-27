@@ -1,0 +1,17 @@
+<% # main container for facets/limits menu -%>
+<%= content_tag :div, id: @id, class: container_classes, data: { controller: 'facet-list' } do %>
+  <div class="facets-header">
+    <%= content_tag :h2, @title, class: header_classes if @title %>
+
+    <%= collapse_toggle_button(@panel_id) %>
+  </div>
+
+  <div id="<%= @panel_id %>" class="<%= body_classes %>">
+    <%= body %>
+
+    <div class="text-center mt-2 d-xxl-none">
+      <button class="btn btn-primary" data-facet-list-target="button" data-action="facet-list#toggle" aria-controls="hidden-facets" aria-expanded="false">
+      </button>
+    </div>
+  </div>
+<% end %>
