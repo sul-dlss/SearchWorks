@@ -60,6 +60,7 @@
         <% end %>
 
       </div>
+      <%= render Searchworks4::AvailabilityComponent.new(document:) %>
     </div>
     <div class="col-2 d-flex flex-column align-items-center">
       <div class="d-flex flex-row">
@@ -67,8 +68,7 @@
         <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
       </div>
       <%= thumbnail %>
-      </div>
-    <%= render Searchworks4::AvailabilityComponent.new(document:) %>
+    </div>
   </div>
   <%= footer %>
 <% end %>
