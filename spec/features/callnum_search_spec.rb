@@ -29,7 +29,6 @@ RSpec.describe 'Call num search', :js do
       within "#content" do
         expect(page).to have_css('h3.index_title', text: object_title)
       end
-      click_button 'Show all filters'
       click_button 'Call number'
       expect(page).to have_link('Dewey Classification')
       click_button 'Toggle subgroup'
