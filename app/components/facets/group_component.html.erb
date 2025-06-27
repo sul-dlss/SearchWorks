@@ -3,7 +3,7 @@
   <div class="facets-header">
     <%= content_tag :h2, @title, class: header_classes if @title %>
 
-    <%= collapse_toggle_button(@panel_id) %>
+    <%= collapse_toggle_button(@panel_id, classes: "btn btn-outline-primary col-12 facet-toggle-button d-block d-lg-none") %>
   </div>
 
   <div id="<%= @panel_id %>" class="<%= body_classes %>">

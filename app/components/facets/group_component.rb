@@ -6,9 +6,8 @@ module Facets
       super
     end
 
-    def collapse_toggle_button(panel_id)
-      render button_component.new(panel_id: panel_id,
-                                  classes: "btn btn-outline-primary col-12 facet-toggle-button d-block d-md-none")
+    def collapse_toggle_button(panel_id, classes: "btn btn-outline-primary col-12 facet-toggle-button d-block d-md-none")
+      render button_component.new(panel_id:, classes:)
     end
   end
 end
