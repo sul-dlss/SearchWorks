@@ -3,8 +3,6 @@
 require 'rails_helper'
 
 RSpec.feature 'Article Home Page' do
-  before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
-
   it 'draws the page' do
     visit articles_path
 

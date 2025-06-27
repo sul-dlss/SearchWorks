@@ -43,13 +43,16 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  describe 'the articles', skip: "Pending SearchWorks 4.0 designs" do
-    before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
+  describe 'the articles index page' do
+    before { visit articles_path }
 
-    it 'has an accessible index page' do
-      visit articles_path
+    it 'is accessible' do
       expect(page).to be_accessible.within('main')
     end
+  end
+
+  describe 'the articles', skip: "Pending SearchWorks 4.0 designs" do
+    before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
 
     it 'has an accessible search results page' do
       visit articles_path q: 'frog'

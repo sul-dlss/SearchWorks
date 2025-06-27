@@ -21,11 +21,9 @@ class ArticlesController < ApplicationController
   end
 
   rescue_from 'Faraday::Error' do |exception|
-    raise exception if params[:q].present?
     raise ActionController::RoutingError, 'Not Found' if params[:action] == 'show'
 
-    flash[:alert] = 'An empty search is not possible in articles+. Enter a keyword to start your search.'
-    redirect_back fallback_location: articles_path
+    raise exception
   end
 
   before_action :set_search_query_modifier, only: :index
@@ -33,7 +31,7 @@ class ArticlesController < ApplicationController
   before_action :eds_init
   # TODO: probably need to move this into an Eds::SearchService initializer
   def eds_init
-    setup_eds_session(session)
+    setup_eds_session(session) if action_name != 'index' || has_search_parameters?
   end
 
   BREAKS = {
@@ -246,6 +244,10 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       format.html { render layout: !request.xhr? }
     end
+  end
+
+  def index
+    super if has_search_parameters?
   end
 
   protected
