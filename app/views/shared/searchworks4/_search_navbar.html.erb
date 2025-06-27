@@ -1,10 +1,19 @@
 <nav id="search-navbar" class="bg-light py-2 mb-3" aria-label="<%= t('searchworks.navigation.search_bar') %>">
-  <div class="container-lg">
-    <div class="search-form w-75">
-        <%= render HomepageSearchComponent.new url: search_action_url,
-                                              advanced_search_url: search_action_url(action: 'advanced_search'),
-                                              params: search_state.params_for_search.except(:qt),
-                                              autocomplete_path: suggest_index_catalog_path %>
-                                              </div>
+  <div class="container-lg search-form d-flex align-items-center column-gap-3 flex-wrap">
+    <div class="text-nowrap">
+      <span class="fw-bold">Search mode:</span>
+      <div class="form-check d-inline-block mx-1">
+        <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" checked onclick="document.querySelector('.search-query-form').action = '<%= search_action_url %>'">
+        <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
+      </div>
+      <div class="form-check d-inline-block mx-1">
+        <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" onclick="document.querySelector('.search-query-form').action = '/articles'">
+        <label class="form-check-label" for="searchTypeArticle">Articles+</label>
+      </div>
+    </div>
+    <%= render HomepageSearchComponent.new url: search_action_url,
+                                          advanced_search_url: search_action_url(action: 'advanced_search'),
+                                          params: search_state.params_for_search.except(:qt),
+                                          autocomplete_path: suggest_index_catalog_path %>
   </div>
 </nav>
