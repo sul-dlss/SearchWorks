@@ -5,7 +5,7 @@
     </button>
   </div>
 <% end %>
-<div class='alternate-catalog accordion accordion-collapse collapse d-md-block mb-3' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
+<div class='alternate-catalog accordion accordion-collapse collapse mb-3 <%= show? ? "show" : "d-md-block" %>' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
   <div class="row">
     <h2 class="alternate-catalog-title col mb-3"></h2>
     <% if close? %>
