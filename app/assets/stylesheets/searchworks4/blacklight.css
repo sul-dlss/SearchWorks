@@ -34,12 +34,6 @@
   }
 }
 
-.facet-limit {
-  --bs-accordion-btn-bg: var(--bs-gray-100);
-  --bs-btn-hover-bg: var(--bs-gray-200);
-  --bs-accordion-active-bg: var(--bs-accordion-btn-bg);
-}
-
 .facet-values {
   --bl-facet-active-item-color: var(--bs-success);
   --bl-facet-remove-color: var(--bs-secondary-color);
