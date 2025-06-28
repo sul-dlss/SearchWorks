@@ -314,6 +314,11 @@ en:
           other: SearchWorks records
     search:
       page_heading: "%{search_type} search results"
+      page_title:
+        constraint: "%{label}: %{value}"
+        many_constraint_values: "%{values} selected"
+        title: "%{application_name} catalog, %{constraints}"
+        joiner: ", "
       facets:
         title: "Refine your results"
       form:
