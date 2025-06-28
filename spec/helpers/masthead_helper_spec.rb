@@ -18,7 +18,7 @@ RSpec.describe MastheadHelper do
 
     it "is empty for access points that don't have mastheads" do
       allow(page_location).to receive(:access_point).and_return("not_an_access_point")
-      expect(render_masthead_partial).to eq ''
+      expect(render_masthead_partial).to be_blank
     end
   end
 
