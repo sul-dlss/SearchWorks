@@ -1,0 +1,22 @@
+<div class="search-masthead search-area-bg mb-3">
+  <div class="container-lg">
+    <div class="row flex-column flex-md-row">
+      <div class="col pe-md-5 mb-5 mb-md-0">
+        <h1 class="mb-3"><%= header %></h1>
+        <%= content %>
+
+        <% if search? %>
+          <%= search %>
+        <% else %>
+          <%= render HomepageSearchComponent.new url: helpers.search_action_url,
+                                            advanced_search_url: helpers.search_action_url(action: 'advanced_search'),
+                                            params: helpers.search_state.params_for_search.except(:qt),
+                                            autocomplete_path: suggest_index_catalog_path %>
+        <% end %>
+      </div>
+      <div class="col border-md-start ps-md-5">
+        <%= aside %>
+      </div>
+    </div>
+  </div>
+</div>

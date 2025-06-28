@@ -11,7 +11,7 @@ RSpec.describe 'Digital Collections Access Point' do
   end
 
   it 'includes the digital collections masthead' do
-    within(".digital-collections-masthead") do
+    within(".search-masthead") do
       expect(page).to have_css('h1', text: 'Digital collections')
       expect(page).to have_css('a', text: 'All digital items')
       expect(page).to have_css('a', text: 'IIIF resources')

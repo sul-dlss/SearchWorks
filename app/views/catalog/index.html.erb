@@ -1,5 +1,7 @@
 <% if has_search_parameters? %>
-  <%= render_masthead_partial %>
+  <% masthead = capture { render_masthead_partial } %>
+  <% content_for(:search_navbar) { masthead } if html_present?(masthead) %>
+
   <%= render partial: "search_results" %>
 <% else %>
   <%= render partial: "home_page" %>

@@ -144,3 +144,9 @@ details[open] {
     color: var(--stanford-80-black);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .border-md-start {
+    border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+}

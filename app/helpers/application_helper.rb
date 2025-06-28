@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  def suppress_search_navbar!
-    content_for(:search_navbar) { tag.div class: 'suppressed-search-navbar d-none' }
-  end
-
   def render_search_bar_advanced_widget
     render partial: 'catalog/search_bar_advanced_widget'
   end

@@ -14,7 +14,7 @@ RSpec.describe 'Dissertation Theses Access Point' do
     expect(page).to have_title('Dissertation theses in SearchWorks catalog')
   end
   it 'includes the dissertation/theses masthead' do
-    within(".dissertation-theses-masthead") do
+    within(".search-masthead") do
       expect(page).to have_css('h1', text: 'Theses and dissertations')
     end
   end

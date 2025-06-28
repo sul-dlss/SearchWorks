@@ -1,9 +1,10 @@
-<div id="masthead-container">
-  <div id="masthead" class="sdr-masthead">
-    <h1 class="my-3">Stanford Digital Repository</h1>
+<%= render Masthead::LayoutComponent.new do |component| %>
+  <% component.with_header { 'Stanford Digital Repository' } %>
+
+  <% component.with_aside do %>
     <p>These results include all digital items and collections from the SDR. Filter by <b>Resource type</b> to find images, maps, data, and more.</p>
 
-    <div class="flexgrid">
+    <div class="d-flex">
       <div class="col">
         <%= link_to('Digital collections', search_catalog_path(collections_search_params)) %>
         <p>Find collections of digital content — archives, donations, and grouped materials — in the SDR.</p>
@@ -17,5 +18,5 @@
         <p>Stanford Libraries' managed repository for scholarly content of enduring value.</p>
       </div>
     </div>
-  </div>
-</div>
+  <% end %>
+<% end %>

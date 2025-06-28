@@ -54,7 +54,10 @@
       <%= render 'shared/searchworks4/search_navbar' %>
     <% end %>
 
-    <%= yield %>
+
+    <%= render MainContainerComponent.new do %>
+      <%= yield %>
+    <% end %>
     <%= render 'shared/searchworks4/su_footer' %>
   </body>
 </html>

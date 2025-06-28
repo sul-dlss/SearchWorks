@@ -5,12 +5,12 @@
 ###
 module MastheadHelper
   def render_masthead_partial
-    return '' unless page_location.access_point?
+    return unless page_location.access_point?
 
     begin
       render "catalog/mastheads/#{page_location.access_point}"
     rescue ActionView::MissingTemplate
-      return ''
+      return
     end
   end
 
