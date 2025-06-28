@@ -1,22 +1,20 @@
 <% bookplate = bookplate_from_document_list %>
 <% if bookplate.present? %>
-  <div id="masthead-container">
-    <div id="masthead" class="bookplate-fund-masthead row">
-      <div class='col-md-2 col-sm-3'>
-        <%= image_tag(bookplate.thumbnail_url, alt: bookplate.text) %>
-      </div>
-      <div class='col-md-10 col-sm-9'>
-        <h1 class="my-3"><%= bookplate.text %></h1>
-        <p>
-          The library resources listed below were acquired with the generous support of this endowed materials fund.
-        </p>
-        <p>
-          Donors and family representatives who have created and sustained library endowments ensure the most relevant research materials are available to students, faculty and scholars in perpetuity, a tradition started by Jane Stanford when she created the first library endowment from the proceeds of the sale of her jewel collection.
-        </p>
-        <p>
-          Learn more about the many ways to <a href="https://library.stanford.edu/support-stanford-libraries">support teaching, learning and research at Stanford Libraries.</a>
-        </p>
-      </div>
-    </div>
-  </div>
+  <%= render Masthead::LayoutComponent.new do |component| %>
+    <% component.with_header { bookplate.text } %>
+
+    <%= image_tag(bookplate.thumbnail_url, alt: bookplate.text) %>
+
+    <% component.with_aside do %>
+      <p>
+        The library resources listed below were acquired with the generous support of this endowed materials fund.
+      </p>
+      <p>
+        Donors and family representatives who have created and sustained library endowments ensure the most relevant research materials are available to students, faculty and scholars in perpetuity, a tradition started by Jane Stanford when she created the first library endowment from the proceeds of the sale of her jewel collection.
+      </p>
+      <p>
+        Learn more about the many ways to <a href="https://library.stanford.edu/support-stanford-libraries">support teaching, learning and research at Stanford Libraries.</a>
+      </p>
+    <% end %>
+  <% end %>
 <% end %>

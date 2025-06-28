@@ -1,10 +1,14 @@
-<div id="masthead-container">
-  <div id="masthead" class="iiif-resources-masthead row">
+<%= render Masthead::LayoutComponent.new do |component| %>
+  <% component.with_header do %>
     <div class='col-md-2'>
       <%= image_tag('iiif_logo.svg', width: '150', alt: "", title: '', style: 'padding: 10px;') %>
     </div>
     <div class='col-md-10'>
-      <h1 class="my-3">IIIF resources</h1>
+      IIIF resources
+    </div>
+  <% end %>
+  <% component.with_aside do %>
+      <h2>About IIIF resources</h2>
       <div>
         <p>
           These items in the Stanford Digital Repository are IIIF-compatible. You can open these images in any IIIF-compatible viewer to manipulate them, analyze them, and compare them to images from other institutions.
@@ -13,6 +17,5 @@
           Learn more about the <a href="https://iiif.io/">International Image Interoperability Framework (IIIF)</a> and <a href="https://library.stanford.edu/iiif">how to open images in a IIIF viewer</a>.
         </p>
       </div>
-    </div>
-  </div>
-</div>
+  <% end %>
+<% end %>

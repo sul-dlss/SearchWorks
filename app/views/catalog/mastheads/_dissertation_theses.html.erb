@@ -1,9 +1,8 @@
-<div id="masthead-container">
-  <div id="masthead" class="dissertation-theses-masthead">
-    <h1 class="my-3">Theses and dissertations</h1>
+<%= render Masthead::LayoutComponent.new do |component| %>
+  <% component.with_header { 'Theses and dissertations' } %>
     <p>
       Result includes all theses and dissertations — from all sources — held in the Stanford Libraries and Digital Repository.
     </p>
     <p>To show Stanford work only, refine by <strong>Stanford student work</strong> or by <strong>Stanford school or department</strong>.</p>
   </div>
-</div>
+<% end %>

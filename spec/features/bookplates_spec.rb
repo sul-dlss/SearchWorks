@@ -40,7 +40,7 @@ RSpec.describe 'Bookplates' do
 
       click_link 'Susan and Ruth Sharp Fund'
 
-      within('.bookplate-fund-masthead') do
+      within('.search-masthead') do
         expect(page).to have_css('img')
         expect(page).to have_css('h1', text: 'Susan and Ruth Sharp Fund')
         expect(page).to have_content masthead_text
@@ -55,7 +55,7 @@ RSpec.describe 'Bookplates' do
 
       click_link 'The Edgar Amos Boyles Centennial Book Fund'
 
-      within('.bookplate-fund-masthead') do
+      within('.search-masthead') do
         expect(page).to have_css('img')
         expect(page).to have_css('h1', text: 'The Edgar Amos Boyles Centennial Book Fund')
         expect(page).to have_content masthead_text
