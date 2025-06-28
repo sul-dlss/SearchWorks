@@ -1,28 +1,28 @@
-<% @page_title= t 'blacklight.home.title' %>
-<% suppress_search_navbar! %>
-
-<div class="search-area-image-bg mb-3">
-  <div class="container">
-    <search class="search-card px-4 py-3 rounded">
-      <div class="mb-3">
-        <span class="fw-bold">Search mode:</span>
-        <div class="form-check form-check-inline mx-3">
-          <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" checked onclick="document.querySelector('.search-query-form').action = '<%= search_action_url %>'">
-          <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
+<% @page_title = t 'blacklight.home.title' %>
+<% content_for(:search_navbar) do %>
+  <div class="search-area-image-bg mb-3">
+    <div class="container">
+      <search class="search-card px-4 py-3 rounded">
+        <div class="mb-3">
+          <span class="fw-bold">Search mode:</span>
+          <div class="form-check form-check-inline mx-3">
+            <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" checked onclick="document.querySelector('.search-query-form').action = '<%= search_action_url %>'">
+            <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" onclick="document.querySelector('.search-query-form').action = '/articles'">
+            <label class="form-check-label" for="searchTypeArticle">Articles+</label>
+          </div>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" onclick="document.querySelector('.search-query-form').action = '/articles'">
-          <label class="form-check-label" for="searchTypeArticle">Articles+</label>
-        </div>
-      </div>
-      <%= render HomepageSearchComponent.new url: search_action_url,
-                                             advanced_search_url: search_action_url(action: 'advanced_search'),
-                                             params: search_state.params_for_search.except(:qt),
-                                             autocomplete_path: suggest_index_catalog_path %>
-      <p class="mt-3">Catalog - search over eleven million physical volumes, over three million e-books, over  65,000 serial licenses, and enumerable digital resources, including  datasets... </p>
-    </search>
+        <%= render HomepageSearchComponent.new url: search_action_url,
+                                              advanced_search_url: search_action_url(action: 'advanced_search'),
+                                              params: search_state.params_for_search.except(:qt),
+                                              autocomplete_path: suggest_index_catalog_path %>
+        <p class="mt-3">Catalog - search over eleven million physical volumes, over three million e-books, over  65,000 serial licenses, and enumerable digital resources, including  datasets... </p>
+      </search>
+    </div>
   </div>
-</div>
+<% end %>
 
 <%= render MainContainerComponent.new do %>
   <div class="row mt-5 catalog-home-page">

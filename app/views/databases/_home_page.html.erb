@@ -1,8 +1,8 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 
-<% suppress_search_navbar! %>
-
-<%= render 'header' %>
+<% content_for(:search_navbar) do %>
+  <%= render 'header' %>
+<% end %>
 
 <%= render MainContainerComponent.new do %>
   <div class="mb-5 mt-4">

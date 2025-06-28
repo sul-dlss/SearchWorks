@@ -1,5 +1,4 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-<% suppress_search_navbar! %>
 
 <% view_config = blacklight_config.view_config(document_index_view_type, action_name: action_name) %>
 <% content_for(:head) do -%>
@@ -9,7 +8,9 @@
   <%= json_api_link_tag %>
 <% end -%>
 
-<%= render 'header' %>
+<% content_for(:search_navbar) do %>
+  <%= render 'header' %>
+<% end %>
 
 <%= render MainContainerComponent.new do %>
   <h1 class="visually-hidden">Search Results</h1>
