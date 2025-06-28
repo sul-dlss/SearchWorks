@@ -20,7 +20,6 @@ Blacklight.onLoad(function() {
   BlacklightRangeLimit.initialize(Blacklight.Modal.modalSelector)
 });
 
-import "./alternate_catalog";
 import "./article";
 import "./call-number-browse-tabs";
 import "./eds_range_limit";
