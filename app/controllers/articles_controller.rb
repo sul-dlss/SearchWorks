@@ -308,7 +308,7 @@ class ArticlesController < ApplicationController
   end
 
   def has_search_parameters?
-    params[:q].present? || params[:f].present?
+    params[:q].present?
   end
 
   def extract_fulltext_link(document, type)
