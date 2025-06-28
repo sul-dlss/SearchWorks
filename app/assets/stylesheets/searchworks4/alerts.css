@@ -16,3 +16,12 @@
     margin-left: 0;
   }
 }
+
+.alert {
+    --stanford-digital-blue-dark-rgb: 0, 84, 143;
+    --bs-info-rgb: var(--stanford-digital-blue-dark-rgb);
+    --bs-info-bg-subtle: rgba(var(--bs-info-rgb), 10%);
+    --bs-info-border-subtle: rgb(var(--bs-info-rgb));
+    --bs-info-text-emphasis: rgb(var(--bs-info-rgb));
+  }
+

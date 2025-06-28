@@ -10,3 +10,76 @@
     --bs-modal-padding: 1rem;
   }
 }
+
+.modal, div[data-blacklight-modal] {
+
+    .modal-content {
+        padding: 0rem 1.75rem;
+        margin-top: 25%;
+    }
+    .modal-title {
+        width:100%;
+    }
+
+    .col-form-label.required::after {
+        content: "* Required";
+        color: var(--stanford-cardinal);
+        margin-left: 5px;
+        font-weight: normal;
+        font-size: 0.9rem;
+    }
+
+    .modal-footer {
+        padding: 1rem 0rem;
+
+    }
+
+    .btn.stanford-only {
+        --bs-btn-padding-x: 0.1rem;
+        --bs-btn-padding-y: 0rem;
+    }
+
+    --bs-modal-footer-gap: 0rem;
+    --bs-modal-padding: 1.75rem !important;
+    --bs-modal-header-padding: 1.75rem 0rem !important;
+}
+
+.login-message {
+    font-size: 0.9rem;
+    --bs-link-decoration: underline;
+}
+
+/* Blacklight's decision to try to use bootstrap modal CSS with an html5 dialog --
+// in such a way the <dialog> element actually serves as the modal backdrop --
+// requires some fixes to both bootstrap CSS and user-agent default css */
+
+dialog.modal[open] {
+    display: block;
+    background: none;
+    border: none;
+    max-height: unset;
+    max-width: unset;
+}
+
+.new-link {
+    font-size: 1rem;
+
+}
+
+
+.modal-content {
+    padding: 0rem 1.75rem;
+    margin-top: 25%;
+}
+
+/* data-blacklight-modal is the containing div with what goes in modal contents on the standalone page */
+div[data-blacklight-modal], .feedback-alert {
+    --bs-gutter-x: 7rem;
+    max-width: 1500px;
+    --bs-gutter-y: 0;
+    width: 60%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
