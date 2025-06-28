@@ -34,6 +34,14 @@ class ArticlesController < ApplicationController
     setup_eds_session(session) if action_name != 'index' || has_search_parameters?
   end
 
+  after_action :update_eds_session
+  def update_eds_session
+    # Update the EDS session token in the user's session
+    used_token = search_service.session_token(do_not_request: true)
+
+    session[Settings.EDS_SESSION_TOKEN_KEY] = used_token if used_token.present? && session[Settings.EDS_SESSION_TOKEN_KEY] != used_token
+  end
+
   BREAKS = {
     words_connector: '<br/>',
     two_words_connector: '<br/>',
@@ -276,7 +284,7 @@ class ArticlesController < ApplicationController
       guest:          session['eds_guest'],
       session_token:  session[Settings.EDS_SESSION_TOKEN_KEY]
     }
-    Eds::SearchService.new(blacklight_config, params, eds_params)
+    @search_service ||= Eds::SearchService.new(blacklight_config, params, eds_params)
   end
 
   def set_search_query_modifier

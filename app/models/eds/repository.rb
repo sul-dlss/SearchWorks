@@ -25,6 +25,8 @@ module Eds
       end
     end
 
+    delegate :session_token, to: :connection
+
     private
 
     def eds_search(search_builder = {})

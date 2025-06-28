@@ -15,6 +15,8 @@ module Eds
 
     attr_reader :blacklight_config, :user_params, :context # used by search_builder
 
+    delegate :session_token, to: :@repository
+
     def search_builder
       blacklight_config.search_builder_class.new(self)
     end

@@ -54,6 +54,7 @@ module Eds
       post('/edsapi/rest/Search', params).body
     rescue Faraday::Error => e
       eds_code = e.response_body['ErrorNumber'] || e.response_body['ErrorCode']
+
       case eds_code
       when '138'
         # deep paging
@@ -71,7 +72,9 @@ module Eds
       end
     end
 
-    def session_token
+    def session_token(do_not_request: false)
+      return @session_token if do_not_request
+
       @session_token ||= begin
         response = connection.get('/edsapi/rest/CreateSession', { profile: eds_params[:profile], guest: eds_params[:guest] ? 'y' : 'n', displaydatabasename: 'y' },
                                   { 'x-authenticationToken': auth_token })
