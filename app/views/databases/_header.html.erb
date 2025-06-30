@@ -1,31 +1,27 @@
-<div class="database-search-area-bg search-area-bg mb-3">
-  <div class="container-lg">
-      <div class="row">
-        <section class="col-lg-5 pb-3" aria-label="Search for databases">
-          <h1>Databases</h1>
-          <div>Search for databases by title or subject area</div>
-          <%= render HomepageSearchComponent.new url: search_action_url,
-                                                 params: search_state.params_for_search.except(:qt),
-                                                 autocomplete_path: suggest_index_catalog_path %>
+<%= render Masthead::LayoutComponent.new(classes: 'database-search-area-bg') do |component| %>
+  <% component.with_header { 'Databases' } %>
 
-        </section>
-        <div class="col-lg-1 d-none d-lg-block"></div>
-        <section class="about-section col-lg-6 pt-3 ps-4" aria-labelledby="about-databases">
-          <heading class="h3"id="about-databases">About Databases</heading>
-          <p class="mt-2">A database is a curated collection of digital scholarly journal articles, typically organized by discipline,
-            with tools that let users search by keyword, author, topic, or other filters to find relevant articles.
-            It serves as a centralized platform for accessing articles from numerous academic journals, facilitating
-            efficient research and discovery.</p>
+  <% component.with_search do %>
+    <div>Search for databases by title or subject area</div>
+    <%= render HomepageSearchComponent.new url: search_action_url,
+                                            params: search_state.params_for_search.except(:qt),
+                                            autocomplete_path: suggest_index_catalog_path %>
+  <% end %>
 
-          <div class="d-flex flex-wrap">
-            <span class="fw-semibold text-nowrap me-3">Other helpful resources:</span>
-            <ul class="list-inline d-inline">
-              <li class="list-inline-item me-3 text-nowrap"><a href="https://sfx-01stanford.hosted.exlibrisgroup.com/01stanford/az">List of Journals A-Z <span class="bi-arrow-up-right"></span></a></li>
-              <li class="list-inline-item me-3 text-nowrap"><a href="/articles">Articles+ <span class="bi-arrow-up-right"></span></a></li>
-              <li class="list-inline-item text-nowrap"><a href="https://library.stanford.edu/services/off-campus-access">Off-campus access <span class="bi-arrow-up-right"></span></a></li>
-            </ul>
-          </div>
-        </section>
+  <% component.with_aside do %>
+      <heading class="h3"">About Databases</heading>
+      <p class="mt-2">A database is a curated collection of digital scholarly journal articles, typically organized by discipline,
+        with tools that let users search by keyword, author, topic, or other filters to find relevant articles.
+        It serves as a centralized platform for accessing articles from numerous academic journals, facilitating
+        efficient research and discovery.</p>
+
+      <div class="d-flex flex-wrap">
+        <span class="fw-semibold text-nowrap me-3">Other helpful resources:</span>
+        <ul class="list-inline d-inline">
+          <li class="list-inline-item me-3 text-nowrap"><a href="https://sfx-01stanford.hosted.exlibrisgroup.com/01stanford/az">List of Journals A-Z <span class="bi-arrow-up-right"></span></a></li>
+          <li class="list-inline-item me-3 text-nowrap"><a href="/articles">Articles+ <span class="bi-arrow-up-right"></span></a></li>
+          <li class="list-inline-item text-nowrap"><a href="https://library.stanford.edu/services/off-campus-access">Off-campus access <span class="bi-arrow-up-right"></span></a></li>
+        </ul>
       </div>
-  </div>
-</div>
+  <% end %>
+<% end %>

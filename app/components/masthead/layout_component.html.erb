@@ -1,7 +1,7 @@
-<div class="search-masthead search-area-bg mb-3">
+<div class="search-masthead search-area-bg mb-3 <%= classes.join(' ') %>">
   <div class="container-lg">
     <div class="row flex-column flex-md-row">
-      <div class="col pe-md-5 mb-5 mb-md-0">
+      <section class="col pe-md-5 mb-5 mb-md-0">
         <h1 class="mb-3"><%= header %></h1>
         <%= content %>
 
@@ -13,10 +13,10 @@
                                             params: helpers.search_state.params_for_search.except(:qt),
                                             autocomplete_path: suggest_index_catalog_path %>
         <% end %>
-      </div>
-      <div class="col border-md-start ps-md-5">
+      </section>
+      <section class="col border-md-start ps-md-5">
         <%= aside %>
-      </div>
+      </section>
     </div>
   </div>
 </div>
