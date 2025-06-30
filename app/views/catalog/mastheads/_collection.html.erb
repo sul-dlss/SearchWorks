@@ -1,16 +1,16 @@
 <% get_collection %>
 <% if !@parent.nil? %>
-  <div id="masthead-container">
-    <div id="masthead" class="collection-masthead">
-      <h1 class="my-3"><%= @parent[:title_display] %></h1>
-      <div class="collection-content">
-        <% if @parent[:summary_display] %>
-          <div class="collection-summary">
-            <div data-behavior='truncate'>
-              <%= format_record_html(@parent[:summary_display].join(', ')) %>
-            </div>
-          </div>
-        <% end %>
+  <%= render Masthead::LayoutComponent.new do |component| %>
+    <% component.with_header { @parent[:title_display] } %>
+    <% if @parent[:summary_display] %>
+      <div class="collection-summary">
+        <div data-behavior='truncate'>
+          <%= format_record_html(@parent[:summary_display].join(', ')) %>
+        </div>
+      </div>
+    <% end %>
+
+    <% component.with_aside do %>
         <dl class="dl-horizontal dl-invert collection-metadata">
           <% if @parent.collection_members.present? %>
             <dt>Digital collection</dt>
@@ -26,7 +26,6 @@
             <dd><%= @parent.marc_links.finding_aid.first.html.html_safe %></dd>
           <% end %>
         </dl>
-      </div>
-    </div>
-  </div>
+    <% end %>
+  <% end %>
 <% end %>

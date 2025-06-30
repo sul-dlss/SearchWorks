@@ -1,9 +1,19 @@
-<div id="masthead-container">
-  <div id="masthead" class="digital-collections-masthead">
-    <h1 class="my-3">Digital collections</h1>
+<%= render Masthead::LayoutComponent.new do |component| %>
+  <% component.with_header { 'Digital collections' } %>
+
+  <% component.with_search do %>
+    <div class="fs-4">Search by title, author (individual or organization)</div>
+    <%= render HomepageSearchComponent.new url: search_action_url,
+                                      advanced_search_url: search_action_url(action: 'advanced_search'),
+                                      params: search_state.params_for_search.except(:qt),
+                                      autocomplete_path: suggest_index_catalog_path %>
+  <% end %>
+
+  <% component.with_aside do %>
+    <h2>About digital collections</h2>
     <p>These results describe collections of digital content — archives, donations, and grouped materials — in the Stanford Digital Repository. Use <b>Explore this collection</b> to find and filter the items within each collection.</p>
 
-    <div class="flexgrid">
+    <div class="d-flex gap-4">
       <div class="col">
         <%= link_to 'All digital items', digital_collections_params_for %>
         <p>Find all items and collections in the SDR. Filter by images, maps, data, and more.</p>
@@ -17,5 +27,5 @@
         <p>Stanford Libraries' managed repository for scholarly content of enduring value.</p>
       </div>
     </div>
-  </div>
-</div>
+  <% end %>
+<% end %>

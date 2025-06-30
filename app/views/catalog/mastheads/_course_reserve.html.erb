@@ -3,9 +3,12 @@
    course_info = CourseReserve.find(id)
 %>
 <% if course_info.present? %>
-  <div id="masthead-container">
-    <div id="masthead" class="course-reserve-masthead">
-      <h1 class="my-3">Course reserve list: <%= course_info.course_number %></h1>
+  <%= render Masthead::LayoutComponent.new do |component| %>
+    <% component.with_header do %>
+      Course reserve list: <%= course_info.course_number %>
+    <% end %>
+
+    <% component.with_aside do %>
       <dl class='dl-horizontal dl-invert'>
         <dt>Course</dt>
         <dd><%= "#{course_info.course_number} -- #{course_info.name}" %></dd>
@@ -15,6 +18,6 @@
       <p>
         <%= link_to "Find reserve list for another course", course_reserves_path %>
       </p>
-    </div>
-  </div>
+    <% end %>
+  <% end %>
 <% end %>

@@ -1,18 +1,20 @@
-<div id="masthead-container">
-  <div id="masthead" class="government-documents-masthead">
-    <h1 class="my-3">Government documents</h1>
-    <div>
-      <p>
-        Stanford is a depository library for California state, federal, UN, and EU government documents,
-        and has extensive holdings of documents from foreign national and local <abbr title="International Governmental Organizations">IGOs</abbr>
-        and <abbr title="Non-Governmental Organizations">NGOs</abbr>. These include publications, data, statistics, archival records, and more.
-      </p>
+<%= render Masthead::LayoutComponent.new do |component| %>
+  <% component.with_header { 'Government documents' } %>
 
-      <p>
-        The Libraries acquire materials via depository agreements, subscriptions, mailing lists, and by contacting agencies directly.
-        We also subscribe to commercial databases containing government publications, data, and archival records.
-      </p>
+  <% component.with_search do %>
+    <div class="fs-4">Search by title, author (individual or organization)</div>
+    <%= render HomepageSearchComponent.new url: search_action_url,
+                                      advanced_search_url: search_action_url(action: 'advanced_search'),
+                                      params: search_state.params_for_search.except(:qt),
+                                      autocomplete_path: suggest_index_catalog_path %>
+  <% end %>
 
-    </div>
-  </div>
-</div>
+  <% component.with_aside do %>
+    <h2>About government documents</h2>
+    <p>
+      Stanford is a depository library for California state, federal, UN, and EU government documents,
+      and has extensive holdings of documents from foreign national and local <abbr title="International Governmental Organizations">IGOs</abbr>
+      and <abbr title="Non-Governmental Organizations">NGOs</abbr>. These include publications, data, statistics, archival records, and more.
+    </p>
+  <% end %>
+<% end %>

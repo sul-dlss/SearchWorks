@@ -12,9 +12,7 @@ RSpec.describe 'Government Documents Access Point' do
   end
 
   it 'provides a masthead in search results' do
-    within('.government-documents-masthead') do
-      expect(page).to have_css('h1', text: 'Government documents')
-    end
+    expect(page).to have_css('h1', text: 'Government documents')
   end
 
   it 'takes the user to the govdocs url' do
