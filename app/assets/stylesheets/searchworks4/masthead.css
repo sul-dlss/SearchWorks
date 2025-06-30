@@ -14,14 +14,3 @@
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
   }
 }
-
-.navbar {
-  ul {
-    --sul-link-font-weight: 400;
-  }
-  .badge {
-    --bs-badge-color: var(--stanford-black);
-
-    background-color: var(--stanford-fog-light);
-  }
-}
