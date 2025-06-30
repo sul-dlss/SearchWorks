@@ -16,45 +16,5 @@ module Searchworks4
     def truncated_display?
       document.holdings.items.count > 20
     end
-
-    class LocationComponent < ViewComponent::Base
-      attr_reader :location, :document
-
-      def initialize(location:, document:, suppress_off_campus: true)
-        @location = location
-        @document = document
-        @suppress_off_campus = suppress_off_campus
-        super
-      end
-
-      def render?
-        !(@suppress_off_campus && location.code.include?('SAL3-'))
-      end
-
-      def stackmappable?
-        location.stackmapable? && location.items.first&.callnumber.present?
-      end
-
-      def call
-        if stackmappable?
-          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger' }, class: 'stackmap-find-it location-name' do
-            tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
-          end
-        else
-          tag.span location.name, class: 'location-name'
-        end
-      end
-    end
-
-    class ItemCountComponent < ViewComponent::Base
-      def initialize(count)
-        @count = count
-        super
-      end
-
-      def call
-        tag.span pluralize(@count, 'item'), class: 'bg-light rounded-pill small px-2 lh-sm text-nowrap'
-      end
-    end
   end
 end
