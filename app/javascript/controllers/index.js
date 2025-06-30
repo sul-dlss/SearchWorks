@@ -55,6 +55,9 @@ application.register("embed-browse", EmbedBrowseController)
 import ExhibitPanelController from "./exhibit_panel_controller"
 application.register("exhibit-panel", ExhibitPanelController)
 
+import FacetCheckboxesController from "./facet_checkboxes_controller"
+application.register("facet-checkboxes", FacetCheckboxesController)
+
 import FacetListController from "./facet_list_controller"
 application.register("facet-list", FacetListController)
 

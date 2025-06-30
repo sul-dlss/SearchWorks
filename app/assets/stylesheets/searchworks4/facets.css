@@ -116,3 +116,18 @@ and there is a show class then it will hide the mini bento
 {
   display: block !important;
 }
+
+.loading-spinner {
+  animation: loading-spinner 2s linear infinite;
+  border: 8px solid var(--stanford-50-black);
+  border-top: 8px solid var(--stanford-80-black);
+  border-radius: 50%;
+  height: 50px;
+  margin: auto;
+  width: 50px;
+}
+
+@keyframes loading-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
