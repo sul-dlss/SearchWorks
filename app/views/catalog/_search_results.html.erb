@@ -7,7 +7,7 @@
     <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.to_s.gsub(/_/, ' ').capitalize.pluralize, application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
   <% end %>
 <% else %>
-  <% @page_title = t('blacklight.search.searchworks_results_title', num_results: "#{pluralize(number_with_delimiter(@response.response[:numFound]), 'result')}", application_name: "#{I18n.t('blacklight.application_name')} catalog") %>
+  <% @page_title = t('blacklight.search.page_title.title', constraints: render_search_to_page_title(search_state), application_name: application_name) %>
 <% end %>
 
 <% view_config = blacklight_config.view_config(document_index_view_type, action_name: action_name) %>
