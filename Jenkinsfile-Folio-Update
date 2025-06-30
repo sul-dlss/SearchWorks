@@ -24,6 +24,7 @@ pipeline {
           gem install bundler
 
           git switch release
+          git pull
 
           bundle install --without production
 
