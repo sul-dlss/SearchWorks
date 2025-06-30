@@ -63,7 +63,8 @@
   }
 }
 
-.stacks-image, .cover-image {
+.stacks-image,
+.cover-image {
   display: block;
   max-height: 200px;
   max-width: 80px;
@@ -138,7 +139,8 @@ details[open] {
     color: var(--stanford-digital-green);
   }
   &.unavailable {
-    color: var(--stanford-digital-red);
+    --bs-body-color: var(--stanford-digital-red);
+    /* color: var(--stanford-digital-red); */
   }
   &.unknown {
     color: var(--stanford-80-black);
@@ -147,6 +149,7 @@ details[open] {
 
 @media screen and (min-width: 768px) {
   .border-md-start {
-    border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    border-left: var(--bs-border-width) var(--bs-border-style)
+      var(--bs-border-color) !important;
   }
 }
