@@ -75,3 +75,6 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 
 import BookmarkToastController from "./bookmark_toast_controller"
 application.register("bookmark-toast", BookmarkToastController)
+
+import StackmapController from "./stackmap_controller"
+application.register("stackmap", StackmapController)

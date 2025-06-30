@@ -22,10 +22,10 @@ RSpec.describe 'catalog/stackmap' do
       expect(rendered).to have_css('.zoom-controls .zoom-in')
       expect(rendered).to have_css('.zoom-controls .zoom-out')
       expect(rendered).to have_css('.zoom-controls .zoom-fit')
-      expect(rendered).to have_css('.controls .show-description')
+      expect(rendered).to have_css('.nav-item .show-description')
 
       expect(rendered).to have_css('.map-template .osd')
-      expect(rendered).to have_css('.map-template .text-directions')
+      expect(rendered).to have_css('.text-directions')
     end
   end
 end

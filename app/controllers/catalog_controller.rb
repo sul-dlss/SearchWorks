@@ -517,7 +517,7 @@ class CatalogController < ApplicationController
   end
 
   def stackmap
-    params.require(:library) # Sometimes bots are calling this service without providing required parameters. Raise an error in this case.
+    params.require(:api_url) # Sometimes bots are calling this service without providing required parameters. Raise an error in this case.
     render layout: !request.xhr?
   end
 
