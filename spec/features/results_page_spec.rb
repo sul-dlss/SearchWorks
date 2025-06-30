@@ -18,11 +18,21 @@ RSpec.feature "Search Results Page" do
     end
 
     it 'draws the page' do
-      expect(page).to have_title(/.*\d (result|results) in SearchWorks catalog/)
+      expect(page).to have_title "SearchWorks catalog, Access: Online"
 
       within('ul.pagination') do
         expect(page).to have_link 'Previous'
       end
+    end
+  end
+
+  context 'when searching with facets and a query' do
+    before do
+      visit search_catalog_path f: { access_facet: ['Online'] }, q: 'broccoli'
+    end
+
+    it 'draws the page' do
+      expect(page).to have_title "SearchWorks catalog, broccoli, Access: Online"
     end
   end
 end
