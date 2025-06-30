@@ -5,20 +5,20 @@
     </button>
   </div>
 <% end %>
-<div class='alternate-catalog accordion accordion-collapse collapse d-md-block mb-3' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
+<div class='alternate-catalog accordion accordion-collapse collapse d-md-block mb-3' data-mini-bento-alternate-catalog-url-value="<%= url %>" data-alternate-catalog="<%= url %>" data-controller="analytics mini-bento" data-analytics-category-value="alternate-catalog">
   <div class="row">
-    <h2 class="alternate-catalog-title col mb-3"></h2>
+    <h2 class="alternate-catalog-title col mb-3" data-mini-bento-target="title">Searching...</h2>
     <% if close? %>
-      <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' aria-label="Close">
+      <button type='button' data-action="click->mini-bento#closeBento" class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' aria-label="Close">
       </button>
     <% end %>
   </div>
-  <div class="alternate-catalog-body row d-none">
+  <div class="alternate-catalog-body row d-none" data-mini-bento-target="body">
     <div class="alternate-catalog-primary-tools col-12">
       <h3 class="alternate-catalog-name mb-0">
         <span class="fw-normal">SearchWorks</span>
         <%= name %>
-        <span class="badge rounded-pill alternate-catalog-count"></span>
+        <span class="badge rounded-pill alternate-catalog-count" data-mini-bento-target="count"></span>
       </h3>
       <div class="alternate-catalog-desc mb-2">
         <%= description %>
