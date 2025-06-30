@@ -34,7 +34,7 @@
   <% content_for(:skip_links) do -%>
     <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
   <% end %>
-  <div class="row">
+  <div class="row align-items-start">
     <div id="content" class="results col">
       <div class="sul-toolbar page-entries-info sort-and-per-page d-flex justify-content-between align-items-center">
         <%= tag.nav class: 'page_links' do %>
