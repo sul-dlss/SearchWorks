@@ -5,7 +5,7 @@
   background-color: black;
 }
 .masthead {
-  ul {
+  .nav-link {
     --sul-link-font-weight: 600;
   }
 
