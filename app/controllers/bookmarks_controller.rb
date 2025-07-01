@@ -44,6 +44,17 @@ class BookmarksController < CatalogController
     redirect_back fallback_location: bookmarks_url
   end
 
+  def create_response(_success)
+    @id = @bookmarks.first.fetch(:document_id)
+    # Renders turbo_stream response
+  end
+
+  def destroy_response(_success)
+    @id = @bookmarks.first.fetch(:document_id)
+
+    # Renders turbo_stream response
+  end
+
   protected
 
   # Clears bookmarks from an ActiveRecord CollectionProxy

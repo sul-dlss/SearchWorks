@@ -14,3 +14,10 @@
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
   }
 }
+
+.bookmark-counter {
+  --bs-badge-color: var(--stanford-black);
+  --bs-badge-padding-x: 0.625rem;
+  --bs-badge-font-weight: 500;
+  background-color: var(--stanford-10-black);
+}

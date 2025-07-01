@@ -1,23 +1,19 @@
-<%- # we don't use the per-form csrf token -%>
-<%= form_tag(bookmark_path,
-             authenticity_token: false,
-             method:  bookmarked? ? :delete : :put,
-             class: "bookmark-toggle",
-             data: {
-               controller: 'bookmark-toast',
-               action: 'bookmark.blacklight@window->bookmark-toast#bookmarkUpdated',
-               present: t('blacklight.search.bookmarks.present'),
-               absent: t('blacklight.search.bookmarks.absent'),
-               inprogress: t('blacklight.search.bookmarks.inprogress')
-            }) do %>
-  <div class="toggle-bookmark" data-controller="analytics">
-    <label class="toggle-bookmark-label" data-checkboxsubmit-target="label" tabindex="0">
-      <input type="checkbox" class="toggle-bookmark-input <%= bookmark_icon ? 'd-none' : '' %>" data-action="click->analytics#trackBookmark" data-checkboxsubmit-target="checkbox" <%= 'checked="checked"' if bookmarked? %>>
-      <%= bookmark_icon %>
-      <span data-checkboxsubmit-target="span" class="d-none"><%= bookmarked? ? t('blacklight.search.bookmarks.present') : t('blacklight.search.bookmarks.absent') %></span>
-    </label>
-  </div>
-
-  <%= submit_tag(t(bookmarked? ? 'remove.button' : 'add.button', scope: 'blacklight.bookmarks'),
-                 class: "bookmark-#{bookmarked? ? 'remove' : 'add'} d-none btn btn-outline-secondary") %>
-<% end %>
+<turbo-frame id="bookmark-<%= @document.is_a?(String) ? @document : @document.id %>">
+  <%= form_tag(bookmark_path,
+               method:  bookmarked? ? :delete : :put,
+               class: "bookmark-toggle",
+               data: {
+                 controller: 'bookmark analytics',
+                 action: "turbo:submit-end->bookmark#bookmarkUpdated",
+                 bookmark_checked_value: bookmarked?
+              }) do %>
+                <%= tag.button icon, type: 'submit', class: "btn p-1 lh-1 action-button",
+                   aria: { label: (bookmarked? ? 'Remove from saved records' : 'Save record') },
+                   data: {
+                     controller: 'tooltip',
+                     action: "click->analytics#trackBookmark " \
+                             "mouseenter->tooltip#show focus->tooltip#show mouseleave->tooltip#hide blur->tooltip#hide " \
+                             "mouseenter->bookmark#hover focus->bookmark#hover mouseleave->bookmark#blur blur->bookmark#blur"
+                   } %>
+  <% end %>
+</turbo-frame>

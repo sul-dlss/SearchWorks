@@ -281,7 +281,7 @@ GEM
       activesupport (>= 6.1)
     hashdiff (1.2.0)
     hashie (5.0.0)
-    honeybadger (5.28.0)
+    honeybadger (5.29.1)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -629,14 +629,14 @@ GEM
       ostruct
       retriable
       ruby-progressbar
-    sqlite3 (2.7.0-aarch64-linux-gnu)
-    sqlite3 (2.7.0-aarch64-linux-musl)
-    sqlite3 (2.7.0-arm-linux-gnu)
-    sqlite3 (2.7.0-arm-linux-musl)
-    sqlite3 (2.7.0-arm64-darwin)
-    sqlite3 (2.7.0-x86_64-darwin)
-    sqlite3 (2.7.0-x86_64-linux-gnu)
-    sqlite3 (2.7.0-x86_64-linux-musl)
+    sqlite3 (2.7.1-aarch64-linux-gnu)
+    sqlite3 (2.7.1-aarch64-linux-musl)
+    sqlite3 (2.7.1-arm-linux-gnu)
+    sqlite3 (2.7.1-arm-linux-musl)
+    sqlite3 (2.7.1-arm64-darwin)
+    sqlite3 (2.7.1-x86_64-darwin)
+    sqlite3 (2.7.1-x86_64-linux-gnu)
+    sqlite3 (2.7.1-x86_64-linux-musl)
     sshkit (1.24.0)
       base64
       logger

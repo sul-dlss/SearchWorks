@@ -25,7 +25,7 @@ RSpec.feature "Record Toolbar", :js do
         end
 
         within ".navbar" do
-          expect(page).to have_css("form label", text: "Bookmark")
+          expect(page).to have_button "Save record"
           expect(page).to have_link('Cite')
           expect(page).to have_link('Email')
           expect(page).to have_button('Copy link')
