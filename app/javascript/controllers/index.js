@@ -78,3 +78,6 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 
 import BookmarkToastController from "./bookmark_toast_controller"
 application.register("bookmark-toast", BookmarkToastController)
+
+import RecaptchaController from "./recaptcha_controller"
+application.register("recaptcha", RecaptchaController)
