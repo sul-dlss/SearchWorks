@@ -15,8 +15,8 @@ RSpec.describe Feedback::ChatWithLibrarianComponent, type: :component do
       expect(page).to have_css '.h3', text: 'Chat with a librarian'
       expect(page).to have_link 'Start chat'
 
-      expect(page).to have_css '[data-jid="ic@chat.libraryh3lp.com"]'
-      expect(page).to have_css '[data-library-h3lp]'
+      expect(page).to have_css '[data-library-h3lp-jid-value="ic@chat.libraryh3lp.com"]'
+      expect(page).to have_css '[data-controller="library-h3lp"]'
       expect(page).to have_css '[data-controller="chat-hours"]'
       expect(page).to have_css '[data-chat-hours-url-value]'
     end
@@ -28,8 +28,8 @@ RSpec.describe Feedback::ChatWithLibrarianComponent, type: :component do
     it 'renders alternative view' do
       expect(page).to have_css '.h3', text: 'Chat with a librarian'
 
-      expect(page).to have_no_css '[data-jid="ic@chat.libraryh3lp.com"]'
-      expect(page).to have_no_css '[data-library-h3lp]'
+      expect(page).to have_no_css '[data-library-h3lp-jid-value="ic@chat.libraryh3lp.com"]'
+      expect(page).to have_no_css '[data-controller="library-h3lp"]'
       expect(page).to have_css '[data-controller="chat-hours"]'
       expect(page).to have_css '[data-chat-hours-url-value]'
     end
