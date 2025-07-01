@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CatalogController < ApplicationController
-  layout proc { |controller| controller.action_name == 'index' ? 'searchworks4' : 'searchworks' }
+  layout 'searchworks4'
 
   include AllCapsParams
 
