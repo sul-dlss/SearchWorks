@@ -16,7 +16,7 @@ en:
         group:
           open: Filters
           close: Filters
-        more_html: 'more <span class="visually-hidden">%{field_name}</span> <i class="fa fa-angle-double-right"></i>'
+        more_html: 'Browse all <span class="visually-hidden">%{field_name}</span> <i class="bi bi-chevron-double-right"></i>'
       form:
         submit_html: '<span class="visually-hidden">Search</span><span class="bi-search"></span>'
         submit: ''

@@ -150,3 +150,11 @@ details[open] {
     border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
   }
 }
+
+.more_facets {
+  --bs-link-color-rgb: var(--sul-link-color-rgb);
+  i {
+    font-size: 0.75rem;
+    -webkit-text-stroke: 0.45px;
+  }
+}

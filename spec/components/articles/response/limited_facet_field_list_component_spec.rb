@@ -49,7 +49,7 @@ RSpec.describe Articles::Response::LimitedFacetFieldListComponent, type: :compon
       expect(page).to have_css 'ul.facet-values'
       expect(page).to have_css 'li', count: 20
       expect(page).to have_css 'li', count: 25, visible: :all # some are hidden
-      expect(page).to have_link "more"
+      expect(page).to have_link "Browse all"
     end
   end
 end
