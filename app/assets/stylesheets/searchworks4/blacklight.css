@@ -139,7 +139,7 @@
 }
 
 .modal {
-  --bl-modal-backdrop-bg: rgba(var(--stanford-black-rgb), 0.2)
+  --bl-modal-backdrop-bg: rgba(var(--stanford-black-rgb), 0.4)
 }
 
 .modal-dialog {
