@@ -1,0 +1,17 @@
+:root {
+  --underline-color: var(--stanford-50-black);
+  --bs-link-decoration: underline dotted var(--underline-color) 1px;
+  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
+  --bs-link-hover-decoration: underline;
+}
+
+#topnav .navbar-nav, #topnav .masthead,
+#pre-footer,
+#su-footer,
+.index_title,
+.page_links,
+.pagination,
+.facet-label,
+.dropdown-item {
+  --bs-link-decoration: none;
+}
