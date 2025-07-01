@@ -1,0 +1,28 @@
+.zero-results {
+  #appliedParams .catalog_startOverLink {
+    display: none;
+  }
+
+  .clear-all {
+    --bs-primary-rgb: var(--stanford-digital-red-rgb)
+  }
+
+  .constraints-container {
+    display: block;
+  }
+
+  .applied-filter {
+    display: block;
+    margin-left: -0.25rem;
+
+    .constraint-value,
+    .remove {
+      --bs-btn-bg: transparent;
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-bg: transparent;
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-border-color: transparent;
+      padding-inline: 0;
+    }
+  }
+}
