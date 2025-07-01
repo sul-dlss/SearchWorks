@@ -14,8 +14,8 @@ RSpec.describe SearchResult::NoResult::ChatWithLibrarianComponent, type: :compon
     it 'renders the component' do
       expect(page).to have_link 'Chat with a librarian'
 
-      expect(page).to have_css '[data-jid="ic@chat.libraryh3lp.com"]'
-      expect(page).to have_css '[data-library-h3lp]'
+      expect(page).to have_css '[data-library-h3lp-jid-value="ic@chat.libraryh3lp.com"]'
+      expect(page).to have_css '[data-controller="library-h3lp"]'
       expect(page).to have_css '[data-controller="chat-hours"]'
       expect(page).to have_css '[data-chat-hours-url-value]'
     end
@@ -27,8 +27,8 @@ RSpec.describe SearchResult::NoResult::ChatWithLibrarianComponent, type: :compon
     it 'renders alternative view' do
       expect(page).to have_css '.h4', text: 'Chat with a librarian'
 
-      expect(page).to have_no_css '[data-jid="ic@chat.libraryh3lp.com"]'
-      expect(page).to have_no_css '[data-library-h3lp]'
+      expect(page).to have_no_css '[data-library-h3lp-jid-value="ic@chat.libraryh3lp.com"]'
+      expect(page).to have_no_css '[data-controller="library-h3lp"]'
       expect(page).to have_css '[data-controller="chat-hours"]'
       expect(page).to have_css '[data-chat-hours-url-value]'
     end

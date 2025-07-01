@@ -1,7 +1,7 @@
 <%= tag.section class: 'chat' do %>
   <%= tag.header class: "h4", data: chat_attrs do %>
-    <span class="bi bi-chat"></span>
-    <%= link_to "Chat with a librarian", "https://library.stanford.edu/contact-us", class: 'disabled start-chat' %>
+    <span class="bi bi-chat" data-library-h3lp-target="icon"></span>
+    <%= link_to "Chat with a librarian", "https://library.stanford.edu/contact-us", class: 'disabled start-chat', 'data-library-h3lp-target': 'link' %>
   <% end %>
   <span data-controller="chat-hours" data-chat-hours-url-value="https://library-hours.stanford.edu/api/v1/library/green/location/reference/hours/for/today">
     <span class="placeholder"></span>
