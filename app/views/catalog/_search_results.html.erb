@@ -64,9 +64,7 @@
             Previous
           <% end %>
           <%= link_to_previous_page @response, previous_label, class: 'me-2' do %>
-            <span class="text-grey-50">
-              <%= previous_label %>
-            </span>
+            <%= tag.span previous_label, class: 'text-grey-50' %>
           <% end %>
           <span class="page_entries">
             <% if @response.total_count == 1 %>
