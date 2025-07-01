@@ -26,6 +26,10 @@
     }
   }
 
+  input[type="submit"] {
+    display: none;
+  }
+
   .toggle-bookmark {
     cursor: pointer;
 
