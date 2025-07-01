@@ -29,7 +29,7 @@
   <div class="col-lg-6 col-xl-4">
     <div class="row">
       <div class="col-xxl-10 col-xl-12">
-        <section class="home-page-facets sidenav">
+        <section class="home-page-facets facets sidenav">
           <h2 class="h3">Browse by</h2>
           <div class="accordion" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
             <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
