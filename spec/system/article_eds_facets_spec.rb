@@ -12,7 +12,7 @@ RSpec.feature 'EDS Facets', :js do
       visit articles_path q: 'frog'
       click_button 'Language'
       within '.blacklight-eds_language_facet' do
-        click_link 'more'
+        click_link 'Browse all'
       end
 
       expect(page).to have_field 'A-Z Sort'
