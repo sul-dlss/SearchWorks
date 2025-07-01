@@ -15,9 +15,10 @@ RSpec.feature 'EDS Facets', :js do
         click_link 'more'
       end
 
-      expect(page).to have_field 'A-Z Sort'
-
       within 'dialog' do
+        expect(page).to have_button('Previous', disabled: true) # Indicates that the paginate controller is done
+        expect(page).to have_field 'A-Z Sort'
+
         expect(page).to have_link 'swedish'
         expect(page).to have_no_link 'slovenian'
 
