@@ -82,7 +82,11 @@
 }
 
 .active-icon {
-  margin-left: -20px;
+  margin-left: -1.125rem;
+  &::before {
+    font-size: 1rem;
+    margin-right: 0.125rem;
+  }
 }
 
 .sort-and-per-page .dropdown-menu {

@@ -6,12 +6,10 @@
 
     <div class="dropdown-menu" role="menu">
       <%- active_sort_fields.each do |sort_key, field| %>
-      <%= link_to url_for(search_state.params_for_search(sort: sort_key)), class: 'dropdown-item', 'aria-current': current_sort_field.label == field.label,
-          data: { action: "click->analytics#trackLink" }, role: 'menuitem', tabindex: '-1' do %>
-          <% if current_sort_field.label == field.label %>
-            <%= t 'blacklight.search.highlight.active_html' %>
-          <% end %>
-          <%= field.label %><% end %>
+        <%= link_to url_for(search_state.params_for_search(sort: sort_key)), class: 'dropdown-item', 'aria-current': current_sort_field.label == field.label,
+            data: { action: "click->analytics#trackLink" }, role: 'menuitem', tabindex: '-1' do %>
+          <%= t 'blacklight.search.highlight.active_html' if current_sort_field.label == field.label %><%= field.label %>
+        <% end %>
       <%- end -%>
     </div>
   </div>

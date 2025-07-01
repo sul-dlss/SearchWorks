@@ -8,10 +8,7 @@
       <%- sw_per_page_options_for_select.each do |(label, count)| %>
       <%= link_to url_for(search_state.params_for_search(per_page: count)), class: 'dropdown-item', 'aria-current': sw_current_per_page(@response) == count,
           data: { action: "click->analytics#trackLink" }, role: 'menuitem', tabindex: '-1' do %>
-          <% if sw_current_per_page(@response) == count %>
-            <%= t 'blacklight.search.highlight.active_html' %>
-          <% end %>
-          <%= label %>
+          <%= t 'blacklight.search.highlight.active_html' if sw_current_per_page(@response) == count %><%= label %>
         <% end %>
       <%- end -%>
     </div>
