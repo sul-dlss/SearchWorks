@@ -342,6 +342,7 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
                                               'searchlink' => %w[fieldcode term]
                                             ))
     sanitize_config = config.nil? ? default_config : config
+    puts "--->EDS DOCUMENT MODEL"
 
     html = CGI.unescapeHTML(data.to_s)
     # need to double-unescape data with an ephtml section
@@ -351,10 +352,27 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
       html = html.gsub("\\n ", '')
     end
 
-    sanitized_html = Sanitize.fragment(html, sanitize_config)
+    #puts html
+    puts html.length
+    begin
+      puts "Testing html against Nokogir"
+      e = Nokogiri.HTML5(html[7500, 15000], max_attributes: -1)
+      e.xpath('//*').each do |element|
+        puts element.name
+        puts element.attributes
+      end
+
+    rescue StandardError => e
+      puts "Error #{e}"
+    end
+    puts "HTML Fragment-->>"
+    puts html[7500, 15000]
+    sanitized_html = Sanitize.fragment(html[7500, 15000], sanitize_config)
     # sanitize 5.0 fails to restore element case after doing lowercase
     sanitized_html = sanitized_html.gsub('<searchlink', '<searchLink')
     sanitized_html.gsub('</searchlink>', '</searchLink>')
+    puts "Resulting sanitized html"
+    puts sanitized_html
   end
 
   # add searchlinks when they don't exist
