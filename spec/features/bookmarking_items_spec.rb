@@ -3,15 +3,6 @@
 require 'rails_helper'
 
 RSpec.feature 'Bookmarking Items' do
-  let(:oclc_citation) { instance_double(Citations::OclcCitation) }
-
-  before do
-    allow(Citations::OclcCitation).to receive(:new).and_return(oclc_citation)
-    allow(oclc_citation).to receive_messages(
-      citations_by_oclc_number: { '12345' => { 'mla' => '<p class="citation_style_MLA">MLA Citation</p>' } }
-    )
-  end
-
   context 'with bookmarks', :js do
     it 'renders the page' do
       visit search_catalog_path f: { format: ["Book"] }, view: "default"
