@@ -335,7 +335,6 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   # elements/attributes that aren't explicitly whitelisted.
   # The RELAXED config: https://github.com/rgrove/sanitize/blob/master/lib/sanitize/config/relaxed.rb
   def html_decode_and_sanitize(data, config = nil)
-    Rails.logger.debug "HTML decode and sanitize"
     default_config = Sanitize::Config.merge(Sanitize::Config::RELAXED,
                                             elements: Sanitize::Config::RELAXED[:elements] +
                                                 %w[relatesto searchlink ephtml],
