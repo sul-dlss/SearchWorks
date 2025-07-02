@@ -74,15 +74,6 @@ live_lookup_service: LiveLookup::Folio
 citeproc_citations:
   enabled: true
 
-oclc_discovery:
-  citations:
-    enabled: false
-  base_url: oclc-discovery-base-url
-  client_key: <%= ENV['OCLC_DISCOVERY_CLIENT_KEY'] %>
-  client_secret: <%= ENV['OCLC_DISCOVERY_CLIENT_SECRET'] %>
-  authorize_url: oclc-discovery-authorize-url
-  token_url: oclc-discovery-token-url
-
 # 'select' (the default) or 'export' (requires indexing with docvalues)
 dynamic_sitemap_solr_endpoint: "select"
 

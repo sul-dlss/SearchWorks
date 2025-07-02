@@ -3,14 +3,9 @@
 require 'rails_helper'
 
 RSpec.feature 'Bookmarking Items', :js do
-  let(:oclc_citation) { instance_double(Citations::OclcCitation) }
   let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }
 
   before do
-    allow(Citations::OclcCitation).to receive(:new).and_return(oclc_citation)
-    allow(oclc_citation).to receive_messages(
-      citations_by_oclc_number: { '12345' => { 'mla' => '<p class="citation_style_MLA">MLA Citation</p>' } }
-    )
     login_as(user)
   end
 
