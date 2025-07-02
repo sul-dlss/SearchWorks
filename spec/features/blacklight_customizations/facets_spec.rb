@@ -24,14 +24,4 @@ RSpec.feature "Facets Customizations" do
     expect(green_index).to be < music_index
     expect(music_index).to be < sdr_index
   end
-
-  scenario "while not in an access point facet title does not change", :js do
-    visit root_path
-    fill_in "q", with: ''
-    click_button 'search'
-
-    within "div#facets" do
-      expect(page).to have_css("h2.facets-heading", text: "Filters")
-    end
-  end
 end

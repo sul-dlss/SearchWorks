@@ -10,7 +10,7 @@ RSpec.describe 'Facets' do
 
         click_link 'Art & Architecture (Bowes)'
 
-        within('.facets') do
+        within('.other-filters') do
           expect(page).to have_css('h3', text: 'Location')
           expect(page).to have_css('a', text: 'Art Locked Stacks')
         end
@@ -23,7 +23,7 @@ RSpec.describe 'Facets' do
 
         click_link 'Education (Cubberley)'
 
-        within('.facets') do
+        within('.other-filters') do
           expect(page).to have_css('h3', text: 'Location')
           expect(page).to have_css('a', text: 'Curriculum Collection')
         end
@@ -36,7 +36,10 @@ RSpec.describe 'Facets' do
 
         click_link 'Green'
 
-        within('.facets') do
+        within('.top-filters') do
+          expect(page).to have_no_css('h3', text: 'Location')
+        end
+        within('.other-filters') do
           expect(page).to have_no_css('h3', text: 'Location')
         end
       end
@@ -49,7 +52,7 @@ RSpec.describe 'Facets' do
           Thesis/Dissertation is selected' do
         visit search_catalog_path(f: { genre_ssim: ['Thesis/Dissertation'] })
 
-        within('.facets') do
+        within('.top-filters') do
           expect(page).to have_css('h3', text: 'Stanford student work')
           expect(page).to have_css('a', text: 'Theses & dissertations')
         end
@@ -58,7 +61,7 @@ RSpec.describe 'Facets' do
           Thesis/Dissertation is selected' do
         visit search_catalog_path(f: { genre_ssim: ['Thesis/Dissertation'] })
 
-        within('.facets') do
+        within('.top-filters') do
           expect(page).to have_css('h3', text: 'Stanford school or department')
         end
       end
