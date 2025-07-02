@@ -360,9 +360,9 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
     rescue ArgumentError => e
       # We still want to notify honeybadger but can provide more information
       # about the html
-      Honeybadger.notify(e, error_message: "Error with arguments passed to Sanitize/Nokogiri", context: { html: })
-      # Replacing the html with an empty string to allow the page to still load
-      sanitized_html = ""
+      Honeybadger.notify(e, error_message: 'Error with arguments passed to Sanitize/Nokogiri', context: { html: })
+      # Return an empty string to allow the page to still load
+      return ''
     end
     # sanitize 5.0 fails to restore element case after doing lowercase
     sanitized_html = sanitized_html.gsub('<searchlink', '<searchLink')
