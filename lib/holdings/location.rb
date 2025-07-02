@@ -20,11 +20,11 @@ class Holdings
     end
 
     def stackmapable?
-      stackmap_api_url.present?
+      stackmap_api_url.present? && URI::RFC2396_PARSER.make_regexp.match?(stackmap_api_url)
     end
 
     def stackmap_api_url
-      details['stackmapBaseUrl']
+      details['stackmapBaseUrl']&.strip
     end
 
     def details
