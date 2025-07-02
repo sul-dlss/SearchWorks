@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ErrorsController < ApplicationController
+  layout 'searchworks4'
+
   COMPONENT_FOR_STATUS = {
     '404' => Status::NotFoundComponent,
     '500' => Status::ServerErrorComponent
