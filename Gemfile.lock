@@ -98,7 +98,7 @@ GEM
     benchmark (0.4.1)
     bigdecimal (3.2.2)
     bindex (0.8.1)
-    blacklight (9.0.0.beta3)
+    blacklight (9.0.0.beta4)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
@@ -724,7 +724,7 @@ PLATFORMS
 DEPENDENCIES
   actioncable
   axe-core-rspec
-  blacklight (~> 9.0.0.beta3)
+  blacklight (~> 9.0.0.beta4)
   blacklight-hierarchy (~> 6.0)
   blacklight-marc (~> 8.0)
   blacklight-ris (~> 0.2.0)
