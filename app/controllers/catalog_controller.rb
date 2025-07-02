@@ -525,10 +525,7 @@ class CatalogController < ApplicationController
   # when more than one document's citation is being displayed.
   def citation
     @documents = search_service.fetch(Array(params[:id]))
-    return unless @documents.size > 1
-
-    oclc_numbers = @documents.filter_map { |document| document.oclc_number.presence }
-    @oclc_citations = Citations::OclcCitation.new(oclc_numbers:).citations_by_oclc_number
+    nil unless @documents.size > 1
   end
 
   def stackmap
