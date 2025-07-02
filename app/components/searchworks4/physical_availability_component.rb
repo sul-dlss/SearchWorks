@@ -54,7 +54,8 @@ module Searchworks4
 
       def call
         if stackmappable?
-          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger' }, class: 'stackmap-find-it location-name text-nowrap' do
+          analytics = { action: "click->analytics#trackLink", controller: "analytics", analytics_category_value: "item_location" }
+          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger', **analytics }, class: 'stackmap-find-it location-name text-nowrap' do
             tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
           end
         else
