@@ -335,6 +335,7 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   # elements/attributes that aren't explicitly whitelisted.
   # The RELAXED config: https://github.com/rgrove/sanitize/blob/master/lib/sanitize/config/relaxed.rb
   def html_decode_and_sanitize(data, config = nil)
+    Rails.logger.debug "HTML decode and sanitize"
     default_config = Sanitize::Config.merge(Sanitize::Config::RELAXED,
                                             elements: Sanitize::Config::RELAXED[:elements] +
                                                 %w[relatesto searchlink ephtml],
@@ -342,14 +343,10 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
                                               'searchlink' => %w[fieldcode term]
                                             ))
     sanitize_config = config.nil? ? default_config : config
-    # Passing option to handle errant brackets
-    sanitize_config[:parser_options] = { max_attributes: 2048 }
-    puts "updated sanitize config"
-
-    sanitize_config.keys.each do |key|
-      puts key
-    end
-    #puts sanitize_config.inspect
+    # Increasing the number of attributes may help deal with errant "<" that
+    # makes the parser think a single element has multiple attributes
+    # when there are no elements.
+    sanitize_config[:parser_options] = { max_attributes: 3000 }
 
     html = CGI.unescapeHTML(data.to_s)
     # need to double-unescape data with an ephtml section
@@ -359,7 +356,15 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
       html = html.gsub("\\n ", '')
     end
 
-    sanitized_html = Sanitize.fragment(html, sanitize_config)
+    begin
+      sanitized_html = Sanitize.fragment(html, sanitize_config)
+    rescue ArgumentError => e
+      # We still want to notify honeybadger but can provide more information
+      # about the html
+      Honeybadger.notify(e, error_message: "Error with arguments passed to Sanitize/Nokogiri", context: { html: })
+      # Replacing the html with an empty string to allow the page to still load
+      sanitized_html = ""
+    end
     # sanitize 5.0 fails to restore element case after doing lowercase
     sanitized_html = sanitized_html.gsub('<searchlink', '<searchLink')
     sanitized_html.gsub('</searchlink>', '</searchLink>')
