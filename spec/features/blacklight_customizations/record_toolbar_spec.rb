@@ -24,9 +24,11 @@ RSpec.feature "Record Toolbar" do
       end
 
       within ".navbar" do
-        expect(page).to have_css("li a", text: "Cite")
-        expect(page).to have_css("li button", text: "Send to")
         expect(page).to have_css("form label", text: "Bookmark")
+        expect(page).to have_link('Cite')
+        expect(page).to have_link('Email')
+        expect(page).to have_button('Copy link')
+        expect(page).to have_button('Print')
       end
     end
   end
@@ -38,19 +40,6 @@ RSpec.feature "Record Toolbar" do
     end
 
     expect(page).to have_no_css('a.previous', visible: true)
-  end
-
-  scenario 'a citable item has export links', :js do
-    visit search_catalog_path f: { format: ['Book'] }
-    page.find('a', text: 'An object').click
-
-    within '#content' do
-      within '.navbar', visible: true do
-        click_button 'Send to'
-        expect(page).to have_css('li a', text: 'RefWorks')
-        expect(page).to have_css('li a', text: 'EndNote')
-      end
-    end
   end
 
   scenario "should have back to search and pagination", :js do
@@ -67,14 +56,6 @@ RSpec.feature "Record Toolbar" do
         expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Search results", visible: true)
         expect(page).to have_css("a.previous", visible: true)
         expect(page).to have_css("a.next", visible: true)
-      end
-      within ".navbar" do
-        expect(page).to have_css("li button", text: "Send to")
-        expect(page).to have_css("form label", text: "Bookmark")
-        click_button "Send to"
-        expect(page).to have_css("li a", text: "text")
-        expect(page).to have_css("li a", text: "email")
-        expect(page).to have_css("li a", text: "printer")
       end
     end
   end

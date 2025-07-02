@@ -20,7 +20,7 @@ RSpec.describe "Record toolbar", :feature, :js do
         expect(page).to have_css('div.record-toolbar', visible: true)
         within '#content' do
           within '.navbar' do
-            expect(page).to have_css('li a', text: 'Cite')
+            expect(page).to have_link('Cite')
           end
         end
       end
@@ -46,8 +46,11 @@ RSpec.describe "Record toolbar", :feature, :js do
           end
 
           within ".navbar" do
-            expect(page).to have_css("li button", text: "Send to")
             expect(page).to have_css("form label", text: "Bookmark")
+            expect(page).to have_link('Cite')
+            expect(page).to have_link('Email')
+            expect(page).to have_button('Copy link')
+            expect(page).to have_button('Print')
           end
         end
       end

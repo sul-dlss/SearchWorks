@@ -9,12 +9,7 @@ RSpec.describe "Emailing Records", :js do
         visit solr_document_path('14')
 
         within('.record-toolbar') do
-          within('li.dropdown') do
-            click_button 'Send to'
-            within('.dropdown-menu') do
-              click_link 'email'
-            end
-          end
+          click_link 'Email'
         end
 
         expect(page).to have_css 'h1', text: 'Email'

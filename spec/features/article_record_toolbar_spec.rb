@@ -26,6 +26,7 @@ RSpec.describe 'Article Record Toolbar', :js do
   end
 
   it 'shows the Send button' do
+    pending 'SW4.0 redesign is changing this'
     within '.record-toolbar' do
       expect(page).to have_css('.btn-sul-toolbar', text: 'Send to')
       expect(page).to have_link('text', visible: false)
