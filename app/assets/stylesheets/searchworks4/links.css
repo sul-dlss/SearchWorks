@@ -12,6 +12,7 @@
 .page_links,
 .pagination,
 .facet-label,
+.record-toolbar,
 .dropdown-item {
   --bs-link-decoration: none;
 }
