@@ -3,6 +3,18 @@
     display: none;
   }
 
+  .border-before {
+    @media (min-width: 768px) {
+      border-left: 1px solid var(--stanford-20-black);
+    }
+  }
+
+  .chat {
+    border-radius: 0.25rem;
+    background-color: rgb(var(--stanford-fog-light-rgb), 0.7);
+    padding: 1rem 0.5rem;
+  }
+
   .clear-all {
     --bs-primary-rgb: var(--stanford-digital-red-rgb)
   }
@@ -23,6 +35,19 @@
       --bs-btn-hover-border-color: transparent;
       --bs-btn-active-border-color: transparent;
       padding-inline: 0;
+    }
+  }
+
+  /* Have primary & other mini-bento tools in columns rather than rows between md and lg */
+  .alternate-catalog {
+    @media (min-width: 768px) and (max-width: 991.99px) {
+      .alternate-catalog-primary-tools, .alternate-catalog-other-tools {
+        flex: 0 0 auto;
+        width: 50%;
+      }
+      .alternate-catalog-other-tools .alternate-catalog-name {
+        margin-top: 0;
+      }
     }
   }
 }

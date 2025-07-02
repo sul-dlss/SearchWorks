@@ -13,6 +13,10 @@
       --bs-heading-color: var(--stanford-cardinal);
     }
 
+    .alternate-catalog-other-tools .alternate-catalog-name {
+      margin-top: 1rem;
+    }
+
     .btn {
       padding: 0.125rem 0.375rem;
     }
