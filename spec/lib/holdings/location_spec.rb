@@ -133,6 +133,16 @@ RSpec.describe Holdings::Location do
       it 'returns true' do
         expect(subject.stackmapable?).to be true
       end
+
+      context 'with an invalid stackmap api url' do
+        before do
+          allow(Folio::Locations).to receive(:details).and_return('stackmapBaseUrl' => 'invalid-url')
+        end
+
+        it 'returns false' do
+          expect(subject.stackmapable?).to be false
+        end
+      end
     end
   end
 
