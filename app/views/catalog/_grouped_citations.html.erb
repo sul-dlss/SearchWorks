@@ -1,17 +1,11 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h2 class="modal-title">Multiple citations</h2>
+    <h2 class="modal-title me-3">Cite</h2><div class="badge rounded-pill bookmark-counter"><%= @documents.count %> records</div>
   <% end %>
 
-  <div class='grouped-citations'>
-    <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="nav-item">
-        <button href="#all" aria-controls="all" role="tab" data-bs-toggle="tab" class="nav-link active" id="by-title-button">By title</button>
-      </li>
-      <li role="presentation" class="nav-item">
-        <button href="#biblio" aria-controls="biblio" role="tab" data-bs-toggle="tab" class="nav-link" id="by-format-button">By citation format</button>
-      </li>
-    </ul>
-    <%= render Citations::MultipleCitationsComponent.new(documents: @documents) %>
-  </div>
+  <%= render Citations::MultipleCitationsComponent.new(documents: @documents) %>
+
+  <% component.with_footer do %>
+    <button type="button" class="btn btn-outline-primary" data-bl-dismiss="modal">Close</button>
+  <% end %>
 <% end %>

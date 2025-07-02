@@ -9,3 +9,9 @@
     --bs-nav-link-padding-x: var(--item-padding-x);
   }
 }
+
+.modal-header {
+  .bookmark-counter {
+    --bs-badge-font-size: 1rem;
+  }
+}

@@ -10,18 +10,18 @@ module Citations
       super()
     end
 
+    delegate :refworks_export_url, :search_state, :bookmarks_export_url, to: :helpers
+
+    def all_citations
+      @all_citations ||= @documents.map { |doc| citations(doc) }
+    end
+
     # @param [SolrDocument] the document to return citations for
     # @return [Hash] A hash of citations for the supplied document in the form of { citation_style => [citation_text] }
     def citations(document)
-      citation_hash = {}
+      return document.citations unless document.eds?
 
-      if document.eds?
-        citation_hash.merge!(document.eds_citations)
-      else
-        citation_hash.merge!(document.mods_citations)
-      end
-
-      citation_hash.presence || Citation::NULL_CITATION
+      document.eds_citations.presence || Citation::NULL_CITATION
     end
   end
 end

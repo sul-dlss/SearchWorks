@@ -4,9 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ['text']
 
-  connect() {
-  }
-
   async copy(e) {
     try {
         await navigator.clipboard.writeText(this.textTarget.innerText)

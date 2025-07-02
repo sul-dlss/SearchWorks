@@ -37,6 +37,9 @@ application.register("browse-nearby", BrowseNearbyController)
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
 
+import CitationFormatController from "./citation_format_controller"
+application.register("citation-format", CitationFormatController)
+
 import CitationStylePickerController from "./citation_style_picker_controller"
 application.register("citation-style-picker", CitationStylePickerController)
 
@@ -79,14 +82,14 @@ application.register("feedback-modal", FeedbackModalController)
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
-import HomePageSearchController from "./home_page_search_controller"
-application.register("home-page-search", HomePageSearchController)
-
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 
 import GoogleCoverImageController from "./google_cover_image_controller"
 application.register("google-cover-image", GoogleCoverImageController)
+
+import HomePageSearchController from "./home_page_search_controller"
+application.register("home-page-search", HomePageSearchController)
 
 import LibraryH3lpController from "./library_h3lp_controller"
 application.register("library-h3lp", LibraryH3lpController)

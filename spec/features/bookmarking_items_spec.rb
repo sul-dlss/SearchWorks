@@ -100,9 +100,12 @@ RSpec.feature 'Bookmarking Items', :js do
       end
 
       within('.modal-dialog') do
-        expect(page).to have_css('div#all')
-        click_button 'By citation format'
-        expect(page).to have_css('div#biblio')
+        select 'Turabian', from: 'Select format'
+        expect(page).to have_content '“Some Intersting Papers.” n.d. Imprint Statement.'
+
+        expect(page).to have_link 'In RIS format (Zotero)', href: '/selections.ris'
+        expect(page).to have_link 'To RefWorks'
+        expect(page).to have_link 'To EndNote', href: '/selections.endnote'
       end
     end
   end
