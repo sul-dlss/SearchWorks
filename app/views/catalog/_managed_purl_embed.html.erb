@@ -1,4 +1,4 @@
-<div class="managed-purl row">
+<div class="managed-purl row" data-controller="managed-purl">
   <div class="col-md-12">
     <h2>Digital content</h2>
   </div>
@@ -10,8 +10,13 @@
       <div class="card-body">
         <ul>
           <% document.managed_purls.each_with_index do |purl, i| %>
-            <li>
-              <%= button_tag data: { embed_target: "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}", embed_provider: Settings.PURL_EMBED_PROVIDER } do %>
+            <li data-managed-purl-target="item">
+              <%= button_tag data: {
+                  embed_target: "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}",
+                  embed_provider: Settings.PURL_EMBED_PROVIDER,
+                  managed_purl_target: 'button',
+                  action: 'click->managed-purl#switchItem'
+              } do %>
                 <% if purl.file_id %>
                   <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :thumbnail) %>">
                 <% end %>
@@ -25,7 +30,7 @@
     </div>
   </div>
   <div class="col-md-8">
-    <div class='managed-purl-embed'>
+    <div class="managed-purl-embed" data-managed-purl-target="embed">
     </div>
   </div>
 </div>
