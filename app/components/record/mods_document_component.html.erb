@@ -17,7 +17,7 @@
     <button class="btn btn-sm py-0 btn-secondary d-lg-none my-3" data-bs-toggle="offcanvas" data-bs-target="#aside" aria-controls="aside">See availability</button>
 
     <%= case
-      when document.managed_purls.any?
+      when document.managed_purls.many?
         render 'catalog/managed_purl_embed', document: document
       when document.druid && (!document.mods? || document.published_content?)
         render Record::Item::EmbedComponent.new(druid: document.druid)
