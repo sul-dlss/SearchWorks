@@ -77,3 +77,8 @@ aside,
 .text-poppy {
   color: var(--stanford-poppy-dark);
 }
+
+.btn-link {
+  --bs-link-color: rgb(var(--bs-link-color-rgb));
+  --bs-link-hover-color: rgb(var(--bs-link-hover-color-rgb));
+}

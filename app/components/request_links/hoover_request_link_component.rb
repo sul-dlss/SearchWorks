@@ -5,7 +5,7 @@ module RequestLinks
     delegate :items, to: :location
 
     def render?
-      items.any? do |item|
+      (has_finding_aid? || document.try(:to_marc)) && items.any? do |item|
         item.effective_location&.details&.dig('availabilityClass') != 'In_process_non_requestable'
       end
     end

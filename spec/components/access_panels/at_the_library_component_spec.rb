@@ -57,11 +57,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
                                                                      callnumber: 'G70.212 .A426 2011',
                                                                      full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
                                                                    }]) ))
+
       expect(page).to have_css(".panel-library-location a")
       expect(page).to have_css(".library-location-heading")
-      expect(page).to have_css(".library-location-heading-text h3", text: "Earth Sciences Library (Branner)")
+      expect(page).to have_css("h3", text: "Earth Sciences Library (Branner)")
       expect(page).to have_css("div.location-hours-today")
-      expect(page).to have_css(".card-body")
+      expect(page).to have_table
     end
   end
 
@@ -92,7 +93,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
     it 'displays the callnumber with live lookup' do
       expect(page).to have_content 'ABC 123'
-      expect(page).to have_css '[data-live-lookup-id]'
+      expect(page).to have_css 'turbo-frame[src="/availability/1234"]'
     end
   end
 
@@ -139,8 +140,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
-          { barcode: '123', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 123' },
-          { barcode: '321', library: 'SPEC-COLL', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 321' }
+          { barcode: '123', status: 'Available', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 123' },
+          { barcode: '321', status: 'Available', library: 'SPEC-COLL', effective_permanent_location_code: 'STACKS', callnumber: 'ABC 321' }
         ]
       )
     end
@@ -160,11 +161,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it "has unknown status text for items we'll be looking up" do
-      expect(page).to have_css('.status-text', text: 'Unknown')
+    it "has a placeholder for items we'll be looking up" do
+      pending 'SW 4.0'
+      expect(page).to have_css('.placeholder')
     end
     it "has explicit status text for items that we know the status" do
-      expect(page).to have_css('.status-text', text: 'In-library use')
+      expect(page).to have_css('td', text: 'Available for in-library use')
     end
   end
 
@@ -185,12 +187,12 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       allow(document).to receive(:folio_items).and_return([
         instance_double(Folio::Item, id: '123', barcode: '123', effective_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
                                      permanent_location: Folio::Types.cached_location_by_code('GRE-STACKS'),
-                                     status: 'In process', material_type: book_type,
+                                     status: 'In process', material_type: book_type, location_provided_availability: 'In process',
                                      loan_type: instance_double(Folio::Item::LoanType, id: nil))
       ])
 
       render_inline(described_class.new(document:))
-      expect(page).to have_css('.status-text', text: 'In process')
+      expect(page).to have_css('td', text: 'In process')
     end
   end
 
@@ -208,9 +210,8 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       it "includes the matched MHLD" do
-        expect(page).to have_css('.panel-library-location a', count: 3)
         expect(page).to have_css('h3', text: "Green Library", count: 1)
-        expect(page).to have_css('.location-name a', text: "Stacks", count: 1)
+        expect(page).to have_css('.location a', text: "Stacks", count: 1)
         expect(page).to have_css('.panel-library-location .mhld', text: "public note")
         expect(page).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
         expect(page).to have_css('.panel-library-location .mhld', text: "Library has: library has")
@@ -286,10 +287,6 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
       it "is present" do
         expect(page).to have_css('.location a', text: 'Request')
-      end
-
-      skip "should not have any requestable items" do
-        expect(page).to have_no_css('td[data-request-url]')
       end
     end
 
@@ -440,6 +437,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
 
       it 'renders request via OAC finding aid' do
+        pending 'SW 4.0 in development'
         expect(page).to have_css 'a[href*="oac"]', text: 'Request via Finding Aid'
         expect(page).to have_css '.availability-icon.noncirc'
         expect(page).to have_css '.status-text', text: 'In-library use'

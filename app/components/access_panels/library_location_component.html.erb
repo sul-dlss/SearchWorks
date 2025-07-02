@@ -1,29 +1,36 @@
-<%= render partial: "catalog/stackmap_link", locals: { document: document, location: location, location_name_class: "location-name" } %>
-<span class="pull-right"><%= render location_request_link %></span>
+<div class="location suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+  <div class="my-2 d-flex justify-content-between" data-availability-target="location">
+    <div><%= render Searchworks4::PhysicalAvailabilityComponent::LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></div>
+    <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+  </div>
 
-<% if location.mhld.present? %>
-  <% if location.mhld.first.latest_received %>
-    <div class='mhld note-highlight'>Latest: <%= location.mhld.first.latest_received %></div>
-  <% end %>
-  <% location.mhld.each do |mhld| %>
-    <% if mhld.public_note.present? %>
-      <div class='mhld'><%= mhld.public_note %></div>
+  <% if location.mhld.present? %>
+    <% if location.mhld.first.latest_received %>
+      <div class='mhld note-highlight'>Latest: <%= location.mhld.first.latest_received %></div>
     <% end %>
-    <% if mhld.library_has.present? %>
-      <div class='mhld'>Library has: <%= mhld.library_has %></div>
+    <% location.mhld.each do |mhld| %>
+      <% if mhld.public_note.present? %>
+        <div class='mhld'><%= mhld.public_note %></div>
+      <% end %>
+      <% if mhld.library_has.present? %>
+        <div class='mhld'>Library has: <%= mhld.library_has %></div>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
-<%= tag.table class: %w[availability record-view], data: { controller: 'long-table', long_table_button_context_value: "items in #{location.name}" } do %>
-  <caption class="visually-hidden">Items in <%= location.name %></caption>
-  <thead>
-    <tr class="visually-hidden">
-      <th scope="col">Call number</th>
-      <th class="visually-hidden" scope="col">Note</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody data-long-table-target="body">
-    <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, classes: 'availability-item', render_item_level_request_link: !location_request_link.render?, consolidate_for_finding_aid: consolidate_items?) %>
-  </tbody>
-<% end %>
+
+  <table class="w-100">
+    <caption class="visually-hidden">
+      <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
+    </caption>
+    <thead class="visually-hidden">
+      <tr>
+        <th>Call number</th>
+        <th>Status</th>
+        <th class="visually-hidden">Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, consolidate_for_finding_aid: consolidate_items?) %>
+    </tbody>
+  </table>
+</div>

@@ -7,10 +7,10 @@ RSpec.describe 'Responsive subnavbar (gray banner)', :feature, :js, :responsive,
     visit solr_document_path('1')
 
     expect(page).to have_css('a', text: /Help/, visible: false)
-    expect(page).to have_css('a', text: /Advanced search/, visible: false)
-    expect(page).to have_css('a', text: /Course reserves/, visible: false)
-    expect(page).to have_css('a', text: /Selections/, visible: false)
+    expect(page).to have_css('a', text: /Featured resources/, visible: false)
+    expect(page).to have_css('a', text: /Bookmarks/, visible: false)
+    expect(page).to have_css('a', text: /Login/, visible: false)
 
-    expect(page).to have_css('button', text: /Menu/, visible: true)
+    expect(page).to have_css('button[aria-label="Toggle navigation"]', visible: true)
   end
 end

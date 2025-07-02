@@ -1,6 +1,6 @@
 
-<div class="section record-browse-nearby container-fluid" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>" data-controller="analytics" data-analytics-category-value="browse-nearby">
-  <h2><%= render Icons::Books3Component.new %> Browse related items</h2>
+<div class="section record-browse-nearby p-4 bg-light" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>" data-controller="analytics" data-analytics-category-value="browse-nearby">
+  <h2>Browse related items</h2>
   <div class="row">
     <div class="col-md-9 col-sm-12">
       Start at call number:
@@ -22,7 +22,7 @@
   <div class="tab-content">
     <% spines.each_with_index do |item, index| %>
       <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
-        <div class="embedded-items">
+        <div class="embedded-items overflow-scroll">
           <%= helpers.turbo_frame_tag "filmstrip_#{item.base_callnumber.gsub(' ', '-')}", src: filmstrip_path(item.base_callnumber), class: 'gallery' %>
         </div>
       </div>

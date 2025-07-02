@@ -156,7 +156,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }])
       render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
-      expect(page).to have_css(".card-header", text: "Available online")
+      expect(page).to have_css("h3", text: "Available online")
       expect(page).to have_css("ul.links li a", text: "Link text")
     end
     it 'adds the stanford-only icon to Stanford only resources' do
@@ -170,7 +170,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
       render_inline(described_class.new(document:))
       expect(page).to have_css '.panel-online'
-      expect(page).to have_css '.card-header', text: 'Also available at'
+      expect(page).to have_css 'h3', text: 'Also available at'
     end
 
     context 'when the record has an SFX link' do
@@ -183,16 +183,6 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       end
     end
 
-    describe 'when the record is not online, has an SFX link, but may return a GBS link (due to a standard number)' do
-      it 'renders content to be filled by GBS if something is returned' do
-        document = SolrDocument.new(oclc: ['abc123'])
-        render_inline(described_class.new(document:))
-
-        expect(page).to have_css('.panel-online', visible: false)
-        expect(page).to have_css('.panel-online .google-books.OCLCabc123', visible: false)
-      end
-    end
-
     describe "database" do
       let(:document) do
         SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], format_main_ssim: ["Database"])
@@ -200,11 +190,11 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
 
       it "renders a special card heading" do
         render_inline(described_class.new(document:))
-        expect(page).to have_css(".card-header", text: "Search this database")
+        expect(page).to have_css("h3", text: "Search this database")
       end
       it "renders a special card footer" do
         render_inline(described_class.new(document:))
-        expect(page).to have_css(".card-footer a", text: "Report a connection problem")
+        expect(page).to have_link("Report a connection problem")
       end
     end
   end

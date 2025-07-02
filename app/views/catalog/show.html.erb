@@ -1,8 +1,23 @@
 <div class="row">
-  <div id="content" class="col-md-12 show-document">
+  <div id="content" class="col-12 col-lg-8 show-document">
+    <%= render RecordToolbarComponent.new(presenter: document_presenter(@document), search_context: @search_context, search_session: search_session) %>
+    <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_presenter(@document).html_title, application_name: "#{I18n.t('blacklight.application_name')} catalog" -%>
+    <% content_for(:head) { render_link_rel_alternates } -%>
 
-    <%= render 'show_main_content' %>
+    <%= render Record::DocumentComponent.new(presenter: document_presenter(@document)) %>
+  </div>
+  <div id="aside" class="record-panels col-12 offset-lg-1 col-lg-3 py-3 py-lg-0 border-start ps-lg-3 offcanvas-lg offcanvas-bottom">
+    <%= render "catalog/record/metadata_panels", document: @document %>
 
+    <% if @document.bookplates.present? %>
+      <section class="border bg-light py-2 px-3">
+        <h3>Acquired with support from</h3>
+
+        <% @document.bookplates.each_slice(2).each do |bookplates| %>
+          <%= render bookplates %>
+        <% end %>
+      </section>
+    <% end %>
   </div>
 </div>
 <div class="row">

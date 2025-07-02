@@ -1,14 +1,10 @@
-<div class="record-toolbar sul-toolbar navbar navbar-expand-md px-3 my-4" role="navigation" data-controller="analytics">
-  <div>
+<div class="record-toolbar d-flex flex-column flex-xxl-row" role="navigation" data-controller="analytics">
+  <div class="d-flex flex-row">
     <%= helpers.link_back_to_catalog class: 'btn btn-link btn-sul-toolbar back-to-results', label: t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
   </div>
-  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".toolbar-collapse">
-    <span class="visually-hidden">Toggle navigation</span>
-    <span class="fa fa-bars"></span>
-  </button>
-  <div class="navbar-collapse collapse toolbar-collapse">
-    <ul class="nav navbar-nav ms-auto">
+  <div class="ms-xxl-auto flex-nowrap">
+    <ul class="nav navbar justify-content-start d-inline-flex flex-nowrap border p-1">
       <% if citable? %>
         <li>
           <%= link_to t('blacklight.tools.cite_html'), cite_path, id: 'citeLink', data: { action: "click->analytics#trackLink", blacklight_modal: "trigger" },

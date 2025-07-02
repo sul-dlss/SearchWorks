@@ -43,6 +43,8 @@ class MarcExtractor
   # Return the MARC fields that match the requested tags or are unmatched vernacular fields for those tags
   # in the order they appear in the MARC record.
   def relevant_fields
+    return [] if marc.blank?
+
     @relevant_fields ||= marc.fields(tags + ['880']).map { |field| MarcFieldWrapper.new(field) }.select do |field|
       field.tag != '880' || (
         field.vernacular_matcher? &&

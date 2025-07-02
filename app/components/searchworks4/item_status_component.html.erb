@@ -1,5 +1,5 @@
 <div id="<%= dom_id %><%= '_rtac' if rtac %>" class="d-inline-flex gap-3">
-  <% if item.folio_status == 'Available' && !rtac && location_provided_availability_as_status.blank? && status_text == 'Available' %>
+  <% if (item.folio_status.nil? || item.folio_status == 'Available') && !rtac && location_provided_availability_as_status.blank? && status_text == 'Available' %>
     <p class="card-text placeholder-wave">
       <span class="placeholder placeholder-sm likely-available"></span>
     </p>

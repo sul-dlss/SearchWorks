@@ -11,17 +11,13 @@ RSpec.feature "In collection Access Panel" do
     end
 
     within(".panel-in-collection") do
-      within(".card-header") do
-        expect(page).to have_content('Item belongs to a collection')
-      end
-      within('.card-body') do
-        expect(page).to have_css("h4 a", text: "Image Collection1")
-        expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/)
-        expect(page).to have_css("dt", text: 'Digital collection')
-        expect(page).to have_css("dd a", text: /\d+ digital items?/)
-        expect(page).to have_css("dt", text: "Finding aid")
-        expect(page).to have_css("dd a", text: "Online Archive of California")
-      end
+      expect(page).to have_css('h3', text: 'Item belongs to a collection')
+      expect(page).to have_css("h4 a", text: "Image Collection1")
+      expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/)
+      expect(page).to have_css("dt", text: 'Digital collection')
+      expect(page).to have_css("dd a", text: /\d+ digital items?/)
+      expect(page).to have_css("dt", text: "Finding aid")
+      expect(page).to have_css("dd a", text: "Online Archive of California")
     end
   end
 end

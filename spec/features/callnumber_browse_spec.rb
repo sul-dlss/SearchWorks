@@ -12,14 +12,13 @@ RSpec.describe 'Callnumber Browse', :js do
 
     it 'has select boxes that work' do
       visit solr_document_path('1')
-
       expect(page).to have_css('.embedded-items')
 
       within '.current-document' do
         first('.toggle-bookmark-label').click
       end
 
-      expect(page).to have_css '[data-behavior="recent-selections"]', text: 'Selections (1)'
+      expect(page).to have_link 'Bookmarks 1'
       expect(page).to have_checked_field visible: :hidden
       expect(page).to have_css('.bookmark-checked')
     end

@@ -199,7 +199,7 @@ RSpec.describe SearchWorksRecordMailer do
 
         it 'renders the bookplate data successfully' do
           expect(mail.body).to have_css('h3', text: 'Acquired with support from')
-          expect(mail.body).to have_css('.media-body', text: /BOOKPLATE-TEXT/)
+          expect(mail.body).to have_css('.bookplate-heading', text: /BOOKPLATE-TEXT/)
         end
       end
     end

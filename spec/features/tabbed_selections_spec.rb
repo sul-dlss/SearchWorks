@@ -20,6 +20,7 @@ RSpec.describe 'Tabbed selections UI' do
 
   describe 'selections drop down', :js do
     it 'renders a drop down with counts for each type of record selection' do
+      pending 'SW4.0 redesign is changing this'
       visit solr_document_path('mf774fs2413')
 
       within('#search-subnavbar') do

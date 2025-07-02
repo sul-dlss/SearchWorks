@@ -1,10 +1,10 @@
-<%= render @layout.new(classes: ['panel-related'], hidden:) do |component| %>
+<%= render @layout.new(classes: ['panel-related mt-5'], hidden:) do |component| %>
   <% component.with_title do %>
     More options
   <% end %>
 
   <% component.with_body do %>
-    <ul class="links">
+    <ul class="links list-unstyled">
       <% if additional_finding_aids? %>
         <%= additional_finding_aids.map { |link| content_tag(:li, link.html.html_safe, class: finding_aid_class(link)) }.join.html_safe %>
       <% end %>

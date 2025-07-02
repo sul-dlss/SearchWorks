@@ -18,11 +18,11 @@ RSpec.feature "Merged Images" do
 
     expect(page).to have_css("h1", text: "Merged Image1") # Title
     within(".panel-in-collection") do # In Collection Access Panel
-      expect(page).to have_css(".card-body a", text: "Merged Image Collection1")
+      expect(page).to have_link("Merged Image Collection1")
     end
     # Metadata sections
-    expect(page).to have_css('h3', text: "Contents/Summary")
-    expect(page).to have_css('h3', text: "Subjects")
-    expect(page).to have_css('h3', text: "Bibliographic information")
+    expect(page).to have_css('h2', text: "Contents/Summary")
+    expect(page).to have_css('h2', text: "Subjects")
+    expect(page).to have_css('h2', text: "Bibliographic information")
   end
 end

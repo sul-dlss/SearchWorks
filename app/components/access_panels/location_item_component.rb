@@ -3,19 +3,16 @@
 module AccessPanels
   class LocationItemComponent < ViewComponent::Base
     with_collection_parameter :item
-    attr_reader :item, :document, :classes, :counter
+    attr_reader :item, :document, :classes
 
-    def initialize(item:, document:, item_counter:, item_iteration:, classes: nil, render_item_note: true, render_item_level_request_link: true, consolidate_for_finding_aid: false)
+    def initialize(item:, document:, item_counter: nil, classes: nil, consolidate_for_finding_aid: false)
       super
 
       @item = item
       @classes = classes
       @document = document
-      @render_item_note = render_item_note
-      @render_item_level_request_link = render_item_level_request_link
       @consolidate_for_finding_aid = consolidate_for_finding_aid
-      @counter = item_counter
-      @iteration = item_iteration
+      @item_counter = item_counter
     end
 
     delegate :bound_with_parent, to: :item
@@ -41,41 +38,13 @@ module AccessPanels
     delegate :has_in_process_availability_class?, :temporary_location_text, :availability_text, to: :item
 
     def render?
-      return false if consolidate_for_finding_aid? && !@iteration.first?
+      return false if consolidate_for_finding_aid? && @item_counter.positive?
 
       true
     end
 
     def consolidate_for_finding_aid?
       @consolidate_for_finding_aid
-    end
-
-    def render_item_note?
-      @render_item_note
-    end
-
-    def render_item_details?
-      !item.suppressed?
-    end
-
-    def render_item_level_request_link?
-      @render_item_level_request_link
-    end
-
-    def render_real_time_availability_request_link?
-      # we're not rendering item-level request links (because e.g. there's already alocation level request link)
-      return false unless render_item_level_request_link?
-
-      # don't render unless item is requestable
-      return false unless item.requestable?
-
-      # non-circulating items don't need real time availability
-      return false unless item.circulates?
-
-      # items that definitely have an item-level request link at render time don't need real time availability
-      return false if item.request_link.render?
-
-      true
     end
 
     # encourage long lines to wrap at punctuation

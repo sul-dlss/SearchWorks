@@ -1,12 +1,12 @@
 <%= header %>
 
-<%= tag.div class: @classes, **@html_attrs do %>
-  <div class="access-panel-heading card-header">
+<%= tag.section class: @classes, **@html_attrs do %>
+  <div class="access-panel-heading">
     <h3>
       <%= title %>
     </h3>
   </div>
-  <div class="card-body">
+  <div class="access-panel-body">
     <%= body %>
   </div>
   <%= after %>

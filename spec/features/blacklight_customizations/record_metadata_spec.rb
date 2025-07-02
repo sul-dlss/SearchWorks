@@ -8,7 +8,7 @@ RSpec.feature 'Record view' do
   end
 
   scenario 'should have correct cover image attributes', :js do
-    within 'div.document' do
+    within '.document' do
       expect(page).to have_css('img.cover-image', visible: true)
       expect(page).to have_css(
         'img.cover-image.ISBN0393040801.ISBN9780393040807.OCLC36024029.LCCN96049953', visible: true

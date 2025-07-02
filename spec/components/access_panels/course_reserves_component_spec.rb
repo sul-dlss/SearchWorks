@@ -39,7 +39,7 @@ RSpec.describe AccessPanels::CourseReservesComponent, type: :component do
     }
 
     it "shows three course reservations" do
-      expect(page).to have_css('div.panel-course-reserve')
+      expect(page).to have_css('section.panel-course-reserve')
       expect(page).to have_css('dl')
       expect(page).to have_css('dt', count: 3, text: "Course")
       expect(page).to have_css('dt', text: "Course")

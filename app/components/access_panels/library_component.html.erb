@@ -1,32 +1,26 @@
-<%= tag.div class: %w[card access-panel panel-library-location mb-3], data: { 'hours-route': (hour_path(library.code) if library.holding_library?) } do %>
-  <%= link_to_library_about_page do %>
-    <div class="library-location-heading access-panel-heading">
-      <%= thumb_for_library %>
-      <div class="library-location-heading-text">
-        <h3><%= library.name %></h3>
-        <div class="small location-hours-today">
-          <% unless library.holding_library? %>
-            (no holding library)
-          <% end %>
-        </div>
+<div class="d-flex flex-column my-2 panel-library-location" data-hours-route="<%= hour_path(library.code) if library.holding_library? %>">
+  <div class="library-location-heading bg-light fw-semibold ms-n3 ps-3 h4 py-1">
+    <h3 class="h4 p-0 m-0"><%= link_to_library_about_page { library.name } %></h3>
+    <div class="small location-hours-today">
+      <% unless library.holding_library? %>
+        (no holding library)
+      <% end %>
+    </div>
+  </div>
+
+  <% if document.marc_links.finding_aid.present? %>
+      <div class='access-panel-subsection'>
+        <h4>Finding aid</h4>
+        <%= document.preferred_finding_aid.html.html_safe %>
       </div>
+  <% end %>
+  <% if library.library_instructions.present? %>
+    <div class='access-panel-subsection'>
+      <h4><%= library.library_instructions[:heading] %></h4>
+      <p><%= library.library_instructions[:text].html_safe %></p>
     </div>
   <% end %>
 
-  <div class="card-body location">
-    <% if document.marc_links.finding_aid.present? %>
-        <div class='access-panel-subsection'>
-          <h4>Finding aid</h4>
-          <%= document.preferred_finding_aid.html.html_safe %>
-        </div>
-    <% end %>
-    <% if library.library_instructions.present? %>
-      <div class='access-panel-subsection'>
-        <h4><%= library.library_instructions[:heading] %></h4>
-        <p><%= library.library_instructions[:text].html_safe %></p>
-      </div>
-    <% end %>
 
-    <%= render AccessPanels::LibraryLocationComponent.with_collection(library.locations.select(&:present?), library: library, document: document) %>
-  </div>
-<% end %>
+  <%= render AccessPanels::LibraryLocationComponent.with_collection(library.locations, document:, library:) %>
+</div>
