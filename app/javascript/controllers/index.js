@@ -28,6 +28,9 @@ application.register("bento-result-count", BentoResultCountController)
 import BlacklightResultCountController from "./blacklight_result_count_controller"
 application.register("blacklight-result-count", BlacklightResultCountController)
 
+import BookmarkToastController from "./bookmark_toast_controller"
+application.register("bookmark-toast", BookmarkToastController)
+
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
 
@@ -67,6 +70,9 @@ application.register("live-lookup", LiveLookupController)
 import LongTableController from "./long_table_controller"
 application.register("long-table", LongTableController)
 
+import ManagedPurlController from "./managed_purl_controller"
+application.register("managed-purl", ManagedPurlController)
+
 import MetaJsonCheckController from "./meta_json_check_controller"
 application.register("meta-json-check", MetaJsonCheckController)
 
@@ -75,9 +81,6 @@ application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
-
-import BookmarkToastController from "./bookmark_toast_controller"
-application.register("bookmark-toast", BookmarkToastController)
 
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
