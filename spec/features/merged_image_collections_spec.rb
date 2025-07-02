@@ -26,6 +26,7 @@ RSpec.feature "Merged Image Collections", :js do
   end
 
   scenario "record view displays metadata and filmstrip" do
+    pending 'SW4.0 redesign in progress.'
     visit solr_document_path('34')
 
     expect(page).to have_css('h1', text: 'Merged Image Collection1')

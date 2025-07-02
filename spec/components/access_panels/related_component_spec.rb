@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe AccessPanels::RelatedComponent, type: :component do
   it 'is hidden by default' do
     render_inline(described_class.new(document: SolrDocument.new))
-    expect(page).to have_css('div.panel-related', visible: false)
+    expect(page).to have_css('section.panel-related', visible: false)
   end
 
   describe 'WorldCat Link' do
@@ -14,7 +14,7 @@ RSpec.describe AccessPanels::RelatedComponent, type: :component do
     end
 
     it 'renders an OCLC link' do
-      expect(page).to have_css('div.panel-related', visible: true)
+      expect(page).to have_css('section.panel-related', visible: true)
       expect(page).to have_css('li.worldcat a', text: 'Find it at other libraries via WorldCat')
     end
   end
@@ -46,7 +46,7 @@ RSpec.describe AccessPanels::RelatedComponent, type: :component do
       end
 
       it 'does not display the additional finding aid' do
-        expect(page).to have_css('div.panel-related', visible: false)
+        expect(page).to have_css('section.panel-related', visible: false)
         expect(page).to have_no_link 'Online Archive of California', href: 'http://oac.cdlib.org/findaid/ark:/something-else'
       end
     end

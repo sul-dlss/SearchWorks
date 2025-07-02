@@ -30,7 +30,7 @@ RSpec.describe AccessPanels::InCollectionComponent, type: :component do
 
     it 'renders summary display with summary display encoded properly' do
       expect(page).to have_css("h3", text: 'Item belongs to a collection')
-      expect(page).to have_css("div.card-body", text: 'Summary & Display')
+      expect(page).to have_css("div[data-behavior=truncate]", text: 'Summary & Display')
       expect(page).to have_no_content("Digital content")
     end
   end

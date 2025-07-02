@@ -64,8 +64,6 @@ class Links
       @ill
     end
 
-    private
-
     def additional_text_html
       content_tag(:span, @additional_text, class: 'additional-link-text') if @additional_text
     end

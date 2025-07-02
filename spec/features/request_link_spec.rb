@@ -38,7 +38,7 @@ RSpec.describe 'Request Links' do
       it 'renders a request button at the location level' do
         visit solr_document_path '56'
 
-        expect(page).to have_css('.request-button', text: 'Request via Aeon')
+        expect(page).to have_css('.location-request-link', text: 'Request via Aeon')
       end
     end
   end

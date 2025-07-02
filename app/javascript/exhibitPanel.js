@@ -34,7 +34,7 @@ const ExhibitsPanel = {
         _this.showAppropriatePanelHeading(data.length);
 
         $.each(data, function(i, exhibit) {
-          _this.createExhibitMediaObject(exhibit, _this.panel.find('.card-body')[0])
+          _this.createExhibitMediaObject(exhibit, _this.panel.find('.access-panel-body')[0])
         });
 
         _this.addToggleButtonBehavior();
@@ -63,7 +63,7 @@ const ExhibitsPanel = {
 
     addToggleButtonBehavior: function() {
       var _this = this;
-      var container = _this.panel.find('.card-body');
+      var container = _this.panel.find('.access-panel-body');
       const exhibitMediaObjects = container[0].querySelectorAll('[data-exhibit-panel-target]')
       const exhibitCount = exhibitMediaObjects.length;
       if (exhibitCount > _this.exhibitToggleThreshold) {

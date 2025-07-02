@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Searchworks4
   class DocumentSectionLayout < ViewComponent::Base
     def initialize(title:, heading_level: :h2, dl_classes: 'dl-horizontal')

@@ -1,17 +1,16 @@
-<%= tag.ul class: "links", id: "online-link-list",
+<%= tag.ul class: "links list-unstyled", id: "online-link-list",
            data: {
              controller: "long-table",
              long_table_button_context_value: "online links",
              action: "item-added->long-table#collapse"
            } do %>
   <% links.each.with_index do |link, index| %>
-    <%= tag.li do %>
-      <span>
-        <%= link.html&.html_safe %>
+    <%= tag.li class: "mt-2 #{'border-top' unless index == 0}" do %>
+      <div>
+        <%= link.link_html&.html_safe %>
         <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
-      </span>
+      </div>
+      <%= link.additional_text_html&.html_safe %>
     <% end %>
   <% end %>
-
-  <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
 <% end %>

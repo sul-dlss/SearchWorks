@@ -15,10 +15,6 @@ module AccessPanels
       @document = document
     end
 
-    def location_request_link
-      @location_request_link ||= LocationRequestLinkComponent.for(document:, library_code: library.code, location:)
-    end
-
     private
 
     def consolidate_items?

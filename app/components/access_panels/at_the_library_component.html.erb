@@ -1,4 +1,7 @@
 <h2>At the library</h2>
-<div data-controller="live-lookup" data-live-lookup-id="<%= document.live_lookup_id %>" data-live-lookup-url-value="<%= availability_index_path %>">
-  <%= render AccessPanels::LibraryComponent.with_collection(libraries, document: document) %>
+<div>
+  <% document.holdings.libraries.each do |library| %>
+    <%= render AccessPanels::LibraryComponent.new(library:, document:) %>
+  <% end %>
+  <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document) %>
 </div>

@@ -10,7 +10,7 @@
     <span class="d-inline-flex gap-3">
       <%= render Searchworks4::ItemStatusComponent.new(item:) %>
       <% unless item.request_link.render? %>
-        <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+        <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
       <% end %>
     </span>
   <% end %>
@@ -37,7 +37,7 @@
       <%= tag.span library.name, class: 'library fw-semibold' %>
       <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
       <%= render ItemCountComponent.new(document.holdings.items.count) %>
-      <%= render LocationRequestLinkComponent.new(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+      <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
 
       <div class="btn btn-outline-primary btn-sm ms-auto text-nowrap">
         <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
@@ -101,7 +101,7 @@
             <div class="pt-2" data-availability-target="location">
               <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></div>
               <% unless document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
-                <%= render LocationRequestLinkComponent.new(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+                <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
               <% end %>
             </div>
             <table class="table w-auto">

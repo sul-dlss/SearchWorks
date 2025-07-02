@@ -16,14 +16,14 @@ RSpec.feature "Record Toolbar" do
     within "#content" do
       within "div.record-toolbar" do
         expect(page).to have_no_css("button.navbar-toggler", visible: true)
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
+        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Search results", visible: true)
         expect(page).to have_no_css("a.previous.disabled", visible: true)
         expect(page).to have_no_css("a.previous", visible: true)
         expect(page).to have_no_css("a.next.disabled", visible: true)
         expect(page).to have_no_css("a.next", visible: true)
       end
 
-      within "div.navbar-collapse" do
+      within ".navbar" do
         expect(page).to have_css("li a", text: "Cite")
         expect(page).to have_css("li button", text: "Send to")
         expect(page).to have_css("form label", text: "Bookmark")
@@ -45,7 +45,7 @@ RSpec.feature "Record Toolbar" do
     page.find('a', text: 'An object').click
 
     within '#content' do
-      within 'div.navbar-collapse', visible: true do
+      within '.navbar', visible: true do
         click_button 'Send to'
         expect(page).to have_css('li a', text: 'RefWorks')
         expect(page).to have_css('li a', text: 'EndNote')
@@ -64,11 +64,11 @@ RSpec.feature "Record Toolbar" do
     within "#content" do
       within "div.record-toolbar" do
         expect(page).to have_no_css("button.navbar-toggler", visible: true)
-        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Back to results", visible: true)
+        expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Search results", visible: true)
         expect(page).to have_css("a.previous", visible: true)
         expect(page).to have_css("a.next", visible: true)
       end
-      within "div.navbar-collapse" do
+      within ".navbar" do
         expect(page).to have_css("li button", text: "Send to")
         expect(page).to have_css("form label", text: "Bookmark")
         click_button "Send to"

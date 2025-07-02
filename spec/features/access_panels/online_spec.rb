@@ -7,12 +7,8 @@ RSpec.feature "Online Access Panel" do
     visit solr_document_path('24')
 
     within(".panel-online") do
-      within(".card-header") do
-        expect(page).to have_content("Search this database")
-      end
-      within(".card-footer") do
-        expect(page).to have_css("a", text: "Report a connection problem")
-      end
+      expect(page).to have_css('h3', text: 'Search this database')
+      expect(page).to have_css('a', text: 'Report a connection problem')
     end
   end
 
@@ -44,16 +40,12 @@ RSpec.feature "Online Access Panel" do
       visit solr_document_path('57')
 
       within('.panel-online') do
-        within('.card-header') do
-          expect(page).to have_content('Available online')
-        end
+        expect(page).to have_css('h3', text: 'Available online')
 
-        within('.card-body') do
-          within('turbo-frame#sfx-data') do
-            expect(page).to have_css('ul li a', text: 'TargetName')
-            expect(page).to have_css('li ul li', text: 'Statement 1')
-            expect(page).to have_css('li ul li', text: 'Statement 2')
-          end
+        within('turbo-frame#sfx-data') do
+          expect(page).to have_css('ul li a', text: 'TargetName')
+          expect(page).to have_css('li ul li', text: 'Statement 1')
+          expect(page).to have_css('li ul li', text: 'Statement 2')
         end
       end
     end

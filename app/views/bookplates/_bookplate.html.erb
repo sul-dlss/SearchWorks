@@ -1,8 +1,6 @@
-<div class='bookplate col-sm-12 col-md-8 col-lg-6'>
-  <div class='media d-flex'>
-    <%= image_tag bookplate.thumbnail_url, alt: bookplate.text, class: 'me-3' %>
-    <div class='media-body'>
-      <p><%= link_to_bookplate_search(bookplate, class: 'media-heading') %></p>
-    </div>
+<div class='bookplate'>
+  <div class='row align-items-center'>
+    <%= image_tag bookplate.thumbnail_url, alt: bookplate.text, class: 'col-6' %>
+    <p class='col-6 bookplate-heading'><%= link_to_bookplate_search(bookplate) %></p>
   </div>
 </div>

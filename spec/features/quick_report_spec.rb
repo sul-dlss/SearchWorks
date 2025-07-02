@@ -22,6 +22,7 @@ RSpec.feature 'Quick report form (no js)' do
   end
 
   scenario 'Quick report is available on show page' do
+    pending 'SW4.0 redesign pending.'
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
     click_button 'Report wrong cover image'

@@ -1,11 +1,12 @@
 <% # NOTE: this is hidden if there are no links, but jquery.plug-google-content.js may unhide it %>
-<%= tag.div class: "panel-online", hidden: !links.any? do %>
+<%= tag.div class: "panel-online mb-3", hidden: !links.any? do %>
   <%= render @layout.new do |component| %>
     <% component.with_header do %>
       <h2>Online</h2>
     <% end %>
 
     <% component.with_title do %>
+      <div class="bg-light p-1 ms-n3 ps-3">
         <% if document.is_a_database? %>
           Search this database
         <% elsif document.druid %>
@@ -13,6 +14,7 @@
         <% else %>
           Available online
         <% end %>
+      </div>
     <% end %>
 
     <% component.with_body do %>
@@ -32,9 +34,11 @@
     <% end %>
 
     <% component.with_after do %>
-      <div class="card-footer">
+      <div>
         <%= link_to("Report a connection problem", "https://library.stanford.edu/ask/email/connection-problems") %>
       </div>
     <% end if links.any? && display_connection_problem_links? %>
   <% end %>
+
+  <%= render AccessPanels::GoogleBooksPreviewComponent.new(document: document, link_text: 'Full view') %>
 <% end%>
