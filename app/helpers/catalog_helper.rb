@@ -12,12 +12,14 @@ module CatalogHelper
 
   def stackmap_link(document, location)
     item = location.items.first
+    params = { callno: item.callnumber,
+               library: item.library,
+               location: item.effective_permanent_location_code }
+    uri = URI(location.stackmap_api_url)
+    uri.query = params.to_query
     stackmap_path(title: (document['title_display'] || '').html_safe,
-                  id: document.id,
-                  callnumber: item.callnumber,
-                  library: item.library,
-                  location: item.effective_permanent_location_code,
-                  api_url: location.stackmap_api_url)
+                  api_url: uri.to_s,
+                  id: document.id)
   end
 
   def new_documents_feed_path

@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Stackmap' do
   it 'renders the page' do
-    get '/view/1/stackmap', params: { library: 'GREEN' }
+    get '/view/1/stackmap', params: { api_url: 'GREEN' }
 
     expect(response).to have_http_status(:ok)
   end

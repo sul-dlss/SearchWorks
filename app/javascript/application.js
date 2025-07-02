@@ -32,7 +32,6 @@ import "./location-hours";
 import "./purl-embed";
 import "./recent-selections";
 import "./select-all";
-import "./stackmap";
 import "./tooltip";
 import "./popover";
 import "./truncate";

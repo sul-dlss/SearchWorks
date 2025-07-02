@@ -25,6 +25,8 @@ layer(components);
 @import url("searchworks4/variables.css") layer(local);
 @import url("searchworks4/zero-results.css") layer(local);
 @import url("modules/chat.css") layer(local);
+@import url("modules/stackmap.css") layer(local);
+@import "leaflet/dist/leaflet";
 
 @layer local {
   @media (min-width: 1400px) {
