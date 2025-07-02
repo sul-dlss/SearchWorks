@@ -15,3 +15,11 @@
     }
   }
 }
+
+.ms-n3 {
+  margin-inline-start: -1rem !important;
+}
+
+.bi.rotate-180::before {
+  transform: rotateY(180deg);
+}
