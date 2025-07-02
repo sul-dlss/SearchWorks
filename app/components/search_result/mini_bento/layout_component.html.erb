@@ -1,5 +1,6 @@
+<!--column on xxl screens-->
 <% unless show? %>
-  <div class="d-md-none d-block mb-2 mini-bento-btn-wrapper">
+  <div class="d-md-none d-block mb-2 d-inline-block w-auto text-nowrap mini-bento-btn-wrapper">
     <button class="mini-bento btn btn-outline-primary col-12" data-bs-toggle="collapse" data-bs-target=".alternate-catalog" aria-expanded="false" aria-controls="alternate-catalog">
       <span>Looking for more?</span>
     </button>
@@ -29,7 +30,6 @@
         <% end %>
       </div>
     </div>
-
     <div class="alternate-catalog-other-tools col-12">
       <div class="d-flex flex-wrap align-items-baseline mb-1">
         <h3 class="alternate-catalog-name mb-1 me-2">
@@ -41,28 +41,24 @@
           <% end %>
         </div>
       </div>
-
       <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
         <%= link_to archive_search_url, class: 'su-underline pe-2' do %>
           Archival Collections at Stanford
         <% end %>
         <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
       </div>
-
       <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
         <%= link_to geo_search_url,  class: 'su-underline pe-2' do %>
           EarthWorks for geospatial data and maps
         <% end %>
         <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
       </div>
-
       <div class="mb-2" data-controller="bento-result-count" data-bento-result-count-url-value="<%= bento_search_url('lib_guides') %>">
         <%= link_to '', class: 'su-underline pe-2', data: {'bento-result-count-target': 'link'} do %>
           Guides to collections, tools, and services
         <% end %>
         <span class="badge rounded-pill" data-bento-result-count-target="count"></span>
       </div>
-
       <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= exhibits_search_url %>">
         <%= link_to exhibits_search_url, class: 'su-underline pe-2' do %>
           Spotlight Exhibits

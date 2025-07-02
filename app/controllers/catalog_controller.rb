@@ -54,6 +54,14 @@ class CatalogController < ApplicationController
 
   before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
+  before_action only: :index do
+    top_filters = blacklight_config.top_filters[PageLocation.new(search_state).access_point] || blacklight_config.top_filters[:default]
+
+    top_filters.each do |filter|
+      blacklight_config.facet_fields[filter].group = 'top' if blacklight_config.facet_fields[filter].present?
+    end
+  end
+
   configure_blacklight do |config|
     config.bootstrap_version = 5
     config.add_results_document_tool(:bookmark, component: Document::TrackingBookmarkComponent, if: :render_bookmarks_control?)
@@ -154,23 +162,18 @@ class CatalogController < ApplicationController
                                 label: 'On order', fq: 'access_facet:"On order"'
                               }
                            },
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
+                           component: Blacklight::Facets::ListComponent
     config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index,
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
+                           component: Blacklight::Facets::ListComponent
     config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index,
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
+                           component: Blacklight::Facets::ListComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 20,
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
+                           component: Blacklight::Facets::ListComponent
     config.add_facet_field "pub_year_tisim", label: "Date", range: true,
                            range_config: {
                              input_label_range_begin: "from year",
                              input_label_range_end: "to year"
-                           },
-                           group: 'non-collapsable'
+                           }
 
     config.add_facet_field "language", label: "Language", limit: 20, component: Blacklight::Facets::ListComponent
     config.add_facet_field "author_person_facet", label: "Author", limit: 20, component: Blacklight::Facets::ListComponent
@@ -217,6 +220,12 @@ class CatalogController < ApplicationController
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
       }
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
+
+    config.top_filters = {
+      :default => ['access_facet', 'format_main_ssim', 'building_facet', 'genre_ssim', 'pub_year_tisim'],
+      :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
+      :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
+    }
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']

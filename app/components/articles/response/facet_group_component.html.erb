@@ -29,10 +29,8 @@
       <div data-behavior='loading-spinner' class='loading-spinner' style='display:none'></div>
     </div>
   <% end %>
-
   <div class="facets-header">
     <%= content_tag :h2, @title, class: 'facets-heading my-0' if @title %>
-
     <%= content_tag :button,
       class:'btn btn-outline-secondary facet-toggle-button fs-2 d-block d-md-none',
       type: 'button',
@@ -44,12 +42,11 @@
         controls: @panel_id,
         expanded: 'false'
       } do %>
-        <span class="visually-hidden">Toggle facets</span>
-        <span class="fa fa-bars"></span>
+      <span class="visually-hidden">Toggle facets</span>
+      <span class="fa fa-bars"></span>
     <% end %>
   </div>
-
-  <%= content_tag :div, id: @panel_id, class: 'facets-collapse d-md-block collapse accordion' do %>
+  <%= content_tag :div, id: @panel_id, class: 'facets-collapse collapse d-md-block accordion' do %>
     <%= body %>
   <% end %>
 <% end %>

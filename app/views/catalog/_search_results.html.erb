@@ -1,5 +1,4 @@
 <%# locals: (content_classes: 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false) %>
-
 <% if page_location.access_point? %>
   <% if page_location.collection? && get_collection.present? %>
     <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
@@ -11,7 +10,6 @@
 <% else %>
   <% @page_title = t('blacklight.search.page_title.title', constraints: render_search_to_page_title(search_state), application_name: application_name) %>
 <% end %>
-
 <% view_config = blacklight_config.view_config(document_index_view_type, action_name: action_name) %>
 <% content_for(:head) do -%>
   <%= render '/catalog/opensearch_response_metadata' %>
@@ -19,8 +17,6 @@
   <%= atom_feed_link_tag %>
   <%= json_api_link_tag %>
 <% end -%>
-
-
 <h1 class="visually-hidden">Search Results</h1>
 <% if has_search_parameters? && !hide_constraints %>
   <div class="row">
@@ -29,7 +25,6 @@
     </div>
   </div>
 <% end %>
-
 <% if @response.empty? %>
   <%= render "shared/zero_results" %>
 <% else %>
@@ -37,42 +32,49 @@
     <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
   <% end %>
   <div class="row align-items-start">
+    <div class="d-md-none mb-3 pe-0 d-inline-block w-auto text-nowrap ">
+      <a class="btn btn-primary"
+      data-bs-toggle="offcanvas"
+      href="#facetsOffcanvas"
+      role="button"
+      aria-controls="facetsOffcanvas">
+        <i class="bi bi-sliders" aria-hidden="true"></i> Filters
+      </a>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="facetsOffcanvas" aria-labelledby="facetsOffcanvasLabel" data-controller="facet-offcanvas">
+      <div class="offcanvas-header">
+        <h5 id="facetsOffcanvasLabel">Filters</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <%= render Facets::GroupComponentContainer.new(response: @response, offcanvas: true) %>
+      </div>
+    </div>
+    <!--This only shows in the column on small screens-->
+    <% benchmark 'Alt results' do %>
+      <%= render view_config.mini_bento_component.new(close: true) if view_config.mini_bento_component %>
+    <% end %>
+  </div>
+  <div class="row align-items-start">
     <% unless hide_facets %>
       <div class="sidebar col-12 col-md-4 col-xxl-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
-        <%= render Facets::GroupComponent.new(id: nil, title: 'Filters',
-                                              header_classes: 'facets-heading',
-                                              body_classes: 'facets-collapse d-md-block collapse accordion') do |component| %>
-          <% component.with_body do %>
-            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group('non-collapsable'), response: @response) %>
-            <div data-facet-list-target="hideFacets" id="hidden-facets">
-              <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
-            </div>
-          <% end %>
-        <% end %>
-
-        <% benchmark 'Alt results' do %>
-          <%= render view_config.mini_bento_component.new(close: true) if view_config.mini_bento_component %>
-        <% end %>
+        <%= render Facets::GroupComponentContainer.new(response: @response) %>
       </div>
     <% end %>
-
     <div id="content" class="results col <%= content_classes %>">
       <div class="sul-toolbar page-entries-info sort-and-per-page d-flex justify-content-between align-items-center">
         <%= render PageLinksComponent.new(response: @response) %>
-
         <span class="d-flex flex-row gap-2">
           <%= render partial: 'sort_widget' %>
           <%= render partial: 'shared/per_page_widget' %>
         </span>
       </div>
-
       <% # container for all documents in index list view -%>
       <div id="documents" class="documents-<%= document_index_view_type %>">
         <%= render view_config.document_component.with_collection(@response.documents.map { |document| document_presenter(document) }, counter_offset: document_counter_with_offset(-1)) %>
       </div>
       <%= render 'results_pagination' %>
     </div>
-
     <aside class="col-xxl-3 d-none d-xxl-block">
       <div id="modules-aside">
       </div>

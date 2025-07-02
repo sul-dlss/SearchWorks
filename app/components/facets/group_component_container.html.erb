@@ -1,0 +1,27 @@
+<%= render Facets::GroupComponent.new(
+      id: nil,
+      title: 'Top filters',
+      container_classes: container_classes_for('top'),
+      header_classes: header_classes,
+      offcanvas: @offcanvas,
+      body_classes: body_classes
+    ) do |component| %>
+  <% component.with_body do %>
+    <%= render Blacklight::FacetComponent.with_collection(helpers.blacklight_config.facet_fields_in_group('top'), response: @response) %>
+  <% end %>
+<% end %>
+<%= render Facets::GroupComponent.new(
+      id: nil,
+      title: 'Other filters',
+      container_classes: container_classes_for('other'),
+      header_classes: header_classes,
+      expandable_filter_group: true,
+      offcanvas: @offcanvas,
+      body_classes: body_classes
+    ) do |component| %>
+  <% component.with_body do %>
+    <div data-facet-group-target="hideFacets" id="hidden-facets">
+      <%= render Blacklight::FacetComponent.with_collection(helpers.blacklight_config.facet_fields_in_group(nil), response: @response) %>
+    </div>
+  <% end %>
+<% end %>

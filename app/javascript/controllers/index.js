@@ -55,8 +55,11 @@ application.register("embed-browse", EmbedBrowseController)
 import ExhibitPanelController from "./exhibit_panel_controller"
 application.register("exhibit-panel", ExhibitPanelController)
 
-import FacetListController from "./facet_list_controller"
-application.register("facet-list", FacetListController)
+import FacetGroupController from "./facet_group_controller"
+application.register("facet-group", FacetGroupController)
+
+import FacetOffcanvasController from "./facet_offcanvas_controller"
+application.register("facet-offcanvas", FacetOffcanvasController)
 
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
