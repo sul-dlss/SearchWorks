@@ -22,3 +22,11 @@
 .sidebar:has(.alternate-catalog.show) .mini-bento.btn[aria-expanded="true"] {
   display: none;
 }
+
+/* This is for resizing for large to small.
+If the user has not clicked on the mini bento button
+and there is a show class then it will hide the mini bento
+ */
+.sidebar:has(.mini-bento.btn[aria-expanded="false"]) .alternate-catalog.show {
+  display: none;
+}
