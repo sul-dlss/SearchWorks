@@ -342,6 +342,10 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
                                               'searchlink' => %w[fieldcode term]
                                             ))
     sanitize_config = config.nil? ? default_config : config
+    # Increasing the number of attributes may help deal with errant "<" that
+    # makes the parser think a single element has multiple attributes
+    # when there are no elements.
+    sanitize_config[:parser_options] = { max_attributes: 3000 }
 
     html = CGI.unescapeHTML(data.to_s)
     # need to double-unescape data with an ephtml section
@@ -351,7 +355,15 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
       html = html.gsub("\\n ", '')
     end
 
-    sanitized_html = Sanitize.fragment(html, sanitize_config)
+    begin
+      sanitized_html = Sanitize.fragment(html, sanitize_config)
+    rescue ArgumentError => e
+      # We still want to notify honeybadger but can provide more information
+      # about the html
+      Honeybadger.notify(e, error_message: 'Error with arguments passed to Sanitize/Nokogiri', context: { html: })
+      # Return an empty string to allow the page to still load
+      return ''
+    end
     # sanitize 5.0 fails to restore element case after doing lowercase
     sanitized_html = sanitized_html.gsub('<searchlink', '<searchLink')
     sanitized_html.gsub('</searchlink>', '</searchLink>')

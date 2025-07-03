@@ -7,11 +7,11 @@ RSpec.feature "Feedback form modal", :js do
     visit root_path
   end
 
-  scenario "feedback form modal should be hidden on page load" do
+  scenario "feedback form modal is be hidden on page load" do
     expect(page).to have_no_css("#feedback-form", visible: true)
   end
 
-  scenario "feedback form modal should be shown filled out and submitted" do
+  scenario "feedback form modal is shown filled out and submitted" do
     skip("Passes locally, not on Travis.") if ENV['CI']
     click_link "Feedback"
     expect(page).to have_css("#feedback-form", visible: true)

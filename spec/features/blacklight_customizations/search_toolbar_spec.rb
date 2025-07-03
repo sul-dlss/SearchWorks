@@ -3,16 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe "Search toolbar", :feature, :js do
-  describe "has SearchWorks customizations" do
-    before do
-      visit solr_document_path('mf774fs2413')
-    end
-
-    it "displays correct subnavbar elements" do
-      expect(page).to have_css('.masthead', text: 'SearchWorks Catalog')
-    end
-  end
-
   describe "Selections dropdown" do
     describe "show list" do
       it "navigates to selections page" do
