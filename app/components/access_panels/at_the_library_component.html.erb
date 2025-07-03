@@ -1,4 +1,3 @@
-<h2>At the library</h2>
 <div>
   <% document.holdings.libraries.each do |library| %>
     <%= render AccessPanels::LibraryComponent.new(library:, document:) %>
