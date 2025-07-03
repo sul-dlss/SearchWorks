@@ -1,4 +1,3 @@
-
 @media (min-width: 520px) {
   .dl-horizontal {
     dt {
@@ -22,4 +21,21 @@
 
 .bi.rotate-180::before {
   transform: rotateY(180deg);
+}
+
+.access-panel {
+  &.panel-exhibit {
+    img {
+      height: 75px;
+      width: 75px;
+    }
+
+    .exhibit-heading h4 {
+      margin-top: 0;
+    }
+
+    .see-all-exhibits {
+      margin-top: 15px;
+    }
+  }
 }
