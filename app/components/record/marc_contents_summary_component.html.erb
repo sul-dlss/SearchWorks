@@ -9,48 +9,54 @@
 <% toc = document.fetch(:toc_struct, []).first %>
 <% if toc.present? %>
   <dt><%= toc[:label] %></dt>
-  <dd>
-    <%- unless toc[:fields].nil? -%>
-      <%- toc[:fields].each do |toc_field| -%>
-        <ul class="toc">
-          <% Array.wrap(toc_field).each do |field| %>
-            <li><%= render_struct_field_data(document, field) %></li>
-          <% end %>
-        </ul>
+  <dd data-controller="long-text" data-long-text-truncate-class="truncate-5">
+    <div data-long-text-target="text">
+      <%- unless toc[:fields].nil? -%>
+        <%- toc[:fields].each do |toc_field| -%>
+          <ul class="toc">
+            <% Array.wrap(toc_field).each do |field| %>
+              <li><%= render_struct_field_data(document, field) %></li>
+            <% end %>
+          </ul>
+        <%- end -%>
       <%- end -%>
-    <%- end -%>
-    <%- unless toc[:vernacular].nil? -%>
-      <%- toc[:vernacular].each do |toc_field| -%>
-        <ul class="toc">
-          <%- toc_field.each do |field| -%>
-            <li><%= field %></li>
-          <%- end -%>
-        </ul>
+      <%- unless toc[:vernacular].nil? -%>
+        <%- toc[:vernacular].each do |toc_field| -%>
+          <ul class="toc">
+            <%- toc_field.each do |field| -%>
+              <li><%= field %></li>
+            <%- end -%>
+          </ul>
+        <%- end -%>
       <%- end -%>
-    <%- end -%>
-    <%- unless toc[:unmatched_vernacular].nil? -%>
-      <%- toc[:unmatched_vernacular].each do |toc_field| -%>
-        <ul class="toc">
-          <%- toc_field.each do |field| -%>
-            <li><%= field %></li>
-          <%- end -%>
-        </ul>
+      <%- unless toc[:unmatched_vernacular].nil? -%>
+        <%- toc[:unmatched_vernacular].each do |toc_field| -%>
+          <ul class="toc">
+            <%- toc_field.each do |field| -%>
+              <li><%= field %></li>
+            <%- end -%>
+          </ul>
+        <%- end -%>
       <%- end -%>
-    <%- end -%>
+    </div>
   </dd>
 <% end %>
 <% summaries.each do |summary|%>
   <% summary.fetch(:fields, []).each do |field| %>
     <dt><%= summary[:label] || 'Summary' %></dt>
-    <dd>
-      <%= render_struct_field_data document, field[:field] %>
-      <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
-      <%= "<br/>".html_safe if field != summary[:fields].last %>
+    <dd data-controller="long-text" data-long-text-truncate-class="truncate-5">
+      <div data-long-text-target="text">
+        <%= render_struct_field_data document, field[:field] %>
+        <%= "<br/>#{field[:vernacular]}".html_safe unless field[:vernacular].nil? %>
+        <%= "<br/>".html_safe if field != summary[:fields].last %>
+      </div>
     </dd>
   <% end %>
   <% if summary[:unmatched_vernacular].present? %>
-    <dd>
-      <%= summary[:unmatched_vernacular].join("<br/>").html_safe %>
+    <dd data-controller="long-text" data-long-text-truncate-class="truncate-5">
+      <div data-long-text-target="text">>
+        <%= summary[:unmatched_vernacular].join("<br/>").html_safe %>
+      </div>
     </dd>
   <% end %>
 <% end %>

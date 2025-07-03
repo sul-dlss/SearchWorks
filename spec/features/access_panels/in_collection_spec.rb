@@ -13,7 +13,7 @@ RSpec.feature "In collection Access Panel" do
     within(".panel-in-collection") do
       expect(page).to have_css('h3', text: 'Item belongs to a collection')
       expect(page).to have_css("h4 a", text: "Image Collection1")
-      expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/)
+      expect(page).to have_css("[data-controller='long-text']", text: /A collection of fixture images/)
       expect(page).to have_css("dt", text: 'Digital collection')
       expect(page).to have_css("dd a", text: /\d+ digital items?/)
       expect(page).to have_css("dt", text: "Finding aid")

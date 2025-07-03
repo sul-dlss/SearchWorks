@@ -73,6 +73,9 @@ application.register("live-lookup", LiveLookupController)
 import LongTableController from "./long_table_controller"
 application.register("long-table", LongTableController)
 
+import LongTextController from "./long_text_controller"
+application.register("long-text", LongTextController)
+
 import ManagedPurlController from "./managed_purl_controller"
 application.register("managed-purl", ManagedPurlController)
 

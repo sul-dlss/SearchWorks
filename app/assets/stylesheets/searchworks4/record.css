@@ -56,3 +56,16 @@
     --bs-nav-link-padding-x: var(--item-padding-x);
   }
 }
+
+.panel-library-location {
+  .item-row {
+    display: flex;
+  }
+}
+
+.truncate-5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
