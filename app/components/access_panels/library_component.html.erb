@@ -1,6 +1,6 @@
 <div class="d-flex flex-column mt-2 mb-3 panel-library-location" data-hours-route="<%= hour_path(library.code) if library.holding_library? %>">
   <div class="library-location-heading bg-light ms-n3 ps-3 py-1 position-relative">
-    <h3 class="h4 p-0 m-0 fw-semibold"><%= link_to_library_about_page class: 'text-body stretched-link' %><i class="ms-1 bi bi-arrow-up-right" aria-hidden="true"></i></h3>
+    <h3 class="h4 p-0 m-0 fw-semibold"><%= link_to_library_about_page class: 'text-body stretched-link' %></h3>
     <div class="small location-hours-today">
       <% if library.holding_library? %>
         <div class="placeholder col-5"></div>

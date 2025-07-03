@@ -14,7 +14,14 @@ module AccessPanels
     end
 
     def link_to_library_about_page(**)
-      link_to_if library.about_url, library.name, library.about_url, **
+      return library.name if library.about_url.blank?
+
+      link_to library.about_url, ** do
+        safe_join([
+          library.name,
+          tag.i(class: 'bi-arrow-up-right ms-1', aria: { hidden: true })
+        ])
+      end
     end
   end
 end
