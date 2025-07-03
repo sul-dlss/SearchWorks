@@ -1,0 +1,11 @@
+.bookmark-toolbar {
+  --item-padding-x: 0.25rem;
+  .btn {
+    /* --bs-btn-padding-y: 0.25rem; */
+    --bs-btn-padding-x: var(--item-padding-x);
+  }
+  .nav-link {
+    --bs-nav-link-padding-y: 0.25rem;
+    --bs-nav-link-padding-x: var(--item-padding-x);
+  }
+}

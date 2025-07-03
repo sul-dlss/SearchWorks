@@ -1,0 +1,24 @@
+<nav class="bookmark-toolbar d-flex justify-content-end flex-column flex-md-row mb-3 mb-xxl-4 gap-4" data-controller="analytics" aria-label="Tools">
+  <ul class="nav navbar justify-content-start d-inline-flex gap-2 px-1 py-0">
+    <li>
+      <%= link_to citation_href,
+                  class: 'nav-link',
+                  data: {
+                    action: "click->analytics#trackLink",
+                    blacklight_modal: "trigger"
+                  } do %>
+        <i class="bi bi-quote me-1"></i>Cite
+      <% end %>
+    </li>
+    <li>
+      <%= link_to email_href,
+                  class: 'nav-link',
+                  data: { blacklight_modal: "trigger" } do %>
+        <i class="bi bi-envelope me-1"></i>Email
+      <% end %>
+    </li>
+    <li>
+      <button class="btn btn-link" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer me-1"></i>Print</button>
+    </li>
+  </ul>
+</nav>

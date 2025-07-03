@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class BookmarksController < CatalogController
-  layout 'searchworks'
+  layout 'searchworks4'
   include Blacklight::Bookmarks
   include SelectionsCount
 
@@ -11,6 +11,8 @@ class BookmarksController < CatalogController
       q: '*:*',
       rows: 20
     }
+    config.sort_fields.delete('relevance')
+    config.sort_fields.delete('new-to-libs')
   end
 
   # Overidden from Blacklight to add our tabbed interface
