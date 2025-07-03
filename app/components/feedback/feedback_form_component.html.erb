@@ -4,6 +4,7 @@
         <%= f.hidden_field :user_agent, 'data-feedback-form-target': 'agent' %>
         <%= f.hidden_field :viewport, 'data-feedback-form-target': 'viewport' %>
         <%= f.hidden_field :last_search, 'data-feedback-form-target': 'lastSearch' %> 
+        <%= f.hidden_field :form_format, value: @format %>
 
         <% if @format == 'modal' %>
             <div class="modal-body">

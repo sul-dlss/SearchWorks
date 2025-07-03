@@ -25,8 +25,7 @@ export default class extends Controller {
 
   // Attached to the "Send" button via data action for submission event turbo:submit-end
   async submitForm(event) {
-    const response = await event.detail.fetchResponse.response.json()
-    this.displayResponse(response)
+    this.displayResponse()
   }
 
   // Set values for specific fields that are not filled in and must be computed
@@ -52,61 +51,20 @@ export default class extends Controller {
 
   // If success, we need an alert or a toast object to show up
   // If error, we need to display the error in the alert or toast object
-  displayResponse(responseJSON) {
-    const messageType = responseJSON[0][0]
-    const message = responseJSON[0][1]
-   
+  displayResponse() {
     if (this.isStandalone()) {
-      this.displayAlert(messageType, message)
       this.hideForm()
     } else {
-      this.displayToast(messageType, message)
+      this.displayToast()
       this.closeModal()
-    }
-  }
-
-
-  displayAlert(messageType, message) {
-    const alertType = (messageType == 'error') ? 'danger' : messageType
-    const iconClass = this.messageIcon(messageType)
-    const flashHtml = `
-      <div class="alert alert-${alertType} alert-dismissible shadow-sm d-flex align-items-center">
-        <div class="text-body">
-          <div><i class="bi ${iconClass} me-2"></i> ${message}</div>
-        </div>
-        <button type="button" class="btn-close p-2 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>`
-
-    // Show the flash message
-    document.querySelector('div.flash_messages').innerHTML = flashHtml
+    } 
   }
 
   // The toast appears on the modal page
-  // Perhaps this could be done by associating this controller with the toast as well
-  // but unclear how "this.element" would resolve
-  displayToast(messageType, message) {
-    const toast = document.getElementById('toast')
-    const toastText = toast.querySelector('.toast-text')
-    const iconClass = this.messageIcon(messageType)
-    const brokenOutMessage = this.breakoutMessageForToast(message)
-    toastText.innerHTML = `<i class="bi ${iconClass} me-2"></i> ${brokenOutMessage}`
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast)
+  // The contents will be updated by the turbo stream response on form submission
+  displayToast() {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(document.getElementById('toast'))
     toastBootstrap.show()
-  }
-
-  messageIcon(messageType) {
-   return (messageType == "error") ? "bi-exclamation-triangle-fill": "bi-check-circle-fill" 
-  }
-
-  breakoutMessageForToast(message) {
-    // If there is an element in strong at the beginning, put on its own line
-    const beginTag = "<strong>"
-    const endTag = "</strong>"
-    if(message.startsWith(beginTag)) {
-      const endIndex = message.indexOf(endTag) + endTag.length
-      return message.substring(0, endIndex) + "<br>" + message.substring(endIndex + 1, message.length)
-    }
-    return message
   }
 
   // This hides all the content, including the heading portion and not just the form itself

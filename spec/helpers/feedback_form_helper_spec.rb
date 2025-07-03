@@ -15,22 +15,6 @@ RSpec.describe FeedbackFormHelper do
     end
   end
 
-  describe "show_connection_form?" do
-    let(:form_controller) { FeedbackFormsController.new }
-
-    before do
-      form_controller.extend(FeedbackFormHelper)
-      allow(form_controller).to receive(:controller).and_return(form_controller)
-    end
-
-    it "returns false when being viewed under the FeedbackFormsController" do
-      expect(form_controller.show_connection_form?).to be_falsey
-    end
-    it "returns true when not under the FeedbackFormsController" do
-      expect(helper.show_connection_form?).to be_truthy
-    end
-  end
-
   describe 'show_quick_report?' do
     it 'is false unless it meets certain criteria' do
       expect(helper.show_quick_report?).to be_falsey

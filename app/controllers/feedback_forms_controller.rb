@@ -29,9 +29,7 @@ class FeedbackFormsController < ApplicationController
         format.html do
           redirect_to params[:url]
         end
-        format.turbo_stream do
-          render json: flash
-        end
+        format.turbo_stream
       end
     end
   end
