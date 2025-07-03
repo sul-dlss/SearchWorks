@@ -2,7 +2,14 @@
   <%= render 'shared/modal' %>
   <main id="main-container" data-controller="google-cover-image">
     <%= render 'global_alerts/alerts' if Settings.GLOBAL_ALERT %>
-    <%= render '/flash_msg', layout: 'shared/flash_messages' %>
+
+    <% # The quick report javascript requires this node to be on the page %>
+    <div class="flash_messages mx-auto" style="max-width: 1000px;">
+      <% FLASH_TYPES_WITH_LEVEL.each do |type, alert_level| %>
+        <%= render AlertComponent.new(level: alert_level, message: flash[type].html_safe) if flash[type] %>
+      <% end %>
+    </div>
+
     <%= content %>
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
       <div id="toast" class="toast d-block" role="alert" aria-live="assertive" aria-atomic="true" data-bs-config='{ "delay": 8000 }'>
