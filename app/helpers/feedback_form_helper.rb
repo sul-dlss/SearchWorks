@@ -17,4 +17,11 @@ module FeedbackFormHelper
       /(\/catalog\/|\/view\/)/.match?(request.referer)
     end
   end
+
+  def breakout_message(message_text)
+    beginTag = "<strong>"
+    endTag = "</strong>"
+    endIndex = message_text.index(endTag) + endTag.length
+    return "#{message_text[0, endIndex]} <br> #{message_text[endIndex + 1, message_text.length]}"
+  end
 end

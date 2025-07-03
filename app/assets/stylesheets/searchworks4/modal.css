@@ -50,9 +50,6 @@
 }
 
 .standalone {
-    max-width: 80%;
-    padding-left: 10%;
-
     h2 {
         padding: 1.5rem 0rem;
     }

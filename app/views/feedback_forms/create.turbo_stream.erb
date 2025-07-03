@@ -1,24 +1,19 @@
 <% 
-    message_type = flash.key?(:error) ? 'error' : 'success'
-    toast_message_text = flash_message_text = flash.key?(:error) ?  flash[:error] : flash[:success]
-    beginTag = "<strong>"
-    endTag = "</strong>"
-    if toast_message_text.starts_with?(beginTag) 
-      endIndex = toast_message_text.index(endTag) + endTag.length
-      toast_message_text = "#{toast_message_text[0, endIndex]} <br> #{toast_message_text[endIndex + 1, toast_message_text.length]}"
-    end
-    toast_icon_class =  (message_type == "error") ? "bi-exclamation-triangle-fill" : "bi-check-circle-fill"
+    message_text = flash.key?(:error) ?  flash[:error] : flash[:success]
+    alert_class = flash.key?(:error) ? 'alert-error' : 'alert-success'
+    toast_message_text = flash.key?(:error) ? message_text : breakout_message(message_text)
+    icon_class =  flash.key?(:error) ? "bi-exclamation-triangle-fill" : "bi-check-circle-fill"
 %>
 
-<% if params[:form_format] == 'modal' %>
-    <%= turbo_stream.update 'toast-text' do %>
-    <i class='<%= "bi #{toast_icon_class} me-2" %>'></i> <%= sanitize toast_message_text %>
-    <% end %>
-<% else %>
+<%= turbo_stream.update 'toast-text' do %>
+    <i class='<%= "bi #{icon_class} me-2" %>'></i> <%= sanitize toast_message_text %>
+<% end %>
+
+<%  if params[:form_format] == 'standalone' %>
     <%= turbo_stream.update_all 'div.flash_messages' do %>
-        <div class="alert alert-<%= message_type %> alert-dismissible shadow-sm d-flex align-items-center">
+        <div class="alert <%= alert_class %> alert-dismissible shadow-sm d-flex align-items-center">
             <div class="text-body">
-                <div><i class='<%= "bi #{toast_icon_class} me-2" %>'></i> <%= sanitize flash_message_text %></div>
+                <div><i class='<%= "bi #{toast_icon_class} me-2" %>'></i> <%= sanitize message_text %></div>
             </div>
             <button type="button" class="btn-close p-2 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
