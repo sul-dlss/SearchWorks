@@ -121,6 +121,17 @@
   .item-row {
     display: flex;
   }
+
+  h3 a {
+    --bs-link-color-rgb: var(--bs-body-color-rgb);
+    &:hover {
+      color: var(--stanford-cardinal);
+
+      i {
+        padding-left: 0.25rem;
+      }
+    }
+  }
 }
 
 .truncate-5 {
