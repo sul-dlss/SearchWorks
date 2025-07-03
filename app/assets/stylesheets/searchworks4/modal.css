@@ -57,14 +57,3 @@
         padding: 1.5rem 0rem;
     }
 }
-
-.feedback-alert {
-    --bs-gutter-x: 7rem;
-    max-width: 1500px;
-    --bs-gutter-y: 0;
-    width: 60%;
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    margin-right: auto;
-    margin-left: auto;
-}
