@@ -1,5 +1,5 @@
 <div class="d-flex flex-column my-2 panel-library-location" data-hours-route="<%= hour_path(library.code) if library.holding_library? %>">
-  <div class="library-location-heading bg-light fw-semibold ms-n3 ps-3 h4 py-1">
+  <div class="library-location-heading bg-light fw-semibold ms-n3 mb-3 ps-3 h4 py-1">
     <h3 class="h4 p-0 m-0"><%= link_to_library_about_page { library.name } %></h3>
     <div class="small location-hours-today">
       <% unless library.holding_library? %>
@@ -15,9 +15,14 @@
       </div>
   <% end %>
   <% if library.library_instructions.present? %>
-    <div class='access-panel-subsection'>
-      <h4><%= library.library_instructions[:heading] %></h4>
-      <p><%= library.library_instructions[:text].html_safe %></p>
+    <div class='access-panel-subsection alert alert-warning border-0 d-flex align-items-center'>
+      <div class="bi bi-exclamation-circle-fill fs-3 me-3"></div>
+      <div class="text-body overflow-auto">
+        <% if library.library_instructions[:heading] %>
+          <h4 class="h5"><%= library.library_instructions[:heading] %></h4>
+        <% end %>
+        <p class="mb-0 small text-break"><%= library.library_instructions[:text].html_safe %></p>
+      </div>
     </div>
   <% end %>
 
