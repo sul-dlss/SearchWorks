@@ -18,7 +18,7 @@
     <% end %>
   <% end %>
 
-  <table class="w-100">
+  <table class="w-100" data-controller="long-table">
     <caption class="visually-hidden">
       <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
     </caption>
@@ -29,7 +29,7 @@
         <th class="visually-hidden">Note</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody data-long-table-target="body">
       <%= render AccessPanels::LocationItemComponent.with_collection(location.items, document:, consolidate_for_finding_aid: consolidate_items?) %>
     </tbody>
   </table>

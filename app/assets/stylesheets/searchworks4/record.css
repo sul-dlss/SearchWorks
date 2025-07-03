@@ -56,3 +56,9 @@
     --bs-nav-link-padding-x: var(--item-padding-x);
   }
 }
+
+.panel-library-location {
+  .item-row {
+    display: flex;
+  }
+}
