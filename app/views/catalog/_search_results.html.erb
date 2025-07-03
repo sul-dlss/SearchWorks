@@ -58,29 +58,7 @@
 
     <div id="content" class="results col <%= content_classes %>">
       <div class="sul-toolbar page-entries-info sort-and-per-page d-flex justify-content-between align-items-center">
-        <%= tag.nav class: 'page_links' do %>
-          <% previous_label = capture do %>
-            <i class="bi bi-chevron-double-left" aria-hidden="true"></i>
-            Previous
-          <% end %>
-          <%= link_to_previous_page @response, previous_label, class: 'me-2' do %>
-            <%= tag.span previous_label, class: 'text-grey-50' %>
-          <% end %>
-          <span class="page_entries">
-            <% if @response.total_count == 1 %>
-              <%= page_entries_info(@response) %>
-            <% else %>
-              <strong><%= number_with_delimiter(@response.offset_value + 1) %></strong> - <strong><%= number_with_delimiter([@response.offset_value + @response.limit_value, @response.total_count].min) %></strong> of <strong><%= number_with_delimiter(@response.total_count) %></strong>
-            <% end %>
-          </span>
-
-          <% next_label = capture do %>
-            Next
-            <i class="bi bi-chevron-double-right" aria-hidden="true"></i>
-            <% end %>
-          <%= link_to_next_page @response, next_label, class: 'ms-2' %>
-        <% end %>
-
+        <%= render PageLinksComponent.new(response: @response) %>
 
         <span class="d-flex flex-row gap-2">
           <%= render partial: 'sort_widget' %>
