@@ -5,7 +5,8 @@
   --bs-link-hover-decoration: underline;
 }
 
-#topnav .navbar-nav, #topnav .masthead,
+#topnav .navbar-nav,
+#topnav .masthead,
 #pre-footer,
 #su-footer,
 .index_title,
@@ -14,6 +15,8 @@
 .facet-label,
 .record-toolbar,
 .library-location-heading,
+.nav-tabs,
+.bookmark-toolbar,
 .dropdown-item {
   --bs-link-decoration: none;
 }
