@@ -19,7 +19,6 @@
 
     <div class='upper-record-metadata mb-3'>
       <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %> &mdash; <%= document.marc_field('3003abcefg').values.join(' ') %></div>
-      <div><%= safe_join document.marc_field(:imprint).values.to_a, '<br>'.html_safe %></div>
     </div>
 
     <button class="btn btn-sm py-0 btn-secondary d-lg-none my-3" data-bs-toggle="offcanvas" data-bs-target="#aside" aria-controls="aside">See availability</button>
@@ -31,7 +30,20 @@
         render Record::Item::EmbedComponent.new(druid: document.druid)
       end
     %>
-    <dl class="dl-horizontal dl-invert mb-5">
+
+    <% if document.display_type == 'marc_collection' %>
+      <div class="async-collection-members col-md-12 mb-5" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
+        <%= helpers.link_to_collection_members('View all items', document) %>
+      </div>
+    <% end %>
+
+    <%= render Record::MarcContentAdviceComponent.new(document: document) %>
+
+    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description', classes: 'my-5') do %>
+      <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, :marc_instrumentation, :linked_series, :linked_collection].each do |tag| %>
+        <%= render_if_present document.marc_field(tag) %>
+      <% end %>
+
       <%= render_if_present document.marc_field('245c') %>
 
       <%- uniform_title = helpers.get_uniform_title(document) -%>
@@ -47,19 +59,7 @@
           <dd><%= field %></dd>
         <% end %>
       <%- end -%>
-
-      <% [:language, '344', '345', '346', '347', '250ab', :production_notice, :marc_instrumentation, :linked_series, :linked_collection].each do |tag| %>
-        <%= render_if_present document.marc_field(tag) %>
-      <% end %>
-    </dl>
-
-    <% if document.display_type == 'marc_collection' %>
-      <div class="async-collection-members col-md-12 mb-5" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
-        <%= helpers.link_to_collection_members('View all items', document) %>
-      </div>
     <% end %>
-
-    <%= render Record::MarcContentAdviceComponent.new(document: document) %>
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Creators/Contributors') do %>
       <% %i[creator corporate_author meeting contributors].each do |target| %>

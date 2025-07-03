@@ -1,4 +1,4 @@
-<section class="mb-5">
+<%= tag.section class: @classes do %>
   <%= content_tag @heading_level, @title %>
   <%= tag.dl content, class: @dl_classes %>
-</section>
+<% end %>
