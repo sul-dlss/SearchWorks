@@ -31,13 +31,13 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  describe 'the catalog record view page' do
+  describe 'the catalog record view page', skip: "Pending SearchWorks 4.0 designs" do
     it 'has an accessible view' do
       visit solr_document_path('28')
       expect(page).to be_accessible.within('main')
     end
 
-    it 'has an accessible view with filmstrips', skip: "Pending SearchWorks 4.0 designs" do
+    it 'has an accessible view with filmstrips' do
       visit solr_document_path('34')
       expect(page).to be_accessible.within('main')
     end

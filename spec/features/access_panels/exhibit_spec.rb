@@ -18,7 +18,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
     it 'does not display the Context heading' do
       visit '/view/mf774fs2413'
       expect(page).to have_css('h2', text: 'Context', visible: false)
-      expect(page).to have_no_css('[data-controller="exhibit-panel"]', visible: true)
+      expect(page).to have_no_css('[data-behavior="exhibits-panel"]', visible: true)
     end
   end
 
@@ -31,7 +31,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
       visit '/view/mf774fs2413'
 
       expect(page).to have_css('h2', text: 'Context', visible: true)
-      within '[data-controller="exhibit-panel"]' do
+      within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('h3', text: 'Item is featured in an exhibit')
         expect(page).to have_css('.d-flex', count: 1)
 
@@ -49,9 +49,9 @@ RSpec.describe 'Exhibit Access Panel', :js do
 
     it 'is displayed and linked' do
       visit '/view/mf774fs2413'
-      expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
+      expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
-      within '[data-controller="exhibit-panel"]' do
+      within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('a img[src="http://example.com/thumb.jpg"]', visible: false)
       end
     end
@@ -64,9 +64,9 @@ RSpec.describe 'Exhibit Access Panel', :js do
 
     it 'is displayed' do
       visit '/view/mf774fs2413'
-      expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
+      expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
-      within '[data-controller="exhibit-panel"]' do
+      within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('.exhibit-heading', text: /The subtitle$/)
       end
     end
@@ -81,9 +81,9 @@ RSpec.describe 'Exhibit Access Panel', :js do
 
     it 'has a specific panel title' do
       visit '/view/mf774fs2413'
-      expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
+      expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
-      within '[data-controller="exhibit-panel"]' do
+      within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('h3', text: 'Item is featured in exhibits')
       end
     end
@@ -91,9 +91,9 @@ RSpec.describe 'Exhibit Access Panel', :js do
     it 'only displays the first 5 exhibits and has a link to toggle any additional' do
       skip('Passes locally, fails intermittently on Travis.') if ENV['CI']
       visit '/view/mf774fs2413'
-      expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
+      expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
-      within '[data-controller="exhibit-panel"]' do
+      within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('.d-flex', count: 5, visible: true)
         expect(page).to have_button('show all 7 exhibits')
         click_button('show all 7 exhibits')
@@ -110,9 +110,9 @@ RSpec.describe 'Exhibit Access Panel', :js do
 
     it 'links to the document within the exhibit' do
       visit '/view/mf774fs2413'
-      expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
+      expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
-      within '[data-controller="exhibit-panel"]' do
+      within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_link('Exhibit Title', href: %r{/exhibit1/catalog/mf774fs2413$})
       end
     end
@@ -125,9 +125,9 @@ RSpec.describe 'Exhibit Access Panel', :js do
 
     it 'has a specific panel title' do
       visit '/view/34'
-      expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
+      expect(page).to have_css('[data-behavior="exhibits-panel"]', visible: true)
 
-      within '[data-controller="exhibit-panel"]' do
+      within '[data-behavior="exhibits-panel"]' do
         expect(page).to have_css('h3', text: 'Exhibit')
         expect(page).to have_link('Exhibit Title', href: %r{/exhibit1$})
       end

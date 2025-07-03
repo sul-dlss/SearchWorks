@@ -24,6 +24,7 @@ import "./alternate_catalog";
 import "./article";
 import "./call-number-browse-tabs";
 import "./eds_range_limit";
+import "./exhibitPanel";
 import "./facet-options-checkboxes";
 import "./feedback_form";
 import "./location-hours";

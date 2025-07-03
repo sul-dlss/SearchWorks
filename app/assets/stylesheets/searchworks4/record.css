@@ -1,3 +1,4 @@
+
 @media (min-width: 520px) {
   .dl-horizontal {
     dt {
@@ -21,38 +22,4 @@
 
 .bi.rotate-180::before {
   transform: rotateY(180deg);
-}
-
-.record-panels {
-  --bs-offcanvas-height: 50%;
-  overflow: auto;
-}
-
-.access-panel {
-  &.panel-exhibit {
-    img {
-      height: 75px;
-      width: 75px;
-    }
-
-    .exhibit-heading h4 {
-      margin-top: 0;
-    }
-
-    .see-all-exhibits {
-      margin-top: 15px;
-    }
-  }
-}
-
-.record-toolbar {
-  --item-padding-x: 0.25rem;
-  .btn {
-    /* --bs-btn-padding-y: 0.25rem; */
-    --bs-btn-padding-x: var(--item-padding-x);
-  }
-  .nav-link {
-    --bs-nav-link-padding-y: 0.25rem;
-    --bs-nav-link-padding-x: var(--item-padding-x);
-  }
 }

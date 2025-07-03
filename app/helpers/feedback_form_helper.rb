@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 module FeedbackFormHelper
-  def render_feedback_form(form_type)
+  def render_connection_form
     render 'shared/feedback_forms/form',
-           type: form_type,
-           target: form_type == 'connection' ? '#connection-form' : '#feedback-form'
+           type: 'connection',
+           target: '#connection-form'
   end
 
-  def show_feedback_form?
+  def show_connection_form?
     !controller.instance_of?(FeedbackFormsController)
   end
 

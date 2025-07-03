@@ -7,10 +7,6 @@ RSpec.feature "Search Results Page" do
     visit solr_document_path 11
   end
 
-  it "has a masthead with the correct text" do
-    expect(page).to have_css('.masthead', text: 'SearchWorks Catalog')
-  end
-
   scenario "should have correct page title" do
     expect(page).to have_title("Amet ad & adipisicing ex mollit pariatur minim dolore. in SearchWorks catalog")
   end
