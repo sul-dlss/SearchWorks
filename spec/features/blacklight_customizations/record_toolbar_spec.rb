@@ -17,7 +17,7 @@ RSpec.feature "Record Toolbar", :js do
       within "#content" do
         within ".record-toolbar" do
           expect(page).to have_no_css("button.navbar-toggler", visible: true)
-          expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Search results", visible: true)
+          expect(page).to have_link "Search results"
           expect(page).to have_no_css("a.previous.disabled", visible: true)
           expect(page).to have_no_css("a.previous", visible: true)
           expect(page).to have_no_css("a.next.disabled", visible: true)
@@ -59,7 +59,7 @@ RSpec.feature "Record Toolbar", :js do
         within "#content" do
           within ".record-toolbar" do
             expect(page).to have_no_css("button.navbar-toggler", visible: true)
-            expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Search results", visible: true)
+            expect(page).to have_link "Search results"
             expect(page).to have_css("a.previous", visible: true)
             expect(page).to have_css("a.next", visible: true)
           end
