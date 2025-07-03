@@ -23,6 +23,11 @@
   transform: rotateY(180deg);
 }
 
+.record-panels {
+  --bs-offcanvas-height: 50%;
+  overflow: auto;
+}
+
 .access-panel {
   &.panel-exhibit {
     img {
@@ -98,4 +103,16 @@
 .managed-purl-embed {
   margin-bottom: 15px;
   margin-left: -15px;
+}
+
+.record-toolbar {
+  --item-padding-x: 0.25rem;
+  .btn {
+    /* --bs-btn-padding-y: 0.25rem; */
+    --bs-btn-padding-x: var(--item-padding-x);
+  }
+  .nav-link {
+    --bs-nav-link-padding-y: 0.25rem;
+    --bs-nav-link-padding-x: var(--item-padding-x);
+  }
 }
