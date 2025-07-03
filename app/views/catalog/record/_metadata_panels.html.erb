@@ -14,13 +14,6 @@
   <% end %>
 
   <% if context.present? || potential_context.present? %>
-    <h2
-      data-behavior="metadata-panel-context-heading"
-      style="<%= 'display:none' unless context.present? %>"
-    >
-      Context
-    </h2>
-
     <%= context %>
     <%= potential_context %>
   <% end %>
