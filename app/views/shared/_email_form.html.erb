@@ -1,15 +1,13 @@
-  <%= render '/flash_msg' %>
+  <% unless %w[articles article_selections].include? controller.controller_name # TODO: full record for articles %>
+    <div class="fw-bold">Send</div>
+    <div class="form-check form-check-inline">
+      <%= radio_button_tag :type, 'full', true, class: 'form-check-input' %> <%= label_tag(:type_full, "Full record", class: 'form-check-label') %>
+    </div>
 
-    <% unless %w[articles article_selections].include? controller.controller_name # TODO: full record for articles %>
-      <div class="fw-bold">Send</div>
-      <div class="form-check form-check-inline">
-        <%= radio_button_tag :type, 'full', true, class: 'form-check-input' %> <%= label_tag(:type_full, "Full record", class: 'form-check-label') %>
-      </div>
-
-      <div class="form-check form-check-inline">
-        <%= radio_button_tag :type, 'brief', class: 'form-check-input' %> <%= label_tag(:type_brief,  "Brief (title, call number, and library location)", class:'form-check-label') %>
-      </div>
-    <% end %>
+    <div class="form-check form-check-inline">
+      <%= radio_button_tag :type, 'brief', class: 'form-check-input' %> <%= label_tag(:type_brief,  "Brief (title, call number, and library location)", class:'form-check-label') %>
+    </div>
+  <% end %>
 
   <div class="my-3">
     <label class="form-label fw-bold me-3" for="to">To</label><small class="text-secondary">* Required</small>
