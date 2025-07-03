@@ -31,6 +31,9 @@ application.register("blacklight-result-count", BlacklightResultCountController)
 import BookmarkController from "./bookmark_controller"
 application.register("bookmark", BookmarkController)
 
+import BrowseNearbyController from "./browse_nearby_controller"
+application.register("browse-nearby", BrowseNearbyController)
+
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
 

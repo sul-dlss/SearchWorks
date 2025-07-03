@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class BrowseController < ApplicationController
+  layout 'searchworks4'
+
   include Blacklight::Configurable
   include Blacklight::Searchable
   include Blacklight::SearchContext

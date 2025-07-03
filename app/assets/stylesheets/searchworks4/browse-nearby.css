@@ -1,0 +1,41 @@
+.record-browse-nearby {
+  --bs-border-color: var(--stanford-20-black);
+  border-radius: 0.25rem;
+
+  .heading, .tabs {
+    .btn {
+      --bs-btn-font-size: 0.875rem;
+      --bs-btn-padding-y: 0.0625rem;
+    }
+  }
+
+  li .btn {
+    border-color: var(--stanford-60-black);
+    color: var(--stanford-black);
+    &::before {
+      padding-right: 0.25rem;
+    }
+  }
+
+  li .btn.active {
+    background-color: var(--stanford-10-black);
+    font-weight: 600;
+  }
+
+  .heading {
+    background-color: white;
+    margin-top: -2.4rem;
+    max-width: 16.5em;
+
+    a {
+      --bs-btn-bg: white;
+      --bs-btn-color: rgb(var(--stanford-digital-blue-rgb));
+      --bs-btn-line-height: 1.5rem;
+      --bs-btn-padding-y: 0;
+
+      &::before {
+        padding-right: 0.25rem;
+      }
+    }
+  }
+}

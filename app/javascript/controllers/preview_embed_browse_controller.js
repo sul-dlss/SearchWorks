@@ -3,6 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Controls a single tile in the browse nearby ribbon
 export default class extends Controller {
   static values = {
+    actionsSelector: String,
     id: String,
     url: String,
     previewSelector: String
@@ -27,9 +28,9 @@ export default class extends Controller {
     this.previewTarget.appendChild(this.closeBtn)
     this.previewTarget.style.display = 'block'
     this.appendPointer(this.previewTarget)
-    this.buttonTarget.textContent = 'Close'
-    this.buttonTarget.classList.add('preview-open')
+    this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
     this.attachPreviewEvents()
+    this.hideDocumentActions()
   }
 
   appendPointer(target) {
@@ -74,15 +75,26 @@ export default class extends Controller {
   }
 
   attachPreviewEvents() {
+    this.previewTarget.addEventListener('turbo:frame-load', () => {
+      this.hideDocumentActions()
+    })
     this.closeBtn.addEventListener('click', () => {
       this.closePreview()
     })
   }
 
+  hideDocumentActions() {
+    const actionsElement = this.previewTarget.querySelector(this.actionsSelectorValue)
+    if (actionsElement) {
+      actionsElement.classList.remove('d-flex')
+      actionsElement.classList.add('d-none')
+    }
+  }
+
   closePreview() {
     this.previewTarget.classList.remove('preview')
-    this.buttonTarget.classList.remove('preview-open')
+    this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
+    this.buttonTarget.classList.add('bi-chevron-down')
     this.previewTarget.style.display = 'none'
-    this.buttonTarget.textContent = 'Preview'
   }
 }
