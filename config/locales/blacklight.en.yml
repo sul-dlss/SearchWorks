@@ -47,7 +47,7 @@ en:
         single_item_found: ''
         no_items_found: "<h2>No %{search_type} results found</h2>"
       entry_pagination_info:
-        other: '%{current} of %{total}'
+        other: '<strong>%{current}</strong> of <strong>%{total}</strong>'
       highlight:
         active_html: '<i class="bi bi-check-lg active-icon align-middle"></i>'
     bookmarks:
