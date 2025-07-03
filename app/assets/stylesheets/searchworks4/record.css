@@ -23,6 +23,11 @@
   transform: rotateY(180deg);
 }
 
+.record-panels {
+  --bs-offcanvas-height: 50%;
+  overflow: auto;
+}
+
 .access-panel {
   &.panel-exhibit {
     img {
