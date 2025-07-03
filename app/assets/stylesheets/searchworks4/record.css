@@ -121,6 +121,17 @@
   .item-row {
     display: flex;
   }
+
+  h3 a {
+    --bs-link-color-rgb: var(--bs-body-color-rgb);
+    &:hover {
+      color: var(--stanford-cardinal);
+
+      i {
+        padding-left: 0.25rem;
+      }
+    }
+  }
 }
 
 .truncate-5 {
@@ -128,4 +139,11 @@
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.blacklight-catalog-show {
+  .cover-image {
+    max-height: 300px;
+    max-width: 128px;
+  }
 }
