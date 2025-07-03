@@ -1,6 +1,6 @@
 <div class="record-toolbar d-flex flex-column flex-xxl-row mb-4 mb-xxl-3 gap-1" role="navigation" data-controller="analytics">
-  <div class="d-flex d-flex-row column-gap-3 align-items-center">
-    <%= helpers.link_back_to_catalog class: 'back-to-results', label: t('blacklight.back_to_search').html_safe %>
+  <div class="d-flex flex-row">
+    <%= helpers.link_back_to_catalog class: 'btn btn-link btn-sul-toolbar back-to-results', label: t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
   </div>
   <div class="ms-xxl-auto flex-nowrap">
@@ -11,13 +11,13 @@
       <% if citable? %>
         <li>
           <%= link_to cite_path, id: 'citeLink', data: { action: "click->analytics#trackLink", blacklight_modal: "trigger" },
-              class: 'nav-link' do %>
+              class: 'btn btn-link btn-sul-toolbar' do %>
             <i class="bi bi-quote me-1"></i><%= t('blacklight.tools.cite_html') %>
           <% end %>
         </li>
       <% end %>
       <li>
-        <a class="nav-link"data-blacklight-modal="trigger" href="<%= email_solr_document_path(document) %>"><i class="bi bi-envelope me-1"></i>Email</a>
+        <a data-blacklight-modal="trigger" href="<%= email_solr_document_path(document) %>"><i class="bi bi-envelope me-1"></i>Email</a>
       </li>
       <li>
         <button class="btn btn-link" type="button" data-controller="copy-link" data-action="click->copy-link#copyLink" data-copy-link-url-value="<%= solr_document_url(document) %>"><i class="bi bi-link-45deg me-1"></i>Copy link</button>
