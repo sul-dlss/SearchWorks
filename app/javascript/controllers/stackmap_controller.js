@@ -1,5 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import L from "leaflet"
+import fetchJsonp from 'fetch-jsonp';
 
 export default class extends Controller {
   static values = {
@@ -9,14 +10,14 @@ export default class extends Controller {
   static targets = ["map", "directions"]
 
   connect() {
-    fetch(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
+    fetchJsonp(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
       .then((response) => response.json())
       .then((data) => this.handleResponse(data))
       .catch(console.error)
   }
 
   handleResponse(data) {
-    if (data.results.maps.length > 0) {
+    if (data.stat === "OK" && data.results.maps.length > 0) {
       this.plugContent(data)
     } else {
       this.element.innerHTML = '<p>No map available for this item</p>'
