@@ -13,8 +13,8 @@ module AccessPanels
       @document = document
     end
 
-    def link_to_library_about_page(&)
-      link_to_if library.about_url, capture(&), library.about_url
+    def link_to_library_about_page(**)
+      link_to_if library.about_url, library.name, library.about_url, **
     end
   end
 end

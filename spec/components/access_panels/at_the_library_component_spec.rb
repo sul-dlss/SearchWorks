@@ -163,7 +163,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
     it "has a placeholder for items we'll be looking up" do
       pending 'SW 4.0'
-      expect(page).to have_css('.placeholder')
+      expect(page).to have_css('.location .placeholder')
     end
     it "has explicit status text for items that we know the status" do
       expect(page).to have_css('td', text: 'Available for in-library use')
