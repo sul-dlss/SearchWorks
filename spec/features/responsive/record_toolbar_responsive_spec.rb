@@ -17,16 +17,13 @@ RSpec.describe "Record toolbar", :feature, :js do
       before { page.find('a', text: 'An object').click }
 
       it 'displays a cite this link toolbar items' do
-        expect(page).to have_css('div.record-toolbar', visible: true)
-        within '#content' do
-          within '.navbar' do
-            expect(page).to have_link('Cite')
-          end
+        within '#content .record-toolbar .navbar' do
+          expect(page).to have_link('Cite')
         end
       end
     end
 
-    context 'any item' do
+    context 'when coming from the second items in a search' do
       before do
         # Specifically trying to not get the first item in the results
         within '.document-position-2' do
@@ -36,21 +33,19 @@ RSpec.describe "Record toolbar", :feature, :js do
 
       it "displays all toolbar items" do
         within "#content" do
-          expect(page).to have_css("div.record-toolbar", visible: true)
-
-          within "div.record-toolbar" do
+          within ".record-toolbar" do
             expect(page).to have_no_css("button.navbar-toggler", visible: true)
             expect(page).to have_css("a.btn.btn-sul-toolbar", text: "Search results", visible: true)
             expect(page).to have_css("a.previous", visible: true)
             expect(page).to have_css("a.next", visible: true)
-          end
 
-          within ".navbar" do
-            expect(page).to have_css("form label", text: "Bookmark")
-            expect(page).to have_link('Cite')
-            expect(page).to have_link('Email')
-            expect(page).to have_button('Copy link')
-            expect(page).to have_button('Print')
+            within ".navbar" do
+              expect(page).to have_css("form label", text: "Bookmark")
+              expect(page).to have_link('Cite')
+              expect(page).to have_link('Email')
+              expect(page).to have_button('Copy link')
+              expect(page).to have_button('Print')
+            end
           end
         end
       end
