@@ -14,3 +14,8 @@
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
   }
 }
+
+#user-util-collapse .dropdown-menu {
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+}
