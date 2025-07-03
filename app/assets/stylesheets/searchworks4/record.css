@@ -129,3 +129,10 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.blacklight-catalog-show {
+  .cover-image {
+    max-height: 300px;
+    max-width: 128px;
+  }
+}
