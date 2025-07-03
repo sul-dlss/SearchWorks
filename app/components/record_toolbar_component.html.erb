@@ -6,7 +6,7 @@
   <div class="ms-xxl-auto flex-nowrap">
     <ul class="nav navbar justify-content-start d-inline-flex gap-2 border rounded px-1 py-0">
       <li class="px-2">
-        <%= render 'bookmark_control', document: document, document_action_config: @presenter.view_config.document_actions.find { |x| x.key == :bookmark } %>
+        <%= render Document::TrackingBookmarkComponent.new(document:, action: @presenter.view_config.document_actions.find { |x| x.key == :bookmark }) %>
       </li>
       <% if citable? %>
         <li>

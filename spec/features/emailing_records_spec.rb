@@ -117,7 +117,7 @@ RSpec.describe "Emailing Records", :js do
         visit search_catalog_path(q: '14')
 
         within('#documents article:first-of-type .dropdown') do
-          click_button 'Document actions'
+          click_button 'More actions'
           click_link 'Email'
         end
       end

@@ -27,23 +27,28 @@ RSpec.feature "Skip-to Navigation" do
     end
   end
 
-  scenario "has skip-to navigation links to search field, main container and records in selections page", :js do
-    visit root_path
-    fill_in 'q', with: '20'
-    click_button 'search'
+  describe 'The selections page', :js do
+    context 'when the user has a saved item' do
+      before do
+        visit root_path
+        fill_in 'q', with: '20'
+        click_button 'search'
 
-    expect(page).to have_css("article[data-document-id='20']")
-    within '[data-document-id="20"]' do
-      page.first('.toggle-bookmark-label').click
-      expect(page).to have_css("span", text: "In Bookmarks", visible: :hidden)
-    end
+        within '[data-document-id="20"]' do
+          click_button 'Save record'
+        end
+        expect(page).to have_content('Saved to bookmarks') # rubocop:disable RSpec/ExpectInHook
 
-    visit bookmarks_path
+        visit bookmarks_path
+      end
 
-    within "#skip-link" do
-      expect(page).to have_link "Skip to search", href: '#search_field', visible: :all
-      expect(page).to have_link "Skip to main content", href: '#main-container', visible: :all
-      expect(page).to have_link "Skip to first result", href: '#documents', visible: :all
+      it "has skip-to navigation links to search field, main container and records" do
+        within "#skip-link" do
+          expect(page).to have_link "Skip to search", href: '#search_field', visible: :all
+          expect(page).to have_link "Skip to main content", href: '#main-container', visible: :all
+          expect(page).to have_link "Skip to first result", href: '#documents', visible: :all
+        end
+      end
     end
   end
 

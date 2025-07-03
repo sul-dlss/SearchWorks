@@ -28,8 +28,8 @@ application.register("bento-result-count", BentoResultCountController)
 import BlacklightResultCountController from "./blacklight_result_count_controller"
 application.register("blacklight-result-count", BlacklightResultCountController)
 
-import BookmarkToastController from "./bookmark_toast_controller"
-application.register("bookmark-toast", BookmarkToastController)
+import BookmarkController from "./bookmark_controller"
+application.register("bookmark", BookmarkController)
 
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
@@ -90,3 +90,6 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
+
+import TooltipController from "./tooltip_controller"
+application.register("tooltip", TooltipController)
