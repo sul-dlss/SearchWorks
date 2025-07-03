@@ -2,35 +2,31 @@
   preview_container = 'preview-filmstrip-container-' + collection_document[:id]
 %>
 <div class="collection-result-preview">
-  <% if @type == 'show' %>
-    <h2 class="my-3">Digital collection preview</h2>
-  <% else %>
-    <h4 class="my-2">Digital collection preview</h4>
-  <% end %>
-  <div class="col-md-12 image-filmstrip">
-    <div class="viewport">
-      <ul class="container-images">
+  <div class="d-inline-flex bg-white ms-2 px-2">
+    <% if @type == 'show' %>
+        <h2 class="mb-0">Digital collection</h2>
+    <% else %>
+      <h4 class="mb-0">Digital collection</h4>
+    <% end %>
+    <span class="ms-2 badge rounded-pill bookmark-counter align-self-center">
+      <%= pluralize(collection_document.collection_members.total, 'item') %>
+    </span>
+    <%= link_to(collection_members_path(collection_document), class: 'ms-2 btn btn-outline-primary') do %>
+      <i class="bi bi-search me-1"></i>Search collection
+    <% end %>
+  </div>
+  <div class="col-md-12 image-filmstrip border rounded px-3">
+    <div class="viewport overflow-scroll">
+      <ul class="container-images list-unstyled d-flex">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>
-          <li data-controller="preview-filmstrip" data-preview-filmstrip-url-value="<%= preview_path(document[:id]) %>" data-preview-filmstrip-id-value="<%= document[:id] %>" data-preview-filmstrip-selector-value="<%= ".#{preview_container}" %>">
+          <li class="d-inline-block position-relative me-2" data-controller="preview-filmstrip" data-preview-filmstrip-url-value="<%= preview_path(document[:id]) %>" data-preview-filmstrip-id-value="<%= document[:id] %>" data-preview-filmstrip-selector-value="<%= ".#{preview_container}" %>">
             <a href="<%= solr_document_path(document[:id]) %>">
               <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document[:id] %>" alt="<%= document_presenter(document).heading %>">
             </a>
-            <% if document.image_urls.length > 1 %>
-              <div class="img-label"><%= pluralize(document.image_urls.length,"part") %></div>
-            <% end %>
           </li>
         <% end %>
       </ul>
     </div>
     <div class="<%= preview_container %> preview"></div>
-  </div>
-
-  <div class="results-online-section">
-    <dl class="dl-horizontal results-metadata-section">
-      <dt><span class="online-label">Online</span></dt>
-      <dd>
-        <%= link_to(text_for_inner_members_link(collection_document), collection_members_path(collection_document)) %>
-      </dd>
-    </dl>
   </div>
 </div>

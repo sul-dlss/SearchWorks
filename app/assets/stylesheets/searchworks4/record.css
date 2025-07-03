@@ -147,3 +147,44 @@
     max-width: 128px;
   }
 }
+
+.collection-result-preview {
+  .btn {
+    --bs-btn-padding-y: 0.125rem;
+    --bs-btn-padding-x: 0.375rem;
+    --bs-btn-font-size: 0.875rem;
+  }
+
+  .preview-trigger-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0.3125rem;
+    transform: translate(0, 0);
+    z-index: 1;
+    background-color: var(--stanford-digital-blue);
+    color: var(--bs-white);
+    -webkit-text-stroke: 0.1rem;
+    border-radius: 2px;
+    padding: 0.3125rem  0.5rem;
+    opacity: 0.85;
+
+    &:hover {
+      width: 100%;
+      right: 0;
+
+      &::before {
+        content: "Preview";
+        margin-right: 0.5rem;
+        -webkit-text-stroke: 0rem;
+      }
+    }
+  }
+
+  .image-filmstrip {
+    --bs-border-radius: 0.25rem;
+    --bs-border-color: var(--stanford-20-black);
+
+    margin-top: -1.25rem;
+    padding-top: 2rem;
+  }
+}
