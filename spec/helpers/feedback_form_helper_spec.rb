@@ -9,33 +9,9 @@ RSpec.describe FeedbackFormHelper do
 
   let(:user) { User.new(email: 'example@stanford.edu') }
 
-  describe '#render_feedback_form' do
+  describe '#render_connection_form' do
     context 'connection type' do
-      it { expect(helper.render_feedback_form('connection')).to include 'Name of resource' }
-    end
-
-    context 'anything else' do
-      before do
-        allow(helper).to receive(:on_campus_or_su_affiliated_user?).and_return false
-      end
-
-      it { expect(helper.render_feedback_form('other')).not_to include 'Name of resource' }
-    end
-  end
-
-  describe "show_feedback_form?" do
-    let(:form_controller) { FeedbackFormsController.new }
-
-    before do
-      form_controller.extend(FeedbackFormHelper)
-      allow(form_controller).to receive(:controller).and_return(form_controller)
-    end
-
-    it "returns false when being viewed under the FeedbackFormsController" do
-      expect(form_controller.show_feedback_form?).to be_falsey
-    end
-    it "returns true when not under the FeedbackFormsController" do
-      expect(helper.show_feedback_form?).to be_truthy
+      it { expect(helper.render_connection_form).to include 'Name of resource' }
     end
   end
 

@@ -7,7 +7,6 @@ RSpec.describe 'shared/_top_navbar' do
 
   before do
     expect(view).to receive(:current_user).at_least(:once).and_return(user)
-    expect(view).to receive(:on_campus_or_su_affiliated_user?).and_return(true)
   end
 
   describe 'when there is a current user' do

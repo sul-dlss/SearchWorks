@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
 module FeedbackFormHelper
-  def render_feedback_form(form_type)
+  def render_connection_form
     render 'shared/feedback_forms/form',
-           type: form_type,
-           target: form_type == 'connection' ? '#connection-form' : '#feedback-form'
-  end
-
-  def show_feedback_form?
-    !controller.instance_of?(FeedbackFormsController)
+           type: 'connection',
+           target: '#connection-form'
   end
 
   def show_quick_report?
@@ -20,5 +16,11 @@ module FeedbackFormHelper
     if request.referer.present?
       /(\/catalog\/|\/view\/)/.match?(request.referer)
     end
+  end
+
+  def breakout_message(message_text)
+    end_tag = "</strong>"
+    end_index = message_text.index(end_tag) + end_tag.length
+    "#{message_text[0, end_index]} <br> #{message_text[end_index + 1, message_text.length]}"
   end
 end
