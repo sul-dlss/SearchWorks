@@ -18,11 +18,9 @@
                 data: { action: "click->analytics#trackLink" } %></li>
         <% else %>
         <li class="pb-2">Try <%= link_to 'advanced search', blacklight_advanced_search_engine.advanced_search_path,
-                    class: 'su-underline',
                     data: { action: "click->analytics#trackLink"} %> to construct a targeted query.</li>
         <% end %>
-        <li class="pb-2">Visit our <%= link_to 'SearchWorks Guide', 'https://guides.library.stanford.edu/searchworks',
-                                  class: 'su-underline' %> for more search tips.</li>
+        <li class="pb-2">Visit our <%= link_to 'SearchWorks Guide', 'https://guides.library.stanford.edu/searchworks' %> for more search tips.</li>
       </ul>
     </div>
   </div>
@@ -45,22 +43,21 @@
       <%= render SearchResult::NoResult::ChatWithLibrarianComponent.new %>
 
       <div class="mt-2">
-        Place a request via <%= link_to 'Interlibrary loan.', 'https://sulils.stanford.edu/', class: 'su-underline' %>
+        Place a request via <%= link_to 'Interlibrary loan.', 'https://sulils.stanford.edu/' %>
       </div>
 
       <div class="mt-1">
-        Submit a <%= link_to 'purchase recommendation', 'https://stanforduniversity.qualtrics.com/jfe/form/SV_5iQABR6VSszIQMR',
-                             class: 'su-underline' %>.
+        Submit a <%= link_to 'purchase recommendation', 'https://stanforduniversity.qualtrics.com/jfe/form/SV_5iQABR6VSszIQMR' %>.
       </div>
 
       <h3 class="mt-3">Search other libraries</h3>
       <ul>
         <li class="pb-2">
-          <%= link_to 'WorldCat', "https://www.worldcat.org/search?qt=worldcat_org_all&q=#{params.fetch(:q, nil)}", class: 'su-underline' %>
+          <%= link_to 'WorldCat', "https://www.worldcat.org/search?qt=worldcat_org_all&q=#{params.fetch(:q, nil)}" %>
           to search libraries across the globe
         </li>
         <li>
-          <%= link_to 'HathiTrust', "https://catalog.hathitrust.org/Search/Home?lookfor=#{params.fetch(:q, nil)}", class: 'su-underline' %>
+          <%= link_to 'HathiTrust', "https://catalog.hathitrust.org/Search/Home?lookfor=#{params.fetch(:q, nil)}" %>
           to search millions of digitized materials, especially helpful for government documents
         </li>
       </ul>
