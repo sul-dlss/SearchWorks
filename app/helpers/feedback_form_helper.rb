@@ -19,9 +19,8 @@ module FeedbackFormHelper
   end
 
   def breakout_message(message_text)
-    beginTag = "<strong>"
-    endTag = "</strong>"
-    endIndex = message_text.index(endTag) + endTag.length
-    return "#{message_text[0, endIndex]} <br> #{message_text[endIndex + 1, message_text.length]}"
+    end_tag = "</strong>"
+    end_index = message_text.index(end_tag) + end_tag.length
+    "#{message_text[0, end_index]} <br> #{message_text[end_index + 1, message_text.length]}"
   end
 end
