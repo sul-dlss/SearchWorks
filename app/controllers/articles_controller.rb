@@ -2,7 +2,7 @@
 
 # ArticleController is the controller for Article Search
 class ArticlesController < ApplicationController
-  layout proc { |controller| controller.action_name != 'index' || controller.has_search_parameters? ? "searchworks" : "searchworks4" }
+  layout proc { |controller| controller.action_name != 'index' ? "searchworks" : "searchworks4" }
 
   include Blacklight::Catalog
   include Blacklight::Configurable
