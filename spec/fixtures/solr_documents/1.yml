@@ -18,6 +18,8 @@ beginning_year_isi: 2000
 imprint_display: 1990
 access_facet: Online
 building_facet: Green
+library_code_facet_ssim:
+  - GREEN
 callnum_facet_hsim: Dewey Classification|000s - Computer Science, Knowledge & Systems|070s - News Media, Journalism, Publishing
 item_display_struct:
   - id: a

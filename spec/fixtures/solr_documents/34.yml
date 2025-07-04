@@ -15,5 +15,7 @@ imprint_display: 2008
 druid: mf774fs2413
 building_facet:
   - "Art & Architecture (Bowes)"
+library_code_facet_ssim:
+  - ART
 location_facet:
   - "Art Locked Stacks"
