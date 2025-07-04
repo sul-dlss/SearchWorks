@@ -510,7 +510,6 @@ e-mfp.org
 eaccess.heart.org
 eahrj.eahealth.org
 eandv.biomedcentral.com
-eba.worldbank.org
 ebm.bmj.com
 ebmh.bmj.com
 ebn.bmj.com
@@ -1132,7 +1131,6 @@ openbioresources.metajnl.com
 openhealthdata.metajnl.com
 openheart.bmj.com
 openhypertensionjournal.com
-openknowledge.worldbank.org
 openlibrary.org
 opg.optica.org
 ophthalmology.lwwhealthlibrary.com
@@ -1232,7 +1230,6 @@ public.ebookcentral.proquest.com
 publications.aap.org
 publications.ersnet.org
 publications.iarc.fr
-publications.worldbank.org
 publichealth.jmir.org
 publichealthreviews.biomedcentral.com
 publikationen.ub.uni-frankfurt.de
@@ -1478,7 +1475,6 @@ voice.ons.org
 vrf.iranjournals.ir
 waojournal.biomedcentral.com
 wbis.degruyter.com
-wbl.worldbank.org
 web.mit.edu
 web.ornl.gov
 webbook.nist.gov
@@ -1858,7 +1854,6 @@ www.eftf.org
 www.egms.de
 www.eighteenthcenturydrama.amdigital.co.uk
 www.einj.or.kr
-www.eisourcebook.org
 www.eitc.org
 www.ejbc.kr
 www.ejcdt.eg.net
@@ -2654,7 +2649,6 @@ www.wjon.org
 www.wjpch.com
 www.wjps.ir
 www.womeninthenationalarchives.amdigital.co.uk
-www.worldbank.org
 www.worldcat.org
 www.worldoflearning.com
 www.worldscibooks.com
