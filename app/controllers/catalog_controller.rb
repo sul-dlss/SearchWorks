@@ -99,7 +99,6 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
     config.index.document_component = Searchworks4::DocumentComponent
-    config.index.title_component = SearchResult::DocumentTitleComponent
     config.index.constraints_component = Searchworks4::ConstraintsComponent
 
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
