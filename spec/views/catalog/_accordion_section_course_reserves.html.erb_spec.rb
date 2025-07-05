@@ -3,6 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe "catalog/_accordion_section_course_reserves" do
+  skip "SW4.0 redesign doesn't have these yet"
   describe "Accordion section - course reserves" do
     let(:document) do
       SolrDocument.new(

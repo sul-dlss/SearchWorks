@@ -150,7 +150,7 @@ RSpec.describe "Emailing Records", :js do
           expect(page).to have_css '.toast', text: 'Email sent'
 
           email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
-          expect(email).to have_css('h3', text: /Bibliographic information/)
+          expect(email).to have_css('h2', text: /Bibliographic information/)
           expect(email).to have_css('dd', text: /A quartely publication/)
         end
       end

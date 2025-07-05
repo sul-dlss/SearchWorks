@@ -1,7 +1,17 @@
 # frozen_string_literal: true
 
 module SearchResult
-  class DocumentGalleryComponent < SearchResult::DocumentComponent
+  class DocumentGalleryComponent < Blacklight::DocumentComponent
+    attr_reader :document, :counter
+
+    def resource_icon
+      helpers.render_resource_icon(presenter.formats)
+    end
+
+    def actions
+      helpers.render_index_doc_actions document, wrapping_class: 'index-document-functions col'
+    end
+
     def preview_container_dom_class
       "preview-container-#{document.id}"
     end

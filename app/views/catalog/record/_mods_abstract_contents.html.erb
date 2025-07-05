@@ -1,8 +1,0 @@
-<% document ||= @document %>
-<% document.mods.abstract.each do |abstract| %>
-  <%= mods_record_field(abstract) %>
-<% end %>
-
-<% document.mods.contents.each do |contents| %>
-  <%= mods_record_field(contents) %>
-<% end %>

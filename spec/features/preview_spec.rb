@@ -8,7 +8,3 @@ RSpec.feature "Preview routes functionality" do
     expect(page).to have_css("h3 a", text: "An object")
   end
 end
-
-RSpec.feature "Preview integration with plugin" do
-  skip
-end
