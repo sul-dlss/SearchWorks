@@ -1,4 +1,3 @@
 <turbo-frame id="preview_<%= @document[:id] %>" data-controller="google-cover-image">
-  <%= render_document_partial @document, 'show_header' %>
-  <%= render_document_partial @document, 'show' %>
+  <%= render Searchworks4::DocumentComponent.new(document: document_presenter(@document), id: "preview_doc_#{@document.id}") %>
 </turbo-frame>
