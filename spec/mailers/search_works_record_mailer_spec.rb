@@ -154,8 +154,8 @@ RSpec.describe SearchWorksRecordMailer do
       end
 
       it 'includes Subjects and Bibliographic information from both MARC and MODS records' do
-        expect(mail.body).to have_css('h3', text: 'Subjects', count: 2)
-        expect(mail.body).to have_css('h3', text: 'Bibliographic information', count: 2)
+        expect(mail.body).to have_css('h2', text: 'Subjects', count: 2)
+        expect(mail.body).to have_css('h2', text: 'Bibliographic information', count: 2)
       end
 
       it 'includes the HTML markup for MARC records' do
@@ -198,7 +198,7 @@ RSpec.describe SearchWorksRecordMailer do
         let(:mail) { SearchWorksRecordMailer.full_email_record([bookplate_document], params, url_params) }
 
         it 'renders the bookplate data successfully' do
-          expect(mail.body).to have_css('h3', text: 'Acquired with support from')
+          expect(mail.body).to have_css('h2', text: 'Acquired with support from')
           expect(mail.body).to have_css('.bookplate-heading', text: /BOOKPLATE-TEXT/)
         end
       end

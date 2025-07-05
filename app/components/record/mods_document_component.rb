@@ -6,8 +6,8 @@ module Record
 
     attr_reader :layout
 
-    def initialize(layout: Record::DocumentLayoutComponent, **)
-      super
+    def initialize(document: nil, layout: Record::DocumentLayoutComponent, **)
+      super(document:, **)
 
       @layout = layout
     end
