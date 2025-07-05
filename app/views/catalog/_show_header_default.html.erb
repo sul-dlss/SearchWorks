@@ -1,8 +1,0 @@
-<% doc_presenter = document_presenter(document) %>
-<h1>
-  <%= render_resource_icon doc_presenter.formats %>
-  <span itemprop="name"><%= document_presenter(document).heading %></span>
-</h1>
-<% if document.vernacular_title.present? %>
-  <p class='vernacular-title'><%= document.vernacular_title.html_safe %></p>
-<% end %>

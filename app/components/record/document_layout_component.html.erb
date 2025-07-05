@@ -27,7 +27,7 @@
     <%= footer %>
   </div>
 
-  <%= render 'catalog/schema_dot_org_default', document: document %>
+  <%= render 'catalog/schema_dot_org_default', document: document if document.id.present? %>
 
   <% if document.respond_to?(:export_as_openurl_ctx_kev) %>
     <!-- COinS, for Zotero among others. -->
