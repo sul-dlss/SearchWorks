@@ -6,7 +6,22 @@
         </div>
     <% end %>
     <% component.with_body do %>
-            <%= render Feedback::FeedbackFormComponent.new(format: 'modal') %>
+        <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
+            <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', html: { 'data-controller': 'feedback-form', 'data-action': 'turbo:submit-end->feedback-form#submitForm' } do |f| %>
+                <%= f.hidden_field :url, value: request.referer, class:"reporting-from-field" %>
+                <%= f.hidden_field :user_agent, 'data-feedback-form-target': 'agent' %>
+                <%= f.hidden_field :viewport, 'data-feedback-form-target': 'viewport' %>
+                <%= f.hidden_field :last_search, 'data-feedback-form-target': 'lastSearch' %>
+                <%= f.hidden_field :form_format, value: 'modal' %>
+
+                <div class="modal-body">
+                    <%= render Feedback::FeedbackFormFieldsComponent.new(form: f) %>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary me-2 close" data-bl-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            <% end %>
+        <% end %>
     <% end %>
 <% end %>
-
