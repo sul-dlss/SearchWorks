@@ -75,7 +75,7 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  describe 'the selections page', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the selections page' do
     before do
       visit '/selections'
     end
