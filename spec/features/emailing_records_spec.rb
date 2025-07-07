@@ -62,18 +62,11 @@ RSpec.describe "Emailing Records", :js do
       end
     end
 
-    context 'when viewing a catalog record', skip: "Pending searchworks 4 redesign" do
+    context 'when viewing a catalog record' do
       before do
         visit solr_document_path('14')
 
-        within('.record-toolbar') do
-          within('li.dropdown') do
-            click_button 'Send to'
-            within('.dropdown-menu') do
-              click_link 'email'
-            end
-          end
-        end
+        click_link 'Email'
       end
 
       context 'when "brief record" is selected' do
@@ -85,7 +78,7 @@ RSpec.describe "Emailing Records", :js do
             click_button 'Send'
           end
 
-          expect(page).to have_css '.alert-success', text: 'Email Sent'
+          expect(page).to have_css '.toast', text: 'Email sent'
         end
       end
 
@@ -101,10 +94,10 @@ RSpec.describe "Emailing Records", :js do
 
         it 'emails a full record' do
           # triggers capybara to wait until email is sent
-          expect(page).to have_css '.alert-success', text: 'Email Sent'
+          expect(page).to have_css '.toast', text: 'Email sent'
 
           email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
-          expect(email).to have_css('h3', text: /Bibliographic information/)
+          expect(email).to have_css('h2', text: /Bibliographic information/)
           expect(email).to have_css('dd', text: /A quartely publication/)
         end
       end
