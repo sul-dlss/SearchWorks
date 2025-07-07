@@ -2,10 +2,15 @@
 
 require "rails_helper"
 
-RSpec.describe Feedback::FeedbackFormComponent, type: :component do
+RSpec.describe Feedback::FeedbackFormFieldsComponent, type: :component do
+  let(:form) { instance_double(ActionView::Helpers::FormBuilder) }
+
   before do
     allow(vc_test_controller).to receive_messages(on_campus_or_su_affiliated_user?: false, current_user: User.new)
-    render_inline(described_class.new)
+    allow(form).to receive_messages(text_field: '<input type="text" name="name">'.html_safe,
+                                    email_field: '<input type="email" name="to" required="required">'.html_safe,
+                                    text_area: '<textarea name="message" required="required"></textarea>'.html_safe)
+    render_inline(described_class.new(form: form))
   end
 
   it 'displays the reporting alert box with specific information' do

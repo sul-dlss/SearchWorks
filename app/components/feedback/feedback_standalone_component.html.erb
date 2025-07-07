@@ -2,6 +2,14 @@
     <h2 class="fw-normal"><%= t('blacklight.feedback_form.title') %></h2>
 
     <div class="feedback-form-container">
-        <%= render Feedback::FeedbackFormComponent.new(format: 'standalone') %>
+        <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
+        <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form', 'action': 'turbo:submit-end->feedback-form#hideForm' } do |f| %>
+                <%= f.hidden_field :form_format, value: 'standalone' %>
+                <%= render Feedback::FeedbackFormFieldsComponent.new(form: f) %>
+                <div class="d-flex-inline text-end">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            <% end %>
+        <% end %>
     </div>
 </div>
