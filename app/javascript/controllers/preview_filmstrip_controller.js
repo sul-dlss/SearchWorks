@@ -9,8 +9,7 @@ export default class extends Controller {
   }
 
   connect() {
-    this.triggerBtn = $('<div class="preview-trigger-btn preview-opacity" data-action="click->preview-filmstrip#showPreview"><span class="bi-chevron-down small"></span></div>')
-    this.triggerFocus = $('<div class="preview-trigger-focus preview-opacity" data-action="click->preview-filmstrip#showPreview">Preview <span class="bi-chevron-down small"></span></div>')
+    this.triggerBtn = $('<button class="btn preview-trigger-btn preview-opacity" data-action="click->preview-filmstrip#showPreview"><span class="bi-chevron-down small"></span></button>')
     this.arrow = $('<div class="preview-arrow"></div>');
 
     // NOTE: The filmstrip, viewport, prevew ,and closeBtn are outside of the controller.
@@ -25,8 +24,7 @@ export default class extends Controller {
   }
 
   appendTriggers() {
-    $(this.element).append(this.triggerBtn).append(this.triggerFocus);
-    this.attachTriggerEvents();
+    $(this.element).append(this.triggerBtn);
   }
 
   showPreview() {
@@ -56,18 +54,6 @@ export default class extends Controller {
     if (arrowLeft > maxLeft) arrowLeft = maxLeft;
 
     this.arrow.css('left', arrowLeft);
-  }
-
-  attachTriggerEvents() {
-    $(this.element).on('mouseenter', () => {
-      this.triggerBtn.hide()
-      this.triggerFocus.fadeIn('fast')
-    })
-
-    $(this.element).on('mouseleave', () => {
-      this.triggerFocus.hide()
-      this.triggerBtn.show()
-    })
   }
 
   // TODO: the preview is outside of this controller's scope.

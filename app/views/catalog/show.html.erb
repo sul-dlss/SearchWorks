@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row align-items-start">
   <div id="content" class="col-12 col-lg-8 show-document">
     <%= render RecordToolbarComponent.new(presenter: document_presenter(@document), search_context: @search_context, search_session: search_session) %>
     <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_presenter(@document).html_title, application_name: "#{I18n.t('blacklight.application_name')} catalog" -%>
@@ -6,7 +6,7 @@
 
     <%= render Record::DocumentComponent.new(presenter: document_presenter(@document)) %>
   </div>
-  <div id="aside" class="record-panels col-12 offset-lg-1 col-lg-3 py-3 py-lg-0 border-start ps-lg-3 offcanvas-lg offcanvas-bottom">
+  <div id="aside" class="mt-5 record-panels col-12 offset-lg-1 col-lg-3 py-3 py-lg-0 border-start ps-lg-3 offcanvas-lg offcanvas-bottom">
     <%= render "catalog/record/metadata_panels", document: @document %>
 
     <% if @document.bookplates.present? %>
@@ -23,5 +23,14 @@
 <div class="row">
   <div class="col-md-12 tech-details">
     <%= tech_details(@document) %>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast" class="toast d-block" role="alert" aria-live="assertive" aria-atomic="true" data-bs-config='{ "delay": 8000 }'>
+    <div class="toast-body d-flex justify-content-between">
+      <div class="toast-text"></div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
   </div>
 </div>

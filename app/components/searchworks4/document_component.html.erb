@@ -61,8 +61,8 @@
 
       </div>
     </div>
-    <div class="col-2 d-flex flex-column align-items-end">
-      <div class="d-flex flex-row gap-2 mb-3">
+    <div class="col-2 d-flex flex-column align-items-center">
+      <div class="d-flex flex-row gap-1 mb-3">
         <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
         <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
       </div>

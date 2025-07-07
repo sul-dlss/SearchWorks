@@ -3,7 +3,7 @@
 module AccessPanels
   class LayoutComponent < ViewComponent::Base
     renders_one :header
-    renders_one :title, lambda { |classes: [], tag: 'h3', &block|
+    renders_one :title, lambda { |classes: ['h3'], tag: 'h2', &block|
       content_tag tag, class: classes, &block
     }
     renders_one :body

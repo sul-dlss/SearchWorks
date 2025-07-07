@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.feature 'Bookmarking Items' do
+RSpec.feature 'Bookmarking Items', :js do
   let(:oclc_citation) { instance_double(Citations::OclcCitation) }
 
   before do
@@ -16,13 +16,33 @@ RSpec.feature 'Bookmarking Items' do
     it 'renders the page' do
       visit search_catalog_path f: { format: ["Book"] }, view: "default"
 
+      # Add one document to saved records
       within(first('.document')) do
-        find('.toggle-bookmark-label').click
+        click_button 'Save record'
       end
 
-      within(all('.document').last) do
-        find('.toggle-bookmark-label').click
+      expect(page).to have_content('Saved to bookmarks')
+
+      # Add another document to saved records
+      within(first('.document:nth-child(2)')) do
+        click_button 'Save record'
       end
+
+      expect(page).to have_content('Saved to bookmarks')
+
+      # Remove the second document from saved records
+      within(first('.document:nth-child(2)')) do
+        click_button('Remove from saved records')
+      end
+
+      expect(page).to have_content('Removed from bookmarks')
+
+      # Add another document to saved records
+      within(all('.document').last) do
+        click_button 'Save record'
+      end
+
+      expect(page).to have_content('Saved to bookmarks')
 
       visit bookmarks_path
 

@@ -14,14 +14,6 @@ RSpec.describe 'Exhibit Access Panel', :js do
     end
   end
 
-  context 'when there are no exhibits' do
-    it 'does not display the Context heading' do
-      visit '/view/mf774fs2413'
-      expect(page).to have_css('h2', text: 'Context', visible: false)
-      expect(page).to have_no_css('[data-controller="exhibit-panel"]', visible: true)
-    end
-  end
-
   context 'when there is one exhibit' do
     let(:content) do
       [{ slug: 'exhibit1', title: 'Exhibit Title' }]
@@ -30,9 +22,8 @@ RSpec.describe 'Exhibit Access Panel', :js do
     it 'displays the sidebar' do
       visit '/view/mf774fs2413'
 
-      expect(page).to have_css('h2', text: 'Context', visible: true)
       within '[data-controller="exhibit-panel"]' do
-        expect(page).to have_css('h3', text: 'Item is featured in an exhibit')
+        expect(page).to have_css('h2', text: 'Item is featured in an exhibit')
         expect(page).to have_css('.d-flex', count: 1)
 
         within '.exhibit-heading' do
@@ -84,7 +75,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
       expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
 
       within '[data-controller="exhibit-panel"]' do
-        expect(page).to have_css('h3', text: 'Item is featured in exhibits')
+        expect(page).to have_css('h2', text: 'Item is featured in exhibits')
       end
     end
 
@@ -128,7 +119,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
       expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
 
       within '[data-controller="exhibit-panel"]' do
-        expect(page).to have_css('h3', text: 'Exhibit')
+        expect(page).to have_css('h2', text: 'Exhibit')
         expect(page).to have_link('Exhibit Title', href: %r{/exhibit1$})
       end
     end

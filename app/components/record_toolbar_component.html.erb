@@ -1,4 +1,4 @@
-<nav class="record-toolbar d-flex flex-column flex-xxl-row mb-4 mb-xxl-3 gap-1" aria-label="Tools" data-controller="analytics">
+<nav class="record-toolbar d-flex flex-column flex-xxl-row mt-5 mb-3 mb-xxl-4 gap-4" aria-label="Tools" data-controller="analytics">
   <div class="d-flex d-flex-row column-gap-3 align-items-center">
     <%= helpers.link_back_to_catalog class: 'back-to-results', label: t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
@@ -6,7 +6,7 @@
   <div class="ms-xxl-auto flex-nowrap">
     <ul class="nav navbar justify-content-start d-inline-flex gap-2 border rounded px-1 py-0">
       <li class="px-2">
-        <%= render 'bookmark_control', document: document, document_action_config: @presenter.view_config.document_actions.find { |x| x.key == :bookmark } %>
+        <%= render Document::TrackingBookmarkComponent.new(document:, action: @presenter.view_config.document_actions.find { |x| x.key == :bookmark }) %>
       </li>
       <% if citable? %>
         <li>
