@@ -8,12 +8,6 @@ export default class extends Controller {
     this.setHiddenFieldValues()
   }
 
-  async showToast(event) {
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(document.getElementById('toast'))
-    toastBootstrap.show()
-    this.closeModal()
-  }
-
   // Set values for specific fields that are not filled in and must be computed
   setHiddenFieldValues() {
     this.agentTarget.value = navigator.userAgent
@@ -33,13 +27,5 @@ export default class extends Controller {
       return null
 
     return backToResults.href
-  }
-
-  hideForm() {
-    document.querySelector('div.standalone').classList.add('d-none')
-  }
-
-  closeModal() {
-    document.getElementById('blacklight-modal').close()
   }
 }
