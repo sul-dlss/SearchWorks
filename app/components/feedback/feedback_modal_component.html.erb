@@ -7,7 +7,7 @@
     <% end %>
     <% component.with_body do %>
         <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
-            <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', html: { 'data-controller': 'feedback-form', 'data-action': 'turbo:submit-end->feedback-form#submitForm' } do |f| %>
+            <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', html: { 'data-controller': 'feedback-form', 'data-action': 'turbo:submit-end->feedback-form#showToast' } do |f| %>
                 <%= f.hidden_field :url, value: request.referer, class:"reporting-from-field" %>
                 <%= f.hidden_field :user_agent, 'data-feedback-form-target': 'agent' %>
                 <%= f.hidden_field :viewport, 'data-feedback-form-target': 'viewport' %>
