@@ -1,6 +1,6 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h3 class="modal-title"><%= params[:title] %></h3>
+    <h2 class="modal-title"><%= params[:title] %></h2>
   <% end %>
   <div class="stackmap" data-controller="stackmap" data-behavior="stackmap" data-stackmap-api-url-value="<%= params[:api_url] %>">
     <p>Call number <span class="callnumber"></span> is located in <span class="library"></span>,  <span class="floorname"></span>.</p>
@@ -34,4 +34,3 @@
 
   </div>
 <% end %>
-
