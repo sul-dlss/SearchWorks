@@ -43,7 +43,6 @@
 }
 
 .search-area-bg {
-  min-height: 212px;
   padding-block: 2.5rem;
   background-color: var(--stanford-fog-light);
 
