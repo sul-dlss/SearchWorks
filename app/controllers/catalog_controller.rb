@@ -228,7 +228,8 @@ class CatalogController < ApplicationController
     config.top_filters = {
       :default => ['access_facet', 'format_hsim', 'library'],
       :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
-      :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
+      :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim'],
+      :advanced_search => ['access_facet', 'format_hsim', 'language', 'building_facet', 'pub_year_tisim']
     }
 
     # Pivot facet example
