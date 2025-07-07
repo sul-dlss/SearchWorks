@@ -35,6 +35,10 @@ export default class extends Controller {
     return backToResults.href
   }
 
+  hideForm() {
+    document.querySelector('div.standalone').classList.add('d-none')
+  }
+
   closeModal() {
     document.getElementById('blacklight-modal').close()
   }
