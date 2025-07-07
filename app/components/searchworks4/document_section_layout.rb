@@ -11,7 +11,7 @@ module Searchworks4
     end
 
     def render?
-      content? && helpers.html_present?(content)
+      helpers.html_present?(content)
     end
   end
 end

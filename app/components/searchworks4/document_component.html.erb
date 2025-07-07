@@ -13,9 +13,11 @@
     <div class="col-10 pe-4">
       <div class="documentHeader">
         <h3 class="index_title">
-          <%=  content_tag :span, class: 'document-counter fw-light' do
-          t('blacklight.search.documents.counter', counter:)
-        end %>
+          <% if counter %>
+            <%=  content_tag :span, class: 'document-counter fw-light' do
+            t('blacklight.search.documents.counter', counter:)
+          end %>
+          <% end %>
           <%= helpers.link_to_document document, counter:, itemprop: 'name', class: 'fw-medium' %>
         </h3>
       </div>
