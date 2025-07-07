@@ -1,13 +1,11 @@
 <% ivar_to_paginate =  article_selections? ? @bookmarks : @response %>
 <!-- Markup for sm screens and larger -->
-<div class="sort-and-per-page sul-toolbar <%= 'selection-list-toolbar' if bookmarks? %>">
+<div class="sort-and-per-page sul-toolbar">
   <%= render partial: "paginate_compact", object: ivar_to_paginate %>
   <span id="viewWidgets" class="d-flex flex-row">
     <%= render partial: 'view_type_group' %>
     <%= render partial: 'sort_widget' %>
     <%= render partial: 'shared/per_page_widget' %>
-    <% unless bookmarks? %>
-      <%= render partial: 'select_all_widget' %>
-    <% end %>
+    <%= render partial: 'select_all_widget' %>
   </span>
 </div>
