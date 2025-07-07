@@ -46,14 +46,13 @@ RSpec.feature 'Bookmarking Items', :js do
 
       visit bookmarks_path
 
-      expect(page).to have_css('h2', text: '2 catalog items')
-      expect(page).to have_css('a', text: '0 articles+ items')
+      expect(page).to have_css('.active .bookmark-counter', text: '2')
+      expect(page).to have_css('.bookmark-counter', text: '0')
       within "#documents" do
         expect(page).to have_css("h3.index_title a", count: 2)
       end
 
-      expect(page).to have_button "Send 1 - 2"
-      click_link 'Cite 1 - 2'
+      click_link 'Cite'
 
       within('.modal-dialog') do
         expect(page).to have_css('div#all')
@@ -66,9 +65,8 @@ RSpec.feature 'Bookmarking Items', :js do
   context 'with no bookmarks' do
     it "renders the page" do
       visit bookmarks_path
-      expect(page).to have_css('h2', text: '0 catalog items')
-      expect(page).to have_css('a', text: '0 articles+ items')
-      expect(page).to have_css("h3", text: "You have no selections")
+      expect(page).to have_css('.bookmark-counter', text: '0')
+      expect(page).to have_content "You have no selections"
     end
   end
 end
