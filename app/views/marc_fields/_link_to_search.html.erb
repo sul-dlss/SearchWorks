@@ -1,6 +1,8 @@
 <% if link_to_search.values.present? %>
-  <dt><%= link_to_search.label %></dt>
-  <% link_to_search.values.each do |value| %>
-    <dd><%= link_to(value.strip, link_to_search.url.merge!(q: "\"#{value.strip}\"")) %></dd>
-  <% end  %>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+    <% component.with_label { link_to_search.label } %>
+    <% link_to_search.values.each do |value| %>
+      <% component.with_value { link_to(value.strip, link_to_search.url.merge!(q: "\"#{value.strip}\"")) } %>
+    <% end %>
+  <% end %>
 <% end %>

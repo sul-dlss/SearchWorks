@@ -150,7 +150,7 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
       expect(page).to have_css('dd', text: 'Waltzes.', count: 1)
       expect(page).to have_css('dd', text: 'Canons, fugues, etc. (Piano)', count: 1)
       expect(page).to have_css('dd', text: 'Marches.', count: 1)
-      expect(page).to have_css('dd', text: "Piano, Musique de.\n         > \n        Sound recordings.", count: 1)
+      expect(page).to have_css('dd', text: /Piano, Musique de\.\s*>\s*Sound recordings\./, count: 1)
     end
   end
 

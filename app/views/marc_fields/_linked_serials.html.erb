@@ -1,12 +1,14 @@
 <% linked_serials.values.each do |value| %>
-  <dt><%= value[:label] %></dt>
-  <dd>
-    <% value[:values].each do |val|%>
-      <% if val[:link] %>
-        <%= link_to(val[:link], search_catalog_path(q: (val[:href] || val[:link]), search_field: val[:search_field])) %>
-      <% else %>
-        <%= val[:text] %>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+    <% component.with_label { value[:label] } %>
+    <% component.with_value do %>
+      <% value[:values].each do |val| %>
+        <% if val[:link] %>
+          <%= link_to(val[:link], search_catalog_path(q: (val[:href] || val[:link]), search_field: val[:search_field])) %>
+        <% else %>
+          <%= val[:text] %>
+        <% end %>
       <% end %>
     <% end %>
-  </dd>
+  <% end %>
 <% end %>
