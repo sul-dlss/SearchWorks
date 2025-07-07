@@ -1,10 +1,12 @@
 <% if linked_related_works.present? %>
-  <dt><%= linked_related_works.label %></dt>
-  <% linked_related_works.values.each do |related_work| %>
-    <dd>
-      <%= related_work[:pre_text] %>
-      <%= link_to(related_work[:link], search_catalog_path(q: related_work[:search], search_field: 'search_title')) %>
-      <%= related_work[:post_text] %>
-    </dd>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+    <% component.with_label { linked_related_works.label } %>
+    <% linked_related_works.values.each do |related_work| %>
+      <% component.with_value do %>
+        <%= related_work[:pre_text] %>
+        <%= link_to(related_work[:link], search_catalog_path(q: related_work[:search], search_field: 'search_title')) %>
+        <%= related_work[:post_text] %>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>

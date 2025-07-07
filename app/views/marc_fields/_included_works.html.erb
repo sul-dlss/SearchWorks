@@ -1,6 +1,10 @@
 <% if included_works.values.present? %>
-  <dt><%= included_works.label %></dt>
-  <% included_works.values.each do |value| %>
-    <dd><%= value[:before_text] %> <%= link_to(value[:link_text], search_catalog_path(q: "\"#{value[:query_text]}\"", search_field: 'author_title')) %> <%= value[:after_text] %></dd>
-  <% end  %>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+    <% component.with_label { included_works.label } %>
+    <% included_works.values.each do |value| %>
+      <% component.with_value do %>
+        <%= value[:before_text] %> <%= link_to(value[:link_text], search_catalog_path(q: "\"#{value[:query_text]}\"", search_field: 'author_title')) %> <%= value[:after_text] %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>

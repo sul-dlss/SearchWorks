@@ -1,9 +1,11 @@
-<dt><%= linked_series.label %></dt>
-<% linked_series.values.each do |series| %>
-  <dd>
-    <% if series[:link] %>
-      <%= link_to(series[:link].strip, search_catalog_path(q: "\"#{series[:link].strip}\"", search_field: 'search_series')) %>
+<%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+  <% component.with_label { linked_series.label } %>
+  <% linked_series.values.each do |series| %>
+    <% component.with_value do %>
+      <% if series[:link] %>
+        <%= link_to(series[:link].strip, search_catalog_path(q: "\"#{series[:link].strip}\"", search_field: 'search_series')) %>
+      <% end %>
+      <%= series[:extra_text] %>
     <% end %>
-    <%= series[:extra_text] %>
-  </dd>
+  <% end %>
 <% end %>
