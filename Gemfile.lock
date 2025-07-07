@@ -173,7 +173,7 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.2.0)
-    honeybadger (5.28.0)
+    honeybadger (5.29.1)
       logger
       ostruct
     http (5.3.1)
@@ -308,7 +308,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rdoc (6.14.1)
+    rdoc (6.14.2)
       erb
       psych (>= 4.0.0)
     redis (5.4.0)
@@ -382,8 +382,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sqlite3 (2.7.0-arm64-darwin)
-    sqlite3 (2.7.0-x86_64-linux-gnu)
+    sqlite3 (2.7.2-arm64-darwin)
+    sqlite3 (2.7.2-x86_64-linux-gnu)
     sshkit (1.24.0)
       base64
       logger
