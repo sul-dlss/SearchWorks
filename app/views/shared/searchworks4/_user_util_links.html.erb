@@ -5,9 +5,6 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/search_history">Search history</a>
-              </li>
-              <li class="nav-item">
                 <% if current_user %>
                   <%= link_to "#{current_user.sunet}: Logout", destroy_user_session_path, class: 'nav-link' %>
                 <% else %>
