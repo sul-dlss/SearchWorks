@@ -1,4 +1,4 @@
-        <%= @form.hidden_field :url, value: request.referer, class:"reporting-from-field" %>
+        <%= @form.hidden_field :url, value: @request_referer, class:"reporting-from-field" %>
         <%= @form.hidden_field :user_agent, 'data-feedback-form-target': 'agent' %>
         <%= @form.hidden_field :viewport, 'data-feedback-form-target': 'viewport' %>
         <%= @form.hidden_field :last_search, 'data-feedback-form-target': 'lastSearch' %>
@@ -8,7 +8,7 @@
             </div>
             <div class="text-body row w-100">
                 <div class="col-8">
-                    Reporting from <%= request.referer %>
+                    Reporting from <%= @request_referer %>
                 </div>
                 <div class="col-4 text-end">
                     <%= link_to 'Check system status', 'http://library-status.stanford.edu'  %>

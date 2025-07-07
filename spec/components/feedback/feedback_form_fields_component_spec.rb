@@ -9,8 +9,9 @@ RSpec.describe Feedback::FeedbackFormFieldsComponent, type: :component do
     allow(vc_test_controller).to receive_messages(on_campus_or_su_affiliated_user?: false, current_user: User.new)
     allow(form).to receive_messages(text_field: '<input type="text" name="name">'.html_safe,
                                     email_field: '<input type="email" name="to" required="required">'.html_safe,
-                                    text_area: '<textarea name="message" required="required"></textarea>'.html_safe)
-    render_inline(described_class.new(form: form))
+                                    text_area: '<textarea name="message" required="required"></textarea>'.html_safe,
+                                    hidden_field: '<input type="hidden" name="url" value="http://localhost:3000" class="reporting-from-field">'.html_safe)
+    render_inline(described_class.new(form: form, request_referer: 'http://localhost:3000'))
   end
 
   it 'displays the reporting alert box with specific information' do

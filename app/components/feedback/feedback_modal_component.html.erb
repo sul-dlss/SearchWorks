@@ -9,7 +9,7 @@
         <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
             <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form feedback-modal', 'action': 'turbo:submit-end->feedback-modal#showToast' } do |f| %>
                 <div class="modal-body">
-                    <%= render Feedback::FeedbackFormFieldsComponent.new(form: f) %>
+                    <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary me-2 close" data-bl-dismiss="modal">Close</button>
