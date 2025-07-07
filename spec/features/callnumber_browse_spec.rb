@@ -18,7 +18,7 @@ RSpec.describe 'Callnumber Browse', :js do
         click_button 'Save record'
       end
 
-      expect(page).to have_link 'Bookmarks 1'
+      expect(page).to have_link 'Saved 1'
     end
   end
 
