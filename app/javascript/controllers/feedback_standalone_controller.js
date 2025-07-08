@@ -4,10 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [ 'container' ]
 
-  connect() {
-    console.log("Feedback standalone")
-  }
-
   hideForm() {
    this.containerTarget.classList.add('d-none')
   }
