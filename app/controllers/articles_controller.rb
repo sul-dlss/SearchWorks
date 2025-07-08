@@ -26,8 +26,6 @@ class ArticlesController < ApplicationController
     raise exception
   end
 
-  before_action :set_search_query_modifier, only: :index
-
   around_action :manage_eds_session_token
   # EDS uses the session token to maintain some kind of state across requests (and also uses it
   # to handle guest state). Therefore, we need to establish a session token before making EDS requests,
@@ -292,10 +290,6 @@ class ArticlesController < ApplicationController
       session_token:  session[Settings.EDS_SESSION_TOKEN_KEY]
     }
     @search_service ||= Eds::SearchService.new(blacklight_config, params, eds_params)
-  end
-
-  def set_search_query_modifier
-    @search_modifier ||= SearchQueryModifier.new(search_state)
   end
 
   # Reuse the EDS session token if available in the user's session data,
