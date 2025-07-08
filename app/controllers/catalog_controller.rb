@@ -28,8 +28,6 @@ class CatalogController < ApplicationController
 
   include Blacklight::Ris::Catalog
 
-  before_action :set_search_query_modifier, only: :index
-
   before_action only: :index do
     if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
       flash[:error] =
@@ -527,10 +525,6 @@ class CatalogController < ApplicationController
     end
   end
   helper_method :augment_solr_document_json_response
-
-  def set_search_query_modifier
-    @search_modifier ||= SearchQueryModifier.new(search_state)
-  end
 
   def advanced_search_form?(*args, **kwargs)
     action_name == 'advanced_search'

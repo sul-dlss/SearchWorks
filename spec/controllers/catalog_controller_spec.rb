@@ -21,12 +21,8 @@ RSpec.describe CatalogController do
   it "includes the EmailValidation concern" do
     expect(subject).to be_a(EmailValidation)
   end
-  describe "#index" do
-    it "sets the search modifier" do
-      get :index
-      expect(assigns(:search_modifier)).to be_a SearchQueryModifier
-    end
 
+  describe "#index" do
     it 'redirects to the home page with a flash message when paging too deep' do
       get :index, params: { page: 251 }
       expect(response).to redirect_to(root_path)
