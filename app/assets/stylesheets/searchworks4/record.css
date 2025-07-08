@@ -180,11 +180,15 @@
     }
   }
 
-  .image-filmstrip {
+  .image-filmstrip, .collection-members {
     --bs-border-radius: 0.25rem;
     --bs-border-color: var(--stanford-20-black);
 
     margin-top: -1.25rem;
     padding-top: 2rem;
+
+    svg {
+      vertical-align: inherit;
+    }
   }
 }
