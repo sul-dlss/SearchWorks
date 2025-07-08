@@ -1,6 +1,6 @@
 :root {
   --underline-color: var(--stanford-50-black);
-  --bs-link-decoration: underline dotted var(--underline-color) 1px;
+  --bs-link-decoration: underline dotted var(--underline-color);
   --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
   --bs-link-hover-decoration: underline;
 }
@@ -19,4 +19,11 @@
 .bookmark-toolbar,
 .dropdown-item {
   --bs-link-decoration: none;
+}
+
+/* Pending https://github.com/sul-dlss/component-library/pull/171/files */
+a:not(.btn),
+.btn-link {
+  text-decoration: var(--bs-link-decoration);
+  -webkit-text-decoration: var(--bs-link-decoration);
 }
