@@ -106,6 +106,7 @@ class CatalogController < ApplicationController
     config.index.document_presenter_class = IndexDocumentPresenter
     config.index.document_component = Searchworks4::DocumentComponent
     config.index.constraints_component = Searchworks4::ConstraintsComponent
+    config.index.facet_filters_component = Searchworks4::FacetFiltersComponent
 
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
     config.index.display_type_field = 'format_main_ssim'
