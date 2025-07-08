@@ -24,13 +24,13 @@ module Eds
       exports = begin
         citation_exports(dbid:, accession_number:)
       rescue StandardError
-        []
+        {}
       end
 
       styles = begin
         citation_styles(dbid:, accession_number:)
       rescue StandardError
-        []
+        {}
       end
 
       {
