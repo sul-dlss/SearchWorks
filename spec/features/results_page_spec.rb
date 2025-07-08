@@ -35,4 +35,14 @@ RSpec.feature "Search Results Page" do
       expect(page).to have_title "SearchWorks catalog, broccoli, Access: Online"
     end
   end
+
+  context 'when performing a blank search' do
+    before do
+      visit search_catalog_path q: ''
+    end
+
+    it 'uses the correct page title without a joiner' do
+      expect(page).to have_title "SearchWorks catalog"
+    end
+  end
 end
