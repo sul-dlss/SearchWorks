@@ -13,7 +13,7 @@ class CatalogSearchService < AbstractSearchService
       json['response']['pages']['total_count'].to_i
     end
 
-    def results # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
+    def results # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/AbcSize
       solr_docs = json['response']['docs']
       solr_docs.collect do |doc|
         result = CatalogResult.new(
@@ -21,7 +21,7 @@ class CatalogSearchService < AbstractSearchService
           link: format(Settings.catalog.fetch_url, id: doc['id']),
           physical: doc['physical']&.first,
           author: doc['author_person_display']&.first,
-          format: doc['format_main_ssim']&.first,
+          format: doc['format_hsim']&.first || doc['format_main_ssim']&.first,
           description: doc['summary_display'].try(:join),
           pub_year: doc['pub_year_ss']
         )
