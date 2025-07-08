@@ -30,8 +30,6 @@ export default class extends Controller {
       return;
     }
 
-    console.log("Bookmark updated successfully", this.checkedValue)
-
     // The saved records page handles updates (only removals) by doing a full page refresh.
     if (window.location.pathname.startsWith('/selections')) {
       Turbo.visit(document.baseURI, { action: 'replace' })
