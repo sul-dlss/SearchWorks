@@ -244,7 +244,7 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-8.0.200.tgz#1d27d9d55e45266e061190db045925e0b4d53d6b"
   integrity sha512-EDqWyxck22BHmv1e+mD8Kl6GmtNkhEPdRfGFT7kvsv1yoXd9iYrqHDVAaR8bKmU/syC5eEZ2I5aWWxtB73ukMw==
 
-"blacklight-frontend@>=7.1 || 8.0":
+"blacklight-frontend@>=7.1 <10.0.0":
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.11.0.tgz#bf0da92b29472d640c88170e1e39179e48d5da07"
   integrity sha512-ibtWYn9gUKJzcuQyBnUtGr1AASRl05iGwBmCibXdnZk13+96hzHLsOKbTOKq585eqN2QPc9axkO837TM5erDUA==
@@ -259,12 +259,11 @@ blacklight-frontend@^9.0.0-beta4:
     bootstrap ">=5.3.5 <6.0.0"
 
 blacklight-hierarchy@^6.1.2:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.4.0.tgz#bcc847508d80160b1bc38be74ec41a207965f34e"
-  integrity sha512-5JL8U8qhVaBy/FVG4DM9MXxpIc1bsTSqI3cEdMS3Md6emFCIThJFiTkooBiCgiumdg/QLT7oKHJxbR5kntwDZQ==
+  version "6.7.1"
+  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.7.1.tgz#585f360cf416536e291bf1b058bc351bf8bc7740"
+  integrity sha512-sYcJ+/aW4b8ir+xFy2hY3QV8b4MdCwMZYv5TFqBmg4wW3NBpLA4j54sBZtiJ6MvFMEZPvNLs+Em3lcA2vH/5NA==
   dependencies:
-    blacklight-frontend ">=7.1 || 8.0"
-    jquery ">=3.0"
+    blacklight-frontend ">=7.1 <10.0.0"
 
 blacklight-range-limit@^8.5.0:
   version "8.5.0"
@@ -364,11 +363,6 @@ is-number@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
-
-jquery@>=3.0:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
-  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
 
 leaflet@1:
   version "1.9.4"
