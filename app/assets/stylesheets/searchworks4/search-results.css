@@ -143,6 +143,7 @@ details[open] {
 
 .more_facets {
   --bs-link-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
   i {
     font-size: 0.75rem;
     -webkit-text-stroke: 0.45px;
