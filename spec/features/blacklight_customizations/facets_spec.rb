@@ -63,4 +63,20 @@ RSpec.feature "Facets Customizations" do
       expect(page).to have_no_text 'Art music'
     end
   end
+
+  scenario 'searching within a facet from the search results page', :js do
+    visit root_path(q: '', search_field: 'search')
+
+    # click on the genre facet
+    click_button 'Genre'
+
+    expect(page).to have_no_link 'Video games'
+    fill_in 'Search genre', with: 'Video'
+
+    expect(page).to have_link 'Video games'
+
+    click_link 'Video games'
+
+    expect(page).to have_css '.constraint-value', text: 'Genre Video games'
+  end
 end
