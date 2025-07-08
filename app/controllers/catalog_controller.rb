@@ -112,7 +112,6 @@ class CatalogController < ApplicationController
     config.index.facet_filters_component = Searchworks4::FacetFiltersComponent
 
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
-    config.index.display_type_field = 'format_hsim'
     config.index.thumbnail_component = ThumbnailWithIiifComponent
     config.index.thumbnail_method = :render_cover_image
     config.index.mini_bento_component = SearchResult::MiniBento::CatalogComponent
