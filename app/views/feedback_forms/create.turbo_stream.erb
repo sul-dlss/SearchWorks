@@ -1,12 +1,11 @@
 <% 
     message_text = flash.key?(:error) ?  flash[:error] : flash[:success]
     alert_class = flash.key?(:error) ? 'alert-error' : 'alert-success'
-    toast_message_text = flash.key?(:error) ? message_text : breakout_message(message_text)
     icon_class =  flash.key?(:error) ? "bi-exclamation-triangle-fill" : "bi-check-circle-fill"
 %>
 
 <%= turbo_stream.update 'toast-text' do %>
-    <i class='<%= "bi #{icon_class} me-2" %>'></i> <%= sanitize toast_message_text %>
+    <i class='<%= "bi #{icon_class} me-2" %>'></i> <%= sanitize message_text %>
 <% end %>
 
 <%  if params[:form_format] == 'standalone' %>
