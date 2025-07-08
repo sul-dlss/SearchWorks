@@ -102,6 +102,8 @@ class CatalogController < ApplicationController
       config.crawler_detector = lambda { |_| true }
     end
 
+    config.facet_search_builder_class = CustomFacetSearchBuilder
+
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
     config.index.document_component = Searchworks4::DocumentComponent
