@@ -30,3 +30,23 @@ and there is a show class then it will hide the mini bento
 .sidebar:has(.mini-bento.btn[aria-expanded="false"]) .alternate-catalog.show {
   display: none;
 }
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .offcanvas-sm-start {
+    top: 0;
+    left: 0;
+    width: var(--bs-offcanvas-width);
+    border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(-100%);
+
+    right: auto;
+    height: auto;
+    max-height: auto;
+    border-top: none;
+
+    &.showing,
+    &.show:not(.hiding) {
+      transform: none;
+    }
+  }
+}

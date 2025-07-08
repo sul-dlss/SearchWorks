@@ -1,5 +1,4 @@
 <%# locals: (content_classes: 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false) %>
-
 <% if page_location.access_point? %>
   <% if page_location.collection? && get_collection.present? %>
     <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
@@ -20,7 +19,6 @@
   <%= json_api_link_tag %>
 <% end -%>
 
-
 <h1 class="visually-hidden">Search Results</h1>
 <% if has_search_parameters? && !hide_constraints %>
   <div class="row">
@@ -29,7 +27,6 @@
     </div>
   </div>
 <% end %>
-
 <% if @response.empty? %>
   <%= render "shared/zero_results" %>
 <% else %>
@@ -38,17 +35,35 @@
   <% end %>
   <div class="row align-items-start">
     <% unless hide_facets %>
-      <div class="sidebar col-12 col-md-4 col-xxl-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
-        <%= render Facets::GroupComponent.new(id: nil, title: 'Filters',
-                                              header_classes: 'facets-heading',
-                                              body_classes: 'facets-collapse d-md-block collapse accordion') do |component| %>
-          <% component.with_body do %>
-            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group('non-collapsable'), response: @response) %>
-            <div data-facet-list-target="hideFacets" id="hidden-facets">
-              <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
-            </div>
-          <% end %>
-        <% end %>
+      <div class="sidebar col-12 col-md-4 col-xxl-3 mb-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
+        <button class="btn btn-primary d-inline-block d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-controls="offcanvas-facets">
+          <i class="bi bi-sliders" aria-hidden="true"></i> Filters
+        </button>
+
+        <div id="offcanvas-facets" class="offcanvas-md offcanvas-bottom offcanvas-sm-start">
+          <div class="offcanvas-body flex-column">
+            <%= render Facets::GroupComponent.new(id: 'top-filters', title: 'Top filters',
+                                                  container_classes: 'facets top-filters sidenav mb-md-4',
+                                                  header_classes: 'facets-heading',
+                                                  body_classes: 'accordion') do |component| %>
+              <% component.with_body do %>
+                <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group('top'), response: @response) %>
+              <% end %>
+            <% end %>
+
+            <%= render Facets::GroupComponent.new(id: 'other-filters', title: 'Other filters',
+                                                  show_button: true,
+                                                  container_classes: 'facets other-filters sidenav mb-md-4',
+                                                  header_classes: 'facets-heading',
+                                                  body_classes: 'accordion') do |component| %>
+              <% component.with_body do %>
+                <div data-facet-list-target="hideFacets" id="hidden-facets">
+                  <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
 
         <% benchmark 'Alt results' do %>
           <%= render view_config.mini_bento_component.new(close: true) if view_config.mini_bento_component %>
