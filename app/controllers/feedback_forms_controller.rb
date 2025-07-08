@@ -3,6 +3,8 @@
 ##
 # Controller used for feedback forms
 class FeedbackFormsController < ApplicationController
+  layout "searchworks4"
+
   before_action :set_form_type, only: %i[new create]
 
   def new
@@ -27,6 +29,7 @@ class FeedbackFormsController < ApplicationController
         format.html do
           redirect_to params[:url]
         end
+        format.turbo_stream
       end
     end
   end
