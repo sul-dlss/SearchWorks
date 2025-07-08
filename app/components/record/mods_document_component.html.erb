@@ -87,11 +87,5 @@
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Bibliographic information') do %>
       <%= render(Record::ModsBibliographicComponent.new(document: document)) %>
     <% end %>
-
-    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Access conditions') do %>
-      <% document.mods.accessCondition.each do |accessCondition| %>
-        <%= render ModsDisplay::FieldComponent.new(field: accessCondition, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
-      <% end %>
-    <% end %>
   <% end %>
 <% end %>
