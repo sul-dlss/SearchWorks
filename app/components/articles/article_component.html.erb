@@ -1,10 +1,4 @@
-<div class="article-record-metadata row">
-  <div class="article-record-panels col-md-4">
-    <div class="metadata-panels">
-      <%= render AccessPanels::OnlineEdsComponent.new(document: document) %>
-      <%= render AccessPanels::SfxComponent.new(document: document) %>
-    </div>
-  </div>
+<div class="article-record-metadata row align-items-start">
   <div class="article-record-sections record-sections col-md-8">
     <% if @document.html_fulltext? %>
       <div class="html-fulltext-container">
@@ -32,7 +26,7 @@
     <dl class="dl-horizontal dl-invert">
       <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
         <% if section_name == 'Summary' -%>
-          <div class="section-container-heading">
+          <div class="section-container-heading mt-4">
             <h2>About this article</h2>
           </div>
           <div class='section'>
@@ -41,7 +35,7 @@
             </div>
           </div>
         <% else -%>
-          <div class='section'>
+          <div class='section mt-4'>
             <div class='section-heading'>
               <h3 id="<%= section_name.downcase %>">
                 <%= section_name -%>
@@ -54,5 +48,11 @@
         <% end -%>
       <% end -%>
     </dl>
+  </div>
+  <div class="article-record-panels col-md-4 border-start">
+    <div class="metadata-panels">
+      <%= render AccessPanels::OnlineEdsComponent.new(document: document) %>
+      <%= render AccessPanels::SfxComponent.new(document: document) %>
+    </div>
   </div>
 </div>
