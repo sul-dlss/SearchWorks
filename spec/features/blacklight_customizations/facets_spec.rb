@@ -24,4 +24,26 @@ RSpec.feature "Facets Customizations" do
     expect(green_index).to be < music_index
     expect(music_index).to be < sdr_index
   end
+
+  scenario 'searching within a facet', :js do
+    visit facet_catalog_path('genre_ssim')
+
+    aggregate_failures do
+      expect(page).to have_css '.modal-body .input-group'
+
+      # we've added an icon and hidden the label text
+      within '.modal-body .input-group' do
+        expect(page).to have_css '.bi-search'
+        expect(page).to have_css 'input[type="text"][placeholder="Search genre"]'
+      end
+    end
+
+    fill_in 'Search genre', with: 'The'
+
+    # it does a search, and uses a facet.method that supports searching
+    aggregate_failures do
+      expect(page).to have_text 'Thesis/Dissertation'
+      expect(page).to have_no_text 'Art music'
+    end
+  end
 end

@@ -17,6 +17,8 @@ en:
           open: Filters
           close: Filters
         more_html: 'Browse all <span class="visually-hidden">%{field_name}</span> <i class="bi bi-chevron-double-right"></i>'
+        suggest:
+          label: "Search %{field_label}"
       form:
         submit_html: '<span class="visually-hidden">Search</span><span class="bi-search"></span>'
         submit: ''
