@@ -38,6 +38,11 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
 
   delegate :dig, to: :@_source
 
+  # def initialize(source, other)
+  #   debugger
+  #   super
+  # end
+
   def eds_title(default: 'This title is unavailable for guests, please login to see more information.')
     # temp. stub for testing fixtures
     return @_source['eds_title'] if @_source.key?('eds_title')
@@ -431,7 +436,9 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   end
 
   def eds_ris_export?
-    dig('exports', 'Format') == 'RIS'
+    false
+    # puts "eds_ris_export? #{self['exports'].inspect}"
+    # dig('exports', 'Format') == 'RIS'
   end
 
   def preferred_online_links

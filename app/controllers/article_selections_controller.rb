@@ -9,6 +9,7 @@ class ArticleSelectionsController < ApplicationController
   include Blacklight::Searchable
   include Blacklight::TokenBasedUser
   include SelectionsCount
+  include EdsSearchable
 
   copy_blacklight_config_from(ArticlesController)
 
@@ -24,14 +25,15 @@ class ArticleSelectionsController < ApplicationController
     @bookmarks = paged_bookmarks
     bookmark_ids = @bookmarks.collect { |b| b.document_id.to_s }
 
-    @document_list = if bookmark_ids.present?
-                       search_service.fetch(bookmark_ids)
-                     else
-                       []
-                     end
+    responses = if bookmark_ids.present?
+                  search_service.fetch(bookmark_ids)
+                else
+                  []
+                end
 
-    @response = @document_list.first&.response || OpenStruct.new(documents: @document_list, rows: @bookmarks.count, limit_value: @bookmarks.limit_value, # rubocop:disable Style/OpenStructUse
-                                                                 current_page: @bookmarks.current_page)
+    @document_list = responses.flat_map(&:documents)
+    @response = OpenStruct.new(documents: @document_list, rows: @bookmarks.count, limit_value: @bookmarks.limit_value, # rubocop:disable Style/OpenStructUse
+                               current_page: @bookmarks.current_page)
     @catalog_count = selections_counts.catalog
     @article_count = selections_counts.articles
 
@@ -84,13 +86,5 @@ class ArticleSelectionsController < ApplicationController
     unless current_or_guest_user or (action == "index" and token_or_current_or_guest_user)
       flash[:notice] = I18n.t('blacklight.bookmarks.need_login') and raise Blacklight::Exceptions::AccessDenied
     end
-  end
-
-  def search_service
-    eds_params = {
-      guest: session['eds_guest'],
-      session_token: session[Settings.EDS_SESSION_TOKEN_KEY]
-    }
-    Eds::SearchService.new(blacklight_config, params, eds_params)
   end
 end

@@ -57,7 +57,7 @@ module Eds
     # @param [Array] ids
     # @param [HashWithIndifferentAccess] extra_controller_params
     def fetch_many(ids, extra_controller_params = {})
-      @repository.find_by_ids(ids) # rubocop:disable Rails/DynamicFindBy
+      responses = @repository.find_by_ids(ids) # rubocop:disable Rails/DynamicFindBy
     end
 
     ##
