@@ -8,7 +8,7 @@ module Searchworks4
                    facet_constraint_component_options: { layout: Searchworks4::ConstraintLayoutComponent },
                    **args)
       super
-      @classes += ' gap-2'
+      @classes += ' gap-2 mt-3 mb-5'
     end
   end
 end
