@@ -36,7 +36,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   def consolidate_home_page_params(solr_params)
     return unless on_home_page?
 
-    solr_params['facet.field'] = ['access_facet', 'format_main_ssim', 'building_facet', 'language']
+    solr_params['facet.field'] = ['access_facet', 'format_hsim', 'building_facet', 'language']
     solr_params['rows'] = 0
   end
 

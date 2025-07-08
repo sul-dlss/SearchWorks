@@ -17,7 +17,7 @@ RSpec.describe SchemaDotOrg do
       SolrDocument.new(
         title_display: 'My book title',
         author_person_display: 'S. author',
-        format_main_ssim: 'Book'
+        format_hsim: 'Book'
       )
     end
 
@@ -34,7 +34,7 @@ RSpec.describe SchemaDotOrg do
       SolrDocument.new(
         title_display: 'Map title',
         author_corp_display: 'USGS',
-        format_main_ssim: 'Map'
+        format_hsim: 'Map'
       )
     end
 
@@ -51,7 +51,7 @@ RSpec.describe SchemaDotOrg do
       SolrDocument.new(
         title_display: 'Code4Lib Journal',
         author_meeting_display: 'code4lib',
-        format_main_ssim: 'Journal/Periodical'
+        format_hsim: 'Journal/Periodical'
       )
     end
 
@@ -79,7 +79,7 @@ RSpec.describe SchemaDotOrg do
   context 'a equipment' do
     let(:document) do
       SolrDocument.new(
-        format_main_ssim: ['Equipment']
+        format_hsim: ['Equipment']
       )
     end
 

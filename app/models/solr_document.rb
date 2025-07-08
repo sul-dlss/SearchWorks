@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class SolrDocument
-  FORMAT_KEY = 'format_main_ssim'
+  FORMAT_KEY = 'format_hsim'
 
   include DocumentLinks
   include DisplayType

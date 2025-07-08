@@ -8,6 +8,6 @@ all_search: Laborum id proident cupidatat nisi consequat dolor laborum dolore mo
   exercitation exercitation.
 language: Spanish
 format: Image
-format_main_ssim: Image
+format_hsim: Image
 access_facet: Online
 building_facet: Hoover Library

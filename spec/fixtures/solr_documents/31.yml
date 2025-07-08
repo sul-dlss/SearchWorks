@@ -7,7 +7,7 @@ collection_type: Digital Collection
 summary_display:
   - "A collection of fixture files from the SearchWorks development index."
 format: File
-format_main_ssim: Dataset
+format_hsim: Dataset
 modsxml: <%= mods_everything %>
 pub_date: 2010
 beginning_year_isi: 2010

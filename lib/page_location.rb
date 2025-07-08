@@ -57,8 +57,7 @@ class PageLocation
   delegate :filter, :filters, to: :@search_state
 
   def format_includes_databases?
-    filter(:format_main_ssim).include?('Database') ||
-      filter(:format).include?('Database')
+    filter(:format_hsim).include?('Database')
   end
 
   def course_reserve_parameters?

@@ -9,7 +9,7 @@ language: Chinese
 format: Book
 marc_json_struct: |
 <%= metadata1 %>
-format_main_ssim: Book
+format_hsim: Book
 imprint_display: 1788
 access_facet: At the Library
 building_facet: Law (Crown)

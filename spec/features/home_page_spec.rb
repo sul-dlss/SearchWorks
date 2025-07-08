@@ -13,7 +13,7 @@ RSpec.feature "Home Page" do
 
   scenario "facets should display" do
     expect(page).to have_title("SearchWorks catalog : Stanford Libraries")
-    expect(page).to have_css(".accordion-header", text: "Resource type")
+    expect(page).to have_css(".accordion-header", text: "Format")
     expect(page).to have_css(".accordion-header", text: "Access")
     expect(page).to have_css(".accordion-header", text: "Library")
   end

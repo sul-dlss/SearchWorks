@@ -154,7 +154,7 @@ url_restricted:
 - https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
 access_facet:
 - Online
-format_main_ssim:
+format_hsim:
 - Book
 physical:
 - '1 online resource (xxxi, 192 pages) : illustrations'

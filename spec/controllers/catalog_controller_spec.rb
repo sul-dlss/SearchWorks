@@ -75,6 +75,7 @@ RSpec.describe CatalogController do
       expect(config.facet_fields.keys).to eq [
         "access_facet",
         "format_main_ssim",
+        "format_hsim",
         "building_facet",
         "genre_ssim",
         "pub_year_tisim",
@@ -103,8 +104,8 @@ RSpec.describe CatalogController do
     end
 
     describe 'facet sort' do
-      it 'sets an index sort for the resource type facet' do
-        expect(config.facet_fields['format_main_ssim'].sort).to eq :index
+      it 'sets an index sort for the format facet' do
+        expect(config.facet_fields['format_hsim'].sort).to eq :index
       end
       it 'sets an index sort for the building type facet' do
         expect(config.facet_fields['building_facet'].sort).to eq :index
@@ -116,7 +117,7 @@ RSpec.describe CatalogController do
 
     describe "facet limits" do
       it "sets a very high facet limit on building and format" do
-        ['building_facet', 'format_main_ssim'].each do |facet|
+        ['building_facet'].each do |facet|
           expect(config.facet_fields[facet].limit).to eq 100
         end
       end

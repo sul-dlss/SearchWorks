@@ -11,6 +11,6 @@ language: English
 marc_json_struct: |
 <%= metadata1 %>
 format: Book
-format_main_ssim: Book
+format_hsim: Book
 access_facet: Online
 building_facet: Green

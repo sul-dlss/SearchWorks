@@ -7,17 +7,17 @@ RSpec.describe Extent do
   let(:no_format) { SolrDocument.new() }
   let(:single_format) {
     SolrDocument.new(
-      format_main_ssim: ['Book']
+      format_hsim: ['Book']
     )
   }
   let(:multi_format) {
     SolrDocument.new(
-      format_main_ssim: ['Database', 'Book']
+      format_hsim: ['Database', 'Book']
     )
   }
   let(:bad_format) {
     SolrDocument.new(
-      format_main_ssim: ['Book', 'Something else']
+      format_hsim: ['Book', 'Something else']
     )
   }
 

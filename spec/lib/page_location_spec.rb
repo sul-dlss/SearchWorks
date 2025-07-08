@@ -63,14 +63,14 @@ RSpec.describe PageLocation do
           end
         end
 
-        describe "new resource type facet" do
-          before { params[:f] = { format_main_ssim: ["Database"] } }
+        describe "new format facet" do
+          before { params[:f] = { format_hsim: ["Database"] } }
 
           it "is defined when a facet is selected" do
             expect(access_point).to eq :databases
           end
           it "is defined when an additional format facet is selected" do
-            params[:f][:format_main_ssim] << "Book"
+            params[:f][:format_hsim] << "Book"
             expect(access_point).to eq :databases
           end
           it "is defined when searching within selected" do
@@ -250,7 +250,7 @@ RSpec.describe PageLocation do
     subject { page_location.databases? }
 
     context "when database format is selected" do
-      let(:params) { { f: { format_main_ssim: ["Database"] } } }
+      let(:params) { { f: { format_hsim: ["Database"] } } }
 
       it { is_expected.to be true }
     end

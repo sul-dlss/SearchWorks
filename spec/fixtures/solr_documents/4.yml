@@ -8,7 +8,7 @@ title_display: Lorem aute dolor proident ullamco adipisicing cupidatat consectet
 all_search: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
 language: French
 format: Video
-format_main_ssim: Video
+format_hsim: Video
 physical: The physical statement
 marc_json_struct: |
 <%= marc_characteristics_fixture %>

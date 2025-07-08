@@ -8,7 +8,7 @@ title_sort: Selected Database 3
 title_245a_display: Selected Database 3
 language: English
 format: Database
-format_main_ssim: Database
+format_hsim: Database
 access_facet: Online
 marc_links_struct:
   - version: '0.2'

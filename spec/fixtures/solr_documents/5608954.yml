@@ -14,5 +14,5 @@ marc_links_struct:
   - version: '0.2'
     href: https://library.stanford.edu
 format: Database
-format_main_ssim: Database
+format_hsim: Database
 access_facet: Online

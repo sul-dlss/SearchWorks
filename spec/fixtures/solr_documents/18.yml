@@ -7,7 +7,7 @@ title_display: Adipisicing tempor quis ullamco enim dolore cillum velit commodo 
 all_search: Adipisicing tempor quis ullamco enim dolore cillum velit commodo qui.
 language: German
 format: Image
-format_main_ssim: Image
+format_hsim: Image
 marc_json_struct: |
 <%= uniform_title_fixture %>
 imprint_display: 1933

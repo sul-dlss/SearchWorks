@@ -24,7 +24,7 @@ module MastheadHelper
 
   def digital_collections_params_for(format = nil)
     facet_params = { f: { building_facet: ['Stanford Digital Repository'] } }
-    facet_params[:f][:format_main_ssim] = [format] if format
+    facet_params[:f][:format_hsim] = [format] if format
     search_catalog_path(facet_params)
   end
 
