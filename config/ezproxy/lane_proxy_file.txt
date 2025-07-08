@@ -423,7 +423,6 @@ data.chhs.ca.gov
 data.lilun.cn
 data.oversea.cnki.net
 database.yomiuri.co.jp
-datacatalog.med.nyu.edu
 datadryad.org
 datasets.americasbarometer.org
 daten.digitale-sammlungen.de
@@ -1280,7 +1279,6 @@ resolver.sub.uni-goettingen.de
 resource-allocation.biomedcentral.com
 resource.nlm.nih.gov
 respiratory-research.biomedcentral.com
-retractiondatabase.org
 retrovirology.biomedcentral.com
 revistas.unc.edu.ar
 revistas.usb.edu.co
@@ -2515,7 +2513,6 @@ www.science-softcon.de
 www.science.org
 www.sciencedirect.com
 www.scientificamerican.com
-www.scimagojr.com
 www.scipharm.at
 www.scirp.org
 www.scopemed.org
