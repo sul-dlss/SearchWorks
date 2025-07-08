@@ -3,8 +3,9 @@
                method:  bookmarked? ? :delete : :put,
                class: "bookmark-toggle",
                data: {
-                 controller: 'bookmark analytics',
+                 controller: 'analytics',
                  action: "turbo:submit-end->bookmark#bookmarkUpdated",
+                 bookmark_target: 'form',
                  bookmark_checked_value: bookmarked?
               }) do %>
                 <%= tag.button icon, type: 'submit', class: "btn p-1 lh-1 action-button",

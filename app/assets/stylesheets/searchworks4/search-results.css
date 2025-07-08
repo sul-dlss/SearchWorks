@@ -1,9 +1,7 @@
 .documents-list {
   .document {
     border-top: 1px solid var(--stanford-30-black);
-    margin-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-top: 1rem;
+    padding-block: 1rem;
     --bl-icon-color: var(--stanford-80-black);
   }
 }
