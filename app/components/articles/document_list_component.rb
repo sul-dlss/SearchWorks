@@ -17,6 +17,10 @@ module Articles
       original
     end
 
+    def doc_presenter
+      @doc_presenter ||= helpers.document_presenter(document)
+    end
+
     # NOTE: ideally this would override the metadata slot in Blacklight, but I'm not sure how to do that.
     def document_metadata
       render Articles::MetadataComponent.new(document: @document)
