@@ -165,7 +165,7 @@ class CatalogController < ApplicationController
                            component: Blacklight::Facets::ListComponent
     config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index,
                            component: Blacklight::Facets::ListComponent
-    config.add_facet_field "genre_ssim", label: "Genre", limit: 20,
+    config.add_facet_field "genre_ssim", label: "Genre", limit: 20, suggest: true,
                            component: Blacklight::Facets::ListComponent
     config.add_facet_field "pub_year_tisim", label: "Date", range: true,
                            range_config: {
@@ -173,10 +173,10 @@ class CatalogController < ApplicationController
                              input_label_range_end: "to year"
                            }
 
-    config.add_facet_field "language", label: "Language", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "author_person_facet", label: "Author", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "topic_facet", label: "Topic", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "geographic_facet", label: "Region", limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "language", label: "Language", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "author_person_facet", label: "Author", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "topic_facet", label: "Topic", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "geographic_facet", label: "Region", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'callnum_facet_hsim',
                            label: 'Call number',
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
@@ -210,8 +210,8 @@ class CatalogController < ApplicationController
                            component: Blacklight::Facets::ListComponent,
                            item_presenter: FolioCourseFacetItemPresenter
 
-    config.add_facet_field "era_facet", label: "Era", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "era_facet", label: "Era", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
     config.add_facet_field "format", label: "Format", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
