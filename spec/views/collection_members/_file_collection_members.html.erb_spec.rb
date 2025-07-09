@@ -24,8 +24,8 @@ RSpec.describe "collection_members/_file_collection_members" do
     expect(rendered).to have_css(".file-title a", text: "File Item")
   end
   it "includes the pub date" do
-    expect(rendered).to have_css(".file-title .main-title-date", text: "[2010]")
-    expect(rendered).to have_css(".file-title .main-title-date", text: "[2011]")
+    expect(rendered).to have_css(".main-title-date", text: "(2010)")
+    expect(rendered).to have_css(".main-title-date", text: "(2011)")
   end
   it "displays the author" do
     expect(rendered).to have_css(".file-author", text: "Mr. Bean")

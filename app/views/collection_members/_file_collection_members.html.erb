@@ -2,38 +2,51 @@
 
 <div class="collection-result-preview">
 <% if document.collection_members.present? %>
-  <div class="file-collection-members">
-    <% if @type == 'show' %>
-      <h2 class="my-3">Digital collection preview</h2>
-    <% else %>
-      <h4 class="my-2">Digital collection preview</h4>
-    <% end %>
-    <% document.collection_members[0...3].each do |collection_member| %>
-      <div class="d-flex file-item">
-        <div class="me-2 file-icon">
-          <%= render_resource_icon collection_member.document_formats %>
-        </div>
-        <div class="file-title">
-          <%= link_to(document_presenter(collection_member).heading, solr_document_path(collection_member)) %>
-          <% if collection_member[:pub_date] %>
-            <span class="main-title-date">[<%= collection_member[:pub_date] %>]</span>
+  <div class="file-collection-members mb-3">
+    <div class="d-inline-flex bg-white ms-2 px-2">
+      <% if @type == 'show' %>
+        <h2 class="mb-0">Digital collection</h2>
+      <% else %>
+        <h4 class="mb-0">Digital collection</h4>
+      <% end %>
+      <span class="ms-2 badge rounded-pill bookmark-counter align-self-center">
+        <%= pluralize(document.collection_members.total, 'item') %>
+      </span>
+      <%= link_to(collection_members_path(document), class: 'ms-2 btn btn-outline-primary') do %>
+        <i class="bi bi-search me-1"></i>Search collection
+      <% end %>
+    </div>
+    <div class="col-12 collection-members border rounded px-3 pb-2">
+      <table class="w-100">
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Type (Pub year)</th>
+            <th scope="col">Author</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% document.collection_members[0...3].each do |collection_member| %>
+            <tr class="border-bottom">
+              <td class="file-title">
+              <%= link_to(document_presenter(collection_member).heading, solr_document_path(collection_member)) %>
+              </td>
+              <td class="me-2 file-icon">
+                <%= render_resource_icon collection_member.document_formats %><span class="ms-1"><%= resource_icon_value collection_member.document_formats %></span>
+                <% if collection_member[:pub_date] %>
+                  <span class="main-title-date">(<%= collection_member[:pub_date] %>)</span>
+                <% end %>
+              </td>
+              <td>
+                <% if collection_member.authors_from_index.present? %>
+                  <span class="file-author"><%= collection_member.authors_from_index.first %></span>
+                <% end %>
+              </td>
+            </tr>
           <% end %>
-          <br/>
-          <% if collection_member.authors_from_index.present? %>
-            <span class="file-author"><%= collection_member.authors_from_index.first %></span>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="results-online-section">
-    <dl class="dl-horizontal results-metadata-section">
-      <dt><span class="online-label">Online</span></dt>
-      <dd>
-        <%= link_to(text_for_inner_members_link(document), collection_members_path(document)) %>
-      </dd>
-    </dl>
+        </tbody>
+      </table>
+    </div>
   </div>
 <% end %>
 </div>
