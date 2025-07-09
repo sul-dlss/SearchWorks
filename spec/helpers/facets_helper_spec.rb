@@ -14,7 +14,7 @@ RSpec.describe FacetsHelper do
       expect(helper.render_resource_icon(['Book', 'Image'])).to have_css('.sul-icon.blacklight-icons-photos1')
     end
     it "renders the first format icon" do
-      expect(helper.render_resource_icon(['Video', 'Image'])).to have_css('.sul-icon.blacklight-icons-film2')
+      expect(helper.render_resource_icon(['Video/Film', 'Image'])).to have_css('.sul-icon.blacklight-icons-film2')
     end
     it "renders an icon that is in Constants::SUL_ICON" do
       expect(helper.render_resource_icon(['Book'])).to have_css('.sul-icon.blacklight-icons-book1')

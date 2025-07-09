@@ -9,6 +9,8 @@ class CatalogController < ApplicationController
 
   include AdvancedSearchParamsMapping
 
+  include FormatParamsMapping
+
   include Blacklight::Catalog
 
   include Blacklight::Marc::Catalog
@@ -164,8 +166,6 @@ class CatalogController < ApplicationController
                               }
                            },
                            component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index, show: false,
-                           component: Blacklight::Facets::ListComponent
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
     config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index,
                            component: Blacklight::Facets::ListComponent
@@ -217,7 +217,6 @@ class CatalogController < ApplicationController
 
     config.add_facet_field "era_facet", label: "Era", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
     config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, suggest: true, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format", label: "Format", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'

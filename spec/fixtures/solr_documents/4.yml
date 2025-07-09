@@ -7,8 +7,7 @@ author_person_display: Cortez, Essie
 title_display: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
 all_search: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
 language: French
-format: Video
-format_hsim: Video
+format_hsim: Video/Film
 physical: The physical statement
 marc_json_struct: |
 <%= marc_characteristics_fixture %>

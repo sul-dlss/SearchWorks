@@ -74,7 +74,6 @@ RSpec.describe CatalogController do
     it "has the correct facet order" do
       expect(config.facet_fields.keys).to eq [
         "access_facet",
-        "format_main_ssim",
         "format_hsim",
         "building_facet",
         "genre_ssim",
@@ -98,7 +97,6 @@ RSpec.describe CatalogController do
         "courses_folio_id_ssim",
         "era_facet",
         "author_other_facet",
-        "format",
         "iiif_resources"
       ]
     end

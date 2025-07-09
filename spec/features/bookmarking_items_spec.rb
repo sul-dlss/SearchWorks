@@ -16,7 +16,7 @@ RSpec.feature 'Bookmarking Items', :js do
 
   describe 'adding and removing bookmarks on the search page' do
     it 'renders the page' do
-      visit search_catalog_path f: { format: ["Book"] }, view: "default"
+      visit search_catalog_path f: { format_hsim: ["Book"] }, view: "default"
 
       # Add one document to saved records
       within(first('.document')) do

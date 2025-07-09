@@ -1096,7 +1096,6 @@
         file_id,
         set,
         set_with_title,
-        format,
         format_main_ssim,
         format_hsim,
         format_physical_ssim,

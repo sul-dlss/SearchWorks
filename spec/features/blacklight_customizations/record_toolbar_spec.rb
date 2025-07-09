@@ -38,7 +38,7 @@ RSpec.feature "Record Toolbar", :js do
   context 'when coming from a search' do
     context 'with the first item in a result' do
       it 'does not have a previous pagination button' do
-        visit search_catalog_path f: { format: ['Book'] }
+        visit search_catalog_path f: { format_hsim: ['Book'] }
         within(first('.document')) do
           find('h3.index_title a').click
         end
@@ -49,7 +49,7 @@ RSpec.feature "Record Toolbar", :js do
 
     context 'with the second item in a result' do
       it "has back to search and pagination" do
-        visit search_catalog_path f: { format: ["Book"] }
+        visit search_catalog_path f: { format_hsim: ["Book"] }
 
         # Specifically trying to not get the first item in the results
         within '.document-position-2' do

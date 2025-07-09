@@ -14,6 +14,13 @@ RSpec.feature "Facets Customizations" do
     expect(db_index).to be < image_index
   end
 
+  scenario 'mapping from the old format_main_ssim to the new format_hsim' do
+    visit root_path(f: { format_main_ssim: ['Music recording'] })
+
+    expect(page).to have_css '.document', count: 1
+    expect(page).to have_css '.document .index_title', text: 'Best Album Every'
+  end
+
   scenario 'library facet is index sorted (not count)' do
     visit root_path
 
