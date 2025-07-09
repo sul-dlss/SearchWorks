@@ -40,14 +40,11 @@ module Eds
                                            blacklight_config:)
     end
 
-    def eds_find(id, params)
+    def eds_find(id, _params)
       dbid = id.split('__', 2).first
       accession_number = id.split('__', 2).last.gsub('%2F', '/')
       record = connection.retrieve(dbid:, accession_number: accession_number)
-      blacklight_config.response_model.new(record,
-                                           params,
-                                           document_model: blacklight_config.document_model,
-                                           blacklight_config:)
+      blacklight_config.document_model.new(record)
     end
 
     def build_connection
