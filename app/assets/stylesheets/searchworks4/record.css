@@ -114,6 +114,9 @@
   .nav-link {
     --bs-nav-link-padding-y: 0.25rem;
     --bs-nav-link-padding-x: var(--item-padding-x);
+    i {
+      vertical-align: middle;
+    }
   }
 }
 
