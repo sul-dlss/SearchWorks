@@ -49,9 +49,10 @@
         </div>
 
         <% if document.mods? %>
-          <dl>
-            <%= render SummaryDataComponent.new(document:) %>
-          </dl>
+          <ul class="document-metadata list-unstyled truncate-2">
+            <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
+          </ul>
+          <%= render SummaryDataComponent.new(document:) %>
         <% else %>
           <ul class="document-metadata list-unstyled">
             <% %i[creator corporate_author meeting].each do |target| %>
