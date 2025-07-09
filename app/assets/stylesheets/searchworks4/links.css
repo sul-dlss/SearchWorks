@@ -21,9 +21,3 @@
   --bs-link-decoration: none;
 }
 
-/* Pending https://github.com/sul-dlss/component-library/pull/171/files */
-a:not(.btn),
-.btn-link {
-  text-decoration: var(--bs-link-decoration);
-  -webkit-text-decoration: var(--bs-link-decoration);
-}
