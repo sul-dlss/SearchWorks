@@ -6,7 +6,8 @@ layer(framework);
 @import url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-07-02/styles/sul.css")
 layer(components);
 
-@import "blacklight-hierarchy/app/assets/stylesheets/blacklight/hierarchy/hierarchy.scss";
+@import url("https://cdn.jsdelivr.net/npm/blacklight-hierarchy@6.7.1/app/assets/stylesheets/blacklight/hierarchy/hierarchy.css")
+layer(framework);
 
 @import url("searchworks4/alerts.css") layer(local);
 @import url("searchworks4/availability-icons.css") layer(local);
