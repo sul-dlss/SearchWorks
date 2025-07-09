@@ -42,7 +42,7 @@ RSpec.feature "Course Reserve Access Point", :js do
     fill_in 'search', with: ''
     expect(page).to have_content '1 - 20 of 53'
 
-    click_button "Sort by Course ID"
+    click_button "Sort by course ID"
     click_link "description"
     expect(page).to have_content 'Alpha course'
   end
