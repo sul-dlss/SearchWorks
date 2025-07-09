@@ -37,9 +37,10 @@ module Searchworks4
     class LocationComponent < ViewComponent::Base
       attr_reader :location, :document
 
-      def initialize(location:, document:, suppress_off_campus: true)
+      def initialize(location:, document:, classes: ['text-nowrap'], suppress_off_campus: true)
         @location = location
         @document = document
+        @classes = classes
         @suppress_off_campus = suppress_off_campus
         super
       end
@@ -55,11 +56,11 @@ module Searchworks4
       def call
         if stackmappable?
           analytics = { action: "click->analytics#trackLink", controller: "analytics", analytics_category_value: "item_location" }
-          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger', **analytics }, class: 'stackmap-find-it location-name text-nowrap' do
+          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger', **analytics }, class: @classes + ['stackmap-find-it location-name'] do
             tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
           end
         else
-          tag.span location.name, class: 'location-name text-nowrap'
+          tag.span location.name, class: @classes + ['location-name']
         end
       end
     end

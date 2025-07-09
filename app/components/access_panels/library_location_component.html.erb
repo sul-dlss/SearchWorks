@@ -1,6 +1,6 @@
 <div class="location suppress-item-level-request-button-if-there-is-a-location-level-request-button">
   <div class="my-2 d-flex justify-content-between align-items-center" data-availability-target="location">
-    <h4 class="fs-15 mb-0"><%= render Searchworks4::PhysicalAvailabilityComponent::LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></h4>
+    <h4 class="fs-15 mb-0"><%= render Searchworks4::PhysicalAvailabilityComponent::LocationComponent.new(location: location, document: document, classes: [], suppress_off_campus: false) %></h4>
     <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link py-0]) %>
   </div>
 
