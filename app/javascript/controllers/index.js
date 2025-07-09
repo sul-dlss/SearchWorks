@@ -52,6 +52,9 @@ application.register("copy-text", CopyTextController)
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
+import DatabaseAutocompleteController from "./database_autocomplete_controller"
+application.register("database-autocomplete", DatabaseAutocompleteController)
+
 import EagerLazyController from "./eager_lazy_controller"
 application.register("eager-lazy", EagerLazyController)
 
