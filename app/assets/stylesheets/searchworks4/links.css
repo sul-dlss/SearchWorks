@@ -26,4 +26,9 @@ a:not(.btn),
 .btn-link {
   text-decoration: var(--bs-link-decoration);
   -webkit-text-decoration: var(--bs-link-decoration);
+
+  &:hover {
+    text-decoration: var(--bs-link-hover-decoration);
+    -webkit-text-decoration: var(--bs-link-hover-decoration);
+  }
 }
