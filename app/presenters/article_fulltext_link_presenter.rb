@@ -25,7 +25,7 @@ class ArticleFulltextLinkPresenter
   delegate :html?, to: :format
 
   def online_label
-    "<span class='online-label'>Full text</span>"
+    '<span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span>'.html_safe
   end
 
   def stanford_only_icon

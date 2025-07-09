@@ -47,6 +47,7 @@
 
         <div id="offcanvas-facets" class="offcanvas-md offcanvas-bottom offcanvas-sm-start">
           <div class="offcanvas-body flex-column">
+            <%= render 'facet_header' %>
             <%= render Facets::GroupComponent.new(id: 'top-filters', title: 'Top filters',
                                                   container_classes: 'facets top-filters sidenav mb-md-4',
                                                   header_classes: 'facets-heading',

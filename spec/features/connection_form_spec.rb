@@ -9,6 +9,7 @@ RSpec.feature 'Connection form (js)', :js do
   end
 
   scenario 'connection form should be shown filled out and submitted' do
+    skip 'SW4.0 redesign does not have this link yet'
     skip('Passes locally, not on Travis.') if ENV['CI']
     find('.connection-problem').click
     expect(page).to have_css('#connection-form', visible: true)
@@ -37,6 +38,7 @@ RSpec.feature 'Connection form (no js)' do
   end
 
   scenario 'connection form should be shown filled out and submitted' do
+    skip 'SW4.0 redesign does not have this link yet'
     find('.connection-problem').click
     expect(page).to have_css('#connection-form', visible: true)
     within 'form.feedback-form' do

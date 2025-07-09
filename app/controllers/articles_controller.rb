@@ -2,7 +2,7 @@
 
 # ArticleController is the controller for Article Search
 class ArticlesController < ApplicationController
-  layout proc { |controller| controller.action_name != 'index' || controller.has_search_parameters? ? "searchworks" : "searchworks4" }
+  layout 'searchworks4'
 
   include Blacklight::Catalog
   include Blacklight::Configurable
@@ -56,7 +56,7 @@ class ArticlesController < ApplicationController
   Blacklight::ActionBuilder.new(self, :citation, {}).build
 
   configure_blacklight do |config|
-    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+    # config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
 
     # Class for sending and receiving requests from a search index
     config.repository_class = Eds::Repository
@@ -68,7 +68,6 @@ class ArticlesController < ApplicationController
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexEdsDocumentPresenter
     config.index.document_component = Articles::DocumentListComponent
-    config.index.facet_group_component = Articles::Response::FacetGroupComponent
     config.index.mini_bento_component = SearchResult::MiniBento::ArticleComponent
     config.index.constraints_component = Searchworks4::ConstraintsComponent
 
@@ -196,9 +195,9 @@ class ArticlesController < ApplicationController
     # Facet field configuration
     # Setting `if: false` for the limiters facet so the facet does not render as
     # a facet but we still can apploy our configured label to the breadcrumbs
-    config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false, eds_limiter: true
-    config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true, eds_limiter: true
-    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SourceType'
+    config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false, eds_limiter: true, group: 'top'
+    config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true, eds_limiter: true, group: 'top'
+    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SourceType', group: 'top'
     config.add_facet_field 'eds_language_facet', label: 'Language', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Language'
     config.add_facet_field 'eds_subject_topic_facet', label: 'Topic', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectEDS'
     config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectGeographic'
