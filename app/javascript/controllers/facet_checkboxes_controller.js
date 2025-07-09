@@ -24,6 +24,6 @@ export default class extends Controller {
   toggleLink(e) {
     this.revealLoadingIndicator();
     this.disableItems();
-    e.target.parentElement.querySelector('input[type="checkbox"]').checked = e.target.dataset.newstate;
+    if (e.target.dataset.newstate) e.target.parentElement.querySelector('input[type="checkbox"]').checked = e.target.dataset.newstate;
   }
 }

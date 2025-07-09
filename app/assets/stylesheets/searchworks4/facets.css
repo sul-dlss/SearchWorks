@@ -131,3 +131,12 @@ and there is a show class then it will hide the mini bento
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.facet-options {
+  .digital-collections {
+    --bs-link-color-rgb: var(--stanford-cardinal-rgb);
+    --bs-link-hover-color-rgb: var(--stanford-cardinal-rgb);
+    color: var(--stanford-cardinal);
+    --bs-link-decoration: none;
+  }
+}

@@ -17,10 +17,10 @@ class PageLocation
                         :course_reserve
                       when collection_parameters?
                         :collection
-                      when digital_collections_parameters?
-                        :digital_collections
                       when sdr_parameters?
                         :sdr
+                      when digital_collections_parameters?
+                        :digital_collections
                       when dissertation_theses_parameters?
                         :dissertation_theses
                       when bookplate_fund_parameters?
@@ -46,6 +46,10 @@ class PageLocation
 
   def sdr?
     access_point == :sdr
+  end
+
+  def digital_collections?
+    access_point == :digital_collections
   end
 
   def collection?
