@@ -9,6 +9,14 @@
   }
 }
 
+.facet-field-heading .accordion-button:not(.collapsed) {
+  background-color: var(--bs-body-bg);
+}
+
+.facet-limit-active .facet-field-heading .accordion-button {
+  background-color: var(--bs-tertiary-bg);
+}
+
 /* TODO: Remove after we have https://github.com/sul-dlss/blacklight-hierarchy/pull/103 */
 .toggle-handle {
   .closed {
