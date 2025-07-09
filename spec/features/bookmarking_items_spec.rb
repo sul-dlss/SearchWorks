@@ -23,28 +23,28 @@ RSpec.feature 'Bookmarking Items', :js do
         click_button 'Save record'
       end
 
-      expect(page).to have_content('Saved to bookmarks')
+      expect(page).to have_content('Record saved')
 
       # Add another document to saved records
       within(first('.document:nth-child(2)')) do
         click_button 'Save record'
       end
 
-      expect(page).to have_content('Saved to bookmarks')
+      expect(page).to have_content('Record saved')
 
       # Remove the second document from saved records
       within(first('.document:nth-child(2)')) do
         click_button('Remove from saved records')
       end
 
-      expect(page).to have_content('Removed from bookmarks')
+      expect(page).to have_content('Record removed')
 
       # Add another document to saved records
       within(all('.document').last) do
         click_button 'Save record'
       end
 
-      expect(page).to have_content('Saved to bookmarks')
+      expect(page).to have_content('Record saved')
 
       visit bookmarks_path
 
@@ -77,7 +77,7 @@ RSpec.feature 'Bookmarking Items', :js do
         click_button('Remove from saved records')
       end
 
-      expect(page).to have_content('Removed from bookmarks')
+      expect(page).to have_content('Record removed')
 
       expect(page).to have_css('.active .bookmark-counter', text: '2')
       expect(page).to have_css('.bookmark-counter', text: '0')

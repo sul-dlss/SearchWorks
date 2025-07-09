@@ -19,9 +19,7 @@ RSpec.describe Eds::Repository do
   end
 
   it '#find' do
-    session = instance_double(Eds::Session,
-                              retrieve: instance_double(EdsDocument)
-                             )
+    session = instance_double(Eds::Session, retrieve: {})
     expect(Eds::Session).to receive(:new).and_return(session)
     expect(instance.find('123__abc')).to be_truthy
     expect(instance.find('123__abc__def')).to be_truthy

@@ -42,9 +42,9 @@ export default class extends Controller {
     const toast = document.getElementById('toast')
     const toastText = toast.querySelector('.toast-text')
     if (added) {
-      toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Saved to bookmarks'
+      toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
     } else {
-      toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Removed from bookmarks'
+      toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
     bootstrap.Toast.getOrCreateInstance(toast).show()
   }

@@ -30,8 +30,8 @@ class ArticleSelectionsController < ApplicationController
                        []
                      end
 
-    @response = @document_list.first&.response || OpenStruct.new(documents: @document_list, rows: @bookmarks.count, limit_value: @bookmarks.limit_value, # rubocop:disable Style/OpenStructUse
-                                                                 current_page: @bookmarks.current_page)
+    @response = OpenStruct.new(documents: @document_list, rows: @bookmarks.count, limit_value: @bookmarks.limit_value, # rubocop:disable Style/OpenStructUse
+                               current_page: @bookmarks.current_page)
     @catalog_count = selections_counts.catalog
     @article_count = selections_counts.articles
 

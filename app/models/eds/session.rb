@@ -33,13 +33,7 @@ module Eds
         {}
       end
 
-      {
-        'SearchResult' => {
-          'Data' => {
-            'Records' => [record.merge('exports' => exports, 'styles' => styles)]
-          }
-        }
-      }
+      record.merge('exports' => exports, 'styles' => styles)
     end
 
     def citation_exports(dbid:, accession_number:, format: 'all')
