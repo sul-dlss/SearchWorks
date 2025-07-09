@@ -11,18 +11,21 @@
                 action: "turbo:submit-end->email-sent#done"
               }  do %>
     <div class="modal-body">
-      <div class="p-4">
-        <%= render 'shared/email_form' %>
-        <% @documents&.each do |doc| %>
-          <%= hidden_field_tag "id[]", doc.id %>
-        <% end %>
-        <%- if params[:sort] -%>
-          <%= hidden_field_tag "sort", params[:sort] %>
-        <%- end -%>
-        <%- if params[:per_page] -%>
-          <%= hidden_field_tag "per_page", params[:per_page] %>
-        <%- end -%>
-      </div>
+      <% if @documents.one? %>
+        <div class="p-4">
+          <div class="fw-bold">Send</div>
+          <div class="form-check form-check-inline mb-3">
+            <%= radio_button_tag :type, 'full', true, class: 'form-check-input' %> <%= label_tag(:type_full, "Full record", class: 'form-check-label') %>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <%= radio_button_tag :type, 'brief', class: 'form-check-input' %> <%= label_tag(:type_brief,  "Brief (title, call number, and library location)", class:'form-check-label') %>
+          </div>
+          <%= render 'shared/email_form', documents: @documents %>
+        </div>
+      <% else %>
+        <%= render 'shared/email_form', documents: @documents %>
+      <% end %>
     </div>
     <div class="modal-footer">
       <button type="button" data-bl-dismiss="modal" class="btn btn-outline-primary">Cancel</button>
