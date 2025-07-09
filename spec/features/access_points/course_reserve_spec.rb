@@ -47,21 +47,22 @@ RSpec.feature "Course Reserve Access Point", :js do
     expect(page).to have_content 'Alpha course'
   end
 
-  describe "visiting a result page", skip: "Still pending new design" do
+  describe "visiting a result page" do
     before do
       create(:reg_course)
       visit search_catalog_path({ f: { courses_folio_id_ssim: ['00254a1b-d0f5-4a9a-88a0-1dd596075d08'] } })
     end
 
     it "displays the Access point masthead" do
-      expect(page).to have_title("Course reserves in SearchWorks catalog")
-      within("#masthead") do
-        expect(page).to have_css("h1", text: 'Course reserve list: ENGLISH-17Q-01')
-        expect(page).to have_css("dt", text: 'Instructor')
-        expect(page).to have_css("dd", text: 'Melissa Stevenson')
-        expect(page).to have_css("dt", text: 'Course')
-        expect(page).to have_css("dd", text: "ENGLISH-17Q-01 -- After 2001: A 21st Century Science Fiction Odyssey")
+      expect(page).to have_title "Course reserves in SearchWorks catalog"
+      within(".search-area-bg") do
+        expect(page).to have_css "h1", text: 'Course reserves Course(s)'
+        expect(page).to have_css "h2", text: "ENGLISH-17Q-01 -- After 2001: A 21st Century Science Fiction Odyssey"
+        expect(page).to have_content 'Melissa Stevenson'
       end
+
+      expect(page).to have_link "Find reserve list for another course"
+
       within("#content") do
         expect(page).to have_css(".document", count: 1)
       end
