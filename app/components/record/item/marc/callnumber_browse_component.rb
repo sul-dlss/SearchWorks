@@ -22,7 +22,7 @@ module Record
         def link_to_callnumber_browse(spine, index = 0)
           button_tag(
             spine.base_callnumber,
-            class: "btn btn-secondary #{'active' if index.zero?}",
+            class: "btn #{'active' if index.zero?}",
             id: "callnumber-browse-#{index}",
             type: "button",
             role: "tab",

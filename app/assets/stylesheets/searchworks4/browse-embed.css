@@ -1,0 +1,23 @@
+.embed-callnumber-browse-container {
+  .gallery {
+    .gallery-document {
+      --bs-border-radius: 0.25rem;
+      --bs-border-color: var(--stanford-20-black);
+
+      border-radius: 0.25rem;
+      margin-left: 0.375rem;
+      margin-right: 0.375rem;
+      margin-bottom: 0;
+
+      &:hover {
+        --bs-border-color: var(--stanford-80-black);
+        box-shadow: var(--bs-box-shadow);
+      }
+
+      &.current-document {
+        --bs-border-color: var(--stanford-cardinal);
+        box-shadow: var(--bs-box-shadow);
+      }
+    }
+  }
+}

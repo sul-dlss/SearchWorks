@@ -3,6 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="gallery-preview"
 export default class extends Controller {
   static values = {
+    actionsSelector: String,
     id: String,
     url: String,
     previewSelector: String
@@ -35,8 +36,7 @@ export default class extends Controller {
 
     this.appendPointer()
 
-    this.buttonTarget.textContent = 'Close'
-    this.buttonTarget.classList.add('preview-open')
+    this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
 
     this.attachPreviewEvents()
   }
@@ -90,22 +90,33 @@ export default class extends Controller {
   }
 
   attachPreviewEvents() {
+    this.previewTarget.addEventListener('turbo:frame-load', () => {
+      this.hideDocumentActions()
+    })
     this.closeBtn.addEventListener('click', () => {
       this.closePreview()
     })
   }
 
+  hideDocumentActions() {
+    const actionsElement = this.previewTarget.querySelector(this.actionsSelectorValue)
+    if (actionsElement) {
+      actionsElement.classList.remove('d-flex')
+      actionsElement.classList.add('d-none')
+    }
+  }
+
   closePreview() {
     this.previewTarget.classList.remove('preview')
-    this.buttonTarget.classList.remove('preview-open')
+    this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
+    this.buttonTarget.classList.add('bi-chevron-down')
     this.previewTarget.style.display = 'none'
-    this.buttonTarget.textContent = 'Preview'
   }
 
   itemsPerRow() {
-    const itemWidth = this.element.offsetWidth + 10
-    const width = $('#documents').width()
-    return Math.floor(width/itemWidth)
+    const itemWidth = this.element.getBoundingClientRect().width + 16;
+    const documentsWidth = document.getElementById('documents').getBoundingClientRect().width;
+    return Math.floor(documentsWidth/itemWidth)
   }
 
   // Depending on how narrow the screen is, we may need to move the preview div location.
