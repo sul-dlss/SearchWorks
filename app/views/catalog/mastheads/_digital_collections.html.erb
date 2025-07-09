@@ -1,8 +1,8 @@
 <%= render Masthead::LayoutComponent.new do |component| %>
-  <% component.with_header { 'Digital collections' } %>
+  <% component.with_header { 'Stanford digital collections' } %>
 
   <% component.with_search do %>
-    <div class="fs-5">Search by title, author (individual or organization)</div>
+    <div class="fs-5">Search by title, author or format</div>
     <%= render HomepageSearchComponent.new url: search_action_url,
                                       advanced_search_url: search_action_url(action: 'advanced_search'),
                                       params: search_state.params_for_search.except(:qt),
@@ -10,22 +10,10 @@
   <% end %>
 
   <% component.with_aside do %>
-    <h2>About digital collections</h2>
-    <p>These results describe collections of digital content — archives, donations, and grouped materials — in the Stanford Digital Repository. Use <b>Explore this collection</b> to find and filter the items within each collection.</p>
-
-    <div class="d-flex gap-4">
-      <div class="col">
-        <%= link_to 'All digital items', digital_collections_params_for %>
-        <p>Find all items and collections in the SDR. Filter by images, maps, data, and more.</p>
-      </div>
-      <div class="col">
-        <%= link_to 'IIIF resources', search_catalog_path(f: {iiif_resources: ['available'] })  %>
-        <p>Find IIIF-compatible items in the SDR.</p>
-      </div>
-      <div class="col">
-        <%= link_to("More about the SDR", "https://library.stanford.edu/research/stanford-digital-repository")%>
-        <p>Stanford Libraries' managed repository for scholarly content of enduring value.</p>
-      </div>
-    </div>
+    <h2>About the Stanford Digital Repository</h2>
+    <p>The Stanford Digital Repository supports the management of scholarly information resources of enduring value to Stanford University. Search results may include individual digital items or curated collections -- or organized groupings of related materials, often based on shared provenance, subject, donor, or archival source.
+    </p>
+    <p>        <a class="btn btn-primary" href="https://sdr.library.stanford.edu/">More information</a></p>
+    <p class="fw-semibold">Promote and protect your scholarship <a href="https://sdr.stanford.edu/" class="fw-normal ms-2">Submit materials <i class="bi bi-arrow-up-right"></i></a>
   <% end %>
 <% end %>

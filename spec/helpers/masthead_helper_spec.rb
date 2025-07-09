@@ -34,14 +34,15 @@ RSpec.describe MastheadHelper do
     end
   end
 
-  describe '#digital_collections_params_for' do
-    it 'alwayses include "Stanford Digital Repository" in the building facet' do
-      expect(digital_collections_params_for).to match /building_facet.*Stanford\+Digital\+Repository/
-      expect(digital_collections_params_for('something')).to match /building_facet.*Stanford\+Digital\+Repository/
+  describe '#sdr_path' do
+    it 'always include "Stanford Digital Repository" in the building facet' do
+      expect(sdr_path).to match /building_facet.*Stanford\+Digital\+Repository/
     end
-    it 'includes the given parameter as the format_hsim' do
-      expect(digital_collections_params_for).not_to match /format_hsim/
-      expect(digital_collections_params_for('something')).to match /format_hsim.*something/
+  end
+
+  describe '#digital_collection_path' do
+    it 'always include "Digital Collection" in the collection_type facet' do
+      expect(digital_collection_path).to match /collection_type.*Digital\+Collection/
     end
   end
 

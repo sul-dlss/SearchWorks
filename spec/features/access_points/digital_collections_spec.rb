@@ -12,10 +12,9 @@ RSpec.describe 'Digital Collections Access Point' do
 
   it 'includes the digital collections masthead' do
     within(".search-masthead") do
-      expect(page).to have_css('h1', text: 'Digital collections')
-      expect(page).to have_css('a', text: 'All digital items')
-      expect(page).to have_css('a', text: 'IIIF resources')
-      expect(page).to have_css('a', text: 'More about the SDR')
+      expect(page).to have_css('h1', text: 'Stanford digital collections')
+      expect(page).to have_css('a', text: 'More information')
+      expect(page).to have_css('a', text: 'Submit materials')
     end
   end
 end

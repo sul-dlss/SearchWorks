@@ -22,9 +22,13 @@ module MastheadHelper
     ['0-9', ('A'..'Z').to_a].flatten
   end
 
-  def digital_collections_params_for(format = nil)
+  def sdr_path
     facet_params = { f: { building_facet: ['Stanford Digital Repository'] } }
-    facet_params[:f][:format_hsim] = [format] if format
+    search_catalog_path(facet_params)
+  end
+
+  def digital_collection_path
+    facet_params = { f: { collection_type: ['Digital Collection'] } }
     search_catalog_path(facet_params)
   end
 
