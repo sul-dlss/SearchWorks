@@ -24,14 +24,11 @@ module LocationFacet
       Folio::Types.libraries.values.find { it['name'].start_with?(name) || it['name'].sub(' Library', '').start_with?(name) }&.fetch('code')
     end
 
-    if library_codes.first
-      new_state = search_state.add_facet_params_and_redirect('library', library_codes.first)
+    return unless library_codes.first
 
-      redirect_to search_catalog_path(new_state.to_h)
-    else
-      # Best we can do is remove the facet.
-      redirect_to search_catalog_path(q: params[:q], f: params[:f])
-    end
+    new_state = search_state.add_facet_params_and_redirect('library', library_codes.first)
+
+    redirect_to search_catalog_path(new_state.to_h)
   end
 
   def add_location_facet
