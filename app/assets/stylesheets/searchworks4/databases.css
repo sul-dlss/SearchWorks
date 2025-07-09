@@ -6,3 +6,9 @@
     }
   }
 }
+
+#search-suggestions mark {
+  padding: 0;
+  font-weight: bold;
+  background-color: transparent;
+}
