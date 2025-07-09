@@ -174,7 +174,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
     config.add_facet_field "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
                             helper_method: :translate_library_code,
-                           component: Blacklight::Facets::ListComponent
+                            component: Searchworks4::LibraryFacetComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
                            component: Searchworks4::FacetSearchComponent
     config.add_facet_field "pub_year_tisim", label: "Date", range: true,
