@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class ArticleSelectionsController < ApplicationController
-  layout 'searchworks4'
-
   include Blacklight::Catalog
   include Blacklight::Configurable
   include Blacklight::SearchContext

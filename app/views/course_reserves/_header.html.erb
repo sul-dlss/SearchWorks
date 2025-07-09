@@ -1,0 +1,34 @@
+<%= render Masthead::LayoutComponent.new(classes: 'course-reserves-search-area-bg') do |component| %>
+  <% component.with_header { 'Course reserves' } %>
+
+  <% component.with_search do %>
+    <div>Search by course ID, description, or instructor</div>
+    <search>
+      <div class="search-query-form col-md-12 col-lg-8">
+        <div class="input-group">
+          <label class="visually-hidden" for="q">search for</label>
+          <input placeholder="e.g. BIO-86, Cell Biology or John Smith" class="search-q q form-control " aria-label="search for"
+            type="search" name="q" id="q" autocomplete="off" data-action="course-reserves#search">
+
+          <button class="btn btn-primary search-btn" type="button" id="search"><span class="submit-search-text">Search</span></button>
+        </div>
+      </div>
+    </search>
+  <% end %>
+
+  <% component.with_aside do %>
+      <heading class="h3"">About course reserves</heading>
+      <p class="mt-2">Course reserve materials are items that the library holds aside for a class,
+        such as books, licensed electronic resources, or media. These items are shared among everyone in the class,
+        and each student has a limited period of time to use them. The borrowing duration is determined by the
+        instructors and may vary from a few hours to a few days. Renewals are not permitted.</p>
+      <%= link_to "More information", "https://library.stanford.edu/services/course-reserves", class: 'btn btn-primary btn-sm mb-4' %>
+
+      <div class="d-flex flex-wrap">
+        <span class="fw-semibold text-nowrap me-3">For instructors:</span>
+        <ul class="list-inline d-inline">
+          <li class="list-inline-item me-3 text-nowrap"><a href="https://reserves.stanford.edu">Request course reserves <span class="bi-arrow-up-right"></span></a></li>
+        </ul>
+      </div>
+  <% end %>
+<% end %>
