@@ -74,7 +74,6 @@ class ArticlesController < ApplicationController
 
     config.index.title_field = :eds_title
     config.index.show_link = 'eds_title'
-    config.index.display_type_field = 'eds_publication_type'
     config.index.fulltext_links_field = 'eds_fulltext_links'
     config.index.search_field_mapping = { # Article -> Catalog
       search:   :search,
@@ -139,7 +138,6 @@ class ArticlesController < ApplicationController
 
     config.show.html_title = 'eds_title'
     config.show.heading = 'eds_title'
-    config.show.display_type_field = 'eds_publication_type'
     config.show.pub_date = 'eds_publication_date'
     config.show.pub_info = 'eds_publisher_info'
     config.show.abstract = 'eds_abstract'

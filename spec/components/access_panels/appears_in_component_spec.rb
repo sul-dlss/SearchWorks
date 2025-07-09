@@ -18,7 +18,7 @@ RSpec.describe AccessPanels::AppearsInComponent, type: :component do
   context 'when the document is a set member and has a parent set' do
     let(:document) { SolrDocument.new(id: 'abc123', set: ['set1']) }
     let(:set_documents) do
-      [{ id: 'abc123', format_main_ssim: 'Map', title_display: 'The Set Object' }]
+      [{ id: 'abc123', format_hsim: 'Map', title_display: 'The Set Object' }]
     end
 
     it 'renders a panel heading' do

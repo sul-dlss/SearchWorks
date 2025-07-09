@@ -38,6 +38,10 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
 
   delegate :dig, to: :@_source
 
+  def document_formats
+    eds_publication_type
+  end
+
   def eds_title(default: 'This title is unavailable for guests, please login to see more information.')
     # temp. stub for testing fixtures
     return @_source['eds_title'] if @_source.key?('eds_title')

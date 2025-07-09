@@ -3,15 +3,22 @@
 require 'rails_helper'
 
 RSpec.feature "Facets Customizations" do
-  scenario 'resource type is index sorted (not count)' do
+  scenario 'format is index sorted (not count)' do
     visit root_path
 
-    book_index  = facet_index(facet_name: 'facet-format_main_ssim', value: 'Book')
-    db_index    = facet_index(facet_name: 'facet-format_main_ssim', value: 'Database')
-    image_index = facet_index(facet_name: 'facet-format_main_ssim', value: 'Image')
+    book_index  = facet_index(facet_name: 'facet-format_hsim', value: 'Book')
+    db_index    = facet_index(facet_name: 'facet-format_hsim', value: 'Database')
+    image_index = facet_index(facet_name: 'facet-format_hsim', value: 'Image')
 
     expect(book_index).to be < db_index
     expect(db_index).to be < image_index
+  end
+
+  scenario 'mapping from the old format_main_ssim to the new format_hsim' do
+    visit root_path(f: { format_main_ssim: ['Music recording'] })
+
+    expect(page).to have_css '.document', count: 1
+    expect(page).to have_css '.document .index_title', text: 'Best Album Every'
   end
 
   scenario 'library facet is index sorted (not count)' do

@@ -9,11 +9,9 @@ RSpec.describe PresenterFormat do
     end.new
   end
 
-  let(:document) { { format_field: ['ABC'] } }
+  let(:document) { SolrDocument.new(format_hsim: ['ABC']) }
 
   before do
-    config = double('BlacklightConfig', index: double(display_type_field: :format_field))
-    expect(presenter).to receive(:configuration).and_return(config)
     expect(presenter).to receive(:document).and_return(document)
   end
 
@@ -24,8 +22,8 @@ RSpec.describe PresenterFormat do
   end
 
   context 'when the field is not present' do
-    let(:document) { {} }
+    let(:document) { SolrDocument.new }
 
-    it { expect(presenter.formats).to be_nil }
+    it { expect(presenter.formats).to eq [] }
   end
 end

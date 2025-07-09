@@ -32,7 +32,7 @@
         <section class="home-page-facets facets sidenav">
           <h2 class="h3 facets-heading">Browse by</h2>
           <div class="accordion" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
-            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
+            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_hsim', 'building_facet').values, response: @response)%>
           </div>
         </section>
       </div>

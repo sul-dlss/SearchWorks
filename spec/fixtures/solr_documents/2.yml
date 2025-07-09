@@ -5,7 +5,7 @@ title_display: Another object
 all_search: Another object
 author_person_display: "Doe, John"
 format: Image
-format_main_ssim: Image
+format_hsim: Image
 language: English
 pub_date: 2013
 pub_year_tisim: 2013

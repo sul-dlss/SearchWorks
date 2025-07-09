@@ -284,7 +284,10 @@ module Constants
     'Newspaper' => Icons::Newspaper2Component,
     'Software/Multimedia' => Icons::Mouse2Component,
     'Sound recording' => Icons::Microphone2Component,
-    'Video' => Icons::Film2Component,
+    'Video' => Icons::Film2Component, # old format_main_ssim value
+    'Video/Film' => Icons::Film2Component,
+    # Video game
+    # Website
     'Credits' => Icons::Contacts1Component,
     'Subjects' => Icons::Tags1Component,
     'Contents' => Icons::List4Component,

@@ -10,6 +10,6 @@ language: Russian
 marc_json_struct: |
 <%= metadata1 %>
 format: Image
-format_main_ssim: Image
+format_hsim: Image
 access_facet: Online
 building_facet: "SAL1&2 (on-campus shelving)"

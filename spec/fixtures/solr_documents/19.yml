@@ -8,7 +8,7 @@ all_search: Ullamco laborum veniam non esse duis nisi.
 title_sort: Ullamco laborum veniam non esse duis nisi.
 language: Russian
 format: Database
-format_main_ssim: Database
+format_hsim: Database
 db_az_subject: History
 access_facet: At the Library
 building_facet: Green

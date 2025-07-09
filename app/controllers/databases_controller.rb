@@ -19,7 +19,7 @@ class DatabasesController < ApplicationController
     config.add_search_field('search')
     config.view.delete(:gallery)
 
-    config.default_solr_params[:fq] = ['format_main_ssim:Database']
+    config.default_solr_params[:fq] = ['format_hsim:Database']
   end
 
   before_action only: :index do

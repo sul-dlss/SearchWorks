@@ -6,7 +6,7 @@ all_search: Image Collection1
 summary_display:
   - "A collection of fixture images from the SearchWorks development index."
 format: Image
-format_main_ssim: Image
+format_hsim: Image
 collection_type: Digital Collection
 modsxml: <%= mods_everything %>
 pub_date: 2014

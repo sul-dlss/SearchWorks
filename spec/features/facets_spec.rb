@@ -67,4 +67,18 @@ RSpec.describe 'Facets' do
       end
     end
   end
+
+  context 'Hierarchical facets' do
+    it 'Renders the hierarchical format_hsim facet' do
+      visit root_path
+
+      click_button 'Format'
+
+      within('.blacklight-format_hsim') do
+        within('li.h-node[role="treeitem"]', text: 'Image') do
+          expect(page).to have_css('li.h-leaf[role="treeitem"]', text: 'Poster')
+        end
+      end
+    end
+  end
 end

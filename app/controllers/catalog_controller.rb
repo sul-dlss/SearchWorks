@@ -9,6 +9,8 @@ class CatalogController < ApplicationController
 
   include AdvancedSearchParamsMapping
 
+  include FormatParamsMapping
+
   include Blacklight::Catalog
 
   include Blacklight::Marc::Catalog
@@ -76,7 +78,8 @@ class CatalogController < ApplicationController
       qt: 'search',
       rows: 20,
       "f.callnum_facet_hsim.facet.limit": "-1",
-      "f.stanford_work_facet_hsim.facet.limit": "-1"
+      "f.stanford_work_facet_hsim.facet.limit": "-1",
+      "f.format_hsim.facet.limit": "-1"
     }
 
     config.fetch_many_document_params = { fl: '*' }
@@ -118,7 +121,6 @@ class CatalogController < ApplicationController
     config.index.facet_filters_component = Searchworks4::FacetFiltersComponent
 
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
-    config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_component = ThumbnailWithIiifComponent
     config.index.thumbnail_method = :render_cover_image
     config.index.mini_bento_component = SearchResult::MiniBento::CatalogComponent
@@ -171,8 +173,7 @@ class CatalogController < ApplicationController
                               }
                            },
                            component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index,
-                           component: Blacklight::Facets::ListComponent
+    config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
     config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index,
                            component: Blacklight::Facets::ListComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 20, suggest: true,
@@ -209,7 +210,8 @@ class CatalogController < ApplicationController
     config.facet_display = {
       hierarchy: {
         'callnum_facet' => [['hsim'], '|'],
-        'stanford_work_facet' => [['hsim'], '|']
+        'stanford_work_facet' => [['hsim'], '|'],
+        'format' => [['hsim'], '|']
       }
     }
     # TODO: remove "course" and "instructor" after a time. These have been replaced by courses_folio_id_ssim.
@@ -222,7 +224,6 @@ class CatalogController < ApplicationController
 
     config.add_facet_field "era_facet", label: "Era", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
-    config.add_facet_field "format", label: "Format", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
@@ -230,7 +231,7 @@ class CatalogController < ApplicationController
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
 
     config.top_filters = {
-      :default => ['access_facet', 'format_main_ssim', 'building_facet', 'genre_ssim', 'pub_year_tisim'],
+      :default => ['access_facet', 'format_hsim', 'building_facet', 'genre_ssim', 'pub_year_tisim'],
       :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
       :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
     }
@@ -484,10 +485,10 @@ class CatalogController < ApplicationController
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {
-        "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
+        "facet.field" => ["access_facet", "format_hsim", "format_physical_ssim", "building_facet", "language"],
          # return all facet values
         "f.access_facet.facet.limit" => -1,
-        "f.format_main_ssim.facet.limit" => -1,
+        "f.format_hsim.facet.limit" => -1,
         "f.format_physical_ssim.facet.limit" => -1,
         "f.building_facet.facet.limit" => -1,
         "f.language.facet.limit" => -1,
