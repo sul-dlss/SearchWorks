@@ -64,7 +64,7 @@
                                                   body_classes: 'accordion') do |component| %>
               <% component.with_body do %>
                 <div data-facet-list-target="hideFacets" id="hidden-facets">
-                  <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+                  <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil).sort_by(&:label), response: @response) %>
                 </div>
               <% end %>
             <% end %>
