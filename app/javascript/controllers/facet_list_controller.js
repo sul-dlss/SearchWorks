@@ -30,8 +30,9 @@ export default class extends Controller {
   }
 
   #hide() {
-    this.hideFacets().forEach(facet => facet.classList.add('d-md-none'))
-    this.titleTarget?.classList.add('d-md-none')
+    this.hideFacets().forEach(facet => facet.classList.add('d-md-none', 'd-xxl-block'))
+    this.titleTarget?.classList.add('d-md-none', 'd-xxl-block')
+    this.buttonTarget.classList.add('d-xxl-none')
     this.buttonTarget.setAttribute('aria-expanded', 'false')
     this.buttonTarget.innerHTML = '<i class="bi bi-sliders" aria-hidden="true"></i> Show all filters'
   }
