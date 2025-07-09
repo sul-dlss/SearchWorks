@@ -24,9 +24,9 @@ RSpec.feature "Facets Customizations" do
   scenario 'library facet is index sorted (not count)' do
     visit root_path
 
-    green_index = facet_index(facet_name: 'facet-library_code_facet_ssim', value: 'Green')
-    music_index = facet_index(facet_name: 'facet-library_code_facet_ssim', value: 'Music')
-    sdr_index   = facet_index(facet_name: 'facet-library_code_facet_ssim', value: 'Stanford Digital Repository')
+    green_index = facet_index(facet_name: 'facet-library', value: 'Green')
+    music_index = facet_index(facet_name: 'facet-library', value: 'Music')
+    sdr_index   = facet_index(facet_name: 'facet-library', value: 'Stanford Digital Repository')
 
     expect(green_index).to be < music_index
     expect(music_index).to be < sdr_index

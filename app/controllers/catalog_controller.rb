@@ -172,7 +172,7 @@ class CatalogController < ApplicationController
                            },
                            component: Blacklight::Facets::ListComponent
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
-    config.add_facet_field "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
+    config.add_facet_field "library", field: "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
                             helper_method: :translate_library_code,
                             component: Searchworks4::LibraryFacetComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
@@ -226,7 +226,7 @@ class CatalogController < ApplicationController
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
 
     config.top_filters = {
-      :default => ['access_facet', 'format_hsim', 'library_code_facet_ssim'],
+      :default => ['access_facet', 'format_hsim', 'library'],
       :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
       :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
     }

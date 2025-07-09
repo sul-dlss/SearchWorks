@@ -133,7 +133,7 @@ RSpec.describe PageLocation do
       end
 
       describe 'sdr' do
-        before { params[:f] = { library_code_facet_ssim: ["SDR"] } }
+        before { params[:f] = { library: ["SDR"] } }
 
         it 'is defined when the Library facet is Stanford Digital Repository' do
           expect(access_point).to eq :sdr
@@ -143,7 +143,7 @@ RSpec.describe PageLocation do
           expect(access_point).to be_nil
         end
         it "is not defined when Library facet is a different value" do
-          params[:f] = { library_code_facet_ssim: ["GREEN"] }
+          params[:f] = { library: ["GREEN"] }
           expect(access_point).to be_nil
         end
       end
@@ -219,7 +219,7 @@ RSpec.describe PageLocation do
     subject { page_location.sdr? }
 
     context "when SDR is selected" do
-      let(:params) { { f: { library_code_facet_ssim: ["SDR"] } } }
+      let(:params) { { f: { library: ["SDR"] } } }
 
       it { is_expected.to be true }
     end

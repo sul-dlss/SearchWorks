@@ -42,8 +42,8 @@ module LocationFacet
 
   def library_code_facet_includes_library_with_sublocation?
     params[:f] &&
-      params[:f][:library_code_facet_ssim] &&
-      Array.wrap(params[:f][:library_code_facet_ssim]).any? do |facet|
+      params[:f][:library] &&
+      Array.wrap(params[:f][:library]).any? do |facet|
         SUBLOCATION_LIBRARIES.include?(facet)
       end
   end
