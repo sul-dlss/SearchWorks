@@ -34,7 +34,7 @@ layer(framework);
 @import "leaflet/dist/leaflet";
 
 @layer local {
-  @media (min-width: 1400px) {
+  @media (min-width: 1580px) {
     .container-lg {
       max-width: 1500px;
     }
