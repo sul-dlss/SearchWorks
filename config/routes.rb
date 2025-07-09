@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   resource :catalog, only: [], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
     concerns :range_searchable
+    get 'facet_results/:id', to: 'catalog#facet_results', as: 'facet_results'
   end
 
   resources :solr_documents, only: [:show], path: '/view', controller: 'catalog' do
