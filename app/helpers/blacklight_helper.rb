@@ -24,6 +24,7 @@ module BlacklightHelper
   # This displays the label from libraries.json
   def translate_library_code(solr_value)
     return 'Stanford Digital Repository' if solr_value == 'SDR'
+    return 'Off-campus collections' if solr_value == 'OFF_CAMPUS'
 
     library = Folio::Types.libraries.values.find { it['code'] == solr_value }
     return solr_value unless library
