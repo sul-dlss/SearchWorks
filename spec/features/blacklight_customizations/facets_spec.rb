@@ -25,6 +25,23 @@ RSpec.feature "Facets Customizations" do
     expect(music_index).to be < sdr_index
   end
 
+  scenario 'hiding other filters', :js do
+    visit search_catalog_path(q: '', search_field: 'search')
+
+    expect(page).to have_button 'Show all filters'
+    expect(page).to have_no_button 'Language'
+
+    click_button 'Show all filters'
+    expect(page).to have_button 'Language'
+  end
+
+  scenario 'with an active facet in the other filters area', :js do
+    visit search_catalog_path(q: '', search_field: 'search', f: { language: ['English'] })
+
+    expect(page).to have_button 'Language'
+    expect(page).to have_no_button 'Show all filters'
+  end
+
   scenario 'searching within a facet', :js do
     visit facet_catalog_path('genre_ssim')
 

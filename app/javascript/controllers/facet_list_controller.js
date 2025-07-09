@@ -5,7 +5,13 @@ export default class extends Controller {
   static targets = ['button', 'title', 'hideFacets']
 
   connect() {
-    this.#hide();
+    if (!this.hasHideFacetsTarget) return;
+
+    if (this.hideFacetsTarget.querySelector('.facet-limit-active')) {
+      this.buttonTarget.classList.add('d-none');
+    } else {
+      this.#hide();
+    }
   }
 
   hideFacets() {
