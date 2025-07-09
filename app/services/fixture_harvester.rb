@@ -40,7 +40,8 @@ class FixtureHarvester
     '3402192', # lots of copies, some checked out
     '14239755', # temporary location
     '513384', # single item with an MHLD in another library
-    '342324' # serial on-exhibit
+    '342324', # serial on-exhibit
+    'in00000422571' # hierarchical format_hsim, Image|Poster
   ].freeze
 
   def self.harvest_all
