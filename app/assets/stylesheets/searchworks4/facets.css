@@ -6,6 +6,12 @@
   }
 }
 
+.facet-hierarchy {
+  .h-node, .h-leaf {
+    align-items: flex-start;
+  }
+}
+
 .facet-values .sul-icon {
   font-size: 1.5em;
   width: 30px;
