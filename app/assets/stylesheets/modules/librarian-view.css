@@ -1,0 +1,49 @@
+.last-updated { 
+  margin-left: auto;
+  align-self: center;
+}
+.last-updated + .blacklight-modal-close {
+  margin-left: 0;
+}
+
+#marc_view {
+  text-align:left;
+
+  .item-details {
+    caption {
+      caption-side: top;
+      background-color: var(--bg-secondary);
+    }
+  }
+
+  .field
+  {
+    border-bottom: 1px solid var(--stanford-60-black);
+    clear:both;
+    word-break: break-all;
+  }
+
+  .ind1, .ind2
+  {
+    display:inline;
+    padding:0 0.25rem;
+  }
+
+  .subfields
+  {
+    padding-left:5em;
+  }
+
+  .tag_ind
+  {
+    float:left;
+  }
+}
+
+#librarian_view
+{
+	left:-17%;
+	text-align:left;
+	top:10%;
+	width:700px;
+}
