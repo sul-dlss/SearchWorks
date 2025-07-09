@@ -206,7 +206,7 @@ class CatalogController < ApplicationController
                             component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, show: false, component: Blacklight::Facets::ListComponent
     config.facet_display = {
       hierarchy: {
         'callnum_facet' => [['hsim'], '|'],
