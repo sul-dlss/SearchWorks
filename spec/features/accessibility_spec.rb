@@ -51,7 +51,7 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  describe 'the articles', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the articles' do
     before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
 
     it 'has an accessible search results page' do
@@ -61,9 +61,10 @@ RSpec.describe 'Site Accessibility', :js do
 
     it 'has an accessible "more facets" modal' do
       visit articles_path q: 'frog'
+      click_button 'Show all filters'
       click_button 'Language'
       within '.blacklight-eds_language_facet' do
-        click_link 'more'
+        click_link 'Browse all'
       end
       expect(page).to have_field 'A-Z Sort'
       expect(page).to be_accessible.within('dialog')
