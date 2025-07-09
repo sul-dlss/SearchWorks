@@ -1,5 +1,5 @@
 <% if page_location.sdr? || page_location.digital_collections? %>
-  <div class="facet-options" data-controller='facet-checkboxes'>
+  <div class="facet-options position-relative" data-controller='facet-checkboxes'>
     <%= render Searchworks4::DigitalCollectionsFacetHeaderComponent.new %>
     <div data-facet-checkboxes-target="loadingIndicator" class="d-none position-absolute opacity-75 top-50 start-50 translate-middle">
       <div class='loading-spinner'></div>

@@ -7,23 +7,23 @@
           page_location.digital_collections?,
           data: { action: 'facet-checkboxes#toggleCheckbox' },
         ) %>
-    <% end %>
-    <%= link_to(digital_collection_path, data: { action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1') do %>
-      <%= 'Show collections only' %>
+      <%= link_to(digital_collection_path, data: { action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1') do %>
+        <%= 'Show collections only' %>
+      <% end %>
     <% end %>
   </div>
 
   <div>
     <%= label_tag('digital_collection_individual', 'Show collections and individual items', class: 'position-relative') do %>
-    <%= radio_button_tag(
-          'digital_collection',
-          'individual',
-          page_location.sdr?,
-          { data: { action: 'facet-checkboxes#toggleCheckbox' } }
-        ) %>
-    <% end %>
-    <%= link_to(sdr_path, data: { action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1') do %>
-      <%= 'Show collections and individual items' %>
+      <%= radio_button_tag(
+            'digital_collection',
+            'individual',
+            page_location.sdr?,
+            { data: { action: 'facet-checkboxes#toggleCheckbox' } }
+          ) %>
+      <%= link_to(sdr_path, data: { action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1') do %>
+        <%= 'Show collections and individual items' %>
+      <% end %>
     <% end %>
   </div>
 </div>
