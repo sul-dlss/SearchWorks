@@ -231,7 +231,7 @@ class CatalogController < ApplicationController
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
 
     config.top_filters = {
-      :default => ['access_facet', 'format_hsim', 'building_facet', 'genre_ssim', 'pub_year_tisim'],
+      :default => ['access_facet', 'format_hsim', 'building_facet'],
       :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
       :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
     }

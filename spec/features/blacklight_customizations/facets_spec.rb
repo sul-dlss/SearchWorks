@@ -74,6 +74,7 @@ RSpec.feature "Facets Customizations" do
   scenario 'searching within a facet from the search results page', :js do
     visit root_path(q: '', search_field: 'search')
 
+    click_button 'Show all filters'
     # click on the genre facet
     click_button 'Genre'
 
