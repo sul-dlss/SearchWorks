@@ -16,7 +16,7 @@
     "sass": "^1.72.0"
   },
   "scripts": {
-    "build": "esbuild app/javascript/application.js app/javascript/searchworks4.js --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
-    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css ./app/assets/stylesheets/print.scss:./app/assets/builds/print.css ./app/assets/stylesheets/searchworks4.scss:./app/assets/builds/searchworks4.css --no-source-map --quiet-deps --load-path=node_modules"
+    "build": "esbuild app/javascript/searchworks4.js --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
+    "build:css": "sass ./app/assets/stylesheets/searchworks4.scss:./app/assets/builds/searchworks4.css --no-source-map --quiet-deps --load-path=node_modules"
   }
 }
