@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class BookmarksController < CatalogController
-  layout 'searchworks4'
   include Blacklight::Bookmarks
   include SelectionsCount
 

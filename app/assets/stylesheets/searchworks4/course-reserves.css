@@ -1,0 +1,11 @@
+.dt-paging-button .bi {
+  font-size: 0.875em;
+}
+
+#course-reserves-browse {
+  --bs-table-striped-bg: white;
+  --bs-table-bg: var(--stanford-fog-light);
+  th {
+    --bs-table-bg: var(--stanford-20-black);
+  }
+}

@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class CatalogController < ApplicationController
-  layout 'searchworks4'
-
   include AllCapsParams
 
   include ReplaceSpecialQuotes

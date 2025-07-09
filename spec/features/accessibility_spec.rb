@@ -90,7 +90,7 @@ RSpec.describe 'Site Accessibility', :js do
     expect(page).to be_accessible.within('main')
   end
 
-  describe 'the course reserves page', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the course reserves page' do
     before do
       create(:reg_course)
       visit course_reserves_path

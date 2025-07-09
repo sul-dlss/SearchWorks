@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class DatabasesController < ApplicationController
-  layout 'searchworks4'
-
   def self.local_prefixes
     super + ['catalog']
   end
