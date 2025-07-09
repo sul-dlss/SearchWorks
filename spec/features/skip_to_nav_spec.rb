@@ -37,7 +37,7 @@ RSpec.feature "Skip-to Navigation" do
         within '[data-document-id="20"]' do
           click_button 'Save record'
         end
-        expect(page).to have_content('Saved to bookmarks') # rubocop:disable RSpec/ExpectInHook
+        expect(page).to have_content('Record saved') # rubocop:disable RSpec/ExpectInHook
 
         visit bookmarks_path
       end
