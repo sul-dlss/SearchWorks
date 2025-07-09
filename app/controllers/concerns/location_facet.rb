@@ -19,11 +19,13 @@ module LocationFacet
 
     legacy_names = params[:f].delete(:building_facet)
     library_codes = legacy_names.filter_map do |name|
-      Folio::Types.libraries.values.find { it['name'].start_with?(name) }&.fetch('id')
+      next 'SDR' if name == 'Stanford Digital Repository'
+
+      Folio::Types.libraries.values.find { it['name'].start_with?(name) || it['name'].sub(' Library', '').start_with?(name) }&.fetch('code')
     end
 
     if library_codes.first
-      new_state = search_state.add_facet_params_and_redirect('library_code_facet_ssim', library_codes.first)
+      new_state = search_state.add_facet_params_and_redirect('library', library_codes.first)
 
       redirect_to search_catalog_path(new_state.to_h)
     else
