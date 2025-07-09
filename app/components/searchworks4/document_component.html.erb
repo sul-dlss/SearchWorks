@@ -15,7 +15,7 @@
     <% # header bar for doc items in index view %>
     <div class="col-10 pe-4">
       <div class="documentHeader">
-        <h3 class="index_title">
+        <h3 class="index_title truncate-2 truncate-md-3 truncate-lg-none">
           <% if counter %>
             <%=  content_tag :span, class: 'document-counter fw-light' do
             t('blacklight.search.documents.counter', counter:)
@@ -27,7 +27,7 @@
       <div class="results-metadata-sections">
 
         <% if document.vernacular_title.present? %>
-          <div><%= document.vernacular_title.html_safe %></div>
+          <div class="truncate-2 truncate-md-3 truncate-lg-none"><%= document.vernacular_title.html_safe %></div>
         <% end %>
 
         <%- uniform_title = helpers.get_uniform_title(document) -%>

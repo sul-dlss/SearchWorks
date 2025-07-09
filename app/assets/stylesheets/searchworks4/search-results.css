@@ -44,6 +44,23 @@
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .truncate-md-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 992px) {
+  .truncate-lg-none {
+    display: inherit;
+    -webkit-line-clamp: initial;
+    overflow: visible;
+  }
+}
+
 .active-icon {
   margin-left: -1.125rem;
   &::before {

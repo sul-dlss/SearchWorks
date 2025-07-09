@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.feature 'Date Range', :js do
   scenario 'Search results should have date slider facet' do
     visit search_catalog_path f: { access_facet: ['Online'] }
+    click_button 'Show all filters'
     click_button 'Date'
     expect(page).to have_css 'input.range_begin'
     expect(page).to have_css 'input.range_end'

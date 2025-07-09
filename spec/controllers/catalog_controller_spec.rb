@@ -121,7 +121,7 @@ RSpec.describe CatalogController do
       end
       it "sets the correct facet limits on standard facets" do
         ['author_person_facet', 'topic_facet', 'genre_ssim'].each do |facet|
-          expect(config.facet_fields[facet].limit).to eq 20
+          expect(config.facet_fields[facet].limit).to eq 6
         end
       end
     end

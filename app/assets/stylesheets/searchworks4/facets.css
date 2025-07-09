@@ -1,3 +1,17 @@
+.facets {
+  & .accordion {
+    .selected {
+      font-weight: 700;
+    }
+  }
+}
+
+.facet-hierarchy {
+  .h-node, .h-leaf {
+    align-items: flex-start;
+  }
+}
+
 .facet-values .sul-icon {
   font-size: 1.5em;
   width: 30px;
@@ -7,6 +21,14 @@
     width: 21px;
     vertical-align: top;
   }
+}
+
+.facet-field-heading .accordion-button:not(.collapsed) {
+  background-color: var(--bs-body-bg);
+}
+
+.facet-limit-active .facet-field-heading .accordion-button {
+  background-color: var(--bs-tertiary-bg);
 }
 
 /* TODO: Remove after we have https://github.com/sul-dlss/blacklight-hierarchy/pull/103 */

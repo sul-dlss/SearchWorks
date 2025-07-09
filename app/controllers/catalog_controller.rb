@@ -176,7 +176,7 @@ class CatalogController < ApplicationController
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
     config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index,
                            component: Blacklight::Facets::ListComponent
-    config.add_facet_field "genre_ssim", label: "Genre", limit: 20, suggest: true,
+    config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
                            component: Searchworks4::FacetSearchComponent
     config.add_facet_field "pub_year_tisim", label: "Date", range: true,
                            range_config: {
@@ -184,29 +184,29 @@ class CatalogController < ApplicationController
                              input_label_range_end: "to year"
                            }
 
-    config.add_facet_field "language", label: "Language", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
-    config.add_facet_field "author_person_facet", label: "Author", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
-    config.add_facet_field "topic_facet", label: "Topic", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
-    config.add_facet_field "geographic_facet", label: "Region", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "language", label: "Language", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "author_person_facet", label: "Author", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "topic_facet", label: "Topic", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "geographic_facet", label: "Region", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field 'callnum_facet_hsim',
                            label: 'Call number',
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'index'
 
     config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true, advanced_search_component: AdvancedSearchRangeLimitComponent
-    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index, component: Blacklight::Facets::ListComponent
-    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 6, sort: :index, component: Blacklight::Facets::ListComponent
+    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 6, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'stanford_work_facet_hsim',
                            label: 'Stanford student work',
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'count', collapse: false, show: false
-    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 6, component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value,
                             filter_query_builder: CollectionFilterQuery,
                             component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 6, show: false, component: Blacklight::Facets::ListComponent
     config.facet_display = {
       hierarchy: {
         'callnum_facet' => [['hsim'], '|'],
@@ -222,8 +222,8 @@ class CatalogController < ApplicationController
                            component: Blacklight::Facets::ListComponent,
                            item_presenter: FolioCourseFacetItemPresenter
 
-    config.add_facet_field "era_facet", label: "Era", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
-    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "era_facet", label: "Era", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
@@ -231,7 +231,7 @@ class CatalogController < ApplicationController
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
 
     config.top_filters = {
-      :default => ['access_facet', 'format_hsim', 'building_facet', 'genre_ssim', 'pub_year_tisim'],
+      :default => ['access_facet', 'format_hsim', 'building_facet'],
       :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
       :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
     }

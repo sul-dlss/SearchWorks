@@ -38,7 +38,7 @@
   <% content_for(:skip_links) do -%>
     <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
   <% end %>
-  <div class="row align-items-start">
+  <div class="row align-items-start mt-4">
     <% unless hide_facets %>
       <div class="sidebar col-12 col-md-4 col-xxl-3 mb-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
         <button class="btn btn-primary d-inline-block d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-controls="offcanvas-facets">
@@ -64,7 +64,7 @@
                                                   body_classes: 'accordion') do |component| %>
               <% component.with_body do %>
                 <div data-facet-list-target="hideFacets" id="hidden-facets">
-                  <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil), response: @response) %>
+                  <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil).sort_by(&:label), response: @response) %>
                 </div>
               <% end %>
             <% end %>
