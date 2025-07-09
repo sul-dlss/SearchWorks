@@ -21,5 +21,13 @@ module Searchworks4
       # Remove any beginning and ending parentheses from post text
       formatted_label.gsub(/[()]/, '')
     end
+
+    def mods_display_name
+      @document.mods_display_name&.first
+    end
+
+    def mods_name
+      @document.mods.name&.first
+    end
   end
 end

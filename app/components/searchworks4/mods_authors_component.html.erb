@@ -1,11 +1,11 @@
 <% if @document.mods_display_name.present? %>
     <li>
-    <% name = @document.mods_display_name.first %>
+    <% name = mods_display_name %>
     <%= link_to(name['link'], search_catalog_path(q: "\"#{name['link']}\"", search_field: 'search_author')) %> <%= label_display(name[:post_text]) %>
     </li>
 <% elsif @document.mods.name.present? && @document.mods.name.first.values.present? %>
     <li>    
-    <% name = @document.mods.name.first %>
+    <% name = mods_name %>
     <%= link_to(name.values.first, search_catalog_path(q: "\"#{name.values.first}\"", search_field: 'search_author')) %> <%= label_display(name.label) %>
     </li>
 <% end %>

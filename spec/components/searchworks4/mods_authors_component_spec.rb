@@ -12,19 +12,19 @@ RSpec.describe Searchworks4::ModsAuthorsComponent, type: :component do
     render_inline(component)
   end
 
-  context 'when the mods Solr record also has an author struct field' do
+  context 'when author struct has data' do
     let(:author_struct) { [{ link: 'Dodaro, Gene L.', search: 'Dodaro, Gene L.', post_text: '(Author)' }] }
 
-    it 'displays display name author with link and role' do
+    it 'displays the link and role from the author struct' do
       expect(page).to have_link('Dodaro, Gene L.', href: "/catalog?q=#{CGI.escape('"Dodaro, Gene L."')}&search_field=search_author")
       expect(page).to have_content(', author')
     end
   end
 
-  context 'when the mods Solr record has no author_struct field' do
+  context 'when author struct does not have data' do
     let(:author_struct) { [] }
 
-    it 'displays first author with link and role' do
+    it 'displays the link and role of the first author from the MODS XML' do
       expect(page).to have_link('J. Smith', href: "/catalog?q=#{CGI.escape('"J. Smith"')}&search_field=search_author")
       expect(page).to have_content(', author')
     end
