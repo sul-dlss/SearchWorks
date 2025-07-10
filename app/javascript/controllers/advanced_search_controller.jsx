@@ -149,7 +149,7 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
         <FilterFields />
         <div className="d-flex flex-row justify-content-end gap-3">
           <Button className="btn btn-outline-primary">Reset</Button>
-          <Button className="btn btn-primary" type="submit">Search</Button>
+          <input className="btn btn-primary" type="submit" value="Search" />
         </div>
 
         <HiddenInputFields />
