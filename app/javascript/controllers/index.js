@@ -49,6 +49,9 @@ application.register("copy-text", CopyTextController)
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
+import EagerLazyController from "./eager_lazy_controller"
+application.register("eager-lazy", EagerLazyController)
+
 import EmailSentController from "./email_sent_controller"
 application.register("email-sent", EmailSentController)
 
