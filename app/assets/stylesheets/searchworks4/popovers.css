@@ -1,0 +1,7 @@
+.popover-availability {
+    --bs-popover-bg: var(--stanford-black);
+    --bs-popover-body-color: #ffffff;
+    --bs-popover-header-bg: var(--stanford-black);
+    --bs-popover-header-color: #ffffff;
+    --bs-popover-max-width: 22rem;
+}

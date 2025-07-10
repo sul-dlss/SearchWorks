@@ -36,6 +36,10 @@ layer(framework);
 @import url("searchworks4/chat.css") layer(local);
 @import url("searchworks4/librarian-view.css") layer(local);
 @import url("searchworks4/stackmap.css") layer(local);
+@import url("searchworks4/popovers.css") layer(local);
+@import url("modules/chat.css") layer(local);
+@import url("modules/librarian-view.css") layer(local);
+@import url("modules/stackmap.css") layer(local);
 @import "leaflet/dist/leaflet";
 
 @layer local {
