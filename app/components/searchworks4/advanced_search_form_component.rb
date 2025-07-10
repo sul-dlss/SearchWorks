@@ -20,7 +20,6 @@ module Searchworks4
         value_labels = display_facet.items.to_h do |item|
           key = item.value
           label = config.item_presenter.new(item, config, helpers, config.key).label
-          # next [nil, nil] if key == label
 
           [key, label]
         end.compact_blank

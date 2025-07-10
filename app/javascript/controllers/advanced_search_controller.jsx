@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import * as React from 'react'
 import { createRoot } from 'react-dom/client';
+import Chip from '@mui/material/Chip';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import FormControl from '@mui/material/FormControl';
@@ -401,6 +402,9 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
             </li>
           );
         }}
+        renderValue={(value, getItemProps) => (
+          <Chip label={valueLabels[value] || value} {...getItemProps()} />
+        )}
         renderInput={(params) => (
           <TextField {...params} placeholder="Select values" />
         )}
