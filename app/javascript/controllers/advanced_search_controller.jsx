@@ -261,6 +261,7 @@ const FilterFields = () => {
 
 
   const filterFields = context.filterFields;
+  const usedFilterFieldKeys = filterFields.map((f) => f.field);
   const addFilterField = (field) => {
     dispatch({ data: { field: field }, type: 'addFilterField' });
   }
@@ -278,9 +279,9 @@ const FilterFields = () => {
         <Button className="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Add filter</Button>
         <ul className="dropdown-menu">
         {context.filterFieldOptions.map((option) => (
-          <li key={option.field}>
+          (!usedFilterFieldKeys.includes(option.field)) && (<li key={option.field}>
             <Button className="dropdown-item" onClick={() => addFilterField(option.field)}>{option.label}</Button>
-          </li>
+          </li>)
           ))}
         </ul>
       </div>
