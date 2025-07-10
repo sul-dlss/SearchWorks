@@ -131,13 +131,15 @@ const mapBlacklightQueryParamsToForm = (queryParams) => {
 
 const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) => {
   const initialData = {
-    filterFields: [],
+    filterFields: filterFields.slice(0, 3).map((f, i) => ({
+      id: i + 1, field: f.field, type: 'and', values: []
+    })),
     filterFieldOptions: filterFields || [],
     filterTypeOptions: [
       { field: 'and', label: 'Includes all (AND)' },
       { field: 'or', label: 'Includes any (OR)' },
     ],
-    currentId: 0,
+    currentId: 4,
     searchFields: [{ id: 0, field: searchFieldOptions[0]?.field || '', type: 'must', value: queryParams.q || '' }],
     searchFieldOptions: searchFieldOptions || [],
     searchTypeOptions: [
