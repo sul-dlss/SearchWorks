@@ -180,6 +180,10 @@
         margin-right: 0.5rem;
         -webkit-text-stroke: 0rem;
       }
+
+      &.preview-open::before {
+        content: "Close";
+      }
     }
   }
 
