@@ -11,8 +11,10 @@
     <% end %>
     <dl class="dl-invert">
       <% if @collection.collection_members.present? %>
-        <dt>Digital collection</dt>
-        <dd><%= helpers.link_to_collection_members(pluralize(@collection.collection_members.total, 'digital item'), @collection) %></dd>
+        <div class="d-flex flex-wrap gap-2">
+          <dt>Digital collection</dt>
+          <dd><%= helpers.link_to_collection_members(pluralize(@collection.collection_members.total, 'digital item'), @collection) %></dd>
+        </div>
       <% end %>
       <% if @collection.extent_sans_format.present? %>
         <dt>Physical collection</dt>
