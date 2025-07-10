@@ -367,6 +367,8 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
     };
   }
 
+  const valueLabels = fieldConfig.value_labels;
+
   return (
     <>
       <FormControl sx={{ minWidth: 200 }} size="small">
@@ -395,7 +397,7 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
                 style={{ marginRight: 8 }}
                 checked={selected}
               />
-              {option}
+              {valueLabels[option] || option}
             </li>
           );
         }}
