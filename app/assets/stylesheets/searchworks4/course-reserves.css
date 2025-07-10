@@ -3,9 +3,17 @@
 }
 
 #course-reserves-browse {
-  --bs-table-striped-bg: white;
-  --bs-table-bg: var(--stanford-fog-light);
   th {
     --bs-table-bg: var(--stanford-20-black);
+  }
+
+  .odd td {
+    --bs-table-bg: white;
+    --bs-table-bg-type: white;
+  }
+
+  .even td {
+    --bs-table-bg: var(--stanford-fog-light);
+    --bs-table-bg-type: var(--stanford-fog-light);
   }
 }

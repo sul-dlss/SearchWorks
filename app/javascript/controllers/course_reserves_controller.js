@@ -62,7 +62,9 @@ export default class extends Controller {
           console.log("skipped")
           tr.style.display = "none"
         } else {
+          const trClass = numberDrawn % 2 ? 'even' : 'odd';
           tr.style.display = ""
+          tr.classList = trClass;
           numberDrawn++
         }
       } else {
