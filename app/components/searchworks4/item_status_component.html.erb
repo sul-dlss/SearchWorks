@@ -8,7 +8,7 @@
       <%= tag.span class:  "availability #{availability_class} d-inline-flex align-items-center" do %>
         <%= tag.i(class: "bi #{availability_icon} me-1") %>
         <%= status_text %>
-        <%= tag.span "Due #{rtac[:due_date]}", class: 'due-date' if rtac&.dig(:due_date) %>
+        <%= tag.span "Due #{rtac[:due_date]}", class: 'ms-2 due-date' if rtac&.dig(:due_date) %>
       <% end %>
       <% end %>
     <%= tag.span temporary_location_text, class: 'temporary-location text-poppy ms-3' if temporary_location_text %>
