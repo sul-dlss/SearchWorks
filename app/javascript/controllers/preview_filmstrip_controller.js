@@ -39,7 +39,14 @@ export default class extends Controller {
     }
   }
 
+  toggleButtonClosed(button) {
+    button.classList.remove('preview-open')
+    button.innerHTML = '<span class="bi-chevron-down small"></span>'
+  }
+
   showPreview() {
+    const prevOpenButton = document.querySelector('.preview-open')
+    if (prevOpenButton) this.toggleButtonClosed(prevOpenButton)
     this.triggerBtn.classList.add('preview-open')
     this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
     const divContent = $('<div class="preview-content"></div>')
@@ -61,9 +68,11 @@ export default class extends Controller {
   appendPointer() {
     this.preview.append(this.arrow);
 
+    const maxLeft = this.preview.width() - this.arrow.width() - 1
     let arrowLeft = parseInt($(this.element).position().left + ($(this.element).width()/2) - 20);
 
     if (arrowLeft < 0) arrowLeft = 0;
+    if (arrowLeft > maxLeft) arrowLeft = maxLeft;
 
     this.arrow.css('left', arrowLeft);
   }
@@ -74,8 +83,7 @@ export default class extends Controller {
   }
 
   closePreview() {
-    this.triggerBtn.classList.remove('preview-open')
-    this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
+    this.toggleButtonClosed(this.triggerBtn);
     this.viewport.css('overflow-x', 'scroll');
     this.preview.empty().hide();
   }
