@@ -17,7 +17,8 @@ module Searchworks4
         display_facet = @response.aggregations[config.field]
         values = (config.limit || 0) < 50 ? [] : display_facet.items
 
-        { field: config.key, label: helpers.facet_field_label(config.key), limit: config.limit, top: config.key.in?(blacklight_config.top_filters[:advanced_search]), values: values }
+        { field: config.key, label: helpers.facet_field_label(config.key), limit: config.limit, range: config.range, top: config.key.in?(blacklight_config.top_filters[:advanced_search]),
+          values: values }
       end
     end
   end

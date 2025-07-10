@@ -291,7 +291,44 @@ const FilterFields = () => {
   )
 }
 
-const FilterField = ({ id, type, values, field, removeField }) => {
+const FilterField = ({ field, removeField, ...args }) => {
+  const context = React.useContext(SearchContext);
+  const fieldConfig = context.filterFieldOptions.find(f => f.field === field) || {};
+
+  if (fieldConfig.range) {
+    return (
+      <div className="d-flex flex-row mb-3 gap-3 align-items-start">
+        <span className="fw-semibold text-nowrap mt-2">{fieldConfig.label}</span>
+        <RangeFilterField field={field} {...args} />
+        { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+      </div>
+    );
+  } else {
+    return (
+      <div className="d-flex flex-row mb-3 gap-3 align-items-start">
+        <span className="fw-semibold text-nowrap mt-2">{fieldConfig.label}</span>
+        <AutocompleteFilterField field={field} {...args} />
+        { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+      </div>
+    );
+  }
+};
+
+const RangeFilterField = ({ id, type, values, field }) => {
+  const context = React.useContext(SearchContext);
+  const dispatch = React.useContext(SearchDispatchContext);
+  const fieldConfig = context.filterFieldOptions.find(f => f.field === field) || {};
+
+  return (
+    <>
+      <TextField name={`range[${field}][begin]`} size="small"></TextField>
+      <span> - </span>
+      <TextField name={`range[${field}][end]`} size="small"></TextField>
+    </>
+  );
+}
+
+const AutocompleteFilterField = ({ id, type, values, field }) => {
   const context = React.useContext(SearchContext);
   const dispatch = React.useContext(SearchDispatchContext);
   const fieldConfig = context.filterFieldOptions.find(f => f.field === field) || {};
@@ -325,9 +362,7 @@ const FilterField = ({ id, type, values, field, removeField }) => {
   }
 
   return (
-    <div className="d-flex flex-row mb-3 gap-3 align-items-start">
-      <span className="fw-semibold text-nowrap mt-2">{fieldConfig.label}</span>
-
+    <>
       <FormControl sx={{ minWidth: 200 }} size="small">
         <Select className="w-auto text-nowrap" value={type} onChange={(event) => dispatch({ type: 'updateFilterField', id: id, data: { type: event.target.value } })}>
           {context.filterTypeOptions.map((option) => (
@@ -364,8 +399,7 @@ const FilterField = ({ id, type, values, field, removeField }) => {
         sx={{ width: '500px' }}
         {...(dataOptions)}
       />
-      { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
-    </div>
+    </>
   );
 };
 
