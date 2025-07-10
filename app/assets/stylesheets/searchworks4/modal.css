@@ -1,6 +1,6 @@
 .modal-content:has(.record-summary) {
   --bs-modal-header-border-width: 0;
-  --bs-modal-padding: 0;
+  --bs-modal-padding: 1.5rem;
   --bs-border-color: var(--stanford-30-black);
 
   .modal-footer {
@@ -9,45 +9,45 @@
 }
 
 .modal:has(.feedback-form) {
-    /* This footer padding value is not affected by or the same as --bs-modal-padding */
-    .modal-footer {
-        padding: 1rem;
-    }
+  /* This footer padding value is not affected by or the same as --bs-modal-padding */
+  .modal-footer {
+    padding: 1rem;
+  }
 
-    /* We want the feedback modal to show a little below the top of the page */
-    .modal-content {
-        margin-top: 25%;
-    }
+  /* We want the feedback modal to show a little below the top of the page */
+  .modal-content {
+    margin-top: 25%;
+  }
 
-    .login-message {
-        font-size: 0.9rem;
-        --bs-link-decoration: underline;
-    }
-    
-    .new-link {
-        font-size: 1rem;
-    }
+  .login-message {
+    font-size: 0.9rem;
+    --bs-link-decoration: underline;
+  }
+
+  .new-link {
+    font-size: 1rem;
+  }
 }
 
 /* The feedback form is available in both modal and standalone page form. The parent classes below cover both cases */
 
 .feedback-form {
-    .col-form-label.required::after {
-        content: "* Required";
-        color: var(--stanford-cardinal);
-        margin-left: 5px;
-        font-weight: normal;
-        font-size: 0.9rem;
-    }
+  .col-form-label.required::after {
+    content: "* Required";
+    color: var(--stanford-cardinal);
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 0.9rem;
+  }
 
-    .btn.stanford-only {
-        --bs-btn-padding-x: 0.1rem;
-        --bs-btn-padding-y: 0rem;
-    }
+  .btn.stanford-only {
+    --bs-btn-padding-x: 0.1rem;
+    --bs-btn-padding-y: 0rem;
+  }
 }
 
 .standalone {
-    h2 {
-        padding: 1.5rem 0rem;
-    }
+  h2 {
+    padding: 1.5rem 0rem;
+  }
 }

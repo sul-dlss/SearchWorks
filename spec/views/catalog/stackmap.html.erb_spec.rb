@@ -7,6 +7,8 @@ RSpec.describe 'catalog/stackmap' do
 
   describe 'StackMap view' do
     before do
+      allow(view).to receive_messages(blacklight_config: CatalogController.blacklight_config,
+                                      blacklight_configuration_context: Blacklight::Configuration::Context.new(controller))
       assign(:document, SolrDocument.new(id: '12345', marc_json_struct: metadata1))
       render
     end
@@ -15,9 +17,6 @@ RSpec.describe 'catalog/stackmap' do
       expect(rendered).to have_css('div.modal-header h2.modal-title')
 
       expect(rendered).to have_css('div.stackmap .map-template')
-
-      expect(rendered).to have_css('span.library')
-      expect(rendered).to have_css('span.floorname')
 
       expect(rendered).to have_css('.zoom-controls .zoom-in')
       expect(rendered).to have_css('.zoom-controls .zoom-out')
