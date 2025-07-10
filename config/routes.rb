@@ -66,6 +66,10 @@ Rails.application.routes.draw do
   end
 
   resources :databases, only: [:index] do
+    collection do
+      get 'autocomplete'
+    end
+
     concerns :searchable
     concerns :range_searchable
   end
