@@ -76,6 +76,13 @@ const formReducer = (state, action) => {
           field.id === action.id ? { ...field, ...action.data } : field
         )
       };
+    case 'reset':
+      return {
+        ...state,
+        searchFields: [{ id: 0, field: state.searchFieldOptions[0]?.field || '', type: 'must', value: '' }],
+        filterFields: [],
+        currentId: 0
+      };
     }
   };
 
@@ -140,6 +147,10 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     ...(mapBlacklightQueryParamsToForm(queryParams, { filterFields, searchFields: searchFieldOptions }) || {})
   }
 
+  const resetForm = () => {
+    dispatch({ type: 'reset' });
+  }
+
   const [form, dispatch] = React.useReducer(formReducer, initialData);
 
   return (
@@ -148,7 +159,7 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
         <SearchFields />
         <FilterFields />
         <div className="d-flex flex-row justify-content-end gap-3">
-          <Button className="btn btn-outline-primary">Reset</Button>
+          <Button className="btn btn-outline-primary" onClick={() => resetForm()}>Reset</Button>
           <input className="btn btn-primary" type="submit" value="Search" />
         </div>
 
