@@ -162,3 +162,7 @@ and there is a show class then it will hide the mini bento
     --bs-link-decoration: none;
   }
 }
+
+#stanford-only-facet-option {
+  color: var(--stanford-red);
+}
