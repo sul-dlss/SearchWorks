@@ -5,15 +5,14 @@
   </div>
 
   <% if location.mhld.present? %>
+    <%= render AccessPanels::LibraryLocationPopoverComponent.new(location.mhld) %>
+    
     <% if location.mhld.first.latest_received %>
       <div class='mhld note-highlight'>Latest: <%= location.mhld.first.latest_received %></div>
     <% end %>
     <% location.mhld.each do |mhld| %>
       <% if mhld.public_note.present? %>
         <div class='mhld note-highlight'><%= mhld.public_note %></div>
-      <% end %>
-      <% if mhld.library_has.present? %>
-        <div class='mhld'>Library has: <%= mhld.library_has %></div>
       <% end %>
     <% end %>
   <% end %>
