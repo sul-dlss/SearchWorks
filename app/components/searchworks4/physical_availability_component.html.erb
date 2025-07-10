@@ -14,7 +14,7 @@
       <% end %>
     </span>
   <% end %>
-  <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document) %>
+  <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
 <% elsif truncated_display? %>
   <%# Instances with lots of items get an abbreviated treatment %>
   <%= container_tag(classes: %w[d-inline-flex]) do %>
