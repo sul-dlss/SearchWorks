@@ -347,8 +347,6 @@ en:
       title: "Send feedback"
       new_tab: "Open in new tab"
       success: "<strong>Thank you!</strong> <br/> Your feedback has been sent."
-    connection_form:
-      success: "<strong>Thank you!</strong> Your connection problem report has been sent."
     range_limit:
       submit_limit: "Apply"
 
