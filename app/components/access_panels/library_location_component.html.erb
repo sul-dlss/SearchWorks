@@ -10,7 +10,7 @@
     <% end %>
     <% location.mhld.each do |mhld| %>
       <% if mhld.public_note.present? %>
-        <div class='mhld'><%= mhld.public_note %></div>
+        <div class='mhld note-highlight'><%= mhld.public_note %></div>
       <% end %>
       <% if mhld.library_has.present? %>
         <div class='mhld'>Library has: <%= mhld.library_has %></div>
