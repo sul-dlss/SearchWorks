@@ -97,9 +97,6 @@ application.register("library-has", LibraryHasController)
 import ListToggleController from "./list_toggle_controller"
 application.register("list-toggle", ListToggleController)
 
-import LiveLookupController from "./live_lookup_controller"
-application.register("live-lookup", LiveLookupController)
-
 import LocationHoursController from "./location_hours_controller"
 application.register("location-hours", LocationHoursController)
 
