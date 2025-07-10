@@ -18,18 +18,6 @@ module CatalogHelper
     default_document_index_view_type
   end
 
-  def stackmap_link(document, location)
-    item = location.items.first
-    params = { callno: item.callnumber,
-               library: item.library,
-               location: item.effective_permanent_location_code }
-    uri = URI(location.stackmap_api_url)
-    uri.query = params.to_query
-    stackmap_path(title: (document['title_display'] || '').html_safe,
-                  api_url: uri.to_s,
-                  id: document.id)
-  end
-
   def link_to_bookplate_search(bookplate, link_opts = {})
     link_to(
       bookplate.text,
