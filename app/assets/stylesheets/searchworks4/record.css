@@ -137,6 +137,19 @@
   }
 }
 
+.note-highlight {
+  background-color: rgba(var(--stanford-illuminating-base-rgb), 0.2);
+  padding: 0.125rem 0.25rem;
+  margin: 0.25rem 0;
+}
+
+.truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .truncate-5 {
   display: -webkit-box;
   -webkit-line-clamp: 5;
@@ -149,6 +162,11 @@
     max-height: 300px;
     max-width: 128px;
   }
+}
+
+.bookplate-image {
+  max-height: 300px;
+  max-width: 128px;
 }
 
 .collection-result-preview {

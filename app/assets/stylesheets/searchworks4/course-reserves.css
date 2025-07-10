@@ -8,4 +8,8 @@
   th {
     --bs-table-bg: var(--stanford-20-black);
   }
+  tbody > tr:nth-child(2n + 1 of :not(.d-none)) > * {
+    --bs-table-color-type: var(--bs-table-striped-color);
+    --bs-table-bg-type: var(--bs-table-striped-bg);
+  }
 }

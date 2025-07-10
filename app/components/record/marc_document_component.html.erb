@@ -1,7 +1,7 @@
 <%= render layout.new(document:) do |component| %>
   <% component.with_thumbnail do %>
     <%= helpers.render_cover_image(document) %>
-  <% end %>
+  <% end unless document.managed_purls.many? || document.druid %>
 
   <% component.with_title { presenter.heading } %>
   <% component.with_header do %>

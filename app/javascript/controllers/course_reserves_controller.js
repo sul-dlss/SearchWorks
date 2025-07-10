@@ -59,14 +59,13 @@ export default class extends Controller {
       if (numberDrawn < this.pageRows && this.rowMatches(tr, this.searchFilter)) {
         if (numberSkipped < numberToSkip) {
           numberSkipped++
-          console.log("skipped")
-          tr.style.display = "none"
+          tr.classList.add("d-none")
         } else {
-          tr.style.display = ""
+          tr.classList.remove("d-none")
           numberDrawn++
         }
       } else {
-        tr.style.display = "none"
+        tr.classList.add("d-none")
       }
     })
   }

@@ -14,11 +14,6 @@
     padding: 1rem;
   }
 
-  /* We want the feedback modal to show a little below the top of the page */
-  .modal-content {
-    margin-top: 25%;
-  }
-
   .login-message {
     font-size: 0.9rem;
     --bs-link-decoration: underline;
