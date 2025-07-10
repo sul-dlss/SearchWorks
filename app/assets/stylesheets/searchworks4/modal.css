@@ -16,7 +16,7 @@
 
     /* We want the feedback modal to show a little below the top of the page */
     .modal-content {
-        margin-top: 25%;
+        margin-top: 15vh;
     }
 
     .login-message {
