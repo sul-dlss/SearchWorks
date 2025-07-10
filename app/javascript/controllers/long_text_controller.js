@@ -37,9 +37,11 @@ export default class extends Controller {
   }
 
   addControls() {
+    if (this.hasButtonTarget) return;
+
     const button = document.createElement('button');
     button.textContent = 'Show more';
-    button.className = 'btn btn-link p-0';
+    button.className = 'btn btn-link p-0 mb-3';
     button.ariaDisabled="true"
     button.ariaLabel = "This button is disabled because assistive technologies already announce the content.";
     button.dataset.action = 'click->long-text#toggle';
