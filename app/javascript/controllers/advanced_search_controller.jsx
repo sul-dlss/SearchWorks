@@ -233,7 +233,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
 
   return (
     <div className="d-flex flex-row mb-3 gap-3 align-items-center">
-      <FormControl sx={{ minWidth: 120 }} size="small">
+      <FormControl sx={{ minWidth: 200 }} size="small">
         <Select className="w-auto" value={field} onChange={(event) => dispatch({ type: 'updateSearchField', id: id, data: { field: event.target.value } })}>
           {context.searchFieldOptions.map((option) => (
             <MenuItem key={option.field} value={option.field}>
