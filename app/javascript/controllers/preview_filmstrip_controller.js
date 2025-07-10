@@ -9,7 +9,10 @@ export default class extends Controller {
   }
 
   connect() {
-    this.triggerBtn = $('<button class="btn preview-trigger-btn preview-opacity" data-action="click->preview-filmstrip#showPreview"><span class="bi-chevron-down small"></span></button>')
+    this.triggerBtn = document.createElement('button')
+    this.triggerBtn.classList.add('btn', 'preview-trigger-btn', 'preview-opacity')
+    this.triggerBtn.dataset.action = 'click->preview-filmstrip#togglePreview'
+    this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
     this.arrow = $('<div class="preview-arrow"></div>');
 
     // NOTE: The filmstrip, viewport, prevew ,and closeBtn are outside of the controller.
@@ -24,10 +27,21 @@ export default class extends Controller {
   }
 
   appendTriggers() {
-    $(this.element).append(this.triggerBtn);
+    this.element.append
+    this.element.append(this.triggerBtn);
+  }
+
+  togglePreview() {
+    if (this.triggerBtn.classList.contains('preview-open')) {
+      this.closePreview()
+    } else {
+      this.showPreview()
+    }
   }
 
   showPreview() {
+    this.triggerBtn.classList.add('preview-open')
+    this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
     const divContent = $('<div class="preview-content"></div>')
 
     this.preview.empty();
@@ -47,11 +61,9 @@ export default class extends Controller {
   appendPointer() {
     this.preview.append(this.arrow);
 
-    const maxLeft = this.preview.width() - this.arrow.width() - 1
     let arrowLeft = parseInt($(this.element).position().left + ($(this.element).width()/2) - 20);
 
     if (arrowLeft < 0) arrowLeft = 0;
-    if (arrowLeft > maxLeft) arrowLeft = maxLeft;
 
     this.arrow.css('left', arrowLeft);
   }
@@ -62,6 +74,8 @@ export default class extends Controller {
   }
 
   closePreview() {
+    this.triggerBtn.classList.remove('preview-open')
+    this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
     this.viewport.css('overflow-x', 'scroll');
     this.preview.empty().hide();
   }
