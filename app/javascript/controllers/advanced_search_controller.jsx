@@ -80,8 +80,10 @@ const formReducer = (state, action) => {
       return {
         ...state,
         searchFields: [{ id: 0, field: state.searchFieldOptions[0]?.field || '', type: 'must', value: '' }],
-        filterFields: [],
-        currentId: 0
+        filterFields: state.filterFieldOptions.slice(0, 3).map((f, i) => ({
+          id: i + 1, field: f.field, type: 'and', values: []
+        })),
+        currentId: 4
       };
     }
   };
