@@ -2,7 +2,11 @@
   <% masthead = capture { render_masthead_partial } %>
   <% content_for(:search_navbar) { masthead } if html_present?(masthead) %>
 
-  <%= render partial: "search_results" %>
+  <% if page_location.access_point == :course_reserve %>
+    <%= render "search_results", hide_constraints: true, hide_facets: true %>
+  <% else %>
+    <%= render partial: "search_results" %>
+  <% end %>
 <% else %>
   <%= render partial: "home_page" %>
 <% end %>
