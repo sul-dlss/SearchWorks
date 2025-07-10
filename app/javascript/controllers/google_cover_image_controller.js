@@ -103,15 +103,11 @@ export default class extends Controller {
       const listGoogleBooks = this.element.querySelectorAll(`.google-books.${bibkey}`)
 
       listGoogleBooks.forEach((googleBooks) => {
-        const $googleBooks = $(googleBooks)
-        if (data.preview === 'full') {
-          this.checkAndEnableOnlineAccordionSection($googleBooks[0]);
-          this.checkAndEnableAccessPanel($googleBooks[0], '.panel-online');
-        } else if (data.preview === 'partial' || data.preview === 'noview') {
-          const $limitedView = $googleBooks.find('.limited-preview')
-          $limitedView.attr('href', data.preview_url);
-          this.checkAndEnableAccessPanel($googleBooks[0], '.panel-related');
+        if (data.preview === 'partial' || data.preview === 'noview') {
+          const $limitedView = googleBooks.querySelector('.limited-preview')
+          $limitedView.href = data.preview_url;
         }
+        this.checkAndEnableAccessPanel(googleBooks, '.access-panel');
       })
     }
   }
@@ -135,22 +131,5 @@ export default class extends Controller {
 
     accessPanel.hidden = false
     googleBooks.hidden = false
-    // Tell the long table controller that another element has been added to it's list
-    googleBooks.dataset.longTableControllerIgnore = false
-    const event = new CustomEvent("item-added");
-    const longTable = googleBooks.closest('[data-controller="long-table"]')
-    longTable?.dispatchEvent(event);
-  }
-
-  checkAndEnableOnlineAccordionSection(googleBooks) {
-    resultsOnlineSection = googleBooks.closest('[data-behavior="results-online-section"]');
-
-    if (resultsOnlineSection) {
-      resultsOnlineSection.hidden = false
-      googleBooks.hidden = false
-      // Re-run responsive truncation on the list in case the google link takes us over the two-line threshold
-      const metadataLinks = googleBooks.closest("[data-behavior='truncate-results-metadata-links']")
-      $(metadataLinks).responsiveTruncate({lines: 2, more: 'more...', less: 'less...'})
-    }
   }
 }
