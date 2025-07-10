@@ -164,6 +164,11 @@
   }
 }
 
+.bookplate-image {
+  max-height: 300px;
+  max-width: 128px;
+}
+
 .collection-result-preview {
   .btn {
     --bs-btn-padding-y: 0.125rem;
