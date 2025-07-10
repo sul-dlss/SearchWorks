@@ -80,10 +80,10 @@ const formReducer = (state, action) => {
       return {
         ...state,
         searchFields: [{ id: 0, field: state.searchFieldOptions[0]?.field || '', type: 'must', value: '' }],
-        filterFields: state.filterFieldOptions.slice(0, 3).map((f, i) => ({
+        filterFields: state.filterFieldOptions.filter(f => f.top).map((f, i) => ({
           id: i + 1, field: f.field, type: 'and', values: []
         })),
-        currentId: 4
+        currentId: state.filterFieldOptions.filter(f => f.top).length
       };
     }
   };
@@ -133,7 +133,7 @@ const mapBlacklightQueryParamsToForm = (queryParams) => {
 
 const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) => {
   const initialData = {
-    filterFields: filterFields.slice(0, 3).map((f, i) => ({
+    filterFields: filterFields.filter(f => f.top).map((f, i) => ({
       id: i + 1, field: f.field, type: 'and', values: []
     })),
     filterFieldOptions: filterFields || [],
@@ -141,7 +141,7 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
       { field: 'and', label: 'Includes all (AND)' },
       { field: 'or', label: 'Includes any (OR)' },
     ],
-    currentId: 4,
+    currentId: filterFields.filter(f => f.top).length,
     searchFields: [{ id: 0, field: searchFieldOptions[0]?.field || '', type: 'must', value: queryParams.q || '' }],
     searchFieldOptions: searchFieldOptions || [],
     searchTypeOptions: [
