@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["container"]
 
   connect() {
-    console.log("Connect to Library Has")
     this.updateDisplay()
   }
 
