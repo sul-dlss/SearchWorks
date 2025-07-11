@@ -19,6 +19,12 @@ export default class extends Controller {
       })
   }
 
+
+  // Inform Leaflet that the map needs to redraw.
+  tabVisibility() {
+    this.viewer.invalidateSize()
+  }
+
   handleResponse(data) {
     if (data.stat === "OK" && data.results.maps.length > 0) {
       this.plugContent(data)
@@ -33,23 +39,23 @@ export default class extends Controller {
     this.callnumberTarget.textContent = callno
 
     maps.forEach((map, index) => {
-      const mapClone = this.mapTarget.cloneNode(true)
-      const zoomControls = mapClone.querySelector(".zoom-controls")
 
       this.libraryTarget.textContent = map.library
       this.floornameTarget.textContent = map.floorname
-
-      const osd = mapClone.querySelector(".osd")
-      osd.id = `osd-${index}`
-
       // Replace <li>- with <li>
       this.directionsTarget.innerHTML = map.directions.replaceAll(/<li>-\s*/g, '<li>')
 
+      this.bounds = [[0, 0], [map.height, map.width]]
+      this.mapurl = map.mapurl
+      this.osdId = `osd-${index}-${Math.floor(Math.random() * 200000000)}`
+
+      const mapClone = this.mapTarget.cloneNode(true)
       // Replace the map target with the cloned one
       this.mapTarget.replaceWith(mapClone)
+      const osd = mapClone.querySelector(".osd")
+      osd.id = this.osdId
+      this.addOsd()
 
-      // Render map
-      this.addOsd(map, `osd-${index}`, zoomControls)
     })
   }
 
@@ -67,18 +73,16 @@ export default class extends Controller {
     }
   }
 
-  addOsd(map, osdId) {
-    this.viewer = L.map(osdId, {
+  addOsd() {
+    this.viewer = L.map(this.osdId, {
       crs: L.CRS.Simple,
       minZoom: -2,
       zoomControl: false,
       attributionControl: false
     })
 
-    this.bounds = [[0, 0], [map.height, map.width]]
-
     L.imageOverlay(
-      `${map.mapurl}&marker=1&type=.png`,
+      `${this.mapurl}&marker=1&type=.png`,
       this.bounds
     ).addTo(this.viewer)
 
