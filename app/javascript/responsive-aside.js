@@ -4,34 +4,53 @@
   document.addEventListener('DOMContentLoaded', resetAndHandleResponsiveAside);
 
 
-  let lastAsideVisibility = false
+  let lastState = null
 
   function resetAndHandleResponsiveAside() {
-    lastAsideVisibility = false
+    lastState = null
     handleResponsiveAside();
   }
 
   function handleResponsiveAside() {
     const aside = document.getElementById('modules-aside')
+    const miniBentoDrawerBtn = document.querySelector('.mini-bento.btn')
+    const miniBentoDrawer = document.getElementById('alternate-catalog-offcanvas')
+    const sidebar = document.querySelector('.sidebar')
 
-    if (aside === null || aside.checkVisibility === undefined) return
+    if (!aside || !aside.checkVisibility || !miniBentoDrawerBtn || !miniBentoDrawerBtn.checkVisibility) return
 
-    const newVisibility = aside.checkVisibility()
+    const currentState = {
+      asideVisible: aside.checkVisibility(),
+      miniBentoSidebarVisible: !miniBentoDrawerBtn.checkVisibility()
+    }
 
-    if (newVisibility !== lastAsideVisibility) {
-      lastAsideVisibility = newVisibility
+    const stateChanged = !lastState ||
+                        currentState.asideVisible !== lastState.asideVisible ||
+                        currentState.miniBentoSidebarVisible !== lastState.miniBentoSidebarVisible
 
-      if (newVisibility) {
-        reparentAsideModules(aside)
+    if (stateChanged) {
+      lastState = currentState
+
+      if (currentState.asideVisible) {
+        reparentAltCatalog(aside)
+      } else if (currentState.miniBentoSidebarVisible) {
+        hideDrawer(miniBentoDrawer)
+        reparentAltCatalog(sidebar)
       } else {
-        reparentAsideModules(document.querySelector('.sidebar'));
+        reparentAltCatalog(miniBentoDrawer)
       }
     }
-  };
+  }
 
-  function reparentAsideModules(parent) {
+  function reparentAltCatalog(parent) {
     const altCatalog = document.querySelector('.alternate-catalog')
     if (altCatalog)
       parent.appendChild(altCatalog)
+  }
+
+  function hideDrawer(drawerElement) {
+    const drawer = bootstrap.Offcanvas.getInstance(drawerElement)
+    if (drawer)
+      drawer.hide()
   }
 })();
