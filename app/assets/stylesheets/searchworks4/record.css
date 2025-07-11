@@ -14,6 +14,11 @@
   }
 }
 
+.document-title {
+  /* create room for the thumbnail */
+  margin-right: 150px;
+}
+
 .ms-n3 {
   margin-inline-start: -1rem !important;
 }
