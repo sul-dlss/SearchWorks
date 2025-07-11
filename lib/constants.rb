@@ -286,8 +286,8 @@ module Constants
     'Sound recording' => Icons::Microphone2Component,
     'Video' => Icons::Film2Component, # old format_main_ssim value
     'Video/Film' => Icons::Film2Component,
-    # Video game
-    # Website
+    'Video game' => Icons::GameController2Component,
+    'Website' => Icons::NetworkWebComponent,
     'Credits' => Icons::Contacts1Component,
     'Subjects' => Icons::Tags1Component,
     'Contents' => Icons::List4Component,
