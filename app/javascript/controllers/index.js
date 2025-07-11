@@ -114,3 +114,9 @@ application.register("stackmap", StackmapController)
 
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
+
+import ShowMoreButtonController from "./show_more_button_controller"
+application.register("show-more-button", ShowMoreButtonController)
+
+import ListToggleController from "./list_toggle_controller"
+application.register("list-toggle", ListToggleController)
