@@ -23,19 +23,17 @@ module NegativeFacets
     end
   end
 
-  class NegativeFilterQueryBuilder < Blacklight::Solr::DefaultFilterQueryBuilder
+  class NegativeFilterQueryBuilder < Blacklight::Solr::AbstractFilterQueryBuilder
     def call(filter, *)
-      filter_queries, subqueries = super
+      facet_config = blacklight_config.facet_fields[filter.config.key]
+      solr_field = facet_config.field if facet_config && !facet_config.query
+      solr_field ||= filter.config.key
 
-      negated_queries = filter_queries.map do |query|
-        if query.start_with?('-')
-          query.delete_prefix('-')
-        else
-          "-#{query}"
-        end
+      negated_queries = filter.values.compact_blank.map do |value|
+        "-#{solr_field}:\"#{value}\""
       end
 
-      [negated_queries, subqueries]
+      [negated_queries, {}]
     end
   end
 end
