@@ -42,25 +42,6 @@ RSpec.describe CatalogHelper do
     end
   end
 
-  describe 'new_documents_feed_path' do
-    before do
-      allow(helper).to receive(:search_state).and_return(Blacklight::SearchState.new({}, CatalogController.blacklight_config))
-    end
-
-    it 'returns the search url to an atom feed' do
-      expect(helper.new_documents_feed_path).to match %r{^/catalog.atom\?}
-    end
-
-    it 'includes the new-to-libs sort key' do
-      expect(helper.new_documents_feed_path).to match(/sort=new-to-libs/)
-    end
-
-    it 'removes the page parameter' do
-      allow(helper).to receive(:search_state).and_return(Blacklight::SearchState.new({ page: 5}, CatalogController.blacklight_config))
-      expect(helper.new_documents_feed_path).not_to match(/page=/)
-    end
-  end
-
   describe 'link_to_bookplate_search' do
     let(:bookplate) { Bookplate.new('FUND-CODE -|- druid-abc -|- fild-id-123 -|- Bookplate Text') }
 
@@ -109,15 +90,6 @@ RSpec.describe CatalogHelper do
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
         expect(tech_details(document)).to have_css('a', text: 'Collection PURL')
       end
-    end
-  end
-
-  describe '#iiif_drag_n_drop' do
-    it 'creates a IIIF drag n drop link' do
-      dnd_link = iiif_drag_n_drop('http://example.io/kittenz/iiif/manifest')
-      expect(dnd_link).to match(/data-turbo="false" data-action="dragstart-&gt;analytics#trackEvent" data-bs-toggle="tooltip" data-bs-placement="left"/)
-      expect(dnd_link).to match(/title="Drag icon to any IIIF viewer. — Click icon to learn more."/)
-      expect(dnd_link).to match(%r{<img width="40" alt="IIIF Drag-n-drop" src="/images/iiif-drag-n-drop.svg" />})
     end
   end
 

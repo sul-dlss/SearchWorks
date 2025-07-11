@@ -528,6 +528,7 @@ class CatalogController < ApplicationController
 
   def stackmap
     params.require(:api_url) # Sometimes bots are calling this service without providing required parameters. Raise an error in this case.
+    @document = search_service.fetch(params[:id])
     render layout: !request.xhr?
   end
 
