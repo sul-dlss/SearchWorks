@@ -10,6 +10,14 @@ module CatalogHelper
     document_index_view_type.to_s
   end
 
+  # override upstream so we don't check the session for the last view type.
+  def document_index_view_type(query_params = params || {})
+    view_param = query_params[:view]
+    return view_param.to_sym if view_param && document_index_views.key?(view_param.to_sym)
+
+    default_document_index_view_type
+  end
+
   def stackmap_link(document, location)
     item = location.items.first
     params = { callno: item.callnumber,

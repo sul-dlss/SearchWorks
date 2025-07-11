@@ -21,6 +21,27 @@ RSpec.describe CatalogHelper do
     end
   end
 
+  describe 'document_index_view_type' do
+    before do
+      allow(helper).to receive_messages(blacklight_config: CatalogController.blacklight_config, blacklight_configuration_context: Blacklight::Configuration::Context.new(helper))
+    end
+
+    it 'returns the view type from params if it exists' do
+      params = { view: 'gallery' }
+      expect(helper.document_index_view_type(params)).to eq :gallery
+    end
+
+    it 'returns the default view type if no params are present' do
+      expect(helper.document_index_view_type).to eq :list
+    end
+
+    it 'overrides blacklight to return the default view type even if there is a stored view in the session' do
+      allow(helper).to receive(:session).and_return(preferred_view: :gallery)
+
+      expect(helper.document_index_view_type(params)).to eq :list
+    end
+  end
+
   describe 'link_to_bookplate_search' do
     let(:bookplate) { Bookplate.new('FUND-CODE -|- druid-abc -|- fild-id-123 -|- Bookplate Text') }
 
