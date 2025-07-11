@@ -94,7 +94,7 @@
     cursor: default;
     text-overflow: ellipsis;
     overflow: hidden;
-    padding-inline: 0.75rem 0rem; /* Keeping the default top/bottom padding */
+    padding-inline: 0.75rem 0.25rem; /* Keeping the default top/bottom padding */
     white-space: nowrap;
     max-width: clamp(288px, calc(30vw), 500px);
 
@@ -121,7 +121,7 @@
     --bs-btn-active-border-color: var(
       --bl-constraint-remove-hover-border-color
     );
-    padding-inline-start: 0.25rem;
+    padding-inline-start: 0.5rem;
   }
 
   .constraint-value,
@@ -137,6 +137,7 @@
     --bs-btn-padding-y: 0.25rem;
   }
 }
+
 
 .modal {
   --bl-modal-backdrop-bg: rgba(var(--stanford-black-rgb), 0.4)
