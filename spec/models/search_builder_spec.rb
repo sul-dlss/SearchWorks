@@ -89,7 +89,7 @@ RSpec.describe SearchBuilder do
       it 'overrides solr parameters to just the things the home page needs' do
         solr_params = { 'facet.field' => ['some garbage'], 'rows' => 50 }
         search_builder.consolidate_home_page_params(solr_params)
-        expect(solr_params).to include 'facet.field' => ['access_facet', 'format_hsim', 'building_facet', 'language'], 'rows' => 0
+        expect(solr_params).to include 'facet.field' => ['access_facet', 'format_hsim', 'building_facet'], 'rows' => 0
       end
     end
 
