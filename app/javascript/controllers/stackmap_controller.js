@@ -7,7 +7,7 @@ export default class extends Controller {
     apiUrl: String
   }
 
-  static targets = ["map", "directions"]
+  static targets = ["map", "directions", "callnumber", "library", "floorname"]
 
   connect() {
     fetchJsonp(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
@@ -28,16 +28,16 @@ export default class extends Controller {
   }
 
   plugContent(data) {
-    const { callnum, maps } = data.results
+    const { callno, maps } = data.results
 
-    this.element.querySelector(".callnumber").textContent = callnum
+    this.callnumberTarget.textContent = callno
 
     maps.forEach((map, index) => {
       const mapClone = this.mapTarget.cloneNode(true)
       const zoomControls = mapClone.querySelector(".zoom-controls")
 
-      this.element.querySelector(".library").textContent = map.library
-      this.element.querySelector(".floorname").textContent = map.floorname
+      this.libraryTarget.textContent = map.library
+      this.floornameTarget.textContent = map.floorname
 
       const osd = mapClone.querySelector(".osd")
       osd.id = `osd-${index}`

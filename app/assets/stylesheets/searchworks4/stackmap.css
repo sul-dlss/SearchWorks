@@ -1,25 +1,6 @@
 .stackmap {
-  padding: 10px 0;
-
-  span.callnumber {
-    font-weight: bold;
-  }
-
-  .library,
-  .floorname,
-  .shelving-range,
-  .callnumber-display {
-    font-weight: bold;
-  }
-
   .map-template {
     padding: 5px 0;
-
-    .controls {
-      clear: both;
-      overflow: auto;
-      padding: 20px 0 10px 0;
-    }
 
     .osd {
       background-color: var(--white);
@@ -27,27 +8,14 @@
       height: 450px;
       padding: 0;
     }
-  }
-}
 
-.text-directions {
-  line-height: 1.8em;
-  padding: 0;
-}
-
-#blacklight-modal {
-  .stackmap {
-    padding: 10px;
-    text-align: left;
-  }
-}
-
-@media (width < 575.98px) {
-  .stackmap {
-    .map-template {
+    @media (width < 575.98px) {
       .osd {
         height: 250px;
       }
-    }
+  }
+  .text-directions {
+    line-height: 1.8em;
+    padding: 0;
   }
 }

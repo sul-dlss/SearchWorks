@@ -1,6 +1,6 @@
 .modal-content:has(.record-summary) {
   --bs-modal-header-border-width: 0;
-  --bs-modal-padding: 0;
+  --bs-modal-padding: 1.5rem;
   --bs-border-color: var(--stanford-30-black);
 
   .modal-footer {

@@ -17,6 +17,7 @@
 .record-toolbar,
 .library-location-heading,
 .nav-tabs,
+.zoom-controls .btn-link,
 .bookmark-toolbar,
 .dropdown-item {
   --bs-link-decoration: none;
