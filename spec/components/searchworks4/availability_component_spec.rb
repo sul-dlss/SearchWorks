@@ -101,7 +101,7 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
       render_inline(described_class.new(document: document))
 
       expect(page).to have_css('.availability-component', text: '1 item')
-      expect(page).to have_css('table caption', text: '1 item in SAL3', visible: :all)
+      expect(page).to have_css('table caption', text: '1 item in Off-campus collections SAL3', visible: :all)
     end
 
     it 'renders the MHLD data' do
@@ -109,6 +109,20 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
       render_inline(described_class.new(document: document))
 
       expect(page).to have_css('table caption', text: 'Library has: 1972/76', visible: :all)
+    end
+  end
+
+  context 'with an instance with items in multiple off-campus libraries' do
+    let(:document) do
+      SolrDocument.from_fixture('4250062.yml')
+    end
+
+    it 'renders the off-campus section with each actual library under it' do
+      render_inline(described_class.new(document:))
+
+      expect(page).to have_css '.library', text: 'Off-campus collections'
+      expect(page).to have_css '.location-name', text: 'SAL', visible: :all
+      expect(page).to have_css '.location-name', text: 'For use in Special Collections Reading Room', visible: :all
     end
   end
 end

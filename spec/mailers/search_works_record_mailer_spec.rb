@@ -10,7 +10,7 @@ RSpec.describe SearchWorksRecordMailer do
       SolrDocument.new(
         id: '123',
         title_display: "Title1",
-        item_display_struct: [{ barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'SAL3-STACKS', callnumber: 'ABC 123' }],
+        item_display_struct: [{ barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 123' }],
         marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }],
         modsxml: mods_everything
       ),
@@ -113,7 +113,7 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to include "Green Library - Stacks"
         expect(mail.body).to include "ABC 123"
 
-        expect(mail.body).to include "SAL3 (off-campus storage) - Stacks"
+        expect(mail.body).to include "Off-campus collections - SAL3"
         expect(mail.body).to include "ABC 321"
       end
 
@@ -174,7 +174,7 @@ RSpec.describe SearchWorksRecordMailer do
 
         expect(mail.body).to have_css('dd', text: 'ABC 123')
 
-        expect(mail.body).to have_css('dt', text: 'SAL3 (off-campus storage) - Stacks')
+        expect(mail.body).to have_css('dt', text: 'Off-campus collections - SAL3')
         expect(mail.body).to have_css('dd', text: 'ABC 321')
       end
 

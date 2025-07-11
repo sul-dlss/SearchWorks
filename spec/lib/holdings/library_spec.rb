@@ -75,7 +75,7 @@ RSpec.describe Holdings::Library do
       ] }
 
       it "sorts locations alpha by name" do
-        expect(locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "Stacks"]
+        expect(locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "SAL"]
         expect(locations.map(&:code)).to eq ["GRE-CURRENTPER", "GRE-SSRC-DOCS", "SAL-PAGE"]
       end
 

@@ -24,6 +24,8 @@ module Folio
     end
 
     def name
+      return 'Off-campus collections' if %w[SAL SAL3 SAL-NEWARK].include?(code)
+
       cached_data&.dig('name') || @name
     end
 
