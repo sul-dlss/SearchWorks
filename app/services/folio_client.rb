@@ -8,6 +8,8 @@ class FolioClient # rubocop:disable Metrics/ClassLength
     content_type: 'application/json'
   }.freeze
 
+  class Error < StandardError; end
+
   attr_reader :base_url
 
   def initialize(url: Settings.folio.url,
@@ -144,7 +146,7 @@ class FolioClient # rubocop:disable Metrics/ClassLength
   def session_token
     @session_token ||= begin
       response = request('/authn/login', json: { username: @username, password: @password }, method: :post)
-      raise response.body unless response.status.created?
+      raise Error, "Unable to login to Folio: #{response.body}" unless response.status.created?
 
       response['x-okapi-token']
     end

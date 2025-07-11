@@ -1,10 +1,14 @@
 <turbo-frame id="availability_<%= dom_id(@document) %>">
-  <% @document.holdings.items.map { |item| [item, @rtac[item.live_lookup_item_id]] }.each do |(item, rtac)| %>
-    <% component = Searchworks4::ItemStatusComponent.new(item: item, rtac: rtac) %>
-    <turbo-stream action="replace" target="<%= component.dom_id %>" method="morph">
-      <template>
-        <%= render component %>
-      </template>
-    </turbo-stream>
+  <% if @rtac %>
+    <% @document.holdings.items.map { |item| [item, @rtac[item.live_lookup_item_id]] }.each do |(item, rtac)| %>
+      <% component = Searchworks4::ItemStatusComponent.new(item: item, rtac: rtac) %>
+      <turbo-stream action="replace" target="<%= component.dom_id %>" method="morph">
+        <template>
+          <%= render component %>
+        </template>
+      </turbo-stream>
+    <% end %>
+  <% else # FOLIO error %>
+    <p>Unable to retrieve availability information.</p>
   <% end %>
 </turbo-frame>
