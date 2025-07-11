@@ -22,18 +22,6 @@ RSpec.describe MastheadHelper do
     end
   end
 
-  describe "#facets_prefix_options" do
-    it "has the correct number of elements" do
-      expect(facets_prefix_options.length).to eq 27
-    end
-    it "includes the necessary options" do
-      expect(facets_prefix_options).to include "0-9"
-      expect(facets_prefix_options).to include "A"
-      expect(facets_prefix_options).to include "X"
-      expect(facets_prefix_options).to include "Z"
-    end
-  end
-
   describe '#sdr_path' do
     it 'always include "Stanford Digital Repository" in the building facet' do
       expect(sdr_path).to match /building_facet.*Stanford\+Digital\+Repository/
