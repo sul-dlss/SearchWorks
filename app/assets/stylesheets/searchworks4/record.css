@@ -161,6 +161,10 @@
   overflow: hidden;
 }
 
+.show-more-button {
+  margin-top: 0.75rem;
+}
+
 .blacklight-catalog-show {
   .cover-image {
     max-height: 300px;
