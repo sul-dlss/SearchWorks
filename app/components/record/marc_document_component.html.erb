@@ -10,7 +10,7 @@
     <% end %>
 
     <div class='upper-record-metadata mb-3'>
-      <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %> &mdash; <%= document.marc_field('3003abcefg').values.join(' ') %></div>
+      <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %> &mdash; <%= safe_join(document.marc_field('3003abcefg').values, ' ') %></div>
     </div>
   <% end %>
 
