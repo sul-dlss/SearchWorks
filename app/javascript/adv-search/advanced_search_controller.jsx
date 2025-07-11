@@ -164,6 +164,7 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     filterTypeOptions: [
       { field: 'and', label: 'Includes all (AND)' },
       { field: 'or', label: 'Includes any (OR)' },
+      { field: 'not', label: 'Excludes all (NOT)' }
     ],
     currentId: filterFields.filter(f => f.top).length,
     searchFields: [{ id: 0, field: searchFieldOptions[0]?.field || '', type: 'must', value: queryParams.q || '' }],
@@ -215,6 +216,12 @@ const HiddenInputFields = () => {
           return (
               field.values.map((value) => (
                 <input type="hidden" name={`f[${field.field}][]`} value={value} key={`${field.field}_${value}`}/>
+              ))
+          )
+        } else if (field.type === 'not') {
+          return (
+            field.values.map((value) => (
+                <input type="hidden" name={`f[-${field.field}][]`} value={value} key={`${field.field}_${value}`} />
               ))
           )
         } else {

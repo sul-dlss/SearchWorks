@@ -18,6 +18,7 @@ class CatalogController < ApplicationController
   include CallnumberSearch
 
   include LocationFacet
+  include NegativeFacets
 
   include EmailValidation
   include CatalogEmailSending
