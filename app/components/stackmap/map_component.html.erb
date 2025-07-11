@@ -1,0 +1,34 @@
+<div data-controller="stackmap" data-stackmap-api-url-value="<%= api_url %>" data-action="shown.bs.tab@window->stackmap#tabVisibility">
+  <p>Call number <span data-stackmap-target="callnumber" class="fw-bold"></span> is located in <span data-stackmap-target="library" class="fw-bold"></span>, <span data-stackmap-target="floorname" class="fw-bold"></span>.</p>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="map-tab-<%= item.id %>" data-bs-toggle="tab" data-bs-target="#map-<%= item.id %>" type="button" role="tab" aria-controls="map-<%= item.id %>" aria-selected="true">
+        <i class="bi bi-map me-1 align-middle"></i>Map
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link show-description" id="directions-tab-<%= item.id %>" data-bs-toggle="tab" data-controller="analytics" data-bs-target="#directions-<%= item.id %>" data-action="reveal-text-directions" type="button" role="tab" aria-controls="directions-<%= item.id %>" aria-selected="false">
+        <i class="bi bi-list-task me-1 align-middle"></i>Text directions
+      </button>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="map-<%= item.id %>" data-stackmap-target="map" class="map-template tab-pane fade show active">
+      <div class="zoom-controls mt-2 mb-1 d-flex justify-content-end gap-2">
+        <%= button_tag class: "zoom-in btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomIn' } do %>
+          <i class="bi bi-zoom-in"></i><span class="d-none d-sm-inline"> Zoom in</span>
+        <% end %>
+        <%= button_tag class: "zoom-out btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomOut' } do %>
+          <i class="bi bi-zoom-out"></i><span class="d-none d-sm-inline"> Zoom out</span>
+        <% end %>
+        <%= button_tag class: "zoom-fit btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomBounds' } do %>
+          <i class="bi bi-arrows-angle-contract"></i><span class="d-none d-sm-inline"> Reset size</span>
+        <% end %>
+      </div>
+      <div class="osd">
+      </div>
+    </div>
+    <div id="directions-<%= item.id %>" data-stackmap-target="directions" class="text-directions col-md-12 mt-4 tab-pane fade">
+    </div>
+  </div>
+</div>

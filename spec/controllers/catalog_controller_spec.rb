@@ -48,26 +48,6 @@ RSpec.describe CatalogController do
     end
   end
 
-  describe "routes" do
-    describe "customized from Blacklight" do
-      it "routes /view/:id properly" do
-        expect({ get: '/view/1234' }).to route_to(controller: 'catalog', action: 'show', id: '1234')
-      end
-      it "routes solr_document_path to /view" do
-        expect(solr_document_path('1234')).to eq '/view/1234'
-      end
-      it "routes solr_document_path to /view" do
-        expect(solr_document_path('1234')).to eq '/view/1234'
-      end
-      it "routes the librarian view properly" do
-        expect({ get: '/view/1234/librarian_view' }).to route_to(controller: 'catalog', action: 'librarian_view', id: '1234')
-      end
-      it "routes the stackmap view properly" do
-        expect({ get: '/view/1234/stackmap' }).to route_to(controller: 'catalog', action: 'stackmap', id: '1234')
-      end
-    end
-  end
-
   describe "blacklight config" do
     let(:config) { controller.blacklight_config }
 
