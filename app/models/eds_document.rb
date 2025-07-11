@@ -25,6 +25,8 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   # SMS uses the semantic field mappings below to generate the body of an SMS email.
   use_extension(EdsExport, &:eds_ris_export?)
 
+  attribute :main_title_date, :string, :eds_publication_year
+
   sw_field_semantics = {
     title: %w[title_display eds_title],
     author: 'author_display',
