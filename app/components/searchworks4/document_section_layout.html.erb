@@ -1,4 +1,4 @@
-<%= tag.section class: @classes do %>
+<%= tag.section class: @classes, data: { controller: "list-toggle" }  do %>
   <%= content_tag @heading_level, @title %>
   <%= tag.dl content, class: @dl_classes %>
 <% end %>

@@ -88,6 +88,9 @@ application.register("google-cover-image", GoogleCoverImageController)
 import LibraryH3lpController from "./library_h3lp_controller"
 application.register("library-h3lp", LibraryH3lpController)
 
+import ListToggleController from "./list_toggle_controller"
+application.register("list-toggle", ListToggleController)
+
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)
 
@@ -111,6 +114,9 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 
 import RecaptchaController from "./recaptcha_controller"
 application.register("recaptcha", RecaptchaController)
+
+import ShowMoreButtonController from "./show_more_button_controller"
+application.register("show-more-button", ShowMoreButtonController)
 
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
