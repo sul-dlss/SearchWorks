@@ -18,7 +18,7 @@
                                               advanced_search_url: search_action_url(action: 'advanced_search'),
                                               params: search_state.params_for_search.except(:qt),
                                               autocomplete_path: suggest_index_catalog_path %>
-        <p class="mt-3">Catalog - search over eleven million physical volumes, over three million e-books, over  65,000 serial licenses, and enumerable digital resources, including  datasets... </p>
+        <p class="mt-3 mb-0">Search over twelve million resources from Stanford University Libraries’ physical and digital collections, including books, journals, maps, media, government documents, databases, datasets, and more.</p>
       </search>
     </div>
   </div>
@@ -46,7 +46,17 @@
       <ul class="list-unstyled">
         <li class="mb-3">
           <div class="fw-semibold">Start with a simple keyword search</div>
-          Examples: “the new york times” or “stephan graham thesis”
+          Examples: <em>the new york times</em> or <em>stephan graham thesis</em>
+        </li>
+
+        <li class="mb-3">
+        <div class="fw-semibold">All words are significant</div>
+        Examples: distinguish between <em>archaeology <strong>and</strong> literature</em> and <em>archaeology <strong>in</strong> literature</em>
+        </li>
+
+        <li class="mb-3">
+          <div class="fw-semibold">Wildcards</div>
+          Example: créat* will find création(s), créateur(s), créatrice(s)
         </li>
 
         <li class="mb-3">
@@ -54,18 +64,13 @@
         </li>
 
         <li class="mb-3">
-        <div class="fw-semibold">Results are sorted by relevance</div>
+          <div class="fw-semibold">Results are sorted by relevance</div>
         </li>
 
         <li class="mb-3">
-        <div class="fw-semibold">All words are significant</div>
-        Examples: distinguish between “archaeology and literature” and “archaeology in literature”
+          <div class="fw-semibold">Or try <a href="/advanced">advanced search</a> to construct a targeted query.</div>
         </li>
 
-        <li class="mb-3">
-          <div class="fw-semibold">Wildcards</div>
-          Example: créat* will find création(s), créateur(s), créatrice(s)
-        </li>
       </ul>
     </section>
     <section class="px-lg-3 py-xl-1 py-3 features">
@@ -90,7 +95,7 @@
         </li>
         <li class="mb-3">
           <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          Student work held in the Stanford Digital repository
+          Student work held in the Stanford Libraries &amp; Digital Repository
         </li>
       </ul>
     </section>
