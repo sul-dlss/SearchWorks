@@ -16,14 +16,10 @@ module NegativeFacets
 
     params[:f].select { |k, _v| k.start_with?('-') }.each_key do |k|
       original_field = blacklight_config.facet_fields[k.delete_prefix('-')]
-      next unless original_field
+      next if original_field.nil? || blacklight_config.facet_fields[k]
 
-      blacklight_config.facet_fields[k] = original_field.dup
-      blacklight_config.facet_fields[k].key = k
-      blacklight_config.facet_fields[k].show = false
-      blacklight_config.facet_fields[k].label = "#{original_field.label} NOT"
-
-      blacklight_config.facet_fields[k].filter_query_builder = NegativeFilterQueryBuilder
+      blacklight_config.add_facet_field k, **original_field.to_h, group: 'negative', show: false, label: "#{original_field.label} NOT",
+                                                                  filter_query_builder: NegativeFilterQueryBuilder
     end
   end
 
