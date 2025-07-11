@@ -7,14 +7,17 @@ class StackmapComponent < ViewComponent::Base
     super
   end
 
-  def api_url
-    item = @items.first
-    url = URI(@stackmap_api_url)
-    url.query = {
-      callno: item.callnumber,
-      library: item.library,
-      location: item.effective_permanent_location_code
-    }.to_query
-    url.to_s
+  attr_reader :items, :stackmap_api_url
+
+  def grouped_by_truncated_callnumbers
+    @grouped_by_truncated_callnumbers ||= items.group_by(&:truncated_callnumber)
+  end
+
+  def tab_id_for(truncated_callnumber)
+    "tab-#{truncated_callnumber.gsub(/\s+/, '-')}"
+  end
+
+  def target_id_for(truncated_callnumber)
+    "target-#{truncated_callnumber.gsub(/\s+/, '-')}"
   end
 end
