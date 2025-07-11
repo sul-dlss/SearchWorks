@@ -18,10 +18,6 @@ module MastheadHelper
     PageLocation.new(search_state)
   end
 
-  def facets_prefix_options
-    ['0-9', ('A'..'Z').to_a].flatten
-  end
-
   def sdr_path
     facet_params = { f: { building_facet: ['Stanford Digital Repository'] } }
     search_catalog_path(facet_params)

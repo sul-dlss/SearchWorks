@@ -77,19 +77,6 @@ RSpec.describe ApplicationHelper do
     end
   end
 
-  describe "#disabled_class_for_current_page" do
-    let(:selections_page) { "selections" }
-
-    it "is disabled" do
-      helper.request.path = "selections"
-      expect(helper.disabled_class_for_current_page(selections_page)).to eq "disabled"
-    end
-    it "is not disabled" do
-      helper.request.path = "feedback"
-      expect(helper.active_class_for_current_page(selections_page)).to be_nil
-    end
-  end
-
   describe "#disabled_class_for_no_selections" do
     it "is disabled" do
       expect(helper.disabled_class_for_no_selections(0)).to eq "disabled"
