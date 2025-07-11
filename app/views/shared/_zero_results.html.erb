@@ -2,7 +2,7 @@
 <div class='row zero-results'>
   <div class="col-md-6 col-lg-4 modify-search">
     <div class="border-before pt-3" data-controller="analytics" data-analytics-category-value="zero-results">
-      <h2 class="ps-3 mb-4"><%= t 'blacklight.search.zero_results.modify_your_search', search_type: search_type_name %></h2>
+      <h2 class="ps-3 mb-4"><%= t 'blacklight.search.zero_results.modify_your_search' %></h2>
       <ul>
         <% filters = SearchResult::NoResult::FiltersComponent.new(render_headers: false, start_over_component: nil, search_state:) %>
         <% if filters.render? %>
