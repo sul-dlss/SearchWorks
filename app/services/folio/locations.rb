@@ -11,7 +11,25 @@ module Folio
     # @return [String] the Folio location label
     def self.label(code:)
       location = find_by(code:)
-      location && location['discoveryDisplayName']
+
+      return unless location
+
+      name = location['discoveryDisplayName']
+
+      if name == 'Stacks' && code.start_with?('SAL')
+        case code.split('-').first
+        when 'SAL3'
+          'SAL3'
+        when 'SAL'
+          'SAL'
+        when 'SAL-NEWARK'
+          'SAL Newark'
+        else
+          name
+        end
+      else
+        name
+      end
     end
 
     # @param [String] code the Folio location code

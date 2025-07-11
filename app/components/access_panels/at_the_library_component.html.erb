@@ -1,6 +1,8 @@
 <div>
-  <% document.holdings.libraries.each do |library| %>
+  <% document.holdings.libraries.reject { |library| library.code.start_with?('SAL') }.each do |library| %>
     <%= render AccessPanels::LibraryComponent.new(library:, document:) %>
   <% end %>
+  <%= render AccessPanels::GroupedLibraryComponent.new(label: 'Off-campus collections', libraries: document.holdings.libraries.select { |library| library.code.start_with?('SAL') } , document:) %>
+
   <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document) %>
 </div>

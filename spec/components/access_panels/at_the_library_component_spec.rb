@@ -444,4 +444,18 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       end
     end
   end
+
+  context 'with an instance with items in multiple off-campus libraries' do
+    let(:document) do
+      SolrDocument.from_fixture('4250062.yml')
+    end
+
+    it 'renders the off-campus section with each actual library under it' do
+      render_inline(described_class.new(document:))
+
+      expect(page).to have_css 'h3', text: 'Off-campus collections'
+      expect(page).to have_css '.location-name', text: 'SAL'
+      expect(page).to have_css '.location-name', text: 'For use in Special Collections Reading Room'
+    end
+  end
 end

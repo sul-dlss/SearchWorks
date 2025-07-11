@@ -34,6 +34,33 @@ module Searchworks4
       document.holdings.libraries.one? && document.holdings.libraries.first.locations.one?
     end
 
+    # Group SAL* libraries together into a single category
+    def library_groups
+      @library_groups ||= begin
+        grouped = document.holdings.libraries.group_by do |library|
+          if library.code.start_with?('SAL')
+            'OFF_CAMPUS'
+          else
+            library.code
+          end
+        end
+
+        grouped.values.map { |libraries| LibraryGroup.new(libraries) }
+      end
+    end
+
+    class LibraryGroup
+      attr_reader :libraries
+
+      def initialize(libraries)
+        @libraries = libraries
+      end
+
+      def name
+        libraries.first.name
+      end
+    end
+
     class LocationComponent < ViewComponent::Base
       attr_reader :location, :document
 

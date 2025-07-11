@@ -78,9 +78,8 @@
   <%# With multiple locations, we just require the user expand the whole table to see any item details %>
   <%= container_tag('details', classes: %w[w-100]) do %>
     <%= tag.summary class: header_classes + ['d-flex'] do %>
-      <% if document.holdings.libraries.one? %>
-        <% library = document.holdings.libraries.first %>
-        <%= tag.span library.name, class: 'library fw-semibold' %>
+      <% if library_groups.one? %>
+        <%= tag.span library_groups.first.name, class: 'library fw-semibold' %>
       <% end %>
 
       <%= render ItemCountComponent.new(document.holdings.items.count) %>
@@ -91,42 +90,44 @@
       </div>
     <% end %>
     <div>
-      <% document.holdings.libraries.each do |library| %>
+      <% library_groups.each do |library_group| %>
         <div class="d-flex flex-column my-2">
-          <% unless document.holdings.libraries.one? %>
-          <div class="bg-light fw-semibold"><%= library.name %></div>
+          <% if library_groups.many? %>
+            <div class="bg-light fw-semibold"><%= library_group.name %></div>
           <% end %>
-        <% library.locations.each do |location| %>
-          <div class="d-flex flex-column flex-sm-row gap-2 gap-sm-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
-            <div class="pt-2" data-availability-target="location">
-              <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></div>
-              <% unless document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
-                <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
-              <% end %>
-            </div>
-            <table class="table w-auto">
-              <caption class="visually-hidden">
-                <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
-              </caption>
-              <thead class="visually-hidden">
-                <tr>
-                  <th>Call number</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-              <% location.items.each do |item| %>
-                <tr>
-                  <th scope="row" class="fw-normal"><%= tag.span item.callnumber, class: 'callnumber' %></th>
-                  <td>
-                    <%= render Searchworks4::ItemStatusComponent.new(item:) %>
-                  </td>
-                </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
-        <% end %>
+          <% library_group.libraries.each do |library| %>
+            <% library.locations.each do |location| %>
+              <div class="d-flex flex-column flex-sm-row gap-2 gap-sm-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+                <div class="pt-2" data-availability-target="location">
+                  <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></div>
+                  <% unless document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
+                    <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+                  <% end %>
+                </div>
+                <table class="table w-auto">
+                  <caption class="visually-hidden">
+                    <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
+                  </caption>
+                  <thead class="visually-hidden">
+                    <tr>
+                      <th>Call number</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <% location.items.each do |item| %>
+                    <tr>
+                      <th scope="row" class="fw-normal"><%= tag.span item.callnumber, class: 'callnumber' %></th>
+                      <td>
+                        <%= render Searchworks4::ItemStatusComponent.new(item:) %>
+                      </td>
+                    </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       <% end %>
       <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
