@@ -9,6 +9,7 @@ module FormatParamsMapping
   private
 
   def map_format_params
+    return if blacklight_config.facet_fields['format_main_ssim']
     return unless params.dig(:f, :format_main_ssim)
 
     params[:f][:format_hsim] ||= []
