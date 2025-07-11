@@ -56,3 +56,9 @@
     }
   }
 }
+
+#advanced-search-form {
+  input:focus-visible {
+    box-shadow: none;
+  }
+}
