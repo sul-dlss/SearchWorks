@@ -1,6 +1,6 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h3 class="modal-title">Cite</h3>
+    <h2 class="modal-title">Cite</h2>
   <% end %>
   <%= render Searchworks4::Citations::CitationComponent.new(presenter:) %>
   <% component.with_footer do %>

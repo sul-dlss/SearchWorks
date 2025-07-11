@@ -5,19 +5,20 @@
 <% if course_info.present? %>
   <%= render Masthead::LayoutComponent.new do |component| %>
     <% component.with_header do %>
-      Course reserve list: <%= course_info.course_number %>
+      Course reserves <i class="bi bi-chevron-right"></i> Course(s)
+    <% end %>
+    <% component.with_search do %>
+      <h2 class="h3"><%= "#{course_info.course_number} -- #{course_info.name}" %></h2>
+      <div>Instructor(s): <%= safe_join course_info.instructors, ', ' %></div>
     <% end %>
 
+
     <% component.with_aside do %>
-      <dl class='dl-horizontal dl-invert'>
-        <dt>Course</dt>
-        <dd><%= "#{course_info.course_number} -- #{course_info.name}" %></dd>
-        <dt>Instructor(s)</dt>
-        <dd><%= safe_join course_info.instructors, ', ' %></dd>
-      </dl>
-      <p>
-        <%= link_to "Find reserve list for another course", course_reserves_path %>
-      </p>
     <% end %>
+    <% component.with_back_link do %>
+      <%= link_to course_reserves_path do %>
+        <%= component.back_icon %> Find reserve list for another course
+      <% end %>
+      <% end %>
   <% end %>
 <% end %>

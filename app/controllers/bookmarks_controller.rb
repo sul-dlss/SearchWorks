@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class BookmarksController < CatalogController
-  layout 'searchworks'
   include Blacklight::Bookmarks
   include SelectionsCount
 
@@ -11,6 +10,8 @@ class BookmarksController < CatalogController
       q: '*:*',
       rows: 20
     }
+    config.sort_fields.delete('relevance')
+    config.sort_fields.delete('new-to-libs')
   end
 
   # Overidden from Blacklight to add our tabbed interface
@@ -42,6 +43,17 @@ class BookmarksController < CatalogController
       flash[:error] = I18n.t('blacklight.bookmarks.clear.failure')
     end
     redirect_back fallback_location: bookmarks_url
+  end
+
+  def create_response(_success)
+    @id = @bookmarks.first.fetch(:document_id)
+    # Renders turbo_stream response
+  end
+
+  def destroy_response(_success)
+    @id = @bookmarks.first.fetch(:document_id)
+
+    # Renders turbo_stream response
   end
 
   protected

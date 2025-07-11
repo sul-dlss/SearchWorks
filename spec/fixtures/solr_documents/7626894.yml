@@ -12,5 +12,5 @@ marc_links_struct:
     href: https://stanford.idm.oclc.org/?url=https://searchworks.stanford.edu
     fulltext: true
 format: Database
-format_main_ssim: Database
+format_hsim: Database
 access_facet: Online

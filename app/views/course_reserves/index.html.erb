@@ -1,42 +1,80 @@
 <% @page_title = t 'blacklight.course_reserves.page_title', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-<div id="masthead-container">
-  <div id="masthead" class="course-reserves-masthead">
-    <h1 class="my-3">Browse course reserves</h1>
-    <div>
-      <p>Request items at the library's loan desk, and return them directly to the same location. Loan periods are typically 2-4 hours. Renewals are not permitted.</p>
-      <p class="inline-links">
-        For instructors: <%= link_to "Request course reserves", "https://reserves.stanford.edu" %> | <%= link_to "More information", "https://library.stanford.edu/services/course-reserves" %>
-      </p>
-    </div>
+
+
+<% content_for(:search_navbar) do %>
+  <%= render 'header' %>
+<% end %>
+
+<% content_for(:body_attributes) do %>
+  data-controller="course-reserves"
+<% end %>
+
+
+<div class="row">
+  <div class="col-lg-9 col-md-12">
+    <section class="">
+      <div class="sort-and-per-page d-flex justify-content-between align-items-center mb-2">
+        <div data-course-reserves-target="results"></div>
+        <div class="d-flex flex-row gap-2">
+          <div class="dropdown">
+              <button type="button" class="btn btn-sm btn-outline-primary lh-1 dropdown-toggle show" data-bs-toggle="dropdown" data-course-reserves-target="sortButton">
+                Sort<span class="d-none d-lg-inline"> by course ID</span>
+              </button>
+
+              <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" aria-current="true" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#0" data-course-reserves-target="sortItem">
+                    <i class="bi bi-check-lg active-icon align-middle"></i>course ID</a>
+                  <a class="dropdown-item" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#1" data-course-reserves-target="sortItem">
+                    <i class="bi bi-check-lg active-icon align-middle d-none"></i>description</a>
+                  <a class="dropdown-item" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#2" data-course-reserves-target="sortItem">
+                    <i class="bi bi-check-lg active-icon align-middle d-none"></i>instructor</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <button type="button" class="btn btn-sm btn-outline-primary lh-1 dropdown-toggle show" data-bs-toggle="dropdown" data-course-reserves-target="perPageButton">
+                20<span class="d-none d-lg-inline"> per page</span>
+              </button>
+
+              <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" aria-current="true" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#20" data-course-reserves-target="perPageItem">
+                    <i class="bi bi-check-lg active-icon align-middle"></i>20</a>
+                  <a class="dropdown-item" aria-current="false" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#50" data-course-reserves-target="perPageItem">
+                    <i class="bi bi-check-lg active-icon align-middle d-none"></i>50</a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <table id="course-reserves-browse" class="table" data-course-reserves-target="table">
+        <thead>
+          <tr>
+            <th>
+              Course ID
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Instructor(s)
+            </th>
+          </tr>
+        </thead>
+        <tbody data-course-reserves-target="tableBody">
+        <% @course_reserves.each do |course| %>
+          <tr>
+            <td class="w-25">
+              <%= link_to course.course_number, search_catalog_path({f: { courses_folio_id_ssim: [course.id] }}), class: 'text-nowrap' %>
+            </td>
+            <td class="w-50">
+              <%= link_to course.name, search_catalog_path({f: { courses_folio_id_ssim: [course.id] }}), style: 'text-wrap: balance' %>
+            </td>
+            <td class="w-25">
+              <%= safe_join course.instructors, ', ' %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <div data-course-reserves-target="bottomPagination"></div>
+    </section>
   </div>
 </div>
-
-<table id="course-reserves-browse" class="table table-striped" data-controller="course-reserves">
-  <thead>
-    <tr>
-      <th>
-        Course ID
-      </th>
-      <th>
-        Description
-      </th>
-      <th>
-        Instructor(s)
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @course_reserves.each do |course| %>
-    <tr>
-      <td>
-        <%= link_to course.course_number, search_catalog_path({f: { courses_folio_id_ssim: [course.id] }}) %>
-      </td>
-      <td>
-        <%= course.name %>
-      </td>
-      <td>
-        <%= safe_join course.instructors, ', ' %>
-      </td>
-    </tr>
-  <% end %>
-</table>

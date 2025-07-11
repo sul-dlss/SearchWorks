@@ -1,37 +1,41 @@
-<%= content_tag 'article',
-      id: document.id,
-      data: {
-        'document-id': document.id.to_s.parameterize
-      },
-      class: 'document',
-      itemscope: true,
-      itemtype: document.itemtype do %>
-  <div class="document-main-section">
-    <div class="document-thumbnail float-end">
-      <%= helpers.render_cover_image(document) %>
-    </div>
-    <h1>
-      <span itemprop="name"><%= presenter.heading %></span>
-    </h1>
+<%= render layout.new(document:) do |component| %>
+  <% component.with_thumbnail do %>
+    <%= helpers.render_cover_image(document) %>
+  <% end unless document.managed_purls.many? || document.druid %>
+
+  <% component.with_title { presenter.heading } %>
+  <% component.with_header do %>
     <% if presenter.vernacular_title.present? %>
-      <p class='vernacular-title'><%= presenter.vernacular_title %></p>
+      <p class='vernacular-title h2 fw-normal mt-3'><%= presenter.vernacular_title %></p>
     <% end %>
 
     <div class='upper-record-metadata mb-3'>
       <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %> &mdash; <%= document.marc_field('3003abcefg').values.join(' ') %></div>
-      <div><%= safe_join document.marc_field(:imprint).values.to_a, '<br>'.html_safe %></div>
     </div>
+  <% end %>
 
-    <button class="btn btn-sm py-0 btn-secondary d-lg-none my-3" data-bs-toggle="offcanvas" data-bs-target="#aside" aria-controls="aside">See availability</button>
-
+  <% component.with_embed do %>
     <%= case
       when document.managed_purls.many?
         render 'catalog/managed_purl_embed', document: document
       when document.druid
         render Record::Item::EmbedComponent.new(druid: document.druid)
-      end
-    %>
-    <dl class="dl-horizontal dl-invert mb-5">
+      end %>
+    <% if document.display_type == 'marc_collection' %>
+      <div class="async-collection-members col-md-12 mb-5" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
+        <%= helpers.link_to_collection_members('View all items', document) %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% component.with_metadata do %>
+    <%= render Record::MarcContentAdviceComponent.new(document: document) %>
+
+    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description', classes: 'my-5') do %>
+      <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, :marc_instrumentation, :linked_series, :linked_collection].each do |tag| %>
+        <%= render_if_present document.marc_field(tag) %>
+      <% end %>
+
       <%= render_if_present document.marc_field('245c') %>
 
       <%- uniform_title = helpers.get_uniform_title(document) -%>
@@ -47,19 +51,7 @@
           <dd><%= field %></dd>
         <% end %>
       <%- end -%>
-
-      <% [:language, '344', '345', '346', '347', '250ab', :production_notice, :marc_instrumentation, :linked_series, :linked_collection].each do |tag| %>
-        <%= render_if_present document.marc_field(tag) %>
-      <% end %>
-    </dl>
-
-    <% if document.display_type == 'marc_collection' %>
-      <div class="async-collection-members col-md-12 mb-5" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
-        <%= helpers.link_to_collection_members('View all items', document) %>
-      </div>
     <% end %>
-
-    <%= render Record::MarcContentAdviceComponent.new(document: document) %>
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Creators/Contributors') do %>
       <% %i[creator corporate_author meeting contributors].each do |target| %>
@@ -77,9 +69,11 @@
       <%= render_if_present document.subjects('690') %>
 
       <% if document.is_a_database? && document[:db_az_subject] %>
-        <dt>Database topics</dt>
-        <% document[:db_az_subject].each do |subject| %>
-          <dd><%= helpers.link_to_database_search(subject) %></dd>
+        <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+          <% component.with_label { 'Database topics' } %>
+          <% document[:db_az_subject].each do |subject| %>
+            <% component.with_value { helpers.link_to_database_search(subject) } %>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
@@ -101,14 +95,9 @@
         <%= render_if_present document.marc_field(tag) %>
       <% end %>
     <% end %>
+  <% end %>
 
+  <% component.with_footer do %>
     <%= render Record::Item::Marc::CallnumberBrowseComponent.new(document: document) if document.browseable_spines.present? %>
-  </div>
-
-  <%= render 'catalog/schema_dot_org_default', document: document %>
-
-  <% if document.respond_to?(:export_as_openurl_ctx_kev) %>
-    <!-- COinS, for Zotero among others. -->
-    <span class="Z3988" title="<%= document.export_as_openurl_ctx_kev(document.document_formats.first) %>"></span>
   <% end %>
 <% end %>

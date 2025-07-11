@@ -4,7 +4,7 @@ require 'rails_helper'
 require 'page_location'
 
 RSpec.describe PageLocation do
-  let(:params) { { f: { format: ["Database"] } } }
+  let(:params) { { f: { format_hsim: ["Database"] } } }
   let(:controller) { CatalogController.new }
   let(:action) { 'index' }
   let(:search_state) { Blacklight::SearchState.new(params, controller.blacklight_config, controller) }
@@ -42,35 +42,14 @@ RSpec.describe PageLocation do
       let(:params) { {} }
 
       describe "databases" do
-        describe "old format facet" do
-          before { params[:f] = { format: ["Database"] } }
-
-          it "is defined when a facet is selected" do
-            expect(access_point).to eq :databases
-          end
-
-          it "is defined when an additional format facet is selected" do
-            params[:f][:format] << "Book"
-            expect(access_point).to eq :databases
-          end
-          it "is defined when searching within selected" do
-            params[:q] = "My Query"
-            expect(access_point).to eq :databases
-          end
-          it "is not defined when a non-database format facet is selected" do
-            params[:f] = { access: "Online" }
-            expect(access_point).to be_nil
-          end
-        end
-
-        describe "new resource type facet" do
-          before { params[:f] = { format_main_ssim: ["Database"] } }
+        describe "new format facet" do
+          before { params[:f] = { format_hsim: ["Database"] } }
 
           it "is defined when a facet is selected" do
             expect(access_point).to eq :databases
           end
           it "is defined when an additional format facet is selected" do
-            params[:f][:format_main_ssim] << "Book"
+            params[:f][:format_hsim] << "Book"
             expect(access_point).to eq :databases
           end
           it "is defined when searching within selected" do
@@ -96,7 +75,7 @@ RSpec.describe PageLocation do
 
         context 'when another facet is selected' do
           before do
-            params[:f][:format] = "Book"
+            params[:f][:format_hsim] = "Book"
           end
 
           it { is_expected.to eq :course_reserve }
@@ -250,7 +229,7 @@ RSpec.describe PageLocation do
     subject { page_location.databases? }
 
     context "when database format is selected" do
-      let(:params) { { f: { format_main_ssim: ["Database"] } } }
+      let(:params) { { f: { format_hsim: ["Database"] } } }
 
       it { is_expected.to be true }
     end

@@ -5,10 +5,9 @@ pub_date: 1632
 author_person_display: Fischer, Goodwin
 title_display: Proident ex duis id esse nulla quis et aute dolore.
 all_search: Proident ex duis id esse nulla quis et aute dolore.
-language: Chinese
-format: Video
+language: ChineseVideo
 genre_ssim:
   - Government document
-format_main_ssim: Video
+format_hsim: Video/Film
 access_facet: Online
 building_facet: Music

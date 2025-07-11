@@ -50,4 +50,90 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
       expect(page).to have_no_css('div[data-behavior="purl-embed"]')
     end
   end
+
+  describe "Object abstract/contents" do
+    let(:document) { SolrDocument.new(modsxml: mods_001) }
+
+    it "displays abstract" do
+      expect(page).to have_css("dd", text: "Topographical and street map of the")
+      expect(page).to have_css("dd", text: "This is an amazing table of contents!")
+    end
+  end
+
+  describe "Contributors section" do
+    let(:document) { SolrDocument.new(modsxml: mods_everything) }
+
+    it 'displays primary authors' do
+      expect(page).to have_css('dt', text: 'Author')
+      expect(page).to have_css('dd', text: 'J. Smith')
+    end
+
+    it "displays secondary authors" do
+      expect(page).to have_css("dt", text: "Producer")
+      expect(page).to have_css("dd a", text: "B. Smith")
+    end
+  end
+
+  context "when metadata sections are all available" do
+    let(:document) { SolrDocument.new(modsxml: mods_001) }
+
+    it "displays correct sections" do
+      expect(page).to have_css('h2', text: "Contributors")
+      expect(page).to have_css('h2', text: "Abstract/Contents")
+      expect(page).to have_css('h2', text: "Subjects")
+      expect(page).to have_css('h2', text: "Bibliographic information")
+    end
+  end
+
+  context "when no metadata sections are available" do
+    let(:document) { SolrDocument.new(modsxml: mods_only_title) }
+
+    it "displays correct sections" do
+      expect(page).to have_no_css('h2', text: "Abstract/Contents")
+      expect(page).to have_no_css('h2', text: "Subjects")
+      expect(page).to have_no_css('h2', text: "Access conditions")
+    end
+  end
+
+  describe "Object subjects" do
+    let(:document) { SolrDocument.new(modsxml: mods_001) }
+
+    it "displays subjects if available" do
+      expect(page).to have_css("dt", text: "Subject")
+      expect(page).to have_css("a", text: '1906 Earthquake')
+    end
+  end
+
+  context 'without subjects or genres' do
+    let(:document) { SolrDocument.new(modsxml: mods_file) }
+
+    it "shoulds not render subjects or genres when a document has no subjects" do
+      expect(page).to have_no_text("Subject")
+      expect(page).to have_no_text("Gentre")
+    end
+  end
+
+  describe "Object genres" do
+    let(:document) { SolrDocument.new(modsxml: mods_001) }
+
+    it "displays genres if available" do
+      expect(page).to have_css("dt", text: "Genre")
+      expect(page).to have_css("a", text: 'Photographs')
+    end
+  end
+
+  describe 'Upper metadata' do
+    let(:document) { SolrDocument.new(modsxml: mods_everything) }
+
+    it "displays fields" do
+      expect(page).to have_css("dt", text: "Type of resource")
+      expect(page).to have_css("dd", text: "still image")
+
+      expect(page).to have_css("dt", text: "Imprint")
+      expect(page).to have_css("dd", text: "copyright 2014")
+
+      expect(page).to have_css("dt", text: "Condition")
+      expect(page).to have_css("dd", text: "amazing")
+    end
+  end
 end

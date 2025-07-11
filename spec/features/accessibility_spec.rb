@@ -31,13 +31,13 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  describe 'the catalog record view page', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the catalog record view page' do
     it 'has an accessible view' do
       visit solr_document_path('28')
       expect(page).to be_accessible.within('main')
     end
 
-    it 'has an accessible view with filmstrips' do
+    it 'has an accessible view with filmstrips', skip: "Pending SearchWorks 4.0 designs" do
       visit solr_document_path('34')
       expect(page).to be_accessible.within('main')
     end
@@ -51,7 +51,7 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  describe 'the articles', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the articles' do
     before { stub_article_service(docs: StubArticleService::SAMPLE_RESULTS) }
 
     it 'has an accessible search results page' do
@@ -61,9 +61,10 @@ RSpec.describe 'Site Accessibility', :js do
 
     it 'has an accessible "more facets" modal' do
       visit articles_path q: 'frog'
+      click_button 'Show all filters'
       click_button 'Language'
       within '.blacklight-eds_language_facet' do
-        click_link 'more'
+        click_link 'Browse all'
       end
       expect(page).to have_field 'A-Z Sort'
       expect(page).to be_accessible.within('dialog')
@@ -75,7 +76,7 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
-  describe 'the selections page', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the selections page' do
     before do
       visit '/selections'
     end
@@ -90,7 +91,7 @@ RSpec.describe 'Site Accessibility', :js do
     expect(page).to be_accessible.within('main')
   end
 
-  describe 'the course reserves page', skip: "Pending SearchWorks 4.0 designs" do
+  describe 'the course reserves page' do
     before do
       create(:reg_course)
       visit course_reserves_path

@@ -9,8 +9,10 @@ export default class extends Controller {
   }
 
   connect() {
-    this.triggerBtn = $('<div class="preview-trigger-btn preview-opacity" data-action="click->preview-filmstrip#showPreview"><span class="bi-chevron-down small"></span></div>')
-    this.triggerFocus = $('<div class="preview-trigger-focus preview-opacity" data-action="click->preview-filmstrip#showPreview">Preview <span class="bi-chevron-down small"></span></div>')
+    this.triggerBtn = document.createElement('button')
+    this.triggerBtn.classList.add('btn', 'preview-trigger-btn', 'preview-opacity')
+    this.triggerBtn.dataset.action = 'click->preview-filmstrip#togglePreview'
+    this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
     this.arrow = $('<div class="preview-arrow"></div>');
 
     // NOTE: The filmstrip, viewport, prevew ,and closeBtn are outside of the controller.
@@ -25,11 +27,28 @@ export default class extends Controller {
   }
 
   appendTriggers() {
-    $(this.element).append(this.triggerBtn).append(this.triggerFocus);
-    this.attachTriggerEvents();
+    this.element.append
+    this.element.append(this.triggerBtn);
+  }
+
+  togglePreview() {
+    if (this.triggerBtn.classList.contains('preview-open')) {
+      this.closePreview()
+    } else {
+      this.showPreview()
+    }
+  }
+
+  toggleButtonClosed(button) {
+    button.classList.remove('preview-open')
+    button.innerHTML = '<span class="bi-chevron-down small"></span>'
   }
 
   showPreview() {
+    const prevOpenButton = document.querySelector('.preview-open')
+    if (prevOpenButton) this.toggleButtonClosed(prevOpenButton)
+    this.triggerBtn.classList.add('preview-open')
+    this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
     const divContent = $('<div class="preview-content"></div>')
 
     this.preview.empty();
@@ -58,24 +77,13 @@ export default class extends Controller {
     this.arrow.css('left', arrowLeft);
   }
 
-  attachTriggerEvents() {
-    $(this.element).on('mouseenter', () => {
-      this.triggerBtn.hide()
-      this.triggerFocus.fadeIn('fast')
-    })
-
-    $(this.element).on('mouseleave', () => {
-      this.triggerFocus.hide()
-      this.triggerBtn.show()
-    })
-  }
-
   // TODO: the preview is outside of this controller's scope.
   attachPreviewEvents() {
     this.closeBtn.on('click', () => this.closePreview());
   }
 
   closePreview() {
+    this.toggleButtonClosed(this.triggerBtn);
     this.viewport.css('overflow-x', 'scroll');
     this.preview.empty().hide();
   }

@@ -1,8 +1,7 @@
-<div class="metadata-panels">
-  <%= render AccessPanels::OnlineComponent.new(document: document) %>
-
+<div class="metadata-panels border-start ps-lg-3 px-3 mb-5">
   <%= render AccessPanels::CourseReservesComponent.new(document: document) %>
-  <%= render AccessPanels::AtTheLibraryComponent.new(document: document) %>
+
+  <%= render AccessPanels::AvailabilityComponent.new(document: document) %>
 
   <% context = capture do %>
     <%= render AccessPanels::AppearsInComponent.new(document: document) %>
@@ -15,16 +14,10 @@
   <% end %>
 
   <% if context.present? || potential_context.present? %>
-    <h2
-      data-behavior="metadata-panel-context-heading"
-      style="<%= 'display:none' unless context.present? %>"
-    >
-      Context
-    </h2>
-
     <%= context %>
     <%= potential_context %>
   <% end %>
 
-  <%= render AccessPanels::RelatedComponent.new(document: document) %>
+  <%= render AccessPanels::AccessConditionsComponent.new(document:) %>
+  <%= render AccessPanels::RelatedComponent.new(document:) %>
 </div>

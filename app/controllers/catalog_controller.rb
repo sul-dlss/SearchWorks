@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class CatalogController < ApplicationController
-  layout 'searchworks4'
-
   include AllCapsParams
 
   include ReplaceSpecialQuotes
 
   include AdvancedSearchParamsMapping
+
+  include FormatParamsMapping
 
   include Blacklight::Catalog
 
@@ -28,8 +28,6 @@ class CatalogController < ApplicationController
 
   include Blacklight::Ris::Catalog
 
-  before_action :set_search_query_modifier, only: :index
-
   before_action only: :index do
     if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
       flash[:error] =
@@ -47,6 +45,13 @@ class CatalogController < ApplicationController
     blacklight_config.index.title_field = blacklight_config.index.title_field.field
   end
 
+  # Reset the facet component to the default Blacklight ListComponent for the facet modal
+  before_action only: :facet do
+    next unless blacklight_config.facet_fields[params[:id]].component == Searchworks4::FacetSearchComponent
+
+    blacklight_config.facet_fields[params[:id]].component = Blacklight::Facets::ListComponent
+  end
+
   before_action do
     blacklight_config.default_solr_params['client-ip'] = request.remote_ip
     blacklight_config.default_solr_params['request-id'] = request.request_id || '-'
@@ -54,16 +59,25 @@ class CatalogController < ApplicationController
 
   before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
 
+  before_action only: :index do
+    top_filters = blacklight_config.top_filters[PageLocation.new(search_state).access_point] || blacklight_config.top_filters[:default]
+
+    top_filters.each do |filter|
+      blacklight_config.facet_fields[filter].group = 'top' if blacklight_config.facet_fields[filter].present?
+    end
+  end
+
   configure_blacklight do |config|
     config.bootstrap_version = 5
-    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+    config.add_results_document_tool(:bookmark, component: Document::TrackingBookmarkComponent, if: :render_bookmarks_control?)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       qt: 'search',
       rows: 20,
       "f.callnum_facet_hsim.facet.limit": "-1",
-      "f.stanford_work_facet_hsim.facet.limit": "-1"
+      "f.stanford_work_facet_hsim.facet.limit": "-1",
+      "f.format_hsim.facet.limit": "-1"
     }
 
     config.fetch_many_document_params = { fl: '*' }
@@ -96,14 +110,15 @@ class CatalogController < ApplicationController
       config.crawler_detector = lambda { |_| true }
     end
 
+    config.facet_search_builder_class = CustomFacetSearchBuilder
+
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
     config.index.document_component = Searchworks4::DocumentComponent
-    config.index.title_component = SearchResult::DocumentTitleComponent
     config.index.constraints_component = Searchworks4::ConstraintsComponent
+    config.index.facet_filters_component = Searchworks4::FacetFiltersComponent
 
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
-    config.index.display_type_field = 'format_main_ssim'
     config.index.thumbnail_component = ThumbnailWithIiifComponent
     config.index.thumbnail_method = :render_cover_image
     config.index.mini_bento_component = SearchResult::MiniBento::CatalogComponent
@@ -155,51 +170,42 @@ class CatalogController < ApplicationController
                                 label: 'On order', fq: 'access_facet:"On order"'
                               }
                            },
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
-    config.add_facet_field "format_main_ssim", label: "Resource type", limit: 100, sort: :index,
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
+                           component: Blacklight::Facets::ListComponent
+    config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
     config.add_facet_field "building_facet", label: "Library", limit: 100, sort: :index,
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
-    config.add_facet_field "genre_ssim", label: "Genre", limit: 20,
-                           component: Blacklight::Facets::ListComponent,
-                           group: 'non-collapsable'
-    config.add_facet_field "pub_year_tisim", label: "Date", range: true,
-                           range_config: {
-                             input_label_range_begin: "from year",
-                             input_label_range_end: "to year"
-                           },
-                           group: 'non-collapsable'
+                           component: Blacklight::Facets::ListComponent
+    config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
+                           component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "pub_year_tisim", label: "Date", range: true
 
-    config.add_facet_field "language", label: "Language", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "author_person_facet", label: "Author", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "topic_facet", label: "Topic", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "geographic_facet", label: "Region", limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "language", label: "Language", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "author_person_facet", label: "Author", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "topic_facet", label: "Topic", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "geographic_facet", label: "Region", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field 'callnum_facet_hsim',
                            label: 'Call number',
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'index'
 
     config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true, advanced_search_component: AdvancedSearchRangeLimitComponent
-    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 20, sort: :index, component: Blacklight::Facets::ListComponent
-    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 6, sort: :index, component: Blacklight::Facets::ListComponent
+    config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 6, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'stanford_work_facet_hsim',
                            label: 'Stanford student work',
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'count', collapse: false, show: false
-    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 6, component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value,
                             filter_query_builder: CollectionFilterQuery,
                             component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 20, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "format_physical_ssim", label: "Media type", limit: 6, show: false, component: Blacklight::Facets::ListComponent
     config.facet_display = {
       hierarchy: {
         'callnum_facet' => [['hsim'], '|'],
-        'stanford_work_facet' => [['hsim'], '|']
+        'stanford_work_facet' => [['hsim'], '|'],
+        'format' => [['hsim'], '|']
       }
     }
     # TODO: remove "course" and "instructor" after a time. These have been replaced by courses_folio_id_ssim.
@@ -210,14 +216,19 @@ class CatalogController < ApplicationController
                            component: Blacklight::Facets::ListComponent,
                            item_presenter: FolioCourseFacetItemPresenter
 
-    config.add_facet_field "era_facet", label: "Era", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 20, component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format", label: "Format", show: false, component: Blacklight::Facets::ListComponent
+    config.add_facet_field "era_facet", label: "Era", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
+    config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field 'iiif_resources', label: 'IIIF resources', show: false, query: {
       available: {
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
       }
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
+
+    config.top_filters = {
+      :default => ['access_facet', 'format_hsim', 'building_facet'],
+      :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
+      :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim']
+    }
 
     # Pivot facet example
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
@@ -468,10 +479,10 @@ class CatalogController < ApplicationController
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {
-        "facet.field" => ["access_facet", "format_main_ssim", "format_physical_ssim", "building_facet", "language"],
+        "facet.field" => ["access_facet", "format_hsim", "format_physical_ssim", "building_facet", "language"],
          # return all facet values
         "f.access_facet.facet.limit" => -1,
-        "f.format_main_ssim.facet.limit" => -1,
+        "f.format_hsim.facet.limit" => -1,
         "f.format_physical_ssim.facet.limit" => -1,
         "f.building_facet.facet.limit" => -1,
         "f.language.facet.limit" => -1,
@@ -517,7 +528,21 @@ class CatalogController < ApplicationController
 
   def stackmap
     params.require(:api_url) # Sometimes bots are calling this service without providing required parameters. Raise an error in this case.
+    @document = search_service.fetch(params[:id])
     render layout: !request.xhr?
+  end
+
+  def facet_results
+    @facet = blacklight_config.facet_fields[params[:id]]
+
+    @response = facet_search_service.facet_suggest_response(@facet.key, params[:query_fragment], "f.#{@facet.key}.facet.method" => 'fc')
+
+    @display_facet = @response.aggregations[@facet.field]
+    @presenter = @facet.presenter.new(@facet, @display_facet, view_context)
+
+    respond_to do |format|
+      format.html { render layout: false }
+    end
   end
 
   private
@@ -528,10 +553,6 @@ class CatalogController < ApplicationController
     end
   end
   helper_method :augment_solr_document_json_response
-
-  def set_search_query_modifier
-    @search_modifier ||= SearchQueryModifier.new(search_state)
-  end
 
   def advanced_search_form?(*args, **kwargs)
     action_name == 'advanced_search'

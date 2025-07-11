@@ -8,7 +8,7 @@ all_search: The Guanches of Tenerife
 title_245a_display: The Guanches of Tenerife
 language: English
 format: Book
-format_main_ssim: Book
+format_hsim: Book
 access_facet: At the Library
 building_facet: Green
 lccn: "07031444"

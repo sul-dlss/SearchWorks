@@ -1,37 +1,45 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h3 class="modal-title"><%= params[:title] %></h3>
+    <h2 class="modal-title">Find it</h2>
   <% end %>
-  <div class="stackmap" data-controller="stackmap" data-behavior="stackmap" data-stackmap-api-url-value="<%= params[:api_url] %>">
-    <p>Call number <span class="callnumber"></span> is located in <span class="library"></span>,  <span class="floorname"></span>.</p>
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="true">
-          <i class="bi bi-map-fill me-1 align-middle"></i>Map
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link show-description" id="directions-tab" data-bs-toggle="tab" data-controller="analytics" data-bs-target="#directions"  data-action="reveal-text-directions" type="button" role="tab" aria-controls="directions" aria-selected="false">
-          <i class="bi bi-list-task me-1 align-middle"></i>Text directions
-        </button>
-      </li>
-    </ul>
-    <div class="tab-content" id="tab-content">
-      <div id="map" data-stackmap-target="map" class="map-template tab-pane fade show active">
-        <div class="controls row">
-          <div class="zoom-controls col-12">
-            <%= button_tag t('blacklight.tools.stackmap.zoom_in_html'), class: "zoom-in btn btn-link p-sm-1", data: {action: 'click->stackmap#zoomIn'} %>
-            <%= button_tag t('blacklight.tools.stackmap.zoom_out_html'), class: "zoom-out btn btn-link p-sm-1", data: {action: 'click->stackmap#zoomOut'} %>
-            <%= button_tag t('blacklight.tools.stackmap.reset_size_html'), class: "zoom-fit btn btn-link p-sm-1", data: {action: 'click->stackmap#zoomBounds'} %>
+  <% component.with_body do %>
+    <%= render Searchworks4::RecordSummaryComponent.new(presenter: document_presenter(@document)) %>
+    <div class="modal-body stackmap pb-2" data-controller="stackmap" data-behavior="stackmap" data-stackmap-api-url-value="<%= params[:api_url] %>">
+      <p>Call number <span data-stackmap-target="callnumber" class="fw-bold"></span> is located in <span data-stackmap-target="library" class="fw-bold"></span>, <span data-stackmap-target="floorname" class="fw-bold"></span>.</p>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="true">
+            <i class="bi bi-map me-1 align-middle"></i>Map
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link show-description" id="directions-tab" data-bs-toggle="tab" data-controller="analytics" data-bs-target="#directions"  data-action="reveal-text-directions" type="button" role="tab" aria-controls="directions" aria-selected="false">
+            <i class="bi bi-list-task me-1 align-middle"></i>Text directions
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="tab-content">
+        <div id="map" data-stackmap-target="map" class="map-template tab-pane fade show active">
+          <div class="zoom-controls mt-2 mb-1 d-flex justify-content-end gap-2">
+            <%= button_tag class: "zoom-in btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomIn' } do %>
+              <i class="bi bi-zoom-in"></i><span class="d-none d-sm-inline"> Zoom in</span>
+            <% end %>
+            <%= button_tag class: "zoom-out btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomOut' } do %>
+              <i class="bi bi-zoom-out"></i><span class="d-none d-sm-inline"> Zoom out</span>
+            <% end %>
+            <%= button_tag class: "zoom-fit btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomBounds' } do %>
+              <i class="bi bi-arrows-angle-contract"></i><span class="d-none d-sm-inline"> Reset size</span>
+            <% end %>
+          </div>
+          <div class="osd">
           </div>
         </div>
-        <div class="osd col-md-12">
+        <div id="directions" data-stackmap-target="directions" class="text-directions col-md-12 mt-4 tab-pane fade">
         </div>
       </div>
-      <div id="directions" data-stackmap-target="directions" class="text-directions col-md-12 mt-4 tab-pane fade">
-      </div>
     </div>
-
-  </div>
+    <div class="modal-footer">
+      <button type="button" data-bl-dismiss="modal" class="btn btn-outline-primary">Close</button>
+    </div>
+  <% end %>
 <% end %>
-

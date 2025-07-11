@@ -1,5 +1,0 @@
-<% document ||= @document %>
-
-<% %i[creator corporate_author meeting contributors].each do |target| %>
-  <%= render document.linked_author(target) %>
-<% end %>

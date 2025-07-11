@@ -21,22 +21,24 @@ RSpec.describe CatalogHelper do
     end
   end
 
-  describe 'new_documents_feed_path' do
+  describe 'document_index_view_type' do
     before do
-      allow(helper).to receive(:search_state).and_return(Blacklight::SearchState.new({}, CatalogController.blacklight_config))
+      allow(helper).to receive_messages(blacklight_config: CatalogController.blacklight_config, blacklight_configuration_context: Blacklight::Configuration::Context.new(helper))
     end
 
-    it 'returns the search url to an atom feed' do
-      expect(helper.new_documents_feed_path).to match %r{^/catalog.atom\?}
+    it 'returns the view type from params if it exists' do
+      params = { view: 'gallery' }
+      expect(helper.document_index_view_type(params)).to eq :gallery
     end
 
-    it 'includes the new-to-libs sort key' do
-      expect(helper.new_documents_feed_path).to match(/sort=new-to-libs/)
+    it 'returns the default view type if no params are present' do
+      expect(helper.document_index_view_type).to eq :list
     end
 
-    it 'removes the page parameter' do
-      allow(helper).to receive(:search_state).and_return(Blacklight::SearchState.new({ page: 5}, CatalogController.blacklight_config))
-      expect(helper.new_documents_feed_path).not_to match(/page=/)
+    it 'overrides blacklight to return the default view type even if there is a stored view in the session' do
+      allow(helper).to receive(:session).and_return(preferred_view: :gallery)
+
+      expect(helper.document_index_view_type(params)).to eq :list
     end
   end
 
@@ -88,15 +90,6 @@ RSpec.describe CatalogHelper do
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
         expect(tech_details(document)).to have_css('a', text: 'Collection PURL')
       end
-    end
-  end
-
-  describe '#iiif_drag_n_drop' do
-    it 'creates a IIIF drag n drop link' do
-      dnd_link = iiif_drag_n_drop('http://example.io/kittenz/iiif/manifest')
-      expect(dnd_link).to match(/data-turbo="false" data-action="dragstart-&gt;analytics#trackEvent" data-bs-toggle="tooltip" data-bs-placement="left"/)
-      expect(dnd_link).to match(/title="Drag icon to any IIIF viewer. — Click icon to learn more."/)
-      expect(dnd_link).to match(%r{<img width="40" alt="IIIF Drag-n-drop" src="/images/iiif-drag-n-drop.svg" />})
     end
   end
 

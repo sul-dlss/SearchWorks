@@ -1,17 +1,4 @@
-  <%= render '/flash_msg' %>
-
-    <% unless %w[articles article_selections].include? controller.controller_name # TODO: full record for articles %>
-      <div class="fw-bold">Send</div>
-      <div class="form-check form-check-inline">
-        <%= radio_button_tag :type, 'full', true, class: 'form-check-input' %> <%= label_tag(:type_full, "Full record", class: 'form-check-label') %>
-      </div>
-
-      <div class="form-check form-check-inline">
-        <%= radio_button_tag :type, 'brief', class: 'form-check-input' %> <%= label_tag(:type_brief,  "Brief (title, call number, and library location)", class:'form-check-label') %>
-      </div>
-    <% end %>
-
-  <div class="my-3">
+  <div class="mb-3">
     <label class="form-label fw-bold me-3" for="to">To</label><small class="text-secondary">* Required</small>
     <%= email_field_tag :to, params[:to], multiple: true, placeholder: "Enter value", class: 'form-control w-50', required: true %>
   </div>
@@ -23,7 +10,7 @@
 
   <div class="mb-3">
     <label class="form-label fw-bold" for="subject">Subject</label>
-    <%= text_field_tag :subject, I18n.t('blacklight.email.text.subject', count: @documents.length, title: (@documents.first.to_semantic_values[:title].first rescue 'N/A') ), class: 'form-control' %>
+    <%= text_field_tag :subject, I18n.t('blacklight.email.text.subject', count: documents.length, title: (documents.first.to_semantic_values[:title].first rescue 'N/A') ), class: 'form-control' %>
   </div>
 
   <div class="mb-3">
@@ -36,3 +23,13 @@
       <%= render RecaptchaWithLoginLinkComponent.new(recaptcha_id: 'connection-form-recaptcha', classes: '') %>
     </div>
   <% end %>
+
+  <% Array.wrap(@documents).each do |doc| %>
+    <%= hidden_field_tag "id[]", doc.id %>
+  <% end %>
+  <%- if params[:sort] -%>
+    <%= hidden_field_tag "sort", params[:sort] %>
+  <%- end -%>
+  <%- if params[:per_page] -%>
+    <%= hidden_field_tag "per_page", params[:per_page] %>
+  <%- end -%>

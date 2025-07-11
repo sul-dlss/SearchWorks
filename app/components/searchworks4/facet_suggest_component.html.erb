@@ -1,0 +1,17 @@
+<div class="my-3 mx-5">
+  <div class="input-group">
+    <label class="input-group-text bg-body border-end-0 pe-0" for="facet_suggest_<%= key %>">
+      <span class="visually-hidden"><%= I18n.t('blacklight.search.facets.suggest.label', field_label: label.downcase) %></span>
+      <i class="bi bi-search" aria-hidden="true"></i>
+    </label>
+    <%= text_field_tag "facet_suggest_#{key}",
+      nil,
+      class: "facet-suggest form-control border-start-0",
+      data: {
+        facet_field: key,
+        facet_search_context: helpers.search_facet_path(id: key)
+      },
+      placeholder: I18n.t('blacklight.search.facets.suggest.label', field_label: label.downcase)
+    %>
+  </div>
+</div>

@@ -17,6 +17,8 @@ en:
           open: Filters
           close: Filters
         more_html: 'Browse all <span class="visually-hidden">%{field_name}</span> <i class="bi bi-chevron-double-right"></i>'
+        suggest:
+          label: "Search %{field_label}"
       form:
         submit_html: '<span class="visually-hidden">Search</span><span class="bi-search"></span>'
         submit: ''
@@ -47,7 +49,7 @@ en:
         single_item_found: ''
         no_items_found: "<h2>No %{search_type} results found</h2>"
       entry_pagination_info:
-        other: '%{current} of %{total}'
+        other: '<strong>%{current}</strong> of <strong>%{total}</strong>'
       highlight:
         active_html: '<i class="bi bi-check-lg active-icon align-middle"></i>'
     bookmarks:
@@ -58,16 +60,9 @@ en:
       clear:
         success: 'Your selections have been deleted.'
     tools:
-      cite_html: '<i class="fa fa-quote-left"></i> Cite'
-      send_to_html: '<i class=" fa fa-share-alt"></i> Send to'
-      sms_html: '<span class="bi-phone"></span> text'
-      email_html: '<span class="bi-envelope-fill"></span> email'
       refworks_html: '<span class="bi-box-arrow-up-right sul-icon-refworks"></span> RefWorks'
       endnote_html: '<span class="bi-box-arrow-up-right sul-icon-endnote"></span> EndNote'
       ris_html: '<span class="bi-download"></span> Zotero RIS'
-      printer_html: '<span class="bi-printer-fill"></span> printer'
-      cite_entries: '<i class="fa fa-quote-left"></i> Cite %{current_range}'
-      send_entries: '<i class=" fa fa-share-alt"></i> Send %{current_range} to'
       librarian_view: 'Librarian view'
       find_it_html: '<i class="fa fa-map-marker"></i> Find it'
       stackmap:

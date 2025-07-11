@@ -1,16 +1,17 @@
 <% if linked_author.present? && linked_author.values.present? %>
-  <dt><%= linked_author.label %></dt>
-  <% linked_author.values.each do |author| %>
-    <dd>
-      <%= link_to(author[:link].strip, search_catalog_path(q: "\"#{author[:search]}\"", search_field: 'search_author')) if author[:link].present? %>
-      <%= author[:post_text] if author[:post_text] %>
-    </dd>
-
-    <% if author[:vern] %>
-      <dd>
-        <%= link_to(author[:vern][:link].strip, search_catalog_path(q: "\"#{author[:vern][:search]}\"", search_field: 'search_author')) if author[:vern][:link].present? %>
-        <%= author[:vern][:post_text] if author[:vern][:post_text] %>
-      </dd>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+    <% component.with_label { linked_author.label } %>
+    <% linked_author.values.each do |author| %>
+      <% component.with_value do %>
+        <%= link_to(author[:link].strip, search_catalog_path(q: "\"#{author[:search]}\"", search_field: 'search_author')) if author[:link].present? %>
+        <%= author[:post_text] if author[:post_text] %>
+      <% end %>
+      <% if author[:vern] %>
+        <% component.with_value do %>
+          <%= link_to(author[:vern][:link].strip, search_catalog_path(q: "\"#{author[:vern][:search]}\"", search_field: 'search_author')) if author[:vern][:link].present? %>
+          <%= author[:vern][:post_text] if author[:vern][:post_text] %>
+        <% end %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

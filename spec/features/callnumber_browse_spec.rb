@@ -7,7 +7,7 @@ RSpec.describe 'Callnumber Browse', :js do
     it 'renders' do
       visit solr_document_path('1')
 
-      expect(page).to have_css('h2', text: 'Browse related items')
+      expect(page).to have_css('h2', text: 'Related items')
     end
 
     it 'has select boxes that work' do
@@ -15,12 +15,10 @@ RSpec.describe 'Callnumber Browse', :js do
       expect(page).to have_css('.embedded-items')
 
       within '.current-document' do
-        first('.toggle-bookmark-label').click
+        click_button 'Save record'
       end
 
-      expect(page).to have_link 'Bookmarks 1'
-      expect(page).to have_checked_field visible: :hidden
-      expect(page).to have_css('.bookmark-checked')
+      expect(page).to have_link 'Saved 1'
     end
   end
 
@@ -29,29 +27,31 @@ RSpec.describe 'Callnumber Browse', :js do
       visit solr_document_path('1')
 
       within '.record-browse-nearby' do
-        click_link 'View full page'
+        click_link 'Full page'
       end
 
       expect(page).to have_css('h1', text: 'Browse related items')
 
-      bookmarks = all('.toggle-bookmark-label')
-      bookmarks.first.click
-      bookmarks.last.click
+      within '.document-position-11' do
+        click_button 'Save record'
+      end
+      within '.document-position-12' do
+        click_button 'Save record'
+      end
 
-      expect(page).to have_css('.bookmark-checked')
+      expect(page).to have_css('[aria-label="Remove from saved records"]')
 
       page.driver.browser.navigate.refresh
 
-      expect(page).to have_checked_field visible: :hidden
-
-      expect(page).to have_css('[data-behavior="recent-selections"]', text: 'Selections (2)')
+      expect(page).to have_text 'Saved'
+      expect(page).to have_css('.bookmark-counter', text: '2')
     end
 
     it 'allows the user to pick the view type' do
       visit solr_document_path('1')
 
       within '.record-browse-nearby' do
-        click_link 'View full page'
+        click_link 'Full page'
       end
 
       expect(page).to have_text('Starting at call number: G70.212')

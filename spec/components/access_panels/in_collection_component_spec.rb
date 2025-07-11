@@ -14,7 +14,7 @@ RSpec.describe AccessPanels::InCollectionComponent, type: :component do
     end
 
     it 'renders the block properly if the collection members are not present' do
-      expect(page).to have_css("h3", text: 'Item belongs to a collection')
+      expect(page).to have_css("h2", text: 'Item belongs to a collection')
       expect(page).to have_no_content("Digital content")
     end
   end
@@ -29,8 +29,8 @@ RSpec.describe AccessPanels::InCollectionComponent, type: :component do
     end
 
     it 'renders summary display with summary display encoded properly' do
-      expect(page).to have_css("h3", text: 'Item belongs to a collection')
-      expect(page).to have_css("div[data-behavior=truncate]", text: 'Summary & Display')
+      expect(page).to have_css("h2", text: 'Item belongs to a collection')
+      expect(page).to have_css("div[data-controller=long-text]", text: 'Summary & Display')
       expect(page).to have_no_content("Digital content")
     end
   end

@@ -157,7 +157,7 @@ module XmlApiHelper
     # .to_s is necessary otherwise the default return value is not always a string
     # using "_" as sep. to more closely follow the views file naming conventions
     # parameterize uses "-" as the default sep. which throws errors
-    display_type = document[blacklight_config.index.display_type_field]
+    display_type = document.document_formats
     if display_type
       if display_type.respond_to?(:join)
         display_type.map { |dt| dt.tr("-", " ").parameterize(separator: "_") }.join(" ")

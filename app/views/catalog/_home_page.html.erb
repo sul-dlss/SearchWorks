@@ -32,7 +32,7 @@
         <section class="home-page-facets facets sidenav">
           <h2 class="h3 facets-heading">Browse by</h2>
           <div class="accordion" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
-            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_main_ssim', 'building_facet').values, response: @response)%>
+            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields.slice('access_facet', 'format_hsim', 'building_facet').values, response: @response)%>
           </div>
         </section>
       </div>
@@ -82,11 +82,11 @@
         </li>
         <li class="mb-3">
           <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          Images, maps, data and more in the Stanford Digital repository
+          Images, maps, data and more in the Stanford Digital Repository
         </li>
         <li class="mb-3">
           <%= link_to 'Government documents', govdocs_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          State, federal, United Nations and European government documents
+          State, federal, United Nations and European Union government documents
         </li>
         <li class="mb-3">
           <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block', data: { action: "click->analytics#trackLink" } %>

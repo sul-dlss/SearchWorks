@@ -12,7 +12,7 @@ RSpec.describe "Emailing Records", :js do
           click_link 'Email'
         end
 
-        expect(page).to have_css 'h1', text: 'Email'
+        expect(page).to have_css 'h2', text: 'Email'
 
         within('.modal-dialog') do
           expect(page).to have_css('p', text: 'Stanford affiliates: Log in to skip Captcha.')
@@ -62,30 +62,23 @@ RSpec.describe "Emailing Records", :js do
       end
     end
 
-    context 'when viewing a catalog record', skip: "Pending searchworks 4 redesign" do
+    context 'when viewing a catalog record' do
       before do
         visit solr_document_path('14')
 
-        within('.record-toolbar') do
-          within('li.dropdown') do
-            click_button 'Send to'
-            within('.dropdown-menu') do
-              click_link 'email'
-            end
-          end
-        end
+        click_link 'Email'
       end
 
       context 'when "brief record" is selected' do
         it "sends the brief record" do
-          expect(page).to have_css 'h1', text: 'Email'
+          expect(page).to have_css 'h2', text: 'Email'
 
           within('.modal-dialog') do
             fill_in 'to', with: 'email@example.com'
             click_button 'Send'
           end
 
-          expect(page).to have_css '.alert-success', text: 'Email Sent'
+          expect(page).to have_css '.toast', text: 'Email sent'
         end
       end
 
@@ -101,10 +94,10 @@ RSpec.describe "Emailing Records", :js do
 
         it 'emails a full record' do
           # triggers capybara to wait until email is sent
-          expect(page).to have_css '.alert-success', text: 'Email Sent'
+          expect(page).to have_css '.toast', text: 'Email sent'
 
           email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
-          expect(email).to have_css('h3', text: /Bibliographic information/)
+          expect(email).to have_css('h2', text: /Bibliographic information/)
           expect(email).to have_css('dd', text: /A quartely publication/)
         end
       end
@@ -117,14 +110,14 @@ RSpec.describe "Emailing Records", :js do
         visit search_catalog_path(q: '14')
 
         within('#documents article:first-of-type .dropdown') do
-          click_button 'Document actions'
+          click_button 'More actions'
           click_link 'Email'
         end
       end
 
       context 'when "brief record" is selected' do
         it "sends the brief record" do
-          expect(page).to have_css 'h1', text: 'Email'
+          expect(page).to have_css 'h2', text: 'Email'
 
           within('.modal-dialog') do
             fill_in 'to', with: 'email@example.com'
@@ -150,7 +143,7 @@ RSpec.describe "Emailing Records", :js do
           expect(page).to have_css '.toast', text: 'Email sent'
 
           email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
-          expect(email).to have_css('h3', text: /Bibliographic information/)
+          expect(email).to have_css('h2', text: /Bibliographic information/)
           expect(email).to have_css('dd', text: /A quartely publication/)
         end
       end

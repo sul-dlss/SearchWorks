@@ -37,9 +37,8 @@ RSpec.describe "Library Location Access Panel" do
 
   describe 'long lists more than 5 callnumbers', :js do
     it 'is truncated with a more link' do
-      pending 'SW4.0 redesign pending.'
       visit solr_document_path '10'
-      expect(page).to have_text 'At the library'
+      expect(page).to have_text 'Availability'
       expect(page).to have_no_css('.callnumber', text: 'MNO', visible: true)
       click_button 'show all'
       expect(page).to have_css('.callnumber', text: 'MNO', visible: true)

@@ -93,9 +93,9 @@
             <str name="f.db_az_subject.facet.sort">index</str>
             <str name="f.db_az_subject.facet.method">enum</str>
           <str name="facet.field">era_facet</str>
-          <str name="facet.field">format_main_ssim</str>
-            <str name="f.format_main_ssim.facet.method">enum</str>
-            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">format_hsim</str>
+            <str name="f.format_hsim.facet.method">enum</str>
+            <str name="f.format_hsim.facet.method">enum</str>
           <str name="facet.field">format_physical_ssim</str>
             <str name="f.format_physical_ssim.facet.method">enum</str>
           <str name="facet.field">fund_facet</str>
@@ -136,9 +136,9 @@
             <str name="f.db_az_subject.facet.method">enum</str>
           <str name="facet.field">era_facet</str>
             <str name="f.era_facet.facet.method">uif</str>
-          <str name="facet.field">format_main_ssim</str>
-            <int name="f.format_main_ssim.facet.limit">-1</int>
-            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">format_hsim</str>
+            <int name="f.format_hsim.facet.limit">-1</int>
+            <str name="f.format_hsim.facet.method">enum</str>
           <str name="facet.field">format_physical_ssim</str>
             <int name="f.format_physical_ssim.facet.limit">20</int>
             <str name="f.format_physical_ssim.facet.method">enum</str>
@@ -174,8 +174,8 @@
             <str name="f.access_facet.facet.method">enum</str>
           <str name="facet.field">building_facet</str>
             <str name="f.building_facet.facet.method">enum</str>
-          <str name="facet.field">format_main_ssim</str>
-            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">format_hsim</str>
+            <str name="f.format_hsim.facet.method">enum</str>
           <str name="facet.field">language</str>
         </lst>
         <!-- single object query to populate filter and fieldValue cache -->
@@ -191,8 +191,8 @@
             <str name="f.access_facet.facet.method">enum</str>
           <str name="facet.field">building_facet</str>
             <str name="f.building_facet.facet.method">enum</str>
-          <str name="facet.field">format_main_ssim</str>
-            <str name="f.format_main_ssim.facet.method">enum</str>
+          <str name="facet.field">format_hsim</str>
+            <str name="f.format_hsim.facet.method">enum</str>
           <str name="facet.field">language</str>
         </lst>
         <!-- should there be warming for different sorts? -->
@@ -1058,9 +1058,9 @@
         <str name="f.db_az_subject.facet.sort">index</str>
       <str name="facet.field">era_facet</str>
         <str name="f.era_facet.facet.method">uif</str>
-      <str name="facet.field">format_main_ssim</str>
-        <int name="f.format_main_ssim.facet.limit">-1</int>
-        <str name="f.format_main_ssim.facet.method">enum</str>
+      <str name="facet.field">format_hsim</str>
+        <int name="f.format_hsim.facet.limit">-1</int>
+        <str name="f.format_hsim.facet.method">enum</str>
       <str name="facet.field">format_physical_ssim</str>
         <int name="f.format_physical_ssim.facet.limit">20</int>
         <str name="f.format_physical_ssim.facet.method">enum</str>
@@ -1096,8 +1096,8 @@
         file_id,
         set,
         set_with_title,
-        format,
         format_main_ssim,
+        format_hsim,
         format_physical_ssim,
         genre_ssim,
         iiif_manifest_url_ssim,

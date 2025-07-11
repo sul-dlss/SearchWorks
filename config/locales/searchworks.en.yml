@@ -344,7 +344,9 @@ en:
 
     back_to_search: '<i class="bi bi-forward-fill rotate-180 me-1" aria-hidden="true"></i><span class="d-none d-sm-inline">Search results</span>'
     feedback_form:
-      success: "<strong>Thank you!</strong> Your feedback has been sent."
+      title: "Send feedback"
+      new_tab: "Open in new tab"
+      success: "<strong>Thank you!</strong> <br/> Your feedback has been sent."
     connection_form:
       success: "<strong>Thank you!</strong> Your connection problem report has been sent."
     range_limit:

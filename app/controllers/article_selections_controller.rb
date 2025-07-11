@@ -28,9 +28,8 @@ class ArticleSelectionsController < ApplicationController
                        []
                      end
 
-    @response = @document_list.first&.response || OpenStruct.new(documents: @document_list, rows: @bookmarks.count, limit_value: @bookmarks.limit_value, # rubocop:disable Style/OpenStructUse
-                                                                 current_page: @bookmarks.current_page)
-
+    @response = OpenStruct.new(documents: @document_list, rows: @bookmarks.count, limit_value: @bookmarks.limit_value, # rubocop:disable Style/OpenStructUse
+                               current_page: @bookmarks.current_page)
     @catalog_count = selections_counts.catalog
     @article_count = selections_counts.articles
 
@@ -64,6 +63,10 @@ class ArticleSelectionsController < ApplicationController
   # @return [Hash] a hash of context information to pass through to the search service
   def search_service_context
     { bookmarks: @bookmarks }
+  end
+
+  def search_action_url
+    '/articles'
   end
 
   protected

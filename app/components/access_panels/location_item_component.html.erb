@@ -1,10 +1,10 @@
-<tr class="d-flex w-100 flex-wrap border-top">
+<tr class="item-row pt-1 w-100 flex-wrap border-top">
   <th scope="row" class="callnumber fw-normal flex-grow-1"><%= tag.span callnumber %></th>
   <td class="text-nowrap text-status">
     <%= render Searchworks4::ItemStatusComponent.new(item:) %>
   </td>
 
-  <td class="w-100 <%= item.public_note.present? || has_bound_with_parent? || item.bound_with_principal? ? 'd-none' : 'd-block' %>">
+  <td class="w-100 <%= item.public_note.present? || has_bound_with_parent? || item.bound_with_principal? ? 'd-block' : 'd-none' %>">
     <% if item.public_note.present? %>
       <div class='public-note note-highlight'>Note: <%= inject_line_break_opportunities item.public_note %></div>
     <% end %>

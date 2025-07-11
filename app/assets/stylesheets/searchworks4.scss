@@ -3,17 +3,24 @@
 layer(framework);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css")
 layer(framework);
-@import url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-07-02/styles/sul.css")
+@import url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-07-10/styles/sul.css")
 layer(components);
 
-@import "blacklight-hierarchy/app/assets/stylesheets/blacklight/hierarchy/hierarchy.scss";
+@import url("https://cdn.jsdelivr.net/npm/blacklight-hierarchy@6.7.1/app/assets/stylesheets/blacklight/hierarchy/hierarchy.css")
+layer(framework);
 
 @import url("searchworks4/alerts.css") layer(local);
 @import url("searchworks4/availability-icons.css") layer(local);
 @import url("searchworks4/blacklight.css") layer(local);
+@import url("searchworks4/bookmarks.css") layer(local);
+@import url("searchworks4/browse-embed.css") layer(local);
+@import url("searchworks4/browse-nearby.css") layer(local);
+@import url("searchworks4/course-reserves.css") layer(local);
 @import url("searchworks4/databases.css") layer(local);
 @import url("searchworks4/facets.css") layer(local);
+@import url("searchworks4/gallery-view.css") layer(local);
 @import url("searchworks4/homepage.css") layer(local);
+@import url("searchworks4/item-preview.css") layer(local);
 @import url("searchworks4/links.css") layer(local);
 @import url("searchworks4/masthead.css") layer(local);
 @import url("searchworks4/mini-bento.css") layer(local);
@@ -26,12 +33,13 @@ layer(components);
 @import url("searchworks4/typography.css") layer(local);
 @import url("searchworks4/variables.css") layer(local);
 @import url("searchworks4/zero-results.css") layer(local);
-@import url("modules/chat.css") layer(local);
-@import url("modules/stackmap.css") layer(local);
+@import url("searchworks4/chat.css") layer(local);
+@import url("searchworks4/librarian-view.css") layer(local);
+@import url("searchworks4/stackmap.css") layer(local);
 @import "leaflet/dist/leaflet";
 
 @layer local {
-  @media (min-width: 1400px) {
+  @media (min-width: 1580px) {
     .container-lg {
       max-width: 1500px;
     }

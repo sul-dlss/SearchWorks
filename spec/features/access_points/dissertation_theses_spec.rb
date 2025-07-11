@@ -18,4 +18,16 @@ RSpec.describe 'Dissertation Theses Access Point' do
       expect(page).to have_css('h1', text: 'Theses and dissertations')
     end
   end
+
+  it 'sets the correct top and other filters' do
+    within('.top-filters') do
+      expect(page).to have_css('h3', text: 'Stanford student work')
+      expect(page).to have_css('a', text: 'Theses & dissertations')
+    end
+
+    within('.other-filters') do
+      expect(page).to have_css('h3', text: 'Genre')
+      expect(page).to have_css('h3', text: 'Date')
+    end
+  end
 end

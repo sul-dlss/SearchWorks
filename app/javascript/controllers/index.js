@@ -28,8 +28,11 @@ application.register("bento-result-count", BentoResultCountController)
 import BlacklightResultCountController from "./blacklight_result_count_controller"
 application.register("blacklight-result-count", BlacklightResultCountController)
 
-import BookmarkToastController from "./bookmark_toast_controller"
-application.register("bookmark-toast", BookmarkToastController)
+import BookmarkController from "./bookmark_controller"
+application.register("bookmark", BookmarkController)
+
+import BrowseNearbyController from "./browse_nearby_controller"
+application.register("browse-nearby", BrowseNearbyController)
 
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
@@ -46,14 +49,35 @@ application.register("copy-text", CopyTextController)
 import CourseReservesController from "./course_reserves_controller"
 application.register("course-reserves", CourseReservesController)
 
+import EagerLazyController from "./eager_lazy_controller"
+application.register("eager-lazy", EagerLazyController)
+
 import EmailSentController from "./email_sent_controller"
 application.register("email-sent", EmailSentController)
 
 import EmbedBrowseController from "./embed_browse_controller"
 application.register("embed-browse", EmbedBrowseController)
 
+import ExhibitPanelController from "./exhibit_panel_controller"
+application.register("exhibit-panel", ExhibitPanelController)
+
+import FacetCheckboxesController from "./facet_checkboxes_controller"
+application.register("facet-checkboxes", FacetCheckboxesController)
+
 import FacetListController from "./facet_list_controller"
 application.register("facet-list", FacetListController)
+
+import FacetSearchController from "./facet_search_controller"
+application.register("facet-search", FacetSearchController)
+
+import FeedbackFormController from "./feedback_form_controller"
+application.register("feedback-form", FeedbackFormController)
+
+import FeedbackModalController from "./feedback_modal_controller"
+application.register("feedback-modal", FeedbackModalController)
+
+import FeedbackStandaloneController from "./feedback_standalone_controller"
+application.register("feedback-standalone", FeedbackStandaloneController)
 
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
@@ -70,6 +94,9 @@ application.register("live-lookup", LiveLookupController)
 import LongTableController from "./long_table_controller"
 application.register("long-table", LongTableController)
 
+import LongTextController from "./long_text_controller"
+application.register("long-text", LongTextController)
+
 import ManagedPurlController from "./managed_purl_controller"
 application.register("managed-purl", ManagedPurlController)
 
@@ -84,3 +111,6 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
+
+import TooltipController from "./tooltip_controller"
+application.register("tooltip", TooltipController)

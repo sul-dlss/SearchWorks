@@ -53,6 +53,7 @@ module Searchworks4
         # temp location
         return nil if item.temporary_location_text && item_status == 'Available'
 
+        return "Available #{item.loan_period}" if item.on_reserve? && item.loan_period
         return 'Available for in-library use' if !item.circulates? && item_status == 'Available'
 
         item_status

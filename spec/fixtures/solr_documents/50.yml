@@ -3,7 +3,7 @@ uuid_ssi: 902eeb30-f415-4790-aa18-3efae87f7537
 hashed_id_ssi: c0c7c76d30bd3dcaefc96f40275bdc0a
 title_display: An item in a virtual object
 all_search: An item in a virtual object
-format_main_ssim: Map
+format_hsim: Map
 modsxml: <%= mods_everything %>
 file_id:
   - wn461xh4882%2F2542001.jp2

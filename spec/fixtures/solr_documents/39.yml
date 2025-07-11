@@ -5,7 +5,7 @@ title_display: File Item3
 all_search: File Item3
 author_person_full_display: Dr. Who
 format: File
-format_main_ssim: Dataset
+format_hsim: Dataset
 collection:
   - 38
 building_facet:

@@ -1,0 +1,9 @@
+<% if @facet_field.paginator.items.any? %>
+  <%= tag.ul id: @id, class: @classes do %>
+    <%= render facet_items %>
+  <% end %>
+<% else %>
+  <%= tag.div id: @id, class: @classes do %>
+    <div class="fst-italic text-muted px-3">No results found</div>
+  <% end %>
+<% end %>

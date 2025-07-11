@@ -57,7 +57,7 @@ pipeline {
       }
 
       when {
-        branch 'release'
+        branch 'uat-release'
       }
 
       steps {
@@ -66,6 +66,7 @@ pipeline {
         sshagent (['sul-devops-team', 'sul-continuous-deployment']){
           sh '''#!/bin/bash -l
           export DEPLOY=1
+          export BRANCH=uat-release
 
           # Load RVM
           rvm use 3.4.1@searchworks --create

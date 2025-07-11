@@ -1,6 +1,6 @@
-<% if marc_field.values.present? %>
-  <dt><%= marc_field.label %></dt>
-  <% marc_field.values.each do |value| %>
-    <dd><%= auto_link(value) %></dd>
-  <% end  %>
+<%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+  <% component.with_label { marc_field.label } %>
+  <% marc_field.values.each do |v| %>
+    <% component.with_value { auto_link(v) } %>
+  <% end %>
 <% end %>

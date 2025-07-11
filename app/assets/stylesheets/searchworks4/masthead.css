@@ -12,10 +12,18 @@
   .h1 {
     --sul-link-font-weight: 300;
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
+    --bs-link-hover-color-rgb: var(--stanford-cardinal-rgb);
   }
 }
 
 #user-util-collapse .dropdown-menu {
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
+}
+
+.bookmark-counter {
+  --bs-badge-color: var(--stanford-black);
+  --bs-badge-padding-x: 0.625rem;
+  --bs-badge-font-weight: 500;
+  background-color: var(--stanford-10-black);
 }

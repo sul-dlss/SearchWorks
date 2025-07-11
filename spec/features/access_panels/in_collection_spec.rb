@@ -6,14 +6,10 @@ RSpec.feature "In collection Access Panel" do
   scenario "for MODS derived documents" do
     visit solr_document_path('mf774fs2413')
 
-    within('.metadata-panels') do
-      expect(page).to have_css('h2', text: 'Context')
-    end
-
     within(".panel-in-collection") do
-      expect(page).to have_css('h3', text: 'Item belongs to a collection')
+      expect(page).to have_css('h2', text: 'Item belongs to a collection')
       expect(page).to have_css("h4 a", text: "Image Collection1")
-      expect(page).to have_css("[data-behavior='truncate']", text: /A collection of fixture images/)
+      expect(page).to have_css("[data-controller='long-text']", text: /A collection of fixture images/)
       expect(page).to have_css("dt", text: 'Digital collection')
       expect(page).to have_css("dd a", text: /\d+ digital items?/)
       expect(page).to have_css("dt", text: "Finding aid")

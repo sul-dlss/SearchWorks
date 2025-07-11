@@ -1,6 +1,8 @@
 <% if local_subjects.values.present? %>
-  <dt><%= local_subjects.label %></dt>
-  <% local_subjects.values.each do |value| %>
-    <dd><%= link_to(value.strip, marc_field.url.merge!(q: "\"#{value.strip}\"")) %></dd>
-  <% end  %>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+    <% component.with_label { local_subjects.label } %>
+    <% local_subjects.values.each do |value| %>
+      <% component.with_value { link_to(value.strip, marc_field.url.merge!(q: "\"#{value.strip}\"")) } %>
+    <% end  %>
+  <% end %>
 <% end %>

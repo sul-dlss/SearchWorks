@@ -1,0 +1,6 @@
+<div class="my-3 clearfix">
+  <%= tag.dt label, title: (label if label.to_s.length > 20 )%>
+  <% values.each do |v| %>
+    <%= v %>
+  <% end %>
+</div>

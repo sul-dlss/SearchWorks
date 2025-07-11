@@ -26,7 +26,7 @@ RSpec.feature "Advanced Search" do
       within ".limit-criteria" do
         expect(page).to have_css("h3.facet-field-heading button", text: "Access")
         expect(page).to have_field 'At the Library'
-        expect(page).to have_css("h3.facet-field-heading button", text: "Resource type")
+        expect(page).to have_css("h3.facet-field-heading button", text: "Format")
         expect(page).to have_field 'Book'
         expect(page).to have_css("h3.facet-field-heading button", text: "Library")
         expect(page).to have_field 'Green'

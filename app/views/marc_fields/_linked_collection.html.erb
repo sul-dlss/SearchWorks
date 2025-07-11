@@ -1,8 +1,10 @@
 <% if linked_collection.values.present? %>
-  <dt><%= linked_collection.label %></dt>
-  <% linked_collection.values.each do |value| %>
-    <dd>
-      <%= link_to(value, search_catalog_path(search_field: :subject_terms, q: "\"#{value}\"")) %>
-    </dd>
-  <% end  %>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+    <% component.with_label { linked_collection.label } %>
+    <% linked_collection.values.each do |value| %>
+      <% component.with_value do %>
+        <%= link_to(value, search_catalog_path(search_field: :subject_terms, q: "\"#{value}\"")) %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>

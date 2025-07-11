@@ -18,8 +18,12 @@
 <% unless doc_dates.blank? %>
   <% dates.each do |field, label| %>
     <% if document.has_key?(field)  %>
-      <dt title="<%= label %>"><%= label %></dt>
-      <dd><%= [document[field]].flatten.join("<br/>").html_safe %></dd>
+      <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+        <% component.with_label { label } %>
+        <% component.with_value do %>
+          <%= [document[field]].flatten.join("<br/>").html_safe %>
+        <% end %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

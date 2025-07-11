@@ -5,7 +5,7 @@ title_display: File Item2
 all_search: File Item2
 author_person_full_display: Mr. Stedman
 format: File
-format_main_ssim: Dataset
+format_hsim: Dataset
 collection:
   - 31
 building_facet:

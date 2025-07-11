@@ -30,7 +30,7 @@ RSpec.feature 'Record view', :js do
 
       within 'div.panel-related' do
         expect(page).to have_css('div.card-header', visible: true)
-        expect(page).to have_css('h3', text: 'More options', visible: true)
+        expect(page).to have_css('h2', text: 'More options', visible: true)
         within('.google-preview') do
           expect(page).to have_css('a.limited-preview', text: '(Limited preview)', visible: true)
           expect(page).to have_css("img[src='/assets/gbs_preview_button.gif']")

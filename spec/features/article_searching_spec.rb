@@ -8,21 +8,11 @@ RSpec.feature 'Article Searching' do
       article_search_for('Kittens')
 
       expect(page).to have_title 'SearchWorks catalog, Kittens'
-      expect(page).to have_css('h2', text: /\d+ articles\+ results?/)
       expect(current_url).to match(%r{/articles\?.*&q=Kittens})
     end
   end
 
   describe 'article search results' do
-    scenario 'subjects are not linked' do
-      stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first])
-      article_search_for('kittens')
-      within '.document-position-1' do
-        expect(page).to have_css('dd', text: /Kittens/)
-        expect(page).to have_no_link('Kittens')
-      end
-    end
-
     scenario 'records are navigable' do
       stub_article_service(type: :single, docs: [StubArticleService::SAMPLE_RESULTS.first]) # just a single document for the record view
 
@@ -36,7 +26,7 @@ RSpec.feature 'Article Searching' do
       expect(current_url).to match(%r{/articles/abc123})
     end
 
-    scenario 'authors, subjects, and abstracts are truncated', :js do
+    scenario 'abstracts are truncated', :js do
       long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
       document = EdsDocument.new({
                                    id: '123',
@@ -64,10 +54,8 @@ RSpec.feature 'Article Searching' do
 
       visit articles_path(q: 'Example Search')
 
-      within(first('.document')) do
-        expect(page).to have_css('dt', text: /subjects/i)
-        expect(page).to have_css('dt', text: /abstract/i)
-        expect(page).to have_css('a.responsiveTruncatorToggle', text: 'more...', count: 3)
+      within(first('article')) do
+        expect(page).to have_css('dt', text: 'Abstract', visible: :all)
       end
     end
 
@@ -75,11 +63,11 @@ RSpec.feature 'Article Searching' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       article_search_for('Kittens')
 
-      expect(page).to have_css('ul.document-metadata li span.online-label', text: 'Full text')
-      expect(page).to have_css('ul.document-metadata li a', text: /^View on detail page/)
-      expect(page).to have_css('ul.document-metadata li a', text: /^View full text/)
-      expect(page).to have_css('ul.document-metadata li a', text: /^Find full text or request/)
-      expect(page).to have_css('ul.document-metadata li a', text: /^View\/download PDF/)
+      expect(page).to have_css('.availability-component .available-online', text: 'Available online')
+      expect(page).to have_css('.availability-component  a', text: /^View on detail page/)
+      expect(page).to have_css('.availability-component  a', text: /^View full text/)
+      expect(page).to have_css('.availability-component  a', text: /^Find full text or request/)
+      expect(page).to have_css('.availability-component  a', text: /^View\/download PDF/)
     end
   end
 

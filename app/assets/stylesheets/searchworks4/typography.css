@@ -82,3 +82,7 @@ aside,
   --bs-link-color: rgb(var(--bs-link-color-rgb));
   --bs-link-hover-color: rgb(var(--bs-link-hover-color-rgb));
 }
+
+.text-digital-green {
+  color: var(--stanford-digital-green);
+}

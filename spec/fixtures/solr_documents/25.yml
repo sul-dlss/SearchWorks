@@ -8,6 +8,6 @@ all_search: Ut aliquip qui elit nostrud reprehenderit aliqua quis anim mollit no
   non.
 language: Japanese
 format: Image
-format_main_ssim: Image
+format_hsim: Image
 access_facet: Online
 building_facet: "Math & Statistics"

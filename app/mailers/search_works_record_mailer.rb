@@ -58,4 +58,19 @@ class SearchWorksRecordMailer < ApplicationMailer
       title: documents.first.to_semantic_values[:title].try(:first) || 'N/A'
     )
   end
+
+  helper_method :blacklight_configuration_context, :document_presenter_class, :render_resource_icon
+  ##
+  # Context in which to evaluate blacklight configuration conditionals
+  def blacklight_configuration_context
+    @blacklight_configuration_context ||= Blacklight::Configuration::Context.new(self)
+  end
+
+  # override the document presenter to force it to use the ShowDocumentPresenter
+  def document_presenter_class(*, **)
+    ShowDocumentPresenter
+  end
+
+  # disable the resource icon
+  def render_resource_icon(*, **); end
 end

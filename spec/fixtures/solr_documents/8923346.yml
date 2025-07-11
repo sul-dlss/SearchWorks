@@ -5,7 +5,7 @@ title_display: Many PURLs for One CKey
 all_search: Many PURLs for One CKey
 language: English
 format: Book
-format_main_ssim: Book
+format_hsim: Book
 access_facet: At the Library
 marc_json_struct: |
 <%= many_managed_purl_856 %>

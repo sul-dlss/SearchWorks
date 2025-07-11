@@ -30,3 +30,19 @@
     background-color: var(--stanford-10-black);
   }
 }
+
+#alternate-catalog-offcanvas {
+  --bs-offcanvas-height: auto;
+}
+
+.offcanvas .alternate-catalog {
+  background: none;
+
+  .alternate-catalog-heading {
+    border-bottom: 1px solid var(--stanford-20-black);
+  }
+
+  .alternate-catalog-primary-tools {
+    margin-top: 1rem;
+  }
+}

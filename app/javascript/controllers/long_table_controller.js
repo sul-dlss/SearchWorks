@@ -66,10 +66,10 @@ export default class extends Controller {
 
   addControls() {
     const button = document.createElement("button")
-    button.classList.add("btn", "btn-secondary", "btn-xs")
+    button.classList.add("btn", "btn-link", "p-0")
     button.dataset.longTableTarget = "button";
     button.dataset.action = "long-table#toggle";
-    button.innerText = this.expandedValue ? "show less" : "show all"
+    button.innerText = this.expandedValue ? "show less" : "show all";
 
     if (this.buttonContextValue) {
       const srSpan = document.createElement("span");

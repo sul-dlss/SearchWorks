@@ -7,7 +7,7 @@ title_245a_search: An object
 author_person_display: Doe, Jane
 author_1xx_search: Doe, Jane
 format: Book
-format_main_ssim: Book
+format_hsim: Book
 language: English
 marc_json_struct: |
 <%= simple_856 %>

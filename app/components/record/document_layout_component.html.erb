@@ -1,0 +1,36 @@
+<%= content_tag 'article',
+      id: document.id,
+      data: {
+        'document-id': document.id.to_s.parameterize
+      },
+      class: 'document',
+      itemscope: true,
+      itemtype: document.itemtype do %>
+  <div class="document-main-section">
+    <% if thumbnail? %>
+      <div class="document-thumbnail float-end mt-1">
+        <%= thumbnail %>
+      </div>
+    <% end %>
+    <h1>
+      <span itemprop="name"><%= title %></span>
+    </h1>
+
+    <%= header %>
+
+    <button class="btn btn-sm py-0 btn-secondary d-lg-none my-3" data-bs-toggle="offcanvas" data-bs-target="#aside" aria-controls="aside">See availability</button>
+
+    <%= embed %>
+
+    <%= metadata %>
+
+    <%= footer %>
+  </div>
+
+  <%= render 'catalog/schema_dot_org_default', document: document if document.id.present? %>
+
+  <% if document.respond_to?(:export_as_openurl_ctx_kev) %>
+    <!-- COinS, for Zotero among others. -->
+    <span class="Z3988" title="<%= document.export_as_openurl_ctx_kev(document.document_formats.first) %>"></span>
+  <% end %>
+<% end %>

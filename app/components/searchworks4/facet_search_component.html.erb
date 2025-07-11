@@ -1,0 +1,29 @@
+<%= render(layout.new(facet_field: facet_field_without_more_link)) do |component| %>
+  <% component.with_label do %>
+    <%= @facet_field.label %>
+  <% end %>
+  <% component.with_body do %>
+    <%= render(Blacklight::Facets::InclusiveConstraintComponent.new(facet_field: @facet_field)) %>
+    <%= content_tag :ul, class: 'facet-values list-unstyled', role: @role do %>
+      <%= render facet_items %>
+    <% end %>
+    <% if @facet_field.modal_path %>
+      <div class="more_facets mb-3">
+        <%= link_to t("more_#{@facet_field.key}_html", scope: 'blacklight.search.facets', default: :more_html, field_name: @facet_field.label),
+          @facet_field.modal_path,
+          data: { blacklight_modal: 'trigger', turbo: false } %>
+      </div>
+
+      <div data-controller="facet-search" data-action="keydown.esc->facet-search#esc keydown.down->facet-search#next keydown.up->facet-search#previous" data-facet-search-url-value="<%= url_for(helpers.search_state.to_h.merge(id: @facet_field.key, action: 'facet_results', only_path: false, query_fragment: '{token}').except(:page)) %>">
+        <div class="input-group">
+          <label class="input-group-text bg-body border-end-0 pe-0" for="facet-search-<%= @facet_field.key %>-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <span class="visually-hidden">Search <%= @facet_field.label.downcase %></span>
+          </label>
+          <%= tag.input id: "facet-search-#{@facet_field.key}-search", type: 'text', class: 'form-control border-start-0', placeholder: "Search #{@facet_field.label.downcase}", role: 'combobox', aria: { autocomplete: 'list', controls: "facet-search-#{@facet_field.key}-results", expanded: false, haspopup: 'menu' }, data: { action: 'facet-search#search focus->facet-search#show', 'facet-search-target': 'input' } %>
+        </div>
+        <%= helpers.turbo_frame_tag "facet-search-#{@facet_field.key}", data: { 'facet-search-target': 'frame' }, target: '_top' %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

@@ -3,6 +3,9 @@
   data: {
     'document-id': @document.id.to_s.parameterize,
     'document-counter': @counter,
+    controller: 'bookmark',
+    action: 'turbo:before-morph-element@document->bookmark#animateRemovals',
+    animate_exit: true
   },
   itemscope: true,
   itemtype: @document.itemtype,
@@ -12,17 +15,19 @@
     <% # header bar for doc items in index view %>
     <div class="col-10 pe-4">
       <div class="documentHeader">
-        <h3 class="index_title">
-          <%=  content_tag :span, class: 'document-counter fw-light' do
-          t('blacklight.search.documents.counter', counter:)
-        end %>
+        <h3 class="index_title truncate-2 truncate-md-3 truncate-lg-none">
+          <% if counter %>
+            <%=  content_tag :span, class: 'document-counter fw-light' do
+            t('blacklight.search.documents.counter', counter:)
+          end %>
+          <% end %>
           <%= helpers.link_to_document document, counter:, itemprop: 'name', class: 'fw-medium' %>
         </h3>
       </div>
       <div class="results-metadata-sections">
 
         <% if document.vernacular_title.present? %>
-          <div><%= document.vernacular_title.html_safe %></div>
+          <div class="truncate-2 truncate-md-3 truncate-lg-none"><%= document.vernacular_title.html_safe %></div>
         <% end %>
 
         <%- uniform_title = helpers.get_uniform_title(document) -%>
@@ -44,9 +49,10 @@
         </div>
 
         <% if document.mods? %>
-          <dl>
-            <%= render SummaryDataComponent.new(document:) %>
-          </dl>
+          <ul class="document-metadata list-unstyled truncate-2">
+            <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
+          </ul>
+          <%= render SummaryDataComponent.new(document:) %>
         <% else %>
           <ul class="document-metadata list-unstyled">
             <% %i[creator corporate_author meeting].each do |target| %>
@@ -62,7 +68,7 @@
       </div>
     </div>
     <div class="col-2 d-flex flex-column align-items-center">
-      <div class="d-flex flex-row gap-2 mb-3">
+      <div class="document-actions d-flex flex-row gap-1 mb-3">
         <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
         <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
       </div>

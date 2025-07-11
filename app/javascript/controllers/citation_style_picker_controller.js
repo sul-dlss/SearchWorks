@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["select", "tab"]
 
   connect() {
-    console.log("connected")
     this.switch()
   }
 
