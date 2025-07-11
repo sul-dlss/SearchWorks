@@ -16,6 +16,8 @@ class AvailabilityController < ApplicationController
     # so we also need to retrieve the solr document too.
     @document = search_service.fetch(params[:id])
     @rtac = LiveLookup.new(@document[:uuid_ssi]).records.index_by { |record| record[:item_id] }
+  rescue FolioClient::Error => e
+    Honeybadger.notify e
   end
 
   private
