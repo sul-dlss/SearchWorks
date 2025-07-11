@@ -21,22 +21,32 @@ export default class extends Controller {
       fetch(this.urlValue)
         .then((response) => response.json())
         .then((json) => {
-          $(this.element).hide().html(json.html).fadeIn(500);
+          this.element.style.display = 'none';
+          this.element.innerHTML = json.html;
+          this.element.style.display = 'block';
+          this.element.style.opacity = '0';
+          this.element.style.transition = 'opacity 0.5s';
+          setTimeout(() => {
+            this.element.style.opacity = '1';
+          }, 10);
 
           this.showAndUpdateDigitalContentCount(json);
         })
   }
 
   showAndUpdateDigitalContentCount(data) {
-    $('[data-behavior="display-digital-content-count"][data-document-id="' + data.id + '"]').show();
-    var updateEl = $('[data-behavior="update-digital-content-count"][data-document-id="' + data.id + '"]');
+    const displayElements = document.querySelectorAll('[data-behavior="display-digital-content-count"][data-document-id="' + data.id + '"]');
+    displayElements.forEach(el => el.style.display = 'block');
 
-    if(updateEl.text().match(/\d+/)) {
-      return;
-    }
-    // Assuming an simple pluralization here (we only update item/items in our implementation)
-    updateEl.show().text(
-        data.total + ' ' + (data.total > 1 ? updateEl.text() + 's' : updateEl.text())
-    )
+    const updateElements = document.querySelectorAll('[data-behavior="update-digital-content-count"][data-document-id="' + data.id + '"]');
+
+    updateElements.forEach(updateEl => {
+      if(updateEl.textContent.match(/\d+/)) {
+        return;
+      }
+      // Assuming an simple pluralization here (we only update item/items in our implementation)
+      updateEl.style.display = 'block';
+      updateEl.textContent = data.total + ' ' + (data.total > 1 ? updateEl.textContent + 's' : updateEl.textContent);
+    });
   }
 }

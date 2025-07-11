@@ -25,7 +25,7 @@ export default class extends Controller {
     this.arrow.className = 'preview-arrow'
     this.gallery = document.querySelectorAll('.gallery-document')
     this.reorderPreviewDivs()
-    $(window).resize(() => this.reorderPreviewDivs())
+    window.addEventListener('resize', () => this.reorderPreviewDivs())
   }
 
   showPreview() {
@@ -74,7 +74,7 @@ export default class extends Controller {
 
   currentPreview(e){
     // Check if we're clicking in a preview
-    if ($(e.target).parents('.preview-container').length > 0){
+    if (e.target.closest('.preview-container')){
       return true
     } else {
       if (e.target === this.buttonTarget) {
@@ -122,8 +122,9 @@ export default class extends Controller {
   // Depending on how narrow the screen is, we may need to move the preview div location.
   reorderPreviewDivs() {
     const docId = this.previewTarget.dataset.documentId
-    const galleryDocs = $(`.gallery-document`)
-    let previewIndex = galleryDocs.index($(`.gallery-document[data-doc-id='${docId}']`)) + 1
+    const galleryDocs = document.querySelectorAll('.gallery-document')
+    const targetDoc = document.querySelector(`.gallery-document[data-doc-id='${docId}']`)
+    let previewIndex = Array.from(galleryDocs).indexOf(targetDoc) + 1
 
     const itemsPerRow = this.itemsPerRow()
     /*
