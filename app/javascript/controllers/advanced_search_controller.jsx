@@ -88,8 +88,8 @@ const formReducer = (state, action) => {
     }
   };
 
-const mapBlacklightQueryParamsToForm = (queryParams) => {
-  let currentId = 0;
+const mapBlacklightQueryParamsToForm = (queryParams, defaultData) => {
+  let currentId = defaultData.currentId;
   const formData = {};
 
   if (queryParams.clause) {
@@ -147,15 +147,14 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     searchTypeOptions: [
       { field: 'must', label: 'Contains all (AND)'},
       { field: 'should', label: 'Contains any (OR)' }
-    ],
-    ...(mapBlacklightQueryParamsToForm(queryParams, { filterFields, searchFields: searchFieldOptions }) || {})
+    ]
   }
 
   const resetForm = () => {
     dispatch({ type: 'reset' });
   }
 
-  const [form, dispatch] = React.useReducer(formReducer, initialData);
+  const [form, dispatch] = React.useReducer(formReducer, { ...initialData, ...mapBlacklightQueryParamsToForm(queryParams, initialData) });
 
   return (
     <SearchContext value={form}>
