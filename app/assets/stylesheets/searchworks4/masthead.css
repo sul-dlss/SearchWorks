@@ -16,6 +16,11 @@
   }
 }
 
+#user-util-collapse .dropdown-menu {
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+}
+
 .bookmark-counter {
   --bs-badge-color: var(--stanford-black);
   --bs-badge-padding-x: 0.625rem;
