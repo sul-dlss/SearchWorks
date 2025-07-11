@@ -4,55 +4,67 @@ require 'rails_helper'
 
 RSpec.describe 'Devise functionality restrictions', type: :routing do
   describe 'registrations' do
-    it 'cancel user should not be available' do
+    it 'cancel user is not available' do
       expect(get: '/users/cancel').not_to be_routable
     end
-    it 'create user should not be available' do
+
+    it 'create user is not available' do
       expect(post: '/users').not_to be_routable
     end
-    it 'new user should not be available' do
+
+    it 'new user is not available' do
       expect(get: '/users/sign_up').not_to be_routable
     end
-    it 'edit user should not be available' do
+
+    it 'get edit user is not available' do
       expect(get: '/users/edit').not_to be_routable
     end
-    it 'edit user should not be available' do
+
+    it 'patch edit user is not available' do
       expect(patch: '/users').not_to be_routable
     end
-    it 'edit user should not be available' do
+
+    it 'put edit user is not available' do
       expect(put: '/users').not_to be_routable
     end
-    it 'edit user should not be available' do
+
+    it 'delete edit user is not available' do
       expect(delete: '/users').not_to be_routable
     end
   end
 
   describe 'passwords' do
-    it 'user password should not be available' do
+    it 'user password is not available' do
       expect(post: '/users/password').not_to be_routable
     end
-    it 'new user password should not be available' do
+
+    it 'new user password is not available' do
       expect(get: '/users/password/new').not_to be_routable
     end
-    it 'edit user password should not be available' do
+
+    it 'get edit user password is not available' do
       expect(get: '/users/password/edit').not_to be_routable
     end
-    it 'edit user password should not be available' do
+
+    it 'patch edit user password is not available' do
       expect(patch: '/users/password/edit').not_to be_routable
     end
-    it 'edit user password should not be available' do
+
+    it 'post edit user password is not available' do
       expect(post: '/users/password/edit').not_to be_routable
     end
   end
 
   describe 'sessions' do
-    it 'new user session should not be available' do
+    it 'get new user session is not available' do
       expect(get: '/users/sign_in').not_to be_routable
     end
-    it 'user session should not be available' do
+
+    it 'post user session is not available' do
       expect(post: '/users/sign_in').not_to be_routable
     end
-    it 'destroy user session should not be available' do
+
+    it 'destroy user session is not available' do
       expect(get: '/users/sign_out').not_to be_routable
     end
   end
