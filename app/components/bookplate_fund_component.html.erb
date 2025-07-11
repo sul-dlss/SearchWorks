@@ -1,20 +1,20 @@
-<% bookplate = bookplate_from_document_list %>
-<% if bookplate.present? %>
-  <%= render Masthead::LayoutComponent.new do |component| %>
-    <% component.with_header { bookplate.text } %>
+<div class="bookplate-fund-masthead col p-3 mb-4">
+  <div class="row">
+    <div class="col-sm-4 col-md-3 d-flex flex-column align-items-md-end">
+      <%= image_tag(thumbnail_url, alt: text, class: 'mb-2 mx-auto') %>
+    </div>
 
-    <%= image_tag(bookplate.thumbnail_url, alt: bookplate.text) %>
-
-    <% component.with_aside do %>
-      <p>
+    <div class="col-sm-8 col-md-9">
+      <h1 class="h2 mb-3"><%= text %></h1>
+      <p class="mb-3">
         The library resources listed below were acquired with the generous support of this endowed materials fund.
       </p>
-      <p>
+      <p class="mb-3">
         Donors and family representatives who have created and sustained library endowments ensure the most relevant research materials are available to students, faculty and scholars in perpetuity, a tradition started by Jane Stanford when she created the first library endowment from the proceeds of the sale of her jewel collection.
       </p>
-      <p>
+      <p class="mb-3">
         Learn more about the many ways to <a href="https://library.stanford.edu/support-stanford-libraries">support teaching, learning and research at Stanford Libraries.</a>
       </p>
-    <% end %>
-  <% end %>
-<% end %>
+    </div>
+  </div>
+</div>

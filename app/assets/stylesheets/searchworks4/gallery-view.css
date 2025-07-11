@@ -1,4 +1,4 @@
-.gallery {
+.gallery, .documents-gallery {
   --gallery-document-total-height: 349px;
   --gallery-document-width: 140px;
   --gallery-document-thumbnail-height: 171px;

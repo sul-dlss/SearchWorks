@@ -164,19 +164,6 @@ RSpec.describe PageLocation do
         end
       end
 
-      describe 'bookplate_fund' do
-        before { params[:f] = { fund_facet: ['ABC123'] } }
-
-        it 'is defined when the fund_facet is present' do
-          expect(access_point).to eq :bookplate_fund
-        end
-
-        it 'is defined when the fund_facet is empty' do
-          params[:f] = { fund_facet: [] }
-          expect(access_point).to be_nil
-        end
-      end
-
       describe 'government_documents' do
         before { params[:f] = { genre_ssim: ['Government document', 'Something else'] } }
 
