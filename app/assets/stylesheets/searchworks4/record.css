@@ -2,7 +2,8 @@
   .dl-horizontal {
     dt {
       float: left;
-      width: 10em;
+      width: 9.5em;
+      margin-right: 0.5em;
       overflow-wrap: break-word;
       hyphens: auto;
     }
