@@ -11,3 +11,5 @@ genre_ssim:
 format_hsim: Video/Film
 access_facet: Online
 building_facet: Music
+library_code_facet_ssim:
+  - MUSIC

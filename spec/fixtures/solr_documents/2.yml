@@ -14,5 +14,7 @@ marc_json_struct: |
 <%= metadata1 %>
 access_facet: Online
 building_facet: SAL3 (off-campus storage)
+library_code_facet_ssim:
+  - SAL3
 course: "CAT-401-01-01"
 instructor: "McDonald, Ronald"

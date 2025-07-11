@@ -36,7 +36,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   def consolidate_home_page_params(solr_params)
     return unless on_home_page?
 
-    solr_params['facet.field'] = blacklight_config.top_filters[:default]
+    solr_params['facet.field'] = blacklight_config.facet_fields.slice(*blacklight_config.top_filters[:default]).values.map(&:field)
     solr_params['rows'] = 0
   end
 
