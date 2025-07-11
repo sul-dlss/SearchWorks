@@ -28,6 +28,11 @@ module MastheadHelper
     search_catalog_path(facet_params)
   end
 
+  def iiif_item_path
+    facet_params = { f: { iiif_resources: ['available'] } }
+    search_catalog_path(facet_params)
+  end
+
   def bookplate_from_document_list(response = @response)
     return unless params[:f] && params[:f][:fund_facet].present? && response.docs.present?
 
