@@ -1,4 +1,4 @@
-<%= form_with url: feedback_form_path, method: :post, class: "feedback-form", id: "connection-form", role: "form", namespace: type do |f| %>
+<%= form_with url: feedback_form_path, method: :post, class: "feedback-form", data: { controller: "recaptcha", action: "submit->recaptcha#refresh" }, role: "form", namespace: type do |f| %>
   <%= f.hidden_field :url, value: request.referer, class:"reporting-from-field" %>
   <%= f.hidden_field :user_agent %>
   <%= f.hidden_field :viewport %>
@@ -38,7 +38,7 @@
 
     <% if current_user.blank? %>
       <div class="mb-3 row">
-        <%= render RecaptchaWithLoginLinkComponent.new(recaptcha_id: "#{type}-recaptcha") %>
+        <%= render RecaptchaComponent.new(action: 'feedback') %>
       </div>
     <% end %>
 
