@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Dissertation Theses Access Point' do
+RSpec.describe 'Dissertation Theses Access Point', :js do
   before do
     visit root_path
     within '.features' do
@@ -29,5 +29,24 @@ RSpec.describe 'Dissertation Theses Access Point' do
       expect(page).to have_css('h3', text: 'Genre')
       expect(page).to have_css('h3', text: 'Date')
     end
+  end
+
+  it 'Toggles the Stanford work facet' do
+    expect(page).to have_css('#facet_option_stanford_only', visible: :visible)
+
+    checkbox = find_by_id('facet_option_stanford_only')
+
+    checkbox.click
+
+    checked = find_by_id('facet_option_stanford_only')
+    expect(page).to have_css('.filter-stanford_work_facet_hsim')
+    expect(checked.checked?).to be(true)
+
+    # Click again to toggle back
+    checked.click
+
+    unchecked = find_by_id('facet_option_stanford_only')
+    expect(page).to have_no_css('.filter-stanford_work_facet_hsim')
+    expect(unchecked.checked?).to be(false)
   end
 end
