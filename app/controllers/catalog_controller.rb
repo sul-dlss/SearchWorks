@@ -224,6 +224,7 @@ class CatalogController < ApplicationController
         label: 'Available', fq: 'iiif_manifest_url_ssim:*'
       }
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
+    config.add_facet_field 'format_main_ssim', label: 'Resource type', component: Blacklight::Facets::ListComponent, show: false, include_in_advanced_search: true
 
     config.top_filters = {
       :default => ['access_facet', 'format_hsim', 'library'],
