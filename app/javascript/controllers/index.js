@@ -88,6 +88,9 @@ application.register("google-cover-image", GoogleCoverImageController)
 import LibraryH3lpController from "./library_h3lp_controller"
 application.register("library-h3lp", LibraryH3lpController)
 
+import LibraryHasController from "./library_has_controller"
+application.register("library-has", LibraryHasController)
+
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)
 

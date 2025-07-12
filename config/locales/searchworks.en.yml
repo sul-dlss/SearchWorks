@@ -23,6 +23,7 @@ en:
       unknown: Unknown
       noncirc_page: In-library use
       in_process: In process
+      summary: Summary of items
     bookmarks:
       clear_all:
         action_confirm: "Clear all your selection lists?"
