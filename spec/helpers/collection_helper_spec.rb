@@ -30,20 +30,6 @@ RSpec.describe CollectionHelper do
     end
   end
 
-  describe '#text_for_inner_members_link' do
-    let(:document) { SolrDocument.new }
-    let(:collection_members) { [SolrDocument.new, SolrDocument.new] }
-
-    before do
-      expect(collection_members).to receive(:total).at_least(:once).and_return(2)
-      expect(document).to receive(:collection_members).at_least(:once).and_return(collection_members)
-    end
-
-    it 'pluralizes the collection members total' do
-      expect(text_for_inner_members_link(document)).to start_with 'Explore this collection'
-    end
-  end
-
   describe "#collection_breadcrumb_value" do
     it "returns the collection name when present" do
       allow(helper).to receive(:document_presenter).and_return(

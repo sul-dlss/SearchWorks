@@ -13,13 +13,6 @@ module CollectionHelper
     search_catalog_path(f: { collection: [document.collection_id] })
   end
 
-  def text_for_inner_members_link(document)
-    return if document.collection_members.blank?
-
-    items_count_text = pluralize(document.collection_members.total, 'digital item')
-    "Explore this collection <strong>(#{items_count_text})</strong>".html_safe
-  end
-
   def collections_search_params
     { f: { collection_type: ["Digital Collection"] } }
   end
