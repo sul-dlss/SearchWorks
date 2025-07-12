@@ -15,9 +15,6 @@ RSpec.feature "Zero results" do
 
   context 'from advanced search' do
     it "displays the page" do
-      visit blacklight_advanced_search_engine.advanced_search_path
-      fill_in "Title", with: "sdfsda"
-      click_button 'advanced-search-submit'
       visit search_catalog_path(op: 'must', clause: { '0' => { query: 'sdfsda', field: 'search_title' } })
       expect(page).to have_link I18n.t('blacklight.search.zero_results.return_to_advanced_search')
     end

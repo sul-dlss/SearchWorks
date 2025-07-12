@@ -17,7 +17,7 @@
         <li class="pb-2"><%= link_to t('blacklight.search.zero_results.return_to_advanced_search'), :back, class: 'font-weight-bolder fw-semibold',
                 data: { action: "click->analytics#trackLink" } %></li>
         <% else %>
-        <li class="pb-2">Try <%= link_to 'advanced search', blacklight_advanced_search_engine.advanced_search_path,
+        <li class="pb-2">Try <%= link_to 'advanced search', advanced_search_path,
                     data: { action: "click->analytics#trackLink"} %> to construct a targeted query.</li>
         <% end %>
         <li class="pb-2">Visit our <%= link_to 'SearchWorks Guide', 'https://guides.library.stanford.edu/searchworks' %> for more search tips.</li>

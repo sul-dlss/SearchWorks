@@ -62,7 +62,7 @@ RSpec.feature "Skip-to Navigation" do
   end
 
   scenario "has skip-to navigation links to form in advanced search page" do
-    visit blacklight_advanced_search_engine.advanced_search_path
+    visit advanced_search_path
 
     within "#skip-link" do
       expect(page).to have_link "Skip to advanced search form", href: '#advanced-search-form'
