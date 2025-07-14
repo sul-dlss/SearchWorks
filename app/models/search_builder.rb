@@ -69,6 +69,6 @@ class SearchBuilder < Blacklight::SearchBuilder
   def on_home_page?
     return false unless search_state.controller&.action_name == 'index' && search_state.controller.controller_name == 'catalog'
 
-    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:search_field].blank? && blacklight_params[:clause].blank?
+    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:range].blank? && blacklight_params[:search_field].blank? && blacklight_params[:clause].blank?
   end
 end

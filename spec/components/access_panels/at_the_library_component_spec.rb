@@ -214,7 +214,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         expect(page).to have_css('.location a', text: "Stacks", count: 1)
         expect(page).to have_css('.panel-library-location .mhld', text: "public note")
         expect(page).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
-        expect(page).to have_css('.panel-library-location .mhld', text: "Library has: library has")
+        expect(page).to have_button('Summary of items')
         expect(page).to have_css('.panel-library-location .callnumber', text: "ABC 123")
       end
     end
@@ -254,7 +254,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         expect(page).to have_css('.location-name', text: "Stacks")
         expect(page).to have_css('.panel-library-location .mhld', text: "public note")
         expect(page).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
-        expect(page).to have_css('.panel-library-location .mhld', text: "Library has: library has")
+        expect(page).to have_button('Summary of items')
       end
     end
   end

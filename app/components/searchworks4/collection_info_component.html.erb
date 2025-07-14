@@ -1,0 +1,34 @@
+<div class="p-4 mb-3 bg-fog-light collection-info">
+  <div class="d-flex justify-content-between gap-3">
+    <h1 class="h2"><%= collection[:title_display] %></h1>
+    <%= link_to solr_document_path(collection[:id]), class: "align-self-baseline text-nowrap" do %>
+      Collection record <i class="bi bi-chevron-right"></i>
+    <% end %>
+  </div>
+
+  <div class="collection-metadata mt-1">
+    <% if collection.extent_sans_format.present? %>
+      <div class="clearfix mb-1">
+        <b><%= collection[:format_main_ssim]&.first %></b> - <%= collection.extent_sans_format %>
+      </div>
+    <% end %>
+    <% if collection.collection_members.present? %>
+      <div class="clearfix mb-1">
+        <b>Digital collection</b> <span class="badge badge-light rounded-pill"><%= pluralize(collection.collection_members.total, 'item') %></span>
+      </div>
+    <% end %>
+    <% if collection.marc_links.finding_aid.present? %>
+      <div class="clearfix finding-aid">
+        <b class="me-1">Finding aid</b> <%= collection.marc_links.finding_aid.first.html.html_safe %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if collection[:summary_display] %>
+  <div class="collection-summary mt-2" data-controller="long-text" data-long-text-truncate-class="truncate-3">
+    <div data-long-text-target="text">
+      <%= helpers.format_record_html(collection[:summary_display].join(', ')) %>
+    </div>
+  </div>
+  <% end %>
+</div>

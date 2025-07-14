@@ -74,9 +74,14 @@
   <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
     <% component.with_label { 'Supplemental links' } %>
     <% component.with_value do %>
-      <%= document.marc_links.supplemental.map do |link| %>
-        <%= "#{link.html} #{ render StanfordOnlyPopoverComponent.new if link.stanford_only? }".html_safe %>
-      <% end.join("<br/>").html_safe %>
+      <ul class="list-unstyled">
+        <% document.marc_links.supplemental.each do |link| %>
+          <li>
+            <%= link.html %>
+            <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
   <% end %>
 <% end %>

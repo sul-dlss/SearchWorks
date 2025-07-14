@@ -43,6 +43,13 @@ RSpec.describe 'Site Accessibility', :js do
     end
   end
 
+  describe 'advanced search', :js do
+    it 'has an accessible view' do
+      visit advanced_search_path
+      expect(page).to be_accessible.within('main')
+    end
+  end
+
   describe 'the articles index page' do
     before { visit articles_path }
 

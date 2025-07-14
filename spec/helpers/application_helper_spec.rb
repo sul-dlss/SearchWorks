@@ -3,19 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationHelper do
-  describe "#active_class_for_current_page" do
-    let(:advanced_page) { "advanced" }
-
-    it "is active" do
-      helper.request.path = "advanced"
-      expect(helper.active_class_for_current_page(advanced_page)).to eq "active"
-    end
-    it "is not active" do
-      helper.request.path = "feedback"
-      expect(helper.active_class_for_current_page(advanced_page)).to be_nil
-    end
-  end
-
   describe "#disabled_class_for_no_selections" do
     it "is disabled" do
       expect(helper.disabled_class_for_no_selections(0)).to eq "disabled"
@@ -102,6 +89,28 @@ RSpec.describe ApplicationHelper do
     it 'passes query to library website search params and does not pass search fields' do
       controller.params = { q: 'kittens' }
       expect(result).to have_link(text: /library website/, href: 'https://library.stanford.edu/search/all?search=kittens')
+    end
+  end
+
+  describe '#ezproxy_database_link' do
+    subject(:link) { helper.ezproxy_database_link(url, title) }
+
+    let(:link_title) { 'title' }
+
+    context 'with a URL matching a SUL proxied host' do
+      let(:url) { 'https://research.ebsco.com/whatever' }
+
+      it 'returns a proxy URL' do
+        expect(link).to eq('https://stanford.idm.oclc.org/login?qurl=https%3A%2F%2Fresearch.ebsco.com%2Fwhatever')
+      end
+    end
+
+    context 'with a URL not matching a SUL proxied host' do
+      let(:url) { 'https://not.website.com/whatever' }
+
+      it 'returns the URL in its original form' do
+        expect(link).to eq(url)
+      end
     end
   end
 end

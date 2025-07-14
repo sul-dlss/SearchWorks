@@ -31,7 +31,7 @@ RSpec.describe LiveLookup::Folio do
       expect(folio_live_lookup.as_json).to eq(
         [{ 'item_id' => '9c130866-f1a4-53fb-b390-30ac35b00388',
            'due_date' => nil,
-           'status' => nil,
+           'status' => 'Available',
            'is_available' => true,
            'is_requestable_status' => false }]
       )
@@ -61,10 +61,6 @@ RSpec.describe LiveLookup::Folio do
 
   describe 'when FOLIO returns a status we want to display differently' do
     let(:status) { 'Awaiting pickup' }
-
-    it 'translates the status' do
-      expect(folio_live_lookup.as_json.first['status']).to eq 'On hold for a borrower'
-    end
 
     it 'still recognizes the folio status as requestable' do
       expect(folio_live_lookup.as_json.first['is_requestable_status']).to be true

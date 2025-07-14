@@ -1624,3 +1624,5 @@ archives.datapages.com
 ae.eastview.com
 bulletin.ceramics.org
 sciendo.com
+research.ebsco.com
+scholar.google.com

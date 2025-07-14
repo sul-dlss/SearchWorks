@@ -43,7 +43,6 @@
 }
 
 .search-area-bg {
-  min-height: 212px;
   padding-block: 2.5rem;
   background-color: var(--stanford-fog-light);
 
@@ -55,5 +54,11 @@
     .about-section {
       border-inline-start: 1px solid var(--stanford-40-black);
     }
+  }
+}
+
+#advanced-search-form {
+  input:focus-visible {
+    box-shadow: none;
   }
 }
