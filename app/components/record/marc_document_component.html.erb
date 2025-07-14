@@ -9,30 +9,34 @@
       <p class='vernacular-title h2 fw-normal mt-3'><%= presenter.vernacular_title %></p>
     <% end %>
 
-    <div class='upper-record-metadata mb-3'>
+    <div class='upper-record-metadata mb-5'>
       <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %> &mdash; <%= safe_join(document.marc_field('3003abcefg').values, ' ') %></div>
+
+      <div class='mt-3'>
+        <%= render Record::MarcContentAdviceComponent.new(document: document) %>
+      </div>
     </div>
   <% end %>
 
   <% component.with_embed do %>
-    <% if document.display_type == 'marc_collection' %>
-      <div class="async-collection-members col-md-12 mb-5" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
-        <%= helpers.link_to_collection_members('View all items', document) %>
-      </div>
-    <% else %>
-      <%= case
-        when document.managed_purls.many?
-          render 'catalog/managed_purl_embed', document: document
-        when document.druid
-          render Record::Item::EmbedComponent.new(druid: document.druid)
-        end %>
-    <% end%>
+    <div class="mb-5">
+      <% if document.display_type == 'marc_collection' %>
+        <div class="async-collection-members col-md-12 mb-5" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
+          <%= helpers.link_to_collection_members('View all items', document) %>
+        </div>
+      <% else %>
+        <%= case
+          when document.managed_purls.many?
+            render 'catalog/managed_purl_embed', document: document
+          when document.druid
+            render Record::Item::EmbedComponent.new(druid: document.druid)
+          end %>
+      <% end%>
+    </div>
   <% end %>
 
   <% component.with_metadata do %>
-    <%= render Record::MarcContentAdviceComponent.new(document: document) %>
-
-    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description', classes: 'my-5') do %>
+    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description', classes: 'mb-5') do %>
       <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, :marc_instrumentation, :linked_series, :linked_collection].each do |tag| %>
         <%= render_if_present document.marc_field(tag) %>
       <% end %>
