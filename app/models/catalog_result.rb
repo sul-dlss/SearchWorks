@@ -23,7 +23,10 @@ class CatalogResult
     'Object' => 'box-3.svg',
     'Software/Multimedia' => 'mouse.svg',
     'Sound recording' => 'microphone-3.svg',
-    'Video' => 'camera-film-1.svg'
+    'Video' => 'camera-film-1.svg',
+    'Video game' => 'game-controller-2.svg',
+    'Video/Film' => 'camera-film-1.svg',
+    'Website' => 'network-web.svg'
   }.freeze
 
   def icon
