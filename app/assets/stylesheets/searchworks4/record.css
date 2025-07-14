@@ -111,6 +111,7 @@
 
 .record-toolbar {
   --item-padding-x: 0.25rem;
+  --bs-link-hover-color: var(--bs-btn-hover-color);
   .btn {
     /* --bs-btn-padding-y: 0.25rem; */
     --bs-btn-padding-x: var(--item-padding-x);
