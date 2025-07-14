@@ -10,5 +10,10 @@ module Searchworks4
       super
       @classes += ' gap-2 mt-3'
     end
+
+    # take the main search query out of the constraints bar
+    def query_constraints
+      render(@facet_constraint_component.with_collection(clause_presenters.to_a, **@facet_constraint_component_options))
+    end
   end
 end
