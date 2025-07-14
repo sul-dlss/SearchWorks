@@ -77,6 +77,12 @@
   vertical-align: -0.18em;
 }
 
+.availability-overview {
+  .due-date {
+    display: none;
+  }
+}
+
 details {
   .open-hidden {
     display: inline-block;
