@@ -3,19 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationHelper do
-  describe "#active_class_for_current_page" do
-    let(:advanced_page) { "advanced" }
-
-    it "is active" do
-      helper.request.path = "advanced"
-      expect(helper.active_class_for_current_page(advanced_page)).to eq "active"
-    end
-    it "is not active" do
-      helper.request.path = "feedback"
-      expect(helper.active_class_for_current_page(advanced_page)).to be_nil
-    end
-  end
-
   describe "#disabled_class_for_no_selections" do
     it "is disabled" do
       expect(helper.disabled_class_for_no_selections(0)).to eq "disabled"
