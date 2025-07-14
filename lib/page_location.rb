@@ -15,8 +15,6 @@ class PageLocation
                         :databases
                       when course_reserve_parameters?
                         :course_reserve
-                      when collection_parameters?
-                        :collection
                       when sdr_parameters?
                         :sdr
                       when digital_collections_parameters?
@@ -53,7 +51,7 @@ class PageLocation
   end
 
   def collection?
-    access_point == :collection
+    collection_parameters?
   end
 
   private
