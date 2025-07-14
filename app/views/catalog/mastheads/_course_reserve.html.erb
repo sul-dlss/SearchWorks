@@ -5,7 +5,7 @@
 <% if course_info.present? %>
   <%= render Masthead::LayoutComponent.new do |component| %>
     <% component.with_header do %>
-      Course reserves <i class="bi bi-chevron-right"></i> Course(s)
+      Course reserves <i class="bi bi-chevron-right align-middle"></i> Course(s)
     <% end %>
     <% component.with_search do %>
       <h2 class="h3"><%= "#{course_info.course_number} -- #{course_info.name}" %></h2>
