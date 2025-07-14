@@ -98,24 +98,6 @@ RSpec.describe PageLocation do
         end
       end
 
-      context "when the collection filter is set" do
-        context 'when collection is present' do
-          let(:params) { { f: { collection: ['29'] } } }
-
-          it { is_expected.to eq :collection }
-        end
-
-        context 'when collection is not present' do
-          it { is_expected.to be_nil }
-        end
-
-        context 'when collection is present and is sirsi' do
-          let(:params) { { f: { collection: ['sirsi'] } } }
-
-          it { is_expected.to be_nil }
-        end
-      end
-
       describe 'digital_collections' do
         before { params[:f] = { collection_type: ["Digital Collection"] } }
 
@@ -212,6 +194,16 @@ RSpec.describe PageLocation do
       let(:params) { { f: { collection: ['29'] } } }
 
       it { is_expected.to be true }
+    end
+
+    context 'when collection is not present' do
+      it { is_expected.to be false }
+    end
+
+    context 'when collection is present and is sirsi' do
+      let(:params) { { f: { collection: ['sirsi'] } } }
+
+      it { is_expected.to be false }
     end
   end
 

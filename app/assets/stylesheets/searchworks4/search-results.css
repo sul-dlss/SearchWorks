@@ -164,3 +164,25 @@ details[open] {
     -webkit-text-stroke: 0.45px;
   }
 }
+
+.collection-info {
+  background-color: var(--stanford-fog-light);
+
+  .finding-aid a {
+    --bs-link-decoration: none;
+
+    &::after {
+      content: '\F144';
+      font-family: "bootstrap-icons";
+      padding-left: 0.25rem;
+      --bs-link-decoration: none;
+      vertical-align: bottom;
+    }
+  }
+
+  .badge {
+    background-color: var(--stanford-20-black);
+    --bs-badge-color: var(--stanford-black);
+    --bs-badge-font-weight: 500;
+  }
+}
