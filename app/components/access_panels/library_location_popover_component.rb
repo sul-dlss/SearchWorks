@@ -2,29 +2,26 @@
 
 module AccessPanels
   class LibraryLocationPopoverComponent < ViewComponent::Base
-    # location.mhld
+    # mhld is an array of Holdings::MHLD objects e.g. returned by location.mhld
+    # This parameter will be an empty array if location has no MHLDs
     def initialize(mhld)
       @mhld = mhld
       super
     end
 
     def render?
-      @mhld.present? && @mhld.any? { |mhld_item| mhld_item.library_has.present? }
+      @mhld.any? { |mhld_item| mhld_item.library_has.present? }
     end
 
     def popover_content
-      sanitize "<div class='fw-bold mb-2'>Library has:</div><div> #{item_locations}</div>"
+      "<div class='fw-bold mb-2'>Library has:</div><div> #{item_locations}</div>"
     end
 
     def item_locations
-      @mhld.map do |mhld_item|
-        library_has(mhld_item)
-      end.join(', ')
+      safe_join @mhld.map { |mhld_item| library_has(mhld_item) }, ', '
     end
 
     def library_has(mhld_item)
-      return "" if mhld_item.library_has.blank?
-
       mhld_item.library_has
     end
   end
