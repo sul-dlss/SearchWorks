@@ -9,7 +9,7 @@ export default class extends Controller {
   }
 
   updateDisplay() {
-    if (this.requestButtonExists()) {
+    if (this.hasContainerTarget && this.requestButtonExists()) {
       // If the request button exists, we want the library popover link
       // to wrap to the next line and be left aligned
       this.containerTarget.classList.remove('justify-content-end')
