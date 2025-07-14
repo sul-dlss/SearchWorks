@@ -2,7 +2,6 @@
   <% component.with_header { 'Stanford digital collections' } %>
 
   <% component.with_search do %>
-    <div class="fs-5 mb-2">Search by title, author or format</div>
     <%= render HomepageSearchComponent.new url: search_action_url,
                                       advanced_search_url: search_action_url(action: 'advanced_search'),
                                       params: search_state.params_for_search.except(:qt),
