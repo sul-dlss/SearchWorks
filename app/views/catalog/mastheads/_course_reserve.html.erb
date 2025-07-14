@@ -12,9 +12,6 @@
       <div>Instructor(s): <%= safe_join course_info.instructors, ', ' %></div>
     <% end %>
 
-
-    <% component.with_aside do %>
-    <% end %>
     <% component.with_back_link do %>
       <%= link_to course_reserves_path do %>
         <%= component.back_icon %> Find reserve list for another course
