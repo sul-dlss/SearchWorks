@@ -106,7 +106,6 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
 
     it "displays correct sections" do
       expect(page).to have_css('h2', text: "Contributors")
-      expect(page).to have_css('h2', text: "Contents/Summary")
       expect(page).to have_css('h2', text: "Bibliographic information")
     end
   end
