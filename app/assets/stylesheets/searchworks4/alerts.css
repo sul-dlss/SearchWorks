@@ -16,3 +16,18 @@
     margin-left: 0;
   }
 }
+
+.global-alert {
+  --bs-alert-margin-bottom: 0;
+  --bs-alert-bg: rgba(var(--stanford-poppy-dark-rgb), 0.1);
+
+  border-top: var(--stanford-poppy-dark) solid 3px;
+
+  .alert-content {
+    max-width: 992px;
+    color: var(--stanford-poppy-dark);
+    .bi-x-lg {
+      vertical-align: -0.085em;
+    }
+  }
+}

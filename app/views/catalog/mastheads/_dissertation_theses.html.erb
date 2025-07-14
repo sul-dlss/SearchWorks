@@ -4,5 +4,8 @@
       Result includes all theses and dissertations — from all sources — held in the Stanford Libraries and Digital Repository.
     </p>
     <p>To show Stanford work only, refine by <strong>Stanford student work</strong> or by <strong>Stanford school or department</strong>.</p>
-  </div>
+<% end %>
+
+<% content_for(:breadcrumb) do %>
+  <a href="/"><%= back_icon %> Back to catalog search</a>
 <% end %>
