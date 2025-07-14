@@ -145,10 +145,10 @@ module StubArticleService # rubocop:disable Metrics/ModuleLength
       raise "Single document response requsted but #{docs.length} provided." if docs.many?
 
       allow_any_instance_of(Eds::Repository).to receive(:find).and_return(
-        StubArticleResponse.new([docs.first])
+        docs.first
       )
       allow_any_instance_of(Eds::Repository).to receive(:find_by_ids).and_return(
-        StubArticleResponse.new([docs.first])
+        [docs.first]
       )
     when :error
       allow_any_instance_of(Eds::Repository).to receive(:search).and_raise(Faraday::Error)

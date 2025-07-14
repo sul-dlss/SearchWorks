@@ -65,8 +65,7 @@ module Eds
     # @param [String] id
     # @param [HashWithIndifferentAccess] extra_controller_params
     def fetch_one(id, extra_controller_params)
-      solr_response = @repository.find id, extra_controller_params
-      solr_response.documents.first
+      @repository.find id, extra_controller_params
     end
 
     private
