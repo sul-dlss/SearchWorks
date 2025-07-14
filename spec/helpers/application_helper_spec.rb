@@ -107,6 +107,7 @@ RSpec.describe ApplicationHelper do
 
   describe '#ezproxy_database_link' do
     subject(:link) { helper.ezproxy_database_link(url, title) }
+
     let(:link_title) { 'title' }
 
     context 'with a URL matching a SUL proxied host' do
