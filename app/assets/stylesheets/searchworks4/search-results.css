@@ -31,6 +31,7 @@
   max-height: 200px;
   max-width: 80px;
   border-radius: 0.125rem;
+  border: 1px solid var(--stanford-fog-light);
 }
 
 .page-entries-info .bi {

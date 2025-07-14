@@ -5,23 +5,25 @@
       <p class='vernacular-title h2 fw-normal mt-3'><%= presenter.vernacular_title %></p>
     <% end %>
 
-    <div class='upper-record-metadata mb-3'>
+    <div class='upper-record-metadata mb-5'>
       <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %></div>
     </div>
   <% end %>
 
   <% component.with_embed do %>
-    <%= case
-      when document.managed_purls.many?
-        render 'catalog/managed_purl_embed', document: document
-      when document.druid && (!document.mods? || document.published_content?)
-        render Record::Item::EmbedComponent.new(druid: document.druid)
-      end %>
-    <% if document.display_type == 'mods_collection' %>
-      <div class="async-collection-members col-md-12" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
-        <%= helpers.link_to_collection_members('View all items', document) %>
-      </div>
-    <% end %>
+    <div class="mb-5">
+      <%= case
+        when document.managed_purls.many?
+          render 'catalog/managed_purl_embed', document: document
+        when document.druid && (!document.mods? || document.published_content?)
+          render Record::Item::EmbedComponent.new(druid: document.druid)
+        end %>
+      <% if document.display_type == 'mods_collection' %>
+        <div class="async-collection-members col-md-12" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
+          <%= helpers.link_to_collection_members('View all items', document) %>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 
   <% component.with_metadata do %>

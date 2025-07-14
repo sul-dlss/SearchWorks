@@ -1,5 +1,5 @@
 <div class="availability-component d-inline-flex border rounded p-2 gap-3">
-  <span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span>
+  <span class="fw-semibold available-online text-nowrap">Available online <i class="bi bi-forward-fill"></i></span>
   <% link = document.preferred_online_links.first %>
   <span>
     <%= link.html&.html_safe %>

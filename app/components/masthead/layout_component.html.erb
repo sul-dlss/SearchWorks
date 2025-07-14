@@ -14,9 +14,11 @@
                                             autocomplete_path: suggest_index_catalog_path %>
         <% end %>
       </section>
-      <section class="col border-md-start ps-md-5">
-        <%= aside %>
-      </section>
+      <% if aside? %>
+        <section class="col border-md-start ps-md-5">
+          <%= aside %>
+        </section>
+      <% end %>
     </div>
   </div>
 </div>

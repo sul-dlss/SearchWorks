@@ -1,6 +1,7 @@
 .record-browse-nearby {
   --bs-border-color: var(--stanford-20-black);
   border-radius: 0.25rem;
+  margin-top: 4rem;
 
   .heading, .tabs {
     .btn {
