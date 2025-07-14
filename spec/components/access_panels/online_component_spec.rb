@@ -86,7 +86,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       links = sfx.links
       expect(links.length).to eq 1
       expect(links.first).to be_sfx
-      expect(links.first.html).to match %r{^<a href=.*class="sfx">Find full text<\/a>$}
+      expect(links.first.link_text).to eq 'Find full text'
     end
 
     it 'returns fulltext links for collection members' do

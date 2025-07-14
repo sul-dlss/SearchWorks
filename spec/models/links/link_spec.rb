@@ -9,14 +9,6 @@ RSpec.describe 'Link' do
     )
   end
 
-  it 'assembles the html link' do
-    expect(link.html).to eq '<a href="http://link.edu" class="sfx">Link Text</a>'
-  end
-
-  it 'makes an html_safe html link' do
-    expect(link.html).to be_html_safe
-  end
-
   it 'assembles the text' do
     expect(link.text).to eq 'Link Text'
   end
