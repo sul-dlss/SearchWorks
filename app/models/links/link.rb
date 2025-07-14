@@ -24,10 +24,6 @@ class Links
       @type = options[:type]
     end
 
-    def ==(other)
-      [@href, @fulltext, @stanford_only, @finding_aid, @sfx] == [other.href, other.fulltext?, other.stanford_only?, other.finding_aid?, other.sfx?]
-    end
-
     def html
       @html ||= safe_join([link_html, casalini_text, additional_text_html].compact, ' ')
     end
