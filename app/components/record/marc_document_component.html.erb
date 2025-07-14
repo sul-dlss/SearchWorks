@@ -10,7 +10,7 @@
     <% end %>
 
     <div class='upper-record-metadata mb-5'>
-      <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %> <% if document.marc_field('3003abcefg').values.any? %>&mdash;<% end %> <%= safe_join(document.marc_field('3003abcefg').values, ' ').presence %></div>
+      <div><span class="me-1"><%= helpers.render_resource_icon presenter.formats %></span><%= presenter.document_format %> <% if document.marc_field('3003abcefg').values.any? %>&mdash;<% end %> <%= safe_join(document.marc_field('3003abcefg').values, ' ').presence %></div>
 
       <div class='mt-3'>
         <%= render Record::MarcContentAdviceComponent.new(document: document) %>
