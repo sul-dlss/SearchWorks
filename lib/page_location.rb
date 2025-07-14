@@ -21,8 +21,6 @@ class PageLocation
                         :digital_collections
                       when dissertation_theses_parameters?
                         :dissertation_theses
-                      when bookplate_fund_parameters?
-                        :bookplate_fund
                       when government_documents_parameters?
                         :government_documents
                       when iiif_resources_parameters?

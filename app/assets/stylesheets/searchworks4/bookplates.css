@@ -1,0 +1,12 @@
+.bookplate-fund-masthead {
+  background-color: var(--stanford-fog-light);
+
+  img {
+    width: 100%;
+    max-width: 200px;
+
+    @media (width >= 1199.98px) {
+      max-width: 400px;
+    }
+  }
+}
