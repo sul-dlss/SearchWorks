@@ -15,16 +15,12 @@ class PageLocation
                         :databases
                       when course_reserve_parameters?
                         :course_reserve
-                      when collection_parameters?
-                        :collection
-                      when digital_collections_parameters?
-                        :digital_collections
                       when sdr_parameters?
                         :sdr
+                      when digital_collections_parameters?
+                        :digital_collections
                       when dissertation_theses_parameters?
                         :dissertation_theses
-                      when bookplate_fund_parameters?
-                        :bookplate_fund
                       when government_documents_parameters?
                         :government_documents
                       when iiif_resources_parameters?
@@ -48,8 +44,12 @@ class PageLocation
     access_point == :sdr
   end
 
+  def digital_collections?
+    access_point == :digital_collections
+  end
+
   def collection?
-    access_point == :collection
+    collection_parameters?
   end
 
   private
@@ -57,8 +57,7 @@ class PageLocation
   delegate :filter, :filters, to: :@search_state
 
   def format_includes_databases?
-    filter(:format_main_ssim).include?('Database') ||
-      filter(:format).include?('Database')
+    filter(:format_hsim).include?('Database') || filter(:format_main_ssim).include?('Database')
   end
 
   def course_reserve_parameters?
@@ -74,7 +73,7 @@ class PageLocation
   end
 
   def sdr_parameters?
-    filter(:building_facet).include?('Stanford Digital Repository')
+    filter(:library).include?('SDR')
   end
 
   def dissertation_theses_parameters?

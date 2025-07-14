@@ -37,7 +37,7 @@ RSpec.feature "Skip-to Navigation" do
         within '[data-document-id="20"]' do
           click_button 'Save record'
         end
-        expect(page).to have_content('Saved to bookmarks') # rubocop:disable RSpec/ExpectInHook
+        expect(page).to have_content('Record saved') # rubocop:disable RSpec/ExpectInHook
 
         visit bookmarks_path
       end
@@ -62,7 +62,7 @@ RSpec.feature "Skip-to Navigation" do
   end
 
   scenario "has skip-to navigation links to form in advanced search page" do
-    visit blacklight_advanced_search_engine.advanced_search_path
+    visit advanced_search_path
 
     within "#skip-link" do
       expect(page).to have_link "Skip to advanced search form", href: '#advanced-search-form'

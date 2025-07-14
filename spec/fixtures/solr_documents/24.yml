@@ -11,10 +11,12 @@ language: Spanish
 format: Database
 marc_json_struct: |
 <%= stanford_only_856 %>
-format_main_ssim: Database
+format_hsim: Database
 db_az_subject: Biology
 access_facet: Online
-building_facet: Hoover Library
+building_facet: Hoover Institution Library & Archives
+library_code_facet_ssim:
+  - HILA
 marc_links_struct:
   - version: '0.2'
     fulltext: true

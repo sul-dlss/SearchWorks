@@ -7,13 +7,14 @@ author_person_display: Cortez, Essie
 title_display: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
 all_search: Lorem aute dolor proident ullamco adipisicing cupidatat consectetur id irure dolor proident minim.
 language: French
-format: Video
-format_main_ssim: Video
+format_hsim: Video/Film
 physical: The physical statement
 marc_json_struct: |
 <%= marc_characteristics_fixture %>
 access_facet: At the Library
-building_facet: Hoover Library
+building_facet: Hoover Institution Library & Archives
+library_code_facet_ssim:
+  - HILA
 item_display_struct:
   - barcode: '123'
     library: GREEN

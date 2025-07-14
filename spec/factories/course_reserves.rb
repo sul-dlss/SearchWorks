@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
+require 'securerandom'
+
 FactoryBot.define do
+  factory :course_reserve do
+    id { SecureRandom.uuid }
+    name { 'Silly course' }
+    course_number { 'COMPUTERS-101' }
+    instructors { ['Donald Knuth'] }
+    is_active { true }
+  end
+
   factory :reg_course, class: 'CourseReserve' do
     id { '00254a1b-d0f5-4a9a-88a0-1dd596075d08' }
     name { 'After 2001: A 21st Century Science Fiction Odyssey' }

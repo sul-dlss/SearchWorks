@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   mount Blacklight::Engine => '/'
   mount BlacklightDynamicSitemap::Engine => '/' if Settings.GENERATE_SITEMAP
 
-  mount BlacklightAdvancedSearch::Engine => '/'
-
   if Rails.env.test?
     require_relative '../spec/support/rack_apps/mock_exhibits_finder_endpoint'
     mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder'
@@ -29,7 +27,9 @@ Rails.application.routes.draw do
   resource :catalog, only: [], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
     concerns :range_searchable
+    get 'facet_results/:id', to: 'catalog#facet_results', as: 'facet_results'
   end
+  get 'advanced', to: 'catalog#advanced_search', as: 'advanced_search'
 
   resources :solr_documents, only: [:show], path: '/view', controller: 'catalog' do
     concerns [:exportable, :marc_viewable]

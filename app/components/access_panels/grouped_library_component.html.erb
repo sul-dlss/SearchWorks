@@ -1,0 +1,16 @@
+<div class="d-flex flex-column mt-2 mb-4 panel-library-location">
+  <div class="library-location-heading bg-light ms-n3 ps-3 py-1 position-relative">
+    <h3 class="h4 p-0 m-0 fw-semibold"><%= label %></h3>
+  </div>
+
+  <% if document.marc_links.finding_aid.present? %>
+      <div class='access-panel-subsection flex-wrap flex-xl-nowrap d-flex row-gap-0 gap-3 align-items-baseline mb-3'>
+        <h4 class="fs-15 text-nowrap text-uppercase text-secondary mb-0">Finding aid</h4>
+        <%= document.preferred_finding_aid.html.html_safe %>
+      </div>
+  <% end %>
+
+  <% libraries.each do |library| %>
+    <%= render AccessPanels::LibraryLocationComponent.with_collection(library.locations, document:, library:) %>
+  <% end %>
+</div>

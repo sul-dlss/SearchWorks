@@ -5,17 +5,17 @@ require 'rails_helper'
 RSpec.describe "Emailing Records", :js do
   context 'when a user is not logged in' do
     context 'when they are on the record view page' do
-      it 'the are provided a reCAPTCHA challenge' do
+      it 'a hidden reCAPTCHA challenge is rendered' do
         visit solr_document_path('14')
 
         within('.record-toolbar') do
           click_link 'Email'
         end
 
-        expect(page).to have_css 'h1', text: 'Email'
+        expect(page).to have_css 'h2', text: 'Email'
 
         within('.modal-dialog') do
-          expect(page).to have_css('p', text: 'Stanford affiliates: Log in to skip Captcha.')
+          expect(page).to have_css('[data-recaptcha-action-value="email"]')
         end
       end
     end
@@ -71,7 +71,7 @@ RSpec.describe "Emailing Records", :js do
 
       context 'when "brief record" is selected' do
         it "sends the brief record" do
-          expect(page).to have_css 'h1', text: 'Email'
+          expect(page).to have_css 'h2', text: 'Email'
 
           within('.modal-dialog') do
             fill_in 'to', with: 'email@example.com'
@@ -117,7 +117,7 @@ RSpec.describe "Emailing Records", :js do
 
       context 'when "brief record" is selected' do
         it "sends the brief record" do
-          expect(page).to have_css 'h1', text: 'Email'
+          expect(page).to have_css 'h2', text: 'Email'
 
           within('.modal-dialog') do
             fill_in 'to', with: 'email@example.com'

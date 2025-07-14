@@ -11,6 +11,8 @@ author_corp_display:
   - Scientific Council for Africa South of the Sahara.
 marc_json_struct: |
 <%= metadata1 %>
-format_main_ssim: Image
+format_hsim: Image
 access_facet: At the Library
 building_facet: Special Collections
+library_code_facet_ssim:
+  - SPEC-COLL

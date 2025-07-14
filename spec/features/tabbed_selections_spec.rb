@@ -18,18 +18,6 @@ RSpec.describe 'Tabbed selections UI' do
     stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
   end
 
-  describe 'selections send to', :js do
-    it 'renders export formats' do
-      visit '/selections'
-
-      within('.bookmark-toolbar') do
-        expect(page).to have_link 'Cite'
-        expect(page).to have_link 'Email'
-        expect(page).to have_button 'Print'
-      end
-    end
-  end
-
   describe 'article records' do
     it 'renders selected articles' do
       visit '/selections/articles'

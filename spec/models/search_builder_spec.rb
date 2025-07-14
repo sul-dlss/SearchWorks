@@ -66,9 +66,9 @@ RSpec.describe SearchBuilder do
     it "sets the facet limit to -1 (unlimited)" do
       search_builder.facets_for_advanced_search_form(solr_params)
       expect(solr_params).to include "f.access_facet.facet.limit" => -1,
-                                     "f.format_main_ssim.facet.limit" => -1,
+                                     "f.format_hsim.facet.limit" => -1,
                                      "f.format_physical_ssim.facet.limit" => -1,
-                                     "f.building_facet.facet.limit" => -1,
+                                     "f.library_code_facet_ssim.facet.limit" => -1,
                                      "f.language.facet.limit" => -1
     end
   end
@@ -89,7 +89,7 @@ RSpec.describe SearchBuilder do
       it 'overrides solr parameters to just the things the home page needs' do
         solr_params = { 'facet.field' => ['some garbage'], 'rows' => 50 }
         search_builder.consolidate_home_page_params(solr_params)
-        expect(solr_params).to include 'facet.field' => ['access_facet', 'format_main_ssim', 'building_facet', 'language'], 'rows' => 0
+        expect(solr_params).to include 'facet.field' => ['access_facet', 'format_hsim', 'library_code_facet_ssim'], 'rows' => 0
       end
     end
 

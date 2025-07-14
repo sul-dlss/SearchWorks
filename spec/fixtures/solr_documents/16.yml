@@ -11,6 +11,8 @@ author_meeting_display:
   - Most Excellent Meeting
 marc_json_struct: |
 <%= metadata1 %>
-format_main_ssim: Newspaper
+format_hsim: Newspaper
 access_facet: At the Library
 building_facet: Special Collections
+library_code_facet_ssim:
+  - SPEC-COLL

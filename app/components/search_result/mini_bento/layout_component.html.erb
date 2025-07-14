@@ -1,20 +1,20 @@
 <% unless show? %>
   <div class="d-md-none mb-2 d-inline-block w-auto text-nowrap mini-bento-btn-wrapper">
-    <button class="mini-bento btn btn-outline-primary col-12" data-bs-toggle="collapse" data-bs-target=".alternate-catalog" aria-expanded="false" aria-controls="alternate-catalog">
+    <button class="mini-bento btn btn-outline-primary col-12" data-bs-toggle="offcanvas" data-bs-target="#alternate-catalog-offcanvas" aria-controls="alternate-catalog-offcanvas">
       <span>Looking for more?</span>
     </button>
   </div>
 <% end %>
-<div class='alternate-catalog accordion accordion-collapse collapse mb-3 <%= show? ? "show" : "d-md-block" %>' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
-  <div class="row">
+<div class='alternate-catalog mb-3 <%= show? ? "show" : "d-md-block" %>' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
+  <div class="alternate-catalog-heading row">
     <h2 class="alternate-catalog-title col mb-3"></h2>
     <% if close? %>
-      <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' aria-label="Close">
+      <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' data-bs-dismiss="offcanvas" aria-label="Close">
       </button>
     <% end %>
   </div>
   <div class="alternate-catalog-body row d-none">
-    <div class="alternate-catalog-primary-tools col-12">
+    <div class="alternate-catalog-primary-tools col-12 col-sm-6 col-md-12">
       <h3 class="alternate-catalog-name mb-0">
         <span class="fw-normal">SearchWorks</span>
         <%= name %>
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="alternate-catalog-other-tools col-12">
+    <div class="alternate-catalog-other-tools col-12 col-sm-6 col-md-12">
       <div class="d-flex flex-wrap align-items-baseline mb-1">
         <h3 class="alternate-catalog-name mb-1 me-2">
           Other search tools
@@ -72,3 +72,4 @@
     </div>
   </div>
 </div>
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="alternate-catalog-offcanvas"></div>

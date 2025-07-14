@@ -1,0 +1,744 @@
+---
+format_hsim:
+- Book
+id: '4250062'
+hashed_id_ssi: c9360f9e487a329d63ed107bdf453481
+marc_json_struct:
+- '{"leader":"01401cam a2200385 a 4500","fields":[{"001":"a4250062"},{"003":"SIRSI"},{"008":"940411s1993    hk
+  ab         000 0 eng  "},{"005":"20240813174958.8"},{"010":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"   94143453 "}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"9627872016"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"9789627872016"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  a4250062"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)30831284"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-I)275657299"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"DLC"},{"c":"DLC"}]}},{"043":{"ind1":" ","ind2":" ","subfields":[{"a":"a-cc---"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"NA1547.S5"},{"b":"J65
+  1993"}]}},{"082":{"ind1":"0","ind2":"0","subfields":[{"a":"720/.951/132022"},{"2":"21"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Johnston, Tess."}]}},{"245":{"ind1":"1","ind2":"2","subfields":[{"a":"A
+  last look :"},{"b":"Western architecture in old Shanghai /"},{"c":"text, Tess Johnston
+  ; photos, Deke Erh."}]}},{"250":{"ind1":" ","ind2":" ","subfields":[{"a":"3rd ed."}]}},{"260":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Hong Kong :"},{"b":"Old China Hand Press,"},{"c":"1993."}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"111 p. :"},{"b":"col. ill., col. map ;"},{"c":"31
+  cm."}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"SAL3 copy 1: Books received
+  with Ansie Lee Sperry Papers (M2970)."}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"SAL3
+  copy 2: Books received with Ansie Lee Sperry Papers (M2970)."}]}},{"596":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"20"}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Eclecticism
+  in architecture"},{"z":"China"},{"z":"Shanghai."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Architecture"},{"z":"China"},{"z":"Shanghai"},{"x":"European
+  influences."}]}},{"651":{"ind1":" ","ind2":"0","subfields":[{"a":"Shanghai (China)"},{"x":"Buildings,
+  structures, etc."}]}},{"700":{"ind1":"1","ind2":" ","subfields":[{"a":"Er, Dongqiang"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi)    94143453"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"fd91de85-18e9-581e-ac0e-07ebd3a1c398"},{"s":"201610ba-634d-574a-9b0c-52dd9609fe4e"}]}}]}'
+all_search: 'Johnston, Tess. A last look : Western architecture in old Shanghai /
+  text, Tess Johnston ; photos, Deke Erh. 3rd ed. Hong Kong : Old China Hand Press,
+  1993. 111 p. : col. ill., col. map ; 31 cm. SAL3 copy 1: Books received with Ansie
+  Lee Sperry Papers (M2970). SAL3 copy 2: Books received with Ansie Lee Sperry Papers
+  (M2970). 20 Eclecticism in architecture China Shanghai. Architecture China Shanghai
+  European influences. Shanghai (China) Buildings, structures, etc. Er, Dongqiang'
+title_245a_search: 'A last look :'
+title_245_search: 'A last look : Western architecture in old Shanghai /'
+title_245a_display: A last look
+title_245c_display: text, Tess Johnston ; photos, Deke Erh.
+title_display: 'A last look : Western architecture in old Shanghai'
+title_full_display: 'A last look : Western architecture in old Shanghai / text, Tess
+  Johnston ; photos, Deke Erh.'
+title_sort: last look Western architecture in old Shanghai
+author_title_245ac_search:
+- 'A last look : text, Tess Johnston ; photos, Deke Erh.'
+author_title_1xx_search:
+- 'Johnston, Tess A last look :'
+author_title_search:
+- 'Johnston, Tess A last look :'
+best_author_title_search: 'Johnston, Tess A last look :'
+author_1xx_search: Johnston, Tess.
+author_7xx_search:
+- Er, Dongqiang
+author_person_facet:
+- Johnston, Tess
+- Er, Dongqiang
+author_person_display:
+- Johnston, Tess
+author_person_full_display:
+- Johnston, Tess.
+author_sort: Johnston Tess last look Western architecture in old Shanghai
+topic_search:
+- Eclecticism in architecture
+- Architecture
+topic_display:
+- Eclecticism in architecture
+- Architecture
+topic_subx_search:
+- European influences.
+- Buildings, structures, etc.
+geographic_search:
+- Shanghai (China)
+geographic_subz_search:
+- China
+- Shanghai.
+- Shanghai
+subject_all_search:
+- Eclecticism in architecture China Shanghai.
+- Architecture China Shanghai European influences.
+- Shanghai (China) Buildings, structures, etc.
+topic_facet:
+- Eclecticism in architecture
+- Architecture
+geographic_facet:
+- Shanghai (China)
+- China
+pub_search:
+- 'Hong Kong : Old China Hand Press'
+pub_display:
+- 'Hong Kong : Old China Hand Press'
+pub_country: Hong Kong
+pub_date: '1993'
+pub_date_search: '1993'
+pub_date_sort: '1993'
+pub_year_tisim:
+- 1993
+pub_year_ss: '1993'
+publication_year_isi: 1993
+imprint_display:
+- '3rd ed. - Hong Kong : Old China Hand Press, 1993.'
+date_cataloged: '1999-10-29T00:00:00Z'
+language:
+- English
+oclc:
+- '30831284'
+access_facet:
+- At the Library
+format_main_ssim:
+- Book
+physical:
+- '111 p. : col. ill., col. map ; 31 cm.'
+isbn_search:
+- '9627872016'
+- '9789627872016'
+isbn_display:
+- '9627872016'
+- '9789627872016'
+lccn: '94143453'
+callnum_facet_hsim:
+- LC Classification|N - Visual Arts|NA - Architecture
+callnum_search:
+- NA1547 .S5 J65 1993
+- NA1547.S5 J65 1993
+lc_assigned_callnum_ssim:
+- NA1547.S5 J65 1993
+barcode_search:
+- '36105073168465'
+- '36105243793333'
+- '36105243793267'
+item_barcodes:
+- '36105073168465'
+- '36105243793333'
+- '36105243793267'
+preferred_barcode: '36105073168465'
+holdings_library_code_ssim:
+- SAL3
+- SAL
+library_code_facet_ssim:
+- OFF_CAMPUS
+location_code_facet_ssim:
+- SAL-PAGE
+- SAL3-PAGE-SP
+building_facet:
+- SAL1&2 (on-campus storage)
+- SAL3 (off-campus storage)
+building_location_facet_ssim:
+- SAL/*
+- SAL/SAL-PAGE
+- SAL/*/type/book
+- SAL/SAL-PAGE/type/book
+- SAL3/*
+- SAL3/SAL3-PAGE-SP
+- SAL3/*/type/book
+- SAL3/SAL3-PAGE-SP/type/book
+shelfkey:
+- lc na  1547.000000 s0.500000 j0.650000 001993
+reverse_shelfkey:
+- en~cp~~yuvs}zzzzzz~7z}uzzzzz~gz}tuzzzz~zzyqqw~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: 'b1b6052cfad6cc8602a3f02b7f071af8c3109a6e
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '008'
+- '005'
+- '010'
+- '020'
+- '035'
+- '040'
+- '043'
+- '050'
+- '082'
+- '100'
+- '245'
+- '250'
+- '260'
+- '300'
+- '590'
+- '596'
+- '650'
+- '651'
+- '700'
+- '999'
+- 010a
+- 020a
+- 035a
+- 040ac
+- 043a
+- 050ab
+- '082a2'
+- 100a
+- 245abc
+- 250a
+- 260abc
+- 300abc
+- 590a
+- 596a
+- 650azz
+- 650azzx
+- 651ax
+- 700a
+- 999is
+- "?010a"
+- "?020a"
+- "?035a"
+- "?040a"
+- "?040c"
+- "?043a"
+- "?050a"
+- "?050b"
+- "?082a"
+- "?0822"
+- "?100a"
+- "?245a"
+- "?245b"
+- "?245c"
+- "?250a"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?590a"
+- "?596a"
+- "?650a"
+- "?650z"
+- "?650x"
+- "?651a"
+- "?651x"
+- "?700a"
+- "?999i"
+- "?999s"
+bib_search: 'Johnston, Tess. A last look : Western architecture in old Shanghai /
+  text, Tess Johnston ; photos, Deke Erh. Hong Kong : Old China Hand Press, 1993.
+  Er, Dongqiang Eclecticism in architecture Architecture Book'
+vern_bib_search: Book
+uuid_ssi: fd91de85-18e9-581e-ac0e-07ebd3a1c398
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"fd91de85-18e9-581e-ac0e-07ebd3a1c398","hrid":"a4250062","tags":{"tagList":["sulacq:gifts_bls"]},"notes":[{"note":"SAL3
+  copy 1: Books received with Ansie Lee Sperry Papers (M2970)","staffOnly":false,"instanceNoteTypeId":"265c4910-3997-4242-9269-6a4a2e91392b"},{"note":"SAL3
+  copy 2: Books received with Ansie Lee Sperry Papers (M2970)","staffOnly":false,"instanceNoteTypeId":"265c4910-3997-4242-9269-6a4a2e91392b"}],"title":"A
+  last look : Western architecture in old Shanghai / text, Tess Johnston ; photos,
+  Deke Erh.","series":[],"source":"MARC","_version":16,"editions":["3rd ed."],"metadata":{"createdDate":"2023-08-21T06:55:52.586Z","updatedDate":"2024-08-13T17:49:59.332Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"c94210cd-4eae-4cf5-8521-436762d62f41"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Eclecticism
+  in architecture--China--Shanghai"},{"value":"Architecture--China--Shanghai--European
+  influences"},{"value":"Shanghai (China)--Buildings, structures, etc"}],"languages":["eng"],"indexTitle":"Last
+  look : Western architecture in old Shanghai /","identifiers":[{"value":"94143453","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"9627872016","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9789627872016","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(Sirsi)
+  a4250062","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)30831284","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)275657299","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)    94143453","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"Hong
+  Kong","publisher":"Old China Hand Press","dateOfPublication":"1993"}],"contributors":[{"name":"Johnston,
+  Tess","primary":true,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Er,
+  Dongqiang","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1999-10-29","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"NA1547.S5
+  J65 1993","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"720.951132022","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:55:52.405+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["111
+  p. : col. ill., col. map ; 31 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-07-11T14:33:39Z'
+created: '2025-07-11T14:33:39Z'
+timestamp: '2025-07-11T14:33:39Z'
+author_struct:
+- creator:
+  - link: Johnston, Tess.
+    search: Johnston, Tess.
+  contributors:
+  - link: Er, Dongqiang
+    search: Er, Dongqiang
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+holdings_json_struct:
+- holdings:
+  - id: d82b60c8-30ee-4948-9228-803d9d1a96ea
+    hrid: ho00000168034
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2024-08-13T17:06:08.327Z'
+      updatedDate: '2024-08-13T17:06:08.327Z'
+      createdByUserId: c94210cd-4eae-4cf5-8521-436762d62f41
+      updatedByUserId: c94210cd-4eae-4cf5-8521-436762d62f41
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: NA1547.S5 J65 1993
+    instanceId: fd91de85-18e9-581e-ac0e-07ebd3a1c398
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    permanentLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: dc0cf657-0fe0-531e-8f7e-73d9f94184da
+    hrid: ah4250062_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:57:56.818Z'
+      updatedDate: '2023-08-21T06:57:56.818Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: NA1547 .S5 J65 1993
+    instanceId: fd91de85-18e9-581e-ac0e-07ebd3a1c398
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+    permanentLocationId: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+        code: SAL-PAGE
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pagePreferSendIlliad: 'true'
+          scanServicePointCode: GREEN
+        library:
+          id: 00d012b4-d5ee-422c-9f38-3457e0ddd1ed
+          code: SAL
+          name: SAL1&2 (on-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+        code: SAL-PAGE
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pagePreferSendIlliad: 'true'
+          scanServicePointCode: GREEN
+        library:
+          id: 00d012b4-d5ee-422c-9f38-3457e0ddd1ed
+          code: SAL
+          name: SAL1&2 (on-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 5abd2238-5457-53c2-84bb-3632dd6fde1a
+    hrid: ai4250062_1_1
+    notes: []
+    status: Missing
+    barcode: '36105073168465'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:58:53.105Z'
+      updatedDate: '2023-08-21T06:58:53.105Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: NA1547 .S5 J65 1993
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: dc0cf657-0fe0-531e-8f7e-73d9f94184da
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: NA 41547 S5 J65 41993 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: NA1547 .S5 J65 1993
+    location:
+      effectiveLocation:
+        id: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+        code: SAL-PAGE
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pagePreferSendIlliad: 'true'
+          scanServicePointCode: GREEN
+        library:
+          id: 00d012b4-d5ee-422c-9f38-3457e0ddd1ed
+          code: SAL
+          name: SAL1&2 (on-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 303739f8-3646-4de8-811d-5e805fe5e9f6
+    hrid: it00000155269
+    tags:
+      tagList: []
+    notes: []
+    status: Available
+    barcode: '36105243793333'
+    request:
+    _version: 6
+    metadata:
+      createdDate: '2024-08-13T17:07:41.528Z'
+      updatedDate: '2025-02-08T02:37:26.256Z'
+      createdByUserId: c94210cd-4eae-4cf5-8521-436762d62f41
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: NA1547.S5 J65 1993
+    copyNumber: '1'
+    lastCheckIn:
+      dateTime: '2025-02-08T02:37:26.026+00:00'
+      staffMemberId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+      servicePointId: 3a306665-eec7-4a40-8f4d-608585b2a394
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: d82b60c8-30ee-4948-9228-803d9d1a96ea
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    permanentLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: NA 41547 S5 J65 41993 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: NA1547.S5 J65 1993
+    location:
+      effectiveLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 97b7a4cc-ff48-468a-a8c4-cc9bcc7f6aa4
+    hrid: it00000155304
+    tags:
+      tagList: []
+    notes: []
+    status: Available
+    barcode: '36105243793267'
+    request:
+    _version: 7
+    metadata:
+      createdDate: '2024-08-13T17:49:19.441Z'
+      updatedDate: '2025-02-08T02:37:23.156Z'
+      createdByUserId: c94210cd-4eae-4cf5-8521-436762d62f41
+      updatedByUserId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: NA1547.S5 J65 1993
+    copyNumber: '2'
+    lastCheckIn:
+      dateTime: '2025-02-08T02:37:23.019+00:00'
+      staffMemberId: a8da172b-aeeb-5dfa-8479-026a2f4f969e
+      servicePointId: 3a306665-eec7-4a40-8f4d-608585b2a394
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: d82b60c8-30ee-4948-9228-803d9d1a96ea
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    permanentLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: NA 41547 S5 J65 41993 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: NA1547.S5 J65 1993
+    location:
+      effectiveLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+item_display_struct:
+- id: 5abd2238-5457-53c2-84bb-3632dd6fde1a
+  barcode: '36105073168465'
+  library: SAL
+  type: book
+  note:
+  instance_id: fd91de85-18e9-581e-ac0e-07ebd3a1c398
+  instance_hrid: a4250062
+  effective_permanent_location_code: SAL-PAGE
+  temporary_location_code:
+  permanent_location_code: SAL-PAGE
+  status: Missing
+  effective_location_id: bb7bd5d2-5b97-4fc6-9dfd-b26a1c14e43f
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: NA1547 .S5 J65 1993
+  callnumber: NA1547 .S5 J65 1993
+  full_shelfkey: lc na  1547.000000 s0.500000 j0.650000 001993
+- id: 303739f8-3646-4de8-811d-5e805fe5e9f6
+  barcode: '36105243793333'
+  library: SAL3
+  type: book
+  note:
+  instance_id: fd91de85-18e9-581e-ac0e-07ebd3a1c398
+  instance_hrid: a4250062
+  effective_permanent_location_code: SAL3-PAGE-SP
+  temporary_location_code:
+  permanent_location_code: SAL3-PAGE-SP
+  status: Available
+  effective_location_id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: NA1547.S5 J65 1993
+  callnumber: NA1547.S5 J65 1993
+  full_shelfkey: lc na  1547.000000 s0.500000 j0.650000 001993
+- id: 97b7a4cc-ff48-468a-a8c4-cc9bcc7f6aa4
+  barcode: '36105243793267'
+  library: SAL3
+  type: book
+  note:
+  instance_id: fd91de85-18e9-581e-ac0e-07ebd3a1c398
+  instance_hrid: a4250062
+  effective_permanent_location_code: SAL3-PAGE-SP
+  temporary_location_code:
+  permanent_location_code: SAL3-PAGE-SP
+  status: Available
+  effective_location_id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: NA1547.S5 J65 1993
+  callnumber: NA1547.S5 J65 1993
+  full_shelfkey: lc na  1547.000000 s0.500000 j0.650000 001993
+browse_nearby_struct:
+- lopped_callnumber: NA1547 .S5 J65 1993
+  shelfkey: lc na  1547.000000 s0.500000 j0.650000 001993
+  reverse_shelfkey: en~cp~~yuvs}zzzzzz~7z}uzzzzz~gz}tuzzzz~zzyqqw~~~~~
+  callnumber: NA1547 .S5 J65 1993
+  scheme: LC
+  item_id: 5abd2238-5457-53c2-84bb-3632dd6fde1a
+- lopped_callnumber: NA1547.S5 J65 1993
+  shelfkey: lc na  1547.000000 s0.500000 j0.650000 001993
+  reverse_shelfkey: en~cp~~yuvs}zzzzzz~7z}uzzzzz~gz}tuzzzz~zzyqqw~~~~~
+  callnumber: NA1547.S5 J65 1993
+  scheme: LC
+  item_id: 303739f8-3646-4de8-811d-5e805fe5e9f6

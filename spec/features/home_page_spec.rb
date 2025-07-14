@@ -13,7 +13,7 @@ RSpec.feature "Home Page" do
 
   scenario "facets should display" do
     expect(page).to have_title("SearchWorks catalog : Stanford Libraries")
-    expect(page).to have_css(".accordion-header", text: "Resource type")
+    expect(page).to have_css(".accordion-header", text: "Format")
     expect(page).to have_css(".accordion-header", text: "Access")
     expect(page).to have_css(".accordion-header", text: "Library")
   end
@@ -36,10 +36,10 @@ RSpec.feature "Home Page" do
     end
   end
 
-  scenario "should have the library facet hidden by default" do
-    within(".blacklight-building_facet") do
+  scenario "has the library facet hidden by default" do
+    within ".blacklight-library" do
       expect(page).to have_button 'Library'
-      expect(page).to have_css('#facet-building_facet.collapse:not(.show)', visible: false)
+      expect(page).to have_css '#facet-library.collapse:not(.show)', visible: false
     end
   end
 

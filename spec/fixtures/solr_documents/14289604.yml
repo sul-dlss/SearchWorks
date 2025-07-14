@@ -1,0 +1,399 @@
+---
+format_hsim:
+- Sound recording
+id: '14289604'
+hashed_id_ssi: 05da494ec7e9cac3e8e2803537dd864e
+marc_json_struct:
+- '{"leader":"02238nim a2200433 i 4500","fields":[{"001":"a14289604"},{"003":"SIRSI"},{"005":"20220813015251.0"},{"006":"m     o  h        "},{"007":"cr
+  |na---||a|u"},{"007":"sz zznnnnnzned"},{"008":"211106e19880415idunnnn o      t  n
+  eng d"},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) a14289604"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"MIGCL"},{"b":"eng"},{"e":"rda"},{"c":"UtOrBLW"},{"d":"CSt"},{"d":"UtOrBLW"}]}},{"043":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"n-us---"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Sermons
+  :"},{"b":"\"What is Political Extremism\" /"},{"c":"Laird Wilcox"}]}},{"246":{"ind1":"3","ind2":"0","subfields":[{"a":"What
+  is political extremism"}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"Pocatello,
+  Idaho :"},{"b":"Idaho State University,"},{"c":"April 15, 1988"}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1 online resource (1 audio file (60 min., 12 sec.))."}]}},{"336":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"spoken word"},{"b":"spw"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"344":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"digital"},{"2":"rda"}]}},{"347":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"audio file"},{"2":"rda"}]}},{"490":{"ind1":"1","ind2":" ","subfields":[{"a":"Political
+  Extremism and Radicalism: Far-Right Groups in America"}]}},{"520":{"ind1":"4","ind2":"
+  ","subfields":[{"a":"This title comes from the Political Extremism and Radicalism
+  digital archive series which provides access to primary sources for academic research
+  and teaching purposes. Please be aware that users may find some of the content within
+  this resource to be offensive."},{"c":"MiFhGG"}]}},{"588":{"ind1":" ","ind2":" ","subfields":[{"a":"Description
+  based on online resource; title from resource webpage (viewed November 8, 2021)"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Radicalism"},{"z":"United States"},{"v":"Sermons."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Right and left (Political science)"},{"v":"Sermons."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Sermons, American."},{"0":"http://id.loc.gov/authorities/subjects/sh85120263"}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Interviews."},{"2":"lcgft"},{"0":"http://id.loc.gov/authorities/genreForms/gf2014026115"}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Wilcox, Laird M.,"},{"e":"speaker."},{"0":"http://id.loc.gov/authorities/names/n83001952"}]}},{"830":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Political Extremism and Radicalism: Far-Right Groups
+  in America."}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available to Stanford-affiliated
+  users."},{"u":"https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222"},{"y":"Political
+  Extremism and Radicalism"},{"x":"Provider: Gale"},{"x":"Collection: Far-Right Groups
+  in America"},{"x":"purchased"},{"x":"eLoaderURL"},{"x":"po4"},{"x":"poPLEX003320"}]}},{"596":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"22"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)1287027394"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) poPLEX003320"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"a3893e63-cc28-5c10-b4f7-156c97a9f5bb"},{"s":"9e9ec4a0-d655-551a-b6f5-d0dd30febef7"}]}}]}'
+all_search: 'Sermons : "What is Political Extremism" / Laird Wilcox What is political
+  extremism Pocatello, Idaho : Idaho State University, April 15, 1988 1 online resource
+  (1 audio file (60 min., 12 sec.)). spoken word spw rdacontent computer c rdamedia
+  online resource cr rdacarrier digital rda audio file rda Political Extremism and
+  Radicalism: Far-Right Groups in America This title comes from the Political Extremism
+  and Radicalism digital archive series which provides access to primary sources for
+  academic research and teaching purposes. Please be aware that users may find some
+  of the content within this resource to be offensive. MiFhGG Description based on
+  online resource; title from resource webpage (viewed November 8, 2021) Radicalism
+  United States Sermons. Right and left (Political science) Sermons. Sermons, American.
+  http://id.loc.gov/authorities/subjects/sh85120263 Interviews. lcgft http://id.loc.gov/authorities/genreForms/gf2014026115
+  Wilcox, Laird M., speaker. http://id.loc.gov/authorities/names/n83001952 Political
+  Extremism and Radicalism: Far-Right Groups in America. Available to Stanford-affiliated
+  users. https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222
+  Political Extremism and Radicalism Provider: Gale Collection: Far-Right Groups in
+  America purchased eLoaderURL po4 poPLEX003320 22'
+title_245a_search: 'Sermons :'
+title_245_search: 'Sermons : "What is Political Extremism" /'
+title_variant_search:
+- What is political extremism
+title_variant_display:
+- What is political extremism
+title_245a_display: Sermons
+title_245c_display: Laird Wilcox
+title_display: 'Sermons : "What is Political Extremism"'
+title_full_display: 'Sermons : "What is Political Extremism" / Laird Wilcox'
+title_sort: Sermons What is Political Extremism
+series_search:
+- 'Political Extremism and Radicalism: Far-Right Groups in America'
+author_title_245ac_search:
+- 'Sermons : Laird Wilcox'
+author_7xx_search:
+- Wilcox, Laird M.,
+author_person_facet:
+- Wilcox, Laird M.
+author_sort: "\U0010FFFF Sermons What is Political Extremism"
+author_authorities_ssim:
+- http://id.loc.gov/authorities/names/n83001952
+topic_search:
+- Radicalism
+- Right and left (Political science)
+- Sermons, American.
+topic_display:
+- Radicalism
+- Right and left (Political science)
+- Sermons, American.
+geographic_subz_search:
+- United States
+subject_other_search:
+- Interviews.
+subject_other_display:
+- Interviews.
+subject_other_subvy_search:
+- Sermons.
+subject_all_search:
+- Radicalism United States Sermons.
+- Right and left (Political science) Sermons.
+- Sermons, American.
+- Interviews.
+topic_facet:
+- Radicalism
+- Right and left (Political science)
+- Sermons, American
+geographic_facet:
+- United States
+pub_search:
+- 'Pocatello, Idaho : Idaho State University'
+pub_display:
+- 'Pocatello, Idaho : Idaho State University'
+pub_country: Idaho, United States
+pub_date: '1988'
+pub_date_search: '1988'
+pub_date_sort: '1988'
+pub_year_tisim:
+- 1988
+pub_year_ss: '1988'
+publication_year_isi: 1988
+imprint_display:
+- 'Pocatello, Idaho : Idaho State University, April 15, 1988'
+date_cataloged: '2022-08-10T00:00:00Z'
+language:
+- English
+url_fulltext:
+- https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222
+url_restricted:
+- https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222
+oclc:
+- '1287027394'
+access_facet:
+- Online
+format_main_ssim:
+- Sound recording
+characteristics_ssim:
+- 'Sound: digital.'
+- 'Digital: audio file.'
+genre_ssim:
+- Interviews
+- Sermons
+physical:
+- 1 online resource (1 audio file (60 min., 12 sec.)).
+summary_search:
+- This title comes from the Political Extremism and Radicalism digital archive series
+  which provides access to primary sources for academic research and teaching purposes.
+  Please be aware that users may find some of the content within this resource to
+  be offensive.
+summary_display:
+- This title comes from the Political Extremism and Radicalism digital archive series
+  which provides access to primary sources for academic research and teaching purposes.
+  Please be aware that users may find some of the content within this resource to
+  be offensive.
+holdings_library_code_ssim:
+- SUL
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '58ed4ea316af31cf9521cde1926bdd064b00f998
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '006'
+- '007'
+- '008'
+- '035'
+- '040'
+- '043'
+- '245'
+- '246'
+- '264'
+- '300'
+- '336'
+- '337'
+- '338'
+- '344'
+- '347'
+- '490'
+- '520'
+- '588'
+- '650'
+- '655'
+- '700'
+- '830'
+- '856'
+- '596'
+- '999'
+- 035a
+- 040abecdd
+- 043a
+- 245abc
+- 246a
+- 264abc
+- 300a
+- 336ab2
+- 337ab2
+- 338ab2
+- 344a2
+- 347a2
+- 490a
+- 520ac
+- 588a
+- 650azv
+- 650av
+- 650a0
+- 655a20
+- 700ae0
+- 830a
+- 856zuyxxxxxx
+- 596a
+- 999is
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?043a"
+- "?245a"
+- "?245b"
+- "?245c"
+- "?246a"
+- "?264a"
+- "?264b"
+- "?264c"
+- "?300a"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?344a"
+- "?3442"
+- "?347a"
+- "?3472"
+- "?490a"
+- "?520a"
+- "?520c"
+- "?588a"
+- "?650a"
+- "?650z"
+- "?650v"
+- "?6500"
+- "?655a"
+- "?6552"
+- "?6550"
+- "?700a"
+- "?700e"
+- "?7000"
+- "?830a"
+- "?856z"
+- "?856u"
+- "?856y"
+- "?856x"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Sermons : "What is Political Extremism" / Laird Wilcox What is political
+  extremism Pocatello, Idaho : Idaho State University, April 15, 1988 Political Extremism
+  and Radicalism: Far-Right Groups in America Wilcox, Laird M., speaker. Radicalism
+  Right and left (Political science) Sermons, American. Sound recording'
+vern_bib_search: Sound recording
+uuid_ssi: a3893e63-cc28-5c10-b4f7-156c97a9f5bb
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"a3893e63-cc28-5c10-b4f7-156c97a9f5bb","hrid":"a14289604","notes":[{"note":"This
+  title comes from the Political Extremism and Radicalism digital archive series which
+  provides access to primary sources for academic research and teaching purposes.
+  Please be aware that users may find some of the content within this resource to
+  be offensive. MiFhGG","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Description
+  based on online resource; title from resource webpage (viewed November 8, 2021)","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"}],"title":"Sermons
+  : \"What is Political Extremism\" / Laird Wilcox","series":[{"value":"Political
+  Extremism and Radicalism: Far-Right Groups in America"}],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T21:23:42.504Z","updatedDate":"2023-08-21T21:23:42.504Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Radicalism
+  United States Sermons"},{"value":"Right and left (Political science) Sermons"},{"value":"Sermons,
+  American"},{"value":"Genre: Interviews"}],"languages":["eng"],"indexTitle":"Sermons
+  : \"what is political extremism\"","identifiers":[{"value":"(Sirsi) a14289604","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)1287027394","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  poPLEX003320","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"role":"Publication","place":"Pocatello,
+  Idaho","publisher":"Idaho State University","dateOfPublication":"April 15, 1988"}],"contributors":[{"name":"Wilcox,
+  Laird M.","primary":false,"contributorTypeId":"ac0baeb5-71e2-435f-aaf1-14b64e2ba700","contributorTypeText":"speaker.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2022-08-10","staffSuppress":false,"instanceTypeId":"c7f7446f-4642-4d97-88c9-55bae2ad6c7f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222","name":"Resource","linkText":"Political
+  Extremism and Radicalism","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"What
+  is political extremism","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"publicationPeriod":{"start":1988},"statusUpdatedDate":"2023-08-21T21:23:42.212+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
+  online resource (1 audio file (60 min., 12 sec.)).","digital","audio file"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-07-09T12:32:25Z'
+created: '2025-07-09T12:32:25Z'
+timestamp: '2025-07-09T12:32:25Z'
+author_struct:
+- contributors:
+  - link: Wilcox, Laird M.,
+    search: Wilcox, Laird M.,
+    pre_text: ''
+    post_text: speaker.
+    authorities:
+    - http://id.loc.gov/authorities/names/n83001952
+    rwo: []
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: Political Extremism and Radicalism
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  additional_links: []
+  material_type:
+  note: Available to Stanford-affiliated users.
+  href: https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Content advice
+  fields:
+  - field:
+    - This title comes from the Political Extremism and Radicalism digital archive
+      series which provides access to primary sources for academic research and teaching
+      purposes. Please be aware that users may find some of the content within this
+      resource to be offensive.
+    - MiFhGG
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: c5527ccb-8258-5b71-bc45-2e9a054936eb
+    hrid: ah14289604_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T21:26:15.608Z'
+      updatedDate: '2023-08-21T21:26:15.608Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: a3893e63-cc28-5c10-b4f7-156c97a9f5bb
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []

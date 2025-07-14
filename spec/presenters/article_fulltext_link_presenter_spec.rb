@@ -41,7 +41,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
       it 'includes a rendered link representing that data' do
         expect(links.length).to eq 1
 
-        expect(page).to have_css('span.online-label', text: 'Full text')
+        expect(page).to have_css('span.available-online', text: 'Available online')
         expect(page).to have_link('View on content provider\'s site', href: 'http://example.com')
       end
     end
@@ -60,7 +60,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
 
       context 'when format is json' do
         it 'includes the svg popover' do
-          expect(page).to have_css 'span.online-label', text: 'Full text'
+          expect(page).to have_css 'span.available-online', text: 'Available online'
           expect(page).to have_link 'View/download PDF'
           expect(page).to have_css 'button[aria-label="Stanford-only"] svg'
         end
@@ -70,7 +70,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
         let(:format) { :html }
 
         it 'includes the svg popover' do
-          expect(page).to have_css 'span.online-label', text: 'Full text'
+          expect(page).to have_css 'span.available-online', text: 'Available online'
           expect(page).to have_link 'View/download PDF'
           expect(page).to have_css 'button[aria-label="Stanford-only"] svg'
         end
@@ -92,7 +92,7 @@ RSpec.describe ArticleFulltextLinkPresenter do
       it 'includes a link to the document to view the full text' do
         expect(links.length).to eq 1
 
-        expect(page).to have_css('span.online-label', text: 'Full text')
+        expect(page).to have_css('span.available-online', text: 'Available online')
         expect(page).to have_link('View on detail page', href: 'http://test.host/articles/abc123')
       end
     end

@@ -7,13 +7,16 @@ export default class extends Controller {
     apiUrl: String
   }
 
-  static targets = ["map", "directions"]
+  static targets = ["map", "directions", "callnumber", "library", "floorname"]
 
   connect() {
     fetchJsonp(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
       .then((response) => response.json())
       .then((data) => this.handleResponse(data))
-      .catch(console.error)
+      .catch((error) => {
+        console.error("StackMap fetch error:", error)
+        this.element.innerHTML = '<p>Error loading map data.</p>'
+      })
   }
 
   handleResponse(data) {
@@ -25,53 +28,60 @@ export default class extends Controller {
   }
 
   plugContent(data) {
-      const maps = data.results.maps
+    const { callno, maps } = data.results
 
-      this.element.querySelector(".callnumber").textContent = data.results.callno
+    this.callnumberTarget.textContent = callno
 
-      maps.forEach((map, index) => {
-        const tpl = this.mapTarget.cloneNode(true)
-        const zoomControls = tpl.querySelector(".zoom-controls")
+    maps.forEach((map, index) => {
+      const mapClone = this.mapTarget.cloneNode(true)
+      const zoomControls = mapClone.querySelector(".zoom-controls")
 
-        this.element.querySelector(".library").textContent = map.library
-        this.element.querySelector(".floorname").textContent = map.floorname
+      this.libraryTarget.textContent = map.library
+      this.floornameTarget.textContent = map.floorname
 
-        tpl.querySelector(".osd").id = 'osd-' + index
-        this.directionsTarget.innerHTML = map.directions.replaceAll('<li>- ', '<li>').replaceAll('<li>-', '<li>')
+      const osd = mapClone.querySelector(".osd")
+      osd.id = `osd-${index}`
 
-        const zoomIn = tpl.querySelector(".zoom-in")
-        const zoomOut = tpl.querySelector(".zoom-out")
-        const zoomFit = tpl.querySelector(".zoom-fit")
+      // Replace <li>- with <li>
+      this.directionsTarget.innerHTML = map.directions.replaceAll(/<li>-\s*/g, '<li>')
 
-        zoomIn.id = 'zoom-in-' + index
-        zoomOut.id = 'zoom-out-' + index
-        zoomFit.id = 'zoom-fit-' + index
+      // Replace the map target with the cloned one
+      this.mapTarget.replaceWith(mapClone)
 
-        this.mapTarget.replaceWith(tpl)
-        this.addOsd(map, index, zoomControls)
-      })
-    }
-    zoomIn() {
-      this.viewer.zoomIn()
-    }
-    zoomOut(){
-      this.viewer.zoomOut()
-    }
-    zoomBounds(){
+      // Render map
+      this.addOsd(map, `osd-${index}`, zoomControls)
+    })
+  }
+
+  zoomIn() {
+    this.viewer?.zoomIn()
+  }
+
+  zoomOut() {
+    this.viewer?.zoomOut()
+  }
+
+  zoomBounds() {
+    if (this.viewer && this.bounds) {
       this.viewer.fitBounds(this.bounds)
     }
-    addOsd(map, index, zoomControls) {
-      this.viewer = L.map('osd-' + index, {
-        crs: L.CRS.Simple,
-        minZoom: -2,
-        zoomControl: false,
-        attributionControl: false
-      })
-      this.bounds = [[0, 0], [map.height, map.width]]
-      L.imageOverlay(
-        map.mapurl + '&marker=1&type=.png',
-        this.bounds
-      ).addTo(this.viewer)
-      this.zoomBounds()
-    }
+  }
+
+  addOsd(map, osdId) {
+    this.viewer = L.map(osdId, {
+      crs: L.CRS.Simple,
+      minZoom: -2,
+      zoomControl: false,
+      attributionControl: false
+    })
+
+    this.bounds = [[0, 0], [map.height, map.width]]
+
+    L.imageOverlay(
+      `${map.mapurl}&marker=1&type=.png`,
+      this.bounds
+    ).addTo(this.viewer)
+
+    this.zoomBounds()
+  }
 }

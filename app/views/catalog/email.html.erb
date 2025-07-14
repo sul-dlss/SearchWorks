@@ -1,0 +1,14 @@
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.with_header do %>
+    <div class="modal-title d-flex align-items-center">
+      <h2 class="mb-0 me-3"><%= t('blacklight.email.form.title') %></h2>
+      <% if @documents.many? %>
+        <span class="badge rounded-pill bookmark-counter fs-6"><%= @documents.count %> records</span>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% component.with_body do %>
+    <%= render 'email_form' %>
+  <% end %>
+<% end %>

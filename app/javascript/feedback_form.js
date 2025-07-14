@@ -4,125 +4,128 @@ Blacklight.onLoad(function(){
 
   //Instantiates plugin for feedback form
 
-  $("#feedback-form").feedbackForm();
-  $("#connection-form").feedbackForm();
+  const connectionForm = document.getElementById("connection-form");
+  if (connectionForm) {
+    new FeedbackForm(connectionForm);
+  }
 })
 
 
-;(function ( $, window, document, undefined ) {
+class FeedbackForm {
   /*
-    jQuery plugin that handles some of the feedback form functionality
+    Feedback form functionality
 
-      Usage: $(selector).feedbackForm();
+      Usage: new FeedbackForm(element);
 
     No available options
 
-    This plugin :
+    This class :
       - changes feedback form link to button
       - submits an ajax request for the feedback form
       - displays alert on response from feedback form
   */
 
-    var pluginName = "feedbackForm";
+  constructor(element, options = {}) {
+    this.element = element;
+    this.options = Object.assign({}, options);
+    this.init();
+  }
 
-    function Plugin( element, options ) {
-        this.element = element;
-        var $el, $form;
+  submitListener(el, forms) {
+    // Serialize and submit form if not on action url
+    forms.forEach((form) => {
+      if (location !== form.action) {
+        const userAgentInput = form.querySelector('#user_agent')
+        const viewportInput = form.querySelector('#viewport')
+        const lastSearchInput = form.querySelector('#last_search')
 
-        this.options = $.extend( {}, options) ;
-        this._name = pluginName;
-        this.init();
-    }
+        if (userAgentInput) userAgentInput.value = navigator.userAgent
+        if (viewportInput) viewportInput.value = 'width:' + window.innerWidth + ' height:' + window.innerHeight
 
-    function submitListener($el, $form){
-      // Serialize and submit form if not on action url
-      $form.each(function(i, form){
-        if (location !== form.action){
-          var $thisform = $(form);
-          $thisform.find('#user_agent').val(navigator.userAgent);
-          $thisform.find('#viewport').val('width:' + window.innerWidth + ' height:' + innerHeight);
-          var lastSearch = $('.back-to-results').map(function() { return this.href }).get().join();
-          $thisform.find('#last_search').val(lastSearch);
-          $thisform.on('submit', function(e){
-            e.preventDefault();
-            const valuesToSubmit = new URLSearchParams(new FormData($thisform[0]))
-            fetch(form.action, {
-              method: 'POST',
-              body: valuesToSubmit
-            }).then((resp) => resp.json())
-            .then((json) => {
-              $($el).collapse('hide');
-              $($form)[0].reset();
-              renderFlashMessages(json);
-            })
+        const backToResultsLinks = document.querySelectorAll('.back-to-results')
+        const lastSearch = Array.from(backToResultsLinks).map(link => link.href).join()
+        if (lastSearchInput) lastSearchInput.value = lastSearch
 
-            // Reset the recaptcha. Recaptcha doesn't permit the same token to be used twice.
-            grecaptcha.reset()
+        form.addEventListener('submit', (e) => {
+          e.preventDefault()
+          const valuesToSubmit = new URLSearchParams(new FormData(form))
+          fetch(form.action, {
+            method: 'POST',
+            body: valuesToSubmit
+          }).then((resp) => resp.json())
+          .then((json) => {
+            // Hide the collapse element
+            const collapseElement = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el)
+            collapseElement.hide()
+            form.reset()
+            this.renderFlashMessages(json)
+          })
 
-            return false;
-          });
+          return false
+        })
+      }
+    })
+  }
 
-        }
-      });
-    }
-
-    function isSuccess(response){
-      switch(response[0][0]){
+  isSuccess(response) {
+    switch(response[0][0]) {
       case 'success':
         return true;
       default:
         return false;
+    }
+  }
+
+  renderFlashMessages(response) {
+    response.forEach((val) => {
+      const alertType = val[0] == 'error' ? 'danger' : val[0];
+      const flashHtml = `
+        <div class="alert alert-${alertType} alert-dismissible shadow-sm d-flex align-items-center">
+          <div class="text-body">
+            <div>${val[1]}</div>
+          </div>
+          <button type="button" class="btn-close p-2 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>`;
+
+      // Show the flash message
+      const flashMessagesContainer = document.querySelector('div.flash_messages');
+      if (flashMessagesContainer) {
+        flashMessagesContainer.innerHTML = flashHtml;
       }
-    }
+    });
+  }
 
-    function renderFlashMessages(response){
-      $.each(response, function(i,val){
-        const alertType = val[0] == 'error' ? 'danger' : val[0]
-        const flashHtml = `
-          <div class="alert alert-${alertType} alert-dismissible shadow-sm d-flex align-items-center">
-            <div class="text-body">
-              <div>${val[1]}</div>
-            </div>
-            <button type="button" class="btn-close p-2 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>`
+  init() {
+    const el = this.element;
+    const forms = el.querySelectorAll('form');
 
-        // Show the flash message
-        document.querySelector('div.flash_messages').innerHTML = flashHtml
-      });
-    }
+    // Add listener for form submit
+    this.submitListener(el, forms);
 
-    Plugin.prototype = {
+    // Update href in nav link to '#'
+    const targetLinks = document.querySelectorAll(`*[data-bs-target="#${this.element.id}"]`);
+    targetLinks.forEach(link => {
+      link.setAttribute('href', '#');
+    });
 
-        init: function() {
-          var $el = $(this.element);
-          var $form = $($el).find('form');
+    // Updates reporting from fields for current location
+    const reportingFromSpans = document.querySelectorAll('span.reporting-from-field');
+    const reportingFromInputs = document.querySelectorAll('input.reporting-from-field');
 
-          //Add listener for form submit
-          submitListener($el, $form);
+    reportingFromSpans.forEach(span => {
+      span.innerHTML = location.href;
+    });
 
-          //Update href in nav link to '#'
-          $('*[data-bs-target="#' + this.element.id +'"]').attr('href', '#');
+    reportingFromInputs.forEach(input => {
+      input.value = location.href;
+    });
 
-          //Updates reporting from fields for current location
-          $('span.reporting-from-field').html(location.href);
-          $('input.reporting-from-field').val(location.href);
-
-          // Listen for form open and then add focus to message
-          $('#' + this.element.id).on('shown.bs.collapse', function () {
-            $form.find('.form-control').first().focus();
-          });
-        }
-    };
-
-    // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
-    $.fn[pluginName] = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, "plugin_" + pluginName)) {
-                $.data(this, "plugin_" + pluginName,
-                new Plugin( this, options ));
-            }
-        });
-    };
-
-})( jQuery, window, document );
+    // Listen for form open and then add focus to message
+    this.element.addEventListener('shown.bs.collapse', () => {
+      const firstFormControl = forms[0]?.querySelector('.form-control');
+      if (firstFormControl) {
+        firstFormControl.focus();
+      }
+    });
+  }
+}

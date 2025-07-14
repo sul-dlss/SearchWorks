@@ -12,11 +12,6 @@ const AlternateCatalog = (function (global) {
       // Setup close click handler
       this.initCloseButton()
 
-      // Insert between the 3rd and 4th document for articles
-      if (document.querySelector('.blacklight-articles')) {
-        this.injectAlternateCatalogIntoResults()
-      }
-
       if (window.innerWidth > 768) {
         this.element.classList.add('show');
       }
@@ -36,21 +31,6 @@ const AlternateCatalog = (function (global) {
       close.addEventListener("click", () => {
         new bootstrap.Collapse(this.element);
       })
-    },
-
-    injectAlternateCatalogIntoResults: function () {
-      const documentList = document.querySelector('#documents')
-      if (!documentList)
-        return // Don't move on the no-results page
-
-      const afterThird = documentList.querySelector('.document-position-2')
-
-      // If there is no third document, just append to the end of #documents
-      if (afterThird) {
-        afterThird.after(this.element)
-      } else {
-        documentList.append(this.element)
-      }
     },
 
     fetchOtherCatalog: function() {

@@ -1,17 +1,7 @@
 <%= form_tag email_articles_path, :data => { blacklight_modal: 'trigger' }, :id => 'email_form', :class => "form-horizontal modal_form", :method => :post do %>
   <div class="modal-body">
-    <%= render :partial=>'shared/email_form' %>
-
-    <%=hidden_field_tag :type, 'brief' %>
-    <% Array.wrap(@documents).each do |doc| %>
-      <%= hidden_field_tag "id[]", doc.id %>
-    <% end %>
-    <%- if params[:sort] -%>
-      <%= hidden_field_tag "sort", params[:sort] %>
-    <%- end -%>
-    <%- if params[:per_page] -%>
-      <%= hidden_field_tag "per_page", params[:per_page] %>
-    <%- end -%>
+    <%= render 'shared/email_form', documents: @documents %>
+    <%= hidden_field_tag :type, 'brief' %>
   </div>
   <div class="modal-footer">
     <button type="submit" class="btn btn-primary"> <%= t('blacklight.sms.form.submit') %></button>

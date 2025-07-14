@@ -1,0 +1,32 @@
+
+  <% if facet_options_presenter.limiters.present? %>
+    <div class="top-panel-heading p-2">
+      <h2>
+        <%= t("searchworks.articles.facets.options.heading") %>
+      </h2>
+    </div>
+    <div class="facet-options position-relative p-2" data-controller='facet-checkboxes'>
+      <ul class="checkbox-facet-list list-unstyled">
+        <% facet_options_presenter.limiters.each do |limiter| %>
+          <li>
+            <%= label_tag("eds_limiter_#{limiter.id}", class: 'position-relative') do %>
+              <%= check_box(
+                    'f',
+                    'eds_search_limiters_facet',
+                    { multiple: true, id: "eds_limiter_#{limiter.id}", checked: limiter.selected?, data: { action: 'facet-checkboxes#toggleCheckbox' } },
+                    limiter.label,
+                    nil
+                  )
+              %>
+              <%= link_to(limiter.search_url, data: { newState: !limiter.selected?, action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1') do %>
+                <%= limiter.label %>
+              <% end %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+      <div data-facet-checkboxes-target="loadingIndicator" class="d-none position-absolute opacity-75 top-50 start-50 translate-middle">
+        <div class='loading-spinner'></div>
+      </div>
+    </div>
+  <% end %>

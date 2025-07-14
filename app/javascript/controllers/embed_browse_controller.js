@@ -12,7 +12,7 @@ export default class extends Controller {
 
   connect() {
     this.viewportTarget = document.querySelector(this.viewportSelectorValue)
-    this.galleryTarget = this.viewportTarget.querySelector('.gallery')
+    this.galleryTarget = this.viewportTarget.querySelector('.embedded-items')
     if (!this.hasContent()) {
       this.displayLink()
       this.galleryTarget.addEventListener('turbo:frame-load', () => {

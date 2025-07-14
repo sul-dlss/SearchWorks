@@ -36,7 +36,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   def consolidate_home_page_params(solr_params)
     return unless on_home_page?
 
-    solr_params['facet.field'] = ['access_facet', 'format_main_ssim', 'building_facet', 'language']
+    solr_params['facet.field'] = blacklight_config.facet_fields.slice(*blacklight_config.top_filters[:default]).values.map(&:field)
     solr_params['rows'] = 0
   end
 
@@ -69,6 +69,6 @@ class SearchBuilder < Blacklight::SearchBuilder
   def on_home_page?
     return false unless search_state.controller&.action_name == 'index' && search_state.controller.controller_name == 'catalog'
 
-    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:search_field].blank? && blacklight_params[:clause].blank?
+    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:range].blank? && blacklight_params[:search_field].blank? && blacklight_params[:clause].blank?
   end
 end

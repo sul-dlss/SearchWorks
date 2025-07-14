@@ -9,60 +9,86 @@ export default class extends Controller {
   }
 
   connect() {
-    this.triggerBtn = $('<button class="btn preview-trigger-btn preview-opacity" data-action="click->preview-filmstrip#showPreview"><span class="bi-chevron-down small"></span></button>')
-    this.arrow = $('<div class="preview-arrow"></div>');
+    this.triggerBtn = document.createElement('button')
+    this.triggerBtn.classList.add('btn', 'preview-trigger-btn', 'preview-opacity')
+    this.triggerBtn.dataset.action = 'click->preview-filmstrip#togglePreview'
+    this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
+    this.arrow = document.createElement('div');
+    this.arrow.className = 'preview-arrow';
 
     // NOTE: The filmstrip, viewport, prevew ,and closeBtn are outside of the controller.
-    this.filmstrip = $(this.element).closest('.image-filmstrip');
-    this.viewport = this.filmstrip.find('.viewport');
-    this.preview = $(this.selectorValue)
-    this.closeBtn = $(`<button type="button" class="preview-close btn-close" aria-label="Close">
-    <span aria-hidden="true" class="visually-hidden">×</span>
-    </button>`);
+    this.filmstrip = this.element.closest('.image-filmstrip');
+    this.viewport = this.filmstrip.querySelector('.viewport');
+    this.preview = document.querySelector(this.selectorValue);
+    this.closeBtn = document.createElement('button');
+    this.closeBtn.type = 'button';
+    this.closeBtn.className = 'preview-close btn-close';
+    this.closeBtn.setAttribute('aria-label', 'Close');
+    this.closeBtn.innerHTML = '<span aria-hidden="true" class="visually-hidden">×</span>';
 
     this.appendTriggers()
   }
 
   appendTriggers() {
-    $(this.element).append(this.triggerBtn);
+    this.element.append
+    this.element.append(this.triggerBtn);
+  }
+
+  togglePreview() {
+    if (this.triggerBtn.classList.contains('preview-open')) {
+      this.closePreview()
+    } else {
+      this.showPreview()
+    }
+  }
+
+  toggleButtonClosed(button) {
+    button.classList.remove('preview-open')
+    button.innerHTML = '<span class="bi-chevron-down small"></span>'
   }
 
   showPreview() {
-    const divContent = $('<div class="preview-content"></div>')
+    const prevOpenButton = document.querySelector('.preview-open')
+    if (prevOpenButton) this.toggleButtonClosed(prevOpenButton)
+    this.triggerBtn.classList.add('preview-open')
+    this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
+    const divContent = document.createElement('div');
+    divContent.className = 'preview-content';
 
-    this.preview.empty();
+    this.preview.innerHTML = '';
 
     this.appendPointer()
-    divContent[0].innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
+    divContent.innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
 
-    this.preview
-      .append(divContent)
-      .append(this.closeBtn)
-      .show();
+    this.preview.appendChild(divContent);
+    this.preview.appendChild(this.closeBtn);
+    this.preview.style.display = 'block';
 
-    this.viewport.css('overflow-x', 'hidden');
+    this.viewport.style.overflowX = 'hidden';
     this.attachPreviewEvents()
   }
 
   appendPointer() {
-    this.preview.append(this.arrow);
+    this.preview.appendChild(this.arrow);
 
-    const maxLeft = this.preview.width() - this.arrow.width() - 1
-    let arrowLeft = parseInt($(this.element).position().left + ($(this.element).width()/2) - 20);
+    const maxLeft = this.preview.offsetWidth - this.arrow.offsetWidth - 1
+    let arrowLeft = parseInt(this.element.offsetLeft + (this.element.offsetWidth/2) - 20);
 
     if (arrowLeft < 0) arrowLeft = 0;
     if (arrowLeft > maxLeft) arrowLeft = maxLeft;
 
-    this.arrow.css('left', arrowLeft);
+    this.arrow.style.left = arrowLeft + 'px';
   }
 
   // TODO: the preview is outside of this controller's scope.
   attachPreviewEvents() {
-    this.closeBtn.on('click', () => this.closePreview());
+    this.closeBtn.addEventListener('click', () => this.closePreview());
   }
 
   closePreview() {
-    this.viewport.css('overflow-x', 'scroll');
-    this.preview.empty().hide();
+    this.toggleButtonClosed(this.triggerBtn);
+    this.viewport.style.overflowX = 'scroll';
+    this.preview.innerHTML = '';
+    this.preview.style.display = 'none';
   }
 }

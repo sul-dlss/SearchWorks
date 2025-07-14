@@ -3,15 +3,20 @@
   itemscope: true,
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
-  <div class="item-thumb">
+  <div class="item-thumb d-flex flex-column justify-content-center">
     <%= render Document::TrackingThumbnailComponent.new(counter:, presenter:) %>
   </div>
   <div class="caption">
     <% # header bar for doc items in index view gallery %>
     <div class="documentHeader">
-      <div class="callnumber-bar">
+      <div class="index_title">
+        <span class="two-lines">
+          <%= document.online_label %>
+          <%= helpers.link_to_document document, class: 'fw-semibold', counter: counter, data: { action: "click->analytics#trackLink"} %>
+        </span>
+      </div>
+      <div class="location py-1">
         <% if document.items.present? %>
-          <%= document.preferred_item.callnumber %><br/>
           <% if document.holdings.libraries.length == 1 %>
             <%= document.holdings.libraries.first.name %>
           <% else %>
@@ -24,25 +29,22 @@
           <%= document.eresources_library_display_name || 'Stanford Libraries' %>
         <% end %>
       </div>
-      <h3 class="index_title">
-        <span class="three-lines">
-          <%= resource_icon %>
-          <%= document.online_label %>
-          <%= helpers.link_to_document document, counter: counter, data: { action: "click->analytics#trackLink"} %>
-        </span>
-        <span class="main-title-date"><%= helpers.get_main_title_date(document) %></span>
-      </h3>
+      <div class="callnumber-bar two-lines">
+        <% if document.items.present? %>
+          <%= document.preferred_item.callnumber %>
+        <% end %>
+      </div>
     </div>
-  </div>
   <% # bookmark functions for items/docs and preview button %>
-  <div class="gallery-buttons">
-    <button class="btn btn-xs btn-preview preview-button docid-<%= document.id %>"
+  <div class="gallery-buttons d-flex justify-content-end">
+    <button class="btn btn-xs btn-preview preview-button bi-chevron-down docid-<%= document.id %>"
             data-behavior="preview-button-trigger"
             data-preview-embed-browse-target="button"
             data-gallery-preview-target="button"
             data-action="preview-embed-browse#togglePreview gallery-preview#togglePreview"
-            >Preview</button>
+            ></button>
     <%= actions %>
+  </div>
   </div>
 <% end %>
 <div class="<%= preview_container_dom_class %> preview-container" data-document-id="<%= document[:id] %>"></div>

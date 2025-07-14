@@ -1,1 +1,10 @@
-<%= render_feedback_form(@form_type) %>
+
+<% if @form_type == "connection" %>
+    <%= render_connection_form %>
+<% else %>
+    <% if request.xhr? %>
+        <%= render Feedback::FeedbackModalComponent.new %>
+    <% else %>
+        <%= render Feedback::FeedbackStandaloneComponent.new %>
+    <% end %>
+<% end %>

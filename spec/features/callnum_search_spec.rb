@@ -34,7 +34,9 @@ RSpec.describe 'Call num search', :js do
       expect(page).to have_link('Dewey Classification')
       click_button 'Toggle subgroup'
       expect(page).to have_link('000s - Computer Science, Knowledge & Systems')
-      page.all('.toggle-handle')[1].click
+      within '[role="group"]' do
+        click_button 'Toggle subgroup'
+      end
       expect(page).to have_link('070s - News Media, Journalism, Publishing')
       click_link object_title
       expect(page).to have_css('h1', text: object_title)

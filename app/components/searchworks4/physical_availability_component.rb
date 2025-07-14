@@ -6,7 +6,7 @@ module Searchworks4
 
     delegate :link_to_document, to: :helpers
 
-    def initialize(document:, classes: %w[availability-component border rounded p-2 fs-15], header_classes: %w[gap-4 row-gap-3 align-items-center flex-wrap])
+    def initialize(document:, classes: %w[availability-component border rounded p-2 fs-15], header_classes: %w[gap-4 row-gap-2 align-items-center flex-wrap])
       @document = document
       @classes = classes
       @header_classes = header_classes
@@ -23,7 +23,7 @@ module Searchworks4
     end
 
     def single_item?
-      document.holdings.items.one? && document.holdings.libraries.one?
+      document.holdings.items.one? && single_location?
     end
 
     def truncated_display?
@@ -34,12 +34,40 @@ module Searchworks4
       document.holdings.libraries.one? && document.holdings.libraries.first.locations.one?
     end
 
+    # Group SAL* libraries together into a single category
+    def library_groups
+      @library_groups ||= begin
+        grouped = document.holdings.libraries.group_by do |library|
+          if library.code.start_with?('SAL')
+            'OFF_CAMPUS'
+          else
+            library.code
+          end
+        end
+
+        grouped.values.map { |libraries| LibraryGroup.new(libraries) }
+      end
+    end
+
+    class LibraryGroup
+      attr_reader :libraries
+
+      def initialize(libraries)
+        @libraries = libraries
+      end
+
+      def name
+        libraries.first.name
+      end
+    end
+
     class LocationComponent < ViewComponent::Base
       attr_reader :location, :document
 
-      def initialize(location:, document:, suppress_off_campus: true)
+      def initialize(location:, document:, classes: ['text-nowrap'], suppress_off_campus: true)
         @location = location
         @document = document
+        @classes = classes
         @suppress_off_campus = suppress_off_campus
         super
       end
@@ -55,11 +83,11 @@ module Searchworks4
       def call
         if stackmappable?
           analytics = { action: "click->analytics#trackLink", controller: "analytics", analytics_category_value: "item_location" }
-          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger', **analytics }, class: 'stackmap-find-it location-name text-nowrap' do
+          link_to helpers.stackmap_link(document, location), data: { blacklight_modal: 'trigger', **analytics }, class: @classes + ['stackmap-find-it location-name'] do
             tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
           end
         else
-          tag.span location.name, class: 'location-name text-nowrap'
+          tag.span location.name, class: @classes + ['location-name']
         end
       end
     end

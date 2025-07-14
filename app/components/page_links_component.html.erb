@@ -5,7 +5,7 @@
   <% end %>
   <%= link_to_previous_page response, previous_label, class: 'me-2' do %>
     <%# Display the disabled previous link if there is no previous page %>
-    <%= tag.span previous_label, class: 'text-grey-50' %>
+    <%= tag.span previous_label, class: 'text-grey-50' if response.total_pages > 1 %>
   <% end %>
   <span class="page_entries">
     <% if response.total_count == 1 %>

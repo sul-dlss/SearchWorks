@@ -43,7 +43,7 @@ module SchemaDotOrg
 
   # Override Blacklight's default itemtype with a more specific value
   def itemtype
-    format = self[:format_main_ssim] || []
+    format = self[:format_hsim] || []
     genre = self[:genre_ssim] || []
     case
     when genre.include?('Thesis/Dissertation')

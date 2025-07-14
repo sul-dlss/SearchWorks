@@ -214,7 +214,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         expect(page).to have_css('.location a', text: "Stacks", count: 1)
         expect(page).to have_css('.panel-library-location .mhld', text: "public note")
         expect(page).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
-        expect(page).to have_css('.panel-library-location .mhld', text: "Library has: library has")
+        expect(page).to have_button('Summary of items')
         expect(page).to have_css('.panel-library-location .callnumber', text: "ABC 123")
       end
     end
@@ -254,7 +254,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         expect(page).to have_css('.location-name', text: "Stacks")
         expect(page).to have_css('.panel-library-location .mhld', text: "public note")
         expect(page).to have_css('.panel-library-location .mhld.note-highlight', text: "Latest: latest received")
-        expect(page).to have_css('.panel-library-location .mhld', text: "Library has: library has")
+        expect(page).to have_button('Summary of items')
       end
     end
   end
@@ -442,6 +442,20 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
         expect(page).to have_css '.availability-icon.noncirc'
         expect(page).to have_css '.status-text', text: 'In-library use'
       end
+    end
+  end
+
+  context 'with an instance with items in multiple off-campus libraries' do
+    let(:document) do
+      SolrDocument.from_fixture('4250062.yml')
+    end
+
+    it 'renders the off-campus section with each actual library under it' do
+      render_inline(described_class.new(document:))
+
+      expect(page).to have_css 'h3', text: 'Off-campus collections'
+      expect(page).to have_css '.location-name', text: 'SAL'
+      expect(page).to have_css '.location-name', text: 'For use in Special Collections Reading Room'
     end
   end
 end

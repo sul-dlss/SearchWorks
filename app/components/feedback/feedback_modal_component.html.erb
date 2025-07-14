@@ -1,0 +1,21 @@
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+    <% component.with_header do %>
+        <div class="d-flex flex-nowrap flex-row w-100 justify-content-between">
+            <h2 class="modal-title fw-normal"><%= t('blacklight.feedback_form.title') %></h2>
+            <a href="/feedback" class="new-link text-nowrap" target="_blank"><i class="bi bi-box-arrow-up-left me-1"></i> <%= t('blacklight.feedback_form.new_tab')%></a>
+        </div>
+    <% end %>
+    <% component.with_body do %>
+        <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
+            <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form feedback-modal recaptcha', 'action': 'turbo:submit-end->feedback-modal#showToast submit->recaptcha#refresh' } do |f| %>
+                <div class="modal-body">
+                    <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary me-2 close" data-bl-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>

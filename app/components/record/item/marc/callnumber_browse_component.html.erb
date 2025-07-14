@@ -1,20 +1,19 @@
 
-<div class="section record-browse-nearby p-4 bg-light" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>" data-controller="analytics" data-analytics-category-value="browse-nearby">
-  <h2>Browse related items</h2>
-  <div class="row">
-    <div class="col-md-9 col-sm-12">
+<div class="section record-browse-nearby p-4 border" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>" data-controller="analytics browse-nearby" data-action="show.bs.tab->browse-nearby#markActive" data-analytics-category-value="browse-nearby">
+  <div class="heading view-full-page ps-2 d-flex me-auto justify-content-start">
+    <h2 class="m-0 pe-3">Related items</h2>
+    <%= link_to "Full page", "#", class: 'btn btn-primary bi bi-arrows-angle-expand fw-normal', hidden: true%>
+  </div>
+  <div class="row mt-4 ps-2 tabs" data-browse-nearby-target="tabs">
+    <div class="col mb-3">
       Start at call number:
-      <ul class="list-inline d-inline ms-3" role="tablist">
+      <ul class="list-inline d-inline ms-2" role="tablist">
         <% spines.each_with_index do |spine, index| %>
-          <li class="d-inline" role="presentation">
+          <li class="d-inline px-2" role="presentation">
             <%= link_to_callnumber_browse(spine, index) %>
           </li>
         <% end %>
       </ul>
-
-    </div>
-    <div class="view-full-page col-md-3 col-sm-12">
-      <%= link_to "View full page", "#", hidden: true %>
     </div>
   </div>
 
@@ -22,7 +21,7 @@
   <div class="tab-content">
     <% spines.each_with_index do |item, index| %>
       <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
-        <div class="embedded-items overflow-scroll">
+        <div class="embedded-items overflow-x-scroll overflow-y-hidden">
           <%= helpers.turbo_frame_tag "filmstrip_#{item.base_callnumber.gsub(' ', '-')}", src: filmstrip_path(item.base_callnumber), class: 'gallery' %>
         </div>
       </div>

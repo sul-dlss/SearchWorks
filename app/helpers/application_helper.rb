@@ -1,80 +1,6 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  def render_search_bar_advanced_widget
-    render partial: 'catalog/search_bar_advanced_widget'
-  end
-
-  def render_search_bar_selections_widget
-    render partial: 'catalog/search_bar_selections_widget'
-  end
-
-  def render_search_targets_widget
-    render partial: 'catalog/search_targets_widget'
-  end
-
-  def get_data_with_label(doc, label, field_string)
-    items = []
-    if doc[field_string]
-      fields = doc[field_string]
-      if fields.is_a?(Array)
-          fields.each do |field|
-            items << field
-          end
-      else
-        items << fields
-      end
-    end
-    { label:, fields: items, vernacular: get_indexed_vernacular(doc, field_string) } unless items.empty?
-  end
-
-  # Generate a dt/dd pair with a link with a label given a field in the SolrDocument
-  def link_to_data_with_label(doc, label, field_string, url)
-    items = []
-    vern = []
-    fields = get_data_with_label(doc, label, field_string)
-    unless fields.nil?
-      unless fields[:fields].nil?
-        fields[:fields].each do |field|
-          items << link_to(field, url.merge!(q: "\"#{field}\""))
-        end
-      end
-      unless fields[:vernacular].nil?
-        fields[:vernacular].each do |field|
-          vern << link_to(field, url.merge!(q: "\"#{field}\""))
-        end
-      end
-    end
-    { label:, fields: items, vernacular: vern } unless items.empty? and vern.empty?
-  end
-
-  def get_indexed_vernacular(doc, field)
-    fields = []
-    if doc["vern_#{field}"]
-      vern_fields = doc["vern_#{field}"]
-      if vern_fields.is_a?(Array)
-        vern_fields.each do |vern_field|
-          fields << vern_field
-        end
-      else
-        fields << vern_fields
-      end
-    end
-    fields unless fields.empty?
-  end
-
-  def active_class_for_current_page(page)
-    if current_page?(page)
-      "active"
-    end
-  end
-
-  def disabled_class_for_current_page(page)
-    if current_page?(page)
-      "disabled"
-    end
-  end
-
   def disabled_class_for_no_selections(count)
     if count == 0
       "disabled"
@@ -135,5 +61,12 @@ module ApplicationHelper
 
   def search_type_name
     t("searchworks.search_dropdown.#{controller_name}.label")
+  end
+
+  # Return an Ezproxy link for URLs that match a proxied URL
+  # If the link does not match a URL that should be proxied, return the link on its own
+  def ezproxy_database_link(url, title)
+    restricted_title = 'available to stanford affiliated users'
+    Links::Ezproxy.new(url: url, link_title: "#{title}(#{restricted_title})", document: nil).to_proxied_url || url
   end
 end

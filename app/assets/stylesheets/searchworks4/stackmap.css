@@ -1,0 +1,21 @@
+.stackmap {
+  .map-template {
+    padding: 5px 0;
+
+    .osd {
+      background-color: var(--white);
+      border: 1px solid var(--stanford-black-10);
+      height: 450px;
+      padding: 0;
+    }
+
+    @media (width < 575.98px) {
+      .osd {
+        height: 250px;
+      }
+  }
+  .text-directions {
+    line-height: 1.8em;
+    padding: 0;
+  }
+}

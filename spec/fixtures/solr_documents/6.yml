@@ -7,6 +7,8 @@ title_display: Deserunt ex officia occaecat incididunt esse veniam amet nulla la
 all_search: Deserunt ex officia occaecat incididunt esse veniam amet nulla labore.
 language: French
 format: Image
-format_main_ssim: Image
+format_hsim: Image
 access_facet: Online
 building_facet: Special Collections
+library_code_facet_ssim:
+  - SPEC-COLL

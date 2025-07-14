@@ -38,17 +38,11 @@ export default class extends Controller {
   }
 
   trackFacetHide(event) {
-    const dimensions = {
-      facet_name: event.target.parentNode.querySelector('.facet-field-heading').textContent.trim()
-    }
-    gtag('event', 'facet_hide', dimensions)
+    this.trackFacetEvent(event, 'facet_hide')
   }
 
   trackFacetShow(event) {
-    const dimensions = {
-      facet_name: event.target.parentNode.querySelector('.facet-field-heading').textContent.trim()
-    }
-    gtag('event', 'facet_show', dimensions)
+    this.trackFacetEvent(event, 'facet_show')
   }
 
   trackLink(event) {
@@ -65,5 +59,25 @@ export default class extends Controller {
       link_text: link.innerText.trim()
     }
     gtag('event', 'click', dimensions)
+  }
+
+  trackFacetEvent(event, gaEventName) {
+    const facetName = this.getTargetFacetName(event.target)
+    if (!facetName) return
+
+    const dimensions = {
+      facet_name: facetName
+    }
+    gtag('event', gaEventName, dimensions)
+  }
+
+  getTargetFacetName(target) {
+    const potentialFacet = target.parentNode
+    // We only care about interactions at the top level of a facet, don't capture hierarchical events.
+    if (potentialFacet && potentialFacet.classList.contains('facet-limit')) {
+      const facetHeading = potentialFacet.querySelector('.facet-field-heading')
+      return facetHeading ? facetHeading.textContent.trim() : null
+    }
+    return null
   }
 }

@@ -7,6 +7,8 @@ title_display: Officia sunt mollit in reprehenderit anim qui aute enim velit.
 all_search: Officia sunt mollit in reprehenderit anim qui aute enim velit.
 language: Spanish
 format: Newspaper
-format_main_ssim: Newspaper
+format_hsim: Newspaper
 access_facet: Online
-building_facet: "Math & Statistics"
+building_facet: "Science (Li and Ma)"
+library_code_facet_ssim:
+  - SCIENCE

@@ -1,0 +1,3 @@
+<turbo-frame id="<%= "facet-search-#{@presenter.key}" %>">
+  <%= render Searchworks4::FacetSearchResultComponent.new(facet_field: @presenter, id: "facet-search-#{@presenter.key}-results", classes: 'ms-4 facet-search-results') if params[:query_fragment].present? %>
+</turbo-frame>

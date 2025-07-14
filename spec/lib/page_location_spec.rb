@@ -4,7 +4,7 @@ require 'rails_helper'
 require 'page_location'
 
 RSpec.describe PageLocation do
-  let(:params) { { f: { format: ["Database"] } } }
+  let(:params) { { f: { format_hsim: ["Database"] } } }
   let(:controller) { CatalogController.new }
   let(:action) { 'index' }
   let(:search_state) { Blacklight::SearchState.new(params, controller.blacklight_config, controller) }
@@ -42,35 +42,14 @@ RSpec.describe PageLocation do
       let(:params) { {} }
 
       describe "databases" do
-        describe "old format facet" do
-          before { params[:f] = { format: ["Database"] } }
-
-          it "is defined when a facet is selected" do
-            expect(access_point).to eq :databases
-          end
-
-          it "is defined when an additional format facet is selected" do
-            params[:f][:format] << "Book"
-            expect(access_point).to eq :databases
-          end
-          it "is defined when searching within selected" do
-            params[:q] = "My Query"
-            expect(access_point).to eq :databases
-          end
-          it "is not defined when a non-database format facet is selected" do
-            params[:f] = { access: "Online" }
-            expect(access_point).to be_nil
-          end
-        end
-
-        describe "new resource type facet" do
-          before { params[:f] = { format_main_ssim: ["Database"] } }
+        describe "new format facet" do
+          before { params[:f] = { format_hsim: ["Database"] } }
 
           it "is defined when a facet is selected" do
             expect(access_point).to eq :databases
           end
           it "is defined when an additional format facet is selected" do
-            params[:f][:format_main_ssim] << "Book"
+            params[:f][:format_hsim] << "Book"
             expect(access_point).to eq :databases
           end
           it "is defined when searching within selected" do
@@ -96,7 +75,7 @@ RSpec.describe PageLocation do
 
         context 'when another facet is selected' do
           before do
-            params[:f][:format] = "Book"
+            params[:f][:format_hsim] = "Book"
           end
 
           it { is_expected.to eq :course_reserve }
@@ -119,24 +98,6 @@ RSpec.describe PageLocation do
         end
       end
 
-      context "when the collection filter is set" do
-        context 'when collection is present' do
-          let(:params) { { f: { collection: ['29'] } } }
-
-          it { is_expected.to eq :collection }
-        end
-
-        context 'when collection is not present' do
-          it { is_expected.to be_nil }
-        end
-
-        context 'when collection is present and is sirsi' do
-          let(:params) { { f: { collection: ['sirsi'] } } }
-
-          it { is_expected.to be_nil }
-        end
-      end
-
       describe 'digital_collections' do
         before { params[:f] = { collection_type: ["Digital Collection"] } }
 
@@ -154,17 +115,17 @@ RSpec.describe PageLocation do
       end
 
       describe 'sdr' do
-        before { params[:f] = { building_facet: ["Stanford Digital Repository"] } }
+        before { params[:f] = { library: ["SDR"] } }
 
-        it 'is defined when the building facet is Stanford Digital Repository' do
+        it 'is defined when the Library facet is Stanford Digital Repository' do
           expect(access_point).to eq :sdr
         end
         it "is not defined when Stanford Digital Repository is not present" do
           params[:f] = {}
           expect(access_point).to be_nil
         end
-        it "is not defined when building_facet is a different value" do
-          params[:f] = { building_facet: ["Green Library"] }
+        it "is not defined when Library facet is a different value" do
+          params[:f] = { library: ["GREEN"] }
           expect(access_point).to be_nil
         end
       end
@@ -181,19 +142,6 @@ RSpec.describe PageLocation do
         end
         it 'is not defined when genre_ssim is another value' do
           params[:f] = { genre_ssim: ['Cat Tricks'] }
-          expect(access_point).to be_nil
-        end
-      end
-
-      describe 'bookplate_fund' do
-        before { params[:f] = { fund_facet: ['ABC123'] } }
-
-        it 'is defined when the fund_facet is present' do
-          expect(access_point).to eq :bookplate_fund
-        end
-
-        it 'is defined when the fund_facet is empty' do
-          params[:f] = { fund_facet: [] }
           expect(access_point).to be_nil
         end
       end
@@ -234,13 +182,23 @@ RSpec.describe PageLocation do
 
       it { is_expected.to be true }
     end
+
+    context 'when collection is not present' do
+      it { is_expected.to be false }
+    end
+
+    context 'when collection is present and is sirsi' do
+      let(:params) { { f: { collection: ['sirsi'] } } }
+
+      it { is_expected.to be false }
+    end
   end
 
   describe '#sdr?' do
     subject { page_location.sdr? }
 
     context "when SDR is selected" do
-      let(:params) { { f: { building_facet: ["Stanford Digital Repository"] } } }
+      let(:params) { { f: { library: ["SDR"] } } }
 
       it { is_expected.to be true }
     end
@@ -250,7 +208,7 @@ RSpec.describe PageLocation do
     subject { page_location.databases? }
 
     context "when database format is selected" do
-      let(:params) { { f: { format_main_ssim: ["Database"] } } }
+      let(:params) { { f: { format_hsim: ["Database"] } } }
 
       it { is_expected.to be true }
     end

@@ -1,9 +1,7 @@
 .documents-list {
   .document {
     border-top: 1px solid var(--stanford-30-black);
-    margin-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-top: 1rem;
+    padding-block: 1rem;
     --bl-icon-color: var(--stanford-80-black);
   }
 }
@@ -33,6 +31,7 @@
   max-height: 200px;
   max-width: 80px;
   border-radius: 0.125rem;
+  border: 1px solid var(--stanford-fog-light);
 }
 
 .page-entries-info .bi {
@@ -44,6 +43,23 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .truncate-md-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 992px) {
+  .truncate-lg-none {
+    display: inherit;
+    -webkit-line-clamp: initial;
+    overflow: visible;
+  }
 }
 
 .active-icon {
@@ -60,6 +76,12 @@
 
 .constraint .remove .bi-x::before {
   vertical-align: -0.18em;
+}
+
+.availability-overview {
+  .due-date {
+    display: none;
+  }
 }
 
 details {
@@ -143,8 +165,31 @@ details[open] {
 
 .more_facets {
   --bs-link-color-rgb: var(--sul-link-color-rgb);
+  --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
   i {
     font-size: 0.75rem;
     -webkit-text-stroke: 0.45px;
+  }
+}
+
+.collection-info {
+  background-color: var(--stanford-fog-light);
+
+  .finding-aid a {
+    --bs-link-decoration: none;
+
+    &::after {
+      content: '\F144';
+      font-family: "bootstrap-icons";
+      padding-left: 0.25rem;
+      --bs-link-decoration: none;
+      vertical-align: bottom;
+    }
+  }
+
+  .badge {
+    background-color: var(--stanford-20-black);
+    --bs-badge-color: var(--stanford-black);
+    --bs-badge-font-weight: 500;
   }
 }

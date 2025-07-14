@@ -1,3 +1,17 @@
+.facets {
+  & .accordion {
+    .selected {
+      font-weight: 700;
+    }
+  }
+}
+
+.facet-hierarchy {
+  .h-node, .h-leaf {
+    align-items: flex-start;
+  }
+}
+
 .facet-values .sul-icon {
   font-size: 1.5em;
   width: 30px;
@@ -7,6 +21,14 @@
     width: 21px;
     vertical-align: top;
   }
+}
+
+.facet-field-heading .accordion-button:not(.collapsed) {
+  background-color: var(--bs-body-bg);
+}
+
+.facet-limit-active .facet-field-heading .accordion-button {
+  background-color: var(--bs-tertiary-bg);
 }
 
 /* TODO: Remove after we have https://github.com/sul-dlss/blacklight-hierarchy/pull/103 */
@@ -19,15 +41,8 @@
   }
 }
 
-.sidebar:has(.alternate-catalog.show) .mini-bento.btn[aria-expanded="true"] {
-  display: none;
-}
-
-/* This is for resizing for large to small.
-If the user has not clicked on the mini bento button
-and there is a show class then it will hide the mini bento
- */
-.sidebar:has(.mini-bento.btn[aria-expanded="false"]) .alternate-catalog.show {
+/* Hide sidebar mini-bento when initally loaded at xs/sm sizes until the JS moves it to the drawer */
+.sidebar:has(.mini-bento.btn) > .alternate-catalog {
   display: none;
 }
 
@@ -48,5 +63,95 @@ and there is a show class then it will hide the mini bento
     &.show:not(.hiding) {
       transform: none;
     }
+  }
+}
+
+.facet-search-results {
+  li {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+
+    &:hover, &:focus, &:focus-within {
+      color: var(--bs-dropdown-link-hover-color);
+      background-color: var(--bs-dropdown-link-hover-bg);
+    }
+  }
+}
+
+.facet-search-results {
+  /* just like .dropdown-menu, without getting any of the javascript behaviors */
+  box-shadow: var(--bs-dropdown-box-shadow);
+  --bs-dropdown-zindex: 1000;
+  --bs-dropdown-min-width: 10rem;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-dropdown-spacer: 0.125rem;
+  --bs-dropdown-font-size: 1rem;
+  --bs-dropdown-color: var(--bs-body-color);
+  --bs-dropdown-bg: var(--bs-body-bg);
+  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-border-radius: var(--bs-border-radius);
+  --bs-dropdown-border-width: var(--bs-border-width);
+  --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - var(--bs-border-width));
+  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-divider-margin-y: 0.5rem;
+  --bs-dropdown-box-shadow: var(--bs-box-shadow);
+  --bs-dropdown-link-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-color: var(--bs-body-color);
+  --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+  --bs-dropdown-link-active-color: #fff;
+  --bs-dropdown-link-active-bg: #0d6efd;
+  --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  --bs-dropdown-header-color: #6c757d;
+  --bs-dropdown-header-padding-x: 1rem;
+  --bs-dropdown-header-padding-y: 0.5rem;
+  position: absolute;
+  z-index: var(--bs-dropdown-zindex);
+  display: none;
+  min-width: var(--bs-dropdown-min-width);
+  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+  margin: 0;
+  font-size: var(--bs-dropdown-font-size);
+  color: var(--bs-dropdown-color);
+  text-align: left;
+  list-style: none;
+  background-color: var(--bs-dropdown-bg);
+  background-clip: padding-box;
+  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+  border-radius: var(--bs-dropdown-border-radius);
+}
+
+[data-controller="facet-search"]:focus-within .facet-search-results,
+.facet-search-results:focus-within,
+.facet-search-results:hover
+{
+  display: block !important;
+}
+
+.loading-spinner {
+  animation: loading-spinner 2s linear infinite;
+  border: 8px solid var(--stanford-50-black);
+  border-top: 8px solid var(--stanford-80-black);
+  border-radius: 50%;
+  height: 50px;
+  margin: auto;
+  width: 50px;
+}
+
+@keyframes loading-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.facet-options {
+  .digital-collections {
+    --bs-link-color-rgb: var(--stanford-cardinal-rgb);
+    --bs-link-hover-color-rgb: var(--stanford-cardinal-rgb);
+    color: var(--stanford-cardinal);
+    --bs-link-decoration: none;
   }
 }

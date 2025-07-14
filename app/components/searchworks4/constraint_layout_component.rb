@@ -6,7 +6,7 @@ module Searchworks4
       return unless @remove_path
 
       link_to(@remove_path, class: 'btn btn-outline-secondary remove') do
-        tag.span('', class: 'bi bi-x', aria_hidden: true) +
+        tag.span('', class: 'bi bi-x fs-4 d-flex', aria: { hidden: true }) +
           tag.span(remove_aria_label, class: "visually-hidden")
       end
     end

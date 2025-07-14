@@ -7,9 +7,11 @@ language: English
 format: Book
 marc_json_struct: |
 <%= metadata1 %>
-format_main_ssim: Book
+format_hsim: Book
 access_facet: At the Library
 building_facet:
   - "Education (Cubberley)"
+library_code_facet_ssim:
+  - EDUCATION
 location_facet:
   - "Curriculum Collection"

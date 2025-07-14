@@ -7,6 +7,8 @@ title_display: Cupidatat fugiat quis duis id.
 all_search: Cupidatat fugiat quis duis id.
 language: Russian
 format: Book
-format_main_ssim: Book
+format_hsim: Book
 access_facet: Online
 building_facet: Music
+library_code_facet_ssim:
+  - MUSIC

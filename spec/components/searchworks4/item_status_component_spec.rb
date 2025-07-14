@@ -89,6 +89,17 @@ RSpec.describe Searchworks4::ItemStatusComponent, type: :component do
     end
   end
 
+  context 'with a loan period' do
+    let(:item) do
+      Holdings::Item.new({ id: 'someuuid', status: 'Available', course_id: '123', loan_period: '3 weeks' })
+    end
+
+    it 'renders the loan period in the status' do
+      render_inline(described_class.new(item: item))
+      expect(page).to have_css('.availability', text: 'Available 3 weeks')
+    end
+  end
+
   context 'with a temporary location' do
     let(:item) do
       Holdings::Item.new({ id: 'someuuid', status: 'Available', temporary_location_code: 'GRE-HH-EXHIBIT' })

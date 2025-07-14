@@ -2,7 +2,7 @@
   preview_container = 'preview-filmstrip-container-' + collection_document[:id]
 %>
 <div class="collection-result-preview">
-  <div class="d-inline-flex bg-white ms-2 px-2">
+  <div class="d-inline-flex bg-white ms-4 px-2">
     <% if @type == 'show' %>
         <h2 class="mb-0">Digital collection</h2>
     <% else %>
@@ -15,7 +15,7 @@
       <i class="bi bi-search me-1"></i>Search collection
     <% end %>
   </div>
-  <div class="col-md-12 image-filmstrip border rounded px-3">
+  <div class="col-md-12 image-filmstrip border rounded p-4 pt-5">
     <div class="viewport overflow-scroll">
       <ul class="container-images list-unstyled d-flex">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>

@@ -18,13 +18,18 @@ module MastheadHelper
     PageLocation.new(search_state)
   end
 
-  def facets_prefix_options
-    ['0-9', ('A'..'Z').to_a].flatten
+  def sdr_path
+    facet_params = { f: { building_facet: ['Stanford Digital Repository'] } }
+    search_catalog_path(facet_params)
   end
 
-  def digital_collections_params_for(format = nil)
-    facet_params = { f: { building_facet: ['Stanford Digital Repository'] } }
-    facet_params[:f][:format_main_ssim] = [format] if format
+  def digital_collection_path
+    facet_params = { f: { collection_type: ['Digital Collection'] } }
+    search_catalog_path(facet_params)
+  end
+
+  def iiif_item_path
+    facet_params = { f: { iiif_resources: ['available'] } }
     search_catalog_path(facet_params)
   end
 

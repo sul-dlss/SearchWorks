@@ -1,0 +1,77 @@
+.gallery, .documents-gallery {
+  --gallery-document-total-height: 349px;
+  --gallery-document-width: 140px;
+  --gallery-document-thumbnail-height: 171px;
+  --gallery-document-margin-left: 15px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .gallery-buttons {
+    margin-top: auto;
+  }
+
+  .gallery-document {
+    height: var(--gallery-document-total-height);
+    width: var(--gallery-document-width);
+    margin: 0 0 25px var(--gallery-document-margin-left);
+    padding: 0;
+
+    .caption {
+      display: flex;
+      height: calc(var(--gallery-document-total-height) - var(--gallery-document-thumbnail-height));
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .cover-image, .stacks-image {
+      margin: auto;
+      max-height: var(--gallery-document-thumbnail-height);
+      max-width: var(--gallery-document-width);
+    }
+
+    .index-document-functions {
+      flex-grow: 0
+    }
+
+    .index_title {
+      font-size: .925rem;
+      height: 3rem;
+
+      a {
+        color: var(--stanford-black);
+      }
+    }
+
+    .item-thumb {
+      border-bottom: 1px solid var(--stanford-20-black);
+      background-color: var(--stanford-fog-light);
+      height: var(--gallery-document-thumbnail-height);
+      margin-top: 1px;
+    }
+
+    .location, .callnumber-bar {
+      font-size: 0.875rem;
+    }
+  }
+
+  .preview {
+    margin-bottom: 1.5rem;
+    margin-left: var(--gallery-document-margin-left);
+  }
+
+  .two-lines {
+    display: -webkit-box;
+    overflow: hidden;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+div.fake-cover-text {
+  display: none;
+}

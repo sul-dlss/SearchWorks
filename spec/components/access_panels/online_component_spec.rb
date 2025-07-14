@@ -125,7 +125,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
 
     context 'when given a database' do
       let(:solr_document_data) do
-        { marc_links_struct: [{ fulltext: 'true' }], format_main_ssim: ['Database'] }
+        { marc_links_struct: [{ fulltext: 'true' }], format_hsim: ['Database'] }
       end
 
       it { expect(component.display_connection_problem_links?).to be true }
@@ -185,7 +185,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
 
     describe "database" do
       let(:document) do
-        SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], format_main_ssim: ["Database"])
+        SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], format_hsim: ["Database"])
       end
 
       it "renders a special card heading" do

@@ -20,46 +20,18 @@ export default class extends Controller {
     }
   }
 
-  truncated() {
-    return this.textTarget.scrollHeight > this.textTarget.clientHeight;
-  }
-
   toggle() {
     this.textTarget.classList.toggle(this.truncateClass);
-
-    if (this.truncated()) {
-      this.buttonTarget.innerText = "Show more";
-    } else {
-      this.buttonTarget.innerText = "Show less";
-    }
-
-    this.buttonTarget.prepend(this.buttonIcon());
   }
 
   addControls() {
+    // keeps the show more button appearing twice on back/forward browser action
+    if (this.element.querySelector('.show-more-button')) return;
+
     const button = document.createElement('button');
-    button.textContent = 'Show more';
-    button.className = 'btn btn-link p-0';
-    button.ariaDisabled="true"
-    button.ariaLabel = "This button is disabled because assistive technologies already announce the content.";
-    button.dataset.action = 'click->long-text#toggle';
-    button.dataset.longTextTarget = 'button';
-    button.prepend(this.buttonIcon());
+    button.dataset.controller = 'show-more-button'
+    button.dataset.action = 'click->long-text#toggle click->show-more-button#toggle';
 
     this.element.appendChild(button);
-  }
-
-  buttonIcon() {
-    const icon = document.createElement('i');
-    icon.ariaHidden = true;
-    icon.className = 'bi me-1';
-
-    if (this.truncated()) {
-      icon.classList.add('bi-arrow-down-circle-fill')
-    } else {
-      icon.classList.add('bi-arrow-up-circle-fill')
-    }
-
-    return icon;
   }
 }

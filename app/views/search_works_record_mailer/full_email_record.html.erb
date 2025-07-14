@@ -29,7 +29,11 @@
           <dl>
             <% document.holdings.libraries.each do |library| %>
               <% library.locations.each do |location| %>
-                <dt><%= library.name %> - <%= location.name %></dt>
+                <% if library.code.start_with? 'SAL' %>
+                  <dt>Off-campus collections - <%= location.name %></dt>
+                <% else %>
+                  <dt><%= library.name %> - <%= location.name %></dt>
+                <% end %>
                 <% location.items.each do |item| %>
                   <dd><%= item.callnumber %></dd>
                 <% end %>

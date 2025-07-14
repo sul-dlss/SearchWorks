@@ -14,7 +14,7 @@ RSpec.feature "Merged File Collections", :js do
     find('button#search').click
 
     within('.file-collection-members') do
-      expect(page).to have_css("a", text: /File Item/, count: 3)
+      expect(page).to have_css("a", text: /File Item/, count: 4)
     end
   end
   scenario "record view should display metadata and file list" do
@@ -23,7 +23,7 @@ RSpec.feature "Merged File Collections", :js do
     expect(page).to have_css('h1', text: 'Merged File Collection1')
 
     within('.file-collection-members') do
-      expect(page).to have_css("a", text: /File Item/, count: 3)
+      expect(page).to have_css("a", text: /File Item/, count: 4)
     end
 
     expect(page).to have_css('h2', text: 'Contents/Summary')

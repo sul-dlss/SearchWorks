@@ -7,22 +7,33 @@
       <%= render BlacklightRangeLimit::RangeSegmentsComponent.new(facet_field: @facet_field, facet_items: [@facet_field.selected_range_facet_item], classes: ['current']) %>
     <% end %>
 
-  <div
-    class='eds_range_slider'
-    data-eds-date-min="<%= date_range.min_year%>"
-    data-eds-date-max="<%= date_range.max_year %>"
-    data-eds-date-begin="<%= date_range.begin %>"
-    data-eds-date-end="<%= date_range.end %>"
-  >
-    <%= form_tag articles_path, method: :get, class: 'range_limit subsection form-inline' do %>
-      <%= render Blacklight::HiddenSearchStateComponent.new(params: helpers.search_state.params_for_search) %>
-      <div class="input-group input-group-sm mb-3 flex-nowrap range-limit-input-group">
-        <%= text_field_tag("range[#{@facet_field.key}][begin]", date_range.begin, class: 'form-control text-center range_begin') %>
-        <%= text_field_tag("range[#{@facet_field.key}][end]", date_range.end, class: 'form-control text-center range_end') %>
-        <%= submit_tag t('blacklight.range_limit.submit_limit'), class: 'submit btn btn-primary' %>
+    <%= form_tag articles_path, method: :get, class: 'range_limit subsection d-flex justify-content-center' do %>
+    <%= render Blacklight::HiddenSearchStateComponent.new(params: helpers.search_state.params_for_search) %>
+    <div class="range-limit-input-group">
+      <div class="d-flex justify-content-between align-items-end">
+        <div class="d-flex flex-column mr-1 me-1">
+          <%= label_tag("range[#{@facet_field.key}][begin]", t("blacklight.range_limit.range_begin_short"), class: 'text-muted small mb-1') %>
+          <%= number_field_tag("range[#{@facet_field.key}][begin]",
+              date_range.begin,
+              min: date_range.min_year,
+              max: date_range.max_year,
+              class: "form-control form-control-sm range_begin")
+              %>
+        </div>
+        <div class="d-flex flex-column ml-1 ms-1">
+          <%= label_tag("range[#{@facet_field.key}][end]", t("blacklight.range_limit.range_end_short"), class: 'text-muted small mb-1') %>
+          <%= number_field_tag("range[#{@facet_field.key}][end]",
+              date_range.end,
+              min: date_range.min_year,
+              max: date_range.max_year,
+              class: "form-control form-control-sm range_end")
+              %>
+        </div>
       </div>
+      <div class="d-flex justify-content-end mt-2">
+        <%= submit_tag t('blacklight.range_limit.submit_limit'), class: @classes[:submit], name: nil %>
+      </div>
+    </div>
     <% end %>
-    <div class='eds-slider slider_js'></div>
-  </div>
   <% end %>
 <% end %>

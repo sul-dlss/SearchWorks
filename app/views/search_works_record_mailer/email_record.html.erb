@@ -12,7 +12,13 @@
             <% if document.holdings.present? %>
               <% document.holdings.libraries.each do |library| %>
                 <% library.locations.each do |location| %>
-                  <ul><li><%= library.name %> - <%= location.name %>
+                  <ul><li>
+                    <% if library.code.start_with? 'SAL' %>
+                      Off-campus collections - <%= location.name %>
+                    <% else %>
+                      <%= library.name %> - <%= location.name %>
+                    <% end %>
+                    
                   <% location.items.each do |item| %>
                     <ul><li><%= item.callnumber %></li></ul>
                   <% end %>

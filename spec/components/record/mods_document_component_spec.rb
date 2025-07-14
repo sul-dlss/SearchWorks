@@ -60,15 +60,6 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
     end
   end
 
-  describe "Object access" do
-    let(:document) { SolrDocument.new(modsxml: mods_001) }
-
-    it "displays access" do
-      expect(page).to have_css("dt", text: "Use and reproduction")
-      expect(page).to have_css("dd", text: "Copyright © Stanford University.")
-    end
-  end
-
   describe "Contributors section" do
     let(:document) { SolrDocument.new(modsxml: mods_everything) }
 
@@ -91,7 +82,6 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
       expect(page).to have_css('h2', text: "Abstract/Contents")
       expect(page).to have_css('h2', text: "Subjects")
       expect(page).to have_css('h2', text: "Bibliographic information")
-      expect(page).to have_css('h2', text: "Access conditions")
     end
   end
 

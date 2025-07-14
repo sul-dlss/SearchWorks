@@ -2,7 +2,7 @@
 
 module RisMapping
   def format_type
-    format = fetch('format_main_ssim', [])
+    format = fetch('format_hsim', [])
     if format.member?('Book')
       'BOOK'
     elsif format.member?('Journal/Periodical')
