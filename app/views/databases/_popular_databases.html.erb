@@ -5,36 +5,36 @@
           <li class="mb-3">
             <div class="fw-semibold">Academic search premier</div>
             <div>Multidisciplinary database of over 4,650 mostly scholarly publications, many full-text; a great place to start your research.</div>
-            <div><a href="https://research.ebsco.com/c/qmsjx4?db=aph">research.ebscohost.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
+            <div><a href="<%= ezproxy_database_link('https://research.ebsco.com/c/qmsjx4?db=aph', 'Academic search premier') %>">research.ebscohost.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
           </li>
 
           <li class="mb-3">
             <div class="fw-semibold">ProQuest</div>
             <div>From business and political science to literature and psychology, access to a wide range of popular academic subjects; includes more than 5,000  titles (over 3,500 in full text) from 1971 forward.</div>
-            <div><a href="https://search.proquest.com">search.proquest.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
+            <div><a href="<%= ezproxy_database_link('https://search.proquest.com', 'ProQuest') %>">search.proquest.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
           </li>
 
           <li class="mb-3">
             <div class="fw-semibold">Web of Science</div>
             <div>Web of Science provides access to information on science, social  sciences, and arts and humanities, as well as search and analysis (citation) tools.</div>
-            <div><a href="https://www.webofscience.com">www.webofscience.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
+            <div><a href="<%= ezproxy_database_link('https://www.webofscience.com', 'Web of Science') %>">www.webofscience.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
           </li>
 
           <li class="mb-3">
             <div class="fw-semibold">JSTOR</div>
             <div>A digital library for scholars, researchers, and students, offering access to thousands of academic journals, books, and primary sources across many disciplines.</div>
-            <div><a href="https://www.jstor.org">www.jstor.org</a> <%= render StanfordOnlyPopoverComponent.new %></div>
+            <div><a href="<%= ezproxy_database_link('https://www.jstor.org', 'JSTOR') %>">www.jstor.org</a> <%= render StanfordOnlyPopoverComponent.new %></div>
           </li>
 
           <li class="mb-3">
             <div class="fw-semibold">IEEE Xplore</div>
             <div>A research database for electrical engineering, computer science, and electronics literature, providing access to IEEE journals, conferences, and standards.</div>
-            <div><a href="https://ieeexplore.ieee.org">ieeexplore.ieee.org</a> <%= render StanfordOnlyPopoverComponent.new %></div>
+            <div><a href="<%= ezproxy_database_link('https://ieeexplore.ieee.org', 'IEEE Xplore') %>">ieeexplore.ieee.org</a> <%= render StanfordOnlyPopoverComponent.new %></div>
           </li>
 
           <li class="mb-3">
             <div class="fw-semibold">Google Scholar</div>
             <div>A freely accessible web search engine that indexes the full text or metadata of scholarly literature across an array of publishing formats and disciplines.</div>
-            <div><a href="https://scholar.google.com">scholar.google.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
+            <div><a href="<%= ezproxy_database_link('https://scholar.google.com', 'Google Scholar') %>">scholar.google.com</a> <%= render StanfordOnlyPopoverComponent.new %></div>
           </li>
         </ul>

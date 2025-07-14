@@ -152,5 +152,34 @@ RSpec.describe Links::Ezproxy do
         it { expect(ezproxy.to_proxied_url).to be_nil }
       end
     end
+
+    context 'Database link' do
+      let(:document) { nil }
+
+      context 'with a url matching a SUL proxied host' do
+        let(:url) { 'https://research.ebsco.com/whatever' }
+
+        context 'link title is a SUL restriction note' do
+          let(:link_title) { 'Available to Stanford Affiliated users' }
+
+          it 'adds the proxy prefix' do
+            expect(ezproxy.to_proxied_url).to eq 'https://stanford.idm.oclc.org/login?qurl=https%3A%2F%2Fresearch.ebsco.com%2Fwhatever'
+          end
+        end
+
+        context 'link title is NOT a SUL restriction note' do
+          let(:link_title) { 'Some other link note' }
+
+          it { expect(ezproxy.to_proxied_url).to be_nil }
+        end
+      end
+
+      context 'with a url NOT matching a SUL proxied host' do
+        let(:url) { 'https://stanford.idm.oclc.org/login?url=https://library.stanford.edu' }
+        let(:link_title) { 'Available to Stanford Affiliated users' }
+
+        it { expect(ezproxy.to_proxied_url).to be_nil }
+      end
+    end
   end
 end

@@ -52,8 +52,9 @@ class Links
         sul_restricted?
     end
 
+    # Popular database links may not have any associated Solr documents
     def libraries
-      @libraries ||= document.fetch(:holdings_library_code_ssim, [])
+      @libraries ||= document&.fetch(:holdings_library_code_ssim, []) || []
     end
 
     def ezproxied_hosts
