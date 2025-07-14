@@ -99,7 +99,7 @@
             <% library.locations.each do |location| %>
               <div class="d-flex flex-column flex-sm-row gap-2 gap-sm-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
                 <div class="pt-2" data-availability-target="location">
-                  <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %></div>
+                  <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false, classes: []) %></div>
                   <% unless document.holdings.libraries.one? && document.holdings.libraries.first.locations.one? %>
                     <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
                   <% end %>
