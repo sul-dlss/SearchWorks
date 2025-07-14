@@ -27,23 +27,25 @@
       <div class="results-metadata-sections">
 
         <% if document.vernacular_title.present? %>
-          <div class="truncate-2 truncate-md-3 truncate-lg-none"><%= document.vernacular_title.html_safe %></div>
+          <div class="truncate-2 truncate-md-3 truncate-lg-none mb-1"><%= document.vernacular_title.html_safe %></div>
         <% end %>
 
-        <%- uniform_title = helpers.get_uniform_title(document) -%>
-        <%- if uniform_title -%>
-          <% uniform_title[:fields]&.each do |field| %>
-            <div><%= helpers.auto_link(field[:field]) %></div>
-            <% if field[:vernacular].present? %>
-              <div><%= field[:vernacular] %></div>
+        <div class="mb-1">
+          <%- uniform_title = helpers.get_uniform_title(document) -%>
+          <%- if uniform_title -%>
+            <% uniform_title[:fields]&.each do |field| %>
+              <div><%= helpers.auto_link(field[:field]) %></div>
+              <% if field[:vernacular].present? %>
+                <div><%= field[:vernacular] %></div>
+              <% end %>
             <% end %>
-          <% end %>
-          <% uniform_title[:unmatched_vernacular]&.each do |field| %>
-            <div><%= field %></div>
-          <% end %>
-        <%- end -%>
+            <% uniform_title[:unmatched_vernacular]&.each do |field| %>
+              <div><%= field %></div>
+            <% end %>
+          <%- end -%>
+        </div>
 
-        <div>
+        <div class="mb-1">
           <span class="align-text-bottom me-1"><%= resource_icon %></span> <%= presenter.document_format %>
           <span class="main-title-date"><%= presenter.main_title_date %></span>
         </div>
