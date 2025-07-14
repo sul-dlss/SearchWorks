@@ -555,7 +555,7 @@ class CatalogController < ApplicationController
 
   def augment_solr_document_json_response(documents)
     documents.map do |document|
-      JsonResultsDocumentPresenter.new(document)
+      JsonResultsDocumentPresenter.new(document, view_context)
     end
   end
   helper_method :augment_solr_document_json_response

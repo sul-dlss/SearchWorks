@@ -17,11 +17,7 @@
         <b>Digital collection</b> <%= render BadgeCounterComponent.new(collection.collection_members.total, 'item') %></span>
       </div>
     <% end %>
-    <% if collection.marc_links.finding_aid.present? %>
-      <div class="clearfix finding-aid">
-        <b class="me-1">Finding aid</b> <%= collection.marc_links.finding_aid.first.html.html_safe %>
-      </div>
-    <% end %>
+    <%= render Searchworks4::SearchResult::CollectionFindingAidLinkComponent.new(finding_aid: collection.marc_links.finding_aid) %>
   </div>
 
   <% if collection[:summary_display] %>
