@@ -1,12 +1,6 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  def active_class_for_current_page(page)
-    if current_page?(page)
-      "active"
-    end
-  end
-
   def disabled_class_for_no_selections(count)
     if count == 0
       "disabled"
