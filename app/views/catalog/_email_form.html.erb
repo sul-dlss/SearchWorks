@@ -7,8 +7,8 @@
               class: "modal_form",
               method: :post,
               data: {
-                controller: "email-sent",
-                action: "turbo:submit-end->email-sent#done"
+                controller: "email-sent recaptcha",
+                action: "turbo:submit-end->email-sent#done submit->recaptcha#refresh",
               }  do %>
     <div class="modal-body">
       <% if @documents.one? %>

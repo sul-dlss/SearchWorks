@@ -20,7 +20,7 @@
 
   <% if current_user.blank? %>
     <div class="mb-3">
-      <%= render RecaptchaWithLoginLinkComponent.new(recaptcha_id: 'connection-form-recaptcha', classes: '') %>
+      <%= render RecaptchaComponent.new(action: 'email') %>
     </div>
   <% end %>
 

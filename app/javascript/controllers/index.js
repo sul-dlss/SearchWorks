@@ -109,6 +109,9 @@ application.register("preview-embed-browse", PreviewEmbedBrowseController)
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
 
+import RecaptchaController from "./recaptcha_controller"
+application.register("recaptcha", RecaptchaController)
+
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
 

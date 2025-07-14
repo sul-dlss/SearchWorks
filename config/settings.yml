@@ -59,9 +59,6 @@ NEW_RELIC_API:
     - key: low_app_apdex_alert
       label: application apdex low
       id: 318894
-RECAPTCHA:
-  SITE_KEY: 6Lc6BAAAAAAAAChqRbQZcn_yyyyyyyyyyyyyyyyy
-  SECRET_KEY: 6Lc6BAAAAAAAAKN3DRm6VA_xxxxxxxxxxxxxxxxx
 IIIF_DND_BASE_URL: https://library.stanford.edu/iiif?%{query}
 REVISION: <%= File.read("#{Rails.root}/REVISION").chomp if File.exist?("#{Rails.root}/REVISION") %>
 

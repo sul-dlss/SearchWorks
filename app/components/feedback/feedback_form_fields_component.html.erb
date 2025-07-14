@@ -44,7 +44,7 @@
                 <%= @form.text_area :message, value: "", rows:"2", class:"form-control", required: true %>
                 <% if helpers.current_user.blank? %>
                     <div class="login-message mt-4 mb-0">
-                        <%= render RecaptchaWithLoginLinkComponent.new(recaptcha_id: "#feedback-recaptcha", classes: "") %>
+                        <%= render RecaptchaComponent.new(action: 'feedback') %>
                     </div>
                 <% end %>
             </div>
