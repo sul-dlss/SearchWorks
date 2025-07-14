@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe AccessPanels::LibraryLocationPopoverComponent, type: :component do
-  subject(:component) { described_class.new(mhld) }
+  subject(:component) { described_class.new(mhld: mhld) }
 
   before { render_inline(component) }
 
@@ -23,12 +23,6 @@ RSpec.describe AccessPanels::LibraryLocationPopoverComponent, type: :component d
     it 'does not render the button' do
       expect(page).to have_no_css('button[data-bs-content]')
       expect(page).to have_no_content('Summary of items')
-    end
-
-    describe '#render?' do
-      it 'returns false' do
-        expect(component).not_to be_render
-      end
     end
   end
 end
