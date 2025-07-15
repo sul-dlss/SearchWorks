@@ -1,15 +1,38 @@
 @media (min-width: 520px) {
   .dl-horizontal {
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     dt {
-      float: left;
+      flex: 0 0 auto;
+      padding-right: 0.5rem;
       width: 9.5em;
-      margin-right: 0.5em;
       overflow-wrap: break-word;
       hyphens: auto;
     }
 
     dd {
-      margin-left: 10em;
+      flex: 0 0 auto;
+      margin-left: 9.5em;
+      width: calc(100% - 9.5em);
+    }
+
+    dd:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .dl-text {
+    dt {
+      width: 100%;
+    }
+
+    dd {
+      width: 100%;
     }
   }
 }

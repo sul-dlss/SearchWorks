@@ -64,7 +64,7 @@
       <% end %>
     <% end %>
 
-    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Contents/Summary', dl_classes: '') do %>
+    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Contents/Summary') do %>
       <%= render Record::MarcContentsSummaryComponent.new(document: document) %>
     <% end %>
 

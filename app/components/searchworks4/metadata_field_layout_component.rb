@@ -7,6 +7,11 @@ module Searchworks4
       tag.dd(**kwargs, &block)
     }
 
+    def initialize(classes: ['my-3'])
+      @classes = classes
+      super
+    end
+
     def render?
       values?
     end
