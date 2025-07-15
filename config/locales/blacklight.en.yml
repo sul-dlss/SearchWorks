@@ -24,7 +24,9 @@ en:
         submit: ''
       form_label: 'search for'
       filters:
-          title: 'Your selections: '
+        title: 'Your selections: '
+      index:
+        label: '%{label}'
       start_over: 'Clear all'
       librarian_view:
         empty: 'No librarian view available'
