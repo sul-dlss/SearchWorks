@@ -10,7 +10,7 @@
       <label class="form-check-label" for="searchTypeArticle">Articles+</label>
     </div>
   </div>
-  <%= form_with url: @url, local: true, method: @method, class: @classes.join(' '), scope: @prefix, role: 'search', **@form_options do |f| %>
+  <%= form_with url: @url, local: true, method: @method, class: @classes.join(' '), scope: @prefix, role: 'search', data: { action: 'home-page-search#submit' }, **@form_options do |f| %>
     <%= render Blacklight::HiddenSearchStateComponent.new(params: @params) %>
     <% if search_fields.length > 1 %>
       <%= f.label :search_field, scoped_t('search_field.label'), class: 'visually-hidden' %>
@@ -38,7 +38,7 @@
           <ul id="autocomplete-popup" class="dropdown-menu" role="listbox" aria-label="<%= scoped_t('search.label') %>" hidden></ul>
         </auto-complete>
       <% else %>
-        <%= f.search_field @query_param, value: @q, placeholder: scoped_t('search.placeholder'), class: "search-q q form-control #{rounded_border_class}", autofocus: @autofocus, aria: { label: scoped_t('search.label') }  %>
+        <%= f.search_field @query_param, value: @q, placeholder: scoped_t('search.placeholder'), class: "search-q q form-control #{rounded_border_class}", autofocus: @autofocus, aria: { label: scoped_t('search.label') }, data: { 'turbo-permanent': true }  %>
       <% end %>
 
       <%= append %>

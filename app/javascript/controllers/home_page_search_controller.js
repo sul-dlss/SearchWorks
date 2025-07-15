@@ -10,4 +10,8 @@ export default class extends Controller {
 
     Turbo.visit(url, { action: 'replace' });
   }
+
+  submit() {
+    delete this.element.querySelector('#q').dataset.turboPermanent;
+  }
 }
