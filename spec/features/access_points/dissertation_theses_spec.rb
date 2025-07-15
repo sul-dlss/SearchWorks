@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Dissertation Theses Access Point' do
+RSpec.describe 'Dissertation Theses Access Point', :js do
   before do
     visit root_path
     within '.features' do
@@ -29,5 +29,23 @@ RSpec.describe 'Dissertation Theses Access Point' do
       expect(page).to have_css('h3', text: 'Genre')
       expect(page).to have_css('h3', text: 'Date')
     end
+  end
+
+  it 'Toggles the Stanford work facet' do
+    expect(page).to have_css('#facet_option_stanford_only', visible: :visible)
+    # Without the Stanford work filter, there should be 3 results
+    expect(page).to have_css('article', count: 3)
+
+    # Check the checkbox to filter by Stanford work
+    check "Show Stanford work only"
+
+    # Expect the Stanford work filter to be applied
+    expect(page).to have_css('article', count: 1)
+
+    # Uncheck the checkbox to remove the filter
+    uncheck "Show Stanford work only"
+
+    # Expect the Stanford work filter to be removed
+    expect(page).to have_css('article', count: 3)
   end
 end
