@@ -1,9 +1,3 @@
-/* Override blacklight 9. We may want to move this to the component library: */
-.navbar-logo {
-  --bl-logo-image: none;
-  --bl-logo-width: 250px;
-  background-color: black;
-}
 .masthead {
   .nav-link {
     --sul-link-font-weight: 600;
