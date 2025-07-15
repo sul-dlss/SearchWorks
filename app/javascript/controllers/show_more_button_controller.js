@@ -29,15 +29,27 @@ export default class extends Controller {
     return icon
   }
 
+  expand() {
+    this.element.innerText = "Show less"
+    this.element.ariaExpanded = true
+    this.element.prepend(this.buttonIcon())
+
+    this.dispatch('expand');
+  }
+
+  collapse() {
+    this.element.innerText = "Show more"
+    this.element.ariaExpanded = false
+    this.element.prepend(this.buttonIcon())
+
+    this.dispatch('collapse');
+  }
+
   toggle() {
     if (this.isTruncated()) {
-      this.element.innerText = "Show less"
-      this.element.ariaExpanded = true
+      this.expand();
     } else {
-      this.element.innerText = "Show more"
-      this.element.ariaExpanded = false
+      this.collapse()
     }
-
-    this.element.prepend(this.buttonIcon())
   }
 }

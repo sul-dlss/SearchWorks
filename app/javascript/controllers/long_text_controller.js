@@ -20,8 +20,12 @@ export default class extends Controller {
     }
   }
 
-  toggle() {
-    this.textTarget.classList.toggle(this.truncateClass);
+  expand() {
+    this.textTarget.classList.add(this.truncateClass);
+  }
+
+  collapse() {
+    this.textTarget.classList.remove(this.truncateClass);
   }
 
   addControls() {
@@ -30,7 +34,9 @@ export default class extends Controller {
 
     const button = document.createElement('button');
     button.dataset.controller = 'show-more-button'
-    button.dataset.action = 'click->long-text#toggle click->show-more-button#toggle';
+    button.dataset.action = 'show-more-button#toggle';
+
+    this.element.dataset.action = `${this.element.dataset.action} show-more-button:expand->long-text#expand show-more-button:collapse->long-text#collapse`;
 
     this.element.appendChild(button);
   }
