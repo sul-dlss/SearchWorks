@@ -9,7 +9,6 @@ import "./popover"
 import "./feedback_form"
 import "./responsive-aside"
 import "./purl-embed"
-import './location-hours'
 import "./range-limit"
 
 // Prevent the back-button from trying to add a second instance of recaptcha
