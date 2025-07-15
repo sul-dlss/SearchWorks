@@ -6,11 +6,11 @@ module EdsSubjects
     attr_reader :terms
     delegate :present?, to: :terms
 
-    class Term < Struct.new(:fieldCode, :searchTerm, :label)
+    class Term < Struct.new(:field_code, :search_term, :label)
       delegate :to_s, to: :label
 
       def search_field
-        case fieldCode
+        case field_code
         when 'SH'
           'subject_heading'
         when 'DE'
@@ -26,7 +26,7 @@ module EdsSubjects
 
       def to_html
         # TODO: we don't have a view context for `link_to`
-        "<a href=\"#{Rails.application.routes.url_helpers.articles_path(q: searchTerm, search_field:)}\">#{CGI.escapeHTML(label)}</a>"
+        "<a href=\"#{Rails.application.routes.url_helpers.articles_path(q: search_term, search_field:)}\">#{CGI.escapeHTML(label)}</a>"
       end
     end
 
@@ -69,12 +69,12 @@ module EdsSubjects
       terms = search_links.collect do |node|
         term = Term.new
         term.label = node.text
-        term.fieldCode = node['fieldcode'] || node['fieldCode']
-        term.searchTerm = CGI.unescape(node['term'].to_s)
-        if /\s+/.match?(term.searchTerm)
-          term.searchTerm = "\"#{term.searchTerm}\"" unless /^"/.match?(term.searchTerm) # quote if not quoted
+        term.field_code = node['fieldcode'] || node['fieldCode']
+        term.search_term = CGI.unescape(node['term'].to_s)
+        if /\s+/.match?(term.search_term)
+          term.search_term = "\"#{term.search_term}\"" unless /^"/.match?(term.search_term) # quote if not quoted
         else
-          term.searchTerm.delete!('"') # no quotes for single words
+          term.search_term.delete!('"') # no quotes for single words
         end
         term
       end
