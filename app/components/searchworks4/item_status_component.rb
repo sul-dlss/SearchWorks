@@ -16,7 +16,7 @@ module Searchworks4
 
     def availability_icon
       case item_status
-      when 'Aged to lost', 'Claimed returned', 'Checked out', 'Awaiting delivery', 'Awaiting pickup', 'Missing', 'In transit', 'Paged'
+      when 'Aged to lost', 'Claimed returned', 'Checked out', 'Awaiting delivery', 'Awaiting pickup', 'Missing', 'Long missing', 'In transit', 'Paged'
         'bi-x-lg'
       when 'In process (non-requestable)', 'In process', 'On order' # rubocop:disable Lint/DuplicateBranch
         'bi-x-lg'
@@ -47,7 +47,9 @@ module Searchworks4
         'On hold for a borrower'
       when 'In process (non-requestable)', 'In process'
         'In process'
-      when 'On order', 'Missing', 'In transit', 'Paged'
+      when 'Missing', 'Long missing'
+        'Missing'
+      when 'On order', 'In transit', 'Paged'
         item_status
       else
         # temp location
@@ -69,7 +71,7 @@ module Searchworks4
 
     def folio_availability_class
       case item_status
-      when 'Aged to lost', 'Claimed returned', 'Checked out', 'Awaiting delivery', 'Awaiting pickup', 'Missing', 'In transit', 'Paged'
+      when 'Aged to lost', 'Claimed returned', 'Checked out', 'Awaiting delivery', 'Awaiting pickup', 'Missing', 'Long missing', 'In transit', 'Paged'
         'unavailable'
       when 'In process (non-requestable)', 'In process', 'On order' # rubocop:disable Lint/DuplicateBranch
         'unavailable'
