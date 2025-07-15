@@ -1,14 +1,13 @@
+<% if facet_options_presenter.limiters.present? %>
+  <div class="pt-2 px-3 pb-1 mb-4 mx-3 mx-xl-4 border border-secondary rounded-1">
+    <h2 class="visually-hidden">
+      <%= t("searchworks.articles.facets.options.heading") %>
+    </h2>
 
-  <% if facet_options_presenter.limiters.present? %>
-    <div class="top-panel-heading p-2">
-      <h2>
-        <%= t("searchworks.articles.facets.options.heading") %>
-      </h2>
-    </div>
-    <div class="facet-options position-relative p-2" data-controller='facet-checkboxes'>
-      <ul class="checkbox-facet-list list-unstyled">
+    <div class="facet-options position-relative" data-controller='facet-checkboxes'>
+      <ul class="checkbox-facet-list list-unstyled mb-0">
         <% facet_options_presenter.limiters.each do |limiter| %>
-          <li>
+          <li class="mb-1">
             <%= label_tag("eds_limiter_#{limiter.id}", class: 'position-relative') do %>
               <%= check_box(
                     'f',
@@ -18,7 +17,7 @@
                     nil
                   )
               %>
-              <%= link_to(limiter.search_url, data: { newState: !limiter.selected?, action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1') do %>
+              <%= link_to(limiter.search_url, data: { newState: !limiter.selected?, action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1 text-secondary') do %>
                 <%= limiter.label %>
               <% end %>
             <% end %>
@@ -29,4 +28,5 @@
         <div class='loading-spinner'></div>
       </div>
     </div>
-  <% end %>
+  </div>
+<% end %>
