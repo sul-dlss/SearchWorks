@@ -13,7 +13,10 @@
       <h1><%= I18n.t('searchworks.guest_message') %>
       <%= render StanfordOnlyPopoverComponent.new %></h1>
     <% else %>
-      <%= title %>
+      <h1 class="mb-5">
+        <span itemprop="name"><%= @presenter.heading %></span>
+      </h1>
+
       <%= document_metadata %>
     <% end %>
   </div>
