@@ -61,6 +61,6 @@ layer(framework);
   }
 
   .grecaptcha-badge {
-    display: none;
+    visibility: hidden;
   }
 }
