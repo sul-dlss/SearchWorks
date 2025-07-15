@@ -529,6 +529,11 @@ class CatalogController < ApplicationController
     @oclc_citations = Citations::OclcCitation.new(oclc_numbers:).citations_by_oclc_number
   end
 
+  def availability_modal
+    @document = search_service.fetch(params[:id])
+    render layout: !request.xhr?
+  end
+
   def stackmap
     @document = search_service.fetch(params[:id])
     @items = @document.holdings.items.select { |item| item.effective_permanent_location_code == params[:location] }

@@ -1,0 +1,17 @@
+<% if document.marc_links.finding_aid.present? %>
+    <div class='access-panel-subsection flex-wrap flex-xl-nowrap d-flex row-gap-0 gap-3 align-items-baseline mt-3'>
+      <h4 class="fs-15 text-nowrap text-uppercase text-secondary mb-0">Finding aid</h4>
+      <%= document.preferred_finding_aid.html.html_safe %>
+    </div>
+<% end %>
+<% if library.library_instructions.present? %>
+  <div class='access-panel-subsection alert alert-warning border-0 d-flex align-items-center mt-3 mb-0'>
+    <div class="bi bi-exclamation-circle-fill fs-5 me-3"></div>
+    <div class="text-body overflow-auto">
+      <% if library.library_instructions[:heading] %>
+        <h4 class="h5"><%= library.library_instructions[:heading] %></h4>
+      <% end %>
+      <p class="mb-0 small text-break"><%= library.library_instructions[:text].html_safe %></p>
+    </div>
+  </div>
+<% end %>
