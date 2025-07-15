@@ -1,27 +1,27 @@
 <% document.mods.subTitle.each do |title| %>
-  <%= render ModsDisplay::FieldComponent.new(field: title, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
+  <div class="my-3"><%= render ModsDisplay::FieldComponent.new(field: title) %></div>
 <% end %>
 
 <% document.mods.audience.each do |audience| %>
-  <%= render ModsDisplay::FieldComponent.new(field: audience, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
+  <div class="my-3"><%= render ModsDisplay::FieldComponent.new(field: audience) %></div>
 <% end %>
 
 <% document.mods.note.each do |notes| %>
-  <%= render ModsDisplay::FieldComponent.new(field: notes, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
+  <div class="my-3"><%= render ModsDisplay::FieldComponent.new(field: notes) %></div>
 <% end %>
 
 <% document.mods.relatedItem.each do |related_item| %>
-  <%= render ModsDisplay::FieldComponent.new(field: related_item, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
+  <div class="my-3"><%= render ModsDisplay::FieldComponent.new(field: related_item) %></div>
 <% end %>
 
 <% document.mods.nestedRelatedItem.each do |nested_related_item| %>
-  <%= render ModsDisplay::FieldComponent.new(field: nested_related_item, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
+  <div class="my-3"><%= render ModsDisplay::FieldComponent.new(field: nested_related_item) %></div>
 <% end %>
 
 <% document.mods.identifier.each do |identifier| %>
-  <%= render ModsDisplay::FieldComponent.new(field: identifier, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
+  <div class="my-3"><%= render ModsDisplay::FieldComponent.new(field: identifier) %></div>
 <% end %>
 
 <% locations.each do |location| %>
-  <%= render ModsDisplay::FieldComponent.new(field: location, label_html_attributes: { class: 'col-md-3' }, value_html_attributes: { class: 'col-md-9' }) %>
+  <div class="my-3"><%= render ModsDisplay::FieldComponent.new(field: location) %></div>
 <% end %>
