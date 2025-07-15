@@ -18,8 +18,6 @@ export default class extends Controller {
     this.closeBtn.className = 'preview-close btn-close'
     this.closeBtn.setAttribute('aria-label', 'Close')
     this.closeBtn.innerHTML = '<span aria-hidden="true" class="visually-hidden">×</span>'
-    this.arrow = document.createElement('div')
-    this.arrow.className = 'preview-arrow'
   }
 
   showPreview() {
@@ -27,22 +25,46 @@ export default class extends Controller {
     this.previewTarget.innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
     this.previewTarget.appendChild(this.closeBtn)
     this.previewTarget.style.display = 'block'
-    this.appendPointer(this.previewTarget)
+    this.appendPointer()
     this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
     this.attachPreviewEvents()
     this.hideDocumentActions()
   }
 
-  appendPointer(target) {
-    target.appendChild(this.arrow)
+  appendPointer() {
+    const target = this.previewTarget;
 
-    const maxLeft = target.offsetWidth - this.arrow.offsetWidth - 1
-    let arrowLeft = parseInt(this.element.getBoundingClientRect().left + (this.element.offsetWidth / 2) - target.offsetLeft)
+    const arrowContainer = document.createElement('div')
+    arrowContainer.className = 'preview-arrow-container position-absolute top-0'
 
-    if (arrowLeft < 0) arrowLeft = 0
-    if (arrowLeft > maxLeft) arrowLeft = maxLeft
+    const arrow = document.createElement('div')
+    arrow.className = 'preview-arrow'
 
-    this.arrow.style.left = arrowLeft + 'px'
+    arrowContainer.appendChild(arrow)
+
+    const min = -1 * arrow.offsetWidth;
+    const max = target.offsetWidth - (this.element.offsetWidth / 2);
+
+    const positionArrow = () => {
+      let arrowLeft = parseInt(this.element.getBoundingClientRect().left + (this.element.offsetWidth / 2) - target.offsetLeft)
+
+      if (arrowLeft < min - 15 || arrowLeft > max + (this.element.offsetWidth / 2)) {
+        arrow.style.display = 'none';
+      } else {
+        arrow.style.display = 'block';
+      }
+
+      if (arrowLeft < min) { arrowLeft = min; }
+      if (arrowLeft > max) { arrowLeft = max; }
+
+      arrow.style.left = arrowLeft + 'px'
+    }
+
+    this.element.closest('.overflow-x-scroll').addEventListener('scroll', positionArrow);
+
+    positionArrow()
+
+    target.appendChild(arrowContainer)
   }
 
   togglePreview(e) {
