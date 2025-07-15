@@ -2,13 +2,13 @@
 <%= tag.div class: "panel-online mb-3", hidden: !links.any? do %>
   <%= render @layout.new do |component| %>
     <% component.with_title(classes: 'h4') do %>
-      <div class="bg-light p-1 ms-n3 ps-3 text-digital-green">
+      <div class="bg-light p-1 py-2 ms-n3 ps-3 text-digital-green">
         <% if document.is_a_database? %>
           Search this database
         <% elsif document.druid %>
           Also available at
         <% else %>
-          Available online
+          Online
         <% end %>
       </div>
     <% end %>
