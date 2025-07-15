@@ -24,10 +24,11 @@
   <%= json_api_link_tag %>
 <% end -%>
 
-<%= render Searchworks4::CollectionInfoComponent.new(collection: @parent) if page_location.collection? %>
-
 <h1 class="visually-hidden">Search Results</h1>
-<%= render BookplateFundComponent.new(bookplate: bookplate_from_document_list) %>
+
+<%= render Searchworks4::SearchResult::CollectionInfoComponent.new(collection: @parent) %>
+<%= render Searchworks4::SearchResult::BookplateFundComponent.new(bookplate: bookplate_from_document_list) %>
+
 <% if has_search_parameters? && !hide_constraints %>
   <div class="row">
     <div class="constraints col d-flex">
