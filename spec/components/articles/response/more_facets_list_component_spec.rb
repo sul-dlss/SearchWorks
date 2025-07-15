@@ -47,7 +47,7 @@ RSpec.describe Articles::Response::MoreFacetsListComponent, type: :component do
     it 'renders the facet items' do
       expect(page).to have_css '[data-controller="articles-facet-more"]'
       expect(page).to have_css 'ul.facet-values'
-      expect(page).to have_css 'li', count: 20
+      expect(page).to have_css 'li', count: 8
       expect(page).to have_css 'li', count: 25, visible: :all # some are hidden
       expect(page).to have_link "Browse all"
     end
