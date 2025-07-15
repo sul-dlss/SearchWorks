@@ -35,16 +35,6 @@ RSpec.describe Record::MarcContentsSummaryComponent, type: :component do
     end
   end
 
-  describe "finding aids" do
-    let(:marc_json_struct) { finding_aid_856 }
-    let(:marc_links_struct) { [{ material_type: 'finding aid', href: 'http://oac.cdlib.org/findai/ark:/13030/an-ark', link_text: 'FINDING AID: Link text' }] }
-
-    it "is displayed when present" do
-      expect(page).to have_css("dt", text: "Finding aid")
-      expect(page).to have_css("dd a", text: "Online Archive of California")
-    end
-  end
-
   context 'document has no fields' do
     let(:marc_json_struct) { no_fields_fixture }
 

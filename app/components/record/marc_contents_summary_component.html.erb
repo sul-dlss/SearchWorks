@@ -1,12 +1,3 @@
-<% if document.marc_links.finding_aid.present? %>
-  <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
-    <% component.with_label { 'Finding aid' } %>
-    <% component.with_value do %>
-      <%= document.marc_links.finding_aid.map(&:html).join("<br/>").html_safe %>
-    <% end %>
-  <% end %>
-<% end %>
-
 <%= render_if_present document.marc_field(:organization_and_arrangement) %>
 <%= render_if_present document.marc_field(504) %>
 
