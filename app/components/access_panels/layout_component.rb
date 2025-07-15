@@ -11,7 +11,7 @@ module AccessPanels
 
     def initialize(classes: [], **html_attrs)
       @html_attrs = html_attrs
-      @classes = %w[mb-4 access-panel] + Array(classes)
+      @classes = %w[mb-5 access-panel] + Array(classes)
     end
   end
 end

@@ -1,5 +1,7 @@
 <%= render @layout.new(classes: 'panel-appears-in') do |component| %>
-  <% component.with_title { 'Item is included in another record' } %>
+  <% component.with_title(tag: 'h3', classes: ['h4', 'ms-n3', 'ps-3', 'bg-light', 'py-2']) do %>
+    Item is included in another record
+  <% end %>
   <% component.with_body do %>
     <% @document.parent_sets.each do |parent_set| %>
       <h4>

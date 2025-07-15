@@ -1,5 +1,5 @@
 <%= render @layout.new(classes: 'panel-course-reserve') do |component| %>
-  <% component.with_title do %>
+  <% component.with_title(classes: ['h3 mb-3 text-secondary'], tag: 'h2') do %>
     Course reserve
   <% end %>
   <% component.with_body do %>

@@ -1,5 +1,7 @@
 <%= render @layout.new(classes: ['panel-online', 'sfx-panel']) do |component| %>
-  <% component.with_title { 'All available sources' } %>
+  <% component.with_title(tag: 'h3', classes: ['h4', 'ms-n3', 'ps-3', 'bg-light', 'py-2']) do %>
+    Other sources
+  <% end %>
 
   <% component.with_body do %>
     <turbo-frame src="<%= sfx_data_path(url: Addressable::URI.encode(sfx_url)) %>" id="sfx-data">

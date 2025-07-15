@@ -7,7 +7,7 @@ RSpec.feature "In collection Access Panel" do
     visit solr_document_path('mf774fs2413')
 
     within(".panel-in-collection") do
-      expect(page).to have_css('h2', text: 'Item belongs to a collection')
+      expect(page).to have_css('h3', text: 'Part of a collection')
       expect(page).to have_css("h4 a", text: "Image Collection1")
       expect(page).to have_css("[data-controller='long-text']", text: /A collection of fixture images/)
       expect(page).to have_css("dt", text: 'Digital collection')
