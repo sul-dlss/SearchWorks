@@ -31,7 +31,9 @@
 
     <% component.with_after do %>
       <div>
-        <%= link_to("Report a connection problem", "https://library.stanford.edu/ask/email/connection-problems") %>
+        <%= link_to("https://library.stanford.edu/ask/email/connection-problems") do %>
+          Report a connection problem<i class="bi bi-arrow-up-right ms-1" aria-hidden></i>
+        <% end %>
       </div>
     <% end if links.any? && display_connection_problem_links? %>
   <% end %>
