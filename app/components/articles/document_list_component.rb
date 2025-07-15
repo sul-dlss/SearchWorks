@@ -25,5 +25,9 @@ module Articles
     def document_metadata
       render Articles::MetadataComponent.new(document: @document)
     end
+
+    def resource_icon
+      helpers.render_articles_format_icon(@document.eds_publication_type || @document.eds_document_type)
+    end
   end
 end

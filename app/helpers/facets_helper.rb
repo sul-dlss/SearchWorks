@@ -16,4 +16,10 @@ module FacetsHelper
 
     render Constants::SUL_ICON_COMPONENTS[value].new
   end
+
+  def render_articles_format_icon(value)
+    return unless Constants::ARTICLES_ICON_COMPONENTS.has_key?(value)
+
+    render Constants::ARTICLES_ICON_COMPONENTS[value].new
+  end
 end
