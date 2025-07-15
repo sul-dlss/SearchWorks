@@ -22,18 +22,6 @@ RSpec.describe MastheadHelper do
     end
   end
 
-  describe '#sdr_path' do
-    it 'always include "Stanford Digital Repository" in the building facet' do
-      expect(sdr_path).to match /building_facet.*Stanford\+Digital\+Repository/
-    end
-  end
-
-  describe '#digital_collection_path' do
-    it 'always include "Digital Collection" in the collection_type facet' do
-      expect(digital_collection_path).to match /collection_type.*Digital\+Collection/
-    end
-  end
-
   describe 'bookplate_from_document_list' do
     it 'is nil when the correct facet field is not present' do
       expect(helper).to receive(:params).at_least(:once).and_return({})

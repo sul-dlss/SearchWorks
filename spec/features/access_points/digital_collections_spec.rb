@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Digital Collections Access Point' do
+RSpec.describe 'Digital Collections Access Point', :js do
   before do
     visit root_path
     within '.features' do
@@ -16,5 +16,24 @@ RSpec.describe 'Digital Collections Access Point' do
       expect(page).to have_css('a', text: 'More information')
       expect(page).to have_css('a', text: 'Submit materials')
     end
+  end
+
+  it 'has the facet options for digital collections' do
+    within('.facet-options') do
+      expect(page).to have_text('Show collections only')
+      expect(page).to have_text('Show collections and individual items')
+    end
+  end
+
+  it 'Toggles the radio buttons' do
+    expect(page).to have_css('article', count: 7)
+    expect(page).to have_css('.filter-value', text: 'Digital Collection')
+
+    choose "Show collections and individual items"
+    expect(page).to have_css('.filter-value', text: 'Stanford Digital Repository')
+    expect(page).to have_css('article', count: 1)
+
+    choose "Show collections only"
+    expect(page).to have_css('article', count: 7)
   end
 end

@@ -18,16 +18,6 @@ module MastheadHelper
     PageLocation.new(search_state)
   end
 
-  def sdr_path
-    facet_params = { f: { building_facet: ['Stanford Digital Repository'] } }
-    search_catalog_path(facet_params)
-  end
-
-  def digital_collection_path
-    facet_params = { f: { collection_type: ['Digital Collection'] } }
-    search_catalog_path(facet_params)
-  end
-
   def iiif_item_path
     facet_params = { f: { iiif_resources: ['available'] } }
     search_catalog_path(facet_params)
