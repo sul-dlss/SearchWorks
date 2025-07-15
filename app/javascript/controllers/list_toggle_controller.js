@@ -36,13 +36,13 @@ export default class extends Controller {
 
   expand() {
     this.elementTargets.forEach(function(element) {
-      element.classList.remove('d-none')
+      element.classList.remove('visually-hidden')
     })
   }
 
   collapse() {
     this.elementTargets.forEach(function(element) {
-      element.classList.add('d-none')
+      element.classList.add('visually-hidden')
     })
 
     this.element.scrollIntoView()
