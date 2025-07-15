@@ -11,11 +11,11 @@
       <h2 class="h3"><%= "#{course_info.course_number} -- #{course_info.name}" %></h2>
       <div>Instructor(s): <%= safe_join course_info.instructors, ', ' %></div>
     <% end %>
+  <% end %>
+<% end %>
 
-    <% component.with_back_link do %>
-      <%= link_to course_reserves_path do %>
-        <%= component.back_icon %> Find reserve list for another course
-      <% end %>
-      <% end %>
+<% content_for(:breadcrumb) do %>
+  <%= link_to course_reserves_path do %>
+    <%= back_icon %> Find reserve list for another course
   <% end %>
 <% end %>

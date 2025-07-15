@@ -5,12 +5,17 @@
   <%= render 'header' %>
 <% end %>
 
+<% content_for(:breadcrumb) do %>
+  <a href="/"><%= back_icon %> Back to catalog search</a>
+<% end %>
+
 <% content_for(:body_attributes) do %>
   data-controller="course-reserves"
 <% end %>
 
 
-<div class="row">
+
+<div class="row mt-4">
   <div class="col-lg-9 col-md-12">
     <section class="">
       <div class="sort-and-per-page d-flex justify-content-between align-items-center mb-2">

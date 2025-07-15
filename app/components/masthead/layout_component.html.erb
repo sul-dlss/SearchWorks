@@ -1,4 +1,4 @@
-<div class="search-masthead search-area-bg mb-3 <%= classes.join(' ') %>">
+<div class="search-masthead search-area-bg <%= classes.join(' ') %>">
   <div class="container-lg">
     <div class="row flex-column flex-md-row">
       <section class="col pe-md-5 mb-5 mb-md-0">
@@ -21,13 +21,4 @@
       <% end %>
     </div>
   </div>
-</div>
-
-<div class="mb-3 mt-4 container-lg">
-  <% if back_link? %>
-    <%= back_link %>
-  <% else %>
-    <a href="/"><%= back_icon %>
-      Back to catalog search</a>
-  <% end %>
 </div>

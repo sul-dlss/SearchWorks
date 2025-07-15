@@ -42,10 +42,18 @@
     <% end %>
     <%= render 'shared/searchworks4/top_navbar' %>
 
+    <%= render GlobalAlertComponent.new(GlobalAlerts::Alert.active) if Settings.GLOBAL_ALERT %>
+
     <% if content_for?(:search_navbar) %>
       <%= content_for(:search_navbar) %>
     <% else %>
       <%= render 'shared/searchworks4/search_navbar' %>
+    <% end %>
+
+    <% if content_for?(:breadcrumb) %>
+      <div class="mb-3 mt-4 container-lg">
+        <%= content_for(:breadcrumb) %>
+      </div>
     <% end %>
 
 

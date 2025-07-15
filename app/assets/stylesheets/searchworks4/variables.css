@@ -1,11 +1,9 @@
 :root {
   --identity-bar-bg-color: var(--stanford-cardinal);
   --identity-bar-color: white;
-  --stanford-digital-red-light: #e50808;
+  --stanford-poppy-dark-rgb: 209, 102, 15;
   --sul-shadow-color: rgba(0, 0, 0, 0.2);
   --bs-box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
-  --bs-light-rgb: var(--stanford-fog-light-rgb);
-  --bs-secondary-rgb: var(--stanford-cardinal-rgb);
 }
 
 /* TODO: Remove after https://github.com/twbs/bootstrap/issues/41569 is resolved*/

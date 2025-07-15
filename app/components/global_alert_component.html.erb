@@ -1,0 +1,13 @@
+<div class="global-alert alert">
+  <div class="container-lg">
+    <div class="alert-content mx-auto" role="alert">
+      <div class="my-5 d-flex align-items-center">
+        <i class="bi bi-exclamation-circle-fill fs-3"></i>
+        <div class="text-body mx-3">
+          <%= @alert.html.html_safe %>
+        </div>
+      </div>
+      <button class="btn text-muted float-end me-5" data-bs-dismiss="alert"><i class="bi bi-x-lg me-1"></i>Close</button>
+    </div>
+  </div>
+</div>

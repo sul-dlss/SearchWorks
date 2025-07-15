@@ -13,7 +13,8 @@ PURL_EMBED_URL_SCHEME: "https://purl.stanford.edu/*"
 PURL_EMBED_RESOURCE: "https://purl.stanford.edu/"
 EXHIBITS_ACCESS_PANEL:
   exhibits_host: http://example.com
-GLOBAL_ALERT: <%= false %>
+GLOBAL_ALERT: false
+# global_alert_time: "2025-12-15T00:00:00Z" # For testing global alert
 GOOGLE_SITE_VERIFICATION: "654321sitever"
 ANALYTICS_DEBUG: true
 PAGINATION_THRESHOLD: 250
