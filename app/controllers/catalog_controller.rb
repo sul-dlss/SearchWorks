@@ -70,6 +70,7 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     config.bootstrap_version = 5
+    config.add_results_collection_tool(:view_type_group)
     config.add_results_document_tool(:bookmark, component: Document::TrackingBookmarkComponent, if: :render_bookmarks_control?)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params

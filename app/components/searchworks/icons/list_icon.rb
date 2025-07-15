@@ -5,7 +5,7 @@ module Searchworks
     class ListIcon < ::ViewComponent::Base
       # :nodoc:
       def call
-        tag.i class: 'fa fa-th-list', aria: { hidden: true }
+        tag.i class: 'bi bi-list-ul', aria: { hidden: true }
       end
     end
   end

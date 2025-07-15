@@ -1,12 +1,12 @@
 .gallery, .documents-gallery {
   --gallery-document-total-height: 349px;
-  --gallery-document-width: 140px;
+  --gallery-document-width: 152px;
   --gallery-document-thumbnail-height: 171px;
-  --gallery-document-margin-left: 15px;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 1.5rem 1rem;
 
   .gallery-buttons {
     margin-top: auto;
@@ -15,7 +15,6 @@
   .gallery-document {
     height: var(--gallery-document-total-height);
     width: var(--gallery-document-width);
-    margin: 0 0 25px var(--gallery-document-margin-left);
     padding: 0;
 
     .caption {
@@ -59,7 +58,6 @@
 
   .preview {
     margin-bottom: 1.5rem;
-    margin-left: var(--gallery-document-margin-left);
   }
 
   .two-lines {

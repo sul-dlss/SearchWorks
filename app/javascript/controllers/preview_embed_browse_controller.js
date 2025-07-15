@@ -23,10 +23,10 @@ export default class extends Controller {
   }
 
   showPreview() {
-    this.previewTarget.classList.add('preview')
+    this.previewTarget.classList.add('preview', 'd-block')
+    this.previewTarget.classList.remove('d-none')
     this.previewTarget.innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
     this.previewTarget.appendChild(this.closeBtn)
-    this.previewTarget.style.display = 'block'
     this.appendPointer(this.previewTarget)
     this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
     this.attachPreviewEvents()
@@ -92,9 +92,9 @@ export default class extends Controller {
   }
 
   closePreview() {
-    this.previewTarget.classList.remove('preview')
+    this.previewTarget.classList.remove('preview', 'd-block')
+    this.previewTarget.classList.add('d-none')
     this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
     this.buttonTarget.classList.add('bi-chevron-down')
-    this.previewTarget.style.display = 'none'
   }
 }

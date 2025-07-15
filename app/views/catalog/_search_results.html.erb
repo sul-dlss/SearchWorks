@@ -1,4 +1,4 @@
-<%# locals: (content_classes: 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false) %>
+<%# locals: (content_classes: document_index_view_type == :gallery ? 'col-md-8 col-xxl-9 px-xxl-4 ps-lg-4 ps-2' : 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false) %>
 <% if page_location.collection? && get_collection.present? %>
   <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 <% elsif page_location.access_point? %>
@@ -89,6 +89,7 @@
         <span class="d-flex flex-row gap-2">
           <%= render partial: 'sort_widget' %>
           <%= render partial: 'shared/per_page_widget' %>
+          <%= render partial: 'view_type_group' if document_index_view_type == :gallery %>
         </span>
       </div>
 

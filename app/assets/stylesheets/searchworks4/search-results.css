@@ -193,3 +193,8 @@ details[open] {
     --bs-badge-font-weight: 500;
   }
 }
+
+.view-type .view-type-group a[aria-current=true] {
+  background-color: var(--bs-btn-color);
+  color: white;
+}
