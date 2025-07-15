@@ -24,8 +24,6 @@ module Articles
       end.compact
     end
 
-    delegate :html_present?, to: :helpers
-
     attr_reader :document
 
     def metadata_fields_for_section(section_name)

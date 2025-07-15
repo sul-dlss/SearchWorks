@@ -23,31 +23,11 @@
       </div>
     <% end %>
 
-    <dl class="dl-horizontal dl-invert">
-      <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
-        <% if section_name == 'Summary' -%>
-          <div class="section-container-heading mt-4">
-            <h2>About this article</h2>
-          </div>
-          <div class='section'>
-            <div class='section-body'>
-              <%= render section -%>
-            </div>
-          </div>
-        <% else -%>
-          <div class='section mt-4'>
-            <div class='section-heading'>
-              <h3 id="<%= section_name.downcase %>">
-                <%= section_name -%>
-              </h3>
-            </div>
-            <div class='section-body'>
-              <%= render section -%>
-            </div>
-          </div>
-        <% end -%>
+    <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
+      <%= render Searchworks4::DocumentSectionLayout.new(title: section_name) do %>
+        <%= render section -%>
       <% end -%>
-    </dl>
+    <% end %>
   </div>
   <div class="article-record-panels col-md-4 px-0 border-start">
     <div class="metadata-panels border-start px-3 ps-lg-3 mb-5">
