@@ -30,9 +30,9 @@
     box-shadow: none;
   }
 
-  .custom-select {
+  .search-field {
     width: 7rem;
-    border: 0;
+    --bs-border-width: 0;
   }
 
   .search-q {
