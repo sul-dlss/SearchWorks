@@ -8,7 +8,7 @@
         <% if search? %>
           <%= search %>
         <% else %>
-          <%= render HomepageSearchComponent.new url: helpers.search_action_url,
+          <%= render MastheadSearchComponent.new url: helpers.search_action_url,
                                             advanced_search_url: helpers.search_action_url(action: 'advanced_search'),
                                             params: helpers.search_state.params_for_search.except(:qt),
                                             autocomplete_path: suggest_index_catalog_path %>

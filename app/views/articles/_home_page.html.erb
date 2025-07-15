@@ -2,22 +2,11 @@
 <% content_for(:search_navbar) do %>
   <div class="search-area-image-bg mb-3">
     <div class="container">
-      <search class="search-card px-4 py-3 rounded" data-controller="home-page-search">
-        <div class="mb-3">
-          <span class="fw-bold">Search mode:</span>
-          <div class="form-check form-check-inline mx-3">
-            <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" data-action="home-page-search#toggle" data-url="<%= root_path %>">
-            <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" checked>
-            <label class="form-check-label" for="searchTypeArticle">Articles+</label>
-          </div>
-        </div>
         <%= render HomepageSearchComponent.new url: search_action_url,
-                                              params: search_state.params_for_search.except(:qt),
-                                              autocomplete_path: suggest_index_catalog_path %>
-        <p class="mt-3">Search over two billion resources from Stanford University Libraries’ digital subscriptions, including articles, eBooks, eNewspapers, and other electronic resources.</p>
+                                               params: search_state.params_for_search.except(:qt),
+                                               autocomplete_path: suggest_index_catalog_path do |component| %>
+          <% component.with_footer { 'Search over two billion resources from Stanford University Libraries’ digital subscriptions, including articles, eBooks, eNewspapers, and other electronic resources.' } %>
+        <% end %>
       </search>
     </div>
   </div>
