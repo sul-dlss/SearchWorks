@@ -1,7 +1,7 @@
-<div class="d-flex flex-column mt-2 mb-4 panel-library-location" data-hours-route="<%= hour_path(library.code) if library.holding_library? %>">
+<div class="d-flex flex-column mt-2 mb-4 panel-library-location" data-controller="location-hours" data-location-hours-route-value="<%= hour_path(library.code) if library.holding_library? %>">
   <div class="library-location-heading bg-light ms-n3 ps-3 py-2 position-relative">
     <h3 class="h4 p-0 m-0 fw-semibold"><%= link_to_library_about_page class: 'fw-semibold stretched-link' %></h3>
-    <div class="small location-hours-today">
+    <div class="small" data-location-hours-target="hours">
       <% if library.holding_library? %>
         <div class="placeholder col-5"></div>
       <% else %>

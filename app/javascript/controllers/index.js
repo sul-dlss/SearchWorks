@@ -79,14 +79,14 @@ application.register("feedback-modal", FeedbackModalController)
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
-import HomePageSearchController from "./home_page_search_controller"
-application.register("home-page-search", HomePageSearchController)
-
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 
 import GoogleCoverImageController from "./google_cover_image_controller"
 application.register("google-cover-image", GoogleCoverImageController)
+
+import HomePageSearchController from "./home_page_search_controller"
+application.register("home-page-search", HomePageSearchController)
 
 import LibraryH3lpController from "./library_h3lp_controller"
 application.register("library-h3lp", LibraryH3lpController)
@@ -99,6 +99,9 @@ application.register("list-toggle", ListToggleController)
 
 import LiveLookupController from "./live_lookup_controller"
 application.register("live-lookup", LiveLookupController)
+
+import LocationHoursController from "./location_hours_controller"
+application.register("location-hours", LocationHoursController)
 
 import LongTableController from "./long_table_controller"
 application.register("long-table", LongTableController)
