@@ -26,7 +26,7 @@
       </div>
       <div class="results-metadata-sections">
         <div>
-          <%= @document.eds_publication_type || @document.eds_document_type %>
+          <span class="align-text-bottom me-1"><%= resource_icon %></span><%= @document.eds_publication_type || @document.eds_document_type %>
           <span class="main-title-date"><%= helpers.get_main_title_date(@document) %></span>
         </div>
 

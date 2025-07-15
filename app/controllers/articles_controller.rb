@@ -131,7 +131,6 @@ class ArticlesController < ApplicationController
     # solr field configuration for document/show views
     config.show.document_presenter_class = ShowEdsDocumentPresenter
     config.show.document_component = Articles::DocumentComponent
-    config.show.title_component = Articles::DocumentTitleComponent
 
     config.show.html_title = 'eds_title'
     config.show.heading = 'eds_title'

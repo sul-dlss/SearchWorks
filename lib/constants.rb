@@ -265,6 +265,22 @@ module Constants
     'AuxAmateurs' => '(source: Amalivre)'
   }
 
+  ARTICLES_ICON_COMPONENTS = {
+    'Academic Journal' => Icons::Book2Component,
+    'Article' => Icons::TextWrapping1Component,
+    'Audio' => Icons::Microphone2Component,
+    'Book' => Icons::Book1Component,
+    'Books' => Icons::Book1Component,
+    'eBook' => Icons::Book1Component,
+    'eBooks' => Icons::Book1Component,
+    'Maps' => Icons::MapLocationComponent,
+    'Music scores' => Icons::FileMusicComponent,
+    'News' => Icons::Newspaper2Component,
+    'Report' => Icons::LooseLeafComponent,
+    'Video Recording' => Icons::Film2Component,
+    'Videos' => Icons::Film2Component
+  }.freeze
+
   SUL_ICON_COMPONENTS = {
     'Loose-leaf' => Icons::LooseLeafComponent,
     'Object' => Icons::CubeComponent,
