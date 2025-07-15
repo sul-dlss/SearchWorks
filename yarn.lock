@@ -581,9 +581,9 @@ babel-plugin-macros@^3.1.0:
     bootstrap ">=4.3.1 <6.0.0"
 
 blacklight-frontend@^9.0.0-beta4:
-  version "9.0.0-beta4"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta4.tgz#cdcd244d21077b27fd5c97422a1c3c0817e96483"
-  integrity sha512-Ltd28kXGfJskjWAgWrQkQrvpF10eUEXfQEOh6MTZDQ8UMuKtcXPvYDJGorwHMMDqTMtT0KiLXsW2xyGPgYVzMw==
+  version "9.0.0-beta5"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta5.tgz#f52415e6281942def4d82ed60028c47e8ff440ab"
+  integrity sha512-6c9T/2DekTS940WTeZXZfHsCzg52oPUBQrjagrdAUyDGaqN1dh7oV/yPTN7j1uy1KG1UIycA9d5pHf8p6TSZzg==
   dependencies:
     bootstrap ">=5.3.5 <6.0.0"
 
