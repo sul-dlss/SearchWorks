@@ -33,21 +33,21 @@
         <ul class='document-metadata results-metadata-section list-unstyled'>
           <% if @document['eds_authors'].present? %>
             <li>
-              <div data-behavior='metadata-truncate'>
+              <div data-behavior='metadata-truncate' class="truncate-2">
                 <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_authors']) %>
               </div>
             </li>
           <% end %>
 
           <% if @document['eds_composed_title'].present? %>
-            <li><%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_composed_title']) %></li>
+            <li class="truncate-2"><%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_composed_title']) %></li>
           <% end %>
         </ul>
         <% if @document['eds_abstract'].present? %>
           <dl>
             <dt class="visually-hidden">Abstract</dt>
             <dd>
-              <div class="truncate-5">
+              <div class="truncate-3">
                 <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_abstract']) %>
               </div>
             </dd>
