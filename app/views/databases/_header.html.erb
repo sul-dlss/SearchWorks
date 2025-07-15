@@ -3,7 +3,7 @@
 
   <% component.with_search do %>
     <div class="fs-5 mb-2">Search for databases by title or subject area</div>
-    <%= render HomepageSearchComponent.new url: search_action_url,
+    <%= render MastheadSearchComponent.new url: search_action_url,
                                             params: search_state.params_for_search.except(:qt),
                                             autocomplete_path: suggest_index_catalog_path %>
   <% end %>
