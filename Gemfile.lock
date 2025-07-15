@@ -98,7 +98,7 @@ GEM
     benchmark (0.4.1)
     bigdecimal (3.2.2)
     bindex (0.8.1)
-    blacklight (9.0.0.beta4)
+    blacklight (9.0.0.beta5)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
@@ -298,7 +298,7 @@ GEM
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    io-console (0.8.0)
+    io-console (0.8.1)
     irb (1.15.2)
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
