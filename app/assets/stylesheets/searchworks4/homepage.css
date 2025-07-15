@@ -41,8 +41,7 @@
   color: var(--stanford-cardinal);
 }
 
-.catalog-home-page,
-.article-home-page {
+.catalog-home-page {
   @media (min-width: 992px) {
     .tips,
     .features {
