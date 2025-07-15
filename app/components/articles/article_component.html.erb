@@ -24,7 +24,7 @@
     <% end %>
 
     <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
-      <%= render Searchworks4::DocumentSectionLayout.new(title: section_name) do %>
+      <%= render Searchworks4::DocumentSectionLayout.new(title: section_name, **({ dl_classes: ['my-3 dl-horizontal dl-text'] } if section_name == 'Contents/Summary')) do %>
         <%= render section -%>
       <% end -%>
     <% end %>
