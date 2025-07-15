@@ -79,6 +79,9 @@ application.register("feedback-modal", FeedbackModalController)
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
+import HomePageSearchController from "./home_page_search_controller"
+application.register("home-page-search", HomePageSearchController)
+
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 
