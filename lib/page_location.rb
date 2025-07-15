@@ -48,6 +48,10 @@ class PageLocation
     access_point == :digital_collections
   end
 
+  def dissertation_theses?
+    access_point == :dissertation_theses
+  end
+
   def collection?
     collection_parameters?
   end

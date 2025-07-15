@@ -5,8 +5,6 @@
       <div class='loading-spinner'></div>
     </div>
   </div>
-<% end %>    
-
-<% if PageLocation.new(search_state).access_point == :dissertation_theses %>
-  <%= render Searchworks4::ThesesDissertationFacetHeaderComponent.new(search_state: search_state) %>
+<% elsif page_location.dissertation_theses? %>
+  <%= render Searchworks4::ThesesDissertationFacetHeaderComponent.new %>
 <% end %>
