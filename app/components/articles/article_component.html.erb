@@ -1,5 +1,5 @@
 <div class="article-record-metadata row align-items-start">
-  <div class="article-record-sections record-sections col-md-8">
+  <div class="article-record-sections record-sections">
     <% if @document.html_fulltext? %>
       <div class="html-fulltext-container">
         <% if helpers.on_campus_or_su_affiliated_user? %>
@@ -23,36 +23,10 @@
       </div>
     <% end %>
 
-    <dl class="dl-horizontal dl-invert">
-      <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
-        <% if section_name == 'Summary' -%>
-          <div class="section-container-heading mt-4">
-            <h2>About this article</h2>
-          </div>
-          <div class='section'>
-            <div class='section-body'>
-              <%= render section -%>
-            </div>
-          </div>
-        <% else -%>
-          <div class='section mt-4'>
-            <div class='section-heading'>
-              <h3 id="<%= section_name.downcase %>">
-                <%= section_name -%>
-              </h3>
-            </div>
-            <div class='section-body'>
-              <%= render section -%>
-            </div>
-          </div>
-        <% end -%>
+    <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
+      <%= render Searchworks4::DocumentSectionLayout.new(title: section_name, **({ dl_classes: ['my-3 dl-horizontal dl-text'] } if section_name == 'Contents/Summary')) do %>
+        <%= render section -%>
       <% end -%>
-    </dl>
-  </div>
-  <div class="article-record-panels col-md-4 px-0 border-start">
-    <div class="metadata-panels border-start px-3 ps-lg-3 mb-5">
-      <%= render AccessPanels::OnlineEdsComponent.new(document: document) %>
-      <%= render AccessPanels::SfxComponent.new(document: document) %>
-    </div>
+    <% end %>
   </div>
 </div>

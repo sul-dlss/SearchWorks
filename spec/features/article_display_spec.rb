@@ -103,11 +103,9 @@ RSpec.feature 'Article Record Display' do
       it 'returns an error message in the panel' do
         visit article_path(document[:id])
 
-        within '.article-record-panels .metadata-panels' do
-          expect(page).to have_css('turbo-frame#sfx-data')
+        expect(page).to have_css('turbo-frame#sfx-data')
 
-          expect(page).to have_content 'Content missing'
-        end
+        expect(page).to have_content 'Content missing'
       end
     end
 
@@ -134,11 +132,9 @@ RSpec.feature 'Article Record Display' do
       it 'is loaded asyc on the page' do
         visit article_path(document[:id])
 
-        within '.article-record-panels .metadata-panels' do
-          within('turbo-frame#sfx-data') do
-            expect(page).to have_css('ul li a', text: 'TargetName')
-            expect(page).to have_css('li ul li', text: 'Statement 1')
-          end
+        within('turbo-frame#sfx-data') do
+          expect(page).to have_css('ul li a', text: 'TargetName')
+          expect(page).to have_css('li ul li', text: 'Statement 1')
         end
       end
     end

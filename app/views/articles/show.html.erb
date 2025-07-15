@@ -1,7 +1,27 @@
 <% @page_title = t 'blacklight.search.show.title_html', document_title: document_presenter(@document).html_title, application_name: "#{I18n.t('blacklight.application_name')} articles" %>
 
-<div class="row">
-  <div id="content" class="col-md-12 show-document">
-    <%= render 'show_main_content' %>
+<div class="row align-items-start">
+  <div id="content" class="col-12 col-lg-8 show-document">
+    <%= render RecordToolbarComponent.new(presenter: document_presenter(@document), search_context: @search_context, search_session: search_session) %>
+    <% if @document.eds_restricted? %>
+      <div class="mt-4">
+        <%= render Articles::LoginBannerComponent.new %>
+      </div>
+    <% end %>
+
+    <%= render (blacklight_config.view_config(:show).document_component || Blacklight::DocumentComponent).new(document: document_presenter(@document), component: :div, title_component: :h1, show: true) do |component| %>
+      <% component.with_footer do %>
+        <% if @document.respond_to?(:export_as_openurl_ctx_kev) %>
+          <!-- COinS, for Zotero among others. -->
+          <span class="Z3988" title="<%= @document.export_as_openurl_ctx_kev(@document[@document.format_key]) %>"></span>
+        <% end %>
+      <%  end %>
+    <% end %>
+  </div>
+  <div id="aside" class="mt-5 record-panels col-12 offset-lg-1 col-lg-3 py-3 py-lg-0 px-0 offcanvas-lg offcanvas-bottom">
+    <div class="metadata-panels border-start px-3 ps-lg-3 mb-5">
+      <%= render AccessPanels::OnlineEdsComponent.new(document: @document) %>
+      <%= render AccessPanels::SfxComponent.new(document: @document) %>
+    </div>
   </div>
 </div>
