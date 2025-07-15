@@ -1,0 +1,34 @@
+<div class="p-2 mb-2 d-flex justify-content-center" data-controller='facet-checkboxes'>
+  <button class="btn btn-outline-secondary p-3 position-relative">
+    <%= label_tag("facet_option_stanford_only") do %>
+      <%= check_box(
+            'f',
+            'stanford_only',
+            {
+              multiple: true,
+              id: "facet_option_stanford_only",
+              checked: stanford_only_selected?,
+              data: { action: 'facet-checkboxes#toggleCheckbox' }
+            },
+            "Show Stanford work only",
+            nil
+          )
+      %>
+      <%= link_to(
+            stanford_only_selected? ? theses_all_path : theses_stanford_only_path,
+            data: {
+              newState: !stanford_only_selected?,
+              action: 'facet-checkboxes#toggleLink',
+              turbo: false
+            },
+            class: 'ms-1 btn',
+          ) do %>
+        Show Stanford work only
+      <% end %>
+    <% end %>
+  </button>
+
+  <div data-facet-checkboxes-target="loadingIndicator" class="d-none position-absolute opacity-75 top-50 start-50 translate-middle">
+    <div class='loading-spinner'></div>
+  </div>
+</div>

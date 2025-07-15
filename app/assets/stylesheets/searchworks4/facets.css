@@ -155,3 +155,7 @@
     --bs-link-decoration: none;
   }
 }
+
+label[for="facet_option_stanford_only"] > a {
+  color: var(--stanford-red);
+}
