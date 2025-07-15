@@ -14,5 +14,5 @@
     <%= tag.span temporary_location_text, class: 'temporary-location text-poppy ms-3' if temporary_location_text %>
   <% end %>
 
-  <%= render(ItemRequestLinkComponent.new(item: item, classes: %w[btn btn-sm btn-secondary item-request-link], rtac: rtac)) %>
+  <%= render(ItemRequestLinkComponent.new(item: item, classes: %w[btn btn-sm btn-secondary item-request-link py-0], rtac: rtac)) %>
 </div>
