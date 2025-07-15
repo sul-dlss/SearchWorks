@@ -16,12 +16,10 @@
     "fetch-jsonp": "^1.3.0",
     "leaflet": "1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "sass": "^1.72.0"
+    "react-dom": "^19.1.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --minify --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
-    "build:dev": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
-    "build:css": "sass ./app/assets/stylesheets/searchworks4.scss:./app/assets/builds/searchworks4.css --no-source-map --quiet-deps --load-path=node_modules"
+    "build:dev": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
   }
 }
