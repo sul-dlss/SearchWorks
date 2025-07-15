@@ -10,6 +10,9 @@ RSpec.describe 'catalog/stackmap' do
       allow(view).to receive_messages(blacklight_config: CatalogController.blacklight_config,
                                       blacklight_configuration_context: Blacklight::Configuration::Context.new(controller))
       assign(:document, SolrDocument.new(id: '12345', marc_json_struct: metadata1))
+      @items = [instance_double(Holdings::Item, callnumber: '12345 v1', truncated_callnumber: '12345', library: 'GREEN',
+                                                effective_permanent_location_code: 'GRE-STACKS', id: 'UUID-12345-1')]
+      @stackmap_api_url = 'http://example.com/stackmap'
       render
     end
 

@@ -13,9 +13,48 @@
       .osd {
         height: 250px;
       }
+    }
   }
   .text-directions {
     line-height: 1.8em;
     padding: 0;
+  }
+
+  /* nesting nav-tabs inside of nav-pills doesn't work */
+  .sw-pills {
+    & > .nav-item > .nav-link {
+      --bs-nav-link-font-size: 0.875rem;
+      --bs-nav-link-padding-y: 0.25rem;
+      --bs-nav-link-padding-x: 0.5rem;
+      --bs-nav-link-color: var(--stanford-black-80);
+      --bs-nav-link-hover-color: var(--stanford-black-80);
+      --sul-link-font-weight: 400;
+      border-radius: 0.25rem;
+      border: 1px solid var(--stanford-60-black);
+      &.active {
+        background-color: var(--stanford-10-black);
+        color: var(--stanford-black);
+        font-weight: 600;
+        &::before {
+          content: "\f633";
+         	display: inline-block;
+         	font-family: bootstrap-icons !important;
+         	font-style: normal;
+         	font-weight: normal !important;
+         	font-variant: normal;
+         	text-transform: none;
+         	line-height: 1;
+         	vertical-align: -.125em;
+         	-webkit-font-smoothing: antialiased;
+         	-moz-osx-font-smoothing: grayscale;
+          margin-inline-end: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .nav-tabs {
+      --bs-nav-pills-link-active-bg: transparent;
+    }
   }
 }

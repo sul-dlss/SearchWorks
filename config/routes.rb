@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     get '/view/:id', to: redirect { |path_params, _req| "/view/#{path_params[:id].delete_prefix('a')}" }
   end
 
-  get "view/:id/librarian_view" => "catalog#librarian_view", :as => :librarian_view
-  get "view/:id/stackmap" => "catalog#stackmap", :as => :stackmap
+  get "view/:id/librarian_view" => "catalog#librarian_view", as: :librarian_view
+  get "view/:id/:location/stackmap" => "catalog#stackmap", as: :stackmap
 
   mount Blacklight::Engine => '/'
   mount BlacklightDynamicSitemap::Engine => '/' if Settings.GENERATE_SITEMAP

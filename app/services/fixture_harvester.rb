@@ -43,7 +43,8 @@ class FixtureHarvester
     '342324', # serial on-exhibit
     'in00000422571', # hierarchical format_hsim, Image|Poster
     '14289604', # content advice
-    '4250062' # items in SAL1&2 and SAL3
+    '4250062', # items in SAL1&2 and SAL3
+    '14205849' # multiple items with unique truncated call numbers
   ].freeze
 
   def self.harvest_all

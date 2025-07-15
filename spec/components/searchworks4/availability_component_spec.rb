@@ -22,7 +22,7 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
       aggregate_failures do
         expect(page).to have_css('turbo-frame[src="/availability/1391872"]')
         expect(page).to have_css('.availability-component', text: 'Green Library')
-        expect(page).to have_link('Stacks', href: %r{^/view/1391872/stackmap})
+        expect(page).to have_link 'Stacks', href: "/view/1391872/GRE-STACKS/stackmap"
         expect(page).to have_css('.callnumber', text: 'KKX3800 .H49 1973')
       end
     end
@@ -36,7 +36,8 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
 
       aggregate_failures do
         expect(page).to have_css('.availability-component', text: 'Green Library')
-        expect(page).to have_link('Stacks', href: %r{^/view/10678312/stackmap})
+        expect(page).to have_link 'Stacks', href: "/view/10678312/GRE-STACKS/stackmap"
+
         expect(page).to have_css('.rounded-pill', text: '4 items')
         expect(page).to have_css('summary', text: 'Show details')
 

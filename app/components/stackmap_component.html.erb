@@ -1,0 +1,22 @@
+<% if grouped_by_truncated_callnumbers.one? %>
+  <%= render Stackmap::MapComponent.new(item: items.first, stackmap_api_url: stackmap_api_url) %>
+<% else %>
+  <div class="d-flex align-items-center mb-3">
+    Select call number: <ul class="nav sw-pills ms-3 gap-3" role="tablist">
+      <% grouped_by_truncated_callnumbers.keys.each.with_index do |truncated_callnumber, index| %>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link<%= ' active' if index == 0 %>" id="<%= tab_id_for(truncated_callnumber) %>" data-bs-toggle="tab" data-bs-target="#<%= target_id_for(truncated_callnumber) %>" type="button" role="tab" aria-controls="<%= tab_id_for(truncated_callnumber) %>" aria-selected="<%= index == 0 %>"
+            ><%= truncated_callnumber %></button>
+        </li>
+
+      <% end %>
+    </ul>
+  </div>
+  <div class="tab-content">
+    <% grouped_by_truncated_callnumbers.each.with_index do |(truncated_callnumber, items), index| %>
+      <div class="tab-pane<%= ' active' if index == 0 %>" id="<%= target_id_for(truncated_callnumber) %>" role="tabpanel" aria-labelledby="<%= tab_id_for(truncated_callnumber) %>" tabindex="0">
+        <%= render Stackmap::MapComponent.new(item: items.first, stackmap_api_url: stackmap_api_url) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
