@@ -24,6 +24,7 @@ class CatalogController < ApplicationController
   include CatalogEmailSending
 
   include StanfordWorkFacet
+  include WithPageLocation
 
   include SearchRelevancyLogging
 
@@ -554,6 +555,18 @@ class CatalogController < ApplicationController
   end
 
   private
+
+  # Overriding upstream Blacklight method to fetch the collection
+  def retrieve_search_results
+    super.tap do |response|
+      first_doc = response.docs.first
+      if first_doc && page_location.collection?
+        @collection = first_doc.parent_collections.find do |c|
+          CollectionHelper.strip_leading_a(c.id) == CollectionHelper.strip_leading_a(page_location.collection_id)
+        end
+      end
+    end
+  end
 
   def augment_solr_document_json_response(documents)
     documents.map do |document|

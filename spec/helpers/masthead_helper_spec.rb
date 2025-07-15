@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require 'page_location'
 
 RSpec.describe MastheadHelper do
   describe "#render_masthead_partial" do
@@ -75,16 +74,6 @@ RSpec.describe MastheadHelper do
         double('Bookplate', text: 'Bookplate-text')
       )
       expect(helper.bookplate_breadcrumb_value('ABC123', response)).to eq 'Bookplate-text'
-    end
-  end
-
-  describe "#page_location" do
-    before do
-      allow(view).to receive(:search_state).and_return(instance_double(Blacklight::SearchState))
-    end
-
-    it "returns a PageLocation" do
-      expect(helper.page_location).to be_a PageLocation
     end
   end
 end
