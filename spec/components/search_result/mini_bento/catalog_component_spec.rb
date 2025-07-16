@@ -6,12 +6,10 @@ RSpec.describe SearchResult::MiniBento::CatalogComponent, type: :component do
   context 'with q params and non-gallery view' do
     before do
       vc_test_controller.params[:q] = 'question'
-      render_inline(described_class.new(close: true))
+      render_inline(described_class.new)
     end
 
     it 'draws the page' do
-      expect(page).to have_css '[data-alternate-catalog="/articles?f%5Beds_s' \
-                               'earch_limiters_facet%5D%5B%5D=Direct+access+to+full+text&q=question"]'
       expect(page).to have_css 'button.btn-close'
       expect(page).to have_css '.alternate-catalog-title'
       expect(page).to have_css '.alternate-catalog-body'
@@ -22,7 +20,7 @@ RSpec.describe SearchResult::MiniBento::CatalogComponent, type: :component do
 
   context 'without a q param' do
     before do
-      render_inline(described_class.new(close: true))
+      render_inline(described_class.new)
     end
 
     it 'draws nothing' do
@@ -34,7 +32,7 @@ RSpec.describe SearchResult::MiniBento::CatalogComponent, type: :component do
     before do
       vc_test_controller.params[:q] = 'question'
       vc_test_controller.params[:view] = 'gallery'
-      render_inline(described_class.new(close: true))
+      render_inline(described_class.new)
     end
 
     it 'draws nothing' do
