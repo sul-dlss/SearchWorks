@@ -1,10 +1,7 @@
 <%= tag.nav class: 'page_links' do %>
-  <% previous_label = capture do %>
-    « Previous
-  <% end %>
-  <%= link_to_previous_page response, previous_label, class: 'me-2' do %>
+  <%= link_to_previous_page response, t('views.pagination.previous').html_safe, class: 'me-2' do %>
     <%# Display the disabled previous link if there is no previous page %>
-    <%= tag.span previous_label, class: 'text-grey-50 me-2' if response.total_pages > 1 %>
+    <%= tag.span t('views.pagination.previous').html_safe, class: 'text-grey-50 me-2' if response.total_pages > 1 %>
   <% end %>
   <span class="page_entries">
     <% if response.total_count == 1 %>
@@ -14,8 +11,5 @@
     <% end %>
   </span>
 
-  <% next_label = capture do %>
-    Next »
-    <% end %>
-  <%= link_to_next_page response, next_label, class: 'ms-2' %>
+  <%= link_to_next_page response, t('views.pagination.next').html_safe, class: 'ms-2' %>
 <% end %>
