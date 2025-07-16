@@ -347,11 +347,16 @@
     --bs-link-hover-color-rgb: var(--stanford-black-rgb);
     --bs-light-rgb: transparent;
     --bs-accordion-inner-border-radius: 0;
+    box-shadow: none;
+
     div {
       flex: 1;
     }
   }
 
+  .accordion-item {
+    border: none;
+  }
 
   .badge {
     background-color: var(--stanford-20-black);

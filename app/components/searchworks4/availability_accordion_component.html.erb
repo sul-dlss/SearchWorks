@@ -1,6 +1,6 @@
 <div class="accordion-item mb-2">
   <h2 class="accordion-header" id="library-<%= index %>">
-    <button class="accordion-button <% if index > 0 %>border-top<% end %> d-flex justify-content-between align-items-center <% unless toggled_library? %>collapsed<% end %>" type="button" data-bs-toggle="collapse" data-bs-target="#<%= library.code %>" aria-expanded="<%= toggled_library? %>" aria-controls="<%= library.code %>">
+    <button class="accordion-button d-flex justify-content-between align-items-center <% unless toggled_library? %>collapsed<% end %>" type="button" data-bs-toggle="collapse" data-bs-target="#<%= library.code %>" aria-expanded="<%= toggled_library? %>" aria-controls="<%= library.code %>">
       <%= render AccessPanels::LibraryHeaderComponent.new(document:, library:) %>
       <div class="text-end"><span class="badge rounded-pill"><%= pluralize(library.items.count, 'item') %></span></div>
     </button>
