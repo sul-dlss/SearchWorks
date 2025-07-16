@@ -6,7 +6,7 @@
 
   <% if document_index_view_type == :gallery %>
     <%= content_tag(:span, class:"fake-cover") do %>
-      <%= content_tag(:div, document_presenter(document).heading, class: "fake-cover-text") %>
+      <%= content_tag(:div, 'Book cover not available', class: "text-center fake-cover-text") %>
     <% end %>
   <% end %>
 <% end %>

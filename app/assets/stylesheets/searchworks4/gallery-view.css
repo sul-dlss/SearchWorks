@@ -49,6 +49,11 @@
       background-color: var(--stanford-fog-light);
       height: var(--gallery-document-thumbnail-height);
       margin-top: 1px;
+
+      a {
+        --bs-link-decoration: none;
+        --bs-link-hover-decoration: none;
+      }
     }
 
     .location, .callnumber-bar {
@@ -71,5 +76,6 @@
 }
 
 div.fake-cover-text {
-  display: none;
+  color: var(--stanford-70-black);
+  font-size: 0.875rem;
 }
