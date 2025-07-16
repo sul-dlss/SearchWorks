@@ -22,6 +22,8 @@
 .bookmark-toolbar,
 .export-citations,
 .dropdown-item,
-.facet-options {
+.facet-options,
+.link-decoration-none
+{
   --bs-link-decoration: none;
 }
