@@ -1,0 +1,14 @@
+<%= render(@layout.new(facet_field: @facet_field)) do |component| %>
+  <% component.with_label do %>
+    <%= @facet_field.label %>
+  <% end %>
+  <% component.with_body do %>
+    <%= render Searchworks4::MiniMiniBentoComponent.new(current_context: 'catalog') %>
+
+    <ul class="facet-hierarchy" role="tree">
+      <% tree.keys.collect do |key| %>
+        <%= render Blacklight::Hierarchy::FacetFieldComponent.new(field_name: @facet_field.facet_field.field, tree: tree[key], key: key) %>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

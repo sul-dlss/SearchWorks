@@ -118,6 +118,9 @@ application.register("meta-json-check", MetaJsonCheckController)
 import MiniBentoController from "./mini_bento_controller"
 application.register("mini-bento", MiniBentoController)
 
+import MiniMiniBentoController from "./mini_mini_bento_controller"
+application.register("mini-mini-bento", MiniMiniBentoController)
+
 import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
 application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
