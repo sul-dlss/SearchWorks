@@ -1,0 +1,29 @@
+<div class="mb-n3 pb-1 d-flex justify-content-between align-items-center w-100">
+  <div class="prev_next_links btn-group">
+    <%= helpers.link_to_previous_page @facet_field.paginator, raw(t('views.pagination.previous')), params: @facet_field.search_state.to_h, param_name: param_name, class: 'btn btn-link', data: { blacklight_modal: "preserve" } do %>
+      <%= content_tag :a, raw(t('views.pagination.previous')), class: 'disabled btn btn-link text-decoration-none', aria: { disabled: true } %>
+    <% end %>
+
+    <%= helpers.link_to_next_page @facet_field.paginator, raw(t('views.pagination.next')), params: @facet_field.search_state.to_h, param_name: param_name, class: 'btn btn-link',  data: { blacklight_modal: "preserve" } do %>
+      <%= content_tag :a, raw(t('views.pagination.next')), class: 'disabled btn btn-link text-decoration-none', aria: { disabled: true } %>
+    <% end %>
+  </div>
+
+  <div class="dropdown sort-options">
+    <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Sort by <%= sort == 'count' ? 'number of matches' : 'A-Z' %>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li>
+        <%= link_to_unless sort == 'count', 'Number of matches', sort_facet_url('count'), data: { blacklight_modal: "preserve" }, class: 'dropdown-item' do %>
+          <%= link_to 'Number of matches', sort_facet_url('count'), aria: { current: true }, data: { blacklight_modal: "preserve" }, class: 'dropdown-item active' %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to_unless sort == 'index', 'A-Z', sort_facet_url('index'), data: { blacklight_modal: "preserve" }, class: 'dropdown-item' do %>
+          <%= link_to 'A-Z', sort_facet_url('index'), aria: { current: true }, data: { blacklight_modal: "preserve" }, class: 'dropdown-item active' %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
