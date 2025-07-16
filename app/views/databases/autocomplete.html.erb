@@ -1,0 +1,17 @@
+<turbo-frame id="search-suggestions">
+  <ul class="dropdown-menu show">
+    <% if @facet_response.aggregations['db_az_subject']&.items&.any? %>
+    <li><div class="dropdown-header text-secondary">Subject areas</div></li>
+      <% @facet_response.aggregations['db_az_subject'].items.each do |item| %>
+        <li><%= link_to highlight(item.value, @query.split), databases_url(f: { db_az_subject: [item.value] }), class: 'dropdown-item' %></li>
+      <% end %>
+    <% end %>
+
+    <% if @title_response.documents.any? %>
+    <li><div class="dropdown-header text-secondary">Titles</div></li>
+      <% @title_response.documents.each do |document| %>
+        <li><%= link_to highlight(document['title_display'], @query.split), solr_document_url(document.id), class: 'dropdown-item' %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</turbo-frame>
