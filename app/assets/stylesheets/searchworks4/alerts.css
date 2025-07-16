@@ -1,7 +1,4 @@
 .alert.eds-restricted {
-  /* Needed until https://github.com/sul-dlss/component-library/pull/134 is merged */
-  --stanford-cardinal-dark: #820000;
-
   border: 1px solid var(--stanford-cardinal);
   border-left: 4px solid var(--stanford-cardinal);
   a {
