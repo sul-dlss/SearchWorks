@@ -40,10 +40,6 @@
 
   <% component.with_metadata do %>
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description', classes: 'mb-5') do %>
-      <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, :marc_instrumentation, :linked_series, :linked_collection].each do |tag| %>
-        <%= render_if_present document.marc_field(tag) %>
-      <% end %>
-
       <%= render_if_present document.marc_field('245c') %>
 
       <%- uniform_title = helpers.get_uniform_title(document) -%>
@@ -61,6 +57,10 @@
           <% end %>
         </div>
       <%- end -%>
+
+      <% [:language, '344', '345', '346', '347', '250ab', :imprint, :production_notice, :marc_instrumentation, :linked_series, :linked_collection].each do |tag| %>
+        <%= render_if_present document.marc_field(tag) %>
+      <% end %>
     <% end %>
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Creators/Contributors') do %>
