@@ -73,7 +73,9 @@ RSpec.describe 'Site Accessibility', :js do
       within '.blacklight-eds_language_facet' do
         click_link 'Browse all'
       end
-      expect(page).to have_field 'A-Z Sort'
+      expect(page).to have_button 'Sort by number of matches'
+      click_button 'Sort by number of matches'
+      expect(page).to have_button 'A-Z'
       expect(page).to be_accessible.within('dialog')
     end
 

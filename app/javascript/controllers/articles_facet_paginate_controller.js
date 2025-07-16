@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Paginates long facet lists in a modal
 export default class extends Controller {
-  static targets = [ "list" , "next", "prev"]
+  static targets = [ "list" , "next", "prev", "sortLabel"]
 
   perPage = 20
   currentPage = 1
@@ -43,8 +43,8 @@ export default class extends Controller {
       elem.hidden = !(recordNum >= firstRecord && recordNum < lastRecord)
     })
 
-    this.prevTarget.disabled = this.currentPage <= 1
-    this.nextTarget.disabled = this.currentPage >= this.maxPage
+    this.prevTargets.forEach(t => t.disabled = this.currentPage <= 1)
+    this.nextTargets.forEach(t => t.disabled = this.currentPage >= this.maxPage)
 
   }
 
@@ -58,6 +58,7 @@ export default class extends Controller {
     this.listTarget.innerHTML = ''
     this.items.forEach(item => this.listTarget.appendChild(item))
     this.paginate()
+    this.sortLabelTarget.textContent = 'Sort by A-Z'
   }
 
   sortNum() {
@@ -70,6 +71,7 @@ export default class extends Controller {
     this.listTarget.innerHTML = '';
     this.items.forEach(item => this.listTarget.appendChild(item))
     this.paginate()
+    this.sortLabelTarget.textContent = 'Sort by number of matches'
   }
 
   intValue(str) {
