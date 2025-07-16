@@ -3,7 +3,7 @@
     <%= image_tag(document.collection_members.first.image_urls(:large).first, class: 'stacks-image', alt: '') %>
   <% else %>
     <%= content_tag(:span, class:"fake-cover", aria: { hidden: true }) do %>
-      <%= content_tag(:div, document_presenter(document).heading, class: "fake-cover-text") %>
+      <%= content_tag(:div, 'Book cover not available', class: "text-center fake-cover-text") %>
     <% end %>
   <% end %>
 <% end %>

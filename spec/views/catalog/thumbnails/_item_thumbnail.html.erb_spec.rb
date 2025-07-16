@@ -14,7 +14,7 @@ RSpec.describe "catalog/thumbnails/_item_thumbnail" do
       it "is included on the gallery view" do
         allow(view).to receive(:document_index_view_type).and_return(:gallery)
         render
-        expect(rendered).to have_css('.fake-cover', text: "Title")
+        expect(rendered).to have_css('.fake-cover', text: "Book cover not available")
       end
 
       it "is not included on other views" do
