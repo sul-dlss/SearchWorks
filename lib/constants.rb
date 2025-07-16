@@ -317,28 +317,23 @@ module Constants
 
   LIBRARY_INSTRUCTIONS = {
     'EDUCATION' => {
-      heading: 'Access',
+      heading: 'On-site access',
       text: 'The Education Library is closed for construction. Request items for pickup at another library.'
     },
     'HILA' => {
-      heading: 'Access',
-      text: 'Items must be requested in advance and viewed on-site.'
+      heading: 'On-site access',
+      text: 'Reservations are required at least seven days in advance. For more information, see ' \
+            '<a href="https://www.hoover.org/library-archives/research-services/plan-research-visit" target="_blank">Plan a research visit</a>.'
     },
     'RUMSEY-MAP' => {
       heading: 'On-site access',
-      text: 'Researchers can request to view these materials in the David Rumsey Map Center.'
-    },
-    'RUMSEYMAP' => {
-      heading: 'On-site access',
-      text: 'Researchers can request to view these materials in the David Rumsey Map Center.'
+      text: 'Researchers can request to view materials in the Center. For more information, see ' \
+            '<a href="https://library.stanford.edu/libraries/david-rumsey-map-center#visiting-the-david-rumsey-map-center" target="_blank">Visiting the David Rumsey Map Center</a>.'
     },
     'SPEC-COLL' => {
       heading: 'On-site access',
-      # text: 'Researchers can request to view these materials in the Special Collections Reading Room.
-      #        Request materials at least 2 business days in advance. Maximum 5 items per day.'
-      # Temporary message via https://github.com/sul-dlss/SearchWorks/issues/3235
-      text: 'Collections are moving, which may affect access. Request materials as early as possible.
-             Maximum 5 items per day. Contact specialcollections@stanford.edu for information about access.'
+      text: 'Submit requests at least three business days in advance. For more information, see ' \
+            '<a href="https://guides.library.stanford.edu/c.php?g=1173230" target="_blank">Using Special Collections and University Archives</a>.'
     }
   }.freeze
 end
