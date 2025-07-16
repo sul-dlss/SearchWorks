@@ -1,3 +1,9 @@
+
+:root {
+  --font-family-serif: "Source Serif 4", serif;
+  --bs-font-sans-serif: 'Source Sans 3 Local', 'SUL Override', 'Arial Unicode MS', Helvetica, sans-serif;
+}
+
 h1,
 .h1,
 h2,
