@@ -77,7 +77,7 @@
         </div>
 
         <% benchmark 'Alt results' do %>
-          <%= render view_config.mini_bento_component.new(close: true) if view_config.mini_bento_component %>
+          <%= render view_config.mini_bento_component.new if view_config.mini_bento_component %>
         <% end %>
       </div>
     <% end %>

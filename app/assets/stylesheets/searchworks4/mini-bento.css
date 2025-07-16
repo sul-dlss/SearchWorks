@@ -1,5 +1,4 @@
 .alternate-catalog {
-  background-color: rgb(var(--stanford-fog-light-rgb), 0.7);
   padding: 1.5rem 1rem;
 
   .alternate-catalog-body {
@@ -21,6 +20,16 @@
       padding: 0.125rem 0.375rem;
     }
   }
+}
+
+@media (min-width: 768px) {
+  .alternate-catalog {
+    background-color: rgb(var(--stanford-fog-light-rgb), 0.7);
+  }
+}
+
+.zero-results .alternate-catalog {
+  background-color: rgb(var(--stanford-fog-light-rgb), 0.7);
 }
 
 #alternate-catalog-offcanvas {

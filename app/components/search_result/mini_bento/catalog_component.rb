@@ -3,12 +3,12 @@
 module SearchResult
   module MiniBento
     class CatalogComponent < ViewComponent::Base
-      def initialize(close:)
-        @close = close
+      def initialize(offcanvas: true)
+        @offcanvas = offcanvas
         super
       end
 
-      attr_reader :close
+      attr_reader :offcanvas
 
       delegate :current_view, to: :helpers
 
@@ -17,7 +17,7 @@ module SearchResult
       end
 
       def call
-        render LayoutComponent.new(close:, i18n_key: :catalog, url:)
+        render LayoutComponent.new(offcanvas:, i18n_key: :catalog, url:)
       end
 
       def url
