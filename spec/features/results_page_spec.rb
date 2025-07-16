@@ -45,4 +45,17 @@ RSpec.feature "Search Results Page" do
       expect(page).to have_title "SearchWorks catalog"
     end
   end
+
+  context 'when clicking clear all' do
+    it 'takes the user to a blank search' do
+      visit search_catalog_path f: { access_facet: ['Online'] }, q: 'book'
+      click_link 'Clear all'
+
+      expect(page).to have_content 'Search tips'
+      expect(page).to have_content 'Featured resources'
+      expect(page).to have_css '.sidebar'
+      expect(page).to have_no_css '.search-area-image-bg'
+      expect(page.current_url).not_to include(/[q|f]=/)
+    end
+  end
 end

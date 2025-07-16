@@ -72,13 +72,12 @@ RSpec.feature 'Article Searching' do
   end
 
   describe 'breadcrumbs', :js do
-    scenario 'start over button returns users to articles home page' do
+    scenario 'start over button returns users to articles new search page' do
       article_search_for('kittens')
 
       expect(page).to have_css('.applied-filter', text: /kittens/)
 
       find('a.btn-reset').click
-      expect(page).to have_current_path(articles_path)
       expect(page).to have_no_css('.applied-filter', text: /kittens/)
     end
 

@@ -1,0 +1,91 @@
+<%# locals: (content_classes: document_index_view_type == :gallery ? 'col-md-8 col-xxl-9 px-xxl-4 ps-lg-4 ps-2' : 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false) %>
+
+<h1 class="visually-hidden">New search</h1>
+
+<div class="row align-items-start mt-4">
+  <div class="sidebar col-12 col-md-4 col-xxl-3 mb-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
+    <button class="btn btn-primary d-inline-block d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-controls="offcanvas-facets">
+      <i class="bi bi-sliders" aria-hidden="true"></i> Filters
+    </button>
+
+    <div id="offcanvas-facets" class="offcanvas-md offcanvas-bottom offcanvas-sm-start">
+      <div class="offcanvas-body flex-column">
+        <%= render 'facet_header' %>
+        <%= render Facets::GroupComponent.new(id: 'top-filters', title: 'Top filters',
+                                              container_classes: 'facets top-filters sidenav mb-md-4',
+                                              header_classes: 'facets-heading',
+                                              body_classes: 'accordion') do |component| %>
+          <% component.with_body do %>
+            <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group('top'), response: @response) %>
+          <% end %>
+        <% end %>
+
+        <%= render Facets::GroupComponent.new(id: 'other-filters', title: 'Other filters',
+                                              show_button: true,
+                                              container_classes: 'facets other-filters sidenav mb-md-4',
+                                              header_classes: 'facets-heading',
+                                              body_classes: 'accordion') do |component| %>
+          <% component.with_body do %>
+            <div data-facet-list-target="hideFacets" id="hidden-facets">
+              <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil).sort_by(&:label), response: @response) %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-xl-8"><section class="px-lg-3 py-1 tips">
+      <header class="d-flex flex-wrap align-items-center h3"><span class="text-nowrap">Search tips</span>
+        <a href="https://guides.library.stanford.edu/searchworks" class="btn btn-sm btn-outline-primary text-nowrap align-self-start ms-4">Visit SearchWorks Guide</a>
+      </header>
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <div class="fw-semibold">Start with a simple keyword search</div>
+          Examples: <em>the new york times</em> or <em>stephan graham thesis</em>
+        </li>
+
+        <li class="mb-3">
+        <div class="fw-semibold">All words are significant</div>
+        Examples: distinguish between <em>archaeology <strong>and</strong> literature</em> and <em>archaeology <strong>in</strong> literature</em>
+        </li>
+
+        <li class="mb-3">
+          <div class="fw-semibold">Wildcards</div>
+          Example: créat* will find création(s), créateur(s), créatrice(s)
+        </li>
+
+        <li class="mb-3">
+          <div class="fw-semibold">Refine with filters</div>
+        </li>
+
+        <li class="mb-3">
+          <div class="fw-semibold">Results are sorted by relevance</div>
+        </li>
+
+        <li class="mb-3">
+          <div class="fw-semibold">Or try an <%= link_to 'advanced search', advanced_search_url, class: 'fw-semibold' %> to construct a targeted query.</div>
+      </ul>
+    </section>
+    <section class="px-lg-3 py-4 features">
+      <header class="h3 mb-3">Featured resources</header>
+
+      <ul class="list-unstyled" data-controller="analytics" data-analytics-category-value="featured-resource">
+        <li class="mb-2">
+          <%= link_to 'Course reserves', course_reserves_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
+        </li>
+        <li class="mb-2">
+          <%= link_to 'Databases', databases_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
+        </li>
+        <li class="mb-2">
+          <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
+        </li>
+        <li class="mb-2">
+          <%= link_to 'Government documents', govdocs_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
+        </li>
+        <li class="mb-2">
+          <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>

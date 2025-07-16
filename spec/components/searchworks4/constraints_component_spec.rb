@@ -32,7 +32,7 @@ RSpec.describe Searchworks4::ConstraintsComponent, type: :component do
     let(:query_params) { { q: 'some query' } }
 
     it 'renders a start-over link' do
-      expect(page).to have_link 'Clear all', href: '/catalog'
+      expect(page).to have_link 'Clear all', href: '/catalog?new=true'
     end
 
     it 'has a header' do
