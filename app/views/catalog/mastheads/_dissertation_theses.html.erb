@@ -1,10 +1,13 @@
 <%= render Masthead::LayoutComponent.new do |component| %>
   <% component.with_header { 'Theses and dissertations' } %>
-    <p>
-      Result includes all theses and dissertations — from all sources — held in the Stanford Libraries and Digital Repository.
-    </p>
-    <p>To show Stanford work only, refine by <strong>Stanford student work</strong> or by <strong>Stanford school or department</strong>.</p>
+
+  <% component.with_aside do %>
+    <h2>About theses and disserations</h2>
+    <p>Results below include all theses and dissertations held in the Stanford University Libraries and the Stanford Digital Repository (SDR).</p>
+    <p class="fw-semibold d-flex gap-3">Other helpful resources: <a href="https://about.proquest.com/en/dissertations/" class="fw-normal">ProQuest Dissertations & Theses <i class="bi bi-arrow-up-right"></i></a></p>
+  <% end %>
 <% end %>
+
 
 <% content_for(:breadcrumb) do %>
   <a href="/"><%= back_icon %> Back to catalog search</a>
