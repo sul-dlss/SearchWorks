@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="mini-bento"
 export default class extends Controller {
   static values = { count: Number, url: String }
-  static targets = ["title", "count", "body"]
+  static targets = ["title", "count", "body", "placeholder"]
   static outlets = ["mini-mini-bento"]
 
   connect() {
@@ -13,6 +13,7 @@ export default class extends Controller {
   }
 
   requestData() {
+    this.placeholderTarget.classList.remove('d-none')
     this.element.busy = true
     this.element.complete = false
 
@@ -42,6 +43,7 @@ export default class extends Controller {
     this.titleTarget.innerHTML = 'Looking for more?'
     this.countTarget.innerHTML = count.toLocaleString()
     this.bodyTarget.classList.remove('d-none')
+    this.placeholderTarget.classList.add('d-none')
 
     // inform the mini-mini-bento outlet that we have data
     this.miniMiniBentoOutlet.receiveCount(count)
