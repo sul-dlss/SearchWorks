@@ -24,13 +24,13 @@ RSpec.describe 'PURL Embed', :js do
       expect(page).to have_button('part 2')
 
       # Click the last item
-      within('.managed-purl-panel') do
+      within('.managed-purl .digital-viewer') do
         find('button[data-embed-target="https://purl.stanford.edu/zg338xh5248"]').click
       end
       expect(find('iframe')['src']).to include('purl.stanford.edu/zg338xh5248')
 
       # Click the first item
-      within('.managed-purl-panel') do
+      within('.managed-purl .digital-viewer') do
         find('button[data-embed-target="https://purl.stanford.edu/ct493wg6431"]').click
       end
       expect(find('iframe')['src']).to include('purl.stanford.edu/ct493wg6431')

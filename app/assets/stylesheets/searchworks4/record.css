@@ -72,34 +72,11 @@
   }
 }
 
-.managed-purl-panel {
-  .card-body {
-    max-height: 430px;
-    overflow-y: scroll;
-  }
-}
-
 .managed-purl {
-  .managed-purl-heading {
-    background-color: var(--stanford-fog-light);
-    height: 40px;
-    padding: 10px;
-    border-radius: var(--bs-card-border-radius) var(--bs-card-border-radius) 0 0;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
   li {
-    border: 1px solid var(--white);
-    display: flex;
-    gap: 8px;
-
     &.active {
-      background: var(--stanford-fog-light);
-      border: 1px solid var(--stanford-10-black);
+      --bs-border-color: var(--stanford-cardinal);
+      --bs-border-width: 2px;
     }
 
     &:hover,
@@ -109,20 +86,7 @@
     }
 
     img {
-      border: 1px solid transparent;
-      object-fit: contain;
-      align-self: flex-start;
-    }
-
-    button {
-      height: 100%;
-      width: 100%;
-      background: none !important;
-      border: 1px solid transparent;
-      color: var(--link);
-      cursor: pointer;
-      padding: 4px;
-      text-align: left;
+      background-color: var(--stanford-fog-light);
     }
   }
 }
@@ -236,18 +200,19 @@
       }
     }
   }
+}
 
-  .image-filmstrip,
-  .collection-members {
-    --bs-border-radius: 0.25rem;
-    --bs-border-color: var(--stanford-20-black);
+.collection-result-preview .image-filmstrip,
+.collection-result-preview .collection-members,
+.managed-purl .digital-viewer {
+  --bs-border-radius: 0.25rem;
+  --bs-border-color: var(--stanford-20-black);
 
-    margin-top: -1rem;
-    padding-top: 2rem;
+  margin-top: -1rem;
+  padding-top: 2rem;
 
-    svg {
-      vertical-align: inherit;
-    }
+  svg {
+    vertical-align: inherit;
   }
 }
 
