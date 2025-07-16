@@ -70,12 +70,11 @@ RSpec.describe 'Bookplates' do
     end
 
     it 'returns a gallery view search result sorted by "new to the Libraries"' do
-      pending 'SW4.0 redesign consideration.'
       visit solr_document_path('45')
 
       click_link 'Susan and Ruth Sharp Fund'
 
-      expect(page).to have_css('#documents.gallery')
+      expect(page).to have_css('#documents.documents-gallery')
       expect(current_url).to include 'view=gallery'
 
       expect(current_url).to include 'sort=new-to-libs'
