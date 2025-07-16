@@ -7,7 +7,7 @@ export default class extends Controller {
     apiUrl: String
   }
 
-  static targets = ["map", "directions", "callnumber", "library", "floorname"]
+  static targets = ["map", "directions", "callnumber", "library", "floorname", 'fitButton']
 
   connect() {
     fetchJsonp(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
@@ -87,5 +87,8 @@ export default class extends Controller {
     ).addTo(this.viewer)
 
     this.zoomBounds()
+
+    // Enable reset button after zoom
+    this.viewer.on('zoomstart', () => this.fitButtonTarget.classList.remove('disabled'))
   }
 }
