@@ -1,5 +1,8 @@
 <div>
-  <h2 class="h3 mb-3 text-secondary">Availability</h2>
+  <div class="d-flex align-content-between">
+    <h2 class="h3 mb-3 text-secondary">Availability</h2>
+    <a href="<%= availability_modal_path(document) %>" data-blacklight-modal="trigger" class="btn btn-link align-self-start"><i class="bi bi-arrows-angle-expand me-1"></i>Expand</a>
+  </div>
 
   <%= render AccessPanels::OnlineComponent.new(document:) %>
   <%= render AccessPanels::AtTheLibraryComponent.new(document:) %>

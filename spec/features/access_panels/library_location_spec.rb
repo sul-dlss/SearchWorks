@@ -40,7 +40,7 @@ RSpec.describe "Library Location Access Panel" do
       visit solr_document_path '10'
       expect(page).to have_text 'Availability'
       expect(page).to have_no_css('.callnumber', text: 'MNO', visible: true)
-      click_button 'show all'
+      click_link 'Browse all 6 items'
       expect(page).to have_css('.callnumber', text: 'MNO', visible: true)
     end
   end

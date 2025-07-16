@@ -24,5 +24,19 @@ module AccessPanels
     def policy
       @policy ||= LocationRequestLinkPolicy.new(location:, library_code: library.code)
     end
+
+    def show_all_link
+      return if consolidate_items?
+
+      count_location_items = location.items.length
+
+      return if display_items.length == count_location_items
+
+      link_to("Browse all #{pluralize(count_location_items, 'item')}", availability_modal_path(document, { library: library.code }), data: { blacklight_modal: "trigger" })
+    end
+
+    def display_items
+      location.items.first(5)
+    end
   end
 end

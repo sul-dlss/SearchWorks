@@ -1,7 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="long-table"
-// This hides rows after the first 5.
 export default class extends Controller {
   static values = {
     buttonContext: { type: String, default: "in location" },

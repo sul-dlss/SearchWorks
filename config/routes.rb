@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get "view/:id/librarian_view" => "catalog#librarian_view", as: :librarian_view
   get "view/:id/:location/stackmap" => "catalog#stackmap", as: :stackmap
+  get "view/:id/availability" => "catalog#availability_modal", :as => :availability_modal
 
   mount Blacklight::Engine => '/'
   mount BlacklightDynamicSitemap::Engine => '/' if Settings.GENERATE_SITEMAP
