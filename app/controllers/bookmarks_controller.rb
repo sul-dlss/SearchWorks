@@ -45,11 +45,13 @@ class BookmarksController < CatalogController
     redirect_back fallback_location: bookmarks_url
   end
 
+  # Overrides Blacklight::BookmarksController#create_response
   def create_response(_success)
     @id = @bookmarks.first.fetch(:document_id)
     # Renders turbo_stream response
   end
 
+  # Overrides Blacklight::BookmarksController#destroy_response
   def destroy_response(_success)
     @id = @bookmarks.first.fetch(:document_id)
 
