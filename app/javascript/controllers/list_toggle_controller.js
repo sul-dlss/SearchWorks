@@ -23,7 +23,9 @@ export default class extends Controller {
     const button = document.createElement('button')
     button.classList.add('mt-0')
     button.dataset.controller = 'show-more-button'
-    button.dataset.action = 'click->list-toggle#toggle click->show-more-button#toggle'
+    button.dataset.action = 'click->show-more-button#toggle'
+
+    this.element.dataset.action = `${this.element.dataset.action} show-more-button:expand->list-toggle#expand show-more-button:collapse->list-toggle#collapse`
     // in order for the button to be accessible it needs to be wrapped in a dd.
     // We can't put it outside the dl element because of subject/genre http://localhost:3000/view/in00000385844
     // buttons in a dl element are an accessibility error
@@ -32,10 +34,17 @@ export default class extends Controller {
     this.groupTarget.append(dd)
   }
 
-  toggle() {
+  expand() {
     this.elementTargets.forEach(function(element) {
-      element.classList.toggle('d-none')
+      element.classList.remove('visually-hidden')
     })
-    if(this.elementTargets[0].classList.contains('d-none')) this.element.scrollIntoView()
+  }
+
+  collapse() {
+    this.elementTargets.forEach(function(element) {
+      element.classList.add('visually-hidden')
+    })
+
+    this.element.scrollIntoView()
   }
 }
