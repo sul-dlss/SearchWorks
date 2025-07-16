@@ -3,7 +3,6 @@
 import "@hotwired/turbo-rails"
 import "blacklight-frontend"
 
-import './alternate_catalog'
 import './article'
 import "./popover"
 import "./feedback_form"

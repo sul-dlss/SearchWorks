@@ -5,20 +5,20 @@
     </button>
   </div>
 <% end %>
-<div class='alternate-catalog mb-3 <%= show? ? "show" : "d-md-block" %>' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
+<div class='alternate-catalog mb-3 <%= show? ? "show" : "d-md-block" %>' data-controller="analytics mini-bento" data-mini-bento-url-value="<%= url %>" data-analytics-category-value="alternate-catalog">
   <div class="alternate-catalog-heading row">
-    <h2 class="alternate-catalog-title col mb-3"></h2>
+    <h2 class="alternate-catalog-title col mb-3" data-mini-bento-target="title"></h2>
     <% if close? %>
       <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' data-bs-dismiss="offcanvas" aria-label="Close">
       </button>
     <% end %>
   </div>
-  <div class="alternate-catalog-body row d-none">
+  <div class="alternate-catalog-body row d-none" data-mini-bento-target="body">
     <div class="alternate-catalog-primary-tools col-12 col-sm-6 col-md-12">
       <h3 class="alternate-catalog-name mb-0">
         <span class="fw-normal">SearchWorks</span>
         <%= name %>
-        <span class="badge rounded-pill alternate-catalog-count bento-count"></span>
+        <span class="badge rounded-pill alternate-catalog-count bento-count" data-mini-bento-target="count"></span>
       </h3>
       <div class="alternate-catalog-desc mb-2">
         <%= description %>
