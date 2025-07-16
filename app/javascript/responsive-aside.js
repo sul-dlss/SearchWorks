@@ -13,44 +13,31 @@
 
   function handleResponsiveAside() {
     const aside = document.getElementById('modules-aside')
-    const miniBentoDrawerBtn = document.querySelector('.mini-bento.btn')
-    const miniBentoDrawer = document.getElementById('alternate-catalog-offcanvas')
     const sidebar = document.querySelector('.sidebar')
 
-    if (!aside || !aside.checkVisibility || !miniBentoDrawerBtn || !miniBentoDrawerBtn.checkVisibility) return
+    if (!aside || !aside.checkVisibility ) return
 
     const currentState = {
-      asideVisible: aside.checkVisibility(),
-      miniBentoSidebarVisible: !miniBentoDrawerBtn.checkVisibility()
+      asideVisible: aside.checkVisibility()
     }
 
     const stateChanged = !lastState ||
-                        currentState.asideVisible !== lastState.asideVisible ||
-                        currentState.miniBentoSidebarVisible !== lastState.miniBentoSidebarVisible
+                        currentState.asideVisible !== lastState.asideVisible
 
     if (stateChanged) {
       lastState = currentState
 
       if (currentState.asideVisible) {
         reparentAltCatalog(aside)
-      } else if (currentState.miniBentoSidebarVisible) {
-        hideDrawer(miniBentoDrawer)
-        reparentAltCatalog(sidebar)
       } else {
-        reparentAltCatalog(miniBentoDrawer)
+        reparentAltCatalog(sidebar)
       }
     }
   }
 
   function reparentAltCatalog(parent) {
-    const altCatalog = document.querySelector('.alternate-catalog')
+    const altCatalog = document.querySelector('.responsive-aside')
     if (altCatalog)
       parent.appendChild(altCatalog)
-  }
-
-  function hideDrawer(drawerElement) {
-    const drawer = bootstrap.Offcanvas.getInstance(drawerElement)
-    if (drawer)
-      drawer.hide()
   }
 })();
