@@ -45,7 +45,7 @@ module Searchworks4
           end
         end
 
-        grouped.values.map { |libraries| LibraryGroup.new(libraries) }
+        grouped.except('OFF_CAMPUS').values.map { |libraries| LibraryGroup.new(libraries) } + [(LibraryGroup.new(grouped['OFF_CAMPUS']) if grouped['OFF_CAMPUS'])].compact
       end
     end
 
