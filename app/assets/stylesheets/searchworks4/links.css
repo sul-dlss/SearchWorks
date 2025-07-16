@@ -21,7 +21,8 @@
 .zoom-controls .btn-link,
 .bookmark-toolbar,
 .dropdown-item,
-.facet-options
+.facet-options,
+.link-decoration-none
 {
   --bs-link-decoration: none;
 }
