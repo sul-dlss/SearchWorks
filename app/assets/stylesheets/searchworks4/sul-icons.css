@@ -1,4 +1,4 @@
-/* Chart icons aligns weird because it is only ~10px tall */
+/* Chart icons aligns weird because it is only ~10px tall, see BusinessChart1Component for dataset types */
 article .blacklight-icons-business_chart1 svg {
   vertical-align: -1px;
 }
