@@ -1,7 +1,7 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: 'Browse related items', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 
 <% if params[:start].present? %>
-  <div id="masthead-container">
+  <div class="px-4 py-2 mb-3 bg-light">
     <div id="masthead" class="browse-masthead">
       <h1 class="my-3">Browse related items</h1>
       <p>Starting at call number:
@@ -15,23 +15,24 @@
       </p>
       <p><%= link_to(document_presenter(@original_doc).heading, solr_document_path(@original_doc)) %></p>
     </div>
+
   </div>
 <% end %>
 
-<div id="content" class="callnumber-browse">
+<% if @spines.present? %>
+  <div class="browse-toolbar mb-3">
+    <%= link_to(browse_index_path(browse_params.merge(before: @spines.first.reverse_shelfkey, after: nil)), class: 'btn btn-outline-primary btn-sm me-2') do %>
+      <i class="bi-arrow-left-short" aria-hidden="true"></i><span class="visually-hidden">Previous</span>
+    <% end %>
+    <%= @spines.first.callnumber %> - <%= @spines.last.callnumber %>
+    <%= link_to(browse_index_path(browse_params.merge(before: nil, after: @spines.last.shelfkey)), class: 'btn btn-outline-primary btn-sm ms-2') do %>
+      <i class="bi-arrow-right-short" aria-hidden="true"></i><span class="visually-hidden">Next</span>
+    <% end %>
+  </div>
+<% end %>
+
+<div id="content" class="callnumber-browse p-3">
   <% if @spines.present? %>
-    <div class="browse-toolbar mb-3">
-      <%= link_to(browse_index_path(browse_params.merge(before: @spines.first.reverse_shelfkey, after: nil)), class: 'btn btn-secondary btn-sm') do %>
-        <i class="bi-arrow-left-short" aria-hidden="true"></i><span class="visually-hidden">Previous</span>
-      <% end %>
-      <%= @spines.first.callnumber %> - <%= @spines.last.callnumber %>
-      <%= link_to(browse_index_path(browse_params.merge(before: nil, after: @spines.last.shelfkey)), class: 'btn btn-secondary btn-sm') do %>
-        <i class="bi-arrow-right-short" aria-hidden="true"></i><span class="visually-hidden">Next</span>
-      <% end %>
-      <div class='pull-right'>
-        <%= render 'catalog/view_type_group' %>
-      </div>
-    </div>
     <%= render_document_index(@spines.map(&:document_with_preferred_item)) %>
   <% end %>
 </div>
