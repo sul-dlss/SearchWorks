@@ -1,5 +1,7 @@
 <%= render @layout.new(classes: 'panel-online') do |component| %>
-  <% component.with_title { 'Best source' } %>
+  <% component.with_title(tag: 'h3', classes: ['h4', 'ms-n3', 'ps-3', 'bg-light', 'py-2']) do %>
+    Best source
+  <% end %>
 
   <% component.with_body do %>
     <ul class='document-metadata list-unstyled'>

@@ -3,6 +3,8 @@
 
   <%= render AccessPanels::AvailabilityComponent.new(document: document) %>
 
+  <%= render AccessPanels::AccessConditionsComponent.new(document:) %>
+
   <% context = capture do %>
     <%= render AccessPanels::AppearsInComponent.new(document: document) %>
     <%= render AccessPanels::InCollectionComponent.new(document: document) %>
@@ -14,10 +16,10 @@
   <% end %>
 
   <% if context.present? || potential_context.present? %>
+    <h2 class="h3 mb-2 text-secondary">Context</h2>
     <%= context %>
     <%= potential_context %>
   <% end %>
 
-  <%= render AccessPanels::AccessConditionsComponent.new(document:) %>
   <%= render AccessPanels::RelatedComponent.new(document:) %>
 </div>

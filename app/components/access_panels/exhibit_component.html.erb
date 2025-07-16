@@ -4,10 +4,12 @@
              exhibit_panel_exhibits_host_value: Settings.EXHIBITS_ACCESS_PANEL.exhibits_host,
              exhibit_panel_is_collection_value: document.is_a_collection?,
              exhibit_panel_druid_value: document.druid,
-             exhibit_panel_heading_single_value: document.is_a_collection? ? 'Exhibits' : 'Item is featured in an exhibit',
-             exhibit_panel_heading_multiple_value: 'Item is featured in exhibits'
+             exhibit_panel_heading_single_value: document.is_a_collection? ? 'Exhibits' : 'Featured in',
+             exhibit_panel_heading_multiple_value: 'Featured in'
            }, style: 'display: none') do |component| %>
-  <% component.with_title do %><span data-exhibit-panel-target="title"></span><% end %>
+  <% component.with_title(tag: 'h3', classes: ['h4', 'ms-n3', 'ps-3', 'bg-light', 'py-2']) do %>
+    <i class="bi bi-image-fill me-1" aria-hidden></i><span data-exhibit-panel-target="title"></span>
+  <% end %>
   <% component.with_body do %>
     <p>Items from this collection are featured in:</p>
     <div data-exhibit-panel-target="cardBody"></div>

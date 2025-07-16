@@ -23,7 +23,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
       visit '/view/mf774fs2413'
 
       within '[data-controller="exhibit-panel"]' do
-        expect(page).to have_css('h2', text: 'Item is featured in an exhibit')
+        expect(page).to have_css('h3', text: 'Featured in')
         expect(page).to have_css('.d-flex', count: 1)
 
         within '.exhibit-heading' do
@@ -75,7 +75,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
       expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
 
       within '[data-controller="exhibit-panel"]' do
-        expect(page).to have_css('h2', text: 'Item is featured in exhibits')
+        expect(page).to have_css('h3', text: 'Featured in')
       end
     end
 
@@ -119,7 +119,7 @@ RSpec.describe 'Exhibit Access Panel', :js do
       expect(page).to have_css('[data-controller="exhibit-panel"]', visible: true)
 
       within '[data-controller="exhibit-panel"]' do
-        expect(page).to have_css('h2', text: 'Exhibit')
+        expect(page).to have_css('h3', text: 'Exhibit')
         expect(page).to have_link('Exhibit Title', href: %r{/exhibit1$})
       end
     end
