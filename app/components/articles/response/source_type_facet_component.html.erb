@@ -1,0 +1,10 @@
+<%= render(@layout.new(facet_field: @facet_field)) do |component| %>
+  <% component.with_label do %>
+    <%= @facet_field.label %>
+  <% end %>
+  <% component.with_body do %>
+    <%= render Searchworks4::MiniMiniBentoComponent.new(current_context: 'articles') %>
+
+    <%= render Articles::Response::MoreFacetsListComponent.new(facet_field: @facet_field, layout: @layout) %>
+  <% end %>
+<% end %>

@@ -173,7 +173,7 @@ class CatalogController < ApplicationController
                               }
                            },
                            component: Blacklight::Facets::ListComponent
-    config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Blacklight::Hierarchy::FacetFieldListComponent
+    config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Searchworks4::FormatFacetComponent
     config.add_facet_field "library", field: "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
                             helper_method: :translate_library_code,
                             component: Searchworks4::LibraryFacetComponent

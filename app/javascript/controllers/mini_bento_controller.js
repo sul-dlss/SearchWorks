@@ -2,8 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="mini-bento"
 export default class extends Controller {
-  static values = { url: String }
+  static values = { count: Number, url: String }
   static targets = ["title", "count", "body"]
+  static outlets = ["mini-mini-bento"]
 
   connect() {
     // mini-bento gets moved around the DOM (and it gets reconnected when that happens),
@@ -34,10 +35,23 @@ export default class extends Controller {
     this.element.busy = false
     this.element.complete = true
 
-    const count = response.response.pages.total_count
+    const count = parseInt(response.response.pages.total_count)
+    this.countValue = count;
+
     // Update title
     this.titleTarget.innerHTML = 'Looking for more?'
-    this.countTarget.innerHTML = parseInt(count).toLocaleString()
+    this.countTarget.innerHTML = count.toLocaleString()
     this.bodyTarget.classList.remove('d-none')
+
+    // inform the mini-mini-bento outlet that we have data
+    this.miniMiniBentoOutlet.receiveCount(count)
+  }
+
+  // if a new mini-mini-bento outlet is connected and we already have data,
+  // send it the count value
+  miniMiniBentoOutletConnected(outlet, _element) {
+    if (!this.countValue) return;
+
+    outlet.receiveCount(this.countValue);
   }
 }

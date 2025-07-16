@@ -1,0 +1,10 @@
+<div class="d-flex mt-2 mb-3 justify-content-center mini-mini-bento d-none" data-controller="mini-mini-bento">
+  <div class="border py-2 px-3 position-relative d-inline-flex align-items-center gap-2">
+    <%= link_to url, class: 'stretched-link text-secondary link-decoration-none' do %>
+      <span class="fw-normal">SearchWorks</span>
+      <span class="fw-bold"><%= name %></span>
+    <% end %>
+
+    <span class="badge rounded-pill bento-count" data-mini-mini-bento-target="count"></span>
+  </div>
+</div>
