@@ -28,6 +28,7 @@ class CatalogController < ApplicationController
   include SearchRelevancyLogging
 
   include Blacklight::Ris::Catalog
+  include Blacklight::TokenBasedUser # For refworks export of multiple records
 
   before_action only: :index do
     if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
@@ -519,14 +520,9 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial :sms, if: false, callback: :sms_action, validator: :validate_sms_params
   end
 
-  # Overridden from Blacklight to pre-fetch OCLC citations in bulk
-  # when more than one document's citation is being displayed.
+  # Overridden from Blacklight
   def citation
     @documents = search_service.fetch(Array(params[:id]))
-    return unless @documents.size > 1
-
-    oclc_numbers = @documents.filter_map { |document| document.oclc_number.presence }
-    @oclc_citations = Citations::OclcCitation.new(oclc_numbers:).citations_by_oclc_number
   end
 
   def stackmap
