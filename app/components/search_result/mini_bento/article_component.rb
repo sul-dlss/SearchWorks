@@ -15,7 +15,7 @@ module SearchResult
       end
 
       def call
-        render LayoutComponent.new(offcanvas:, i18n_key: :article, url:, show: true)
+        render LayoutComponent.new(offcanvas:, i18n_key: :article, url:)
       end
 
       def url

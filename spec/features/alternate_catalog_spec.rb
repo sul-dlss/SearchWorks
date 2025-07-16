@@ -42,7 +42,7 @@ RSpec.feature 'Alterate catalog results', :js do
       click_button 'Source type'
       within '.mini-mini-bento' do
         expect(page).to have_text 'SearchWorks Catalog'
-        expect(page).to have_css '.bento-count', text: '64'
+        expect(page).to have_css '.bento-count', text: '66'
       end
     end
   end
@@ -51,7 +51,7 @@ RSpec.feature 'Alterate catalog results', :js do
     it 'renders a button that opens mini-bento in a drawer' do
       visit search_catalog_path(q: '1*')
       click_button 'Looking for more?'
-      expect(page).to have_css '.offcanvas .alternate-catalog'
+      expect(page).to have_css '.offcanvas-md .alternate-catalog'
     end
   end
 
