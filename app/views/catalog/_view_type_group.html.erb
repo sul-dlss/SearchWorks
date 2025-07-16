@@ -1,13 +1,5 @@
-<%= render(Blacklight::Response::ViewTypeComponent.new(
+<%= render(ViewTypeDropdownComponent.new(
       response: controller_name == 'browse' ? [true] : @response, # Allows browse controller to reneder without a @response
       views: document_index_view_controls,
       search_state: search_state,
-      selected: document_index_view_type)) do |component| %>
-        <% document_index_view_controls.each do |key, config| %>
-          <% component.with_view(key: key,
-                                 view: config,
-                                 selected: document_index_view_type == key,
-                                 search_state: search_state,
-                                 classes: 'btn btn-sm btn-outline-primary btn-icon') %>
-        <% end %>
-<% end %>
+      selected: document_index_view_type)) -%>

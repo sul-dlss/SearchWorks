@@ -70,7 +70,6 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     config.bootstrap_version = 5
-    config.add_results_collection_tool(:view_type_group)
     config.add_results_document_tool(:bookmark, component: Document::TrackingBookmarkComponent, if: :render_bookmarks_control?)
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -202,7 +201,8 @@ class CatalogController < ApplicationController
                             filter_query_builder: CollectionFilterQuery,
                             component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::Facets::ListComponent
-    config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::Facets::ListComponent
+    config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::Facets::ListComponent,
+                           item_presenter: FundFacetItemPresenter
     config.add_facet_field "format_physical_ssim", label: "Media type", limit: 6, show: false, component: Blacklight::Facets::ListComponent
     config.facet_display = {
       hierarchy: {

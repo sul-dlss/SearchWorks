@@ -5,7 +5,7 @@ module Searchworks
     # :nodoc:
     class GalleryIcon < ::ViewComponent::Base
       def call
-        tag.i class: 'bi bi-grid-3x2-gap-fill', aria: { hidden: true }
+        tag.i class: 'fa fa-th', aria: { hidden: true }
       end
     end
   end
