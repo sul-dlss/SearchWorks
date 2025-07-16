@@ -71,11 +71,11 @@ export default class extends Controller {
   }
 
   get nextIcon() {
-    return `<i class="bi bi-chevron-double-right" aria-hidden="true"></i>`
+    return `»`
   }
 
   get prevIcon() {
-    return `<i class="bi bi-chevron-double-left" aria-hidden="true"></i>`
+    return `«`
   }
 
   drawTopResults() {

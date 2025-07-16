@@ -330,7 +330,7 @@ en:
         return_to_advanced_search: Return to Advanced search page
 
     bookmarks:
-      page_heading: "Selections list"
+      page_heading: "Saved records"
       add:
         button: "Select"
       remove:
