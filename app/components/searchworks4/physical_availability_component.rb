@@ -27,7 +27,7 @@ module Searchworks4
     end
 
     def truncated_display?
-      document.holdings.items.count > 20
+      document.holdings.items.count > 10
     end
 
     def single_location?
