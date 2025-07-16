@@ -9,10 +9,20 @@
 <div class="<% if offcanvas? %>offcanvas-md offcanvas-bottom<% end %> responsive-aside" id="alternate-catalog-offcanvas">
   <div class='alternate-catalog mb-md-3' data-controller="analytics mini-bento" data-mini-bento-url-value="<%= url %>" data-mini-bento-mini-mini-bento-outlet=".mini-mini-bento" data-analytics-category-value="alternate-catalog">
     <div class="alternate-catalog-heading row">
-      <h2 class="alternate-catalog-title col mb-3" data-mini-bento-target="title"></h2>
+      <h2 class="alternate-catalog-title col mb-3" data-mini-bento-target="title">Looking for more?</h2>
       <% if offcanvas? %>
         <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' data-bs-dismiss="offcanvas" data-bs-target="#alternate-catalog-offcanvas" aria-label="Close"></button>
       <% end %>
+    </div>
+    <div class="placeholder-glow d-none" data-mini-bento-target="placeholder">
+      <div class="placeholder d-block bg-danger w-50 p-3 mb-2"></div>
+      <div class="placeholder d-block p-1 w-100 mb-1"></div>
+      <div class="placeholder d-block p-1 w-25 mb-3"></div>
+      <div class="placeholder d-block p-3 w-50 mb-3"></div>
+      <div class="placeholder d-block p-1 w-75 mb-2"></div>
+      <div class="placeholder d-block p-1 w-50 mb-2"></div>
+      <div class="placeholder d-block p-1 w-75 mb-2"></div>
+      <div class="placeholder d-block p-1 w-25 mb-2"></div>
     </div>
     <div class="alternate-catalog-body row d-none" data-mini-bento-target="body">
       <div class="alternate-catalog-primary-tools col-12 col-sm-6 col-md-12">
