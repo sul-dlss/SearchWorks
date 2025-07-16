@@ -138,9 +138,8 @@
   }
 }
 
-
 .modal {
-  --bl-modal-backdrop-bg: rgba(var(--stanford-black-rgb), 0.4)
+  --bl-modal-backdrop-bg: rgba(var(--stanford-black-rgb), 0.4);
 }
 
 .modal-dialog {
@@ -187,21 +186,5 @@ dialog.modal[open] {
 
   &::backdrop {
     background-color: var(--bl-modal-backdrop-bg);
-  }
-}
-
-#search-navbar search {
-  width: 100%;
-}
-
-@media (width >= 767.98px) {
-  #search-navbar search {
-    width: 60%;
-  }
-}
-
-@media (width >= 1199.98px) {
-  #search-navbar search {
-    width: 50%;
   }
 }
