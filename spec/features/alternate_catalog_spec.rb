@@ -16,6 +16,15 @@ RSpec.feature 'Alterate catalog results', :js do
         expect(page).to have_css '.alternate-catalog-count', text: '4'
       end
     end
+
+    it 'draws mini-mini-bento' do
+      visit search_catalog_path(q: '1*')
+      click_button 'Format'
+      within '.mini-mini-bento' do
+        expect(page).to have_text 'SearchWorks Articles+'
+        expect(page).to have_css '.bento-count', text: '4'
+      end
+    end
   end
 
   context 'when on article search' do
@@ -27,13 +36,22 @@ RSpec.feature 'Alterate catalog results', :js do
         expect(page).to have_css '.alternate-catalog-count'
       end
     end
+
+    it 'draws mini-mini-bento' do
+      visit articles_path(q: '1*')
+      click_button 'Source type'
+      within '.mini-mini-bento' do
+        expect(page).to have_text 'SearchWorks Catalog'
+        expect(page).to have_css '.bento-count', text: '66'
+      end
+    end
   end
 
   context 'when on small screens', :responsive, page_width: 700 do
     it 'renders a button that opens mini-bento in a drawer' do
       visit search_catalog_path(q: '1*')
       click_button 'Looking for more?'
-      expect(page).to have_css '.offcanvas .alternate-catalog'
+      expect(page).to have_css '.offcanvas-md .alternate-catalog'
     end
   end
 

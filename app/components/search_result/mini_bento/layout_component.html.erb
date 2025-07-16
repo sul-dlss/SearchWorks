@@ -1,75 +1,86 @@
-<% unless show? %>
-  <div class="d-md-none mb-2 d-inline-block w-auto text-nowrap mini-bento-btn-wrapper">
-    <button class="mini-bento btn btn-outline-primary col-12" data-bs-toggle="offcanvas" data-bs-target="#alternate-catalog-offcanvas" aria-controls="alternate-catalog-offcanvas">
-      <span>Looking for more?</span>
-    </button>
-  </div>
+<% if offcanvas? %>
+<div class="d-md-none mb-2 d-inline-block w-auto text-nowrap mini-bento-btn-wrapper">
+  <button class="mini-bento btn btn-outline-primary col-12" data-bs-toggle="offcanvas" data-bs-target="#alternate-catalog-offcanvas" aria-controls="alternate-catalog-offcanvas">
+    <span>Looking for more?</span>
+  </button>
+</div>
 <% end %>
-<div class='alternate-catalog mb-3 <%= show? ? "show" : "d-md-block" %>' data-alternate-catalog="<%= url %>" data-controller="analytics" data-analytics-category-value="alternate-catalog">
-  <div class="alternate-catalog-heading row">
-    <h2 class="alternate-catalog-title col mb-3"></h2>
-    <% if close? %>
-      <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' data-bs-dismiss="offcanvas" aria-label="Close">
-      </button>
-    <% end %>
-  </div>
-  <div class="alternate-catalog-body row d-none">
-    <div class="alternate-catalog-primary-tools col-12 col-sm-6 col-md-12">
-      <h3 class="alternate-catalog-name mb-0">
-        <span class="fw-normal">SearchWorks</span>
-        <%= name %>
-        <span class="badge rounded-pill alternate-catalog-count"></span>
-      </h3>
-      <div class="alternate-catalog-desc mb-2">
-        <%= description %>
-      </div>
-      <div>
-        <%= link_to(url, class: 'btn btn-outline-secondary', data: { action: "click->analytics#trackLink"}) do %>
-          View <%= result_singular %> results
-        <% end %>
-      </div>
-    </div>
 
-    <div class="alternate-catalog-other-tools col-12 col-sm-6 col-md-12">
-      <div class="d-flex flex-wrap align-items-baseline mb-1">
-        <h3 class="alternate-catalog-name mb-1 me-2">
-          Other search tools
+<div class="<% if offcanvas? %>offcanvas-md offcanvas-bottom<% end %> responsive-aside" id="alternate-catalog-offcanvas">
+  <div class='alternate-catalog mb-md-3' data-controller="analytics mini-bento" data-mini-bento-url-value="<%= url %>" data-mini-bento-mini-mini-bento-outlet=".mini-mini-bento" data-analytics-category-value="alternate-catalog">
+    <div class="alternate-catalog-heading row">
+      <h2 class="alternate-catalog-title col mb-3" data-mini-bento-target="title">Looking for more?</h2>
+      <% if offcanvas? %>
+        <button type='button' class='alternate-catalog-close btn-close col-2 me-2 d-md-none d-block' data-bs-dismiss="offcanvas" data-bs-target="#alternate-catalog-offcanvas" aria-label="Close"></button>
+      <% end %>
+    </div>
+    <div class="placeholder-glow d-none" data-mini-bento-target="placeholder">
+      <div class="placeholder d-block bg-danger w-50 p-3 mb-2"></div>
+      <div class="placeholder d-block p-1 w-100 mb-1"></div>
+      <div class="placeholder d-block p-1 w-25 mb-3"></div>
+      <div class="placeholder d-block p-3 w-50 mb-3"></div>
+      <div class="placeholder d-block p-1 w-75 mb-2"></div>
+      <div class="placeholder d-block p-1 w-50 mb-2"></div>
+      <div class="placeholder d-block p-1 w-75 mb-2"></div>
+      <div class="placeholder d-block p-1 w-25 mb-2"></div>
+    </div>
+    <div class="alternate-catalog-body row d-none" data-mini-bento-target="body">
+      <div class="alternate-catalog-primary-tools col-12 col-sm-6 col-md-12">
+        <h3 class="alternate-catalog-name mb-0">
+          <span class="fw-normal">SearchWorks</span>
+          <%= name %>
+          <span class="badge rounded-pill alternate-catalog-count bento-count" data-mini-bento-target="count"></span>
         </h3>
-        <div class="alternate-catalog-view-all mb-2">
-          <%= link_to(bento_url) do %>
-            View results from all tools
+        <div class="alternate-catalog-desc mb-2">
+          <%= description %>
+        </div>
+        <div>
+          <%= link_to(url, class: 'btn btn-outline-secondary', data: { action: "click->analytics#trackLink"}) do %>
+            View <%= result_singular %> results
           <% end %>
         </div>
       </div>
 
-      <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
-        <%= link_to archive_search_url, class: 'pe-2' do %>
-          Archival Collections at Stanford
-        <% end %>
-        <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
-      </div>
+      <div class="alternate-catalog-other-tools col-12 col-sm-6 col-md-12">
+        <div class="d-flex flex-wrap align-items-baseline mb-1">
+          <h3 class="alternate-catalog-name mb-1 me-2">
+            Other search tools
+          </h3>
+          <div class="alternate-catalog-view-all mb-2">
+            <%= link_to(bento_url) do %>
+              View results from all tools
+            <% end %>
+          </div>
+        </div>
 
-      <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
-        <%= link_to geo_search_url,  class: 'pe-2' do %>
-          EarthWorks for geospatial data and maps
-        <% end %>
-        <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
-      </div>
+        <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
+          <%= link_to archive_search_url, class: 'pe-2' do %>
+            Archival Collections at Stanford
+          <% end %>
+          <span class="badge rounded-pill bento-count" data-blacklight-result-count-target="count"></span>
+        </div>
 
-      <div class="mb-2" data-controller="bento-result-count" data-bento-result-count-url-value="<%= bento_search_url('lib_guides') %>">
-        <%= link_to '', class: 'pe-2', data: {'bento-result-count-target': 'link'} do %>
-          Guides to collections, tools, and services
-        <% end %>
-        <span class="badge rounded-pill" data-bento-result-count-target="count"></span>
-      </div>
+        <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
+          <%= link_to geo_search_url,  class: 'pe-2' do %>
+            EarthWorks for geospatial data and maps
+          <% end %>
+          <span class="badge rounded-pill bento-count" data-blacklight-result-count-target="count"></span>
+        </div>
 
-      <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= exhibits_search_url %>">
-        <%= link_to exhibits_search_url, class: 'pe-2' do %>
-          Spotlight Exhibits
-        <% end %>
-        <span class="badge rounded-pill" data-blacklight-result-count-target="count"></span>
+        <div class="mb-2" data-controller="bento-result-count" data-bento-result-count-url-value="<%= bento_search_url('lib_guides') %>">
+          <%= link_to '', class: 'pe-2', data: {'bento-result-count-target': 'link'} do %>
+            Guides to collections, tools, and services
+          <% end %>
+          <span class="badge rounded-pill bento-count" data-bento-result-count-target="count"></span>
+        </div>
+
+        <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= exhibits_search_url %>">
+          <%= link_to exhibits_search_url, class: 'pe-2' do %>
+            Spotlight Exhibits
+          <% end %>
+          <span class="badge rounded-pill bento-count" data-blacklight-result-count-target="count"></span>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="alternate-catalog-offcanvas"></div>

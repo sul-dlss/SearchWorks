@@ -3,22 +3,17 @@
 module SearchResult
   module MiniBento
     class LayoutComponent < ViewComponent::Base
-      def initialize(close:, url:, i18n_key:, show: nil)
-        @close = close
+      def initialize(url:, i18n_key:, offcanvas: true)
+        @offcanvas = offcanvas
         @url = url
         @i18n_key = i18n_key
-        @show = show
         super
       end
 
       attr_reader :url, :i18n_key
 
-      def close?
-        @close
-      end
-
-      def show?
-        @show || !close?
+      def offcanvas?
+        @offcanvas
       end
 
       def bento_url

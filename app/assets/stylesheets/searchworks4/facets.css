@@ -41,11 +41,6 @@
   }
 }
 
-/* Hide sidebar mini-bento when initally loaded at xs/sm sizes until the JS moves it to the drawer */
-.sidebar:has(.mini-bento.btn) > .alternate-catalog {
-  display: none;
-}
-
 @media screen and (min-width: 576px) and (max-width: 767px) {
   .offcanvas-sm-start {
     top: 0;

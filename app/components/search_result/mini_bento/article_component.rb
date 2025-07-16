@@ -3,19 +3,19 @@
 module SearchResult
   module MiniBento
     class ArticleComponent < ViewComponent::Base
-      def initialize(close:)
-        @close = close
+      def initialize(offcanvas: true)
+        @offcanvas = offcanvas
         super
       end
 
-      attr_reader :close
+      attr_reader :offcanvas
 
       def render?
         params[:q].present?
       end
 
       def call
-        render LayoutComponent.new(close:, i18n_key: :article, url:, show: true)
+        render LayoutComponent.new(offcanvas:, i18n_key: :article, url:)
       end
 
       def url

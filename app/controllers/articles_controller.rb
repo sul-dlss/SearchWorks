@@ -194,7 +194,7 @@ class ArticlesController < ApplicationController
     # a facet but we still can apploy our configured label to the breadcrumbs
     config.add_facet_field 'eds_search_limiters_facet', label: 'Settings', if: false, eds_limiter: true, group: 'top'
     config.add_facet_field 'pub_year_tisim', label: 'Date', component: ArticlesRangeLimitComponent, range: true, eds_limiter: true, group: 'top'
-    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SourceType', group: 'top'
+    config.add_facet_field 'eds_publication_type_facet', label: 'Source type', component: Articles::Response::SourceTypeFacetComponent, field: 'SourceType', group: 'top'
     config.add_facet_field 'eds_language_facet', label: 'Language', component: Articles::Response::LimitedFacetFieldListComponent, field: 'Language'
     config.add_facet_field 'eds_subject_topic_facet', label: 'Topic', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectEDS'
     config.add_facet_field 'eds_subjects_geographic_facet', label: 'Geography', component: Articles::Response::LimitedFacetFieldListComponent, field: 'SubjectGeographic'
