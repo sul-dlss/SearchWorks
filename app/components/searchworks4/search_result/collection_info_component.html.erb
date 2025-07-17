@@ -14,7 +14,7 @@
     <% end %>
     <% if collection.collection_members.present? %>
       <div class="clearfix mb-1">
-        <b>Digital collection</b> <span class="badge badge-light rounded-pill"><%= pluralize(collection.collection_members.total, 'item') %></span>
+        <b>Digital collection</b> <span class="badge badge-light rounded-pill"><%= pluralize(number_with_delimiter(collection.collection_members.total), 'item') %></span>
       </div>
     <% end %>
     <% if collection.marc_links.finding_aid.present? %>

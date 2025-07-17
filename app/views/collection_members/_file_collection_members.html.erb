@@ -10,7 +10,7 @@
         <h4 class="mb-0">Digital collection</h4>
       <% end %>
       <span class="ms-2 badge rounded-pill bookmark-counter align-self-center">
-        <%= pluralize(document.collection_members.total, 'item') %>
+        <%= pluralize(number_with_delimiter(document.collection_members.total), 'item') %>
       </span>
     </div>
     <div class="col-12 collection-members border rounded px-3 pb-2">
@@ -45,7 +45,7 @@
       </table>
       <div class="mt-1">
         <%= link_to(collection_members_path(document), class: 'text-decoration-none') do %>
-          Browse all <%= pluralize(document.collection_members.total, 'item') %> »
+          Browse all <%= pluralize(number_with_delimiter(document.collection_members.total), 'item') %> »
         <% end %>
       </div>
     </div>

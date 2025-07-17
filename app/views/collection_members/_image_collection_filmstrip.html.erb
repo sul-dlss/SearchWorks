@@ -9,7 +9,7 @@
       <h4 class="mb-0">Digital collection</h4>
     <% end %>
     <span class="ms-2 badge rounded-pill bookmark-counter align-self-center">
-      <%= pluralize(collection_document.collection_members.total, 'item') %>
+      <%= pluralize(number_with_delimiter(collection_document.collection_members.total), 'item') %>
     </span>
     <%= link_to(collection_members_path(collection_document), class: 'ms-2 btn btn-outline-primary') do %>
       <i class="bi bi-search me-1"></i>Search collection
