@@ -10,7 +10,7 @@ export default class extends Controller {
       this.addControls()
       ddElements.forEach(function(element, index) {
         if (index < 5) return
-        element.classList.add('d-none')
+        element.classList.add('visually-hidden')
         element.setAttribute('data-list-toggle-target', 'element')
       })
     }
@@ -45,6 +45,13 @@ export default class extends Controller {
       element.classList.add('visually-hidden')
     })
 
-    this.element.scrollIntoView()
+    if (this.element.scrollIntoViewIfNeeded) {
+      this.element.scrollIntoViewIfNeeded()
+    } else {
+      const element = this.element;
+      new IntersectionObserver( function( [entry] ) {
+        if (entry.intersectionRatio < 1) element.scrollIntoView();
+      }).observe(element);
+    }
   }
 }

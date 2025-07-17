@@ -21,11 +21,11 @@ export default class extends Controller {
   }
 
   expand() {
-    this.textTarget.classList.add(this.truncateClass);
+    this.textTarget.classList.remove(this.truncateClass);
   }
 
   collapse() {
-    this.textTarget.classList.remove(this.truncateClass);
+    this.textTarget.classList.add(this.truncateClass);
   }
 
   addControls() {
