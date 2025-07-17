@@ -13,9 +13,19 @@
   }
 
   .gallery-document {
+    --bs-border-radius: 0.25rem;
+    --bs-border-color: var(--stanford-20-black);
     height: var(--gallery-document-total-height);
     width: var(--gallery-document-width);
     padding: 0;
+
+    &:hover {
+      --bs-border-color: var(--stanford-80-black);
+    }
+
+    &.current-document {
+      --bs-border-color: var(--stanford-cardinal);
+    }
 
     .caption {
       display: flex;

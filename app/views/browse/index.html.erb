@@ -31,7 +31,8 @@
   </div>
 <% end %>
 
-<div id="content" class="callnumber-browse p-3">
+<div id="content" class="callnumber-browse p-3" data-controller="browse-related-items" data-browse-related-items-start-value="<%= params[:start] %>"
+     data-browse-related-items-target="viewport">
   <% if @spines.present? %>
     <%= render_document_index(@spines.map(&:document_with_preferred_item)) %>
   <% end %>
