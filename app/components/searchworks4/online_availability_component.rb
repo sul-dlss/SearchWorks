@@ -15,8 +15,8 @@ module Searchworks4
       document.preferred_online_links.any? || (document.druid.present? && (!document.mods? || document.published_content?))
     end
 
-    def link
-      document.preferred_online_links.first || sdr_link
+    def links
+      document.preferred_online_links.presence || [sdr_link]
     end
 
     def sdr_link
