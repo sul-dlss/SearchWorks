@@ -154,3 +154,9 @@
 label[for="facet_option_stanford_only"] > a {
   color: var(--stanford-red);
 }
+
+.facet-pagination.bottom {
+  .sort-options {
+    display: none;
+  }
+}
