@@ -17,7 +17,7 @@ RSpec.describe Searchworks4::ModsAuthorsComponent, type: :component do
 
     it 'displays the link and role from the author struct' do
       expect(page).to have_link('Dodaro, Gene L.', href: "/catalog?q=#{CGI.escape('"Dodaro, Gene L."')}&search_field=search_author")
-      expect(page).to have_content(', author')
+      expect(page).to have_content('Dodaro, Gene L., author')
     end
   end
 
@@ -26,7 +26,7 @@ RSpec.describe Searchworks4::ModsAuthorsComponent, type: :component do
 
     it 'displays the link and role of the first author from the MODS XML' do
       expect(page).to have_link('J. Smith', href: "/catalog?q=#{CGI.escape('"J. Smith"')}&search_field=search_author")
-      expect(page).to have_content(', author')
+      expect(page).to have_content('J. Smith, author')
     end
   end
 end
