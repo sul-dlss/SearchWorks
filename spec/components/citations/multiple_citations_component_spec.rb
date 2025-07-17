@@ -10,7 +10,7 @@ RSpec.describe Citations::MultipleCitationsComponent, type: :component do
     with_request_url "/view/citation?id%5B%5D=in00000053236&id%5B%5D=14434124" do
       with_controller_class BookmarksController do
         allow(vc_test_controller).to receive_messages(current_user: User.new, encrypt_user_id: 123)
-        puts render_inline(component)
+        render_inline(component)
       end
     end
   end
