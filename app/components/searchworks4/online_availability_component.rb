@@ -12,7 +12,17 @@ module Searchworks4
     end
 
     def render?
-      document.preferred_online_links.any?
+      document.preferred_online_links.any? || (document.druid.present? && (!document.mods? || document.published_content?))
+    end
+
+    def link
+      document.preferred_online_links.first || sdr_link
+    end
+
+    def sdr_link
+      return unless document.druid
+
+      Links::Link.new({ href: helpers.url_for(document), link_text: 'See record', stanford_only: false })
     end
   end
 end
