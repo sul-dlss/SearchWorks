@@ -19,6 +19,7 @@
   --bs-badge-color: var(--stanford-black);
   --bs-badge-padding-x: 0.625rem;
   --bs-badge-font-weight: 500;
+  --bs-badge-font-size: 0.875rem;
   background-color: var(--stanford-10-black);
 }
 
