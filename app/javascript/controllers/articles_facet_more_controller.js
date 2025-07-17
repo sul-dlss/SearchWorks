@@ -33,8 +33,8 @@ export default class extends Controller {
       <div class="modal-footer">
         <div class="facet-pagination bottom flex-row justify-content-between">
           <div class="prev_next_links btn-group pull-left">
-            <button class="btn btn-link" disabled data-articles-facet-paginate-target="prev" data-action="articles-facet-paginate#previous"><i class="fa fa-arrow-left"></i> <span class="d-none d-sm-inline">Previous</span></a>
-            <button class="btn btn-link" data-articles-facet-paginate-target="next" data-action="articles-facet-paginate#next"><span class="d-none d-sm-inline">Next</span> <i class="fa fa-arrow-right"></i></a>
+            <button class="btn btn-link" disabled data-articles-facet-paginate-target="prev" data-action="articles-facet-paginate#previous"><i class="bi bi-arrow-left"></i> <span class="d-none d-sm-inline">Previous</span></a>
+            <button class="btn btn-link" data-articles-facet-paginate-target="next" data-action="articles-facet-paginate#next"><span class="d-none d-sm-inline">Next</span> <i class="bi bi-arrow-right"></i></a>
           </div>
 
 
