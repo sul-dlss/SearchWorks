@@ -6,6 +6,7 @@
     <%= render Searchworks4::RecordSummaryComponent.new(presenter: document_presenter(@document)) %>
 
     <div class="accordion availability-modal px-3 mt-3">
+      <%= render Searchworks4::OnlineAccordionComponent.new(document: @document, toggled_library: params[:library]) %>
       <%= render Searchworks4::AvailabilityAccordionComponent.with_collection(@document.holdings.libraries.compact_blank, document: @document, toggled_library: params[:library]) %>
       <%= turbo_frame_tag "availability_#{dom_id(@document)}", src: availability_path(@document) %>
     </div>

@@ -1,16 +1,23 @@
-<%= tag.ul class: "links list-unstyled", id: "online-link-list",
-           data: {
-             controller: "long-table",
-             long_table_button_context_value: "online links",
-             action: "item-added->long-table#collapse"
-           } do %>
-  <% links.each.with_index do |link, index| %>
-    <%= tag.li class: "mt-2 #{'border-top' unless index == 0}" do %>
-      <div>
-        <%= link.link_html&.html_safe %>
-        <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
-      </div>
-      <%= link.additional_text_html&.html_safe %>
+<% if (sfx_links&.any? || links.any?) && document.eresources_library_display_name %>
+  <strong> <%= document.eresources_library_display_name %> </strong>
+<% end %>
+<% if sfx_links&.any? %>
+  <div class='sfx-panel'>
+    <% sfx_url = sfx_links.first.href %>
+    <turbo-frame src="<%= sfx_data_path(url: sfx_url) %>" id="sfx-data">
+      <div class='loading-spinner'></div>
+    </turbo-frame>
+  </div>
+<% else %>
+  <%= tag.ul class: "links list-unstyled mb-1", id: "online-link-list" do %>
+    <% links.each.with_index do |link, index| %>
+      <%= tag.li class: "mt-2 #{'border-top' unless index == 0}" do %>
+        <div>
+          <%= link.link_html&.html_safe %>
+          <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
+        </div>
+        <%= link.additional_text_html&.html_safe %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
