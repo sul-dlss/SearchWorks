@@ -227,6 +227,11 @@
   border-radius: 0.25rem;
   margin-top: 4rem;
 
+  /* Applied by the browse nearby controller to resize versus the aside */
+  &.breakout {
+    width: 153.33%;
+  }
+
   .heading,
   .tabs {
     .btn {
