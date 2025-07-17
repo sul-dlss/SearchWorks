@@ -125,4 +125,15 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
       expect(page).to have_css '.location-name', text: 'For use in Special Collections Reading Room', visible: :all
     end
   end
+
+  context 'with a MODS record' do
+    let(:document) { SolrDocument.from_fixture("mf774fs2413.yml") }
+
+    it 'renders the MODS record availability' do
+      render_inline(described_class.new(document: document))
+
+      expect(page).to have_css('.availability-component', text: 'Available online')
+      expect(page).to have_link('See record', href: %r{/view/mf774fs2413})
+    end
+  end
 end

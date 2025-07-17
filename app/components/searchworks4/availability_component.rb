@@ -10,7 +10,7 @@ module Searchworks4
     end
 
     def render?
-      document.holdings.present? || document.preferred_online_links.any?
+      document.holdings.present? || document.preferred_online_links.any? || (document.druid.present? && (!document.mods? || document.published_content?))
     end
 
     def truncated_display?
