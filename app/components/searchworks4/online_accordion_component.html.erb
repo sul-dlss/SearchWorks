@@ -1,6 +1,6 @@
 <div class="accordion-item mb-2">
   <h2 class="accordion-header" id="online-header">
-    <button class="accordion-button text-digital-green fw-semibold d-flex justify-content-between align-items-center py-2<% unless toggled_library? %>collapsed<% end %>" type="button" data-bs-toggle="collapse" data-bs-target="#online" aria-expanded="<%= toggled_library? %>" aria-controls="online">
+    <button class="accordion-button text-digital-green fw-semibold d-flex justify-content-between align-items-center py-2<% unless toggled_library? %> collapsed<% end %>" type="button" data-bs-toggle="collapse" data-bs-target="#online" aria-expanded="<%= toggled_library? %>" aria-controls="online">
       <% if document.is_a_database? %>
         Search this database
       <% elsif document.druid %>
