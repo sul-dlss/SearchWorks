@@ -147,6 +147,11 @@
       vertical-align: middle;
     }
   }
+
+  /* Suppress e.g. the save button tooltip, which is unnecessary because we're showing the label already */
+  .tooltip {
+    display: none !important;
+  }
 }
 
 .panel-library-location {
