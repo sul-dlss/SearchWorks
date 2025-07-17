@@ -8,13 +8,15 @@
                  bookmark_target: 'form',
                  bookmark_checked_value: bookmarked?
               }) do %>
-                <%= tag.button icon, type: 'submit', class: "btn p-1 lh-1 action-button",
+                <%= tag.button type: 'submit', class: "btn p-1 lh-1 action-button",
                    aria: { label: (bookmarked? ? 'Remove from saved records' : 'Save record') },
                    data: {
                      controller: 'tooltip',
                      action: "click->analytics#trackBookmark " \
                              "mouseenter->tooltip#show focus->tooltip#show mouseleave->tooltip#hide blur->tooltip#hide " \
                              "mouseenter->bookmark#hover focus->bookmark#hover mouseleave->bookmark#blur blur->bookmark#blur"
-                   } %>
+                   } do %>
+                     <%= icon %><%= label if display_label? %>
+                   <% end %>
   <% end %>
 </turbo-frame>

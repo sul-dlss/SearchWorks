@@ -144,9 +144,14 @@ details[open] {
 }
 
 .action-button {
-  --bs-btn-border-radius: 50%;
-  &:hover {
-    background-color: var(--bs-secondary-bg);
+  --bs-btn-color: var(--stanford-80-black);
+  --bs-btn-hover-color: var(--stanford-black);
+
+  &:not(:has(.bookmark-label)) {
+    --bs-btn-border-radius: 50%;
+    &:hover {
+      background-color: var(--bs-secondary-bg);
+    }
   }
 }
 
@@ -179,7 +184,7 @@ details[open] {
     --bs-link-decoration: none;
 
     &::after {
-      content: '\F144';
+      content: "\F144";
       font-family: "bootstrap-icons";
       padding-left: 0.25rem;
       --bs-link-decoration: none;

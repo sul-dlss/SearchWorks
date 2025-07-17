@@ -1,5 +1,8 @@
 <%= turbo_stream.replace "bookmark-#{@id}" do %>
-  <%= render Document::TrackingBookmarkComponent.new(document: @id, checked: false, action: CatalogController.blacklight_config.index.document_actions[:bookmark]) %>
+  <%= render Document::TrackingBookmarkComponent.new(document: @id,
+    display_label: URI.parse(request.referer).path.start_with?('/view/'),
+    checked: false,
+    action: CatalogController.blacklight_config.index.document_actions[:bookmark]) %>
 <% end %>
 <%= turbo_stream.replace 'bookmark-counter' do %>
   <%= turbo_frame_tag "bookmark-counter" do %>
