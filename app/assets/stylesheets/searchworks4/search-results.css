@@ -193,3 +193,19 @@ details[open] {
     --bs-badge-font-weight: 500;
   }
 }
+
+details.availability-component {
+  .header {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+  }
+
+  &[open] {
+    .header {
+      background-color: var(--stanford-fog-light);
+      border-bottom-color: transparent !important;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

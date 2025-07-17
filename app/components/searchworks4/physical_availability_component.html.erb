@@ -1,6 +1,6 @@
 <% if single_item? %>
   <%# Instances with a single item collapse the item information %>
-  <%= container_tag(classes: %w[d-inline-flex suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
+  <%= container_tag(classes: %w[border rounded d-inline-flex suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
     <% library = document.holdings.libraries.first %>
     <% location = library.locations.first %>
     <% item = location.items.first %>
@@ -17,7 +17,7 @@
   <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy', data: { 'eager-lazy-target': 'frame' } %>
 <% elsif truncated_display? %>
   <%# Instances with lots of items get an abbreviated treatment %>
-  <%= container_tag(classes: %w[d-inline-flex]) do %>
+  <%= container_tag(classes: %w[border rounded d-inline-flex]) do %>
     <% if document.holdings.libraries.one? %>
       <% library = document.holdings.libraries.first %>
 
@@ -33,17 +33,19 @@
   <% library = document.holdings.libraries.first %>
   <% location = library.locations.first %>
   <%= container_tag('details', classes: %w[w-100 suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
-    <%= tag.summary class: header_classes + ['d-flex'] do %>
-      <%= tag.span library.name, class: 'library fw-semibold' %>
-      <%= render ItemCountComponent.new(document.holdings.items.count) %>
-      <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+    <%= tag.summary class: ['d-flex'] do %>
+      <%= tag.div class: header_classes + ['d-inline-flex', 'me-4'] do %>
+        <%= tag.span library.name, class: 'library fw-semibold' %>
+        <%= render ItemCountComponent.new(document.holdings.items.count) %>
+        <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
 
-      <div class="btn btn-outline-primary btn-sm ms-auto text-nowrap">
-        <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
-        <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
-      </div>
+        <div class="btn btn-outline-primary btn-sm ms-5 text-nowrap">
+          <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
+          <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
+        </div>
+      <% end %>
     <% end %>
-    <div>
+    <div class="border rounded-end rounded-bottom">
       <div class="d-flex gap-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
         <div class="pt-2 d-none d-sm-block">
           <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %>
@@ -76,19 +78,21 @@
 <% else %>
   <%# With multiple locations, we just require the user expand the whole table to see any item details %>
   <%= container_tag('details', classes: %w[w-100]) do %>
-    <%= tag.summary class: header_classes + ['d-flex'] do %>
-      <% if library_groups.one? %>
-        <%= tag.span library_groups.first.name, class: 'library fw-semibold' %>
+    <%= tag.summary class: ['d-flex', 'me-4'] do %>
+      <%= tag.div class: header_classes + ['d-inline-flex'] do %>
+        <% if library_groups.one? %>
+          <%= tag.span library_groups.first.name, class: 'library fw-semibold' %>
+        <% end %>
+
+        <%= render ItemCountComponent.new(document.holdings.items.count) %>
+
+        <div class="btn btn-outline-primary btn-sm ms-5 text-nowrap">
+          <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
+          <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
+        </div>
       <% end %>
-
-      <%= render ItemCountComponent.new(document.holdings.items.count) %>
-
-      <div class="btn btn-outline-primary btn-sm ms-auto text-nowrap">
-        <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
-        <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
-      </div>
     <% end %>
-    <div>
+    <div class="border rounded-end rounded-bottom p-2">
       <% library_groups.each do |library_group| %>
         <div class="d-flex flex-column my-2">
           <% if library_groups.many? %>

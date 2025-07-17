@@ -9,7 +9,7 @@ export default class extends Controller {
   }
   
   // The length of location labels can vary dramatically. It looks better if the items area aligns for all locations within an instance.
-  updateLocationColumnsToEqualWidth(maxWidth = 30, additionalPadding = 5) {
+  updateLocationColumnsToEqualWidth(maxWidth = 25, additionalPadding = 5) {
     const bestWidth = Math.min(maxWidth, this.maxLocationColumnWidth());
 
     this.locationTargets.forEach((location) => {
