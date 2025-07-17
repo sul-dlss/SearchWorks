@@ -37,12 +37,13 @@ RSpec.feature "Record Toolbar", :js do
 
   context 'when coming from a search' do
     context 'with the first item in a result' do
-      it 'does not have a previous pagination button' do
+      it 'does not have a previous pagination button (but does have a placeholder)' do
         visit search_catalog_path f: { format_hsim: ['Book'] }
         within(first('.document')) do
           find('h3.index_title a').click
         end
 
+        expect(page).to have_css('span.previous', text: 'Previous')
         expect(page).to have_no_css('a.previous', visible: true)
       end
     end
