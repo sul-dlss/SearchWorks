@@ -99,17 +99,27 @@ export default class extends Controller {
   }
 
   renderAccessPanel(bibkey, data) {
-    if (typeof data.info_url !== 'undefined') {
-      const listGoogleBooks = this.element.querySelectorAll(`.google-books.${bibkey}`)
+    if (typeof data.info_url == 'undefined' || !['full', 'partial', 'noview'].includes(data.preview)) return;
 
-      listGoogleBooks.forEach((googleBooks) => {
-        if (data.preview === 'partial' || data.preview === 'noview') {
-          const $limitedView = googleBooks.querySelector('.limited-preview')
-          $limitedView.href = data.preview_url;
-        }
-        this.checkAndEnableAccessPanel(googleBooks, '.access-panel');
-      })
+    const listGoogleBooks = this.element.querySelectorAll(`.google-books.${bibkey}`)
+
+    const labels = {
+      full: 'Full view',
+      partial: 'Limited preview',
+      noview: 'Limited preview'
     }
+
+    listGoogleBooks.forEach((googleBooks) => {
+      if (googleBooks.querySelector('a')) return;
+
+      const link = document.createElement('a')
+      link.href = data.preview_url;
+      link.innerHTML = `(${labels[data.preview]})`;
+
+      googleBooks.appendChild(link);
+
+      this.checkAndEnableAccessPanel(googleBooks, '.access-panel');
+    })
   }
 
   // Return a comma delimited string of identifiers
