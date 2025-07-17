@@ -139,7 +139,8 @@
     /* --bs-btn-padding-y: 0.25rem; */
     --bs-btn-padding-x: var(--item-padding-x);
   }
-  .nav-link {
+  .nav-link, .action-button {
+    --bs-nav-link-color: var(--stanford-80-black);
     --bs-nav-link-padding-y: 0.25rem;
     --bs-nav-link-padding-x: var(--item-padding-x);
     i {
