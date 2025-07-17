@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class JsonResultsDocumentPresenter
-  def initialize(source_document)
+  def initialize(source_document, view_context)
     @source_document = source_document
+    @view_context = view_context
   end
 
   def as_json(*)
@@ -24,7 +25,8 @@ class JsonResultsDocumentPresenter
 
     {
       'fulltext_link_html' => online_links.map do |link|
-        html = link.stanford_only? ? "<span class=\"stanford-only\">#{link.html}</span>" : link.html
+        access_link = Searchworks4::AccessLinkComponent.new(link:).render_in(@view_context)
+        html = link.stanford_only? ? "<span class=\"stanford-only\">#{access_link}</span>" : access_link
 
         "<span class=\"online-label\">Online</span> #{html}"
       end

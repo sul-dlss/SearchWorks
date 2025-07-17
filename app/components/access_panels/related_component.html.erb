@@ -6,7 +6,11 @@
   <% component.with_body do %>
     <ul class="links list-unstyled">
       <% if additional_finding_aids? %>
-        <%= additional_finding_aids.map { |link| content_tag(:li, link.html.html_safe, class: finding_aid_class(link)) }.join.html_safe %>
+        <%= additional_finding_aids.each do |link| %>
+          <%= content_tag :li, class: finding_aid_class(link) do %>
+            <%= render Searchworks4::AccessLinkComponent.new(link:) %>
+          <% end %>
+        <% end %>
       <% end %>
       <% if oclc.present? %>
         <li class="worldcat">

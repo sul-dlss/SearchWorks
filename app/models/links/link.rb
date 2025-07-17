@@ -4,7 +4,7 @@ class Links
   class Link
     include ActionView::Helpers::TagHelper
 
-    attr_accessor :href, :file_id, :druid, :type, :sort
+    attr_accessor :href, :file_id, :druid, :type, :sort, :link_title, :link_text, :additional_text
 
     def initialize(options = {})
       @additional_text = options[:additional_text]
@@ -24,12 +24,8 @@ class Links
       @type = options[:type]
     end
 
-    def html
-      @html ||= safe_join([link_html, casalini_text, additional_text_html].compact, ' ')
-    end
-
     def text
-      @text ||= safe_join([@link_text || link_host, casalini_text, additional_text_html].compact, ' ')
+      @text ||= safe_join([@link_text || link_host, casalini_text, additional_text].compact, ' ')
     end
 
     def part_label(index:)
@@ -60,16 +56,8 @@ class Links
       @ill
     end
 
-    def additional_text_html
-      content_tag(:span, @additional_text, class: 'additional-link-text') if @additional_text
-    end
-
     def casalini_text
       '(source: Casalini)' if @casalini
-    end
-
-    def link_class
-      'sfx' if @sfx
     end
 
     def link_host
@@ -84,18 +72,6 @@ class Links
       host || @href
     rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
       @href
-    end
-
-    def link_html
-      tooltip_attr = if @link_title.present? && !stanford_only?
-                       {
-                         title: @link_title,
-                         data: { 'bs-placement': 'right', 'bs-toggle': 'tooltip' }
-                       }
-                     else
-                       {}
-                     end
-      content_tag(:a, @link_text || link_host, href: @href, class: link_class, **tooltip_attr)
     end
   end
 end
