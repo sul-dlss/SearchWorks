@@ -71,8 +71,14 @@
     }
   }
 
+  .preview-container {
+    /* Stop the 'row' class from interfering with the gallery preview controller dynamic margins */
+    flex-shrink: unset;
+  }
+
   .preview {
     margin-bottom: 1.5rem;
+    width: 100%;
   }
 
   .two-lines {
