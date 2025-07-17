@@ -2,12 +2,6 @@
 
 module AccessPanels
   class GoogleBooksPreviewComponent < AccessPanels::Base
-    def initialize(document:, link_text: 'Limited preview')
-      super(document:)
-
-      @link_text = link_text
-    end
-
     def book_ids
       helpers.get_book_ids(document)
     end
