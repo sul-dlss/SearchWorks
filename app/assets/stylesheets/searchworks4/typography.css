@@ -80,6 +80,11 @@ aside,
   }
 }
 
+.fs-14 {
+  --bs-body-font-size: 14px;
+  font-size: var(--bs-body-font-size);
+}
+
 .text-poppy {
   color: var(--stanford-poppy-dark);
 }

@@ -3,7 +3,7 @@
 
 <% toc = document.fetch(:toc_struct, []).first %>
 <% if toc.present? %>
-  <%= render Searchworks4::MetadataFieldLayoutComponent.new(classes: ['my-3 dl-text']) do |component| %>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new(classes: ['my-2 dl-text']) do |component| %>
     <% component.with_label { toc[:label] } %>
     <% component.with_value data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-5'} do %>
       <div data-long-text-target="text">
@@ -40,7 +40,7 @@
 <% end %>
 
 <% summaries.each do |summary|%>
-  <%= render Searchworks4::MetadataFieldLayoutComponent.new(classes: 'my-3 dl-text') do |component| %>
+  <%= render Searchworks4::MetadataFieldLayoutComponent.new(classes: 'my-2 dl-text') do |component| %>
     <% component.with_label { summary[:label] || 'Summary' } %>
     <% summary.fetch(:fields, []).each do |field| %>
       <% component.with_value data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-5'} do %>

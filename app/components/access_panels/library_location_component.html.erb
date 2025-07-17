@@ -7,11 +7,13 @@
 
   <% if location.mhld.present? %>
     <% if location.mhld.first.latest_received %>
-      <div class='mhld note-highlight'>Latest: <%= location.mhld.first.latest_received %></div>
+      <div class='mhld note-highlight fs-14 d-inline-block mt-0'>Latest: <%= location.mhld.first.latest_received %></div>
     <% end %>
     <% location.mhld.each do |mhld| %>
       <% if mhld.public_note.present? %>
-        <div class='mhld note-highlight'><%= mhld.public_note %></div>
+        <div>
+          <div class='mhld note-highlight fs-14 d-inline-block'><%= mhld.public_note %></div>
+        </div>
       <% end %>
     <% end %>
   <% end %>
