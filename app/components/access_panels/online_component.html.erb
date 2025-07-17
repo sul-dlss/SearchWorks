@@ -14,18 +14,9 @@
     <% end %>
 
     <% component.with_body do %>
-      <% if (sfx_links&.any? || links.any?) && document.eresources_library_display_name %>
-        <strong> <%= document.eresources_library_display_name %> </strong>
-      <% end %>
-      <% if sfx_links&.any? %>
-        <div class='sfx-panel'>
-          <% sfx_url = sfx_links.first.href %>
-          <turbo-frame src="<%= sfx_data_path(url: sfx_url) %>" id="sfx-data">
-            <div class='loading-spinner'></div>
-          </turbo-frame>
-        </div>
-      <% else %>
-        <%= render AccessPanels::OnlineLinkListComponent.new(document:, links:) %>
+      <%= render AccessPanels::OnlineLinkListComponent.new(document:, links: links.first(5)) %>
+      <% if links.length > 5 %>
+        <%= link_to("Browse all #{pluralize(links.length, 'item')}", availability_modal_path(document, { library: 'online' }), data: { blacklight_modal: "trigger" }) %>
       <% end %>
     <% end %>
 

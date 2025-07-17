@@ -8,6 +8,12 @@ module AccessPanels
       super()
     end
 
+    def sfx_links
+      return [] if document.marc_links.sfx.blank?
+
+      document.marc_links.sfx
+    end
+
     attr_accessor :document, :links
   end
 end
