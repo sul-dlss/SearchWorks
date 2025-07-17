@@ -7,7 +7,7 @@ module Searchworks4
       tag.dd(**kwargs, &block)
     }
 
-    def initialize(classes: ['my-3'])
+    def initialize(classes: ['my-2'])
       @classes = classes
       super
     end

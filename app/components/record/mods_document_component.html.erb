@@ -29,49 +29,49 @@
   <% component.with_metadata do %>
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description') do %>
       <% document.mods.resourceType.each do |resource_type| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(resource_type) %>
         </div>
       <% end %>
 
       <% document.mods.imprint.each do |imprint| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(imprint) %>
         </div>
       <% end %>
 
       <% document.mods.language.each do |language| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(language, ', ') %>
         </div>
       <% end %>
 
       <% document.mods.description.each do |description| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(description) %>
         </div>
       <% end %>
 
       <% document.mods.extent.each do |extent| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(extent) %>
         </div>
       <% end %>
 
       <% document.mods.form.each do |form| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(form) %>
         </div>
       <% end %>
 
       <% document.mods.geo.each do |geo| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(geo) %>
         </div>
       <% end %>
 
       <% document.mods.cartographics.each do |cartographic| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(cartographic) %>
         </div>
       <% end %>
@@ -79,7 +79,7 @@
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Creators/Contributors') do %>
       <% document.mods.name&.each do |name| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_name_field(name) { |name| link_to(name, search_catalog_path(q: "\"#{name}\"", search_field: 'search_author')) } %>
         </div>
       <% end %>
@@ -87,13 +87,13 @@
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Abstract/Contents', dl_classes: 'dl-horizontal dl-text') do %>
       <% document.mods.abstract.each do |abstract| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(abstract) %>
         </div>
       <% end %>
 
       <% document.mods.contents.each do |contents| %>
-        <div class="my-3">
+        <div class="my-2">
           <%= mods_record_field(contents) %>
         </div>
       <% end %>
@@ -101,10 +101,10 @@
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Subjects') do %>
       <% if document.mods.subject.any?(&:values) %>
-        <div class="my-3"><%= linked_mods_subjects(document.mods.subject) %></div>
+        <div class="my-2"><%= linked_mods_subjects(document.mods.subject) %></div>
       <% end %>
       <% if document.mods.genre.any?(&:values) %>
-        <div class="my-3"><%= linked_mods_genres(document.mods.genre) %></div>
+        <div class="my-2"><%= linked_mods_genres(document.mods.genre) %></div>
       <% end %>
     <% end %>
 
