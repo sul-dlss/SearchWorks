@@ -31,6 +31,7 @@ RSpec.describe 'Callnumber Browse', :js do
       end
 
       expect(page).to have_css('h1', text: 'Browse related items')
+      expect(page).to have_css('.gallery-document.current-document')
 
       within '.document-position-11' do
         click_button 'Save record'

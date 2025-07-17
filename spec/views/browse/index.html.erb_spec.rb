@@ -26,10 +26,14 @@ RSpec.describe "browse/index" do
     expect(view).to receive(:document_presenter).with(original_doc).and_return(presenter)
   end
 
-  it "links to the document" do
+  it "renders information about the current document" do
     render
     expect(rendered).to have_css('a', text: 'Title')
+    expect(rendered).to have_css('[data-controller="browse-related-items"]')
+    expect(rendered).to have_css('[data-browse-related-items-start-value="123"]')
+    expect(rendered).to have_css('[data-browse-related-items-target="viewport"]')
   end
+
   describe "without barcode" do
     it "selects the first callnumber in the heading when no barcode is present" do
       render
