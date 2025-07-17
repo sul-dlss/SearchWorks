@@ -22,7 +22,7 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
   end
 
   it 'includes the managed purl panel and upper metadata elements' do
-    expect(page).to have_css('.managed-purl-panel')
+    expect(page).to have_css('.managed-purl .digital-viewer')
     expect(page).to have_css('.upper-record-metadata')
     expect(page).to have_css('li', text: 'Some Part Label')
     expect(page).to have_css('li', text: 'part 2')

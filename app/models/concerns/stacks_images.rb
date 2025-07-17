@@ -27,7 +27,8 @@ module StacksImages
       thumbnail: 'square/100,100/0/default.jpg',
       default: 'full/80,80/0/default.jpg',
       medium: 'full/125,125/0/default.jpg',
-      large: 'full/!400,400/0/default.jpg'
+      large: 'full/!400,400/0/default.jpg',
+      rect_thumbnail: 'full/,100/0/default.jpg'
     }
   end
 end

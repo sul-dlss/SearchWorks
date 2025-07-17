@@ -1,36 +1,31 @@
-<div class="managed-purl row" data-controller="managed-purl">
-  <div class="col-md-12">
-    <h2>Digital content</h2>
+<div class="managed-purl" data-controller="managed-purl">
+  <div class="d-inline-flex bg-white ms-4 px-2">
+    <h2 class="mb-0">Digital content</h2><div class="ms-2 badge rounded-pill align-self-center text-black bg-light"><%= "#{document.managed_purls.count} parts" %></div>
   </div>
-  <div class="col-md-4">
-    <div class="card managed-purl-panel mb-3">
-      <div class="managed-purl-heading">
-        <%= "#{document.managed_purls.count} parts" %>
-      </div>
-      <div class="card-body">
-        <ul>
-          <% document.managed_purls.each_with_index do |purl, i| %>
-            <li data-managed-purl-target="item">
-              <%= button_tag data: {
-                  embed_target: "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}",
-                  embed_provider: Settings.PURL_EMBED_PROVIDER,
-                  managed_purl_target: 'button',
-                  action: 'click->managed-purl#switchItem'
-              } do %>
-                <% if purl.file_id %>
-                  <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :thumbnail) %>">
-                <% end %>
-
-                <%= purl.part_label(index: i + 1) %>
+  <div class="border rounded px-3 pb-2 row digital-viewer">
+    <div class="col-4">
+      <ul class="list-unstyled overflow-scroll pe-3" style="height: 520px;">
+        <% document.managed_purls.each_with_index do |purl, i| %>
+          <li data-managed-purl-target="item" class="border mb-2">
+            <%= button_tag(data: {
+                embed_target: "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}",
+                embed_provider: Settings.PURL_EMBED_PROVIDER,
+                managed_purl_target: 'button',
+                action: 'click->managed-purl#switchItem'
+            }, class: 'p-0 btn w-100 h-100 text-start text-decoration-none')  do %>
+              <% if purl.file_id %>
+                <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :rect_thumbnail) %>">
               <% end %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+
+              <%= purl.part_label(index: i + 1) %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
     </div>
-  </div>
-  <div class="col-md-8">
-    <div class="managed-purl-embed" data-managed-purl-target="embed">
+    <div class="col-8">
+      <div class="managed-purl-embed" data-managed-purl-target="embed">
+      </div>
     </div>
   </div>
 </div>
