@@ -81,11 +81,11 @@ RSpec.describe LinkedSerials do
       let(:marc) { main_entry_and_title_serial_fixture_with_issn }
 
       it 'has an ISSN prefix' do
-        expect(subject.values.last[:values][2][:text]).to eq 'ISSN'
+        expect(subject.values.last[:values].last).to include(prepend: '(ISSN ')
       end
 
       it 'links to the isbn_search search field' do
-        expect(subject.values.last[:values][3][:search_field]).to eq 'isbn_search'
+        expect(subject.values.last[:values].last).to include search_field: 'isbn_search'
       end
     end
 
@@ -93,7 +93,7 @@ RSpec.describe LinkedSerials do
       let(:marc) { main_entry_and_title_serial_fixture }
 
       it 'links to the isbn_search search field' do
-        expect(subject.values.last[:values][2][:search_field]).to eq 'isbn_search'
+        expect(subject.values.last[:values].last).to include search_field: 'isbn_search'
       end
     end
 

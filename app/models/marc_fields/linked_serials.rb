@@ -69,18 +69,13 @@ class LinkedSerials < MarcField
 
   def x_subfield(_, value)
     [
-      { text: '(' },
-      { text: 'ISSN' },
-      { link: value, search_field: 'isbn_search' },
-      { text: ')' }
+      { prepend: '(ISSN ', link: value, search_field: 'isbn_search', append: ')' }
     ]
   end
 
   def z_subfield(_, value)
     [
-      { text: '(' },
-      { link: value, search_field: 'isbn_search' },
-      { text: ')' }
+      { prepend: '(', link: value, search_field: 'isbn_search', append: ')' }
     ]
   end
 

@@ -15,7 +15,7 @@ RSpec.describe 'marc_fields/_linked_serials' do
           values: [
             { link: 'Link Value1', href: '"Quoted Link Value"', search_field: 'the-search-field' },
             { text: 'Text Value2' },
-            { link: 'Link Value2', search_field: 'the-other-search-field' }
+            { prepend: '(', link: 'Link Value2', search_field: 'the-other-search-field', append: ')' }
           ]
         }
       ]
@@ -49,6 +49,7 @@ RSpec.describe 'marc_fields/_linked_serials' do
       expect(subject).to have_css('dd a', text: 'Link Value1')
       expect(subject).to have_content('Text Value2')
       expect(subject).to have_no_css('dd a', text: 'Text Value2')
+      expect(subject).to have_css('dd', text: '(Link Value2)')
       expect(subject).to have_css('dd a', text: 'Link Value2')
     end
 
