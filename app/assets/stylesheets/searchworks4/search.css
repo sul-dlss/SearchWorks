@@ -57,6 +57,22 @@
   }
 }
 
+#search-navbar search {
+  width: 100%;
+}
+
+@media (width >= 767.98px) {
+  #search-navbar search {
+    width: 60%;
+  }
+}
+
+@media (width >= 1199.98px) {
+  #search-navbar search {
+    width: 50%;
+  }
+}
+
 #advanced-search-form {
   input:focus-visible {
     box-shadow: none;
