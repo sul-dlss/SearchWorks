@@ -330,3 +330,27 @@
   }
 
 }
+
+.search-mode {
+  h2 .badge {
+    background-color: rgba( 0, 133, 102, 0.2);
+  }
+
+  .item-row {
+    display: none;
+  }
+
+  .item-row:has(mark) {
+    display: flex;
+  }
+
+  /* TODO: can't toggle display on .location because css layers and .d-flex aren't cooperating??? */
+  .location {
+    content-visibility: hidden;
+  }
+
+
+  .location:has(mark) {
+    content-visibility: visible !important;
+  }
+}
