@@ -22,6 +22,9 @@ application.register("async-collection-members", AsyncCollectionMembersControlle
 import AvailabilityController from "./availability_controller"
 application.register("availability", AvailabilityController)
 
+import AvailabilitySearchController from "./availability_search_controller"
+application.register("availability-search", AvailabilitySearchController)
+
 import BentoResultCountController from "./bento_result_count_controller"
 application.register("bento-result-count", BentoResultCountController)
 
