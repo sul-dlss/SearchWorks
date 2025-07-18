@@ -92,13 +92,33 @@ export default class extends Controller {
   }
 
   pageLinks() {
+    const outerWindow = 2
+    const innerWindow = 2
+
     const links = []
 
+    const pagesToRender = [];
+
     for (let i = 0; i < this.totalPages; i++) {
+      if (i < outerWindow || i >= this.totalPages - outerWindow || (i >= this.currentPage - innerWindow && i <= this.currentPage + innerWindow) ||
+          (this.currentPage < outerWindow && i <= outerWindow + innerWindow)
+        ) {
+        pagesToRender.push(i)
+      } else {
+        if (pagesToRender[pagesToRender.length - 1] != 'gap') pagesToRender.push('gap')
+      }
+    }
+
+    pagesToRender.forEach((i) => {
+      if (i == 'gap') {
+        links.push('<li class="page-item disabled"><span class="page-link">...</span></li>')
+        return
+      }
+
       const active = i === this.currentPage
       const link = `<li class="page-item${active ? ' active' : ''}"><a class="page-link" href="#${i}" data-action="course-reserves#gotoPage">${i + 1}</a></li>`
       links.push(link)
-    }
+    })
 
     return links.join('')
   }
