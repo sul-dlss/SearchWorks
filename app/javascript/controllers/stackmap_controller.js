@@ -7,7 +7,7 @@ export default class extends Controller {
     apiUrl: String
   }
 
-  static targets = ["map", "directions", "callnumber", "library", "floorname", 'fitButton']
+  static targets = ["map", "directions", "callnumber", "library", "floorname", 'fitButton', 'zoomOutButton']
 
   connect() {
     fetchJsonp(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
@@ -69,7 +69,28 @@ export default class extends Controller {
 
   zoomBounds() {
     if (this.viewer && this.bounds) {
-      this.viewer.fitBounds(this.bounds)
+      this.viewer.fitBounds(this.bounds);
+      this.fitButtonTarget.classList.add('disabled')
+      this.zoomOutButtonTarget.classList.add('disabled')
+    }
+  }
+
+  /**
+   * Update the zoom control state based on the current map state.
+   */
+  handleBoundsChanged(e) {
+    if (!this.viewer || !this.fittedBounds) return;
+
+    if (this.viewer.getZoom() <= this.viewer.getMinZoom()) {
+      this.zoomOutButtonTarget.classList.add('disabled')
+    } else {
+      this.zoomOutButtonTarget.classList.remove('disabled')
+    }
+
+    if (this.viewer.getBounds().equals(this.fittedBounds)) {
+      this.fitButtonTarget.classList.add('disabled')
+    } else {
+      this.fitButtonTarget.classList.remove('disabled')
     }
   }
 
@@ -78,7 +99,8 @@ export default class extends Controller {
       crs: L.CRS.Simple,
       minZoom: -2,
       zoomControl: false,
-      attributionControl: false
+      attributionControl: false,
+      zoomSnap: 0.5
     })
 
     L.imageOverlay(
@@ -88,7 +110,13 @@ export default class extends Controller {
 
     this.zoomBounds()
 
+    // bookkeep the initial viewer bounds
+    this.fittedBounds = this.viewer.getBounds();
+
     // Enable reset button after zoom
     this.viewer.on('zoomstart', () => this.fitButtonTarget.classList.remove('disabled'))
+    this.viewer.on('movestart', () => this.fitButtonTarget.classList.remove('disabled'))
+    this.viewer.on('moveend', (e) => this.handleBoundsChanged(e))
+    this.viewer.on('zoomend', (e) => this.handleBoundsChanged(e))
   }
 }
