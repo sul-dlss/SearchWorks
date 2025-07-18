@@ -18,10 +18,10 @@
         <%= button_tag class: "zoom-in btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomIn' } do %>
           <i class="bi bi-zoom-in"></i><span class="d-none d-sm-inline"> Zoom in</span>
         <% end %>
-        <%= button_tag class: "zoom-out btn btn-link p-sm-1", data: { action: 'click->stackmap#zoomOut' } do %>
+        <%= button_tag class: "zoom-out btn btn-link p-sm-1", data: { stackmap_target: 'zoomOutButton', action: 'click->stackmap#zoomOut' } do %>
           <i class="bi bi-zoom-out"></i><span class="d-none d-sm-inline"> Zoom out</span>
         <% end %>
-        <%= button_tag class: "zoom-fit btn btn-link p-sm-1 disabled", data: { stackmap_target: 'fitButton', action: 'click->stackmap#zoomBounds' } do %>
+        <%= button_tag class: "zoom-fit btn btn-link p-sm-1", data: { stackmap_target: 'fitButton', action: 'click->stackmap#zoomBounds' } do %>
           <i class="bi bi-arrows-angle-contract"></i><span class="d-none d-sm-inline"> Reset size</span>
         <% end %>
       </div>
