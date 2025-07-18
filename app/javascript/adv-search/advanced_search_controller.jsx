@@ -388,11 +388,11 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
     dataOptions.onInputChange = (event, newInputValue) => {
       (async () => {
         setLoading(true);
-        const response = await fetch(`/catalog/facet/${field}?${new URLSearchParams({ 'facet.sort': 'index', query_fragment: newInputValue}).toString() }`, { headers: { 'Accept': 'application/json' } });
+        const response = await fetch(`/catalog/facet/${field}?${new URLSearchParams({ 'facet.sort': 'count', query_fragment: newInputValue}).toString() }`, { headers: { 'Accept': 'application/json' } });
 
         if (response.ok) {
           const json = await response.json();
-          setOptions(json.response.facets.items.map(v => v.value));
+          setOptions(json.response.facets.items.map(v => v.value).sort());
           setLoading(false);
         }
       })();
