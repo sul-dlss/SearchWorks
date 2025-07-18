@@ -14,10 +14,10 @@ class FeedbackFormsController < ApplicationController
         case @form_type
         when 'connection'
           FeedbackMailer.submit_connection(params, request.remote_ip).deliver_now
-          flash[:success] = t('blacklight.connection_form.success')
+          flash.now[:success] = t('blacklight.connection_form.success')
         else
           FeedbackMailer.submit_feedback(params, request.remote_ip).deliver_now
-          flash[:success] = t('blacklight.feedback_form.success')
+          flash.now[:success] = t('blacklight.feedback_form.success')
         end
       end
       respond_to do |format|
@@ -46,7 +46,7 @@ class FeedbackFormsController < ApplicationController
     if params[:message].nil? or params[:message] == ""
       errors << "A message is required"
     end
-    flash[:error] = errors.join("<br/>") unless errors.empty?
-    flash[:error].nil?
+    flash.now[:error] = errors.join("<br/>") unless errors.empty?
+    flash.now[:error].nil?
   end
 end

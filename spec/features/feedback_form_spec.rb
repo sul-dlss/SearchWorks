@@ -26,4 +26,43 @@ RSpec.feature "Feedback form modal", :js do
     end
     expect(page).to have_css("div.toast-body", text: "Thank you!\nYour feedback has been sent.")
   end
+
+  scenario "feedback form in a new browser tab" do
+    click_link "Feedback"
+    expect(page).to have_css("#feedback-form", visible: true)
+    click_link 'Open in new tab'
+
+    expect(page).to have_css("#feedback-form", visible: false), 'hides the modal'
+
+    aggregate_failures('shows the feedback form in a new tab') do
+      switch_to_window(windows.last)
+      expect(page).to have_css("#feedback-form", visible: true)
+      within "form.feedback-form" do
+        fill_in("message", with: "This is only a test")
+        fill_in("name", with: "Ronald McDonald")
+        fill_in("to", with: "test@kittenz.eu")
+        click_button "Send"
+      end
+    end
+
+    aggregate_failures('shows the feedback toast in the original tab and closes the new tab') do
+      switch_to_window(windows.first)
+      expect(page).to have_css("div.toast-body", text: "Thank you!\nYour feedback has been sent.")
+      expect(windows.length).to eq(1)
+    end
+  end
+
+  scenario 'feedback form in a browser tab renders an alert instead of a toast' do
+    visit '/feedback'
+
+    within "form.feedback-form" do
+      fill_in("message", with: "This is only a test")
+      fill_in("name", with: "Ronald McDonald")
+      fill_in("to", with: "test@kittenz.eu")
+      click_button "Send"
+    end
+
+    expect(page).to have_css('.alert', text: "Thank you!\nYour feedback has been sent.")
+    expect(page).to have_no_css("div.toast-body", text: "Thank you!\nYour feedback has been sent.")
+  end
 end

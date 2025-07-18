@@ -9,6 +9,9 @@
 <% end %>
 
 <%  if params[:form_format] == 'standalone' %>
+    <%= turbo_stream.action 'updateOpener', 'toast-text' do %>
+        <i class='<%= "bi #{icon_class} me-2" %>'></i> <%= sanitize message_text %>
+    <% end %>
     <%= turbo_stream.update_all 'div.flash_messages' do %>
         <div class="alert <%= alert_class %> alert-dismissible shadow-sm d-flex align-items-center">
             <div class="text-body">
