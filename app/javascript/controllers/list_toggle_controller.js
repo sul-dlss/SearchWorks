@@ -9,11 +9,13 @@ export default class extends Controller {
   static targets = ['element', 'group']
   connect() {
     if (!this.hasGroupTarget) return
+
     const ddElements = this.groupTarget.querySelectorAll(this.listItemSelectorValue)
     if (ddElements.length > this.limitValue) {
       this.addControls()
+      const limitValue = this.limitValue
       ddElements.forEach(function(element, index) {
-        if (index < this.limitValue) return
+        if (index < limitValue) return
         element.classList.add('visually-hidden')
         element.setAttribute('data-list-toggle-target', 'element')
       })
