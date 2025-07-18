@@ -91,10 +91,13 @@ const formReducer = (state, action) => {
 
 const mapBlacklightQueryParamsToForm = (queryParams, defaultData) => {
   let currentId = defaultData.currentId;
+  const searchFieldKeys = defaultData.searchFieldOptions.map(f => f.field);
+  const filterFieldKeys = defaultData.filterFieldOptions.map(f => f.field);
+
   const formData = {};
 
   if (queryParams.clause) {
-    formData.searchFields = Object.entries(queryParams.clause).map(([_idx, clause]) => {
+    formData.searchFields = Object.entries(queryParams.clause).filter(([_idx, clause]) => searchFieldKeys.includes(clause.field)).map(([_idx, clause]) => {
       return {
         id: currentId++,
         field: clause.field || '',
@@ -107,7 +110,7 @@ const mapBlacklightQueryParamsToForm = (queryParams, defaultData) => {
   let filterFields = [];
 
   if (queryParams.f) {
-    const f = Object.entries(queryParams.f).map(([field, values]) => {
+    const f = Object.entries(queryParams.f).filter(([field, _values]) => filterFieldKeys.includes(field)).map(([field, values]) => {
       return {
         id: currentId++,
         field: field,
@@ -120,7 +123,7 @@ const mapBlacklightQueryParamsToForm = (queryParams, defaultData) => {
   }
 
   if (queryParams.f_inclusive) {
-    const f_inclusive = Object.entries(queryParams.f_inclusive).map(([field, values]) => {
+    const f_inclusive = Object.entries(queryParams.f_inclusive).filter(([field, _values]) => filterFieldKeys.includes(field)).map(([field, values]) => {
       return {
         id: currentId++,
         field: field,
@@ -132,7 +135,7 @@ const mapBlacklightQueryParamsToForm = (queryParams, defaultData) => {
   }
 
   if (queryParams.range) {
-    const range = Object.entries(queryParams.range).map(([field, range]) => {
+    const range = Object.entries(queryParams.range).filter(([field, _values]) => filterFieldKeys.includes(field)).map(([field, range]) => {
       return {
         id: currentId++,
         field: field,
