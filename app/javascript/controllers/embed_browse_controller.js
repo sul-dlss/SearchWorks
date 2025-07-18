@@ -32,7 +32,7 @@ export default class extends Controller {
 
   currentDocumentTarget() {
     return this.viewportTarget
-      .querySelector(`.gallery-document[data-doc-id="${this.currentDocValue}"]`)
+      .querySelector(`.gallery-document[data-document-id="${this.currentDocValue}"]`)
   }
 
   displayLink() {

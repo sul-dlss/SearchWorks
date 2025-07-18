@@ -13,7 +13,7 @@ export default class extends Controller {
 
   currentDocumentTarget() {
     return this.viewportTarget
-      .querySelector(`.gallery-document[data-doc-id="${this.startValue}"]`)
+      .querySelector(`.gallery-document[data-document-id="${this.startValue}"]`)
   }
 
   markCurrentDocument() {

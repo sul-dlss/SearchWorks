@@ -2,10 +2,7 @@
   id: @id,
   data: {
     'document-id': @document.id.to_s.parameterize,
-    'document-counter': @counter,
-    controller: 'bookmark',
-    action: 'turbo:before-morph-element@document->bookmark#animateRemovals',
-    animate_exit: true
+    'document-counter': @counter
   },
   itemscope: true,
   itemtype: @document.itemtype,

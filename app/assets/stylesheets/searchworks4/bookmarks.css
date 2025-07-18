@@ -15,3 +15,87 @@
     --bs-badge-font-size: 1rem;
   }
 }
+
+.bookmark-toggle {
+  --bl-icon-color: var(--bs-primary);
+  color: var(--stanford-80-black);
+
+  .no-js & {
+    input[type="submit"] {
+      display: inline;
+    }
+
+    .toggle-bookmark {
+      display: none;
+    }
+  }
+
+  input[type="submit"] {
+    display: none;
+  }
+
+  .toggle-bookmark {
+    cursor: pointer;
+
+    .toggle-bookmark-label {
+      font-weight: inherit;
+      --bookmark-width-height: 1rem;
+
+      .blacklight-icons svg {
+        height: var(--bookmark-width-height);
+        width: var(--bookmark-width-height);
+        overflow: visible;
+        fill: var(--bl-icon-color);
+        vertical-align: sub;
+
+
+        &.bookmark-checked {
+          display: none;
+        }
+      }
+    }
+
+    .bookmarked-hover {
+      --bl-icon-color: var(--stanford-digital-red-light);
+    }
+
+    .bookmark-unchecked {
+      --bl-icon-color: var(--bs-nav-link-color);
+    }
+
+    .bookmark-checked {
+      --bl-icon-color: var(--stanford-cardinal);
+    }
+
+    .toggle-bookmark-input:checked + span svg {
+      &.bookmark-checked {
+        display: inherit;
+      }
+
+      &.bookmark-unchecked {
+        display: none;
+      }
+    }
+  }
+  
+
+  /* override for line 21.
+      Creates weird spacing in toolbar when min-width is set to 8rem */
+  .header-tools .toggle-bookmark-label {
+    min-width: 2rem;
+  }
+}
+
+.record-browse-nearby {
+  .bookmark-text {
+    display: none;
+  }
+
+  .blacklight-icons svg {
+    --bookmark-width-height: 1.25rem;
+  }
+
+  .btn-preview {
+    margin-top: 0.15rem;
+  }
+}
