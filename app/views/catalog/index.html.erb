@@ -7,6 +7,8 @@
   <% else %>
     <%= render partial: "search_results" %>
   <% end %>
+<% elsif params[:new] %>
+  <%= render partial: "new_search" %>
 <% else %>
   <%= render partial: "home_page" %>
 <% end %>

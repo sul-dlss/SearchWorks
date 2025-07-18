@@ -8,7 +8,7 @@ RSpec.describe SearchBuilder do
   let(:blacklight_params) { {} }
   let(:solr_params) { {} }
   let(:action_name) { 'index'}
-  let(:scope) { double(blacklight_config: CatalogController.blacklight_config, search_state_class: nil, action_name:, controller_name: 'catalog') }
+  let(:scope) { double(blacklight_config: CatalogController.blacklight_config, search_state_class: nil, action_name:, controller_name: 'catalog', params: {}) }
 
   before do
     # silly hack to avoid refactoring these tests

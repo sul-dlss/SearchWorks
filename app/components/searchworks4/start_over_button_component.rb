@@ -12,7 +12,7 @@ module Searchworks4
 
     # Omit view to avoid being stuck in gallery mode from book funds/full page browse nearby.
     def start_over_path
-      helpers.search_action_path({})
+      helpers.search_action_path({ new: true })
     end
   end
 end
