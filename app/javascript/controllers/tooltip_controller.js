@@ -15,7 +15,11 @@ export default class extends Controller {
 
   show() {
     this.tooltip.classList.add('show')
+    this.popperInstance.update()
+  }
 
+  updatePopper() {
+    this.tooltip.innerHTML = this.element.getAttribute('aria-label')
     this.popperInstance.update()
   }
 

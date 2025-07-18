@@ -9,6 +9,9 @@ en:
       home:
         title: 'SearchWorks articles+ : Stanford Libraries'
     search:
+      bookmarks:
+        present: Saved
+        absent: Save
       facets:
         access_point:
           databases:
