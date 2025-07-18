@@ -2,14 +2,18 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="list-toggle"
 export default class extends Controller {
+  static values = {
+    listItemSelector: { type: String, default: 'dd' },
+    limit: { type: Number, default: 5 }
+  }
   static targets = ['element', 'group']
   connect() {
     if (!this.hasGroupTarget) return
-    const ddElements = this.groupTarget.querySelectorAll('dd')
-    if (ddElements.length > 5) {
+    const ddElements = this.groupTarget.querySelectorAll(this.listItemSelectorValue)
+    if (ddElements.length > this.limitValue) {
       this.addControls()
       ddElements.forEach(function(element, index) {
-        if (index < 5) return
+        if (index < this.limitValue) return
         element.classList.add('visually-hidden')
         element.setAttribute('data-list-toggle-target', 'element')
       })
@@ -29,7 +33,7 @@ export default class extends Controller {
     // in order for the button to be accessible it needs to be wrapped in a dd.
     // We can't put it outside the dl element because of subject/genre http://localhost:3000/view/in00000385844
     // buttons in a dl element are an accessibility error
-    const dd = document.createElement('dd')
+    const dd = document.createElement(this.listItemSelectorValue)
     dd.append(button)
     this.groupTarget.append(dd)
   }
