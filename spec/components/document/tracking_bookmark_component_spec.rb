@@ -14,6 +14,6 @@ RSpec.describe Document::TrackingBookmarkComponent, type: :component do
 
   it 'gathers analytics' do
     expect(page).to have_css '[data-controller="analytics"]'
-    expect(page).to have_css 'button[data-action^="click->analytics#trackBookmark"]'
+    expect(page).to have_css '[data-action^="click->analytics#trackBookmark"]'
   end
 end

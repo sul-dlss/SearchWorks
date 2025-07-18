@@ -2,24 +2,30 @@
 <%= form_tag(bookmark_path,
              authenticity_token: false,
              method:  bookmarked? ? :delete : :put,
-             class: "bookmark-toggle",
+             class: "bookmark-toggle btn nav-link",
+             aria: { label: (bookmarked? ? 'Remove from saved records' : 'Add to saved records') },
              data: {
+               controller: 'bookmark tooltip',
+               action: "click->analytics#trackBookmark " \
+                      "mouseenter->tooltip#show focus->tooltip#show mouseleave->tooltip#hide blur->tooltip#hide " \
+                      "mouseenter->bookmark#hover click->bookmark#blur focus->bookmark#hover mouseleave->bookmark#blur blur->bookmark#blur " \
+                      "update-tooltip@window->tooltip#updatePopper bookmark.blacklight@window->bookmark#bookmarkUpdated",
                present: t('blacklight.search.bookmarks.present'),
                absent: t('blacklight.search.bookmarks.absent'),
                inprogress: t('blacklight.search.bookmarks.inprogress')
             }) do %>
   <div class="toggle-bookmark" data-controller="analytics">
-    <label class="toggle-bookmark-label" data-checkboxsubmit-target="label">
+    <label class="toggle-bookmark-label" data-checkboxsubmit-target="label" tabindex="0">
       <input type="checkbox" class="toggle-bookmark-input <%= bookmark_icon ? 'd-none' : '' %>" data-action="click->analytics#trackBookmark" data-checkboxsubmit-target="checkbox" <%= 'checked="checked"' if bookmarked? %>>
       <%= bookmark_icon %>
-      <span data-checkboxsubmit-target="span"><%= bookmarked? ? t('blacklight.search.bookmarks.present') : t('blacklight.search.bookmarks.absent') %></span>
+      <span class="bookmark-text" data-checkboxsubmit-target="span"><%= bookmarked? ? t('blacklight.search.bookmarks.present') : t('blacklight.search.bookmarks.absent') %></span>
     </label>
   </div>
-
   <%= hidden_field_tag('bookmarks[][document_id]', document.id) %>
   <%= hidden_field_tag('bookmarks[][record_type]', 'article') %>
   <%= hidden_field_tag('bookmarks[][document_type]', document.class) %>
 
+
   <%= submit_tag(t(bookmarked? ? 'remove.button' : 'add.button', scope: 'blacklight.bookmarks'),
-                 class: "bookmark-#{bookmarked? ? 'remove' : 'add'} btn btn-outline-secondary") %>
+                 class: "bookmark-#{bookmarked? ? 'remove' : 'add'} d-none btn btn-outline-secondary") %>
 <% end %>

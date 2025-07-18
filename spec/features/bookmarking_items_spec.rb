@@ -15,28 +15,28 @@ RSpec.feature 'Bookmarking Items', :js do
 
       # Add one document to saved records
       within(first('.document')) do
-        click_button 'Save record'
+        find('.toggle-bookmark').click
       end
 
       expect(page).to have_content('Record saved')
 
       # Add another document to saved records
       within(first('.document:nth-child(2)')) do
-        click_button 'Save record'
+        find('.toggle-bookmark').click
       end
 
       expect(page).to have_content('Record saved')
 
       # Remove the second document from saved records
       within(first('.document:nth-child(2)')) do
-        click_button('Remove from saved records')
+        find('.toggle-bookmark').click
       end
 
       expect(page).to have_content('Record removed')
 
       # Add another document to saved records
       within(all('.document').last) do
-        click_button 'Save record'
+        find('.toggle-bookmark').click
       end
 
       expect(page).to have_content('Record saved')
@@ -69,7 +69,7 @@ RSpec.feature 'Bookmarking Items', :js do
       end
       # Remove the second document from saved records
       within(first('.document:nth-child(2)')) do
-        click_button('Remove from saved records')
+        find('.toggle-bookmark').click
       end
 
       expect(page).to have_content('Record removed')
