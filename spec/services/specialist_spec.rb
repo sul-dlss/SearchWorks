@@ -18,5 +18,9 @@ RSpec.describe Specialist do
     it 'returns nothing if the query term was a stopword' do
       expect(described_class.find('the')).to be_nil
     end
+
+    it 'truncates apostrophes in search terms instead of treating it is a separate token' do
+      expect(described_class.find("Black's Law Dictionary")).to be_blank
+    end
   end
 end
