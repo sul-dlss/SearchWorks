@@ -5,13 +5,15 @@
     <% location = library.locations.first %>
     <% item = location.items.first %>
     <%= tag.span library.name, class: 'library fw-semibold text-nowrap' %>
-    <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
-    <%= tag.span item.callnumber, class: 'callnumber text-nowrap' %>
-    <span class="d-inline-flex gap-3">
-      <%= render Searchworks4::ItemStatusComponent.new(item:) %>
-      <% unless item.request_link.render? %>
-        <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
-      <% end %>
+    <span class="d-inline-flex gap-4 row-gap-2 align-items-center flex-wrap">
+      <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
+      <%= tag.span item.callnumber, class: 'callnumber text-nowrap' %>
+      <span class="d-inline-flex gap-3">
+        <%= render Searchworks4::ItemStatusComponent.new(item:) %>
+        <% unless item.request_link.render? %>
+          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+        <% end %>
+      </span>
     </span>
   <% end %>
   <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy', data: { 'eager-lazy-target': 'frame' } %>
