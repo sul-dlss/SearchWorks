@@ -18,8 +18,6 @@ RSpec.describe Searchworks4::ConstraintsComponent, type: :component do
     end
   end
 
-  # config.add_facet_field '-some_facet', :some_facet.to_h, group: 'negative', show: false, label: :some_facet.label.to_s,
-  # filter_query_builder: NegativeFilterQueryBuilder
   let(:search_state) { Blacklight::SearchState.new(query_params.with_indifferent_access, blacklight_config) }
   let(:query_params) { {} }
 
