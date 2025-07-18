@@ -6,7 +6,7 @@ Specialist = Data.define(:title, :full_title, :research_areas, :photo_url, :emai
   end
 
   def self.tokenize(term)
-    term.downcase.gsub(/[[:punct:]]/, ' ').split(/\s+/).excluding(stopwords)
+    term.downcase.gsub("'s", 's').gsub(/[[:punct:]]/, ' ').split(/\s+/).excluding(stopwords)
   end
 
   def self.find(query)
