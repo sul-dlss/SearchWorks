@@ -25,6 +25,9 @@
 
       <%= tag.span library.name, class: 'library fw-semibold' %>
       <%= render LocationComponent.new(location: library.locations.first, document: document, suppress_off_campus: true) if library.locations.one? %>
+
+    <% else %>
+      <%= tag.span 'Multiple locations', class: 'library fw-semibold' %>
     <% end %>
 
     <%= render ItemCountComponent.new(document.holdings.items.count) %>
