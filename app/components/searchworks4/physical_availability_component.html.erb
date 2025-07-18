@@ -84,6 +84,8 @@
       <%= tag.div class: header_classes + ['d-inline-flex'] do %>
         <% if library_groups.one? %>
           <%= tag.span library_groups.first.name, class: 'library fw-semibold' %>
+        <% else %>
+          <%= tag.span 'Multiple locations', class: 'library fw-semibold' %>
         <% end %>
 
         <%= render ItemCountComponent.new(document.holdings.items.count) %>
