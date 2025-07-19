@@ -42,7 +42,7 @@ RSpec.feature 'Alterate catalog results', :js do
       click_button 'Source type'
       within '.mini-mini-bento' do
         expect(page).to have_text 'SearchWorks Catalog'
-        expect(page).to have_css '.bento-count', text: '66'
+        expect(page).to have_css '.bento-count', text: '67'
       end
     end
   end

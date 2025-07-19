@@ -340,3 +340,10 @@
   }
 
 }
+
+.alert.citations-alert {
+  --bs-alert-bg: rgba(var(--stanford-poppy-dark-rgb), 0.1);
+  &::before {
+    color: rgb(var(--stanford-poppy-rgb))
+  }
+}

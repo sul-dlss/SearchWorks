@@ -15,7 +15,7 @@ module Citations
 
     # @return [Hash] A hash with the preferred citation style as key and citation text as value
     def all_citations
-      return { CITATION_STYLE => "<p>#{mods_citation}</p>".html_safe } if mods_citation.present? # rubocop:disable Rails/OutputSafety
+      return { CITATION_STYLE => mods_citation.html_safe } if mods_citation.present? # rubocop:disable Rails/OutputSafety
 
       {}
     end

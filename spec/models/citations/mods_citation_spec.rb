@@ -11,7 +11,7 @@ RSpec.describe Citations::ModsCitation do
 
   describe '#all_citations' do
     it 'returns a hash with the preferred citation' do
-      expect(mods_citation.all_citations).to eq({ 'preferred' => '<p>This is the preferred citation data</p>' })
+      expect(mods_citation.all_citations).to eq({ 'preferred' => 'This is the preferred citation data' })
     end
   end
 end
