@@ -104,9 +104,6 @@ class SolrDocument
 
   # self.unique_key = 'id'
 
-  # SMS uses the semantic field mappings below to generate the body of an SMS email.
-  use_extension(Searchworks::Document::Sms)
-
   # DublinCore uses the semantic field mappings below to assemble an OAI-compliant Dublin Core document
   # Semantic mappings of solr stored fields. Fields may be multi or
   # single valued. See Blacklight::Solr::Document::ExtendableClassMethods#field_semantics

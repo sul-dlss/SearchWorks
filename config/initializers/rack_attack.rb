@@ -83,7 +83,7 @@ if Settings.THROTTLE_TRAFFIC
       {}
     end
 
-    req.ip if route[:action].in? %w[email sms citation fulltext_link]
+    req.ip if route[:action].in? %w[email citation fulltext_link]
   end
 
   # Throttle article searching based on badly behaved user agent (device farm)?
