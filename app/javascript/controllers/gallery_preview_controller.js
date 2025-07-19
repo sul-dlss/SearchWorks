@@ -37,8 +37,57 @@ export default class extends Controller {
     this.appendPointer()
 
     this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
-
+    this.adjustPreviewMargins()
     this.attachPreviewEvents()
+  }
+
+  adjustPreviewMargins() {
+    // This is assuming the preview is styled for 100% width
+    this.previewTarget.style.marginLeft = 0
+    this.previewTarget.style.marginRight = 0
+    const maxPreviewWidth = 800
+    const galleryGapWidth = 16
+    const galleryRect = this.element.getBoundingClientRect()
+    const galleryDocumentWidth = galleryRect.width + galleryGapWidth
+    const previewWidth = this.previewTarget.getBoundingClientRect().width
+    const documentsOnRow = Math.floor(previewWidth/galleryDocumentWidth)
+    const documentsRect = document.getElementById('documents').getBoundingClientRect()
+    const leftBound = documentsRect.left
+    const rightBound = leftBound + documentsRect.width
+    const minMarginRight = Math.ceil(previewWidth - (documentsOnRow * galleryDocumentWidth) + galleryGapWidth)
+    const galleryCenterDistanceFromLeftBound = (galleryRect.left + (galleryDocumentWidth / 2)) - leftBound
+    const galleryCenterDistanceFromRightBound = rightBound - (galleryRect.left + (galleryDocumentWidth / 2))
+
+    if (previewWidth <= maxPreviewWidth) {
+      // Adjust the right margin so it matches the unused flex space at the end of the row
+      this.previewTarget.style.marginRight = `${minMarginRight}px`
+      this.movePointer(galleryCenterDistanceFromLeftBound)
+      return
+    }
+
+    if (galleryCenterDistanceFromLeftBound <= (maxPreviewWidth/2)) {
+      // If the center of the element is too close to the left to center, max the right margin
+      const marginRight = Math.ceil(previewWidth - maxPreviewWidth)
+      this.previewTarget.style.marginRight = `${marginRight}px`
+      this.movePointer(galleryCenterDistanceFromLeftBound)
+      return
+    }
+
+    if (galleryCenterDistanceFromRightBound <= (maxPreviewWidth/2)) {
+      // If the center of the element is too close to the right to center, max the left margin
+      const marginLeft = Math.ceil(previewWidth - maxPreviewWidth) - minMarginRight
+      this.previewTarget.style.marginLeft = `${marginLeft}px`
+      this.previewTarget.style.marginRight = `${minMarginRight}px`
+      this.movePointer(galleryCenterDistanceFromLeftBound - marginLeft)
+      return
+    }
+
+    // Otherwise we need to balance the left and right margins to center the preview
+    const marginLeft = Math.ceil(galleryCenterDistanceFromLeftBound - (maxPreviewWidth / 2))
+    const marginRight = Math.ceil(previewWidth - maxPreviewWidth - marginLeft)
+    this.previewTarget.style.marginLeft = `${marginLeft}px`
+    this.previewTarget.style.marginRight = `${marginRight}px`
+    this.movePointer(galleryCenterDistanceFromLeftBound - marginLeft)
   }
 
   clamp(x, min, max) {
@@ -47,12 +96,11 @@ export default class extends Controller {
 
   appendPointer() {
     this.previewTarget.appendChild(this.arrow)
+  }
 
-    const maxLeft = this.previewTarget.offsetWidth - this.arrow.offsetWidth - 1
-    const { left, width } = this.element.getBoundingClientRect()
-    const docsLeft = document.getElementById('documents').getBoundingClientRect().left
-    const arrowLeft = this.clamp(left - docsLeft + width / 2 - 10, 0, maxLeft)
-
+  movePointer(targetCenter) {
+    const pointerWidth = 21
+    const arrowLeft = targetCenter - pointerWidth
     this.arrow.style.left = arrowLeft + 'px'
   }
 
@@ -90,6 +138,10 @@ export default class extends Controller {
   }
 
   attachPreviewEvents() {
+    window.addEventListener('resize', () => {
+      this.adjustPreviewMargins()
+      this.movePointer()
+    })
     this.previewTarget.addEventListener('turbo:frame-load', () => {
       this.hideDocumentActions()
     })
