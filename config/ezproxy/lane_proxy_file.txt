@@ -48,6 +48,7 @@ aejournal.biomedcentral.com
 aem.asm.org
 afju.springeropen.com
 africacommons.net
+ageconsearch.umn.edu
 aging.jmir.org
 agupubs.onlinelibrary.wiley.com
 ahajournals.org
@@ -638,6 +639,7 @@ geoscienceworld.org
 gh.bmj.com
 ghr.nlm.nih.gov
 ghrp.biomedcentral.com
+global.factiva.com
 global.oup.com
 globalheartjournal.com
 globalizationandhealth.biomedcentral.com
