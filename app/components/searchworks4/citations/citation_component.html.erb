@@ -3,7 +3,9 @@
 <div class="modal-body" data-controller="citation-style-picker">
   <h4 class="fs-5">Copy citation</h4>
 
-  <% if preferred_only? %>
+  <% if unavailable? %>
+    <input type="hidden" data-citation-style-picker-target="select" value="tab-<%= null_key %>" />
+  <% elsif preferred_only? %>
     <input type="hidden" data-citation-style-picker-target="select" value="tab-<%= preferred_key %>" />
   <% else %>
 
@@ -23,7 +25,9 @@
 
   <% citations.each do |style, citation| %>
     <div class="mb-4 bg-light p-2" data-citation-style-picker-target="tab" data-controller="copy-text" id="tab-<%= style %>" hidden>
-      <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm lh-1 ms-4" data-action="copy-text#copy">Copy</button></h5>
+      <% unless unavailable? %>
+        <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm lh-1 ms-4" data-action="copy-text#copy">Copy</button></h5>
+      <% end %>
       <% Array(citation).each do |cite| %>
         <div class="mb-2" data-copy-text-target="text">
           <%= cite %>
@@ -32,7 +36,7 @@
     </div>
   <% end %>
 
-
+  <% unless unavailable? %>
   <h4 class="fs-5">Export citation</h4>
   <ul class="list-unstyled">
     <% if exports_ris? %>
@@ -69,4 +73,5 @@
       </li>
     <% end %>
   </ul>
+  <% end %>
 </div>

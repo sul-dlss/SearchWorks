@@ -17,8 +17,16 @@ module Searchworks4
         citations.present?
       end
 
+      def unavailable?
+        citations.present? && citations == Citation::NULL_CITATION
+      end
+
       def preferred_only?
         citations.one? && citations.keys.first == preferred_key
+      end
+
+      def null_key
+        Citation::NULL_CITATION.keys.first
       end
 
       def preferred_key

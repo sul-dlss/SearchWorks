@@ -16,6 +16,7 @@
     <div class="bg-light p-3"<%= ' hidden' if index != 0 %> data-citation-format-target="panel"
       data-controller="copy-text" id="citation-format-<%= format %>">
       <div class="d-flex align-items-center gap-2 mb-2">
+      <% unless all_unavailable? %>
         <h4 class="mb-0 me-3">
           <% if preferred_or_unavailable_citations_only? %>
             Preferred citations
@@ -24,8 +25,11 @@
           <% end %>
         </h4>
         <button class="btn btn-outline-primary" data-action="click->copy-text#copy">Copy</button>
+      <% end %>
       </div>
-      <% if unavailable_citation_count(format).positive? %>
+      <% if all_unavailable? %>
+        <div class="alert citations-alert bi bi-exclamation-circle-fill p-2 my-3"><span class="ms-2">All citations are unavailable for the saved records.</span></div>
+      <% elsif unavailable_citation_count(format).positive? %>
         <div class="alert citations-alert bi bi-exclamation-circle-fill p-2 my-3"><span class="ms-2">Citations are unavailable for <%= unavailable_citation_count(format) %> of the <%= all_citations.count %> saved records.</span></div>
       <% end %>
       <ol class="mb-3 ps-3" data-copy-text-target="text">
@@ -42,6 +46,7 @@
   <% end %>
 </div>
 
+<% unless all_unavailable? %>
 <h3 class="mt-4 mb-3">Export citations</h3>
 <ul class="list-unstyled d-flex gap-3 export-citations">
   <% if @documents.any? {|d| d.export_formats.key?(:ris) } %>
@@ -66,3 +71,4 @@
     </li>
   <% end %>
 </ul>
+<% end %>
