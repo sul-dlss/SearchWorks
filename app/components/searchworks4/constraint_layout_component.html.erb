@@ -1,0 +1,16 @@
+<span class="btn-group applied-filter constraint <%= @classes %>">
+  <span class="constraint-value btn btn-outline-secondary">
+    <% if @label.present? %>
+     <span class="filter-name">
+      <%# The following includes prefix where it applies for advanced search selections %>
+        <% if @prefix.present? %>
+            <span class="filter-prefix border-end"><%= sanitize @prefix %></span>
+        <% end %>
+        <%= @label %></span>
+    <% end %>
+    <% if @value.present? %>
+      <%= content_tag :span, @value, class: 'filter-value', title: strip_tags(@value) %>
+    <% end %>
+  </span>
+  <%= remove_button %>
+</span>

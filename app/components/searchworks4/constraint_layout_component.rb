@@ -2,6 +2,12 @@
 
 module Searchworks4
   class ConstraintLayoutComponent < Blacklight::ConstraintLayoutComponent
+    # This extension allows us to pass in the prefix value for advanced search constraints
+    def initialize(value:, label: nil, remove_path: nil, classes: nil, prefix: nil, search_state: nil)
+      super(value:, label:, remove_path:, classes:, search_state:)
+      @prefix = prefix
+    end
+
     def remove_button
       return unless @remove_path
 

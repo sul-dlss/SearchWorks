@@ -111,6 +111,12 @@
       margin-left: 0.25rem;
       transition: background-color 0.15s ease-in-out;
     }
+
+    .filter-prefix {
+      margin-right: 0.5rem;
+      padding-right: 0.5rem;
+     --bs-border-color: var(--stanford-black);
+    }
   }
 
   .remove {

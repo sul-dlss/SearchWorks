@@ -18,7 +18,7 @@ module NegativeFacets
       original_field = blacklight_config.facet_fields[k.delete_prefix('-')]
       next if original_field.nil? || blacklight_config.facet_fields[k]
 
-      blacklight_config.add_facet_field k, **original_field.to_h, group: 'negative', show: false, label: "#{original_field.label} NOT",
+      blacklight_config.add_facet_field k, **original_field.to_h, group: 'negative', show: false, label: original_field.label.to_s,
                                                                   filter_query_builder: NegativeFilterQueryBuilder
     end
   end
