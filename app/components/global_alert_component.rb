@@ -7,6 +7,14 @@ class GlobalAlertComponent < ViewComponent::Base
   end
 
   def render?
-    @alert.present?
+    @alert.present? && cookies[alert_id] != 'dismissed'
+  end
+
+  def alert_id
+    "global_alert_#{@alert.try(:id) || @alert.html.hash}"
+  end
+
+  def dismiss_type
+    @alert.try(:dismiss)
   end
 end
