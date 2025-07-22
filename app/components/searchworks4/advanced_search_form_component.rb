@@ -24,7 +24,8 @@ module Searchworks4
           [key, label]
         end.compact_blank
 
-        { field: config.key, label: facet_presenter.label, limit: config.limit, range: config.range, top: config.key.in?(blacklight_config.top_filters[:advanced_search]),
+        { field: config.key, label: config.advanced_search_label || facet_presenter.label,
+          limit: config.limit, range: config.range, top: config.key.in?(blacklight_config.top_filters[:advanced_search]),
           values: values, value_labels: value_labels }
       end
     end
