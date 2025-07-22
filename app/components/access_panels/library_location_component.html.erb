@@ -45,5 +45,9 @@
       <%= render AccessPanels::LocationItemComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?) %>
     </tbody>
   </table>
-  <%= show_all_link %>
+  <% if location_count? %>
+    <%= link_to(availability_modal_path(document, { library: library.code }), data: { blacklight_modal: "trigger" }) do %>
+      Browse all <%= pluralize(location_count?, 'item') %> <i class="bi bi-chevron-double-right fs-14"></i>
+    <% end %>
+  <% end %>
 </div>
