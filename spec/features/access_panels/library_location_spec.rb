@@ -78,4 +78,56 @@ RSpec.describe "Library Location Access Panel" do
       end
     end
   end
+
+  describe 'when expanding the modal', :js do
+    it 'expands the modal to show all items with the expand button' do
+      visit '/view/402381'
+      click_link 'Expand'
+
+      expect(page).to have_content 'SI 8.9: 29'
+      expect(page).to have_content 'N380 .S75 V.73'
+    end
+
+    it 'expands the modal to just the current library with the "browse all" button' do
+      visit '/view/402381'
+      click_link 'Browse all 9 items'
+
+      expect(page).to have_content 'N380 .S75 V.73'
+      expect(page).to have_no_content 'SI 8.9: 29'
+    end
+
+    it 'allows the user to search by call number' do
+      visit '/view/402381'
+      click_link 'Expand'
+
+      within '.availability-modal' do
+        fill_in 'Search items', with: '7'
+
+        expect(page).to have_css('.availability-modal tr:has(mark)', count: 12)
+
+        expect(page).to have_content('20 items | 2 matches').and(have_content('US Federal Documents')).and(have_content('SI 8.9: 7'))
+        expect(page).to have_content('9 items | 9 matches').and(have_content('SAL3')).and(have_content('N380 .S75 V.12'))
+
+        fill_in 'Search items', with: '73'
+
+        expect(page).to have_content('20 items | 0 matches').and(have_no_content('US Federal Documents'))
+        expect(page).to have_content('9 items | 1 match').and(have_content('SAL3'))
+
+        fill_in 'Search items', with: ''
+
+        expect(page).to have_content 'SI 8.9: 29'
+        expect(page).to have_content 'N380 .S75 V.73'
+      end
+    end
+
+    it 'hides the online availability when searching' do
+      visit '/view/10838998'
+      click_link 'Expand'
+      fill_in 'Search items', with: 'ML'
+
+      within '.availability-modal' do
+        expect(page).to have_no_content('MIT Press Direct')
+      end
+    end
+  end
 end
