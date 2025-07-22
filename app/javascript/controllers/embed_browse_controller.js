@@ -49,4 +49,8 @@ export default class extends Controller {
       this.viewportTarget.appendChild(element)
     })
   }
+
+  scrollOver(event) {
+    scrollOver(this.currentDocumentTarget(), this.galleryTarget)
+  }
 }
