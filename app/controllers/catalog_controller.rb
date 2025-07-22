@@ -162,17 +162,6 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
     config.add_facet_field 'access_facet', label: 'Access',
-                           query: {
-                             'At the Library': {
-                               label: 'At the Library', fq: 'access_facet:"At the Library"'
-                             },
-                             'Online': {
-                                label: 'Online', fq: "access_facet:Online"
-                             },
-                             'On order': {
-                                label: 'On order', fq: 'access_facet:"On order"'
-                              }
-                           },
                            component: Blacklight::Facets::ListComponent
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Searchworks4::FormatFacetComponent
     config.add_facet_field "library", field: "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
