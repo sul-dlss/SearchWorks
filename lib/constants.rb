@@ -317,21 +317,17 @@ module Constants
 
   LIBRARY_INSTRUCTIONS = {
     'EDUCATION' => {
-      heading: 'On-site access',
       text: 'The Education Library is closed for construction. Request items for pickup at another library.'
     },
     'HILA' => {
-      heading: 'On-site access',
       text: 'Reservations are required at least seven days in advance. For more information, see ' \
             '<a href="https://www.hoover.org/library-archives/research-services/plan-research-visit" target="_blank">Plan a research visit</a>.'
     },
     'RUMSEY-MAP' => {
-      heading: 'On-site access',
       text: 'Researchers can request to view materials in the Center. For more information, see ' \
             '<a href="https://library.stanford.edu/libraries/david-rumsey-map-center#visiting-the-david-rumsey-map-center" target="_blank">Visiting the David Rumsey Map Center</a>.'
     },
     'SPEC-COLL' => {
-      heading: 'On-site access',
       text: 'Submit requests at least three business days in advance. For more information, see ' \
             '<a href="https://guides.library.stanford.edu/c.php?g=1173230" target="_blank">Using Special Collections and University Archives</a>.'
     }
