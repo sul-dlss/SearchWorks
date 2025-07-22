@@ -50,19 +50,21 @@ RSpec.feature 'Article Record Display' do
 
       it 'toggled via panel heading' do
         visit article_path(document[:id])
-        expect(page).to have_css('.fulltext-toggle-bar', text: 'Hide full text')
-        expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
-        expect(page).to have_content('This Journal')
-
-        find_by_id('fulltextToggleBar').click
         expect(page).to have_css('.fulltext-toggle-bar', text: 'Show full text')
         expect(page).to have_no_css('div.blacklight-eds_html_fulltext', visible: true)
         expect(page).to have_no_content('This Journal')
+
+        find_by_id('fulltextToggleBar').click
+
+        expect(page).to have_css('.fulltext-toggle-bar', text: 'Hide full text')
+        expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
+        expect(page).to have_content('This Journal')
       end
 
       it 'renders HTML' do
         visit article_path(document[:id])
 
+        find_by_id('fulltextToggleBar').click
         expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
         within('div.blacklight-eds_html_fulltext') do
           expect(page).to have_no_content('<anid>')

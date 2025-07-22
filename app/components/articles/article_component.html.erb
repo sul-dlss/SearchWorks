@@ -1,12 +1,12 @@
 <div class="article-record-metadata row align-items-start">
   <div class="article-record-sections record-sections">
     <% if @document.html_fulltext? %>
-      <div class="html-fulltext-container">
+      <div class="html-fulltext-container mb-5">
         <% if helpers.on_campus_or_su_affiliated_user? %>
-          <button class="section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-bs-toggle="collapse" href="#toggleFulltext" aria-expanded="true" aria-controls="toggleFulltext">
-            <h2>Hide full text <i class='bi bi-chevron-down'></i></h2>
+          <button class="btn btn-secondary mb-3 section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-bs-toggle="collapse" href="#toggleFulltext" aria-expanded="false" aria-controls="toggleFulltext">
+            <h2 class="mb-0">Show full text <i class='bi bi-chevron-right'></i></h2>
           </button>
-          <div class='eds-full-text-section section-body collapse show' id="toggleFulltext">
+          <div class='eds-full-text-section section-body collapse' id="toggleFulltext">
             <% metadata_fields_for_section('Fulltext').each do |field_presenter| -%>
               <% if field_presenter.render_field? %>
                 <div class="blacklight-<%= field_presenter.key %>"><%= field_presenter.render %></div>
