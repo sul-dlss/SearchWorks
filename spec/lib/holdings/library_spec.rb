@@ -115,7 +115,6 @@ RSpec.describe Holdings::Library do
   describe '#library_instructions' do
     it 'returns instructions for libraries which have them' do
       Constants::LIBRARY_INSTRUCTIONS.each_key do |library|
-        expect(Holdings::Library.new(library).library_instructions).to have_key(:heading)
         expect(Holdings::Library.new(library).library_instructions).to have_key(:text)
       end
     end

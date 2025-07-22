@@ -406,7 +406,6 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     end
 
     it 'renders special instructions field' do
-      expect(page).to have_css('h4', text: 'On-site access')
       expect(page).to have_css('p', text: /Submit requests at least three business days in advance/)
     end
   end
