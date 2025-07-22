@@ -10,6 +10,12 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li>
+                        <%= link_to 'Course reserves', course_reserves_path, class: 'dropdown-item' %>
+                      </li>
+                      <li>
+                        <%= link_to 'Databases', databases_path, class: 'dropdown-item' %>
+                      </li>
+                      <li>
                         <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'dropdown-item' %>
                       </li>
                       <li>
@@ -17,12 +23,6 @@
                       </li>
                       <li>
                         <%= link_to 'Theses & dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'dropdown-item' %>
-                      </li>
-                      <li>
-                        <%= link_to 'Course reserves', course_reserves_path, class: 'dropdown-item' %>
-                      </li>
-                      <li>
-                        <%= link_to 'Databases', databases_path, class: 'dropdown-item' %>
                       </li>
                     </ul>
                   </li>
