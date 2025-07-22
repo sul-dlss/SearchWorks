@@ -13,13 +13,22 @@ module Searchworks4
     end
 
     # In the situation of advanced search, we want to use our own clause presenters
-    # Otherwise, the parent class's method is sufficient
+    # We still want to accept the query constraints the super method uses as well
     def query_constraints
-      if advanced_clause_search?
-        ''.html_safe + render(@facet_constraint_component.with_collection(advanced_clause_presenters.to_a, **@facet_constraint_component_options))
+      if @search_state.query_param.present?
+        render(
+          @query_constraint_component.new(
+            search_state: @search_state,
+            value: @search_state.query_param,
+            label: label,
+            remove_path: remove_path,
+            classes: 'query',
+            **@query_constraint_component_options
+          )
+        )
       else
-        super
-      end
+        ''.html_safe
+      end +  render(@facet_constraint_component.with_collection(advanced_clause_presenters.to_a, **@facet_constraint_component_options))
     end
 
     # Extending the core method to allow using custom inclusive and negative facet item presenters
@@ -43,11 +52,6 @@ module Searchworks4
     end
 
     private
-
-    # Is this an advanced search query using clause parameters
-    def advanced_clause_search?
-      @search_state&.clause_params&.present?
-    end
 
     # This method returns the presenter for advanced search clauses
     def advanced_clause_presenters
