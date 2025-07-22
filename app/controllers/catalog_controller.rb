@@ -180,7 +180,7 @@ class CatalogController < ApplicationController
                             component: Searchworks4::LibraryFacetComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
                            component: Searchworks4::FacetSearchComponent
-    config.add_facet_field "pub_year_tisim", label: "Date", range: true
+    config.add_facet_field "pub_year_tisim", label: "Date", range: true, advanced_search_label: 'Publication year'
 
     config.add_facet_field "language", label: "Language", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field "author_person_facet", label: "Author", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
