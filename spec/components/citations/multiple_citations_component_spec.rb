@@ -35,6 +35,17 @@ RSpec.describe Citations::MultipleCitationsComponent, type: :component do
     end
   end
 
+  context 'when all citations are null' do
+    let(:documents) { [SolrDocument.find('1'), SolrDocument.find('4')] }
+    let(:request_url) { "/view/citation?id%5B%5D=1&id%5B%5D=4" }
+
+    it 'does not offer any options' do
+      expect(page).to have_text 'All citations are unavailable for the saved records.'
+      expect(page).to have_no_text 'Null'
+      expect(page).to have_no_text 'Export citations'
+    end
+  end
+
   context 'when some items have only preferred citations (mods)' do
     let(:documents) { [SolrDocument.find('in00000053236'), SolrDocument.find('nj140cs3237')] }
     let(:request_url) { "/view/citation?id%5B%5D=in00000053236&id%5B%5D=nj140cs3237" }

@@ -34,6 +34,10 @@ module Citations
       citations_for_document.one? && citations_for_document.keys.first == preferred_key
     end
 
+    def all_unavailable?
+      all_citations.all?(Citation::NULL_CITATION)
+    end
+
     def preferred_citation(citations_for_document)
       citations_for_document[preferred_key]
     end
