@@ -258,6 +258,10 @@ class ArticlesController < ApplicationController
     super if has_search_parameters?
   end
 
+  def search_bar
+    render layout: false
+  end
+
   protected
 
   def send_emails_to_all_recipients(documents)

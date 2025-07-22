@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     concerns :searchable
     concerns :range_searchable
     get 'facet_results/:id', to: 'catalog#facet_results', as: 'facet_results'
+    get 'search_bar'
   end
   get 'advanced', to: 'catalog#advanced_search', as: 'advanced_search'
 
@@ -106,6 +107,10 @@ Rails.application.routes.draw do
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
     resources :articles, only: %i[index show] do
       concerns :exportable
+
+      collection do
+        get 'search_bar'
+      end
     end
 
     get 'articles/:id/ris' => 'articles#show', as: :articles_ris, constraints: ->(req) { req.format = :ris }
