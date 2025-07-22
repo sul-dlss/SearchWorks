@@ -2,7 +2,7 @@
   <ul class="nav navbar justify-content-start d-inline-flex gap-2 px-1 py-0">
     <li>
       <%= link_to citation_href,
-                  class: 'nav-link',
+                  class: 'btn nav-link',
                   data: {
                     action: "click->analytics#trackLink",
                     blacklight_modal: "trigger"
@@ -12,13 +12,13 @@
     </li>
     <li>
       <%= link_to email_href,
-                  class: 'nav-link',
+                  class: 'btn nav-link',
                   data: { blacklight_modal: "trigger" } do %>
         <i class="bi bi-envelope me-1"></i>Email
       <% end %>
     </li>
     <li>
-      <button class="btn btn-link" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer me-1"></i>Print</button>
+      <button class="btn nav-link" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer me-1"></i>Print</button>
     </li>
   </ul>
 </nav>
