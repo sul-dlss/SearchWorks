@@ -4,6 +4,8 @@
   --stanford-poppy-dark-rgb: 209, 102, 15;
   --sul-shadow-color: rgba(0, 0, 0, 0.2);
   --bs-box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
+  /* https://github.com/sul-dlss/component-library/pull/176 */
+  --stanford-digital-green-rgb: 0, 133, 102;
 }
 
 /* TODO: Remove after https://github.com/twbs/bootstrap/issues/41569 is resolved*/

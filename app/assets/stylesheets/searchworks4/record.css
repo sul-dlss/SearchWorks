@@ -347,3 +347,33 @@
     color: rgb(var(--stanford-poppy-rgb))
   }
 }
+
+.availability-library-location {
+  display: flex;
+}
+
+.search-mode {
+  h2 .badge {
+    background-color: rgba(var(--stanford-digital-green-rgb), 0.2);
+  }
+
+  #online {
+    display: none !important
+  }
+
+  .item-row {
+    display: none !important;
+  }
+
+  .item-row:has(mark) {
+    display: flex !important;
+  }
+
+  .availability-library-location  {
+    display: none !important;
+  }
+
+  .availability-library-location:has(mark) {
+    display: flex !important;
+  }
+}
