@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe "browse/index" do
   let(:original_doc) do
     SolrDocument.new(
-      id: 'doc-id',
+      id: 'document-id',
       browse_nearby_struct: browse_nearby_struct,
       item_display_struct: item_display_struct
     )

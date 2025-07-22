@@ -27,7 +27,7 @@ RSpec.describe 'Callnumber Browse', :js do
       expect(page).to have_css('.embedded-items')
 
       within '.current-document' do
-        click_button 'Save record'
+        find('.toggle-bookmark').click
       end
 
       expect(page).to have_link 'Saved 1'
@@ -46,10 +46,10 @@ RSpec.describe 'Callnumber Browse', :js do
       expect(page).to have_css('.gallery-document.current-document')
 
       within '.document-position-11' do
-        click_button 'Save record'
+        find('.toggle-bookmark').click
       end
       within '.document-position-12' do
-        click_button 'Save record'
+        find('.toggle-bookmark').click
       end
 
       expect(page).to have_css('[aria-label="Remove from saved records"]')

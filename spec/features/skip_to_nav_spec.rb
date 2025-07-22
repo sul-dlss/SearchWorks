@@ -34,8 +34,8 @@ RSpec.feature "Skip-to Navigation" do
         fill_in 'q', with: '20'
         click_button 'search'
 
-        within '[data-document-id="20"]' do
-          click_button 'Save record'
+        within '.bookmark-toggle[data-document-id="20"]' do
+          find('.toggle-bookmark').click
         end
         expect(page).to have_content('Record saved') # rubocop:disable RSpec/ExpectInHook
 

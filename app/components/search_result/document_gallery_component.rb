@@ -22,7 +22,7 @@ module SearchResult
 
     def data
       {
-        doc_id: @document.id,
+        document_id: @document.id,
         document_counter: @counter
       }.merge(stimulus_attributes)
     end

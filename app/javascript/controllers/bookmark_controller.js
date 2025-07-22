@@ -2,87 +2,48 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="bookmark"
 export default class extends Controller {
-  static targets = ['icon', 'form']
-
-  get checkedValue() {
-    return this.formTarget.dataset.bookmarkCheckedValue == 'true'
-  }
+  static targets = ['icon', 'checkedIcon', 'hoverIcon']
 
   hover() {
-    if (this.checkedValue) {
-      this.iconTarget.style.setProperty('--bl-icon-color', 'var(--stanford-digital-red-light)')
-      this.iconTarget.classList.remove('bi-bookmark-check-fill')
-      this.iconTarget.classList.add('bi-bookmark-dash-fill')
+    if (this.checked()) {
+      this.checkedIconTarget.classList.add('d-none');
+      this.hoverIconTarget.classList.remove('d-none');
     }
+  }
+
+  checked() {
+    return this.element.querySelector('input[type="checkbox"]').checked
   }
 
   blur() {
-    if (this.checkedValue) {
-      this.iconTarget.style.removeProperty('--bl-icon-color')
-      this.iconTarget.classList.remove('bi-bookmark-dash-fill')
-      this.iconTarget.classList.add('bi-bookmark-check-fill')
+    this.checkedIconTarget.classList.remove('d-none');
+    this.hoverIconTarget.classList.add('d-none')
+  }
+
+  // this can get removed after https://github.com/projectblacklight/blacklight/pull/3693 is released
+  clickedId(){
+    if (this.checked()) {
+      this.hover()
+      this.element.ariaLabel = 'Remove from saved records';
+    } else {
+      this.element.ariaLabel = 'Save record';
     }
+    window.dispatchEvent(new CustomEvent('bookmark-updated', {detail: {checked: this.checked(), document_id: this.element.dataset.documentId}}))
   }
 
   bookmarkUpdated(event) {
-    if (!event.detail.success) {
-      console.error('Bookmark update failed:', event.detail.error);
-      return;
-    }
-
-    // The saved records page handles updates (only removals) by doing a full page refresh.
-    if (window.location.pathname.startsWith('/selections')) {
-      Turbo.visit(document.baseURI, { action: 'replace' })
-    } else {
-      this.displayToast(!this.checkedValue)
-    }
-  }
-
-  displayToast(added) {
+    // lines 36, 40, 43 should get commented in when https://github.com/projectblacklight/blacklight/pull/3693 is released
+    // if (event.detail.documentId != this.element.dataset.documentId) return;
     const toast = document.getElementById('toast')
     const toastText = toast.querySelector('.toast-text')
-    if (added) {
+    if (event.detail.checked){
+      //this.element.ariaLabel = 'Remove from saved records';
       toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
     } else {
+      //this.element.ariaLabel = 'Save record';
       toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
+    window.dispatchEvent(new CustomEvent('update-tooltip', {}))
     bootstrap.Toast.getOrCreateInstance(toast).show()
-  }
-
-  animateRemovals(event) {
-    if (event.detail.newElement == null && event.target.dataset.animateExit && !event.target.dataset.animateExitStarted) {
-      event.target.dataset.animateExitStarted = true // prevent multiple animations
-      event.preventDefault();
-
-      this.animateExit(event.target);
-    }
-  }
-
-  async animateExit(target) {
-    target.animate(
-      [
-        {
-          transform: `scale(1)`,
-          transformOrigin: "top",
-          height: 'auto',
-          opacity: 1.0,
-        },
-        {
-          transform: `scaleY(0)`,
-          transformOrigin: "top",
-          height: 0,
-          opacity: 0,
-        },
-      ],
-      {
-        duration: 600,
-        easing: "ease-out",
-      }
-    )
-    await Promise.all(
-      target.getAnimations().map((animation) => animation.finished)
-    )
-    target.remove()
-    this.displayToast(false)
   }
 }

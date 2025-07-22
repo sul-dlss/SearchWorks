@@ -142,6 +142,9 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 import RecaptchaController from "./recaptcha_controller"
 application.register("recaptcha", RecaptchaController)
 
+import SavedListController from "./saved_list_controller"
+application.register("saved-list", SavedListController)
+
 import ShowMoreButtonController from "./show_more_button_controller"
 application.register("show-more-button", ShowMoreButtonController)
 

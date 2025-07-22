@@ -175,7 +175,7 @@ export default class extends Controller {
   reorderPreviewDivs() {
     const docId = this.previewTarget.dataset.documentId
     const galleryDocs = document.querySelectorAll('.gallery-document')
-    const targetDoc = document.querySelector(`.gallery-document[data-doc-id='${docId}']`)
+    const targetDoc = document.querySelector(`.gallery-document[data-document-id='${docId}']`)
     let previewIndex = Array.from(galleryDocs).indexOf(targetDoc) + 1
 
     const itemsPerRow = this.itemsPerRow()

@@ -7,7 +7,7 @@
     <% if response.total_count == 1 %>
       <%= page_entries_info(response) %>
     <% else %>
-      <strong><%= number_with_delimiter(response.offset_value + 1) %></strong> - <strong><%= number_with_delimiter([@response.offset_value + @response.limit_value, @response.total_count].min) %></strong> of <strong><%= number_with_delimiter(@response.total_count) %></strong>
+      <strong><%= number_with_delimiter(response.offset_value + 1) %></strong> - <strong><%= number_with_delimiter([@response.offset_value + @response.limit_value, @response.total_count].min) %></strong> of <strong class="end-count"><%= number_with_delimiter(@response.total_count) %></strong>
     <% end %>
   </span>
 

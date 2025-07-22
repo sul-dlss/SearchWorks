@@ -98,7 +98,7 @@ def document_index id
 end
 
 def all_docs_on_page
-  page.all(:xpath, "//form[@data-doc-id]").pluck("data-doc-id")
+  page.all(:xpath, "//form[@data-document-id]").pluck("data-document-id")
 end
 
 def facet_index(options)

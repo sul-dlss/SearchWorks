@@ -4,6 +4,12 @@
     padding-block: 1rem;
     --bl-icon-color: var(--stanford-80-black);
   }
+
+  .toggle-bookmark {
+    .bookmark-text {
+      display: none;
+    }
+  }
 }
 
 .dropdown-toggle::after {
@@ -146,11 +152,11 @@ details[open] {
 .action-button {
   --bs-btn-color: var(--stanford-80-black);
   --bs-btn-hover-color: var(--stanford-black);
-
-  &:not(:has(.bookmark-label)) {
-    --bs-btn-border-radius: 50%;
-    &:hover {
-      background-color: var(--bs-secondary-bg);
+  --bs-btn-border-radius: 50%;
+  &:hover {
+    background-color: var(--bs-secondary-bg);
+    &:has(input[type="checkbox"]:checked) {
+      --bs-secondary-bg: transparent;
     }
   }
 }

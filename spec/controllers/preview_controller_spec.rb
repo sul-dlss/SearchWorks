@@ -4,9 +4,9 @@ require 'rails_helper'
 
 RSpec.describe PreviewController do
   describe "#show" do
-    doc_id = 1
+    document_id = 1
     it "gets the document" do
-      get :show, params: { id: doc_id }
+      get :show, params: { id: document_id }
       expect(assigns[:document]).not_to be_nil
     end
   end
