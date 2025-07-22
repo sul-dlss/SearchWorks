@@ -71,6 +71,7 @@ Metrics/BlockLength:
     - configure_blacklight
     - rule # Parslet Transform
   Exclude:
+    - 'app/controllers/catalog_controller.rb'
     - '**/*.rake'
     - 'config/**/*.rb'
     - 'spec/**/*'

@@ -7,7 +7,11 @@ module Searchworks4
     def before_render; end
 
     def search_fields
-      blacklight_config.search_fields.select { |_, v| helpers.should_render_field?(v) }.map { |_key, f| { field: f.key, label: helpers.label_for_search_field(f.key) } }
+      possible_search_fields = blacklight_config.search_fields.select do |_, v|
+        helpers.should_render_field?(v) || v.include_in_advanced_search
+      end
+
+      possible_search_fields.map { |_key, f| { field: f.key, label: helpers.label_for_search_field(f.key) } }
     end
 
     def search_filter_controls
@@ -24,7 +28,8 @@ module Searchworks4
           [key, label]
         end.compact_blank
 
-        { field: config.key, label: facet_presenter.label, limit: config.limit, range: config.range, top: config.key.in?(blacklight_config.top_filters[:advanced_search]),
+        { field: config.key, label: config.advanced_search_label || facet_presenter.label,
+          limit: config.limit, range: config.range, top: config.key.in?(blacklight_config.top_filters[:advanced_search]),
           values: values, value_labels: value_labels }
       end
     end

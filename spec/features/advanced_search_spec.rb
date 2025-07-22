@@ -28,7 +28,7 @@ RSpec.feature "Advanced Search" do
     expect(page).to have_css('.search-field', count: 2)
 
     expect(page).to have_css(".flex-row", text: "Access")
-    expect(page).to have_css(".flex-row", text: "Date")
+    expect(page).to have_css(".flex-row", text: "Publication year")
     expect(page).to have_css(".flex-row", text: "Format")
     expect(page).to have_css(".flex-row", text: "Language")
 

@@ -1,5 +1,7 @@
 .facets {
   & .accordion {
+    --bs-accordion-active-color: var(--stanford-black);
+
     .selected {
       font-weight: 700;
     }

@@ -180,7 +180,7 @@ class CatalogController < ApplicationController
                             component: Searchworks4::LibraryFacetComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
                            component: Searchworks4::FacetSearchComponent
-    config.add_facet_field "pub_year_tisim", label: "Date", range: true
+    config.add_facet_field "pub_year_tisim", label: "Date", range: true, advanced_search_label: 'Publication year'
 
     config.add_facet_field "language", label: "Language", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field "author_person_facet", label: "Author", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
@@ -406,6 +406,7 @@ class CatalogController < ApplicationController
     # Adds search fields for use only in BL Advanced Search
     config.add_search_field("series_search") do |field|
       field.label = "Series title"
+      field.include_in_advanced_search = true
       field.include_in_simple_select = false
       field.solr_parameters = {
         qf:  '${qf_series}',
@@ -429,6 +430,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field("pub_search") do |field|
       field.label = "Place, publisher, year"
+      field.include_in_advanced_search = true
       field.include_in_simple_select = false
       field.solr_parameters = {
         qf:  '${qf_pub_info}',
@@ -452,6 +454,7 @@ class CatalogController < ApplicationController
 
     config.add_search_field("isbn_search") do |field|
       field.label = "ISBN/ISSN etc."
+      field.include_in_advanced_search = true
       field.include_in_simple_select = false
       field.solr_parameters = {
         qf:  '${qf_number}',

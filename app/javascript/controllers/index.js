@@ -91,6 +91,9 @@ application.register("feedback-standalone", FeedbackStandaloneController)
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 
+import GlobalAlertController from "./global_alert_controller"
+application.register("global-alert", GlobalAlertController)
+
 import GoogleCoverImageController from "./google_cover_image_controller"
 application.register("google-cover-image", GoogleCoverImageController)
 
@@ -126,6 +129,9 @@ application.register("mini-bento", MiniBentoController)
 
 import MiniMiniBentoController from "./mini_mini_bento_controller"
 application.register("mini-mini-bento", MiniMiniBentoController)
+
+import ModalController from "./modal_controller"
+application.register("modal", ModalController)
 
 import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
 application.register("preview-embed-browse", PreviewEmbedBrowseController)
