@@ -35,7 +35,6 @@
 }
 
 .facet-values {
-  --bl-facet-active-item-color: var(--bs-success);
   --bl-facet-remove-color: var(--bs-secondary-color);
   --bl-facet-remove-hover-color: var(--bs-danger);
 
@@ -48,6 +47,7 @@
 
     .selected {
       color: var(--bl-facet-active-item-color);
+      font-weight: 700;
     }
   }
 
