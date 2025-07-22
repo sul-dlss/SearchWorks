@@ -100,6 +100,7 @@
   margin-left: -15px;
 }
 
+.bookmark-toolbar,
 .record-toolbar {
   --item-padding-x: 0.25rem;
   --bs-link-hover-color: var(--bs-btn-hover-color);
