@@ -5,7 +5,7 @@ module AccessPanels
     with_collection_parameter :item
     attr_reader :item, :document, :classes
 
-    def initialize(item:, document:, item_counter: nil, classes: nil, consolidate_for_finding_aid: false)
+    def initialize(item:, document:, item_counter: nil, classes: nil, consolidate_for_finding_aid: false, modal: false)
       super
 
       @item = item
@@ -13,6 +13,7 @@ module AccessPanels
       @document = document
       @consolidate_for_finding_aid = consolidate_for_finding_aid
       @item_counter = item_counter
+      @modal = modal
     end
 
     delegate :bound_with_parent, to: :item

@@ -1,5 +1,5 @@
-<div class="bound-with-type">Bound with:</div>
-<ul class="list-unstyled mb-0">
+<div class="bound-with-type fw-medium">Item is bound with other items</div>
+<ul class="list-unstyled mb-0" data-controller="list-toggle" data-list-toggle-expanded-value="true" data-list-toggle-target="group" data-list-toggle-list-item-selector-value="li" data-list-toggle-limit-value="0">
   <% bound_with_children.each do |child| %>
     <li class="pb-2">
       <div class="bound-with-title"><%= bound_with_title(child.document) %></div>

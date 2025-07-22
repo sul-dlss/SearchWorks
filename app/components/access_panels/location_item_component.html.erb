@@ -1,4 +1,4 @@
-<tr class="item-row pt-1 w-100 flex-wrap border-top fs-15">
+<tr class="item-row pt-1 w-100 flex-wrap border-top d-flex fs-15">
   <th scope="row" class="callnumber fw-normal flex-grow-1"><%= tag.span callnumber %></th>
   <td class="text-nowrap text-status">
     <%= render Searchworks4::ItemStatusComponent.new(item:) %>
@@ -16,7 +16,16 @@
         <div class="bound-with-callnumber"><%= bound_with_callnumber %></div>
       </div>
     <% elsif item.bound_with_principal? && item.id %>
-      <%= helpers.turbo_frame_tag [:item, item.id], src: bound_with_children_solr_document_path(document.id, item_id: item.id), loading: 'lazy' %>
+      <% if @modal %>
+        <%= helpers.turbo_frame_tag [:item, item.id], src: bound_with_children_solr_document_path(document.id, item_id: item.id), loading: 'lazy' %>
+      <% else %>
+        <div class="bound-with bg-light p-2 mt-2">
+          <div class="bound-with-type">Item is bound with other items</div>
+          <%= link_to bound_with_children_modal_solr_document_path(item_id: item.id), data: { turbo_frame: "blacklight-modal", blacklight_modal: "trigger" }, class: 'btn btn-link p-1 text-left' do %>
+             See items <i class="bi bi-chevron-double-right fs-14"></i>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
   </td>
 </tr>

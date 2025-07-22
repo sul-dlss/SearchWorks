@@ -162,6 +162,7 @@
 
 .show-more-button {
   margin-top: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .blacklight-catalog-show {
@@ -377,4 +378,8 @@
   .availability-library-location:has(mark) {
     display: flex !important;
   }
+}
+
+.bound-with .show-more-button {
+  margin-bottom: 0.1rem;
 }

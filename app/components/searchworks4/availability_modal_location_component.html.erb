@@ -32,7 +32,7 @@
         </tr>
       </thead>
       <tbody>
-        <%= render AccessPanels::LocationItemComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?) %>
+        <%= render AccessPanels::LocationItemComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?, modal: true) %>
       </tbody>
     </table>
   </div>

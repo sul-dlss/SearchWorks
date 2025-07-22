@@ -22,17 +22,16 @@ class BoundWithChildrenController < ApplicationController
   def index
     @id = params.require(:id)
     @item_id = params.require(:item_id)
-    limit = params[:limit] ? params[:limit].to_i : 3
-    @response = search_results(@item_id, limit: limit)
+    @response = search_results(@item_id)
     @bound_with_children = filtered_children(@response.docs)
     @bound_with_parent = @bound_with_children.first&.bound_with_parent
   end
 
   private
 
-  def search_results(item_id, limit: 100)
+  def search_results(item_id)
     search_service.search_results do |builder|
-      builder.where(bound_with_parent_item_ids_ssim: item_id).rows(limit)
+      builder.where(bound_with_parent_item_ids_ssim: item_id)
     end
   end
 

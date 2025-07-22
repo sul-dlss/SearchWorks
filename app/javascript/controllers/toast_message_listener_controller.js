@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="show-more-button"
+// Connects to data-controller="toast-message"
 export default class extends Controller {
   showToast(e) {
     const toast = document.getElementById('toast');
