@@ -31,6 +31,7 @@ module Record
               selected: index.zero?
             },
             data: {
+              action: "click->embed-browse#scrollOver",
               controller: "embed-browse",
               bs_toggle: "tab",
               bs_target: "#callnumber-#{index}",

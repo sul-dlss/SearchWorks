@@ -4,10 +4,22 @@ require 'rails_helper'
 
 RSpec.describe 'Callnumber Browse', :js do
   describe 'embedded on the record page' do
-    it 'renders' do
-      visit solr_document_path('1')
+    it 'renders buttons to switch call numbers and marks the current item' do
+      visit solr_document_path('14205849')
 
       expect(page).to have_css('h2', text: 'Related items')
+      expect(page).to have_button 'PQ3949.2 .C65 Z74 2021'
+      expect(page).to have_button '840.5 .Y18'
+      within '#callnumber-0' do
+        expect(page).to have_text 'PQ3949.2 .C65 Z74 2021'
+        expect(page).to have_css '.current-document'
+      end
+
+      click_button '840.5 .Y18'
+      within '#callnumber-1' do
+        expect(page).to have_text '840.5 .Y18'
+        expect(page).to have_css '.current-document'
+      end
     end
 
     it 'has select boxes that work' do
