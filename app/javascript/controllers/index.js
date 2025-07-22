@@ -91,6 +91,9 @@ application.register("feedback-standalone", FeedbackStandaloneController)
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 
+import GlobalAlertController from "./global_alert_controller"
+application.register("global-alert", GlobalAlertController)
+
 import GoogleCoverImageController from "./google_cover_image_controller"
 application.register("google-cover-image", GoogleCoverImageController)
 
