@@ -3,18 +3,23 @@
 <div class="modal-body" data-controller="citation-style-picker">
   <h4 class="fs-5">Copy citation</h4>
 
-  <div class="row mb-3">
-    <div class="col-auto">
-      <label for="citation-style-select" class="col-form-label fw-bold">Select format</label>
+  <% if preferred_only? %>
+    <input type="hidden" data-citation-style-picker-target="select" value="tab-<%= preferred_key %>" />
+  <% else %>
+
+    <div class="row mb-3">
+      <div class="col-auto">
+        <label for="citation-style-select" class="col-form-label fw-bold">Select format</label>
+      </div>
+      <div class="col-auto">
+        <select id="citation-style-select" data-citation-style-picker-target="select" data-action="citation-style-picker#switch" class="form-select" style="width: unset;">
+          <% citations.keys.each do |style| %>
+            <option value="tab-<%= style %>" ><%= t("searchworks.citations.styles.#{style}") %></option>
+          <% end %>
+        </select>
+      </div>
     </div>
-    <div class="col-auto">
-      <select id="citation-style-select" data-citation-style-picker-target="select" data-action="citation-style-picker#switch" class="form-select" style="width: unset;">
-        <% citations.keys.each do |style| %>
-          <option value="tab-<%= style %>" ><%= t("searchworks.citations.styles.#{style}") %></option>
-        <% end %>
-      </select>
-    </div>
-  </div>
+  <% end %>
 
   <% citations.each do |style, citation| %>
     <div class="mb-4 bg-light p-2" data-citation-style-picker-target="tab" data-controller="copy-text" id="tab-<%= style %>" hidden>

@@ -17,6 +17,14 @@ module Searchworks4
         citations.present?
       end
 
+      def preferred_only?
+        citations.one? && citations.keys.first == preferred_key
+      end
+
+      def preferred_key
+        'preferred'
+      end
+
       def exports_ris?
         presenter.document.export_formats.key?(:ris)
       end

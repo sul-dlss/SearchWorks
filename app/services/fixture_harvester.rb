@@ -44,7 +44,8 @@ class FixtureHarvester
     'in00000422571', # hierarchical format_hsim, Image|Poster
     '14289604', # content advice
     '4250062', # items in SAL1&2 and SAL3
-    '14205849' # multiple items with unique truncated call numbers
+    '14205849', # multiple items with unique truncated call numbers
+    'nj140cs3237' # mods preferred citation
   ].freeze
 
   def self.harvest_all
