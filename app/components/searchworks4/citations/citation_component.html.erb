@@ -1,7 +1,7 @@
 <%= render Searchworks4::RecordSummaryComponent.new(presenter:) %>
 
 <div class="modal-body" data-controller="citation-style-picker">
-  <h4 class="fs-5">Copy citation</h4>
+  <h3>Copy citation</h3>
 
   <% if preferred_only? %>
     <input type="hidden" data-citation-style-picker-target="select" value="tab-<%= preferred_key %>" />
@@ -33,8 +33,8 @@
   <% end %>
 
 
-  <h4 class="fs-5">Export citation</h4>
-  <ul class="list-unstyled">
+  <h3>Export citation</h3>
+  <ul class="list-unstyled d-flex gap-3 export-citations">
     <% if exports_ris? %>
       <li>
       <% if eds_ris_export? %>
