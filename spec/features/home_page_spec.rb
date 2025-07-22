@@ -20,7 +20,7 @@ RSpec.feature "Home Page" do
 
   scenario "'Featured sets' section should display" do
     expect(page).to have_css(".features a", text: "Digital collections")
-    expect(page).to have_css(".features a", text: "Theses & dissertations")
+    expect(page).to have_css(".features a", text: "Theses and dissertations")
     expect(page).to have_css('.features a', text: 'Government documents')
     expect(page).to have_css(".features a", text: "Databases")
     expect(page).to have_css(".features a", text: "Course reserves")
