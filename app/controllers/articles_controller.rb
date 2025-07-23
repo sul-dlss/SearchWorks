@@ -141,9 +141,6 @@ class ArticlesController < ApplicationController
     config.show.plink = 'eds_plink'
     config.show.route = { controller: 'articles' }
     config.show.sections = {
-      'Fulltext' => {
-        eds_html_fulltext: { label: 'Full Text', helper_method: :sanitize_fulltext }
-      },
       'Description' => {
         eds_authors:              { label: 'Authors', helper_method: :link_authors },
         eds_author_affiliations:  { label: 'Author Affiliations', helper_method: :clean_affiliations },
@@ -217,6 +214,10 @@ class ArticlesController < ApplicationController
     config.add_sort_field 'relevance', sort: 'relevance', label: 'relevance'
     config.add_sort_field 'newest', sort: 'date', label: 'date (most recent)'
     config.add_sort_field 'oldest', sort: 'date2', label: 'date (oldest)'
+  end
+
+  def fulltext_html
+    @document = fetch(params[:id])
   end
 
   def fulltext_link

@@ -118,6 +118,7 @@ Rails.application.routes.draw do
     get 'articles/:id/ris' => 'articles#show', as: :articles_ris, constraints: ->(req) { req.format = :ris }
 
     post 'articles/:id/track' => 'articles#track', as: :track_articles
+    get 'articles/:id/fulltext' => 'articles#fulltext_html', as: :article_html_fulltext
     get 'articles/:id/:type/fulltext' => 'articles#fulltext_link', as: :article_fulltext_link, constraints: { type: /[-\w]+/ }
   end
 

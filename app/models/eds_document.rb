@@ -67,7 +67,7 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   def eds_html_fulltext
     return unless eds_html_fulltext_available?
 
-    dig('FullText', 'Text', 'Value')
+    CGI.unescapeHTML(dig('FullText', 'Text', 'Value'))
   end
 
   def eds_html_fulltext_available?

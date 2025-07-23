@@ -1,0 +1,11 @@
+<% @page_title = t 'blacklight.search.show.title_html', document_title: "Full text: #{document_presenter(@document).html_title}", application_name: "#{I18n.t('blacklight.application_name')} articles" %>
+
+<% content_for(:search_navbar) { tag.div(class: 'd-none') } %>
+
+<div class="text-end col-xl-9">
+  <%= render AccessPanels::OnlineEdsComponent.new(document: @document) %>
+</div>
+
+<div class='eds-full-text-section col-xl-9'>
+  <%= sanitize @document.eds_html_fulltext, scrubber: Eds::HtmlScrubber.new %>
+</div>
