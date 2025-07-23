@@ -28,7 +28,19 @@ export default class extends Controller {
     } else {
       this.element.ariaLabel = 'Save record';
     }
+    this.updateOtherPageBookmarks(this.element.dataset.documentId)
     window.dispatchEvent(new CustomEvent('bookmark-updated', {detail: {checked: this.checked(), document_id: this.element.dataset.documentId}}))
+  }
+
+  updateOtherPageBookmarks(documentId) {
+    const pageBookmarks = document.querySelectorAll(`.bookmark-toggle[data-document-id="${documentId}"]`)
+    if (pageBookmarks.length < 2) return
+    const checked = this.checked();
+    pageBookmarks.forEach((bookmark) => {
+      bookmark.method = checked ? 'put' : 'delete';
+      bookmark.ariaLabel = checked ? 'Remove from saved records' : 'Save record'
+      bookmark.querySelector('input[type="checkbox"]').checked = checked;
+    })
   }
 
   bookmarkUpdated(event) {
@@ -43,6 +55,7 @@ export default class extends Controller {
       //this.element.ariaLabel = 'Save record';
       toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
+    //this.updateOtherPageBookmarks(event.detail.documentId)
     window.dispatchEvent(new CustomEvent('update-tooltip', {}))
     bootstrap.Toast.getOrCreateInstance(toast).show()
   }
