@@ -7,7 +7,7 @@
                     labelledby: "bookmark-#{@document.id}" },
              data: {
                controller: 'bookmark tooltip',
-               document_id: @document.id,
+               document_id: @document.id.to_s.parameterize,
                action: "click->analytics#trackBookmark " \
                       "mouseenter->tooltip#show focus->tooltip#show mouseleave->tooltip#hide blur->tooltip#hide " \
                       "mouseenter->bookmark#hover click->bookmark#hover click->bookmark#blur focus->bookmark#hover mouseleave->bookmark#blur blur->bookmark#blur " \
