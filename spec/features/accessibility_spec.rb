@@ -22,7 +22,7 @@ RSpec.describe 'Site Accessibility', :js do
       end
     end
 
-    context 'with zero results', skip: "Contrast issue for start-chat" do
+    context 'with zero results' do
       before { visit search_catalog_path q: 'sdfsda', search_field: 'search_author' }
 
       it 'is accessible' do
@@ -93,11 +93,6 @@ RSpec.describe 'Site Accessibility', :js do
     it 'is accessible' do
       expect(page).to be_accessible.within('main')
     end
-  end
-
-  it 'has an accessible advanced search page', skip: "Pending SearchWorks 4.0 designs" do
-    visit blacklight_advanced_search_engine.advanced_search_path
-    expect(page).to be_accessible.within('main')
   end
 
   describe 'the course reserves page' do

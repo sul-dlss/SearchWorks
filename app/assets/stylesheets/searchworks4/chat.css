@@ -16,9 +16,8 @@
     color: rgb(var(--stanford-digital-blue-rgb));
   }
 
-  .bi-chat,
-  .disabled {
-    color: var(--stanford-40-black) !important;
+  .bi-chat {
+    color: var(--stanford-50-black) !important;
   }
 
   .placeholder {
