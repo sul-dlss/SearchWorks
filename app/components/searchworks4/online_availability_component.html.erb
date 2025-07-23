@@ -1,9 +1,9 @@
-<div class="availability-component d-inline-flex border rounded p-2 gap-3" data-controller="list-toggle" data-list-toggle-list-item-selector-value="li" data-list-toggle-limit-value="3">
+<div class="availability-component d-inline-flex gap-3" data-controller="list-toggle" data-list-toggle-list-item-selector-value="li" data-list-toggle-limit-value="3">
   <div class="fw-semibold available-online text-nowrap">Available online <i class="bi bi-forward-fill"></i></div>
 
   <ul class="list-unstyled mb-0" data-list-toggle-target="group">
     <% links.each do |link| %>
-      <li class="mb-1">
+      <li class="<%= link_classes %>">
         <%= link.html&.html_safe %>
         <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
       </li>
