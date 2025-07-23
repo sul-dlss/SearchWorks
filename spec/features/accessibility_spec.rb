@@ -41,6 +41,17 @@ RSpec.describe 'Site Accessibility', :js do
       visit solr_document_path('34')
       expect(page).to be_accessible.within('main')
     end
+
+    context 'when in gallery view' do
+      it 'has an accessible view' do
+        visit solr_document_path('1391872')
+        within '.record-browse-nearby' do
+          click_link 'Full page'
+        end
+        expect(page).to have_text 'Browse related items'
+        expect(page).to be_accessible.within('main')
+      end
+    end
   end
 
   describe 'advanced search', :js do

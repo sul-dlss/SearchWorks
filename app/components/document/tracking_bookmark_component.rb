@@ -10,5 +10,23 @@ module Document
     def article?
       @document.eds?
     end
+
+    def aria_label
+      [tooltip_label, bookmark_subject_label].join(' ')
+    end
+
+    def tooltip_label
+      bookmarked? ? "Remove from saved records" : "Save record"
+    end
+
+    def bookmark_state_label
+      bookmarked? ? t('blacklight.search.bookmarks.present') : t('blacklight.search.bookmarks.absent')
+    end
+
+    private
+
+    def bookmark_subject_label
+      helpers.document_presenter(@document)&.heading || @document.id
+    end
   end
 end

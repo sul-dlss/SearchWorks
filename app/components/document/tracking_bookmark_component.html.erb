@@ -3,8 +3,8 @@
              authenticity_token: false,
              method:  bookmarked? ? :delete : :put,
              class: "bookmark-toggle btn nav-link",
-             aria: { label: (bookmarked? ? "Remove from saved records" : "Save record"),
-                    labelledby: "bookmark-#{@document.id}" },
+             title: tooltip_label,
+             aria: { label: aria_label },
              data: {
                controller: 'bookmark tooltip',
                document_id: @document.id.to_s.parameterize,
@@ -20,8 +20,7 @@
     <label id="bookmark-<%= @document.id %>" class="toggle-bookmark-label" data-checkboxsubmit-target="label" tabindex="0">
       <input type="checkbox" class="toggle-bookmark-input <%= bookmark_icon ? 'd-none' : '' %>" data-action="click->analytics#trackBookmark" data-checkboxsubmit-target="checkbox" <%= 'checked="checked"' if bookmarked? %>>
       <%= bookmark_icon %>
-      <span class="visually-hidden"><%= @document.id %>: </span>
-      <span class="bookmark-text align-middle" data-checkboxsubmit-target="span"><%= bookmarked? ? t('blacklight.search.bookmarks.present') : t('blacklight.search.bookmarks.absent') %></span>
+      <span class="bookmark-text align-middle" data-checkboxsubmit-target="span"><%= bookmark_state_label %></span>
     </label>
   </div>
   <% if article? %>

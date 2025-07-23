@@ -71,7 +71,7 @@ module StubArticleService # rubocop:disable Metrics/ModuleLength
           'BibRecord' => {
             'BibEntity' => {
               'Titles' => [
-                { 'Type' => 'main', 'TitleFull' => 'Another title for the document' }
+                { 'Type' => 'main', 'TitleFull' => 'Another title for the fulltext document' }
               ]
             }
           }
@@ -97,7 +97,7 @@ module StubArticleService # rubocop:disable Metrics/ModuleLength
           'BibRecord' => {
             'BibEntity' => {
               'Titles' => [
-                { 'Type' => 'main', 'TitleFull' => 'Another title for the document' }
+                { 'Type' => 'main', 'TitleFull' => 'Another title for the non-fulltext document' }
               ]
             }
           }
