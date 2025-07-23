@@ -7,6 +7,7 @@
   </h2>
   <div id="<%= library.code %>" class="accordion-collapse collapse<% if toggled_library? %> show<% end %>" aria-labelledby="library-<%= index %>" data-bs-parent="#<%= library.code %>">
     <div class="accordion-body">
+      <%= render AccessPanels::AdditionalInfoComponent.new(document:, library:) %>
       <%= render Searchworks4::AvailabilityModalLocationComponent.with_collection(library.locations, document: @document, library:) %>
     </div>
   </div>
