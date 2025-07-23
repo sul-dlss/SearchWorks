@@ -1,4 +1,4 @@
-<%= tag.div class: @classes, data: { 'list-toggle-target': 'group' } do %>
+<%= tag.div class: @classes, data: { controller: "list-toggle", 'list-toggle-target': 'group' } do %>
   <%= tag.dt label, title: (label if label.to_s.length > 20 )%>
   <% values.each do |v| %>
     <%= v %>
