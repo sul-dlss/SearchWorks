@@ -61,7 +61,7 @@ RSpec.feature "Advanced Search" do
 
   it 'submits the form with the filter parameters', :js do
     find_field('Access').send_keys 'Onl'
-    find('[role="listbox"] li:nth-child(2)').click
+    find('[role="listbox"] li', text: 'Online').click
     page.driver.browser.execute_script("document.querySelector('form').submit()")
     expect(page).to have_css('.blacklight-catalog-index')
     uri = URI.parse(page.current_url)
