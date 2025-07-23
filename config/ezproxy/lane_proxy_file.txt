@@ -483,6 +483,7 @@ doaj.org
 doc.chemnetbase.com
 docs.google.com
 docs.newsbank.com
+documents.paratext.com
 docuseek2.com
 dod.chemnetbase.com
 doi.org
