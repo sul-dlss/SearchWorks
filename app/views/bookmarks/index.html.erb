@@ -8,6 +8,7 @@
       <li class="nav-item">
         <%= link_to bookmarks_path,
           class: "nav-link #{'active' unless article_selections?}",
+          data: { turbo: false },
           aria: !article_selections? ? {} :{ current: 'page'} do %>
           Catalog <span class="badge rounded-pill bookmark-counter" data-saved-list-target="count"><%= @catalog_count %></span>
         <% end %>
@@ -15,6 +16,7 @@
       <li class="nav-item">
         <%= link_to article_selections_path,
           class: "nav-link #{'active' if article_selections?}",
+          data: { turbo: false },
           aria: article_selections? ? {} :{ current: 'page'} do %>
           Articles+ <span class="badge rounded-pill bookmark-counter" data-saved-list-target="count"><%= @article_count %></span>
         <% end %>
