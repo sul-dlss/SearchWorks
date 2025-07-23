@@ -6,7 +6,7 @@ RSpec.describe 'Dissertation Theses Access Point', :js do
   before do
     visit root_path
     within '.features' do
-      click_link 'Theses & dissertations'
+      click_link 'Theses and dissertations'
     end
   end
 
