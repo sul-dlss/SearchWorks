@@ -145,21 +145,21 @@ class ArticlesController < ApplicationController
         eds_html_fulltext: { label: 'Full Text', helper_method: :sanitize_fulltext }
       },
       'Description' => {
-        eds_authors:              { label: 'Authors', separator_options: BREAKS, helper_method: :link_authors },
-        eds_author_affiliations:  { label: 'Author Affiliations', separator_options: BREAKS, helper_method: :clean_affiliations },
+        eds_authors:              { label: 'Authors', helper_method: :link_authors },
+        eds_author_affiliations:  { label: 'Author Affiliations', helper_method: :clean_affiliations },
         eds_composed_title:       { label: 'Source', helper_method: :italicize_composed_title },
         eds_publication_date:     { label: 'Publication Date' },
         eds_languages:            { label: 'Language', helper_method: :mark_html_safe }
       },
       'Contents/Summary' => {
-        eds_abstract: { label: 'Abstract', helper_method: :mark_html_safe },
-        eds_notes:    { label: 'Notes' }
+        eds_abstract: { label: 'Abstract', helper_method: :mark_html_safe, truncate: true },
+        eds_notes:    { label: 'Notes', truncate: true }
       },
       'Subjects' => {
-        eds_subjects:                 { label: 'Subjects', separator_options: BREAKS, helper_method: :link_subjects },
-        eds_subjects_geographic:      { label: 'Geography', separator_options: BREAKS, helper_method: :link_subjects },
-        eds_subjects_person:          { label: 'Person Subjects', separator_options: BREAKS, helper_method: :link_subjects },
-        eds_author_supplied_keywords: { label: 'Author Supplied Keywords', separator_options: BREAKS, helper_method: :link_subjects }
+        eds_subjects:                 { label: 'Subjects', helper_method: :link_subjects },
+        eds_subjects_geographic:      { label: 'Geography', helper_method: :link_subjects },
+        eds_subjects_person:          { label: 'Person Subjects', helper_method: :link_subjects },
+        eds_author_supplied_keywords: { label: 'Author Supplied Keywords', helper_method: :link_subjects }
       },
       'Details' => {
         eds_publication_type:     { label: 'Format' },

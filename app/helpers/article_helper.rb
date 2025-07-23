@@ -17,39 +17,36 @@ module ArticleHelper
   end
 
   def link_subjects(options = {})
-    separators = options.dig(:config, :separator_options) || {}
     subjects = @document.send(options[:field].to_sym) if options[:field].present? && @document.respond_to?(options[:field].to_sym)
     subjects ||= EdsSubjects::Subject.from(options[:value])
-    subjects.map(&:to_html).to_sentence(separators).html_safe
+    subjects.map { |x| x.to_html.html_safe }
   end
 
   def link_authors(options = {})
     return if options[:value].blank?
 
-    separators = options.dig(:config, :separator_options) || {}
     values = render_text_from_html(options[:value])
     values.collect do |value|
       search, label_relator = parse_out_relators(value)
-      (link_to search, articles_path(q: "\"#{search}\"", search_field: :author)) + "#{label_relator}"
-    end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
+      safe_join([link_to(search, articles_path(q: "\"#{search}\"", search_field: :author)), "#{label_relator}"])
+    end
   end
 
   def strip_author_relators(options = {})
     return if options[:value].blank?
 
-    separators = options.dig(:config, :separator_options) || {}
     values = render_text_from_html(options[:value])
     values.collect do |value|
       parse_out_relators(value).first # ignore second return value (label)
-    end.to_sentence(separators).html_safe # this is what Blacklight's Join step does
+    end
   end
 
   def clean_affiliations(options = {})
     return if options[:value].blank?
 
-    separators = options.dig(:config, :separator_options) || {}
-    affiliations = options[:value].map(&:to_s).to_sentence(separators)
-    remove_eds_tag(affiliations, 'relatesto').html_safe
+    options[:value].map(&:to_s).map do |affiliation|
+      remove_eds_tag(affiliation, 'relatesto').html_safe
+    end
   end
 
   def link_to_doi(options = {})
@@ -77,8 +74,7 @@ module ArticleHelper
   def mark_html_safe(options = {})
     return unless options[:value].present?
 
-    separators = options.dig(:config, :separator_options) || {}
-    options[:value].map(&:to_s).to_sentence(separators).html_safe
+    options[:value].map { |x| x.to_s.html_safe }
   end
 
   def sanitize_fulltext(options = {})
@@ -127,8 +123,7 @@ module ArticleHelper
   def remove_html_from_document_field(options = {})
     return if options[:value].blank?
 
-    separators = options.dig(:config, :separator_options) || {}
-    render_text_from_html(options[:value]).map(&:to_s).to_sentence(separators)
+    render_text_from_html(options[:value]).map(&:to_s)
   end
 
   def render_text_from_html(values)
@@ -138,7 +133,7 @@ module ArticleHelper
     values.map do |value|
       doc = Nokogiri::HTML(CGI.unescapeHTML(value))
       doc.xpath('//text()').to_a.map(&:to_s)
-    end.flatten
+    end.flatten.compact_blank
   end
 
   private
