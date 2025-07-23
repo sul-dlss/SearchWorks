@@ -94,6 +94,10 @@ aside,
   --bs-link-hover-color: rgb(var(--bs-link-hover-color-rgb));
 }
 
+.disabled {
+  color: var(--stanford-50-black);
+}
+
 .text-digital-green {
   color: var(--stanford-digital-green);
 }
