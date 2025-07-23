@@ -14,7 +14,7 @@
                 action: 'click->managed-purl#switchItem'
             }, class: 'p-0 btn w-100 h-100 text-start text-decoration-none')  do %>
               <% if purl.file_id %>
-                <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :rect_thumbnail) %>">
+                <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :rect_thumbnail) %>" class="me-2">
               <% end %>
 
               <%= purl.part_label(index: i + 1) %>
