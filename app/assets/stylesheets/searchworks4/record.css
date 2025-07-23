@@ -78,15 +78,12 @@
 
 .managed-purl {
   li {
-    &.active {
-      --bs-border-color: var(--stanford-cardinal);
-      --bs-border-width: 2px;
+    &:hover {
+      --bs-border-color: var(--stanford-80-black);
     }
 
-    &:hover,
-    &:active {
-      background: var(--stanford-fog-light);
-      border: 1px solid var(--stanford-10-black);
+    &.active,&:active {
+      --bs-border-color: var(--stanford-cardinal);
     }
 
     img {

@@ -6,7 +6,7 @@
     <div class="col-4">
       <ul class="list-unstyled overflow-scroll pe-3" style="height: 520px;">
         <% document.managed_purls.each_with_index do |purl, i| %>
-          <li data-managed-purl-target="item" class="border mb-2">
+          <li data-managed-purl-target="item" class="mb-2 border">
             <%= button_tag(data: {
                 embed_target: "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}",
                 embed_provider: Settings.PURL_EMBED_PROVIDER,
