@@ -1,15 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="toast-message"
+// Connects to data-controller="toast-message-listener"
 export default class extends Controller {
   showToast(e) {
-    const toast = document.getElementById('toast');
+    const toast = document.getElementById('toast-template').content.cloneNode(true).querySelector('.toast');
     if (!toast) return;
 
-    const toastText = document.getElementById('toast-text');
+    const toastText = toast.querySelector('.toast-text');
     toastText.innerHTML = e.detail.html;
 
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast)
-    toastBootstrap.show()
+    document.getElementById('toast-area').appendChild(toast);
   }
 }
