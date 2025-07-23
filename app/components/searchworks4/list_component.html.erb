@@ -3,9 +3,12 @@
     <%= @facet_field.label %>
   <% end %>
   <% component.with_body do %>
-    <%= render(Searchworks4::InclusiveConstraintComponent.new(facet_field: @facet_field)) %>
-    <%= content_tag :ul, class: @classes, role: @role do %>
-      <%= render facet_items %>
+    <% if inclusive_present? %>
+      <%= render(Searchworks4::InclusiveConstraintComponent.new(facet_field: @facet_field)) %>
+    <% else %>
+      <%= content_tag :ul, class: @classes, role: @role do %>
+        <%= render facet_items %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

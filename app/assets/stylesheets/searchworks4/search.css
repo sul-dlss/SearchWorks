@@ -81,3 +81,7 @@
     box-shadow: none;
   }
 }
+
+.advanced-facet-heading {
+  color: var(--stanford-cardinal);
+}

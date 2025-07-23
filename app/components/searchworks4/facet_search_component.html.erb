@@ -3,9 +3,13 @@
     <%= @facet_field.label %>
   <% end %>
   <% component.with_body do %>
-    <%= render(Blacklight::Facets::InclusiveConstraintComponent.new(facet_field: @facet_field)) %>
-    <%= content_tag :ul, class: 'facet-values list-unstyled', role: @role do %>
-      <%= render facet_items %>
+    <% if inclusive_present? %>
+      <%= render(Searchworks4::InclusiveConstraintComponent.new(facet_field: @facet_field)) %>
+      <%#= render(Blacklight::Facets::InclusiveConstraintComponent.new(facet_field: @facet_field))# %>
+    <% else %>
+      <%= content_tag :ul, class: 'facet-values list-unstyled', role: @role do %>
+        <%= render facet_items %>
+      <% end %>
     <% end %>
     <% if @facet_field.modal_path %>
       <div class="more_facets mb-3">
