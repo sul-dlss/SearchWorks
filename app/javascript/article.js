@@ -3,9 +3,9 @@ import Blacklight from 'blacklight-frontend'
 Blacklight.onLoad(() => {
   const fullText = document.querySelector('#toggleFulltext')
   fullText?.addEventListener('show.bs.collapse', () => {
-    document.querySelector('#fulltextToggleBar').innerHTML = '<h2>Hide full text <i class="bi bi-chevron-down"></i></h2>'
+    document.querySelector('#fulltextToggleBar h2').innerHTML = 'Hide full text <i class="bi bi-chevron-down"></i>'
   })
   fullText?.addEventListener('hide.bs.collapse', () => {
-    document.querySelector('#fulltextToggleBar').innerHTML = '<h2>Show full text <i class="bi bi-chevron-right"></i></h2>'
+    document.querySelector('#fulltextToggleBar h2').innerHTML = 'Show full text <i class="bi bi-chevron-right"></i>'
   })
 })
