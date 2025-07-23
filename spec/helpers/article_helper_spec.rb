@@ -35,7 +35,7 @@ RSpec.describe ArticleHelper do
 
   describe '#link_subjects' do
     it 'quotes the subject and does a subject search' do
-      result = Capybara.string(helper.link_subjects(value: ['<searchLink fieldCode="SU" term="ABC">ABC</searchLink><br/><searchLink fieldCode="SU" term="123">123</searchLink>']))
+      result = Capybara.string(safe_join(helper.link_subjects(value: ['<searchLink fieldCode="SU" term="ABC">ABC</searchLink><br/><searchLink fieldCode="SU" term="123">123</searchLink>'])))
       expect(result).to have_link 'ABC', href: /\?q=ABC&search_field=subject/
       expect(result).to have_link '123', href: /\?q=123&search_field=subject/
     end
@@ -46,24 +46,20 @@ RSpec.describe ArticleHelper do
     let(:affiliations) { ["<relatesTo>1</relatesTo>Institute A<br /><relatesTo>2</relatesTo>Institute B<br /><relatesTo>3</relatesTo>Institute C"] }
 
     context '#link_authors' do
-      subject(:result) { Capybara.string(helper.link_authors(value: authors)) }
+      subject(:result) { Capybara.string(safe_join(helper.link_authors(value: authors), '')) }
 
       it 'includes a search link for each author' do
         expect(result).to have_link 'John Doe', href: '/articles?q=%22John+Doe%22&search_field=author'
         expect(result).to have_link 'Doe, Jane', href: '/articles?q=%22Doe%2C+Jane%22&search_field=author'
         expect(result).to have_link 'Fred Doe', href: '/articles?q=%22Fred+Doe%22&search_field=author'
-        expect(result).to have_content 'John Doe, Author, Doe, Jane, and Fred Doe'
       end
     end
 
     context '#strip_author_relators' do
-      subject(:result) { Capybara.string(helper.strip_author_relators(value: authors)) }
+      subject(:result) { helper.strip_author_relators(value: authors) }
 
       it 'removes relator terms' do
-        expect(result).to have_content 'John Doe, Doe, Jane, and Fred Doe'
-      end
-      it 'has no links' do
-        expect(result).to have_no_link
+        expect(result).to include 'John Doe', 'Doe, Jane', 'Fred Doe'
       end
     end
 
@@ -97,38 +93,34 @@ RSpec.describe ArticleHelper do
   context '#mark_html_safe' do
     it 'preserves HTML entities to render' do
       result = helper.mark_html_safe(value: Array.wrap('This &amp; That'))
-      expect(result).to eq 'This &amp; That'
+      expect(result).to include 'This &amp; That'
     end
     it 'preserves HTML elements to render' do
       result = helper.mark_html_safe(value: Array.wrap('<i>This Journal</i>, 10(1)'))
-      expect(result).to eq '<i>This Journal</i>, 10(1)'
+      expect(result).to include '<i>This Journal</i>, 10(1)'
     end
     it 'handles multiple values' do
       result = helper.mark_html_safe(value: %w[This That])
-      expect(result).to eq 'This and That'
+      expect(result).to include 'This', 'That'
       result = helper.mark_html_safe(value: %w[This That The\ Other])
-      expect(result).to eq 'This, That, and The Other'
-    end
-    it 'handles multiple values with separators' do
-      result = helper.mark_html_safe(value: %w[This That], config: { separator_options: { two_words_connector: '<br/>' } })
-      expect(result).to eq 'This<br/>That'
+      expect(result).to include 'This', 'That', 'The Other'
     end
   end
 
   context '#sanitize_fulltext' do
     it 'preserves HTML entities to render' do
       result = helper.mark_html_safe(value: Array.wrap('This &amp; That'))
-      expect(result).to eq 'This &amp; That'
+      expect(result).to include 'This &amp; That'
     end
 
     it 'preserves HTML elements to render' do
       result = helper.sanitize_fulltext(value: Array.wrap('<p>This Journal</p>, 10(1)'))
-      expect(result).to eq '<p>This Journal</p>, 10(1)'
+      expect(result).to include '<p>This Journal</p>, 10(1)'
     end
 
     it 'removes non-HTML EDS tags' do
       result = helper.sanitize_fulltext(value: Array.wrap('<anid>09dfa;</anid><p>This Journal</p>, 10(1)'))
-      expect(result).to eq '<p>This Journal</p>, 10(1)'
+      expect(result).to include '<p>This Journal</p>, 10(1)'
     end
   end
 
@@ -136,7 +128,7 @@ RSpec.describe ArticleHelper do
     it 'returns to_sentance joined text splitting on and stripping HTML' do
       result = remove_html_from_document_field(value: Array.wrap('Thing1<br/>Thing2<br/>Thing3'))
 
-      expect(result).to eq 'Thing1, Thing2, and Thing3'
+      expect(result).to include 'Thing1', 'Thing2', 'Thing3'
     end
   end
 

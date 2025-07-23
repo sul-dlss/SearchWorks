@@ -22,10 +22,8 @@ RSpec.feature 'Article Record Display' do
     it 'are linked' do
       visit article_path(document[:id])
 
-      within 'dd.blacklight-eds_subjects_person' do
-        expect(page).to have_link 'Person1'
-        expect(page).to have_link 'Person2'
-      end
+      expect(page).to have_css('dd.blacklight-eds_subjects_person a', text: 'Person1')
+      expect(page).to have_css('dd.blacklight-eds_subjects_person a', text: 'Person2')
     end
   end
 

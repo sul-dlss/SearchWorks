@@ -18,7 +18,7 @@ module Articles
 
     def metadata_sections
       sections.keys.index_with do |section_name|
-        collection = Blacklight::MetadataFieldComponent.with_collection(metadata_fields_for_section(section_name), layout: MetadataFieldLayoutComponent)
+        collection = Articles::EdsMetadataFieldComponent.with_collection(metadata_fields_for_section(section_name), layout: Searchworks4::MetadataFieldLayoutComponent)
 
         collection if collection.any?(&:render?)
       end.compact
