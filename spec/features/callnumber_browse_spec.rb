@@ -69,5 +69,17 @@ RSpec.describe 'Callnumber Browse', :js do
 
       expect(page).to have_text('Starting at call number: G70.212')
     end
+
+    it 'allows the user to start a new search without carrying over the browse state' do
+      stub_article_service(docs: [])
+      visit browse_index_path(call_number: 'A', start: '1')
+      expect(page).to have_text('Starting at call number: A')
+
+      fill_in 'q', with: 'biography'
+      click_button 'Search'
+
+      expect(page).to have_css('.constraint.query', text: 'biography')
+      expect(page).to have_no_css('.constraint.filter')
+    end
   end
 end
