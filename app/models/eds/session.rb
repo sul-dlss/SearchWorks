@@ -29,7 +29,8 @@ module Eds
 
       styles = begin
         citation_styles(dbid:, accession_number:)
-      rescue StandardError
+      rescue StandardError => e
+        Rails.logger.debug { "Error retrieving citation styles: #{e.message}" }
         {}
       end
 
