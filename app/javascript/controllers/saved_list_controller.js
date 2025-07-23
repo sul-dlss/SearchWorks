@@ -6,7 +6,7 @@ export default class extends Controller {
 
   bookmarksUpdated(event) {
     if (event.detail.checked == true) return
-    const record = document.querySelector(`[data-document-id="${event.detail.document_id}"]`)
+    const record = document.querySelector(`article[data-document-id="${event.detail.document_id}"]`)
     record.style.transition = 'opacity 0.5s ease';
     record.style.opacity = 0;
 
