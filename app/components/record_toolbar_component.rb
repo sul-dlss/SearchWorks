@@ -16,4 +16,12 @@ class RecordToolbarComponent < ViewComponent::Base
   def cite_path
     document.eds? ? citation_article_path(document) : citation_solr_document_path(document)
   end
+
+  def email_path
+    document.eds? ? email_article_path(document) : email_solr_document_path(document)
+  end
+
+  def copy_url
+    document.eds? ? eds_document_url(document) : solr_document_url(document)
+  end
 end
