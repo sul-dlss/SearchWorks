@@ -106,7 +106,7 @@ module ArticleHelper
     # Rewrite EDS eplinks into actual hyperlinks to other research starters
     doc.search('eplink').each do |node|
       node.name = 'a'
-      node['href'] = article_path(id: "#{document['eds_database_id']}__#{node['linkkey']}")
+      node['href'] = eds_document_path(id: "#{document['eds_database_id']}__#{node['linkkey']}")
     end
 
     # Wrap images into figures with captions
