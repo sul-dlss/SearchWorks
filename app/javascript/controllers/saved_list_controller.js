@@ -13,12 +13,5 @@ export default class extends Controller {
     record.addEventListener('transitionend', () => {
       Turbo.visit(document.baseURI, { action: 'replace' })
     }, { once: true });    
-
-    document.addEventListener('turbo:load', (turbo_event) => {
-      if (turbo_event.detail.url.includes('selections')){
-        var e = new CustomEvent('bookmark.blacklight', { detail: event.detail });
-        window.dispatchEvent(e)
-      }
-    });
   }
 }
