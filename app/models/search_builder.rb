@@ -66,12 +66,12 @@ class SearchBuilder < Blacklight::SearchBuilder
     @page_location ||= PageLocation.new(search_state)
   end
 
-  def on_home_page?
+  def on_home_page?(search_params = %i[q f f_inclusive range search_field clause])
     return false unless search_state.controller&.action_name == 'index' && search_state.controller.controller_name == 'catalog'
 
     # new isn't an allowed search state parameter, so we have to dig through the controller to get the original params
     return false if search_state.controller.params[:new].present?
 
-    blacklight_params[:q].blank? && blacklight_params[:f].blank? && blacklight_params[:range].blank? && blacklight_params[:search_field].blank? && blacklight_params[:clause].blank?
+    search_params.all? { |param| blacklight_params[param].blank? }
   end
 end
