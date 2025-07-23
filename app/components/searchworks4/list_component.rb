@@ -9,5 +9,9 @@ module Searchworks4
       puts "Wrapping element #{wrapping_element.inspect}"
       facet_item_component_class.with_collection(facet_item_presenters, wrapping_element: wrapping_element, **item_args)
     end
+
+    def inclusive_present?
+      @facet_field.values.find { |v| v.is_a? Array }
+    end
   end
 end

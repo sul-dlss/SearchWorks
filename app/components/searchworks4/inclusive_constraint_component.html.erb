@@ -1,5 +1,4 @@
 <span class='advanced-facet-heading'><%= t('blacklight.advanced_search.inclusive') %></span>
-<%= content_tag :ul, class: @classes, role: @role do %>
+<%= content_tag :ul, class:'facet-values list-unstyled', role: @role do %>
     <%= render Blacklight::Facets::ItemComponent.with_collection(presenters.to_a, wrapping_element: :li) %>
  <% end %>
-<%= values %>
