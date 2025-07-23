@@ -38,6 +38,7 @@
     cursor: pointer;
 
     .toggle-bookmark-label {
+      cursor: pointer;
       font-weight: inherit;
       --bookmark-width-height: 1rem;
 
@@ -52,6 +53,10 @@
         &.bookmark-checked {
           display: none;
         }
+      }
+
+      .bookmark-text {
+        cursor: pointer;
       }
     }
 
