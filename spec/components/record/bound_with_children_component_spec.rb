@@ -21,7 +21,7 @@ RSpec.describe Record::BoundWithChildrenComponent, type: :component do
   end
 
   it "renders bounds with correctly" do
-    expect(page).to have_css('.bound-with-type', text: 'Bound with:')
+    expect(page).to have_css('.bound-with-type', text: 'Item is bound with other items')
     expect(page).to have_css('.bound-with-title', count: 2)
 
     expect(page).to have_link('987654 title', href: '/view/987654')

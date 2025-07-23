@@ -1,11 +1,11 @@
-<div class="bound-with-type h3">Bound with:</div>
+<div class="bound-with-type fw-medium fs-14 mb-0">Bound with</div>
 <table class="mb-0">
   <th class="visually-hidden">Title</th>
   <th class="visually-hidden">Call Number</th>
   <% bound_with_children.each do |child| %>
-      <tr class="bound-with-item">
+      <tr class="bound-with-item border-top">
         <td class="bound-with-title align-top py-2"><%= bound_with_title(child.document) %></td>
-        <td class="bound-with-callnumber align-top py-2"><%= child.callnumber %></td>
+        <td class="bound-with-callnumber align-top py-2 text-nowrap"><%= child.callnumber %></td>
       </tr>
   <% end %>
 </table>

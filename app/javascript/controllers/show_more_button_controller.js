@@ -4,7 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     this.element.textContent = 'Show more'
-    this.element.classList.add('btn', 'btn-link', 'p-0', 'mb-3', 'show-more-button')
+    this.element.classList.add('btn', 'btn-link', 'p-0', 'show-more-button')
     this.element.ariaDisabled = 'true'
     this.element.ariaExpanded = 'false'
     this.element.ariaLabel = "This button is disabled because assistive technologies already announced the content."
