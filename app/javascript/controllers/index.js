@@ -148,6 +148,9 @@ application.register("recaptcha", RecaptchaController)
 import SavedListController from "./saved_list_controller"
 application.register("saved-list", SavedListController)
 
+import SearchNavbarController from "./search_navbar_controller"
+application.register("search-navbar", SearchNavbarController)
+
 import ShowMoreButtonController from "./show_more_button_controller"
 application.register("show-more-button", ShowMoreButtonController)
 

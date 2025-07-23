@@ -3,7 +3,7 @@
   <div class="search-area-image-bg">
     <div class="container">
         <%= render HomepageSearchComponent.new url: search_action_url,
-                                               params: search_state.params_for_search.except(:qt),
+                                               params: search_state.params_for_search(f: { eds_search_limiters_facet: ['Direct access to full text'] }).except(:qt),
                                                autocomplete_path: suggest_index_catalog_path do |component| %>
           <% component.with_footer { 'Search over two billion resources from Stanford University Libraries’ digital subscriptions, including articles, eBooks, eNewspapers, and other electronic resources.' } %>
         <% end %>

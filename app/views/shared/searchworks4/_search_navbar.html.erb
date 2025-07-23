@@ -1,21 +1,25 @@
-<nav id="search-navbar" class="bg-light py-2 mb-3" aria-label="<%= t('searchworks.navigation.search_bar') %>">
-  <div class="container-lg search-form d-flex align-items-center column-gap-3 flex-wrap">
-    <div class="text-nowrap">
-      <span class="fw-bold">Search mode:</span>
-      <% articles_checked = controller.controller_name == 'articles' %>
-      <div class="form-check d-inline-block mx-1">
-        <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" onclick="document.querySelector('.search-query-form').action = '/';" <% unless articles_checked %>checked<% end %>>
-        <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
+<% articles_checked = controller_name.in?(%w[article_selections articles]) %>
+<%= tag.nav id: 'search-navbar', class: %w[bg-light py-2 mb-3],
+            'aria-label': t('searchworks.navigation.search_bar'),
+            data: { controller: 'search-navbar', 'search-navbar-additional-articles-params-value': (articles_checked ? nil : {'f[eds_search_limiters_facet][]': 'Direct access to full text' }.to_json )} do %>
+  <turbo-frame id="search-navbar-frame" refresh="morph" data-search-navbar-target="container">
+    <div class="container-lg search-form d-flex align-items-center column-gap-3 flex-wrap">
+      <div class="text-nowrap">
+        <span class="fw-bold">Search mode:</span>
+        <div class="form-check d-inline-block mx-1">
+          <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" data-url="<%= search_bar_catalog_url %>" data-action="search-navbar#toggleMode" <% unless articles_checked %>checked<% end %>>
+          <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
+        </div>
+        <div class="form-check d-inline-block mx-1">
+          <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" data-url="<%= search_bar_articles_url %>" data-action="search-navbar#toggleMode" <% if articles_checked %>checked<% end %>>
+          <label class="form-check-label" for="searchTypeArticle">Articles+</label>
+        </div>
       </div>
-      <div class="form-check d-inline-block mx-1">
-        <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" onclick="document.querySelector('.search-query-form').action = '/articles'" <% if articles_checked %>checked<% end %>>
-        <label class="form-check-label" for="searchTypeArticle">Articles+</label>
-      </div>
+      <%= render MastheadSearchComponent.new url: search_action_url,
+                                            advanced_search_url: controller_name.in?(%w[article_selections articles]) ? nil : search_action_url(action: 'advanced_search'),
+                                            params: search_state.params_for_search.except(:qt),
+                                            autocomplete_path: suggest_index_catalog_path %>
+      <%= link_to_unless_current 'Advanced search', advanced_search_path(search_state.params_for_search), class: 'text-body' unless controller_name.in?(%w[article_selections articles]) %>
     </div>
-    <%= render MastheadSearchComponent.new url: search_action_url,
-                                          advanced_search_url: controller_name.in?(%w[article_selections articles]) ? nil : search_action_url(action: 'advanced_search'),
-                                          params: search_state.params_for_search.except(:qt),
-                                          autocomplete_path: suggest_index_catalog_path %>
-    <%= link_to_unless_current 'Advanced search', advanced_search_path(search_state.params_for_search), class: 'text-body' unless controller_name.in?(%w[article_selections articles]) %>
-  </div>
-</nav>
+  </turbo-frame>
+<% end %>

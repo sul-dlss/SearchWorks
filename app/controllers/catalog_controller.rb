@@ -546,6 +546,10 @@ class CatalogController < ApplicationController
     end
   end
 
+  def search_bar
+    render layout: false
+  end
+
   private
 
   def augment_solr_document_json_response(documents)
