@@ -28,7 +28,8 @@ export default class extends Controller {
     } else {
       this.element.ariaLabel = 'Save record';
     }
-    window.dispatchEvent(new CustomEvent('bookmark-updated', {detail: {checked: this.checked(), document_id: this.element.dataset.documentId}}))
+
+    this.element.dispatchEvent(new CustomEvent('bookmark-updated', {bubbles: true, detail: {checked: this.checked(), document_id: this.element.dataset.documentId}}))
   }
 
   bookmarkUpdated(event) {
@@ -43,7 +44,7 @@ export default class extends Controller {
       //this.element.ariaLabel = 'Save record';
       toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
-    window.dispatchEvent(new CustomEvent('update-tooltip', {}))
+    this.element.dispatchEvent(new CustomEvent('update-tooltip', { bubbles: true}))
     bootstrap.Toast.getOrCreateInstance(toast).show()
   }
 }
