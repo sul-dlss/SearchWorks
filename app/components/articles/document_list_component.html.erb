@@ -34,13 +34,13 @@
           <% if @document['eds_authors'].present? %>
             <li>
               <div data-behavior='metadata-truncate' class="truncate-2">
-                <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_authors']) %>
+                <%= safe_join Array(doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_authors'])), ', ' %>
               </div>
             </li>
           <% end %>
 
           <% if @document['eds_composed_title'].present? %>
-            <li class="truncate-2"><%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_composed_title']) %></li>
+            <li class="truncate-2"><%= Array(doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_composed_title'])).first %></li>
           <% end %>
         </ul>
         <% if @document['eds_abstract'].present? %>
@@ -48,7 +48,7 @@
             <dt class="visually-hidden">Abstract</dt>
             <dd>
               <div class="truncate-3">
-                <%= doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_abstract']) %>
+                <%= Array(doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_abstract'])).first %>
               </div>
             </dd>
           </dl>
