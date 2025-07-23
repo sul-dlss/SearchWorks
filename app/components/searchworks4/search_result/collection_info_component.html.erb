@@ -25,7 +25,7 @@
   </div>
 
   <% if collection[:summary_display] %>
-  <div class="collection-summary mt-2" data-controller="long-text" data-long-text-truncate-class="truncate-3">
+  <div class="collection-summary mt-2 col-xxl-9" data-controller="long-text" data-long-text-truncate-class="truncate-3">
     <div data-long-text-target="text">
       <%= helpers.format_record_html(collection[:summary_display].join(', ')) %>
     </div>
