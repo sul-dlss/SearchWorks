@@ -15,7 +15,7 @@ RSpec.feature "Databases Access Point" do
     expect(page).to have_title "Databases in SearchWorks catalog"
     within(".search-area-bg") do
       expect(page).to have_css "h1", text: "Databases"
-      expect(page).to have_link "List of Journals A-Z"
+      expect(page).to have_link "Publication Finder"
       expect(page).to have_link "Articles+"
       expect(page).to have_link "Off-campus access"
     end
