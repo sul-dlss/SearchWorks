@@ -20,7 +20,7 @@ RSpec.feature 'Article Record Display' do
     end
 
     it 'are linked' do
-      visit article_path(document[:id])
+      visit eds_document_path(document[:id])
 
       expect(page).to have_css('dd.blacklight-eds_subjects_person a', text: 'Person1')
       expect(page).to have_css('dd.blacklight-eds_subjects_person a', text: 'Person2')
@@ -47,7 +47,7 @@ RSpec.feature 'Article Record Display' do
       end
 
       it 'toggled via panel heading' do
-        visit article_path(document[:id])
+        visit eds_document_path(document[:id])
         expect(page).to have_css('.fulltext-toggle-bar', text: 'Show full text')
         expect(page).to have_no_css('div.blacklight-eds_html_fulltext', visible: true)
         expect(page).to have_no_content('This Journal')
@@ -60,7 +60,7 @@ RSpec.feature 'Article Record Display' do
       end
 
       it 'renders HTML' do
-        visit article_path(document[:id])
+        visit eds_document_path(document[:id])
 
         find_by_id('fulltextToggleBar').click
         expect(page).to have_css('div.blacklight-eds_html_fulltext', visible: true)
@@ -72,7 +72,7 @@ RSpec.feature 'Article Record Display' do
 
     context 'when a user does not have access' do
       it 'renders a login link instead' do
-        visit article_path(document[:id])
+        visit eds_document_path(document[:id])
 
         expect(page).to have_css('a h2', text: 'Log in to show fulltext')
         expect(page).to have_no_css('button#fulltextToggleBar')
@@ -101,7 +101,7 @@ RSpec.feature 'Article Record Display' do
 
     context 'when the SFX data is not loaded successfully' do
       it 'returns an error message in the panel' do
-        visit article_path(document[:id])
+        visit eds_document_path(document[:id])
 
         expect(page).to have_css('turbo-frame#sfx-data')
 
@@ -130,7 +130,7 @@ RSpec.feature 'Article Record Display' do
       end
 
       it 'is loaded asyc on the page' do
-        visit article_path(document[:id])
+        visit eds_document_path(document[:id])
 
         within('turbo-frame#sfx-data') do
           expect(page).to have_css('ul li a', text: 'TargetName')

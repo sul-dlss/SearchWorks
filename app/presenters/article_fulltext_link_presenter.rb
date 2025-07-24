@@ -3,7 +3,7 @@
 ##
 # A presenter class handle the logic to render markup for fulltext links from EDS
 class ArticleFulltextLinkPresenter
-  delegate :article_url, :article_fulltext_link_url, :link_to, :image_tag, :image_url, to: :context
+  delegate :eds_document_url, :article_fulltext_link_url, :link_to, :image_tag, :image_url, to: :context
   def initialize(document:, context:)
     @document = document
     @context = context
@@ -13,7 +13,7 @@ class ArticleFulltextLinkPresenter
     return [] unless online_access_panel? || document_has_fulltext?
     return access_panel_links.map { |link| render_fulltext_link(link) } if online_access_panel?
 
-    ["#{online_label} #{link_to('View on detail page', article_url(document))}"]
+    ["#{online_label} #{link_to('View on detail page', eds_document_url(document))}"]
   end
 
   private
@@ -57,7 +57,7 @@ class ArticleFulltextLinkPresenter
   def detail_link_markup(link)
     <<-HTML
       #{online_label}
-      #{(link_to('View on detail page', article_url(document)) if document_has_fulltext?)}
+      #{(link_to('View on detail page', eds_document_url(document)) if document_has_fulltext?)}
       #{image_tag(image_url('pdf-icon.svg'), height: '20px', alt: 'PDF')}
       #{link_to(link.text, article_fulltext_link_url(id: document.id, type: link.type), data: { turbo: false })}
       #{stanford_only_icon}

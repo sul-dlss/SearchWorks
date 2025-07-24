@@ -2,4 +2,5 @@
 
 class IndexEdsDocumentPresenter < Blacklight::IndexPresenter
   include PresenterFormat
+  include CatalogFields
 end

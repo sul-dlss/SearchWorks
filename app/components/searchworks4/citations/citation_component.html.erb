@@ -40,25 +40,29 @@
   <h3>Export citation</h3>
   <ul class="list-unstyled d-flex gap-3 export-citations">
     <% if exports_ris? %>
-      <li>
       <% if eds_ris_export? %>
-        <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); this.nextElementSibling.submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
-        <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
-          <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: @document.export_as_ris) %>
-        <% end %>
-        <%= link_to 'In RIS format (Zotero)',
+        <li>
+          <%= link_to t('blacklight.tools.refworks_html'), '', onclick: "event.preventDefault(); this.nextElementSibling.submit();", role: 'menuitem', tabindex: '-1', class: 'refworks dropdown-item' %>
+          <%= form_tag(refworks_export_url(filter: 'RIS Format'), 'aria-hidden': true) do %>
+            <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: presenter.document.export_as_ris) %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'In RIS format (Zotero)',
                     articles_ris_path(presenter.document, format: 'ris'),
                     data: { turbo: false } %>
+        </li>
       <% else %>
-        <%= link_to 'In RIS format (Zotero)',
+        <li>
+          <%= link_to 'In RIS format (Zotero)',
                     solr_document_path(presenter.document, format: 'ris'),
                     data: { turbo: false } %>
+        </li>
       <% end %>
-    </li>
     <% end %>
     <% if exports_endnote? %>
       <li>
-      <%= link_to 'To EndNote',
+        <%= link_to 'To EndNote',
                   solr_document_path(presenter.document, format: 'endnote'),
                   data: { turbo: false } %>
       </li>

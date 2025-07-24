@@ -40,7 +40,7 @@ RSpec.describe "Emailing Records", :js do
       end
 
       it 'sends a brief record' do
-        visit article_path(document[:id])
+        visit eds_document_path(document[:id])
 
         within('.record-toolbar') do
           within('li.dropdown') do

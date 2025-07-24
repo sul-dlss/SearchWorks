@@ -10,6 +10,8 @@ module Searchworks4
     end
 
     def authors
+      return presenter.document.eds_authors if presenter.document.eds?
+
       sum = []
       %i[creator corporate_author meeting].each do |target|
         sum += presenter.document.linked_author(target).values

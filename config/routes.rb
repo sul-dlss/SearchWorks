@@ -105,13 +105,15 @@ Rails.application.routes.draw do
   resources :course_reserves, only: :index, path: "reserves"
 
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
-    resources :articles, only: %i[index show] do
+    resources :articles, only: %i[index] do
       concerns :exportable
 
       collection do
         get 'search_bar'
       end
     end
+
+    get 'articles/:id' => 'articles#show', as: :eds_document
 
     get 'articles/:id/ris' => 'articles#show', as: :articles_ris, constraints: ->(req) { req.format = :ris }
 
