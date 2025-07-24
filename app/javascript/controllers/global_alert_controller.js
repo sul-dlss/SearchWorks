@@ -16,6 +16,6 @@ export default class extends Controller {
       lifetime = `expires=${date.toUTCString()}`;
     }
 
-    document.cookie = `${cookieId}=dismissed; ${lifetime} path=/; HttpOnly; SameSite=None`;
+    document.cookie = `${cookieId}=dismissed; ${lifetime} path=/`;
   }
 }
