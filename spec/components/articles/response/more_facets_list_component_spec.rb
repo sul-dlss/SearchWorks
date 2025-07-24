@@ -17,7 +17,8 @@ RSpec.describe Articles::Response::MoreFacetsListComponent, type: :component do
       active?: false,
       collapsed?: false,
       modal_path: nil,
-      values: []
+      values: [],
+      item_presenter: instance_double(Blacklight::FacetItemPresenter, href: '', selected?: false, label: 'Field', hits: 0, value: 'field_value')
     )
   end
 

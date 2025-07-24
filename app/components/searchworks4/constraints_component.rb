@@ -45,7 +45,7 @@ module Searchworks4
           elsif negative_facet?(facet.config)
             yield negative_facet_item_presenter(facet.config, val, facet.key)
           else
-            yield facet_item_presenter(facet.config, val, facet.key)
+            yield facet_item_presenter(facet.config, val)
           end
         end
       end
