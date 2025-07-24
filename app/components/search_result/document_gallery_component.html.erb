@@ -14,7 +14,7 @@
           <%= helpers.link_to_document document, class: 'fw-semibold', counter: counter, data: { action: "click->analytics#trackLink"} %>
         </span>
       </div>
-      <div class="location py-1">
+      <div class="location one-line py-1">
         <% if document.items.present? %>
           <% if document.holdings.libraries.length == 1 %>
             <%= document.holdings.libraries.first.name %>
@@ -22,15 +22,16 @@
             in <%= document.holdings.libraries.length %> libraries
           <% end %>
         <% elsif document.mods? %>
-          <br/>Stanford Digital Repository
+          Stanford Digital Repository
         <% elsif document.preferred_online_links.present?  %>
-          eResource<br />
           <%= document.eresources_library_display_name || 'Stanford Libraries' %>
         <% end %>
       </div>
       <div class="callnumber-bar two-lines">
         <% if document.items.present? %>
           <%= document.preferred_item.callnumber %>
+        <% elsif document.preferred_online_links.present? %>
+          Online
         <% end %>
       </div>
     </div>
