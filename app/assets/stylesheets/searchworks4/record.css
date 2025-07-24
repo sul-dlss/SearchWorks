@@ -350,6 +350,10 @@
   display: flex;
 }
 
+.item-row {
+  display: flex;
+}
+
 .search-mode {
   h2 .badge {
     background-color: rgba(var(--stanford-digital-green-rgb), 0.2);
