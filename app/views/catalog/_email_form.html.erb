@@ -22,6 +22,7 @@
         </div>
         <%= render 'shared/email_form', documents: @documents %>
       <% else %>
+        <input type="hidden" name="type" value="brief" />
         <%= render 'shared/email_form', documents: @documents %>
       <% end %>
     </div>
