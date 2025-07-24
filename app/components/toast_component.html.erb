@@ -1,0 +1,6 @@
+<%= tag.div class: 'toast', role: 'alert', aria: { atomic: 'true', live: 'assertive' }, data: { controller: 'toast', action: 'hidden.bs.toast->toast#destroy', 'bs-config': '{ "delay": 8000 }' } do %>
+  <div class="toast-body d-flex justify-content-between">
+    <div class="toast-text"><%= content %></div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+<% end %>

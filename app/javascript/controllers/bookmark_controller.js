@@ -21,8 +21,9 @@ export default class extends Controller {
   }
 
   bookmarkUpdated(event) {
-    const toast = document.getElementById('toast')
+    const toast = document.getElementById('toast-template').content.cloneNode(true).querySelector('.toast');
     const toastText = toast.querySelector('.toast-text')
+
     if (event.detail.checked){
       this.element.ariaLabel = 'Remove from saved records';
       toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
@@ -31,7 +32,8 @@ export default class extends Controller {
       this.element.ariaLabel = 'Save record';
       toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
+
     this.element.dispatchEvent(new CustomEvent('update-tooltip', { bubbles: true}))
-    bootstrap.Toast.getOrCreateInstance(toast).show()
+    document.getElementById('toast-area').appendChild(toast)
   }
 }

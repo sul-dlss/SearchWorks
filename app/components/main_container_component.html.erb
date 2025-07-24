@@ -10,13 +10,10 @@
     </div>
 
     <%= content %>
-    <div data-turbo-permanent class="toast-container position-fixed bottom-0 end-0 p-3" data-controller="toast-message-listener" data-action="show-toast@window->toast-message-listener#showToast">
-      <div id="toast" class="toast d-block" role="alert" aria-live="assertive" aria-atomic="true" data-bs-config='{ "delay": 8000 }'>
-        <div class="toast-body d-flex justify-content-between">
-          <div id="toast-text" class="toast-text"></div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-      </div>
+    <div id="toast-area" data-turbo-permanent class="toast-container position-fixed bottom-0 end-0 p-3" data-controller="toast-message-listener" data-action="show-toast@window->toast-message-listener#showToast">
+      <template id="toast-template">
+        <%= render ToastComponent.new %>
+      </template>
     </div>
   </main>
 </div>

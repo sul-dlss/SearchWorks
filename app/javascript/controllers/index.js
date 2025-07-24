@@ -157,6 +157,9 @@ application.register("show-more-button", ShowMoreButtonController)
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
 
+import ToastController from "./toast_controller"
+application.register("toast", ToastController)
+
 import ToastMessageListenerController from "./toast_message_listener_controller"
 application.register("toast-message-listener", ToastMessageListenerController)
 
