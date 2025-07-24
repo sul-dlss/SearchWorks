@@ -22,6 +22,8 @@ class Links
       @sort = options[:sort]
       @stanford_only = options[:stanford_only]
       @type = options[:type]
+      @access = options[:access]
+      @libraries = options[:libraries] || []
     end
 
     def html
@@ -60,6 +62,21 @@ class Links
       @ill
     end
 
+    def open_access?
+      return false if @access.blank?
+      return false if @access == 'restricted'
+
+      true
+    end
+
+    def aggregator?
+      link_host&.in?(aggregator_hostnames)
+    end
+
+    def ebscohost?
+      link_host&.include?('ebscohost.com')
+    end
+
     def additional_text_html
       content_tag(:span, @additional_text, class: 'additional-link-text') if @additional_text
     end
@@ -95,7 +112,25 @@ class Links
                      else
                        {}
                      end
-      content_tag(:a, @link_text || link_host, href: @href, class: link_class, **tooltip_attr)
+      content_tag(:a, @link_text || link_host, href: proxied_url || @href, class: link_class, **tooltip_attr)
+    end
+
+    def proxied_url
+      Links::Ezproxy.new(
+        url: @href, link_title: @link_title, libraries: @libraries
+      ).to_proxied_url
+    end
+
+    def aggregator_hostnames
+      %w[proquest.com
+         ebsco.com
+         gale.com
+         lexis.com
+         bioone.org
+         jstor.org
+         muse.jhu.edu
+         factiva.com
+         heinonline.org]
     end
   end
 end
