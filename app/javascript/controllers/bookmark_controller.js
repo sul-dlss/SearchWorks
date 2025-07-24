@@ -26,7 +26,7 @@ export default class extends Controller {
     if (event.detail.checked){
       this.element.ariaLabel = 'Remove from saved records';
       toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
-      this.hover()
+      if (this.element.matches(':hover')) this.hover()
     } else {
       this.element.ariaLabel = 'Save record';
       toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
