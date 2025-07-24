@@ -15,7 +15,7 @@ module Searchworks4
       @facet_field.paginator.items.map do |item|
         # For the facet values that are in the inclusive facet
         if values.include?(item.value)
-          InclusiveFacetItemPresenter.new(values, item, @facet_field.facet_field, helpers, @facet_field.key, @facet_field.search_state)
+          AdvancedFacetItemPresenter.new(values, item, @facet_field.facet_field, helpers, @facet_field.key, @facet_field.search_state)
         else
           Blacklight::FacetItemPresenter.new(item, @facet_field.facet_field, helpers, @facet_field.key)
         end
