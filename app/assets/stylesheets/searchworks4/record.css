@@ -383,3 +383,10 @@
 .bound-with .show-more-button {
   margin-bottom: 0.1rem;
 }
+
+.blacklight-articles-fulltext_html {
+  #topnav .navbar-nav { display: none; }
+  .access-panel-heading {
+    display: none;
+  }
+}

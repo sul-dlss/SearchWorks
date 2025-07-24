@@ -83,7 +83,8 @@ RSpec.describe ArticleFulltextLinkPresenter do
                           'id' => 'abc123',
                           'FullText' => {
                             'Text' => {
-                              'Availability' => '1'
+                              'Availability' => '1',
+                              'Value' => '<p>This is the full text of the document.</p>'
                             }
                           }
                         })

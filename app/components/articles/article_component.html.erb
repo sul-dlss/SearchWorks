@@ -2,28 +2,13 @@
   <div class="article-record-sections record-sections">
     <% if @document.html_fulltext? %>
       <div class="html-fulltext-container mb-5">
-        <% if helpers.on_campus_or_su_affiliated_user? %>
-          <button class="btn btn-secondary mb-3 section-container-heading fulltext-toggle-bar" id="fulltextToggleBar" data-bs-toggle="collapse" href="#toggleFulltext" aria-expanded="false" aria-controls="toggleFulltext">
-            <h2 class="mb-0">Show full text <i class='bi bi-chevron-right'></i></h2>
-          </button>
-          <div class='eds-full-text-section section-body collapse' id="toggleFulltext">
-            <% metadata_fields_for_section('Fulltext').each do |field_presenter| -%>
-              <% if field_presenter.render_field? %>
-                <div class="blacklight-<%= field_presenter.key %>"><%= field_presenter.render %></div>
-              <% end -%>
-            <% end -%>
-          </div>
-        <% else %>
-          <div class='section-container-heading fulltext-toggle-bar'>
-            <%= link_to(new_user_session_path(referrer: request.original_url)) do %>
-              <h2>Log in to show fulltext <i class='bi bi-chevron-right'></i></h2>
-            <% end %>
-          </div>
+        <%= link_to(helpers.on_campus_or_su_affiliated_user? ? article_html_fulltext_url(@document) : new_user_session_path(referrer: article_html_fulltext_url(@document)), class: 'btn btn-secondary', target: '_blank') do %>
+          Full text <i class='bi bi-chevron-right'></i>
         <% end %>
       </div>
     <% end %>
 
-    <% metadata_sections.without('Fulltext').each do |section_name, section| -%>
+    <% metadata_sections.each do |section_name, section| -%>
       <%= render Searchworks4::DocumentSectionLayout.new(title: section_name, **({ dl_classes: ['my-3 dl-horizontal dl-text'] } if section_name == 'Contents/Summary')) do %>
         <%= render section -%>
       <% end -%>
