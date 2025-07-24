@@ -13,8 +13,7 @@
   }
 
   .gallery-document {
-    --bs-border-radius: 0.25rem;
-    --bs-border-color: var(--stanford-20-black);
+    border-radius: 0.25rem;
     height: var(--gallery-document-total-height);
     width: var(--gallery-document-width);
     padding: 0;
