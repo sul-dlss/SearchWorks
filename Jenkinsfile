@@ -236,11 +236,11 @@ pipeline {
     stage('folio-dev deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'preview_folio'
-        BRANCH = 'release'
+        BRANCH = 'main'
       }
 
       when {
-        branch 'release'
+        branch 'main'
       }
 
       steps {
