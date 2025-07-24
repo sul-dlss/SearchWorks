@@ -15,7 +15,7 @@ pipeline {
           rvm use 3.4.1@searchworks --create
           gem install bundler
 
-          git switch release
+          git switch main
           git pull
 
           bundle install --without production
@@ -28,7 +28,7 @@ pipeline {
           git add config/ezproxy/lane_proxy_file.txt
           git commit -m "Update Lane Library EZProxy config" &&
           git push git@github.com:sul-dlss/SearchWorks.git lane-ezproxy-update &&
-          hub pull-request -f -m "Update Lane Library EZProxy config" --base release
+          hub pull-request -f -m "Update Lane Library EZProxy config" --base main
           echo 'Done!'
           '''
         }
