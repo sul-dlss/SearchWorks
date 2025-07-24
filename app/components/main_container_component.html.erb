@@ -3,7 +3,7 @@
   <main id="main-container" data-controller="google-cover-image" class="mb-5">
 
     <% # The quick report javascript requires this node to be on the page %>
-    <div class="flash_messages mx-auto my-3" style="max-width: 1000px;">
+    <div class="flash_messages<% if flash.any? %> mx-auto my-3<% end %>" style="max-width: 1000px;">
       <% FLASH_TYPES_WITH_LEVEL.each do |type, alert_level| %>
         <%= render AlertComponent.new(level: alert_level, message: flash[type].html_safe) if flash[type] %>
       <% end %>
