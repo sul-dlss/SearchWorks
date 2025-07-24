@@ -76,9 +76,8 @@ RSpec.describe ArticlesController do
 
   describe '#fulltext_link' do
     it 'redirect to a fulltext link' do
-      stub_article_service(type: :single, docs: [SolrDocument.new(id: '123',
-                                                                  eds_fulltext_links: [{ url: 'http://example.com/file.pdf', type: 'pdf' }])])
-      get :fulltext_link, params: { id: '123', type: :pdf }
+      stub_article_service(type: :single, docs: [instance_double(EdsDocument, id: '123', eds_fulltext_links: [{ url: 'http://example.com/file.pdf', type: 'pdflink' }])])
+      get :fulltext_link, params: { id: '123', type: 'pdf' }
       expect(response).to redirect_to('http://example.com/file.pdf')
     end
 
@@ -86,9 +85,7 @@ RSpec.describe ArticlesController do
       before do
         stub_article_service(
           type: :single,
-          docs: [
-            SolrDocument.new(id: '123', eds_fulltext_links: [{ url: 'detail', type: 'pdf' }])
-          ]
+          docs: [instance_double(EdsDocument, id: '123', eds_fulltext_links: [{ url: 'detail', type: 'pdf' }])]
         )
       end
 
@@ -99,7 +96,7 @@ RSpec.describe ArticlesController do
         end
 
         it 'returns an error message indicating to login to view the content' do
-          get :fulltext_link, params: { id: '123', type: :pdf }
+          get :fulltext_link, params: { id: '123', type: 'pdf' }
           error_message = Capybara.string(flash[:error])
           expect(error_message).to have_content(
             'Sorry, the PDF download was not successful because you are currently in guest mode.'
@@ -111,7 +108,7 @@ RSpec.describe ArticlesController do
         it 'does not send an exception to Honeybadger (because this can be expected)' do
           expect(Honeybadger).not_to receive(:notify)
 
-          get :fulltext_link, params: { id: '123', type: :pdf }
+          get :fulltext_link, params: { id: '123', type: 'pdf' }
         end
       end
 
@@ -123,7 +120,7 @@ RSpec.describe ArticlesController do
         end
 
         it 'returns an error message indicating to report it as a connection problem' do
-          get :fulltext_link, params: { id: '123', type: :pdf }
+          get :fulltext_link, params: { id: '123', type: 'pdf' }
           error_message = Capybara.string(flash[:error])
           expect(error_message).to have_content 'Sorry, the PDF download was not successful'
           expect(error_message).to have_content 'We don\'t know the source of the error.'
@@ -134,7 +131,7 @@ RSpec.describe ArticlesController do
         it 'sends and exception notification' do
           expect(Honeybadger).to receive(:notify)
 
-          get :fulltext_link, params: { id: '123', type: :pdf }
+          get :fulltext_link, params: { id: '123', type: 'pdf' }
         end
       end
     end
