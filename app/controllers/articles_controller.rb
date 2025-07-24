@@ -222,7 +222,7 @@ class ArticlesController < ApplicationController
 
   def fulltext_link
     document = search_service.fetch(params[:id])
-    url = extract_fulltext_link(document, params[:type])
+    url = extract_fulltext_link(document, params[:type] == 'pdf' ? 'pdflink' : params[:type])
     redirect_to url, allow_other_host: true if url.present?
   rescue => e
     if current_user
@@ -324,10 +324,10 @@ class ArticlesController < ApplicationController
   end
 
   def extract_fulltext_link(document, type)
-    links = document.fetch('eds_fulltext_links', [])
+    links = document.eds_fulltext_links
     links.each do |link|
-      next if link['url'].blank? || link['url'] == 'detail'
-      return link['url'] if link['type'] == type.to_s
+      next if link[:url].blank? || link[:url] == 'detail'
+      return link[:url] if link[:type] == type.to_s
     end
     raise ArgumentError, "Missing #{type} fulltext link in document #{document.id}"
   end
