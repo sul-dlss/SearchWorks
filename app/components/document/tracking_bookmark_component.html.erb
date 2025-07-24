@@ -3,7 +3,6 @@
              authenticity_token: false,
              method:  bookmarked? ? :delete : :put,
              class: "bookmark-toggle btn nav-link",
-             title: tooltip_label,
              aria: { label: aria_label },
              data: {
                controller: 'bookmark tooltip',
@@ -14,7 +13,8 @@
                       "update-tooltip->tooltip#updatePopper bookmark.blacklight->bookmark#bookmarkUpdated",
                present: t('blacklight.search.bookmarks.present'),
                absent: t('blacklight.search.bookmarks.absent'),
-               inprogress: t('blacklight.search.bookmarks.inprogress')
+               inprogress: t('blacklight.search.bookmarks.inprogress'),
+               tooltip: tooltip_label
             }) do %>
   <div class="toggle-bookmark" data-controller="analytics">
     <label id="bookmark-<%= @document.id %>" class="toggle-bookmark-label" data-checkboxsubmit-target="label" tabindex="0">

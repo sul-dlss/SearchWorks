@@ -52,7 +52,7 @@ RSpec.describe 'Callnumber Browse', :js do
         find('.toggle-bookmark').click
       end
 
-      expect(page).to have_css('[title="Remove from saved records"]')
+      expect(page).to have_css('[data-tooltip="Remove from saved records"]')
 
       page.driver.browser.navigate.refresh
 

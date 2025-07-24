@@ -19,6 +19,6 @@ RSpec.describe Document::TrackingBookmarkComponent, type: :component do
 
   it 'has tooltip and bookmark attributes' do
     expect(page).to have_css '[data-controller="bookmark tooltip"]'
-    expect(page).to have_css '[title="Save record"]'
+    expect(page).to have_css '[data-tooltip="Save record"]'
   end
 end

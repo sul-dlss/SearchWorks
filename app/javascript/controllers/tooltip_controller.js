@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import { createPopper }  from '@popperjs/core'
 
-// Must be instantiated on an element with a title OR an aria-label attribute
+// Must be instantiated on an element with a data-tooltip OR an aria-label attribute
 export default class extends Controller {
   connect () {
     this.tooltip = document.createElement("div")
@@ -24,7 +24,7 @@ export default class extends Controller {
   }
 
   tooltipText() {
-    return this.element.title || this.element.getAttribute('aria-label')
+    return this.element.getAttribute('data-tooltip') || this.element.getAttribute('aria-label')
   }
 
   hide() {
