@@ -2,11 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="saved-list"
 export default class extends Controller {
-  static targets = ['count']
-
   bookmarksUpdated(event) {
     if (event.detail.checked == true) return
-    const record = document.querySelector(`article[data-document-id="${event.detail.document_id}"]`)
+    const record = event.target.closest('article');
     record.style.transition = 'opacity 0.5s ease';
     record.style.opacity = 0;
 

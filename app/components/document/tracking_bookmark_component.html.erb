@@ -11,7 +11,7 @@
                action: "click->analytics#trackBookmark " \
                       "mouseenter->tooltip#show focus->tooltip#show mouseleave->tooltip#hide blur->tooltip#hide " \
                       "mouseenter->bookmark#hover click->bookmark#hover click->bookmark#blur focus->bookmark#hover mouseleave->bookmark#blur blur->bookmark#blur " \
-                      "update-tooltip@window->tooltip#updatePopper bookmark.blacklight@window->bookmark#bookmarkUpdated click->bookmark#clickedId",
+                      "update-tooltip->tooltip#updatePopper bookmark.blacklight->bookmark#bookmarkUpdated",
                present: t('blacklight.search.bookmarks.present'),
                absent: t('blacklight.search.bookmarks.absent'),
                inprogress: t('blacklight.search.bookmarks.inprogress')

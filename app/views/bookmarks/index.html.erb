@@ -1,6 +1,6 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: t('blacklight.bookmarks.page_heading'), application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 
-<div class="col-xl-9 col-md-12 mt-3" data-controller="saved-list" data-action="bookmark-updated@window->saved-list#bookmarksUpdated">
+<div class="col-xl-9 col-md-12 mt-3" data-controller="saved-list" data-action="bookmark.blacklight->saved-list#bookmarksUpdated">
   <div class="d-flex mb-2">
     <h1 class="me-3">Saved Records</h1>
 
@@ -9,14 +9,14 @@
         <%= link_to bookmarks_path,
           class: "nav-link #{'active' unless article_selections?}",
           aria: !article_selections? ? {} :{ current: 'page'} do %>
-          Catalog <span class="badge rounded-pill bookmark-counter" data-saved-list-target="count"><%= @catalog_count %></span>
+          Catalog <span class="badge rounded-pill bookmark-counter"><%= @catalog_count %></span>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to article_selections_path,
           class: "nav-link #{'active' if article_selections?}",
           aria: article_selections? ? {} :{ current: 'page'} do %>
-          Articles+ <span class="badge rounded-pill bookmark-counter" data-saved-list-target="count"><%= @article_count %></span>
+          Articles+ <span class="badge rounded-pill bookmark-counter"><%= @article_count %></span>
         <% end %>
       </li>
     </ul>
@@ -39,7 +39,7 @@
 
       <span class="d-flex flex-row gap-2">
         <%= render partial: 'sort_widget' %>
-        <span data-saved-list-target="perPage">
+        <span>
           <%= render partial: 'shared/per_page_widget' %>
         </span>
       </span>
