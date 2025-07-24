@@ -13,7 +13,7 @@ export default class extends Controller {
     if (this.dismissValue == "permanent") {
       const date = new Date();
       date.setFullYear(date.getFullYear() + 1);
-      lifetime = `expires=${date.toUTCString()}`;
+      lifetime = `expires=${date.toUTCString()};`;
     }
 
     document.cookie = `${cookieId}=dismissed; ${lifetime} path=/`;
