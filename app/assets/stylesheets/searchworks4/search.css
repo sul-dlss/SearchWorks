@@ -36,7 +36,7 @@
   }
 
   .search-q {
-    border: 0;
+    border: 1px solid transparent;
     border-inline-start: var(--search-q-border);
     outline: none;
   }
