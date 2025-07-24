@@ -23,7 +23,7 @@ pipeline {
           rvm use 3.4.1@searchworks --create
           gem install bundler
 
-          git switch release
+          git switch main
           git pull
 
           bundle install --without production
@@ -36,7 +36,7 @@ pipeline {
           git add config/folio
           git commit -m "Update FOLIO types" &&
           git push git@github.com:sul-dlss/SearchWorks.git folio-policies-update-prod &&
-          hub pull-request -f -m "Update FOLIO types" --base release
+          hub pull-request -f -m "Update FOLIO types" --base main
           echo 'Done!'
           '''
         }
@@ -70,7 +70,7 @@ pipeline {
           git add config/folio
           git commit -m "Update FOLIO types" &&
           git push git@github.com:sul-dlss/SearchWorks.git folio-policies-update-test &&
-          hub pull-request -f -m "Update FOLIO types" --base release
+          hub pull-request -f -m "Update FOLIO types" --base main
           echo 'Done!'
           '''
         }
