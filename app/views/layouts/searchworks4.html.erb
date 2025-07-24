@@ -40,9 +40,9 @@
     <%= render blacklight_config.skip_link_component.new do %>
       <%= content_for(:skip_links) %>
     <% end %>
-    <%= render 'shared/searchworks4/top_navbar' %>
-
     <%= render GlobalAlertComponent.new(Settings.local_alert || GlobalAlerts::Alert.active) if Settings.GLOBAL_ALERT %>
+
+    <%= render 'shared/searchworks4/top_navbar' %>
 
     <% if content_for?(:search_navbar) %>
       <%= content_for(:search_navbar) %>
