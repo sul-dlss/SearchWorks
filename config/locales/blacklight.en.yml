@@ -65,7 +65,7 @@ en:
       clear:
         success: 'Your selections have been deleted.'
     tools:
-      refworks_html: '<span class="bi-box-arrow-up-right sul-icon-refworks"></span> RefWorks'
+      refworks_html: 'RefWorks'
       endnote_html: '<span class="bi-box-arrow-up-right sul-icon-endnote"></span> EndNote'
       ris_html: '<span class="bi-download"></span> Zotero RIS'
       librarian_view: 'Librarian view'
