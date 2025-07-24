@@ -24,7 +24,7 @@ export default class extends Controller {
   }
 
   tooltipText() {
-    return this.element.getAttribute('data-tooltip') || this.element.getAttribute('aria-label')
+    return this.element.dataset.tooltip || this.element.ariaLabel
   }
 
   hide() {
