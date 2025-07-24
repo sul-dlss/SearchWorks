@@ -42,7 +42,7 @@
     <% end %>
     <%= render 'shared/searchworks4/top_navbar' %>
 
-    <%= render GlobalAlertComponent.new(GlobalAlerts::Alert.active) if Settings.GLOBAL_ALERT %>
+    <%= render GlobalAlertComponent.new(Settings.local_alert || GlobalAlerts::Alert.active) if Settings.GLOBAL_ALERT %>
 
     <% if content_for?(:search_navbar) %>
       <%= content_for(:search_navbar) %>
