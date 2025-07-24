@@ -1,6 +1,6 @@
 <%= render @layout.new do |component| %>
   <% component.with_label { label } %>
-  <% Array(render_field).each do |value| %>
+  <% Array(render_field).uniq.each do |value| %>
     <% component.with_value(**value_attr) do %>
       <% if truncate? %>
         <%= tag.div value, data: { 'long-text-target' => "text" } %>
