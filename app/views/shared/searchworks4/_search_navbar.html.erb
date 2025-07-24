@@ -19,7 +19,7 @@
                                             advanced_search_url: controller_name.in?(%w[article_selections articles]) ? nil : search_action_url(action: 'advanced_search'),
                                             params: search_state.params_for_search.except(:qt),
                                             autocomplete_path: suggest_index_catalog_path %>
-      <%= link_to_unless_current 'Advanced search', advanced_search_path(search_state.params_for_search), class: 'text-body' unless controller_name.in?(%w[article_selections articles]) %>
+      <%= link_to_unless_current 'Advanced search', advanced_search_path(search_state.params_for_search), data: { turbo: false }, class: 'text-body' unless controller_name.in?(%w[article_selections articles]) %>
     </div>
   </turbo-frame>
 <% end %>
