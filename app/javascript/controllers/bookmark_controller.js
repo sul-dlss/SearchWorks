@@ -23,13 +23,14 @@ export default class extends Controller {
   bookmarkUpdated(event) {
     const toast = document.getElementById('toast-template').content.cloneNode(true).querySelector('.toast');
     const toastText = toast.querySelector('.toast-text')
-
-    if (event.detail.checked){
-      this.element.ariaLabel = 'Remove from saved records';
+    if (event.detail.checked) {
+      this.element.dataset.tooltip = 'Remove from saved records'
+      this.element.ariaLabel = this.element.ariaLabel.replace('Save record', 'Remove from saved records')
       toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
       if (this.element.matches(':hover')) this.hover()
     } else {
-      this.element.ariaLabel = 'Save record';
+      this.element.dataset.tooltip = 'Save record'
+      this.element.ariaLabel = this.element.ariaLabel.replace('Remove from saved records', 'Save record')
       toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
 

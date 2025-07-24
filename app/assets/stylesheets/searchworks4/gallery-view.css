@@ -26,6 +26,10 @@
       --bs-border-color: var(--stanford-cardinal);
     }
 
+    .bookmark-toggle .bookmark-text {
+      display: none;
+    }
+
     .caption {
       display: flex;
       height: calc(var(--gallery-document-total-height) - var(--gallery-document-thumbnail-height));

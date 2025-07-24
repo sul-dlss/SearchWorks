@@ -1,12 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 import { createPopper }  from '@popperjs/core'
 
-// Must be instantiated on an element with an aria-label attribute
+// Must be instantiated on an element with a data-tooltip OR an aria-label attribute
 export default class extends Controller {
   connect () {
     this.tooltip = document.createElement("div")
     this.tooltip.classList.add('tooltip')
-    this.tooltip.innerHTML = this.element.getAttribute('aria-label')
+    this.tooltip.innerHTML = this.tooltipText()
     this.tooltip.ariaHidden = 'true'
     this.element.appendChild(this.tooltip)
 
@@ -19,8 +19,12 @@ export default class extends Controller {
   }
 
   updatePopper() {
-    this.tooltip.innerHTML = this.element.getAttribute('aria-label')
+    this.tooltip.innerHTML = this.tooltipText()
     this.popperInstance.update()
+  }
+
+  tooltipText() {
+    return this.element.dataset.tooltip || this.element.ariaLabel
   }
 
   hide() {
