@@ -84,6 +84,15 @@
     width: 100%;
   }
 
+  .one-line {
+    display: -webkit-box;
+    overflow: hidden;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
   .two-lines {
     display: -webkit-box;
     overflow: hidden;
