@@ -19,6 +19,12 @@ module Searchworks4
       document.preferred_online_links.presence || [sdr_link]
     end
 
+    def link_classes
+      return if links.one?
+
+      "mb-1"
+    end
+
     def sdr_link
       return unless document.druid
 

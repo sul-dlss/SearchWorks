@@ -1,4 +1,6 @@
 <div class="availability-overview mt-3 d-flex flex-column gap-2 fs-15 align-items-start">
-  <%= render Searchworks4::OnlineAvailabilityComponent.new(document:) %>
-  <%= render Searchworks4::PhysicalAvailabilityComponent.new(document:) %>
+  <div class="border rounded w-auto p-2">
+    <%= render Searchworks4::OnlineAvailabilityComponent.new(document:) %>
+    <%= render Searchworks4::PhysicalAvailabilityComponent.new(document:) %>
+  </div>
 </div>

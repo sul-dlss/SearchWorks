@@ -1,6 +1,6 @@
 <% if single_item? %>
   <%# Instances with a single item collapse the item information %>
-  <%= container_tag(classes: %w[border rounded d-inline-flex suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
+  <%= container_tag(classes: %w[d-inline-flex suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
     <% library = document.holdings.libraries.first %>
     <% location = library.locations.first %>
     <% item = location.items.first %>
@@ -19,7 +19,7 @@
   <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy', data: { 'eager-lazy-target': 'frame' } %>
 <% elsif truncated_display? %>
   <%# Instances with lots of items get an abbreviated treatment %>
-  <%= container_tag(classes: %w[border rounded d-inline-flex]) do %>
+  <%= container_tag(classes: %w[d-inline-flex]) do %>
     <% if document.holdings.libraries.one? %>
       <% library = document.holdings.libraries.first %>
 
