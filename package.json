@@ -8,7 +8,7 @@
     "@hotwired/turbo-rails": "^8.0.0",
     "@mui/material": "^7.2.0",
     "@popperjs/core": "2.11.8",
-    "blacklight-frontend": "^9.0.0-beta4",
+    "blacklight-frontend": "^9.0.0-beta6",
     "blacklight-hierarchy": "^6.1.2",
     "blacklight-range-limit": "^9.0.0",
     "bootstrap": "5",

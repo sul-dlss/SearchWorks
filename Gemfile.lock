@@ -98,7 +98,7 @@ GEM
     benchmark (0.4.1)
     bigdecimal (3.2.2)
     bindex (0.8.1)
-    blacklight (9.0.0.beta5)
+    blacklight (9.0.0.beta6)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
@@ -280,7 +280,7 @@ GEM
       activesupport (>= 6.1)
     hashdiff (1.2.0)
     hashie (5.0.0)
-    honeybadger (6.0.0)
+    honeybadger (6.0.1)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -722,7 +722,7 @@ PLATFORMS
 DEPENDENCIES
   actioncable
   axe-core-rspec
-  blacklight (~> 9.0.0.beta4)
+  blacklight (~> 9.0.0.beta6)
   blacklight-hierarchy (~> 6.0)
   blacklight-marc (~> 8.0)
   blacklight-ris (~> 0.2.0)
