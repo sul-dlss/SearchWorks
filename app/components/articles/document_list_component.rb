@@ -21,11 +21,6 @@ module Articles
       @doc_presenter ||= helpers.document_presenter(document)
     end
 
-    # NOTE: ideally this would override the metadata slot in Blacklight, but I'm not sure how to do that.
-    def document_metadata
-      render Articles::MetadataComponent.new(document: @document)
-    end
-
     def resource_icon
       helpers.render_articles_format_icon(@document.eds_publication_type || @document.eds_document_type)
     end
