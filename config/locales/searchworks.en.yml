@@ -332,9 +332,9 @@ en:
     bookmarks:
       page_heading: "Saved records"
       add:
-        button: "Select"
+        button: "Save record"
       remove:
-        button: "Selected"
+        button: "Remove record"
 
     tools:
       endnote: "EndNote"
