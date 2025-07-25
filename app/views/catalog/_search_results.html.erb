@@ -83,10 +83,10 @@
     <% end %>
 
     <div id="content" class="results col <%= content_classes %>" data-controller="eager-lazy">
-      <div class="page-entries-info sort-and-per-page mb-2 d-flex justify-content-between align-items-center">
+      <div class="page-entries-info mb-2 d-flex justify-content-between align-items-center">
         <%= render PageLinksComponent.new(response: @response) %>
 
-        <span class="d-flex flex-row gap-2">
+        <span class="sort-and-per-page d-flex flex-row gap-2">
           <%= render partial: 'sort_widget' %>
           <%= render partial: 'shared/per_page_widget' %>
         </span>
