@@ -1,4 +1,4 @@
-<nav class="record-toolbar d-flex flex-column flex-xxl-row mt-5 mb-3 mb-xxl-4 gap-4" aria-label="Tools" data-controller="analytics">
+<nav class="record-toolbar d-flex flex-column flex-xxl-row mt-5 mb-3 mb-xxl-4 gap-4" aria-label="Tools" data-controller="analytics" data-analytics-category-value="record-toolbar">
   <div class="d-flex d-flex-row column-gap-3 align-items-center">
     <%= helpers.link_back_to_catalog class: 'back-to-results', label: t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
@@ -17,13 +17,13 @@
         </li>
       <% end %>
       <li>
-        <a class="btn nav-link"data-blacklight-modal="trigger" href="<%= email_path %>"><i class="bi bi-envelope me-1"></i>Email</a>
+        <a class="btn nav-link" data-action="click->analytics#trackLink" data-blacklight-modal="trigger" href="<%= email_path %>"><i class="bi bi-envelope me-1"></i>Email</a>
       </li>
       <li>
-        <button class="btn nav-link" type="button" data-controller="copy-link" data-action="click->copy-link#copyLink" data-copy-link-url-value="<%= copy_url %>"><i class="bi bi-link-45deg me-1"></i>Copy link</button>
+        <button class="btn nav-link" type="button" data-controller="copy-link" data-action="click->copy-link#copyLink click->analytics#trackEvent" data-copy-link-url-value="<%= copy_url %>"><i class="bi bi-link-45deg me-1"></i>Copy link</button>
       </li>
       <li>
-        <button class="btn nav-link" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer me-1"></i>Print</button>
+        <button class="btn nav-link" data-action="click->analytics#trackEvent" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer me-1"></i>Print</button>
       </li>
     </ul>
   </div>
