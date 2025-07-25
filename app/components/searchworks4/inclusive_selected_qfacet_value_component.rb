@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 module Searchworks4
   class InclusiveSelectedQfacetValueComponent < Blacklight::Hierarchy::SelectedQfacetValueComponent
@@ -14,6 +15,7 @@ module Searchworks4
       # Remove the old values and then add new values
       new_state = helpers.search_state.filter(field_name).remove(@values)
       new_state = new_state.filter(field_name).add(new_values)
+
       # Set the path with the parameters for the intended state
       helpers.search_action_path(new_state.params)
     end
