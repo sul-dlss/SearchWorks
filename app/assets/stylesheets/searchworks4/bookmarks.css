@@ -20,16 +20,6 @@
   --bl-icon-color: var(--bs-primary);
   color: var(--stanford-80-black);
 
-  .no-js & {
-    input[type="submit"] {
-      display: inline;
-    }
-
-    .toggle-bookmark {
-      display: none;
-    }
-  }
-
   input[type="submit"] {
     display: none;
   }
