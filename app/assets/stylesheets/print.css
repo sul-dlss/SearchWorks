@@ -1,0 +1,76 @@
+@media print {
+  .identity-bar {
+    display: none !important;
+  }
+
+  .user-util-links {
+    display: none !important
+  }
+
+  #search-navbar {
+    display: none !important;
+  }
+
+  .masthead .navbars {
+    display: none !important;
+  }
+
+  .blacklight-catalog-index {
+    .sidebar {
+      display: none !important;
+    }
+
+    .sort-and-per-page {
+      display: none !important;
+    }
+
+    .paginate-section {
+      display: none !important;
+    }
+  }
+
+  .blacklight-catalog-show {
+    .record-toolbar {
+      display: none !important;
+      /* Because d-flex is more important than us... */
+      content-visibility: hidden;
+      position: absolute;
+    }
+
+    #content article:first-of-type {
+      margin-top: 2rem;
+    }
+
+    #aside {
+      margin-left: 0;
+      width: 66%;
+
+      h2.h3 {
+        --sul-header-font-size: 1.5rem;
+      }
+    }
+
+    .expand-availability {
+      display: none;
+    }
+
+    .panel-related {
+      display: none;
+    }
+
+    .record-browse-nearby {
+      display: none;
+    }
+  }
+  .item-menu-dropdown {
+    display: none !important;
+  }
+
+  #pre-footer {
+    display: none !important;
+  }
+
+  #su-footer {
+    display: none !important;
+  }
+}
