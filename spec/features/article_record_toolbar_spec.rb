@@ -26,14 +26,11 @@ RSpec.describe 'Article Record Toolbar', :js do
   end
 
   it 'shows the Send button' do
-    pending 'SW4.0 redesign is changing this'
     within '.record-toolbar' do
-      expect(page).to have_css('.btn-sul-toolbar', text: 'Send to')
-      expect(page).to have_link('text', visible: false)
-      expect(page).to have_link('email', visible: false)
-      expect(page).to have_link('RefWorks', visible: false)
-      expect(page).to have_link('Zotero RIS', visible: false)
-      expect(page).to have_link('printer', visible: false)
+      expect(page).to have_css('form.bookmark-toggle')
+      expect(page).to have_link('Email')
+      expect(page).to have_button('Copy link')
+      expect(page).to have_button('Print')
     end
   end
   it 'shows both prev and next buttons' do
@@ -47,10 +44,9 @@ RSpec.describe 'Article Record Toolbar', :js do
     let(:previous_document) { nil }
 
     it 'shows only the Next button' do
-      skip 'TODO: disabled temporarily'
       within '.record-toolbar' do
-        expect(page).to have_no_css('.previous', text: 'Previous')
-        expect(page).to have_css('.next', text: 'Next')
+        expect(page).to have_link('Next')
+        expect(page).to have_no_link('Previous').and have_css('.previous', text: 'Previous')
       end
     end
   end
@@ -59,10 +55,9 @@ RSpec.describe 'Article Record Toolbar', :js do
     let(:next_document) { nil }
 
     it 'shows only the Previous button' do
-      skip 'TODO: disabled temporarily'
       within '.record-toolbar' do
-        expect(page).to have_css('.previous', text: 'Previous')
-        expect(page).to have_no_css('.next', text: 'Next')
+        expect(page).to have_link('Previous')
+        expect(page).to have_no_link('Next')
       end
     end
   end
@@ -72,10 +67,9 @@ RSpec.describe 'Article Record Toolbar', :js do
     let(:next_document) { nil }
 
     it 'does not show any Previous or Next buttons' do
-      skip 'TODO: disabled temporarily'
       within '.record-toolbar' do
-        expect(page).to have_no_css('.previous', text: 'Previous')
-        expect(page).to have_no_css('.next', text: 'Next')
+        expect(page).to have_no_link('Previous').and have_css('.previous', text: 'Previous')
+        expect(page).to have_no_link('Next').and have_no_css('.next', text: 'Next')
       end
     end
   end
