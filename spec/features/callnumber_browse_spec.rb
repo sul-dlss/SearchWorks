@@ -91,7 +91,7 @@ RSpec.describe 'Callnumber Browse', :js do
       expect(page).to have_css(
         ".fake-cover", text: 'Book cover not available', visible: :hidden
       )
-      expect(page).to have_css '.gallery-document .index_title', text: 'Studies in old Ottoman criminal law'
+      expect(page).to have_css '.gallery-document h3.index_title', text: 'Studies in old Ottoman criminal law'
 
       expect(page).to have_css '.toggle-bookmark'
       expect(page).to have_button 'preview'

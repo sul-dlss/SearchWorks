@@ -9,12 +9,12 @@
   <div class="caption">
     <% # header bar for doc items in index view gallery %>
     <div class="documentHeader">
-      <div class="index_title">
+      <h3 class="index_title mb-0">
         <span class="two-lines">
           <%= helpers.link_to_document document, class: 'fw-semibold', counter: counter, data: { action: "click->analytics#trackLink"} %>
         </span>
-      </div>
-      <div class="location one-line py-1">
+      </h3>
+      <div class="location one-line pb-1">
         <% if document.items.present? %>
           <% if document.holdings.libraries.length == 1 %>
             <%= document.holdings.libraries.first.name %>
