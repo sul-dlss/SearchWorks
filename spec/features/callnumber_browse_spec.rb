@@ -82,4 +82,23 @@ RSpec.describe 'Callnumber Browse', :js do
       expect(page).to have_no_css('.constraint.filter')
     end
   end
+
+  scenario 'Results are rendered properly', :js do
+    visit browse_index_path(call_number: 'A', start: '1', after: '0', view: 'gallery')
+
+    within '.gallery-document[data-document-id="1391872"]' do
+      expect(page).to have_css('div.callnumber-bar', text: 'KKX3800 .H49 1973')
+      expect(page).to have_css(
+        ".fake-cover", text: 'Book cover not available', visible: :hidden
+      )
+      expect(page).to have_css '.gallery-document .index_title', text: 'Studies in old Ottoman criminal law'
+
+      expect(page).to have_css '.toggle-bookmark'
+      expect(page).to have_button 'preview'
+      click_button 'preview'
+    end
+    within '.preview-container' do
+      expect(page).to have_css('h3', text: 'Studies in old Ottoman criminal law')
+    end
+  end
 end
