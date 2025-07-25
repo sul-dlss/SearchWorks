@@ -11,6 +11,7 @@ export default class extends Controller {
   connect() {
     this.triggerBtn = document.createElement('button')
     this.triggerBtn.classList.add('btn', 'preview-trigger-btn', 'preview-opacity')
+    this.triggerBtn.ariaLabel = 'Show preview'
     this.triggerBtn.dataset.action = 'click->preview-filmstrip#togglePreview'
     this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
     this.arrow = document.createElement('div');
@@ -44,6 +45,7 @@ export default class extends Controller {
 
   toggleButtonClosed(button) {
     button.classList.remove('preview-open')
+    this.triggerBtn.ariaLabel = 'Hide preview'
     button.innerHTML = '<span class="bi-chevron-down small"></span>'
   }
 
@@ -51,6 +53,7 @@ export default class extends Controller {
     const prevOpenButton = document.querySelector('.preview-open')
     if (prevOpenButton) this.toggleButtonClosed(prevOpenButton)
     this.triggerBtn.classList.add('preview-open')
+    this.triggerBtn.ariaLabel = 'Hide preview'
     this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
     const divContent = document.createElement('div');
     divContent.className = 'preview-content';

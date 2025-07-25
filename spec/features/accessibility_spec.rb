@@ -37,7 +37,7 @@ RSpec.describe 'Site Accessibility', :js do
       expect(page).to be_accessible.within('main')
     end
 
-    it 'has an accessible view with filmstrips', skip: "Pending SearchWorks 4.0 designs" do
+    it 'has an accessible view with filmstrips' do
       visit solr_document_path('34')
       expect(page).to be_accessible.within('main')
     end
