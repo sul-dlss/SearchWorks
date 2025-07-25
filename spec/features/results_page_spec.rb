@@ -46,6 +46,26 @@ RSpec.feature "Search Results Page" do
     end
   end
 
+  context 'with a library filter applied' do
+    before do
+      visit search_catalog_path f: { library: ['HILA'] }
+    end
+
+    it 'uses the friendly library name rather than the code' do
+      expect(page).to have_title "SearchWorks catalog, Library: Hoover Institution Library & Archives"
+    end
+  end
+
+  context 'with a library filter and search term applied' do
+    before do
+      visit search_catalog_path f: { library: ['HILA'] }, q: 'book'
+    end
+
+    it 'uses the friendly library name rather than the code' do
+      expect(page).to have_title "SearchWorks catalog, book, Library: Hoover Institution Library & Archives"
+    end
+  end
+
   context 'when clicking clear all' do
     it 'takes the user to a blank search' do
       visit search_catalog_path f: { access_facet: ['Online'] }, q: 'book'
