@@ -52,4 +52,28 @@ module CatalogHelper
 
     value.gsub(/<!--.*?-->/m, '').present?
   end
+
+  # Override Blacklight, which has a bug when the facet url key doesn't match the solr field name
+  # Render an html <title> appropriate string for a selected facet field and values
+  #
+  # @see #render_search_to_page_title
+  # @param [Symbol] facet the facet field
+  # @param [Array<String>] values the selected facet values
+  # @return [String]
+  def render_search_to_page_title_filter(facet, values)
+    facet_config = blacklight_config.facet_fields[facet] || facet_configuration_for_field(facet)
+    facet_presenter = facet_field_presenter(facet_config, {})
+    filter_label = facet_presenter.label
+    filter_value = if values.size < 3
+                     values.map do |value|
+                       item_presenter = facet_presenter.item_presenter(value)
+                       label = item_presenter.label
+                       label = strip_tags(label) if label.html_safe?
+                       label
+                     end.to_sentence
+                   else
+                     t('blacklight.search.page_title.many_constraint_values', values: values.size)
+                   end
+    t('blacklight.search.page_title.constraint', label: filter_label, value: filter_value)
+  end
 end
