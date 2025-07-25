@@ -11,7 +11,7 @@ module Searchworks4
 
     def presenters
       # Note that the values returned are the ones that are POSSIBLE with the search
-      # This will not list the inclusive value if it isn't included in the facetsß
+      # This will not list the inclusive value if it isn't included in the facets
       @facet_field.paginator.items.map do |item|
         # For the facet values that are in the inclusive facet
         if values.include?(item.value)

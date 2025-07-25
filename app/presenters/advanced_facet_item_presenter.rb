@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AdvancedFacetItemPresenter < Blacklight::FacetGroupedItemPresenter
   # The main difference here is we are sending in a facet item which is a Blacklight::Solr::Response::Facets::FacetItem
   # and not just a value

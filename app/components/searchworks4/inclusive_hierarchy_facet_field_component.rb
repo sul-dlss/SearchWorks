@@ -9,7 +9,7 @@ module Searchworks4
       @values = values
       super(field_name:, tree:, key:)
     end
-   
+
     # Facet field values are an array of arrays
     def qfacet_selected?
       @values.any? { |v| v.include?(item.qvalue) }
