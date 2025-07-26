@@ -136,6 +136,9 @@ application.register("mini-mini-bento", MiniMiniBentoController)
 import ModalController from "./modal_controller"
 application.register("modal", ModalController)
 
+import PopoverController from "./popover_controller"
+application.register("popover", PopoverController)
+
 import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
 application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
