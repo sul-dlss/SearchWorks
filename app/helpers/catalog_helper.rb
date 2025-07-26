@@ -10,6 +10,16 @@ module CatalogHelper
     document_index_view_type.to_s
   end
 
+  def format_constraints_page_title(search_state)
+    text = render_search_to_page_title(search_state)
+    return text unless text.present? && search_state.filter('library').present?
+
+    library_code = search_state.filter('library').values.first
+    library_name = translate_library_code(library_code)
+
+    text.sub(/Library:\s*.*/, "Library: #{library_name}")
+  end
+
   # override upstream so we don't check the session for the last view type.
   def document_index_view_type(query_params = params || {})
     view_param = query_params[:view]
