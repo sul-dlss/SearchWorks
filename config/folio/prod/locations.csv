@@ -23,6 +23,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 05c3ba7e-81ac-4ed7-93ad-e9fab5f3ac32,Media Microfiche Math,MEDIA-MATHCAB,SU,SUL,MEDIA-CENTER,Microfiche collection,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
 06d97475-3945-4083-9342-db9b8c16df11,Green Hohbach SVA Special Projects,GRE-HH-SVA-SPECIALPROJECTS,SU,SUL,GREEN,In process,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
 06e128e7-2970-47d1-8dfa-fcd651803e1a,Earth Sci Map Cases,EAR-MAP-CASES,SU,SUL,EARTH-SCI,Map cases,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,,
+0840b49a-297a-4ede-b958-616bda1fe479,Lane Books: Medical Humanities,LANE-HUM,SU,MED,LANE,Books: Medical Humanities (Upstairs),true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,
 08601677-5d55-459d-a499-b06114c940c2,SUL Borrow Direct,SUL-BORROW-DIRECT,SU,SUL,SUL,Borrow Direct,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,,
 087e1422-1146-411a-880a-fa4839e22b55,Earth Sci Display - Circ,EAR-DISPLAY-CIRC,SU,SUL,EARTH-SCI,Display shelves: Circulation desk,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,true,,,,,
 08e54eef-c972-400e-924f-935c9f2a06ce,Spec U-Arch Reference,SPEC-UARCH-REF,SU,SUL,SPEC-COLL,University Archives Reference,true,SPEC,SPEC,,,SPECUA,,,,,,,,,,,,
