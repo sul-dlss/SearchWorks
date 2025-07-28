@@ -6,7 +6,7 @@ RSpec.describe 'PURL Embed', :js do
   it 'is present for images' do
     visit solr_document_path('mf774fs2413')
 
-    within('[data-behavior="purl-embed"]') do
+    within('[data-controller="purl-embed"]') do
       expect(page).to have_css('iframe')
     end
   end

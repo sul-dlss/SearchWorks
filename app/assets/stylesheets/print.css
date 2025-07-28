@@ -48,6 +48,14 @@
       h2.h3 {
         --sul-header-font-size: 1.5rem;
       }
+
+      /* Reset offcanvas */
+      --bs-offcanvas-transition: none;
+      position: relative;
+      transform: none;
+      height: auto;
+      overflow: visible;
+      visibility: visible;
     }
 
     .expand-availability {

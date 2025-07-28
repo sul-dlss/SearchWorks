@@ -20,7 +20,7 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
       end
 
       it 'includes the embed viewer' do
-        expect(page).to have_css('div[data-behavior="purl-embed"]')
+        expect(page).to have_css('div[data-controller="purl-embed"]')
       end
     end
 
@@ -30,7 +30,7 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
       end
 
       it 'does not include the purl-embed-viewer element' do
-        expect(page).to have_no_css('div[data-behavior="purl-embed"]')
+        expect(page).to have_no_css('div[data-controller="purl-embed"]')
       end
     end
 
@@ -38,7 +38,7 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
       let(:document) { SolrDocument.new(id: 'abc213', druid: 'abc123', modsxml: mods_001) }
 
       it 'includes the purl-embed-viewer element' do
-        expect(page).to have_css('div[data-behavior="purl-embed"]')
+        expect(page).to have_css('div[data-controller="purl-embed"]')
       end
     end
   end
@@ -47,7 +47,7 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
     let(:document) { SolrDocument.new(id: 'abc213', modsxml: mods_001) }
 
     it 'does not include the purl-embed-viewer element' do
-      expect(page).to have_no_css('div[data-behavior="purl-embed"]')
+      expect(page).to have_no_css('div[data-controller="purl-embed"]')
     end
   end
 

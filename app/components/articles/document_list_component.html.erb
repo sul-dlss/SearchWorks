@@ -33,7 +33,7 @@
         <ul class='document-metadata results-metadata-section list-unstyled'>
           <% if @document['eds_authors'].present? %>
             <li>
-              <div data-behavior='metadata-truncate' class="truncate-2">
+              <div class="truncate-2">
                 <%= safe_join Array(doc_presenter.field_value(doc_presenter.configuration.index_fields['eds_authors'])), ', ' %>
               </div>
             </li>

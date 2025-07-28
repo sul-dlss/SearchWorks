@@ -11,6 +11,6 @@ RSpec.describe Record::Item::EmbedComponent, type: :component do
   end
 
   it 'renders the component' do
-    expect(page).to have_css('[data-behavior="purl-embed"][data-embed-url="https://embed.stanford.edu/embed.json?hide_title=true&url=https://purl.stanford.edu/druid:1234"]')
+    expect(page).to have_css('[data-controller="purl-embed"][data-purl-embed-url-value="https://embed.stanford.edu/embed.json?hide_title=true&url=https://purl.stanford.edu/druid:1234"]')
   end
 end

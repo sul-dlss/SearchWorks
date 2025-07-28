@@ -8,7 +8,7 @@ RSpec.feature "Merged Image Collections", :js do
 
     expect(page).to have_css('h1', text: 'Merged Image Collection1')
 
-    expect(page).to have_no_css('.managed-purl').and have_no_css('[data-behavior="purl-embed"]')
+    expect(page).to have_no_css('.managed-purl').and have_no_css('[data-controller="purl-embed"]')
 
     within('.image-filmstrip') do
       within('ul.container-images') do
