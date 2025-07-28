@@ -38,7 +38,7 @@
 <% end %>
 
 <% if @response.empty? %>
-  <%= render "shared/zero_results" %>
+  <%= render "zero_results" %>
 <% else %>
   <% content_for(:skip_links) do -%>
     <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>

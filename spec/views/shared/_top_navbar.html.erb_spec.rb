@@ -2,11 +2,11 @@
 
 require 'rails_helper'
 
-RSpec.describe 'shared/_top_navbar' do
-  let(:user) { double('user') }
+RSpec.describe 'shared/searchworks4/_top_navbar' do
+  let(:user) { double('user', bookmarks: []) }
 
   before do
-    expect(view).to receive(:current_user).at_least(:once).and_return(user)
+    allow(view).to receive_messages(current_user: user, current_or_guest_user: user)
   end
 
   describe 'when there is a current user' do
