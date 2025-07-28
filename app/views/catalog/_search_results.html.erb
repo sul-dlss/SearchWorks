@@ -43,9 +43,9 @@
   <% content_for(:skip_links) do -%>
     <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
   <% end %>
-  <div class="row align-items-start mt-4">
+  <div class="row align-items-start mt-4" data-controller="responsive-aside" data-action="resize@window->responsive-aside#moveContentIfNeeded">
     <% unless hide_facets %>
-      <div class="sidebar col-12 col-md-4 col-xxl-3 mb-3" data-controller="analytics" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
+      <div class="sidebar col-12 col-md-4 col-xxl-3 mb-3" data-controller="analytics" data-responsive-aside-target="default" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
         <button class="btn btn-primary d-inline-block d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-controls="offcanvas-facets">
           <i class="bi bi-sliders" aria-hidden="true"></i> Filters
         </button>
@@ -100,7 +100,7 @@
     </div>
 
     <aside class="col-xxl-3 d-none d-xxl-block">
-      <div id="modules-aside">
+      <div data-responsive-aside-target="responsive">
       </div>
       <%= content_for(:additional_aside_content) %>
     </aside>
