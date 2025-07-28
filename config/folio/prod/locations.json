@@ -562,6 +562,28 @@
     }
   },
   {
+    "id": "0840b49a-297a-4ede-b958-616bda1fe479",
+    "name": "Lane Books: Medical Humanities",
+    "code": "LANE-HUM",
+    "discoveryDisplayName": "Books: Medical Humanities (Upstairs)",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
+    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
+    "details": {},
+    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
+    "servicePointIds": [
+      "0483c7bd-8e95-4c7b-9704-484b01879b02"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-07-25T18:20:38.878+00:00",
+      "createdByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f",
+      "updatedDate": "2025-07-25T18:20:38.878+00:00",
+      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+    }
+  },
+  {
     "id": "08601677-5d55-459d-a499-b06114c940c2",
     "name": "SUL Borrow Direct",
     "code": "SUL-BORROW-DIRECT",
