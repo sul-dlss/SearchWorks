@@ -207,9 +207,6 @@ class ArticlesController < ApplicationController
     # config.add_facet_field 'eds_library_collection_facet', label: 'Location'
     # config.add_facet_field 'eds_author_university_facet', label: 'University'
 
-    # View type group config
-    config.view.list.icon = Searchworks::Icons::ListIcon
-
     # Sorting, using EDS sort keys
     config.add_sort_field 'relevance', sort: 'relevance', label: 'relevance'
     config.add_sort_field 'newest', sort: 'date', label: 'date (most recent)'
