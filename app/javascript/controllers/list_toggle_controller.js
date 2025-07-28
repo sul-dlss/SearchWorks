@@ -51,11 +51,16 @@ export default class extends Controller {
       element.classList.add('visually-hidden')
     })
 
+    // scrollIntoViewIfNeeded is a built in browser non-standard method
+    // doesn't work in Firefox
     if (this.element.scrollIntoViewIfNeeded) {
       this.element.scrollIntoViewIfNeeded()
     } else {
       const element = this.element;
       new IntersectionObserver( function( [entry] ) {
+        // stop observing after the first time
+        // otherwise this will keep setting the scroll to the element on all scrolls
+        this.unobserve(entry.target);
         if (entry.intersectionRatio < 1) element.scrollIntoView();
       }).observe(element);
     }
