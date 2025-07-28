@@ -6,7 +6,6 @@ import "blacklight-frontend"
 import './article'
 import "./popover"
 import "./feedback_form"
-import "./responsive-aside"
 import "./purl-embed"
 import "./range-limit"
 

@@ -145,6 +145,9 @@ application.register("preview-filmstrip", PreviewFilmstripController)
 import RecaptchaController from "./recaptcha_controller"
 application.register("recaptcha", RecaptchaController)
 
+import ResponsiveAsideController from "./responsive_aside_controller"
+application.register("responsive-aside", ResponsiveAsideController)
+
 import SavedListController from "./saved_list_controller"
 application.register("saved-list", SavedListController)
 
