@@ -54,10 +54,11 @@
           </dl>
         <% end %>
 
-        <% unless @document.eds_restricted? %>
+        <% links_presenter = ArticleFulltextLinkPresenter.new(document: @document, context: self) %>
+        <% unless @document.eds_restricted? || links_presenter.links.none? %>
           <div class="availability-component d-inline-flex border rounded p-2 gap-3">
             <ul class='document-metadata results-metadata-section list-unstyled mb-0'>
-              <% ArticleFulltextLinkPresenter.new(document: @document, context: self).links.each do |link| %>
+              <% links_presenter.links.each do |link| %>
                 <li><%= link.html_safe %></li>
               <% end %>
             </ul>
