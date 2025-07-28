@@ -66,10 +66,7 @@ en:
         success: 'Your selections have been deleted.'
     tools:
       refworks_html: 'RefWorks'
-      endnote_html: '<span class="bi-box-arrow-up-right sul-icon-endnote"></span> EndNote'
-      ris_html: '<span class="bi-download"></span> Zotero RIS'
       librarian_view: 'Librarian view'
-      find_it_html: '<i class="fa fa-map-marker"></i> Find it'
       stackmap:
         zoom_in_html: '<i class="bi bi-plus-circle-fill"></i><span class="d-none d-sm-inline"> Zoom in</span>'
         zoom_out_html: '<i class="bi bi-dash-circle-fill"></i><span class="d-none d-sm-inline">  Zoom out</span>'
