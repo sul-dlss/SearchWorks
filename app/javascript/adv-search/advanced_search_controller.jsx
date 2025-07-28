@@ -161,7 +161,7 @@ const preventFormSubmit = (e) => {
 const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) => {
   const initialData = {
     filterFields: filterFields.filter(f => f.top).map((f, i) => ({
-      id: i + 1, field: f.field, type: 'and', values: []
+      id: i + 2, field: f.field, type: 'and', values: []
     })),
     filterFieldOptions: filterFields || [],
     filterTypeOptions: [
@@ -170,7 +170,10 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
       { field: 'not', label: 'Excludes all (NOT)' }
     ],
     currentId: filterFields.filter(f => f.top).length,
-    searchFields: [{ id: 0, field: searchFieldOptions[0]?.field || '', type: 'must', value: queryParams.q || '' }],
+    searchFields: [
+      { id: 0, field: searchFieldOptions[0]?.field || '', type: 'must', value: queryParams.q || '' },
+      { id: 1, field: searchFieldOptions[0]?.field || '', type: 'must', value: '' }
+    ],
     searchFieldOptions: searchFieldOptions || [],
     searchTypeOptions: [
       { field: 'must', label: 'Contains all (AND)'},

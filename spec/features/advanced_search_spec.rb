@@ -12,9 +12,9 @@ RSpec.feature "Advanced Search" do
     expect(page).to have_css("h2", text: "Search")
     expect(page).to have_css("h2", text: "Filters")
 
-    expect(page).to have_css('.search-field', text: 'All fields', count: 1)
+    expect(page).to have_css('.search-field', text: 'All fields', count: 2)
 
-    find('.search-field').click
+    find_all('.search-field').first.click
     expect(page).to have_css '[role="listbox"] li', text: "All fields"
     expect(page).to have_css '[role="listbox"] li', text: "Title"
     expect(page).to have_css '[role="listbox"] li', text: "Author"
@@ -25,7 +25,7 @@ RSpec.feature "Advanced Search" do
     expect(page).to have_css('.search-field', text: 'Title', count: 1)
 
     click_on 'Add search terms'
-    expect(page).to have_css('.search-field', count: 2)
+    expect(page).to have_css('.search-field', count: 3)
 
     expect(page).to have_css(".flex-row", text: "Access")
     expect(page).to have_css(".flex-row", text: "Publication year")
@@ -42,10 +42,9 @@ RSpec.feature "Advanced Search" do
   end
 
   it 'submits the form with the search parameters', :js do
-    find('.search-field').click
+    find_all('.search-field').first.click
     find('[role="listbox"] li:nth-child(2)').click
     fill_in 'Title search term', with: 'Image title'
-    click_on 'Add search terms'
     fill_in 'All fields search term', with: 'Cats'
 
     page.driver.browser.execute_script("document.querySelector('form').submit()")
