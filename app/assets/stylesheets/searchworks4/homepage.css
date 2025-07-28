@@ -1,8 +1,8 @@
 .blacklight-catalog {
-  --banner-image: url(/searchworks4/catalog-image.jpg);
+  --banner-image: url(/searchworks4/catalog-image.webp);
 }
 .blacklight-articles {
-  --banner-image: url(/searchworks4/research-papers-reading-v1.jpg);
+  --banner-image: url(/searchworks4/research-papers-reading-v1.webp);
 }
 .search-area-image-bg {
   &::before {
