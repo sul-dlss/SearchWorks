@@ -223,7 +223,8 @@ class ArticlesController < ApplicationController
   def fulltext_link
     document = search_service.fetch(params[:id])
     url = extract_fulltext_link(document, params[:type] == 'pdf' ? 'pdflink' : params[:type])
-    redirect_to url, allow_other_host: true if url.present?
+
+    redirect_to url, allow_other_host: true
   rescue => e
     if current_user
       # We only care if there's a user, otherwise it's definitely a data problem?
@@ -325,11 +326,11 @@ class ArticlesController < ApplicationController
 
   def extract_fulltext_link(document, type)
     links = document.eds_fulltext_links
-    links.each do |link|
-      next if link[:url].blank? || link[:url] == 'detail'
-      return link[:url] if link[:type] == type.to_s
-    end
-    raise ArgumentError, "Missing #{type} fulltext link in document #{document.id}"
+    link = links.find { |link| link[:url].present? && link[:url] != 'detail' && link[:type] == type.to_s }
+
+    raise ArgumentError, "Missing #{type} fulltext link in document #{document.id}" unless link
+
+    link&.dig(:url)
   end
 
   def flash_message_for_link_error

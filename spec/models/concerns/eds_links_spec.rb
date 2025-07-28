@@ -60,6 +60,44 @@ RSpec.describe EdsLinks do
     end
   end
 
+  context 'with a "smart" link with a URL' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'Links' => [
+                            {
+                              'Type' => 'other',
+                              'Url' => 'https://some.ebsco.url/'
+                            }
+                          ]
+                        }
+                      })
+    end
+
+    it 'has a fulltext link prefixed by ezproxy' do
+      expect(document.eds_links.all.first).to have_attributes(href: 'https://stanford.idm.oclc.org/login?qurl=https%3A%2F%2Fsome.ebsco.url%2F', text: 'View on content provider&#39;s site',
+                                                              stanford_only?: true)
+    end
+  end
+
+  context 'with a "smart" link without a URL' do
+    let(:document) do
+      EdsDocument.new({
+                        'FullText' => {
+                          'Links' => [
+                            {
+                              'Type' => 'other'
+                            }
+                          ]
+                        }
+                      })
+    end
+
+    it 'has a fulltext link' do
+      expect(document.eds_links.all.first).to have_attributes(href: 'detail', text: 'View on content provider&#39;s site', stanford_only?: true)
+    end
+  end
+
   context 'with a HTML full text link' do
     let(:document) do
       EdsDocument.new({
