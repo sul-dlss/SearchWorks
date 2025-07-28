@@ -11,7 +11,7 @@ module Record
       attr_reader :druid
 
       def call
-        tag.div(data: { behavior: "purl-embed", embed_url: })
+        tag.div(data: { controller: "purl-embed", 'purl-embed-url-value': embed_url })
       end
 
       def embed_url

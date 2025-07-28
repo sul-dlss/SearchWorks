@@ -142,6 +142,9 @@ application.register("preview-embed-browse", PreviewEmbedBrowseController)
 import PreviewFilmstripController from "./preview_filmstrip_controller"
 application.register("preview-filmstrip", PreviewFilmstripController)
 
+import PurlEmbedController from "./purl_embed_controller"
+application.register("purl-embed", PurlEmbedController)
+
 import RecaptchaController from "./recaptcha_controller"
 application.register("recaptcha", RecaptchaController)
 
