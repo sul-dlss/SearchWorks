@@ -1,4 +1,9 @@
 <% @page_title = t 'blacklight.home.title' %>
+
+<% content_for :head do %>
+  <%= preload_link_tag 'searchworks4/catalog-image.webp' %>
+<% end %>
+
 <% content_for(:search_navbar) do %>
   <div class="search-area-image-bg">
     <div class="container">
