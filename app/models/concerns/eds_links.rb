@@ -44,15 +44,15 @@ module EdsLinks
     end
 
     def pdf?
-      category == 2
+      %w[pdf ebook-pdf ebook-epub].include?(type)
     end
 
     def sfx?
-      category == 3
+      @original_label.to_s =~ /check sfx/i
     end
 
     def ill?
-      category == 5
+      @original_label.to_s =~ /view request options/i
     end
 
     def category
