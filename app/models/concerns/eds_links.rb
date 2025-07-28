@@ -30,7 +30,7 @@ module EdsLinks
     end
 
     def present?
-      %w[customlink-fulltext pdf ebook-pdf ebook-epub].include?(type) && label.present?
+      %w[customlink-fulltext pdf ebook-pdf ebook-epub other].include?(type) && label.present?
     end
 
     def type
@@ -72,7 +72,7 @@ module EdsLinks
         sfx:       sfx?,
         ill:       ill?,
         type:,
-        stanford_only: pdf?
+        stanford_only: pdf? || type == 'other'
       )
     end
 
@@ -101,6 +101,7 @@ module EdsLinks
       'HTML full text'.downcase =>           { label: 'View full text', category: 1 },
       'PDF full text'.downcase =>            { label: 'View/download PDF', category: 2 },
       'PDF eBook Full Text'.downcase =>      { label: 'View/download PDF', category: 2 },
+      'Full text'.downcase =>                { label: 'View on content provider\'s site', category: 3 },
       'Check SFX for full text'.downcase =>  { label: 'View on content provider\'s site', category: 3 },
       :open_access_link =>                   { label: :as_is, category: 4 },
       'View request options'.downcase =>     { label: 'Find full text or request', category: 5 }

@@ -95,9 +95,13 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
       when 'ebook-epub'
         link_label = 'ePub eBook Full Text'
         link_icon = 'ePub eBook Full Text Icon'
+      when 'other'
+        link_label = 'Full Text'
       end
 
       link_url = link['Url'] || 'detail'
+      link_url = "#{Settings.libraries.default.ezproxy_host}#{{ qurl: link['Url'] }.to_param}" if link['Type'] == 'other' && link['Url'].present?
+
       { url: link_url, label: link_label, icon: link_icon, type: link['Type'], expires: true } if link_label
     end
 
