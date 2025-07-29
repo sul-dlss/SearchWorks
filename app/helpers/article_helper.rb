@@ -4,10 +4,6 @@ require 'nokogiri'
 require 'cgi'
 
 module ArticleHelper
-  def article_search?
-    controller_name == 'articles'
-  end
-
   def article_selections?
     controller_name == 'article_selections'
   end

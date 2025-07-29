@@ -3,20 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe ArticleHelper do
-  describe '#article_search?' do
-    context 'when in the ArticlesController' do
-      before { expect(helper).to receive_messages(controller_name: 'articles') }
-
-      it { expect(helper.article_search?).to be true }
-    end
-
-    context 'when not in the ArticlesController' do
-      before { expect(helper).to receive_messages(controller_name: 'anything_else') }
-
-      it { expect(helper.article_search?).to be false }
-    end
-  end
-
   context '#link_to_doi' do
     it 'renders a link by appending the value to the DOI resolver' do
       result = helper.link_to_doi(value: %w[abc])
