@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="course-reserves"
 export default class extends Controller {
   static targets = ['table', 'tableBody', 'sortButton', 'perPageButton', 'sortItem', 'perPageItem', 'results', 'bottomPagination']
+  static classes = ['activeMenuItem']
 
   getCellValue = (tr, idx) => {
     const val = tr.children[idx].innerText || tr.children[idx].textContent
@@ -138,7 +139,7 @@ export default class extends Controller {
 
     this.sortItemTargets.forEach((item, idx) => {
       item.getAttribute('aria-current', idx === this.sortColumn)
-      item.querySelector('.active-icon').classList.toggle('d-none', idx !== this.sortColumn)
+      item.querySelector('.active-icon').classList.toggle(this.activeMenuItemClass, idx === this.sortColumn)
     })
 
     this.draw()
@@ -165,7 +166,7 @@ export default class extends Controller {
     this.perPageItemTargets.forEach((item) => {
       const current = item.getAttribute('href') === `#${this.pageRows}`
       item.getAttribute('aria-current', current)
-      item.querySelector('.active-icon').classList.toggle('d-none', !current)
+      item.querySelector('.active-icon').classList.toggle(this.activeMenuItemClass, current)
     })
 
     this.draw()

@@ -10,7 +10,7 @@
 <% end %>
 
 <% content_for(:body_attributes) do %>
-  data-controller="course-reserves"
+  data-controller="course-reserves" data-course-reserves-active-menu-item-class="bi-check-lg"
 <% end %>
 
 
@@ -27,12 +27,12 @@
               </button>
 
               <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" aria-current="true" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#0" data-course-reserves-target="sortItem">
-                    <i class="bi bi-check-lg active-icon align-middle"></i>course ID</a>
-                  <a class="dropdown-item" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#1" data-course-reserves-target="sortItem">
-                    <i class="bi bi-check-lg active-icon align-middle d-none"></i>description</a>
-                  <a class="dropdown-item" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#2" data-course-reserves-target="sortItem">
-                    <i class="bi bi-check-lg active-icon align-middle d-none"></i>instructor</a>
+                  <a class="dropdown-item icon-link" aria-current="true" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#0" data-course-reserves-target="sortItem">
+                    <i class="bi bi-check-lg active-icon" aria-hidden="true"></i>course ID</a>
+                  <a class="dropdown-item icon-link" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#1" data-course-reserves-target="sortItem">
+                    <i class="bi active-icon" aria-hidden="true"></i>description</a>
+                  <a class="dropdown-item icon-link" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#2" data-course-reserves-target="sortItem">
+                    <i class="bi active-icon" aria-hidden="true"></i>instructor</a>
               </div>
           </div>
           <div class="dropdown">
@@ -41,10 +41,10 @@
               </button>
 
               <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" aria-current="true" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#20" data-course-reserves-target="perPageItem">
-                    <i class="bi bi-check-lg active-icon align-middle"></i>20</a>
-                  <a class="dropdown-item" aria-current="false" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#50" data-course-reserves-target="perPageItem">
-                    <i class="bi bi-check-lg active-icon align-middle d-none"></i>50</a>
+                  <a class="dropdown-item icon-link" aria-current="true" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#20" data-course-reserves-target="perPageItem">
+                    <i class="bi bi-check-lg active-icon" aria-hidden="true"></i>20</a>
+                  <a class="dropdown-item icon-link" aria-current="false" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#50" data-course-reserves-target="perPageItem">
+                    <i class="bi active-icon" aria-hidden="true"></i>50</a>
               </div>
           </div>
         </div>
