@@ -68,12 +68,12 @@ RSpec.describe 'search/_module_heading' do
 
   context 'with 100 results for lib_guides' do
     let(:total) { 100 }
-    let(:service) { Service.new('lib_guides') }
+    let(:service) { Service.new('libguides') }
 
     it 'renders' do
       expect(rendered).to have_css('.result-set-heading', text: 'Guides')
       expect(rendered).to have_css('.result-set-subheading', text: /Course and topic guides/)
-      expect(rendered).to have_link 'See all 100+ lib guides results'
+      expect(rendered).to have_link 'See all 100+ libguides results'
     end
   end
 end

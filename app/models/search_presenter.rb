@@ -15,7 +15,7 @@ class SearchPresenter
   end
 
   def formatted_total
-    return '100+' if service_name == 'lib_guides' && total == 100
+    return '100+' if service_name == 'libguides' && total == 100
 
     ActiveSupport::NumberHelper.number_to_delimited(total)
   end

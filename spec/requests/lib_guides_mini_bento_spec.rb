@@ -13,7 +13,7 @@ RSpec.describe 'Mini-bento endpoint for library guides' do
   let(:response_hash) { { name: 'name' } }
 
   it 'draws the page' do
-    get '/all/xhr_search/lib_guides.json?q=frog'
+    get '/all/xhr_search/libguides.json?q=frog'
     expect(response).to have_http_status(:ok)
     expect(response.parsed_body).to eq({
                                          'app_link' => 'https://guides.library.stanford.edu/srch.php?q=frog',

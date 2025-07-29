@@ -14,12 +14,12 @@ RSpec.feature 'Homepage', :js do
       expect(page).to have_text 'Other sources searched'
 
       # First two search tools sections
-      expect(page).to have_text 'SearchWorks Catalog'
-      expect(page).to have_text 'SearchWorks Articles+'
+      expect(page).to have_link 'SearchWorks Catalog'
+      expect(page).to have_link 'SearchWorks Articles+'
 
       # First two
-      expect(page).to have_text 'Library website'
-      expect(page).to have_text 'Guides'
+      expect(page).to have_link 'Library website'
+      expect(page).to have_link 'Guides'
     end
 
     expect(page).to be_accessible
