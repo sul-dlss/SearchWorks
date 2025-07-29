@@ -64,21 +64,6 @@ en:
         q:
           articles: articles, e-books, & other e-resources
           default: books & media
-    search_dropdown:
-      articles:
-        label: articles+
-        description_html: <span class="h3 d-block">articles+</span> <span class="form-text">journal articles &amp; other e-resources</span>
-      articles_selections:
-        label: articles+
-      catalog:
-        label: catalog
-        description_html: <span class="h3 d-block">catalog</span> <span class="form-text">books, media &amp; more in the Stanford Libraries' collections</span>
-      library_website:
-        label: library website
-        description_html: <span class="h3 d-block">library website</span> <span class="form-text">library info, guides, collections &amp; services</span>
-      bento:
-        label: all
-        description_html: <span class="h3 d-block">all</span> <span class="form-text">catalog, articles, website, &amp; more in one search</span>
     marc_fields:
       "020":
         label: "ISBN"
