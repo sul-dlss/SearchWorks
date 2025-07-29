@@ -4,11 +4,7 @@
 <% if document.collection_members.present? %>
   <div class="file-collection-members mb-3">
     <div class="d-inline-flex bg-white ms-4 px-2">
-      <% if @type == 'show' %>
-        <h2 class="mb-0">Digital collection</h2>
-      <% else %>
-        <h4 class="mb-0">Digital collection</h4>
-      <% end %>
+      <h2 class="mb-0">Digital collection</h2>
       <span class="ms-2 badge rounded-pill bookmark-counter align-self-center">
         <%= pluralize(number_with_delimiter(document.collection_members.total), 'item') %>
       </span>

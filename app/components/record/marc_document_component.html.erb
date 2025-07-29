@@ -24,9 +24,7 @@
   <% component.with_embed do %>
     <div class="mb-5">
       <% if document.display_type == 'marc_collection' %>
-        <div class="async-collection-members col-md-12 mb-5" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
-          <%= helpers.link_to_collection_members('View all items', document) %>
-        </div>
+        <%= render 'collection_members/placeholder', document: document %>
       <% else %>
         <%= case
           when document.managed_purls.many?
