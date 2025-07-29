@@ -24,15 +24,6 @@ en:
       noncirc_page: In-library use
       in_process: In process
       summary: Summary of items
-    bookmarks:
-      clear_all:
-        action_confirm: "Clear all your selection lists?"
-      article:
-        clear:
-          action_confirm: Clear your articles+ selections?
-      catalog:
-        clear:
-          action_confirm: Clear your catalog selections?
     citations:
       styles:
         apa: APA
