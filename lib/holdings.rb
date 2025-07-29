@@ -35,6 +35,14 @@ class Holdings
     @libraries
   end
 
+  def sal_libraries
+    libraries.select { |library| library.code.start_with?('SAL') }.compact_blank
+  end
+
+  def non_sal_libraries
+    libraries.reject { |library| library.code.start_with?('SAL') }.compact_blank
+  end
+
   def find_by_barcode(barcode)
     items.find { |item| item.barcode == barcode }
   end

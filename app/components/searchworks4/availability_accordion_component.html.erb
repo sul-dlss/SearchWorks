@@ -2,13 +2,15 @@
   <h2 class="accordion-header" id="library-<%= index %>">
     <button class="accordion-button d-flex justify-content-between align-items-center <% unless toggled_library? %>collapsed<% end %>" type="button" data-bs-toggle="collapse" data-bs-target="#<%= library.code %>" aria-expanded="<%= toggled_library? %>" aria-controls="<%= library.code %>">
       <%= render AccessPanels::LibraryHeaderComponent.new(document:, library:) %>
-      <div class="text-end"><span class="badge rounded-pill me-3"><%= pluralize(number_with_delimiter(library.items.count), 'item') %></span></div>
+      <div class="text-end"><span class="badge rounded-pill me-3"><%= pluralize(number_with_delimiter(item_count), 'item') %></span></div>
     </button>
   </h2>
   <div id="<%= library.code %>" class="accordion-collapse collapse<% if toggled_library? %> show<% end %>" aria-labelledby="library-<%= index %>" data-bs-parent="#<%= library.code %>">
     <div class="accordion-body">
-      <%= render AccessPanels::AdditionalInfoComponent.new(document:, library:) %>
-      <%= render Searchworks4::AvailabilityModalLocationComponent.with_collection(library.locations, document: @document, library:) %>
+      <% libraries.each do |lib| %>
+        <%= render AccessPanels::AdditionalInfoComponent.new(document:, library: lib) %>
+        <%= render Searchworks4::AvailabilityModalLocationComponent.with_collection(lib.locations, document: @document, library: lib) %>
+      <% end %>
     </div>
   </div>
 </div>
