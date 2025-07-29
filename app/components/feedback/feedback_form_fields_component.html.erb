@@ -21,19 +21,25 @@
         </div>
 
         <div class="mb-3 row">
-            <label class="col-form-label fw-bold" for="name">Name</label>
+            <label class="col-form-label fw-bold" for="name"
+            >Name</label
+            >
             <div>
                 <%= @form.text_field :name, value: "", class:"form-control", autocomplete: "name" %>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-form-label required fw-bold" for="email">Email</label>
+            <label class="col-form-label required fw-bold" for="email"
+            >Email</label
+            >
             <div>
                 <%= @form.email_field :to, value: "", class:"form-control", autocomplete: "email", required: true %>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-form-label required fw-bold" for="message">Message</label>
+            <label class="col-form-label required fw-bold" for="message"
+            >Message</label
+            >
             <div>
                 <%= @form.text_area :message, value: "", rows:"2", class:"form-control", required: true %>
                 <% if helpers.current_user.blank? %>
