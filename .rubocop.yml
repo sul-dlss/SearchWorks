@@ -36,6 +36,7 @@ Metrics/ClassLength:
     - 'app/controllers/catalog_controller.rb'
     - 'app/models/marc_fields/linked_serials.rb'
     - 'lib/holdings/item.rb'
+    - 'app/models/solr_document.rb'
   Max: 115
 
 # Configuration parameters: AllowedMethods, AllowedPatterns.

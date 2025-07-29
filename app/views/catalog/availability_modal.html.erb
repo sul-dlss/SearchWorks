@@ -14,7 +14,8 @@
         <input type="search" class="form-control border-start-0" placeholder="Search for a copy, volume, or issue" data-action="availability-search#search" id="availability-search-input" />
       </div>
       <%= render Searchworks4::OnlineAccordionComponent.new(document: @document, toggled_library: params[:library]) %>
-      <%= render Searchworks4::AvailabilityAccordionComponent.with_collection(@document.holdings.libraries.compact_blank, document: @document, toggled_library: params[:library]) %>
+      <%= render Searchworks4::AvailabilityAccordionComponent.with_collection(@document.holdings.non_sal_libraries, document: @document, toggled_library: params[:library])%>
+      <%= render Searchworks4::AvailabilityAccordionComponent.new(library: @document.holdings.sal_libraries.first, document: @document, toggled_library: params[:library], libraries: @document.holdings.sal_libraries) %>
       <%= turbo_frame_tag "availability_#{dom_id(@document)}", src: availability_path(@document) %>
     </div>
     <div class="modal-footer">

@@ -10,6 +10,11 @@ module AccessPanels
       super
     end
 
+    # we don't need to fetch hours for SAL since it doesn't have hours
+    def fetch_hours?
+      library.code.exclude?('SAL')
+    end
+
     def link_to_library_about_page(**)
       return library.name if library.about_url.blank?
 
