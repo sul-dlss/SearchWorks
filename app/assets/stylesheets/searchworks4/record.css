@@ -129,10 +129,6 @@
     --bs-link-color-rgb: var(--bs-body-color-rgb);
     &:hover {
       color: var(--stanford-cardinal);
-
-      i {
-        padding-left: 0.25rem;
-      }
     }
   }
 }
