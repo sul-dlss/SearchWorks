@@ -6,7 +6,7 @@
   <% elsif qfacet_selected? %>
      <%= render Searchworks4::InclusiveSelectedQfacetValueComponent.new(values: @values, field_name: field_name, item: item) %>
   <% else %>
-     <%= render Blacklight::Hierarchy::QfacetValueComponent.new(field_name: field_name, item: item, id: id) %>
+     <%= render Searchworks4::InclusiveQfacetValueComponent.new(values: @values, field_name: field_name, item: item, id: id) %>
   <% end %>
 
   <% unless subset.empty? %>
