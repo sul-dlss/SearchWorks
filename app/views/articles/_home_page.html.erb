@@ -1,4 +1,9 @@
 <% @page_title = t 'blacklight.articles.home.title' %>
+
+<% content_for :head do %>
+  <%= preload_link_tag 'searchworks4/research-papers-reading-v1.webp' %>
+<% end %>
+
 <% content_for(:search_navbar) do %>
   <div class="search-area-image-bg">
     <div class="container">
