@@ -6,7 +6,7 @@
   <div data-controller="google-cover-image" class="d-flex">
     <%= render view_config.document_component.with_collection(document_presenters, partials: view_config.partials, counter_offset: @response&.start || 0) %>
   </div>
-<% elsif %>
+<% else %>
   <% # container for all documents in brief index view -%>
   <div id="documents" class="row gallery">
     <%= render view_config.document_component.with_collection(document_presenters, partials: view_config.partials, counter_offset: @response&.start || 0) %>
