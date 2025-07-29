@@ -60,4 +60,9 @@ RSpec.describe Searchworks4::InclusiveConstraintComponent, type: :component do
     expect(CGI.unescape(a_remove['href'])).to eq('http://test.host/catalog?f_inclusive[field][]=b')
     expect(CGI.unescape(b_remove['href'])).to eq('http://test.host/catalog?f_inclusive[field][]=a')
   end
+
+  it 'displays addition links for unselected facets' do
+    c_add = page.find('li a.facet-select')
+    expect(CGI.unescape(c_add['href'])).to eq('http://test.host/catalog?f_inclusive[field][]=a&f_inclusive[field][]=b&f_inclusive[field][]=c')
+  end
 end
