@@ -45,8 +45,8 @@
         <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
 
         <div class="btn btn-outline-primary btn-sm ms-5 text-nowrap">
-          <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
-          <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
+          <span class="open-hidden icon-link"><i class="bi bi-chevron-down"></i> Show details</span>
+          <span class="open-visible icon-link"><i class="bi bi-chevron-up"></i> Hide details</span>
         </div>
       <% end %>
     <% end %>
@@ -94,8 +94,8 @@
         <%= render ItemCountComponent.new(document.holdings.items.count) %>
 
         <div class="btn btn-outline-primary btn-sm ms-5 text-nowrap">
-          <span class="open-hidden"><i class="bi bi-chevron-down align-middle"></i> Show details</span>
-          <span class="open-visible"><i class="bi bi-chevron-up"></i> Hide details</span>
+          <span class="open-hidden icon-link"><i class="bi bi-chevron-down"></i> Show details</span>
+          <span class="open-visible icon-link"><i class="bi bi-chevron-up"></i> Hide details</span>
         </div>
       <% end %>
     <% end %>
