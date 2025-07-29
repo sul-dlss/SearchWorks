@@ -446,11 +446,6 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
     eds_html_fulltext_available?
   end
 
-  def research_starter?
-    # TODO: we probably need a better way to determine this
-    self['eds_database_name'] == 'Research Starters'
-  end
-
   def eds_restricted?
     # TODO: we probably need a better way to determine this
     self['eds_title'] =~ ::EdsDocument::EDS_RESTRICTED_PATTERN
