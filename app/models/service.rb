@@ -8,23 +8,20 @@ class Service
     @name = name
   end
 
+  def display_name
+    I18n.t('micro_display_name', scope: i18n.key, default: name)
+  end
+
   def i18n_key
-    @i18n_key ||= "#{@name}_search"
+    name
   end
 
   def settings
-    case @name
-    when 'lib_guides'
-      Settings.libguides
-    when 'library_website_api'
-      Settings.library_website
-    else
-      Settings.public_send(@name)
-    end
+    Settings.public_send(@name)
   end
 
   def search_service
-    "#{name.camelize}SearchService".constantize.new
+    (settings.implementation || "#{name.camelize}SearchService").constantize.new
   end
 
   def see_all_url_template

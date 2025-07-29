@@ -1,5 +1,5 @@
 <%= turbo_frame_tag "#{@service.name}_module" do %>
   <div class="alert alert-danger">
-    There was an error retrieving your <%= t("#{params[:endpoint]}_search.micro_display_name") %> results.
+    There was an error retrieving your <%= t("micro_display_name", scope: @service.i18n_key) %> results.
   </div>
 <% end %>

@@ -7,8 +7,8 @@ enabled_searchers:
   - archives
   - exhibits
   - earthworks
-  - library_website_api
-  - lib_guides
+  - library_website
+  - libguides
 catalog:
   api_url: "https://searchworks.stanford.edu/?q=%{q}&rows=%{max}&format=json"
   query_url: "https://searchworks.stanford.edu/?q=%{q}"
@@ -31,6 +31,7 @@ libguides:
   num_results_shown: 3
   query_url: "https://guides.library.stanford.edu/srch.php?q=%{q}"
   home_url: "https://guides.library.stanford.edu"
+  implementation: LibGuidesSearchService
 exhibits:
   api_url: "https://exhibits.stanford.edu/exhibit_finder?q=%{q}"
   home_url: "https://exhibits.stanford.edu"
@@ -41,11 +42,15 @@ library_website:
   api_url: "https://library.sites-pro.stanford.edu/jsonapi/index/full_site_content?fields[node--stanford_page]=path,title,su_page_description&filter[fulltext]=%{q}&page[limit]=%{max}"
   query_url: "https://library.stanford.edu/search/?q=%{q}"
   link_url: "https://library.stanford.edu/%{id}"
+  home_url: "https://library.stanford.edu"
+  implementation: LibraryWebsiteApiSearchService
 earthworks:
   api_url: "https://earthworks.stanford.edu?q=%{q}&rows=%{max}&format=json"
   query_url: "https://earthworks.stanford.edu?q=%{q}"
   fetch_url: "https://earthworks.stanford.edu/catalog/%{id}"
   home_url: "https://earthworks.stanford.edu"
+subject_specialist_search:
+  home_url: "https://library.stanford.edu/research-support/subject-specialists"
 quick_search:
   doi_loaded_link: "http://doi.org/"
 analytics_debug: true

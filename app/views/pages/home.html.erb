@@ -15,18 +15,18 @@
     <div class="col-xl-7 col-md-8">
       <header class="h3 fw-semibold mb-3">Stanford University Libraries' search tools</header>
       <div class="mb-125">
-        <div class="mb-1"> SearchWorks <span class="fw-semibold">Catalog</span> </div>
-        <div><%= t('catalog_search.sub_heading_html') %></div>
+        <div class="mb-1"><a href="https://searchworks.stanford.edu/">SearchWorks <span class="fw-semibold">Catalog</span></a></div>
+        <div><%= t('catalog.sub_heading_html') %></div>
       </div>
 
       <div class="mb-3">
-        <div class="mb-1"> SearchWorks <span class="fw-semibold">Articles+</span> </div>
-        <div><%= t('article_search.sub_heading_html') %></div>
+        <div class="mb-1"><a href="https://searchworks.stanford.edu/articles">SearchWorks <span class="fw-semibold">Articles+</span></a></div>
+        <div><%= t('article.sub_heading_html') %></div>
       </div>
 
-      <% %w[archives_search earthworks_search exhibits_search].each do |scope| %>
+      <% %w[archives earthworks exhibits].each do |scope| %>
         <div class="mb-125">
-          <div class="mb-1 fw-semibold"><%= t('display_name_html', scope:) %></div>
+          <div class="mb-1 fw-semibold"><%= link_to t('display_name_html', scope:), Settings[scope].home_url %></div>
           <div><%= t('sub_heading_html', scope:) %></div>
         </div>
       <% end %>
@@ -35,9 +35,9 @@
     <div class="col-xl-4 offset-xl-1 col-md-4 ps-xxl-5">
       <aside class="p-3 bg-secondary">
         <header class="h3 fw-semibold mb-3">Other sources searched</header>
-        <% %w[library_website_api_search lib_guides_search subject_specialist_search].each do |scope| %>
+        <% %w[library_website libguides subject_specialist_search].each do |scope| %>
           <div class="mb-3">
-            <div class="mb-1 fw-semibold"><%= t('display_name_html', scope:) %></div>
+            <div class="mb-1 fw-semibold"><%= link_to_if Settings[scope]&.home_url, t('display_name_html', scope:), Settings[scope]&.home_url %></div>
             <div><%= t('sub_heading_html', scope:) %></div>
           </div>
         <% end %>

@@ -1,6 +1,10 @@
 en:
   default_title: "Stanford Libraries"
-  exhibits_search:
+  opensearch_description: "Stanford Libraries"
+  defaults_search:
+    title_name: Search
+  organization_name: Stanford Libraries
+  exhibits:
     short_display_name: Spotlight Exhibits
     display_name_html: Spotlight Exhibits
     micro_display_name: Spotlight exhibits
@@ -9,11 +13,7 @@ en:
     pass_on_search_link_text: Search "%{query}" in all exhibit items
     sub_heading_html: Digital exhibits featuring digital content from the SDR (Stanford Digital Repository) and beyond.
     toggle_button_text: Show %{total} exhibits
-  opensearch_description: "Stanford Libraries"
-  defaults_search:
-    title_name: Search
-  organization_name: Stanford Libraries
-  catalog_search:
+  catalog:
     display_name_html: '<span class="fw-light">SearchWorks</span> Catalog'
     short_display_name: "Catalog"
     sub_heading_html: Physical and digital collections, including books, journals, maps, media, government documents, and more.
@@ -21,14 +21,14 @@ en:
     error_service_mesasge: "searching SearchWorks catalog"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/"
-  archives_search:
+  archives:
     display_name_html: Archival Collections at Stanford
     short_display_name: Archival Collections at Stanford
     sub_heading_html: Finding aids for collections of primary sources and other unique, original or rare materials, including personal papers, institutional records, photographs, recordings, ephemera, and more.
     micro_display_name: archives
     no_results_service_message: "a different search"
     no_results_link: "http://archives.stanford.edu/"
-  article_search:
+  article:
     display_name_html: '<span class="fw-light">SearchWorks</span> Articles+'
     short_display_name: "Articles+"
     sub_heading_html: Digital subscriptions, available to the Stanford community, including articles, eBooks, digital newspapers, and more.
@@ -36,7 +36,7 @@ en:
     error_service_mesasge: "searching SearchWorks articles+"
     no_results_service_message: "a different search"
     no_results_link: "http://searchworks.stanford.edu/articles"
-  lib_guides_search:
+  libguides:
     short_display_name: Guides
     display_name_html: Guides
     micro_display_name: guide
@@ -45,7 +45,7 @@ en:
     pass_on_search_link_text: Search "%{query}" in all guide pages
     sub_heading_html: Course and topic guides, providing information on collections, tools, and services.
     toggle_button_text: Show %{total} guides
-  library_website_api_search:
+  library_website:
     display_name_html: Library website
     short_display_name: "Website"
     sub_heading_html: Information guide to services, research support, spaces, policies, news and events.
@@ -53,7 +53,7 @@ en:
     error_service_mesasge: "searching library website"
     no_results_service_message: "a different search"
     no_results_link: "http://library.stanford.edu/search/website"
-  earthworks_search:
+  earthworks:
     display_name_html: EarthWorks
     short_display_name: EarthWorks
     sub_heading_html: Geospatial datasets (GIS data) and scanned & georeferenced maps, charts, atlases, and more. Also includes datasets and maps from other institutions.

@@ -2,7 +2,7 @@
     <%= render 'module_heading', presenter: %>
     <% if presenter.no_answer? %>
       <div class="alert alert-danger">
-        There was an error retrieving your <%= t("#{presenter.service_name}_search.micro_display_name") %> results.
+        There was an error retrieving your <%= t("micro_display_name", scope: presenter.i18n_key) %> results.
       </div>
     <% elsif presenter.no_results? %>
         <%= render 'no_results', presenter: %>
