@@ -3,6 +3,9 @@
   --identity-bar-color: white;
   --sul-shadow-color: rgba(0, 0, 0, 0.2);
   --bs-box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
+
+  /* https://github.com/sul-dlss/component-library/pull/180 */
+  --stanford-digital-green: rgb(var(--stanford-digital-green-rgb));
 }
 
 /* TODO: Remove after https://github.com/twbs/bootstrap/issues/41569 is resolved*/
