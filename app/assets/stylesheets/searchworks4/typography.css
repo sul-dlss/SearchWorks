@@ -172,3 +172,18 @@ aside,
     overflow: visible;
   }
 }
+
+.icon-link .bi::before, .navbar .icon-link .bi::before {
+  vertical-align: 0;
+}
+
+.navbar .icon-link .bi-envelope::before {
+  vertical-align: 0.0625em;
+}
+
+.btn {
+  .icon-link > .bi-chevron-down {
+    line-height: 0.995em;
+    vertical-align: -0.05em;
+  }
+}

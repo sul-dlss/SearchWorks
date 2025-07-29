@@ -11,19 +11,19 @@
       <% if citable? %>
         <li>
           <%= link_to cite_path, id: 'citeLink', data: { action: "click->analytics#trackLink", blacklight_modal: "trigger" },
-              class: 'btn nav-link' do %>
-            <i class="bi bi-quote me-1"></i>Cite
+              class: 'btn nav-link icon-link' do %>
+            <i class="bi bi-quote"></i>Cite
           <% end %>
         </li>
       <% end %>
       <li>
-        <a class="btn nav-link" data-action="click->analytics#trackLink" data-blacklight-modal="trigger" href="<%= email_path %>"><i class="bi bi-envelope me-1"></i>Email</a>
+        <a class="btn nav-link icon-link" data-action="click->analytics#trackLink" data-blacklight-modal="trigger" href="<%= email_path %>"><i class="bi bi-envelope"></i>Email</a>
       </li>
       <li>
-        <button class="btn nav-link" type="button" data-controller="copy-link" data-action="click->copy-link#copyLink click->analytics#trackEvent" data-copy-link-url-value="<%= copy_url %>"><i class="bi bi-link-45deg me-1"></i>Copy link</button>
+        <button class="btn nav-link icon-link" type="button" data-controller="copy-link" data-action="click->copy-link#copyLink click->analytics#trackEvent" data-copy-link-url-value="<%= copy_url %>"><i class="bi bi-link-45deg"></i>Copy link</button>
       </li>
       <li>
-        <button class="btn nav-link" data-action="click->analytics#trackEvent" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer me-1"></i>Print</button>
+        <button class="btn nav-link icon-link" data-action="click->analytics#trackEvent" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer"></i>Print</button>
       </li>
     </ul>
   </div>

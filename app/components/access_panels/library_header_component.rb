@@ -21,7 +21,7 @@ module AccessPanels
       link_to library.about_url, ** do
         safe_join([
           library.name,
-          tag.i(class: 'bi-arrow-up-right ms-1', aria: { hidden: true })
+          tag.i(class: 'bi bi-arrow-up-right', aria: { hidden: true })
         ])
       end
     end
