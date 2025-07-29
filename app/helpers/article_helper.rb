@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'nokogiri'
-require 'cgi'
-
 module ArticleHelper
   def article_search?
     controller_name == 'articles'
