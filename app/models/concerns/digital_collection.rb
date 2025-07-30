@@ -48,30 +48,6 @@ module DigitalCollection
       @render_type ||= should_display_filmstrip? ? 'filmstrip' : 'list'
     end
 
-    def with_type(type)
-      @type = type
-      self
-    end
-
-    def as_json(*)
-      {
-        total:,
-        id: document[:id],
-        html: render
-      }
-    end
-
-    def to_partial_path
-      'collection_members/show'
-    end
-
-    def render
-      ApplicationController.render(
-        template: to_partial_path,
-        assigns: { document:, type: }
-      )
-    end
-
     private
 
     attr_reader :document, :options, :type

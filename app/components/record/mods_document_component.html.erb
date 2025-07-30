@@ -19,9 +19,7 @@
           render Record::Item::EmbedComponent.new(druid: document.druid)
         end %>
       <% if document.display_type == 'mods_collection' %>
-        <div class="async-collection-members col-md-12" data-controller="async-collection-members" data-async-collection-members-url-value="<%= collection_member_path(document.id, type: action_name, format: :json) %>" aria-live="polite">
-          <%= helpers.link_to_collection_members('View all items', document) %>
-        </div>
+        <%= render 'collection_members/placeholder', document: document %>
       <% end %>
     </div>
   <% end %>

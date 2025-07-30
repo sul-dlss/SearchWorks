@@ -1,0 +1,10 @@
+<turbo-frame id="<%= "collection_members_#{document.id}" %>" src="<%= collection_member_path(document.id) %>" target="_top">
+  <div class="collection-result-preview">
+    <div class="d-inline-flex bg-white ms-4 px-2">
+      <h2 class="mb-0">Digital collection</h2>
+    </div>
+    <div class="col-md-12 image-filmstrip border rounded p-4 pt-5">
+      <%= link_to_collection_members('View all items', document) %>
+    </div>
+  </div>
+</turbo-frame>
