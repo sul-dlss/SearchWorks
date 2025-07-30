@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 module Searchworks4
-  class FacetSearchComponent < Blacklight::Facets::ListComponent
+  class FacetSearchComponent < Searchworks4::ListComponent
+    # Used to extend: Blacklight::Facets::ListComponent
     def search_url
       helpers.catalog_facet_results_path(id: facet_field.key)
     end

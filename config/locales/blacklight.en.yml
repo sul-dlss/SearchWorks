@@ -57,6 +57,8 @@ en:
         other: '<strong>%{current}</strong> of <strong>%{total}</strong>'
       highlight:
         active_html: '<i class="bi bi-check-lg active-icon align-middle"></i>'
+    advanced_search:
+      inclusive: 'Includes ANY'
     bookmarks:
       no_bookmarks: 'You have no selections'
       select_all: '<i class="fa fa-square-o"></i> <span class="d-none d-lg-inline">Select </span>all'
