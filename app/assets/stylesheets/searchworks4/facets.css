@@ -12,6 +12,10 @@
   .h-node, .h-leaf {
     align-items: flex-start;
   }
+
+  & > .h-leaf {
+    padding-left: 0;
+  }
 }
 
 .facet-values .sul-icon {
