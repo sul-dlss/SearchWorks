@@ -65,7 +65,6 @@ export default class extends Controller {
   addToggleButtonBehavior() {
     const exhibitElements = this.exhibitTargets
     const exhibitCount = exhibitElements.length
-    console.log("count", exhibitCount, "threshold", this.exhibitToggleThreshold)
 
     if (exhibitCount > this.exhibitToggleThreshold) {
       let toggleButton = this.cardBodyTarget.querySelector('button.see-all-exhibits')

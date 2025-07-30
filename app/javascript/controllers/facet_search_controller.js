@@ -73,7 +73,6 @@ export default class extends Controller {
     const currentIndex = items.indexOf(e.target);
 
     if (currentIndex >= items.length - 1) {
-      console.log(items[0]);
       return items[0].focus();
     } else {
       items[currentIndex + 1].focus();
