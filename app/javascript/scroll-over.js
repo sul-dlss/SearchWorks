@@ -12,7 +12,6 @@ export default function(element, gallery) {
   }
 
   const scrollAmount = left - galleryWidth / 2 + elementWidth / 2
-  element.classList.add('current-document')
 
   gallery.scrollTo({ left: scrollAmount })
 }

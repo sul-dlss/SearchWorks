@@ -34,9 +34,6 @@ application.register("bookmark", BookmarkController)
 import BrowseNearbyController from "./browse_nearby_controller"
 application.register("browse-nearby", BrowseNearbyController)
 
-import BrowseRelatedItemsController from "./browse_related_items_controller"
-application.register("browse-related-items", BrowseRelatedItemsController)
-
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
 

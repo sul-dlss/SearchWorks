@@ -4,6 +4,12 @@ module SearchResult
   class DocumentGalleryComponent < Blacklight::DocumentComponent
     attr_reader :document, :counter
 
+    def initialize(document:, document_counter: 0, starting_document: nil, **)
+      super(document: document, document_counter: document_counter, **)
+
+      @starting_document = starting_document
+    end
+
     def resource_icon
       helpers.render_resource_icon(presenter.formats)
     end
@@ -17,7 +23,7 @@ module SearchResult
     end
 
     def classes
-      super - ['document'] + %w[border gallery-document]
+      super - ['document'] + %w[border gallery-document] + [('current-document' if @starting_document && document.id == @starting_document.id)].compact
     end
 
     def data

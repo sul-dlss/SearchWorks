@@ -29,9 +29,6 @@ RSpec.describe "browse/index" do
   it "renders information about the current document" do
     render
     expect(rendered).to have_css('a', text: 'Title')
-    expect(rendered).to have_css('[data-controller="browse-related-items"]')
-    expect(rendered).to have_css('[data-browse-related-items-start-value="123"]')
-    expect(rendered).to have_css('[data-browse-related-items-target="viewport"]')
   end
 
   describe "without barcode" do
