@@ -41,7 +41,6 @@ export default class extends Controller {
   }
 
   renderCoverAndAccessPanel(json) {
-    console.log(json);
     // Loop through all the relevant cover elements and if the cover
     // element has a standard number (order of precidence: OCLC, LCCN, then ISBN)
     // that exists in the json response and render the cover image for it.
