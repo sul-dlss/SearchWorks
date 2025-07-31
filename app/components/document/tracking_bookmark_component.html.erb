@@ -17,10 +17,10 @@
                tooltip: tooltip_label
             }) do %>
   <div class="toggle-bookmark" data-controller="analytics">
-    <label id="bookmark-<%= @document.id %>" class="toggle-bookmark-label" data-checkboxsubmit-target="label" tabindex="0">
+    <label id="bookmark-<%= @document.id %>" class="toggle-bookmark-label icon-link" data-checkboxsubmit-target="label" tabindex="0">
       <input type="checkbox" class="toggle-bookmark-input <%= bookmark_icon ? 'd-none' : '' %>" data-action="click->analytics#trackBookmark" data-checkboxsubmit-target="checkbox" <%= 'checked="checked"' if bookmarked? %>>
       <%= bookmark_icon %>
-      <span class="bookmark-text align-middle" data-checkboxsubmit-target="span"><%= bookmark_state_label %></span>
+      <span class="bookmark-text" data-checkboxsubmit-target="span"><%= bookmark_state_label %></span>
     </label>
   </div>
   <% if article? %>

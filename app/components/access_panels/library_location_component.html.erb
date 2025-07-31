@@ -46,7 +46,7 @@
     </tbody>
   </table>
   <% if location_count? %>
-    <%= link_to(availability_modal_path(document, { library: library.code }), data: { blacklight_modal: "trigger" }) do %>
+    <%= link_to(availability_modal_path(document, { library: library.code }), class: 'icon-link', data: { blacklight_modal: "trigger" }) do %>
       Browse all <%= pluralize(location_count?, 'item') %> <i class="bi bi-chevron-double-right fs-14"></i>
     <% end %>
   <% end %>
