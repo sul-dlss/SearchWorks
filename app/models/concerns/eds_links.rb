@@ -101,8 +101,9 @@ module EdsLinks
       'HTML full text'.downcase =>           { label: 'View full text', category: 1 },
       'PDF full text'.downcase =>            { label: 'View/download PDF', category: 2 },
       'PDF eBook Full Text'.downcase =>      { label: 'View/download PDF', category: 2 },
-      'Full text'.downcase =>                { label: 'View on content provider\'s site', category: 3 },
-      'Check SFX for full text'.downcase =>  { label: 'View on content provider\'s site', category: 3 },
+      'EDS Full text'.downcase =>            { label: 'View on content provider\'s site', category: 3 },
+      'Full text'.downcase =>                { label: 'View on content provider\'s site', category: 4 },
+      'Check SFX for full text'.downcase =>  { label: 'View on content provider\'s site', category: 4 },
       :open_access_link =>                   { label: :as_is, category: 4 },
       'View request options'.downcase =>     { label: 'Find full text or request', category: 5 }
     }.freeze
