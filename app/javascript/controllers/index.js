@@ -136,6 +136,9 @@ application.register("modal", ModalController)
 import PopoverController from "./popover_controller"
 application.register("popover", PopoverController)
 
+import PreviewController from "./preview_controller"
+application.register("preview", PreviewController)
+
 import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
 application.register("preview-embed-browse", PreviewEmbedBrowseController)
 

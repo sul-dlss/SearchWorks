@@ -15,7 +15,7 @@
     <div class="viewport overflow-scroll">
       <ul class="container-images list-unstyled d-flex">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>
-          <li class="d-inline-block position-relative me-2" data-controller="preview-filmstrip" data-preview-filmstrip-url-value="<%= preview_path(document[:id]) %>" data-preview-filmstrip-id-value="<%= document[:id] %>" data-preview-filmstrip-selector-value="<%= ".#{preview_container}" %>">
+          <li class="d-inline-block position-relative me-2" data-controller="preview-filmstrip" data-action="preview:close@document->preview-filmstrip#handlePreviewClose" data-preview-filmstrip-url-value="<%= preview_path(document[:id]) %>" data-preview-filmstrip-id-value="<%= document[:id] %>" data-preview-filmstrip-preview-outlet="<%= ".#{preview_container}" %>">
             <a href="<%= solr_document_path(document[:id]) %>">
               <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document[:id] %>" alt="<%= document_presenter(document).heading %>">
             </a>
@@ -23,6 +23,6 @@
         <% end %>
       </ul>
     </div>
-    <div class="<%= preview_container %> preview"></div>
+    <div class="<%= preview_container %> preview" data-controller="preview"></div>
   </div>
 </div>
