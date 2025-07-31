@@ -85,14 +85,8 @@ export default class extends Controller {
     }
   }
 
-  appendPointer(target) {
-    const maxLeft = target.offsetWidth - this.arrow.offsetWidth - 1
-    let arrowLeft = parseInt(this.element.getBoundingClientRect().left + (this.element.offsetWidth / 2) - target.offsetLeft)
-
-    if (arrowLeft < 0) arrowLeft = 0
-    if (arrowLeft > maxLeft) arrowLeft = maxLeft
-
-    this.arrow.style.left = arrowLeft + 'px'
+  get arrow() {
+    return this.previewOutlet.arrowTarget;
   }
 
   togglePreview(e) {
@@ -109,10 +103,6 @@ export default class extends Controller {
       this.showPreview()
 
     }
-  }
-
-  get arrow() {
-    return this.previewOutlet.arrowTarget;
   }
 
   currentPreview(e){
