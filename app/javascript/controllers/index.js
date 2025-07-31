@@ -61,9 +61,6 @@ application.register("eager-lazy", EagerLazyController)
 import EmailSentController from "./email_sent_controller"
 application.register("email-sent", EmailSentController)
 
-import EmbedBrowseController from "./embed_browse_controller"
-application.register("embed-browse", EmbedBrowseController)
-
 import ExhibitPanelController from "./exhibit_panel_controller"
 application.register("exhibit-panel", ExhibitPanelController)
 
@@ -87,6 +84,9 @@ application.register("feedback-standalone", FeedbackStandaloneController)
 
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
+
+import GalleryRowController from "./gallery_row_controller"
+application.register("gallery-row", GalleryRowController)
 
 import GlobalAlertController from "./global_alert_controller"
 application.register("global-alert", GlobalAlertController)
