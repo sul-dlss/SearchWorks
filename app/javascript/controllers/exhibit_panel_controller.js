@@ -37,12 +37,6 @@ export default class extends Controller {
       })
 
       this.addToggleButtonBehavior()
-
-      const contextHeading = document.querySelector('[data-behavior="metadata-panel-context-heading"]')
-      if (contextHeading) {
-        contextHeading.style.display = 'block'
-      }
-
       this.element.style.display = 'block'
     } catch (error) {
       console.error('Failed to fetch exhibits:', error)
