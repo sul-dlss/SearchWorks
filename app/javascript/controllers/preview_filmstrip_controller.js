@@ -47,8 +47,6 @@ export default class extends Controller {
     this.triggerBtn.ariaLabel = 'Hide preview'
     this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
 
-    this.viewport.style.overflowX = 'hidden';
-
     this.previewOutlet.load(this.idValue, this.urlValue)
     this.adjustPreviewMargins();
     this.attachPreviewEvents()
@@ -56,7 +54,6 @@ export default class extends Controller {
 
   closePreview() {
     this.toggleButtonClosed(this.triggerBtn);
-    this.viewport.style.overflowX = 'scroll';
     this.previewOutlet.close()
   }
 
@@ -64,7 +61,6 @@ export default class extends Controller {
     if (event.target != this.previewOutletElement) return;
 
     this.toggleButtonClosed(this.triggerBtn);
-    this.viewport.style.overflowX = 'scroll';
   }
 
   adjustPreviewMargins() {
