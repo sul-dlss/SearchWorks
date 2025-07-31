@@ -5,25 +5,33 @@ import fetchJsonp from "fetch-jsonp"
 export default class extends Controller {
   static targets = ["image"]
 
-  static booksPerAjaxCall = 15
-  static booksApiUrl = 'https://books.google.com/books?jscmd=viewapi&bibkeys='
+  static values = {
+    batchSize: { type: Number, default: 15 },
+    booksApiUrl: { type: String, default: 'https://books.google.com/books?jscmd=viewapi&bibkeys=' }
+  }
 
   connect() {
-    const currentCovers = Array.from(this.imageTargets)
+  }
+
+  imageTargetConnected(_element) {
+    const pendingCovers = Array.from(this.imageTargets).filter(el => !el.hasAttribute('busy') && !el.hasAttribute('complete'));
+    pendingCovers.forEach(el => { el.setAttribute('busy', '') })
+
     const batches = []
 
+    if (pendingCovers.length === 0) return;
+
     // batch by batch-cutoff value
-    while (currentCovers.length) {
-      batches.push(currentCovers.splice(0, this.constructor.booksPerAjaxCall))
+    while (pendingCovers.length) {
+      batches.push(pendingCovers.splice(0, this.batchSizeValue))
     }
 
     this.addBookCoversByBatch(batches)
   }
 
-
    addBookCoversByBatch(batches) {
     batches.forEach((batch) => {
-      const batchBooksApiUrl = this.constructor.booksApiUrl + this.getBibKeysForBatch(batch)
+      const batchBooksApiUrl = this.booksApiUrlValue + this.getBibKeysForBatch(batch)
 
       fetchJsonp(batchBooksApiUrl)
         .then((response) => response.json())
@@ -33,10 +41,14 @@ export default class extends Controller {
   }
 
   renderCoverAndAccessPanel(json) {
+    console.log(json);
     // Loop through all the relevant cover elements and if the cover
     // element has a standard number (order of precidence: OCLC, LCCN, then ISBN)
     // that exists in the json response and render the cover image for it.
     this.imageTargets.forEach((coverImg) => {
+      coverImg.setAttribute('complete', '');
+      coverImg.removeAttribute('busy');
+
       const data = this.bestResponseForNumber(json, coverImg);
       if (typeof data !== 'undefined') {
         this.renderCoverImage(data.bibkey, data.data);
