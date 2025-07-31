@@ -31,10 +31,11 @@ module SearchResult
       if browse_nearby?
         {
           controller: 'preview-embed-browse',
+          action: 'preview:close@document->preview-embed-browse#handlePreviewClosed',
           preview_embed_browse_id_value: @document.id,
           preview_embed_browse_url_value: preview_path(@document.id),
           preview_embed_browse_preview_embed_browse_outlet: '.gallery-document',
-          preview_embed_browse_preview_selector_value: ".#{preview_container_dom_class}",
+          preview_embed_browse_preview_outlet: ".#{preview_container_dom_class}",
           preview_embed_browse_actions_selector_value: ".document-actions"
         }
       else

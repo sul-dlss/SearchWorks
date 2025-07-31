@@ -4,9 +4,10 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static values = {
     url: String,
-    id: String,
-    selector: String
+    id: String
   }
+
+  static outlets = ['preview']
 
   connect() {
     this.triggerBtn = document.createElement('button')
@@ -14,24 +15,14 @@ export default class extends Controller {
     this.triggerBtn.ariaLabel = 'Show preview'
     this.triggerBtn.dataset.action = 'click->preview-filmstrip#togglePreview'
     this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
-    this.arrow = document.createElement('div');
-    this.arrow.className = 'preview-arrow';
 
     // NOTE: The filmstrip, viewport, prevew ,and closeBtn are outside of the controller.
     this.filmstrip = this.element.closest('.image-filmstrip');
     this.viewport = this.filmstrip.querySelector('.viewport');
-    this.preview = document.querySelector(this.selectorValue);
-    this.closeBtn = document.createElement('button');
-    this.closeBtn.type = 'button';
-    this.closeBtn.className = 'preview-close btn-close';
-    this.closeBtn.setAttribute('aria-label', 'Close');
-    this.closeBtn.innerHTML = '<span aria-hidden="true" class="visually-hidden">×</span>';
-
     this.appendTriggers()
   }
 
   appendTriggers() {
-    this.element.append
     this.element.append(this.triggerBtn);
   }
 
@@ -55,43 +46,90 @@ export default class extends Controller {
     this.triggerBtn.classList.add('preview-open')
     this.triggerBtn.ariaLabel = 'Hide preview'
     this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
-    const divContent = document.createElement('div');
-    divContent.className = 'preview-content';
-
-    this.preview.innerHTML = '';
-
-    this.appendPointer()
-    divContent.innerHTML = `<turbo-frame src="${this.urlValue}" id="preview_${this.idValue}"></turbo-frame>`
-
-    this.preview.appendChild(divContent);
-    this.preview.appendChild(this.closeBtn);
-    this.preview.style.display = 'block';
 
     this.viewport.style.overflowX = 'hidden';
+
+    this.previewOutlet.load(this.idValue, this.urlValue)
+    this.adjustPreviewMargins();
     this.attachPreviewEvents()
-  }
-
-  appendPointer() {
-    this.preview.appendChild(this.arrow);
-
-    const maxLeft = this.preview.offsetWidth - this.arrow.offsetWidth - 1
-    let arrowLeft = parseInt(this.element.offsetLeft + (this.element.offsetWidth/2) - 20);
-
-    if (arrowLeft < 0) arrowLeft = 0;
-    if (arrowLeft > maxLeft) arrowLeft = maxLeft;
-
-    this.arrow.style.left = arrowLeft + 'px';
-  }
-
-  // TODO: the preview is outside of this controller's scope.
-  attachPreviewEvents() {
-    this.closeBtn.addEventListener('click', () => this.closePreview());
   }
 
   closePreview() {
     this.toggleButtonClosed(this.triggerBtn);
     this.viewport.style.overflowX = 'scroll';
-    this.preview.innerHTML = '';
-    this.preview.style.display = 'none';
+    this.previewOutlet.close()
+  }
+
+  handlePreviewClose(event) {
+    if (event.target != this.previewOutletElement) return;
+
+    this.toggleButtonClosed(this.triggerBtn);
+    this.viewport.style.overflowX = 'scroll';
+  }
+
+  adjustPreviewMargins() {
+    const maxPreviewWidth = this.viewport.getBoundingClientRect().width;
+    const galleryGapWidth = 8
+    const galleryRect = this.element.getBoundingClientRect()
+    const previewRect = this.previewOutletElement.getBoundingClientRect()
+    const galleryDocumentWidth = galleryRect.width + galleryGapWidth
+    const previewWidth = previewRect.width
+    const leftBound = previewRect.left
+    const rightBound = leftBound + previewWidth
+    const minMargin = 8 // Not tied to anything, it just looks nice and leaves space for the drop shadow.
+    const galleryCenterDistanceFromLeftBound = (galleryRect.left + (galleryDocumentWidth / 2)) - leftBound
+    const galleryCenterDistanceFromRightBound = rightBound - (galleryRect.left + (galleryDocumentWidth / 2))
+
+    if (previewWidth <= maxPreviewWidth) {
+      // The potential max width of the preview is smaller than our specified max width, so add our minimum padding.
+      this.movePointer(galleryCenterDistanceFromLeftBound, leftBound, leftBound + previewWidth - (2 * minMargin))
+      return
+    }
+
+    if (galleryCenterDistanceFromLeftBound <= (maxPreviewWidth/2)) {
+      this.movePointer(galleryCenterDistanceFromLeftBound, leftBound, leftBound + maxPreviewWidth)
+      return
+    }
+
+    if (galleryCenterDistanceFromRightBound <= (maxPreviewWidth/2)) {
+      // If the center of the element is too close to the right to center, max the left margin
+      const marginLeft = Math.ceil(previewWidth - maxPreviewWidth) - minMargin
+      this.movePointer(galleryCenterDistanceFromLeftBound - marginLeft, leftBound, leftBound + maxPreviewWidth)
+      return
+    }
+
+    // Otherwise we need to balance the left and right margins to center the preview
+    const marginLeft = Math.ceil(galleryCenterDistanceFromLeftBound - (maxPreviewWidth / 2))
+    this.movePointer(galleryCenterDistanceFromLeftBound - marginLeft, leftBound, leftBound + maxPreviewWidth)
+  }
+
+  movePointer(targetCenter, leftBound, rightBound) {
+    const pointerWidth = 21
+    const arrowLeft = targetCenter - pointerWidth
+
+    if (arrowLeft > 0 && leftBound + targetCenter < rightBound) {
+      this.arrow.style.left = arrowLeft + 'px'
+      this.arrow.classList.add('d-block')
+      this.arrow.classList.remove('d-none')
+    } else {
+      this.arrow.classList.add('d-none')
+      this.arrow.classList.remove('d-block')
+    }
+  }
+
+  get arrow() {
+    return this.previewOutlet.arrowTarget;
+  }
+
+  attachPreviewEvents() {
+    const scrollContainer = this.viewport
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', () => {
+        this.adjustPreviewMargins()
+      })
+    }
+    window.addEventListener('resize', () => {
+      this.adjustPreviewMargins()
+    })
   }
 }
