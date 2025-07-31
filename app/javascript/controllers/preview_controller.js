@@ -37,7 +37,6 @@ export default class extends Controller {
   appendFrame() {
     const frame = document.createElement('turbo-frame');
     frame.setAttribute('data-preview-target', 'frame');
-    frame.setAttribute('data-action', 'turbo:frame-load->preview#hideDocumentActions')
     frame.setAttribute('data-preview-target', 'frame')
     this.element.appendChild(frame);
   }
