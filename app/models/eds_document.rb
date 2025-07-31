@@ -92,7 +92,7 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
         link_label = 'ePub eBook Full Text'
         link_icon = 'ePub eBook Full Text Icon'
       when 'other'
-        link_label = 'Full Text'
+        link_label = 'EDS Full Text'
       end
 
       link_url = link['Url'] || 'detail'

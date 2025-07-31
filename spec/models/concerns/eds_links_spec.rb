@@ -262,7 +262,7 @@ RSpec.describe EdsLinks do
       [
         { 'Text' => 'HTML FULL TEXT',          'Url' => 'http://example.com/1' },
         { 'Text' => 'PDF FULL TEXT',           'Url' => 'http://example.com/2' },
-        { 'Text' => 'CHECK SFX FOR FULL TEXT', 'Url' => 'http://example.com/3' },
+        { 'Text' => 'EDS FULL TEXT',           'Url' => 'http://example.com/3' },
         { 'Text' => 'OPEN ACCESS',             'Url' => 'http://example.com/4' },
         { 'Text' => 'VIEW REQUEST OPTIONS',    'Url' => 'http://example.com/5' },
         { 'Text' => 'ACCESS URL',              'Url' => 'http://example.com/6' } # ignored
