@@ -16,7 +16,6 @@ export default class extends Controller {
     if (!this.hasContent()) {
       this.displayLink()
       this.galleryTarget.addEventListener('turbo:frame-load', () => {
-        this.reorderPreviewElements();
         scrollOver(this.currentDocumentTarget(), this.galleryTarget)
       }, true)
     }
@@ -39,15 +38,6 @@ export default class extends Controller {
     const linkViewFullPage = document.querySelector('.view-full-page a')
     linkViewFullPage.href = this.browseUrlValue
     linkViewFullPage.hidden = false
-  }
-
-  reorderPreviewElements() {
-    const previewElements = this.galleryTarget.querySelectorAll('.preview-container')
-
-    // Append each preview element to the viewport target
-    previewElements.forEach(element => {
-      this.viewportTarget.appendChild(element)
-    })
   }
 
   scrollOver(event) {

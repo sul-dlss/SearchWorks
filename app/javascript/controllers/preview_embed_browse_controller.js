@@ -3,10 +3,8 @@ import { Controller } from "@hotwired/stimulus"
 // Controls a single tile in the browse nearby ribbon
 export default class extends Controller {
   static values = {
-    actionsSelector: String,
     id: String,
-    url: String,
-    previewSelector: String
+    url: String
   }
   static targets = [ "button" ]
   static outlets = [ "preview-embed-browse", "preview" ]
@@ -105,15 +103,6 @@ export default class extends Controller {
     }
   }
 
-  currentPreview(e){
-    // Check if we're clicking in a preview
-    if (e.target.closest('.preview-container')){
-      return true
-    } else {
-      return e.target === this.buttonTarget
-    }
-  }
-
   previewOpen(){
     return this.buttonTarget.classList.contains('preview-open')
   }
@@ -144,6 +133,7 @@ export default class extends Controller {
 
   handlePreviewClosed(event) {
     if (event.target != this.previewOutletElement) return;
+    if (this.buttonTarget.classList.contains('bi-chevron-down')) return;
 
     this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
     this.buttonTarget.classList.add('bi-chevron-down')

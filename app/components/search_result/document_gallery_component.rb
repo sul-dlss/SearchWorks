@@ -4,10 +4,11 @@ module SearchResult
   class DocumentGalleryComponent < Blacklight::DocumentComponent
     attr_reader :document, :counter
 
-    def initialize(document:, document_counter: 0, starting_document: nil, **)
+    def initialize(document:, document_counter: 0, starting_document: nil, preview_id: nil, **)
       super(document: document, document_counter: document_counter, **)
 
       @starting_document = starting_document
+      @preview_id = preview_id
     end
 
     def resource_icon
@@ -20,6 +21,14 @@ module SearchResult
 
     def preview_container_dom_class
       "preview-container-#{document.id}"
+    end
+
+    def preview_outlet_selector
+      if @preview_id
+        "##{@preview_id}"
+      else
+        ".#{preview_container_dom_class}"
+      end
     end
 
     def classes
@@ -41,7 +50,7 @@ module SearchResult
           preview_embed_browse_id_value: @document.id,
           preview_embed_browse_url_value: preview_path(@document.id),
           preview_embed_browse_preview_embed_browse_outlet: '.gallery-document',
-          preview_embed_browse_preview_outlet: ".#{preview_container_dom_class}",
+          preview_embed_browse_preview_outlet: preview_outlet_selector,
           preview_embed_browse_actions_selector_value: ".document-actions"
         }
       else

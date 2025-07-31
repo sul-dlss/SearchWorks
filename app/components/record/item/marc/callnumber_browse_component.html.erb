@@ -22,8 +22,9 @@
     <% spines.each_with_index do |item, index| %>
       <div id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
         <div class="embedded-items overflow-x-scroll overflow-y-hidden">
-          <%= helpers.turbo_frame_tag "filmstrip_#{item.base_callnumber.gsub(' ', '-')}", src: filmstrip_path(item.base_callnumber), class: 'gallery' %>
+          <%= helpers.turbo_frame_tag "filmstrip_#{item.base_callnumber.gsub(' ', '-')}", src: filmstrip_path(item.base_callnumber, preview_id: "browse-nearby-preview-#{index}"), class: 'gallery' %>
         </div>
+        <div id="browse-nearby-preview-<%= index %>" data-controller="preview"></div>
       </div>
     <% end %>
   </div>

@@ -12,6 +12,7 @@ export default class extends Controller {
   connect() {
     this.appendFrame();
     this.appendButtons();
+    this.element.classList.add('d-none')
   }
 
   appendButtons() {
@@ -41,17 +42,25 @@ export default class extends Controller {
     this.element.appendChild(frame);
   }
 
+  reset() {
+    this.frameTarget.innerHTML = '';
+  }
+
   load(id, url) {
-    this.idValue = id
-    this.urlValue = url
+    if (this.idValue != id) {
+      this.reset();
+      this.idValue = id
+      this.urlValue = url
+      this.frameTarget.setAttribute('id', `preview_${this.idValue}`)
+      this.frameTarget.setAttribute('src', this.urlValue)
+    }
+
     this.open()
   }
 
   open() {
     this.element.classList.add('preview', 'd-block')
     this.element.classList.remove('d-none')
-    this.frameTarget.setAttribute('id', `preview_${this.idValue}`)
-    this.frameTarget.setAttribute('src', this.urlValue)
     this.dispatch("open");
   }
 

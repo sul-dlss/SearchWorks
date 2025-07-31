@@ -44,11 +44,12 @@ module Record
           )
         end
 
-        def filmstrip_path(call_number)
+        def filmstrip_path(call_number, **)
           browse_nearby_path(
             start: document[:id],
             call_number:,
-            view: :gallery
+            view: :gallery,
+            **
           )
         end
 

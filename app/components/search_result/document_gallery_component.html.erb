@@ -47,4 +47,7 @@
   </div>
   </div>
 <% end %>
-<div class="<%= preview_container_dom_class %> preview-container d-none" data-controller="preview" data-document-id="<%= document[:id] %>"></div>
+
+<% unless @preview_id.present? %>
+  <div class="<%= preview_container_dom_class %> preview-container d-none" data-controller="preview" data-document-id="<%= document[:id] %>"></div>
+<% end %>
