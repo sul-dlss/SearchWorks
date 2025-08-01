@@ -118,6 +118,7 @@ class SolrDocument
   attribute :oclc_number, :string, 'oclc'
   attribute :imprint_string, :string, :imprint_display
   attribute :vernacular_title, :string, :vern_title_display
+  attribute :main_title_date, :string, :pub_year_ss
 
   def document_formats
     format.presence || old_format.presence || []
