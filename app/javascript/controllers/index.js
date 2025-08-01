@@ -82,6 +82,9 @@ application.register("feedback-modal", FeedbackModalController)
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
+import GalleryCardController from "./gallery_card_controller"
+application.register("gallery-card", GalleryCardController)
+
 import GalleryLayoutController from "./gallery_layout_controller"
 application.register("gallery-layout", GalleryLayoutController)
 
@@ -135,9 +138,6 @@ application.register("popover", PopoverController)
 
 import PreviewController from "./preview_controller"
 application.register("preview", PreviewController)
-
-import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
-application.register("preview-embed-browse", PreviewEmbedBrowseController)
 
 import PurlEmbedController from "./purl_embed_controller"
 application.register("purl-embed", PurlEmbedController)

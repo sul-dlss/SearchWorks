@@ -2,6 +2,6 @@
 <% document_presenters = documents.map { |doc| document_presenter(doc) } -%>
 
 <% # container for all documents in e.g. book covers view -%>
-<div id="documents" class="row gallery" data-controller="gallery-layout" data-gallery-layout-preview-embed-browse-outlet=".gallery-document" data-action="resize@window->gallery-layout#reorderPreviewDivs preview-embed-browse:show->gallery-layout#handlePreviewShow">
+<div id="documents" class="row gallery" data-controller="gallery-layout" data-gallery-layout-gallery-card-outlet=".gallery-document" data-action="resize@window->gallery-layout#reorderPreviewDivs gallery-card:show->gallery-layout#handlePreviewShow">
   <%= render view_config.document_component.with_collection(document_presenters, partials: view_config.partials, counter_offset: @response&.start || 0) %>
 </div>

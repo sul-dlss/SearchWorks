@@ -13,10 +13,10 @@ RSpec.feature "Merged Image Collections", :js do
     within('.image-filmstrip') do
       within('ul.container-images') do
         expect(page).to have_css("a img.thumb-35")
-        expect(page).to have_css("li[data-preview-embed-browse-url-value$='/preview/35']")
+        expect(page).to have_css("li[data-gallery-card-url-value$='/preview/35']")
 
         expect(page).to have_css("a img.thumb-36")
-        expect(page).to have_css("li[data-preview-embed-browse-url-value$='/preview/36']")
+        expect(page).to have_css("li[data-gallery-card-url-value$='/preview/36']")
       end
     end
 

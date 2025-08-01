@@ -21,7 +21,7 @@
   <div class="tab-content">
     <% spines.each_with_index do |item, index| %>
       <% preview_id = "browse-nearby-preview-#{index}" %>
-      <div data-controller="gallery-row" data-gallery-row-max-preview-width-value="800" data-action="resize@window->gallery-row#adjustPreviewMargins turbo:frame-load->gallery-row#scrollToCurrentDocument preview-embed-browse:show->gallery-row#setCurrentPreview" data-gallery-row-preview-outlet="#<%= preview_id %>" data-gallery-row-preview-embed-browse-outlet="#callnumber-<%=index%> .gallery-document" id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
+      <div data-controller="gallery-row" data-gallery-row-max-preview-width-value="800" data-action="resize@window->gallery-row#adjustPreviewMargins turbo:frame-load->gallery-row#scrollToCurrentDocument gallery-card:show->gallery-row#setCurrentPreview" data-gallery-row-preview-outlet="#<%= preview_id %>" data-gallery-row-gallery-card-outlet="#callnumber-<%=index%> .gallery-document" id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
         <div class="embedded-items overflow-x-scroll overflow-y-hidden" data-gallery-row-target="container" data-action="scroll->gallery-row#adjustPreviewMargins">
           <%= helpers.turbo_frame_tag "filmstrip_#{item.base_callnumber.gsub(' ', '-')}", src: filmstrip_path(item.base_callnumber, preview_id: preview_id), loading: index == 0 ? 'eager' : 'lazy', class: 'gallery' %>
         </div>

@@ -4,7 +4,7 @@ import scrollOver from "../scroll-over"
 // Connects to data-controller="gallery-row"
 export default class extends Controller {
   static targets = [ "container" ]
-  static outlets = [ "preview-embed-browse", "preview" ]
+  static outlets = [ "gallery-card", "preview" ]
   static values = {
     currentDocumentClass: { type: String, default: 'current-document' },
     maxPreviewWidth: { type: Number, default: -1 }
@@ -15,13 +15,13 @@ export default class extends Controller {
   }
 
   currentDocumentTarget() {
-    return this.previewEmbedBrowseOutletElements.find(el => el.classList.contains(this.currentDocumentClassValue));
+    return this.galleryCardOutletElements.find(el => el.classList.contains(this.currentDocumentClassValue));
   }
 
   setCurrentPreview(event) {
     this.currentPreview = event.target;
 
-    this.previewEmbedBrowseOutlets.forEach((tile) => {
+    this.galleryCardOutlets.forEach((tile) => {
       if (tile.element === event.target) return;
 
       tile.updateButton('closed');
@@ -31,7 +31,7 @@ export default class extends Controller {
   }
 
   get previewContainer() {
-    return this.previewEmbedBrowseOutletElement.parentElement;
+    return this.galleryCardOutletElement.parentElement;
   }
 
   adjustPreviewMargins() {
@@ -43,7 +43,7 @@ export default class extends Controller {
     const maxPreviewWidth = this.maxPreviewWidthValue;
     const galleryRect = this.currentPreview.getBoundingClientRect()
     const previewRect = this.previewOutletElement.getBoundingClientRect()
-    const galleryDocumentWidth = this.previewContainer.getBoundingClientRect().width / this.previewEmbedBrowseOutlets.length;
+    const galleryDocumentWidth = this.previewContainer.getBoundingClientRect().width / this.galleryCardOutlets.length;
     const previewWidth = previewRect.width
     const leftBound = previewRect.left
     const rightBound = leftBound + previewWidth

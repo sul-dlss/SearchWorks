@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="gallery-layout"
 export default class extends Controller {
-  static outlets = [ "preview-embed-browse"]
+  static outlets = [ "gallery-card"]
   static values = {
     itemsPerRow: { type: Number, default: 0 },
   }
@@ -12,12 +12,9 @@ export default class extends Controller {
   }
 
   handlePreviewShow(event) {
-    this.currentPreviewEmbedBrowseElement = event.target;
-    this.currentPreviewEmbedBrowse = this.previewEmbedBrowseOutlets.find((outlet) => outlet.element == event.target);
-    this.currentPreviewEmbedBrowsePreviewOutletElement = this.currentPreviewEmbedBrowse.previewOutletElement;
+    this.currentGalleryCard = this.galleryCardOutlets.find((outlet) => outlet.element == event.target);
 
-
-    this.previewEmbedBrowseOutlets.forEach((tile) => {
+    this.galleryCardOutlets.forEach((tile) => {
       if (tile.element === event.target) return;
 
       if (tile.previewOpen()) tile.closePreview();
@@ -28,16 +25,16 @@ export default class extends Controller {
   }
 
   adjustPreviewMargins() {
-    if (!this.currentPreviewEmbedBrowsePreviewOutletElement) return;
+    if (!this.currentGalleryCard) return;
 
     // This is assuming the preview is styled for 100% width
-    this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginLeft = 0
-    this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginRight = 0
+    this.currentGalleryCard.previewOutletElement.style.marginLeft = 0
+    this.currentGalleryCard.previewOutletElement.style.marginRight = 0
     const maxPreviewWidth = 800
     const galleryGapWidth = 16
-    const galleryRect = this.currentPreviewEmbedBrowseElement.getBoundingClientRect()
+    const galleryRect = this.currentGalleryCard.element.getBoundingClientRect()
     const galleryDocumentWidth = galleryRect.width + galleryGapWidth
-    const previewWidth = this.currentPreviewEmbedBrowsePreviewOutletElement.getBoundingClientRect().width
+    const previewWidth = this.currentGalleryCard.previewOutletElement.getBoundingClientRect().width
     const documentsOnRow = Math.floor(previewWidth/galleryDocumentWidth)
     const documentsRect = this.element.getBoundingClientRect()
     const leftBound = documentsRect.left
@@ -48,7 +45,7 @@ export default class extends Controller {
 
     if (previewWidth <= maxPreviewWidth) {
       // Adjust the right margin so it matches the unused flex space at the end of the row
-      this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginRight = `${minMarginRight}px`
+      this.currentGalleryCard.previewOutletElement.style.marginRight = `${minMarginRight}px`
       this.movePointer(galleryCenterDistanceFromLeftBound)
       return
     }
@@ -56,7 +53,7 @@ export default class extends Controller {
     if (galleryCenterDistanceFromLeftBound <= (maxPreviewWidth/2)) {
       // If the center of the element is too close to the left to center, max the right margin
       const marginRight = Math.ceil(previewWidth - maxPreviewWidth)
-      this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginRight = `${marginRight}px`
+      this.currentGalleryCard.previewOutletElement.style.marginRight = `${marginRight}px`
       this.movePointer(galleryCenterDistanceFromLeftBound)
       return
     }
@@ -64,8 +61,8 @@ export default class extends Controller {
     if (galleryCenterDistanceFromRightBound <= (maxPreviewWidth/2)) {
       // If the center of the element is too close to the right to center, max the left margin
       const marginLeft = Math.ceil(previewWidth - maxPreviewWidth) - minMarginRight
-      this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginLeft = `${marginLeft}px`
-      this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginRight = `${minMarginRight}px`
+      this.currentGalleryCard.previewOutletElement.style.marginLeft = `${marginLeft}px`
+      this.currentGalleryCard.previewOutletElement.style.marginRight = `${minMarginRight}px`
       this.movePointer(galleryCenterDistanceFromLeftBound - marginLeft)
       return
     }
@@ -73,20 +70,20 @@ export default class extends Controller {
     // Otherwise we need to balance the left and right margins to center the preview
     const marginLeft = Math.ceil(galleryCenterDistanceFromLeftBound - (maxPreviewWidth / 2))
     const marginRight = Math.ceil(previewWidth - maxPreviewWidth - marginLeft)
-    this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginLeft = `${marginLeft}px`
-    this.currentPreviewEmbedBrowsePreviewOutletElement.style.marginRight = `${marginRight}px`
+    this.currentGalleryCard.previewOutletElement.style.marginLeft = `${marginLeft}px`
+    this.currentGalleryCard.previewOutletElement.style.marginRight = `${marginRight}px`
     this.movePointer(galleryCenterDistanceFromLeftBound - marginLeft)
   }
 
   movePointer(targetCenter) {
     const pointerWidth = 21
     const arrowLeft = targetCenter - pointerWidth
-    this.currentPreviewEmbedBrowse.previewOutlet.arrowTarget.style.left = arrowLeft + 'px'
+    this.currentGalleryCard.previewOutlet.arrowTarget.style.left = arrowLeft + 'px'
   }
 
   itemsPerRow() {
     // the item, plus the gap between items
-    const itemWidth = this.previewEmbedBrowseOutletElement.getBoundingClientRect().width + 16;
+    const itemWidth = this.galleryCardOutletElement.getBoundingClientRect().width + 16;
 
     // the container, plus the left and right item gap (accounting for the beginning + end of the row)
     const documentsWidth = this.element.getBoundingClientRect().width + 16;
@@ -118,7 +115,7 @@ export default class extends Controller {
     }
 
     let buffer = [];
-    this.previewEmbedBrowseOutlets.forEach((tile, index) => {
+    this.galleryCardOutlets.forEach((tile, index) => {
       if (index % itemsPerRow === 0 && index !== 0) {
         if (buffer.length > 0) {
           buffer.forEach((previewOutletElement) => {

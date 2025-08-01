@@ -44,11 +44,11 @@ module SearchResult
 
     def stimulus_attributes
       {
-        controller: 'preview-embed-browse',
-        action: 'preview:close@document->preview-embed-browse#handlePreviewClosed',
-        preview_embed_browse_id_value: @document.id,
-        preview_embed_browse_url_value: preview_path(@document.id),
-        preview_embed_browse_preview_outlet: preview_outlet_selector
+        controller: 'gallery-card',
+        action: 'preview:close@document->gallery-card#handlePreviewClosed',
+        gallery_card_id_value: @document.id,
+        gallery_card_url_value: preview_path(@document.id),
+        gallery_card_preview_outlet: preview_outlet_selector
       }
     end
 

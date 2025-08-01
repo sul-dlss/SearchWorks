@@ -1,13 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Controls a single tile in the browse nearby ribbon
+// Controls the preview "popup" in e.g. the browse nearby ribbon or image collection filmstrip.
 export default class extends Controller {
   static values = {
     id: String,
     url: String,
   }
   static targets = [ "arrow", "closeButton", "frame" ]
-  static outlets = [ "preview-embed-browse" ]
 
   connect() {
     this.appendFrame();
