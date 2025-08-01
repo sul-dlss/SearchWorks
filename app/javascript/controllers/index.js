@@ -70,9 +70,6 @@ application.register("facet-search", FacetSearchController)
 import FeedbackFormController from "./feedback_form_controller"
 application.register("feedback-form", FeedbackFormController)
 
-import FeedbackStandaloneController from "./feedback_standalone_controller"
-application.register("feedback-standalone", FeedbackStandaloneController)
-
 import GalleryCardController from "./gallery_card_controller"
 application.register("gallery-card", GalleryCardController)
 
