@@ -1,6 +1,6 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h2 class="modal-title me-3">Cite</h2><div class="badge rounded-pill bookmark-counter"><%= @documents.count %> records</div>
+    <h2 class="modal-title me-3">Cite</h2><%= render BadgeCounterComponent.new(@documents.count, 'records', additional_classes: ['bookmark-counter']) %>
   <% end %>
 
   <%= render Citations::MultipleCitationsComponent.new(documents: @documents) %>

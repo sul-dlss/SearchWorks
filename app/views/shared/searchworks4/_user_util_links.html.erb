@@ -1,7 +1,7 @@
             <ul class="user-util-links column-gap-3 navbar-nav <%= extra_classes %>">
               <li class="nav-item">
                 <a class="nav-link" href="/selections">
-                  Saved <span class="badge rounded-pill bookmark-counter align-middle" data-role="bookmark-counter"><%= current_or_guest_user&.bookmarks&.count %></span>
+                  Saved <%= render BadgeCounterComponent.new(current_or_guest_user&.bookmarks&.count, additional_classes: %w[ms-2 bookmark-counter align-middle], data: { role: 'bookmark-counter'}) %>
                 </a>
               </li>
               <li class="nav-item">

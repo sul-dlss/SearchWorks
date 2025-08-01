@@ -5,9 +5,7 @@
   <div class="file-collection-members mb-3">
     <div class="d-inline-flex bg-white ms-4 px-2">
       <h2 class="mb-0">Digital collection</h2>
-      <span class="ms-2 badge rounded-pill bookmark-counter align-self-center">
-        <%= pluralize(number_with_delimiter(document.collection_members.total), 'item') %>
-      </span>
+      <%= render BadgeCounterComponent.new(document.collection_members.count, 'item', additional_classes: %w[ms-2 bookmark-counter align-self-center]) %>
     </div>
     <div class="col-12 collection-members border rounded px-3 pb-2">
       <table class="w-100">

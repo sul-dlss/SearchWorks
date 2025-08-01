@@ -9,14 +9,14 @@
         <%= link_to bookmarks_path,
           class: "nav-link #{'active' unless article_selections?}",
           aria: !article_selections? ? {} :{ current: 'page'} do %>
-          Catalog <span class="badge rounded-pill bookmark-counter"><%= @catalog_count %></span>
+          Catalog <%= render BadgeCounterComponent.new(@catalog_count, additional_classes: ['bookmark-counter']) %>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to article_selections_path,
           class: "nav-link #{'active' if article_selections?}",
           aria: article_selections? ? {} :{ current: 'page'} do %>
-          Articles+ <span class="badge rounded-pill bookmark-counter"><%= @article_count %></span>
+          Articles+ <%= render BadgeCounterComponent.new(@article_count, additional_classes: ['bookmark-counter']) %>
         <% end %>
       </li>
     </ul>

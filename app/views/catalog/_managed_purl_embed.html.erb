@@ -1,6 +1,6 @@
 <div class="managed-purl" data-controller="managed-purl">
   <div class="d-inline-flex bg-white ms-4 px-2">
-    <h2 class="mb-0">Digital content</h2><div class="ms-2 badge rounded-pill bookmark-counter align-self-center"><%= "#{document.managed_purls.count} parts" %></div>
+    <h2 class="mb-0">Digital content</h2><%= render BadgeCounterComponent.new(document.managed_purls.count, 'part', additional_classes: %w[ms-2 bookmark-counter align-self-center]) %>
   </div>
   <div class="border rounded px-3 pb-2 row digital-viewer">
     <div class="col-4">
