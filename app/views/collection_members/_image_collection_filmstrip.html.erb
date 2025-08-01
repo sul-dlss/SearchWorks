@@ -11,22 +11,22 @@
       <i class="bi bi-search me-1"></i>Search collection
     <% end %>
   </div>
-  <div class="col-md-12 image-filmstrip border rounded p-4 pt-5">
-    <div class="viewport overflow-scroll">
+  <div class="col-md-12 image-filmstrip border rounded p-4 pt-5" data-controller="gallery-row" data-action="resize@window->gallery-row#adjustPreviewMargins preview-embed-browse:show->gallery-row#setCurrentPreview" data-gallery-row-preview-outlet="<%= ".#{preview_container}" %>" data-gallery-row-preview-embed-browse-outlet=".container-images li">
+    <div class="viewport overflow-scroll" data-gallery-row-target="container" data-action="scroll->gallery-row#adjustPreviewMargins" >
       <ul class="container-images list-unstyled d-flex">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>
-          <li class="d-inline-block position-relative me-2" data-controller="preview-filmstrip" data-action="preview:close@document->preview-filmstrip#handlePreviewClose" data-preview-filmstrip-url-value="<%= preview_path(document[:id]) %>" data-preview-filmstrip-id-value="<%= document[:id] %>" data-preview-filmstrip-preview-outlet="<%= ".#{preview_container}" %>">
+          <li class="d-inline-block position-relative me-2" data-controller="preview-embed-browse" data-action="preview:close@document->preview-embed-browse#handlePreviewClosed" data-preview-embed-browse-url-value="<%= preview_path(document[:id]) %>" data-preview-embed-browse-id-value="<%= document[:id] %>" data-preview-embed-browse-preview-outlet="<%= ".#{preview_container}" %>">
             <a href="<%= solr_document_path(document[:id]) %>">
               <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document[:id] %>" alt="<%= document_presenter(document).heading %>">
             </a>
 
-            <button class="btn preview-trigger-btn preview-opacity" aria-label="Show preview" data-preview-filmstrip-target="button" data-action="click->preview-filmstrip#togglePreview">
+            <button class="btn preview-trigger-btn preview-opacity" aria-label="Show preview" data-preview-embed-browse-target="button" data-action="preview-embed-browse#togglePreview">
               <span class="bi bi-chevron-down small"></span>
             </button>
           </li>
         <% end %>
       </ul>
     </div>
-    <div class="<%= preview_container %> preview" data-controller="preview"></div>
+    <div class="<%= preview_container %> preview d-none" data-controller="preview"></div>
   </div>
 </div>

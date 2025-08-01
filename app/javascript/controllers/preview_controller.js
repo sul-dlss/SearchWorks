@@ -12,7 +12,6 @@ export default class extends Controller {
   connect() {
     this.appendFrame();
     this.appendButtons();
-    this.element.classList.add('d-none')
   }
 
   appendButtons() {

@@ -6,7 +6,8 @@ export default class extends Controller {
   static targets = [ "container" ]
   static outlets = [ "preview-embed-browse", "preview" ]
   static values = {
-    currentDocumentClass: { type: String, default: 'current-document' }
+    currentDocumentClass: { type: String, default: 'current-document' },
+    maxPreviewWidth: { type: Number, default: -1 }
   }
 
   scrollToCurrentDocument() {
@@ -39,7 +40,7 @@ export default class extends Controller {
     // This is assuming the preview is styled for 100% width
     this.previewOutletElement.style.marginLeft = 0
     this.previewOutletElement.style.marginRight = 0
-    const maxPreviewWidth = 800
+    const maxPreviewWidth = this.maxPreviewWidthValue;
     const galleryRect = this.currentPreview.getBoundingClientRect()
     const previewRect = this.previewOutletElement.getBoundingClientRect()
     const galleryDocumentWidth = this.previewContainer.getBoundingClientRect().width / this.previewEmbedBrowseOutlets.length;
@@ -50,7 +51,7 @@ export default class extends Controller {
     const galleryCenterDistanceFromLeftBound = (galleryRect.left + (galleryDocumentWidth / 2)) - leftBound
     const galleryCenterDistanceFromRightBound = rightBound - (galleryRect.left + (galleryDocumentWidth / 2))
 
-    if (previewWidth <= maxPreviewWidth) {
+    if (maxPreviewWidth < 0 || previewWidth <= maxPreviewWidth) {
       // The potential max width of the preview is smaller than our specified max width, so add our minimum padding.
       this.previewOutletElement.style.marginLeft = `${minMargin}px`
       this.previewOutletElement.style.marginRight = `${minMargin}px`
