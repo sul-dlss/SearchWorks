@@ -1,0 +1,12 @@
+<%= tag.section(class: 'chat', data: { controller: 'library-h3lp', 'library-h3lp-hours-url-value': Settings.library_chat_hours_url }.merge(chat_attrs)) do %>
+  <% if @layout == 'inline' %>
+    <header class="<%= @header_class %>">Chat with a librarian <%= render StanfordOnlyPopoverComponent.new %></header>
+    <%= chat_link('Start chat') %>
+  <% else %>
+    <header class="<%= @header_class %>"><%= chat_link('Chat with a librarian') %></header>
+  <% end %>
+  <span data-library-h3lp-target="hours">
+    <span class="placeholder"></span>
+  </span>
+  <%= link_to 'All reference hours', 'https://library.stanford.edu/libraries/cecil-h-green-library', class: "ms-2" %>
+<% end %>
