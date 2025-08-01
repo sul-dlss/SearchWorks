@@ -166,11 +166,11 @@ application.register("show-more-button", ShowMoreButtonController)
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
 
+import ToastContainer from "./toast_container_controller"
+application.register("toast-container", ToastContainer)
+
 import ToastController from "./toast_controller"
 application.register("toast", ToastController)
-
-import ToastMessageListenerController from "./toast_message_listener_controller"
-application.register("toast-message-listener", ToastMessageListenerController)
 
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
