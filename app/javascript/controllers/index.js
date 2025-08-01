@@ -82,6 +82,9 @@ application.register("feedback-modal", FeedbackModalController)
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
+import GalleryLayoutController from "./gallery_layout_controller"
+application.register("gallery-layout", GalleryLayoutController)
+
 import GalleryPreviewController from "./gallery_preview_controller"
 application.register("gallery-preview", GalleryPreviewController)
 

@@ -57,7 +57,6 @@ module SearchResult
           action: 'preview:close@document->gallery-preview#handlePreviewClosed',
           gallery_preview_id_value: @document.id,
           gallery_preview_url_value: preview_path(@document.id),
-          gallery_preview_gallery_preview_outlet: '.gallery-document',
           gallery_preview_preview_outlet: ".#{preview_container_dom_class}"
         }
       end
