@@ -9,11 +9,8 @@ export default class extends Controller {
   async copyLink() {
     try {
         await navigator.clipboard.writeText(this.urlValue)
-        const toast = document.getElementById('toast-template').content.cloneNode(true).querySelector('.toast');
-        const toastText = toast.querySelector('.toast-text')
-        toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Link copied to clipboard'
-        document.getElementById('toast-area').appendChild(toast)
-        bootstrap.Toast.getOrCreateInstance(toast).show()
+
+        window.dispatchEvent(new CustomEvent('show-toast', { detail: { html: '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Link copied to clipboard' } }));
     } catch (err) {
         console.error('Failed to copy text: ', err);
     }

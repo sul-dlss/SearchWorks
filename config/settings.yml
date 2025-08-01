@@ -16,15 +16,6 @@ EXHIBITS_ACCESS_PANEL:
 GLOBAL_ALERT: false
 # global_alert_time: "2025-12-15T00:00:00Z" # For testing global alert
 
-local_alert:
-  id: 'searchworks4-release-message'
-  dismiss: 'permanent'
-  html: >
-    <strong>SearchWorks has been updated with a new design and enhanced features.</strong>
-    <p class='mb-0'>You can now search within filters, cite or email records directly from search results,
-    view an enhanced Availability section, and more. Please
-    <a href='/feedback' data-blacklight-modal='trigger'>share your feedback</a> to help us continue improving.</p>
-
 GOOGLE_SITE_VERIFICATION: "654321sitever"
 ANALYTICS_DEBUG: true
 PAGINATION_THRESHOLD: 250

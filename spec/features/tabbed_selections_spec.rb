@@ -22,8 +22,8 @@ RSpec.describe 'Tabbed selections UI' do
     it 'renders selected articles' do
       visit '/selections/articles'
 
-      expect(page).to have_css('.bookmark-counter', text: '3')
-      expect(page).to have_css('.bookmark-counter', text: '4')
+      expect(page).to have_css('.badge', text: '3')
+      expect(page).to have_css('.badge', text: '4')
       expect(page).to have_css('.document', count: 4)
     end
 
@@ -44,8 +44,8 @@ RSpec.describe 'Tabbed selections UI' do
     it 'renders selected catalog documents' do
       visit '/selections'
 
-      expect(page).to have_css('.bookmark-counter', text: '3')
-      expect(page).to have_css('.bookmark-counter', text: '4')
+      expect(page).to have_css('.badge', text: '3')
+      expect(page).to have_css('.badge', text: '4')
       expect(page).to have_css('.document', count: 3)
     end
   end

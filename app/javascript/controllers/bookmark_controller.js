@@ -43,18 +43,19 @@ export default class extends Controller {
   }
 
   bookmarkUpdated(event) {
-    const toast = document.getElementById('toast-template').content.cloneNode(true).querySelector('.toast');
-    const toastText = toast.querySelector('.toast-text')
+    let toastHtml;
     this.updateAriaTooltip(this.element, event.detail.checked)
 
     if (event.detail.checked){
-      toastText.innerHTML = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
+      toastHtml = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
       if (this.element.matches(':hover')) this.hover()
     } else {
-      toastText.innerHTML =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
+      toastHtml =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
 
     this.updateOtherPageBookmarks(event.target.dataset.documentId, event.detail.checked)
-    document.getElementById('toast-area').appendChild(toast)
+
+
+    window.dispatchEvent(new CustomEvent('show-toast', { detail: { html: toastHtml } }));
   }
 }

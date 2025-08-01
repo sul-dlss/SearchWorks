@@ -95,6 +95,7 @@ apfmj.biomedcentral.com
 apjai-journal.org
 apjcn.nhri.org.tw
 apn.mhmedical.com
+app.deweydata.io
 app.gideononline.com
 app.jove.com
 app.knovel.com

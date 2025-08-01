@@ -528,7 +528,10 @@ class CatalogController < ApplicationController
     library_code = @items.first.library
     location = @document.holdings.libraries.find { |library| library.code == library_code }.locations.find { |location| location.code == params[:location] }
     @stackmap_api_url = location.stackmap_api_url
-    render layout: !request.xhr?
+
+    respond_to do |format|
+      format.html { render layout: !request.xhr? }
+    end
   end
 
   def facet_results

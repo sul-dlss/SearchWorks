@@ -5,10 +5,6 @@ module ApplicationHelper
     params[:search_field] == 'advanced' || params[:clause].present?
   end
 
-  def search_type_name
-    t("searchworks.search_dropdown.#{controller_name}.label")
-  end
-
   # Return an Ezproxy link for URLs that match a proxied URL
   # If the link does not match a URL that should be proxied, return the link on its own
   def ezproxy_database_link(url, title)

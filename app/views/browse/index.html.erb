@@ -31,9 +31,11 @@
   </div>
 <% end %>
 
-<div id="content" class="callnumber-browse p-3" data-controller="browse-related-items" data-browse-related-items-start-value="<%= params[:start] %>"
-     data-browse-related-items-target="viewport">
+<div id="content" class="callnumber-browse p-3">
   <% if @spines.present? %>
-    <%= render_document_index(@spines.map(&:document_with_preferred_item)) %>
+    <% view_config = local_assigns[:view_config] || blacklight_config&.view_config(document_index_view_type) %>
+    <div id="documents" class="row gallery" data-controller="gallery-layout" data-gallery-layout-gallery-card-outlet=".gallery-document" data-action="resize@window->gallery-layout#reorderPreviewDivs gallery-card:show->gallery-layout#handlePreviewShow">
+      <%= render view_config.document_component.with_collection(@spines.map(&:document_with_preferred_item).map { |document| document_presenter(document) }, starting_document: @original_doc) %>
+    </div>
   <% end %>
 </div>
