@@ -4,7 +4,7 @@
   <% unless preferred_or_unavailable_citations_only? %>
   <div class="d-flex align-items-center gap-2 mb-3">
     <label for="citation-format" class="fw-bold">Select format</label>
-    <select id="citation-format" class="form-select w-25" data-action="change->citation-format#reveal">
+    <select id="citation-format" class="form-select w-25" data-action="change->citation-format#reveal" aria-controls="<%= Citations::MarcCitation::FORMATS.map { |style| "citation-format-#{style}" }.join(' ') %>">
       <% Citations::MarcCitation::FORMATS.each do |format| %>
         <option value="citation-format-<%= format %>"><%= t format, scope: 'searchworks.citations.styles' %></option>
       <% end %>

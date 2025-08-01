@@ -9,7 +9,7 @@
       <label for="citation-format-select" class="col-form-label fw-bold">Select format</label>
     </div>
     <div class="col-auto">
-      <select id="citation-format-select" data-action="change->citation-format#reveal" class="form-select" style="width: unset;">
+      <select id="citation-format-select" data-action="change->citation-format#reveal" class="form-select" style="width: unset;" aria-controls="<%= citations.keys.map { |style| "citation-format-#{style}" }.join(' ') %>">
         <% citations.keys.each do |style| %>
           <option value="citation-format-<%= style %>" ><%= t("searchworks.citations.styles.#{style}") %></option>
         <% end %>
