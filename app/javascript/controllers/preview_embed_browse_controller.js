@@ -6,14 +6,11 @@ export default class extends Controller {
     id: String,
     url: String
   }
+
   static targets = [ "button" ]
+
   static outlets = [ "preview" ]
 
-  showPreview() {
-    this.previewOutlet.load(this.idValue, this.urlValue)
-    this.updateButton('open')
-    this.dispatch('show');
-  }
 
   updateButton(state) {
     if (state == 'open') {
@@ -30,9 +27,20 @@ export default class extends Controller {
     }
   }
 
+  showPreview() {
+    this.previewOutlet.load(this.idValue, this.urlValue)
+
+    this.updateButton('open')
+    this.dispatch('show');
+  }
+
+  closePreview() {
+    this.previewOutlet.close()
+  }
+
   togglePreview() {
-    if (this.previewOpen()){
-      this.previewOutlet.close()
+    if (this.previewOpen()) {
+      this.closePreview()
     } else {
       this.showPreview()
     }

@@ -85,9 +85,6 @@ application.register("feedback-standalone", FeedbackStandaloneController)
 import GalleryLayoutController from "./gallery_layout_controller"
 application.register("gallery-layout", GalleryLayoutController)
 
-import GalleryPreviewController from "./gallery_preview_controller"
-application.register("gallery-preview", GalleryPreviewController)
-
 import GalleryRowController from "./gallery_row_controller"
 application.register("gallery-row", GalleryRowController)
 

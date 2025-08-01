@@ -34,7 +34,7 @@
 <div id="content" class="callnumber-browse p-3">
   <% if @spines.present? %>
     <% view_config = local_assigns[:view_config] || blacklight_config&.view_config(document_index_view_type) %>
-    <div id="documents" class="row gallery" data-controller="gallery-layout" data-gallery-layout-gallery-preview-outlet=".gallery-document" data-action="resize@window->gallery-layout#reorderPreviewDivs gallery-preview:show->gallery-layout#handlePreviewShow">
+    <div id="documents" class="row gallery" data-controller="gallery-layout" data-gallery-layout-preview-embed-browse-outlet=".gallery-document" data-action="resize@window->gallery-layout#reorderPreviewDivs preview-embed-browse:show->gallery-layout#handlePreviewShow">
       <%= render view_config.document_component.with_collection(@spines.map(&:document_with_preferred_item).map { |document| document_presenter(document) }, starting_document: @original_doc) %>
     </div>
   <% end %>
