@@ -15,3 +15,20 @@ end
 RSpec.configure do |config|
   config.include AccessibilityHelpers, type: :feature
 end
+
+RSpec::Matchers.define :be_valid_html do
+  match do |actual|
+    validate(actual.html, max_errors: 1).none?
+  end
+
+  failure_message do |actual|
+    errors = validate(actual.html)
+    "Expected HTML to be valid, but found errors:\n#{errors.join("\n")}"
+  end
+
+  def validate(body, max_errors: 10)
+    doc = Nokogiri::HTML5(body, max_errors: max_errors)
+
+    doc.errors
+  end
+end
