@@ -99,7 +99,7 @@ module Searchworks4
       end
 
       def call
-        tag.span pluralize(number_with_delimiter(@count), 'item'), class: 'bg-light rounded-pill small px-2 lh-sm text-nowrap'
+        render BadgeCounterComponent.new(@count, 'item', additional_classes: %w[px-2 lh-sm text-nowrap])
       end
     end
   end

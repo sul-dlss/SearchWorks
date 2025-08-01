@@ -43,8 +43,8 @@ RSpec.feature 'Bookmarking Items', :js do
 
       visit bookmarks_path
 
-      expect(page).to have_css('.active .bookmark-counter', text: '2')
-      expect(page).to have_css('.bookmark-counter', text: '0')
+      expect(page).to have_css('.active .badge', text: '2')
+      expect(page).to have_css('.badge', text: '0')
       within "#documents" do
         expect(page).to have_css("h3.index_title a", count: 2)
       end
@@ -62,8 +62,8 @@ RSpec.feature 'Bookmarking Items', :js do
     end
 
     it 'renders the page' do
-      expect(page).to have_css('.active .bookmark-counter', text: '3')
-      expect(page).to have_css('.bookmark-counter', text: '0')
+      expect(page).to have_css('.active .badge', text: '3')
+      expect(page).to have_css('.badge', text: '0')
       within "#documents" do
         expect(page).to have_css("article", count: 3)
       end
@@ -74,8 +74,8 @@ RSpec.feature 'Bookmarking Items', :js do
 
       expect(page).to have_content('Record removed')
 
-      expect(page).to have_css('.active .bookmark-counter', text: '2')
-      expect(page).to have_css('.bookmark-counter', text: '0')
+      expect(page).to have_css('.active .badge', text: '2')
+      expect(page).to have_css('.badge', text: '0')
       within "#documents" do
         expect(page).to have_css("article", count: 2)
       end

@@ -4,9 +4,7 @@
 <div class="collection-result-preview">
   <div class="d-inline-flex bg-white ms-4 px-2">
     <h2 class="mb-0">Digital collection</h2>
-    <span class="ms-2 badge rounded-pill bookmark-counter align-self-center">
-      <%= pluralize(number_with_delimiter(collection_document.collection_members.total), 'item') %>
-    </span>
+    <%= render BadgeCounterComponent.new(collection_document.collection_members.total, 'item', additional_classes: %w[ms-2 align-self-center]) %>
     <%= link_to(collection_members_path(collection_document), class: 'ms-2 btn btn-outline-primary') do %>
       <i class="bi bi-search me-1"></i>Search collection
     <% end %>
