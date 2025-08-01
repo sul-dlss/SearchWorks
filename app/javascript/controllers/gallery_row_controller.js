@@ -10,7 +10,9 @@ export default class extends Controller {
     maxPreviewWidth: { type: Number, default: -1 }
   }
 
-  scrollToCurrentDocument() {
+  scrollToCurrentDocument(e) {
+    if (e.target.parentElement != this.containerTarget) return;
+
     scrollOver(this.currentDocumentTarget(), this.containerTarget)
   }
 
