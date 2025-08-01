@@ -36,7 +36,7 @@ RSpec.feature "Feedback form modal", :js do
 
     aggregate_failures('shows the feedback form in a new tab') do
       switch_to_window(windows.last)
-      expect(page).to have_css("#feedback-form", visible: true)
+      expect(page).to have_css(".feedback-form", visible: true)
       within "form.feedback-form" do
         fill_in("message", with: "This is only a test")
         fill_in("name", with: "Ronald McDonald")
