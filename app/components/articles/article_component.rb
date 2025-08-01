@@ -12,6 +12,13 @@ module Articles
       !@document.eds_restricted?
     end
 
+    def fulltext_href
+      url = article_html_fulltext_url(@document)
+      return url if helpers.on_campus_or_su_affiliated_user?
+
+      new_user_session_path(referrer: url)
+    end
+
     def sections
       helpers.blacklight_config.show.sections
     end
