@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
   include EmailValidation
+  include WithPageLocation
 
   allow_browser versions: :modern, block: :handle_outdated_browser
 
