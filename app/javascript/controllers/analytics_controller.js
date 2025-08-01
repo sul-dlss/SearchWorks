@@ -29,10 +29,11 @@ export default class extends Controller {
   trackEvent(event) {
     const eventName = this.categoryValue || "searchworks"
     const element = event.currentTarget
+    const link_text = element.innerText ? element.innerText.trim() : ''
     const dimensions = {
       link_classes: element.className,
       link_id: element.id,
-      link_text: element.innerText.trim()
+      link_text: link_text
     }
     gtag('event', eventName, dimensions)
   }
