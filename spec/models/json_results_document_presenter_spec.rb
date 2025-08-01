@@ -3,10 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe JsonResultsDocumentPresenter do
-  subject(:presenter) { described_class.new(source_document) }
+  subject(:presenter) { described_class.new(source_document, view_context) }
 
   let(:document_data) { { id: 'abc123', title_display: 'The Title' } }
   let(:source_document) { SolrDocument.new(document_data) }
+  let(:view_context) { ApplicationController.new.view_context }
 
   describe '#as_json' do
     it 'returns the SolrDocument as_json response' do

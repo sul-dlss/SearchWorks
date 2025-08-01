@@ -21,10 +21,10 @@
 .nav-pills,
 .zoom-controls .btn-link,
 .bookmark-toolbar,
+.collection-info .finding-aid,
 .export-citations,
 .dropdown-item,
 .facet-options,
-.link-decoration-none
-{
+.link-decoration-none {
   --bs-link-decoration: none;
 }
