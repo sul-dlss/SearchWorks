@@ -19,6 +19,13 @@ export default class extends Controller {
 
   setCurrentPreview(event) {
     this.currentPreview = event.target;
+
+    this.previewEmbedBrowseOutlets.forEach((tile) => {
+      if (tile.element === event.target) return;
+
+      tile.updateButton('closed');
+    });
+
     this.adjustPreviewMargins();
   }
 

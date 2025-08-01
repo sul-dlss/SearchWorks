@@ -7,28 +7,29 @@ export default class extends Controller {
     url: String
   }
   static targets = [ "button" ]
-  static outlets = [ "preview-embed-browse", "preview" ]
+  static outlets = [ "preview" ]
 
   showPreview() {
     this.previewOutlet.load(this.idValue, this.urlValue)
-    this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
-
+    this.updateButton('open')
     this.dispatch('show');
+  }
+
+  updateButton(state) {
+    if (state == 'open') {
+      this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
+      this.buttonTarget.classList.remove('bi-chevron-down')
+    } else {
+      this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
+      this.buttonTarget.classList.add('bi-chevron-down')
+    }
   }
 
   togglePreview(e) {
     if (this.previewOpen()){
-      this.closePreview()
+      this.previewOutlet.close()
     } else {
-      // Close the others
-      this.previewEmbedBrowseOutlets.forEach((tile) => {
-        if (tile !== this) {
-          tile.closePreview()
-        }
-      })
-
       this.showPreview()
-
     }
   }
 
@@ -36,17 +37,11 @@ export default class extends Controller {
     return this.buttonTarget.classList.contains('preview-open')
   }
 
-  closePreview() {
-    this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
-    this.buttonTarget.classList.add('bi-chevron-down')
-    this.previewOutlet.close()
-  }
-
   handlePreviewClosed(event) {
     if (event.target != this.previewOutletElement) return;
-    if (this.buttonTarget.classList.contains('bi-chevron-down')) return;
+    if (!this.previewOpen()) return;
 
-    this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
-    this.buttonTarget.classList.add('bi-chevron-down')
+    this.closePreview();
+    this.updateButton('closed')
   }
 }

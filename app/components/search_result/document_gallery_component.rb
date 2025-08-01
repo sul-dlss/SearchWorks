@@ -49,9 +49,7 @@ module SearchResult
           action: 'preview:close@document->preview-embed-browse#handlePreviewClosed',
           preview_embed_browse_id_value: @document.id,
           preview_embed_browse_url_value: preview_path(@document.id),
-          preview_embed_browse_preview_embed_browse_outlet: '.gallery-document',
-          preview_embed_browse_preview_outlet: preview_outlet_selector,
-          preview_embed_browse_actions_selector_value: ".document-actions"
+          preview_embed_browse_preview_outlet: preview_outlet_selector
         }
       else
         {
