@@ -10,7 +10,7 @@
     </div>
 
     <%= content %>
-    <div id="toast-area" data-turbo-permanent class="toast-container position-fixed bottom-0 end-0 p-3" data-controller="toast-message-listener" data-action="show-toast@window->toast-message-listener#showToast">
+    <div id="toast-area" data-turbo-permanent class="toast-container position-fixed bottom-0 end-0 p-3" data-controller="toast-container" data-action="show-toast@window->toast-container#showToast">
       <template id="toast-template">
         <%= render ToastComponent.new %>
       </template>

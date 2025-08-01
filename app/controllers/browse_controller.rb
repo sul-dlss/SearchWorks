@@ -19,6 +19,8 @@ class BrowseController < ApplicationController
   end
 
   def nearby
+    @preview_id = params[:preview_id]
+
     respond_to do |format|
       format.html do
         render layout: false

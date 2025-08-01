@@ -2,16 +2,18 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="browse-nearby"
 export default class extends Controller {
-  static targets = [ "container", "tabs" ]
+  static targets = [ "container", "tabs", "fullPage" ]
 
   connect() {
     this.addActiveClasses(this.tabsTarget.querySelector('button.active'))
     this.resizeWithAside()
   }
 
-  markActive(event) {
+  setActive(event) {
     this.addActiveClasses(event.target)
     this.removeActiveClasses(event.relatedTarget)
+
+    if (this.hasFullPageTarget) this.fullPageTarget.href = event.target.dataset.fullPageUrl;
   }
 
   resizeWithAside() {

@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-import AccordionSectionController from "./accordion_section_controller"
-application.register("accordion-section", AccordionSectionController)
-
 import AnalyticsController from "./analytics_controller"
 application.register("analytics", AnalyticsController)
 
@@ -34,14 +31,8 @@ application.register("bookmark", BookmarkController)
 import BrowseNearbyController from "./browse_nearby_controller"
 application.register("browse-nearby", BrowseNearbyController)
 
-import BrowseRelatedItemsController from "./browse_related_items_controller"
-application.register("browse-related-items", BrowseRelatedItemsController)
-
 import CitationFormatController from "./citation_format_controller"
 application.register("citation-format", CitationFormatController)
-
-import CitationStylePickerController from "./citation_style_picker_controller"
-application.register("citation-style-picker", CitationStylePickerController)
 
 import CopyLinkController from "./copy_link_controller"
 application.register("copy-link", CopyLinkController)
@@ -61,9 +52,6 @@ application.register("eager-lazy", EagerLazyController)
 import EmailSentController from "./email_sent_controller"
 application.register("email-sent", EmailSentController)
 
-import EmbedBrowseController from "./embed_browse_controller"
-application.register("embed-browse", EmbedBrowseController)
-
 import ExhibitPanelController from "./exhibit_panel_controller"
 application.register("exhibit-panel", ExhibitPanelController)
 
@@ -79,14 +67,17 @@ application.register("facet-search", FacetSearchController)
 import FeedbackFormController from "./feedback_form_controller"
 application.register("feedback-form", FeedbackFormController)
 
-import FeedbackModalController from "./feedback_modal_controller"
-application.register("feedback-modal", FeedbackModalController)
-
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
-import GalleryPreviewController from "./gallery_preview_controller"
-application.register("gallery-preview", GalleryPreviewController)
+import GalleryCardController from "./gallery_card_controller"
+application.register("gallery-card", GalleryCardController)
+
+import GalleryLayoutController from "./gallery_layout_controller"
+application.register("gallery-layout", GalleryLayoutController)
+
+import GalleryRowController from "./gallery_row_controller"
+application.register("gallery-row", GalleryRowController)
 
 import GlobalAlertController from "./global_alert_controller"
 application.register("global-alert", GlobalAlertController)
@@ -99,9 +90,6 @@ application.register("home-page-search", HomePageSearchController)
 
 import LibraryH3lpController from "./library_h3lp_controller"
 application.register("library-h3lp", LibraryH3lpController)
-
-import LibraryHasController from "./library_has_controller"
-application.register("library-has", LibraryHasController)
 
 import ListToggleController from "./list_toggle_controller"
 application.register("list-toggle", ListToggleController)
@@ -136,12 +124,6 @@ application.register("popover", PopoverController)
 import PreviewController from "./preview_controller"
 application.register("preview", PreviewController)
 
-import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
-application.register("preview-embed-browse", PreviewEmbedBrowseController)
-
-import PreviewFilmstripController from "./preview_filmstrip_controller"
-application.register("preview-filmstrip", PreviewFilmstripController)
-
 import PurlEmbedController from "./purl_embed_controller"
 application.register("purl-embed", PurlEmbedController)
 
@@ -163,11 +145,11 @@ application.register("show-more-button", ShowMoreButtonController)
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
 
+import ToastContainer from "./toast_container_controller"
+application.register("toast-container", ToastContainer)
+
 import ToastController from "./toast_controller"
 application.register("toast", ToastController)
-
-import ToastMessageListenerController from "./toast_message_listener_controller"
-application.register("toast-message-listener", ToastMessageListenerController)
 
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)

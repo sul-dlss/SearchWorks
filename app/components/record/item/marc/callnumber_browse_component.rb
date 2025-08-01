@@ -31,24 +31,20 @@ module Record
               selected: index.zero?
             },
             data: {
-              action: "click->embed-browse#scrollOver",
-              controller: "embed-browse",
               bs_toggle: "tab",
               bs_target: "#callnumber-#{index}",
               start: document[:id],
-              embed_browse_current_doc_value: document[:id],
-              embed_browse_viewport_selector_value: "#callnumber-#{index}",
-              embed_browse_browse_url_value: full_page_path(spine.base_callnumber),
-              embed_browse_url_value: filmstrip_path(spine.base_callnumber)
+              full_page_url: full_page_path(spine.base_callnumber)
             }
           )
         end
 
-        def filmstrip_path(call_number)
+        def filmstrip_path(call_number, **)
           browse_nearby_path(
             start: document[:id],
             call_number:,
-            view: :gallery
+            view: :gallery,
+            **
           )
         end
 

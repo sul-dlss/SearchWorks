@@ -17,7 +17,10 @@ module LocationFacet
   def redirect_legacy_building_facet
     return unless params[:f] && params[:f][:building_facet]
 
-    legacy_names = params[:f].delete(:building_facet)
+    raw_facet = params[:f].delete(:building_facet)
+
+    legacy_names = raw_facet.respond_to?(:values) ? raw_facet.values : raw_facet
+
     library_codes = legacy_names.filter_map do |name|
       next 'SDR' if name == 'Stanford Digital Repository'
 
