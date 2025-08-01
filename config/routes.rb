@@ -100,8 +100,6 @@ Rails.application.routes.draw do
 
   resources :availability, only: [:index, :show]
 
-  resources :recent_selections, only: :index
-
   resources :course_reserves, only: :index, path: "reserves"
 
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
