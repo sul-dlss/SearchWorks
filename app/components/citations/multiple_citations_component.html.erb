@@ -6,7 +6,7 @@
     <label for="citation-format" class="fw-bold">Select format</label>
     <select id="citation-format" class="form-select w-25" data-action="change->citation-format#reveal">
       <% Citations::MarcCitation::FORMATS.each do |format| %>
-        <option value="<%= format %>"><%= t format, scope: 'searchworks.citations.styles' %></option>
+        <option value="citation-format-<%= format %>"><%= t format, scope: 'searchworks.citations.styles' %></option>
       <% end %>
     </select>
   </div>

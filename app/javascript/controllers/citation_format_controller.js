@@ -7,6 +7,6 @@ export default class extends Controller {
   reveal(e) {
     const citationFormat = e.target.value
     this.tabTargets.forEach(tab => tab.hidden = true)
-    this.element.querySelector(`#citation-format-${citationFormat}`).hidden = false
+    this.element.querySelector("#" + citationFormat).hidden = false
   }
 }
