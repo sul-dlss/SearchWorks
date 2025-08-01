@@ -2,7 +2,7 @@
   <% component.with_header do %>
     <div class="modal-title d-flex align-items-center">
       <h2 class="mb-0 me-3"><%= t('blacklight.email.form.title') %></h2>
-      <%= render BadgeCounterComponent.new(@documents.count, additional_classes: %w[bookmark-counter fs-6]) if @documents.many? %>
+      <%= render BadgeCounterComponent.new(@documents.count, 'records', additional_classes: %w[fs-6]) if @documents.many? %>
     </div>
   <% end %>
 

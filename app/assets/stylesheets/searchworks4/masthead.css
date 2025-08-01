@@ -15,9 +15,7 @@
   --bs-dropdown-item-padding-y: 0.25rem;
 }
 
-.bookmark-counter {
-  --bs-badge-padding-x: 0.625rem;
-  --bs-badge-font-weight: 500;
+.badge.small {
   --bs-badge-font-size: 0.875rem;
 }
 

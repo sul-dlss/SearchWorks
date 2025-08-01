@@ -101,3 +101,16 @@ aside,
 .text-digital-green {
   color: var(--stanford-digital-green);
 }
+
+.badge {
+  /* Override bootstrap to give a little more space */
+  --bs-badge-padding-x: 0.625rem;
+
+  /* Override bootstrap to make the default badge text legible */
+  --bs-badge-font-size: 0.875rem;
+  --bs-badge-font-weight: 500;
+
+  &.small {
+    --bs-badge-font-size: 0.75rem;
+  }
+}

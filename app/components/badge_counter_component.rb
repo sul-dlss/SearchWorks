@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class BadgeCounterComponent < ViewComponent::Base
-  def initialize(count = 0, what = nil, label: nil, classes: %w[badge rounded-pill text-bg-light], additional_classes: [], **kwargs)
+  def initialize(count = 0, what = nil, label: nil, classes: %w[badge rounded-pill], color: 'text-bg-light', additional_classes: [], **kwargs)
     super(**kwargs)
 
     @count = count
     @what = what
     @label = label
-    @classes = classes
+    @classes = classes + [color].compact
     @additional_classes = additional_classes
     @kwargs = kwargs
   end
