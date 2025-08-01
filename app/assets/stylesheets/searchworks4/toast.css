@@ -13,5 +13,6 @@
   }
   &.showing {
     opacity: 1;
+    transform: translateX(calc(100% + 30px));
   }
 }
