@@ -73,9 +73,6 @@ application.register("facet-search", FacetSearchController)
 import FeedbackFormController from "./feedback_form_controller"
 application.register("feedback-form", FeedbackFormController)
 
-import FeedbackModalController from "./feedback_modal_controller"
-application.register("feedback-modal", FeedbackModalController)
-
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
