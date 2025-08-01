@@ -31,9 +31,6 @@ application.register("bookmark", BookmarkController)
 import BrowseNearbyController from "./browse_nearby_controller"
 application.register("browse-nearby", BrowseNearbyController)
 
-import ChatHoursController from "./chat_hours_controller"
-application.register("chat-hours", ChatHoursController)
-
 import CitationFormatController from "./citation_format_controller"
 application.register("citation-format", CitationFormatController)
 

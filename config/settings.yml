@@ -191,6 +191,8 @@ libraries:
     ezproxy_host: https://stanford.idm.oclc.org/login?
     name: Stanford Libraries
 
+library_chat_hours_url: "https://library-hours.stanford.edu/api/v1/library/green/location/reference/hours/for/today"
+
 folio_hold_recall_statuses:
   - Checked out
   - Awaiting pickup

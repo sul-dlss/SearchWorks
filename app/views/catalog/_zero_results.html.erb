@@ -40,7 +40,7 @@
 
       <h3 class="mt-4">Stanford affiliates <%= render StanfordOnlyPopoverComponent.new %></h3>
 
-      <%= render SearchResult::NoResult::ChatWithLibrarianComponent.new %>
+      <%= render Searchworks4::ChatWithLibrarianComponent.new header_class: 'h4', layout: 'block' %>
 
       <div class="mt-2">
         Place a request via <%= link_to 'Interlibrary loan', 'https://sulils.stanford.edu/' %>.
