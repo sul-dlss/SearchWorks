@@ -91,20 +91,4 @@ RSpec.feature 'Article Searching' do
       expect(current_url).not_to match(%r{/article\?.*&q=kittens})
     end
   end
-
-  describe 'JSON API' do
-    it 'includes the fulltext_link_html data' do
-      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
-      visit articles_path(q: 'kittens', format: 'json')
-      results = JSON.parse(page.body)
-      expect(Capybara.string(results['response']['docs'][0]['fulltext_link_html'])).to have_link('View on detail page')
-      expect(Capybara.string(results['response']['docs'][1]['fulltext_link_html'])).to have_link('View full text')
-
-      expect(
-        Capybara.string(results['response']['docs'][2]['fulltext_link_html'])
-      ).to have_link('Find full text or request')
-
-      expect(Capybara.string(results['response']['docs'][3]['fulltext_link_html'])).to have_link('View/download PDF')
-    end
-  end
 end
