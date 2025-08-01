@@ -7,45 +7,40 @@ export default class extends Controller {
     id: String
   }
 
+  static targets = [ "button" ]
   static outlets = ['preview']
 
   connect() {
-    this.triggerBtn = document.createElement('button')
-    this.triggerBtn.classList.add('btn', 'preview-trigger-btn', 'preview-opacity')
-    this.triggerBtn.ariaLabel = 'Show preview'
-    this.triggerBtn.dataset.action = 'click->preview-filmstrip#togglePreview'
-    this.triggerBtn.innerHTML = '<span class="bi-chevron-down small"></span>'
-
     // NOTE: The filmstrip, viewport, prevew ,and closeBtn are outside of the controller.
     this.filmstrip = this.element.closest('.image-filmstrip');
     this.viewport = this.filmstrip.querySelector('.viewport');
-    this.appendTriggers()
   }
 
-  appendTriggers() {
-    this.element.append(this.triggerBtn);
+  updateButton(state) {
+    if (state == 'open') {
+      this.buttonTarget.classList.add('preview-open')
+      this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-up')
+      this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-down')
+      this.buttonTarget.ariaLabel = 'Hide preview'
+      this
+    } else if (this.buttonTarget.classList.contains('preview-open')) {
+      this.buttonTarget.classList.remove('preview-open')
+      this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-up')
+      this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-down')
+      this.buttonTarget.ariaLabel = 'Show preview'
+    }
   }
 
   togglePreview() {
-    if (this.triggerBtn.classList.contains('preview-open')) {
+    if (this.buttonTarget.classList.contains('preview-open')) {
       this.closePreview()
     } else {
       this.showPreview()
     }
   }
 
-  toggleButtonClosed(button) {
-    button.classList.remove('preview-open')
-    this.triggerBtn.ariaLabel = 'Hide preview'
-    button.innerHTML = '<span class="bi-chevron-down small"></span>'
-  }
-
   showPreview() {
-    const prevOpenButton = document.querySelector('.preview-open')
-    if (prevOpenButton) this.toggleButtonClosed(prevOpenButton)
-    this.triggerBtn.classList.add('preview-open')
-    this.triggerBtn.ariaLabel = 'Hide preview'
-    this.triggerBtn.innerHTML = '<span class="bi-chevron-up small"></span>'
+    this.updateButton('open')
 
     this.previewOutlet.load(this.idValue, this.urlValue)
     this.adjustPreviewMargins();
@@ -53,14 +48,14 @@ export default class extends Controller {
   }
 
   closePreview() {
-    this.toggleButtonClosed(this.triggerBtn);
+    this.updateButton('closed')
     this.previewOutlet.close()
   }
 
   handlePreviewClose(event) {
     if (event.target != this.previewOutletElement) return;
 
-    this.toggleButtonClosed(this.triggerBtn);
+    this.updateButton('closed')
   }
 
   adjustPreviewMargins() {

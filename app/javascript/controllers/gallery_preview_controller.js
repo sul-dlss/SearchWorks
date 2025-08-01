@@ -17,10 +17,25 @@ export default class extends Controller {
     window.addEventListener('resize', () => this.reorderPreviewDivs())
   }
 
+  updateButton(state) {
+    if (state == 'open') {
+      this.buttonTarget.classList.add('preview-open')
+      this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-up')
+      this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-down')
+      this.buttonTarget.ariaLabel = 'Hide preview'
+      this
+    } else if (this.buttonTarget.classList.contains('preview-open')) {
+      this.buttonTarget.classList.remove('preview-open')
+      this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-up')
+      this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-down')
+      this.buttonTarget.ariaLabel = 'Show preview'
+    }
+  }
+
   showPreview() {
     this.previewOutlet.load(this.idValue, this.urlValue)
 
-    this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
+    this.updateButton('open')
     this.attachPreviewEvents()
     this.adjustPreviewMargins()
   }
@@ -118,8 +133,7 @@ export default class extends Controller {
   handlePreviewClosed(event) {
     if (event.target != this.previewOutletElement) return;
 
-    this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
-    this.buttonTarget.classList.add('bi-chevron-down')
+    this.updateButton('closed')
   }
 
   itemsPerRow() {

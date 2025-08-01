@@ -19,6 +19,10 @@
             <a href="<%= solr_document_path(document[:id]) %>">
               <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document[:id] %>" alt="<%= document_presenter(document).heading %>">
             </a>
+
+            <button class="btn preview-trigger-btn preview-opacity" aria-label="Show preview" data-preview-filmstrip-target="button" data-action="click->preview-filmstrip#togglePreview">
+              <span class="bi bi-chevron-down small"></span>
+            </button>
           </li>
         <% end %>
       </ul>
