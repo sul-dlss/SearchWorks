@@ -1,35 +1,51 @@
 import { Controller } from "@hotwired/stimulus"
+import scrollOver from "../scroll-over"
 
-// Controls a single tile in the browse nearby ribbon
+// Connects to data-controller="gallery-row"
 export default class extends Controller {
+  static targets = [ "container" ]
+  static outlets = [ "gallery-card", "preview" ]
   static values = {
-    actionsSelector: String,
-    id: String,
-    url: String,
-    previewSelector: String
-  }
-  static targets = [ "button" ]
-  static outlets = [ "preview-embed-browse", "preview" ]
-
-  connect() {
+    currentDocumentClass: { type: String, default: 'current-document' },
+    maxPreviewWidth: { type: Number, default: -1 }
   }
 
-  showPreview() {
-    this.previewOutlet.load(this.idValue, this.urlValue)
-    this.buttonTarget.classList.add('preview-open', 'bi-chevron-up')
-    this.attachPreviewEvents()
-    this.adjustPreviewMargins()
+  scrollToCurrentDocument(e) {
+    if (e.target.parentElement != this.containerTarget) return;
+
+    scrollOver(this.currentDocumentTarget(), this.containerTarget)
+  }
+
+  currentDocumentTarget() {
+    return this.galleryCardOutletElements.find(el => el.classList.contains(this.currentDocumentClassValue));
+  }
+
+  setCurrentPreview(event) {
+    this.currentPreview = event.target;
+
+    this.galleryCardOutlets.forEach((tile) => {
+      if (tile.element === event.target) return;
+
+      tile.updateButton('closed');
+    });
+
+    this.adjustPreviewMargins();
+  }
+
+  get previewContainer() {
+    return this.galleryCardOutletElement.parentElement;
   }
 
   adjustPreviewMargins() {
+    if (!this.currentPreview) return;
+
     // This is assuming the preview is styled for 100% width
     this.previewOutletElement.style.marginLeft = 0
     this.previewOutletElement.style.marginRight = 0
-    const maxPreviewWidth = 800
-    const galleryGapWidth = 16
-    const galleryRect = this.element.getBoundingClientRect()
+    const maxPreviewWidth = this.maxPreviewWidthValue;
+    const galleryRect = this.currentPreview.getBoundingClientRect()
     const previewRect = this.previewOutletElement.getBoundingClientRect()
-    const galleryDocumentWidth = galleryRect.width + galleryGapWidth
+    const galleryDocumentWidth = this.previewContainer.getBoundingClientRect().width / this.galleryCardOutlets.length;
     const previewWidth = previewRect.width
     const leftBound = previewRect.left
     const rightBound = leftBound + previewWidth
@@ -37,7 +53,7 @@ export default class extends Controller {
     const galleryCenterDistanceFromLeftBound = (galleryRect.left + (galleryDocumentWidth / 2)) - leftBound
     const galleryCenterDistanceFromRightBound = rightBound - (galleryRect.left + (galleryDocumentWidth / 2))
 
-    if (previewWidth <= maxPreviewWidth) {
+    if (maxPreviewWidth < 0 || previewWidth <= maxPreviewWidth) {
       // The potential max width of the preview is smaller than our specified max width, so add our minimum padding.
       this.previewOutletElement.style.marginLeft = `${minMargin}px`
       this.previewOutletElement.style.marginRight = `${minMargin}px`
@@ -87,65 +103,5 @@ export default class extends Controller {
 
   get arrow() {
     return this.previewOutlet.arrowTarget;
-  }
-
-  togglePreview(e) {
-    if (this.previewOpen()){
-      this.closePreview()
-    } else {
-      // Close the others
-      this.previewEmbedBrowseOutlets.forEach((tile) => {
-        if (tile !== this) {
-          tile.closePreview()
-        }
-      })
-
-      this.showPreview()
-
-    }
-  }
-
-  currentPreview(e){
-    // Check if we're clicking in a preview
-    if (e.target.closest('.preview-container')){
-      return true
-    } else {
-      return e.target === this.buttonTarget
-    }
-  }
-
-  previewOpen(){
-    return this.buttonTarget.classList.contains('preview-open')
-  }
-
-  scrollContainerTarget() {
-    const container = this.previewOutletElement.closest('.embed-callnumber-browse-container')
-    if (!container) return null
-    return container.querySelector('.embedded-items')
-  }
-
-  attachPreviewEvents() {
-    const scrollContainer = this.scrollContainerTarget()
-    if (scrollContainer) {
-      scrollContainer.addEventListener('scroll', () => {
-        this.adjustPreviewMargins()
-      })
-    }
-    window.addEventListener('resize', () => {
-      this.adjustPreviewMargins()
-    })
-  }
-
-  closePreview() {
-    this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
-    this.buttonTarget.classList.add('bi-chevron-down')
-    this.previewOutlet.close()
-  }
-
-  handlePreviewClosed(event) {
-    if (event.target != this.previewOutletElement) return;
-
-    this.buttonTarget.classList.remove('preview-open', 'bi-chevron-up')
-    this.buttonTarget.classList.add('bi-chevron-down')
   }
 }

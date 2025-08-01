@@ -31,9 +31,6 @@ application.register("bookmark", BookmarkController)
 import BrowseNearbyController from "./browse_nearby_controller"
 application.register("browse-nearby", BrowseNearbyController)
 
-import BrowseRelatedItemsController from "./browse_related_items_controller"
-application.register("browse-related-items", BrowseRelatedItemsController)
-
 import ChatHoursController from "./chat_hours_controller"
 application.register("chat-hours", ChatHoursController)
 
@@ -61,9 +58,6 @@ application.register("eager-lazy", EagerLazyController)
 import EmailSentController from "./email_sent_controller"
 application.register("email-sent", EmailSentController)
 
-import EmbedBrowseController from "./embed_browse_controller"
-application.register("embed-browse", EmbedBrowseController)
-
 import ExhibitPanelController from "./exhibit_panel_controller"
 application.register("exhibit-panel", ExhibitPanelController)
 
@@ -85,8 +79,14 @@ application.register("feedback-modal", FeedbackModalController)
 import FeedbackStandaloneController from "./feedback_standalone_controller"
 application.register("feedback-standalone", FeedbackStandaloneController)
 
-import GalleryPreviewController from "./gallery_preview_controller"
-application.register("gallery-preview", GalleryPreviewController)
+import GalleryCardController from "./gallery_card_controller"
+application.register("gallery-card", GalleryCardController)
+
+import GalleryLayoutController from "./gallery_layout_controller"
+application.register("gallery-layout", GalleryLayoutController)
+
+import GalleryRowController from "./gallery_row_controller"
+application.register("gallery-row", GalleryRowController)
 
 import GlobalAlertController from "./global_alert_controller"
 application.register("global-alert", GlobalAlertController)
@@ -135,12 +135,6 @@ application.register("popover", PopoverController)
 
 import PreviewController from "./preview_controller"
 application.register("preview", PreviewController)
-
-import PreviewEmbedBrowseController from "./preview_embed_browse_controller"
-application.register("preview-embed-browse", PreviewEmbedBrowseController)
-
-import PreviewFilmstripController from "./preview_filmstrip_controller"
-application.register("preview-filmstrip", PreviewFilmstripController)
 
 import PurlEmbedController from "./purl_embed_controller"
 application.register("purl-embed", PurlEmbedController)

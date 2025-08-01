@@ -37,15 +37,16 @@
     </div>
   <% # bookmark functions for items/docs and preview button %>
   <div class="gallery-buttons d-flex justify-content-end">
-    <button class="btn btn-xs btn-preview preview-button bi-chevron-down documentid-<%= document.id %>"
-            aria-label="preview"
-            data-behavior="preview-button-trigger"
-            data-preview-embed-browse-target="button"
-            data-gallery-preview-target="button"
-            data-action="preview-embed-browse#togglePreview gallery-preview#togglePreview"
-            ></button>
+    <button class="btn btn-xs btn-preview preview-button documentid-<%= document.id %>"
+            aria-label="Show preview"
+            data-gallery-card-target="button"
+            data-action="gallery-card#togglePreview"
+            ><span class="bi bi-chevron-down"></span></button>
     <%= actions %>
   </div>
   </div>
 <% end %>
-<div class="<%= preview_container_dom_class %> preview-container d-none" data-controller="preview" data-document-id="<%= document[:id] %>"></div>
+
+<% unless @preview_id.present? %>
+  <div class="<%= preview_container_dom_class %> preview-container d-none" data-controller="preview" data-document-id="<%= document[:id] %>"></div>
+<% end %>

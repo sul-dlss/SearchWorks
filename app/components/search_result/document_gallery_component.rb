@@ -4,6 +4,13 @@ module SearchResult
   class DocumentGalleryComponent < Blacklight::DocumentComponent
     attr_reader :document, :counter
 
+    def initialize(document:, document_counter: 0, starting_document: nil, preview_id: nil, **)
+      super(document: document, document_counter: document_counter, **)
+
+      @starting_document = starting_document
+      @preview_id = preview_id
+    end
+
     def resource_icon
       helpers.render_resource_icon(presenter.formats)
     end
@@ -16,8 +23,16 @@ module SearchResult
       "preview-container-#{document.id}"
     end
 
+    def preview_outlet_selector
+      if @preview_id
+        "##{@preview_id}"
+      else
+        ".#{preview_container_dom_class}"
+      end
+    end
+
     def classes
-      super - ['document'] + %w[border gallery-document]
+      super - ['document'] + %w[border gallery-document] + [('current-document' if @starting_document && document.id == @starting_document.id)].compact
     end
 
     def data
@@ -28,26 +43,13 @@ module SearchResult
     end
 
     def stimulus_attributes
-      if browse_nearby?
-        {
-          controller: 'preview-embed-browse',
-          action: 'preview:close@document->preview-embed-browse#handlePreviewClosed',
-          preview_embed_browse_id_value: @document.id,
-          preview_embed_browse_url_value: preview_path(@document.id),
-          preview_embed_browse_preview_embed_browse_outlet: '.gallery-document',
-          preview_embed_browse_preview_outlet: ".#{preview_container_dom_class}",
-          preview_embed_browse_actions_selector_value: ".document-actions"
-        }
-      else
-        {
-          controller: 'gallery-preview',
-          gallery_preview_id_value: @document.id,
-          gallery_preview_url_value: preview_path(@document.id),
-          gallery_preview_gallery_preview_outlet: '.gallery-document',
-          gallery_preview_preview_selector_value: ".#{preview_container_dom_class}",
-          gallery_preview_actions_selector_value: ".document-actions"
-        }
-      end
+      {
+        controller: 'gallery-card',
+        action: 'preview:close@document->gallery-card#handlePreviewClosed',
+        gallery_card_id_value: @document.id,
+        gallery_card_url_value: preview_path(@document.id),
+        gallery_card_preview_outlet: preview_outlet_selector
+      }
     end
 
     def browse_nearby?
