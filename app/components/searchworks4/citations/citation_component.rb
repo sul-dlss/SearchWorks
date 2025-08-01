@@ -13,6 +13,16 @@ module Searchworks4
       delegate :citations, :eds_ris_export?, to: :presenter
       delegate :refworks_export_url, to: :helpers
 
+      def default_style
+        if unavailable?
+          null_key
+        elsif preferred_only?
+          preferred_key
+        else
+          citations.keys.first
+        end
+      end
+
       def render?
         citations.present?
       end
