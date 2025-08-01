@@ -28,11 +28,6 @@
   }
 }
 
-.what-header {
-  font-weight: 700;
-  color: var(--stanford-cardinal);
-}
-
 .catalog-home-page {
   .tips .btn {
     padding: 0.125rem 0.375rem;
