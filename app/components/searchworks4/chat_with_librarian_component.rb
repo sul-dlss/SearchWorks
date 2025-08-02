@@ -2,7 +2,7 @@
 
 module Searchworks4
   class ChatWithLibrarianComponent < ViewComponent::Base
-    delegate :on_campus_or_su_affiliated_user?, to: :helpers
+    delegate :allowed_to?, to: :helpers
 
     # The default may change but this maintains the old design in other parts of the site
     def initialize(layout: 'inline', header_class: "h3")
@@ -18,7 +18,7 @@ module Searchworks4
     end
 
     def chat_attrs
-      return {} unless on_campus_or_su_affiliated_user?
+      return {} unless allowed_to?(:create?, with: OnlineChatPolicy)
 
       { library_h3lp_jid_value: "ic@chat.libraryh3lp.com" }
     end
