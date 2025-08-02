@@ -10,11 +10,11 @@
     <% # header bar for doc items in index view gallery %>
     <div class="documentHeader">
       <h3 class="index_title mb-0">
-        <span class="two-lines">
+        <span class="truncate-2">
           <%= helpers.link_to_document document, class: 'fw-semibold', counter: counter, data: { action: "click->analytics#trackLink"} %>
         </span>
       </h3>
-      <div class="location one-line pb-1">
+      <div class="location truncate-1 pb-1">
         <% if document.items.present? %>
           <% if document.holdings.libraries.length == 1 %>
             <%= document.holdings.libraries.first.name %>
@@ -27,7 +27,7 @@
           <%= document.eresources_library_display_name || 'Stanford Libraries' %>
         <% end %>
       </div>
-      <div class="callnumber-bar two-lines">
+      <div class="callnumber-bar truncate-2">
         <% if document.items.present? %>
           <%= document.preferred_item.callnumber %>
         <% elsif document.preferred_online_links.present? %>
