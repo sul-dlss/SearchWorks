@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ActiveRecord::Base
-  attr_writer :affiliations, :person_affiliations, :entitlements
+  attr_writer :affiliations, :person_affiliations, :entitlements, :on_campus
 
   # Connects this user object to Blacklights Bookmarks.
   include Blacklight::User
@@ -33,6 +33,14 @@ class User < ActiveRecord::Base
     @entitlements ||= ENV['eduPersonEntitlement']
   end
 
+  def on_campus?
+    @on_campus || false
+  end
+
+  def on_campus_or_su_affiliated_user?
+    on_campus? || stanford_affiliated?
+  end
+
   # Based on previous work and discussions, the 'eduPersonAffiliaton' attribute, which is mapped
   # to the 'unscoped-affiliation' attribute, should have sufficient information to decide whether
   # or not a user has the right affiliation access.  If the value of this attribute is
@@ -50,11 +58,11 @@ class User < ActiveRecord::Base
     # We also want to send a notification in case it is covered by suAffiliation
     # because this shows us a mismatch between the attributes when there shouldn't be a difference.
     # TODO: Refer to https://github.com/sul-dlss/SearchWorks/issues/4016
-    if su_affiliated?
-      Honeybadger.notify('User affiliations and privileges: Not affiliated by eduPersonAffiliation or eduPersonEntitlement ' \
-                         'but affiliated by suAffiliation', context: to_honeybadger_context)
-      true
-    end
+    return false unless su_affiliated?
+
+    Honeybadger.notify('User affiliations and privileges: Not affiliated by eduPersonAffiliation or eduPersonEntitlement ' \
+                       'but affiliated by suAffiliation', context: to_honeybadger_context)
+    true
   end
 
   # Checks if access is enabled based on set of defined Stanford affiliations
@@ -64,6 +72,14 @@ class User < ActiveRecord::Base
     affiliations.split(';').any? do |affiliation|
       Settings.SU_AFFILIATIONS.include?(affiliation.strip)
     end
+  end
+
+  # clears the credentials and returns this instance
+  def without_credentials!
+    self.affiliations = ''
+    self.person_affiliations = ''
+    self.entitlements = ''
+    self
   end
 
   # Checks if eduPersonAffiliation attribute value, mapped to unscoped-affiliation, provides access

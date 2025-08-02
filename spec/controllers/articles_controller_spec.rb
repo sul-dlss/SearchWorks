@@ -145,7 +145,7 @@ RSpec.describe ArticlesController do
     let(:eds_session) { instance_double(Eds::Session, session_token: 'abc') }
 
     before do
-      allow(controller).to receive_messages(session: user_session, on_campus_or_su_affiliated_user?: true)
+      allow(controller).to receive_messages(session: user_session, allowed_to?: true)
       allow(controller).to receive(:search_service).and_return(double(session_token: 'abc'))
     end
 

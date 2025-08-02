@@ -2,7 +2,7 @@
   <div class="article-record-sections record-sections">
     <% if @document.html_fulltext? %>
       <div class="html-fulltext-container mb-5">
-        <%= link_to(helpers.on_campus_or_su_affiliated_user? ? article_html_fulltext_url(@document) : new_user_session_path(referrer: article_html_fulltext_url(@document)), class: 'btn btn-secondary', target: '_blank') do %>
+        <%= link_to(allowed_to?(:read_fulltext?, with: EdsApiPolicy) ? article_html_fulltext_url(@document) : new_user_session_path(referrer: article_html_fulltext_url(@document)), class: 'btn btn-secondary', target: '_blank') do %>
           Full text <i class='bi bi-chevron-right'></i>
         <% end %>
       </div>

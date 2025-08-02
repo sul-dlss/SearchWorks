@@ -298,7 +298,7 @@ class ArticlesController < ApplicationController
   def setup_eds_session
     return if session[Settings.EDS_SESSION_TOKEN_KEY].present?
 
-    session['eds_guest'] = !on_campus_or_su_affiliated_user?
+    session['eds_guest'] = !allowed_to?(:list_non_guest?, with: EdsApiPolicy)
 
     session[Settings.EDS_SESSION_TOKEN_KEY] = Eds::Session.new(
       guest: session['eds_guest'],
