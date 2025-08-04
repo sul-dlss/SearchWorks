@@ -11,14 +11,14 @@ RSpec.describe SearchWorksRecordMailer do
         id: '123',
         title_display: "Title1",
         item_display_struct: [{ barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 123' }],
-        marc_links_struct: [{ href: "https://library.stanford.edu", sfx: true }],
+        marc_links_struct: [{ href: "https://library.stanford.edu" }],
         modsxml: mods_everything
       ),
       SolrDocument.new(
         id: '321',
         title_display: "Title2",
         item_display_struct: [{ barcode: '54321', library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS', callnumber: 'ABC 321' }],
-        marc_links_struct: [{ href: "https://stacks.stanford.edu", sfx: true }],
+        marc_links_struct: [{ href: "https://stacks.stanford.edu" }],
         marc_json_struct: metadata1
       )
     ]
@@ -117,12 +117,6 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to include "ABC 321"
       end
 
-      it 'includes the URLs' do
-        expect(mail.body).to include "Online:"
-        expect(mail.body).to include "https://library.stanford.edu"
-        expect(mail.body).to include "https://stacks.stanford.edu"
-      end
-
       it 'includes the URL to all the documents' do
         expect(mail.body).to have_link("Title1", href: "http://example.com/view/123")
         expect(mail.body).to have_link("Title2", href: "http://example.com/view/321")
@@ -176,11 +170,6 @@ RSpec.describe SearchWorksRecordMailer do
 
         expect(mail.body).to have_css('dt', text: 'Off-campus collections - SAL3')
         expect(mail.body).to have_css('dd', text: 'ABC 321')
-      end
-
-      it 'includes links of all the documents' do
-        expect(mail.body).to have_css('h2', text: 'Online')
-        expect(mail.body).to have_css('.preferred-online-links a', text: 'Find full text', count: documents.length)
       end
 
       it 'separates records w/ a horizontal rule' do

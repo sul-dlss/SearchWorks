@@ -12,7 +12,7 @@ module AccessPanels
     end
 
     def display_connection_problem_links?
-      document.marc_links.sfx.any? || document.is_a_database? || document.preferred_online_links.any?(&:stanford_only?)
+      document.is_a_database? || document.preferred_online_links.any?(&:stanford_only?)
     end
   end
 end

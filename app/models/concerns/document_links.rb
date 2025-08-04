@@ -4,7 +4,7 @@ module DocumentLinks
   include MarcLinks
 
   def preferred_online_links
-    sfx_links || marc_fulltext_links || []
+    marc_fulltext_links || []
   end
 
   def has_finding_aid?
@@ -30,10 +30,6 @@ module DocumentLinks
   end
 
   private
-
-  def sfx_links
-    marc_links.sfx.presence
-  end
 
   def marc_fulltext_links
     marc_links.fulltext if marc_links&.fulltext.present?

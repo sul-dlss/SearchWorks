@@ -54,20 +54,4 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
       expect(list_item['class']).to include('stanford-only')
     end
   end
-
-  context 'ILL links' do
-    let(:document) do
-      EdsDocument.new({
-                        'FullText' => {
-                          'CustomLinks' => [
-                            { 'Text' => 'View request options', 'Url' => 'http://example.com' }
-                          ]
-                        }
-                      })
-    end
-
-    it 'includes label icon' do
-      expect(page).to have_css('ul li a.sfx', text: /^Find full text or request/)
-    end
-  end
 end

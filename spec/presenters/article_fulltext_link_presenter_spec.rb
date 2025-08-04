@@ -26,26 +26,6 @@ RSpec.describe ArticleFulltextLinkPresenter do
       it { is_expected.to be_empty }
     end
 
-    context 'when the document has link' do
-      let(:document) do
-        EdsDocument.new({
-                          'FullText' => {
-                            'CustomLinks' => [{
-                              'Text' => 'Check SFX for full text',
-                              'Url' => 'http://example.com'
-                            }]
-                          }
-                        })
-      end
-
-      it 'includes a rendered link representing that data' do
-        expect(links.length).to eq 1
-
-        expect(page).to have_css('span.available-online', text: 'Available online')
-        expect(page).to have_link('View on content provider\'s site', href: 'http://example.com')
-      end
-    end
-
     context 'when the document has a stanford-only link' do
       let(:document) do
         EdsDocument.new({

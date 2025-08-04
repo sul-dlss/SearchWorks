@@ -19,14 +19,6 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
     )
   end
 
-  let(:sfx) do
-    described_class.new(
-      document: SolrDocument.new(
-        marc_links_struct: [{ link_text: "Link text", href: "http://example.com/sfx-link", sfx: true }]
-      )
-    )
-  end
-
   let(:image_collection_member) do
     described_class.new(
       document: SolrDocument.new(
@@ -82,13 +74,6 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       expect(fulltext.links.all?(&:fulltext?)).to be_truthy
     end
 
-    it 'returns the SFX link even if there are other links' do
-      links = sfx.links
-      expect(links.length).to eq 1
-      expect(links.first).to be_sfx
-      expect(links.first.html).to match %r{^<a href=.*class="sfx">Find full text<\/a>$}
-    end
-
     it 'returns fulltext links for collection members' do
       expect(image_collection_member.links).to be_present
     end
@@ -113,14 +98,6 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       end
 
       it { expect(component.display_connection_problem_links?).to be false }
-    end
-
-    context 'when given an sfx document' do
-      let(:solr_document_data) do
-        { marc_links_struct: [{ link_text: "Link text", href: "https://example.com/sfx", sfx: true }] }
-      end
-
-      it { expect(component.display_connection_problem_links?).to be true }
     end
 
     context 'when given a database' do
@@ -171,16 +148,6 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       render_inline(described_class.new(document:))
       expect(page).to have_css '.panel-online'
       expect(page).to have_css 'h2', text: 'Also available at'
-    end
-
-    context 'when the record has an SFX link' do
-      it 'renders markup w/ attributes to fetch SFX data (and does not render the link)' do
-        document = SolrDocument.new(marc_links_struct: [link_text: "Link text", href: "http://example.com/sfx-link", sfx: true])
-        render_inline(described_class.new(document:))
-        expect(page).to have_css('.panel-online')
-        expect(page).to have_no_link('Find full text')
-        expect(page).to have_css('turbo-frame#sfx-data')
-      end
     end
 
     describe "database" do

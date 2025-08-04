@@ -27,8 +27,6 @@ module MarcLinks
     def link_text
       if finding_aid?
         finding_aid_link_text
-      elsif link_struct[:sfx]
-        'Find full text'
       else
         link_struct[:link_text]
       end

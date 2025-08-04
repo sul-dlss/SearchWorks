@@ -10,7 +10,7 @@
           <% if link.href == 'detail' %>
             <%= link_to(link.text, article_fulltext_link_path(id: document.id, type: link.type), data: { turbo: false }) %>
           <% else %>
-            <%= link_to(link.text, link.href, class: link.ill? ? 'sfx' : '') %>
+            <%= link_to(link.text, link.href) %>
           <% end %>
           <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
         </li>

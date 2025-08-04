@@ -47,10 +47,6 @@ module EdsLinks
       %w[pdf ebook-pdf ebook-epub].include?(type)
     end
 
-    def sfx?
-      @original_label.to_s =~ /check sfx/i
-    end
-
     def ill?
       @original_label.to_s =~ /view request options/i
     end
@@ -69,7 +65,6 @@ module EdsLinks
         link_text: label,
         href:      url,
         fulltext:  present? && show?(categories, category),
-        sfx:       sfx?,
         ill:       ill?,
         type:,
         stanford_only: pdf? || type == 'other'
@@ -103,7 +98,6 @@ module EdsLinks
       'PDF eBook Full Text'.downcase =>      { label: 'View/download PDF', category: 2 },
       'EDS Full text'.downcase =>            { label: 'View on content provider\'s site', category: 3 },
       'Full text'.downcase =>                { label: 'View on content provider\'s site', category: 4 },
-      'Check SFX for full text'.downcase =>  { label: 'View on content provider\'s site', category: 4 },
       :open_access_link =>                   { label: :as_is, category: 4 },
       'View request options'.downcase =>     { label: 'Find full text or request', category: 5 }
     }.freeze

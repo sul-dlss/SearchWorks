@@ -18,7 +18,6 @@ class Links
       @link_text = options[:link_text]
       @link_title = options[:link_title]
       @managed_purl = options[:managed_purl]
-      @sfx = options[:sfx]
       @sort = options[:sort]
       @stanford_only = options[:stanford_only]
       @type = options[:type]
@@ -48,10 +47,6 @@ class Links
       @finding_aid
     end
 
-    def sfx?
-      @sfx
-    end
-
     def managed_purl?
       @managed_purl
     end
@@ -66,10 +61,6 @@ class Links
 
     def casalini_text
       '(source: Casalini)' if @casalini
-    end
-
-    def link_class
-      'sfx' if @sfx
     end
 
     def link_host
@@ -95,7 +86,7 @@ class Links
                      else
                        {}
                      end
-      content_tag(:a, @link_text || link_host, href: @href, class: link_class, **tooltip_attr)
+      content_tag(:a, @link_text || link_host, href: @href, **tooltip_attr)
     end
   end
 end
