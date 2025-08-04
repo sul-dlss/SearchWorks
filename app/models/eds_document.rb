@@ -135,7 +135,7 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   end
 
   def eds_authors
-    deep_find_all(dig(*bib_relationshps_path), 'NameFull')&.to_a
+    deep_find_all(dig(*bib_relationshps_path), 'NameFull')&.to_a&.uniq
   end
 
   def eds_publication_date
