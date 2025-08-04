@@ -1,0 +1,10 @@
+<td class="w-100">
+  <div class="bound-with bg-light p-2 mt-2">
+    <div class="bound-with-type">Item is bound with other items</div>
+    <%= link_to bound_with_children_modal_solr_document_path(item_id: item.id),
+        data: { turbo_frame: "blacklight-modal", blacklight_modal: "trigger" },
+        class: 'btn btn-link p-1 text-left' do %>
+    See items <i class="bi bi-chevron-double-right fs-14"></i>
+    <% end %>
+  </div>
+</td>
