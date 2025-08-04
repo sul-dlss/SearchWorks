@@ -1,0 +1,515 @@
+---
+format_hsim:
+- Database
+- Software/Multimedia
+id: '4287807'
+hashed_id_ssi: f0783c5f7ac3a1e875d850eb2e71dc4e
+all_search: 'IEEE Xplore [electronic resource]. Added title on home page caption graphic:
+  IEEE/IEE electronic library IEEE explore IEL online IEEE IEE electronic library
+  online IEEE electronic library IEEE/IEE electronic library online Computer data.
+  [Piscataway, N.J.?] : IEEE, c1998- Coverage from 1988- Title from home page caption
+  graphic (viewed July 31, 2000). Also available on CD-ROM. Full text  and abstracts/citations
+  restricted to subscribing institutions; tables of contents free for all Text and
+  graphics (HTML and PDF) Provides full-image access to the publications of both the
+  Institute of Electrical and Electronics Engineers (IEEE) and the Institution of
+  Electrical Engineers (IEE); includes all journals, magazines, standards and conference
+  proceedings published since 1988. The index is a subset of the INSPEC database,
+  allowing users to search specifically for the information they need, then display
+  and print the full image. Each image includes all charts, graphs, diagrams, photographs,
+  and illustrative material. Mode of access: World Wide Web. System requirements:
+  Internet access with Netscape Navigator Version 4.x or higher or Microsoft Internet
+  Explorer 4.0 or higher. Requires Adobe Acrobat 3.x to view full text. 22 Physics
+  Abstracts Databases. Electrical engineering Abstracts Databases. Information technology
+  Abstracts Databases. Physics Indexes Databases. Electrical engineering Indexes Databases.
+  Information technology Indexes Databases. Standards, Engineering Databases. IEEE/IEE
+  electronic library Available to Stanford-affiliated users. http://ieeexplore.ieee.org/
+  CRARYG druid:hm051nv6365 hm051nv6365_00_0001.jp2 Gordon B. and Mary L. Crary Endowed
+  Book Fund GALLAGHER druid:xj380fc8866 xj380fc8866_00_0001.jp2 Philip B. Gallagher
+  Memorial Book Fund MYERS druid:vp331zt9239 vp331zt9239_00_0001.jp2 Ralph Cather
+  Myers Endowed Book Fund in Engineering AHNE druid:wb131kf0893 KAQAT_Ahn.jp2 Edward
+  Sun Ahn Endowed Book Fund NISHINO druid:pw114bg3719 pw114bg3719_00_0001.jp2 Hiroshi
+  Herbert Nishino Memorial Fund for Engineering'
+title_245a_search: IEEE Xplore
+title_245_search: IEEE Xplore
+title_variant_search:
+- IEEE/IEE electronic library
+- IEEE explore
+- IEL online
+- IEEE IEE electronic library online
+- IEEE electronic library
+- IEEE/IEE electronic library online
+title_variant_display:
+- IEEE/IEE electronic library
+- IEEE explore
+- IEL online
+- IEEE IEE electronic library online
+- IEEE electronic library
+- IEEE/IEE electronic library online
+title_related_search:
+- IEEE/IEE electronic library
+title_245a_display: IEEE Xplore
+title_display: IEEE Xplore [electronic resource].
+title_full_display: IEEE Xplore [electronic resource].
+title_sort: IEEE Xplore electronic resource
+author_title_245ac_search:
+- IEEE Xplore
+author_sort: "\U0010FFFF IEEE Xplore electronic resource"
+topic_search:
+- Physics
+- Electrical engineering
+- Information technology
+- Standards, Engineering
+topic_display:
+- Physics
+- Electrical engineering
+- Information technology
+- Standards, Engineering
+subject_other_subvy_search:
+- Abstracts Databases.
+- Indexes Databases.
+- Databases.
+subject_all_search:
+- Physics Abstracts Databases.
+- Electrical engineering Abstracts Databases.
+- Information technology Abstracts Databases.
+- Physics Indexes Databases.
+- Electrical engineering Indexes Databases.
+- Information technology Indexes Databases.
+- Standards, Engineering Databases.
+topic_facet:
+- Physics
+- Electrical engineering
+- Information technology
+- Standards, Engineering
+pub_search:
+- "[Piscataway, N.J.?] : IEEE"
+pub_display:
+- "[Piscataway, N.J.?] : IEEE"
+pub_country: New Jersey, United States
+pub_date: '1998'
+pub_date_search: '1998'
+pub_date_sort: '1998'
+pub_year_tisim:
+- 1998
+pub_year_ss: '1998'
+publication_year_isi: 1998
+imprint_display:
+- "[Piscataway, N.J.?] : IEEE, c1998-"
+date_cataloged: '2000-01-28T00:00:00Z'
+language:
+- English
+url_fulltext:
+- http://ieeexplore.ieee.org/
+url_restricted:
+- http://ieeexplore.ieee.org/
+oclc:
+- '123332117'
+access_facet:
+- Online
+format_main_ssim:
+- Database
+genre_ssim:
+- Abstracts
+- Databases
+- Indexes
+db_az_subject:
+- Engineering
+- Chemistry and Chemical Engineering
+- Computer Science
+db_az_subject_search:
+- Engineering
+- Chemistry and Chemical Engineering
+- Computer Science
+summary_search:
+- Provides full-image access to the publications of both the Institute of Electrical
+  and Electronics Engineers (IEEE) and the Institution of Electrical Engineers (IEE);
+  includes all journals, magazines, standards and conference proceedings published
+  since 1988. The index is a subset of the INSPEC database, allowing users to search
+  specifically for the information they need, then display and print the full image.
+  Each image includes all charts, graphs, diagrams, photographs, and illustrative
+  material.
+summary_display:
+- Provides full-image access to the publications of both the Institute of Electrical
+  and Electronics Engineers (IEEE) and the Institution of Electrical Engineers (IEE);
+  includes all journals, magazines, standards and conference proceedings published
+  since 1988. The index is a subset of the INSPEC database, allowing users to search
+  specifically for the information they need, then display and print the full image.
+  Each image includes all charts, graphs, diagrams, photographs, and illustrative
+  material.
+holdings_library_code_ssim:
+- SUL
+library_code_facet_ssim:
+- SUL
+bookplates_display:
+- CRARYG -|- hm051nv6365 -|- hm051nv6365_00_0001.jp2 -|- Gordon B. and Mary L. Crary
+  Endowed Book Fund
+- GALLAGHER -|- xj380fc8866 -|- xj380fc8866_00_0001.jp2 -|- Philip B. Gallagher Memorial
+  Book Fund
+- MYERS -|- vp331zt9239 -|- vp331zt9239_00_0001.jp2 -|- Ralph Cather Myers Endowed
+  Book Fund in Engineering
+- AHNE -|- wb131kf0893 -|- KAQAT_Ahn.jp2 -|- Edward Sun Ahn Endowed Book Fund
+- NISHINO -|- pw114bg3719 -|- pw114bg3719_00_0001.jp2 -|- Hiroshi Herbert Nishino
+  Memorial Fund for Engineering
+fund_facet:
+- CRARYG
+- hm051nv6365
+- GALLAGHER
+- xj380fc8866
+- MYERS
+- vp331zt9239
+- AHNE
+- wb131kf0893
+- NISHINO
+- pw114bg3719
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '007'
+- '008'
+- '035'
+- '040'
+- '099'
+- '245'
+- '246'
+- '247'
+- '256'
+- '260'
+- '362'
+- '500'
+- '506'
+- '516'
+- '520'
+- '538'
+- '596'
+- '650'
+- '787'
+- '856'
+- '979'
+- '999'
+- 035a
+- 040acd
+- '099a'
+- 245ah
+- 246ia
+- 246a
+- 247a
+- 256a
+- 260abc
+- 362a
+- 500a
+- 506a
+- 516a
+- 520a
+- 538a
+- 596a
+- 650avv
+- 650av
+- 787t
+- 856zu
+- 979fbcd
+- 999is
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040d"
+- "?099a"
+- "?245a"
+- "?245h"
+- "?246i"
+- "?246a"
+- "?247a"
+- "?256a"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?362a"
+- "?500a"
+- "?506a"
+- "?516a"
+- "?520a"
+- "?538a"
+- "?596a"
+- "?650a"
+- "?650v"
+- "?787t"
+- "?856z"
+- "?856u"
+- "?979f"
+- "?979b"
+- "?979c"
+- "?979d"
+- "?999i"
+- "?999s"
+bib_search: 'IEEE Xplore [electronic resource]. Added title on home page caption graphic:
+  IEEE/IEE electronic library IEEE explore IEL online IEEE IEE electronic library
+  online IEEE electronic library IEEE/IEE electronic library online [Piscataway, N.J.?]
+  : IEEE, c1998- Physics Electrical engineering Information technology Standards,
+  Engineering Database'
+vern_bib_search: Database
+uuid_ssi: 6d48aac3-9ba3-59d4-a38f-878584ef5c60
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"6d48aac3-9ba3-59d4-a38f-878584ef5c60","hrid":"a4287807","tags":{"tagList":[]},"notes":[{"note":"Title
+  from home page caption graphic (viewed July 31, 2000)","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Also
+  available on CD-ROM","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Full
+  text  and abstracts/citations restricted to subscribing institutions; tables of
+  contents free for all","staffOnly":false,"instanceNoteTypeId":"e814a32e-02da-4773-8f3a-6629cdb7ecdf"},{"note":"Text
+  and graphics (HTML and PDF)","staffOnly":false,"instanceNoteTypeId":"3d931c23-6ae8-4e5a-8802-dc8c2e21ea19"},{"note":"Provides
+  full-image access to the publications of both the Institute of Electrical and Electronics
+  Engineers (IEEE) and the Institution of Electrical Engineers (IEE); includes all
+  journals, magazines, standards and conference proceedings published since 1988.
+  The index is a subset of the INSPEC database, allowing users to search specifically
+  for the information they need, then display and print the full image. Each image
+  includes all charts, graphs, diagrams, photographs, and illustrative material","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Mode
+  of access: World Wide Web","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"},{"note":"System
+  requirements: Internet access with Netscape Navigator Version 4.x or higher or Microsoft
+  Internet Explorer 4.0 or higher. Requires Adobe Acrobat 3.x to view full text","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"}],"title":"IEEE
+  Xplore [electronic resource].","series":[],"source":"MARC","_version":6,"editions":[],"metadata":{"createdDate":"2023-08-21T06:56:32.211Z","updatedDate":"2025-03-19T10:07:03.677Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Physics--Abstracts--Databases"},{"value":"Electrical
+  engineering--Abstracts--Databases"},{"value":"Information technology--Abstracts--Databases"},{"value":"Physics--Indexes--Databases"},{"value":"Electrical
+  engineering--Indexes--Databases"},{"value":"Information technology--Indexes--Databases"},{"value":"Standards,
+  Engineering--Databases"}],"languages":["eng"],"indexTitle":"IEEE Xplore","identifiers":[{"value":"(Sirsi)
+  a4287807","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)123332117","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)275690988","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  a4287807","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(Sirsi)
+  CDKG99-D4","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"[Piscataway,
+  N.J.?]","publisher":"IEEE","dateOfPublication":"c1998-"}],"contributors":[],"catalogedDate":"2000-01-28","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"http://ieeexplore.ieee.org","name":"Resource","publicNote":"Available
+  to Stanford-affiliated users.","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":["Coverage
+  from 1988-"],"statisticalCodes":[{"id":"4bc78766-8f34-4b1a-9e39-2a689a4ae998","name":"Database"}],"alternativeTitles":[{"alternativeTitle":"Added
+  title on home page caption graphic: IEEE/IEE electronic library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEEE
+  explore","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEL
+  online","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEEE
+  IEE electronic library online","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEEE
+  electronic library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEEE/IEE
+  electronic library online","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:56:32.106+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"90cec30d-475e-4e32-ac68-c3a8439fd14d","orderType":"Ongoing","orderStatus":"Open","poLineNumber":"612243F03-1","orderSentDate":"2025-02-20T19:26:17.303+00:00","orderCloseReason":null,"polReceiptStatus":"Ongoing"}]}'
+last_updated: '2025-07-30T10:53:16Z'
+created: '2025-07-30T10:53:16Z'
+timestamp: '2025-07-30T10:53:16Z'
+marc_json_struct:
+- '{"leader":"03162cmm a2200589 a 4500","fields":[{"001":"a4287807"},{"003":"SIRSI"},{"007":"cr
+  cn ||||||||"},{"008":"990526s19989999nju        m        eng d"},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a4287807"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)123332117"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-I)275690988"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"CMontNP"},{"c":"CMontNP"},{"d":"CSt"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"TA"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"TK"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"QD"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"XL"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"IEEE
+  Xplore"},{"h":"[electronic resource]."}]}},{"246":{"ind1":"1","ind2":" ","subfields":[{"i":"Added
+  title on home page caption graphic:"},{"a":"IEEE/IEE electronic library"}]}},{"246":{"ind1":"3","ind2":"
+  ","subfields":[{"a":"IEEE explore"}]}},{"246":{"ind1":"3","ind2":" ","subfields":[{"a":"IEL
+  online"}]}},{"246":{"ind1":"3","ind2":" ","subfields":[{"a":"IEEE IEE electronic
+  library online"}]}},{"246":{"ind1":"3","ind2":" ","subfields":[{"a":"IEEE electronic
+  library"}]}},{"247":{"ind1":"1","ind2":"0","subfields":[{"a":"IEEE/IEE electronic
+  library online"}]}},{"256":{"ind1":" ","ind2":" ","subfields":[{"a":"Computer data."}]}},{"260":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"[Piscataway, N.J.?] :"},{"b":"IEEE,"},{"c":"c1998-"}]}},{"362":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Coverage from 1988-"}]}},{"500":{"ind1":" ","ind2":" ","subfields":[{"a":"Title
+  from home page caption graphic (viewed July 31, 2000)."}]}},{"500":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Also available on CD-ROM."}]}},{"506":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Full text  and abstracts/citations restricted to subscribing
+  institutions; tables of contents free for all"}]}},{"516":{"ind1":" ","ind2":" ","subfields":[{"a":"Text
+  and graphics (HTML and PDF)"}]}},{"520":{"ind1":" ","ind2":" ","subfields":[{"a":"Provides
+  full-image access to the publications of both the Institute of Electrical and Electronics
+  Engineers (IEEE) and the Institution of Electrical Engineers (IEE); includes all
+  journals, magazines, standards and conference proceedings published since 1988.
+  The index is a subset of the INSPEC database, allowing users to search specifically
+  for the information they need, then display and print the full image. Each image
+  includes all charts, graphs, diagrams, photographs, and illustrative material."}]}},{"538":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Mode of access: World Wide Web."}]}},{"538":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"System requirements: Internet access with Netscape
+  Navigator Version 4.x or higher or Microsoft Internet Explorer 4.0 or higher. Requires
+  Adobe Acrobat 3.x to view full text."}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"22"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Physics"},{"v":"Abstracts"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Electrical engineering"},{"v":"Abstracts"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Information technology"},{"v":"Abstracts"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Physics"},{"v":"Indexes"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Electrical engineering"},{"v":"Indexes"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Information technology"},{"v":"Indexes"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Standards, Engineering"},{"v":"Databases."}]}},{"787":{"ind1":"0","ind2":"
+  ","subfields":[{"t":"IEEE/IEE electronic library"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"http://ieeexplore.ieee.org/"}]}},{"979":{"ind1":"
+  ","ind2":" ","subfields":[{"f":"CRARYG"},{"b":"druid:hm051nv6365"},{"c":"hm051nv6365_00_0001.jp2"},{"d":"Gordon
+  B. and Mary L. Crary Endowed Book Fund"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"GALLAGHER"},{"b":"druid:xj380fc8866"},{"c":"xj380fc8866_00_0001.jp2"},{"d":"Philip
+  B. Gallagher Memorial Book Fund"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"MYERS"},{"b":"druid:vp331zt9239"},{"c":"vp331zt9239_00_0001.jp2"},{"d":"Ralph
+  Cather Myers Endowed Book Fund in Engineering"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"AHNE"},{"b":"druid:wb131kf0893"},{"c":"KAQAT_Ahn.jp2"},{"d":"Edward
+  Sun Ahn Endowed Book Fund"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"NISHINO"},{"b":"druid:pw114bg3719"},{"c":"pw114bg3719_00_0001.jp2"},{"d":"Hiroshi
+  Herbert Nishino Memorial Fund for Engineering"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  a4287807"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi) CDKG99-D4"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"6d48aac3-9ba3-59d4-a38f-878584ef5c60"},{"s":"38771bac-94d6-53d9-ac1b-d17eb57cd569"}]}}]}'
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: ieeexplore.ieee.org
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  additional_links: []
+  material_type:
+  note: Available to Stanford-affiliated users.
+  href: http://ieeexplore.ieee.org/
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Provides full-image access to the publications of both the Institute of Electrical
+      and Electronics Engineers (IEEE) and the Institution of Electrical Engineers
+      (IEE); includes all journals, magazines, standards and conference proceedings
+      published since 1988. The index is a subset of the INSPEC database, allowing
+      users to search specifically for the information they need, then display and
+      print the full image. Each image includes all charts, graphs, diagrams, photographs,
+      and illustrative material.
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 5a8e2f6f-e20a-5c8b-a88b-b162fac6d8ee
+    hrid: ah4287807_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:58:24.351Z'
+      updatedDate: '2023-08-21T06:58:24.351Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 6d48aac3-9ba3-59d4-a38f-878584ef5c60
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 1ebb49d3-2b73-5734-9cf8-3ee4c42a0e31
+    hrid: ah4287807_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T06:58:29.992Z'
+      updatedDate: '2023-08-21T06:58:29.992Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: XX(4287807.2)
+    instanceId: 6d48aac3-9ba3-59d4-a38f-878584ef5c60
+    holdingsType:
+      id: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+      name: Computer File
+      source: local
+    callNumberType:
+      id: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+      name: Shelving control number
+      source: folio
+    holdingsTypeId: 87e17a6d-a5e9-4981-95d3-1416f42df37f
+    callNumberTypeId: 28927d76-e097-4f63-8510-e56f2b7a3ad0
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b5ec2962-ec69-4f15-8afc-f14cc9729982
+    permanentLocationId: b5ec2962-ec69-4f15-8afc-f14cc9729982
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b5ec2962-ec69-4f15-8afc-f14cc9729982
+        code: SUL-SHADOW
+        name: Ask at circulation desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b5ec2962-ec69-4f15-8afc-f14cc9729982
+        code: SUL-SHADOW
+        name: Ask at circulation desk
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []

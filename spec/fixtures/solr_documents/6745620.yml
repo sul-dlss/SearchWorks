@@ -1,0 +1,527 @@
+---
+format_hsim:
+- Database
+id: '6745620'
+hashed_id_ssi: f8144d638953e9adc9e59ea8cb592d91
+all_search: 'JSTOR [electronic resource] Journal storage 1995-2009: [New York] : JSTOR
+  2009- : [New York] : ITHAKA, 1995- Updated weekly Provides page images of back issues
+  of the core scholarly journals in the humanities, social sciences, and basic sciences
+  from the earliest issues to within a few years of current publication. Users may
+  browse by journal title or discipline, or may search the full-text or citations/abstracts.
+  New issues of existing titles and new titles are added approximately on a weekly
+  basis. Online versions of the print publications. Mode of access: World Wide Web.
+  Arts & Sciences I-XV -- Biological Sciences Collection -- Business Collection --
+  Ecology & Botany Collection -- General Sciences Collection -- Jewish Studies Collection
+  -- Language & Literature Collection -- Life Sciences Collection -- Music Collection
+  -- 19th Century British Pamphlets -- Struggles for Freedom: Southern Africa. Description
+  based on JSTOR website (JSTOR, viewed February 23, 2011); title from homepage. Humanities
+  Periodicals Databases. Humanities Periodicals Indexes. Social sciences Periodicals
+  Indexes. Social sciences Periodicals Databases. Mathematics Periodicals Databases.
+  Mathematics Periodicals Indexes. Science Periodicals Indexes. Science Periodicals
+  Databases. Scholarly periodicals Databases. Scholarly periodicals Indexes. Full-text
+  databases. lcgft JSTOR (Organization) Ithaka (Organization) Available to Stanford-affiliated
+  users at: http://www.jstor.org/ 22'
+title_245a_search: JSTOR
+title_245_search: JSTOR
+title_variant_search:
+- Journal storage
+title_variant_display:
+- Journal storage
+title_245a_display: JSTOR
+title_display: JSTOR [electronic resource]
+title_full_display: JSTOR [electronic resource]
+title_sort: JSTOR electronic resource
+author_title_245ac_search:
+- JSTOR
+author_7xx_search:
+- JSTOR (Organization)
+- Ithaka (Organization)
+author_other_facet:
+- JSTOR (Organization)
+- Ithaka (Organization)
+author_sort: "\U0010FFFF JSTOR electronic resource"
+topic_search:
+- Humanities
+- Social sciences
+- Mathematics
+- Science
+- Scholarly periodicals
+topic_display:
+- Humanities
+- Social sciences
+- Mathematics
+- Science
+- Scholarly periodicals
+topic_subx_search:
+- Periodicals
+subject_other_search:
+- Full-text databases.
+subject_other_display:
+- Full-text databases.
+subject_other_subvy_search:
+- Periodicals Databases.
+- Indexes.
+- Databases.
+subject_all_search:
+- Humanities Periodicals Databases.
+- Humanities Periodicals Indexes.
+- Social sciences Periodicals Indexes.
+- Social sciences Periodicals Databases.
+- Mathematics Periodicals Databases.
+- Mathematics Periodicals Indexes.
+- Science Periodicals Indexes.
+- Science Periodicals Databases.
+- Scholarly periodicals Databases.
+- Scholarly periodicals Indexes.
+- Full-text databases.
+topic_facet:
+- Humanities
+- Social sciences
+- Mathematics
+- Science
+- Scholarly periodicals
+pub_search:
+- "[New York] : JSTOR"
+- "[New York] : ITHAKA"
+pub_display:
+- "[New York] : JSTOR"
+- "[New York] : ITHAKA"
+pub_country: New York (State), United States
+pub_date: '1995'
+pub_date_search: '1995'
+pub_date_sort: '1995'
+pub_year_tisim:
+- 1995
+- 1996
+- 1997
+- 1998
+- 1999
+- 2000
+- 2001
+- 2002
+- 2003
+- 2004
+- 2005
+- 2006
+- 2007
+- 2008
+- 2009
+- 2010
+- 2011
+- 2012
+- 2013
+- 2014
+- 2015
+- 2016
+- 2017
+- 2018
+- 2019
+- 2020
+- 2021
+- 2022
+- 2023
+- 2024
+- 2025
+pub_year_ss: 1995 -
+beginning_year_isi: 1995
+imprint_display:
+- '1995-2009: [New York] : JSTOR 2009- : [New York] : ITHAKA, 1995-'
+date_cataloged: '2011-07-20T00:00:00Z'
+language:
+- English
+url_fulltext:
+- http://www.jstor.org/
+url_restricted:
+- http://www.jstor.org/
+oclc:
+- '46609535'
+access_facet:
+- Online
+format_main_ssim:
+- Book
+- Database
+genre_ssim:
+- Full-text databases
+- Periodicals
+- Databases
+- Indexes
+db_az_subject:
+- General and Reference Works
+- History
+- American History
+- Science (General)
+- Economics and Business
+- Jewish Studies
+- Music
+- Language
+- Earth Sciences
+- Biology
+db_az_subject_search:
+- General and Reference Works
+- History
+- American History
+- Science (General)
+- Economics and Business
+- Jewish Studies
+- Music
+- Language
+- Earth Sciences
+- Biology
+toc_search:
+- 'Arts & Sciences I-XV -- Biological Sciences Collection -- Business Collection --
+  Ecology & Botany Collection -- General Sciences Collection -- Jewish Studies Collection
+  -- Language & Literature Collection -- Life Sciences Collection -- Music Collection
+  -- 19th Century British Pamphlets -- Struggles for Freedom: Southern Africa.'
+summary_search:
+- Provides page images of back issues of the core scholarly journals in the humanities,
+  social sciences, and basic sciences from the earliest issues to within a few years
+  of current publication. Users may browse by journal title or discipline, or may
+  search the full-text or citations/abstracts. New issues of existing titles and new
+  titles are added approximately on a weekly basis.
+summary_display:
+- Provides page images of back issues of the core scholarly journals in the humanities,
+  social sciences, and basic sciences from the earliest issues to within a few years
+  of current publication. Users may browse by journal title or discipline, or may
+  search the full-text or citations/abstracts. New issues of existing titles and new
+  titles are added approximately on a weekly basis.
+lccn: '2011228758'
+callnum_facet_hsim:
+- LC Classification|Z - Bibliography, Library Science, Information Resources|Z - Bibliography,
+  Library Science, Information Resources
+lc_assigned_callnum_ssim:
+- Z6944.S3
+holdings_library_code_ssim:
+- SUL
+library_code_facet_ssim:
+- SUL
+shelfkey:
+- lc z   6944.000000 s0.300000
+reverse_shelfkey:
+- en~0~~~tqvv}zzzzzz~7z}wzzzzz~~~~~~~~~~~~~~~~~~~~~~
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '006'
+- '007'
+- '008'
+- '010'
+- '035'
+- '040'
+- '042'
+- '049'
+- '050'
+- '082'
+- '245'
+- '246'
+- '260'
+- '310'
+- '520'
+- '530'
+- '538'
+- '505'
+- '588'
+- '650'
+- '655'
+- '710'
+- '856'
+- '994'
+- '099'
+- '596'
+- '999'
+- 010az
+- 035a
+- 040acddddddddddddd
+- 042a
+- '049a'
+- 050a
+- '082a'
+- 245ah
+- 246a
+- 2603ab
+- 2603abc
+- 310a
+- 520a
+- 530a
+- 538a
+- 505a
+- 588a
+- 650avv
+- 650axv
+- 650av
+- 655a2
+- 710a
+- 856zu
+- 994ab
+- '099a'
+- 596a
+- 999is
+- "?010a"
+- "?010z"
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040d"
+- "?042a"
+- "?049a"
+- "?050a"
+- "?082a"
+- "?245a"
+- "?245h"
+- "?246a"
+- "?2603"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?310a"
+- "?520a"
+- "?530a"
+- "?538a"
+- "?505a"
+- "?588a"
+- "?650a"
+- "?650v"
+- "?650x"
+- "?655a"
+- "?6552"
+- "?710a"
+- "?856z"
+- "?856u"
+- "?994a"
+- "?994b"
+- "?099a"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'JSTOR [electronic resource] Journal storage 1995-2009: [New York] : JSTOR
+  2009- : [New York] : ITHAKA, 1995- JSTOR (Organization) Ithaka (Organization) Humanities
+  Social sciences Mathematics Science Scholarly periodicals Book Database'
+vern_bib_search: Book Database
+uuid_ssi: aa5d3e53-1527-5410-a224-9795f5ba8e89
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"aa5d3e53-1527-5410-a224-9795f5ba8e89","hrid":"a6745620","notes":[{"note":"Provides
+  page images of back issues of the core scholarly journals in the humanities, social
+  sciences, and basic sciences from the earliest issues to within a few years of current
+  publication. Users may browse by journal title or discipline, or may search the
+  full-text or citations/abstracts. New issues of existing titles and new titles are
+  added approximately on a weekly basis","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Online
+  versions of the print publications","staffOnly":false,"instanceNoteTypeId":"1d51e8b2-dee7-43f5-983c-a40757b9cdfa"},{"note":"Mode
+  of access: World Wide Web","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"},{"note":"Arts
+  & Sciences I-XV -- Biological Sciences Collection -- Business Collection -- Ecology
+  & Botany Collection -- General Sciences Collection -- Jewish Studies Collection
+  -- Language & Literature Collection -- Life Sciences Collection -- Music Collection
+  -- 19th Century British Pamphlets -- Struggles for Freedom: Southern Africa","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"},{"note":"Description
+  based on JSTOR website (JSTOR, viewed February 23, 2011); title from homepage","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"}],"title":"JSTOR
+  [electronic resource]","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T10:16:38.945Z","updatedDate":"2023-08-21T10:16:38.945Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Humanities
+  Periodicals Databases"},{"value":"Humanities Periodicals Indexes"},{"value":"Social
+  sciences Periodicals Indexes"},{"value":"Social sciences Periodicals Databases"},{"value":"Mathematics
+  Periodicals Databases"},{"value":"Mathematics Periodicals Indexes"},{"value":"Science
+  Periodicals Indexes"},{"value":"Science Periodicals Databases"},{"value":"Scholarly
+  periodicals Databases"},{"value":"Scholarly periodicals Indexes"},{"value":"Genre:
+  Full-text databases"}],"languages":["eng"],"indexTitle":"Jstor","identifiers":[{"value":"2011228758","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  a6745620","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)46609535","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)742007612","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  ocm46609535","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(Sirsi)
+  ocm36027621","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"[New
+  York]","publisher":"1995-2009 JSTOR","dateOfPublication":""},{"place":"[New York]","publisher":"2009
+  ITHAKA","dateOfPublication":"1995"}],"contributors":[{"name":"JSTOR (Organization)","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"},{"name":"Ithaka
+  (Organization)","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2011-07-20","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"Z6944.S3","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"025.06","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[{"uri":"http://www.jstor.org","name":"Resource","publicNote":"Available
+  to Stanford-affiliated users at","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"4fc0f4fe-06fd-490a-a078-c4da1754e03a","publicationRange":[],"statisticalCodes":[{"id":"4bc78766-8f34-4b1a-9e39-2a689a4ae998","name":"Database"}],"alternativeTitles":[{"alternativeTitle":"Journal
+  storage","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"end":1995},"statusUpdatedDate":"2023-08-21T10:16:38.861+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":["Updated
+  weekly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-07-30T12:41:29Z'
+created: '2025-07-30T12:41:29Z'
+timestamp: '2025-07-30T12:41:29Z'
+marc_json_struct:
+- '{"leader":"03049cai a2200697 a 4500","fields":[{"001":"a6745620"},{"003":"SIRSI"},{"006":"m        d        "},{"007":"cr
+  |||||||||||"},{"008":"970325c19959999nyuwr   o     0    2eng  "},{"010":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"  2011228758"},{"z":"  2001522653"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a6745620"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"DLC"},{"c":"DLC"},{"d":"BTCTA"},{"d":"ZP2"},{"d":"GZM"},{"d":"EYM"},{"d":"IUL"},{"d":"N@F"},{"d":"JPG"},{"d":"DRB"},{"d":"ALAUL"},{"d":"COO"},{"d":"PAU"},{"d":"DLC"},{"d":"CSt"}]}},{"042":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"pcc"}]}},{"049":{"ind1":" ","ind2":" ","subfields":[{"a":"STFA"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"Z6944.S3"}]}},{"082":{"ind1":"0","ind2":"4","subfields":[{"a":"025.06"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"JSTOR"},{"h":"[electronic
+  resource]"}]}},{"246":{"ind1":"1","ind2":" ","subfields":[{"a":"Journal storage"}]}},{"260":{"ind1":"
+  ","ind2":" ","subfields":[{"3":"1995-2009:"},{"a":"[New York] :"},{"b":"JSTOR"}]}},{"260":{"ind1":"3","ind2":"
+  ","subfields":[{"3":"2009- :"},{"a":"[New York] :"},{"b":"ITHAKA,"},{"c":"1995-"}]}},{"310":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Updated weekly"}]}},{"520":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Provides page images of back issues of the core scholarly journals
+  in the humanities, social sciences, and basic sciences from the earliest issues
+  to within a few years of current publication. Users may browse by journal title
+  or discipline, or may search the full-text or citations/abstracts. New issues of
+  existing titles and new titles are added approximately on a weekly basis."}]}},{"530":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Online versions of the print publications."}]}},{"538":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Mode of access: World Wide Web."}]}},{"505":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Arts & Sciences I-XV -- Biological Sciences Collection -- Business
+  Collection -- Ecology & Botany Collection -- General Sciences Collection -- Jewish
+  Studies Collection -- Language & Literature Collection -- Life Sciences Collection
+  -- Music Collection -- 19th Century British Pamphlets -- Struggles for Freedom:
+  Southern Africa."}]}},{"588":{"ind1":" ","ind2":" ","subfields":[{"a":"Description
+  based on JSTOR website (JSTOR, viewed February 23, 2011); title from homepage."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Humanities"},{"v":"Periodicals"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Humanities"},{"x":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Social sciences"},{"x":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Social sciences"},{"v":"Periodicals"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Mathematics"},{"v":"Periodicals"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Mathematics"},{"x":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Science"},{"x":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Science"},{"v":"Periodicals"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Scholarly periodicals"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Scholarly periodicals"},{"v":"Indexes."}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Full-text databases."},{"2":"lcgft"}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"JSTOR (Organization)"}]}},{"710":{"ind1":"2","ind2":" ","subfields":[{"a":"Ithaka
+  (Organization)"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available to
+  Stanford-affiliated users at:"},{"u":"http://www.jstor.org/"}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"C0"},{"b":"STF"}]}},{"099":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"A"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"D"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"E"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"Q"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"HC"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"BM"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"M"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"P"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"QE"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"QH"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)46609535"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-I)742007612"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"22"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ocm46609535"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(Sirsi) a6745620"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  ocm36027621"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"aa5d3e53-1527-5410-a224-9795f5ba8e89"},{"s":"e7ca08c9-b680-5ebe-82e8-2adda26a8fb6"}]}}]}'
+author_struct:
+- contributors:
+  - link: JSTOR (Organization)
+    search: JSTOR (Organization)
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+  - link: Ithaka (Organization)
+    search: Ithaka (Organization)
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: www.jstor.org
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  additional_links: []
+  material_type:
+  note: 'Available to Stanford-affiliated users at:'
+  href: http://www.jstor.org/
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Provides page images of back issues of the core scholarly journals in the humanities,
+      social sciences, and basic sciences from the earliest issues to within a few
+      years of current publication. Users may browse by journal title or discipline,
+      or may search the full-text or citations/abstracts. New issues of existing titles
+      and new titles are added approximately on a weekly basis.
+    vernacular:
+  unmatched_vernacular: []
+toc_struct:
+- label: Contents
+  fields:
+  - - Arts & Sciences I-XV
+    - Biological Sciences Collection
+    - Business Collection
+    - Ecology & Botany Collection
+    - General Sciences Collection
+    - Jewish Studies Collection
+    - Language & Literature Collection
+    - Life Sciences Collection
+    - Music Collection
+    - 19th Century British Pamphlets
+    - 'Struggles for Freedom: Southern Africa.'
+  vernacular:
+  unmatched_vernacular:
+holdings_json_struct:
+- holdings:
+  - id: 4abb3ddf-988b-5419-ba80-5e3b499e39b6
+    hrid: ah6745620_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T10:18:06.509Z'
+      updatedDate: '2023-08-21T10:18:06.509Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: aa5d3e53-1527-5410-a224-9795f5ba8e89
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
+browse_nearby_struct:
+- lopped_callnumber: Z6944.S3
+  shelfkey: lc z   6944.000000 s0.300000
+  reverse_shelfkey: en~0~~~tqvv}zzzzzz~7z}wzzzzz~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: Z6944.S3
+  scheme: LC

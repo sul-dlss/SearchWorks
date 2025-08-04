@@ -1,0 +1,395 @@
+---
+format_hsim:
+- Book
+- Database
+- Journal/Periodical
+id: '8785205'
+hashed_id_ssi: da17303c0e6cb810c93bc7611ab58e52
+marc_json_struct:
+- '{"leader":"02177cam a2200541 a 4500","fields":[{"001":"a8785205"},{"003":"SIRSI"},{"005":"20240419175651.8"},{"006":"suu
+  d s     0    2"},{"006":"m        d        "},{"007":"cr |||||||||||"},{"008":"040218m19989999miu     oi    000
+  0 eng  "},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"  2004354453"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) a8785205"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"DLC"},{"c":"DLC"},{"d":"GZM"},{"d":"BTCTA"},{"d":"OCLCQ"},{"d":"CSt"},{"d":"UtOrBLW"}]}},{"049":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"STFA"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"AI3"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"ProQuest."},{"p":"Research
+  library"},{"h":"[electronic resource]."}]}},{"246":{"ind1":"3","ind2":"0","subfields":[{"a":"Research
+  library"}]}},{"246":{"ind1":"1","ind2":" ","subfields":[{"i":"Title also appears
+  as:"},{"a":"Interdisciplinary--Research library"}]}},{"260":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"[Ann Arbor, Mich.] :"},{"b":"ProQuest Information and Learning
+  Company."}]}},{"362":{"ind1":"1","ind2":" ","subfields":[{"a":"Began in 1998?"}]}},{"538":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Mode of access: World Wide Web."}]}},{"500":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Title from Web page (viewed on Dec. 13, 2004)."}]}},{"520":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Provides online access to an extensive collection
+  of full-text articles from journals across a wide range of subject areas, including
+  business, education, literature, political science, and psychology. User interface
+  available in Chinese, English, French, German, Japanese, Korean, Portuguese, Spanish,
+  and Turkish."}]}},{"506":{"ind1":" ","ind2":" ","subfields":[{"a":"Access limited
+  to subscribers."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Arts"},{"v":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Humanities"},{"x":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Science"},{"x":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Health"},{"v":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Social sciences"},{"x":"Periodicals"},{"v":"Indexes."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Full-text databases."},{"2":"lcgft"}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"ProQuest Information and Learning Company."}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"C0"},{"b":"STF"}]}},{"099":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"A"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"H"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"HC"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"HM"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Q"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"XA"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"https://search.proquest.com/pqrl?accountid=14026"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)61854343"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-I)815289219"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  ocm61854343"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"46daed96-88fa-5c38-b902-088cb0910a2f"},{"s":"6474306b-a703-5e70-9c3f-7395006b0826"}]}}]}'
+all_search: 'ProQuest. Research library [electronic resource]. Research library Title
+  also appears as: Interdisciplinary--Research library [Ann Arbor, Mich.] : ProQuest
+  Information and Learning Company. Began in 1998? Mode of access: World Wide Web.
+  Title from Web page (viewed on Dec. 13, 2004). Provides online access to an extensive
+  collection of full-text articles from journals across a wide range of subject areas,
+  including business, education, literature, political science, and psychology. User
+  interface available in Chinese, English, French, German, Japanese, Korean, Portuguese,
+  Spanish, and Turkish. Access limited to subscribers. Periodicals Indexes. Arts Periodicals
+  Indexes. Humanities Periodicals Indexes. Science Periodicals Indexes. Health Periodicals
+  Indexes. Social sciences Periodicals Indexes. Full-text databases. lcgft ProQuest
+  Information and Learning Company. Available to Stanford-affiliated users. https://search.proquest.com/pqrl?accountid=14026'
+title_245a_search: ProQuest.
+title_245_search: ProQuest. Research library
+title_variant_search:
+- Research library
+- Interdisciplinary--Research library
+title_variant_display:
+- Research library
+- Interdisciplinary--Research library
+title_245a_display: ProQuest
+title_display: ProQuest. Research library [electronic resource].
+title_full_display: ProQuest. Research library [electronic resource].
+title_sort: ProQuest Research library electronic resource
+author_title_245ac_search:
+- ProQuest.
+author_7xx_search:
+- ProQuest Information and Learning Company.
+author_other_facet:
+- ProQuest Information and Learning Company
+author_sort: "\U0010FFFF ProQuest Research library electronic resource"
+topic_search:
+- Periodicals
+- Arts
+- Humanities
+- Science
+- Health
+- Social sciences
+- Full-text databases.
+topic_display:
+- Periodicals
+- Arts
+- Humanities
+- Science
+- Health
+- Social sciences
+- Full-text databases.
+topic_subx_search:
+- Periodicals
+subject_other_subvy_search:
+- Indexes.
+- Periodicals Indexes.
+subject_all_search:
+- Periodicals Indexes.
+- Arts Periodicals Indexes.
+- Humanities Periodicals Indexes.
+- Science Periodicals Indexes.
+- Health Periodicals Indexes.
+- Social sciences Periodicals Indexes.
+- Full-text databases.
+topic_facet:
+- Periodicals
+- Arts
+- Humanities
+- Science
+- Health
+- Social sciences
+- Full-text databases
+pub_search:
+- "[Ann Arbor, Mich.] : ProQuest Information and Learning Company"
+pub_display:
+- "[Ann Arbor, Mich.] : ProQuest Information and Learning Company"
+pub_country: Michigan, United States
+pub_date: '1998'
+pub_date_search: '1998'
+pub_date_sort: '1998'
+pub_year_tisim:
+- 1998
+pub_year_ss: 1998 -
+beginning_year_isi: 1998
+imprint_display:
+- "[Ann Arbor, Mich.] : ProQuest Information and Learning Company."
+date_cataloged: '2012-10-25T00:00:00Z'
+language:
+- English
+url_fulltext:
+- https://search.proquest.com/pqrl?accountid=14026
+url_restricted:
+- https://search.proquest.com/pqrl?accountid=14026
+oclc:
+- '61854343'
+access_facet:
+- Online
+format_main_ssim:
+- Book
+- Database
+genre_ssim:
+- Indexes
+- Periodicals
+db_az_subject:
+- General and Reference Works
+- Social Sciences (General)
+- Economics and Business
+- Sociology
+- Science (General)
+- Communication and Journalism
+db_az_subject_search:
+- General and Reference Works
+- Social Sciences (General)
+- Economics and Business
+- Sociology
+- Science (General)
+- Communication and Journalism
+summary_search:
+- Provides online access to an extensive collection of full-text articles from journals
+  across a wide range of subject areas, including business, education, literature,
+  political science, and psychology. User interface available in Chinese, English,
+  French, German, Japanese, Korean, Portuguese, Spanish, and Turkish.
+summary_display:
+- Provides online access to an extensive collection of full-text articles from journals
+  across a wide range of subject areas, including business, education, literature,
+  political science, and psychology. User interface available in Chinese, English,
+  French, German, Japanese, Korean, Portuguese, Spanish, and Turkish.
+lccn: '2004354453'
+holdings_library_code_ssim:
+- SUL
+library_code_facet_ssim:
+- SUL
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '006'
+- '007'
+- '008'
+- '010'
+- '035'
+- '040'
+- '049'
+- '050'
+- '245'
+- '246'
+- '260'
+- '362'
+- '538'
+- '500'
+- '520'
+- '506'
+- '650'
+- '710'
+- '994'
+- '099'
+- '856'
+- '999'
+- 010a
+- 035a
+- 040acddddd
+- '049a'
+- 050a
+- 245aph
+- 246a
+- 246ia
+- 260ab
+- 362a
+- 538a
+- 500a
+- 520a
+- 506a
+- 650av
+- 650avv
+- 650axv
+- 650a2
+- 710a
+- 994ab
+- '099a'
+- 856zu
+- 999is
+- "?010a"
+- "?035a"
+- "?040a"
+- "?040c"
+- "?040d"
+- "?049a"
+- "?050a"
+- "?245a"
+- "?245p"
+- "?245h"
+- "?246a"
+- "?246i"
+- "?260a"
+- "?260b"
+- "?362a"
+- "?538a"
+- "?500a"
+- "?520a"
+- "?506a"
+- "?650a"
+- "?650v"
+- "?650x"
+- "?6502"
+- "?710a"
+- "?994a"
+- "?994b"
+- "?099a"
+- "?856z"
+- "?856u"
+- "?999i"
+- "?999s"
+bib_search: 'ProQuest. Research library [electronic resource]. Research library Title
+  also appears as: Interdisciplinary--Research library [Ann Arbor, Mich.] : ProQuest
+  Information and Learning Company. ProQuest Information and Learning Company. Periodicals
+  Arts Humanities Science Health Social sciences Full-text databases. Book Database'
+vern_bib_search: Book Database
+uuid_ssi: 46daed96-88fa-5c38-b902-088cb0910a2f
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"46daed96-88fa-5c38-b902-088cb0910a2f","hrid":"a8785205","tags":{"tagList":[]},"notes":[{"note":"Mode
+  of access: World Wide Web","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"},{"note":"Title
+  from Web page (viewed on Dec. 13, 2004)","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Provides
+  online access to an extensive collection of full-text articles from journals across
+  a wide range of subject areas, including business, education, literature, political
+  science, and psychology. User interface available in Chinese, English, French, German,
+  Japanese, Korean, Portuguese, Spanish, and Turkish","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Access
+  limited to subscribers","staffOnly":false,"instanceNoteTypeId":"e814a32e-02da-4773-8f3a-6629cdb7ecdf"}],"title":"ProQuest.
+  Research library [electronic resource].","series":[],"source":"MARC","_version":7,"editions":[],"metadata":{"createdDate":"2023-08-21T12:45:53.593Z","updatedDate":"2024-04-19T18:08:03.112Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"d43a28c3-e9d6-44a3-8927-0063924982f1"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Periodicals--Indexes"},{"value":"Arts--Periodicals--Indexes"},{"value":"Humanities--Periodicals--Indexes"},{"value":"Science--Periodicals--Indexes"},{"value":"Health--Periodicals--Indexes"},{"value":"Social
+  sciences--Periodicals--Indexes"},{"value":"Full-text databases"}],"languages":["eng"],"indexTitle":"ProQuest.
+  Research library","identifiers":[{"value":"2004354453","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  a8785205","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)61854343","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)815289219","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)
+  ocm61854343","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"[Ann
+  Arbor, Mich.]","publisher":"ProQuest Information and Learning Company."}],"contributors":[{"name":"ProQuest
+  Information and Learning Company","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2012-10-25","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"AI3","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://search.proquest.com/pqrl?accountid=14026","name":"Resource","publicNote":"Available
+  to Stanford-affiliated users.","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":["Began
+  in 1998?"],"statisticalCodes":[{"id":"4bc78766-8f34-4b1a-9e39-2a689a4ae998","name":"Database"}],"alternativeTitles":[{"alternativeTitle":"Research
+  library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"Title
+  also appears as: Interdisciplinary--Research library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T12:45:53.494+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"c4414aac-9f18-4d44-8725-bb893a76acdc","orderType":"Ongoing","orderStatus":"Open","poLineNumber":"646649F03-1","orderSentDate":"2024-04-03T22:24:40.056+00:00","orderCloseReason":null,"polReceiptStatus":"Ongoing"}]}'
+last_updated: '2025-07-30T10:10:51Z'
+created: '2025-07-30T10:10:51Z'
+timestamp: '2025-07-30T10:10:51Z'
+author_struct:
+- contributors:
+  - link: ProQuest Information and Learning Company.
+    search: ProQuest Information and Learning Company.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: search.proquest.com
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  additional_links: []
+  material_type:
+  note: Available to Stanford-affiliated users.
+  href: https://search.proquest.com/pqrl?accountid=14026
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Provides online access to an extensive collection of full-text articles from
+      journals across a wide range of subject areas, including business, education,
+      literature, political science, and psychology. User interface available in Chinese,
+      English, French, German, Japanese, Korean, Portuguese, Spanish, and Turkish.
+    vernacular:
+  unmatched_vernacular: []
+holdings_json_struct:
+- holdings:
+  - id: 96c2efc2-5361-4e0b-8576-1b60db7ef82e
+    hrid: ho00000095090
+    notes: []
+    _version: 2
+    metadata:
+      createdDate: '2024-04-03T22:24:41.200Z'
+      updatedDate: '2024-11-12T21:58:06.957Z'
+      createdByUserId: 0d699d7c-441f-47fa-bc8a-f4c75635c243
+      updatedByUserId: d43a28c3-e9d6-44a3-8927-0063924982f1
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 46daed96-88fa-5c38-b902-088cb0910a2f
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
