@@ -389,3 +389,8 @@
     --bs-btn-color: var(--bs-popover-body-color);
   }
 }
+
+.toc {
+  list-style-position: inside;
+  padding-left: 0.25rem;
+}
