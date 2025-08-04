@@ -39,6 +39,11 @@ class DatabasesController < ApplicationController
     blacklight_config.default_solr_params['request-id'] = request.request_id || '-'
   end
 
+  before_action only: :index do
+    ids = Settings.selected_databases.keys.map(&:to_s)
+    @selected_databases = search_service.fetch(ids, { sort: "title_sort asc", rows: ids.length }).sort_by { |doc| ids.index(doc.id) }
+  end
+
   class DatabaseTitleSuggestionsSearchBuilder < Blacklight::SearchBuilder
     def self.default_processor_chain
       [:suggestion_query]
@@ -74,6 +79,14 @@ class DatabasesController < ApplicationController
       solr_parameters['f.db_az_subject.facet.contains'] = search_state.query_param
       solr_parameters['f.db_az_subject.facet.contains.ignoreCase'] = 'true'
       solr_parameters[:rows] = 0
+    end
+  end
+
+  def index
+    if has_search_parameters?
+      super
+    else
+      render 'home_page'
     end
   end
 

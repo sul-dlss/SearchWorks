@@ -1,16 +1,8 @@
-<% if has_search_parameters? %>
-  <% content_for(:search_navbar) { render 'header' } %>
-  <% content_for(:additional_aside_content) do %>
-    <div class="pt-4 px-1">
-      <%= render 'popular_databases' %>
-    </div>
-  <% end %>
-
-  <%= render partial: "search_results", locals: { content_classes: 'col-md-8 me-md-auto', hide_constraints: true, hide_facets: true } %>
-<% else %>
-  <%= render partial: "home_page" %>
+<% content_for(:search_navbar) { render 'header' } %>
+<% content_for(:additional_aside_content) do %>
+  <div class="pt-4 px-1">
+    <%= render 'popular_databases' %>
+  </div>
 <% end %>
 
-<% content_for(:breadcrumb) do %>
-  <a href="/"><%= back_icon %> Back to catalog search</a>
-<% end %>
+<%= render partial: "search_results", locals: { content_classes: 'col-md-8 me-md-auto', hide_constraints: true, hide_facets: true } %>
