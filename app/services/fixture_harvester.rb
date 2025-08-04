@@ -45,7 +45,15 @@ class FixtureHarvester
     '14289604', # content advice
     '4250062', # items in SAL1&2 and SAL3
     '14205849', # multiple items with unique truncated call numbers
-    'nj140cs3237' # mods preferred citation
+    'nj140cs3237', # mods preferred citation
+
+    # selected databases
+    '5749286',
+    '8785205',
+    '5572228',
+    '6745620',
+    '4287807',
+    '13709575'
   ].freeze
 
   def self.harvest_all

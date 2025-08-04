@@ -1,0 +1,680 @@
+---
+format_hsim:
+- Database
+id: '5572228'
+hashed_id_ssi: bd9cc2f3cdfe5cafc824e133854481e4
+all_search: 'Web of science core collection. Web of knowledge. Web of science ISI
+  web of knowledge. Web of science Web of science citation databases <Nov. 13, 1998>
+  [New York, NY] : Thomson Reuters 1 online resource Updated weekly text txt rdacontent
+  computer c rdamedia online resource cr rdacarrier Began in 2014 Web of Science Core
+  Collection provides access to the world''s leading citation databases. Authoritative,
+  multidisciplinary content covers journals worldwide, including Open Access journals
+  and conference proceedings. Includes current and retrospective coverage in the sciences,
+  social sciences, arts, and humanities, with coverage to 1900. Access restricted
+  to subscribing institutions. Description based on contents viewed March 25, 2014;
+  title from database search screen. Citation Indexes -- Science Citation Index Expanded
+  1900-present -- Social Sciences Citation Index 1900-present -- Arts & Humanities
+  Citation Index 1975-present -- Conference Proceedings Citation Index, Science 1990-present
+  -- Conference Proceedings Citation Index, Social Sciences & Humanities 1990-present
+  -- Book Citation Index - Science 2005-present -- Book Citation Index - Social Sciences
+  & Humanities 2005-present -- Chemical Indexes -- Current Chemical Reactions (CCR
+  Expanded) 1985-present -- Index Chemicus (IC) 1993-present -- Emerging Sources Citation
+  Index 2005- Science Indexes Databases. Social sciences Indexes Databases. Arts Indexes
+  Databases. Humanities Indexes Databases. agriculture anthropology archaeology area
+  studies behavioral sciences business chemistry communication criminology & penology
+  demography earth sciences economics education environmental studies ergonomics ethnic
+  studies family studies geriatrics & gerontology health policy & services history
+  industrial relations & labor international relations language & linguistics law
+  management nursing philosophy planning & development political science psychology
+  public administration public health social issues social work sociology substance
+  abuse transportation urban studies womens studies Electronic reference sources.
+  Electronic reference sources. Electronic indexes. local Thomson Reuters issuing
+  body. Institute for Scientific Information. Science citation index expanded. Social
+  sciences citation index. Arts & humanities citation index. Index chemicus. Conference
+  proceedings citation index. Science. Conference proceedings citation index. Social
+  science & humanities. Book citation index. Science. Book citation index. Social
+  sciences & humanities. Current chemical reactions. Emerging Sources Citation Index
+  Science citation index 0036-827X (DLC)   63023334 (OCoLC)1604320 Social sciences
+  citation index 0091-3707 (DLC)   73085287 (OCoLC)1784460 Arts & humanities citation
+  index 0162-8445 (DLC)   79642953 (OCoLC)4122996 Index chemicus (Philadelphia, Pa.
+  : 1987) 0891-6055 (DLC)sn 86010602 (OCoLC)14923744 Conference proceedings citation
+  index. Science (CPCI-S). Philadelphia, Pa. : Institute for Scientific Information
+  (OCoLC)611168648 Conference proceedings citation index. Social science & humanities
+  (CPCI-SSH). Philadelphia, Pa. : Institute for Scientific Information, Inc., 2008-
+  (OCoLC)301468194 Book citation index. Science (BKCI-S). [New York, N.Y.] : Thomson
+  Reuters (OCoLC)795241134 Book citation index. Social sciences & humanities (BKCI-SSH).
+  [New York, N.Y.] : Thomson Reuters (OCoLC)781776975 Current chemical reactions 0163-6278
+  (DLC)  2002200927 (OCoLC)4419332 Available to Stanford-affiliated users. https://www.webofscience.com/wos/woscc/basic-search
+  World of science  (alias) Arts & humanities citation index (ACB7558) Science citation
+  index (ACN4569) Social sciences citation index (ABZ5928) Century of science (another
+  name for backfile to Web of Science) Emerging Sources Citation Index 22'
+title_245a_search: Web of science core collection.
+title_245_search: Web of science core collection.
+title_variant_search:
+- Web of knowledge. Web of science
+- ISI web of knowledge. Web of science
+- Web of science citation databases <Nov. 13, 1998>
+title_variant_display:
+- Web of knowledge. Web of science
+- ISI web of knowledge. Web of science
+- Web of science citation databases <Nov. 13, 1998>
+title_related_search:
+- Science citation index expanded.
+- Social sciences citation index.
+- Arts & humanities citation index.
+- Index chemicus.
+- Conference proceedings citation index. Science.
+- Conference proceedings citation index. Social science & humanities.
+- Book citation index. Science.
+- Book citation index. Social sciences & humanities.
+- Current chemical reactions.
+- Emerging Sources Citation Index
+- Science citation index
+- Social sciences citation index
+- Arts & humanities citation index
+- 'Index chemicus (Philadelphia, Pa. : 1987)'
+- Conference proceedings citation index. Science (CPCI-S).
+- Conference proceedings citation index. Social science & humanities (CPCI-SSH).
+- Book citation index. Science (BKCI-S).
+- Book citation index. Social sciences & humanities (BKCI-SSH).
+- Current chemical reactions
+- World of science  (alias)
+- Arts & humanities citation index (ACB7558)
+- Science citation index (ACN4569)
+- Social sciences citation index (ABZ5928)
+- Century of science (another name for backfile to Web of Science)
+title_245a_display: Web of science core collection
+title_display: Web of science core collection
+title_full_display: Web of science core collection.
+title_sort: Web of science core collection
+author_title_245ac_search:
+- Web of science core collection.
+author_7xx_search:
+- Thomson Reuters
+- Institute for Scientific Information.
+author_other_facet:
+- Thomson Reuters
+- Institute for Scientific Information
+author_sort: "\U0010FFFF Web of science core collection"
+works_struct:
+- '{"included":[{"link":"Science citation index expanded.","search":"Science citation
+  index expanded.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Social
+  sciences citation index.","search":"Social sciences citation index.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Arts
+  & humanities citation index.","search":"Arts & humanities citation index.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Index
+  chemicus.","search":"Index chemicus.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Conference
+  proceedings citation index. Science.","search":"Conference proceedings citation
+  index. Science.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Conference
+  proceedings citation index. Social science & humanities.","search":"Conference proceedings
+  citation index. Social science & humanities.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Book
+  citation index. Science.","search":"Book citation index. Science.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Book
+  citation index. Social sciences & humanities.","search":"Book citation index. Social
+  sciences & humanities.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Current
+  chemical reactions.","search":"Current chemical reactions.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Emerging
+  Sources Citation Index","search":"Emerging Sources Citation Index","pre_text":"","post_text":"","authorities":[],"rwo":[]}],"related":[{"link":"Science
+  citation index expanded.","search":"Science citation index expanded.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Social
+  sciences citation index.","search":"Social sciences citation index.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Arts
+  & humanities citation index.","search":"Arts & humanities citation index.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Index
+  chemicus.","search":"Index chemicus.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Conference
+  proceedings citation index. Science.","search":"Conference proceedings citation
+  index. Science.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Conference
+  proceedings citation index. Social science & humanities.","search":"Conference proceedings
+  citation index. Social science & humanities.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Book
+  citation index. Science.","search":"Book citation index. Science.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Book
+  citation index. Social sciences & humanities.","search":"Book citation index. Social
+  sciences & humanities.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Current
+  chemical reactions.","search":"Current chemical reactions.","pre_text":"","post_text":"","authorities":[],"rwo":[]},{"link":"Emerging
+  Sources Citation Index","search":"Emerging Sources Citation Index","pre_text":"","post_text":"","authorities":[],"rwo":[]}]}'
+topic_search:
+- Science
+- Social sciences
+- Arts
+- Humanities
+- agriculture anthropology archaeology area studies behavioral sciences business chemistry
+  communication criminology & penology demography earth sciences economics education
+  environmental studies ergonomics ethnic studies family studies geriatrics & gerontology
+  health policy & services history industrial relations & labor international relations
+  language & linguistics law management nursing philosophy planning & development
+  political science psychology public administration public health social issues social
+  work sociology substance abuse transportation urban studies womens studies
+topic_display:
+- Science
+- Social sciences
+- Arts
+- Humanities
+- agriculture anthropology archaeology area studies behavioral sciences business chemistry
+  communication criminology & penology demography earth sciences economics education
+  environmental studies ergonomics ethnic studies family studies geriatrics & gerontology
+  health policy & services history industrial relations & labor international relations
+  language & linguistics law management nursing philosophy planning & development
+  political science psychology public administration public health social issues social
+  work sociology substance abuse transportation urban studies womens studies
+subject_other_search:
+- Electronic reference sources.
+- Electronic indexes.
+subject_other_display:
+- Electronic reference sources.
+- Electronic indexes.
+subject_other_subvy_search:
+- Indexes Databases.
+subject_all_search:
+- Science Indexes Databases.
+- Social sciences Indexes Databases.
+- Arts Indexes Databases.
+- Humanities Indexes Databases.
+- agriculture anthropology archaeology area studies behavioral sciences business chemistry
+  communication criminology & penology demography earth sciences economics education
+  environmental studies ergonomics ethnic studies family studies geriatrics & gerontology
+  health policy & services history industrial relations & labor international relations
+  language & linguistics law management nursing philosophy planning & development
+  political science psychology public administration public health social issues social
+  work sociology substance abuse transportation urban studies womens studies
+- Electronic reference sources.
+- Electronic indexes.
+topic_facet:
+- Science
+- Social sciences
+- Arts
+- Humanities
+pub_search:
+- "[New York, NY] : Thomson Reuters"
+pub_display:
+- "[New York, NY] : Thomson Reuters"
+pub_country: New York (State), United States
+pub_date: '2014'
+pub_date_search: '2014'
+pub_date_sort: '2014'
+pub_year_tisim:
+- 2014
+- 2015
+- 2016
+- 2017
+- 2018
+- 2019
+- 2020
+- 2021
+- 2022
+- 2023
+- 2024
+- 2025
+pub_year_ss: 2014 -
+beginning_year_isi: 2014
+imprint_display:
+- "[New York, NY] : Thomson Reuters"
+date_cataloged: '2006-10-02T00:00:00Z'
+language:
+- English
+url_fulltext:
+- https://www.webofscience.com/wos/woscc/basic-search
+url_restricted:
+- https://www.webofscience.com/wos/woscc/basic-search
+oclc:
+- '37853368'
+access_facet:
+- Online
+format_main_ssim:
+- Database
+genre_ssim:
+- Electronic reference sources
+- Electronic indexes
+- Indexes
+- Databases
+db_az_subject:
+- General and Reference Works
+- Environmental Studies
+- Social Sciences (General)
+- Art, Architecture and Design
+- Science (General)
+- Physics and Astronomy
+- Chemistry and Chemical Engineering
+- Earth Sciences
+- Biology
+- Medicine
+- Engineering
+db_az_subject_search:
+- General and Reference Works
+- Environmental Studies
+- Social Sciences (General)
+- Art, Architecture and Design
+- Science (General)
+- Physics and Astronomy
+- Chemistry and Chemical Engineering
+- Earth Sciences
+- Biology
+- Medicine
+- Engineering
+physical:
+- 1 online resource
+toc_search:
+- Citation Indexes -- Science Citation Index Expanded 1900-present -- Social Sciences
+  Citation Index 1900-present -- Arts & Humanities Citation Index 1975-present --
+  Conference Proceedings Citation Index, Science 1990-present -- Conference Proceedings
+  Citation Index, Social Sciences & Humanities 1990-present -- Book Citation Index
+  - Science 2005-present -- Book Citation Index - Social Sciences & Humanities 2005-present
+  -- Chemical Indexes -- Current Chemical Reactions (CCR Expanded) 1985-present --
+  Index Chemicus (IC) 1993-present -- Emerging Sources Citation Index 2005-
+summary_search:
+- Web of Science Core Collection provides access to the world's leading citation databases.
+  Authoritative, multidisciplinary content covers journals worldwide, including Open
+  Access journals and conference proceedings. Includes current and retrospective coverage
+  in the sciences, social sciences, arts, and humanities, with coverage to 1900.
+summary_display:
+- Web of Science Core Collection provides access to the world's leading citation databases.
+  Authoritative, multidisciplinary content covers journals worldwide, including Open
+  Access journals and conference proceedings. Includes current and retrospective coverage
+  in the sciences, social sciences, arts, and humanities, with coverage to 1900.
+issn_search:
+- 0036-827X
+- '0091-3707'
+- 0162-8445
+- '0891-6055'
+- 0163-6278
+lccn: '2014254855'
+holdings_library_code_ssim:
+- SUL
+library_code_facet_ssim:
+- SUL
+collection:
+- sirsi
+- folio
+collection_search:
+- sirsi
+- folio
+context_source_ssi: folio
+context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
+
+  '
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '006'
+- '007'
+- '008'
+- '010'
+- '035'
+- '040'
+- '042'
+- '050'
+- '049'
+- '245'
+- '247'
+- '264'
+- '300'
+- '310'
+- '336'
+- '337'
+- '338'
+- '362'
+- '520'
+- '506'
+- '588'
+- '505'
+- '650'
+- '653'
+- '655'
+- '710'
+- '730'
+- '740'
+- '776'
+- '994'
+- '099'
+- '856'
+- '799'
+- '596'
+- '999'
+- 010a
+- 035a
+- 040abecdddd
+- 042a
+- 050a
+- '049a'
+- 245a
+- 247ap
+- 247af
+- 264ab
+- 300a
+- 310a
+- 336ab2
+- 337ab2
+- 338ab2
+- 362a
+- 520a
+- 506a
+- 588a
+- 505a
+- 650avv
+- 653aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+- 655a
+- 655a2
+- 710ae
+- 710a
+- 730a
+- 740ap
+- 740a
+- 776txww
+- 776tdw
+- 994ab
+- '099a'
+- 856zu
+- 799a
+- 596a
+- 999is
+- "?010a"
+- "?035a"
+- "?040a"
+- "?040b"
+- "?040e"
+- "?040c"
+- "?040d"
+- "?042a"
+- "?050a"
+- "?049a"
+- "?245a"
+- "?247a"
+- "?247p"
+- "?247f"
+- "?264a"
+- "?264b"
+- "?300a"
+- "?310a"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
+- "?362a"
+- "?520a"
+- "?506a"
+- "?588a"
+- "?505a"
+- "?650a"
+- "?650v"
+- "?653a"
+- "?655a"
+- "?6552"
+- "?710a"
+- "?710e"
+- "?730a"
+- "?740a"
+- "?740p"
+- "?776t"
+- "?776x"
+- "?776w"
+- "?776d"
+- "?994a"
+- "?994b"
+- "?099a"
+- "?856z"
+- "?856u"
+- "?799a"
+- "?596a"
+- "?999i"
+- "?999s"
+bib_search: 'Web of science core collection. Web of knowledge. Web of science ISI
+  web of knowledge. Web of science Web of science citation databases <Nov. 13, 1998>
+  [New York, NY] : Thomson Reuters Thomson Reuters issuing body. Institute for Scientific
+  Information. Science Social sciences Arts Humanities agriculture anthropology archaeology
+  area studies behavioral sciences business chemistry communication criminology &
+  penology demography earth sciences economics education environmental studies ergonomics
+  ethnic studies family studies geriatrics & gerontology health policy & services
+  history industrial relations & labor international relations language & linguistics
+  law management nursing philosophy planning & development political science psychology
+  public administration public health social issues social work sociology substance
+  abuse transportation urban studies womens studies Database'
+vern_bib_search: Database
+uuid_ssi: 2174e285-6670-525f-8b4c-60627f5babf1
+folio_json_struct:
+- '{"pieces":[null],"instance":{"id":"2174e285-6670-525f-8b4c-60627f5babf1","hrid":"a5572228","tags":{"tagList":[]},"notes":[{"note":"Web
+  of Science Core Collection provides access to the world''s leading citation databases.
+  Authoritative, multidisciplinary content covers journals worldwide, including Open
+  Access journals and conference proceedings. Includes current and retrospective coverage
+  in the sciences, social sciences, arts, and humanities, with coverage to 1900","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Access
+  restricted to subscribing institutions","staffOnly":false,"instanceNoteTypeId":"e814a32e-02da-4773-8f3a-6629cdb7ecdf"},{"note":"Description
+  based on contents viewed March 25, 2014; title from database search screen","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"},{"note":"Citation
+  Indexes -- Science Citation Index Expanded 1900-present -- Social Sciences Citation
+  Index 1900-present -- Arts & Humanities Citation Index 1975-present -- Conference
+  Proceedings Citation Index, Science 1990-present -- Conference Proceedings Citation
+  Index, Social Sciences & Humanities 1990-present -- Book Citation Index - Science
+  2005-present -- Book Citation Index - Social Sciences & Humanities 2005-present
+  -- Chemical Indexes -- Current Chemical Reactions (CCR Expanded) 1985-present --
+  Index Chemicus (IC) 1993-present -- Emerging Sources Citation Index 2005-","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"}],"title":"Web
+  of science core collection.","series":[],"source":"MARC","_version":4,"editions":[],"metadata":{"createdDate":"2023-08-21T08:39:00.562Z","updatedDate":"2023-09-06T18:00:20.243Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"7eceefee-310e-4dec-9811-2b0cb8b8648b"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Science--Indexes--Databases"},{"value":"Social
+  sciences--Indexes--Databases"},{"value":"Arts--Indexes--Databases"},{"value":"Humanities--Indexes--Databases"},{"value":"Electronic
+  reference sources"},{"value":"Electronic indexes"}],"languages":["eng"],"indexTitle":"Web
+  of science core collection.","identifiers":[{"value":"2014254855","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  a5572228","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)37853368","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"role":"Publication","place":"[New
+  York, NY]","publisher":"Thomson Reuters"}],"contributors":[{"name":"Thomson Reuters","primary":false,"contributorTypeText":"issuing
+  body.","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"},{"name":"Institute
+  for Scientific Information","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2006-10-02","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"AI3","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://www.webofscience.com/wos/woscc/basic-search","name":"Resource","publicNote":"Available
+  to Stanford-affiliated users.","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"4fc0f4fe-06fd-490a-a078-c4da1754e03a","publicationRange":["Began
+  in 2014"],"statisticalCodes":[{"id":"4bc78766-8f34-4b1a-9e39-2a689a4ae998","name":"Database"}],"alternativeTitles":[{"alternativeTitle":"Web
+  of knowledge. Web of science","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"ISI
+  web of knowledge. Web of science","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"Web
+  of science citation databases <Nov. 13, 1998>","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2023-08-21T08:39:00.554+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":["1
+  online resource"],"publicationFrequency":["Updated weekly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+last_updated: '2025-07-30T09:19:13Z'
+created: '2025-07-30T09:19:13Z'
+timestamp: '2025-07-30T09:19:13Z'
+marc_json_struct:
+- '{"leader":"05761cai a2201045 i 4500","fields":[{"001":"a5572228"},{"003":"SIRSI"},{"005":"20230906180019.1"},{"006":"m     o  d        "},{"007":"cr
+  mnu||||||||"},{"008":"140121c20149999nyuwr dooi    0    2eng c"},{"010":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"  2014254855"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)
+  a5572228"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"ZCU"},{"b":"eng"},{"e":"rda"},{"c":"ZCU"},{"d":"CUS"},{"d":"NDD"},{"d":"OCLCO"},{"d":"CSt"}]}},{"042":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"pcc"}]}},{"050":{"ind1":" ","ind2":"4","subfields":[{"a":"AI3"}]}},{"049":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"STFA"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Web
+  of science core collection."}]}},{"247":{"ind1":"1","ind2":"0","subfields":[{"a":"Web
+  of knowledge."},{"p":"Web of science"}]}},{"247":{"ind1":"1","ind2":"0","subfields":[{"a":"ISI
+  web of knowledge."},{"p":"Web of science"}]}},{"247":{"ind1":"1","ind2":"0","subfields":[{"a":"Web
+  of science citation databases"},{"f":"<Nov. 13, 1998>"}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"[New
+  York, NY] :"},{"b":"Thomson Reuters"}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"1
+  online resource"}]}},{"310":{"ind1":" ","ind2":" ","subfields":[{"a":"Updated weekly"}]}},{"336":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"362":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Began in 2014"}]}},{"520":{"ind1":" ","ind2":" ","subfields":[{"a":"Web
+  of Science Core Collection provides access to the world''s leading citation databases.
+  Authoritative, multidisciplinary content covers journals worldwide, including Open
+  Access journals and conference proceedings. Includes current and retrospective coverage
+  in the sciences, social sciences, arts, and humanities, with coverage to 1900."}]}},{"506":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Access restricted to subscribing institutions."}]}},{"588":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Description based on contents viewed March 25, 2014;
+  title from database search screen."}]}},{"505":{"ind1":"0","ind2":" ","subfields":[{"a":"Citation
+  Indexes -- Science Citation Index Expanded 1900-present -- Social Sciences Citation
+  Index 1900-present -- Arts & Humanities Citation Index 1975-present -- Conference
+  Proceedings Citation Index, Science 1990-present -- Conference Proceedings Citation
+  Index, Social Sciences & Humanities 1990-present -- Book Citation Index - Science
+  2005-present -- Book Citation Index - Social Sciences & Humanities 2005-present
+  -- Chemical Indexes -- Current Chemical Reactions (CCR Expanded) 1985-present --
+  Index Chemicus (IC) 1993-present -- Emerging Sources Citation Index 2005-"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Science"},{"v":"Indexes"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Social sciences"},{"v":"Indexes"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Arts"},{"v":"Indexes"},{"v":"Databases."}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Humanities"},{"v":"Indexes"},{"v":"Databases."}]}},{"653":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"agriculture"},{"a":"anthropology"},{"a":"archaeology"},{"a":"area
+  studies"},{"a":"behavioral sciences"},{"a":"business"},{"a":"chemistry"},{"a":"communication"},{"a":"criminology
+  & penology"},{"a":"demography"},{"a":"earth sciences"},{"a":"economics"},{"a":"education"},{"a":"environmental
+  studies"},{"a":"ergonomics"},{"a":"ethnic studies"},{"a":"family studies"},{"a":"geriatrics
+  & gerontology"},{"a":"health policy & services"},{"a":"history"},{"a":"industrial
+  relations & labor"},{"a":"international relations"},{"a":"language & linguistics"},{"a":"law"},{"a":"management"},{"a":"nursing"},{"a":"philosophy"},{"a":"planning
+  & development"},{"a":"political science"},{"a":"psychology"},{"a":"public administration"},{"a":"public
+  health"},{"a":"social issues"},{"a":"social work"},{"a":"sociology"},{"a":"substance
+  abuse"},{"a":"transportation"},{"a":"urban studies"},{"a":"womens studies"}]}},{"655":{"ind1":"
+  ","ind2":"4","subfields":[{"a":"Electronic reference sources."}]}},{"655":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Electronic reference sources."}]}},{"655":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Electronic indexes."},{"2":"local"}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"Thomson Reuters"},{"e":"issuing body."}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"Institute for Scientific Information."}]}},{"730":{"ind1":"0","ind2":"2","subfields":[{"a":"Science
+  citation index expanded."}]}},{"730":{"ind1":"0","ind2":"2","subfields":[{"a":"Social
+  sciences citation index."}]}},{"730":{"ind1":"0","ind2":"2","subfields":[{"a":"Arts
+  & humanities citation index."}]}},{"730":{"ind1":"0","ind2":"2","subfields":[{"a":"Index
+  chemicus."}]}},{"740":{"ind1":"0","ind2":"2","subfields":[{"a":"Conference proceedings
+  citation index."},{"p":"Science."}]}},{"740":{"ind1":"0","ind2":"2","subfields":[{"a":"Conference
+  proceedings citation index."},{"p":"Social science & humanities."}]}},{"740":{"ind1":"0","ind2":"2","subfields":[{"a":"Book
+  citation index."},{"p":"Science."}]}},{"740":{"ind1":"0","ind2":"2","subfields":[{"a":"Book
+  citation index."},{"p":"Social sciences & humanities."}]}},{"740":{"ind1":"0","ind2":"2","subfields":[{"a":"Current
+  chemical reactions."}]}},{"730":{"ind1":"0","ind2":"2","subfields":[{"a":"Emerging
+  Sources Citation Index"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Science
+  citation index"},{"x":"0036-827X"},{"w":"(DLC)   63023334"},{"w":"(OCoLC)1604320"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Social
+  sciences citation index"},{"x":"0091-3707"},{"w":"(DLC)   73085287"},{"w":"(OCoLC)1784460"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Arts
+  & humanities citation index"},{"x":"0162-8445"},{"w":"(DLC)   79642953"},{"w":"(OCoLC)4122996"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Index
+  chemicus (Philadelphia, Pa. : 1987)"},{"x":"0891-6055"},{"w":"(DLC)sn 86010602"},{"w":"(OCoLC)14923744"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Conference
+  proceedings citation index. Science (CPCI-S)."},{"d":"Philadelphia, Pa. : Institute
+  for Scientific Information"},{"w":"(OCoLC)611168648"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Conference
+  proceedings citation index. Social science & humanities (CPCI-SSH)."},{"d":"Philadelphia,
+  Pa. : Institute for Scientific Information, Inc., 2008-"},{"w":"(OCoLC)301468194"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Book
+  citation index. Science (BKCI-S)."},{"d":"[New York, N.Y.] : Thomson Reuters"},{"w":"(OCoLC)795241134"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Book
+  citation index. Social sciences & humanities (BKCI-SSH)."},{"d":"[New York, N.Y.]
+  : Thomson Reuters"},{"w":"(OCoLC)781776975"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"t":"Current
+  chemical reactions"},{"x":"0163-6278"},{"w":"(DLC)  2002200927"},{"w":"(OCoLC)4419332"}]}},{"994":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"C0"},{"b":"STF"}]}},{"099":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"AI"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"GE"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"H"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"N"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Q"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"QB"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"QC"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"QD"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"QE"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"QH"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"R"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"TH"}]}},{"099":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"TS"}]}},{"099":{"ind1":" ","ind2":" ","subfields":[{"a":"Z"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"https://www.webofscience.com/wos/woscc/basic-search"}]}},{"799":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"World of science  (alias)"}]}},{"799":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Arts & humanities citation index (ACB7558)"}]}},{"799":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Science citation index (ACN4569)"}]}},{"799":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Social sciences citation index (ABZ5928)"}]}},{"799":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Century of science (another name for backfile to
+  Web of Science)"}]}},{"799":{"ind1":" ","ind2":" ","subfields":[{"a":"Emerging Sources
+  Citation Index"}]}},{"596":{"ind1":" ","ind2":" ","subfields":[{"a":"22"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-M)37853368"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"2174e285-6670-525f-8b4c-60627f5babf1"},{"s":"5ec68132-f808-5c95-a4ad-398b1c86074c"}]}}]}'
+author_struct:
+- contributors:
+  - link: Thomson Reuters
+    search: Thomson Reuters
+    pre_text: ''
+    post_text: issuing body.
+    authorities: []
+    rwo: []
+  - link: Institute for Scientific Information.
+    search: Institute for Scientific Information.
+    pre_text: ''
+    post_text: ''
+    authorities: []
+    rwo: []
+marc_links_struct:
+- version: '0.2'
+  stanford_only: true
+  stanford_law_only: false
+  link_text: www.webofscience.com
+  link_title: Available to Stanford-affiliated users only
+  additional_text:
+  additional_links: []
+  material_type:
+  note: Available to Stanford-affiliated users.
+  href: https://www.webofscience.com/wos/woscc/basic-search
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Web of Science Core Collection provides access to the world's leading citation
+      databases. Authoritative, multidisciplinary content covers journals worldwide,
+      including Open Access journals and conference proceedings. Includes current
+      and retrospective coverage in the sciences, social sciences, arts, and humanities,
+      with coverage to 1900.
+    vernacular:
+  unmatched_vernacular: []
+toc_struct:
+- label: Contents
+  fields:
+  - - Citation Indexes
+    - Science Citation Index Expanded 1900-present
+    - Social Sciences Citation Index 1900-present
+    - Arts & Humanities Citation Index 1975-present
+    - Conference Proceedings Citation Index, Science 1990-present
+    - Conference Proceedings Citation Index, Social Sciences & Humanities 1990-present
+    - Book Citation Index - Science 2005-present
+    - Book Citation Index - Social Sciences & Humanities 2005-present
+    - Chemical Indexes
+    - Current Chemical Reactions (CCR Expanded) 1985-present
+    - Index Chemicus (IC) 1993-present
+    - Emerging Sources Citation Index 2005-
+  vernacular:
+  unmatched_vernacular:
+holdings_json_struct:
+- holdings:
+  - id: 56f99806-fe78-524c-b970-c77da178dfa7
+    hrid: ah5572228_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T08:40:57.657Z'
+      updatedDate: '2023-08-21T08:40:57.657Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 2174e285-6670-525f-8b4c-60627f5babf1
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    permanentLocationId: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: b0a1a8c3-cc9a-487c-a2ed-308fc3a49a91
+        code: SUL-ELECTRONIC
+        name: online resource
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items: []
