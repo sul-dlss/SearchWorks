@@ -34,8 +34,8 @@ function handleResponsiveAside() {
 
 function reparentAsideModules(parentId) {
   const els = [
-    document.getElementById('library_website_api_module'),
-    document.getElementById('lib_guides_module'),
+    document.getElementById('library_website_module'),
+    document.getElementById('libguides_module'),
     document.getElementById('specialist-main')
   ];
 
