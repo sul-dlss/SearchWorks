@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '13840972'
 hashed_id_ssi: 1f3cb2387a8311cd957b6b99a8e6fde4
 marc_json_struct:
@@ -122,7 +124,7 @@ oclc:
 - '504092'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 genre_ssim:
 - Biographies
@@ -200,9 +202,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -314,7 +313,7 @@ bib_search: 'Fassmann, Kurt, 1927- Die Grossen der Weltgeschichte / Hrg. von Kur
 vern_bib_search: Book
 uuid_ssi: d0b2299c-d86c-5e80-a3c2-5003c1e8310e
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"d0b2299c-d86c-5e80-a3c2-5003c1e8310e","hrid":"a13840972","notes":[{"note":"Includes
+- '{"instance":{"id":"d0b2299c-d86c-5e80-a3c2-5003c1e8310e","hrid":"a13840972","notes":[{"note":"Includes
   bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"},{"note":"Bd.
   1. Imhotep bis Cicero.--Bd. 2. Cäsar bis Karl der Grosse.--Bd. 3. Harun ar-Raschid
   bis Petrarca.-- Bd. 4. Boccaccio bis Palladio.--Bd. 5. Calvin bis Huygens.--Bd.
@@ -329,10 +328,7 @@ folio_json_struct:
   ocm00504092","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"Zürich)","publisher":"Kindler","dateOfPublication":"1971-1979"}],"contributors":[{"name":"Fassmann,
   Kurt, 1927-","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2021-04-16","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"CT153
   .G7","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"end":1979,"start":1971},"statusUpdatedDate":"2023-08-21T20:42:38.094+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["12
-  volumes : illustrations (some color) ; 27 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-06-22T13:40:09Z'
-created: '2025-06-22T13:40:09Z'
-timestamp: '2025-06-22T13:40:09Z'
+  volumes : illustrations (some color) ; 27 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Fassmann, Kurt, 1927-

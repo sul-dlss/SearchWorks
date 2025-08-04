@@ -174,9 +174,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -266,7 +263,7 @@ bib_search: 'ProQuest. Research library [electronic resource]. Research library 
 vern_bib_search: Book Database
 uuid_ssi: 46daed96-88fa-5c38-b902-088cb0910a2f
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"46daed96-88fa-5c38-b902-088cb0910a2f","hrid":"a8785205","tags":{"tagList":[]},"notes":[{"note":"Mode
+- '{"instance":{"id":"46daed96-88fa-5c38-b902-088cb0910a2f","hrid":"a8785205","tags":{"tagList":[]},"notes":[{"note":"Mode
   of access: World Wide Web","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"},{"note":"Title
   from Web page (viewed on Dec. 13, 2004)","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Provides
   online access to an extensive collection of full-text articles from journals across
@@ -284,10 +281,7 @@ folio_json_struct:
   to Stanford-affiliated users.","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":["Began
   in 1998?"],"statisticalCodes":[{"id":"4bc78766-8f34-4b1a-9e39-2a689a4ae998","name":"Database"}],"alternativeTitles":[{"alternativeTitle":"Research
   library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"Title
-  also appears as: Interdisciplinary--Research library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T12:45:53.494+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"c4414aac-9f18-4d44-8725-bb893a76acdc","orderType":"Ongoing","orderStatus":"Open","poLineNumber":"646649F03-1","orderSentDate":"2024-04-03T22:24:40.056+00:00","orderCloseReason":null,"polReceiptStatus":"Ongoing"}]}'
-last_updated: '2025-07-30T10:10:51Z'
-created: '2025-07-30T10:10:51Z'
-timestamp: '2025-07-30T10:10:51Z'
+  also appears as: Interdisciplinary--Research library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T12:45:53.494+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]}}'
 author_struct:
 - contributors:
   - link: ProQuest Information and Learning Company.
@@ -304,6 +298,7 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: Available to Stanford-affiliated users.
   href: https://search.proquest.com/pqrl?accountid=14026

@@ -1,4 +1,7 @@
 ---
+format_hsim:
+- Sound recording
+- Sound recording|Vinyl disc
 id: '14239755'
 hashed_id_ssi: 78a707f38144a4a97365ab85025cd513
 marc_json_struct:
@@ -155,7 +158,7 @@ oclc:
 - '1287887987'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Music recording
 format_physical_ssim:
 - Vinyl disc
@@ -220,9 +223,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -354,7 +354,7 @@ bib_search: 'Adele, 1988- performer, composer. 30 / Adele Thirty New York, NY : 
 vern_bib_search: Music recording
 uuid_ssi: 0075c808-b8aa-54e7-903e-9a412190a7da
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"0075c808-b8aa-54e7-903e-9a412190a7da","hrid":"a14239755","notes":[{"note":"Vinyl
+- '{"instance":{"id":"0075c808-b8aa-54e7-903e-9a412190a7da","hrid":"a14239755","notes":[{"note":"Vinyl
   LPs","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"LPs
   in sleeves","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Vinyl
   disc, double-sided; turntable required","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"},{"note":"Lyrics
@@ -374,10 +374,7 @@ folio_json_struct:
   1988-","primary":true,"contributorTypeId":"246858e3-4022-4991-9f1c-50901ccc1438","contributorTypeText":"performer,
   composer.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Garner,
   Erroll","primary":false,"contributorTypeId":"246858e3-4022-4991-9f1c-50901ccc1438","contributorTypeText":"performer.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2023-03-06","staffSuppress":false,"instanceTypeId":"3be24c14-3551-4180-9292-26a786649c8b","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Thirty","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["5cb91d15-96b1-4b8a-bf60-ec310538da66"],"publicationPeriod":{"start":2021},"statusUpdatedDate":"2023-08-21T21:21:36.209+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["2
-  audio discs ; 12 in.","vinyl","12 in.","analog","33 1/3 rpm","microgroove","stereo"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-06-22T09:16:18Z'
-created: '2025-06-22T09:16:18Z'
-timestamp: '2025-06-22T09:16:18Z'
+  audio discs ; 12 in.","vinyl","12 in.","analog","33 1/3 rpm","microgroove","stereo"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Adele, 1988-

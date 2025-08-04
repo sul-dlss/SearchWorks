@@ -193,9 +193,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f91baee7c42f6f7c56c86ae272ec3b97d878682c
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -296,7 +293,7 @@ bib_search: 'Maryse Condé, a writer for our times / Madeleine Dobie and Kaiama 
 vern_bib_search: Book
 uuid_ssi: e6611a5e-8759-5950-922d-d4e65265454a
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"e6611a5e-8759-5950-922d-d4e65265454a","hrid":"a14205849","notes":[{"note":"Includes
+- '{"instance":{"id":"e6611a5e-8759-5950-922d-d4e65265454a","hrid":"a14205849","notes":[{"note":"Includes
   bibliographical references","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"},{"note":"In
   2018, the New Academy selected Guadeloupean writer, scholar, and teacher of literature
   Maryse Conde as the recipient of the 2018 Alternative Nobel Prize in Literature.
@@ -321,10 +318,7 @@ folio_json_struct:
   Madeleine","primary":false,"contributorTypeId":"9deb29d1-3e71-4951-9413-a80adac703d0","contributorTypeText":"editor.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Glover,
   Kaiama L., 1972-","primary":false,"contributorTypeId":"9deb29d1-3e71-4951-9413-a80adac703d0","contributorTypeText":"editor.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2022-05-25","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"PQ3949.2.C65
   Z74 2021","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"843.914","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"start":2021},"statusUpdatedDate":"2023-08-21T21:21:14.559+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["164
-  pages ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-07-13T14:31:28Z'
-created: '2025-07-13T14:31:28Z'
-timestamp: '2025-07-13T14:31:28Z'
+  pages ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - contributors:
   - link: Dobie, Madeleine

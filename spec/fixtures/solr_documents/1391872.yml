@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '1391872'
 hashed_id_ssi: 32dd53a201d14db17d719a14f61fb35f
 marc_json_struct:
@@ -94,7 +96,7 @@ oclc:
 - '648719'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 physical:
 - xxxii, 340 p. 23 cm.
@@ -138,9 +140,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -215,7 +214,7 @@ bib_search: Heyd, Uriel, 1913-1968 Studies in old Ottoman criminal law; edited b
 vern_bib_search: Book
 uuid_ssi: b0e0445b-dc19-5e05-a85c-5ecbad784255
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"b0e0445b-dc19-5e05-a85c-5ecbad784255","hrid":"a1391872","notes":[{"note":"\"The
+- '{"instance":{"id":"b0e0445b-dc19-5e05-a85c-5ecbad784255","hrid":"a1391872","notes":[{"note":"\"The
   Ottoman criminal code, text [and] translation\": p. [54]-131","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Includes
   bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"}],"title":"Studies
   in old Ottoman criminal law; edited by V. L. Menage.","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-21T00:25:50.092Z","updatedDate":"2023-08-21T00:25:50.092Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Criminal
@@ -225,10 +224,7 @@ folio_json_struct:
   Clarendon Press","publisher":"","dateOfPublication":"1973"}],"contributors":[{"name":"Heyd,
   Uriel, 1913-1968","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Ménage,
   V. L","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1991-08-24","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"LAW","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"345.49600903","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1973},"statusUpdatedDate":"2023-08-21T00:25:49.515+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["xxxii,
-  340 p. 23 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-06-23T15:11:06Z'
-created: '2025-06-23T15:11:06Z'
-timestamp: '2025-06-23T15:11:06Z'
+  340 p. 23 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Heyd, Uriel, 1913-1968
@@ -321,15 +317,15 @@ holdings_json_struct:
     tags:
       tagList: []
     notes: []
-    status: Available
+    status: Missing
     barcode: '36105025440939'
     request:
-    _version: 4
+    _version: 9
     metadata:
       createdDate: '2023-08-21T00:28:32.369Z'
-      updatedDate: '2025-06-23T15:09:15.000Z'
+      updatedDate: '2025-07-23T17:03:25.446Z'
       createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
-      updatedByUserId: 4038fd97-5e51-4041-ab31-1131cefb4cea
+      updatedByUserId: 867890f5-0cb8-4e19-9f50-822bc644cf94
     formerIds: []
     callNumber:
       typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
@@ -392,7 +388,7 @@ item_display_struct:
   effective_permanent_location_code: GRE-STACKS
   temporary_location_code:
   permanent_location_code: GRE-STACKS
-  status: Available
+  status: Missing
   effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27

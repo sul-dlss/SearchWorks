@@ -17,7 +17,7 @@ RSpec.feature "Facets Customizations" do
   scenario 'mapping from the old format_main_ssim to the new format_hsim' do
     visit root_path(f: { format_main_ssim: ['Music recording'] })
 
-    expect(page).to have_css '.document', count: 2
+    expect(page).to have_css '.document', count: 5
     expect(page).to have_css '.document .index_title', text: 'Best Album Every'
   end
 

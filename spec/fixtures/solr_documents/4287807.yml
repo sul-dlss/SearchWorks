@@ -168,9 +168,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -260,7 +257,7 @@ bib_search: 'IEEE Xplore [electronic resource]. Added title on home page caption
 vern_bib_search: Database
 uuid_ssi: 6d48aac3-9ba3-59d4-a38f-878584ef5c60
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"6d48aac3-9ba3-59d4-a38f-878584ef5c60","hrid":"a4287807","tags":{"tagList":[]},"notes":[{"note":"Title
+- '{"instance":{"id":"6d48aac3-9ba3-59d4-a38f-878584ef5c60","hrid":"a4287807","tags":{"tagList":[]},"notes":[{"note":"Title
   from home page caption graphic (viewed July 31, 2000)","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Also
   available on CD-ROM","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Full
   text  and abstracts/citations restricted to subscribing institutions; tables of
@@ -290,10 +287,7 @@ folio_json_struct:
   online","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEEE
   IEE electronic library online","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEEE
   electronic library","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"IEEE/IEE
-  electronic library online","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:56:32.106+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"90cec30d-475e-4e32-ac68-c3a8439fd14d","orderType":"Ongoing","orderStatus":"Open","poLineNumber":"612243F03-1","orderSentDate":"2025-02-20T19:26:17.303+00:00","orderCloseReason":null,"polReceiptStatus":"Ongoing"}]}'
-last_updated: '2025-07-30T10:53:16Z'
-created: '2025-07-30T10:53:16Z'
-timestamp: '2025-07-30T10:53:16Z'
+  electronic library online","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:56:32.106+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]}}'
 marc_json_struct:
 - '{"leader":"03162cmm a2200589 a 4500","fields":[{"001":"a4287807"},{"003":"SIRSI"},{"007":"cr
   cn ||||||||"},{"008":"990526s19989999nju        m        eng d"},{"035":{"ind1":"
@@ -350,6 +344,7 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: Available to Stanford-affiliated users.
   href: http://ieeexplore.ieee.org/

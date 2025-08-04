@@ -148,6 +148,8 @@ summary_display:
   be offensive.
 holdings_library_code_ssim:
 - SUL
+library_code_facet_ssim:
+- SUL
 collection:
 - sirsi
 - folio
@@ -155,9 +157,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '58ed4ea316af31cf9521cde1926bdd064b00f998
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -270,7 +269,7 @@ bib_search: 'Sermons : "What is Political Extremism" / Laird Wilcox What is poli
 vern_bib_search: Sound recording
 uuid_ssi: a3893e63-cc28-5c10-b4f7-156c97a9f5bb
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"a3893e63-cc28-5c10-b4f7-156c97a9f5bb","hrid":"a14289604","notes":[{"note":"This
+- '{"instance":{"id":"a3893e63-cc28-5c10-b4f7-156c97a9f5bb","hrid":"a14289604","notes":[{"note":"This
   title comes from the Political Extremism and Radicalism digital archive series which
   provides access to primary sources for academic research and teaching purposes.
   Please be aware that users may find some of the content within this resource to
@@ -286,10 +285,7 @@ folio_json_struct:
   Laird M.","primary":false,"contributorTypeId":"ac0baeb5-71e2-435f-aaf1-14b64e2ba700","contributorTypeText":"speaker.","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2022-08-10","staffSuppress":false,"instanceTypeId":"c7f7446f-4642-4d97-88c9-55bae2ad6c7f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222","name":"Resource","linkText":"Political
   Extremism and Radicalism","publicNote":"Available to Stanford-affiliated users","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"What
   is political extremism","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"publicationPeriod":{"start":1988},"statusUpdatedDate":"2023-08-21T21:23:42.212+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["1
-  online resource (1 audio file (60 min., 12 sec.)).","digital","audio file"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-07-09T12:32:25Z'
-created: '2025-07-09T12:32:25Z'
-timestamp: '2025-07-09T12:32:25Z'
+  online resource (1 audio file (60 min., 12 sec.)).","digital","audio file"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - contributors:
   - link: Wilcox, Laird M.,
@@ -307,6 +303,7 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: Available to Stanford-affiliated users.
   href: https://link.gale.com/apps/doc/GGEAHG189871536/PLEX?sid=gale_marc&u=stan90222

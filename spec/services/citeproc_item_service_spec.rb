@@ -96,7 +96,7 @@ RSpec.describe CiteprocItemService do
     let(:document) { SolrDocument.find('L210044') }
 
     it 'makes an item' do
-      expect(citation).to eq "New Jersey State Department of Health. (1877). <i>Annual report of the Department of Health of the State of New Jersey</i>. State Dept. of Health."
+      expect(citation).to eq "New Jersey State Department of Health. (1877). <i>Annual report of the Department of Health of the State of New Jersey</i>. State Department of Health."
     end
   end
 

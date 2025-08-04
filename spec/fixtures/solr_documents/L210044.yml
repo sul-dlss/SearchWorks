@@ -1,30 +1,36 @@
 ---
+format_hsim:
+- Journal/Periodical
 id: L210044
 hashed_id_ssi: b30353b0ea918dc6da1a41adb4b84aec
 marc_json_struct:
-- '{"leader":"01427cas a2200361Ei 4500","fields":[{"001":"L210044"},{"005":"20230809010904.0"},{"008":"790809d187719uunjuar   s    s00|
-  a1eng d"},{"035":{"ind1":" ","ind2":" ","subfields":[{"9":"L210044"}]}},{"035":{"ind1":"
+- '{"leader":"01815cas a2200433Ei 4500","fields":[{"001":"L210044"},{"008":"790809d187719uunjuar        s0   a1eng
+  d"},{"005":"20250524015444.8"},{"035":{"ind1":" ","ind2":" ","subfields":[{"9":"L210044"}]}},{"035":{"ind1":"
   ","ind2":" ","subfields":[{"a":"(DNLM)A42480000(s)"}]}},{"035":{"ind1":" ","ind2":"
   ","subfields":[{"a":"(OCoLC)5255092"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"210044"}]}},{"040":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"TxCM"},{"c":"TxCM"},{"d":"m.c."},{"d":"N"},{"d":"OColC"},{"d":"DLC"},{"d":"m/c"},{"d":"DLC"},{"d":"NST"},{"d":"CStRLIN"}]}},{"210":{"ind1":"1","ind2":"0","subfields":[{"a":"Annu
-  Rep Dep Health State N J"},{"h":"[print/digital]"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Annual
-  report of the Department of Health of the State of New Jersey"},{"h":"[print/digital]."}]}},{"247":{"ind1":"1","ind2":"0","subfields":[{"a":"Annual
+  ","ind2":" ","subfields":[{"a":"TxCM"},{"c":"TxCM"},{"d":"m.c."},{"d":"N"},{"d":"OColC"},{"d":"DLC"},{"d":"m/c"},{"d":"DLC"},{"d":"NST"},{"d":"CStRLIN"},{"d":"UtOrBLW"}]}},{"043":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"n-us-nj"}]}},{"210":{"ind1":"1","ind2":"0","subfields":[{"a":"Annu
+  Rep Dep Health State N J"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Annual
+  report of the Department of Health of the State of New Jersey."}]}},{"247":{"ind1":"1","ind2":"0","subfields":[{"a":"Annual
   report of the Board of Health of the State of New Jersey"},{"f":"1879-1914"}]}},{"247":{"ind1":"1","ind2":"0","subfields":[{"a":"Report
-  of the Board of Health of the State of New Jersey"},{"f":"1877-1878"}]}},{"260":{"ind1":"1","ind2":"
-  ","subfields":[{"b":"State Dept. of Health,"},{"c":"1877-19uu."}]}},{"265":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"Trenton, N.J. :"},{"b":"State Dept. of Health,"},{"c":"1877-19uu."}]}},{"300":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"volumes :"},{"b":"illustrations ;"},{"c":"24 cm"}]}},{"310":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"Annual"}]}},{"362":{"ind1":"0","ind2":" ","subfields":[{"a":"1877-19uu."}]}},{"515":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"Report year irregular; 1917/19 covers period from
-  November 1, 1917-June 30, 1919."}]}},{"650":{"ind1":"4","ind2":"2","subfields":[{"a":"Public
-  Health"},{"0":"Z16573"}]}},{"651":{"ind1":"2","ind2":"7","subfields":[{"a":"New
-  Jersey"},{"0":"Z10258"}]}},{"655":{"ind1":"1","ind2":"7","subfields":[{"a":"Annual
-  Reports"},{"0":"Z17183"}]}},{"655":{"ind1":"1","ind2":"7","subfields":[{"a":"Government
-  Publications, State"},{"0":"Z255755"}]}},{"655":{"ind1":"4","ind2":"7","subfields":[{"a":"Serials"},{"0":"Z15113"}]}},{"655":{"ind1":"7","ind2":"7","subfields":[{"a":"Subset,
-  Scanned 2006"},{"0":"Z65974"}]}},{"710":{"ind1":"1","ind2":" ","subfields":[{"a":"New
-  Jersey."},{"b":"State Department of Health."},{"0":"Z208677"}]}},{"785":{"ind1":"0","ind2":"0","subfields":[{"t":"Healthy
-  in New Jersey"},{"g":"(not owned)."}]}},{"904":{"ind1":"0","ind2":" ","subfields":[{"a":"annual
-  report department health state new jersey"}]}},{"953":{"ind1":"9","ind2":" ","subfields":[{"a":"A"},{"b":"A42480000"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"41fb6f87-176f-5db3-a3d1-1060c5635f81"},{"s":"1d40b5eb-f092-50fd-a3fd-83ddb749f74e"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1877-81"},{"u":"https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage"},{"y":"Google
+  of the Board of Health of the State of New Jersey"},{"f":"1877-1878"}]}},{"264":{"ind1":"
+  ","ind2":"1","subfields":[{"a":"[Place of publication not identified] :"},{"b":"State
+  Department of Health,"},{"c":"1877-19uu."}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"volumes
+  :"},{"b":"illustrations ;"},{"c":"24 cm"}]}},{"310":{"ind1":" ","ind2":" ","subfields":[{"a":"Annual"}]}},{"336":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"unmediated"},{"b":"n"},{"2":"rdamedia"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"volume"},{"b":"nc"},{"2":"rdacarrier"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"362":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"1877-19uu."}]}},{"515":{"ind1":" ","ind2":" ","subfields":[{"a":"Report
+  year irregular; 1917/19 covers period from November 1, 1917-June 30, 1919."}]}},{"650":{"ind1":"2","ind2":"2","subfields":[{"a":"Public
+  Health."},{"0":"http://id.nlm.nih.gov/mesh/D011634"}]}},{"655":{"ind1":" ","ind2":"2","subfields":[{"a":"Annual
+  Report."},{"0":"http://id.nlm.nih.gov/mesh/D019487"}]}},{"655":{"ind1":" ","ind2":"4","subfields":[{"a":"Government
+  Publications, State."}]}},{"651":{"ind1":" ","ind2":"0","subfields":[{"a":"New Jersey."},{"0":"http://id.loc.gov/authorities/names/n80046086"}]}},{"690":{"ind1":"4","ind2":"7","subfields":[{"a":"Serials"}]}},{"655":{"ind1":"7","ind2":"7","subfields":[{"a":"Subset,
+  Scanned 2006."}]}},{"710":{"ind1":"1","ind2":" ","subfields":[{"a":"New Jersey."},{"b":"State
+  Department of Health."},{"0":"http://id.loc.gov/authorities/names/n79135150"}]}},{"785":{"ind1":"0","ind2":"0","subfields":[{"t":"Healthy
+  in New Jersey"},{"g":"(not owned)."}]}},{"945":{"ind1":" ","ind2":" ","subfields":[{"h":"print/digital"}]}},{"965":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Trenton, N.J. :"},{"b":"State Dept. of Health,"},{"c":"1877-19uu."}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"41fb6f87-176f-5db3-a3d1-1060c5635f81"},{"s":"1d40b5eb-f092-50fd-a3fd-83ddb749f74e"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1877-81"},{"u":"https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage"},{"y":"Google
   Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1882-84"},{"u":"https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage"},{"y":"Google
   Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1885"},{"u":"https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage"},{"y":"Google
   Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1886-87"},{"u":"https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage"},{"y":"Google
@@ -79,15 +85,17 @@ marc_json_struct:
   Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1925"},{"u":"https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage"},{"y":"Google
   Books"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"3":"1931"},{"u":"https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage"},{"y":"Google
   Books"}]}}]}'
-all_search: 'Annu Rep Dep Health State N J [print/digital] Annual report of the Department
-  of Health of the State of New Jersey [print/digital]. Annual report of the Board
-  of Health of the State of New Jersey 1879-1914 Report of the Board of Health of
-  the State of New Jersey 1877-1878 State Dept. of Health, 1877-19uu. Trenton, N.J.
-  : State Dept. of Health, 1877-19uu. volumes : illustrations ; 24 cm Annual 1877-19uu.
-  Report year irregular; 1917/19 covers period from November 1, 1917-June 30, 1919.
-  Public Health Z16573 New Jersey Z10258 Annual Reports Z17183 Government Publications,
-  State Z255755 Serials Z15113 Subset, Scanned 2006 Z65974 New Jersey. State Department
-  of Health. Z208677 Healthy in New Jersey (not owned). 1877-81 https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
+all_search: 'Annu Rep Dep Health State N J Annual report of the Department of Health
+  of the State of New Jersey. Annual report of the Board of Health of the State of
+  New Jersey 1879-1914 Report of the Board of Health of the State of New Jersey 1877-1878
+  [Place of publication not identified] : State Department of Health, 1877-19uu. volumes
+  : illustrations ; 24 cm Annual text txt rdacontent unmediated n rdamedia computer
+  c rdamedia volume nc rdacarrier online resource cr rdacarrier 1877-19uu. Report
+  year irregular; 1917/19 covers period from November 1, 1917-June 30, 1919. Public
+  Health. http://id.nlm.nih.gov/mesh/D011634 Annual Report. http://id.nlm.nih.gov/mesh/D019487
+  Government Publications, State. New Jersey. http://id.loc.gov/authorities/names/n80046086
+  Serials Subset, Scanned 2006. New Jersey. State Department of Health. http://id.loc.gov/authorities/names/n79135150
+  Healthy in New Jersey (not owned). 1877-81 https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
   Google Books 1882-84 https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage
   Google Books 1885 https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage
   Google Books 1886-87 https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage
@@ -142,8 +150,8 @@ all_search: 'Annu Rep Dep Health State N J [print/digital] Annual report of the 
   Google Books 1925 https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage
   Google Books 1931 https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage
   Google Books'
-title_245a_search: Annual report of the Department of Health of the State of New Jersey
-title_245_search: Annual report of the Department of Health of the State of New Jersey
+title_245a_search: Annual report of the Department of Health of the State of New Jersey.
+title_245_search: Annual report of the Department of Health of the State of New Jersey.
 title_variant_search:
 - Annu Rep Dep Health State N J
 - Annual report of the Board of Health of the State of New Jersey 1879-1914
@@ -157,41 +165,42 @@ title_related_search:
 title_245a_display: Annual report of the Department of Health of the State of New
   Jersey
 title_display: Annual report of the Department of Health of the State of New Jersey
-  [print/digital].
 title_full_display: Annual report of the Department of Health of the State of New
-  Jersey [print/digital].
-title_sort: Annual report of the Department of Health of the State of New Jersey printdigital
+  Jersey.
+title_sort: Annual report of the Department of Health of the State of New Jersey
 author_title_245ac_search:
-- Annual report of the Department of Health of the State of New Jersey
+- Annual report of the Department of Health of the State of New Jersey.
 author_7xx_search:
 - New Jersey. State Department of Health.
 author_other_facet:
 - New Jersey. State Department of Health
 author_sort: "\U0010FFFF Annual report of the Department of Health of the State of
-  New Jersey printdigital"
+  New Jersey"
 author_authorities_ssim:
-- Z208677
+- http://id.loc.gov/authorities/names/n79135150
 topic_search:
-- Public Health
-topic_display:
-- Public Health
-geographic_search:
-- New Jersey
-subject_all_search:
-- Public Health
-- New Jersey
-- Annual Reports
-- Government Publications, State
+- Public Health.
 - Serials
-- Subset, Scanned 2006
+topic_display:
+- Public Health.
+- Serials
+geographic_search:
+- New Jersey.
+subject_all_search:
+- Public Health.
+- Annual Report.
+- Government Publications, State.
+- New Jersey.
+- Serials
+- Subset, Scanned 2006.
 topic_facet:
 - Public Health
 geographic_facet:
 - New Jersey
 pub_search:
-- State Dept. of Health
+- State Department of Health
 pub_display:
-- State Dept. of Health
+- State Department of Health
 pub_country: New Jersey, United States
 pub_date: '1877'
 pub_date_search: '1877'
@@ -201,7 +210,7 @@ pub_year_tisim:
 pub_year_ss: 1877 -
 beginning_year_isi: 1877
 imprint_display:
-- State Dept. of Health, 1877-19uu.
+- "[Place of publication not identified] : State Department of Health, 1877-19uu."
 date_cataloged: '1979-08-09T00:00:00Z'
 language:
 - English
@@ -265,12 +274,11 @@ oclc:
 access_facet:
 - Online
 - At the Library
-format_hsim:
+format_main_ssim:
 - Journal/Periodical
 genre_ssim:
-- Annual Reports
+- Annual Report
 - Government Publications, State
-- Serials
 - Subset, Scanned 2006
 - Government document
 physical:
@@ -466,54 +474,60 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
 - '001'
-- '005'
 - '008'
+- '005'
 - '035'
 - '040'
+- '043'
 - '210'
 - '245'
 - '247'
-- '260'
-- '265'
+- '264'
 - '300'
 - '310'
+- '336'
+- '337'
+- '338'
 - '362'
 - '515'
 - '650'
-- '651'
 - '655'
+- '651'
+- '690'
 - '710'
 - '785'
-- '904'
-- '953'
+- '945'
+- '965'
 - '999'
 - '856'
 - '0359'
 - 035a
-- 040acdddddddd
-- 210ah
-- 245ah
+- 040acddddddddd
+- 043a
+- 210a
+- 245a
 - 247af
-- 260bc
-- 265abc
+- 264abc
 - 300abc
 - 310a
+- 336ab2
+- 337ab2
+- 338ab2
 - 362a
 - 515a
 - 650a0
-- 651a0
 - 655a0
+- 655a
+- 651a0
+- 690a
 - 710ab0
 - 785tg
-- 904a
-- 953ab
+- 945h
+- 965abc
 - 999is
 - 8563uy
 - "?0359"
@@ -521,65 +535,70 @@ context_marc_fields_ssim:
 - "?040a"
 - "?040c"
 - "?040d"
+- "?043a"
 - "?210a"
-- "?210h"
 - "?245a"
-- "?245h"
 - "?247a"
 - "?247f"
-- "?260b"
-- "?260c"
-- "?265a"
-- "?265b"
-- "?265c"
+- "?264a"
+- "?264b"
+- "?264c"
 - "?300a"
 - "?300b"
 - "?300c"
 - "?310a"
+- "?336a"
+- "?336b"
+- "?3362"
+- "?337a"
+- "?337b"
+- "?3372"
+- "?338a"
+- "?338b"
+- "?3382"
 - "?362a"
 - "?515a"
 - "?650a"
 - "?6500"
-- "?651a"
-- "?6510"
 - "?655a"
 - "?6550"
+- "?651a"
+- "?6510"
+- "?690a"
 - "?710a"
 - "?710b"
 - "?7100"
 - "?785t"
 - "?785g"
-- "?904a"
-- "?953a"
-- "?953b"
+- "?945h"
+- "?965a"
+- "?965b"
+- "?965c"
 - "?999i"
 - "?999s"
 - "?8563"
 - "?856u"
 - "?856y"
-bib_search: Annu Rep Dep Health State N J [print/digital] Annual report of the Department
-  of Health of the State of New Jersey [print/digital]. Annual report of the Board
-  of Health of the State of New Jersey 1879-1914 Report of the Board of Health of
-  the State of New Jersey 1877-1878 State Dept. of Health, 1877-19uu. New Jersey.
-  State Department of Health. Public Health Journal/Periodical
+bib_search: 'Annu Rep Dep Health State N J Annual report of the Department of Health
+  of the State of New Jersey. Annual report of the Board of Health of the State of
+  New Jersey 1879-1914 Report of the Board of Health of the State of New Jersey 1877-1878
+  [Place of publication not identified] : State Department of Health, 1877-19uu. New
+  Jersey. State Department of Health. Public Health. Serials Journal/Periodical'
 vern_bib_search: Journal/Periodical
 uuid_ssi: 41fb6f87-176f-5db3-a3d1-1060c5635f81
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"41fb6f87-176f-5db3-a3d1-1060c5635f81","hrid":"L210044","tags":{"tagList":[]},"notes":[{"note":"Report
+- '{"instance":{"id":"41fb6f87-176f-5db3-a3d1-1060c5635f81","hrid":"L210044","tags":{"tagList":[]},"notes":[{"note":"Report
   year irregular; 1917/19 covers period from November 1, 1917-June 30, 1919","staffOnly":false,"instanceNoteTypeId":"cf635f41-29e7-4dd0-8598-33f230157074"}],"title":"Annual
-  report of the Department of Health of the State of New Jersey [print/digital].","series":[],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-24T15:18:21.687Z","updatedDate":"2023-08-24T15:18:21.687Z","createdByUserId":"0b29ca0a-68b6-5547-ab9e-a266c4379236","updatedByUserId":"0b29ca0a-68b6-5547-ab9e-a266c4379236"},"statusId":"52a2ff34-2a12-420d-8539-21aa8d3cf5d8","subjects":[{"value":"Public
-  Health"},{"value":"New Jersey"},{"value":"Annual Reports"},{"value":"Government
-  Publications, State"},{"value":"Serials"},{"value":"Subset, Scanned 2006"}],"languages":["eng"],"indexTitle":"Annual
-  report of the Department of Health of the State of New Jersey","identifiers":[{"value":"(DNLM)A42480000(s)","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC)5255092","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"210044","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"publisher":"State
-  Dept. of Health","dateOfPublication":"1877-19uu"}],"contributors":[{"name":"New
+  report of the Department of Health of the State of New Jersey.","series":[],"source":"MARC","_version":4,"editions":[],"metadata":{"createdDate":"2023-08-24T15:18:21.687Z","updatedDate":"2025-05-24T01:54:45.892Z","createdByUserId":"0b29ca0a-68b6-5547-ab9e-a266c4379236","updatedByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77"},"statusId":"52a2ff34-2a12-420d-8539-21aa8d3cf5d8","subjects":[{"value":"Public
+  Health"},{"value":"Annual Report"},{"value":"Government Publications, State"},{"value":"New
+  Jersey"},{"value":"Subset, Scanned 2006"}],"languages":["eng"],"indexTitle":"Annual
+  report of the Department of Health of the State of New Jersey.","identifiers":[{"value":"(DNLM)A42480000(s)","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC)5255092","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"210044","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"role":"Publication","place":"[Place
+  of publication not identified]","publisher":"State Department of Health","dateOfPublication":"1877-19uu"}],"contributors":[{"name":"New
   Jersey. State Department of Health","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"1979-08-09","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"068b5344-e2a6-40df-9186-1829e13cd344","publicationRange":["1877-19uu"],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Annu
   Rep Dep Health State N J","alternativeTitleTypeId":"bba5b222-1cc8-4745-9a75-3f1d3b5c3a67"},{"alternativeTitle":"Annual
   report of the Board of Health of the State of New Jersey 1879-1914","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"Report
-  of the Board of Health of the State of New Jersey 1877-1878","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1877},"statusUpdatedDate":"2023-08-24T15:18:21.607+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["volumes
-  : illustrations ; 24 cm"],"publicationFrequency":["Annual"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-18T10:29:53Z'
-created: '2025-05-18T10:29:53Z'
-timestamp: '2025-05-18T10:29:53Z'
+  of the Board of Health of the State of New Jersey 1877-1878","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324","f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2023-08-24T15:18:21.607+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["volumes
+  : illustrations ; 24 cm"],"publicationFrequency":["Annual"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - contributors:
   - link: New Jersey. State Department of Health.
@@ -587,7 +606,7 @@ author_struct:
     pre_text: ''
     post_text: ''
     authorities:
-    - Z208677
+    - http://id.loc.gov/authorities/names/n79135150
     rwo: []
 marc_links_struct:
 - version: '0.2'
@@ -597,13 +616,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: 1877-81
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135193&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -615,13 +634,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: 1882-84
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135208&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -633,13 +652,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1885'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135216&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -651,13 +670,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: 1886-87
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135224&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -669,13 +688,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: 1888-89
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135232&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -687,13 +706,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1890'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135240&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -705,13 +724,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: 1891-92
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135258&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -723,13 +742,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: 1893-94
   note: ''
   href: https://books.google.com/books?vid=Stanford24504135266&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -741,13 +760,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1920'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174951&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -759,13 +778,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1921'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174969&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -777,13 +796,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1923'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174977&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -795,13 +814,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1924'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174985&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -813,13 +832,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1922'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504174993&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -831,13 +850,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1913'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175070&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -849,13 +868,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1914'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175088&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -867,13 +886,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1915'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175096&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -885,13 +904,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1917'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175101&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -903,13 +922,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1919'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175119&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -921,13 +940,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1906'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175127&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -939,13 +958,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1907'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175135&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -957,13 +976,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1908'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175143&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -975,13 +994,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1909'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175151&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -993,13 +1012,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1910'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175169&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1011,13 +1030,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1911'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175177&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1029,13 +1048,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1912'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175185&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1047,13 +1066,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: 1895-97
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175232&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1065,13 +1084,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1898'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175240&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1083,13 +1102,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1899'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175258&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1101,13 +1120,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1900'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175266&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1119,13 +1138,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1901'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175274&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1137,13 +1156,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1902'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175282&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1155,13 +1174,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1904'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175290&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1173,13 +1192,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1903'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504175305&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1191,13 +1210,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1934'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219612&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1209,13 +1228,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1929'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219620&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1227,13 +1246,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1936'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219638&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1245,13 +1264,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1937'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219646&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1263,13 +1282,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1933'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219654&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1281,13 +1300,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1930'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219662&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1299,13 +1318,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1928'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219670&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1317,13 +1336,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1927'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219688&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1335,13 +1354,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1932'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219696&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1353,13 +1372,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1926'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504219701&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1371,13 +1390,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1938'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220192&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1389,13 +1408,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1963'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220215&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1407,13 +1426,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1964'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220223&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1425,13 +1444,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1966'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220231&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1443,13 +1462,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1959'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220249&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1461,13 +1480,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1960'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220257&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1479,13 +1498,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1961'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220265&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1497,13 +1516,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1962'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220273&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1515,13 +1534,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1935'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220281&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1533,13 +1552,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1925'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220299&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -1551,13 +1570,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: '1931'
   note: ''
   href: https://books.google.com/books?vid=Stanford24504220304&printsec=titlepage
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:

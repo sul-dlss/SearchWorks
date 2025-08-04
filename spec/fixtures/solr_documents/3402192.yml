@@ -1,13 +1,15 @@
 ---
+format_hsim:
+- Book
 id: '3402192'
 hashed_id_ssi: dd9ccd9429343cb87006571116366ff5
 marc_json_struct:
-- '{"leader":"01474cam a22003858a 4500","fields":[{"001":"a3402192"},{"008":"961011s1997    nyu      b    001
-  0 eng  "},{"005":"20250122230720.8"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   96037068"}]}},{"020":{"ind1":"
+- '{"leader":"01388cam a22003618a 4500","fields":[{"001":"a3402192"},{"008":"961011s1997    nyu      b    001
+  0 eng  "},{"005":"20250703145836.2"},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   96037068"}]}},{"020":{"ind1":"
   ","ind2":" ","subfields":[{"a":"0393038912"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"9780393038910"}]}},{"035":{"ind1":"
   ","ind2":" ","subfields":[{"a":"(OCoLC-I)275230620"}]}},{"035":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"(OCoLC-M)35792200"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)    96037068"}]}},{"035":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"a3402192"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"DLC"},{"c":"DLC"},{"d":"OrLoB"},{"d":"CSt"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"HM206"},{"b":".D48
+  ","subfields":[{"a":"(OCoLC-M)35792200"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(Sirsi)    96037068"}]}},{"040":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"DLC"},{"c":"DLC"},{"d":"OrLoB"},{"d":"CSt"}]}},{"050":{"ind1":"0","ind2":"0","subfields":[{"a":"HM206"},{"b":".D48
   1997"}]}},{"082":{"ind1":"0","ind2":"0","subfields":[{"a":"303.4"},{"2":"21"}]}},{"100":{"ind1":"1","ind2":"
   ","subfields":[{"a":"Diamond, Jared M."}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Guns,
   germs, and steel :"},{"b":"the fates of human societies /"},{"c":"Jared Diamond."}]}},{"260":{"ind1":"
@@ -19,7 +21,6 @@ marc_json_struct:
   ","ind2":"0","subfields":[{"a":"Ethnology."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Human
   beings"},{"x":"Effect of environment on."}]}},{"650":{"ind1":" ","ind2":"0","subfields":[{"a":"Culture
   diffusion."}]}},{"919":{"ind1":" ","ind2":" ","subfields":[{"a":"exclude from BorrowDirect"},{"b":"reserve
-  fall 2021"}]}},{"919":{"ind1":" ","ind2":" ","subfields":[{"a":"exclude from BorrowDirect"},{"b":"reserve
   fall 2022"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"MEYERRES2"},{"b":"druid:jk178rf2718"},{"c":"jk178rf2718_00_0001.jp2"},{"d":"The
   Jackson E. Reynolds Book Fund"}]}},{"986":{"ind1":" ","ind2":" ","subfields":[{"a":"Winner
   of Rhone Poulenc General Prize for Science Books 1998."},{"1":"Nielsen"},{"x":"9780393038910"},{"x":"20160527"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"79de0869-d7ca-51ba-a837-45f566c9c2b4"},{"s":"a2c33e70-1a96-5151-9d67-fac17845813b"}]}}]}'
@@ -100,7 +101,7 @@ oclc:
 - '35792200'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 physical:
 - 480 p.
@@ -144,7 +145,7 @@ holdings_library_code_ssim:
 - GREEN
 - SCIENCE
 library_code_facet_ssim:
-- SAL3
+- OFF_CAMPUS
 - SCIENCE
 - TANNER
 - GREEN
@@ -192,9 +193,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'd1047c3143e8ed515727d5cc1879e15a1b777c95
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -275,19 +273,16 @@ bib_search: 'Diamond, Jared M. Guns, germs, and steel : the fates of human socie
 vern_bib_search: Book
 uuid_ssi: 79de0869-d7ca-51ba-a837-45f566c9c2b4
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"79de0869-d7ca-51ba-a837-45f566c9c2b4","hrid":"a3402192","tags":{"tagList":[]},"notes":[{"note":"Includes
+- '{"instance":{"id":"79de0869-d7ca-51ba-a837-45f566c9c2b4","hrid":"a3402192","tags":{"tagList":[]},"notes":[{"note":"Includes
   bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"}],"title":"Guns,
-  germs, and steel : the fates of human societies / Jared Diamond.","series":[],"source":"MARC","_version":17,"editions":[],"metadata":{"createdDate":"2023-08-21T05:48:30.811Z","updatedDate":"2025-01-22T23:07:21.334Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"d43a28c3-e9d6-44a3-8927-0063924982f1"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Social
+  germs, and steel : the fates of human societies / Jared Diamond.","series":[],"source":"MARC","_version":18,"editions":[],"metadata":{"createdDate":"2023-08-21T05:48:30.811Z","updatedDate":"2025-07-03T14:58:36.368Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"d43a28c3-e9d6-44a3-8927-0063924982f1"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Social
   evolution"},{"value":"Civilization--History"},{"value":"Ethnology"},{"value":"Human
   beings--Effect of environment on"},{"value":"Culture diffusion"}],"languages":["eng"],"indexTitle":"Guns,
-  germs, and steel : the fates of human societies /","identifiers":[{"value":"96037068","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"0393038912","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9780393038910","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(OCoLC-I)275230620","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-M)35792200","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)    96037068","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"a3402192","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"New
+  germs, and steel : the fates of human societies /","identifiers":[{"value":"96037068","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"0393038912","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9780393038910","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"(OCoLC-I)275230620","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-M)35792200","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(Sirsi)    96037068","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"}],"publication":[{"place":"New
   York","publisher":"W. W. Norton & Company","dateOfPublication":"1997"}],"contributors":[{"name":"Diamond,
   Jared M.","primary":true,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1997-04-08","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"HM206
   .D48 1997","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"303.4","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T05:48:30.804+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["480
-  p."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-06-24T07:05:24Z'
-created: '2025-06-24T07:05:24Z'
-timestamp: '2025-06-24T07:05:24Z'
+  p."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Diamond, Jared M.
@@ -840,15 +835,15 @@ holdings_json_struct:
   - id: 15f7fb09-a22f-580e-8939-ceac58d39fa7
     hrid: ai3402192_1_3
     notes: []
-    status: Available
+    status: Checked out
     barcode: '36105123825817'
     request:
-    _version: 4
+    _version: 5
     metadata:
       createdDate: '2023-08-21T05:51:13.203Z'
-      updatedDate: '2025-04-11T21:47:23.250Z'
+      updatedDate: '2025-07-25T01:37:39.319Z'
       createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
-      updatedByUserId: bfe6f660-dd65-46d1-b56e-0ea081a7c9af
+      updatedByUserId: a4dcafe4-8c10-4677-88cc-7dfeba59af94
     formerIds: []
     callNumber:
       typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
@@ -1197,7 +1192,7 @@ item_display_struct:
   effective_permanent_location_code: GRE-STACKS
   temporary_location_code:
   permanent_location_code: GRE-STACKS
-  status: Available
+  status: Checked out
   effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
