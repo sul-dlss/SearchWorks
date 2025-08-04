@@ -3,7 +3,5 @@ HOURS_API:
   enabled: false
 SU_AFFILIATIONS:
   - test-stanford:test
-LIB_GUIDES:
-  MINI_BENTO_ENABLED: true
 
 live_lookup_service: LiveLookup::Testing

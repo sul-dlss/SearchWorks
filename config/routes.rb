@@ -84,8 +84,6 @@ Rails.application.routes.draw do
 
   resource :quick_reports, only: [:create]
 
-  resources :lib_guides, only: :index
-
   resources :browse, only: :index
 
   get 'catalog/:id/track' => 'catalog#track', as: 'track_browse'
