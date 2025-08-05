@@ -5,12 +5,12 @@ require 'rails_helper'
 RSpec.describe 'Link' do
   let(:link) do
     Links::Link.new(
-      href: 'http://link.edu', link_text: 'Link Text', fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
+      href: 'http://link.edu', link_text: 'Link Text', fulltext: true, stanford_only: true, finding_aid: true, managed_purl: true
     )
   end
 
   it 'assembles the html link' do
-    expect(link.html).to eq '<a href="http://link.edu" class="sfx">Link Text</a>'
+    expect(link.html).to eq '<a href="http://link.edu">Link Text</a>'
   end
 
   it 'makes an html_safe html link' do
@@ -41,10 +41,6 @@ RSpec.describe 'Link' do
     expect(link).to be_finding_aid
   end
 
-  it 'parses the sfx option' do
-    expect(link).to be_sfx
-  end
-
   it 'parses the managed_purl option' do
     expect(link).to be_managed_purl
   end
@@ -52,7 +48,7 @@ RSpec.describe 'Link' do
   context 'without link text' do
     let(:link) do
       Links::Link.new(
-        href: 'http://link.edu', fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
+        href: 'http://link.edu', fulltext: true, stanford_only: true, finding_aid: true, managed_purl: true
       )
     end
 
@@ -69,7 +65,7 @@ RSpec.describe 'Link' do
     context 'without link text' do
       let(:link) do
         Links::Link.new(
-          href: 'http://link.edu', link_text: nil, fulltext: true, stanford_only: true, finding_aid: true, sfx: true, managed_purl: true
+          href: 'http://link.edu', link_text: nil, fulltext: true, stanford_only: true, finding_aid: true, managed_purl: true
         )
       end
 

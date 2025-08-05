@@ -169,23 +169,6 @@ RSpec.describe EdsLinks do
     end
   end
 
-  context 'with a SFX link' do
-    let(:document) do
-      EdsDocument.new({
-                        'FullText' => {
-                          'CustomLinks' => [{
-                            'Text' => 'Check SFX for full text',
-                            'Url' => 'http://sfx.example.com'
-                          }]
-                        }
-                      })
-    end
-
-    it 'relabels it to "View full text"' do
-      expect(document.eds_links.all.first).to have_attributes(text: 'View on content provider&#39;s site', stanford_only?: false)
-    end
-  end
-
   context 'with a "View request options" link' do
     let(:document) do
       EdsDocument.new({

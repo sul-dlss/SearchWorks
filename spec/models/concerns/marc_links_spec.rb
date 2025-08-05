@@ -166,22 +166,6 @@ RSpec.describe MarcLinks do
         end
       end
 
-      context 'with SFX links' do
-        let(:document) do
-          SolrDocument.new(
-            marc_links_struct: [{ href: "http://example.com/sfx-link", sfx: true }]
-          )
-        end
-
-        it 'identifies sfx URLs and link them appropriately' do
-          expect(marc_links.length).to eq 1
-          expect(marc_links.first).to be_sfx
-          expect(document.marc_links.sfx.length).to eq 1
-          expect(document.marc_links.sfx.first).to be_sfx
-          expect(document.marc_links.sfx.first.html).to match(%r{^<a href=.*class="sfx">Find full text</a>$})
-        end
-      end
-
       describe 'ezproxy' do
         context 'pre-encoded urls' do
           let(:document) do

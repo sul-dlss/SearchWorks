@@ -120,8 +120,6 @@ Rails.application.routes.draw do
     get 'articles/:id/:type/fulltext' => 'articles#fulltext_link', as: :article_fulltext_link, constraints: { type: /[-\w]+/ }
   end
 
-  resource :sfx_data, only: :show
-
   # Vanity URL used in development office mailings
   get '/funds/:fund', to: redirect { |path_params, _req| "/?f[fund_facet][]=#{path_params[:fund].upcase}" }
 

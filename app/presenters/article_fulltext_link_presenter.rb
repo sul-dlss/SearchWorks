@@ -47,8 +47,6 @@ class ArticleFulltextLinkPresenter
   def render_fulltext_link(link)
     if link.href == 'detail' # PDFs
       detail_link_markup(link)
-    elsif link.ill?
-      link_to(link.text, link.href, class: 'sfx')
     else
       "#{online_label} #{link_to(link.text, link.href)}"
     end
