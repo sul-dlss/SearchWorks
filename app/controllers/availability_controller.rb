@@ -1,15 +1,10 @@
 # frozen_string_literal: true
 
 class AvailabilityController < ApplicationController
-  before_action :redirect_bots
-  before_action :redirect_no_ids, only: [:index]
   include Blacklight::Searchable
-  layout false, only: [:index]
-  layout 'turbo_rails/frame', only: [:show]
 
-  def index
-    render json: LiveLookup.new(params[:ids]).as_json, layout: false
-  end
+  before_action :redirect_bots
+  layout 'turbo_rails/frame'
 
   def show
     # Unfortunately, FOLIO doesn't provide enough information in the RTAC lookup to drive all of our logic,
@@ -26,9 +21,5 @@ class AvailabilityController < ApplicationController
     if /bot|spider|crawl|teoma/i.match?(request.env['HTTP_USER_AGENT'])
       render status: :forbidden, plain: "No bots allowed"
     end
-  end
-
-  def redirect_no_ids
-    render json: [] unless Array(params[:ids]).compact_blank.present?
   end
 end
