@@ -1354,7 +1354,6 @@ Style/PercentLiteralDelimiters:
     - "app/helpers/marc_helper.rb"
     - "app/models/concerns/series_linkable.rb"
     - "app/models/marc_fields/bound_with_note.rb"
-    - "app/models/marc_fields/database_note.rb"
     - "app/models/marc_fields/imprint.rb"
     - "app/models/marc_fields/instrumentation.rb"
     - "app/models/marc_fields/language.rb"

@@ -1946,30 +1946,6 @@ module MarcMetadataFixtures
     json
   end
 
-  def marc_592_fixture
-    <<-json
-      {
-        "leader": "          22        4500",
-        "fields": [
-          {
-            "592": {
-              "ind1": " ",
-              "ind2": " ",
-              "subfields": [
-                {
-                  "a": "A local note"
-                },
-                {
-                  "b": "added to subjects only"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    json
-  end
-
   def marc_multi_series_fixture
     <<-json
       {
