@@ -30,12 +30,16 @@
 
       <h3>Contact our reference team</h3>
       <div class="mb-2">
-        <span class="bi bi-phone"></span>
-        <%= link_to '(650) 725-1064', 'tel:650-725-1064' %>
+        <%= link_to 'tel:650-725-1064', class: 'icon-link' do %>
+          <span class="bi bi-phone"></span>
+          (650) 725-1064
+        <% end %>
       </div>
       <div class="mb-2">
-        <span class="bi bi-envelope"></span>
-        <%= link_to 'library-reference@stanford.edu', 'mailto:library-reference@stanford.edu' %>
+        <%= link_to 'mailto:library-reference@stanford.edu', class: 'icon-link' do %>
+          <span class="bi bi-envelope"></span>
+          library-reference@stanford.edu
+        <% end %>
       </div>
 
       <h3 class="mt-4">Stanford affiliates <%= render StanfordOnlyPopoverComponent.new %></h3>

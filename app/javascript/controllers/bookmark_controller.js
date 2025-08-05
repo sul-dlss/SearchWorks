@@ -2,23 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="bookmark"
 export default class extends Controller {
-  static targets = ['icon', 'checkedIcon', 'hoverIcon']
-
-  hover() {
-    if (this.checked()) {
-      this.checkedIconTarget.classList.add('d-none');
-      this.hoverIconTarget.classList.remove('d-none');
-    }
-  }
-
-  checked() {
-    return this.element.querySelector('input[type="checkbox"]').checked
-  }
-
-  blur() {
-    this.checkedIconTarget.classList.remove('d-none');
-    this.hoverIconTarget.classList.add('d-none')
-  }
+  static targets = ['icon']
 
   updateAriaTooltip(bookmark, checked) {
     if (checked) { 
@@ -48,7 +32,6 @@ export default class extends Controller {
 
     if (event.detail.checked){
       toastHtml = '<i class="bi bi-check-circle-fill pe-1" aria-hidden="true"></i> Record saved'
-      if (this.element.matches(':hover')) this.hover()
     } else {
       toastHtml =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }

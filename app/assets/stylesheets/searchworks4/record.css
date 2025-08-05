@@ -109,9 +109,6 @@
     --bs-nav-link-color: var(--stanford-80-black);
     --bs-nav-link-padding-y: 0.25rem;
     --bs-nav-link-padding-x: var(--item-padding-x);
-    i {
-      vertical-align: middle;
-    }
   }
 
   /* Suppress e.g. the save button tooltip, which is unnecessary because we're showing the label already */
@@ -129,10 +126,6 @@
     --bs-link-color-rgb: var(--bs-body-color-rgb);
     &:hover {
       color: var(--stanford-cardinal);
-
-      i {
-        padding-left: 0.25rem;
-      }
     }
   }
 }
