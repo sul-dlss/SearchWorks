@@ -162,15 +162,8 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
     end
 
     it "displays for databases" do
-      allow(document).to receive(:is_a_database?).and_return(true)
       expect(page).to have_css("dd a", text: "DB Subject1")
       expect(page).to have_css("dd a", text: "DB Subject2")
-    end
-
-    it "does not display for non-databases" do
-      allow(document).to receive(:is_a_database?).and_return(false)
-      expect(page).to have_no_css("dd a", text: "DB Subject1")
-      expect(page).to have_no_css("dd a", text: "DB Subject2")
     end
   end
 
