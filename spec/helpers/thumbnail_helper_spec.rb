@@ -12,13 +12,8 @@ RSpec.describe ThumbnailHelper do
       allow(helper).to receive(:book_ids).and_return(numbers)
     end
 
-    it "returns nothing when the document does not have an associated thumbnail partial" do
-      allow(document).to receive(:display_type).and_return(nil)
-      expect(helper.render_cover_image(document)).to be_nil
-    end
     it "renders the appropriate partial for a document's display type" do
-      allow(document).to receive(:display_type).and_return('marc')
-      expect(helper).to receive(:render).with({ partial: 'catalog/thumbnails/marc_thumbnail', locals: expected_locals })
+      expect(helper).to receive(:render).with({ partial: 'catalog/thumbnails/item_thumbnail', locals: expected_locals })
       helper.render_cover_image(document)
     end
   end
