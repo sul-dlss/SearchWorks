@@ -21,5 +21,7 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+      - name: Herb analyze
+        run: bundle exec herb analyze app --non-interactive --no-log-file
       - name: Run tests
         run: bundle exec rake

@@ -48,6 +48,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'capybara', '~> 3.0'
+  gem "herb", "~> 0.4.3"
   gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 8.0'
