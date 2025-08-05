@@ -7,12 +7,12 @@ class Links
     SUL_RESTRICTED_REGEX = /available[ -]?to[ -]?stanford[ -]?affiliated[ -]?users[ -]?a?t?[:;.]?/i
     LANE_RESTRICTED_REGEX = /Access restricted to Stanford community/i
 
-    attr_reader :url, :link_title, :document
+    attr_reader :url, :link_title, :libraries
 
-    def initialize(url:, link_title:, document:)
+    def initialize(url:, link_title:, libraries: [])
       @url = url&.strip
       @link_title = link_title
-      @document = document
+      @libraries = libraries
     end
 
     # @return [String, nil] the proxy-prefixed URL or nil if the URL should not be proxied.
@@ -50,11 +50,6 @@ class Links
     def apply_sul_proxy_prefix?
       ezproxied_hosts[:default].any?(link_host) &&
         sul_restricted?
-    end
-
-    # Popular database links may not have any associated Solr documents
-    def libraries
-      @libraries ||= document&.fetch(:holdings_library_code_ssim, []) || []
     end
 
     def ezproxied_hosts
