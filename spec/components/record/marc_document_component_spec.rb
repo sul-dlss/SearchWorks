@@ -28,22 +28,6 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
     expect(page).to have_css('li', text: 'part 2')
   end
 
-  describe "MARC 592" do
-    let(:document) { SolrDocument.new(marc_json_struct: marc_592_fixture) }
-
-    it "displays for databases" do
-      allow(document).to receive(:is_a_database?).and_return(true)
-      expect(page).to have_css("dt", text: "Note")
-      expect(page).to have_css("dd", text: "A local note added to subjects only")
-    end
-
-    it "does not display for non-databases" do
-      allow(document).to receive(:is_a_database?).and_return(false)
-      expect(page).to have_no_css("dt", text: "Note")
-      expect(page).to have_no_css("dd", text: "A local note added to subjects only")
-    end
-  end
-
   describe "dates from solr" do
     let(:document) { SolrDocument.new(marc_json_struct: metadata1, publication_year_isi: '1234', other_year_isi: '4321', copyright_year_isi: '5678') }
 

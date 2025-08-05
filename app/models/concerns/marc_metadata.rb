@@ -34,10 +34,6 @@ module MarcMetadata
     @linked_related_works ||= LinkedRelatedWorks.new(self)
   end
 
-  def database_note
-    @database_note ||= DatabaseNote.new(self)
-  end
-
   def production_notice
     @production_notice ||= ProductionNotice.new(self)
   end
