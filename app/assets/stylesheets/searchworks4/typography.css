@@ -182,8 +182,12 @@ aside,
 }
 
 .btn {
-  .icon-link > .bi-chevron-down {
+  .icon-link > .bi-chevron-down::before {
     line-height: 0.995em;
-    vertical-align: -0.05em;
+    vertical-align: -0.2em;
+  }
+
+  .icon-link > .bi-chevron-up::before {
+    vertical-align: -0.125em;
   }
 }
