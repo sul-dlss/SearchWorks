@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module CatalogFields
+  def display_type = nil
+
   def document_format
     document.document_formats.first
   end

@@ -474,8 +474,6 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   def mods = nil
   def oclc_number = nil
 
-  def display_type = 'eds'
-
   def holdings
     Holdings.new([], [])
   end
