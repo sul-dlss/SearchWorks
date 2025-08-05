@@ -180,7 +180,7 @@ class CatalogController < ApplicationController
                            component: Blacklight::Hierarchy::FacetFieldListComponent,
                            sort: 'index'
 
-    config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true, advanced_search_component: AdvancedSearchRangeLimitComponent
+    config.add_facet_field 'pub_year_adv_search', show: false, field: 'pub_year_tisim', range: true
     config.add_facet_field "db_az_subject", label: "Database topic", collapse: false, show: false, limit: 6, sort: :index, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'location_facet', label: 'Location', collapse: false, show: false, limit: 6, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'stanford_work_facet_hsim',
