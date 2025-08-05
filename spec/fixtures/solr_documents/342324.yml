@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Music score
 id: '342324'
 hashed_id_ssi: 6c229d66f03375a9e007ed215fd9391f
 marc_json_struct:
@@ -271,7 +273,7 @@ oclc:
 - '17872408'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Music score
 physical:
 - 'v. of music : facsims. ; 33 cm.'
@@ -559,7 +561,7 @@ holdings_library_code_ssim:
 - MUSIC
 library_code_facet_ssim:
 - MUSIC
-- SAL3
+- OFF_CAMPUS
 location_code_facet_ssim:
 - MUS-R-STACKS
 - SAL3-PAGE-MU
@@ -585,7 +587,7 @@ reverse_shelfkey:
 - en~d~~~zzzw}zzzzzz~6z}xtzzzz~3z}qzzzzz~4}zzzzzy~~~
 mhld_display:
 - 'SAL3 -|- SAL3-PAGE-MU -|-  -|- Bd.6 -|- '
-- MUSIC -|- MUS-R-STACKS -|-  -|- Bd.1-4;Bd.5:T.4;Bd.6-53;Bd.55-67 -|- V.67
+- 'MUSIC -|- MUS-R-STACKS -|-  -|- Bd.1-4;Bd.5:T.4;Bd.6-53;Bd.55-67 -|- '
 bookplates_display:
 - SHARPS -|- rq470hm8269 -|- rq470hm8269_00_0001.jp2 -|- Susan and Ruth Sharp Fund
 fund_facet:
@@ -598,9 +600,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -688,7 +687,7 @@ bib_search: 'Telemann, Georg Philipp, 1681-1767. Musikalische Werke / Georg Phil
 vern_bib_search: Music score
 uuid_ssi: 99b3ed8e-e460-5f5a-abe8-1b877fc1128d
 folio_json_struct:
-- '{"pieces":[{"id":"7a4904d4-3ed7-4829-9576-9cdbae8ca02f","format":"Physical","itemId":"cb5b8af6-b0a0-4c2d-88be-437844a09794","titleId":"9f4de88b-0d83-4f03-925f-f55bb3b3c90f","poLineId":"ac206a4b-a3a1-422b-b929-69eb46211637","holdingId":"19488021-c056-58ee-bfee-ba031abb2563","supplement":false,"enumeration":"V.61","receivedDate":"2023-12-20T20:16:40.389+00:00","receivingStatus":"Received","displayOnHolding":true},{"id":"f0473365-9c75-4f3a-b41d-e862db7b7d4a","format":"Physical","itemId":"f2d04464-c1ae-4724-b2e4-ddc1b01a31ff","titleId":"9f4de88b-0d83-4f03-925f-f55bb3b3c90f","poLineId":"ac206a4b-a3a1-422b-b929-69eb46211637","holdingId":"19488021-c056-58ee-bfee-ba031abb2563","supplement":false,"enumeration":"V.67","receivedDate":"2025-01-30T23:31:52.238+00:00","receivingStatus":"Received","displayOnHolding":true}],"instance":{"id":"99b3ed8e-e460-5f5a-abe8-1b877fc1128d","hrid":"a342324","tags":{"tagList":[]},"notes":[{"note":"Some
+- '{"instance":{"id":"99b3ed8e-e460-5f5a-abe8-1b877fc1128d","hrid":"a342324","tags":{"tagList":[]},"notes":[{"note":"Some
   vols. consist of score and parts","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Publisher''s
   no.: Bärenreiter-Ausgabe 2241--","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Bd.
   1. Zwölf methodische Sonaten -- Bd. 2-5. Der harmonische Gottesdienst -- Bd. 6-8.
@@ -814,10 +813,7 @@ folio_json_struct:
   für Musikforschung (1946- )","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"1996-04-05","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"M3
   .T4","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Works.
   1950","alternativeTitleTypeId":"30512027-cdc9-4c79-af75-1565b3bd888d"}],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-20T16:32:36.189+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["v.
-  of music : facsims. ; 33 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"ac206a4b-a3a1-422b-b929-69eb46211637","orderType":"Ongoing","orderStatus":"Open","poLineNumber":"2ABT0151-1","orderSentDate":"2024-06-04T13:33:54.160+00:00","orderCloseReason":null,"polReceiptStatus":"Ongoing"}]}'
-last_updated: '2025-06-22T11:54:46Z'
-created: '2025-06-22T11:54:46Z'
-timestamp: '2025-06-22T11:54:46Z'
+  of music : facsims. ; 33 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]}}'
 author_struct:
 - creator:
   - link: Telemann, Georg Philipp, 1681-1767.

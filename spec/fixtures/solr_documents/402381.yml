@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '402381'
 hashed_id_ssi: 5803ba99e9881485cbb083a4147eb429
 marc_json_struct:
@@ -165,7 +167,7 @@ oclc:
 - '2061037'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 genre_ssim:
 - Periodicals
@@ -283,7 +285,7 @@ holdings_library_code_ssim:
 - SAL3
 library_code_facet_ssim:
 - GREEN
-- SAL3
+- OFF_CAMPUS
 - ART
 location_code_facet_ssim:
 - GRE-FED-DOCS
@@ -326,9 +328,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -465,7 +464,7 @@ bib_search: 'Studies in the history of art (Washington, D.C.) Stud. hist. art St
 vern_bib_search: Book
 uuid_ssi: 848640f1-4ad7-5437-8239-c340ad0d0e6b
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"848640f1-4ad7-5437-8239-c340ad0d0e6b","hrid":"a402381","tags":{"tagList":["sulacq:govdoc-fed"]},"notes":[{"note":"Distributed
+- '{"instance":{"id":"848640f1-4ad7-5437-8239-c340ad0d0e6b","hrid":"a402381","tags":{"tagList":["sulacq:govdoc-fed"]},"notes":[{"note":"Distributed
   by University Press of New England, Hanover, N.H., v. 12-<51> ; vols. for <2005->
   distributed by Yale University Press, New Haven, Conn","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Vols.
   for 1971/72-1973 lack vol. numbering but constitute v. 4-5","staffOnly":false,"instanceNoteTypeId":"cf635f41-29e7-4dd0-8598-33f230157074"},{"note":"Vol.
@@ -482,10 +481,7 @@ folio_json_struct:
   S78","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"709","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"068b5344-e2a6-40df-9186-1829e13cd344","publicationRange":["1971,1972-"],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Studies
   in the history of art (Washington, D.C.)","alternativeTitleTypeId":"30512027-cdc9-4c79-af75-1565b3bd888d"},{"alternativeTitle":"Stud.
   hist. art","alternativeTitleTypeId":"bba5b222-1cc8-4745-9a75-3f1d3b5c3a67"}],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"statusUpdatedDate":"2023-08-20T18:42:13.714+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["volumes
-  : illustrations ; 25-29 cm"],"publicationFrequency":["Irregular"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"f17b0b90-7ce0-43c4-9d26-02aa28b4e145","orderType":"Ongoing","orderStatus":"Open","poLineNumber":"3ACA5123-1","orderSentDate":"1997-08-30T07:00:00.000+00:00","orderCloseReason":null,"polReceiptStatus":"Ongoing"}]}'
-last_updated: '2025-06-22T11:21:45Z'
-created: '2025-06-22T11:21:45Z'
-timestamp: '2025-06-22T11:21:45Z'
+  : illustrations ; 25-29 cm"],"publicationFrequency":["Irregular"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]}}'
 author_struct:
 - contributors:
   - link: National Gallery of Art (U.S.)

@@ -1,13 +1,16 @@
 ---
+format_hsim:
+- Video game
 id: '6631609'
 hashed_id_ssi: fe4b9cc160551e2704a490035e26600e
 marc_json_struct:
-- '{"leader":"05063cmm a2200649 a 4500","fields":[{"001":"a6631609"},{"007":"co cga||||||||"},{"008":"011029s2000    cc     fq  g        eng
-  d"},{"005":"20250225203953.3"},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"1882982398"}]}},{"020":{"ind1":"
+- '{"leader":"05183cmm a2200661 a 4500","fields":[{"001":"a6631609"},{"007":"co cga||||||||"},{"008":"011029s2000    cc     fq  g        eng
+  d"},{"005":"20250609204602.5"},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"1882982398"}]}},{"020":{"ind1":"
   ","ind2":" ","subfields":[{"a":"9781882982394"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"a":"188298241X"},{"q":"(guide)"}]}},{"020":{"ind1":"
   ","ind2":" ","subfields":[{"a":"9781882982417"},{"q":"(guide)"}]}},{"029":{"ind1":"1","ind2":"
-  ","subfields":[{"a":"YDXCP"},{"b":"1673383"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)48227022"}]}},{"040":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"MUS"},{"b":"eng"},{"c":"MUS"},{"d":"OCLCQ"},{"d":"BAKER"},{"d":"YDXCP"},{"d":"OCLCQ"},{"d":"OCLCF"},{"d":"OCLCO"},{"d":"OCLCQ"},{"d":"OCLCO"},{"d":"OCLCQ"},{"d":"OCLCL"},{"d":"OCLCO"},{"d":"STF"}]}},{"050":{"ind1":"
+  ","subfields":[{"a":"YDXCP"},{"b":"1673383"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)48227022"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) ocm48227022"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"MUS"},{"b":"eng"},{"c":"MUS"},{"d":"OCLCQ"},{"d":"BAKER"},{"d":"YDXCP"},{"d":"OCLCQ"},{"d":"OCLCF"},{"d":"OCLCO"},{"d":"OCLCQ"},{"d":"OCLCO"},{"d":"OCLCQ"},{"d":"OCLCL"},{"d":"OCLCO"},{"d":"STF"}]}},{"050":{"ind1":"
   ","ind2":"4","subfields":[{"a":"LB2341"},{"b":".V57 2000"}]}},{"099":{"ind1":" ","ind2":"
   ","subfields":[{"a":"SCM0445"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"Virtual
   U :"},{"b":"a simulation of university system management /"},{"c":"Enlight Software
@@ -66,9 +69,9 @@ marc_json_struct:
   Education Group."}]}},{"710":{"ind1":"2","ind2":" ","subfields":[{"a":"Anker Publishing."}]}},{"710":{"ind1":"2","ind2":"
   ","subfields":[{"a":"Digitalmill (Firm)"},{"1":"https://id.oclc.org/worldcat/entity/E39QH7JmpGgrCXTWVVr7yfcGTR"}]}},{"740":{"ind1":"0","ind2":"2","subfields":[{"a":"Virtual
   U strategy guide."}]}},{"856":{"ind1":"4","ind2":"2","subfields":[{"3":"Finding
-  Aid"},{"u":"https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://purl.stanford.edu/rc671ym6474"},{"x":"SDR-PURL"},{"x":"collection"}]}},{"035":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"(Sirsi) ocm48227022"}]}},{"938":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"Baker & Taylor"},{"b":"BKTY"},{"c":"130.00"},{"d":"134.95"},{"i":"1882982398"},{"n":"0003568638"},{"s":"active"}]}},{"938":{"ind1":"
+  aid"},{"u":"https://archives.stanford.edu/findingaid/ark:/22236/s1aff14110-7e6c-431c-ab04-35ccc19a311d"}]}},{"856":{"ind1":"4","ind2":"2","subfields":[{"3":"Finding
+  Aid"},{"u":"https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/"}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"https://purl.stanford.edu/rc671ym6474"},{"x":"SDR-PURL"},{"x":"collection"}]}},{"938":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Baker & Taylor"},{"b":"BKTY"},{"c":"130.00"},{"d":"134.95"},{"i":"1882982398"},{"n":"0003568638"},{"s":"active"}]}},{"938":{"ind1":"
   ","ind2":" ","subfields":[{"a":"YBP Library Services"},{"b":"YANK"},{"n":"1673383"}]}},{"994":{"ind1":"
   ","ind2":" ","subfields":[{"a":"Z0"},{"b":"STF"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"93289e1f-8763-5dcd-8bd5-640af6f767d7"},{"s":"14b52e2d-5bc7-580a-94bf-e62e3591d031"}]}}]}'
 all_search: 'Virtual U : a simulation of university system management / Enlight Software
@@ -112,8 +115,9 @@ all_search: 'Virtual U : a simulation of university system management / Enlight 
   (OCoLC)fst01423728 Massy, William F. Chan, Trevor. Salkind, Neil S. Rainwater, Therese.
   Enlight Software. Jackson Hole Higher Education Group. Anker Publishing. Digitalmill
   (Firm) https://id.oclc.org/worldcat/entity/E39QH7JmpGgrCXTWVVr7yfcGTR Virtual U
-  strategy guide. Finding Aid https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
-  https://purl.stanford.edu/rc671ym6474 SDR-PURL collection'
+  strategy guide. Finding aid https://archives.stanford.edu/findingaid/ark:/22236/s1aff14110-7e6c-431c-ab04-35ccc19a311d
+  Finding Aid https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/ https://purl.stanford.edu/rc671ym6474
+  SDR-PURL collection'
 title_245a_search: 'Virtual U :'
 title_245_search: 'Virtual U : a simulation of university system management /'
 title_related_search:
@@ -193,13 +197,14 @@ language:
 url_fulltext:
 - https://purl.stanford.edu/rc671ym6474
 url_suppl:
+- https://archives.stanford.edu/findingaid/ark:/22236/s1aff14110-7e6c-431c-ab04-35ccc19a311d
 - https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
 oclc:
 - '48227022'
 access_facet:
 - Online
 - At the Library
-format_hsim:
+format_main_ssim:
 - Software/Multimedia
 - Archive/Manuscript
 genre_ssim:
@@ -276,6 +281,7 @@ holdings_library_code_ssim:
 library_code_facet_ssim:
 - MEDIA-CENTER
 - SPEC-COLL
+- SDR
 location_code_facet_ssim:
 - MEDIA-CDCAB
 - MEDIA-CAGE
@@ -312,9 +318,6 @@ collection_search:
 collection_type:
 - Digital Collection
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -452,7 +455,7 @@ bib_search: 'Virtual U : a simulation of university system management / Enlight 
 vern_bib_search: Software/Multimedia Archive/Manuscript
 uuid_ssi: 93289e1f-8763-5dcd-8bd5-640af6f767d7
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"93289e1f-8763-5dcd-8bd5-640af6f767d7","hrid":"a6631609","tags":{"tagList":[]},"notes":[{"note":"System
+- '{"instance":{"id":"93289e1f-8763-5dcd-8bd5-640af6f767d7","hrid":"a6631609","tags":{"tagList":[]},"notes":[{"note":"System
   requirements: Windows 95/98/2000; 32 MB of RAM; 65 MB available hard disk space;
   CD-ROM drive; DirectX 6.0 with compatible graphics card","staffOnly":false,"instanceNoteTypeId":"95f62ca7-5df5-4a51-9890-d0ec3a34665f"},{"note":"Not
   compatible with WindowsNT 3.5 or 4.0","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Title
@@ -490,7 +493,7 @@ folio_json_struct:
   provided by the Alfred P. Sloan Foundation","staffOnly":false,"instanceNoteTypeId":"f289c02b-9515-4c3f-b242-ffd071e82135"}],"title":"Virtual
   U : a simulation of university system management / Enlight Software ; Jackson Hole
   Higher Education Group ; Digitalmill ; developed by William F. Massy [and Trevor
-  Chan].","series":[],"source":"MARC","_version":10,"editions":["Administrator version."],"metadata":{"createdDate":"2023-08-21T09:58:43.187Z","updatedDate":"2025-02-25T20:39:54.761Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"e5094801-9452-4ca8-924c-d3e9a33512f5"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Universities
+  Chan].","series":[],"source":"MARC","_version":13,"editions":["Administrator version."],"metadata":{"createdDate":"2023-08-21T09:58:43.187Z","updatedDate":"2025-06-09T20:46:07.665Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"d43a28c3-e9d6-44a3-8927-0063924982f1"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Universities
   and colleges--Administration--Video games"},{"value":"Universities and colleges--Administration"},{"value":"Computer
   games"}],"languages":["eng"],"indexTitle":"Virtual U : a simulation of university
   system management /","identifiers":[{"value":"1882982398","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"9781882982394","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"188298241X
@@ -507,14 +510,13 @@ folio_json_struct:
   Publishing","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"},{"name":"Digitalmill
   (Firm)","primary":false,"contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2007-03-01","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"LB2341
   .V57 2000","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://purl.stanford.edu/rc671ym6474","name":"Version
-  of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"},{"uri":"https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r","name":"Related
+  of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"},{"uri":"https://archives.stanford.edu/findingaid/ark:/22236/s1aff14110-7e6c-431c-ab04-35ccc19a311d","name":"Related
+  resource","relationshipId":"5bfe1b7b-f151-4501-8cfa-23b321d5cd1e","materialsSpecification":"Finding
+  aid"},{"uri":"https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r","name":"Related
   resource","relationshipId":"5bfe1b7b-f151-4501-8cfa-23b321d5cd1e","materialsSpecification":"Finding
   Aid"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T09:58:42.692+0000","statisticalCodeIds":["36dfb19d-8d6b-4c4f-a8cc-8b403452bce5"],"administrativeNotes":[],"physicalDescriptions":["1
   computer optical disc : sound, color ; 4 3/4 in. + 1 guide (viii, 132 pages ; 23
-  cm) + 1 user manual (v, 73 pages : illustrations ; 23 cm)"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-18T11:33:27Z'
-created: '2025-05-18T11:33:27Z'
-timestamp: '2025-05-18T11:33:27Z'
+  cm) + 1 user manual (v, 73 pages : illustrations ; 23 cm)"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - contributors:
   - link: Massy, William F.
@@ -570,17 +572,35 @@ marc_links_struct:
 - version: '0.2'
   stanford_only: false
   stanford_law_only: false
+  link_text: Finding aid
+  link_title: ''
+  additional_text:
+  additional_links: []
+  access: ''
+  material_type: Finding aid
+  note: ''
+  href: https://archives.stanford.edu/findingaid/ark:/22236/s1aff14110-7e6c-431c-ab04-35ccc19a311d
+  sort:
+  casalini:
+  fulltext: false
+  managed_purl: false
+  file_id:
+  druid:
+  sfx: false
+- version: '0.2'
+  stanford_only: false
+  stanford_law_only: false
   link_text: Finding Aid
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: Finding Aid
   note: ''
   href: https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
   sort:
   casalini:
   fulltext: false
-  finding_aid: true
   managed_purl: false
   file_id:
   druid:
@@ -592,13 +612,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: ''
   href: https://purl.stanford.edu/rc671ym6474
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: true
   file_id:
   druid: rc671ym6474

@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '10678312'
 hashed_id_ssi: f60a890b3d70cbb853546c7bb88666e2
 marc_json_struct:
@@ -88,7 +90,7 @@ oclc:
 - '900305637'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 physical:
 - '4 volumes : illustrations, maps ; 24 cm'
@@ -104,7 +106,7 @@ isbn_display:
 - '1848934351'
 callnum_facet_hsim:
 - LC Classification|F - United States, British, Dutch, French, Latin America (Local
-  History)|F - United States, British, Dutch, French, Latin America (Local History)
+  History)
 callnum_search:
 - F2161 .E27 2014 V.2
 - F2161 .E27 2014 V.3
@@ -155,9 +157,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -253,7 +252,7 @@ bib_search: 'The early English Caribbean, 1570-1700 / edited by Carla Gardina Pe
 vern_bib_search: Book
 uuid_ssi: 0ae8b991-8510-565d-845f-bf75dad04c77
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"0ae8b991-8510-565d-845f-bf75dad04c77","hrid":"a10678312","notes":[{"note":"Includes
+- '{"instance":{"id":"0ae8b991-8510-565d-845f-bf75dad04c77","hrid":"a10678312","notes":[{"note":"Includes
   bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"},{"note":"Volume
   1. Conceptualizing the West Indies -- Volume 2. Fitting into the empire --Volume
   3. Living in the Caribbean -- Volume 4. Making meaning","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"}],"title":"The
@@ -267,10 +266,7 @@ folio_json_struct:
   cis26084283","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)900305637","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"role":"Publication","place":"London","publisher":"Pickering
   & Chatto","dateOfPublication":"2014"},{"role":"Copyright notice date","place":"","publisher":"","dateOfPublication":"©2014"}],"contributors":[],"catalogedDate":"2015-02-25","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"F2161
   .E27 2014","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"972.902","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"start":2014},"statusUpdatedDate":"2023-08-21T15:38:20.010+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["4
-  volumes : illustrations, maps ; 24 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-06-22T09:14:51Z'
-created: '2025-06-22T09:14:51Z'
-timestamp: '2025-06-22T09:14:51Z'
+  volumes : illustrations, maps ; 24 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 toc_struct:
 - label: Contents
   fields:

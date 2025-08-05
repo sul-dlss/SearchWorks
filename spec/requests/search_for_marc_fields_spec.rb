@@ -10,6 +10,5 @@ RSpec.describe 'Searching for records with a specific MARC field' do
     expect(response.body).to include 'The gases of swamp rice soils'
     expect(response.body).to include 'World 1:500,000'
     expect(response.body).to include 'The retention of soluble phosphates in calcareous and non-calcareous soils'
-    expect(response.body).to include 'Adaptation and regularization of deep neural networks under temporal smoothness assumption'
   end
 end

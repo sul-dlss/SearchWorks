@@ -161,9 +161,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'b1b6052cfad6cc8602a3f02b7f071af8c3109a6e
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -245,7 +242,7 @@ bib_search: 'Johnston, Tess. A last look : Western architecture in old Shanghai 
 vern_bib_search: Book
 uuid_ssi: fd91de85-18e9-581e-ac0e-07ebd3a1c398
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"fd91de85-18e9-581e-ac0e-07ebd3a1c398","hrid":"a4250062","tags":{"tagList":["sulacq:gifts_bls"]},"notes":[{"note":"SAL3
+- '{"instance":{"id":"fd91de85-18e9-581e-ac0e-07ebd3a1c398","hrid":"a4250062","tags":{"tagList":["sulacq:gifts_bls"]},"notes":[{"note":"SAL3
   copy 1: Books received with Ansie Lee Sperry Papers (M2970)","staffOnly":false,"instanceNoteTypeId":"265c4910-3997-4242-9269-6a4a2e91392b"},{"note":"SAL3
   copy 2: Books received with Ansie Lee Sperry Papers (M2970)","staffOnly":false,"instanceNoteTypeId":"265c4910-3997-4242-9269-6a4a2e91392b"}],"title":"A
   last look : Western architecture in old Shanghai / text, Tess Johnston ; photos,
@@ -258,10 +255,7 @@ folio_json_struct:
   Tess","primary":true,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Er,
   Dongqiang","primary":false,"contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1999-10-29","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"NA1547.S5
   J65 1993","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"720.951132022","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-21T06:55:52.405+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["111
-  p. : col. ill., col. map ; 31 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-07-11T14:33:39Z'
-created: '2025-07-11T14:33:39Z'
-timestamp: '2025-07-11T14:33:39Z'
+  p. : col. ill., col. map ; 31 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Johnston, Tess.

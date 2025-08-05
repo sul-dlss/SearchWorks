@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '2285756'
 hashed_id_ssi: e58d3e77144dc0c51083c72d79b7389a
 marc_json_struct:
@@ -105,7 +107,7 @@ oclc:
 - '26152031'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 genre_ssim:
 - Government document
@@ -124,7 +126,7 @@ preferred_barcode: '36105026508924'
 holdings_library_code_ssim:
 - SAL3
 library_code_facet_ssim:
-- SAL3
+- OFF_CAMPUS
 location_code_facet_ssim:
 - SAL3-STACKS
 building_facet:
@@ -145,9 +147,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -230,7 +229,7 @@ bib_search: 'Viswanath, Bhagavatula, 1889- Some factors affecting the cooking of
 vern_bib_search: Book
 uuid_ssi: fd5a13f6-d9ec-57c3-b6f3-187c20f35a7e
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"fd5a13f6-d9ec-57c3-b6f3-187c20f35a7e","hrid":"a2285756","notes":[],"title":"Some
+- '{"instance":{"id":"fd5a13f6-d9ec-57c3-b6f3-187c20f35a7e","hrid":"a2285756","notes":[],"title":"Some
   factors affecting the cooking of dholl (Cajanus indicus) / By B. Viswanath, T. Lakshmana
   Row, B.A., and P.A. Raghunathaswami Ayyangar ...","series":[{"value":"India. Dept.
   of Agriculture. Memoirs. Chemical series ; vol. IV, no. 5"},{"value":"India. Department
@@ -244,12 +243,9 @@ folio_json_struct:
   Bhagavatula, 1889-","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Ayyangar,
   P. A. Raghunathaswami","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Row,
   T. Lakshmana","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1992-07-30","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1916},"statusUpdatedDate":"2023-08-21T02:57:54.291+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["p.
-  [149]-163. : fold. ill. ; 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+  [149]-163. : fold. ill. ; 25 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0,"pieces":[],"holdingSummaries":[]}'
 bound_with_parent_item_ids_ssim:
 - 1193e6b3-3bfc-5c51-b1ac-7ef347cdc46f
-last_updated: '2025-05-18T14:11:25Z'
-created: '2025-05-18T14:11:25Z'
-timestamp: '2025-05-18T14:11:25Z'
 author_struct:
 - creator:
   - link: Viswanath, Bhagavatula, 1889-
@@ -282,7 +278,7 @@ holdings_json_struct:
       item:
         id: 1193e6b3-3bfc-5c51-b1ac-7ef347cdc46f
         hrid: ai5488000_1_1
-        status: Available
+        status: In transit
         volume:
         barcode: '36105026508924'
         callNumber:
@@ -418,7 +414,7 @@ item_display_struct:
   effective_permanent_location_code: SAL3-STACKS
   temporary_location_code:
   permanent_location_code: SAL3-STACKS
-  status: Available
+  status: In transit
   effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
   material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
   loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27

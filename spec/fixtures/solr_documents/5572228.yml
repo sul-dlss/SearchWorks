@@ -280,9 +280,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -430,7 +427,7 @@ bib_search: 'Web of science core collection. Web of knowledge. Web of science IS
 vern_bib_search: Database
 uuid_ssi: 2174e285-6670-525f-8b4c-60627f5babf1
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"2174e285-6670-525f-8b4c-60627f5babf1","hrid":"a5572228","tags":{"tagList":[]},"notes":[{"note":"Web
+- '{"instance":{"id":"2174e285-6670-525f-8b4c-60627f5babf1","hrid":"a5572228","tags":{"tagList":[]},"notes":[{"note":"Web
   of Science Core Collection provides access to the world''s leading citation databases.
   Authoritative, multidisciplinary content covers journals worldwide, including Open
   Access journals and conference proceedings. Includes current and retrospective coverage
@@ -457,10 +454,7 @@ folio_json_struct:
   of knowledge. Web of science","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"ISI
   web of knowledge. Web of science","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"},{"alternativeTitle":"Web
   of science citation databases <Nov. 13, 1998>","alternativeTitleTypeId":"ab26d2e4-1a4a-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2023-08-21T08:39:00.554+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":["1
-  online resource"],"publicationFrequency":["Updated weekly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-07-30T09:19:13Z'
-created: '2025-07-30T09:19:13Z'
-timestamp: '2025-07-30T09:19:13Z'
+  online resource"],"publicationFrequency":["Updated weekly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 marc_json_struct:
 - '{"leader":"05761cai a2201045 i 4500","fields":[{"001":"a5572228"},{"003":"SIRSI"},{"005":"20230906180019.1"},{"006":"m     o  d        "},{"007":"cr
   mnu||||||||"},{"008":"140121c20149999nyuwr dooi    0    2eng c"},{"010":{"ind1":"
@@ -571,6 +565,7 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: Available to Stanford-affiliated users.
   href: https://www.webofscience.com/wos/woscc/basic-search

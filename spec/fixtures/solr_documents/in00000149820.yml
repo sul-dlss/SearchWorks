@@ -1,77 +1,40 @@
 ---
+format_hsim:
+- Book
 id: in00000149820
 hashed_id_ssi: 1f0c5dda9457d4c5555d28c79df6ed75
-marc_json_struct:
-- '{"leader":"02456nam a2200505 i 4500","fields":[{"001":"in00000149820"},{"006":"m|||||o||d||||||||"},{"007":"cr
-  |||||||||||"},{"008":"230907r20242023enk    fob    001|0 eng|d"},{"005":"20240814200048.6"},{"020":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"9780191976193"},{"q":"ebook"},{"c":"No price"}]}},{"024":{"ind1":"7","ind2":"
-  ","subfields":[{"a":"10.1093/actrade/9780199609758.book.1"},{"2":"doi"}]}},{"035":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"xs9780191976193"}]}},{"035":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"(OCoLC-M)1473759181"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"StDuBDS"},{"b":"eng"},{"c":"StDuBDS"},{"e":"rda"},{"e":"pn"},{"d":"CSt"}]}},{"041":{"ind1":"1","ind2":"
-  ","subfields":[{"a":"eng"},{"h":"grc"}]}},{"050":{"ind1":" ","ind2":"4","subfields":[{"a":"PA3893"},{"b":".T7
-  2024"}]}},{"072":{"ind1":" ","ind2":"7","subfields":[{"a":"PHI"},{"2":"ukslc"}]}},{"072":{"ind1":"
-  ","ind2":"7","subfields":[{"a":"QDH"},{"2":"thema"}]}},{"082":{"ind1":"0","ind2":"4","subfields":[{"a":"185"},{"2":"23"}]}},{"100":{"ind1":"0","ind2":"
-  ","subfields":[{"a":"Aristotle,"},{"e":"author."}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Aristotle
-  :"},{"b":"topics."},{"n":"Book VI /"},{"c":"translated with an introduction and
-  commentary by Annamaria Schiaparelli."}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"Oxford
-  :"},{"b":"Oxford University Press,"},{"c":"2024."}]}},{"300":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"1 online resource."}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"text"},{"2":"rdacontent"}]}},{"337":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"computer"},{"2":"rdamedia"}]}},{"338":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"online resource"},{"2":"rdacarrier"}]}},{"490":{"ind1":"1","ind2":"
-  ","subfields":[{"a":"Clarendon Aristotle series"}]}},{"490":{"ind1":"1","ind2":"
-  ","subfields":[{"a":"Oxford scholarly editions online"}]}},{"500":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"Translated from the Ancient Greek."}]}},{"500":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"Previously issued in print: 2023."}]}},{"504":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"Includes bibliographical references and index."}]}},{"505":{"ind1":"0","ind2":"
-  ","subfields":[{"a":"Topics: translation and commentary -- Book VI: -- 1 -- 2 --
-  3 -- 4 -- 5 -- 6 -- 7 -- 8 -- 9 -- 10 -- 11 -- 12 -- 13 -- 14."}]}},{"520":{"ind1":"8","ind2":"
-  ","subfields":[{"a":"Presents a new translation of Aristotle''s Topics Book VI,
+all_search: '10.1093/actrade/9780199609758.book.1 doi Aristotle, author. http://id.loc.gov/authorities/names/n79004182
+  Aristotle : topics. Book VI / translated with an introduction and commentary by
+  Annamaria Schiaparelli Oxford : Oxford University Press, 2024 1 online resource
+  text rdacontent computer rdamedia online resource rdacarrier Clarendon Aristotle
+  series Oxford scholarly editions online Translated from the Ancient Greek Previously
+  issued in print: 2023 Includes bibliographical references and index Topics: translation
+  and commentary -- Book VI: -- 1 -- 2 -- 3 -- 4 -- 5 -- 6 -- 7 -- 8 -- 9 -- 10 --
+  11 -- 12 -- 13 -- 14 Presents a new translation of Aristotle''s Topics Book VI,
   accompanied by a detailed commentary and textual notes. The text is entirely devoted
   to the discussion of definition, the most extended and refined discussion of this
-  subject handed down to us from the classical period."}]}},{"521":{"ind1":" ","ind2":"
-  ","subfields":[{"a":"Specialized."}]}},{"588":{"ind1":" ","ind2":" ","subfields":[{"a":"Description
-  based on online resource; title from home page (viewed on June 25, 2024)."}]}},{"650":{"ind1":"
-  ","ind2":"0","subfields":[{"a":"Definition (Philosophy)"}]}},{"650":{"ind1":" ","ind2":"7","subfields":[{"a":"Philosophy."},{"2":"ukslc"}]}},{"650":{"ind1":"
-  ","ind2":"7","subfields":[{"a":"History of philosophy, philosophical traditions."},{"2":"thema"}]}},{"700":{"ind1":"1","ind2":"
-  ","subfields":[{"a":"Schiaparelli, Annamaria,"},{"d":"1966-"},{"e":"translator,"},{"e":"writer
-  of added commentary."}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"i":"Print
-  version :"},{"z":"9780199609758"}]}},{"830":{"ind1":" ","ind2":"0","subfields":[{"a":"Clarendon
-  Aristotle series."}]}},{"830":{"ind1":" ","ind2":"0","subfields":[{"a":"Oxford scholarly
-  editions online."}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
-  to Stanford-affiliated users."},{"u":"https://dx.doi.org/10.1093/actrade/9780199609758.book.1"},{"y":"Oxford
-  Scholarly Editions Online"},{"x":"Provider: Oxford University Press"},{"x":"Collection:
-  Aristotle"},{"x":"purchased"},{"x":"eLoaderURL"},{"x":"xs4"},{"x":"xs9780191976193"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"275f293f-9e13-4293-aca2-23cacc0c64ab"},{"s":"d684d5da-6b20-45f6-adbe-3fd4cbe3df69"}]}}]}'
-all_search: '10.1093/actrade/9780199609758.book.1 doi Aristotle, author. Aristotle
-  : topics. Book VI / translated with an introduction and commentary by Annamaria
-  Schiaparelli. Oxford : Oxford University Press, 2024. 1 online resource. text rdacontent
-  computer rdamedia online resource rdacarrier Clarendon Aristotle series Oxford scholarly
-  editions online Translated from the Ancient Greek. Previously issued in print: 2023.
-  Includes bibliographical references and index. Topics: translation and commentary
-  -- Book VI: -- 1 -- 2 -- 3 -- 4 -- 5 -- 6 -- 7 -- 8 -- 9 -- 10 -- 11 -- 12 -- 13
-  -- 14. Presents a new translation of Aristotle''s Topics Book VI, accompanied by
-  a detailed commentary and textual notes. The text is entirely devoted to the discussion
-  of definition, the most extended and refined discussion of this subject handed down
-  to us from the classical period. Specialized. Description based on online resource;
-  title from home page (viewed on June 25, 2024). Definition (Philosophy) Philosophy.
-  ukslc History of philosophy, philosophical traditions. thema Schiaparelli, Annamaria,
-  1966- translator, writer of added commentary. Print version : 9780199609758 Clarendon
-  Aristotle series. Oxford scholarly editions online. Available to Stanford-affiliated
-  users. https://dx.doi.org/10.1093/actrade/9780199609758.book.1 Oxford Scholarly
-  Editions Online Provider: Oxford University Press Collection: Aristotle purchased
-  eLoaderURL xs4 xs9780191976193'
+  subject handed down to us from the classical period Specialized Description based
+  on online resource; title from home page (viewed on June 25, 2024) Definition (Philosophy)
+  http://id.loc.gov/authorities/subjects/sh85036458 Philosophy. ukslc History of philosophy,
+  philosophical traditions. thema Schiaparelli, Annamaria, 1966- translator, writer
+  of added commentary. http://id.loc.gov/authorities/names/n2002046987 Print version
+  : 9780199609758 Clarendon Aristotle series. http://id.loc.gov/authorities/names/n42006772
+  Oxford scholarly editions online. Available to Stanford-affiliated users. https://dx.doi.org/10.1093/actrade/9780199609758.book.1
+  Oxford Scholarly Editions Online Provider: Oxford University Press Collection: Aristotle
+  purchased eLoaderURL xs4 xs9780191976193'
 title_245a_search: 'Aristotle :'
 title_245_search: 'Aristotle : topics. Book VI /'
 title_245a_display: Aristotle
 title_245c_display: translated with an introduction and commentary by Annamaria Schiaparelli
 title_display: 'Aristotle : topics. Book VI'
 title_full_display: 'Aristotle : topics. Book VI / translated with an introduction
-  and commentary by Annamaria Schiaparelli.'
+  and commentary by Annamaria Schiaparelli'
 title_sort: Aristotle topics Book VI
 series_search:
 - Clarendon Aristotle series
 - Oxford scholarly editions online
 author_title_245ac_search:
-- 'Aristotle : translated with an introduction and commentary by Annamaria Schiaparelli.'
+- 'Aristotle : translated with an introduction and commentary by Annamaria Schiaparelli'
 author_title_1xx_search:
 - 'Aristotle Aristotle :'
 author_title_search:
@@ -88,6 +51,9 @@ author_person_display:
 author_person_full_display:
 - Aristotle, author.
 author_sort: Aristotle Aristotle topics Book VI
+author_authorities_ssim:
+- http://id.loc.gov/authorities/names/n79004182
+- http://id.loc.gov/authorities/names/n2002046987
 topic_search:
 - Definition (Philosophy)
 - Philosophy.
@@ -119,7 +85,7 @@ pub_year_ss: '2023'
 reprint_year_isi: 2024
 original_year_isi: 2023
 imprint_display:
-- 'Oxford : Oxford University Press, 2024.'
+- 'Oxford : Oxford University Press, 2024'
 date_cataloged: '2024-08-14T00:00:00Z'
 language:
 - English
@@ -131,23 +97,23 @@ oclc:
 - '1473759181'
 access_facet:
 - Online
-format_hsim:
+format_main_ssim:
 - Book
 physical:
-- 1 online resource.
+- 1 online resource
 toc_search:
 - 'Topics: translation and commentary -- Book VI: -- 1 -- 2 -- 3 -- 4 -- 5 -- 6 --
-  7 -- 8 -- 9 -- 10 -- 11 -- 12 -- 13 -- 14.'
+  7 -- 8 -- 9 -- 10 -- 11 -- 12 -- 13 -- 14'
 summary_search:
 - Presents a new translation of Aristotle's Topics Book VI, accompanied by a detailed
   commentary and textual notes. The text is entirely devoted to the discussion of
   definition, the most extended and refined discussion of this subject handed down
-  to us from the classical period.
+  to us from the classical period
 summary_display:
 - Presents a new translation of Aristotle's Topics Book VI, accompanied by a detailed
   commentary and textual notes. The text is entirely devoted to the discussion of
   definition, the most extended and refined discussion of this subject handed down
-  to us from the classical period.
+  to us from the classical period
 isbn_search:
 - '9780191976193'
 - '9780199609758'
@@ -160,6 +126,8 @@ lc_assigned_callnum_ssim:
 - PA3893 .T7 2024
 holdings_library_code_ssim:
 - SUL
+library_code_facet_ssim:
+- SUL
 shelfkey:
 - lc pa  3893.000000 t0.700000 002024
 reverse_shelfkey:
@@ -171,9 +139,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -213,12 +178,12 @@ context_marc_fields_ssim:
 - 020aqc
 - 024a2
 - 035a
-- 040abceed
+- 040abceedd
 - 041ah
 - 050ab
 - 072a2
 - '082a2'
-- 100ae
+- 100ae0
 - 245abnc
 - 264abc
 - 300a
@@ -232,10 +197,11 @@ context_marc_fields_ssim:
 - 520a
 - 521a
 - 588a
-- 650a
+- 650a0
 - 650a2
-- 700adee
+- 700adee0
 - 776iz
+- 830a0
 - 830a
 - 856zuyxxxxxx
 - 999is
@@ -260,6 +226,7 @@ context_marc_fields_ssim:
 - "?0822"
 - "?100a"
 - "?100e"
+- "?1000"
 - "?245a"
 - "?245b"
 - "?245n"
@@ -282,13 +249,16 @@ context_marc_fields_ssim:
 - "?521a"
 - "?588a"
 - "?650a"
+- "?6500"
 - "?6502"
 - "?700a"
 - "?700d"
 - "?700e"
+- "?7000"
 - "?776i"
 - "?776z"
 - "?830a"
+- "?8300"
 - "?856z"
 - "?856u"
 - "?856y"
@@ -296,17 +266,14 @@ context_marc_fields_ssim:
 - "?999i"
 - "?999s"
 bib_search: 'Aristotle, author. Aristotle : topics. Book VI / translated with an introduction
-  and commentary by Annamaria Schiaparelli. Oxford : Oxford University Press, 2024.
+  and commentary by Annamaria Schiaparelli Oxford : Oxford University Press, 2024
   Clarendon Aristotle series Oxford scholarly editions online Schiaparelli, Annamaria,
   1966- translator, writer of added commentary. Definition (Philosophy) Philosophy.
   History of philosophy, philosophical traditions. Book'
 vern_bib_search: Book
 uuid_ssi: 275f293f-9e13-4293-aca2-23cacc0c64ab
-last_updated: '2025-05-18T09:39:00Z'
-created: '2025-05-18T09:39:00Z'
-timestamp: '2025-05-18T09:39:00Z'
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"275f293f-9e13-4293-aca2-23cacc0c64ab","hrid":"in00000149820","tags":{"tagList":[]},"notes":[{"note":"Translated
+- '{"instance":{"id":"275f293f-9e13-4293-aca2-23cacc0c64ab","hrid":"in00000149820","tags":{"tagList":[]},"notes":[{"note":"Translated
   from the Ancient Greek","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Previously
   issued in print: 2023","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"Includes
   bibliographical references and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"},{"note":"Topics:
@@ -318,8 +285,8 @@ folio_json_struct:
   the classical period","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Specialized","staffOnly":false,"instanceNoteTypeId":"922fdcde-952d-45c2-b9ea-5fc8959ad116"},{"note":"Description
   based on online resource; title from home page (viewed on June 25, 2024)","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"}],"title":"Aristotle
   : topics. Book VI / translated with an introduction and commentary by Annamaria
-  Schiaparelli.","series":[{"value":"Clarendon Aristotle series."},{"value":"Oxford
-  scholarly editions online."}],"source":"MARC","_version":4,"editions":[],"metadata":{"createdDate":"2024-08-14T20:00:48.475Z","updatedDate":"2024-12-29T20:05:05.764Z","createdByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77","updatedByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Definition
+  Schiaparelli","series":[{"value":"Clarendon Aristotle series."},{"value":"Oxford
+  scholarly editions online."}],"source":"MARC","_version":5,"editions":[],"metadata":{"createdDate":"2024-08-14T20:00:48.475Z","updatedDate":"2025-06-14T15:33:54.013Z","createdByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77","updatedByUserId":"ffba9979-3f5d-4aac-a74f-18218dd2573f"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Definition
   (Philosophy)"},{"value":"Philosophy"},{"value":"History of philosophy, philosophical
   traditions"}],"languages":["eng"],"indexTitle":"Aristotle : topics. Book VI /","identifiers":[{"value":"9780191976193
   No price ebook","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"10.1093/actrade/9780199609758.book.1
@@ -328,18 +295,62 @@ folio_json_struct:
   Annamaria, 1966-","primary":false,"contributorTypeId":"3322b734-ce38-4cd4-815d-8983352837cc","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"2024-08-14","instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"PA3893
   .T7 2024","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"185","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://dx.doi.org/10.1093/actrade/9780199609758.book.1","name":"Resource","linkText":"Oxford
   Scholarly Editions Online","publicNote":"Available to Stanford-affiliated users.","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2024-08-14T20:00:48.475+0000","statisticalCodeIds":["66189d25-82fc-4f14-a55a-2b4996979bb8"],"administrativeNotes":[],"physicalDescriptions":["1
-  online resource."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
+  online resource"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
+marc_json_struct:
+- '{"leader":"02685nam a2200517 i 4500","fields":[{"001":"in00000149820"},{"006":"m|||||o||d||||||||"},{"007":"cr
+  |||||||||||"},{"008":"230907r20242023enk    fob    001 0 eng|d"},{"005":"20250614153101.0"},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"9780191976193"},{"q":"ebook"},{"c":"No price"}]}},{"024":{"ind1":"7","ind2":"
+  ","subfields":[{"a":"10.1093/actrade/9780199609758.book.1"},{"2":"doi"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"xs9780191976193"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(OCoLC-M)1473759181"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"StDuBDS"},{"b":"eng"},{"c":"StDuBDS"},{"e":"rda"},{"e":"pn"},{"d":"CSt"},{"d":"UtOrBLW"}]}},{"041":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"eng"},{"h":"grc"}]}},{"050":{"ind1":" ","ind2":"4","subfields":[{"a":"PA3893"},{"b":".T7
+  2024"}]}},{"072":{"ind1":" ","ind2":"7","subfields":[{"a":"PHI"},{"2":"ukslc"}]}},{"072":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"QDH"},{"2":"thema"}]}},{"082":{"ind1":"0","ind2":"4","subfields":[{"a":"185"},{"2":"23"}]}},{"100":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Aristotle,"},{"e":"author."},{"0":"http://id.loc.gov/authorities/names/n79004182"}]}},{"245":{"ind1":"1","ind2":"0","subfields":[{"a":"Aristotle
+  :"},{"b":"topics."},{"n":"Book VI /"},{"c":"translated with an introduction and
+  commentary by Annamaria Schiaparelli"}]}},{"264":{"ind1":" ","ind2":"1","subfields":[{"a":"Oxford
+  :"},{"b":"Oxford University Press,"},{"c":"2024"}]}},{"300":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"1 online resource"}]}},{"336":{"ind1":" ","ind2":" ","subfields":[{"a":"text"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"2":"rdacarrier"}]}},{"490":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Clarendon Aristotle series"}]}},{"490":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Oxford scholarly editions online"}]}},{"500":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Translated from the Ancient Greek"}]}},{"500":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Previously issued in print: 2023"}]}},{"504":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Includes bibliographical references and index"}]}},{"505":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"Topics: translation and commentary -- Book VI: -- 1 -- 2 --
+  3 -- 4 -- 5 -- 6 -- 7 -- 8 -- 9 -- 10 -- 11 -- 12 -- 13 -- 14"}]}},{"520":{"ind1":"8","ind2":"
+  ","subfields":[{"a":"Presents a new translation of Aristotle''s Topics Book VI,
+  accompanied by a detailed commentary and textual notes. The text is entirely devoted
+  to the discussion of definition, the most extended and refined discussion of this
+  subject handed down to us from the classical period"}]}},{"521":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"Specialized"}]}},{"588":{"ind1":" ","ind2":" ","subfields":[{"a":"Description
+  based on online resource; title from home page (viewed on June 25, 2024)"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Definition (Philosophy)"},{"0":"http://id.loc.gov/authorities/subjects/sh85036458"}]}},{"650":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"Philosophy."},{"2":"ukslc"}]}},{"650":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"History of philosophy, philosophical traditions."},{"2":"thema"}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Schiaparelli, Annamaria,"},{"d":"1966-"},{"e":"translator,"},{"e":"writer
+  of added commentary."},{"0":"http://id.loc.gov/authorities/names/n2002046987"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"i":"Print
+  version :"},{"z":"9780199609758"}]}},{"830":{"ind1":" ","ind2":"0","subfields":[{"a":"Clarendon
+  Aristotle series."},{"0":"http://id.loc.gov/authorities/names/n42006772"}]}},{"830":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Oxford scholarly editions online."}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"https://dx.doi.org/10.1093/actrade/9780199609758.book.1"},{"y":"Oxford
+  Scholarly Editions Online"},{"x":"Provider: Oxford University Press"},{"x":"Collection:
+  Aristotle"},{"x":"purchased"},{"x":"eLoaderURL"},{"x":"xs4"},{"x":"xs9780191976193"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"275f293f-9e13-4293-aca2-23cacc0c64ab"},{"s":"d684d5da-6b20-45f6-adbe-3fd4cbe3df69"}]}}]}'
 author_struct:
 - creator:
   - link: Aristotle,
     search: Aristotle,
     post_text: author.
+    authorities:
+    - http://id.loc.gov/authorities/names/n79004182
   contributors:
   - link: Schiaparelli, Annamaria, 1966-
     search: Schiaparelli, Annamaria, 1966-
     pre_text: ''
     post_text: translator, writer of added commentary.
-    authorities: []
+    authorities:
+    - http://id.loc.gov/authorities/names/n2002046987
     rwo: []
 marc_links_struct:
 - version: '0.2'
@@ -349,13 +360,13 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: Available to Stanford-affiliated users.
   href: https://dx.doi.org/10.1093/actrade/9780199609758.book.1
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -367,7 +378,7 @@ summary_struct:
     - Presents a new translation of Aristotle's Topics Book VI, accompanied by a detailed
       commentary and textual notes. The text is entirely devoted to the discussion
       of definition, the most extended and refined discussion of this subject handed
-      down to us from the classical period.
+      down to us from the classical period
     vernacular:
   unmatched_vernacular: []
 toc_struct:
@@ -388,7 +399,7 @@ toc_struct:
     - '11'
     - '12'
     - '13'
-    - '14.'
+    - '14'
   vernacular:
   unmatched_vernacular:
 holdings_json_struct:

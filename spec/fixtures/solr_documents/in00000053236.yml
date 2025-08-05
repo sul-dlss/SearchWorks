@@ -1,62 +1,13 @@
 ---
+format_hsim:
+- Book
 id: in00000053236
 hashed_id_ssi: 74242fe952834d6e04561519bf456110
-marc_json_struct:
-- '{"leader":"03701nam a2200493 i 4500","fields":[{"001":"in00000053236"},{"006":"m     o  d        "},{"007":"cr
-  un|---aucuu"},{"008":"240111s2024    sz a    ob    001 0 eng d"},{"005":"20240206233617.1"},{"020":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"9783031407024"},{"q":"(electronic bk.)"}]}},{"020":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"3031407024"},{"q":"(electronic bk.)"}]}},{"020":{"ind1":"
-  ","ind2":" ","subfields":[{"z":"9783031407017"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"z":"3031407016"}]}},{"024":{"ind1":"7","ind2":"
-  ","subfields":[{"a":"10.1007/978-3-031-40702-4"},{"2":"doi"}]}},{"035":{"ind1":"
-  ","ind2":"9","subfields":[{"a":"gls305914613"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"NhCcYBP"},{"c":"NhCcYBP"}]}},{"043":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"f-sa---"}]}},{"050":{"ind1":" ","ind2":"4","subfields":[{"a":"PN1991.3.S65"},{"b":"A15
-  2024"}]}},{"072":{"ind1":" ","ind2":"7","subfields":[{"a":"APW"},{"2":"bicssc"}]}},{"072":{"ind1":"
-  ","ind2":"7","subfields":[{"a":"SOC052000"},{"2":"bisacsh"}]}},{"072":{"ind1":"
-  ","ind2":"7","subfields":[{"a":"ATL"},{"2":"thema"}]}},{"082":{"ind1":"0","ind2":"4","subfields":[{"a":"791.440968"},{"2":"23/eng/20240111"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"100
-  years of radio in South Africa."},{"n":"Volume 1,"},{"p":"South African radio stations
-  and broadcasters then & now /"},{"c":"Sisanda Nkoala, Gilbert Motsaathebe, editors."}]}},{"246":{"ind1":"3","ind2":"0","subfields":[{"a":"South
-  African radio stations and broadcasters then & now"}]}},{"246":{"ind1":"3","ind2":"
-  ","subfields":[{"a":"South African radio stations and broadcasters then and now"}]}},{"264":{"ind1":"
-  ","ind2":"1","subfields":[{"a":"Cham :"},{"b":"Palgrave Macmillan,"},{"c":"2024."}]}},{"300":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"1 online resource (xxxi, 192 pages) :"},{"b":"illustrations"}]}},{"336":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"338":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"505":{"ind1":"0","ind2":"
-  ","subfields":[{"a":"1. Introduction: A Century Of South Africa''s Most Renowned
-  Medium -- 2. 100 Years Of Radio In South Africa: A Practitioner’s Reflections On
-  Yesteryear -- 3. The Sound Of Freedom: Radio Freedom As An Instrument Of Social
-  And Political Mobilisation Against An Illegetimate Astate - A Practioner''s Reflection
-  -- 4. Reflecting On Two Decades Of Strategic Choices: A Practitioners Examination
-  Of Sabc Public Service Radio Product Management From 1996-2016 -- 5. Exploring The
-  Radiant Allure: The Impact And Significance Of Star Iconism In Radio Mmabatho And
-  Radio Bop On The South African Media Landscape -- 6. African Language Radio A Locus
-  Of Indigenous Language Revival And Identity Negotiation: A Case Study Of Umhlobo
-  Wenene FM -- 7. Resonating Voices: The Transformative Power Of Xitsonga Radio Stations
-  In Language Preservation And Societal Discourse -- 8. The Shibobos, Dadas, And Dummies.
-  A Reflection On Cultural Nuances, Race, And Gender In Sports And Entertainment Radio
-  Broadcasting -- 9. Storytellers, Curators, Watchdogs And Analysts: A Metajournalistic
-  Discourse Analysis Of South African Radio Broadcasters'' Role In Agenda Setting
-  -- 10. Brave Broken heart? The Story of the Late Radio Journalist Suna Venter --
-  11. Concluding Remarks: Radio History, Development, And Impact In South Africa."}]}},{"504":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"Includes bibliographical references and index."}]}},{"533":{"ind1":"
-  ","ind2":" ","subfields":[{"a":"Electronic reproduction."},{"b":"Ann Arbor, MI"},{"n":"Available
-  via World Wide Web."}]}},{"588":{"ind1":"0","ind2":" ","subfields":[{"a":"Online
-  resource; title from PDF title page (SpringerLink, viewed January 11, 2024)."}]}},{"650":{"ind1":"
-  ","ind2":"0","subfields":[{"a":"Radio broadcasting"},{"z":"South Africa"},{"x":"History."}]}},{"700":{"ind1":"1","ind2":"
-  ","subfields":[{"a":"Nkoala, Sisanda,"},{"e":"editor."}]}},{"700":{"ind1":"1","ind2":"
-  ","subfields":[{"a":"Motsaathebe, Gilbert,"},{"e":"editor."},{"0":"(orcid)0000-0002-8681-6945"},{"1":"https://orcid.org/0000-0002-8681-6945"}]}},{"710":{"ind1":"2","ind2":"
-  ","subfields":[{"a":"ProQuest (Firm)"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"i":"Print
-  version:"},{"a":"Nkoala, Sisanda"},{"t":"100 Years of Radio in South Africa, Volume
-  1"},{"d":"Cham : Springer International Publishing AG,c2024"},{"z":"9783031407017"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
-  to Stanford-affiliated users."},{"u":"https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209"},{"y":"ProQuest
-  Ebook Central"},{"x":"Provider: GOBI"},{"x":"purchased"},{"z":"Access limited to
-  1 user"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"LINDER"},{"b":"druid:xg474qk4925"},{"c":"xg474qk4925_00_0001.jp2"},{"d":"The
-  Doris H. Linder Book Fund"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"s":"e8c564e2-deee-4494-a2bb-108507a66e42"},{"i":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c"}]}}]}'
 all_search: '10.1007/978-3-031-40702-4 doi 100 years of radio in South Africa. Volume
   1, South African radio stations and broadcasters then & now / Sisanda Nkoala, Gilbert
-  Motsaathebe, editors. South African radio stations and broadcasters then & now South
+  Motsaathebe, editors South African radio stations and broadcasters then & now South
   African radio stations and broadcasters then and now Cham : Palgrave Macmillan,
-  2024. 1 online resource (xxxi, 192 pages) : illustrations text txt rdacontent computer
+  2024 1 online resource (xxxi, 192 pages) : illustrations text txt rdacontent computer
   c rdamedia online resource cr rdacarrier 1. Introduction: A Century Of South Africa''s
   Most Renowned Medium -- 2. 100 Years Of Radio In South Africa: A Practitioner’s
   Reflections On Yesteryear -- 3. The Sound Of Freedom: Radio Freedom As An Instrument
@@ -73,13 +24,15 @@ all_search: '10.1007/978-3-031-40702-4 doi 100 years of radio in South Africa. V
   Analysts: A Metajournalistic Discourse Analysis Of South African Radio Broadcasters''
   Role In Agenda Setting -- 10. Brave Broken heart? The Story of the Late Radio Journalist
   Suna Venter -- 11. Concluding Remarks: Radio History, Development, And Impact In
-  South Africa. Includes bibliographical references and index. Electronic reproduction.
-  Ann Arbor, MI Available via World Wide Web. Online resource; title from PDF title
-  page (SpringerLink, viewed January 11, 2024). Radio broadcasting South Africa History.
-  Nkoala, Sisanda, editor. Motsaathebe, Gilbert, editor. (orcid)0000-0002-8681-6945
-  https://orcid.org/0000-0002-8681-6945 ProQuest (Firm) Print version: Nkoala, Sisanda
-  100 Years of Radio in South Africa, Volume 1 Cham : Springer International Publishing
-  AG,c2024 9783031407017 Available to Stanford-affiliated users. https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
+  South Africa Includes bibliographical references and index Electronic reproduction.
+  Ann Arbor, MI Available via World Wide Web Online resource; title from PDF title
+  page (SpringerLink, viewed January 11, 2024) Radio broadcasting South Africa History.
+  Nkoala, Sisanda, editor. http://id.loc.gov/authorities/names/no2024066235 Motsaathebe,
+  Gilbert, editor. (orcid)0000-0002-8681-6945 http://id.loc.gov/authorities/names/no2020134621
+  https://orcid.org/0000-0002-8681-6945 ProQuest (Firm) http://id.loc.gov/authorities/names/n2007068018
+  Print version: Nkoala, Sisanda 100 Years of Radio in South Africa, Volume 1 Cham
+  : Springer International Publishing AG,c2024 9783031407017 Available to Stanford-affiliated
+  users. https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
   ProQuest Ebook Central Provider: GOBI purchased Access limited to 1 user LINDER
   druid:xg474qk4925 xg474qk4925_00_0001.jp2 The Doris H. Linder Book Fund'
 title_245a_search: 100 years of radio in South Africa.
@@ -98,11 +51,11 @@ title_245c_display: Sisanda Nkoala, Gilbert Motsaathebe, editors
 title_display: 100 years of radio in South Africa. Volume 1, South African radio stations
   and broadcasters then & now
 title_full_display: 100 years of radio in South Africa. Volume 1, South African radio
-  stations and broadcasters then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors.
+  stations and broadcasters then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors
 title_sort: 100 years of radio in South Africa Volume 1 South African radio stations
   and broadcasters then  now
 author_title_245ac_search:
-- 100 years of radio in South Africa. Sisanda Nkoala, Gilbert Motsaathebe, editors.
+- 100 years of radio in South Africa. Sisanda Nkoala, Gilbert Motsaathebe, editors
 author_7xx_search:
 - Nkoala, Sisanda,
 - Motsaathebe, Gilbert,
@@ -115,8 +68,11 @@ author_other_facet:
 author_sort: "\U0010FFFF 100 years of radio in South Africa Volume 1 South African
   radio stations and broadcasters then  now"
 author_authorities_ssim:
+- http://id.loc.gov/authorities/names/no2024066235
 - "(orcid)0000-0002-8681-6945"
+- http://id.loc.gov/authorities/names/no2020134621
 - https://orcid.org/0000-0002-8681-6945
+- http://id.loc.gov/authorities/names/n2007068018
 topic_search:
 - Radio broadcasting
 topic_display:
@@ -144,7 +100,7 @@ pub_year_tisim:
 pub_year_ss: '2024'
 publication_year_isi: 2024
 imprint_display:
-- 'Cham : Palgrave Macmillan, 2024.'
+- 'Cham : Palgrave Macmillan, 2024'
 date_cataloged: '2024-02-06T00:00:00Z'
 language:
 - English
@@ -154,7 +110,7 @@ url_restricted:
 - https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
 access_facet:
 - Online
-format_hsim:
+format_main_ssim:
 - Book
 physical:
 - '1 online resource (xxxi, 192 pages) : illustrations'
@@ -174,7 +130,7 @@ toc_search:
   Curators, Watchdogs And Analysts: A Metajournalistic Discourse Analysis Of South
   African Radio Broadcasters'' Role In Agenda Setting -- 10. Brave Broken heart? The
   Story of the Late Radio Journalist Suna Venter -- 11. Concluding Remarks: Radio
-  History, Development, And Impact In South Africa.'
+  History, Development, And Impact In South Africa'
 isbn_search:
 - '9783031407024'
 - '3031407024'
@@ -189,6 +145,8 @@ callnum_facet_hsim:
 lc_assigned_callnum_ssim:
 - PN1991.3.S65 A15 2024
 holdings_library_code_ssim:
+- SUL
+library_code_facet_ssim:
 - SUL
 shelfkey:
 - lc pn  1991.300000 s0.650000 a0.150000 002024
@@ -207,9 +165,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -248,7 +203,7 @@ context_marc_fields_ssim:
 - 020z
 - 024a2
 - 035a
-- 040ac
+- 040acd
 - 043a
 - 050ab
 - 072a2
@@ -265,9 +220,9 @@ context_marc_fields_ssim:
 - 533abn
 - 588a
 - 650azx
-- 700ae
-- 700ae01
-- 710a
+- 700ae0
+- 700ae001
+- 710a0
 - 776iatdz
 - 856zuyxxz
 - 979fbcd
@@ -280,6 +235,7 @@ context_marc_fields_ssim:
 - "?035a"
 - "?040a"
 - "?040c"
+- "?040d"
 - "?043a"
 - "?050a"
 - "?050b"
@@ -320,6 +276,7 @@ context_marc_fields_ssim:
 - "?7000"
 - "?7001"
 - "?710a"
+- "?7100"
 - "?776i"
 - "?776a"
 - "?776t"
@@ -336,17 +293,14 @@ context_marc_fields_ssim:
 - "?999s"
 - "?999i"
 bib_search: '100 years of radio in South Africa. Volume 1, South African radio stations
-  and broadcasters then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors. South
+  and broadcasters then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors South
   African radio stations and broadcasters then & now South African radio stations
-  and broadcasters then and now Cham : Palgrave Macmillan, 2024. Nkoala, Sisanda,
-  editor. Motsaathebe, Gilbert, editor. ProQuest (Firm) Radio broadcasting Book'
+  and broadcasters then and now Cham : Palgrave Macmillan, 2024 Nkoala, Sisanda, editor.
+  Motsaathebe, Gilbert, editor. ProQuest (Firm) Radio broadcasting Book'
 vern_bib_search: Book
 uuid_ssi: 3f1e6f2c-ab5c-4562-8784-96a2e1003c9c
-last_updated: '2025-05-18T09:54:59Z'
-created: '2025-05-18T09:54:59Z'
-timestamp: '2025-05-18T09:54:59Z'
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c","hrid":"in00000053236","tags":{"tagList":[]},"notes":[{"note":"1.
+- '{"instance":{"id":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c","hrid":"in00000053236","tags":{"tagList":[]},"notes":[{"note":"1.
   Introduction: A Century Of South Africa''s Most Renowned Medium -- 2. 100 Years
   Of Radio In South Africa: A Practitioner’s Reflections On Yesteryear -- 3. The Sound
   Of Freedom: Radio Freedom As An Instrument Of Social And Political Mobilisation
@@ -367,7 +321,7 @@ folio_json_struct:
   reproduction. Ann Arbor, MI Available via World Wide Web","staffOnly":false,"instanceNoteTypeId":"d548fdff-b71c-4359-8055-f1c008c30f01"},{"note":"Online
   resource; title from PDF title page (SpringerLink, viewed January 11, 2024)","staffOnly":false,"instanceNoteTypeId":"66ea8f28-d5da-426a-a7c9-739a5d676347"}],"title":"100
   years of radio in South Africa. Volume 1, South African radio stations and broadcasters
-  then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors.","series":[],"source":"MARC","_version":9,"editions":[],"metadata":{"createdDate":"2024-02-01T15:43:45.739Z","updatedDate":"2024-10-31T17:15:50.777Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"07e8be0e-1cf5-5061-b5b3-4517d9a74d77"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Radio
+  then & now / Sisanda Nkoala, Gilbert Motsaathebe, editors","series":[],"source":"MARC","_version":10,"editions":[],"metadata":{"createdDate":"2024-02-01T15:43:45.739Z","updatedDate":"2025-06-17T01:55:38.257Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"ffba9979-3f5d-4aac-a74f-18218dd2573f"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Radio
   broadcasting--South Africa--History"}],"languages":["eng"],"indexTitle":"100 years
   of radio in South Africa. Volume 1, South African radio stations and broadcasters
   then & now /","identifiers":[{"value":"9783031407024 (electronic bk.)","identifierTypeId":"8261054f-be78-422d-bd51-4ed9f33c3422"},{"value":"3031407024
@@ -381,15 +335,66 @@ folio_json_struct:
   to 1 user","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"South
   African radio stations and broadcasters then & now","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"South
   African radio stations and broadcasters then and now","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2024-02-06T23:36:27.556Z","statisticalCodeIds":["8193f218-5499-4a08-aa1d-3a2b79e338c3"],"administrativeNotes":[],"physicalDescriptions":["1
-  online resource (xxxi, 192 pages) : illustrations"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":"c9310b98-889a-4cda-a5c4-d570cc17fd0e","orderType":"One-Time","orderStatus":"Closed","poLineNumber":"49550-1","orderSentDate":"2024-02-01T15:43:44.051+00:00","orderCloseReason":{"reason":"Complete"},"polReceiptStatus":"Fully
-  Received"}]}'
+  online resource (xxxi, 192 pages) : illustrations"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]}}'
+marc_json_struct:
+- '{"leader":"03951nam a2200505 i 4500","fields":[{"001":"in00000053236"},{"006":"m     o  d        "},{"007":"cr
+  un|---aucuu"},{"008":"240111s2024    sz a    ob    001 0 eng d"},{"005":"20250617015537.8"},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"9783031407024"},{"q":"(electronic bk.)"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"3031407024"},{"q":"(electronic bk.)"}]}},{"020":{"ind1":"
+  ","ind2":" ","subfields":[{"z":"9783031407017"}]}},{"020":{"ind1":" ","ind2":" ","subfields":[{"z":"3031407016"}]}},{"024":{"ind1":"7","ind2":"
+  ","subfields":[{"a":"10.1007/978-3-031-40702-4"},{"2":"doi"}]}},{"035":{"ind1":"
+  ","ind2":"9","subfields":[{"a":"gls305914613"}]}},{"040":{"ind1":" ","ind2":" ","subfields":[{"a":"NhCcYBP"},{"c":"NhCcYBP"},{"d":"UtOrBLW"}]}},{"043":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"f-sa---"}]}},{"050":{"ind1":" ","ind2":"4","subfields":[{"a":"PN1991.3.S65"},{"b":"A15
+  2024"}]}},{"072":{"ind1":" ","ind2":"7","subfields":[{"a":"APW"},{"2":"bicssc"}]}},{"072":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"SOC052000"},{"2":"bisacsh"}]}},{"072":{"ind1":"
+  ","ind2":"7","subfields":[{"a":"ATL"},{"2":"thema"}]}},{"082":{"ind1":"0","ind2":"4","subfields":[{"a":"791.440968"},{"2":"23/eng/20240111"}]}},{"245":{"ind1":"0","ind2":"0","subfields":[{"a":"100
+  years of radio in South Africa."},{"n":"Volume 1,"},{"p":"South African radio stations
+  and broadcasters then & now /"},{"c":"Sisanda Nkoala, Gilbert Motsaathebe, editors"}]}},{"246":{"ind1":"3","ind2":"0","subfields":[{"a":"South
+  African radio stations and broadcasters then & now"}]}},{"246":{"ind1":"3","ind2":"
+  ","subfields":[{"a":"South African radio stations and broadcasters then and now"}]}},{"264":{"ind1":"
+  ","ind2":"1","subfields":[{"a":"Cham :"},{"b":"Palgrave Macmillan,"},{"c":"2024"}]}},{"300":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1 online resource (xxxi, 192 pages) :"},{"b":"illustrations"}]}},{"336":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"text"},{"b":"txt"},{"2":"rdacontent"}]}},{"337":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"computer"},{"b":"c"},{"2":"rdamedia"}]}},{"338":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"online resource"},{"b":"cr"},{"2":"rdacarrier"}]}},{"505":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"1. Introduction: A Century Of South Africa''s Most Renowned
+  Medium -- 2. 100 Years Of Radio In South Africa: A Practitioner’s Reflections On
+  Yesteryear -- 3. The Sound Of Freedom: Radio Freedom As An Instrument Of Social
+  And Political Mobilisation Against An Illegetimate Astate - A Practioner''s Reflection
+  -- 4. Reflecting On Two Decades Of Strategic Choices: A Practitioners Examination
+  Of Sabc Public Service Radio Product Management From 1996-2016 -- 5. Exploring The
+  Radiant Allure: The Impact And Significance Of Star Iconism In Radio Mmabatho And
+  Radio Bop On The South African Media Landscape -- 6. African Language Radio A Locus
+  Of Indigenous Language Revival And Identity Negotiation: A Case Study Of Umhlobo
+  Wenene FM -- 7. Resonating Voices: The Transformative Power Of Xitsonga Radio Stations
+  In Language Preservation And Societal Discourse -- 8. The Shibobos, Dadas, And Dummies.
+  A Reflection On Cultural Nuances, Race, And Gender In Sports And Entertainment Radio
+  Broadcasting -- 9. Storytellers, Curators, Watchdogs And Analysts: A Metajournalistic
+  Discourse Analysis Of South African Radio Broadcasters'' Role In Agenda Setting
+  -- 10. Brave Broken heart? The Story of the Late Radio Journalist Suna Venter --
+  11. Concluding Remarks: Radio History, Development, And Impact In South Africa"}]}},{"504":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Includes bibliographical references and index"}]}},{"533":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"Electronic reproduction."},{"b":"Ann Arbor, MI"},{"n":"Available
+  via World Wide Web"}]}},{"588":{"ind1":"0","ind2":" ","subfields":[{"a":"Online
+  resource; title from PDF title page (SpringerLink, viewed January 11, 2024)"}]}},{"650":{"ind1":"
+  ","ind2":"0","subfields":[{"a":"Radio broadcasting"},{"z":"South Africa"},{"x":"History."}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Nkoala, Sisanda,"},{"e":"editor."},{"0":"http://id.loc.gov/authorities/names/no2024066235"}]}},{"700":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"Motsaathebe, Gilbert,"},{"e":"editor."},{"0":"(orcid)0000-0002-8681-6945"},{"0":"http://id.loc.gov/authorities/names/no2020134621"},{"1":"https://orcid.org/0000-0002-8681-6945"}]}},{"710":{"ind1":"2","ind2":"
+  ","subfields":[{"a":"ProQuest (Firm)"},{"0":"http://id.loc.gov/authorities/names/n2007068018"}]}},{"776":{"ind1":"0","ind2":"8","subfields":[{"i":"Print
+  version:"},{"a":"Nkoala, Sisanda"},{"t":"100 Years of Radio in South Africa, Volume
+  1"},{"d":"Cham : Springer International Publishing AG,c2024"},{"z":"9783031407017"}]}},{"856":{"ind1":"4","ind2":"0","subfields":[{"z":"Available
+  to Stanford-affiliated users."},{"u":"https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209"},{"y":"ProQuest
+  Ebook Central"},{"x":"Provider: GOBI"},{"x":"purchased"},{"z":"Access limited to
+  1 user"}]}},{"979":{"ind1":" ","ind2":" ","subfields":[{"f":"LINDER"},{"b":"druid:xg474qk4925"},{"c":"xg474qk4925_00_0001.jp2"},{"d":"The
+  Doris H. Linder Book Fund"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"s":"e8c564e2-deee-4494-a2bb-108507a66e42"},{"i":"3f1e6f2c-ab5c-4562-8784-96a2e1003c9c"}]}}]}'
 author_struct:
 - contributors:
   - link: Nkoala, Sisanda,
     search: Nkoala, Sisanda,
     pre_text: ''
     post_text: editor.
-    authorities: []
+    authorities:
+    - http://id.loc.gov/authorities/names/no2024066235
     rwo: []
   - link: Motsaathebe, Gilbert,
     search: Motsaathebe, Gilbert,
@@ -397,13 +402,15 @@ author_struct:
     post_text: editor.
     authorities:
     - "(orcid)0000-0002-8681-6945"
+    - http://id.loc.gov/authorities/names/no2020134621
     rwo:
     - https://orcid.org/0000-0002-8681-6945
   - link: ProQuest (Firm)
     search: ProQuest (Firm)
     pre_text: ''
     post_text: ''
-    authorities: []
+    authorities:
+    - http://id.loc.gov/authorities/names/n2007068018
     rwo: []
 marc_links_struct:
 - version: '0.2'
@@ -413,13 +420,13 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text: Access limited to 1 user
   additional_links: []
+  access: ''
   material_type:
   note: Available to Stanford-affiliated users. Access limited to 1 user
   href: https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=31051209
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
@@ -444,7 +451,7 @@ toc_struct:
     - '9. Storytellers, Curators, Watchdogs And Analysts: A Metajournalistic Discourse
       Analysis Of South African Radio Broadcasters'' Role In Agenda Setting'
     - 10. Brave Broken heart? The Story of the Late Radio Journalist Suna Venter
-    - '11. Concluding Remarks: Radio History, Development, And Impact In South Africa.'
+    - '11. Concluding Remarks: Radio History, Development, And Impact In South Africa'
   vernacular:
   unmatched_vernacular:
 holdings_json_struct:

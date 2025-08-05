@@ -177,12 +177,6 @@ dor_resource_count_isi: 129
 dor_read_rights_ssim:
 - world
 context_source_ssi: sdr
-context_version_ssi: '6baed9757930cb66e1d8c3d45e43f9e7360782fc
-
-  '
-last_updated: '2025-07-08T13:53:36Z'
-created: '2025-07-08T13:53:36Z'
-timestamp: '2025-07-08T13:53:36Z'
 format_hsim:
 - Dataset
 - Object

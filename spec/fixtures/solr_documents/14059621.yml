@@ -1,4 +1,8 @@
 ---
+format_hsim:
+- Book
+- Sound recording
+- Sound recording|Audiocassette
 id: '14059621'
 hashed_id_ssi: '09e5c9ea5b542a5adc47d20d81ad75eb'
 all_search: 'Strom, Dao, author. http://id.loc.gov/authorities/names/n2002026442 Instrument
@@ -135,7 +139,7 @@ oclc:
 - '1230230667'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 format_physical_ssim:
 - Audiocassette
@@ -200,7 +204,7 @@ preferred_barcode: '36105231728176'
 holdings_library_code_ssim:
 - SAL3
 library_code_facet_ssim:
-- SAL3
+- OFF_CAMPUS
 location_code_facet_ssim:
 - SAL3-STACKS
 building_facet:
@@ -228,9 +232,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -375,7 +376,7 @@ bib_search: 'Strom, Dao, author. Instrument / Dao Strom Accompanying audiocasset
 vern_bib_search: Book
 uuid_ssi: 33bc9508-9fa4-5e89-bc9e-0f9bea53108e
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"33bc9508-9fa4-5e89-bc9e-0f9bea53108e","hrid":"a14059621","notes":[{"note":"Self-travelogue/s
+- '{"instance":{"id":"33bc9508-9fa4-5e89-bc9e-0f9bea53108e","hrid":"a14059621","notes":[{"note":"Self-travelogue/s
   -- [Istayed] / I have traveled -- Dia- -- Diatribes -- Self-travelogue/s -- [Carry
   / catalyst]","staffOnly":false,"instanceNoteTypeId":"5ba8e385-0e27-462e-a571-ffa1fa34ea54"},{"note":"Traveler''s
   ode tracklist : 1. traveler''s ode -- 2. [interim] -- 3. [i stayed] -- 4. i have
@@ -420,10 +421,7 @@ folio_json_struct:
   audiocassette : Traveler''s ode","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324","6d749f00-97bd-4eab-9828-57167558f514"],"publicationPeriod":{"start":2020},"statusUpdatedDate":"2023-08-21T21:02:54.758+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["164
   pages : illustrations (some color) ; 22 cm + 1 audiocassette (7 1/8 x 5 in., 1/4
   in. tape)","audiocassette analog","audiocassette 3 3/4 ips","audiocassette mono","audiocassette
-  CD audio"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-18T09:46:15Z'
-created: '2025-05-18T09:46:15Z'
-timestamp: '2025-05-18T09:46:15Z'
+  CD audio"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 marc_json_struct:
 - '{"leader":"04484cam a2200589 i 4500","fields":[{"001":"a14059621"},{"003":"SIRSI"},{"005":"20220129011406.0"},{"007":"ss
   lunjlcmpnue"},{"008":"200716t20202020orua          000 p eng d"},{"010":{"ind1":"

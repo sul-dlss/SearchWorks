@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Journal/Periodical
 id: '513384'
 hashed_id_ssi: c2c65369ad9ef540b95617ffb82c76bc
 marc_json_struct:
@@ -52,7 +54,7 @@ oclc:
 - '4098726'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Journal/Periodical
 physical:
 - v. ; 24 cm.
@@ -75,7 +77,7 @@ holdings_library_code_ssim:
 - SAL3
 - SAL
 library_code_facet_ssim:
-- SAL3
+- OFF_CAMPUS
 location_code_facet_ssim:
 - SAL3-STACKS
 building_facet:
@@ -98,9 +100,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -149,15 +148,12 @@ bib_search: Cumulative microform reviews. 1972/76-  . Westport. Conn., Microform
 vern_bib_search: Journal/Periodical
 uuid_ssi: 17e623cd-cfcb-56e3-a889-ca1e133026f1
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"17e623cd-cfcb-56e3-a889-ca1e133026f1","hrid":"a513384","notes":[],"title":"Cumulative
+- '{"instance":{"id":"17e623cd-cfcb-56e3-a889-ca1e133026f1","hrid":"a513384","notes":[],"title":"Cumulative
   microform reviews. 1972/76-  .","series":[],"source":"MARC","_version":7,"editions":[],"metadata":{"createdDate":"2023-08-20T17:32:07.747Z","updatedDate":"2023-08-20T17:32:07.747Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Microforms
   Reviews Indexes"}],"languages":["eng"],"indexTitle":"Cumulative microform reviews.","identifiers":[{"value":"87640299","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
   ACQ1726","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(CSt-H)notisACQ1726","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(CStRLIN)CSUX17080924-S","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)4098726","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)272657571","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"0162-0940","identifierTypeId":"913300b2-03ed-469a-8179-c1092c991227"},{"value":"0162-0940","identifierTypeId":"5860f255-a27f-4916-a830-262aa900a6b9"}],"publication":[{"place":"Westport.
   Conn., Microform Review","publisher":"","dateOfPublication":""}],"contributors":[],"catalogedDate":"1996-05-23","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"068b5344-e2a6-40df-9186-1829e13cd344","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"statusUpdatedDate":"2023-08-20T17:32:07.154+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["     v.
-  ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-06-22T09:14:56Z'
-created: '2025-06-22T09:14:56Z'
-timestamp: '2025-06-22T09:14:56Z'
+  ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 holdings_json_struct:
 - holdings:
   - id: 23a079c2-9cbe-5d2e-82b3-fe8d3e85ec7f

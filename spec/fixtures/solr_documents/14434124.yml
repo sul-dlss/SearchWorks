@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '14434124'
 hashed_id_ssi: de1e7b47796e6a582d44b92557a42808
 marc_json_struct:
@@ -134,7 +136,7 @@ oclc:
 - '1324660300'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 genre_ssim:
 - Short stories
@@ -168,7 +170,7 @@ preferred_barcode: '36105235818098'
 holdings_library_code_ssim:
 - SAL3
 library_code_facet_ssim:
-- SAL3
+- OFF_CAMPUS
 location_code_facet_ssim:
 - SAL3-STACKS
 building_facet:
@@ -189,9 +191,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -316,7 +315,7 @@ bib_search: 'Nomberg, Hersh David, 1876-1927, author. Between parents / Hersh Do
 vern_bib_search: 'צווישן טאטע־מאמע טור : פארלאג, [2021] Book'
 uuid_ssi: b60c5a35-7a85-5189-90fc-1010c0f1b17b
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"b60c5a35-7a85-5189-90fc-1010c0f1b17b","hrid":"a14434124","tags":{"tagList":[]},"notes":[{"note":"\"Originally
+- '{"instance":{"id":"b60c5a35-7a85-5189-90fc-1010c0f1b17b","hrid":"a14434124","tags":{"tagList":[]},"notes":[{"note":"\"Originally
   published in Der Yud, Krakow, 1902.\"--Title page verso","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"\"Yiddish/English
   bilingual edition\"--Cover","staffOnly":false,"instanceNoteTypeId":"6a2533a7-4de2-4e64-8466-074c2fa9308c"},{"note":"\"A
   child of divorced parents, eleven-year-old Yitskhok, finds himself adrift when his
@@ -337,10 +336,7 @@ folio_json_struct:
   T813 2021","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[{"alternativeTitle":"Tsṿishn
   ṭaṭe-mame","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"},{"alternativeTitle":"צווישן
   טאטע־מאמע","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"statusUpdatedDate":"2023-08-21T21:40:13.804+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["61
-  pages ; 18 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-18T12:15:43Z'
-created: '2025-05-18T12:15:43Z'
-timestamp: '2025-05-18T12:15:43Z'
+  pages ; 18 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Nomberg, Hersh David, 1876-1927,

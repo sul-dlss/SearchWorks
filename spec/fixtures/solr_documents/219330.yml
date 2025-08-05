@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '219330'
 hashed_id_ssi: 310c7f3f31b206e51c05da9d055b1720
 marc_json_struct:
@@ -93,7 +95,7 @@ oclc:
 access_facet:
 - Online
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 physical:
 - '2 v. : port. ; 16 cm.'
@@ -135,9 +137,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -206,7 +205,7 @@ bib_search: 'Irving, Washington, 1783-1859. The life of Oliver Goldsmith : with 
 vern_bib_search: Book
 uuid_ssi: 3a3792fc-fe4f-55b6-b135-1e329ebc0ab7
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"3a3792fc-fe4f-55b6-b135-1e329ebc0ab7","hrid":"a219330","notes":[{"note":"Associates
+- '{"instance":{"id":"3a3792fc-fe4f-55b6-b135-1e329ebc0ab7","hrid":"a219330","notes":[{"note":"Associates
   of the Stanford University Libraries","staffOnly":false,"instanceNoteTypeId":"fcf323dc-96d1-49a4-ae80-a9033a059cf9"}],"title":"The
   life of Oliver Goldsmith : with selections from his writings / by Washington Irving.","series":[{"value":"Family
   library ; no. 121-122"},{"value":"Harper''s family library no. 121-122"}],"source":"MARC","_version":3,"editions":[],"metadata":{"createdDate":"2023-08-20T15:38:12.301Z","updatedDate":"2023-08-20T15:38:12.301Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[],"languages":["eng"],"indexTitle":"Life
@@ -216,10 +215,7 @@ folio_json_struct:
   1783-1859","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"},{"name":"Goldsmith,
   Oliver, 1730?-1774. Works. Selections. 1847","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1992-10-30","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[],"instanceFormats":[],"electronicAccess":[{"uri":"https://catalog.hathitrust.org/Record/008967804","name":"Version
   of resource","linkText":"Full text via HathiTrust","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1847},"statusUpdatedDate":"2023-08-20T15:38:11.603+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["2
-  v. : port. ; 16 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-18T09:55:33Z'
-created: '2025-05-18T09:55:33Z'
-timestamp: '2025-05-18T09:55:33Z'
+  v. : port. ; 16 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Irving, Washington, 1783-1859.
@@ -232,13 +228,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: ''
   href: https://catalog.hathitrust.org/Record/008967804
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:

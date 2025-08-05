@@ -62,7 +62,7 @@ class FixtureHarvester
 
   def self.harvest(id)
     response = conn.get("#{id}.json")
-    yaml = response.body.dig('response', 'document').except('_version_').to_yaml
+    yaml = response.body.dig('response', 'document').except('_version_', 'last_updated', 'created', 'timestamp', 'context_version_ssi').to_yaml
     File.write("spec/fixtures/solr_documents/#{id}.yml", yaml)
   end
 

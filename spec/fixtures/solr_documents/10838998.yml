@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '10838998'
 hashed_id_ssi: d3c7fb6c04db350d075f7281c84dcfa2
 marc_json_struct:
@@ -164,7 +166,7 @@ oclc:
 access_facet:
 - Online
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 physical:
 - 'ix, 236 pages : illustrations ; 24 cm.'
@@ -267,9 +269,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '78a467b126ea8b09cfa30212b8ed4c04339d6b7b
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -385,7 +384,7 @@ bib_search: 'Nelson, Andrew J., author. The sound of innovation : Stanford and t
 vern_bib_search: Book
 uuid_ssi: bc081cad-b601-59c3-96ac-34fd7b1e6e8b
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"bc081cad-b601-59c3-96ac-34fd7b1e6e8b","hrid":"a10838998","notes":[{"note":"Includes
+- '{"instance":{"id":"bc081cad-b601-59c3-96ac-34fd7b1e6e8b","hrid":"a10838998","notes":[{"note":"Includes
   bibliographical references (pages 209-226) and index","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"}],"title":"The
   sound of innovation : Stanford and the computer music revolution / Andrew J. Nelson.","series":[{"value":"Inside
   technology"}],"source":"MARC","_version":4,"editions":[],"metadata":{"createdDate":"2023-08-21T15:45:32.888Z","updatedDate":"2023-08-21T15:45:32.888Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Stanford
@@ -404,10 +403,7 @@ folio_json_struct:
   C464 2015","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"786.760979473","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy","name":"Version
   of resource","linkText":"MIT Press Direct","publicNote":"Available to Stanford-affiliated
   users","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"start":2015},"statusUpdatedDate":"2023-08-21T15:45:32.800+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["ix,
-  236 pages : illustrations ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-06-22T13:21:24Z'
-created: '2025-06-22T13:21:24Z'
-timestamp: '2025-06-22T13:21:24Z'
+  236 pages : illustrations ; 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - creator:
   - link: Nelson, Andrew J.,
@@ -421,6 +417,7 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: Available to Stanford-affiliated users.
   href: https://doi.org/10.7551/mitpress/10086.001.0001?locatt=mode:legacy

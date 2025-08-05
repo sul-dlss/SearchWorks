@@ -205,9 +205,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: '8ffa9173bf0cbbec435243fdb84e5be742c78a51
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -310,7 +307,7 @@ bib_search: 'JSTOR [electronic resource] Journal storage 1995-2009: [New York] :
 vern_bib_search: Book Database
 uuid_ssi: aa5d3e53-1527-5410-a224-9795f5ba8e89
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"aa5d3e53-1527-5410-a224-9795f5ba8e89","hrid":"a6745620","notes":[{"note":"Provides
+- '{"instance":{"id":"aa5d3e53-1527-5410-a224-9795f5ba8e89","hrid":"a6745620","notes":[{"note":"Provides
   page images of back issues of the core scholarly journals in the humanities, social
   sciences, and basic sciences from the earliest issues to within a few years of current
   publication. Users may browse by journal title or discipline, or may search the
@@ -338,10 +335,7 @@ folio_json_struct:
   (Organization)","primary":false,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2011-07-20","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"Z6944.S3","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"025.06","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[{"uri":"http://www.jstor.org","name":"Resource","publicNote":"Available
   to Stanford-affiliated users at","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"4fc0f4fe-06fd-490a-a078-c4da1754e03a","publicationRange":[],"statisticalCodes":[{"id":"4bc78766-8f34-4b1a-9e39-2a689a4ae998","name":"Database"}],"alternativeTitles":[{"alternativeTitle":"Journal
   storage","alternativeTitleTypeId":"35bbe7f2-1a49-11ed-861d-0242ac120002"}],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"end":1995},"statusUpdatedDate":"2023-08-21T10:16:38.861+0000","statisticalCodeIds":["4bc78766-8f34-4b1a-9e39-2a689a4ae998"],"administrativeNotes":[],"physicalDescriptions":[],"publicationFrequency":["Updated
-  weekly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-07-30T12:41:29Z'
-created: '2025-07-30T12:41:29Z'
-timestamp: '2025-07-30T12:41:29Z'
+  weekly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 marc_json_struct:
 - '{"leader":"03049cai a2200697 a 4500","fields":[{"001":"a6745620"},{"003":"SIRSI"},{"006":"m        d        "},{"007":"cr
   |||||||||||"},{"008":"970325c19959999nyuwr   o     0    2eng  "},{"010":{"ind1":"
@@ -413,6 +407,7 @@ marc_links_struct:
   link_title: Available to Stanford-affiliated users only
   additional_text:
   additional_links: []
+  access: ''
   material_type:
   note: 'Available to Stanford-affiliated users at:'
   href: http://www.jstor.org/

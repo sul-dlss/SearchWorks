@@ -92,7 +92,7 @@ access_facet:
 - Online
 access_status_ssim:
 - Open Access
-format_hsim:
+format_main_ssim:
 - Book
 genre_ssim:
 - Government document
@@ -111,6 +111,8 @@ callnum_facet_hsim:
 - Government Document|Federal
 holdings_library_code_ssim:
 - SUL
+library_code_facet_ssim:
+- SUL
 collection:
 - sirsi
 - folio
@@ -118,9 +120,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -221,7 +220,7 @@ bib_search: 'Arctic science portal. [Arlington, Va.] : United States Arctic Rese
 vern_bib_search: Book
 uuid_ssi: 446d2369-2b74-5ae3-8864-7814333448f3
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"446d2369-2b74-5ae3-8864-7814333448f3","hrid":"a12324130","notes":[{"note":"The
+- '{"instance":{"id":"446d2369-2b74-5ae3-8864-7814333448f3","hrid":"a12324130","notes":[{"note":"The
   portal is a collection of Arctic science websites covering topics on society, environment,
   economics, reference and organizations. The portal is designed for use by researchers,
   decision makers and the general public","staffOnly":false,"instanceNoteTypeId":"10e2e11b-450f-45c8-b09b-0f819999966e"},{"note":"Contents
@@ -238,10 +237,7 @@ folio_json_struct:
   body.","contributorNameTypeId":"2e48e713-17f3-4c13-a9f8-23845bb210aa"}],"catalogedDate":"2018-02-08","staffSuppress":false,"instanceTypeId":"6312d172-f0cf-40f6-b27d-9fa8feaf332f","previouslyHeld":false,"classifications":[{"classificationNumber":"Y
   3.AR 2/2:2/P 82/","classificationTypeId":"fb12264c-ff3b-47e0-8e09-b0aa074361f1"}],"instanceFormats":[],"electronicAccess":[{"uri":"https://purl.fdlp.gov/GPO/gpo88626","name":"Resource","relationshipId":"f5d0068e-6272-458e-8a81-b85e7b9a14aa"}],"holdingsRecords2":[],"modeOfIssuanceId":"4fc0f4fe-06fd-490a-a078-c4da1754e03a","publicationRange":["Ceased
   publication"],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["f5e8210f-7640-459b-a71f-552567f92369"],"statusUpdatedDate":"2023-08-21T18:23:37.388+0000","statisticalCodeIds":["d3f618e2-9fa9-4623-94ae-1d95d1d66f79"],"administrativeNotes":[],"physicalDescriptions":["1
-  online resource"],"publicationFrequency":["Updated irregularly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-18T10:00:26Z'
-created: '2025-05-18T10:00:26Z'
-timestamp: '2025-05-18T10:00:26Z'
+  online resource"],"publicationFrequency":["Updated irregularly"],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - contributors:
   - link: United States. Arctic Research Commission,
@@ -258,13 +254,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: open
   material_type:
   note: ''
   href: https://purl.fdlp.gov/GPO/gpo88626
   sort:
   casalini:
   fulltext: true
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:

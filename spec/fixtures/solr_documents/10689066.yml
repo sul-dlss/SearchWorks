@@ -1,4 +1,6 @@
 ---
+format_hsim:
+- Book
 id: '10689066'
 hashed_id_ssi: d4ec907dd66f2d77f3457f8287637375
 marc_json_struct:
@@ -130,7 +132,7 @@ oclc:
 - '893860605'
 access_facet:
 - At the Library
-format_hsim:
+format_main_ssim:
 - Book
 physical:
 - '122 pages : illustrations ; 24 cm'
@@ -154,7 +156,7 @@ preferred_barcode: '36105214833316'
 holdings_library_code_ssim:
 - SAL3
 library_code_facet_ssim:
-- SAL3
+- OFF_CAMPUS
 location_code_facet_ssim:
 - SAL3-STACKS
 building_facet:
@@ -175,9 +177,6 @@ collection_search:
 - sirsi
 - folio
 context_source_ssi: folio
-context_version_ssi: 'f2cfe986f8721af55d5df04e0215a6b959494615
-
-  '
 context_input_name_ssi: "/dev/null"
 context_input_modified_dtsi: '2024-12-12T06:30:53Z'
 context_marc_fields_ssim:
@@ -282,7 +281,7 @@ bib_search: 'I Sardi e la Resistenza : il contributo dei partigiani di Ardauli a
 vern_bib_search: Book
 uuid_ssi: d6eaa486-bd35-5c36-9150-c0a51690f46e
 folio_json_struct:
-- '{"pieces":[null],"instance":{"id":"d6eaa486-bd35-5c36-9150-c0a51690f46e","hrid":"a10689066","notes":[{"note":"Includes
+- '{"instance":{"id":"d6eaa486-bd35-5c36-9150-c0a51690f46e","hrid":"a10689066","notes":[{"note":"Includes
   bibliographical references (pages 115-122)","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"}],"title":"I
   Sardi e la Resistenza : il contributo dei partigiani di Ardauli alla lotta di Liberazione,
   1943-1945 / Aldo Borghesi, Gian Luigi Deiana, Giuseppe Deiana ; a cura di Giuseppe
@@ -301,10 +300,7 @@ folio_json_struct:
   A7277 2014","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"}],"instanceFormats":[],"electronicAccess":[{"uri":"http://bookdata.stanford.edu/casalini/suauth/14/38/14383934.pdf","name":"Version
   of resource","publicNote":"Available to Stanford-affiliated users at (source: Casalini)","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3","materialsSpecification":"Table
   of contents"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":["8d511d33-5e85-4c5d-9bce-6e3c9cd0c324"],"publicationPeriod":{"start":2014},"statusUpdatedDate":"2023-08-21T15:37:32.700+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["122
-  pages : illustrations ; 24 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"holdingSummaries":[{"poLineId":null,"orderType":null,"orderStatus":null,"poLineNumber":null,"orderSentDate":null,"orderCloseReason":null,"polReceiptStatus":null}]}'
-last_updated: '2025-05-18T13:31:39Z'
-created: '2025-05-18T13:31:39Z'
-timestamp: '2025-05-18T13:31:39Z'
+  pages : illustrations ; 24 cm"],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0}'
 author_struct:
 - contributors:
   - link: Deiana, Giuseppe,
@@ -333,13 +329,13 @@ marc_links_struct:
   link_title: ''
   additional_text:
   additional_links: []
+  access: ''
   material_type: Table of contents
   note: 'Available to Stanford-affiliated users at: (source: Casalini)'
   href: http://bookdata.stanford.edu/casalini/suauth/14/38/14383934.pdf
   sort:
   casalini: true
   fulltext: false
-  finding_aid: false
   managed_purl: false
   file_id:
   druid:
