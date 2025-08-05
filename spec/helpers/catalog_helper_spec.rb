@@ -6,21 +6,6 @@ RSpec.describe CatalogHelper do
   include ModsFixtures
   include MarcMetadataFixtures
 
-  describe 'current_view' do
-    before do
-      allow(helper).to receive_messages(blacklight_config: CatalogController.blacklight_config, blacklight_configuration_context: Blacklight::Configuration::Context.new(helper))
-    end
-
-    it 'if params[:view] present, should return it' do
-      params = { view: 'gallery' }
-      allow(helper).to receive(:params).and_return(params)
-      expect(helper.current_view).to eq 'gallery'
-    end
-    it 'if params is not present, return list' do
-      expect(helper.current_view).to eq 'list'
-    end
-  end
-
   describe 'document_index_view_type' do
     before do
       allow(helper).to receive_messages(blacklight_config: CatalogController.blacklight_config, blacklight_configuration_context: Blacklight::Configuration::Context.new(helper))
