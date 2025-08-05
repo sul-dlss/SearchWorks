@@ -76,12 +76,10 @@
       <%= render_if_present document.subjects('655') %>
       <%= render_if_present document.subjects('690') %>
 
-      <% if document.is_a_database? && document[:db_az_subject] %>
-        <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
-          <% component.with_label { 'Database topics' } %>
-          <% document[:db_az_subject].each do |subject| %>
-            <% component.with_value { helpers.link_to_database_search(subject) } %>
-          <% end %>
+      <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
+        <% component.with_label { 'Database topics' } %>
+        <% document.db_az_subject.each do |subject| %>
+          <% component.with_value { helpers.link_to_database_search(subject) } %>
         <% end %>
       <% end %>
     <% end %>

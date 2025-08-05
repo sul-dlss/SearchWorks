@@ -118,13 +118,10 @@ class SolrDocument
   attribute :oclc_number, :string, 'oclc'
   attribute :imprint_string, :string, :imprint_display
   attribute :vernacular_title, :string, :vern_title_display
+  attribute :db_az_subject, :array, :db_az_subject
 
   def document_formats
     format.presence || old_format.presence || []
-  end
-
-  def db_az_subject
-    self[:db_az_subject] if is_a_database?
   end
 
   def file_ids
