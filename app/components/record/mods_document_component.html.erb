@@ -18,7 +18,7 @@
         when document.druid && (!document.mods? || document.published_content?)
           render Record::Item::EmbedComponent.new(druid: document.druid)
         end %>
-      <% if document.display_type == 'mods_collection' %>
+      <% if document.is_a_collection? %>
         <%= render 'collection_members/placeholder', document: document %>
       <% end %>
     </div>

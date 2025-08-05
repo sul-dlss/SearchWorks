@@ -66,7 +66,7 @@ RSpec.describe 'Bookplates' do
         expect(page).to have_css('.filter-value', text: 'The Edgar Amos Boyles Centennial Book Fund')
       end
 
-      expect(page).to have_css('div.blacklight-marc[data-document-id]', count: 1)
+      expect(page).to have_css('div.gallery-document[data-document-id]', count: 1)
     end
 
     it 'returns a gallery view search result sorted by "new to the Libraries"' do
