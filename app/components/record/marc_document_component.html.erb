@@ -23,7 +23,7 @@
 
   <% component.with_embed do %>
     <div class="mb-5">
-      <% if document.display_type == 'marc_collection' %>
+      <% if document.is_a_collection? %>
         <%= render 'collection_members/placeholder', document: document %>
       <% else %>
         <%= case

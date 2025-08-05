@@ -10,13 +10,10 @@ module Record
     end
 
     def call
-      case @document.display_type
-      when /^marc/
-        render Record::MarcDocumentComponent.new(document: @presenter, **@kwargs)
-      when /^mods/
+      if @document.mods?
         render Record::ModsDocumentComponent.new(document: @presenter, **@kwargs)
       else
-        raise "Unknown display type #{@document.display_type}"
+        render Record::MarcDocumentComponent.new(document: @presenter, **@kwargs)
       end
     end
   end
