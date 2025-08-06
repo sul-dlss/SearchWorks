@@ -24,6 +24,15 @@ class ArticlesController < ApplicationController
     raise exception
   end
 
+  # manipulate the search state params to set 'Direct access to full text' as the default
+  # unless the user might have un-checked it already as part of asearch.
+  before_action do
+    next if action_name == 'index' && has_search_parameters?
+
+    search_state.params['f'] ||= {}
+    search_state.params['f']['eds_search_limiters_facet'] ||= ['Direct access to full text']
+  end
+
   around_action :manage_eds_session_token
   # EDS uses the session token to maintain some kind of state across requests (and also uses it
   # to handle guest state). Therefore, we need to establish a session token before making EDS requests,
