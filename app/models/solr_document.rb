@@ -12,7 +12,6 @@ class SolrDocument
   include SolrHoldings
   include SolrSet
   include MarcBoundWithNote
-  include Citable
   include MarcMetadata
   include MarcSubjects
   include IiifConcern
@@ -188,5 +187,13 @@ class SolrDocument
     end
 
     @bookplates ||= []
+  end
+
+  delegate :citable?, :citations, :mods_citations, :to_citeproc, to: :citation_object
+
+  private
+
+  def citation_object
+    @citation_object ||= Citation.new(self)
   end
 end
