@@ -4,7 +4,12 @@
     <%= render Searchworks4::ItemStatusComponent.new(item:) %>
   </td>
 
-  <%= render Searchworks4::Item::PublicNoteComponent.new(item:) %>
-  <%= render Searchworks4::Item::BoundWithParentComponent.new(item:, document:) %>
-  <%= render Searchworks4::Item::BoundWithPrincipalListComponent.new(item:, document:) %>
+  <% note_content = capture do %>
+    <%= render Searchworks4::Item::PublicNoteComponent.new(item:) %>
+    <%= render Searchworks4::Item::BoundWithParentComponent.new(item:, document:) %>
+    <%= render Searchworks4::Item::BoundWithPrincipalListComponent.new(item:, document:) %>
+  <% end %>
+  <td class="w-100 <%= 'd-none' if note_content.strip.empty? %>">
+    <%= note_content %>
+  </td>
 </tr>
