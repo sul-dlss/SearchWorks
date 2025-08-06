@@ -12,7 +12,6 @@ class SolrDocument
   include SolrHoldings
   include SolrSet
   include MarcMetadata
-  include IiifConcern
   include DorContentMetadata
   include CollectionTitles
 
