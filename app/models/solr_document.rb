@@ -12,7 +12,6 @@ class SolrDocument
   include SolrHoldings
   include SolrSet
   include MarcBoundWithNote
-  include SolrBookplates
   include Citable
   include MarcMetadata
   include MarcSubjects
@@ -181,5 +180,13 @@ class SolrDocument
 
   def druid
     self[:druid] || managed_purls.map(&:druid)&.first
+  end
+
+  def bookplates
+    @bookplates ||= self[:bookplates_display]&.map do |bookplate_field|
+      Bookplate.new(bookplate_field)
+    end
+
+    @bookplates ||= []
   end
 end
