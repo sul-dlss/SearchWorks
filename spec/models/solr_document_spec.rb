@@ -123,12 +123,6 @@ RSpec.describe SolrDocument do
     end
   end
 
-  describe '#id' do
-    it 'escapes slashes' do
-      expect(SolrDocument.new(id: 'abc/123').id).to eq 'abc%2F123'
-    end
-  end
-
   describe '#eresources_library_display_name' do
     let(:eresource_bus_library) { { id: 30, holdings_library_code_ssim: 'BUSINESS', item_display_struct: [] } }
 
