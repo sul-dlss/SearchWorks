@@ -32,5 +32,25 @@ module AccessPanels
     def consolidate_for_finding_aid?
       @consolidate_for_finding_aid
     end
+
+    def note?
+      note_component.render?
+    end
+
+    def boundwith?
+      boundwith_parent_component.render? || boundwith_principal_component.render?
+    end
+
+    def note_component
+      @note_component ||= Searchworks4::Item::PublicNoteComponent.new(item:)
+    end
+
+    def boundwith_parent_component
+      @boundwith_parent_component ||= Searchworks4::Item::BoundWithParentComponent.new(item:, document:)
+    end
+
+    def boundwith_principal_component
+      @boundwith_principal_component ||= Searchworks4::Item::BoundWithPrincipalComponent.new(item:, document:)
+    end
   end
 end
