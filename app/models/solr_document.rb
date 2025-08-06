@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class SolrDocument
-  FORMAT_KEY = 'format_hsim'
-
   include MarcLinks
   include DigitalCollection
   include Extent
@@ -94,7 +92,7 @@ class SolrDocument
   use_extension(Blacklight::Document::DublinCore)
 
   attribute :course_ids, :array, :courses_folio_id_ssim
-  attribute :format, :array, FORMAT_KEY
+  attribute :format, :array, :format_hsim
   attribute :old_format, :array, 'format_main_ssim'
   attribute :live_lookup_id, :string, 'uuid_ssi'
   attribute :oclc_number, :string, 'oclc'
