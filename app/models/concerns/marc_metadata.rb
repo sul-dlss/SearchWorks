@@ -68,6 +68,10 @@ module MarcMetadata
     @isbn ||= Isbn.new(self)
   end
 
+  def imprint
+    @imprint ||= Imprint.new(self)
+  end
+
   def linked_serials
     @linked_serials ||= LinkedSerials.new(self)
   end

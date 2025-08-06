@@ -8,7 +8,6 @@ class SolrDocument
   include Extent
   include CollectionMember
   include ModsData
-  include MarcImprint
   include Druid
   include StacksImages
   include DigitalImage
