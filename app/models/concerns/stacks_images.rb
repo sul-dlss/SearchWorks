@@ -47,8 +47,6 @@ module StacksImages
   private
 
   def image_ids
-    file_ids.select do |file_id|
-      file_id =~ /\.jp2$/
-    end
+    file_ids.grep(/\.jp2$/)
   end
 end
