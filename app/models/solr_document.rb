@@ -11,7 +11,6 @@ class SolrDocument
   include StacksImages
   include SolrHoldings
   include SolrSet
-  include MarcBoundWithNote
   include MarcMetadata
   include IiifConcern
   include DorContentMetadata
