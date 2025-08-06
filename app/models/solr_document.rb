@@ -13,7 +13,6 @@ class SolrDocument
   include SolrSet
   include MarcMetadata
   include DorContentMetadata
-  include CollectionTitles
 
   include Blacklight::Solr::Document
   include SchemaDotOrg
