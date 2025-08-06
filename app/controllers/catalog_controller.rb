@@ -122,8 +122,7 @@ class CatalogController < ApplicationController
     config.index.facet_pagination_component = Searchworks4::FacetPaginationComponent
 
     config.index.title_field = Blacklight::Configuration::IndexField.new(field: 'title_display', steps: [TitleRenderingStep])
-    config.index.thumbnail_component = ThumbnailWithIiifComponent
-    config.index.thumbnail_method = :render_cover_image
+    config.index.thumbnail_component = Searchworks4::ThumbnailComponent
     config.index.mini_bento_component = SearchResult::MiniBento::CatalogComponent
 
     config.index.search_field_mapping = { # Catalog -> Article

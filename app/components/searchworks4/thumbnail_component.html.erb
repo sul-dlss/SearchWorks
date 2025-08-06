@@ -1,0 +1,3 @@
+<%= tag.div class: @classes do %>
+  <%= helpers.link_to_document(document, value, 'aria-hidden': true, tabindex: -1, counter: @counter, data: { action: "click->analytics#trackLink"}) %>
+<% end %>
