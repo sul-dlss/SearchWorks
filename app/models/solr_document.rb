@@ -9,7 +9,6 @@ class SolrDocument
   include CollectionMember
   include ModsData
   include StacksImages
-  include DigitalImage
   include SolrHoldings
   include SolrSet
   include MarcBoundWithNote
