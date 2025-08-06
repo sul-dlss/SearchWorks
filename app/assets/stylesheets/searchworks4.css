@@ -35,7 +35,7 @@ layer(framework);
 @import url("searchworks4/chat.css") layer(local);
 @import url("searchworks4/librarian-view.css") layer(local);
 @import url("searchworks4/stackmap.css") layer(local);
-@import "leaflet/dist/leaflet";
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css") layer(local);
 
 @layer local {
   @media (min-width: 1580px) {
