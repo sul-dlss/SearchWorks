@@ -1247,7 +1247,6 @@ pubs.geoscienceworld.org
 pubs.lib.umn.edu
 pubs.rsc.org
 pubs.rsna.org
-pubs.usgs.gov
 pubsonline.informs.org
 purl.access.gpo.gov
 purl.fdlp.gov
@@ -1434,7 +1433,6 @@ threedmedprint.biomedcentral.com
 thrombosisjournal.biomedcentral.com
 thyroidresearchjournal.biomedcentral.com
 titlelist.readex.com
-titles.cambridge.org
 tle.geoscienceworld.org
 tnsw.infolinker.com.tw
 tobaccocontrol.bmj.com
