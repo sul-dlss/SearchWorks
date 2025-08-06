@@ -13,7 +13,6 @@ class SolrDocument
   include SolrSet
   include MarcBoundWithNote
   include MarcMetadata
-  include MarcSubjects
   include IiifConcern
   include DorContentMetadata
   include CollectionTitles

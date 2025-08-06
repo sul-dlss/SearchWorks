@@ -83,4 +83,9 @@ module MarcMetadata
   def linked_collection
     @linked_collection ||= LinkedCollection.new(self)
   end
+
+  def subjects(tags)
+    @subjects ||= {}
+    @subjects[tags] ||= Subjects.new(self, tags)
+  end
 end
