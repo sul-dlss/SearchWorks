@@ -1,0 +1,1777 @@
+---
+format_hsim:
+- Book
+id: '1213958'
+hashed_id_ssi: 070fae03245491832896ab8b7c57e741
+marc_json_struct:
+- '{"leader":"01388cam a2200349u  4500","fields":[{"001":"a1213958"},{"003":"SIRSI"},{"005":"19910715000000.0"},{"008":"861023s1955    iluac    b    000
+  0deng  "},{"010":{"ind1":" ","ind2":" ","subfields":[{"a":"   55007400"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(Sirsi) AFS5080"}]}},{"035":{"ind1":" ","ind2":"
+  ","subfields":[{"a":"(CStRLIN)CSUG86-B101773"}]}},{"035":{"ind1":" ","ind2":" ","subfields":[{"a":"(OCoLC-M)710646"}]}},{"035":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"(OCoLC-I)273401561"}]}},{"040":{"ind1":" ","ind2":"
+  ","subfields":[{"c":"MnU"},{"d":"CSt"},{"d":"OrLoB"}]}},{"050":{"ind1":"0","ind2":"
+  ","subfields":[{"a":"QB36.G2"},{"b":"S3"}]}},{"082":{"ind1":" ","ind2":" ","subfields":[{"a":"925.2"}]}},{"100":{"ind1":"1","ind2":"
+  ","subfields":[{"a":"De Santillana, Giorgio,"},{"d":"1902-1974"}]}},{"245":{"ind1":"1","ind2":"4","subfields":[{"a":"The
+  crime of Galileo."}]}},{"260":{"ind1":" ","ind2":" ","subfields":[{"a":"[Chicago]"},{"b":"University
+  of Chicago Press"},{"c":"[1955]"}]}},{"300":{"ind1":" ","ind2":" ","subfields":[{"a":"xv,
+  338 p."},{"b":"ports., diagrs."},{"c":"24 cm."}]}},{"504":{"ind1":" ","ind2":" ","subfields":[{"a":"Bibliographical
+  footnotes."}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"Stanford copy 2
+  (RBC): Stephen Jay Gould Collection."}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"Copy
+  3: Barchas Reference Collection."},{"d":"36105233291991 (item id)"}]}},{"596":{"ind1":"
+  ","ind2":" ","subfields":[{"a":"1 21 23 31"}]}},{"600":{"ind1":"1","ind2":"0","subfields":[{"a":"Galilei,
+  Galileo,"},{"d":"1564-1642."}]}},{"856":{"ind1":"4","ind2":"1","subfields":[{"u":"http://purl.stanford.edu/ph310ms8188"},{"x":"SDR-PURL"},{"x":"item"},{"x":"barcode:36105115576790"},{"x":"file:ph310ms8188%2F36105115576790_00_0002.jp2"},{"x":"collection:sp673gr4168::Stephen
+  J. Gould Rare Books Collection"}]}},{"590":{"ind1":" ","ind2":" ","subfields":[{"a":"Barchas
+  Reference Collection is part of The Samuel I. and Cecile M. Barchas Collection in
+  the History of Science and Ideas"}]}},{"795":{"ind1":" ","ind2":" ","subfields":[{"a":"Barchas
+  Reference Collection"}]}},{"795":{"ind1":" ","ind2":" ","subfields":[{"a":"Stephen
+  Jay Gould Collection"}]}},{"795":{"ind1":" ","ind2":" ","subfields":[{"a":"Timoshenko
+  Collection"}]}},{"999":{"ind1":"f","ind2":"f","subfields":[{"i":"54e3ca32-db34-5cc4-bf98-d107f3722e39"},{"s":"1a9d77a0-a66c-523f-bf9e-c95ac59110b1"}]}}]}'
+all_search: 'De Santillana, Giorgio, 1902-1974 The crime of Galileo. [Chicago] University
+  of Chicago Press [1955] xv, 338 p. ports., diagrs. 24 cm. Bibliographical footnotes.
+  Stanford copy 2 (RBC): Stephen Jay Gould Collection. Copy 3: Barchas Reference Collection.
+  36105233291991 (item id) 1 21 23 31 Galilei, Galileo, 1564-1642. http://purl.stanford.edu/ph310ms8188
+  SDR-PURL item barcode:36105115576790 file:ph310ms8188%2F36105115576790_00_0002.jp2
+  collection:sp673gr4168::Stephen J. Gould Rare Books Collection Barchas Reference
+  Collection is part of The Samuel I. and Cecile M. Barchas Collection in the History
+  of Science and Ideas Barchas Reference Collection Stephen Jay Gould Collection Timoshenko
+  Collection'
+title_245a_search: The crime of Galileo.
+title_245_search: The crime of Galileo.
+title_245a_display: The crime of Galileo
+title_display: The crime of Galileo
+title_full_display: The crime of Galileo.
+title_sort: crime of Galileo
+author_title_245ac_search:
+- The crime of Galileo.
+author_title_1xx_search:
+- De Santillana, Giorgio The crime of Galileo.
+author_title_search:
+- De Santillana, Giorgio, 1902-1974 The crime of Galileo.
+best_author_title_search: De Santillana, Giorgio, 1902-1974 The crime of Galileo.
+author_1xx_search: De Santillana, Giorgio, 1902-1974
+author_person_facet:
+- De Santillana, Giorgio, 1902-1974
+author_person_display:
+- De Santillana, Giorgio, 1902-1974
+author_person_full_display:
+- De Santillana, Giorgio, 1902-1974
+author_sort: De Santillana Giorgio 19021974 crime of Galileo
+topic_search:
+- Barchas Reference Collection
+- Stephen Jay Gould Collection
+- Timoshenko Collection
+topic_display:
+- Barchas Reference Collection
+- Stephen Jay Gould Collection
+- Timoshenko Collection
+subject_other_search:
+- Galilei, Galileo, 1564-1642.
+subject_other_display:
+- Galilei, Galileo, 1564-1642.
+subject_all_search:
+- Galilei, Galileo, 1564-1642.
+- Barchas Reference Collection
+- Stephen Jay Gould Collection
+- Timoshenko Collection
+topic_facet:
+- Galilei, Galileo, 1564-1642
+pub_search:
+- "[Chicago] University of Chicago Press"
+pub_display:
+- "[Chicago] University of Chicago Press"
+pub_country: Illinois, United States
+pub_date: '1955'
+pub_date_search: '1955'
+pub_date_sort: '1955'
+pub_year_tisim:
+- 1955
+pub_year_ss: '1955'
+publication_year_isi: 1955
+imprint_display:
+- "[Chicago] University of Chicago Press [1955]"
+date_cataloged: '1991-08-24T00:00:00Z'
+language:
+- English
+url_fulltext:
+- http://purl.stanford.edu/ph310ms8188
+oclc:
+- '710646'
+access_facet:
+- Online
+- At the Library
+format_main_ssim:
+- Book
+physical:
+- xv, 338 p. ports., diagrs. 24 cm.
+lccn: '55007400'
+callnum_facet_hsim:
+- LC Classification|Q - Science (General)|QB - Astronomy
+- Dewey Classification|500s - Natural Sciences & Mathematics|530s - Physics
+callnum_search:
+- QB36 .G2 D4 1955
+- QB36 .G2 S3
+- 530.92 .G158S
+lc_assigned_callnum_ssim:
+- QB36.G2 S3
+barcode_search:
+- '36105233291991'
+- '36105038067083'
+- '36105003970675'
+- '36105096501015'
+- '36105038067091'
+- '36105003970444'
+- '36105030423078'
+- '36105005212407'
+- '36105115576790'
+- '36105005748376'
+item_barcodes:
+- '36105233291991'
+- '36105038067083'
+- '36105003970675'
+- '36105096501015'
+- '36105038067091'
+- '36105003970444'
+- '36105030423078'
+- '36105005212407'
+- '36105115576790'
+- '36105005748376'
+preferred_barcode: '36105038067083'
+holdings_library_code_ssim:
+- SUL
+- SAL3
+- TANNER
+- SPEC-COLL
+- GREEN
+library_code_facet_ssim:
+- OFF_CAMPUS
+- GREEN
+- SPEC-COLL
+- TANNER
+- SDR
+location_code_facet_ssim:
+- SAL3-PAGE-SP
+- GRE-STACKS
+- SAL3-STACKS
+- SPEC-NEWTON
+- SPEC-RARE-BOOKS
+- TAN-STACKS
+building_facet:
+- SAL3 (off-campus storage)
+- Green
+- Special Collections
+- Philosophy (Tanner)
+- Stanford Digital Repository
+building_location_facet_ssim:
+- SAL3/*
+- SAL3/SAL3-PAGE-SP
+- SAL3/*/type/book
+- SAL3/SAL3-PAGE-SP/type/book
+- GREEN/*
+- GREEN/GRE-STACKS
+- GREEN/*/type/book
+- GREEN/GRE-STACKS/type/book
+- SAL3/SAL3-STACKS
+- SAL3/SAL3-STACKS/type/book
+- SPEC-COLL/*
+- SPEC-COLL/SPEC-NEWTON
+- SPEC-COLL/*/type/book
+- SPEC-COLL/SPEC-NEWTON/type/book
+- SPEC-COLL/SPEC-RARE-BOOKS
+- SPEC-COLL/SPEC-RARE-BOOKS/type/book
+- TANNER/*
+- TANNER/TAN-STACKS
+- TANNER/*/type/book
+- TANNER/TAN-STACKS/type/book
+shelfkey:
+- lc qb  0036.000000 g0.200000 d0.400000 001955
+- lc qb  0036.000000 g0.200000 s0.300000
+- dewey 530.92000000 g158s
+reverse_shelfkey:
+- en~9o~~zzwt}zzzzzz~jz}xzzzzz~mz}vzzzzz~zzyquu~~~~~
+- en~9o~~zzwt}zzzzzz~jz}xzzzzz~7z}wzzzzz~~~~~~~~~~~~
+- ml3l1~uwz}qxzzzzzz~jyur7~~~~~~~~~~~~~~~~~~~~~~~~~~
+managed_purl_urls:
+- http://purl.stanford.edu/ph310ms8188
+marc_collection_title_ssim:
+- Barchas Reference Collection
+- Stephen Jay Gould Collection
+- Timoshenko Collection
+collection:
+- sirsi
+- folio
+- sp673gr4168
+collection_search:
+- sirsi
+- folio
+- sp673gr4168
+collection_with_title:
+- sp673gr4168-|-Stephen J. Gould Rare Books Collection
+file_id:
+- ph310ms8188%2F36105115576790_00_0002.jp2
+iiif_manifest_url_ssim:
+- https://purl.stanford.edu/ph310ms8188/iiif/manifest
+context_source_ssi: folio
+context_input_name_ssi: "/dev/null"
+context_input_modified_dtsi: '2024-12-12T06:30:53Z'
+context_marc_fields_ssim:
+- '001'
+- '003'
+- '005'
+- '008'
+- '010'
+- '035'
+- '040'
+- '050'
+- '082'
+- '100'
+- '245'
+- '260'
+- '300'
+- '504'
+- '590'
+- '596'
+- '600'
+- '856'
+- '795'
+- '999'
+- 010a
+- 035a
+- 040cdd
+- 050ab
+- '082a'
+- 100ad
+- 245a
+- 260abc
+- 300abc
+- 504a
+- 590a
+- 590ad
+- 596a
+- 600ad
+- 856uxxxxx
+- 795a
+- 999is
+- "?010a"
+- "?035a"
+- "?040c"
+- "?040d"
+- "?050a"
+- "?050b"
+- "?082a"
+- "?100a"
+- "?100d"
+- "?245a"
+- "?260a"
+- "?260b"
+- "?260c"
+- "?300a"
+- "?300b"
+- "?300c"
+- "?504a"
+- "?590a"
+- "?590d"
+- "?596a"
+- "?600a"
+- "?600d"
+- "?856u"
+- "?856x"
+- "?795a"
+- "?999i"
+- "?999s"
+bib_search: De Santillana, Giorgio, 1902-1974 The crime of Galileo. [Chicago] University
+  of Chicago Press [1955] Barchas Reference Collection Stephen Jay Gould Collection
+  Timoshenko Collection Book
+vern_bib_search: Book
+uuid_ssi: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+folio_json_struct:
+- '{"instance":{"id":"54e3ca32-db34-5cc4-bf98-d107f3722e39","hrid":"a1213958","notes":[{"note":"Bibliographical
+  footnotes","staffOnly":false,"instanceNoteTypeId":"86b6e817-e1bc-42fb-bab0-70e7547de6c1"},{"note":"Barchas
+  Reference Collection","staffOnly":false,"instanceNoteTypeId":"fcf323dc-96d1-49a4-ae80-a9033a059cf9"},{"note":"Stephen
+  Jay Gould Collection","staffOnly":false,"instanceNoteTypeId":"fcf323dc-96d1-49a4-ae80-a9033a059cf9"},{"note":"Timoshenko
+  Collection","staffOnly":false,"instanceNoteTypeId":"fcf323dc-96d1-49a4-ae80-a9033a059cf9"}],"title":"The
+  crime of Galileo.","series":[],"source":"MARC","_version":7,"editions":[],"metadata":{"createdDate":"2023-08-21T00:25:14.109Z","updatedDate":"2023-08-21T00:25:14.109Z","createdByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766","updatedByUserId":"58d0aaf6-dcda-4d5e-92da-012e6b7dd766"},"statusId":"9634a5ab-9228-4703-baf2-4d12ebc77d56","subjects":[{"value":"Galilei,
+  Galileo, 1564-1642"}],"languages":["eng"],"indexTitle":"Crime of galileo.","identifiers":[{"value":"55007400","identifierTypeId":"c858e4f2-2b6b-4385-842b-60732ee14abb"},{"value":"(Sirsi)
+  AFS5080","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(CStRLIN)CSUG86-B101773","identifierTypeId":"7e591197-f335-4afb-bc6d-a6d76ca3bace"},{"value":"(OCoLC-M)710646","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"},{"value":"(OCoLC-I)273401561","identifierTypeId":"439bfbae-75bc-4f74-9fc7-b2a2d47ce3ef"}],"publication":[{"place":"[Chicago]","publisher":"University
+  of Chicago Press","dateOfPublication":"[1955]"}],"contributors":[{"name":"De Santillana,
+  Giorgio, 1902-1974","primary":true,"contributorTypeId":"9f0a2cf0-7a9b-45a2-a403-f68d2850d07c","contributorNameTypeId":"2b94c631-fca9-4892-a730-03ee529ffe2a"}],"catalogedDate":"1991-08-24","staffSuppress":false,"instanceTypeId":"30fffe0e-e985-4144-b2e2-1e8179bdb41f","previouslyHeld":false,"classifications":[{"classificationNumber":"QB36.G2
+  S3","classificationTypeId":"ce176ace-a53e-4b4d-aa89-725ed7b2edac"},{"classificationNumber":"925.2","classificationTypeId":"42471af9-7d25-4f3a-bf78-60d29dcf463b"}],"instanceFormats":[],"electronicAccess":[{"uri":"http://purl.stanford.edu/ph310ms8188","name":"Version
+  of resource","relationshipId":"3b430592-2e09-4b48-9a0c-0636d66b9fb3"}],"holdingsRecords2":[],"modeOfIssuanceId":"9d18a02f-5897-4c31-9106-c9abb5c7ae8b","publicationRange":[],"statisticalCodes":[],"alternativeTitles":[],"discoverySuppress":false,"instanceFormatIds":[],"publicationPeriod":{"start":1955},"statusUpdatedDate":"2023-08-21T00:25:14.101+0000","statisticalCodeIds":[],"administrativeNotes":[],"physicalDescriptions":["xv,
+  338 p. ports., diagrs. 24 cm."],"publicationFrequency":[],"suppressFromDiscovery":false,"natureOfContentTermIds":[]},"po_lines":0,"pieces":[],"holdingSummaries":[]}'
+author_struct:
+- creator:
+  - link: De Santillana, Giorgio, 1902-1974
+    search: De Santillana, Giorgio, 1902-1974
+marc_links_struct:
+- version: '0.2'
+  stanford_only: false
+  stanford_law_only: false
+  link_text:
+  link_title: ''
+  additional_text:
+  additional_links: []
+  access: ''
+  material_type:
+  note: ''
+  href: http://purl.stanford.edu/ph310ms8188
+  sort:
+  casalini:
+  fulltext: true
+  managed_purl: true
+  file_id: ph310ms8188%2F36105115576790_00_0002.jp2
+  druid: ph310ms8188
+  sfx: false
+holdings_json_struct:
+- holdings:
+  - id: 29d09bc9-d545-5521-b026-93f3425d77dd
+    hrid: ah1213958_8
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:26:49.312Z'
+      updatedDate: '2023-08-21T00:26:49.312Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+      name: Electronic
+      source: folio
+    callNumberType:
+    holdingsTypeId: 996f93e2-5b5e-4cf2-9168-33ced1f95eed
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1b14e21c-8d47-45c7-bc49-456a0086422b
+    permanentLocationId: 1b14e21c-8d47-45c7-bc49-456a0086422b
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1b14e21c-8d47-45c7-bc49-456a0086422b
+        code: SUL-SDR
+        name: Stanford Digital Repository
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1b14e21c-8d47-45c7-bc49-456a0086422b
+        code: SUL-SDR
+        name: Stanford Digital Repository
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: c1a86906-ced0-46cb-8f5b-8cef542bdd00
+          code: SUL
+          name: SUL
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 3771ca31-3b98-5a90-bc9b-7b76b300dec7
+    hrid: ah1213958_6
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:26:47.190Z'
+      updatedDate: '2023-08-21T00:26:47.190Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: 530.92 .G158S
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 7f722ccd-76bb-59b3-9226-768110bb9a77
+    hrid: ah1213958_5
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:26:47.190Z'
+      updatedDate: '2023-08-21T00:26:47.190Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: QB36 .G2 D4 1955
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 5ed399b7-3d1f-4603-9950-e12fa6de4187
+    permanentLocationId: 5ed399b7-3d1f-4603-9950-e12fa6de4187
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 5ed399b7-3d1f-4603-9950-e12fa6de4187
+        code: TAN-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: e5f23316-85ce-440c-886c-eff410f66f26
+          code: TANNER
+          name: Philosophy Library (Tanner)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 5ed399b7-3d1f-4603-9950-e12fa6de4187
+        code: TAN-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: e5f23316-85ce-440c-886c-eff410f66f26
+          code: TANNER
+          name: Philosophy Library (Tanner)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 0ac13b96-5635-5b9f-82e1-e6400d6ed626
+    hrid: ah1213958_7
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:26:47.190Z'
+      updatedDate: '2023-08-21T00:26:47.190Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: QB36 .G2 D4 1955
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    permanentLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 161a11c7-d178-53d2-baca-d52244d19fe6
+    hrid: ah1213958_4
+    notes: []
+    _version: 3
+    metadata:
+      createdDate: '2023-08-21T00:26:47.190Z'
+      updatedDate: '2024-07-08T22:12:33.922Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: c2504e0f-02cd-4572-85f7-eb4b0b67e589
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: QB36 .G2 D4 1955
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 271f84ab-47aa-40cc-b8a1-18a992bb6b88
+    permanentLocationId: 271f84ab-47aa-40cc-b8a1-18a992bb6b88
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 271f84ab-47aa-40cc-b8a1-18a992bb6b88
+        code: SPEC-RARE-BOOKS
+        name: Rare Books Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 271f84ab-47aa-40cc-b8a1-18a992bb6b88
+        code: SPEC-RARE-BOOKS
+        name: Rare Books Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 4af25607-143f-5e82-ad1f-f04e8a652998
+    hrid: ah1213958_1
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:26:47.190Z'
+      updatedDate: '2023-08-21T00:26:47.190Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: QB36 .G2 S3
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: 6ca35172-af07-5fae-aaf2-ad87b198cdce
+    hrid: ah1213958_2
+    notes: []
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:26:47.190Z'
+      updatedDate: '2023-08-21T00:26:47.190Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: QB36 .G2 D4 1955
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  - id: c38d1280-2dd0-5cb4-bb59-c704bba22655
+    hrid: ah1213958_3
+    notes: []
+    _version: 3
+    metadata:
+      createdDate: '2023-08-21T00:26:47.190Z'
+      updatedDate: '2024-07-09T18:45:11.108Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: c2504e0f-02cd-4572-85f7-eb4b0b67e589
+    sourceId: f32d531e-df79-46b3-8932-cdd35f7a2264
+    boundWith:
+    formerIds: []
+    illPolicy:
+    callNumber: QB36 .G2 D4 1955
+    instanceId: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+    holdingsType:
+      id: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+      name: Book
+      source: local
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    holdingsTypeId: 5684e4a3-9279-4463-b6ee-20ae21bbec07
+    callNumberTypeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+    electronicAccess: []
+    discoverySuppress: false
+    holdingsStatements: []
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 13d50f50-8dee-4dfd-82fb-7da97f67d779
+    permanentLocationId: 13d50f50-8dee-4dfd-82fb-7da97f67d779
+    suppressFromDiscovery: false
+    holdingsStatementsForIndexes: []
+    holdingsStatementsForSupplements: []
+    location:
+      effectiveLocation:
+        id: 13d50f50-8dee-4dfd-82fb-7da97f67d779
+        code: SPEC-NEWTON
+        name: Newton Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+      permanentLocation:
+        id: 13d50f50-8dee-4dfd-82fb-7da97f67d779
+        code: SPEC-NEWTON
+        name: Newton Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+  items:
+  - id: 10a7df56-eb31-51e7-becc-92a7c722a50b
+    hrid: ai1213958_7_3
+    notes:
+    - note: Copy 3
+      staffOnly: false
+      itemNoteTypeId: 3d70f1e0-8d95-464d-9961-9c69e7d2f9eb
+      itemNoteTypeName: Public
+    status: Available
+    barcode: '36105233291991'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 D4 1955
+    copyNumber: '2'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 0ac13b96-5635-5b9f-82e1-e6400d6ed626
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 D4 41955 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 D4 1955
+    location:
+      effectiveLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 14e65cc2-050b-5798-8bf9-e51cd95e31a8
+    hrid: ai1213958_2_1
+    notes: []
+    status: Available
+    barcode: '36105038067083'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 D4 1955
+    copyNumber: '3'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 6ca35172-af07-5fae-aaf2-ad87b198cdce
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 D4 41955 13
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 D4 1955
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 59d56c83-8ad5-5a71-a1bd-2361747f2386
+    hrid: ai1213958_1_1
+    notes: []
+    status: Available
+    barcode: '36105003970675'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 S3
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 4af25607-143f-5e82-ad1f-f04e8a652998
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 S3 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 S3
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 73109e37-ef89-5560-a56d-0dddc0c44c8b
+    hrid: ai1213958_3_1
+    notes: []
+    status: Available
+    barcode: '36105096501015'
+    request:
+    _version: 3
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2024-07-09T18:45:11.123Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: c2504e0f-02cd-4572-85f7-eb4b0b67e589
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 D4 1955
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: c38d1280-2dd0-5cb4-bb59-c704bba22655
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 13d50f50-8dee-4dfd-82fb-7da97f67d779
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 D4 41955 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 D4 1955
+    location:
+      effectiveLocation:
+        id: 13d50f50-8dee-4dfd-82fb-7da97f67d779
+        code: SPEC-NEWTON
+        name: Newton Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 806903f0-8627-52ce-b85c-39a1b98fe664
+    hrid: ai1213958_2_3
+    notes: []
+    status: Available
+    barcode: '36105038067091'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 D4 1955
+    copyNumber: '4'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 6ca35172-af07-5fae-aaf2-ad87b198cdce
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 4573e824-9273-4f13-972f-cff7bf504217
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 D4 41955 14
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 D4 1955
+    location:
+      effectiveLocation:
+        id: 4573e824-9273-4f13-972f-cff7bf504217
+        code: GRE-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          stackmapBaseUrl: https://stanford.stackmap.com/json/
+        library:
+          id: f6b5519e-88d9-413e-924d-9ed96255f72e
+          code: GREEN
+          name: Green Library
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 8fc160bc-b37e-59d1-a150-e413425a6323
+    hrid: ai1213958_1_3
+    notes: []
+    status: Available
+    barcode: '36105003970444'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 S3
+    copyNumber: '2'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 4af25607-143f-5e82-ad1f-f04e8a652998
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 S3 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 S3
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: 9932d279-8d70-578f-9614-e0e2bb80e54d
+    hrid: ai1213958_7_1
+    notes:
+    - note: Timoshenko Collection
+      staffOnly: false
+      itemNoteTypeId: 3d70f1e0-8d95-464d-9961-9c69e7d2f9eb
+      itemNoteTypeName: Public
+    status: Available
+    barcode: '36105030423078'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 D4 1955
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 0ac13b96-5635-5b9f-82e1-e6400d6ed626
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 D4 41955 11
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 D4 1955
+    location:
+      effectiveLocation:
+        id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+        code: SAL3-PAGE-SP
+        name: For use in Special Collections Reading Room
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          pageServicePointCodes: SPEC
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: a1cf9e75-6477-5742-9cd4-838f2145a38a
+    hrid: ai1213958_6_1
+    notes: []
+    status: Available
+    barcode: '36105005212407'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      typeName: Dewey Decimal classification
+      callNumber: 530.92 .G158S
+    copyNumber: '1'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      name: Dewey Decimal classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 3771ca31-3b98-5a90-bc9b-7b76b300dec7
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: 3530.92 G158S 11
+    effectiveCallNumberComponents:
+      typeId: 03dd64d0-5626-4ecd-8ece-4531e0069f35
+      callNumber: 530.92 .G158S
+    location:
+      effectiveLocation:
+        id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+        code: SAL3-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          availabilityClass: Offsite
+          scanServicePointCode: SAL3
+        library:
+          id: ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9
+          code: SAL3
+          name: SAL3 (off-campus storage)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: a617e2e8-83c6-515a-96fd-93f628d06726
+    hrid: ai1213958_4_1
+    notes: []
+    status: Available
+    barcode: '36105115576790'
+    request:
+    _version: 3
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2024-07-08T22:12:33.936Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: c2504e0f-02cd-4572-85f7-eb4b0b67e589
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 D4 1955
+    copyNumber: '2'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 161a11c7-d178-53d2-baca-d52244d19fe6
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Non-circulating
+    temporaryLoanType:
+    statisticalCodeIds:
+    - e6f1059b-4ab2-4bb2-adcb-af66acb6f4fa
+    administrativeNotes: []
+    effectiveLocationId: 271f84ab-47aa-40cc-b8a1-18a992bb6b88
+    permanentLoanTypeId: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 D4 41955 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 D4 1955
+    location:
+      effectiveLocation:
+        id: 271f84ab-47aa-40cc-b8a1-18a992bb6b88
+        code: SPEC-RARE-BOOKS
+        name: Rare Books Collection
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details:
+          pageAeonSite: SPECUA
+        library:
+          id: 5b61a365-6b39-408c-947d-f8861a7ba8ae
+          code: SPEC-COLL
+          name: Special Collections
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+  - id: ef374b99-69a4-5b72-8d61-02022b9f35f2
+    hrid: ai1213958_5_1
+    notes: []
+    status: Available
+    barcode: '36105005748376'
+    request:
+    _version: 1
+    metadata:
+      createdDate: '2023-08-21T00:28:22.294Z'
+      updatedDate: '2023-08-21T00:28:22.294Z'
+      createdByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+      updatedByUserId: 58d0aaf6-dcda-4d5e-92da-012e6b7dd766
+    formerIds: []
+    callNumber:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      typeName: Library of Congress classification
+      callNumber: QB36 .G2 D4 1955
+    copyNumber: '2'
+    yearCaption: []
+    materialType: book
+    callNumberType:
+      id: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      name: Library of Congress classification
+      source: system
+    materialTypeId: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+    numberOfPieces: '1'
+    circulationNotes: []
+    electronicAccess: []
+    holdingsRecordId: 7f722ccd-76bb-59b3-9226-768110bb9a77
+    discoverySuppress: false
+    itemDamagedStatus:
+    permanentLoanType: Can circulate
+    temporaryLoanType:
+    statisticalCodeIds: []
+    administrativeNotes: []
+    effectiveLocationId: 5ed399b7-3d1f-4603-9950-e12fa6de4187
+    permanentLoanTypeId: 2b94c631-fca9-4892-a730-03ee529ffe27
+    suppressFromDiscovery: false
+    effectiveShelvingOrder: QB 236 G2 D4 41955 12
+    effectiveCallNumberComponents:
+      typeId: 95467209-6d7b-468b-94df-0f5d7ad2747d
+      callNumber: QB36 .G2 D4 1955
+    location:
+      effectiveLocation:
+        id: 5ed399b7-3d1f-4603-9950-e12fa6de4187
+        code: TAN-STACKS
+        name: Stacks
+        campus:
+          id: c365047a-51f2-45ce-8601-e421ca3615c5
+          code: SUL
+          name: Stanford Libraries
+        details: {}
+        library:
+          id: e5f23316-85ce-440c-886c-eff410f66f26
+          code: TANNER
+          name: Philosophy Library (Tanner)
+        isActive: true
+        institution:
+          id: 8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929
+          code: SU
+          name: Stanford University
+    courses: []
+collection_struct:
+- title: Barchas Reference Collection
+  source: marc
+- title: Stephen Jay Gould Collection
+  source: marc
+- title: Timoshenko Collection
+  source: marc
+- source: SDR-PURL
+  item_type: item
+  type: collection
+  druid: sp673gr4168
+  id: ''
+  title: Stephen J. Gould Rare Books Collection
+item_display_struct:
+- id: 10a7df56-eb31-51e7-becc-92a7c722a50b
+  barcode: '36105233291991'
+  library: SAL3
+  type: book
+  note: ".PUBLIC. Copy 3"
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: SAL3-PAGE-SP
+  temporary_location_code:
+  permanent_location_code: SAL3-PAGE-SP
+  status: Available
+  effective_location_id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 D4 1955
+  callnumber: QB36 .G2 D4 1955
+  full_shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+- id: 14e65cc2-050b-5798-8bf9-e51cd95e31a8
+  barcode: '36105038067083'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 D4 1955
+  callnumber: QB36 .G2 D4 1955
+  full_shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+- id: 59d56c83-8ad5-5a71-a1bd-2361747f2386
+  barcode: '36105003970675'
+  library: SAL3
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 S3
+  callnumber: QB36 .G2 S3
+  full_shelfkey: lc qb  0036.000000 g0.200000 s0.300000
+- id: 73109e37-ef89-5560-a56d-0dddc0c44c8b
+  barcode: '36105096501015'
+  library: SPEC-COLL
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: SPEC-NEWTON
+  temporary_location_code:
+  permanent_location_code: SPEC-NEWTON
+  status: Available
+  effective_location_id: 13d50f50-8dee-4dfd-82fb-7da97f67d779
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 D4 1955
+  callnumber: QB36 .G2 D4 1955
+  full_shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+- id: 806903f0-8627-52ce-b85c-39a1b98fe664
+  barcode: '36105038067091'
+  library: GREEN
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: GRE-STACKS
+  temporary_location_code:
+  permanent_location_code: GRE-STACKS
+  status: Available
+  effective_location_id: 4573e824-9273-4f13-972f-cff7bf504217
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 D4 1955
+  callnumber: QB36 .G2 D4 1955
+  full_shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+- id: 8fc160bc-b37e-59d1-a150-e413425a6323
+  barcode: '36105003970444'
+  library: SAL3
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 S3
+  callnumber: QB36 .G2 S3
+  full_shelfkey: lc qb  0036.000000 g0.200000 s0.300000
+- id: 9932d279-8d70-578f-9614-e0e2bb80e54d
+  barcode: '36105030423078'
+  library: SAL3
+  type: book
+  note: ".PUBLIC. Timoshenko Collection"
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: SAL3-PAGE-SP
+  temporary_location_code:
+  permanent_location_code: SAL3-PAGE-SP
+  status: Available
+  effective_location_id: 3cbd5559-5ca9-473e-8d7d-98a67bff29f5
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 D4 1955
+  callnumber: QB36 .G2 D4 1955
+  full_shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+- id: a1cf9e75-6477-5742-9cd4-838f2145a38a
+  barcode: '36105005212407'
+  library: SAL3
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: SAL3-STACKS
+  temporary_location_code:
+  permanent_location_code: SAL3-STACKS
+  status: Available
+  effective_location_id: 1146c4fa-5798-40e1-9b8e-92ee4c9f2ee2
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: 530.92 .G158S
+  callnumber: 530.92 .G158S
+  full_shelfkey: dewey 530.92000000 g158s
+- id: a617e2e8-83c6-515a-96fd-93f628d06726
+  barcode: '36105115576790'
+  library: SPEC-COLL
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: SPEC-RARE-BOOKS
+  temporary_location_code:
+  permanent_location_code: SPEC-RARE-BOOKS
+  status: Available
+  effective_location_id: 271f84ab-47aa-40cc-b8a1-18a992bb6b88
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 D4 1955
+  callnumber: QB36 .G2 D4 1955
+  full_shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+- id: ef374b99-69a4-5b72-8d61-02022b9f35f2
+  barcode: '36105005748376'
+  library: TANNER
+  type: book
+  note:
+  instance_id: 54e3ca32-db34-5cc4-bf98-d107f3722e39
+  instance_hrid: a1213958
+  effective_permanent_location_code: TAN-STACKS
+  temporary_location_code:
+  permanent_location_code: TAN-STACKS
+  status: Available
+  effective_location_id: 5ed399b7-3d1f-4603-9950-e12fa6de4187
+  material_type_id: 1a54b431-2e4f-452d-9cae-9cee66c9a892
+  loan_type_id: 2b94c631-fca9-4892-a730-03ee529ffe27
+  bound_with:
+  is_bound_with_principal: false
+  lopped_callnumber: QB36 .G2 D4 1955
+  callnumber: QB36 .G2 D4 1955
+  full_shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+browse_nearby_struct:
+- lopped_callnumber: QB36 .G2 D4 1955
+  shelfkey: lc qb  0036.000000 g0.200000 d0.400000 001955
+  reverse_shelfkey: en~9o~~zzwt}zzzzzz~jz}xzzzzz~mz}vzzzzz~zzyquu~~~~~
+  callnumber: QB36 .G2 D4 1955
+  scheme: LC
+  item_id: 10a7df56-eb31-51e7-becc-92a7c722a50b
+- lopped_callnumber: QB36 .G2 S3
+  shelfkey: lc qb  0036.000000 g0.200000 s0.300000
+  reverse_shelfkey: en~9o~~zzwt}zzzzzz~jz}xzzzzz~7z}wzzzzz~~~~~~~~~~~~
+  callnumber: QB36 .G2 S3
+  scheme: LC
+  item_id: 59d56c83-8ad5-5a71-a1bd-2361747f2386
+- lopped_callnumber: 530.92 .G158S
+  shelfkey: dewey 530.92000000 g158s
+  reverse_shelfkey: ml3l1~uwz}qxzzzzzz~jyur7~~~~~~~~~~~~~~~~~~~~~~~~~~
+  callnumber: 530.92 .G158S
+  scheme: DEWEY
+  item_id: a1cf9e75-6477-5742-9cd4-838f2145a38a

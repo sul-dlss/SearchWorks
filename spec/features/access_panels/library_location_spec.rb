@@ -88,6 +88,18 @@ RSpec.describe "Library Location Access Panel" do
       expect(page).to have_content 'N380 .S75 V.73'
     end
 
+    it 'shows public notes' do
+      visit solr_document_path '1213958'
+      expect(page).to have_content 'Note: Copy 3'
+      expect(page).to have_content 'Note: Timoshenko Collection'
+      click_link 'Expand'
+
+      within '.availability-modal' do
+        expect(page).to have_content 'Note: Copy 3'
+        expect(page).to have_content 'Note: Timoshenko Collection'
+      end
+    end
+
     it 'expands the modal to just the current library with the "browse all" button' do
       visit '/view/402381'
       click_link 'Browse all 9 items'
