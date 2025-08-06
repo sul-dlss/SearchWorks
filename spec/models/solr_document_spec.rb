@@ -25,13 +25,6 @@ RSpec.describe SolrDocument do
     end
   end
 
-  describe "DisplayType" do
-    it "includes display type" do
-      expect(subject).to be_a DisplayType
-      expect(subject).to respond_to(:display_type)
-    end
-  end
-
   describe "DigitalCollection" do
     it "includes digital collection" do
       expect(subject).to be_a DigitalCollection

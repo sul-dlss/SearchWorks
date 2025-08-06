@@ -4,7 +4,6 @@ class SolrDocument
   FORMAT_KEY = 'format_hsim'
 
   include DocumentLinks
-  include DisplayType
   include CourseReserves
   include DatabaseDocument
   include DigitalCollection
