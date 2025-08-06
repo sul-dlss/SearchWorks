@@ -4,7 +4,6 @@ class SolrDocument
   FORMAT_KEY = 'format_hsim'
 
   include MarcLinks
-  include CourseReserves
   include DatabaseDocument
   include DigitalCollection
   include Extent
@@ -169,5 +168,9 @@ class SolrDocument
   def self.from_fixture(filename, with_json: false)
     solr_data = SolrFixtureLoader.load(filename, with_json: with_json)
     new(solr_data)
+  end
+
+  def course_reserves
+    @course_reserves ||= course_ids.present? ? Array(CourseReserve.find(*course_ids)).sort_by(&:course_number) : []
   end
 end
