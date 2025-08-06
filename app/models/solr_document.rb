@@ -139,12 +139,6 @@ class SolrDocument
     holdings&.libraries&.any?(&:present?)
   end
 
-  concerning :MarcOrganizationAndArrangement do
-    def organization_and_arrangement
-      @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
-    end
-  end
-
   # @return [String] the document id, prefixed with an 'a' if it's a numeric catkey
   # after FOLIO migration, all ILS-derived ids should be prefixed with 'a'
   def prefixed_id

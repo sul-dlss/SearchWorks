@@ -104,4 +104,8 @@ module MarcMetadata
 
     @bound_with_note_for_access_panel ||= note_object
   end
+
+  def organization_and_arrangement
+    @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
+  end
 end
