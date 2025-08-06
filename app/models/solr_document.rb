@@ -4,7 +4,6 @@ class SolrDocument
   FORMAT_KEY = 'format_hsim'
 
   include MarcLinks
-  include DatabaseDocument
   include DigitalCollection
   include Extent
   include CollectionMember
@@ -172,5 +171,9 @@ class SolrDocument
 
   def course_reserves
     @course_reserves ||= course_ids.present? ? Array(CourseReserve.find(*course_ids)).sort_by(&:course_number) : []
+  end
+
+  def is_a_database? # rubocop:disable Naming/PredicatePrefix
+    document_formats.include? "Database"
   end
 end
