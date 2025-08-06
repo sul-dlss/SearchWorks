@@ -1,7 +1,0 @@
-<% if document_index_view_type == :gallery %>
-  <% if document.collection_members.present? && document.collection_members.first.image_urls(:large).present? %>
-    <%= image_tag(document.collection_members.first.image_urls(:large).first, class: 'stacks-image', alt: '') %>
-  <% else %>
-    <%= render Searchworks4::PlaceholderThumbnailComponent.new %>
-  <% end %>
-<% end %>

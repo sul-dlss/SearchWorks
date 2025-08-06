@@ -4,7 +4,7 @@
   itemtype: @document.itemtype,
   class: classes.flatten.join(' ') do %>
   <div class="item-thumb d-flex flex-column justify-content-center">
-    <%= render Document::TrackingThumbnailComponent.new(counter:, presenter:) %>
+    <%= thumbnail %>
   </div>
   <div class="caption">
     <% # header bar for doc items in index view gallery %>

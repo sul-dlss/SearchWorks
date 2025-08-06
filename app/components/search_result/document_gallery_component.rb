@@ -15,6 +15,12 @@ module SearchResult
       helpers.render_resource_icon(presenter.formats)
     end
 
+    def before_render
+      set_slot(:thumbnail, nil, render_placeholder: true, render_collection_thumbnail_from_member: true)
+
+      super
+    end
+
     def actions
       helpers.render_index_doc_actions document, wrapping_class: 'index-document-functions col'
     end

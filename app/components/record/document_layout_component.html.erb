@@ -7,11 +7,8 @@
       itemscope: true,
       itemtype: document.itemtype do %>
   <div class="document-main-section">
-    <% if thumbnail? %>
-      <div class="document-thumbnail float-end mt-1">
-        <%= thumbnail %>
-      </div>
-    <% end %>
+    <%= thumbnail %>
+
     <h1 class="document-title">
       <span itemprop="name"><%= title %></span>
     </h1>
