@@ -105,10 +105,6 @@ class SolrDocument
     format.presence || old_format.presence || []
   end
 
-  def file_ids
-    self[:img_info] || self[:file_id] || []
-  end
-
   def book_ids
     isbn = add_prefix_to_elements(Array(self['isbn_display']), 'ISBN')
     oclc = add_prefix_to_elements(Array(self['oclc']), 'OCLC')

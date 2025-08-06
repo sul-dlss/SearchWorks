@@ -40,6 +40,10 @@ module StacksImages
     end
   end
 
+  def file_ids
+    self[:img_info] || self[:file_id] || []
+  end
+
   private
 
   def image_ids
