@@ -8,7 +8,6 @@ class SolrDocument
   include Extent
   include CollectionMember
   include ModsData
-  include Druid
   include StacksImages
   include DigitalImage
   include SolrHoldings
@@ -179,5 +178,9 @@ class SolrDocument
     [self[:author_person_full_display], self[:vern_author_person_full_display],
      self[:author_corp_display], self[:vern_author_corp_display],
      self[:author_meeting_display], self[:vern_author_meeting_display]].flatten.compact.uniq
+  end
+
+  def druid
+    self[:druid] || managed_purls.map(&:druid)&.first
   end
 end
