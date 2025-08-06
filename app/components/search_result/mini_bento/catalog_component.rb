@@ -10,10 +10,10 @@ module SearchResult
 
       attr_reader :offcanvas
 
-      delegate :current_view, to: :helpers
+      delegate :document_index_view_type, to: :helpers
 
       def render?
-        params.fetch(:q, nil).present? && current_view != 'gallery'
+        params.fetch(:q, nil).present? && document_index_view_type.to_s != 'gallery'
       end
 
       def call

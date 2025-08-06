@@ -6,10 +6,6 @@
 module CatalogHelper
   include Blacklight::CatalogHelperBehavior
 
-  def current_view
-    document_index_view_type.to_s
-  end
-
   # override upstream so we don't check the session for the last view type.
   def document_index_view_type(query_params = params || {})
     view_param = query_params[:view]
