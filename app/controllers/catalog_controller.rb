@@ -505,7 +505,6 @@ class CatalogController < ApplicationController
     # View type group config
     config.view.gallery(document_component: SearchResult::DocumentGalleryComponent)
 
-    config.index.respond_to.mobile = true
     config.fetch_many_document_params = { qt: 'document' }
 
     config.add_show_tools_partial :citation, if: false
