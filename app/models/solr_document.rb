@@ -3,7 +3,7 @@
 class SolrDocument
   FORMAT_KEY = 'format_hsim'
 
-  include DocumentLinks
+  include MarcLinks
   include CourseReserves
   include DatabaseDocument
   include DigitalCollection
