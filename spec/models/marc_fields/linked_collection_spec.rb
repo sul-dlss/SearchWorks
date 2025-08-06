@@ -36,4 +36,15 @@ RSpec.describe LinkedCollection do
       expect(subject.to_partial_path).to eq 'marc_fields/linked_collection'
     end
   end
+
+  context 'when it is a digital collection' do
+    let(:document) do
+      SolrDocument.new(
+        { collection_struct: [{ 'title' => 'Shao shu min zu she hui li shi diao cha',
+                                'source' => 'SDR-PURL' }] }
+      )
+    end
+
+    it { expect(subject).not_to be_present }
+  end
 end

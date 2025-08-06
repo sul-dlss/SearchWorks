@@ -19,12 +19,6 @@ RSpec.describe SolrDocument do
     end
   end
 
-  describe "DatabaseDocument" do
-    it "includes database document" do
-      expect(subject).to be_a DatabaseDocument
-    end
-  end
-
   describe "DigitalCollection" do
     it "includes digital collection" do
       expect(subject).to be_a DigitalCollection
@@ -43,27 +37,9 @@ RSpec.describe SolrDocument do
     end
   end
 
-  describe "IndexAuthors" do
-    it "includes index authors" do
-      expect(subject).to be_a IndexAuthors
-    end
-  end
-
-  describe "Druid" do
-    it "includes druid" do
-      expect(subject).to be_a Druid
-    end
-  end
-
   describe 'StacksImages' do
     it 'includes the StacksImages mixin' do
       expect(subject).to be_a StacksImages
-    end
-  end
-
-  describe 'DigitalImage' do
-    it 'includes the DigitalImage mixin' do
-      expect(subject).to be_a DigitalImage
     end
   end
 
@@ -80,14 +56,13 @@ RSpec.describe SolrDocument do
   end
 
   describe 'SolrBookplates' do
-    it 'is included' do
-      expect(subject).to be_a SolrBookplates
-    end
-  end
+    subject(:document) { SolrDocument.new(bookplates_display: ['ABC -|- 123']) }
 
-  describe 'CitationConcern' do
-    it 'is included' do
-      expect(subject).to be_a Citable
+    it 'provides a bookplates method that returns an array of Bookplate objects' do
+      expect(document).to respond_to(:bookplates)
+      expect(document.bookplates).to be_a Array
+      expect(document.bookplates).to be_present
+      expect(document.bookplates).to all(be_a Bookplate)
     end
   end
 
@@ -98,12 +73,6 @@ RSpec.describe SolrDocument do
       expect(document.export_as_ris).to eq "TY  - GEN\n" \
                                            "DP  - https://searchworks.stanford.edu/view/456\n" \
                                            "UR  - https://searchworks.stanford.edu/view/456\nER  - "
-    end
-  end
-
-  describe 'MarcBoundWithNote' do
-    it 'is included' do
-      expect(subject).to be_a MarcBoundWithNote
     end
   end
 
