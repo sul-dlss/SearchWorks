@@ -1,6 +1,18 @@
 # frozen_string_literal: true
 
 module MarcJsonExtension
+  def self.extended(document)
+    # Register our exportable formats, we inherit these from MarcExport
+    Blacklight::Marc::DocumentExport.register_export_formats(document)
+  end
+
+  include Blacklight::Marc::DocumentExport # All our export_as stuff based on to_marc.
+
+  # ruby-marc object
+  def to_marc
+    @to_marc ||= load_marc
+  end
+
   # Override blacklight-marc if we have marcjson available
   def load_marc
     json = begin

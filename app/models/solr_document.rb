@@ -47,14 +47,6 @@ class SolrDocument
     false
   end
 
-  # The following shows how to setup this blacklight document to display marc documents
-  extension_parameters[:marc_source_field] = :marcxml
-  extension_parameters[:marc_format_type] = :marcxml
-
-  use_extension(Blacklight::Marc::DocumentExtension) do |document|
-    document.key?(:marcxml) || document.key?(:marc_json_struct)
-  end
-
   use_extension(MarcJsonExtension) do |document|
     document.key?(:marc_json_struct)
   end
