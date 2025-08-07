@@ -113,6 +113,7 @@ class SolrDocument
   attribute :imprint_string, :string, :imprint_display
   attribute :vernacular_title, :string, :vern_title_display
   attribute :db_az_subject, :array, :db_az_subject
+  attribute :last_updated, :time, :last_updated
 
   def document_formats
     format.presence || old_format.presence || []

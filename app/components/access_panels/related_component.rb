@@ -6,7 +6,7 @@ module AccessPanels
     delegate :additional_finding_aids?, :additional_finding_aids, to: :document
 
     def oclc
-      document[:oclc]
+      document.oclc_number
     end
 
     private

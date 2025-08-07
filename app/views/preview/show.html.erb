@@ -1,4 +1,4 @@
-<turbo-frame id="preview_<%= @document[:id] %>">
+<turbo-frame id="preview_<%= @document.id %>">
   <%= render Searchworks4::DocumentComponent.new(document: document_presenter(@document), id: "preview_doc_#{@document.id}") do |component| %>
     <% component.with_actions { '' } %>
   <% end %>

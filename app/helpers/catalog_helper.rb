@@ -34,11 +34,11 @@ module CatalogHelper
     )
     details.push link_to('Collection PURL', "https://purl.stanford.edu/#{document.druid}") if document.is_a_collection?
     if document.respond_to?(:to_marc)
-      details.push "Catkey: #{document[:id]}"
+      details.push "Catkey: #{document.id}"
     elsif document.mods?
-      details.push "DRUID: #{document[:id]}"
+      details.push "DRUID: #{document.id}"
     else
-      details.push "ID: #{document[:id]}"
+      details.push "ID: #{document.id}"
     end
     safe_join(details, ' | ')
   end

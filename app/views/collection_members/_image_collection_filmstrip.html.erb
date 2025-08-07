@@ -1,5 +1,5 @@
 <%
-  preview_container = 'preview-filmstrip-container-' + collection_document[:id]
+  preview_container = 'preview-filmstrip-container-' + collection_document.id
 %>
 <div class="collection-result-preview">
   <div class="d-inline-flex bg-white ms-4 px-2">
@@ -13,9 +13,9 @@
     <div class="viewport overflow-scroll" data-gallery-row-target="container" data-action="scroll->gallery-row#adjustPreviewMargins" >
       <ul class="container-images list-unstyled d-flex">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>
-          <li class="d-inline-block position-relative me-2" data-controller="gallery-card" data-action="preview:close@document->gallery-card#handlePreviewClosed" data-gallery-card-url-value="<%= preview_path(document[:id]) %>" data-gallery-card-id-value="<%= document[:id] %>" data-gallery-card-preview-outlet="<%= ".#{preview_container}" %>">
-            <a href="<%= solr_document_path(document[:id]) %>">
-              <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document[:id] %>" alt="<%= document_presenter(document).heading %>">
+          <li class="d-inline-block position-relative me-2" data-controller="gallery-card" data-action="preview:close@document->gallery-card#handlePreviewClosed" data-gallery-card-url-value="<%= preview_path(document.id) %>" data-gallery-card-id-value="<%= document.id %>" data-gallery-card-preview-outlet="<%= ".#{preview_container}" %>">
+            <a href="<%= solr_document_path(document.id) %>">
+              <img src="<%= document.image_urls(:thumbnail).first %>" loading="lazy" class="thumb-<%= document.id %>" alt="<%= document_presenter(document).heading %>">
             </a>
 
             <button class="btn preview-trigger-btn preview-opacity" aria-label="Show preview" data-gallery-card-target="button" data-action="gallery-card#togglePreview">

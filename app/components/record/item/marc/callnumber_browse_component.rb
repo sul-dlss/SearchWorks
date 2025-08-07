@@ -33,7 +33,7 @@ module Record
             data: {
               bs_toggle: "tab",
               bs_target: "#callnumber-#{index}",
-              start: document[:id],
+              start: document.id,
               full_page_url: full_page_path(spine.base_callnumber)
             }
           )
@@ -41,7 +41,7 @@ module Record
 
         def filmstrip_path(call_number, **)
           browse_nearby_path(
-            start: document[:id],
+            start: document.id,
             call_number:,
             view: :gallery,
             **
@@ -50,7 +50,7 @@ module Record
 
         def full_page_path(call_number)
           browse_index_path(
-            start: document[:id],
+            start: document.id,
             call_number:,
             view: :gallery
           )

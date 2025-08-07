@@ -33,7 +33,7 @@ class HooverOpenUrlRequest
   end
 
   def ckey
-    document[:id]
+    document.id
   end
 
   def item_title
