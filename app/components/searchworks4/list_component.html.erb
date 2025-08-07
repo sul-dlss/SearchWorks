@@ -1,0 +1,11 @@
+<%= render(layout.new(facet_field: @facet_field)) do |component| %>
+  <% component.with_label do %>
+    <%= @facet_field.label %>
+  <% end %>
+  <% component.with_body do %>
+    <%= render(Searchworks4::InclusiveConstraintComponent.new(facet_field: @facet_field)) %>
+    <%= content_tag :ul, class: @classes, role: @role do %>
+      <%= render facet_items %>
+    <% end %>
+  <% end %>
+<% end %>
