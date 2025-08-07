@@ -117,10 +117,4 @@ module ArticleHelper
     text.search(tag).remove
     text.to_html
   end
-
-  def element_rename(doc, from, to)
-    doc.search(from).each do |node|
-      node.name = to
-    end
-  end
 end
