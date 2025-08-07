@@ -3,7 +3,7 @@
 module ResultsDocumentHelper
   def get_main_title_date(document)
     # Data is indexed with the display date in Solr field pub_year_ss
-    date = document["pub_year_ss"] || document['eds_publication_year']
+    date = document["pub_year_ss"]
     return if date.blank?
 
     "[#{date}]"

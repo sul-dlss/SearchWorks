@@ -29,25 +29,6 @@ RSpec.describe ResultsDocumentHelper do
     @document_01 = SolrDocument.new(data_01)
     @document_02 = SolrDocument.new(data_02)
     @document_03 = SolrDocument.new(data_03)
-    @document_05 = EdsDocument.new(
-      {
-        'RecordInfo' => {
-          'BibRecord' => {
-            'BibRelationships' => {
-              'IsPartOfRelationships' => [
-                {
-                  'BibEntity' => {
-                    'Dates' => [
-                      { 'Type' => 'published', 'Y' => '2017', 'M' => '01', 'D' => '01' }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        }
-      }
-    )
   end
 
   describe "Render metadata" do
@@ -56,10 +37,6 @@ RSpec.describe ResultsDocumentHelper do
         expect(get_main_title_date(@document_01)).to eq "[1999]"
         expect(get_main_title_date(@document_02)).to eq "[1801 ... 1837]"
         expect(get_main_title_date(@document_03)).to eq "[199 B.C.]"
-      end
-
-      it 'returns the eds publication year when present' do
-        expect(get_main_title_date(@document_05)).to eq '[2017]'
       end
     end
 
