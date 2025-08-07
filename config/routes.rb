@@ -89,6 +89,10 @@ Rails.application.routes.draw do
     { controller: '/catalog', action: 'index', f: { collection_type: ['Digital Collection'] } }
   end
 
+  direct :iiif_items do
+    { controller: '/catalog', action: 'index', f: { iiif_resources: ['available'] } }
+  end
+
   direct :collection_members do |document|
     { controller: '/catalog', action: 'index', f: { collection: [document.prefixed_id] } }
   end
