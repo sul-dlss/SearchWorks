@@ -5,10 +5,6 @@ module CollectionHelper
     collection_id.sub(/^a(\d+)$/, '\1')
   end
 
-  def collection_members_path(document, options = {})
-    search_catalog_path(f: { collection: [document.prefixed_id] })
-  end
-
   def collection_breadcrumb_value(collection_id)
     if @response.documents.first&.index_parent_collections.present?
       collection = @response.documents.first.index_parent_collections.find do |coll|

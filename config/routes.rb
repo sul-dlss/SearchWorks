@@ -89,6 +89,10 @@ Rails.application.routes.draw do
     { controller: '/catalog', action: 'index', f: { collection_type: ['Digital Collection'] } }
   end
 
+  direct :collection_members do |document|
+    { controller: '/catalog', action: 'index', f: { collection: [document.prefixed_id] } }
+  end
+
   resources :hours, only: :show
 
   resource :feedback_form, path: "feedback", only: [:new, :create]

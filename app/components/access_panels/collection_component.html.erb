@@ -16,7 +16,7 @@
       <% if @collection.collection_members.present? %>
         <div class="d-flex flex-wrap gap-2">
           <dt>Digital collection</dt>
-          <dd><%= link_to(pluralize(@collection.collection_members.total, 'digital item'), helpers.collection_members_path(@collection)) %></dd>
+          <dd><%= link_to(pluralize(@collection.collection_members.total, 'digital item'), collection_members_path(@collection)) %></dd>
         </div>
       <% end %>
       <% if @collection.extent_sans_format.present? %>
