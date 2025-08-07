@@ -9,20 +9,6 @@ module ResultsDocumentHelper
     "[#{date}]"
   end
 
-  def get_book_ids(document)
-    isbn = add_prefix_to_elements(Array(document['isbn_display']), 'ISBN')
-    oclc = add_prefix_to_elements(Array(document['oclc']), 'OCLC')
-    lccn = add_prefix_to_elements(Array(document['lccn']), 'LCCN')
-
-    { 'isbn' => isbn, 'oclc' => oclc, 'lccn' => lccn }
-  end
-
-  def add_prefix_to_elements(arr, prefix)
-    arr.map do |i|
-      "#{prefix}#{i.to_s.gsub(/\W/, '')}"
-    end
-  end
-
   def render_struct_field_data(document, field)
     case field
     when Hash

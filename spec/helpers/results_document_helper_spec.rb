@@ -62,13 +62,5 @@ RSpec.describe ResultsDocumentHelper do
         expect(get_main_title_date(@document_05)).to eq '[2017]'
       end
     end
-
-    it "returns book ids with prefixes" do
-      book_ids = get_book_ids(@document_01)
-
-      expect(book_ids['isbn']).to eq ["ISBN0393040801x", "ISBN9780393040807"]
-      expect(book_ids['lccn']).to eq ["LCCNa96049953"]
-      expect(book_ids['oclc']).to eq ["OCLC36024029"]
-    end
   end
 end

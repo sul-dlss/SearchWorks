@@ -197,4 +197,22 @@ RSpec.describe SolrDocument do
 
     it { is_expected.to eq 'a' }
   end
+
+  describe '#book_ids' do
+    let(:document) do
+      SolrDocument.new(
+        isbn_display: ["0393040801x", "9780393040807"],
+        lccn: "a 96049953",
+        oclc: 36024029
+      )
+    end
+
+    it "returns book ids with prefixes" do
+      book_ids = document.book_ids
+
+      expect(book_ids['isbn']).to eq ["ISBN0393040801x", "ISBN9780393040807"]
+      expect(book_ids['lccn']).to eq ["LCCNa96049953"]
+      expect(book_ids['oclc']).to eq ["OCLC36024029"]
+    end
+  end
 end

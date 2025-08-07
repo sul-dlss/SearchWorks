@@ -127,6 +127,20 @@ class SolrDocument
     self[:img_info] || self[:file_id] || []
   end
 
+  def book_ids
+    isbn = add_prefix_to_elements(Array(self['isbn_display']), 'ISBN')
+    oclc = add_prefix_to_elements(Array(self['oclc']), 'OCLC')
+    lccn = add_prefix_to_elements(Array(self['lccn']), 'LCCN')
+
+    { 'isbn' => isbn, 'oclc' => oclc, 'lccn' => lccn }
+  end
+
+  def add_prefix_to_elements(arr, prefix)
+    arr.map do |i|
+      "#{prefix}#{i.to_s.gsub(/\W/, '')}"
+    end
+  end
+
   # Checks holdings to see if there are any physical holdings
   # If there aren't and the library isn't sul, return the library name
   def eresources_library_display_name
