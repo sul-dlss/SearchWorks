@@ -16,12 +16,6 @@ RSpec.describe Bookplate do
     it 'gets the bookplate text' do
       expect(subject.text).to eq 'BOOKPLATE-TEXT'
     end
-
-    it 'gets the params hash representing a facet search' do
-      expect(subject.params_for_search).to be_a Hash
-      expect(subject.params_for_search[:f]).to be_a Hash
-      expect(subject.params_for_search[:f][:fund_facet]).to eq ['abc123']
-    end
   end
 
   describe '#matches?' do

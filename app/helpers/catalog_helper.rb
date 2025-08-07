@@ -14,14 +14,6 @@ module CatalogHelper
     default_document_index_view_type
   end
 
-  def link_to_bookplate_search(bookplate, link_opts = {})
-    link_to(
-      bookplate.text,
-      search_catalog_path(bookplate.params_for_search.merge(view: 'gallery', sort: 'new-to-libs')),
-      link_opts
-    )
-  end
-
   def link_to_database_search(subject)
     link_to(subject, search_catalog_path(f: { db_az_subject: [subject], format_hsim: ['Database'] }))
   end

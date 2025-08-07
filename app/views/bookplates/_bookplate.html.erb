@@ -1,6 +1,6 @@
 <div class='bookplate my-2'>
   <div class='d-flex align-items-center gap-3'>
     <%= image_tag bookplate.thumbnail_url, alt: bookplate.text, class: 'bookplate-image' %>
-    <p class='bookplate-heading'><%= link_to_bookplate_search(bookplate) %></p>
+    <p class='bookplate-heading'><%= link_to bookplate.text, bookplate_search_url(bookplate) %></p>
   </div>
 </div>

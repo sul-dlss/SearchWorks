@@ -135,6 +135,10 @@ Rails.application.routes.draw do
   # Vanity URL used in development office mailings
   get '/funds/:fund', to: redirect { |path_params, _req| "/?f[fund_facet][]=#{path_params[:fund].upcase}" }
 
+  direct :bookplate_search do |bookplate|
+    { controller: '/catalog', action: 'index', f: { fund_facet: [bookplate.druid] }, view: 'gallery', sort: 'new-to-libs' }
+  end
+
   %w(404 500).each do |code|
     match code, to: 'errors#show', code: code, via: :all
   end

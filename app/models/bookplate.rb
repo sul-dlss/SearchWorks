@@ -22,18 +22,18 @@ class Bookplate
     split_fields[3]
   end
 
-  def params_for_search
-    { f: { facet_field_key.to_sym => [druid] } }
-  end
-
   def to_partial_path
     'bookplates/bookplate'
   end
 
   def matches?(params)
-    values = Array.wrap(params.dig(:f, facet_field_key.to_sym))
+    values = Array.wrap(params.dig(:f, :fund_facet))
 
     values.include?(druid) || values.include?(fund_name)
+  end
+
+  def druid
+    split_fields[1].gsub('druid:', '')
   end
 
   private
@@ -42,20 +42,12 @@ class Bookplate
     split_fields[0]
   end
 
-  def druid
-    split_fields[1].gsub('druid:', '')
-  end
-
   def file_id
     split_fields[2].gsub(/\..*$/, '')
   end
 
   def split_fields
     bookplate_data.split(data_delimiter).map(&:strip)
-  end
-
-  def facet_field_key
-    :fund_facet
   end
 
   def data_delimiter
