@@ -26,14 +26,14 @@ RSpec.describe 'Digital Collections Access Point', :js do
   end
 
   it 'Toggles the radio buttons' do
-    expect(page).to have_css('article', count: 7)
+    expect(page).to have_css('article', count: 8)
     expect(page).to have_css('.filter-value', text: 'Digital Collection')
 
     choose "Show collections and individual items"
     expect(page).to have_css('.filter-value', text: 'Stanford Digital Repository')
-    expect(page).to have_css('article', count: 7)
+    expect(page).to have_css('article', count: 8)
 
     choose "Show collections only"
-    expect(page).to have_css('article', count: 7)
+    expect(page).to have_css('article', count: 8)
   end
 end

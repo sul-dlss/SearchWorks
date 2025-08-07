@@ -136,4 +136,16 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
       expect(page).to have_link('See record', href: %r{/view/mf774fs2413})
     end
   end
+
+  context 'with a finding aid that is aeon pageable' do
+    let(:document) { SolrDocument.from_fixture("11966809.yml") }
+
+    it 'renders the aeon pageable finding aid' do
+      render_inline(described_class.new(document: document))
+
+      expect(page).to have_text 'Special Collections'
+      expect(page).to have_css('.callnumber', text: 'SC1346')
+      expect(page).to have_link('Request via Finding Aid')
+    end
+  end
 end
