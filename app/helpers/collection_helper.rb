@@ -5,10 +5,6 @@ module CollectionHelper
     collection_id.sub(/^a(\d+)$/, '\1')
   end
 
-  def link_to_collection_members(link_text, document, options = {})
-    link_to(link_text, collection_members_path(document), options)
-  end
-
   def collection_members_path(document, options = {})
     search_catalog_path(f: { collection: [document.prefixed_id] })
   end

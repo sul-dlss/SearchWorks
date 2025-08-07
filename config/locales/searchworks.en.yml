@@ -270,11 +270,6 @@ en:
       page_title: "Advanced search in SearchWorks catalog"
       form:
         title: "Advanced search"
-        query_criteria_heading_html: "Match %{select_menu} of the fields below"
-        sort_label: "Sort results by"
-        search_btn_html: "Search"
-        start_over_html: "Clear form"
-        limit_criteria_heading_html: "Limit results by"
     course_reserves:
       page_title: "Course reserves in %{application_name}"
     email:
@@ -327,48 +322,3 @@ en:
       success: "<strong>Thank you!</strong> Your connection problem report has been sent."
     range_limit:
       submit_limit: "Apply"
-
-  record_side_nav:
-    abstract:
-      id: "abstract"
-      icon: '<i class="fa fa-align-justify"></i>'
-      label: "Abstract"
-    abstract_contents:
-      id: "abstract-contents"
-      icon: '<i class="fa fa-align-justify"></i>'
-      label: "Contents"
-    contributors:
-      id: "contributors"
-      icon: '<i class="fa fa-user"></i>'
-      label: "Contributors"
-    access_conditions:
-      id: "access-conditions"
-      icon: '<i class="fa fa-key"></i>'
-      label: "Access"
-    contents_summary:
-      id: "contents-summary"
-      icon: '<i class="fa fa-align-justify"></i>'
-      label: "Summary"
-    subjects:
-      id: "subjects"
-      icon: '<i class="fa fa-tags"></i>'
-      label: "Subjects"
-    bibliography_info:
-      id: "bibliography-info"
-      icon: '<i class="fa fa-info"></i>'
-      label: "Info"
-    details:
-      id: "details"
-      icon: '<i class="fa fa-info"></i>'
-      label: "Details"
-    browse_nearby:
-      id: "browse-nearby"
-      label: "Browse"
-    fulltext:
-      id: "full-text"
-      icon: '<i class="fa fa-align-justify"></i>'
-      label: "Full Text"
-    summary:
-      id: "summary"
-      icon: '<i class="fa fa-align-justify"></i>'
-      label: "Summary"
