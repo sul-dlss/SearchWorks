@@ -1,7 +1,8 @@
 <% articles_checked = controller_name.in?(%w[article_selections articles]) %>
+<% addl_parameters = controller_name == 'articles' && action_name == 'index' ? nil : { 'f[eds_search_limiters_facet][]': 'Direct access to full text' } %>
 <%= tag.nav id: 'search-navbar', class: %w[bg-light py-2 mb-3],
             'aria-label': t('searchworks.navigation.search_bar'),
-            data: { controller: 'search-navbar', 'search-navbar-additional-articles-params-value': (articles_checked ? nil : {'f[eds_search_limiters_facet][]': 'Direct access to full text' }.to_json )} do %>
+            data: { controller: 'search-navbar', 'search-navbar-additional-articles-params-value': addl_parameters&.to_json } do %>
   <turbo-frame id="search-navbar-frame" refresh="morph" data-search-navbar-target="container">
     <div class="container-lg search-form d-flex align-items-center column-gap-3 flex-wrap">
       <div class="text-nowrap">
