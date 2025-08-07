@@ -1,0 +1,3 @@
+<%= helpers.turbo_frame_tag [:item, item.id],
+    src: bound_with_children_solr_document_path(document.id, item_id: item.id),
+    loading: 'lazy' %>

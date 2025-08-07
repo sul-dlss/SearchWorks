@@ -4,28 +4,9 @@
     <%= render Searchworks4::ItemStatusComponent.new(item:) %>
   </td>
 
-  <td class="w-100 <%= item.public_note.present? || has_bound_with_parent? || item.bound_with_principal? ? 'd-block' : 'd-none' %>">
-    <% if item.public_note.present? %>
-      <div class='public-note note-highlight fs-14 d-inline-block'>Note: <%= inject_line_break_opportunities item.public_note %></div>
-    <% end %>
-
-    <% if has_bound_with_parent? %>
-      <div class="bound-with bg-light p-2 mt-2">
-        <div class="bound-with-type">Bound and shelved with:</div>
-        <div class="bound-with-title"><%= item.bound_with_id == document.id ? tag.em('Same title') : link_to(bound_with_title, solr_document_path(item.bound_with_id)) %></div>
-        <div class="bound-with-callnumber"><%= bound_with_callnumber %></div>
-      </div>
-    <% elsif item.bound_with_principal? && item.id %>
-      <% if @modal %>
-        <%= helpers.turbo_frame_tag [:item, item.id], src: bound_with_children_solr_document_path(document.id, item_id: item.id), loading: 'lazy' %>
-      <% else %>
-        <div class="bound-with bg-light p-2 mt-2">
-          <div class="bound-with-type">Item is bound with other items</div>
-          <%= link_to bound_with_children_modal_solr_document_path(item_id: item.id), data: { turbo_frame: "blacklight-modal", blacklight_modal: "trigger" }, class: 'btn btn-link p-1 text-left' do %>
-             See items <i class="bi bi-chevron-double-right fs-14"></i>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
+  <td class="w-100 <%= 'd-none' unless note? || boundwith? %>">
+    <%= render note_component %>
+    <%= render boundwith_parent_component %>
+    <%= render boundwith_principal_component %>
   </td>
 </tr>
