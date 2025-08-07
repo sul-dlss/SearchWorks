@@ -118,6 +118,10 @@ Rails.application.routes.draw do
 
   resources :course_reserves, only: :index, path: "reserves"
 
+  direct :course_search do |course|
+    { controller: '/catalog', action: 'index', f: { courses_folio_id_ssim: [course.id] } }
+  end
+
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
     resources :articles, only: %i[index] do
       concerns :exportable
