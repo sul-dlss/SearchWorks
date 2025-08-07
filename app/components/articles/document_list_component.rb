@@ -24,5 +24,12 @@ module Articles
     def resource_icon
       helpers.render_articles_format_icon(@document.eds_publication_type || @document.eds_document_type)
     end
+
+    def main_title_date
+      date = document.eds_publication_year
+      return if date.blank?
+
+      "[#{date}]"
+    end
   end
 end
