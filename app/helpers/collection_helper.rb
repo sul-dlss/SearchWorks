@@ -10,7 +10,7 @@ module CollectionHelper
   end
 
   def collection_members_path(document, options = {})
-    search_catalog_path(f: { collection: [document.collection_id] })
+    search_catalog_path(f: { collection: [document.prefixed_id] })
   end
 
   def collections_search_params
