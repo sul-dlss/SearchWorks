@@ -116,4 +116,12 @@ RSpec.describe CatalogController do
       end
     end
   end
+
+  describe "#preview" do
+    document_id = 1
+    it "gets the document" do
+      get :preview, params: { id: document_id }
+      expect(assigns[:document]).not_to be_nil
+    end
+  end
 end

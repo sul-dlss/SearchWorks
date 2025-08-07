@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.feature "Preview routes functionality" do
   scenario "at show route" do
-    visit preview_path(1)
+    visit preview_solr_document_path(1)
     expect(page).to have_css("h3 a", text: "An object")
   end
 end

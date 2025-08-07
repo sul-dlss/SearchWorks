@@ -53,7 +53,7 @@ module SearchResult
         controller: 'gallery-card',
         action: 'preview:close@document->gallery-card#handlePreviewClosed',
         gallery_card_id_value: @document.id,
-        gallery_card_url_value: preview_path(@document.id),
+        gallery_card_url_value: preview_solr_document_path(@document.id),
         gallery_card_preview_outlet: preview_outlet_selector
       }
     end
