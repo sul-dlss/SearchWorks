@@ -9,10 +9,6 @@ module CollectionHelper
     search_catalog_path(f: { collection: [document.prefixed_id] })
   end
 
-  def collections_search_params
-    { f: { collection_type: ["Digital Collection"] } }
-  end
-
   def collection_breadcrumb_value(collection_id)
     if @response.documents.first&.index_parent_collections.present?
       collection = @response.documents.first.index_parent_collections.find do |coll|

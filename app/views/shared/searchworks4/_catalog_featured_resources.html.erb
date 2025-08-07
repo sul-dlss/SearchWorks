@@ -16,13 +16,13 @@
                         <%= link_to 'Databases', databases_path, class: 'dropdown-item' %>
                       </li>
                       <li>
-                        <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'dropdown-item' %>
+                        <%= link_to 'Digital collections', digital_collections_path, class: 'dropdown-item' %>
                       </li>
                       <li>
                         <%= link_to 'Government documents', govdocs_path, class: 'dropdown-item' %>
                       </li>
                       <li>
-                        <%= link_to 'Theses and dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'dropdown-item' %>
+                        <%= link_to 'Theses and dissertations', theses_and_dissertations_path, class: 'dropdown-item' %>
                       </li>
                     </ul>
                   </li>

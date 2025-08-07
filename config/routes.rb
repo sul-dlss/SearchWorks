@@ -77,7 +77,17 @@ Rails.application.routes.draw do
   end
   post 'databases/:id/track' => 'databases#track', as: :track_databases
 
-  get 'govdocs' => 'catalog#index', defaults: { f: { genre_ssim: ['Government document'] } }, as: :govdocs
+  direct :govdocs do
+    { controller: '/catalog', action: 'index', f: { genre_ssim: ['Government document'] } }
+  end
+
+  direct :theses_and_dissertations do
+    { controller: '/catalog', action: 'index', f: { genre_ssim: ['Thesis/Dissertation'] } }
+  end
+
+  direct :digital_collections do
+    { controller: '/catalog', action: 'index', f: { collection_type: ['Digital Collection'] } }
+  end
 
   resources :hours, only: :show
 
