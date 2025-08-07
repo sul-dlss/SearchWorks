@@ -35,7 +35,7 @@ module Searchworks4
     end
 
     def possible_gb_cover_image
-      book_ids = helpers.get_book_ids(document)
+      book_ids = document.book_ids
 
       css_class = (book_ids['isbn'] + book_ids['oclc'] + book_ids['lccn']).join(' ')
       isbn = book_ids['isbn'].join(',')

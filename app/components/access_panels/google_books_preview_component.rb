@@ -2,9 +2,7 @@
 
 module AccessPanels
   class GoogleBooksPreviewComponent < AccessPanels::Base
-    def book_ids
-      helpers.get_book_ids(document)
-    end
+    delegate :book_ids, to: :document
 
     def render?
       book_ids.values.any?(&:present?)
