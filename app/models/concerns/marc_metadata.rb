@@ -68,6 +68,10 @@ module MarcMetadata
     @isbn ||= Isbn.new(self)
   end
 
+  def imprint
+    @imprint ||= Imprint.new(self)
+  end
+
   def linked_serials
     @linked_serials ||= LinkedSerials.new(self)
   end
@@ -78,5 +82,30 @@ module MarcMetadata
 
   def linked_collection
     @linked_collection ||= LinkedCollection.new(self)
+  end
+
+  def subjects(tags)
+    @subjects ||= {}
+    @subjects[tags] ||= Subjects.new(self, tags)
+  end
+
+  def bound_with_note?
+    bound_with_note_for_access_panel.present?
+  end
+
+  def bound_with_note
+    return if (note_object = BoundWithNote.new(self)).blank?
+
+    @bound_with_note ||= note_object
+  end
+
+  def bound_with_note_for_access_panel
+    return if (note_object = BoundWithNoteForAccessPanel.new(self)).blank?
+
+    @bound_with_note_for_access_panel ||= note_object
+  end
+
+  def organization_and_arrangement
+    @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
   end
 end

@@ -10,6 +10,18 @@ module MarcLinks
     end)
   end
 
+  def preferred_online_links
+    marc_links&.fulltext || []
+  end
+
+  def has_finding_aid?
+    preferred_finding_aid&.href.present?
+  end
+
+  def preferred_finding_aid
+    marc_links&.finding_aid&.first
+  end
+
   class MarcLinkProcessor
     attr_reader :document, :link_struct
 

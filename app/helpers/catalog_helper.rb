@@ -23,7 +23,7 @@ module CatalogHelper
   end
 
   def link_to_database_search(subject)
-    link_to(subject, search_catalog_path(f: { db_az_subject: [subject], SolrDocument::FORMAT_KEY => ['Database'] }))
+    link_to(subject, search_catalog_path(f: { db_az_subject: [subject], format_hsim: ['Database'] }))
   end
 
   def tech_details(document)

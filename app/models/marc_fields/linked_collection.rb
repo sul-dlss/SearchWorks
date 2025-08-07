@@ -8,6 +8,12 @@ class LinkedCollection < MarcField
   end
 
   def values
-    document.collection_titles.map(&:values).flatten.map(&:strip)
+    collection_titles.map(&:values).flatten.map(&:strip)
+  end
+
+  def collection_titles
+    document.fetch(:collection_struct, []).reject { |collection| collection[:source] == 'SDR-PURL' }
+            .map { |collection| collection.slice(:title, :vernacular).compact }
+            .reject(&:empty?)
   end
 end

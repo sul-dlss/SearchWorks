@@ -10,7 +10,7 @@ class MarcField
 
   attr_reader :document, :tags
 
-  delegate :present?, to: :values
+  delegate :present?, :blank?, to: :values
 
   def initialize(solr_document, tags = [])
     @document = solr_document

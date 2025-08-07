@@ -1,30 +1,16 @@
 # frozen_string_literal: true
 
 class SolrDocument
-  FORMAT_KEY = 'format_hsim'
-
-  include DocumentLinks
-  include CourseReserves
-  include DatabaseDocument
+  include MarcLinks
   include DigitalCollection
   include Extent
   include CollectionMember
   include ModsData
-  include IndexAuthors
-  include MarcImprint
-  include Druid
   include StacksImages
-  include DigitalImage
   include SolrHoldings
   include SolrSet
-  include MarcBoundWithNote
-  include SolrBookplates
-  include Citable
   include MarcMetadata
-  include MarcSubjects
-  include IiifConcern
   include DorContentMetadata
-  include CollectionTitles
 
   include Blacklight::Solr::Document
   include SchemaDotOrg
@@ -106,7 +92,7 @@ class SolrDocument
   use_extension(Blacklight::Document::DublinCore)
 
   attribute :course_ids, :array, :courses_folio_id_ssim
-  attribute :format, :array, FORMAT_KEY
+  attribute :format, :array, :format_hsim
   attribute :old_format, :array, 'format_main_ssim'
   attribute :live_lookup_id, :string, 'uuid_ssi'
   attribute :oclc_number, :string, 'oclc'
@@ -117,10 +103,6 @@ class SolrDocument
 
   def document_formats
     format.presence || old_format.presence || []
-  end
-
-  def file_ids
-    self[:img_info] || self[:file_id] || []
   end
 
   def book_ids
@@ -153,12 +135,6 @@ class SolrDocument
     holdings&.libraries&.any?(&:present?)
   end
 
-  concerning :MarcOrganizationAndArrangement do
-    def organization_and_arrangement
-      @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
-    end
-  end
-
   # @return [String] the document id, prefixed with an 'a' if it's a numeric catkey
   # after FOLIO migration, all ILS-derived ids should be prefixed with 'a'
   def prefixed_id
@@ -169,5 +145,39 @@ class SolrDocument
   def self.from_fixture(filename, with_json: false)
     solr_data = SolrFixtureLoader.load(filename, with_json: with_json)
     new(solr_data)
+  end
+
+  def course_reserves
+    @course_reserves ||= course_ids.present? ? Array(CourseReserve.find(*course_ids)).sort_by(&:course_number) : []
+  end
+
+  def is_a_database? # rubocop:disable Naming/PredicatePrefix
+    document_formats.include? "Database"
+  end
+
+  def authors_from_index
+    [self[:author_person_full_display], self[:vern_author_person_full_display],
+     self[:author_corp_display], self[:vern_author_corp_display],
+     self[:author_meeting_display], self[:vern_author_meeting_display]].flatten.compact.uniq
+  end
+
+  def druid
+    self[:druid] || managed_purls.map(&:druid)&.first
+  end
+
+  def bookplates
+    @bookplates ||= self[:bookplates_display]&.map do |bookplate_field|
+      Bookplate.new(bookplate_field)
+    end
+
+    @bookplates ||= []
+  end
+
+  delegate :citable?, :citations, :mods_citations, :to_citeproc, to: :citation_object
+
+  private
+
+  def citation_object
+    @citation_object ||= Citation.new(self)
   end
 end

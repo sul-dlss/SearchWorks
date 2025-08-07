@@ -31,4 +31,22 @@ module StacksImages
       rect_thumbnail: 'full/,100/0/default.jpg'
     }
   end
+
+  # Get stacks urls for a document using file ids
+  # @return [Array]
+  def image_urls(size = :default)
+    image_ids.map do |image_id|
+      craft_image_url(image_id:, size:)
+    end
+  end
+
+  def file_ids
+    self[:img_info] || self[:file_id] || []
+  end
+
+  private
+
+  def image_ids
+    file_ids.grep(/\.jp2$/)
+  end
 end
