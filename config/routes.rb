@@ -77,6 +77,10 @@ Rails.application.routes.draw do
   end
   post 'databases/:id/track' => 'databases#track', as: :track_databases
 
+  direct :database_search do |subject|
+    { controller: '/catalog', action: 'index', f: { db_az_subject: [subject], format_hsim: ['Database'] } }
+  end
+
   direct :govdocs do
     { controller: '/catalog', action: 'index', f: { genre_ssim: ['Government document'] } }
   end
