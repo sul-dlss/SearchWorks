@@ -1,5 +1,5 @@
 
-<div class="section record-browse-nearby p-4 border" id="<%= t('record_side_nav.browse_nearby.id') %>" data-side-nav-class="<%= t('record_side_nav.browse_nearby.id') %>" data-controller="analytics browse-nearby" data-action="resize@window->browse-nearby#resizeWithAside turbo:frame-load@window->browse-nearby#resizeWithAside show.bs.tab->browse-nearby#setActive" data-analytics-category-value="browse-nearby" data-browse-nearby-target="container">
+<div class="section record-browse-nearby p-4 border" data-controller="analytics browse-nearby" data-action="resize@window->browse-nearby#resizeWithAside turbo:frame-load@window->browse-nearby#resizeWithAside show.bs.tab->browse-nearby#setActive" data-analytics-category-value="browse-nearby" data-browse-nearby-target="container">
   <div class="heading view-full-page ps-2 d-flex me-auto justify-content-start">
     <h2 class="m-0 pe-3">Related items</h2>
     <%= link_to "Full page", full_page_path(spines.first.base_callnumber), class: 'btn btn-primary bi bi-arrows-angle-expand fw-normal', data: { 'browse-nearby-target': "fullPage", action: "click->analytics#trackLink" } %>
