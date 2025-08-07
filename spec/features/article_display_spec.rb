@@ -20,7 +20,7 @@ RSpec.feature 'Article Record Display' do
     end
 
     it 'are linked' do
-      visit eds_document_path(document[:id])
+      visit eds_document_path(document.id)
 
       expect(page).to have_css('dd.blacklight-eds_subjects_person a', text: 'Person1')
       expect(page).to have_css('dd.blacklight-eds_subjects_person a', text: 'Person2')
@@ -47,7 +47,7 @@ RSpec.feature 'Article Record Display' do
       end
 
       it 'renders HTML' do
-        visit eds_document_path(document[:id])
+        visit eds_document_path(document.id)
 
         expect(page).to have_link 'Full text'
         click_link 'Full text'
@@ -60,7 +60,7 @@ RSpec.feature 'Article Record Display' do
 
     context 'when a user does not have access' do
       it 'renders a login link instead' do
-        visit eds_document_path(document[:id])
+        visit eds_document_path(document.id)
         expect(page).to have_link 'Full text', href: %r{/sso/login}
       end
     end

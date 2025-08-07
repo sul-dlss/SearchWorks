@@ -87,7 +87,7 @@ module DigitalCollection
     # @return [String] a Solr query string
     # search for items with collection set to both prefixed and non-prefixed ids
     def collection_member_params
-      [document[:id], document.prefixed_id].uniq.map do |collection_id|
+      [document.id, document.prefixed_id].uniq.map do |collection_id|
         "collection:\"#{collection_id}\""
       end.join(" OR ")
     end

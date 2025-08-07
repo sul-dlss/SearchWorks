@@ -62,7 +62,7 @@ RSpec.describe HooverOpenUrlRequest do
 
     describe '#ckey' do
       it 'returns the document id' do
-        expect(url.ckey).to eq document[:id]
+        expect(url.ckey).to eq document.id
       end
     end
 

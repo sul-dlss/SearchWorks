@@ -33,7 +33,7 @@ class Holdings
         shelfkey,
         document[:title_sort].to_s,
         sort_pub_date,
-        document[:id].to_s
+        document.id.to_s
       ]
     end
 
