@@ -3,11 +3,20 @@
     <%= @facet_field.label %>
   <% end %>
   <% component.with_body do %>
+    <% if inclusive_present? %>
+      <span class='advanced-facet-heading'><%= t('blacklight.advanced_search.inclusive') %></span>
+    <% end %>
     <%= render Searchworks4::MiniMiniBentoComponent.new(current_context: 'catalog') %>
 
     <ul class="facet-hierarchy" role="tree">
-      <% tree.keys.collect do |key| %>
-        <%= render Blacklight::Hierarchy::FacetFieldComponent.new(field_name: @facet_field.facet_field.field, tree: tree[key], key: key) %>
+      <% if inclusive_present? %>
+         <% tree.keys.collect do |key| %>
+          <%= render Searchworks4::InclusiveHierarchyFacetFieldComponent.new(values: @facet_field.values, field_name: @facet_field.facet_field.field, tree: tree[key], key: key) %>
+        <% end %>  
+      <% else %>
+        <% tree.keys.collect do |key| %>
+          <%= render Blacklight::Hierarchy::FacetFieldComponent.new(field_name: @facet_field.facet_field.field, tree: tree[key], key: key) %>
+        <% end %>
       <% end %>
     </ul>
   <% end %>

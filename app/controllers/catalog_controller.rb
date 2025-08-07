@@ -161,7 +161,7 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
     config.add_facet_field 'access_facet', label: 'Access',
-                           component: Blacklight::Facets::ListComponent, sort: :index
+                           component: Searchworks4::ListComponent, sort: :index
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Searchworks4::FormatFacetComponent
     config.add_facet_field "library", field: "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
                             helper_method: :translate_library_code,

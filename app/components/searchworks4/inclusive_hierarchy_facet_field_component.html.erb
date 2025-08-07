@@ -1,0 +1,19 @@
+<li class="<%= li_class %>" data-controller="<%= controller_name %>" role="treeitem">
+  <% ul_id = "b-h-#{SecureRandom.alphanumeric(10)}" %>
+  <%= helpers.facet_toggle_button(field_name, id, ul_id) if subset.any? %>
+  <% if item.nil? %>
+     <%= key %>
+  <% elsif qfacet_selected? %>
+     <%= render Searchworks4::InclusiveSelectedQfacetValueComponent.new(values: @values, field_name: field_name, item: item) %>
+  <% else %>
+     <%= render Searchworks4::InclusiveQfacetValueComponent.new(values: @values, field_name: field_name, item: item, id: id) %>
+  <% end %>
+
+  <% unless subset.empty? %>
+    <ul id="<%= ul_id %>" class="collapse" data-b-h-collapsible-target="list" role="group">
+    <% subset.keys.each do |subkey| %>
+      <%= render self.class.new(values: @values, field_name: field_name, tree: subset[subkey], key: subkey) %>
+    <% end %>
+    </ul>
+  <% end %>
+</li>
