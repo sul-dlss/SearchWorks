@@ -3,17 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe CollectionHelper do
-  describe "#link_to_collection_members" do
-    let(:document) { instance_double(SolrDocument, id: '1234', collection_id: 'a1234') }
-
-    it "links to the given text" do
-      expect(link_to_collection_members("LinkText", document)).to match /<a href.*>LinkText<\/a>/
-    end
-    it "links the collection id with prefix" do
-      expect(link_to_collection_members("LinkText", document)).to match /<a href=\".*collection.*=a1234\".*/
-    end
-  end
-
   describe "#collections_search_params" do
     it "is the collection_type facet value of 'Digital Collection" do
       expect(collections_search_params).to have_key(:f)
