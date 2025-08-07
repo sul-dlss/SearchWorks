@@ -510,6 +510,15 @@ class CatalogController < ApplicationController
     config.add_show_tools_partial :email, callback: :send_emails_to_all_recipients, validator: :validate_email_params_and_recaptcha
   end
 
+  def preview
+    @document = search_service.fetch(params[:id])
+    respond_to do |format|
+      format.html do
+        render 'preview', layout: false
+      end
+    end
+  end
+
   # Overridden from Blacklight
   def citation
     @documents = search_service.fetch(Array(params[:id]))

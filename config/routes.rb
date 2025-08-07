@@ -37,6 +37,7 @@ Rails.application.routes.draw do
     concerns [:exportable, :marc_viewable]
 
     member do
+      get 'preview'
       get 'bound_with_children/:item_id', to: 'bound_with_children#index', as: 'bound_with_children'
       get 'bound_with_children_modal/:item_id', to: 'bound_with_children#modal', as: 'bound_with_children_modal'
     end
@@ -87,14 +88,11 @@ Rails.application.routes.draw do
   resources :browse, only: :index
 
   get 'catalog/:id/track' => 'catalog#track', as: 'track_browse'
-  get 'catalog/:id/track' => 'catalog#track', as: 'track_preview'
   get 'catalog/:id/track' => 'articles#track', as: 'track_article_selections'
 
   get "browse/nearby" => "browse#nearby"
 
   get "feedback" => "feedback_forms#new"
-
-  resources :preview, only: :show
 
   resources :availability, only: [:show]
 
