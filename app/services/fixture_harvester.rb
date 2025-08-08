@@ -54,7 +54,10 @@ class FixtureHarvester
     '5572228',
     '6745620',
     '4287807',
-    '13709575'
+    '13709575',
+
+    # aeon pageable finding aids
+    '11966809'
   ].freeze
 
   def self.harvest_all

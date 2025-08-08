@@ -89,6 +89,12 @@ module Searchworks4
 
       render Searchworks4::AvailabilityComponent.new(document: document)
     end
+
+    def aeon_pageable_finding_aid
+      document = SolrDocument.from_fixture("11966809.yml")
+
+      render Searchworks4::AvailabilityComponent.new(document: document)
+    end
   end
   # @!endgroup
 end

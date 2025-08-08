@@ -17,6 +17,24 @@
     </span>
   <% end %>
   <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy', data: { 'eager-lazy-target': 'frame' } %>
+<% elsif truncated_display_with_finding_aid? %>
+  <%# Instances with a single item collapse the item information %>
+  <%= container_tag(classes: %w[border rounded d-inline-flex suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
+    <% library = document.holdings.libraries.first %>
+    <% location = library.locations.first %>
+    <% item = location.items.first %>
+    <%= tag.span library.name, class: 'library fw-semibold text-nowrap' %>
+    <span class="d-inline-flex gap-4 row-gap-2 align-items-center flex-wrap">
+      <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
+      <%= tag.span item.truncated_callnumber, class: 'callnumber text-nowrap' %>
+      <span class="d-inline-flex gap-3">
+        <%= render Searchworks4::ItemStatusComponent.new(item:) %>
+        <% unless item.request_link.render? %>
+          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+        <% end %>
+      </span>
+    </span>
+  <% end %>
 <% elsif truncated_display? %>
   <%# Instances with lots of items get an abbreviated treatment %>
   <%= container_tag(classes: %w[border rounded d-inline-flex]) do %>
@@ -107,6 +125,7 @@
           <% end %>
           <% library_group.libraries.each do |library| %>
             <% library.locations.each do |location| %>
+              <% truncate_items = truncate_location_items?(library: library, location: location) %>
               <div class="d-flex flex-column flex-sm-row gap-2 gap-sm-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
                 <div class="pt-2" data-availability-target="location">
                   <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false, classes: []) %></div>
@@ -114,7 +133,7 @@
                 </div>
                 <table class="table w-auto">
                   <caption class="visually-hidden">
-                    <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
+                    <%= truncate_items ? 'Items' : pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
                   </caption>
                   <thead class="visually-hidden">
                     <tr>
@@ -123,14 +142,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                  <% location.items.each do |item| %>
-                    <tr>
-                      <th scope="row" class="fw-normal"><%= tag.span item.callnumber, class: 'callnumber' %></th>
-                      <td>
-                        <%= render Searchworks4::ItemStatusComponent.new(item:) %>
-                      </td>
-                    </tr>
-                  <% end %>
+                    <% if truncate_items %>
+                      <tr><th scope="row" class="fw-normal"><%= tag.span location.items.first.truncated_callnumber, class: 'callnumber' %></th><td></td></tr>
+                    <% else %>
+                      <% location.items.each do |item| %>
+                        <tr>
+                          <th scope="row" class="fw-normal"><%= tag.span item.callnumber, class: 'callnumber' %></th>
+                          <td>
+                            <%= render Searchworks4::ItemStatusComponent.new(item:) %>
+                          </td>
+                        </tr>
+                      <% end %>
+                    <% end %>
                   </tbody>
                 </table>
               </div>
