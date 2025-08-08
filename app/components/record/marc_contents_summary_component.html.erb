@@ -68,8 +68,7 @@
       <ul class="list-unstyled">
         <% document.marc_links.supplemental.each do |link| %>
           <li>
-            <%= link.html %>
-            <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
+            <%= render Searchworks::LinkComponent.new(link) %>
           </li>
         <% end %>
       </ul>
