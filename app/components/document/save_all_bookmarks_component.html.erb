@@ -1,0 +1,13 @@
+<div id="bookmark-select-all" class="bookmark-toggle bookmark-select-all-toggle d-flex flex-row" data-controller="analytics" data-analytics-category-value="bookmark-save-all">
+  <button type="button" class="btn btn-sm btn-outline-primary toggle-all-bookmark lh-1"
+          data-controller="bookmark-all"
+          data-action="click->bookmark-all#selectAll bookmark.blacklight@window->bookmark-all#update"
+          data-bookmark-all-in-progress-value="false"
+          data-bookmark-all-finished-label-value="Saved all records"
+          data-bookmark-all-bookmark-outlet="<%= documents_selector %> .bookmark-toggle">
+    <%= icon %>
+    <span class="bookmark-text save-label">Save all</span>
+    <span class="bookmark-text saving-label">Saving...</span>
+    <span class="bookmark-text saved-label">Saved all</span>
+  </button>
+</div>

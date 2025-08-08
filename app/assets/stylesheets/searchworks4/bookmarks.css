@@ -18,7 +18,7 @@
     display: none;
   }
 
-  .toggle-bookmark {
+  .toggle-bookmark, .toggle-all-bookmark {
     cursor: pointer;
 
     .toggle-bookmark-label {
@@ -95,5 +95,48 @@
 
   .btn-preview {
     margin-top: -0.125em;
+  }
+}
+
+.bookmark-select-all-toggle {
+  .btn-outline-primary {
+    --bs-btn-active-color: var(--stanford-80-black);
+    --bs-btn-disabled-color: var(--stanford-50-black);
+    --bs-btn-border-color: var(--stanford-80-black);
+    --bs-btn-color: var(--stanford-80-black);
+    --bs-btn-hover-color: var(--stanford-80-black);
+    --bs-btn-hover-border-color: var(--stanford-80-black);
+    --bs-btn-active-color: var(--stanford-80-black);
+    --bs-btn-active-border-color: var(--stanford-80-black);
+  }
+
+  .bookmark-hover-icon, .bookmark-checked-icon, .saved-label, .saving-label {
+    display: none;
+  }
+
+  &:has(button[disabled][data-bookmark-all-in-progress-value="true"]) {
+    .bookmark-checked-icon, .saving-label {
+      display: inline;
+    }
+    .bookmark-unchecked-icon, .saved-label, .save-label {
+      display: none;
+    }
+  }
+
+  &:has(button[disabled]:not([data-bookmark-all-in-progress-value="true"])) {
+    .bookmark-checked-icon, .saved-label {
+      display: inline;
+    }
+    .bookmark-unchecked-icon, .saving-label, .save-label {
+      display: none;
+    }
+  }
+
+  .bookmark-unchecked-icon {
+    --bl-icon-color: var(--bs-nav-link-color);
+  }
+
+  .bookmark-checked-icon {
+    --bl-icon-color: var(--stanford-cardinal);
   }
 }

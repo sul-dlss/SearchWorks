@@ -49,6 +49,25 @@ RSpec.feature 'Bookmarking Items', :js do
         expect(page).to have_css("h3.index_title a", count: 2)
       end
     end
+
+    it 'selects all bookmarks' do
+      visit search_catalog_path f: { format_hsim: ["Book"] }, view: "default"
+      click_button 'Save all'
+
+      within "#documents" do
+        bookmarks = page.all(".toggle-bookmark")
+        expect(bookmarks).to all(have_css(".checked"))
+      end
+      expect(page).to have_css '.toast', text: 'Saved all records'
+      expect(page).to have_button 'Saved all', disabled: true
+
+      # Uncheck a bookmark
+      within(first('.document')) do
+        find('.toggle-bookmark').click
+      end
+
+      expect(page).to have_button 'Save all'
+    end
   end
 
   describe 'removing bookmarks from the bookmarks page' do
