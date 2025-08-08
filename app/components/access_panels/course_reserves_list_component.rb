@@ -16,7 +16,7 @@ module AccessPanels
     end
 
     def link_to_course_reserve_course(course)
-      link_to("#{course.course_number} -- #{course.name}", search_catalog_path({ f: { courses_folio_id_ssim: [course.id] } }))
+      link_to("#{course.course_number} -- #{course.name}", course_search_path(course))
     end
   end
 end

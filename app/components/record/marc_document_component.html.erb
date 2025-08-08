@@ -76,7 +76,7 @@
       <%= render Searchworks4::MetadataFieldLayoutComponent.new do |component| %>
         <% component.with_label { 'Database topics' } %>
         <% document.db_az_subject.each do |subject| %>
-          <% component.with_value { helpers.link_to_database_search(subject) } %>
+          <% component.with_value { link_to(subject, database_search_path(subject)) } %>
         <% end %>
       <% end %>
     <% end %>

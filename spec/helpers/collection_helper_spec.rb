@@ -3,22 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe CollectionHelper do
-  describe "#collections_search_params" do
-    it "is the collection_type facet value of 'Digital Collection" do
-      expect(collections_search_params).to have_key(:f)
-      expect(collections_search_params[:f]).to have_key(:collection_type)
-      expect(collections_search_params[:f][:collection_type]).to eq ["Digital Collection"]
-    end
-  end
-
-  describe "#collection_members_path" do
-    let(:document) { instance_double(SolrDocument, id: '1234', prefixed_id: 'a1234') }
-
-    it "links the collection id with prefix" do
-      expect(collection_members_path(document)).to match /.*collection.*=a1234.*/
-    end
-  end
-
   describe "#collection_breadcrumb_value" do
     it "returns the collection name when present" do
       allow(helper).to receive(:document_presenter).and_return(

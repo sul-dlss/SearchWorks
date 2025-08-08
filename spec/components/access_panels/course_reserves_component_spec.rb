@@ -49,13 +49,13 @@ RSpec.describe AccessPanels::CourseReservesComponent, type: :component do
 
     it "has all three links correctly formatted" do
       expect(page).to have_link('ENGLISH-17Q-01 -- After 2001: A 21st Century Science Fiction Odyssey',
-                                href: '/catalog?f%5Bcourses_folio_id_ssim%5D%5B%5D=00254a1b-d0f5-4a9a-88a0-1dd596075d08')
+                                href: '/?f%5Bcourses_folio_id_ssim%5D%5B%5D=00254a1b-d0f5-4a9a-88a0-1dd596075d08')
 
       expect(page).to have_link("SEMINAR -- James Joyce's Ulysses: Directed Reading",
-                                href: '/catalog?f%5Bcourses_folio_id_ssim%5D%5B%5D=00a45880-2088-4bbd-8b37-929093f1a032')
+                                href: '/?f%5Bcourses_folio_id_ssim%5D%5B%5D=00a45880-2088-4bbd-8b37-929093f1a032')
 
       expect(page).to have_link('CEE-270-01 -- Movement and Fate of Organic Contaminants in Waters',
-                                href: '/catalog?f%5Bcourses_folio_id_ssim%5D%5B%5D=0030dde8-b82d-4585-a049-c630a93b94f2')
+                                href: '/?f%5Bcourses_folio_id_ssim%5D%5B%5D=0030dde8-b82d-4585-a049-c630a93b94f2')
     end
   end
 end
