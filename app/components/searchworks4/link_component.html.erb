@@ -1,3 +1,5 @@
-<%= link_to link.link_text, href: link.href, **tooltip_attr %>
-<%= link.casalini_text if link.casalini_text %>
-<%= tag.span link.additional_text, class: 'additional-link-text' if link.additional_text %>
+<%= icon %>
+<%= link_to link_text, href, **link_attr %>
+<%= stanford_only_icon if stanford_only? %>
+<%= casalini_text if casalini_text %>
+<%= tag.span additional_text, class: 'additional-link-text' if additional_text %>

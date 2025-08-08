@@ -20,7 +20,7 @@ RSpec.describe MarcLinks do
     it 'decodes structured data in the document' do
       expect(document.marc_links.all.length).to eq 4
       expect(document.marc_links.fulltext.first.text).to eq 'fulltext'
-      expect(document.marc_links.finding_aid.first.html).to eq '<a href="http://oac.cdlib.org/findai/ark:/13030/an-ark">Online Archive of California</a>'
+      expect(document.marc_links.finding_aid.first).to have_attributes href: "http://oac.cdlib.org/findai/ark:/13030/an-ark", link_text: 'Online Archive of California'
       expect(document.marc_links.supplemental.first).to be_stanford_only
       expect(document.marc_links.managed_purls.first.text).to eq 'druid'
       expect(document.marc_links.managed_purls.first.file_id).to eq 'x'
@@ -66,8 +66,9 @@ RSpec.describe MarcLinks do
 
       it 'returns both fulltext and supplemental links' do
         expect(marc_links.length).to eq 2
-        expect(marc_links.first.html).to match(%r{^<a href="https://library\.stanford\.edu"})
-        expect(marc_links.last.html).to match(%r{^<a href="https://searchworks\.stanford\.edu">link text</a>$})
+        expect(marc_links.first).to have_attributes href: 'https://library.stanford.edu'
+        expect(marc_links.last).to have_attributes href: 'https://searchworks.stanford.edu',
+                                                   text: 'link text'
       end
 
       it 'returns the plain text and href separately' do
@@ -98,8 +99,9 @@ RSpec.describe MarcLinks do
         it 'identifies finding aid links' do
           expect(marc_links.first).to be_finding_aid
           expect(document.marc_links.finding_aid.length).to eq 1
-          expect(document.marc_links.finding_aid.first.html).to match(
-            %r{<a href=".*oac\.cdlib\.org/findaid/ark:/something-else">Online Archive of California</a>}
+          expect(document.marc_links.finding_aid.first).to have_attributes(
+            href: "http://oac.cdlib.org/findaid/ark:/something-else",
+            link_text: 'Online Archive of California'
           )
         end
       end
@@ -127,8 +129,9 @@ RSpec.describe MarcLinks do
         it 'displays the preferred (Archives) finding aid' do
           expect(marc_links.first).to be_finding_aid
           expect(document.marc_links.finding_aid.length).to eq 2
-          expect(document.marc_links.finding_aid.first.html).to match(
-            %r{<a href=".*archives\.stanford\.edu/findaid/ark:/archives-ark-id">Archival Collections at Stanford</a>}
+          expect(document.marc_links.finding_aid.first).to have_attributes(
+            href: "http://archives.stanford.edu/findaid/ark:/archives-ark-id",
+            link_text: 'Archival Collections at Stanford'
           )
         end
       end
@@ -159,10 +162,10 @@ RSpec.describe MarcLinks do
 
         it 'parses them properly' do
           expect(marc_links.length).to eq 4
-          expect(marc_links.first.html).to match(
-            %r{<a href=.*example\.com/lookup\?\^The\+Query.*>www\.example\.com</a>}
-          )
-          expect(marc_links[2].html).to match(%r{<a.*> at: </a>})
+          expect(marc_links.first).to have_attributes href: "http://www.example.com/lookup?^The+Query+Is+No+Good",
+                                                      text: 'www.example.com'
+
+          expect(marc_links.third).to have_attributes(text: ' at: ')
         end
       end
 
@@ -183,8 +186,8 @@ RSpec.describe MarcLinks do
 
           it 'returns the URL in the url parameter for ezproxy links (but fallback on the URL host)' do
             expect(marc_links.length).to eq 2
-            expect(marc_links.first.html).to match(%r{<a href=.*>library\.stanford\.edu</a>})
-            expect(marc_links.last.html).to match(%r{<a href=.*>ezproxy\.stanford\.edu</a>})
+            expect(marc_links.first).to have_attributes(link_text: 'library.stanford.edu')
+            expect(marc_links.last).to have_attributes(link_text: 'ezproxy.stanford.edu')
           end
         end
 

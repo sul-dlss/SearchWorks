@@ -98,24 +98,13 @@ RSpec.feature 'Article Searching' do
       visit articles_path(q: 'kittens', format: 'json')
       results = JSON.parse(page.body).with_indifferent_access
 
-      aggregate_failures do
-        expect(results.dig('response', 'docs', 0, 'links')).to include hash_including(href: 'http://www.example.com/articles/abc123', link_text: 'View on detail page')
-        expect(Capybara.string(results['response']['docs'][0]['fulltext_link_html'])).to have_link('View on detail page')
-      end
+      expect(results.dig('response', 'docs', 0, 'links')).to include hash_including(href: 'http://www.example.com/articles/abc123', link_text: 'View on detail page')
 
-      aggregate_failures do
-        expect(results.dig('response', 'docs', 1, 'links')).to include hash_including(href: 'http://example.com', link_text: 'View full text')
-        expect(Capybara.string(results['response']['docs'][1]['fulltext_link_html'])).to have_link('View full text')
-      end
+      expect(results.dig('response', 'docs', 1, 'links')).to include hash_including(href: 'http://example.com', link_text: 'View full text')
 
-      expect(
-        Capybara.string(results['response']['docs'][2]['fulltext_link_html'])
-      ).to have_link('Find full text or request')
+      expect(results.dig('response', 'docs', 2, 'links')).to include hash_including(link_text: 'Find full text or request')
 
-      aggregate_failures do
-        expect(Capybara.string(results['response']['docs'][3]['fulltext_link_html'])).to have_link('View/download PDF')
-        expect(results.dig('response', 'docs', 3, 'links')).to include hash_including(href: 'http://www.example.com/articles/pdfyyy/pdf/fulltext', link_text: 'View/download PDF')
-      end
+      expect(results.dig('response', 'docs', 3, 'links')).to include hash_including(href: 'http://www.example.com/articles/pdfyyy/pdf/fulltext', link_text: 'View/download PDF')
     end
   end
 end

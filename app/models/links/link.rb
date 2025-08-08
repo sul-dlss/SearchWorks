@@ -4,7 +4,7 @@ class Links
   class Link
     include ActionView::Helpers::TagHelper
 
-    attr_accessor :href, :file_id, :druid, :type, :sort
+    attr_accessor :href, :file_id, :druid, :type, :sort, :link_title
 
     def initialize(options = {})
       @additional_text = options[:additional_text]
@@ -21,10 +21,6 @@ class Links
       @sort = options[:sort]
       @stanford_only = options[:stanford_only]
       @type = options[:type]
-    end
-
-    def html
-      @html ||= safe_join([link_html, casalini_text, additional_text_html].compact, ' ')
     end
 
     def text
@@ -81,18 +77,6 @@ class Links
       host || @href
     rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
       @href
-    end
-
-    def link_html
-      tooltip_attr = if @link_title.present? && !stanford_only?
-                       {
-                         title: @link_title,
-                         data: { 'bs-placement': 'right', 'bs-toggle': 'tooltip' }
-                       }
-                     else
-                       {}
-                     end
-      content_tag(:a, link_text, href: @href, **tooltip_attr)
     end
 
     def as_json(*)

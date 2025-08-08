@@ -54,12 +54,15 @@
             </dl>
           <% end %>
 
-          <% links_presenter = ArticleFulltextLinkPresenter.new(document: @document, context: self) %>
-          <% unless @document.eds_restricted? || links_presenter.links.none? %>
+          <% if !@document.eds_restricted? && (@document.preferred_online_links.any? || @document.html_fulltext?) %>
             <div class="availability-component d-inline-flex border rounded p-2 gap-3">
               <ul class='document-metadata results-metadata-section list-unstyled mb-0'>
-                <% links_presenter.links.each do |link| %>
-                  <li><span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span> <%= link.html_safe %></li>
+                <% if @document.preferred_online_links.any? %>
+                  <% @document.preferred_online_links.each do |link| %>
+                    <li><span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span> <%= render Articles::LinkComponent.new(link: link, document: @document) %></li>
+                  <% end %>
+                <% elsif @document.html_fulltext? %>
+                  <li><span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span> <%= render Articles::LinkComponent.new(link: nil, document: @document) %></li>
                 <% end %>
               </ul>
             </div>
