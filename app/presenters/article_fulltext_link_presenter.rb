@@ -23,10 +23,6 @@ class ArticleFulltextLinkPresenter
 
   attr_reader :document
 
-  def online_label
-    '<span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span>'.html_safe
-  end
-
   def stanford_only_icon
     render StanfordOnlyPopoverComponent.new
   end
@@ -39,13 +35,12 @@ class ArticleFulltextLinkPresenter
     if link.href == 'detail' # PDFs
       detail_link_markup(link)
     else
-      "#{online_label} #{link_to(link.text, link.href)}"
+      link_to(link.text, link.href)
     end
   end
 
   def detail_link_markup(link)
     <<-HTML
-      #{online_label}
       #{(link_to('View on detail page', eds_document_url(document)) if document_has_fulltext?)}
       #{image_tag(image_url('pdf-icon.svg'), height: '20px', alt: 'PDF') unless link.type == 'other'}
       #{link_to(link.text, article_fulltext_link_url(id: document.id, type: link.type), data: { turbo: false })}
