@@ -1,6 +1,6 @@
 <%# locals: (content_classes: document_index_view_type == :gallery ? 'col-md-8 col-xxl-9 px-xxl-4 ps-lg-4 ps-2' : 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false) %>
-<% if page_location.collection? && get_collection.present? %>
-  <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+<% if page_location.collection? && @collection.present? %>
+  <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@collection).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 <% elsif page_location.access_point? %>
   <% if page_location.sdr? %>
     <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
@@ -26,7 +26,7 @@
 
 <h1 class="visually-hidden">Search Results</h1>
 
-<%= render Searchworks4::SearchResult::CollectionInfoComponent.new(collection: @parent) %>
+<%= render Searchworks4::SearchResult::CollectionInfoComponent.new(collection: @collection) %>
 <%= render Searchworks4::SearchResult::BookplateFundComponent.new(bookplate: bookplate_from_document_list) %>
 
 <% if has_search_parameters? && !hide_constraints %>

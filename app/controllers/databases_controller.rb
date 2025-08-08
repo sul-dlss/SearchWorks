@@ -8,6 +8,7 @@ class DatabasesController < ApplicationController
   include Blacklight::Catalog
   include EmailValidation
   include CatalogEmailSending
+  include WithPageLocation
 
   copy_blacklight_config_from(CatalogController)
 
