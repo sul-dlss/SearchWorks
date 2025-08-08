@@ -2,9 +2,7 @@
 
 class CatalogResult
   include ActiveModel::API
-  attr_accessor :title, :format, :physical, :author, :description, :link, :pub_year, :fulltext_link_html, :fulltext_stanford_only
-
-  alias fulltext_stanford_only? fulltext_stanford_only
+  attr_accessor :title, :format, :physical, :author, :description, :link, :pub_year, :fulltext_link_html
 
   FORMAT_TO_ICON = {
     'Archive/Manuscript' => 'box-1.svg',
@@ -31,5 +29,20 @@ class CatalogResult
 
   def icon
     FORMAT_TO_ICON.fetch(format, 'notebook.svg')
+  end
+
+  def html
+    @html ||= Nokogiri::HTML(fulltext_link_html)
+  end
+
+  def fulltext_stanford_only?
+    # Break up the HTML string into the pieces we use
+    (html.css('[aria-label="Stanford-only"]').first || html.css('.stanford-only').first).present?
+  end
+
+  def link_html
+    # Break up the HTML string into the pieces we use
+    link = html.css('a').first&.to_html
+    "<span class=\"text-green\">Available online ⮕</span> #{link}" if link
   end
 end

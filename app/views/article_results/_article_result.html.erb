@@ -1,7 +1,7 @@
 <li class='no-thumbnail'>
   <div class="result">
     <div class="result-title fs-1125 fw-medium pt-2 pb-1">
-      <%= link_to article_result.title.html_safe, article_result.link %>
+        <%= link_to article_result.title.html_safe, article_result.link %> <% if article_result.fulltext_link_html %><span class="online-label badge rounded-pill ms-2">Online</span><% end %>
     </div>
 
 
@@ -27,8 +27,8 @@
     <% end %>
 
 
-    <% if article_result.fulltext_link_html %>
-      <p><%= article_result.fulltext_link_html.html_safe %>
+    <% if article_result.link_html %>
+      <p><%= article_result.link_html.html_safe %>
         <%= render 'shared/stanford_only_button' if article_result.fulltext_stanford_only? %></p>
     <% end %>
 

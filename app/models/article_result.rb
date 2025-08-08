@@ -17,10 +17,8 @@ class ArticleResult
 
   include ActiveModel::API
 
-  attr_accessor :title, :format, :journal, :author, :description, :link, :fulltext_link_html,
-                :pub_date, :composed_title, :fulltext_stanford_only
-
-  alias fulltext_stanford_only? fulltext_stanford_only
+  attr_accessor :title, :format, :journal, :author, :description, :link,
+                :pub_date, :composed_title, :fulltext_link_html
 
   def icon
     FORMAT_TO_ICON.fetch(format, 'notebook.svg')
@@ -44,5 +42,17 @@ class ArticleResult
 
     italic_match = composed_title.match(%r{\u003C/i\u003E(.*)}i)
     italic_match ? italic_match[1] : ''
+  end
+
+  def html
+    @html ||= Nokogiri::HTML(fulltext_link_html)
+  end
+
+  def link_html
+    html.css('a').first&.to_html || ''
+  end
+
+  def fulltext_stanford_only?
+    html.css('[aria-label="Stanford-only"]').first || html.css('.stanford-only').first
   end
 end
