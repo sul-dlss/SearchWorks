@@ -23,10 +23,13 @@ RSpec.describe JsonResultsDocumentPresenter do
         }]
       end
 
+      let(:json) { presenter.as_json.with_indifferent_access }
+
       it 'includes the link wrapped in a span with a class to be styled by consumers' do
-        expect(presenter.as_json['fulltext_link_html'].length).to eq 1
-        expect(presenter.as_json['fulltext_link_html'].first).to include('<span class="stanford-only">')
-        expect(presenter.as_json['fulltext_link_html'].first).to match(/<a href=.*example.com.*>The Link<\/a>/)
+        expect(json['fulltext_link_html'].length).to eq 1
+        expect(json['fulltext_link_html'].first).to include('<span class="stanford-only">')
+        expect(json['fulltext_link_html'].first).to match(/<a href=.*example.com.*>The Link<\/a>/)
+        expect(json['links'].first).to include(href: 'https://example.com', link_text: 'The Link', stanford_only: true)
       end
     end
   end
