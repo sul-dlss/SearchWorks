@@ -10,7 +10,7 @@ RSpec.describe ArticleSearchService do
                 response: {
                   docs:
                   [
-                    { id: 'abc123', eds_composed_title: 'Composed title', fulltext_link_html: '<a href="#">Link</a>' }
+                    { id: 'abc123', eds_composed_title: 'Composed title', links: [{ href: '#', link_text: 'Link' }] }
                   ]
                 }
               })
@@ -28,7 +28,7 @@ RSpec.describe ArticleSearchService do
     it 'is set by the fulltext_link_html field in the document' do
       results = service.search(query).results
       expect(results.length).to eq 1
-      expect(results.first.fulltext_link_html).to eq '<a href="#">Link</a>'
+      expect(results.first.link_html).to eq '<a href="#">Link</a>'
     end
   end
 end

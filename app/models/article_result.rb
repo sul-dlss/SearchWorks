@@ -18,7 +18,7 @@ class ArticleResult
   include ActiveModel::API
 
   attr_accessor :title, :format, :journal, :author, :description, :link,
-                :pub_date, :composed_title, :fulltext_link_html
+                :pub_date, :composed_title, :resource_links
 
   def icon
     FORMAT_TO_ICON.fetch(format, 'notebook.svg')
@@ -44,15 +44,17 @@ class ArticleResult
     italic_match ? italic_match[1] : ''
   end
 
-  def html
-    @html ||= Nokogiri::HTML(fulltext_link_html)
+  def preferred_resource_link
+    resource_links&.first&.with_indifferent_access
   end
 
   def link_html
-    html.css('a').first&.to_html || ''
+    return unless preferred_resource_link
+
+    ApplicationController.helpers.link_to preferred_resource_link[:link_text], preferred_resource_link[:href]
   end
 
   def fulltext_stanford_only?
-    html.css('[aria-label="Stanford-only"]').first || html.css('.stanford-only').first
+    preferred_resource_link&.dig(:stanford_only)
   end
 end

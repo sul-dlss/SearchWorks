@@ -28,7 +28,7 @@ class ArticleSearchService < AbstractSearchService
           author: doc['eds_authors']&.first,
           pub_date: doc['eds_publication_date'],
           composed_title: doc['eds_composed_title'],
-          fulltext_link_html: doc['fulltext_link_html']
+          resource_links: doc['links']
         )
       end
     end

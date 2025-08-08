@@ -24,7 +24,7 @@ class CatalogSearchService < AbstractSearchService
           format: doc['format_hsim']&.first || doc['format_main_ssim']&.first,
           description: doc['summary_display'].try(:join),
           pub_year: doc['pub_year_ss'],
-          fulltext_link_html: doc['fulltext_link_html']&.first
+          resource_links: doc['links']
         )
       end
     end
