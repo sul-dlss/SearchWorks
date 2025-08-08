@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This is consumed by Bento
-docs = @presenter.documents.collect do |document|
+docs = @presenter.documents.collect do |document| # rubocop:disable Metrics/BlockLength
   link = ArticleFulltextLinkPresenter.new(document:, context: self).links.first # top priority one only
   composed_title = document['eds_composed_title']
   data = {
@@ -14,6 +14,17 @@ docs = @presenter.documents.collect do |document|
   }
   data['source'] = document.to_h # avoids deprecation warning
   data['fulltext_link_html'] = link if link.present?
+  if document.preferred_online_links.first.present?
+    link = document.preferred_online_links.first
+    data['links'] = [link.as_json]
+    data['links'][0][:href] = article_fulltext_link_url(id: document.id, type: link.type) if link.href == 'detail'
+  elsif document.html_fulltext?
+    data['links'] = [{
+      type: 'detail',
+      href: eds_document_url(document),
+      link_text: 'View on detail page'
+    }]
+  end
   data['eds_composed_title'] = italicize_composed_title({ value: Array.wrap(composed_title) }) if composed_title.present?
 
   data

@@ -28,12 +28,10 @@ class JsonResultsDocumentPresenter
 
         "<span class=\"online-label\">Online</span> #{html}"
       end
-    }
+    }.merge('links' => online_links.map(&:as_json))
   end
 
   def online_links
-    return [] unless source_document&.preferred_online_links&.any?
-
-    source_document.preferred_online_links
+    source_document&.preferred_online_links || []
   end
 end

@@ -88,5 +88,16 @@ class Links
                      end
       content_tag(:a, @link_text || link_host, href: @href, **tooltip_attr)
     end
+
+    def as_json(*)
+      {
+        type: @type,
+        href: @href,
+        stanford_only: @stanford_only,
+        link_text: @link_text || link_host,
+        source: casalini_text,
+        additional_text: @additional_text
+      }
+    end
   end
 end
