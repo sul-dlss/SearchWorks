@@ -3,22 +3,14 @@
 ##
 # Controller used for feedback forms
 class FeedbackFormsController < ApplicationController
-  before_action :set_form_type, only: %i[new create]
-
   def new
   end
 
   def create
     if request.post?
       if valid?
-        case @form_type
-        when 'connection'
-          FeedbackMailer.submit_connection(params, request.remote_ip).deliver_now
-          flash.now[:success] = t('blacklight.connection_form.success')
-        else
-          FeedbackMailer.submit_feedback(params, request.remote_ip).deliver_now
-          flash.now[:success] = t('blacklight.feedback_form.success')
-        end
+        FeedbackMailer.submit_feedback(params, request.remote_ip).deliver_now
+        flash.now[:success] = t('blacklight.feedback_form.success')
       end
       respond_to do |format|
         format.json do
@@ -33,10 +25,6 @@ class FeedbackFormsController < ApplicationController
   end
 
   protected
-
-  def set_form_type
-    @form_type = params.permit(:type)[:type] || 'feedback'
-  end
 
   def valid?
     errors = []
