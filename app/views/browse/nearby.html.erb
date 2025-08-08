@@ -1,5 +1,5 @@
   <% if @spines.present? %>
-    <turbo-frame id="filmstrip_<%= params[:call_number].gsub(' ', '-') %>">
+    <turbo-frame id="filmstrip_<%= params[:call_number]&.gsub(' ', '-') %>">
       <% view_config = local_assigns[:view_config] || blacklight_config&.view_config(document_index_view_type) %>
       <div class="d-flex">
         <%= render view_config.document_component.with_collection(@spines.map(&:document_with_preferred_item).map { |document| document_presenter(document) }, starting_document: @original_doc, preview_id: @preview_id) %>
