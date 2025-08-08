@@ -59,7 +59,7 @@
             <div class="availability-component d-inline-flex border rounded p-2 gap-3">
               <ul class='document-metadata results-metadata-section list-unstyled mb-0'>
                 <% links_presenter.links.each do |link| %>
-                  <li><%= link.html_safe %></li>
+                  <li><span class="fw-semibold available-online">Available online <i class="bi bi-forward-fill"></i></span> <%= link.html_safe %></li>
                 <% end %>
               </ul>
             </div>
