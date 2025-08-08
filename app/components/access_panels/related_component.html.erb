@@ -7,8 +7,8 @@
     <ul class="links list-unstyled">
       <% if additional_finding_aids? %>
         <% additional_finding_aids.each do |link| %>
-          <%= tag.li class: finding_aid_class(link) %>
-            <%= render Searchworks::LinkComponent.new(link) %>
+          <%= tag.li class: finding_aid_class(link) do %>
+            <%= render Searchworks4::LinkComponent.new(link: link) %>
           <% end %>
         <% end %>
       <% end %>

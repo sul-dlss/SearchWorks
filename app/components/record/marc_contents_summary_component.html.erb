@@ -68,7 +68,7 @@
       <ul class="list-unstyled">
         <% document.marc_links.supplemental.each do |link| %>
           <li>
-            <%= render Searchworks::LinkComponent.new(link) %>
+            <%= render Searchworks4::LinkComponent.new(link: link) %>
           </li>
         <% end %>
       </ul>

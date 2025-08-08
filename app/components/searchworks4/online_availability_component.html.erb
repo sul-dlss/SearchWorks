@@ -4,7 +4,7 @@
   <ul class="list-unstyled mb-0" data-list-toggle-target="group">
     <% links.each do |link| %>
       <li <% if links.many? %>class="mb-1"<% end %>>
-        <%= render Searchworks::LinkComponent.new(link) %>
+        <%= render Searchworks4::LinkComponent.new(link: link) %>
       </li>
     <% end %>
   </ul>
