@@ -89,6 +89,7 @@
         <span class="sort-and-per-page d-flex flex-row gap-2">
           <%= render partial: 'sort_widget' %>
           <%= render partial: 'shared/per_page_widget' %>
+          <%= render Document::SaveAllBookmarksComponent.new(documents_selector: '#documents') %>
         </span>
       </div>
 

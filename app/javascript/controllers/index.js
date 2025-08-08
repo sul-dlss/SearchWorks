@@ -28,6 +28,9 @@ application.register("blacklight-result-count", BlacklightResultCountController)
 import BookmarkController from "./bookmark_controller"
 application.register("bookmark", BookmarkController)
 
+import BookmarkAllController from "./bookmark_all_controller"
+application.register("bookmark-all", BookmarkAllController)
+
 import BrowseNearbyController from "./browse_nearby_controller"
 application.register("browse-nearby", BrowseNearbyController)
 
