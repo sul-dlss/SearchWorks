@@ -50,6 +50,7 @@ Rails.application.routes.draw do
 
       collection do
         delete 'clear'
+        delete '', action: :destroy
       end
 
       collection do

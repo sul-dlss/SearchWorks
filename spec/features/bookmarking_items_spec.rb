@@ -49,6 +49,34 @@ RSpec.feature 'Bookmarking Items', :js do
         expect(page).to have_css("h3.index_title a", count: 2)
       end
     end
+
+    it 'selects and removes all bookmarks' do
+      visit search_catalog_path f: { format_hsim: ["Book"] }, view: "default"
+      expect(page).to have_css('button[aria-label="Save all records on this page"]')
+
+      click_button 'Save all'
+      expect(page).to have_button 'Saved all'
+      expect(page).to have_css('button[aria-label="Remove all saved records on this page"]')
+      expect(page).to have_text 'Saved 20'
+      within '#documents' do
+        bookmarks = page.all('.toggle-bookmark')
+        expect(bookmarks).to all(have_css('.checked'))
+      end
+
+      within(first('.document')) do
+        find('.toggle-bookmark').click
+      end
+      expect(page).to have_text 'Saved 19'
+
+      click_button 'Save all'
+      expect(page).to have_text 'Saved 20'
+
+      click_button 'Saved all'
+      within '#documents' do
+        bookmarks = page.all('.toggle-bookmark')
+        expect(bookmarks).to all(have_no_css('.checked'))
+      end
+    end
   end
 
   describe 'removing bookmarks from the bookmarks page' do
