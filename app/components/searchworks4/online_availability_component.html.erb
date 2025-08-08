@@ -4,8 +4,7 @@
   <ul class="list-unstyled mb-0" data-list-toggle-target="group">
     <% links.each do |link| %>
       <li <% if links.many? %>class="mb-1"<% end %>>
-        <%= link.html&.html_safe %>
-        <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %>
+        <%= render Searchworks::LinkComponent.new(link) %>
       </li>
     <% end %>
   </ul>

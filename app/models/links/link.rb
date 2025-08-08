@@ -28,11 +28,15 @@ class Links
     end
 
     def text
-      @text ||= safe_join([@link_text || link_host, casalini_text, additional_text_html].compact, ' ')
+      @text ||= safe_join([link_text, casalini_text, additional_text_html].compact, ' ')
     end
 
     def part_label(index:)
       @link_text || ("part #{index}" if index) || "part"
+    end
+
+    def link_text
+      @link_text || link_host
     end
 
     def fulltext?
@@ -56,8 +60,10 @@ class Links
     end
 
     def additional_text_html
-      content_tag(:span, @additional_text, class: 'additional-link-text') if @additional_text
+      content_tag(:span, additional_text, class: 'additional-link-text') if @additional_text
     end
+
+    attr_reader :additional_text
 
     def casalini_text
       '(source: Casalini)' if @casalini
@@ -86,7 +92,7 @@ class Links
                      else
                        {}
                      end
-      content_tag(:a, @link_text || link_host, href: @href, **tooltip_attr)
+      content_tag(:a, link_text, href: @href, **tooltip_attr)
     end
 
     def as_json(*)
@@ -94,7 +100,7 @@ class Links
         type: @type,
         href: @href,
         stanford_only: @stanford_only,
-        link_text: @link_text || link_host,
+        link_text: link_text,
         source: casalini_text,
         additional_text: @additional_text
       }
