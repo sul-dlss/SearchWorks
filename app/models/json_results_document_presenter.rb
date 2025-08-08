@@ -22,13 +22,7 @@ class JsonResultsDocumentPresenter
   def fulltext_link_html
     return {} if online_links.blank?
 
-    {
-      'fulltext_link_html' => online_links.map do |link|
-        html = link.stanford_only? ? "<span class=\"stanford-only\">#{link.html}</span>" : link.html
-
-        "<span class=\"online-label\">Online</span> #{html}"
-      end
-    }.merge('links' => online_links.map(&:as_json))
+    { 'links' => online_links.map(&:as_json) }
   end
 
   def online_links

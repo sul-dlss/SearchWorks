@@ -2,7 +2,6 @@
 
 # This is consumed by Bento
 docs = @presenter.documents.collect do |document| # rubocop:disable Metrics/BlockLength
-  link = ArticleFulltextLinkPresenter.new(document:, context: self).links.first # top priority one only
   composed_title = document['eds_composed_title']
   data = {
     eds_title: document.eds_title,
@@ -13,7 +12,6 @@ docs = @presenter.documents.collect do |document| # rubocop:disable Metrics/Bloc
     eds_publication_date: document.eds_publication_date
   }
   data['source'] = document.to_h # avoids deprecation warning
-  data['fulltext_link_html'] = link if link.present?
   if document.preferred_online_links.first.present?
     link = document.preferred_online_links.first
     data['links'] = [link.as_json]
