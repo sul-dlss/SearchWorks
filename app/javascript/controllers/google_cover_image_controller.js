@@ -94,18 +94,21 @@ export default class extends Controller {
       thumbUrl = thumbUrl.replace(/zoom=5/, 'zoom=1')
       thumbUrl = thumbUrl.replace(/&?edge=curl/, '')
 
-      const imageEl = this.element.querySelector(selectorCoverImg)
+      const imageEls = Array.from(this.element.querySelectorAll(selectorCoverImg));
 
-      // Only set the thumb src if it's not already set
-      if (imageEl.src === '') {
-        imageEl.src = thumbUrl
-        imageEl.hidden = false
 
-        const fakeCover = imageEl.parentElement.querySelector('span.fake-cover')
-        if (fakeCover) {
-          fakeCover.hidden = true
+      imageEls.forEach((imageEl) => {
+        // Only set the thumb src if it's not already set
+        if (imageEl.src === '') {
+          imageEl.src = thumbUrl
+          imageEl.hidden = false
+
+          const fakeCover = imageEl.parentElement.querySelector('span.fake-cover')
+          if (fakeCover) {
+            fakeCover.hidden = true
+          }
         }
-      }
+      })
     }
   }
 
