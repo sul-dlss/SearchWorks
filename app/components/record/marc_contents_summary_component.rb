@@ -3,7 +3,7 @@
 module Record
   class MarcContentsSummaryComponent < ViewComponent::Base
     def initialize(document:)
-      super
+      super()
       @document = document
     end
 

@@ -6,7 +6,7 @@ class ItemRequestLinkComponent < ViewComponent::Base
   delegate :document, :library, :effective_permanent_location_code, :barcode, to: :item
 
   def initialize(item:, classes: %w[btn btn-xs request-button], rtac: nil)
-    super
+    super()
 
     @item = item
     @classes = classes

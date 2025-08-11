@@ -9,7 +9,7 @@ module Masthead
     attr_reader :classes
 
     def initialize(classes: [])
-      super
+      super()
 
       @classes = Array(classes)
     end

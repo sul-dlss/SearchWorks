@@ -4,7 +4,7 @@ module Searchworks4
   class ModsAuthorsComponent < ViewComponent::Base
     def initialize(document:)
       @document = document
-      super
+      super()
     end
 
     # The comma should not be part of the link for the author name

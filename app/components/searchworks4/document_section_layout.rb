@@ -7,7 +7,7 @@ module Searchworks4
       @classes = classes
       @heading_level = heading_level
       @dl_classes = dl_classes
-      super
+      super()
     end
 
     def render?

@@ -4,7 +4,7 @@ class StackmapComponent < ViewComponent::Base
   def initialize(items:, stackmap_api_url:)
     @items = items
     @stackmap_api_url = stackmap_api_url
-    super
+    super()
   end
 
   attr_reader :items, :stackmap_api_url

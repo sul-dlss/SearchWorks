@@ -7,7 +7,7 @@ module AccessPanels
     def initialize(mhld:, is_modal: false)
       @mhld = mhld
       @is_modal = is_modal
-      super
+      super()
     end
 
     def container_class

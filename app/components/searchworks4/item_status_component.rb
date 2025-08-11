@@ -7,7 +7,7 @@ module Searchworks4
     def initialize(item:, rtac: nil)
       @item = item
       @rtac = rtac
-      super
+      super()
     end
 
     def dom_id

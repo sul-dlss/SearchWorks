@@ -6,7 +6,7 @@ module Record
       @presenter = presenter
       @document = document || presenter.document
       @kwargs = kwargs
-      super
+      super()
     end
 
     def call

@@ -7,7 +7,7 @@ module SearchResult
         @offcanvas = offcanvas
         @url = url
         @i18n_key = i18n_key
-        super
+        super()
       end
 
       attr_reader :url, :i18n_key

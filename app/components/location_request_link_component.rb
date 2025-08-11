@@ -18,7 +18,7 @@ class LocationRequestLinkComponent < ViewComponent::Base
   end
 
   def initialize(document:, library_code:, location:, hide_icon: false, classes: %w[btn btn-xs request-button], **link_params)
-    super
+    super()
 
     @document = document
     @library_code = library_code

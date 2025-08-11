@@ -4,7 +4,7 @@ module Bookmarks
   class ToolbarComponent < ViewComponent::Base
     def initialize(document_ids:)
       @document_ids = document_ids
-      super
+      super()
     end
 
     attr_reader :document_ids

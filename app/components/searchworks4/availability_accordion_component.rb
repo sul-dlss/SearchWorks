@@ -12,7 +12,7 @@ module Searchworks4
       @document = document
       @toggled_library = toggled_library
       @libraries = libraries
-      super
+      super()
     end
 
     def render?

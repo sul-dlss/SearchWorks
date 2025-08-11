@@ -5,7 +5,7 @@ module Searchworks4
     class ItemMenuComponent < ViewComponent::Base
       def initialize(document:)
         @document = document
-        super
+        super()
       end
 
       attr_reader :document

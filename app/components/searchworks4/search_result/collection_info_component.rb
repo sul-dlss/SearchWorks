@@ -5,7 +5,7 @@ module Searchworks4
     class CollectionInfoComponent < ViewComponent::Base
       def initialize(collection:)
         @collection = collection
-        super
+        super()
       end
 
       attr_reader :collection

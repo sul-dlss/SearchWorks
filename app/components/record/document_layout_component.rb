@@ -12,7 +12,7 @@ module Record
     attr_reader :document
 
     def initialize(document:)
-      super
+      super()
 
       @document = document
     end

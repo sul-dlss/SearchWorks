@@ -7,7 +7,7 @@ module AccessPanels
     def initialize(library:, document:)
       @library = library
       @document = document
-      super
+      super()
     end
 
     # we don't need to fetch hours for SAL since it doesn't have hours

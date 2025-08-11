@@ -9,7 +9,7 @@ module Searchworks4
 
     def initialize(classes: ['my-2'])
       @classes = classes
-      super
+      super()
     end
 
     def render?

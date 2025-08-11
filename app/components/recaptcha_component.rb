@@ -7,6 +7,6 @@ class RecaptchaComponent < ViewComponent::Base
     @action = action
     @inline_script = inline_script
     @site_key = site_key
-    super
+    super()
   end
 end
