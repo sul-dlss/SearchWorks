@@ -60,9 +60,11 @@
       <%= tag.div class: header_classes + ['d-inline-flex', 'me-4'] do %>
         <%= tag.span library.name, class: 'library fw-semibold' %>
         <%= render ItemCountComponent.new(document.holdings.items.count) %>
-        <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+        <span class="me-auto">
+          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link me-2 me-md-3 me-lg-4 me-xl-5]) %>
+        </span>
 
-        <div class="btn btn-outline-primary btn-sm ms-5 text-nowrap">
+        <div class="btn btn-outline-primary btn-sm text-nowrap">
           <span class="open-hidden icon-link"><i class="bi bi-chevron-down"></i> Show details</span>
           <span class="open-visible icon-link"><i class="bi bi-chevron-up"></i> Hide details</span>
         </div>
