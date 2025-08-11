@@ -14,10 +14,6 @@ module MastheadHelper
     end
   end
 
-  def page_location
-    PageLocation.new(search_state)
-  end
-
   def iiif_item_path
     facet_params = { f: { iiif_resources: ['available'] } }
     search_catalog_path(facet_params)

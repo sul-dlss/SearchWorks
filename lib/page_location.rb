@@ -56,6 +56,10 @@ class PageLocation
     collection_parameters?
   end
 
+  def collection_id
+    filter(:collection).values.excluding('sirsi', 'folio').first
+  end
+
   private
 
   delegate :filter, :filters, to: :@search_state
@@ -69,7 +73,7 @@ class PageLocation
   end
 
   def collection_parameters?
-    filter(:collection).values.excluding('sirsi', 'folio').present?
+    collection_id.present?
   end
 
   def digital_collections_parameters?
