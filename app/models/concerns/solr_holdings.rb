@@ -32,9 +32,9 @@ module SolrHoldings
 
   def preferred_item
     @preferred_item ||= begin
-      item = self[:preferred_barcode] && (items.reject(&:suppressed?).find do |c|
+      item = self[:preferred_barcode] && items.reject(&:suppressed?).find do |c|
         c.barcode == self[:preferred_barcode]
-      end)
+      end
 
       item || items.first
     end
