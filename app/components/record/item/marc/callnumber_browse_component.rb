@@ -8,7 +8,7 @@ module Record
 
         def initialize(document:)
           @document = document
-          super
+          super()
         end
 
         attr_reader :document

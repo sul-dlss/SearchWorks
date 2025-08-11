@@ -3,7 +3,7 @@
 class PageLinksComponent < ViewComponent::Base
   def initialize(response:)
     @response = response
-    super
+    super()
   end
   attr_accessor :response
 end

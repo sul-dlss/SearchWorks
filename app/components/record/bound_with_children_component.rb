@@ -3,7 +3,7 @@
 module Record
   class BoundWithChildrenComponent < ViewComponent::Base
     def initialize(bound_with_children:, item_id:, instance_id:)
-      super
+      super()
       @bound_with_children = bound_with_children
       @item_id = item_id
       @instance_id = instance_id

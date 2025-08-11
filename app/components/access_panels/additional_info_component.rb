@@ -7,7 +7,7 @@ module AccessPanels
     def initialize(library:, document:)
       @library = library
       @document = document
-      super
+      super()
     end
   end
 end

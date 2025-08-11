@@ -7,7 +7,7 @@ module Searchworks4
 
       def initialize(presenter:)
         @presenter = presenter
-        super
+        super()
       end
 
       delegate :citations, :eds_ris_export?, to: :presenter

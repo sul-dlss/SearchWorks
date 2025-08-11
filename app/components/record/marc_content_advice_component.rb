@@ -3,7 +3,7 @@
 module Record
   class MarcContentAdviceComponent < ViewComponent::Base
     def initialize(document:)
-      super
+      super()
       @document = document
       @content_advice = document.fetch(:summary_struct, []).select { |elem| elem[:label] == 'Content advice' }
     end

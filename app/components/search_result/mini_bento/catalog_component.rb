@@ -5,7 +5,7 @@ module SearchResult
     class CatalogComponent < ViewComponent::Base
       def initialize(offcanvas: true)
         @offcanvas = offcanvas
-        super
+        super()
       end
 
       attr_reader :offcanvas

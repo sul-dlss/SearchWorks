@@ -6,7 +6,7 @@ module Searchworks4
 
     def initialize(presenter:)
       @presenter = presenter
-      super
+      super()
     end
 
     def authors

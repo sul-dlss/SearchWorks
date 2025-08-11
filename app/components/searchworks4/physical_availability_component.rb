@@ -69,7 +69,7 @@ module Searchworks4
         @document = document
         @classes = classes
         @suppress_off_campus = suppress_off_campus
-        super
+        super()
       end
 
       def render?
@@ -95,7 +95,7 @@ module Searchworks4
     class ItemCountComponent < ViewComponent::Base
       def initialize(count)
         @count = count
-        super
+        super()
       end
 
       def call

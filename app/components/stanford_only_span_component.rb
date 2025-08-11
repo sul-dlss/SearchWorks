@@ -4,7 +4,7 @@ class StanfordOnlySpanComponent < ViewComponent::Base
   attr_reader :aria
 
   def initialize(aria: { label: 'Stanford-only' })
-    super
+    super()
     @aria = aria
   end
 

@@ -4,7 +4,7 @@ class AlertComponent < ViewComponent::Base
   def initialize(level:, message:)
     @level = level
     @message = message
-    super
+    super()
   end
 
   attr_reader :level, :message

@@ -7,7 +7,7 @@ module Searchworks4
     def initialize(document:, toggled_library:)
       @document = document
       @toggled_library = toggled_library
-      super
+      super()
     end
 
     def render?

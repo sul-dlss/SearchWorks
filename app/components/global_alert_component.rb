@@ -5,7 +5,7 @@ class GlobalAlertComponent < ViewComponent::Base
 
   def initialize(alert)
     @alert = alert
-    super
+    super()
   end
 
   def render?

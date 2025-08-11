@@ -4,7 +4,7 @@ module Searchworks4
   module SearchResult
     class BookplateFundComponent < ViewComponent::Base
       def initialize(bookplate:)
-        super
+        super()
 
         @bookplate = bookplate
       end

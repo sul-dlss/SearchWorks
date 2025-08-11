@@ -5,7 +5,7 @@ module Stackmap
     def initialize(item:, stackmap_api_url:)
       @item = item
       @stackmap_api_url = stackmap_api_url
-      super
+      super()
     end
 
     attr_reader :item

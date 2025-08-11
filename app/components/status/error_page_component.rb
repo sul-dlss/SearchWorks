@@ -5,7 +5,7 @@ module Status
     renders_one :message
 
     def initialize(code:, header:)
-      super
+      super()
       @code = code
       @header = header
     end

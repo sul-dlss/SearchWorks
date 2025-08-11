@@ -5,7 +5,7 @@ module Record
     class EmbedComponent < ViewComponent::Base
       def initialize(druid:)
         @druid = druid
-        super
+        super()
       end
 
       attr_reader :druid

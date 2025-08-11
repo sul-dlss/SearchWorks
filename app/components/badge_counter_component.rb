@@ -2,7 +2,7 @@
 
 class BadgeCounterComponent < ViewComponent::Base
   def initialize(count = 0, what = nil, label: nil, classes: %w[badge rounded-pill], color: 'text-bg-light', additional_classes: [], **kwargs)
-    super(**kwargs)
+    super()
 
     @count = count
     @what = what

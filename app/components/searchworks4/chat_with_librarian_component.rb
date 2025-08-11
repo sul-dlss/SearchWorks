@@ -6,7 +6,7 @@ module Searchworks4
 
     # The default may change but this maintains the old design in other parts of the site
     def initialize(layout: 'inline', header_class: "h3")
-      super
+      super()
       @layout = layout
       @header_class = header_class
     end

@@ -6,7 +6,7 @@ module Searchworks4
 
     def initialize(current_context:)
       @current_context = current_context
-      super
+      super()
     end
 
     def render?

@@ -7,7 +7,7 @@ module AccessPanels
     # @params [Holdings::Library] library the holdings for the item at a particular library
     # @params [SolrDocument] document
     def initialize(label:, libraries:, document:)
-      super
+      super()
 
       @label = label
       @libraries = libraries
