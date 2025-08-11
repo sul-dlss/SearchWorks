@@ -154,7 +154,7 @@ elibrary.bwv-verlag.de
 zs-archiv.bwv-verlag.de
 pubs.asha.org
 www.budrich-journals.de
-tracfed.syr.edu
+tracreports.org
 www.elevenjournals.com
 asppublications.org
 www.asppublications.org
@@ -1627,3 +1627,8 @@ sciendo.com
 research.ebsco.com
 shs.cairn.info
 npcd.oversea.cnki.net
+mcb.armusicanthology.com
+documents.paratext.com
+appliedsciencecommons.net
+latamcommons.net
+journals.lwbooks.co.uk
