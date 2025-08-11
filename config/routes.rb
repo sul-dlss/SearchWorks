@@ -77,7 +77,29 @@ Rails.application.routes.draw do
   end
   post 'databases/:id/track' => 'databases#track', as: :track_databases
 
-  get 'govdocs' => 'catalog#index', defaults: { f: { genre_ssim: ['Government document'] } }, as: :govdocs
+  direct :database_search do |subject|
+    { controller: '/catalog', action: 'index', f: { db_az_subject: [subject], format_hsim: ['Database'] } }
+  end
+
+  direct :govdocs do
+    { controller: '/catalog', action: 'index', f: { genre_ssim: ['Government document'] } }
+  end
+
+  direct :theses_and_dissertations do
+    { controller: '/catalog', action: 'index', f: { genre_ssim: ['Thesis/Dissertation'] } }
+  end
+
+  direct :digital_collections do
+    { controller: '/catalog', action: 'index', f: { collection_type: ['Digital Collection'] } }
+  end
+
+  direct :iiif_items do
+    { controller: '/catalog', action: 'index', f: { iiif_resources: ['available'] } }
+  end
+
+  direct :collection_members do |document|
+    { controller: '/catalog', action: 'index', f: { collection: [document.prefixed_id] } }
+  end
 
   resources :hours, only: :show
 
@@ -100,6 +122,10 @@ Rails.application.routes.draw do
 
   resources :course_reserves, only: :index, path: "reserves"
 
+  direct :course_search do |course|
+    { controller: '/catalog', action: 'index', f: { courses_folio_id_ssim: [course.id] } }
+  end
+
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
     resources :articles, only: %i[index] do
       concerns :exportable
@@ -120,6 +146,10 @@ Rails.application.routes.draw do
 
   # Vanity URL used in development office mailings
   get '/funds/:fund', to: redirect { |path_params, _req| "/?f[fund_facet][]=#{path_params[:fund].upcase}" }
+
+  direct :bookplate_search do |bookplate|
+    { controller: '/catalog', action: 'index', f: { fund_facet: [bookplate.druid] }, view: 'gallery', sort: 'new-to-libs' }
+  end
 
   %w(404 500).each do |code|
     match code, to: 'errors#show', code: code, via: :all

@@ -67,10 +67,10 @@
         <% @course_reserves.each do |course| %>
           <tr>
             <td class="w-25">
-              <%= link_to course.course_number, search_catalog_path({f: { courses_folio_id_ssim: [course.id] }}), class: 'text-nowrap' %>
+              <%= link_to course.course_number, course_search_path(course), class: 'text-nowrap' %>
             </td>
             <td class="w-50">
-              <%= link_to course.name, search_catalog_path({f: { courses_folio_id_ssim: [course.id] }}), style: 'text-wrap: balance' %>
+              <%= link_to course.name, course_search_path(course), style: 'text-wrap: balance' %>
             </td>
             <td class="w-25">
               <%= safe_join course.instructors, ', ' %>

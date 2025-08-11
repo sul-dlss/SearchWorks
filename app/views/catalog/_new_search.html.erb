@@ -79,13 +79,13 @@
           <%= link_to 'Databases', databases_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
         </li>
         <li class="mb-2">
-          <%= link_to 'Digital collections', search_catalog_path(collections_search_params), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
+          <%= link_to 'Digital collections', digital_collections_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
         </li>
         <li class="mb-2">
           <%= link_to 'Government documents', govdocs_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
         </li>
         <li class="mb-2">
-          <%= link_to 'Theses and dissertations', search_catalog_path(f: {genre_ssim: ['Thesis/Dissertation']}), class: 'd-block', data: { action: "click->analytics#trackLink" } %>
+          <%= link_to 'Theses and dissertations', theses_and_dissertations_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
         </li>
       </ul>
     </section>
