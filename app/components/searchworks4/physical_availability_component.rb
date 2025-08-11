@@ -34,6 +34,18 @@ module Searchworks4
       document.holdings.libraries.one? && document.holdings.libraries.first.locations.one?
     end
 
+    def truncated_display_with_finding_aid?
+      document.marc_links.finding_aid&.any? && single_location? && aeon_pageable?(library: document.holdings.libraries.first, location: document.holdings.libraries.first.locations.first)
+    end
+
+    def aeon_pageable?(library:, location:)
+      LocationRequestLinkPolicy.new(location: location, library_code: library.code).aeon_pageable?
+    end
+
+    def truncate_location_items?(library:, location:)
+      aeon_pageable?(library: library, location: location) && document.marc_links.finding_aid&.any?
+    end
+
     # Group SAL* libraries together into a single category
     def library_groups
       @library_groups ||= begin
