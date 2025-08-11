@@ -93,18 +93,29 @@ RSpec.feature 'Article Searching' do
   end
 
   describe 'JSON API' do
-    it 'includes the fulltext_link_html data' do
+    it 'includes the link data' do
       stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
       visit articles_path(q: 'kittens', format: 'json')
-      results = JSON.parse(page.body)
-      expect(Capybara.string(results['response']['docs'][0]['fulltext_link_html'])).to have_link('View on detail page')
-      expect(Capybara.string(results['response']['docs'][1]['fulltext_link_html'])).to have_link('View full text')
+      results = JSON.parse(page.body).with_indifferent_access
+
+      aggregate_failures do
+        expect(results.dig('response', 'docs', 0, 'links')).to include hash_including(href: 'http://www.example.com/articles/abc123', link_text: 'View on detail page')
+        expect(Capybara.string(results['response']['docs'][0]['fulltext_link_html'])).to have_link('View on detail page')
+      end
+
+      aggregate_failures do
+        expect(results.dig('response', 'docs', 1, 'links')).to include hash_including(href: 'http://example.com', link_text: 'View full text')
+        expect(Capybara.string(results['response']['docs'][1]['fulltext_link_html'])).to have_link('View full text')
+      end
 
       expect(
         Capybara.string(results['response']['docs'][2]['fulltext_link_html'])
       ).to have_link('Find full text or request')
 
-      expect(Capybara.string(results['response']['docs'][3]['fulltext_link_html'])).to have_link('View/download PDF')
+      aggregate_failures do
+        expect(Capybara.string(results['response']['docs'][3]['fulltext_link_html'])).to have_link('View/download PDF')
+        expect(results.dig('response', 'docs', 3, 'links')).to include hash_including(href: 'http://www.example.com/articles/pdfyyy/pdf/fulltext', link_text: 'View/download PDF')
+      end
     end
   end
 end
