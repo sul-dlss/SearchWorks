@@ -14,7 +14,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       let(:loan_type) { Folio::Item::LoanType.new(Folio::Types.instance.get_type('loan_types').find { |t| t['name'] == 'Can circulate' }.slice('id', 'name')) }
       let(:effective_location) {
         Folio::Location.from_dynamic(
-          (Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'SAL3-STACKS' }).merge(
+          Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'SAL3-STACKS' }.merge(
             'institution' => Folio::Types.instance.get_type('institutions').find { |t| t['code'] == 'SU' },
             'campus' => Folio::Types.instance.get_type('campuses').find { |t| t['code'] == 'SUL' },
             'library' => Folio::Types.instance.get_type('libraries').find { |t| t['code'] == 'SAL3' }
@@ -33,7 +33,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       let(:loan_type) { Folio::Item::LoanType.new(Folio::Types.instance.get_type('loan_types').find { |t| t['name'] == 'Non-circulating' }.slice('id', 'name')) }
       let(:effective_location) {
         Folio::Location.from_dynamic(
-          (Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'SAL3-PAGE-GR' }).merge(
+          Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'SAL3-PAGE-GR' }.merge(
             'institution' => Folio::Types.instance.get_type('institutions').find { |t| t['code'] == 'SU' },
             'campus' => Folio::Types.instance.get_type('campuses').find { |t| t['code'] == 'SUL' },
             'library' => Folio::Types.instance.get_type('libraries').find { |t| t['code'] == 'SAL3' }
@@ -52,7 +52,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       let(:loan_type) { Folio::Item::LoanType.new(Folio::Types.instance.get_type('loan_types').find { |t| t['name'] == 'Can circulate' }.slice('id', 'name')) }
       let(:effective_location) {
         Folio::Location.from_dynamic(
-          (Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'BUS-CRES' }).merge(
+          Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'BUS-CRES' }.merge(
             'institution' => Folio::Types.instance.get_type('institutions').find { |t| t['code'] == 'SU' },
             'campus' => Folio::Types.instance.get_type('campuses').find { |t| t['code'] == 'GSB' },
             'library' => Folio::Types.instance.get_type('libraries').find { |t| t['code'] == 'BUSINESS' }
