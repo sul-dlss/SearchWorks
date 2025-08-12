@@ -28,12 +28,20 @@ module SearchResult
         "https://archives.stanford.edu/catalog?group=true&q=#{params[:q]}"
       end
 
+      def archive_search_json_url
+        "https://archives.stanford.edu/catalog?group=true&q=#{params[:q]}&format=json"
+      end
+
       def exhibits_search_url
         "https://exhibits.stanford.edu/search?q=#{params[:q]}"
       end
 
       def geo_search_url
         "https://earthworks.stanford.edu/?q=#{params[:q]}"
+      end
+
+      def geo_search_json_url
+        "https://earthworks.stanford.edu/?q=#{params[:q]}&format=json"
       end
 
       def name

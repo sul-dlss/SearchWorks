@@ -53,14 +53,14 @@
           </div>
         </div>
 
-        <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
+        <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_json_url %>">
           <%= link_to archive_search_url, class: 'pe-2' do %>
             Archival Collections at Stanford
           <% end %>
           <span class="badge rounded-pill bento-count" data-blacklight-result-count-target="count"></span>
         </div>
 
-        <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
+        <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_json_url %>">
           <%= link_to geo_search_url,  class: 'pe-2' do %>
             EarthWorks for geospatial data and maps
           <% end %>
