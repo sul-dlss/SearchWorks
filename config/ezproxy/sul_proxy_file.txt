@@ -1632,3 +1632,4 @@ documents.paratext.com
 appliedsciencecommons.net
 latamcommons.net
 journals.lwbooks.co.uk
+scite.ai
