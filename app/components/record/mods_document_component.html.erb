@@ -99,10 +99,10 @@
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Subjects') do %>
       <% if document.mods.subject.any?(&:values) %>
-        <div class="my-2" data-controller="list-toggle" data-list-toggle-target="group"><%= linked_mods_subjects(document.mods.subject) %></div>
+        <%= linked_mods_subjects(document.mods.subject) %>
       <% end %>
       <% if document.mods.genre.any?(&:values) %>
-        <div class="my-2" data-controller="list-toggle" data-list-toggle-target="group"><%= linked_mods_genres(document.mods.genre) %></div>
+        <%= linked_mods_genres(document.mods.genre) %>
       <% end %>
     <% end %>
 
