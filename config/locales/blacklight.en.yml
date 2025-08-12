@@ -61,9 +61,6 @@ en:
       inclusive: 'Includes ANY'
     bookmarks:
       no_bookmarks: 'You have no selections'
-      select_all: '<i class="fa fa-square-o"></i> <span class="d-none d-lg-inline">Select </span>all'
-      unselect_all: '<i class="fa fa-check-square-o"></i> <span class="d-none d-lg-inline">Unselect </span>all'
-      selection_title: 'selection'
       clear:
         success: 'Your selections have been deleted.'
     tools:
