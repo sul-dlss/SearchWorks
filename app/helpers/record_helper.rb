@@ -5,8 +5,8 @@ module RecordHelper
   # Sugar around changes now in mods_display that utilizes previous SearchWorks
   # RecordHelper behavior
   def linked_mods_subjects(subjects)
-    subjects.map do |subject|
-      mods_subject_field(subject) do |subject_text, buffer|
+    divs = subjects.map do |subject|
+      dt_dd = mods_subject_field(subject) do |subject_text, buffer|
         link_to(
           subject_text,
           search_catalog_path(
@@ -15,15 +15,19 @@ module RecordHelper
           )
         )
       end
-    end.join.html_safe
+
+      tag.div dt_dd, class: 'my-2', data: { controller: 'list-toggle', 'list-toggle-target': 'group' }
+    end
+
+    safe_join divs
   end
 
   ##
   # Sugar around changes now in mods_display that utilizes previous SearchWorks
   # RecordHelper behavior
   def linked_mods_genres(genres)
-    genres.map do |subject|
-      mods_genre_field(subject) do |subject_text, buffer|
+    divs = genres.map do |subject|
+      dt_dd = mods_genre_field(subject) do |subject_text, buffer|
         link_to(
           subject_text,
           search_catalog_path(
@@ -32,7 +36,11 @@ module RecordHelper
           )
         )
       end
-    end.join.html_safe
+
+      tag.div dt_dd, class: 'my-2', data: { controller: 'list-toggle', 'list-toggle-target': 'group' }
+    end
+
+    safe_join divs
   end
 
   ##
