@@ -118,8 +118,6 @@ Rails.application.routes.draw do
 
   resources :availability, only: [:show]
 
-  resources :recent_selections, only: :index
-
   resources :course_reserves, only: :index, path: "reserves"
 
   direct :course_search do |course|

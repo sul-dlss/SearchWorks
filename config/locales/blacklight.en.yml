@@ -64,8 +64,6 @@ en:
       select_all: '<i class="fa fa-square-o"></i> <span class="d-none d-lg-inline">Select </span>all'
       unselect_all: '<i class="fa fa-check-square-o"></i> <span class="d-none d-lg-inline">Unselect </span>all'
       selection_title: 'selection'
-      clear:
-        success: 'Your selections have been deleted.'
     tools:
       refworks_html: 'RefWorks'
       librarian_view: 'Librarian view'
