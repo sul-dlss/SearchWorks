@@ -7137,7 +7137,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
-    "details": {},
+    "details": {
+      "availabilityClass": "In_process"
+    },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
       "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
@@ -7146,8 +7148,8 @@
     "metadata": {
       "createdDate": "2025-02-12T23:12:18.316+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-02-12T23:12:18.316+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-08-13T00:43:36.500+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -11793,7 +11795,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
-    "details": {},
+    "details": {
+      "availabilityClass": "In_process"
+    },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
       "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
@@ -11802,8 +11806,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:49.395+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:49.395+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-08-13T00:44:06.806+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -14001,7 +14005,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
-    "details": {},
+    "details": {
+      "availabilityClass": "In_process"
+    },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
       "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
@@ -14010,8 +14016,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:49.677+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:49.677+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-08-13T00:44:52.104+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
