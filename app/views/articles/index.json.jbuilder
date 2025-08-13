@@ -5,6 +5,7 @@ docs = @presenter.documents.collect do |document| # rubocop:disable Metrics/Bloc
   link = ArticleFulltextLinkPresenter.new(document:, context: self).links.first # top priority one only
   composed_title = document['eds_composed_title']
   data = {
+    id: document.id,
     eds_title: document.eds_title,
     eds_publication_type: document.eds_publication_type,
     eds_source_title: document.eds_source_title,
