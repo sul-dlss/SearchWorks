@@ -17,10 +17,8 @@ class ArticleResult
 
   include ActiveModel::API
 
-  attr_accessor :title, :format, :journal, :author, :description, :link, :fulltext_link_html,
-                :pub_date, :composed_title, :fulltext_stanford_only
-
-  alias fulltext_stanford_only? fulltext_stanford_only
+  attr_accessor :title, :format, :journal, :author, :description, :link,
+                :pub_date, :composed_title, :resource_links
 
   def icon
     FORMAT_TO_ICON.fetch(format, 'notebook.svg')
@@ -44,5 +42,19 @@ class ArticleResult
 
     italic_match = composed_title.match(%r{\u003C/i\u003E(.*)}i)
     italic_match ? italic_match[1] : ''
+  end
+
+  def preferred_resource_link
+    resource_links&.first&.with_indifferent_access
+  end
+
+  def link_html
+    return unless preferred_resource_link
+
+    ApplicationController.helpers.link_to preferred_resource_link[:link_text], preferred_resource_link[:href]
+  end
+
+  def fulltext_stanford_only?
+    preferred_resource_link&.dig(:stanford_only)
   end
 end

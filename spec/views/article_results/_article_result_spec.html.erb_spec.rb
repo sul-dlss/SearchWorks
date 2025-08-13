@@ -15,7 +15,9 @@ RSpec.describe 'article_results/_article_result' do
         link: 'http://example.com',
         author: 'The Author',
         pub_date: '2022-06-15',
-        fulltext_link_html: '<a href="#">Link</a>'
+        resource_links: [
+          { href: '#', link_text: 'Link' }
+        ]
       )
     end
 
@@ -43,7 +45,9 @@ RSpec.describe 'article_results/_article_result' do
           link: 'http://example.com',
           author: 'The Author',
           pub_date: '2022-06-15',
-          fulltext_link_html: '<a href="#">Link</a>',
+          resource_links: [
+            { href: '#', link_text: 'Link' }
+          ],
           journal: 'Journal Title',
           composed_title: "\u003Ci\u003EJournal Title\u003C/i\u003E pages 11-23"
         )
@@ -62,7 +66,9 @@ RSpec.describe 'article_results/_article_result' do
           link: 'http://example.com',
           author: 'The Author',
           pub_date: '2022-06-15',
-          fulltext_link_html: '<a href="#">Link</a>',
+          resource_links: [
+            { href: '#', link_text: 'Link' }
+          ],
           journal: 'Journal Title',
           composed_title: "\u003CsearchLink fieldcode=\"JN\" term=\"%22EAST+BAY+TIMES%22\"\u003EEAST BAY TIMES\u003C/searchLink\u003E pages 11-23"
         )
