@@ -11,7 +11,22 @@ module MarcLinks
   end
 
   def preferred_online_links
-    marc_links&.fulltext || []
+    @preferred_online_links ||= prioritized_marc_fulltext_links
+  end
+
+  def prioritized_marc_fulltext_links
+    marc_fulltext_links = marc_links&.fulltext
+
+    return [] if marc_fulltext_links.blank?
+
+    # If there are no EBSCO links, the 856s might be in a useful order in the MARC record
+    return marc_fulltext_links unless marc_fulltext_links.any?(&:ebscohost?)
+
+    # But if there are EBSCO links, we want to prioritize them ourselves
+    open_access, other_links = marc_fulltext_links.partition(&:open_access?)
+    aggregator_links, licensed_links = other_links.partition(&:aggregator?)
+
+    licensed_links + open_access + aggregator_links
   end
 
   def has_finding_aid?
@@ -31,7 +46,7 @@ module MarcLinks
     end
 
     def to_link
-      Links::Link.new(link_struct.merge({ href:, link_text:, finding_aid: finding_aid?, sort: }))
+      Links::Link.new(link_struct.merge({ href: link_struct[:href], ezproxy_href: proxied_url, link_text:, finding_aid: finding_aid?, sort: }))
     end
 
     private
@@ -72,10 +87,6 @@ module MarcLinks
       else
         link_struct[:sort].to_s
       end
-    end
-
-    def href
-      proxied_url || link_struct[:href]
     end
 
     def proxied_url
