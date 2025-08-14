@@ -37,15 +37,18 @@
       <div class="masthead">
         <div class="container-lg">
           <div
-            class="d-flex flex-wrap align-items-end justify-content-between pt-3 pb-1 pb-md-3 gap-3"
+            class="d-flex flex-wrap align-items-center pt-3 pb-1 pb-md-3 gap-2"
           >
-            <div>
-              <div class="h1 my-0">
-                <% if controller.is_a? ArticlesController %>
-                  <a href="/articles">SearchWorks <span class="fw-semibold">Articles+</span></a>
-                <% else %>
-                  <a href="/">SearchWorks <span class="fw-semibold">Catalog</span></a>
-                <% end %>
+          <div class="d-flex align-items-center gap-2 flex-grow-1">
+              <span class="rosette-logo me-1 align-self-start flex-shrink-0" aria-hidden></span>
+              <div class="me-1 flex-grow-1">
+                <div class="h1 my-0">
+                  <% if controller.is_a? ArticlesController %>
+                    <a href="/articles">SearchWorks <span class="fw-semibold">Articles+</span></a>
+                  <% else %>
+                    <a href="/">SearchWorks <span class="fw-semibold">Catalog</span></a>
+                  <% end %>
+                </div>
               </div>
             </div>
             <div class="navbars ms-md-auto">
