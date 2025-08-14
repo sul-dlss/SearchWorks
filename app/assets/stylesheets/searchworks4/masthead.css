@@ -8,6 +8,12 @@
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
     --bs-link-hover-color-rgb: var(--stanford-cardinal-rgb);
   }
+
+  .navbar-nav {
+    @media (width >= 768px) {
+      margin-bottom: -0.5rem;
+    }
+  }
 }
 
 #user-util-collapse .dropdown-menu {
