@@ -19,7 +19,7 @@
     <% end %>
     <% if collection.marc_links.finding_aid.present? %>
       <div class="clearfix finding-aid">
-        <b class="me-1">Finding aid</b> <%= collection.marc_links.finding_aid.first.html.html_safe %>
+        <b class="me-1">Finding aid</b> <%= render Searchworks4::LinkComponent.new(link: collection.marc_links.finding_aid.first) %>
       </div>
     <% end %>
   </div>

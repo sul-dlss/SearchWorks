@@ -9,7 +9,7 @@
 
       <% link = document.preferred_online_links&.first %>
       <% if link.present? %>
-        <div><%= link.html&.html_safe %> <%= render StanfordOnlyPopoverComponent.new if link.stanford_only? %></div>
+        <div><%= render Searchworks4::LinkComponent.new(link: link) %></div>
       <% end %>
     </li>
   <% end %>

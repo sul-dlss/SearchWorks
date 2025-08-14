@@ -6,7 +6,7 @@
   <% if document.marc_links.finding_aid.present? %>
       <div class='access-panel-subsection flex-wrap flex-xl-nowrap d-flex row-gap-0 gap-3 align-items-baseline mb-3'>
         <h4 class="fs-15 text-nowrap text-uppercase text-secondary mb-0">Finding aid</h4>
-        <%= document.preferred_finding_aid.html.html_safe %>
+        <%= render Searchworks4::LinkComponent.new(link: document.preferred_finding_aid) %>
       </div>
   <% end %>
 

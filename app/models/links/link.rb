@@ -4,7 +4,7 @@ class Links
   class Link
     include ActionView::Helpers::TagHelper
 
-    attr_accessor :href, :file_id, :druid, :type, :sort
+    attr_accessor :href, :file_id, :druid, :type, :sort, :link_title
 
     def initialize(options = {})
       @additional_text = options[:additional_text]
@@ -23,16 +23,16 @@ class Links
       @type = options[:type]
     end
 
-    def html
-      @html ||= safe_join([link_html, casalini_text, additional_text_html].compact, ' ')
-    end
-
     def text
-      @text ||= safe_join([@link_text || link_host, casalini_text, additional_text_html].compact, ' ')
+      @text ||= safe_join([link_text, casalini_text, additional_text_html].compact, ' ')
     end
 
     def part_label(index:)
       @link_text || ("part #{index}" if index) || "part"
+    end
+
+    def link_text
+      @link_text || link_host
     end
 
     def fulltext?
@@ -56,8 +56,10 @@ class Links
     end
 
     def additional_text_html
-      content_tag(:span, @additional_text, class: 'additional-link-text') if @additional_text
+      content_tag(:span, additional_text, class: 'additional-link-text') if @additional_text
     end
+
+    attr_reader :additional_text
 
     def casalini_text
       '(source: Casalini)' if @casalini
@@ -77,24 +79,12 @@ class Links
       @href
     end
 
-    def link_html
-      tooltip_attr = if @link_title.present? && !stanford_only?
-                       {
-                         title: @link_title,
-                         data: { 'bs-placement': 'right', 'bs-toggle': 'tooltip' }
-                       }
-                     else
-                       {}
-                     end
-      content_tag(:a, @link_text || link_host, href: @href, **tooltip_attr)
-    end
-
     def as_json(*)
       {
         type: @type,
         href: @href,
         stanford_only: @stanford_only,
-        link_text: @link_text || link_host,
+        link_text: link_text,
         source: casalini_text,
         additional_text: @additional_text
       }
