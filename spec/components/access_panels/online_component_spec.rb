@@ -141,7 +141,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       render_inline(described_class.new(document:))
       expect(page).to have_css(".panel-online")
       expect(page).to have_css("ul.links li .stanford-only")
-      expect(page).to have_css("span.additional-link-text", text: "4 at one time")
+      expect(page).to have_css("div.additional-link-text", text: "4 at one time")
     end
     it 'renders a different heading for SDR items' do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
