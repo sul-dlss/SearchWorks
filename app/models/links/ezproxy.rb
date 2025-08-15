@@ -4,16 +4,20 @@
 #  and which prefix to apply.
 class Links
   class Ezproxy
-    SUL_RESTRICTED_REGEX = /available[ -]?to[ -]?stanford[ -]?affiliated[ -]?users[ -]?a?t?[:;.]?/i
     LANE_RESTRICTED_REGEX = /Access restricted to Stanford community/i
 
-    attr_reader :url, :link_title, :document
+    attr_reader :link, :document
 
-    def initialize(url:, link_title:, document:)
-      @url = url&.strip
-      @link_title = link_title
+    def initialize(link:, document:)
+      @link = link
       @document = document
     end
+
+    def url
+      @url ||= link.href.strip
+    end
+
+    delegate :link_title, to: :link
 
     # @return [String, nil] the proxy-prefixed URL or nil if the URL should not be proxied.
     def to_proxied_url
@@ -44,12 +48,12 @@ class Links
     def apply_lane_proxy_prefix?
       libraries.include?('LANE') &&
         ezproxied_hosts['LANE'].any?(link_host) &&
-        lane_restricted?
+        link.stanford_only?
     end
 
     def apply_sul_proxy_prefix?
       ezproxied_hosts[:default].any?(link_host) &&
-        sul_restricted?
+        link.stanford_only?
     end
 
     # Popular database links may not have any associated Solr documents
@@ -71,15 +75,6 @@ class Links
       rescue StandardError
         nil
       end
-    end
-
-    def lane_restricted?
-      LANE_RESTRICTED_REGEX.match?(link_title) ||
-        SUL_RESTRICTED_REGEX.match?(link_title)
-    end
-
-    def sul_restricted?
-      SUL_RESTRICTED_REGEX.match?(link_title)
     end
   end
 end

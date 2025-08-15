@@ -9,7 +9,7 @@
 
       <% link = document.preferred_online_links&.first %>
       <% if link.present? %>
-        <div><%= render Searchworks4::LinkComponent.new(link: link) %></div>
+        <div><%= render Searchworks4::LinkComponent.new(link: link, document: document) %></div>
       <% end %>
     </li>
   <% end %>

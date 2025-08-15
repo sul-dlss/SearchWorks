@@ -25,7 +25,7 @@
       <% end %>
       <% if @collection.has_finding_aid? %>
         <dt>Finding aid</dt>
-        <dd><%= render Searchworks4::LinkComponent.new(link: @collection.preferred_finding_aid) %></dd>
+        <dd><%= render Searchworks4::LinkComponent.new(link: @collection.preferred_finding_aid, document: @collection) %></dd>
       <% end %>
     </dl>
   <% end %>

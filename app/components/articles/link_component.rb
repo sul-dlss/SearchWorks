@@ -2,14 +2,6 @@
 
 module Articles
   class LinkComponent < Searchworks4::LinkComponent
-    attr_reader :document, :link
-
-    def initialize(link: nil, document: nil)
-      super(link: link)
-
-      @document = document
-    end
-
     def render?
       link.present? || document.html_fulltext?
     end

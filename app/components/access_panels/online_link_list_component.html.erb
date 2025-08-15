@@ -6,7 +6,7 @@
   <% links.each.with_index do |link, index| %>
     <%= tag.li class: "mt-2 #{'border-top' unless index == 0}" do %>
       <div>
-        <%= render Searchworks4::LinkComponent.new(link: link) %>
+        <%= render Searchworks4::LinkComponent.new(link: link, document: document) %>
       </div>
     <% end %>
   <% end %>

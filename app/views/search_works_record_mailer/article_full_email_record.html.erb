@@ -17,7 +17,7 @@
       <% if document.preferred_online_links.any? %>
         <h2>Online</h2>
         <% document.preferred_online_links.each do |link| %>
-          <%= render Searchworks4::LinkComponent.new(link: link) %><br/>
+          <%= render Searchworks4::LinkComponent.new(link: link, document: document) %><br/>
         <% end %>
       <% end %>
       <hr/>

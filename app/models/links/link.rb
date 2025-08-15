@@ -4,7 +4,7 @@ class Links
   class Link
     include ActionView::Helpers::TagHelper
 
-    attr_accessor :file_id, :druid, :type, :sort, :link_title
+    attr_accessor :href, :file_id, :druid, :type, :sort, :link_title
 
     def initialize(options = {})
       @additional_text = options[:additional_text]
@@ -13,8 +13,7 @@ class Links
       @file_id = options[:file_id]
       @finding_aid = options[:finding_aid]
       @fulltext = options[:fulltext]
-      @original_href = options[:href]
-      @ezproxy_href = options[:ezproxy_href]
+      @href = options[:href]
       @ill = options[:ill]
       @link_text = options[:link_text]
       @link_title = options[:link_title]
@@ -84,22 +83,18 @@ class Links
     end
 
     def link_host
-      return if @original_href.blank?
+      return if href.blank?
 
-      uri = URI.parse(Addressable::URI.encode(@original_href.strip))
+      uri = URI.parse(Addressable::URI.encode(href.strip))
       host = uri.host
       if host =~ Links::PROXY_REGEX && uri.query
         query = CGI.parse(uri.query)
         host = URI.parse(query['url'].first).host if query['url'].present?
       end
 
-      host || @original_href
+      host || href
     rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
-      @original_href
-    end
-
-    def href
-      @ezproxy_href || @original_href
+      href
     end
 
     def as_json(*)
