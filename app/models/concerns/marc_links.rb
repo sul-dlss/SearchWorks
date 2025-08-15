@@ -46,7 +46,7 @@ module MarcLinks
     end
 
     def to_link
-      Links::Link.new(link_struct.merge({ href: link_struct[:href], ezproxy_href: proxied_url, link_text:, finding_aid: finding_aid?, sort: }))
+      Links::Link.new(link_struct.merge({ href: link_struct[:href], link_text:, finding_aid: finding_aid?, sort: }))
     end
 
     private
@@ -87,12 +87,6 @@ module MarcLinks
       else
         link_struct[:sort].to_s
       end
-    end
-
-    def proxied_url
-      Links::Ezproxy.new(
-        url: link_struct[:href], link_title: link_struct[:link_title], document:
-      ).to_proxied_url
     end
   end
 end
