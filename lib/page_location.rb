@@ -15,10 +15,10 @@ class PageLocation
                         :databases
                       when course_reserve_parameters?
                         :course_reserve
-                      when sdr_parameters?
-                        :sdr
                       when digital_collections_parameters?
                         :digital_collections
+                      when sdr_parameters?
+                        :sdr
                       when dissertation_theses_parameters?
                         :dissertation_theses
                       when government_documents_parameters?

@@ -8,7 +8,6 @@ module Searchworks4
       state = search_state.deep_dup
 
       state = remove_filter_if_present(state, 'collection_type', 'Digital Collection')
-      state = add_filter_unless_present(state, 'library', 'SDR')
 
       search_catalog_path(state.to_h)
     end
@@ -16,7 +15,6 @@ module Searchworks4
     def digital_collections_only_path
       state = search_state.deep_dup
 
-      state = remove_filter_if_present(state, 'library', 'SDR')
       state = add_filter_unless_present(state, 'collection_type', 'Digital Collection')
 
       search_catalog_path(state.to_h)

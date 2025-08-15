@@ -90,7 +90,7 @@ Rails.application.routes.draw do
   end
 
   direct :digital_collections do
-    { controller: '/catalog', action: 'index', f: { collection_type: ['Digital Collection'] } }
+    { controller: '/catalog', action: 'index', f: { library: ['SDR'], collection_type: ['Digital Collection'] } }
   end
 
   direct :iiif_items do

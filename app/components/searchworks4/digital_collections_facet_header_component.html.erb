@@ -18,7 +18,7 @@
       <%= radio_button_tag(
             'digital_collection',
             'individual',
-            page_location.sdr?,
+            !page_location.digital_collections?,
             { data: { action: 'facet-checkboxes#toggleCheckbox' } }
           ) %>
       <%= link_to(digital_all_items_path, data: { action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1') do %>
