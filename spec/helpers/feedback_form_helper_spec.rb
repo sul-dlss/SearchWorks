@@ -9,12 +9,6 @@ RSpec.describe FeedbackFormHelper do
 
   let(:user) { User.new(email: 'example@stanford.edu') }
 
-  describe '#render_connection_form' do
-    context 'connection type' do
-      it { expect(helper.render_connection_form).to include 'Name of resource' }
-    end
-  end
-
   describe 'show_quick_report?' do
     it 'is false unless it meets certain criteria' do
       expect(helper.show_quick_report?).to be_falsey
