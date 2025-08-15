@@ -4,7 +4,7 @@ class Links
   class Link
     include ActionView::Helpers::TagHelper
 
-    attr_accessor :href, :file_id, :druid, :type, :sort, :link_title
+    attr_accessor :file_id, :druid, :type, :sort, :link_title
 
     def initialize(options = {})
       @additional_text = options[:additional_text]
@@ -13,7 +13,8 @@ class Links
       @file_id = options[:file_id]
       @finding_aid = options[:finding_aid]
       @fulltext = options[:fulltext]
-      @href = options[:href]
+      @original_href = options[:href]
+      @ezproxy_href = options[:ezproxy_href]
       @ill = options[:ill]
       @link_text = options[:link_text]
       @link_title = options[:link_title]
@@ -55,6 +56,23 @@ class Links
       @ill
     end
 
+    def open_access?
+      return false if @access.blank?
+      return false if @access == 'restricted'
+
+      true
+    end
+
+    def aggregator?
+      aggregator_hostnames.any? do |hostname|
+        link_host&.include?(hostname)
+      end
+    end
+
+    def ebscohost?
+      link_host&.include?('ebscohost.com')
+    end
+
     def additional_text_html
       content_tag(:span, additional_text, class: 'additional-link-text') if @additional_text
     end
@@ -66,28 +84,46 @@ class Links
     end
 
     def link_host
-      return if @href.blank?
+      return if @original_href.blank?
 
-      uri = URI.parse(Addressable::URI.encode(@href.strip))
+      uri = URI.parse(Addressable::URI.encode(@original_href.strip))
       host = uri.host
       if host =~ Links::PROXY_REGEX && uri.query
         query = CGI.parse(uri.query)
         host = URI.parse(query['url'].first).host if query['url'].present?
       end
-      host || @href
+
+      host || @original_href
     rescue URI::InvalidURIError, Addressable::URI::InvalidURIError
-      @href
+      @original_href
+    end
+
+    def href
+      @ezproxy_href || @original_href
     end
 
     def as_json(*)
       {
         type: @type,
-        href: @href,
+        href: href,
         stanford_only: @stanford_only,
         link_text: link_text,
         source: casalini_text,
         additional_text: @additional_text
       }
+    end
+
+    def aggregator_hostnames
+      %w[proquest.com
+         ebsco.com
+         search.ebscohost.com
+         gale.com
+         lexis.com
+         bioone.org
+         jstor.org
+         muse.jhu.edu
+         factiva.com
+         heinonline.org]
     end
   end
 end
