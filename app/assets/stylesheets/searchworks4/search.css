@@ -61,18 +61,31 @@
 }
 
 #search-navbar search {
+  order: 2;
+  max-width: 38rem;
   width: 100%;
-}
 
-@media (width >= 767.98px) {
-  #search-navbar search {
-    width: 60%;
+  @media (width >= 575.98px) {
+    order: 3;
+    max-width: 100%;
+  }
+
+  @media (width >= 991.98px) {
+    order: 2;
+    max-width: 38rem;
   }
 }
 
-@media (width >= 1199.98px) {
-  #search-navbar search {
-    width: 50%;
+/* When search mode & the advanced search link are on the top row and search wraps to the next,
+ this provides a fixed width for both rows */
+#search-navbar {
+  search, .advanced-search-link {
+    @media (width >= 767.98px) {
+      margin-right: calc(100vw - 45rem);
+    }
+    @media (width >= 991.98px) {
+      margin-right: 0;
+    }
   }
 }
 
