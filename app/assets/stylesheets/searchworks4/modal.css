@@ -8,6 +8,11 @@
   }
 }
 
+/* Hide the modal footer close button for modal content being viewed as a page. */
+#main-container .modal-footer button[data-bl-dismiss="modal"] {
+  display: none;
+}
+
 .modal:has(.feedback-form) {
   /* This footer padding value is not affected by or the same as --bs-modal-padding */
   .modal-footer {
