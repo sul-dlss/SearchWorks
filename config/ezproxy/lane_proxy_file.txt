@@ -32,6 +32,7 @@ accessphysiotherapy.mhmedical.com
 accesssurgery.mhmedical.com
 accp1.onlinelibrary.wiley.com
 accpjournals.onlinelibrary.wiley.com
+aclandanatomy.com
 aclanthology.org
 acr.amegroups.com
 acsess.onlinelibrary.wiley.com
@@ -1161,7 +1162,6 @@ pathogeneticsjournal.biomedcentral.com
 pathology.lwwhealthlibrary.com
 pds.lib.harvard.edu
 ped-rheum.biomedcentral.com
-pediatriccare.solutions.aap.org
 pediatrics.jmir.org
 pediatrics.lwwhealthlibrary.com
 pedsinreview.aappublications.org
@@ -1189,7 +1189,6 @@ pm.nlx.com
 pn.bmj.com
 pneumonia.biomedcentral.com
 policycommons.net
-policypress.universitypressscholarship.com
 politicalmoneyline.com
 poly.chemnetbase.com
 pophealthmetrics.biomedcentral.com
@@ -1519,7 +1518,6 @@ www.accessible.com
 www.accessscience.com
 www.accjournal.org
 www.achot.cz
-www.aclandanatomy.com
 www.acli.com
 www.aclweb.org
 www.acm.org
