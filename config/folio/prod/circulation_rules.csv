@@ -79,10 +79,10 @@ staff or staff-casual or fellow,book,,,,,SAL3-PAGE-MU-CIRC,1yearfixed-2renew-7da
 faculty,book,,,,,SAL3-PAGE-MU-CIRC,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$65 lost fee
 faculty,book,,,,,SAL3-PAGE-MP,1qtr-1renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
 faculty,book,,,,,SAL3-PAGE-LP,28day-2renew-7daygrace,Allow All,Default notice,No fines,$225 lost fee
-graduate or postdoctoral,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
+undergrad or graduate or postdoctoral,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 staff or staff-casual or fellow,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,,SAL3-HY-PAGE-EA or SAL3-ND-PAGE-EA,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$75 lost fee
-graduate or postdoctoral,book,,,,,SAL3-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
+undergrad or graduate or postdoctoral,book,,,,,SAL3-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 staff or staff-casual or fellow,book,,,,,SAL3-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,,SAL3-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$75 lost fee
 any,book,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging,Default notice,No fines,$75 lost fee
