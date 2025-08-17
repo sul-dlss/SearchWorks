@@ -110,24 +110,15 @@
     --bs-btn-active-border-color: var(--stanford-80-black);
   }
 
-  .bookmark-hover-icon, .bookmark-checked-icon, .saved-label, .saving-label {
+  .bookmark-hover-icon, .bookmark-checked-icon, .saved-label {
     display: none;
   }
 
-  &:has(button[disabled][data-bookmark-all-in-progress-value="true"]) {
-    .bookmark-checked-icon, .saving-label {
-      display: inline;
-    }
-    .bookmark-unchecked-icon, .saved-label, .save-label {
-      display: none;
-    }
-  }
-
-  &:has(button[disabled]:not([data-bookmark-all-in-progress-value="true"])) {
+  &:has(button[disabled]) {
     .bookmark-checked-icon, .saved-label {
       display: inline;
     }
-    .bookmark-unchecked-icon, .saving-label, .save-label {
+    .bookmark-unchecked-icon, .save-label {
       display: none;
     }
   }

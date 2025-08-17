@@ -36,37 +36,14 @@ export default class extends Controller {
       toastHtml =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
 
-    if (this.isToastEnabled()) {
-      window.dispatchEvent(new CustomEvent('show-toast', { detail: { html: toastHtml } }));
-    }
+    window.dispatchEvent(new CustomEvent('show-toast', { detail: { html: toastHtml } }));
 
     this.updateOtherPageBookmarks(event.target.dataset.documentId, event.detail.checked)
-    this.enableToast(this.element)
-  }
-
-  bookmarkWithoutToast() {
-    const bookmarkInput = this.bookmarkInput(this.element)
-    if (!this.isBookmarked()) {
-      this.suppressNextToast()
-      bookmarkInput.click()
-    }
   }
 
   isBookmarked() {
     const bookmarkInput = this.bookmarkInput(this.element)
     return bookmarkInput.checked == true
-  }
-
-  isToastEnabled() {
-    return this.element.dataset.bookmarkSuppressToast === undefined
-  }
-
-  suppressNextToast() {
-    this.element.dataset.bookmarkSuppressToast = true
-  }
-
-  enableToast() {
-    this.element.removeAttribute('data-bookmark-suppress-toast')
   }
 
   bookmarkInput(bookmarkElement) {
