@@ -107,7 +107,7 @@ gem 'rack-attack' # For throttle configuration
 gem 'redis'
 
 gem 'global_alerts'
-gem 'view_component'
+gem 'view_component', '~> 3.0'
 
 # Use for parsing FOLIO circulation rules
 gem "parslet", "~> 2.0"
