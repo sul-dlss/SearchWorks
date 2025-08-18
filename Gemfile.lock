@@ -98,14 +98,14 @@ GEM
     benchmark (0.4.1)
     bigdecimal (3.2.2)
     bindex (0.8.1)
-    blacklight (9.0.0.beta7)
+    blacklight (9.0.0.beta6)
       globalid
       i18n (>= 1.7.0)
       jbuilder (~> 2.7)
       kaminari (>= 0.15)
       ostruct (>= 0.3.2)
       rails (>= 7.0, < 9)
-      view_component (>= 3.0, < 5.0)
+      view_component (~> 3.9)
       zeitwerk
     blacklight-hierarchy (6.8.0)
       blacklight (>= 7.18, < 9)
@@ -730,7 +730,7 @@ PLATFORMS
 DEPENDENCIES
   actioncable
   axe-core-rspec
-  blacklight (~> 9.0.0.beta6)
+  blacklight (= 9.0.0.beta6)
   blacklight-hierarchy (~> 6.0)
   blacklight-marc (~> 8.0)
   blacklight-ris (~> 0.2.0)
