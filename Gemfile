@@ -79,7 +79,7 @@ gem 'newrelic_rpm'
 
 gem "coderay"
 
-gem 'blacklight', '~> 9.0.0.beta6'
+gem 'blacklight', '9.0.0.beta6'
 gem "blacklight-marc", "~> 8.0"
 gem "blacklight_advanced_search", '~> 8.0.0.alpha'
 gem "blacklight_range_limit", "~> 9.0"
@@ -107,7 +107,7 @@ gem 'rack-attack' # For throttle configuration
 gem 'redis'
 
 gem 'global_alerts'
-gem 'view_component'
+gem 'view_component', '~> 3.0'
 
 # Use for parsing FOLIO circulation rules
 gem "parslet", "~> 2.0"
