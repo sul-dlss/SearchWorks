@@ -7,7 +7,7 @@ module Searchworks4
     delegate :link_text, :link_title, :casalini_text, :additional_text, :stanford_only?, to: :link
 
     def initialize(link:, document: nil)
-      super
+      super()
       @link = link
       @document = document
     end

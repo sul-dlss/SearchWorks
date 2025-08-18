@@ -16,7 +16,7 @@ module SearchResult
     end
 
     def before_render
-      set_slot(:thumbnail, nil, render_placeholder: true, render_collection_thumbnail_from_member: true)
+      with_thumbnail(render_placeholder: true, render_collection_thumbnail_from_member: true)
 
       super
     end
