@@ -5,23 +5,27 @@
       <p class='vernacular-title h2 fw-normal mt-3'><%= presenter.vernacular_title %></p>
     <% end %>
 
-    <div class='upper-record-metadata mb-5'>
+    <div class='upper-record-metadata mb-4 mb-lg-5'>
       <div><%= helpers.render_resource_icon presenter.formats %> <%= presenter.document_format %></div>
     </div>
   <% end %>
 
   <% component.with_embed do %>
-    <div class="mb-5">
-      <%= case
-        when document.managed_purls.many?
-          render 'catalog/managed_purl_embed', document: document
-        when document.druid && (!document.mods? || document.published_content?)
-          render Record::Item::EmbedComponent.new(druid: document.druid)
-        end %>
-      <% if document.is_a_collection? %>
-        <%= render 'collection_members/placeholder', document: document %>
-      <% end %>
-    </div>
+    <% if document.managed_purls.many? ||
+          (document.druid && (!document.mods? || document.published_content?)) ||
+          document.is_a_collection? %>
+      <div class="mb-4 mb-lg-5">
+        <%= case
+          when document.managed_purls.many?
+            render 'catalog/managed_purl_embed', document: document
+          when document.druid && (!document.mods? || document.published_content?)
+            render Record::Item::EmbedComponent.new(druid: document.druid)
+          end %>
+        <% if document.is_a_collection? %>
+          <%= render 'collection_members/placeholder', document: document %>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 
   <% component.with_metadata do %>

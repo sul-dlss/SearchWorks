@@ -2,7 +2,7 @@
 
 module Searchworks4
   class DocumentSectionLayout < ViewComponent::Base
-    def initialize(title:, classes: ['mb-5'], heading_level: :h2, dl_classes: 'dl-horizontal')
+    def initialize(title:, classes: ['mb-4 mb-lg-5'], heading_level: :h2, dl_classes: 'dl-horizontal')
       @title = title
       @classes = classes
       @heading_level = heading_level

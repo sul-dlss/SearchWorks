@@ -6,7 +6,7 @@
       <p class='vernacular-title h2 fw-normal mt-3'><%= presenter.vernacular_title %></p>
     <% end %>
 
-    <div class='upper-record-metadata mb-5'>
+    <div class='upper-record-metadata mb-4 mb-lg-5'>
       <div>
         <span class="me-1 align-text-bottom"><%= helpers.render_resource_icon presenter.formats %></span><%= presenter.document_format %>
         <% if presenter.document_format.present? && document.marc_field('3003abcefg').values.any? %>&mdash;<% end %> <%= safe_join(document.marc_field('3003abcefg').values, ' ').presence %>
@@ -19,22 +19,24 @@
   <% end %>
 
   <% component.with_embed do %>
-    <div class="mb-5">
-      <% if document.is_a_collection? %>
-        <%= render 'collection_members/placeholder', document: document %>
-      <% else %>
-        <%= case
-          when document.managed_purls.many?
-            render 'catalog/managed_purl_embed', document: document
-          when document.druid
-            render Record::Item::EmbedComponent.new(druid: document.druid)
-          end %>
-      <% end%>
-    </div>
+    <% if document.is_a_collection? || document.managed_purls.many? || document.druid %>
+      <div class="mb-4 mb-lg-5">
+        <% if document.is_a_collection? %>
+          <%= render 'collection_members/placeholder', document: document %>
+        <% else %>
+          <%= case
+            when document.managed_purls.many?
+              render 'catalog/managed_purl_embed', document: document
+            when document.druid
+              render Record::Item::EmbedComponent.new(druid: document.druid)
+            end %>
+        <% end%>
+      </div>
+    <% end %>
   <% end %>
 
   <% component.with_metadata do %>
-    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description', classes: 'mb-5') do %>
+    <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description', classes: 'mb-4 mb-lg-5') do %>
       <%= render_if_present document.marc_field('245c') %>
 
       <%- uniform_title = helpers.get_uniform_title(document) -%>

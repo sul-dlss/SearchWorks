@@ -17,11 +17,11 @@
         <span itemprop="name"><%= @presenter.heading %></span>
       </h1>
 
-      <div class="mb-5">
+      <div class="mb-4 mb-lg-5">
         <span class="align-text-bottom me-1"><%= resource_icon %></span><%= @document.eds_publication_type || @document.eds_document_type %>
       </div>
 
-      <button class="btn btn-sm py-0 btn-secondary d-lg-none my-4" data-bs-toggle="offcanvas" data-bs-target="#aside" aria-controls="aside">See availability</button>
+      <button class="btn btn-secondary d-lg-none mb-4" data-bs-toggle="offcanvas" data-bs-target="#aside" aria-controls="aside">See availability</button>
 
       <%= document_metadata %>
     <% end %>
