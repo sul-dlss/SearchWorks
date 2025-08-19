@@ -502,6 +502,10 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
 
+    # Configuration for autocomplete suggester
+    config.autocomplete_enabled = true
+    config.autocomplete_path = 'suggest'
+
     # View type group config
     config.view.gallery(document_component: SearchResult::DocumentGalleryComponent)
 
@@ -566,6 +570,13 @@ class CatalogController < ApplicationController
 
   def search_bar
     render layout: false
+  end
+
+  # This override is only for testing out multiple suggest implementations and can be removed later  # Returns the dropdown list for autocomplete
+  def suggest
+    @request_params = { q: params[:q] }
+    @suggestions = Blacklight::Solr::SuggestRepository.new(blacklight_config).suggestions(@request_params) 
+    render 'suggest', layout: false
   end
 
   private
