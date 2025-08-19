@@ -8,7 +8,7 @@ module Searchworks4
     # This method returns the text that will show up for the selected advanced search clauses,
     # inclusive facets, and negative facets.
     def prefix
-      @facet_item_presenter.facet_item_presenter.respond_to?(:prefix) ? @facet_item_presenter.facet_item_presenter.prefix : nil
+      @facet_item_presenter.try(:prefix)
     end
   end
 end
