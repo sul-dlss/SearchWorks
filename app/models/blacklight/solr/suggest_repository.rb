@@ -5,6 +5,9 @@ module Blacklight::Solr
     # @param [Hash] request_params
     # @return {suggester_name: [suggest response]}
     def suggestions(request_params)
+      request_params['suggest.dictionary'] = suggester_names
+      # We may not need this but just in case
+      request_params['suggest.q'] = request_params[:q]
       suggest_results = connection.send_and_receive(suggest_handler_path, params: request_params) 
       results = {}
       suggester_names.each do |suggester_name|
