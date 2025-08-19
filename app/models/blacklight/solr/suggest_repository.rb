@@ -6,6 +6,7 @@ module Blacklight::Solr
     # @return {suggester_name: [suggest response]}
     def suggestions(request_params)
       request_params['suggest.dictionary'] = suggester_names
+      request_params['suggest.build'] = true
       # We may not need this but just in case
       request_params['suggest.q'] = request_params[:q]
       suggest_results = connection.send_and_receive(suggest_handler_path, params: request_params) 
