@@ -1,4 +1,4 @@
 <div class="recaptcha" data-recaptcha-target="tags" data-recaptcha-action-value="<%= action %>" data-recaptcha-site-key-value="<%= site_key %>">
   This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-  <%= recaptcha_v3 action:, inline_script:, site_key: %>
+  <%= helpers.recaptcha_v3 action:, inline_script:, site_key: %>
 </div>

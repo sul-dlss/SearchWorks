@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Searchworks4
-  class NegativeFacetItemPresenter < Blacklight::FacetItemPresenter
+  class NegativeConstraintPresenter < SimpleDelegator
     # This method returns what to display for the inclusive facet constraint
     # preceding the title and value of the facet.
     def prefix

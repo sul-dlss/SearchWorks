@@ -52,7 +52,7 @@
   <% if @documents.any? {|d| d.export_formats.key?(:ris) } %>
     <li>
       <%= link_to 'In RIS format (Zotero)', bookmarks_path(:ris, search_state.params_for_search),
-                  download: File.basename(url_for(search_state.to_h.merge(format: 'ris'))) %>
+                  download: ::File.basename(url_for(search_state.to_h.merge(format: 'ris'))) %>
     </li>
   <% end %>
 
@@ -67,7 +67,7 @@
     <li>
       <%= link_to 'To EndNote',
                   bookmarks_path(:endnote, search_state.params_for_search),
-                  download: File.basename(bookmarks_path(:endnote, search_state.params_for_search)) %>
+                  download: ::File.basename(bookmarks_path(:endnote, search_state.params_for_search)) %>
     </li>
   <% end %>
 </ul>
