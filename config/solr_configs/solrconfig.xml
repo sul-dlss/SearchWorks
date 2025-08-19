@@ -293,7 +293,7 @@
         isbn_search^1.6
         issn_search^1.6
         id_search
-        callnum_search
+        callnum_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search
         druid
         oclc
         item_barcodes_search
@@ -365,7 +365,7 @@
         pub_date_search^2
         isbn_search^1.6
         issn_search^1.6
-        callnum_search
+        callnum_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search
         id_search
         druid
         oclc
@@ -437,7 +437,7 @@
         bib_search^7
         pub_date_search^10
         issn_search^7.5
-        callnum_search^7
+        callnum_search^7 alphanum_callnum_search^7 spec_callnum_search^7 sudoc_callnum_search^7 undoc_callnum_search^7
         physical^5                     vern_physical^5
         award_search^5
         collection_search^5

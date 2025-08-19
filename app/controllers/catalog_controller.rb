@@ -362,9 +362,9 @@ class CatalogController < ApplicationController
       field.label = "Call number"
       field.include_in_advanced_search = false
       field.advanced_parse = false
-      field.solr_parameters = { defType: 'lucene' }
-      field.solr_local_parameters = {
-        df: 'callnum_search'
+      field.solr_parameters = {
+        qf: 'callnum_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search',
+        pf: 'callnum_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search'
       }
     end
 
