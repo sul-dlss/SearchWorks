@@ -31,27 +31,6 @@ module Searchworks4
       end +  render(@facet_constraint_component.with_collection(advanced_clause_presenters.to_a, **@facet_constraint_component_options))
     end
 
-    # Extending the core method to allow using custom inclusive and negative facet item presenters
-    # to handle the display of prefixes for advanced search results
-    def constraint_presenters
-      return to_enum(:constraint_presenters) unless block_given?
-
-      @search_state.filters.map do |facet|
-        facet_field_presenter = helpers.facet_field_presenter(facet.config, {})
-        facet.each_value do |val|
-          next if val.blank?
-
-          if val.is_a?(Array)
-            yield inclusive_facet_constraint_presenter(facet_field_presenter, facet.config, val, facet.key) if val.any?(&:present?)
-          elsif negative_facet?(facet.config)
-            yield negative_facet_constraint_presenter(facet_field_presenter, facet.config, val)
-          else
-            yield facet_constraint_presenter(facet_field_presenter, facet.config, val)
-          end
-        end
-      end
-    end
-
     private
 
     # This method returns the presenter for advanced search clauses
@@ -72,8 +51,12 @@ module Searchworks4
 
     # This method returns an extension of the Negative Facet Item Presenter
     # that implements a prefix method
-    def negative_facet_constraint_presenter(*)
-      Searchworks4::NegativeConstraintPresenter.new(facet_constraint_presenter(*))
+    def facet_constraint_presenter(facet_field_presenter, facet_config, facet_item)
+      if negative_facet?(facet_config)
+        Searchworks4::NegativeConstraintPresenter.new(super)
+      else
+        super
+      end
     end
 
     # Is this a negative facet situation e.g. Language != English?
