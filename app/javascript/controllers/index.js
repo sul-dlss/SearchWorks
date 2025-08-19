@@ -13,6 +13,9 @@ application.register("articles-facet-more", ArticlesFacetMoreController)
 import ArticlesFacetPaginateController from "./articles_facet_paginate_controller"
 application.register("articles-facet-paginate", ArticlesFacetPaginateController)
 
+import AutoCompleteController from "./auto_complete_controller"
+application.register("auto-complete", AutoCompleteController)
+
 import AvailabilityController from "./availability_controller"
 application.register("availability", AvailabilityController)
 
