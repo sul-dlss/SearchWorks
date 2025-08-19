@@ -33,19 +33,20 @@ module Searchworks4
 
     # Extending the core method to allow using custom inclusive and negative facet item presenters
     # to handle the display of prefixes for advanced search results
-    def facet_item_presenters
-      return to_enum(:facet_item_presenters) unless block_given?
+    def constraint_presenters
+      return to_enum(:constraint_presenters) unless block_given?
 
       @search_state.filters.map do |facet|
+        facet_field_presenter = helpers.facet_field_presenter(facet.config, {})
         facet.each_value do |val|
           next if val.blank?
 
           if val.is_a?(Array)
-            yield inclusive_facet_item_presenter(facet.config, val, facet.key) if val.any?(&:present?)
+            yield inclusive_facet_constraint_presenter(facet_field_presenter, facet.config, val, facet.key) if val.any?(&:present?)
           elsif negative_facet?(facet.config)
-            yield negative_facet_item_presenter(facet.config, val, facet.key)
+            yield negative_facet_constraint_presenter(facet_field_presenter, facet.config, val, facet.key)
           else
-            yield facet_item_presenter(facet.config, val)
+            yield facet_constraint_presenter(facet_field_presenter, facet.config, val)
           end
         end
       end
@@ -65,14 +66,20 @@ module Searchworks4
 
     # This method returns an extension of the inclusive facet item presenter
     # that enables the prefix method
-    def inclusive_facet_item_presenter(facet_config, facet_item, facet_field)
-      Searchworks4::InclusiveFacetItemPresenter.new(facet_item, facet_config, helpers, facet_field)
+    def inclusive_facet_constraint_presenter(facet_field_presenter, facet_config, facet_item, facet_field)
+      facet_config.constraint_presenter.new(
+        facet_item_presenter: Searchworks4::InclusiveFacetItemPresenter.new(facet_item, facet_config, helpers, facet_field),
+        field_label: facet_field_presenter.label
+      )
     end
 
     # This method returns an extension of the Negative Facet Item Presenter
     # that implements a prefix method
-    def negative_facet_item_presenter(facet_config, facet_item, facet_field)
-      Searchworks4::NegativeFacetItemPresenter.new(facet_item, facet_config, helpers, facet_field)
+    def negative_facet_constraint_presenter(facet_field_presenter, facet_config, facet_item, facet_field)
+      facet_config.constraint_presenter.new(
+        facet_item_presenter: Searchworks4::NegativeFacetItemPresenter.new(facet_item, facet_config, helpers, facet_field),
+        field_label: facet_field_presenter.label
+      )
     end
 
     # Is this a negative facet situation e.g. Language != English?
