@@ -2,7 +2,7 @@
   <div class="mb-2 d-flex flex-wrap col-gap-3 row-gap-1 justify-content-between align-items-center location-request" data-availability-target="location">
     <h4 class="fs-15 mb-0"><%= render Searchworks4::PhysicalAvailabilityComponent::LocationComponent.new(location: location, document: document, classes: [], suppress_off_campus: false) %></h4>
     <% summary = capture { render AccessPanels::LibraryLocationPopoverComponent.new(mhld: location.mhld) } %>
-    <% request_link = capture { render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link text-nowrap py-0]) } %>
+    <% request_link = capture { render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link text-nowrap ms-auto py-0]) } %>
 
     <% if summary.present? %>
       <div class="w-100 d-flex justify-content-between align-items-center">
