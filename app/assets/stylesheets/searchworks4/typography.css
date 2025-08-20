@@ -155,6 +155,14 @@ aside,
   overflow: hidden;
 }
 
+.truncate-6 {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
   .truncate-md-3 {
     display: -webkit-box;

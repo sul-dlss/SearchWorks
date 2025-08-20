@@ -2,7 +2,11 @@
   <% component.with_title(classes: 'h3 text-secondary') { 'Access conditions' } %>
   <% component.with_body do %>
     <% document.mods.accessCondition.each do |accessCondition| %>
-      <%= render ModsDisplay::FieldComponent.new(field: accessCondition) %>
+      <%= tag.div data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-6'} do %>
+        <dl class="mb-0" data-long-text-target="text">
+          <%= render ModsDisplay::FieldComponent.new(field: accessCondition) %>
+        </dl>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
