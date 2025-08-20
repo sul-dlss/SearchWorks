@@ -16,6 +16,7 @@ RSpec.describe AccessPanels::RelatedComponent, type: :component do
     it 'renders an OCLC link' do
       expect(page).to have_css('section.panel-related', visible: true)
       expect(page).to have_css('li.worldcat a', text: 'Find it at other libraries via WorldCat')
+      expect(page).to have_link('Find it at other libraries via WorldCat', href: /12345/)
     end
   end
 
