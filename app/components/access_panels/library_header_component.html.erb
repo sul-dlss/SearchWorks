@@ -2,11 +2,13 @@
   <h3 class="h4 p-0 m-0 fw-semibold">
     <%= link_to_library_about_page class: 'fw-semibold icon-link icon-link-hover stretched-link' %>
   </h3>
-  <div class="small" data-location-hours-target="hours">
-    <% if library.holding_library? %>
-      <div class="placeholder col-5"></div>
-    <% else %>
-      (no holding library)
-    <% end %>
-  </div>
+  <% if fetch_hours? %>
+    <div class="small" data-location-hours-target="hours">
+      <% if library.holding_library? %>
+        <div class="placeholder col-5"></div>
+      <% else %>
+        (no holding library)
+      <% end %>
+    </div>
+  <% end %>
 </div>
