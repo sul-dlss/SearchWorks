@@ -10,7 +10,7 @@ module RecordHelper
         link_to(
           subject_text,
           search_catalog_path(
-            q: "\"#{[buffer, subject_text.strip].flatten.join(' ')}\"",
+            q: [buffer, subject_text.strip].flatten.map { |term| "\"#{term}\"" }.join(' '),
             search_field: 'subject_terms'
           )
         )
