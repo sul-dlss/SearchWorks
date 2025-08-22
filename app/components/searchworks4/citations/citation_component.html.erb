@@ -1,39 +1,9 @@
 <%= render Searchworks4::RecordSummaryComponent.new(presenter:) %>
 
 <div class="modal-body" data-controller="citation-format">
-  <h3>Copy citation</h3>
-
-  <% unless unavailable? || preferred_only? %>
-  <div class="row mb-3">
-    <div class="col-auto">
-      <label for="citation-format-select" class="col-form-label fw-bold">Select format</label>
-    </div>
-    <div class="col-auto">
-      <select id="citation-format-select" data-action="change->citation-format#reveal" class="form-select" style="width: unset;" aria-controls="<%= citations.keys.map { |style| "citation-format-#{style}" }.join(' ') %>">
-        <% citations.keys.each do |style| %>
-          <option value="citation-format-<%= style %>" ><%= t("searchworks.citations.styles.#{style}") %></option>
-        <% end %>
-      </select>
-    </div>
-  </div>
-  <% end %>
-
-  <% citations.each do |style, citation| %>
-    <div class="mb-4 bg-light p-2" data-citation-format-target="tab" data-controller="copy-text" id="citation-format-<%= style %>" <%= 'hidden' unless style == default_style %>>
-      <% unless unavailable? %>
-        <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm lh-1 ms-4" data-action="copy-text#copy">Copy</button></h5>
-      <% end %>
-      <% Array(citation).each do |cite| %>
-        <div class="mb-2" data-copy-text-target="text">
-          <%= cite %>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-
   <% unless unavailable? %>
   <h3>Export citation</h3>
-  <ul class="list-unstyled d-flex gap-3 export-citations">
+  <ul class="list-unstyled d-flex gap-3 export-citations mb-4">
     <% if exports_ris? %>
       <% if eds_ris_export? %>
         <li>
@@ -73,4 +43,35 @@
     <% end %>
   </ul>
   <% end %>
+
+  <h3>Copy citation</h3>
+
+  <% unless unavailable? || preferred_only? %>
+  <div class="row mb-3">
+    <div class="col-auto">
+      <label for="citation-format-select" class="col-form-label fw-bold">Select format</label>
+    </div>
+    <div class="col-auto">
+      <select id="citation-format-select" data-action="change->citation-format#reveal" class="form-select" style="width: unset;" aria-controls="<%= citations.keys.map { |style| "citation-format-#{style}" }.join(' ') %>">
+        <% citations.keys.each do |style| %>
+          <option value="citation-format-<%= style %>" ><%= t("searchworks.citations.styles.#{style}") %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+  <% end %>
+
+  <% citations.each do |style, citation| %>
+    <div class="mb-4 bg-light p-2" data-citation-format-target="tab" data-controller="copy-text" id="citation-format-<%= style %>" <%= 'hidden' unless style == default_style %>>
+      <% unless unavailable? %>
+        <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm lh-1 ms-4" data-action="copy-text#copy">Copy</button></h5>
+      <% end %>
+      <% Array(citation).each do |cite| %>
+        <div class="mb-2" data-copy-text-target="text">
+          <%= cite %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
 </div>

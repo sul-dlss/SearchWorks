@@ -3,8 +3,8 @@
     <h2 class="modal-title">Availability</h2>
   <% end %>
   <% component.with_body do %>
-    <%= render Searchworks4::RecordSummaryComponent.new(presenter: document_presenter(@document)) %>
-
+  <%= render Searchworks4::RecordSummaryComponent.new(presenter: document_presenter(@document)) %>
+  <div class="modal-body">
     <div class="accordion availability-modal px-3 mt-3" data-controller="availability-search">
       <div class="input-group my-3">
         <label class="input-group-text bg-body border-end-0 pe-0" for="availability-search-input">
@@ -18,5 +18,6 @@
       <%= render Searchworks4::AvailabilityAccordionComponent.new(library: @document.holdings.sal_libraries.first, document: @document, toggled_library: params[:library], libraries: @document.holdings.sal_libraries) %>
       <%= turbo_frame_tag "availability_#{dom_id(@document)}", src: availability_path(@document) %>
     </div>
+  </div>
   <% end %>
 <% end %>
