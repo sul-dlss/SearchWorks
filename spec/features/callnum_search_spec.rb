@@ -89,20 +89,40 @@ RSpec.describe 'Call num search', :js do
     end
 
     context 'when the item is not from SPEC' do
-      it 'matches searches with at least the first two terms' do
-        visit search_catalog_path
-        fill_in 'q', with: 'ZVC 12345'
-        select 'Call number', from: 'search_field'
-        click_button 'search'
-        expect(page).to have_text 'An object'
+      context 'when the first term has five or fewer alpha characters' do
+        it 'matches the first two terms' do
+          visit search_catalog_path
+          fill_in 'q', with: 'ZVC 12345'
+          select 'Call number', from: 'search_field'
+          click_button 'search'
+          expect(page).to have_text 'An object'
+        end
+
+        it 'does not match a search for the first term' do
+          visit search_catalog_path
+          fill_in 'q', with: 'ZVC'
+          select 'Call number', from: 'search_field'
+          click_button 'search'
+          expect(page).to have_text 'No results found'
+        end
       end
 
-      it 'does not match a search with only the first term' do
-        visit search_catalog_path
-        fill_in 'q', with: 'ZVC'
-        select 'Call number', from: 'search_field'
-        click_button 'search'
-        expect(page).to have_text 'No results found'
+      context 'when the first term is more than five alpha characters or is numeric' do
+        it 'matches a single leading numeric term' do
+          visit search_catalog_path
+          fill_in 'q', with: '3781'
+          select 'Call number', from: 'search_field'
+          click_button 'search'
+          expect(page).to have_text 'An object'
+        end
+
+        it 'matches a single leading alpha term' do
+          visit search_catalog_path
+          fill_in 'q', with: 'vrooman'
+          select 'Call number', from: 'search_field'
+          click_button 'search'
+          expect(page).to have_text 'An object'
+        end
       end
 
       it 'matches call numbers that look like ETDs' do

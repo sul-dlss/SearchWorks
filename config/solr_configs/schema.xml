@@ -755,11 +755,11 @@
       </analyzer>
     </fieldType>
 
-    <!-- field designed for ALPHANUM (and CALDOC) call number searching -->
+    <!-- field designed for ALPHANUM (including CALDOC) call number searching -->
     <fieldType name="callnumAlphanum" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
       <analyzer type="index">
-        <!-- Remove space between the first two terms, we want two or more terms to match -->
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
+        <!-- Remove space between the first two terms only if first term is 5 alpha characters or less -->
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^([A-Za-z]{1,5})\s+(\w+)" replacement="$1$2"/>
         <!-- Replace punctuation with a space -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
         <!-- Normalize whitespace -->
@@ -768,7 +768,7 @@
         <filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
       <analyzer type="query">
-        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^(\w+)\s+(\w+)" replacement="$1$2"/>
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="^([A-Za-z]{1,5})\s+(\w+)" replacement="$1$2"/>
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="([\p{Punct}])" replacement=" "/>
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
         <tokenizer class="solr.KeywordTokenizerFactory" />
