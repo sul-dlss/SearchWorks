@@ -437,6 +437,7 @@
         bib_search^7
         pub_date_search^10
         issn_search^7.5
+        exact_callnum_search^7.5
         callnum_search^7 alphanum_callnum_search^7 spec_callnum_search^7 sudoc_callnum_search^7 undoc_callnum_search^7
         physical^5                     vern_physical^5
         award_search^5

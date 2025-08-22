@@ -209,6 +209,7 @@
     <field name="spec_callnum_search" type="callnumSpec" indexed="true" stored="true" multiValued="true"/>
     <field name="sudoc_callnum_search" type="callnumSudoc" indexed="true" stored="true" multiValued="true"/>
     <field name="undoc_callnum_search" type="callnumUndoc" indexed="true" stored="true" multiValued="true"/>
+    <field name="callnum_exact_search" type="callnumExact" indexed="true" stored="true" multiValued="true"/>
 
     <!-- for nearby on shelf:  term lookups to get next X alpha sorted terms -->
     <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
@@ -784,6 +785,16 @@
         <filter class="solr.LowerCaseFilterFactory" />
       </analyzer>
       <analyzer type="query">
+        <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
+        <tokenizer class="solr.KeywordTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- field designed for exact call number searching -->
+    <fieldType name="callnumExact" class="solr.TextField" omitNorms="true" omitTermFreqAndPositions="true">
+      <analyzer>
+        <!-- Normalize whitespace -->
         <charFilter class="solr.PatternReplaceCharFilterFactory" pattern="\s{2,}" replacement=" "/>
         <tokenizer class="solr.KeywordTokenizerFactory" />
         <filter class="solr.LowerCaseFilterFactory" />
