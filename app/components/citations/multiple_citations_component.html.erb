@@ -1,6 +1,32 @@
-<h3>Copy citations</h3>
-
 <div data-controller="citation-format">
+  <% unless all_unavailable? %>
+  <h3 class="mb-3">Export citations</h3>
+  <ul class="list-unstyled d-flex gap-3 export-citations mb-4">
+    <% if @documents.any? {|d| d.export_formats.key?(:ris) } %>
+      <li>
+        <%= link_to 'In RIS format (Zotero)', bookmarks_path(:ris, search_state.params_for_search),
+                    download: ::File.basename(url_for(search_state.to_h.merge(format: 'ris'))) %>
+      </li>
+    <% end %>
+
+    <% if @documents.any? { |d| d.exports_as? :refworks_marc_txt } %>
+      <li>
+        <%= link_to "To RefWorks",
+                    refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, search_state.params_for_search))%>
+      </li>
+    <% end %>
+
+    <% if @documents.any? { |d| d.exports_as? :endnote } %>
+      <li>
+        <%= link_to 'To EndNote',
+                    bookmarks_path(:endnote, search_state.params_for_search),
+                    download: ::File.basename(bookmarks_path(:endnote, search_state.params_for_search)) %>
+      </li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <h3>Copy citations</h3>
   <% unless preferred_or_unavailable_citations_only? %>
   <div class="d-flex align-items-center gap-2 mb-3">
     <label for="citation-format" class="fw-bold">Select format</label>
@@ -45,30 +71,3 @@
   </div>
   <% end %>
 </div>
-
-<% unless all_unavailable? %>
-<h3 class="mt-4 mb-3">Export citations</h3>
-<ul class="list-unstyled d-flex gap-3 export-citations">
-  <% if @documents.any? {|d| d.export_formats.key?(:ris) } %>
-    <li>
-      <%= link_to 'In RIS format (Zotero)', bookmarks_path(:ris, search_state.params_for_search),
-                  download: ::File.basename(url_for(search_state.to_h.merge(format: 'ris'))) %>
-    </li>
-  <% end %>
-
-  <% if @documents.any? { |d| d.exports_as? :refworks_marc_txt } %>
-    <li>
-      <%= link_to "To RefWorks",
-                  refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, search_state.params_for_search))%>
-    </li>
-  <% end %>
-
-  <% if @documents.any? { |d| d.exports_as? :endnote } %>
-    <li>
-      <%= link_to 'To EndNote',
-                  bookmarks_path(:endnote, search_state.params_for_search),
-                  download: ::File.basename(bookmarks_path(:endnote, search_state.params_for_search)) %>
-    </li>
-  <% end %>
-</ul>
-<% end %>
