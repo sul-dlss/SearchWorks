@@ -18,8 +18,5 @@
       <%= render Searchworks4::AvailabilityAccordionComponent.new(library: @document.holdings.sal_libraries.first, document: @document, toggled_library: params[:library], libraries: @document.holdings.sal_libraries) %>
       <%= turbo_frame_tag "availability_#{dom_id(@document)}", src: availability_path(@document) %>
     </div>
-    <div class="modal-footer">
-      <button type="button" data-bl-dismiss="modal" class="btn btn-outline-primary">Close</button>
-    </div>
   <% end %>
 <% end %>
