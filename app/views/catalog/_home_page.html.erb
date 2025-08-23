@@ -70,24 +70,24 @@
 
       <ul class="list-unstyled" data-controller="analytics" data-analytics-category-value="featured-resource">
         <li class="mb-3">
-          <%= link_to 'Course reserves', course_reserves_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          Books, media and digital resources set aside for classes
+          <%= link_to 'Course reserves', course_reserves_path, data: { action: "click->analytics#trackLink" } %>
+          <p>Books, media and digital resources set aside for classes</p>
         </li>
         <li class="mb-3">
-          <%= link_to 'Databases', databases_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          Curated collections of digital resources, organized by topic, from academic journals, newspapers, and other trusted sources
+          <%= link_to 'Databases', databases_path, data: { action: "click->analytics#trackLink" } %>
+          <p>Curated collections of digital resources, organized by topic, from academic journals, newspapers, and other trusted sources</p>
         </li>
         <li class="mb-3">
-          <%= link_to 'Digital collections', digital_collections_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          Images, maps, data and more in the Stanford Digital Repository (SDR)
+          <%= link_to 'Digital collections', digital_collections_path, data: { action: "click->analytics#trackLink" } %>
+          <p>Images, maps, data and more in the Stanford Digital Repository (SDR)</p>
         </li>
         <li class="mb-3">
-          <%= link_to 'Government documents', govdocs_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          State, federal, United Nations and European Union government documents
+          <%= link_to 'Government documents', govdocs_path, data: { action: "click->analytics#trackLink" } %>
+          <p>State, federal, United Nations and European Union government documents</p>
         </li>
         <li class="mb-3">
-          <%= link_to 'Theses and dissertations', theses_and_dissertations_path, class: 'd-block', data: { action: "click->analytics#trackLink" } %>
-          Student work held in the Stanford University Libraries and the Stanford Digital Repository (SDR)
+          <%= link_to 'Theses and dissertations', theses_and_dissertations_path, data: { action: "click->analytics#trackLink" } %>
+          <p>Student work held in the Stanford University Libraries and the Stanford Digital Repository (SDR)</p>
         </li>
       </ul>
     </section>
