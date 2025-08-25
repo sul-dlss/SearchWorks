@@ -54,28 +54,28 @@
         </div>
 
         <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= archive_search_url %>">
-          <%= link_to archive_search_url, class: 'pe-2' do %>
+          <%= link_to archive_search_url, class: 'me-2' do %>
             Archival Collections at Stanford
           <% end %>
           <span class="badge rounded-pill bento-count" data-blacklight-result-count-target="count"></span>
         </div>
 
         <div class="mb-2" data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= geo_search_url %>">
-          <%= link_to geo_search_url,  class: 'pe-2' do %>
+          <%= link_to geo_search_url,  class: 'me-2' do %>
             EarthWorks for geospatial data and maps
           <% end %>
           <span class="badge rounded-pill bento-count" data-blacklight-result-count-target="count"></span>
         </div>
 
         <div class="mb-2" data-controller="bento-result-count" data-bento-result-count-url-value="<%= bento_search_url('libguides') %>">
-          <%= link_to '', class: 'pe-2', data: {'bento-result-count-target': 'link'} do %>
+          <%= link_to '', class: 'me-2', data: {'bento-result-count-target': 'link'} do %>
             Guides to collections, tools, and services
           <% end %>
           <span class="badge rounded-pill bento-count" data-bento-result-count-target="count"></span>
         </div>
 
         <div data-controller="blacklight-result-count" data-blacklight-result-count-url-value="<%= exhibits_search_url %>">
-          <%= link_to exhibits_search_url, class: 'pe-2' do %>
+          <%= link_to exhibits_search_url, class: 'me-2' do %>
             Spotlight Exhibits
           <% end %>
           <span class="badge rounded-pill bento-count" data-blacklight-result-count-target="count"></span>
