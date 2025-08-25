@@ -7,7 +7,7 @@ RSpec.feature 'Article Searching' do
     scenario 'renders results page if search parameters are present' do
       article_search_for('Kittens')
 
-      expect(page).to have_title 'SearchWorks catalog, Kittens'
+      expect(page).to have_title 'Search for Kittens'
       expect(current_url).to match(%r{/articles\?.*&q=Kittens})
     end
   end
