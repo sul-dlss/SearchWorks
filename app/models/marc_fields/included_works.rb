@@ -15,7 +15,7 @@ class IncludedWorks < MarcField
     href_text = []
 
     before_t, *after_t = relevant_subfields.slice_before { |subfield| subfield.code == 't' }.to_a
-    within_t, *extra_fields = after_t.flatten.slice_after { |subfield| subfield.value =~ /[\.|;]\s*$/ }.to_a
+    within_t, *extra_fields = after_t.flatten.slice_after { |subfield| subfield.value =~ /[.|;]\s*$/ }.to_a
 
     # With values until we get to subfield t
     text_only_subfields = ["e", "j", "4"]
