@@ -14,7 +14,7 @@ RSpec.feature "Image Collection", :js do
     page.find('button#search').click
 
     expect(page).to have_css("h3 a", text: "Image Collection1") #title
-    expect(page).to have_css("div.truncate-2", text: /Nunc venenatis et odio ac elementum/) # truncated summary
+    expect(page).to have_css("div[data-controller='long-text']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
   end
 
   scenario "Record view" do
