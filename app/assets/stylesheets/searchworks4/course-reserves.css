@@ -9,3 +9,11 @@
     --bs-table-bg-type: var(--bs-table-striped-bg);
   }
 }
+
+.col-course-id {
+  width: 15%;
+}
+
+.col-description {
+  width: 45%;
+}
