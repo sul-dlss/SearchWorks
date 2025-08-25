@@ -89,6 +89,14 @@
   }
 }
 
+@media (width >= 575.98px) {
+  .search-card .advanced-search-link {
+    height: 0;
+    order: -1;
+    margin-inline-start: auto;
+  }
+}
+
 #advanced-search-form {
   input:focus-visible {
     box-shadow: none;
