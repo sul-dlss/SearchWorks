@@ -18,7 +18,7 @@ RSpec.feature "Search Results Page" do
     end
 
     it 'draws the page' do
-      expect(page).to have_title "SearchWorks catalog, Access: Online"
+      expect(page).to have_title "Search for Access: Online in SearchWorks catalog"
 
       within('ul.pagination') do
         expect(page).to have_link 'Previous'
@@ -32,7 +32,7 @@ RSpec.feature "Search Results Page" do
     end
 
     it 'draws the page' do
-      expect(page).to have_title "SearchWorks catalog, broccoli, Access: Online"
+      expect(page).to have_title "broccoli, Access: Online"
     end
   end
 
@@ -52,7 +52,7 @@ RSpec.feature "Search Results Page" do
     end
 
     it 'uses the friendly library name rather than the code' do
-      expect(page).to have_title "SearchWorks catalog, Library: Hoover Institution Library & Archives"
+      expect(page).to have_title "Library: Hoover Institution Library & Archives"
     end
   end
 
@@ -62,7 +62,7 @@ RSpec.feature "Search Results Page" do
     end
 
     it 'uses the friendly library name rather than the code' do
-      expect(page).to have_title "SearchWorks catalog, book, Library: Hoover Institution Library & Archives"
+      expect(page).to have_title "book, Library: Hoover Institution Library & Archives"
     end
   end
 
