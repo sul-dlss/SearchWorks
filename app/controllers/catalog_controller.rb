@@ -505,6 +505,7 @@ class CatalogController < ApplicationController
     # Configuration for autocomplete suggester
     config.autocomplete_enabled = true
     config.autocomplete_path = 'suggest'
+    config.autocomplete_suggester = 'defaultAnalyzing'
 
     # View type group config
     config.view.gallery(document_component: SearchResult::DocumentGalleryComponent)
@@ -573,11 +574,11 @@ class CatalogController < ApplicationController
   end
 
   # This override is only for testing out multiple suggest implementations and can be removed later  # Returns the dropdown list for autocomplete
-  def suggest
-    @request_params = { q: params[:q] }
-    @suggestions = Blacklight::Solr::SuggestRepository.new(blacklight_config).suggestions(@request_params) 
-    render 'suggest', layout: false
-  end
+  # def suggest
+  #  @request_params = { q: params[:q] }
+  #  @suggestions = Blacklight::Solr::SuggestRepository.new(blacklight_config).suggestions(@request_params) 
+  #  render 'suggest', layout: false
+  # end
 
   private
 
