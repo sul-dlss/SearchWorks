@@ -2,12 +2,28 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="show-more-button"
 export default class extends Controller {
+  static values = { style: { type: String, default: 'icon-button' } }
   connect() {
-    this.element.textContent = 'Show more'
-    this.element.classList.add('btn', 'btn-link', 'p-0', 'show-more-button')
+    switch (this.styleValue) {
+      case 'text-button':
+        this.setupTextButton()
+        break;
+      default:
+        this.setupIconButton()
+    }
     this.element.ariaDisabled = 'true'
     this.element.ariaExpanded = 'false'
     this.element.ariaLabel = "This button is disabled because assistive technologies already announced the content."
+  }
+
+  setupTextButton() {
+    this.element.textContent = 'more'
+    this.element.classList.add('btn', 'btn-link', 'p-0', 'm-0', 'show-more-button')
+  }
+
+  setupIconButton() {
+    this.element.textContent = 'Show more'
+    this.element.classList.add('btn', 'btn-link', 'p-0', 'show-more-button')
     this.element.prepend(this.buttonIcon())
   }
 
@@ -30,17 +46,27 @@ export default class extends Controller {
   }
 
   expand() {
-    this.element.innerText = "Show less"
     this.element.ariaExpanded = true
-    this.element.prepend(this.buttonIcon())
+
+    if (this.styleValue == 'icon-button') {
+      this.element.innerText = "Show less"
+      this.element.prepend(this.buttonIcon())
+    } else {
+      this.element.textContent = 'less'
+    }
 
     this.dispatch('expand');
   }
 
   collapse() {
-    this.element.innerText = "Show more"
     this.element.ariaExpanded = false
-    this.element.prepend(this.buttonIcon())
+
+    if (this.styleValue == 'icon-button') {
+      this.element.innerText = "Show more"
+      this.element.prepend(this.buttonIcon())
+    } else {
+      this.element.textContent = 'more'
+    }
 
     this.dispatch('collapse');
   }

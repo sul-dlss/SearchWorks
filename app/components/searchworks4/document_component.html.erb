@@ -65,8 +65,10 @@
             <% end %>
           </ul>
 
-          <div class="truncate-2">
-            <%= render TocAndSummaryComponent.new(document:) %>
+          <div data-controller="long-text" data-long-text-truncate-class="truncate-2" data-long-text-show-more-button-style-value="text-button">
+            <div data-long-text-target="text">
+              <%= render TocAndSummaryComponent.new(document:) %>
+            </div>
           </div>
         <% end %>
 

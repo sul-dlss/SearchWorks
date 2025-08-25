@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["button", "text"]
   static classes = ["truncate"]
+  static values = { showMoreButtonStyle: String }
 
   connect() {
     this.textTarget.classList.add(this.truncateClass);
@@ -35,6 +36,7 @@ export default class extends Controller {
     const button = document.createElement('button');
     button.dataset.controller = 'show-more-button'
     button.dataset.action = 'show-more-button#toggle';
+    button.dataset.showMoreButtonStyleValue = this.showMoreButtonStyleValue;
 
     this.element.dataset.action = `${this.element.dataset.action} show-more-button:expand->long-text#expand show-more-button:collapse->long-text#collapse`;
 
