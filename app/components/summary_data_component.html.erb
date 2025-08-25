@@ -1,7 +1,9 @@
-<div class='truncate-2'>
-  <% if render_toc_and_summary? %>
-    <%= render TocAndSummaryComponent.new(document:) %>
-  <% else %>
-    <%= mods_abstract %>
-  <% end %>
+<div data-controller="long-text" data-long-text-truncate-class="truncate-2" data-long-text-show-more-button-style-value="text-button">
+  <div data-long-text-target="text">
+    <% if render_toc_and_summary? %>
+      <%= render TocAndSummaryComponent.new(document:) %>
+    <% else %>
+      <%= mods_abstract %>
+    <% end %>
+  </div>
 </div>
