@@ -299,7 +299,10 @@
     --bs-link-hover-color-rgb: var(--stanford-black-rgb);
     --bs-light-rgb: transparent;
     --bs-accordion-inner-border-radius: 0;
-    box-shadow: none;
+
+    &:not(:focus-visible) {
+      box-shadow: none;
+    }
 
     div {
       flex: 1;
