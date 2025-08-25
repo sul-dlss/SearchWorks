@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
-Specialist = Data.define(:title, :full_title, :research_areas, :photo_url, :email) do
+Specialist = Data.define(:name, :full_title, :research_areas, :description, :photo_url, :email, :types) do
   def self.stopwords
     %w[a an and are as at be by for from has have in is it of on or that the to with]
   end
 
   def self.tokenize(term)
+    return unless term
+
     term.downcase.gsub("'s", 's').gsub(/[[:punct:]]/, ' ').split(/\s+/).excluding(stopwords)
   end
 
@@ -21,12 +23,25 @@ Specialist = Data.define(:title, :full_title, :research_areas, :photo_url, :emai
   end
 
   def self.load_specialists
-    Rails.root.join('config/subject_specialist.jsonl').readlines.filter_map do |line|
-      data = JSON.parse(line).slice('title', 'fullTitle', 'researchAreas', 'photoUrl', 'email').transform_keys(&:underscore).symbolize_keys
-      next if data[:research_areas] == '$undefined'
+    response = JSON.parse(Rails.root.join('config/subject_specialist.json').read)
 
-      Specialist.new(**data)
+    response['results'].filter_map do |data|
+      specialist = Specialist.from_sws_json(data)
+
+      specialist if specialist.subject_specialist?
     end
+  end
+
+  def self.from_sws_json(data)
+    new(
+      name: "#{data['firstName']} #{data['lastName']}",
+      full_title: data['fullTitle'],
+      research_areas: data['research'],
+      photo_url: data.dig('photo', 'url'),
+      email: data['email'],
+      types: data['personTypes']&.pluck('name'),
+      description: data['body']
+    )
   end
 
   # calculates the inverse document frequency (IDF) for each token across all specialists, which can then be used for scoring partial matches
@@ -49,8 +64,12 @@ Specialist = Data.define(:title, :full_title, :research_areas, :photo_url, :emai
   end
 
   def search_tokens
-    (research_areas + [title, full_title]).flat_map do |x|
+    (research_areas + [name, full_title]).flat_map do |x|
       Specialist.tokenize(x)
     end
+  end
+
+  def subject_specialist?
+    types&.include?('Subject specialist')
   end
 end
