@@ -52,13 +52,13 @@
       <table id="course-reserves-browse" class="table" data-course-reserves-target="table">
         <thead>
           <tr>
-            <th>
+            <th class="w-25">
               Course ID
             </th>
-            <th>
+            <th class="w-50">
               Description
             </th>
-            <th>
+            <th class="w-25">
               Instructor(s)
             </th>
           </tr>
@@ -66,13 +66,13 @@
         <tbody data-course-reserves-target="tableBody">
         <% @course_reserves.each do |course| %>
           <tr>
-            <td class="w-25">
+            <td>
               <%= link_to course.course_number, course_search_path(course), class: 'text-nowrap' %>
             </td>
-            <td class="w-50">
+            <td>
               <%= link_to course.name, course_search_path(course), style: 'text-wrap: balance' %>
             </td>
-            <td class="w-25">
+            <td>
               <%= safe_join course.instructors, ', ' %>
             </td>
           </tr>
