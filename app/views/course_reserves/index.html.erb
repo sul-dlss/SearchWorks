@@ -16,7 +16,7 @@
 
 
 <div class="row mt-4">
-  <div class="col-lg-9 col-md-12">
+  <div class="col-xxl-9">
     <section class="">
       <div class="sort-and-per-page d-flex justify-content-between align-items-center mb-2">
         <div data-course-reserves-target="results"></div>
@@ -52,13 +52,13 @@
       <table id="course-reserves-browse" class="table" data-course-reserves-target="table">
         <thead>
           <tr>
-            <th>
+            <th class="col-course-id">
               Course ID
             </th>
-            <th>
+            <th class="col-description">
               Description
             </th>
-            <th>
+            <th class="col-instructor">
               Instructor(s)
             </th>
           </tr>
@@ -66,13 +66,13 @@
         <tbody data-course-reserves-target="tableBody">
         <% @course_reserves.each do |course| %>
           <tr>
-            <td class="w-25">
+            <td>
               <%= link_to course.course_number, course_search_path(course), class: 'text-nowrap' %>
             </td>
-            <td class="w-50">
+            <td>
               <%= link_to course.name, course_search_path(course), style: 'text-wrap: balance' %>
             </td>
-            <td class="w-25">
+            <td>
               <%= safe_join course.instructors, ', ' %>
             </td>
           </tr>
