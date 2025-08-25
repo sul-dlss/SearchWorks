@@ -85,7 +85,7 @@ module Searchworks4
       end
 
       def render?
-        !(@suppress_off_campus && location.code.include?('SAL3-'))
+        !(@suppress_off_campus && location.code&.include?('SAL3-'))
       end
 
       def stackmappable?
