@@ -147,7 +147,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
       render_inline(described_class.new(document:))
       expect(page).to have_css '.panel-online'
-      expect(page).to have_css 'h2', text: 'Also available at'
+      expect(page).to have_css 'h2', text: 'Also online at'
     end
 
     describe "database" do
