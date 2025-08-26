@@ -14,11 +14,6 @@ RSpec.describe Feedback::FeedbackFormFieldsComponent, type: :component do
     render_inline(described_class.new(form: form, request_referer: 'http://localhost:3000'))
   end
 
-  it 'displays the reporting alert box with specific information' do
-    expect(page).to have_css("div.alert div.text-body div.col-8", text: "Reporting from")
-    expect(page).to have_css("div.alert div.text-body div.col-4 a", text: "Check system status")
-  end
-
   it 'contains specific form fields' do
     expect(page).to have_css("textarea[name='message'][required='required']")
     expect(page).to have_css("input[name='to'][required='required']")

@@ -6,16 +6,29 @@
         </div>
     <% end %>
     <% component.with_body do %>
-        <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
-            <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'turbo:submit-end->modal#close submit->recaptcha#refresh' } do |f| %>
-                <div class="modal-body">
-                    <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary me-2 close" data-bl-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </div>
+        <% if request.referer %>
+            <div class="bg-dark-subtle py-1 px-4 border-top">
+                Reporting from <%= request.referer %>
+            </div>
+
+            <% if catalog_document_id %>
+                <turbo-frame id="document-summary-<%= catalog_document_id %>" src="<%= document_summary_path(catalog_document_id)%>">
+                    <div class="modal-header bg-light py-5"></div>
+                </turbo-frame>
             <% end %>
         <% end %>
+
+        <div class="modal-body">
+            <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
+                <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'turbo:submit-end->modal#close submit->recaptcha#refresh' } do |f| %>
+                    <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
+                <% end %>
+            <% end %>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary me-2 close" data-bl-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" form="feedback-form">Send</button>
+        </div>
     <% end %>
 <% end %>

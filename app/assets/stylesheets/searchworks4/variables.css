@@ -6,6 +6,8 @@
 
   /* https://github.com/sul-dlss/component-library/pull/180 */
   --stanford-digital-green: rgb(var(--stanford-digital-green-rgb));
+
+  --bs-dark-bg-subtle: var(--stanford-10-black);
 }
 
 /* TODO: Remove after https://github.com/twbs/bootstrap/issues/41569 is resolved*/

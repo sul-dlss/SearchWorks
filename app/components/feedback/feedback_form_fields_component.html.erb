@@ -2,22 +2,26 @@
         <%= @form.hidden_field :user_agent, 'data-feedback-form-target': 'agent' %>
         <%= @form.hidden_field :viewport, 'data-feedback-form-target': 'viewport' %>
         <%= @form.hidden_field :last_search, 'data-feedback-form-target': 'lastSearch' %>
-        <div role="alert" class="alert alert-info d-flex shadow-sm align-items-center" >
-            <div
-            class="bi bi-info-circle-fill fs-3 me-3 align-self-center d-flex justify-content-center">
-            </div>
-            <div class="text-body row w-100">
-                <div class="col-8">
-                    Reporting from <%= @request_referer %>
-                </div>
-                <div class="col-4 text-end">
-                    <%= link_to 'Check system status', 'http://library-status.stanford.edu'  %>
-                </div>
-            </div>
+
+        <div class="mb-3 d-flex justify-content-start gap-3">
+            <strong class="fw-semibold">Other helpful resources:</strong>
+
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                    <%= link_to("https://library.stanford.edu/ask/email/connection-problems") do %>
+                    Report a connection problem<i class="bi bi-arrow-up-right ms-1" aria-hidden></i>
+                    <% end %>
+                </li>
+                <li class="list-inline-item">
+                    <%= link_to 'http://library-status.stanford.edu' do%>
+                        Check system status<i class="bi bi-arrow-up-right ms-1" aria-hidden></i>
+                    <% end %>
+                </li>
+            </ul>
         </div>
 
-        <div class="pt-3 mb-3 row">
-            <%= render Searchworks4::ChatWithLibrarianComponent.new(layout: 'inline', header_class: "h5") %>
+        <div class="mb-3 row">
+            <%= render Searchworks4::ChatWithLibrarianComponent.new(layout: 'inline', header_class: "fw-semibold") %>
         </div>
 
         <div class="mb-3 row">

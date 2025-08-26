@@ -65,4 +65,15 @@ RSpec.feature "Feedback form modal", :js do
     expect(page).to have_css('.alert', text: "Thank you!\nYour feedback has been sent.")
     expect(page).to have_no_css("div.toast-body", text: "Thank you!\nYour feedback has been sent.")
   end
+
+  scenario 'opening the feedback form from a catalog#show page includes the document summary' do
+    visit solr_document_path('1')
+    click_link "Feedback"
+
+    expect(page).to have_css("#feedback-form", visible: true)
+    within ".record-summary" do
+      expect(page).to have_text('An object')
+      expect(page).to have_text('Book')
+    end
+  end
 end
