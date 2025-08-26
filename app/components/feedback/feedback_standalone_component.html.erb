@@ -2,6 +2,12 @@
     <h2 class="fw-normal"><%= t('blacklight.feedback_form.title') %></h2>
 
     <div class="feedback-form-container">
+        <% if request.referer %>
+            <div class="bg-dark-subtle py-1 px-2">
+                Reporting from <%= request.referer %>
+            </div>
+        <% end %>
+
         <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
         <% form_with url: feedback_form_path, method: :post, class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'submit->recaptcha#refresh' } do |f| %>
                 <%= f.hidden_field :form_format, value: 'standalone' %>

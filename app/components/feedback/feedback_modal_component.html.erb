@@ -6,7 +6,13 @@
         </div>
     <% end %>
     <% component.with_body do %>
+        <% if request.referer %>
+            <div class="bg-dark-subtle py-1 px-4 border-top">
+                Reporting from <%= request.referer %>
+            </div>
+        <% end %>
         <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
+
             <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'turbo:submit-end->modal#close submit->recaptcha#refresh' } do |f| %>
                 <div class="modal-body">
                     <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
