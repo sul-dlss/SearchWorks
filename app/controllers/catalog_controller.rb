@@ -519,6 +519,15 @@ class CatalogController < ApplicationController
     end
   end
 
+  def summary
+    @document = search_service.fetch(params[:id])
+    respond_to do |format|
+      format.html do
+        render 'summary', layout: false
+      end
+    end
+  end
+
   # Overridden from Blacklight
   def citation
     @documents = search_service.fetch(Array(params[:id]))

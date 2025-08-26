@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get '/view/:id', to: redirect { |path_params, _req| "/view/#{path_params[:id].delete_prefix('a')}" }
   end
 
+  get "view/:id/summary" => "catalog#summary", as: :document_summary
   get "view/:id/librarian_view" => "catalog#librarian_view", as: :librarian_view
   get "view/:id/:location/stackmap" => "catalog#stackmap", as: :stackmap
   get "view/:id/availability" => "catalog#availability_modal", :as => :availability_modal

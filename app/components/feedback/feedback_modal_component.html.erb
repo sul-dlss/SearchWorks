@@ -10,6 +10,12 @@
             <div class="bg-dark-subtle py-1 px-4 border-top">
                 Reporting from <%= request.referer %>
             </div>
+
+            <% if catalog_document_id %>
+                <turbo-frame id="document-summary-<%= catalog_document_id %>" src="<%= document_summary_path(catalog_document_id)%>">
+                    <div class="modal-header bg-light py-5"></div>
+                </turbo-frame>
+            <% end %>
         <% end %>
 
         <div class="modal-body">
