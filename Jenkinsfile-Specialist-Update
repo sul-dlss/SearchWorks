@@ -1,0 +1,38 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('harvest') {
+      steps {
+        checkout scm
+
+        sshagent (['sul-devops-team']){
+          sh '''#!/bin/bash -l
+          export PATH=/ci/home/bin:$PATH
+          export HUB_CONFIG=/ci/home/config/hub
+
+          # Load RVM
+          rvm use 3.4.1@sul-bento-app --create
+          gem install bundler
+
+          git switch main
+          git pull
+
+          bundle install --without production
+
+          # Harvest
+          bin/rake load_subject_specialists || exit 1
+
+          # Make a PR
+          git checkout -B specialists-update
+          git add config/subject_specialist.txt
+          git commit -m "Update subject specialists" &&
+          git push git@github.com:sul-dlss/SearchWorks.git specialists-update &&
+          hub pull-request -f -m "Update subject specialists" --base main
+          echo 'Done!'
+          '''
+        }
+      }
+    }
+  }
+}

@@ -15,3 +15,7 @@ begin
 rescue LoadError
   puts 'Unable to load RuboCop.'
 end
+
+task load_subject_specialists: :environment do
+  Specialist.harvest!
+end
