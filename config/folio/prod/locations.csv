@@ -349,6 +349,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 92f0d68c-a7ee-42b6-a902-bb78b8d67c76,Art migration error,ART-MIGRATE-ERR,SU,SUL,ART,Error during migration,true,ART,ART,,,,,,,,,,,,,,,,
 9334a710-0c76-4404-9cb0-07f61b4c39fb,Spec SAL3 Media,SPEC-SAL3-MEDIA,SU,SUL,SPEC-COLL,Media,true,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,,
 935d0ae7-4cf0-41e6-abbb-6004e0280b30,Earth Sci Folios,EAR-FOLIO,SU,SUL,EARTH-SCI,Folios,true,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,,,
+93abb417-6c5f-4053-ab4b-171c41d791ac,Education Oversize,EDU-OVERSIZE,SU,SUL,EDUCATION,Oversize,true,EDUCATION,EDUCATION,,,,,,,,,,,,,,,,
 945f7cdb-89fd-4be8-a70f-17e10fdb784b,East Asia Scan Review,EAL-SCANREVIEW,SU,SUL,EAST-ASIA,In process,true,EAST-ASIA,EAST-ASIA,,,,,,,,,,,,,,,,
 9523510d-2afa-47fd-8310-eaf8e690479e,Business Reserves,BUS-CRES,SU,GSB,BUSINESS,On reserve: Ask at Business i-Desk,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,true,,,,,,
 9532a131-63a9-418c-9c3f-5092dbf5a143,Lane Spec: Vertical File,LANE-HSFLE,SU,MED,LANE,Medical History Center: By appointment,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,,,

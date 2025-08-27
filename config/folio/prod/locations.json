@@ -8118,6 +8118,28 @@
     }
   },
   {
+    "id": "93abb417-6c5f-4053-ab4b-171c41d791ac",
+    "name": "Education Oversize",
+    "code": "EDU-OVERSIZE",
+    "discoveryDisplayName": "Oversize",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
+    "details": {},
+    "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
+    "servicePointIds": [
+      "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-08-26T22:55:48.914+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-08-26T22:55:48.914+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "945f7cdb-89fd-4be8-a70f-17e10fdb784b",
     "name": "East Asia Scan Review",
     "code": "EAL-SCANREVIEW",
