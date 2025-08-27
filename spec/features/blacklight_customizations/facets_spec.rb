@@ -82,12 +82,12 @@ RSpec.feature "Facets Customizations" do
 
     aggregate_failures do
       expect(sort_items.length).to eq 2
-      expect(sort_items.map { |item| item[:href]}).to all(include("facet_suggest_query=The")) 
+      expect(sort_items.pluck(:href)).to all(include("facet_suggest_query=The"))
     end
   end
 
   scenario 'loading facet search page with suggest parameter', :js do
-    visit facet_catalog_path('genre_ssim') + "?facet_suggest_query=The"
+    visit "#{facet_catalog_path('genre_ssim')}?facet_suggest_query=The"
     expect(page.find('input.facet-suggest').value).to eq 'The'
   end
 
