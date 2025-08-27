@@ -28,7 +28,7 @@ module Searchworks4
     def default_thumbnail
       return nil if presenter.document.eds? || presenter.document.managed_purls.many? || presenter.document.druid
 
-      Searchworks4::ThumbnailComponent.new(presenter: presenter, counter: nil, classes: %w[document-thumbnail float-end mt-1])
+      Searchworks4::ThumbnailComponent.new(presenter: presenter, counter: nil, classes: %w[document-thumbnail mt-1])
     end
   end
 end
