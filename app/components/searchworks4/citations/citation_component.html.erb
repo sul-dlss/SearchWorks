@@ -62,13 +62,13 @@
   <% end %>
 
   <% citations.each do |style, citation| %>
-    <div class="mb-4 bg-light p-2" data-citation-format-target="tab" data-controller="copy-text" id="citation-format-<%= style %>" <%= 'hidden' unless style == default_style %>>
+    <div class="mb-4 bg-light p-2 citations" data-citation-format-target="tab" data-controller="copy-text" id="citation-format-<%= style %>" <%= 'hidden' unless style == default_style %>>
       <% unless unavailable? %>
         <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm lh-1 ms-4" data-action="copy-text#copy">Copy</button></h5>
       <% end %>
       <% Array(citation).each do |cite| %>
         <div class="mb-2" data-copy-text-target="text">
-          <%= cite %>
+          <%= helpers.auto_link cite %>
         </div>
       <% end %>
     </div>

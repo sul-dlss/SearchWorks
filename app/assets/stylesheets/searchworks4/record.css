@@ -390,3 +390,9 @@
   list-style-position: inside;
   padding-left: 0.25rem;
 }
+
+.citations {
+  a {
+    word-break: break-word;
+  }
+}
