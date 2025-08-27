@@ -389,6 +389,7 @@ a172bf77-3012-4a30-a6e0-8a83884a423c,SAL3 PAGE-MM,SAL3-PAGE-MM,SU,SUL,SAL3,Reque
 a18f5612-e6b4-49e8-b13e-87a95390f10e,Green IC Send to SAL3,GRE-IC-SEND2SAL3,SU,SUL,GREEN,Ask at circulation desk,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,,
 a192dc24-ac67-4c50-aaba-f38e10b053c3,Science Reference Oversize,SCI-REF-OVERSIZE,SU,SUL,SCIENCE,Reference: Oversize,true,SCIENCE,SCIENCE,,,,,,,,,,,,,,,
 a19fa3e9-687b-47fe-aa7b-09d06bcdac6d,Lane Ref: LC Class,LANE-REF,SU,MED,LANE,Reference: Information Desk,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,
+a1d84732-1844-4bbe-a83f-639d44953ed4,Education Oversize,EDU-OVERSIZE,SU,SUL,EDUCATION,Oversize,true,EDUCATION,EDUCATION,,,,,,,,,,,,,,,
 a1e48e5a-5a5a-49b1-a7f1-0d248ef26f04,ARS Inprocess,ARS-INPROCESS,SU,SUL,ARS,In process,true,ARS,ARS,,,,,ARS,,,In_process,,,,,,,
 a2b544b8-4087-4b1e-bef2-e27be9faa7f0,Media Microfiche Diazo,MEDIA-DIZOCAB,SU,SUL,MEDIA-CENTER,Microfiche collection,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
 a40bcc60-22cd-4e42-be64-79bb23ea9fb0,Spec SAL3 Manuscript,SPEC-SAL3-MSS,SU,SUL,SPEC-COLL,Manuscript Collection,true,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,
