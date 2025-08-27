@@ -1,0 +1,6 @@
+<%= form_with url: quick_reports_path, method: :post do |f| %>
+  <%= f.hidden_field(:url, value: request.referer) %>
+  <button type='submit' class='btn btn-outline-primary btn-sm btn-quick-report mt-1' data-bl-dismiss="modal">
+    Report wrong cover image<i class="ms-1 bi bi-send" aria-hidden></i>
+  </button>
+<% end %>
