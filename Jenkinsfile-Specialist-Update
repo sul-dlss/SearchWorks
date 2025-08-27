@@ -25,7 +25,7 @@ pipeline {
 
           # Make a PR
           git checkout -B specialists-update
-          git add config/subject_specialist.txt
+          git add config/subject_specialist.json
           git commit -m "Update subject specialists" &&
           git push git@github.com:sul-dlss/SearchWorks.git specialists-update &&
           hub pull-request -f -m "Update subject specialists" --base main
