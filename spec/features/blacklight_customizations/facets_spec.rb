@@ -71,6 +71,26 @@ RSpec.feature "Facets Customizations" do
     end
   end
 
+  scenario 'searching within a facet and changing sort order', :js do
+    visit facet_catalog_path('genre_ssim')
+
+    fill_in 'Search genre', with: 'The'
+
+    click_button 'Sort by number of matches'
+
+    sort_items = page.all('div.sort-options a.dropdown-item')
+
+    aggregate_failures do
+      expect(sort_items.length).to eq 2
+      expect(sort_items.map { |item| item[:href]}).to all(include("facet_suggest_query=The")) 
+    end
+  end
+
+  scenario 'loading facet search page with suggest parameter', :js do
+    visit facet_catalog_path('genre_ssim') + "?facet_suggest_query=The"
+    expect(page.find('input.facet-suggest').value).to eq 'The'
+  end
+
   scenario 'searching within a facet from the search results page', :js do
     visit root_path(q: '', search_field: 'search')
 

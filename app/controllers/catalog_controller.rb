@@ -86,6 +86,7 @@ class CatalogController < ApplicationController
 
     config.search_state_fields += [
       :prefix, # used to filter by database title
+      :facet_suggest_query, # used to pass facet suggest input to sort URLs
     ]
 
     # solr path which will be added to solr base url before the other solr params.
