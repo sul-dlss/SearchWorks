@@ -10,15 +10,6 @@ class FeedbackMailer < ApplicationMailer
          reply_to: Settings.EMAIL_TO.FEEDBACK)
   end
 
-  def submit_connection(params, ip)
-    @mailer_parser = FeedbackMailerParser.new(params, ip)
-
-    mail(to: Settings.EMAIL_TO.CONNECTION,
-         subject: "Connection problem: #{@mailer_parser.resource_name}",
-         from: @mailer_parser.email,
-         reply_to: Settings.EMAIL_TO.CONNECTION)
-  end
-
   def submit_wrong_book_cover(params, ip)
     @url = params[:url]
     @ip = ip
