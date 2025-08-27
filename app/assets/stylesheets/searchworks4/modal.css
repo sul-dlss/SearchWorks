@@ -8,6 +8,10 @@
   }
 }
 
+.record-summary .document-thumbnail img {
+  max-height: 100px;
+}
+
 /* Hide the modal footer close button for modal content being viewed as a page. */
 #main-container .modal-footer button[data-bl-dismiss="modal"] {
   display: none;
