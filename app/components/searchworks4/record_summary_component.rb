@@ -4,6 +4,8 @@ module Searchworks4
   class RecordSummaryComponent < ViewComponent::Base
     attr_reader :presenter
 
+    renders_one :thumbnail
+
     def initialize(presenter:)
       @presenter = presenter
       super()
@@ -21,6 +23,12 @@ module Searchworks4
 
     def resource_icon
       helpers.render_resource_icon(presenter.formats)
+    end
+
+    def default_thumbnail
+      return nil if presenter.document.eds? || presenter.document.managed_purls.many? || presenter.document.druid
+
+      Searchworks4::ThumbnailComponent.new(presenter: presenter, counter: nil, classes: %w[document-thumbnail float-end mt-1])
     end
   end
 end
