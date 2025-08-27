@@ -6,5 +6,7 @@
     </div>
   <% end %>
 
-  <%= render 'email_form' %>
+  <% component.with_body do %>
+    <%= render 'email_form' %>
+  <% end %>
 <% end %>
