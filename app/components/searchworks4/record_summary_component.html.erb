@@ -9,6 +9,7 @@
           <li><%= author %></li>
         <% end %>
       </ul>
+      <%= render Searchworks4::QuickReportComponent.new if render_quick_report?%>
     </div>
   </div>
 </div>

@@ -6,8 +6,9 @@ module Searchworks4
 
     renders_one :thumbnail
 
-    def initialize(presenter:)
+    def initialize(presenter:, render_quick_report: false)
       @presenter = presenter
+      @render_quick_report = render_quick_report
       super()
     end
 
@@ -29,6 +30,10 @@ module Searchworks4
       return nil if presenter.document.eds? || presenter.document.managed_purls.many? || presenter.document.druid
 
       Searchworks4::ThumbnailComponent.new(presenter: presenter, counter: nil, classes: %w[document-thumbnail mt-1])
+    end
+
+    def render_quick_report?
+      @render_quick_report
     end
   end
 end

@@ -9,7 +9,7 @@
         <% end %>
 
         <% if catalog_document_id %>
-            <turbo-frame id="document-summary-<%= catalog_document_id %>" src="<%= document_summary_path(catalog_document_id)%>">
+            <turbo-frame id="document-summary-<%= catalog_document_id %>" src="<%= document_summary_path(catalog_document_id, render_quick_report: true)%>">
                 <div class="modal-header bg-light py-5"></div>
             </turbo-frame>
         <% end %>
