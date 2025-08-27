@@ -3,12 +3,8 @@
 require 'rails_helper'
 
 RSpec.feature 'Quick report form', :js do
-  before do
-    visit solr_document_path('1')
-  end
-
   scenario 'Quick report is available on show page' do
-    visit solr_document_path('1')
+    visit solr_document_path('in00000053236')
     click_link 'Feedback'
     expect(page).to have_css('button.btn-quick-report')
     click_button 'Report wrong cover image'
