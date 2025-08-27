@@ -39,7 +39,7 @@
   <% end %>
 
   <% Citations::MarcCitation::FORMATS.each.with_index do |format, index| %>
-    <div class="bg-light p-3"<%= ' hidden' if index != 0 %> data-citation-format-target="tab"
+    <div class="citations bg-light p-3"<%= ' hidden' if index != 0 %> data-citation-format-target="tab"
       data-controller="copy-text" id="citation-format-<%= format %>">
       <div class="d-flex align-items-center gap-2 mb-2">
       <% unless all_unavailable? %>
@@ -61,7 +61,8 @@
       <ol class="mb-3 ps-3" data-copy-text-target="text">
         <% all_citations.each do |citations_for_document| %>
         <li class="mb-3 ps-2">
-          <%= citation_for_format(citations_for_document, format) || '<i>Citation unavailable</i>'.html_safe %>
+          <% cite = helpers.auto_link citation_for_format(citations_for_document, format) %>
+          <%= cite.presence || '<i>Citation unavailable</i>'.html_safe %>
           <% if !preferred_or_unavailable_citations_only? && preferred_citation_only?(citations_for_document) %>
             <i><%= "(Preferred citation / #{t format, scope: 'searchworks.citations.styles'} unavailable)" %></i>
           <% end %>
