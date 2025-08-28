@@ -32,6 +32,13 @@ Specialist = Data.define(:name, :full_title, :research_areas, :description, :pho
     end
   end
 
+  def self.harvest!
+    # surely every specialist has the letter 'e' somewhere, right?
+    response = HTTP.get('https://library.stanford.edu/api/people/search?q=e')
+
+    Rails.root.join('config/subject_specialist.json').write(JSON.pretty_generate(JSON.parse(response.body)))
+  end
+
   def self.from_sws_json(data)
     new(
       name: "#{data['firstName']} #{data['lastName']}",
