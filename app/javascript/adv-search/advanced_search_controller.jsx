@@ -30,6 +30,14 @@ const Button = ({ children, onClick, ...props }) => {
   );
 }
 
+const AddButton = ({ children, className, ...props }) => (
+  <Button className={`btn icon-link text-nowrap ${className}`} {...props}><i class="bi bi-plus-square-fill text-digital-green" aria-hidden></i>{children}</Button>
+)
+
+const DeleteButton = ({ children, className, ...props }) => (
+  <Button className={`btn icon-link text-nowrap ${className}`} {...props} ariaLabel={children}><i class="bi bi-dash-square-fill text-digital-red-light" aria-hidden></i><span class="d-none d-md-inline">{children}</span></Button>
+)
+
 const formReducer = (state, action) => {
   switch (action.type) {
     case 'addSearchField':
@@ -165,9 +173,9 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     })),
     filterFieldOptions: filterFields || [],
     filterTypeOptions: [
-      { field: 'and', label: 'Includes all (AND)' },
-      { field: 'or', label: 'Includes any (OR)' },
-      { field: 'not', label: 'Excludes all (NOT)' }
+      { field: 'and', label: 'Includes all' },
+      { field: 'or', label: 'Includes any' },
+      { field: 'not', label: 'Excludes all' }
     ],
     currentId: filterFields.filter(f => f.top).length,
     searchFields: [
@@ -176,8 +184,8 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     ],
     searchFieldOptions: searchFieldOptions || [],
     searchTypeOptions: [
-      { field: 'must', label: 'Contains all (AND)'},
-      { field: 'should', label: 'Contains any (OR)' }
+      { field: 'must', label: 'Contains all'},
+      { field: 'should', label: 'Contains any' }
     ]
   }
 
@@ -259,7 +267,7 @@ const SearchFields = () => {
           dispatch({ type: 'removeSearchField', id: field.id });
         })} key={field.id} />
       ))}
-      <Button className="btn btn-outline-primary" onClick={addField}>Add search terms</Button>
+      <AddButton onClick={addField}>Add search terms</AddButton>
     </section>
   );
 };
@@ -272,7 +280,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
   return (
     <fieldset className="d-flex flex-row mb-3 gap-3 align-items-center">
       <legend className="visually-hidden">Search query</legend>
-      <FormControl sx={{ minWidth: 180 }} size="small">
+      <FormControl className="col-4 col-sm-3 col-lg-2" size="small">
         <InputLabel id={`search-field-select-${id}`} className="visually-hidden">Search in</InputLabel>
         <Select labelId={`search-field-select-${id}`} className="w-auto search-field" value={field} onChange={(event) => dispatch({ type: 'updateSearchField', id: id, data: { field: event.target.value } })}>
           {context.searchFieldOptions.map((option) => (
@@ -282,7 +290,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
           ))}
         </Select>
       </FormControl>
-      <FormControl sx={{ minWidth: 190 }} size="small">
+      <FormControl className="col-4 col-sm-3 col-lg-2" size="small">
         <InputLabel id={`search-field-operator-${id}`} className="visually-hidden">{searchField?.label} search operator</InputLabel>
         <Select labelId={`search-field-operator-${id}`} className="w-auto" value={type} onChange={(event) => dispatch({ type: 'updateSearchField', id: id, data: { type: event.target.value } })}>
           {context.searchTypeOptions.map((option) => (
@@ -294,7 +302,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
       </FormControl>
       <label className="visually-hidden" htmlFor={`search-field-${id}`}>{searchField?.label} search term</label>
       <TextField id={`search-field-${id}`} fullWidth size="small" value={value} onKeyDown={preventFormSubmit} onChange={(e) => dispatch({ type: 'updateSearchField', id: id, data: { value: e.target.value } })} />
-      { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+      { removeField && (<DeleteButton onClick={removeField}>Delete row</DeleteButton>) }
     </fieldset>
   );
 };
@@ -320,7 +328,7 @@ const FilterFields = () => {
       )) }
       
       <div className="dropdown">
-        <Button className="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Add filter</Button>
+        <AddButton className="border border-dark-subtle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Add filter</AddButton>
         <ul className="dropdown-menu">
         {context.filterFieldOptions.map((option) => (
           (!usedFilterFieldKeys.includes(option.field)) && (<li key={option.field}>
@@ -342,18 +350,18 @@ const FilterField = ({ field, removeField, ...args }) => {
     return (
       <fieldset className="d-flex flex-row mb-3 gap-3 align-items-start">
         <legend className="visually-hidden">Filter field</legend>
-        <span className="fw-semibold text-nowrap mt-2">{fieldConfig.label}</span>
+        <span className="fw-semibold text-nowrap mt-2 col-4 col-sm-3 col-lg-2">{fieldConfig.label}</span>
         <RangeFilterField field={field} {...args} />
-        { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+        { removeField && (<DeleteButton className="ms-auto" onClick={removeField}>Delete row</DeleteButton>) }
       </fieldset>
     );
   } else {
     return (
       <fieldset className="d-flex flex-row mb-3 gap-3 align-items-start">
         <legend className="visually-hidden">Filter field</legend>
-        <label htmlFor={`filter-field-${id}`} className="fw-semibold text-nowrap mt-2">{fieldConfig.label}</label>
+        <label htmlFor={`filter-field-${id}`} className="fw-semibold text-nowrap mt-2 col-4 col-sm-3 col-lg-2">{fieldConfig.label}</label>
         <AutocompleteFilterField field={field} {...args} />
-        { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+        { removeField && (<DeleteButton onClick={removeField}>Delete row</DeleteButton>) }
       </fieldset>
     );
   }
@@ -366,10 +374,9 @@ const RangeFilterField = ({ id, field, values }) => {
   return (
     <>
       <label className="visually-hidden" htmlFor={`range-field-${id}-begin`}>From year</label>
-      <TextField id={`range-field-${id}-begin`} name={values[0] && values[0].length > 0 && `range[${field}][begin]`} value={values[0] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [event.target.value, values[1]] } })}} size="small"></TextField>
-      <span className="lh-lg">&ndash;</span>
+      <TextField className="col-4 col-sm-3 col-lg-2" placeholder="From year" id={`range-field-${id}-begin`} name={values[0] && values[0].length > 0 && `range[${field}][begin]`} value={values[0] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [event.target.value, values[1]] } })}} size="small"></TextField>
       <label className="visually-hidden" htmlFor={`range-field-${id}-end`}>To year</label>
-      <TextField id={`range-field-${id}-end`} name={values[1] && values[1].length > 0 && `range[${field}][end]`} value={values[1] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [values[0], event.target.value] } })}} size="small"></TextField>
+      <TextField sx={{ minWidth: '8ch' }} className="col-md-3 col-lg-2" placeholder="To year" id={`range-field-${id}-end`} name={values[1] && values[1].length > 0 && `range[${field}][end]`} value={values[1] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [values[0], event.target.value] } })}} size="small"></TextField>
     </>
   );
 }
@@ -413,7 +420,7 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
 
   return (
     <>
-      <FormControl sx={{ minWidth: 200 }} size="small">
+      <FormControl className="col-4 col-sm-3 col-lg-2" size="small">
         <InputLabel id={`filter-field-operator-${id}`} className="visually-hidden">Search operator</InputLabel>
         <Select labelId={`filter-field-operator-${id}`} className="w-auto text-nowrap" value={type} onChange={(event) => dispatch({ type: 'updateFilterField', id: id, data: { type: event.target.value } })}>
           {context.filterTypeOptions.map((option) => (

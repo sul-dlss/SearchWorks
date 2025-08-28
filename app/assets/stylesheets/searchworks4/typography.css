@@ -102,6 +102,10 @@ aside,
   color: var(--stanford-digital-green);
 }
 
+.text-digital-red-light {
+  color: var(--stanford-digital-red-light);
+}
+
 .badge {
   /* Override bootstrap to give a little more space */
   --bs-badge-padding-x: 0.625rem;
