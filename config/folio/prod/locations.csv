@@ -133,6 +133,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 2e9c0fe9-73f4-4555-bbe8-6c0d97e558ec,Rumsey Inprocess,RUM-INPROCESS,SU,SUL,RUMSEY-MAP,In process,true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,,
 2f75fa4d-26b6-4beb-b034-50cf4443b628,Green Shadow,GRE-SHADOW,SU,SUL,GREEN,Ask at circulation desk,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,,,
 2faabe02-758e-4b87-a470-dca43027458e,SAL PUB 70,SAL-PUB70,SU,SUL,SAL,Stacks,true,SAL,SAL,,,,,,,,Offsite,true,,,,,,,
+30551dd4-9d34-4abc-9191-9e00ec7462aa,Green Reserves Processing,GRE-RESV-PROCESSING,SU,SUL,GREEN,In process,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,In_process,,,,,,,,
 31b65d3e-de73-4182-baa0-be22fc302db3,Rumsey W7 Stacks Small,RUM-W7-STK-SM,SU,SUL,RUMSEY-MAP,Map Center (W7 small stacks),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,,
 31b68968-90b7-4205-83bc-1a6d2350e0e7,HILA Shelved Elsewhere,HILA-SEE-OTHER,SU,HOOVER,HILA,See linked record,true,HILA,HILA,,,,,,,,,,,,,,,,
 32bebe0c-a235-4689-8f8a-6cc0472e74b1,Spec Inprocess,SPEC-INPROCESS,SU,SUL,SPEC-COLL,In process,true,SPEC,SPEC,,,,,,,,In_process_non_requestable,,,,,,,,

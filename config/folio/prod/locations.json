@@ -3122,6 +3122,30 @@
     }
   },
   {
+    "id": "30551dd4-9d34-4abc-9191-9e00ec7462aa",
+    "name": "Green Reserves Processing",
+    "code": "GRE-RESV-PROCESSING",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+      "availabilityClass": "In_process"
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-08-27T23:57:48.933+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-08-27T23:57:48.933+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "31b65d3e-de73-4182-baa0-be22fc302db3",
     "name": "Rumsey W7 Stacks Small",
     "code": "RUM-W7-STK-SM",
