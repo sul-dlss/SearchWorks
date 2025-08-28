@@ -524,6 +524,7 @@ d3bf7d1b-53ce-4075-9d5e-7bd2f27e014e,Art Locked Stacks Oversize,ART-LOCKED-OVERS
 d3c5969d-2a59-40ff-9afa-4877581280d6,Education PAGE-ED,EDU-PAGE-ED,SU,SUL,EDUCATION,Ask at circulation desk,true,EDUCATION,EDUCATION,,,,,,,,,,,,,,,
 d42efd7a-722a-4cf5-bf11-36119e4ccb1f,Rumsey Center Case Small,RUM-C-CASE-SM,SU,SUL,RUMSEY-MAP,Map Center (small case),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,
 d444c783-1064-44e0-b930-cea6615a44d8,Rumsey W7 Stacks Medium,RUM-W7-STK-MD,SU,SUL,RUMSEY-MAP,Map Center (W7 medium stacks),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,
+d4854a30-4dc4-4dde-9502-b082d133be59,Green Reserves Processing,GRE-RESV-PROCESSING,SU,SUL,GREEN,In process,true,GREEN-LOAN,GREEN-LOAN,,,,,,,,In_process,,,,,,,
 d4d319ae-6310-419f-8f90-1b03f952aa44,Spec Shelved Elsewhere,SPEC-SEE-OTHER,SU,SUL,SPEC-COLL,See linked record to request items bound together,true,SPEC,SPEC,,,SPECUA,,,,,,,,,,,,
 d50c3151-3532-4e6d-a1d3-7a8fe6cf4fdc,Lane Spec: Display,LANE-WKSTD,SU,MED,LANE,Medical History Center: By appointment,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,,
 d59b21e4-a2c9-48ed-916c-edf91ab49741,Media Withdrawn,MEDIA-WITHDRAWN,SU,SUL,MEDIA-CENTER,Ask at Media Center desk,true,MEDIA-CENTER,MEDIA-CENTER,,,,,,,,,,,,,,,
