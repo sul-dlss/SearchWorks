@@ -30,6 +30,14 @@ const Button = ({ children, onClick, ...props }) => {
   );
 }
 
+const AddButton = ({ children, className, ...props }) => (
+  <Button className={`btn icon-link text-nowrap ${className}`} {...props}><i class="bi bi-plus-square-fill text-digital-green" aria-hidden></i>{children}</Button>
+)
+
+const DeleteButton = ({ children, className, ...props }) => (
+  <Button className={`btn icon-link text-nowrap ${className}`} {...props}><i class="bi bi-dash-square-fill text-digital-red-light" aria-hidden></i>{children}</Button>
+)
+
 const formReducer = (state, action) => {
   switch (action.type) {
     case 'addSearchField':
@@ -259,7 +267,7 @@ const SearchFields = () => {
           dispatch({ type: 'removeSearchField', id: field.id });
         })} key={field.id} />
       ))}
-      <Button className="btn btn-outline-primary" onClick={addField}>Add search terms</Button>
+      <AddButton onClick={addField}>Add search terms</AddButton>
     </section>
   );
 };
@@ -294,7 +302,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
       </FormControl>
       <label className="visually-hidden" htmlFor={`search-field-${id}`}>{searchField?.label} search term</label>
       <TextField id={`search-field-${id}`} fullWidth size="small" value={value} onKeyDown={preventFormSubmit} onChange={(e) => dispatch({ type: 'updateSearchField', id: id, data: { value: e.target.value } })} />
-      { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+      { removeField && (<DeleteButton onClick={removeField}>Delete row</DeleteButton>) }
     </fieldset>
   );
 };
@@ -320,7 +328,7 @@ const FilterFields = () => {
       )) }
       
       <div className="dropdown">
-        <Button className="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Add filter</Button>
+        <AddButton className="border border-dark-subtle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Add filter</AddButton>
         <ul className="dropdown-menu">
         {context.filterFieldOptions.map((option) => (
           (!usedFilterFieldKeys.includes(option.field)) && (<li key={option.field}>
@@ -344,7 +352,7 @@ const FilterField = ({ field, removeField, ...args }) => {
         <legend className="visually-hidden">Filter field</legend>
         <span className="fw-semibold text-nowrap mt-2">{fieldConfig.label}</span>
         <RangeFilterField field={field} {...args} />
-        { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+        { removeField && (<DeleteButton onClick={removeField}>Delete row</DeleteButton>) }
       </fieldset>
     );
   } else {
@@ -353,7 +361,7 @@ const FilterField = ({ field, removeField, ...args }) => {
         <legend className="visually-hidden">Filter field</legend>
         <label htmlFor={`filter-field-${id}`} className="fw-semibold text-nowrap mt-2">{fieldConfig.label}</label>
         <AutocompleteFilterField field={field} {...args} />
-        { removeField && (<Button className="btn btn-outline-danger text-nowrap" onClick={removeField}>Delete row</Button>) }
+        { removeField && (<DeleteButton onClick={removeField}>Delete row</DeleteButton>) }
       </fieldset>
     );
   }
