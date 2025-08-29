@@ -1297,7 +1297,6 @@ publichealth.jmir.org
 publichealthreviews.biomedcentral.com
 publikationen.ub.uni-frankfurt.de
 publish.ancientbooks.cn
-publisher.abc-clio.com
 publishing.rcseng.ac.uk
 pubmed.ncbi.nlm.nih.gov
 pubs.acs.org
