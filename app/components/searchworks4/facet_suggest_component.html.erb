@@ -4,11 +4,12 @@
     <i class="bi bi-search" aria-hidden="true"></i>
   </label>
   <%= text_field_tag "facet_suggest_#{key}",
-    nil,
+    suggest_query,
     class: "facet-suggest form-control border-start-0",
     data: {
       facet_field: key,
-      facet_search_context: helpers.search_facet_path(id: key)
+      facet_search_context: helpers.search_facet_path(id: key),
+      facet_suggest_target: "input"
     },
     placeholder: I18n.t('blacklight.search.facets.suggest.label', field_label: label.downcase)
   %>
