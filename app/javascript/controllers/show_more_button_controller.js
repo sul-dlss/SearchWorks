@@ -47,7 +47,7 @@ export default class extends Controller {
   }
 
   expand() {
-    this.element.ariaExpanded = true
+    this.element.ariaExpanded = "true"
 
     if (this.styleValue == 'icon-button') {
       this.element.innerText = "Show less"
@@ -60,7 +60,7 @@ export default class extends Controller {
   }
 
   collapse() {
-    this.element.ariaExpanded = false
+    this.element.ariaExpanded = "false"
 
     if (this.styleValue == 'icon-button') {
       this.element.innerText = "Show more"
