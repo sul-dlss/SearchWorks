@@ -62,11 +62,16 @@ class Date008 < MarcField
     @value ||= begin
       year = field.value[range]
 
+      if /\d{4}/.match?(year)
+        year
       # suppress wildly approximate dates (e.g. with century precision)
-      if /\d{3}[\du-]/.match?(year)
-        replacement = date1? ? '0' : '9'
-        year.gsub(/[u-]/, replacement)
+      elsif /\d{3}[\du-]/.match?(year)
+        format_approximate_year(year)
       end
     end
+  end
+
+  def format_approximate_year(year)
+    "#{year.gsub(/[u-]/, '0')}s"
   end
 end

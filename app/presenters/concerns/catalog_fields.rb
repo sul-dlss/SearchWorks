@@ -8,7 +8,15 @@ module CatalogFields
   end
 
   def main_title_date
-    "(#{document.first('pub_year_ss')})" if document.key? 'pub_year_ss'
+    return unless document.key? 'pub_year_ss'
+
+    year = document.first('pub_year_ss')
+
+    if year.match?(/[u-]$/)
+      "#{year.gsub(/[u-]/, '0')}s"
+    else
+      "(#{year})"
+    end
   end
 
   delegate :eds_ris_export?, to: :document
