@@ -108,4 +108,8 @@ module MarcMetadata
   def organization_and_arrangement
     @organization_and_arrangement ||= OrganizationAndArrangement.new(self)
   end
+
+  def date008(range: nil)
+    Date008.new(self, range: range)
+  end
 end

@@ -84,7 +84,8 @@
     <% end %>
 
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Bibliographic information') do %>
-      <%= render partial: 'catalog/dates_from_solr', locals: {document: document} %>
+      <%= render_if_present document.date008(range: 7..10) %>
+      <%= render_if_present document.date008(range: 11..14) %>
 
       <% fields = [
         242, 243, 246, 247, '254a', 255, '256a',

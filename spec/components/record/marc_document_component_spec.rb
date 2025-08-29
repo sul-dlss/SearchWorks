@@ -29,17 +29,21 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
   end
 
   describe "dates from solr" do
-    let(:document) { SolrDocument.new(marc_json_struct: metadata1, publication_year_isi: '1234', other_year_isi: '4321', copyright_year_isi: '5678') }
+    let(:document) { SolrDocument.new(marc_json_struct: [metadata]) }
+    let(:metadata) do
+      JSON.parse(metadata1).deep_merge(
+        'fields' => [
+          { '008' => '210101i1843202u    xxu           000 0 eng d' }
+        ]
+      )
+    end
 
-    it "includes dates from solr" do
-      expect(page).to have_css('dt', text: 'Publication date')
-      expect(page).to have_css('dd', text: '1234')
+    it "includes dates from the 008" do
+      expect(page).to have_css('dt', text: 'Earliest date')
+      expect(page).to have_css('dd', text: '1843')
 
-      expect(page).to have_css('dt', text: 'Date')
-      expect(page).to have_css('dd', text: '4321')
-
-      expect(page).to have_css('dt', text: 'Copyright date')
-      expect(page).to have_css('dd', text: '5678')
+      expect(page).to have_css('dt', text: 'Latest date')
+      expect(page).to have_css('dd', text: '2029')
     end
   end
 
