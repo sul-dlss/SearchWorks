@@ -4,6 +4,10 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static values = { style: { type: String, default: 'icon-button' } }
   connect() {
+    this.element.ariaDisabled = 'true'
+    this.element.ariaExpanded = 'false'
+    this.element.ariaLabel = "This button is disabled because assistive technologies already announced the content."
+
     switch (this.styleValue) {
       case 'text-button':
         this.setupTextButton()
@@ -11,9 +15,6 @@ export default class extends Controller {
       default:
         this.setupIconButton()
     }
-    this.element.ariaDisabled = 'true'
-    this.element.ariaExpanded = 'false'
-    this.element.ariaLabel = "This button is disabled because assistive technologies already announced the content."
   }
 
   setupTextButton() {
@@ -46,7 +47,7 @@ export default class extends Controller {
   }
 
   expand() {
-    this.element.ariaExpanded = true
+    this.element.ariaExpanded = "true"
 
     if (this.styleValue == 'icon-button') {
       this.element.innerText = "Show less"
@@ -59,7 +60,7 @@ export default class extends Controller {
   }
 
   collapse() {
-    this.element.ariaExpanded = false
+    this.element.ariaExpanded = "false"
 
     if (this.styleValue == 'icon-button') {
       this.element.innerText = "Show more"
