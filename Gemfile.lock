@@ -399,7 +399,7 @@ GEM
       racc (~> 1.7)
     net-http (0.6.0)
       uri
-    net-imap (0.5.9)
+    net-imap (0.5.10)
       date
       net-protocol
     net-pop (0.1.2)
@@ -413,7 +413,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     net-ssh (7.3.0)
-    newrelic_rpm (9.20.0)
+    newrelic_rpm (9.21.0)
     nio4r (2.7.4)
     nokogiri (1.18.9-aarch64-linux-gnu)
       racc (~> 1.4)
@@ -434,14 +434,14 @@ GEM
     nom-xml (1.2.0)
       i18n
       nokogiri
-    oauth2 (2.0.12)
+    oauth2 (2.0.14)
       faraday (>= 0.17.3, < 4.0)
       jwt (>= 1.0, < 4.0)
       logger (~> 1.2)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0, >= 2.0.3)
-      version_gem (>= 1.1.8, < 3)
+      version_gem (~> 1.1, >= 1.1.8)
     observer (0.1.2)
     okcomputer (1.19.0)
     open-uri (0.5.0)
@@ -543,7 +543,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     retriable (3.1.2)
-    rexml (3.4.1)
+    rexml (3.4.2)
     rinku (2.0.6)
     roadie (5.2.1)
       css_parser (~> 1.4)
@@ -572,7 +572,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.5)
-    rubocop (1.80.0)
+    rubocop (1.80.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
