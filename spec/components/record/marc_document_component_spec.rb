@@ -43,7 +43,7 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
       expect(page).to have_css('dd', text: '1843')
 
       expect(page).to have_css('dt', text: 'Latest date')
-      expect(page).to have_css('dd', text: '2029')
+      expect(page).to have_css('dd', text: '2020s')
     end
   end
 
