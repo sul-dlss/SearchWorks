@@ -89,7 +89,7 @@ module Searchworks4
       end
 
       def stackmappable?
-        location.stackmapable? && location.items.first&.callnumber.present?
+        location.stackmapable? && location.items.first&.callnumber(default: nil).present?
       end
 
       def call

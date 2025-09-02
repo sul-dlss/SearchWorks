@@ -28,6 +28,23 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
     end
   end
 
+  context 'with an item without a call number' do
+    let(:document) { SolrDocument.from_fixture("1391872.yml") }
+
+    before do
+      document[:item_display_struct][0].delete 'callnumber'
+    end
+
+    it 'renders the item without the stackmaps link' do
+      render_inline(described_class.new(document: document))
+
+      aggregate_failures do
+        expect(page).to have_no_link 'Stacks', href: "/view/1391872/GRE-STACKS/stackmap"
+        expect(page).to have_css('.callnumber', text: '(no call number)')
+      end
+    end
+  end
+
   context 'with multiple items all in Green Stacks' do
     let(:document) { SolrDocument.from_fixture("10678312.yml") }
 
