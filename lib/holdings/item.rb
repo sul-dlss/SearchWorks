@@ -70,8 +70,8 @@ class Holdings
       item_display[:lopped_callnumber]
     end
 
-    def callnumber
-      item_display[:callnumber].presence || '(no call number)'
+    def callnumber(default: '(no call number)')
+      item_display[:callnumber].presence || default
     end
 
     def full_shelfkey(default: MAX_SHELFKEY)
