@@ -23,6 +23,12 @@
   display: none;
 }
 
+/* Anchor (override modal-dialog-centered) for facet suggest modals */
+.modal-dialog:has(.facet-suggest) {
+  align-items: normal;
+  display: block;
+}
+
 .modal:has(.feedback-form) {
   /* This footer padding value is not affected by or the same as --bs-modal-padding */
   .modal-footer {
