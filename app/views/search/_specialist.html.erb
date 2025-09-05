@@ -1,23 +1,32 @@
 <div class="col module">
   <h2 class="result-set-heading h4 fw-semibold">Subject specialists</h2>
+
+  <div class="mb-1">
+    <a href="https://library.stanford.edu/research-support/subject-specialists" class="btn btn-outline-secondary">See all subject specialists</a>
+  </div>
   <small class="result-set-subheading d-block mb-3">
     Experts who can help with research across a wide variety of subject areas.
   </small>
 
+  <ol class="list-unstyled">
+    <% specialists.each do |specialist| %>
+    <li>
+      <div class="specialist-card card py-3 mb-2">
+        <div class="d-flex gap-3">
+          <div class="photo position-relative flex-shrink-0"><img src="<%= specialist.photo_url %>" alt="Subject Specialist Photo"></img></div>
+          <div class="text">
+            <div class="name fw-semibold"><%= link_to(specialist.name, specialist.href) %></div>
+            <div class="title fw-semibold pb-1"><%= specialist.full_title %></div>
+            <div><%= specialist.research_areas.to_sentence %></div>
+            <div><a href="mailto:<%= specialist.email %>" class="align-middle text-nowrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope me-1" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                </svg><%= specialist.email %></a></div>
+          </div>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  </ul>
 
-  <div class="specialist-card card p-4">
-    <div class="photo position-absolute start-50 translate-middle-x"><img src="<%= specialist.photo_url %>" alt="Subject Specialist Photo"></img></div>
-    <div class="text">
-      <div class="name h5 fw-semibold"><%= specialist.name %></div>
-      <div><%= specialist.research_areas.to_sentence %></div>
-      <div class="mb-3"><a href="mailto:<%= specialist.email %>" class="align-middle fw-semibold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-      </svg> <%= specialist.email %></a></div>
-    </div>
-  </div>
-
-  <div class="mt-4 text-center">
-  <a href="https://library.stanford.edu/research-support/subject-specialists" class="btn btn-outline-secondary">View all subject specialists</a>
-  </div>
 
 </div>

@@ -5,7 +5,7 @@ class SearchController < ApplicationController
 
   def index
     @query = params_q_scrubbed
-    @specialist = Specialist.find(@query)
+    @specialists = Specialist.find(@query)&.first(3)
   end
 
   def show
