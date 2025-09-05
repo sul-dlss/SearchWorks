@@ -15,15 +15,20 @@ export default class extends Controller {
     bookmark.dispatchEvent(new CustomEvent('update-tooltip', { bubbles: true}))
   }
 
-  updateOtherPageBookmarks(documentId, checked) {
-    const pageBookmarks = document.querySelectorAll(`.bookmark-toggle[data-document-id="${documentId}"]`)
-    if (pageBookmarks.length < 2) return
-    pageBookmarks.forEach((bookmark) => {
-      this.updateAriaTooltip(bookmark, checked)
-      bookmark.querySelector('input[name="_method"]').value = checked ? 'delete' : 'put'
-      bookmark.querySelector('input[type="checkbox"]').checked = checked
-      bookmark.querySelector('.bookmark-text').innerHTML = checked ? bookmark.dataset.present : bookmark.dataset.absent
-    })
+  updateBookmarksFor(documentId, state) {
+    const bookmarksForDoc = document.querySelectorAll(`.bookmark-toggle[data-document-id="${documentId}"]`)
+    bookmarksForDoc.forEach(bookmark => this.updateStateFor(bookmark, state))
+  }
+
+  updateStateFor(bookmark, state) {
+    if (this.bookmarkInput(bookmark).checked == state) return
+
+    this.bookmarkInput(bookmark).checked = state
+    bookmark.querySelector('input[name="_method"]').value = state ? 'delete' : 'put'
+    bookmark.querySelector('.bookmark-text').innerHTML = state ? bookmark.dataset.present : bookmark.dataset.absent
+    const label = bookmark.querySelector('[data-checkboxsubmit-target="label"]')
+    state ? label.classList.add('checked') : label.classList.remove('checked')
+    this.updateAriaTooltip(bookmark, state)
   }
 
   bookmarkUpdated(event) {
@@ -36,9 +41,17 @@ export default class extends Controller {
       toastHtml =  '<i class="bi bi-trash-fill pe-1" aria-hidden="true"></i> Record removed'
     }
 
-    this.updateOtherPageBookmarks(event.target.dataset.documentId, event.detail.checked)
-
-
     window.dispatchEvent(new CustomEvent('show-toast', { detail: { html: toastHtml } }));
+
+    this.updateBookmarksFor(event.target.dataset.documentId, event.detail.checked)
+  }
+
+  isBookmarked() {
+    const bookmarkInput = this.bookmarkInput(this.element)
+    return bookmarkInput.checked == true
+  }
+
+  bookmarkInput(bookmarkElement) {
+    return bookmarkElement.querySelector('input[type="checkbox"]')
   }
 }

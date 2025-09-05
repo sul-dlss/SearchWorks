@@ -1,0 +1,18 @@
+<div id="bookmark-select-all" class="bookmark-toggle bookmark-select-all-toggle d-flex flex-row" data-controller="analytics" data-analytics-category-value="bookmark-save-all">
+  <button type="button"
+          aria-live="polite"
+          class="bookmark-toggle-all toggle-bookmark btn btn-sm btn-outline-primary lh-1"
+          data-action="mouseenter->tooltip#show focus->tooltip#show mouseleave->tooltip#hide blur->tooltip#hide update-tooltip->tooltip#updatePopper bookmark.blacklight@window->bookmark-all#update click->bookmark-all#toggleAll"
+          data-controller="bookmark-all tooltip"
+          data-bookmark-all-bookmark-outlet="<%= documents_selector %> .bookmark-toggle"
+          disabled>
+    <input type="checkbox"
+           class="toggle-bookmark-input d-none"
+           data-bookmark-all-target="checkbox">
+    <span class="action-button blacklight-icons">
+      <%= icon %>
+    </span>
+    <span class="bookmark-text save-label">Save all</span>
+    <span class="bookmark-text saved-label">Saved all</span>
+  </button>
+</div>
