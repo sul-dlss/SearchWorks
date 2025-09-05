@@ -345,6 +345,7 @@ catalogimages.wiley.com
 catalogue.bnf.fr
 catalyst.nejm.org
 catdir.loc.gov
+cbm.sb-roscoff.fr
 cbmjournal.springeropen.com
 cccc.uochb.cas.cz
 ccdm.aphapublications.org
@@ -565,6 +566,7 @@ edu.medici.tv
 edu.rsc.org
 educationforhealthjournal.org
 efsa.onlinelibrary.wiley.com
+egazete.cumhuriyet.com.tr
 ehjournal.biomedcentral.com
 ehoonline.biomedcentral.com
 ehp.niehs.nih.gov
@@ -815,6 +817,7 @@ interactionofcolor.com
 internalmedicine.lwwhealthlibrary.com
 internationalbreastfeedingjournal.biomedcentral.com
 intjem.biomedcentral.com
+intlpress.com
 investigativegenetics.biomedcentral.com
 iopscience.iop.org
 iovs.arvojournals.org
@@ -912,6 +915,7 @@ journal-inflammation.biomedcentral.com
 journal.copdfoundation.org
 journal.equinoxpub.com
 journal.imbio.de
+journal.telospress.com
 journal.waocp.org
 journalhosting.ucalgary.ca
 journalimplantdent.springeropen.com
@@ -920,7 +924,6 @@ journalofethics.ama-assn.org
 journalotohns.biomedcentral.com
 journalretinavitreous.biomedcentral.com
 journalrip.com
-journals.aai.org
 journals.ala.org
 journals.ametsoc.org
 journals.aps.org
@@ -933,6 +936,7 @@ journals.healio.com
 journals.humankinetics.com
 journals.iucr.org
 journals.jps.jp
+journals.lib.unb.ca
 journals.library.ualberta.ca
 journals.lub.lu.se
 journals.lww.com
@@ -986,6 +990,7 @@ knepublishing.com
 knovel.com
 knowitallanyware.com
 knowledge.sagepub.com
+knowledgehub.icheme.org
 koreamed.org
 ksiebook.kstudy.com
 ladb.unm.edu
@@ -1288,6 +1293,7 @@ psychnews.psychiatryonline.org
 psychotherapy.psychiatryonline.org
 psycnet.apa.org
 pubchem.ncbi.nlm.nih.gov
+publi.math.unideb.hu
 public.carnet.hr
 public.ebookcentral.proquest.com
 publications.aap.org
@@ -1516,6 +1522,7 @@ tnsw.infolinker.com.tw
 tobaccocontrol.bmj.com
 tocs.kubikat.org
 tomography.org
+topology.nipissingu.ca
 tp.amegroups.com
 trace.tennessee.edu
 tracreports.org
@@ -1535,6 +1542,7 @@ udndata.com
 ugeskriftet.dk
 ulrichsweb.serialssolutions.com
 upload.wikimedia.org
+urbanland.uli.org
 us.expasy.org
 usp.az1.qualtrics.com
 uswest.ensembl.org
@@ -1982,6 +1990,7 @@ www.esaim-cocv.org
 www.esaim-m2an.org
 www.esaim-ps.org
 www.eugenicsarchive.org
+www.euppublishing.com
 www.eurannallergyimm.com
 www.eurekaselect.com
 www.eurjbreasthealth.com
@@ -2166,6 +2175,7 @@ www.infoworld.com
 www.ingenta.com
 www.ingentaconnect.com
 www.injepijournal.com
+www.insna.org
 www.int-res.com
 www.interactionofcolor.com
 www.internationaljournalofcaringsciences.org
@@ -2592,6 +2602,7 @@ www.reumatismo.org
 www.revespcardiol.org
 www.rhinologyjournal.com
 www.rimed.org
+www.risk.net
 www.riss.kr
 www.rjo.ro
 www.rjpbcs.com
