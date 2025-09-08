@@ -107,6 +107,10 @@ RSpec.feature 'Bookmarking Items', :js do
       within "#documents" do
         expect(page).to have_css("article", count: 2)
       end
+
+      click_button 'Remove all'
+      expect(page).to have_text 'Your selections have been deleted'
+      expect(page).to have_css('.active .badge', text: '0')
     end
   end
 
