@@ -3,12 +3,12 @@
 require 'rails_helper'
 RSpec.describe Specialist do
   describe '.find' do
-    it 'returns a specialist matching the query' do
-      expect(described_class.find('British History')).to have_attributes(name: 'Benjamin Stone')
+    it 'returns specialists matching the query' do
+      expect(described_class.find('British History').first).to have_attributes(name: 'Benjamin Stone')
     end
 
-    it 'returns a specialist using a partial match' do
-      expect(described_class.find('Rare unmatchedtoken Curator')).to have_attributes(name: 'Benjamin Albritton')
+    it 'returns specialists using a partial match' do
+      expect(described_class.find('Rare unmatchedtoken Curator').first).to have_attributes(name: 'Benjamin Albritton')
     end
 
     it 'returns nothing if no terms match' do

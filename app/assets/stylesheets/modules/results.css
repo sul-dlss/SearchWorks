@@ -40,7 +40,7 @@
 }
 
 .result-set-subheading {
-  color: var(--stanford-90-black);
+  color: var(--stanford-80-black);
 }
 
 .module-container {
@@ -122,21 +122,19 @@
 }
 
 .specialist-card {
+  --bs-card-bg: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity));
   --bs-card-border-radius: 0;
-  border: 1px solid var(--stanford-digital-red);
-  border-top: 5px solid var(--stanford-digital-red);
-  width: 80%;
+  border: none;
+  container-type: inline-size;
   margin: auto;
-  margin-top: 50px;
   position: relative;
 
   .photo {
-    height: 100px;
-    max-width: 100px;
+    height: 88px;
+    max-width: 88px;
     aspect-ratio: 1/1;
     border-radius: 9999px;
     overflow: hidden;
-    top: -50px;
     img {
       width: 100%;
       height: 100%;
@@ -144,15 +142,19 @@
       object-fit: cover;
     }
   }
-  .text {
-    position: relative;
-    top: 2.75rem;
-    padding-bottom: 2rem;
-  }
   .name {
     color: var(--stanford-black);
+    font-size: 1.125rem;
   }
 }
 aside .specialist-card {
   width: 100%;
+}
+
+/* At small container sizes (including in the aside) allow the photo to stack */
+@container (max-width: 280px) {
+  .specialist-card > .d-flex {
+    align-items: center;
+    flex-direction: column;
+  }
 }

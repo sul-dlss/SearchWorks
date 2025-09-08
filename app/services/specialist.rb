@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Specialist = Data.define(:name, :full_title, :research_areas, :description, :photo_url, :email, :types) do
+Specialist = Data.define(:name, :full_title, :research_areas, :description, :photo_url, :email, :types, :href) do
   def self.stopwords
     %w[a an and are as at be by for from has have in is it of on or that the to with]
   end
@@ -15,7 +15,7 @@ Specialist = Data.define(:name, :full_title, :research_areas, :description, :pho
     query_tokens = Specialist.tokenize(query)
 
     specialists.map { |specialist| [specialist, (specialist.search_tokens & query_tokens).map { |token| Specialist.idf[token] || 0 }.sum] }
-               .filter { |_, score| score.positive? }.max_by { |_, score| score }&.first
+               .filter { |_, score| score.positive? }.sort_by { |_, score| -score }.map(&:first).presence
   end
 
   def self.specialists
@@ -47,7 +47,8 @@ Specialist = Data.define(:name, :full_title, :research_areas, :description, :pho
       photo_url: data.dig('photo', 'url'),
       email: data['email'],
       types: data['personTypes']&.pluck('name'),
-      description: data['body']
+      description: data['body'],
+      href: "https://library.stanford.edu#{data['path']}"
     )
   end
 
