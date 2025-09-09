@@ -73,9 +73,6 @@
   }
 }
 
-.input-group > .search-q {
-  flex-grow: 4;
-}
 
 .constraints-container {
   display: flex;
@@ -193,4 +190,40 @@ dialog.modal[open] {
   &::backdrop {
     background-color: var(--bl-modal-backdrop-bg);
   }
+}
+
+/* Blacklight's autocomplete nested element requires application of input group styles that are only applied to direct descendants. */
+
+.input-group > .search-q, .input-group > .search-autocomplete-wrapper > .search-q {
+  flex-grow: 4;
+}
+
+.input-group > .search-autocomplete-wrapper > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: calc(var(--bs-border-width) * -1);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group > .search-autocomplete-wrapper > .form-control {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+.input-group:not(.has-validation) > .search-autocomplete-wrapper > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-autocomplete-wrapper {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  align-items: stretch;
+  flex-grow: 1.55;
+}
+
+.search-autocomplete-wrapper .dropdown-menu{
+  top: 40px;
 }
