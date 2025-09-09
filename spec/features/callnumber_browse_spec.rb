@@ -96,6 +96,7 @@ RSpec.describe 'Callnumber Browse', :js do
       expect(page).to have_css '.toggle-bookmark'
       expect(page).to have_button 'preview'
       click_button 'preview'
+      expect(page).to have_button 'Close'
     end
     within '.preview-container' do
       expect(page).to have_css('h3', text: 'Studies in old Ottoman criminal law')

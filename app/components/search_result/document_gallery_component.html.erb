@@ -37,11 +37,7 @@
     </div>
   <% # bookmark functions for items/docs and preview button %>
   <div class="gallery-buttons d-flex justify-content-end align-items-center gap-1">
-    <button class="btn btn-xs btn-preview preview-button documentid-<%= document.id %>"
-            aria-label="Show preview"
-            data-gallery-card-target="button"
-            data-action="gallery-card#togglePreview"
-            ><span class="bi bi-chevron-down"></span></button>
+    <%= render Searchworks4::GalleryCardPreviewButtonComponent.new(document_id: document.id) %>
     <%= actions %>
   </div>
   </div>
