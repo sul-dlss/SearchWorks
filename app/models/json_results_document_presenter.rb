@@ -22,7 +22,13 @@ class JsonResultsDocumentPresenter
   def fulltext_link_html
     return {} if online_links.blank?
 
-    { 'links' => online_links.map(&:as_json) }
+    links = online_links.map do |online_link| 
+      # Include EZProxy links where applicable
+      online_link.href = Searchworks4::LinkComponent.new(link: online_link, document: @source_document).href
+      online_link.as_json
+    end
+
+    { 'links' => links} 
   end
 
   def online_links
