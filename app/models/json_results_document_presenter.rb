@@ -24,8 +24,7 @@ class JsonResultsDocumentPresenter
 
     links = online_links.map do |online_link|
       # Include EZProxy links where applicable
-      online_link.href = Searchworks4::LinkComponent.new(link: online_link, document: @source_document).href
-      online_link.as_json
+      online_link.as_json.merge(href: href(online_link))
     end
 
     { 'links' => links }
@@ -33,5 +32,13 @@ class JsonResultsDocumentPresenter
 
   def online_links
     source_document&.preferred_online_links || []
+  end
+
+  def href(online_link)
+    proxied_url(online_link) || online_link.href
+  end
+
+  def proxied_url(link)
+    Links::Ezproxy.new(link: link, document: @source_document).to_proxied_url
   end
 end
