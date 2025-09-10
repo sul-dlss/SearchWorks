@@ -42,7 +42,7 @@ RSpec.feature "Search types" do
       end
     end
 
-    click_link 'Articles+'
+    choose 'Articles+'
 
     aggregate_failures('has article search types') do
       within('#search_field') do
