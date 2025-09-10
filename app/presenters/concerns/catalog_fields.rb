@@ -12,8 +12,8 @@ module CatalogFields
 
     year = document.first('pub_year_ss')
 
-    if year.match?(/[u-]$/)
-      "#{year.gsub(/[u-]/, '0')}s"
+    if year.match?(/u$/)
+      "#{year.tr('u', '0')}s"
     else
       "(#{year})"
     end
