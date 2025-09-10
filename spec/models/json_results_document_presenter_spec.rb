@@ -16,7 +16,7 @@ RSpec.describe JsonResultsDocumentPresenter do
     context 'when the source document is available online to only Stanford users' do
       before do
         document_data['marc_links_struct'] = [{
-          "href": "https://example.com",
+          "href": "https://sciendo.com",
           "link_text": "The Link",
           "fulltext": true,
           "stanford_only": true
@@ -25,8 +25,8 @@ RSpec.describe JsonResultsDocumentPresenter do
 
       let(:json) { presenter.as_json.with_indifferent_access }
 
-      it 'includes the link wrapped in a span with a class to be styled by consumers' do
-        expect(json['links'].first).to include(href: 'https://example.com', link_text: 'The Link', stanford_only: true)
+      it 'includes the link wrapped in a span with a class to be styled by consumers and uses EzProxy for the link' do
+        expect(json['links'].first).to include(href: 'https://stanford.idm.oclc.org/login?qurl=https%3A%2F%2Fsciendo.com', link_text: 'The Link', stanford_only: true)
       end
     end
   end

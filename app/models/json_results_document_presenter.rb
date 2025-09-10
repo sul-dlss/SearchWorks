@@ -22,10 +22,23 @@ class JsonResultsDocumentPresenter
   def fulltext_link_html
     return {} if online_links.blank?
 
-    { 'links' => online_links.map(&:as_json) }
+    links = online_links.map do |online_link|
+      # Include EZProxy links where applicable
+      online_link.as_json.merge(href: href(online_link))
+    end
+
+    { 'links' => links }
   end
 
   def online_links
     source_document&.preferred_online_links || []
+  end
+
+  def href(online_link)
+    proxied_url(online_link) || online_link.href
+  end
+
+  def proxied_url(link)
+    Links::Ezproxy.new(link: link, document: @source_document).to_proxied_url
   end
 end
