@@ -224,6 +224,10 @@ dialog.modal[open] {
   flex-grow: 1.55;
 }
 
-.search-autocomplete-wrapper .dropdown-menu{
+.search-autocomplete-wrapper .dropdown-menu {
   top: 40px;
+}
+
+.search-autocomplete-wrapper .dropdown-item[aria-selected="true"] {
+  background-color: var(--stanford-fog-light);
 }
