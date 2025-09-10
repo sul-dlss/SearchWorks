@@ -172,6 +172,7 @@ beyoglueye.com
 bhsd.sccgov.org
 bi.tbzmed.ac.ir
 bib.eastview.com
+bibliographies.brillonline.com
 biblioscout.net
 bibpurl.oclc.org
 bio-diglib.biomedcentral.com
@@ -1471,7 +1472,6 @@ stanford.policymap.com
 stanford.universitypressscholarship.com
 stanfordhealthcare.org
 stanforduniversity.qualtrics.com
-stanforduniversitylanemedicallibrary.on.worldcat.org
 statabs-proquest-com.stanford.idm.oclc.org
 statabs.proquest.com
 statesofindia.cmie.com
