@@ -355,7 +355,6 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 9523510d-2afa-47fd-8310-eaf8e690479e,Business Reserves,BUS-CRES,SU,GSB,BUSINESS,On reserve: Ask at Business i-Desk,true,BUS-IDESK,BUS-IDESK,,,,,,,,,,true,,,,,,
 9532a131-63a9-418c-9c3f-5092dbf5a143,Lane Spec: Vertical File,LANE-HSFLE,SU,MED,LANE,Medical History Center: By appointment,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,,,
 9539a651-1428-4be9-be2b-f9bb18a4a174,SAL3 Shadowed,SAL3-SHADOW,SU,SUL,SAL3,Withdrawn,true,SAL3,SAL3,,,,,,,,,,,,,,,,
-954d0e35-8eb1-4a0c-8787-cbdd889eafd3,Lane Error: Loc Problem in Acq,LANE-NLOC,SU,MED,LANE,Error: Location Problem,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,,
 95ba773a-ca0e-44cf-9c07-7477d97e64e9,Tanner Reference,TAN-REF,SU,SUL,TANNER,Reference,true,TANNER,TANNER,,,,,,,,,,,,,,,,
 96249f49-22ab-48cf-93c9-bd418a2593fa,Eng Shadowed,ENG-SHADOW,SU,SUL,ENG,Ask at circulation desk,true,ENG,ENG,,,,,,,,,,,,,,,,
 969dd3ad-2305-443b-b8c4-eb9b7458c1ce,SAL3 Withdrawn Digital Substitute,SAL3-WD-DIGITAL-SUB,SU,SUL,SAL3,Digital substitute,true,SAL3,SAL3,,,,,,,,,,,,,,,,
