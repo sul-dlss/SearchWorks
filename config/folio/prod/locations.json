@@ -8256,28 +8256,6 @@
     }
   },
   {
-    "id": "954d0e35-8eb1-4a0c-8787-cbdd889eafd3",
-    "name": "Lane Error: Loc Problem in Acq",
-    "code": "LANE-NLOC",
-    "discoveryDisplayName": "Error: Location Problem",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
-    "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
-    "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
-    "servicePointIds": [
-      "0483c7bd-8e95-4c7b-9704-484b01879b02"
-    ],
-    "servicePoints": [],
-    "metadata": {
-      "createdDate": "2023-08-10T17:46:25.479+00:00",
-      "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:25.479+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
     "id": "95ba773a-ca0e-44cf-9c07-7477d97e64e9",
     "name": "Tanner Reference",
     "code": "TAN-REF",
