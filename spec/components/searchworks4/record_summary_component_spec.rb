@@ -27,4 +27,46 @@ RSpec.describe Searchworks4::RecordSummaryComponent, type: :component do
       expect(page).to have_css ".document-thumbnail"
     end
   end
+
+  context 'with main title dates' do
+    context 'with a single year' do
+      let(:document) { SolrDocument.new(id: 'x', pub_year_ss: '2020') }
+
+      it "renders the date in parentheses" do
+        expect(page).to have_text '(2020)'
+      end
+    end
+
+    context 'with uncertain decade' do
+      let(:document) { SolrDocument.new(id: 'x', pub_year_ss: '184u') }
+
+      it "renders the date with 0s" do
+        expect(page).to have_text '1840s'
+      end
+    end
+
+    context 'with uncertain century' do
+      let(:document) { SolrDocument.new(id: 'x', pub_year_ss: '18uu') }
+
+      it "renders the date with 0s" do
+        expect(page).to have_text '1800s'
+      end
+    end
+
+    context 'with a date range' do
+      let(:document) { SolrDocument.new(id: 'x', pub_year_ss: '200u - 201u') }
+
+      it "renders the date range in parentheses" do
+        expect(page).to have_text '(2000s - 2010s)'
+      end
+    end
+
+    context 'with an open ended range' do
+      let(:document) { SolrDocument.new(id: 'x', pub_year_ss: '201u - ') }
+
+      it "renders the date range in parentheses" do
+        expect(page).to have_text '(2010s - )'
+      end
+    end
+  end
 end
