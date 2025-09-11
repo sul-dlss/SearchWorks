@@ -23,5 +23,15 @@
     <li>
       <button class="btn nav-link" data-action="click->analytics#trackEvent" onClick="javascript:if(window.print)window.print()"><i class="bi bi-printer me-1"></i>Print</button>
     </li>
+    <li>
+      <%= button_to clear_bookmarks_path(type: bookmark_type),
+          method: :delete,
+          class: 'toggle-bookmark-remove-all bookmark-toggle btn btn-link lh-1' do %>
+          <span class="action-button blacklight-icons">
+            <%= bookmark_icon %>
+          </span>
+          Remove all
+      <% end %>
+    </li>
   </ul>
 </nav>

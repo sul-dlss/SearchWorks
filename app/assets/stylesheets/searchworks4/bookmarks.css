@@ -14,6 +14,26 @@
   --bl-icon-color: var(--bs-primary);
   color: var(--stanford-80-black);
 
+  .blacklight-icons svg {
+    height: var(--bookmark-width-height);
+    width: var(--bookmark-width-height);
+    overflow: visible;
+    fill: var(--bl-icon-color);
+    vertical-align: sub;
+  }
+
+  .bookmark-hover-icon {
+    --bl-icon-color: var(--stanford-digital-red-light);
+  }
+
+  .bookmark-unchecked-icon {
+    --bl-icon-color: var(--bs-nav-link-color);
+  }
+
+  .bookmark-checked-icon {
+    --bl-icon-color: var(--stanford-cardinal);
+  }
+
   input[type="submit"] {
     display: none;
   }
@@ -25,14 +45,6 @@
       cursor: pointer;
       font-weight: inherit;
       --bookmark-width-height: 1rem;
-
-      .blacklight-icons svg {
-        height: var(--bookmark-width-height);
-        width: var(--bookmark-width-height);
-        overflow: visible;
-        fill: var(--bl-icon-color);
-        vertical-align: sub;
-      }
 
       .bookmark-text {
         cursor: pointer;
@@ -61,18 +73,6 @@
        .bookmark-unchecked-icon, .save-label {
          display: none;
        }
-    }
-
-    .bookmark-hover-icon {
-      --bl-icon-color: var(--stanford-digital-red-light);
-    }
-
-    .bookmark-unchecked-icon {
-      --bl-icon-color: var(--bs-nav-link-color);
-    }
-
-    .bookmark-checked-icon {
-      --bl-icon-color: var(--stanford-cardinal);
     }
   }
   
@@ -116,5 +116,15 @@
 
   .bookmark-checked-icon {
     --bl-icon-color: var(--stanford-cardinal);
+  }
+}
+
+.toggle-bookmark-remove-all {
+  &:hover .bookmark-hover-icon {
+    --bl-icon-color: var(--stanford-digital-red);
+  }
+
+  .bookmark-checked-icon, .bookmark-unchecked-icon {
+    display: none;
   }
 }
