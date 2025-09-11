@@ -282,7 +282,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
   return (
     <fieldset className="d-flex flex-row mb-3 gap-3 align-items-center">
       <legend className="visually-hidden">Search query</legend>
-      <FormControl className="col-4 col-sm-3 col-lg-2 col-xl-3" size="small">
+      <FormControl className="col-4 col-sm-3 col-lg-2" size="small">
         <InputLabel id={`search-field-select-${id}`} className="visually-hidden">Search in</InputLabel>
         <Select labelId={`search-field-select-${id}`} className="w-auto search-field" value={field} onChange={(event) => dispatch({ type: 'updateSearchField', id: id, data: { field: event.target.value } })}>
           {context.searchFieldOptions.map((option) => (
@@ -479,7 +479,7 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
             />
           ))
         }
-        style={{ width: 500 }}
+        style={{ width: 550 }}
         renderInput={(params) => (
           <TextField onKeyDown={preventFormSubmit} {...params} placeholder="Select values" />
         )}
