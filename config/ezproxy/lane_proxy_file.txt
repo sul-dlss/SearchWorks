@@ -947,6 +947,7 @@ journals.plos.org
 journals.sagepub.com
 journals.sbmu.ac.ir
 journals.sfu.ca
+journals.sns.it
 journals.squ.edu.om
 journals.stfm.org
 journals.viamedica.pl
@@ -1439,6 +1440,7 @@ sit.bmj.com
 sjtrem.biomedcentral.com
 sk.sagepub.com
 skeletalmusclejournal.biomedcentral.com
+sloanreview.mit.edu
 small.wenzibase.com
 smf.emath.fr
 smj.sma.org.sg
@@ -1452,6 +1454,7 @@ sportsmedicine-open.springeropen.com
 springerlink.com
 springerlink.metapress.com
 spssi.onlinelibrary.wiley.com
+srchdb1.chosun.com
 srdata.nist.gov
 srh.bmj.com
 sso.cas.org
@@ -1717,7 +1720,6 @@ www.arctt.info
 www.arjournals.org
 www.arl.org
 www.ascro.hr
-www.ase.org.uk
 www.ashdin.com
 www.asiaandro.com
 www.asiaintervention.org
@@ -1985,6 +1987,7 @@ www.ephysician.ir
 www.epjap.org
 www.eplasty.com
 www.epschinadata.com
+www.epw.in
 www.epwrfits.in
 www.erudit.org
 www.esaim-cocv.org
@@ -2483,6 +2486,7 @@ www.oecd-ilibrary.org
 www.oecd.org
 www.ojhas.org
 www.ojoonline.org
+www.oldcitypublishing.com
 www.omicsonline.org
 www.omjournal.org
 www.ompu.ac.jp
@@ -2777,6 +2781,7 @@ www.wjon.org
 www.wjpch.com
 www.wjps.ir
 www.womeninthenationalarchives.amdigital.co.uk
+www.world-economics-journal.com
 www.worldcat.org
 www.worldoflearning.com
 www.worldscibooks.com
