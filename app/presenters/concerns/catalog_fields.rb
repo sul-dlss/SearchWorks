@@ -12,8 +12,12 @@ module CatalogFields
 
     year = document.first('pub_year_ss')
 
-    if year.match?(/u$/)
-      "#{year.tr('u', '0')}s"
+    if year.match?(/\d+u+/)
+      value = year.gsub(/\d+u+/) do |match|
+        "#{match.tr('u', '0')}s"
+      end
+
+      "(#{value})"
     else
       "(#{year})"
     end
