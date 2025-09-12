@@ -78,7 +78,7 @@ RSpec.feature "Facets Customizations" do
 
     click_button 'Sort by number of matches'
 
-    sort_items = page.all('div.sort-options a.dropdown-item')
+    sort_items = page.all('.dropdown.sort-options .dropdown-item')
 
     aggregate_failures do
       expect(sort_items.length).to eq 2
