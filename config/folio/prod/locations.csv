@@ -214,6 +214,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 5447624a-5871-4d7a-864a-99eb4b77583c,Marine Bio Serials,MAR-SERIALS,SU,SUL,MARINE-BIO,Serials,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,,,,,
 549da344-f397-4b87-9c5b-b42453b8ac22,Rumsey Center Case Large,RUM-C-CASE-LG,SU,SUL,RUMSEY-MAP,Map Center (large case),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,,
 54ac639a-56fa-4602-ad76-74cde2003ca8,Lane Ref: Retired Periodical,LANE-PRREF,SU,MED,LANE,Retired Ref Journals: Downstairs,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,,
+54c05778-210b-4847-8384-21d6ff738197,Green HAS Exhibit,GRE-HAS-EXHIBIT,SU,SUL,GREEN,Lane Reading Room: On exhibit,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,,
 54ccfbf4-b59e-4393-8eaa-60f422b74e70,Spec SAL3 Newton,SPEC-SAL3-NEWTON,SU,SUL,SPEC-COLL,Newton Collection,true,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,,
 5576a35d-465c-407c-8900-ae63f2d1fbf3,SUL Withdrawn,SUL-WITHDRAWN,SU,SUL,SUL,Withdrawn,true,SULTS,SULTS,,,,,,,,,,,,,,,,
 569b2a12-b04e-42ee-b0a8-f4bb03ae2963,Law Career,LAW-CAREER,SU,LAW,LAW,Careers collection: Ask at circulation desk,true,LAW,LAW,,,,,,,,,,,,,,,,
