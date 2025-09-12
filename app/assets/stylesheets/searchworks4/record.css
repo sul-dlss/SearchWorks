@@ -154,39 +154,26 @@
 }
 
 .collection-result-preview {
+  .filmstrip-gallery-card img {
+    /* This should match the dimensions we're asking the IIIF server for.
+       This addresses an issue where the rendered size was spilling over to the next pixel (101),
+       which makes the preview button position look sloppy */
+    height: 100px;
+  }
+
+  .preview-button {
+    bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    opacity: 0.85;
+    position: absolute;
+    right: 0.25rem;
+  }
+
   .btn {
     --bs-btn-padding-y: 0.125rem;
     --bs-btn-padding-x: 0.375rem;
     --bs-btn-font-size: 0.875rem;
-  }
-
-  .preview-trigger-btn {
-    position: absolute;
-    bottom: 0;
-    right: 0.3125rem;
-    transform: translate(0, 0);
-    z-index: 1;
-    background-color: var(--stanford-digital-blue);
-    color: var(--bs-white);
-    -webkit-text-stroke: 0.1rem;
-    border-radius: 2px;
-    padding: 0.3125rem 0.5rem;
-    opacity: 0.85;
-
-    &:hover {
-      width: 100%;
-      right: 0;
-
-      &::before {
-        content: "Preview";
-        margin-right: 0.5rem;
-        -webkit-text-stroke: 0rem;
-      }
-
-      &.preview-open::before {
-        content: "Close";
-      }
-    }
   }
 }
 
@@ -261,9 +248,14 @@
   .embed-callnumber-browse-container {
     .gallery {
       .gallery-document {
+        position: relative;
         margin-left: 0.375rem;
         margin-right: 0.375rem;
         margin-bottom: 0;
+
+        &:has(.preview-button .button-text.show) {
+          --bs-border-color: var(--stanford-60-black);
+        }
 
         &:hover {
           box-shadow: var(--bs-box-shadow);
@@ -276,6 +268,24 @@
     }
   }
 }
+
+.embed-callnumber-browse-container .gallery-document:hover,
+.collection-result-preview .filmstrip-gallery-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+/* Stop the translate effect from bouncing if the cursor is left hovering in the gap */
+.embed-callnumber-browse-container .gallery-document:hover::after,
+.collection-result-preview .filmstrip-gallery-card:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  z-index: -1;
+}
+
 
 .availability-modal {
   --bs-accordion-border-radius: 0;

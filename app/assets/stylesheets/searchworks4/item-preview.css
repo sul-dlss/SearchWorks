@@ -40,11 +40,31 @@
     right: 0.5rem;
     top: 0.5rem;
   }
+
+  .document-thumbnail {
+    margin-right: 3rem;
+  }
+}
+
+.filmstrip-gallery-card:hover .preview-button .button-text,
+.gallery-document:hover .preview-button .button-text,
+.preview-button .button-text.show {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  max-width: 100%;
 }
 
 .preview-button {
   background-color: var(--stanford-digital-blue);
   color: white;
   height: 1.5rem;
-  padding: 0 0.05rem;
+
+  &:hover {
+    background-color: var(--stanford-digital-blue-dark);
+  }
+
+  .button-text {
+    max-width: 0px;
+    transition: padding 0.33s ease;
+  }
 }
