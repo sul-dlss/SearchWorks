@@ -8,6 +8,8 @@ import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+import Chip from '@mui/material/Chip';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const SearchContext = React.createContext({});
 const SearchDispatchContext = React.createContext(null);
@@ -290,7 +292,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
           ))}
         </Select>
       </FormControl>
-      <FormControl className="col-4 col-sm-3 col-lg-2" size="small">
+      <FormControl className="col-4 col-sm-3 col-lg-2 col-xl-3" size="small">
         <InputLabel id={`search-field-operator-${id}`} className="visually-hidden">{searchField?.label} search operator</InputLabel>
         <Select labelId={`search-field-operator-${id}`} className="w-auto" value={type} onChange={(event) => dispatch({ type: 'updateSearchField', id: id, data: { type: event.target.value } })}>
           {context.searchTypeOptions.map((option) => (
@@ -374,9 +376,9 @@ const RangeFilterField = ({ id, field, values }) => {
   return (
     <>
       <label className="visually-hidden" htmlFor={`range-field-${id}-begin`}>From year</label>
-      <TextField className="col-4 col-sm-3 col-lg-2" placeholder="From year" id={`range-field-${id}-begin`} name={values[0] && values[0].length > 0 && `range[${field}][begin]`} value={values[0] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [event.target.value, values[1]] } })}} size="small"></TextField>
+      <TextField className="col-4 col-sm-3 col-lg-2 col-xl-3" placeholder="From year" id={`range-field-${id}-begin`} name={values[0] && values[0].length > 0 && `range[${field}][begin]`} value={values[0] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [event.target.value, values[1]] } })}} size="small"></TextField>
       <label className="visually-hidden" htmlFor={`range-field-${id}-end`}>To year</label>
-      <TextField sx={{ minWidth: '8ch' }} className="col-md-3 col-lg-2" placeholder="To year" id={`range-field-${id}-end`} name={values[1] && values[1].length > 0 && `range[${field}][end]`} value={values[1] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [values[0], event.target.value] } })}} size="small"></TextField>
+      <TextField sx={{ minWidth: '8ch' }} className="col-md-3 col-lg-2 col-xl-3" placeholder="To year" id={`range-field-${id}-end`} name={values[1] && values[1].length > 0 && `range[${field}][end]`} value={values[1] || ''} onKeyDown={preventFormSubmit} onChange={(event) => { dispatch({ type: 'updateFilterField', id: id, data: { values: [values[0], event.target.value] } })}} size="small"></TextField>
     </>
   );
 }
@@ -420,7 +422,7 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
 
   return (
     <>
-      <FormControl className="col-4 col-sm-3 col-lg-2" size="small">
+      <FormControl className="col-4 col-sm-3 col-lg-2 col-xl-3" size="small">
         <InputLabel id={`filter-field-operator-${id}`} className="visually-hidden">Search operator</InputLabel>
         <Select labelId={`filter-field-operator-${id}`} className="w-auto text-nowrap" value={type} onChange={(event) => dispatch({ type: 'updateFilterField', id: id, data: { type: event.target.value } })}>
           {context.filterTypeOptions.map((option) => (
@@ -441,6 +443,11 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
         value={values}
         disableCloseOnSelect
         getOptionLabel={mapValueToLabel}
+        popupIcon={
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          </svg>
+        }
         renderOption={(props, option, { selected }) => {
           const { key, ...optionProps } = props;
           return (
@@ -456,7 +463,23 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
             </li>
           );
         }}
-        style={{ width: 500 }}
+        renderTags={(tagValue, getTagProps) =>
+          tagValue.map((option, index) => (
+            <Chip
+              key={index}
+              label={mapValueToLabel(option)}
+              {...getTagProps({ index })}
+              deleteIcon={
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="btn remove" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+              }
+              size="small"
+              sx={{ fontSize: '0.875rem' }}
+            />
+          ))
+        }
+        style={{ width: 550 }}
         renderInput={(params) => (
           <TextField onKeyDown={preventFormSubmit} {...params} placeholder="Select values" />
         )}
@@ -466,6 +489,66 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
   );
 };
 
+const SulSelectDropdownIcon = (props) => (
+  <svg
+    {...props}
+    width="16"
+    height="16"
+    fill="currentColor"
+    viewBox="0 0 16 16"
+  >
+    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+  </svg>
+);
+
+const theme = createTheme({
+  typography: {
+    color: 'var(--stanford-black)',
+    fontFamily: '"Source Sans 3"',
+  },
+  components: {
+    MuiChip: {
+      styleOverrides: {
+        label: {
+          padding: '0.5rem 0.75rem',
+        },
+        deleteIcon: {
+          color: 'var(--stanford-black)',
+          '&:hover': {
+            color: 'var(--stanford-digital-red)',
+          },
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            backgroundColor: 'white',
+            '&:hover': {
+              backgroundColor: 'var(--bs-dropdown-link-hover-bg)',
+            },
+          },
+        },
+      },
+    },
+    MuiSelect: {
+      defaultProps: {
+        IconComponent: SulSelectDropdownIcon,
+      },
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            backgroundColor: 'white',
+            '&:hover': {
+              backgroundColor: 'var(--bs-dropdown-link-hover-bg)',
+            },
+          },
+        },
+      },
+    },
+  },
+});
 
 export default class extends Controller {
   static values = {
@@ -474,6 +557,10 @@ export default class extends Controller {
     searchFieldOptions: Array
   }
   connect() {
-    createRoot(this.element).render(<AdvancedSearchForm queryParams={this.queryParamsValue} searchFieldOptions={this.searchFieldOptionsValue} filterFields={this.filterFieldsValue} />);
+    createRoot(this.element).render(<ThemeProvider theme={theme}>
+                                      <AdvancedSearchForm queryParams={this.queryParamsValue}
+                                                          searchFieldOptions={this.searchFieldOptionsValue}
+                                                          filterFields={this.filterFieldsValue} />
+                                    </ThemeProvider>);
   }
 }

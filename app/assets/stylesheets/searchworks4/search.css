@@ -103,6 +103,18 @@
   input:focus-visible {
     box-shadow: none;
   }
+
+  .btn:hover:has(.text-digital-red-light) {
+    .text-digital-red-light {
+      color: var(--stanford-digital-red);
+    }
+  }
+
+  .btn:hover:has(.text-digital-green) {
+    .text-digital-green {
+      color: rgb(var(--stanford-digital-green-dark-rgb));
+    }
+  }
 }
 
 .advanced-facet-heading {
