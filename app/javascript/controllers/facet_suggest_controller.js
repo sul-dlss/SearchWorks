@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="facet-suggest"
 export default class extends Controller {
-  static targets = ['input', 'count', 'alphabetical']
+  static targets = ['query']
 
 
   connect() {
@@ -12,11 +12,12 @@ export default class extends Controller {
   }
 
   loadExistingQuery() {
-    if(this.inputTarget.value != "") {
+    const inputElement = this.inputElement()
+    if (inputElement.value != "") {
       // There needs to be an input event for the query to be applied and have the Blacklight FacetSuggest respond
       // correctly, removimg the previous and next links if applicable
       const event = new Event('input', { bubbles: true })
-      this.inputTarget.dispatchEvent(event)
+      inputElement.dispatchEvent(event)
     }
   }
 
@@ -26,15 +27,15 @@ export default class extends Controller {
   // appends them to the sorting URLs to allow for that query to 
   // be passed along with the sorting option
   handleSort() {
-    const countUrl = new URL(this.countTarget.href)
-    const alphabeticalUrl =  new URL(this.alphabeticalTarget.href)
-    const countParams = new URLSearchParams(countUrl.search)
-    const alphabeticalParams = new URLSearchParams(alphabeticalUrl.search)
-    countParams.set('facet_suggest_query', this.inputTarget.value)
-    alphabeticalParams.set('facet_suggest_query', this.inputTarget.value)
-    countUrl.search = countParams
-    alphabeticalUrl.search = alphabeticalParams
-    this.countTarget.href = countUrl.href
-    this.alphabeticalTarget.href = alphabeticalUrl.href
+    this.queryTargets.forEach(query => {
+      const url = new URL(query.href)
+      url.searchParams.set('facet_suggest_query', this.inputElement().value)
+      query.href = url.href
+    })
+  }
+
+  inputElement() {
+    // This is needed rather than this.element because the modal rewrites the DOM
+    return document.querySelector('.modal-body input.facet-suggest')
   }
 }
