@@ -568,6 +568,17 @@ class CatalogController < ApplicationController
     render layout: false
   end
 
+  def volumes_modal
+    @call_number = params[:q]
+    @response = search_service.search_results
+    respond_to do |format|
+      format.html do
+        return render layout: false if request.xhr?
+        # Otherwise draw the full page
+      end
+    end
+  end
+
   private
 
   def augment_solr_document_json_response(documents)
