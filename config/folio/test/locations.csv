@@ -490,6 +490,7 @@ c9cef3c6-5874-4bae-b90b-2e1d1f4674db,HILA Stacks,HILA-STACKS,SU,HOOVER,HILA,Stac
 ca2f8482-649a-4f51-8733-f6f53f477829,Classics migration error,CLA-MIGRATE-ERR,SU,SUL,CLASSICS,Error during migration,true,CLASSICS,CLASSICS,,,,,,,,,,,,,,,
 cacd4964-c133-4199-b53b-99852a7c5e95,HILA Microforms,HILA-MICROFORMS,SU,HOOVER,HILA,Microforms,true,HILA,HILA,,,,,,,,,,,,,,,
 cb0275a1-ac7a-4d3b-843a-62e77952f5d2,Green British Docs,GRE-BRIT-DOCS,SU,SUL,GREEN,British Government Documents,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,British,,,,
+cbc79fc0-45f8-45f1-b203-742d1d68c5d0,Green HAS Exhibit,GRE-HAS-EXHIBIT,SU,SUL,GREEN,Lane Reading Room: On exhibit,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
 cbff46a6-58f9-4288-bc03-72aecca76469,Media Microfiche ,MEDIA-CDCAB,SU,SUL,MEDIA-CENTER,Ask at Media Center desk,true,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
 cc5fbda7-7a93-470c-b86f-6b192497528d,Spec SAL3 Law,SPEC-SAL3-LAW,SU,SUL,SPEC-COLL,Law Collection,true,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,
 ccd4c66e-50b2-4bb4-9357-54f6fc636957,Marine Bio Locked Media,MAR-LOCKED-MEDIA,SU,SUL,MARINE-BIO,Locked media: Ask at circulation desk,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,,,,
