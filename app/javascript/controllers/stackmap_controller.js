@@ -7,7 +7,7 @@ export default class extends Controller {
     apiUrl: String
   }
 
-  static targets = ["map", "directions", "callnumber", "library", "floorname", 'fitButton', 'zoomOutButton']
+  static targets = ["map", "directions", "directionsTab", "callnumber", "library", "floorname", 'fitButton', 'zoomOutButton']
 
   connect() {
     fetchJsonp(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
@@ -42,8 +42,13 @@ export default class extends Controller {
 
       this.libraryTarget.textContent = map.library
       this.floornameTarget.textContent = map.floorname
-      // Replace <li>- with <li>
-      this.directionsTarget.innerHTML = map.directions.replaceAll(/<li>-\s*/g, '<li>')
+
+      if (map.directions == "") {
+        this.directionsTabTarget.classList.add('d-none')
+      } else {
+        // Replace <li>- with <li>
+        this.directionsTarget.innerHTML = map.directions.replaceAll(/<li>-\s*/g, '<li>')
+      }
 
       this.bounds = [[0, 0], [map.height, map.width]]
       this.mapurl = map.mapurl
