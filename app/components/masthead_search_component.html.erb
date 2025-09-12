@@ -16,7 +16,7 @@
                     {},
                     title: scoped_t('search_field.title'),
                     class: "form-select search-field",
-                    data: {'action': 'change->auto-complete#onChange'} ) %>
+                    data: {'action': 'change->auto-complete#onChange', 'auto-complete-target': 'select'} ) %>
       <% elsif search_fields.length == 1 %>
         <%= f.hidden_field :search_field, value: search_fields.first.last %>
       <% end %>
