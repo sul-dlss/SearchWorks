@@ -505,7 +505,6 @@ class CatalogController < ApplicationController
     # Configuration for autocomplete suggester
     config.autocomplete_enabled = true
     config.autocomplete_path = 'suggest'
-    config.autocomplete_suggester = 'defaultAnalyzing'
 
     # View type group config
     config.view.gallery(document_component: SearchResult::DocumentGalleryComponent)
@@ -571,14 +570,6 @@ class CatalogController < ApplicationController
 
   def search_bar
     render layout: false
-  end
-
-  # This override supports sending a different suggester name than that returned by default
-  # Later, we will update our Solr configuration to return the suggester we want to use by default
-  def suggest
-    @request_params = { q: params[:q] }
-    @suggestions = Blacklight::Solr::SuggestRepository.new(blacklight_config).suggestions(@request_params) 
-    render 'suggest', layout: false
   end
 
   private
