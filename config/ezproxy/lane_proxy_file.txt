@@ -287,6 +287,7 @@ bmjophth.bmj.com
 bmjpaedsopen.bmj.com
 boardsbeyond.com
 book.oversea.cnki.net
+bookauctionrecords.org
 books.fupress.com
 books.google.be
 books.google.ch
@@ -755,6 +756,7 @@ idpjournal.biomedcentral.com
 ieeeXplore.ieee.org
 ieeexplore-ieee-org.stanford.idm.oclc.org
 ieeexplore.ieee.org
+ier.ut.ac.ir
 ietresearch.onlinelibrary.wiley.com
 ifst.onlinelibrary.wiley.com
 iiif.lib.harvard.edu
@@ -1266,6 +1268,7 @@ portal.genexplain.com
 portal.igpublish.com
 portico.org
 portlandpress.com
+practicalactionpublishing.com
 practicalgastro.com
 prc.springeropen.com
 prcp.psychiatryonline.org
@@ -1358,6 +1361,7 @@ respiratory-research.biomedcentral.com
 retrovirology.biomedcentral.com
 revistas.unc.edu.ar
 revistas.usb.edu.co
+revistasice.com
 rgd.mcw.edu
 rimg.geoscienceworld.org
 rjme.ro
@@ -1514,6 +1518,7 @@ thailand.digitaljournals.org
 theatlantic.com
 thejns.org
 theoncologist.onlinelibrary.wiley.com
+thepolynesiansociety.org
 thescipub.com
 thesurgery.or.kr
 thorax.bmj.com
@@ -1675,6 +1680,7 @@ www.ama-assn.org
 www.americanconsumerculture.amdigital.co.uk
 www.americangeosciences.org
 www.americanhistory.amdigital.co.uk
+www.americanlibrarydirectory.com
 www.americanwest.amdigital.co.uk
 www.americashealthrankings.org
 www.amj.net.au
@@ -1777,6 +1783,7 @@ www.bls.gov
 www.bmas-conf.org
 www.bmbreports.org
 www.bmj.com
+www.bns.ee
 www.bodley.ox.ac.uk
 www.bookrail.co.kr
 www.brain-map.org
@@ -2017,6 +2024,7 @@ www.fedprac-digital.com
 www.fertstert.org
 www.ffhdj.com
 www.firstworldwar.amdigital.co.uk
+www.flm-journal.org
 www.fluorideresearch.org
 www.fm.viamedica.pl
 www.fons.org
@@ -2466,6 +2474,7 @@ www.noiseandhealth.org
 www.noropsikiyatriarsivi.com
 www.nossdav.org
 www.nowpublishers.com
+www.nplusonemag.com
 www.npmj.org
 www.nps.org.au
 www.nrcresearchpress.com
@@ -2714,6 +2723,7 @@ www.thermopedia.com
 www.thieme-connect.com
 www.thieme-connect.de
 www.thieme.de
+www.thlz.com
 www.thno.org
 www.thoracicmedicine.org
 www.tictocs.ac.uk
