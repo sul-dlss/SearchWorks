@@ -5,21 +5,28 @@
   --banner-image: url(/searchworks4/research-papers-reading-v1.webp);
 }
 .search-area-image-bg {
-  &::before {
-    content: "";
-    position: absolute;
-    opacity: 80%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--banner-image);
-    z-index: -1;
+  .container {
+    --bs-gutter-x: 0;
   }
 
-  position: relative;
-  height: 350px;
-  padding-block: 80px;
+  @media (min-width: 576px) {
+    --bs-gutter-x: 1.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      opacity: 80%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: var(--banner-image);
+      z-index: -1;
+    }
+
+    position: relative;
+    height: 350px;
+    padding-block: 80px;
+  }
 
   .search-card {
     background-color: white;
