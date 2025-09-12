@@ -11352,6 +11352,30 @@
     }
   },
   {
+    "id": "cbc79fc0-45f8-45f1-b203-742d1d68c5d0",
+    "name": "Green HAS Exhibit",
+    "code": "GRE-HAS-EXHIBIT",
+    "discoveryDisplayName": "Lane Reading Room: On exhibit",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [],
+    "metadata": {
+      "createdDate": "2025-09-11T22:30:12.320+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2025-09-11T22:30:12.320+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "cbff46a6-58f9-4288-bc03-72aecca76469",
     "name": "Media Microfiche ",
     "code": "MEDIA-CDCAB",
