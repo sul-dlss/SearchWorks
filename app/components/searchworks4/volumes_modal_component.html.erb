@@ -1,0 +1,16 @@
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.with_title { 'Volumes' } %>
+  <% component.with_body do %>
+
+    <% results.each do |result| %>
+      <div class="row border-top">
+        <div class="col-8">
+          <a href="<%= solr_document_path(result['id']) %>"><%= result['title_display'] %></a>
+        </div>
+        <div class="col-4 text-end">
+          <%= call_number_display(result) %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
