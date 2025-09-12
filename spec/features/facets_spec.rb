@@ -81,4 +81,31 @@ RSpec.describe 'Facets' do
       end
     end
   end
+
+  context 'Range facet', :js do
+    context 'has no selection' do
+      it 'does not show the distribution range chart' do
+        visit search_catalog_path(q: '', search_field: 'search')
+
+        click_button 'Show all filters'
+        click_button 'Date'
+
+        within('#facet-pub_year_tisim') do
+          expect(page).to have_field('range[pub_year_tisim][begin]')
+          expect(page).to have_field('range[pub_year_tisim][end]')
+          expect(page).to have_no_css('.chart-wrapper')
+        end
+      end
+    end
+
+    context 'has a selection' do
+      it 'shows the distribution range chart' do
+        visit search_catalog_path(range: { pub_year_tisim: { begin: '1999', end: '2025' } })
+
+        within('#facet-pub_year_tisim') do
+          expect(page).to have_css('.chart-wrapper')
+        end
+      end
+    end
+  end
 end
