@@ -8,8 +8,7 @@
     class: "facet-suggest form-control border-start-0",
     data: {
       facet_field: key,
-      facet_search_context: helpers.search_facet_path(id: key),
-      facet_suggest_target: "input"
+      facet_search_context: helpers.search_facet_path(id: key)
     },
     placeholder: I18n.t('blacklight.search.facets.suggest.label', field_label: label.downcase)
   %>
