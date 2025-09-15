@@ -7,7 +7,7 @@ export default class extends Controller {
     url: String
   }
 
-  static targets = [ "button" ]
+  static targets = [ "button", "buttonText" ]
 
   static outlets = [ "preview" ]
 
@@ -18,12 +18,15 @@ export default class extends Controller {
       this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-up')
       this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-down')
       this.buttonTarget.ariaLabel = 'Hide preview'
-      this
+      this.buttonTextTarget.textContent = 'Close'
+      this.buttonTextTarget.classList.add('show')
     } else if (this.buttonTarget.classList.contains('preview-open')) {
       this.buttonTarget.classList.remove('preview-open')
       this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-up')
       this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-down')
       this.buttonTarget.ariaLabel = 'Show preview'
+      this.buttonTextTarget.textContent = 'Preview'
+      this.buttonTextTarget.classList.remove('show')
     }
   }
 
