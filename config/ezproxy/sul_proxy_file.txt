@@ -1636,3 +1636,5 @@ scite.ai
 link.intlpress.com
 thediplomat.com
 www.bloomsburycollections.com
+advance.lexis.com
+global.factiva.com
