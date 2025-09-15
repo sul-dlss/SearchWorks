@@ -4,7 +4,7 @@
     <i class="bi bi-search" aria-hidden="true"></i>
   </label>
   <%= text_field_tag "facet_suggest_#{key}",
-    nil,
+    suggest_query,
     class: "facet-suggest form-control border-start-0",
     data: {
       facet_field: key,

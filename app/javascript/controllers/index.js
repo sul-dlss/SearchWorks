@@ -67,6 +67,9 @@ application.register("facet-list", FacetListController)
 import FacetSearchController from "./facet_search_controller"
 application.register("facet-search", FacetSearchController)
 
+import FacetSuggestController from "./facet_suggest_controller"
+application.register("facet-suggest", FacetSuggestController)
+
 import FeedbackFormController from "./feedback_form_controller"
 application.register("feedback-form", FeedbackFormController)
 
