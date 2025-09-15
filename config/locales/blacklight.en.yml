@@ -46,7 +46,7 @@ en:
         gallery: 'gallery'
         list: 'normal'
       per_page:
-        button_label_html: '%{count}<span> per page</span>'
+        button_label_html: '%{count} per page'
       pagination_info:
         pages:
           one: '%{start_num} - %{end_num}'
