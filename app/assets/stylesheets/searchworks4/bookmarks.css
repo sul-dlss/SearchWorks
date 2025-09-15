@@ -99,6 +99,11 @@
 }
 
 .bookmark-select-all-toggle {
+  .bookmark-toggle-all {
+    padding-top: 0.1875rem;
+    padding-bottom: 0.1875rem;
+  }
+
   .btn-outline-primary {
     --bs-btn-active-color: var(--stanford-80-black);
     --bs-btn-disabled-color: var(--stanford-50-black);
