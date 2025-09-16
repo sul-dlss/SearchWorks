@@ -519,6 +519,7 @@ docuseek2.com
 dod.chemnetbase.com
 doi.org
 drc.bmj.com
+drive.google.com
 droit.cairn.info
 druginfo.nlm.nih.gov
 ds.cc.yamaguchi-u.ac.jp
@@ -744,6 +745,7 @@ hstalks.com
 hsus.cambridge.org
 human-resources-health.biomedcentral.com
 humanfactors.jmir.org
+humanlifereview.com
 humgenomics.biomedcentral.com
 hunteq.com
 hv.proquest.com
@@ -923,6 +925,7 @@ journal.waocp.org
 journalhosting.ucalgary.ca
 journalimplantdent.springeropen.com
 journalofbigdata.springeropen.com
+journalofeconomicinsight.com
 journalofethics.ama-assn.org
 journalotohns.biomedcentral.com
 journalretinavitreous.biomedcentral.com
@@ -952,6 +955,7 @@ journals.sfu.ca
 journals.sns.it
 journals.squ.edu.om
 journals.stfm.org
+journals.upress.ufl.edu
 journals.viamedica.pl
 jov.arvojournals.org
 jovs.amegroups.com
@@ -1140,6 +1144,7 @@ neurolrespract.biomedcentral.com
 neurophotonics.spiedigitallibrary.org
 new.sourceoecd.org
 newfirstsearch.oclc.org
+newleftreview.org
 newspaperslibrary.proquest.com
 nexisuni.com
 ng.neurology.org
@@ -1175,6 +1180,7 @@ ohsonline.com
 ojin.nursingworld.org
 ojphi.org
 ojrd.biomedcentral.com
+ojs.library.dal.ca
 ojvr.org
 olap.epsnet.com.cn
 om-pc.biomedcentral.com
@@ -1319,6 +1325,7 @@ pubs.ciphi.ca
 pubs.cnl.ca
 pubs.geoscienceworld.org
 pubs.lib.umn.edu
+pubs.nctm.org
 pubs.rsc.org
 pubs.rsna.org
 pubsonline.informs.org
@@ -2079,6 +2086,7 @@ www.healtheffects.org
 www.heartandmetabolism.org
 www.heartviews.org
 www.heinonline.org
+www.heldermann.de
 www.hellenicjcardiol.com
 www.hematologyandoncology.net
 www.hgmd.cf.ac.uk
@@ -2164,6 +2172,7 @@ www.imdb.com
 www.img.cas.cz
 www.imj.ie
 www.impactaging.com
+www.impan.pl
 www.imrpress.com
 www.imstat.org
 www.in-silico-pharmacology.com
@@ -2187,7 +2196,6 @@ www.infoworld.com
 www.ingenta.com
 www.ingentaconnect.com
 www.injepijournal.com
-www.insna.org
 www.int-res.com
 www.interactionofcolor.com
 www.internationaljournalofcaringsciences.org
@@ -2215,6 +2223,7 @@ www.jafib.com
 www.japi.org
 www.japtr.org
 www.jbclinpharm.org
+www.jbe-platform.com
 www.jbr.gr
 www.jbra.com.br
 www.jbsr.be
@@ -2381,6 +2390,7 @@ www.masstourism.amdigital.co.uk
 www.math.kth.se
 www.math.upenn.edu
 www.mathjournals.org
+www.mathnet.ru
 www.mathunion.org
 www.mattioli1885journals.com
 www.mbc.ca.gov
