@@ -582,6 +582,7 @@ ecbd5085-0b02-4542-b790-176327e0668a,SAL Arabic,SAL-ARABIC,SU,SUL,SAL,Temporary 
 ecc609ab-7204-4a4f-be73-fca050ae9918,Lane Books: Oversize Folio,LANE-FOLIO,SU,MED,LANE,Oversize - Folio: Downstairs,true,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,
 ecf8e20b-9135-437c-855b-d24fe92844f2,Eng Science Fiction,ENG-SCIFI,SU,SUL,ENG,Science fiction collection,true,ENG,ENG,,,,,,,,,,,,,,,
 ee3965d1-d19d-49ef-8493-88bac9929121,Spec Robinson,SPEC-ROBINSON,SU,SUL,SPEC-COLL,Robinson Collection,true,SPEC,SPEC,,,SPECUA,,,,,,,,,,,,
+ee7e6160-c139-49e4-8857-1997faeaf975,Eng JEDI,ENG-JEDI,SU,SUL,ENG,JEDI collection,true,ENG,ENG,,,,,,,,,,,,,,,
 ef28be31-ff72-45ce-a4b1-b4b139ec19db,Green Hohbach Reference,GRE-HH-REF,SU,SUL,GREEN,Hohbach Hall: Reference,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,
 f05736d2-d3a2-4532-88aa-031a87528863,SUL Shelved Elsewhere,SUL-SEE-OTHER,SU,SUL,SUL,See linked record to request items bound together,true,Online,Online,,,,,,,,,,,,,,,
 f0872428-a8ee-446e-a535-de44bc4b8d98,Spec SAL3 MemLibMusic,SPEC-SAL3-MEMLIBMUS,SU,SUL,SPEC-COLL,Memorial Library of Music,true,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,
