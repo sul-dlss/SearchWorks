@@ -6,12 +6,20 @@
     <% end %>
   </div>
 
-  <div class="mb-1">
+  <div class="mb-2">
     <% if presenter.document_format.present? %>
       <span class="align-text-bottom me-1"><%= resource_icon %></span> <%= collection.document_formats&.first %> &mdash;
     <% end %>
     <%= collection.extent_sans_format %>
   </div>
+
+  <% if collection[:summary_display] %>
+  <div class="collection-summary mt-2 col-xxl-9" data-controller="long-text" data-long-text-truncate-class="truncate-3">
+    <div data-long-text-target="text">
+      <%= helpers.format_record_html(collection[:summary_display].join(', ')) %>
+    </div>
+  </div>
+  <% end %>
 
   <div class="collection-metadata mt-1">
 
@@ -27,11 +35,4 @@
     <% end %>
   </div>
 
-  <% if collection[:summary_display] %>
-  <div class="collection-summary mt-2 col-xxl-9" data-controller="long-text" data-long-text-truncate-class="truncate-3">
-    <div data-long-text-target="text">
-      <%= helpers.format_record_html(collection[:summary_display].join(', ')) %>
-    </div>
-  </div>
-  <% end %>
 </div>
