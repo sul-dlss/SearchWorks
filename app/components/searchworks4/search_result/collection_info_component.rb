@@ -13,6 +13,14 @@ module Searchworks4
       def render?
         helpers.page_location.collection? && collection.present?
       end
+
+      def presenter
+        @presenter ||= helpers.document_presenter(collection)
+      end
+
+      def resource_icon
+        helpers.render_resource_icon(presenter.formats)
+      end
     end
   end
 end
