@@ -21,18 +21,17 @@
   </div>
   <% end %>
 
-  <div class="collection-metadata mt-1">
-
+  <dl class="collection-metadata mb-0">
     <% if collection.collection_members.present? %>
-      <div class="clearfix mb-1">
-        <b>Digital collection</b> <%= render BadgeCounterComponent.new(collection.collection_members.total, 'item') %>
+      <div class="d-flex gap-3 justify-content-start">
+        <dt>Digital collection</dt><dd><%= render BadgeCounterComponent.new(collection.collection_members.total, 'item') %></dd>
       </div>
     <% end %>
     <% if collection.marc_links.finding_aid.present? %>
-      <div class="clearfix finding-aid">
-        <b class="me-1">Finding aid</b> <%= render Searchworks4::LinkComponent.new(link: collection.marc_links.finding_aid.first, document: collection) %>
+      <div class="d-flex gap-3 justify-content-start">
+        <dt>Finding aid</dt><dd><%= render Searchworks4::LinkComponent.new(link: collection.marc_links.finding_aid.first, document: collection) %></dd>
       </div>
     <% end %>
-  </div>
+  </dl>
 
 </div>
