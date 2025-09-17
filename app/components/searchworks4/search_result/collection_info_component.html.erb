@@ -24,7 +24,7 @@
   <dl class="collection-metadata mb-0">
     <% if collection.collection_members.present? %>
       <div class="d-flex gap-3 justify-content-start">
-        <dt>Digital collection</dt><dd><%= render BadgeCounterComponent.new(collection.collection_members.total, 'item') %></dd>
+        <dt>Digital collection</dt><dd><%= render BadgeCounterComponent.new(collection.collection_members.total, 'item', color: nil) %></dd>
       </div>
     <% end %>
     <% if collection.marc_links.finding_aid.present? %>
