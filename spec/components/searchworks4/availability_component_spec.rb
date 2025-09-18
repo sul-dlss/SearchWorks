@@ -171,7 +171,7 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
 
     it 'displays the link for the volumes modal' do
       render_inline(described_class.new(document: document))
-      
+
       expect(page).to have_css('a[data-blacklight-modal="trigger"]', text: 'See volumes', visible: :all)
     end
   end
