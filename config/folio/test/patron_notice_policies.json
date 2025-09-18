@@ -1,5 +1,46 @@
 [
   {
+    "id": "0da49c1c-798d-48f0-922a-34c1e9b436a5",
+    "name": "test notice ",
+    "metadata": {
+      "createdDate": "2025-09-17T18:52:23.235+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2025-09-17T18:54:04.312+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    },
+    "loanNotices": [
+      {
+        "templateId": "cc3b542f-a8d3-4bf0-bf2b-c0c2cd4a42a5",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Due date",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Hours"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Weeks"
+          }
+        }
+      }
+    ],
+    "feeFineNotices": [],
+    "requestNotices": [
+      {
+        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
+      }
+    ]
+  },
+  {
     "id": "122b3d2b-4788-4f1e-9117-56daa91cb75c",
     "name": "Send No Notices",
     "description": "A basic notice policy that does not define any notices",
