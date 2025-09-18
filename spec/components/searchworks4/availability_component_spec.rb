@@ -165,4 +165,14 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
       expect(page).to have_link('Request via Finding Aid')
     end
   end
+
+  context 'with analytics items' do
+    let(:document) { SolrDocument.from_fixture("2027166.yml") }
+
+    it 'displays the link for the volumes modal' do
+      render_inline(described_class.new(document: document))
+      
+      expect(page).to have_css('a[data-blacklight-modal="trigger"]', text: 'See volumes', visible: :all)
+    end
+  end
 end

@@ -570,6 +570,7 @@ class CatalogController < ApplicationController
 
   def volumes_modal
     @call_number = params[:q]
+    @title = params[:title]
     @response = search_service.search_results
     respond_to do |format|
       format.html do

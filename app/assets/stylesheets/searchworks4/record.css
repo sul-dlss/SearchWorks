@@ -299,6 +299,10 @@
     --bs-border-width: 0;
   }
 
+  table tr:last-child {
+    border-bottom: none;
+  }
+
   .accordion-button {
     --bs-accordion-btn-bg: var(--stanford-fog-light);
     --bs-accordion-active-bg: var(--stanford-fog-light);

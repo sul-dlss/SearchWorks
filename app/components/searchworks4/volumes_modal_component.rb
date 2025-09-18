@@ -2,10 +2,11 @@
 
 module Searchworks4
   class VolumesModalComponent < ViewComponent::Base
-    def initialize(call_number:, response:)
+    def initialize(call_number:, response:, title:)
       super()
       @call_number = call_number
       @response = response
+      @title = title
     end
 
     def results
@@ -13,15 +14,17 @@ module Searchworks4
     end
 
     def call_number_display(solr_doc)
-      call_number = ''
       if solr_doc.key?('lc_assigned_callnum_ssim')
-        call_number = solr_doc['lc_assigned_callnum_ssim'].join(', ')
+        solr_doc['lc_assigned_callnum_ssim'].join(', ')
       elsif solr_doc.key?('item_display_struct')
-        call_number = solr_doc['item_display_struct'][0]['callnumber']
+        solr_doc['item_display_struct'][0]['callnumber']
       else
-        call_number = ''
+        ''
       end
-      call_number
+    end
+
+    def show_search?
+      results.length > 4
     end
   end
 end

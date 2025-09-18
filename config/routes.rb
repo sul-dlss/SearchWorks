@@ -119,7 +119,6 @@ Rails.application.routes.draw do
   get "feedback" => "feedback_forms#new"
   get "catalog/volumes_modal" => "catalog#volumes_modal", :as => :volumes_modal
 
-
   resources :availability, only: [:show]
 
   resources :recent_selections, only: :index
