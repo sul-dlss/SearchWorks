@@ -23,8 +23,9 @@
   display: none;
 }
 
-/* Anchor (override modal-dialog-centered) for facet suggest modals */
-.modal-dialog:has(.facet-suggest) {
+/* Anchor (override modal-dialog-centered) the availability & facet suggest modals */
+.modal-dialog:has(.facet-suggest),
+.modal-dialog:has(.availability-modal) {
   align-items: normal;
   display: block;
 }
