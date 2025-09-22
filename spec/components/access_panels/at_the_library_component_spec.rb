@@ -376,24 +376,6 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     end
   end
 
-  describe 'finding aid' do
-    before do
-      document = SolrDocument.new(
-        id: '123',
-        item_display_struct: [
-          { barcode: '123', library: 'SPEC-COLL', effective_permanent_location_code: 'STACKS', callnumber: 'ABC' }
-        ],
-        marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", note: 'something something Finding aid' }]
-      )
-      render_inline(described_class.new(document:))
-    end
-
-    it 'displays finding aid sections with link' do
-      expect(page).to have_css('h4', text: 'Finding aid')
-      expect(page).to have_css('a', text: 'Online Archive of California')
-    end
-  end
-
   describe 'special instructions' do
     before do
       document = SolrDocument.new(

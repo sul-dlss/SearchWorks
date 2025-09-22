@@ -12,6 +12,15 @@
         <% if presenter.document_format.present? && document.marc_field('3003abcefg').values.any? %>&mdash;<% end %> <%= safe_join(document.marc_field('3003abcefg').values, ' ').presence %>
       </div>
 
+      <% if document.marc_links.finding_aid.present? %>
+        <dl class="mt-4">
+          <div class="d-flex justify-content-start gap-3">
+            <dt>Finding aid</dt>
+            <dd><%= render Searchworks4::LinkComponent.new(link: document.preferred_finding_aid, document: document) %></dd>
+          </div>
+        </dl>
+      <% end %>
+
       <div class='mt-3'>
         <%= render Record::MarcContentAdviceComponent.new(document: document) %>
       </div>
