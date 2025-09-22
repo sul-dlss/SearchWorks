@@ -89,10 +89,13 @@ RSpec.describe Record::MarcDocumentComponent, type: :component do
 
   describe "Metadata sections all available" do
     let(:document) do
-      SolrDocument.new(marc_json_struct: marc_sections_fixture, author_struct: [{ creator: [{ link: '...', search: '...' }] }], marc_links_struct: [{ material_type: 'finding aid' }])
+      SolrDocument.new(marc_json_struct: marc_sections_fixture, author_struct: [{ creator: [{ link: '...', search: '...' }] }],
+                       marc_links_struct: [{ href: "http://oac.cdlib.org/findaid/ark:/something-else", material_type: 'finding aid' }])
     end
 
     it "displays correct sections" do
+      expect(page).to have_css('dt', text: 'Finding aid')
+      expect(page).to have_link(href: 'http://oac.cdlib.org/findaid/ark:/something-else')
       expect(page).to have_css('h2', text: "Contributors")
       expect(page).to have_css('h2', text: "Bibliographic information")
     end
