@@ -1,27 +1,16 @@
 <div class="p-4 mb-3 bg-fog-light collection-info">
   <div class="d-flex justify-content-between gap-3">
-    <h1 class="h2"><%= collection[:title_display] %></h1>
-    <%= link_to solr_document_path(collection[:id]), class: "align-self-baseline text-nowrap" do %>
-      Collection record <i class="bi bi-chevron-right"></i>
+    <h1 class="h2 mb-0"><%= collection[:title_display] %></h1>
+    <%= link_to solr_document_path(collection[:id]), class: "align-self-baseline text-nowrap btn btn-icon btn-outline-primary" do %>
+      Collection details <i class="bi bi-chevron-right"></i>
     <% end %>
   </div>
 
-  <div class="collection-metadata mt-1">
-    <% if collection.extent_sans_format.present? %>
-      <div class="clearfix mb-1">
-        <b><%= collection[:format_main_ssim]&.first %></b> - <%= collection.extent_sans_format %>
-      </div>
+  <div class="mb-2">
+    <% if presenter.document_format.present? %>
+      <span class="align-text-bottom me-1"><%= resource_icon %></span> <%= collection.document_formats&.first %> &mdash;
     <% end %>
-    <% if collection.collection_members.present? %>
-      <div class="clearfix mb-1">
-        <b>Digital collection</b> <%= render BadgeCounterComponent.new(collection.collection_members.total, 'item') %>
-      </div>
-    <% end %>
-    <% if collection.marc_links.finding_aid.present? %>
-      <div class="clearfix finding-aid">
-        <b class="me-1">Finding aid</b> <%= render Searchworks4::LinkComponent.new(link: collection.marc_links.finding_aid.first, document: collection) %>
-      </div>
-    <% end %>
+    <%= collection.extent_sans_format %>
   </div>
 
   <% if collection[:summary_display] %>
@@ -31,4 +20,18 @@
     </div>
   </div>
   <% end %>
+
+  <dl class="collection-metadata mb-0">
+    <% if collection.collection_members.present? %>
+      <div class="d-flex gap-3 justify-content-start">
+        <dt>Digital collection</dt><dd><%= render BadgeCounterComponent.new(collection.collection_members.total, 'item', color: nil) %></dd>
+      </div>
+    <% end %>
+    <% if collection.marc_links.finding_aid.present? %>
+      <div class="d-flex gap-3 justify-content-start">
+        <dt>Finding aid</dt><dd><%= render Searchworks4::LinkComponent.new(link: collection.marc_links.finding_aid.first, document: collection) %></dd>
+      </div>
+    <% end %>
+  </dl>
+
 </div>
