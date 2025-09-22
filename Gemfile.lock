@@ -199,7 +199,7 @@ GEM
     jbuilder (2.14.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
-    json (2.13.2)
+    json (2.14.1)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     listen (3.9.0)
@@ -217,7 +217,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.0.4)
+    marcel (1.1.0)
     matrix (0.4.3)
     mini_mime (1.1.5)
     minitest (5.25.5)
@@ -339,7 +339,7 @@ GEM
       rspec-expectations (~> 3.13)
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
-    rspec-support (3.13.5)
+    rspec-support (3.13.6)
     rubocop (1.80.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -351,7 +351,7 @@ GEM
       rubocop-ast (>= 1.46.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.46.0)
+    rubocop-ast (1.47.1)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     rubocop-capybara (2.22.1)
@@ -382,8 +382,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
-    sqlite3 (2.7.3-arm64-darwin)
-    sqlite3 (2.7.3-x86_64-linux-gnu)
+    sqlite3 (2.7.4-arm64-darwin)
+    sqlite3 (2.7.4-x86_64-linux-gnu)
     sshkit (1.24.0)
       base64
       logger
