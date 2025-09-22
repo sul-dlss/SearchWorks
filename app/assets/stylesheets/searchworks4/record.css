@@ -377,7 +377,7 @@
 }
 
 .blacklight-articles-fulltext_html {
-  #topnav .navbar-nav { display: none; }
+  #topnav .navbar { display: none; }
   .access-panel-heading {
     display: none;
   }
