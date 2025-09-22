@@ -65,6 +65,6 @@
 
   .button-text {
     max-width: 0px;
-    transition: padding 0.33s ease;
+    transition: padding 0.33s ease-in-out;
   }
 }
