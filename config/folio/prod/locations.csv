@@ -60,7 +60,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 150b8273-b10b-4907-b43f-a3d4f89bc79f,Spec SAL3 U-Archives,SPEC-SAL3-U-ARCHIVES,SU,SUL,SPEC-COLL,University Archives,true,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,,
 1564e5df-d1a6-41b7-bd6a-f150c3f8b9bf,Lane Spec: Storage,LANE-STRG,SU,MED,LANE,Medical History Center: By appointment,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,,,
 156a50fe-b288-447f-82c4-618ba8e4565a,Lane Spec: Old Class,LANE-SPOLD,SU,MED,LANE,Medical History Center: By appointment,true,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,,,
-158168a3-ede4-4cc1-8c98-61f4feeb22ea,SAL3 Shelved Elsewhere,SAL3-SEE-OTHER,SU,SUL,SAL3,See linked record to request items bound together,true,SAL3,SAL3,,,,,,,,,,,,,,,,
+158168a3-ede4-4cc1-8c98-61f4feeb22ea,SAL3 Shelved Elsewhere,SAL3-SEE-OTHER,SU,SUL,SAL3,Individual volumes catalogued separately,true,SAL3,SAL3,,,,,,,,,,,,,,,,
 17e1aae1-9b25-4e37-ac2f-34316628bc8e,Green LL Newspapers,GRE-LL-NEWSPAPERS,SU,SUL,GREEN,Lower level: Newspapers,true,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,,
 18464b12-20ad-420b-bdf5-43d78d1d1470,Music Permanent Reserve,MUS-PERMRES,SU,SUL,MUSIC,Permanent reserve: Ask at circulation desk,true,MUSIC,MUSIC,,,,,,,,,,,,,,,,
 18a321cc-a47b-4aca-9159-a782d58f85f9,SAL3 PAGE-FC,SAL3-PAGE-FC,SU,SUL,SAL3,"For use in Art & Architecture Library, Music Library or Special Collections",true,SAL3,SAL3,,,,,"ART,MUSIC,SPEC",,,Offsite,,,,,,,,
