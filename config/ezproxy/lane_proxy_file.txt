@@ -105,6 +105,7 @@ app.deweydata.io
 app.gideononline.com
 app.jove.com
 app.knovel.com
+app.simplyanalytics.com
 app.wileydigitalarchives.com
 applied-informatics-j.springeropen.com
 appliedcr.biomedcentral.com
@@ -1072,6 +1073,7 @@ medone-ophthalmology.thieme.com
 medone-otolaryngology.thieme.com
 medone-plasticsurgery.thieme.com
 medone-radiology.thieme.com
+medone.thieme.com
 medpix.nlm.nih.gov
 mefj.springeropen.com
 mehdijournal.com
@@ -1556,6 +1558,7 @@ uclibs.org
 udbstat.eastview.com
 udndata.com
 ugeskriftet.dk
+uia.org
 ulrichsweb.serialssolutions.com
 upload.wikimedia.org
 urbanland.uli.org
