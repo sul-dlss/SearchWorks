@@ -1,4 +1,6 @@
 <div class="p-4 mb-3 bg-fog-light collection-info">
+  <%= render Searchworks4::CollectionSuperhead.new %>
+
   <div class="d-flex justify-content-between gap-3">
     <h1 class="h2 mb-0"><%= collection[:title_display] %></h1>
     <%= link_to solr_document_path(collection[:id]), class: "align-self-baseline text-nowrap btn btn-icon btn-outline-primary" do %>

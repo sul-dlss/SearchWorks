@@ -8,6 +8,7 @@
       itemtype: document.itemtype do %>
   <div class="document-main-section">
     <%= thumbnail %>
+    <%= render Searchworks4::CollectionSuperhead.new if document.is_a_collection? || document.has_finding_aid? %>
 
     <h1 class="document-title">
       <span itemprop="name"><%= title %></span>
