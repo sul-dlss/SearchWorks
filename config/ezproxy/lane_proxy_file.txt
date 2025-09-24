@@ -1475,6 +1475,7 @@ ssrr-journal.jp
 standardsingenomics.biomedcentral.com
 stanford-artech-patron.eb20.com
 stanford-pilot.hosted.panopto.com
+stanford.chronoshub.io
 stanford.dkyobobook.co.kr
 stanford.edaptivedocs.org
 stanford.idm.oclc.org
