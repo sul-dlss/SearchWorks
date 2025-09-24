@@ -37,6 +37,10 @@ module MarcLinks
     marc_links&.finding_aid&.first
   end
 
+  def stanford_archives_finding_aid?
+    preferred_finding_aid&.href&.include?('//archives.stanford.edu')
+  end
+
   class MarcLinkProcessor
     attr_reader :document, :link_struct
 

@@ -78,4 +78,24 @@ RSpec.feature "Search Results Page" do
       expect(page.current_url).not_to include(/[q|f]=/)
     end
   end
+
+  context 'with a collection with a finding aid' do
+    before do
+      visit search_catalog_path(q: '11966809')
+    end
+
+    it 'flags the collection' do
+      expect(page).to have_css '.badge.text-palo-alto-dark', text: 'Archival Collections at Stanford'
+    end
+  end
+
+  context 'with a digital collection' do
+    before do
+      visit search_catalog_path(q: '29')
+    end
+
+    it 'flags the collection' do
+      expect(page).to have_css '.badge.text-secondary', text: 'Collection'
+    end
+  end
 end
