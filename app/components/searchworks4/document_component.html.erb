@@ -61,9 +61,11 @@
         <% end %>
 
         <% if document.mods? %>
-          <ul class="document-metadata list-unstyled truncate-2">
-            <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
-          </ul>
+          <% if document.mods.name.any? %>
+            <ul class="document-metadata list-unstyled truncate-2">
+              <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
+            </ul>
+          <% end %>
           <%= render SummaryDataComponent.new(document:) %>
         <% else %>
           <ul class="document-metadata list-unstyled">
