@@ -26,7 +26,7 @@
 
 <h1 class="visually-hidden">Search Results</h1>
 
-<%= render Searchworks4::SearchResult::CollectionInfoComponent.new(collection: @parent) %>
+<%= render Searchworks4::SearchResult::CollectionInfoComponent.new(collection: @parent) if page_location.collection? %>
 <%= render Searchworks4::SearchResult::BookplateFundComponent.new(bookplate: bookplate_from_document_list) %>
 
 <% if has_search_parameters? && !hide_constraints %>

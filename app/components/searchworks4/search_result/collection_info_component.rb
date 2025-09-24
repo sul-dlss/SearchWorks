@@ -11,7 +11,7 @@ module Searchworks4
       attr_reader :collection
 
       def render?
-        helpers.page_location.collection? && collection.present?
+        collection.present?
       end
 
       def presenter
