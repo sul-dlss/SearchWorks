@@ -246,7 +246,8 @@ RSpec.describe EdsLinks do
         { 'Text' => 'HTML FULL TEXT',          'Url' => 'http://example.com/1' },
         { 'Text' => 'PDF FULL TEXT',           'Url' => 'http://example.com/2' },
         { 'Text' => 'EDS FULL TEXT',           'Url' => 'http://example.com/3' },
-        { 'Text' => 'OPEN ACCESS',             'Url' => 'http://example.com/4' },
+        { 'Text' => 'OPEN ACCESS',             'Url' => 'http://example.com/41' },
+        { 'Text' => 'FULL TEXT',               'Url' => 'http://example.com/4' }, # ignored
         { 'Text' => 'VIEW REQUEST OPTIONS',    'Url' => 'http://example.com/5' },
         { 'Text' => 'ACCESS URL',              'Url' => 'http://example.com/6' } # ignored
       ]
@@ -263,7 +264,7 @@ RSpec.describe EdsLinks do
     end
 
     context 'category 3' do
-      let(:links) { all_custom_links[2..4] }
+      let(:links) { all_custom_links[2..5] }
 
       it 'shows 3 only' do
         expect(document.eds_links.fulltext.length).to eq 1
@@ -272,16 +273,16 @@ RSpec.describe EdsLinks do
     end
 
     context 'category 4' do
-      let(:links) { all_custom_links[3..4] }
+      let(:links) { all_custom_links[3..5] }
 
-      it 'shows 4 only' do
+      it 'shows 4 only and does not show category 4 with view content link' do
         expect(document.eds_links.fulltext.length).to eq 1
-        expect(document.eds_links.fulltext.first.href).to eq('http://example.com/4')
+        expect(document.eds_links.fulltext.first.href).to eq('http://example.com/41')
       end
     end
 
     context 'category 5' do
-      let(:links) { all_custom_links[4..4] }
+      let(:links) { all_custom_links[5..5] }
 
       it 'shows 5 only' do
         expect(document.eds_links.fulltext.length).to eq 1

@@ -7,9 +7,13 @@ module Articles
     end
 
     def icon
-      return unless link
+      return unless link && %w[ebook-pdf pdflink pdf].include?(link.type)
 
-      image_tag(image_url('pdf-icon.svg'), height: '20px', alt: 'PDF') unless link.type == 'other'
+      pdf_icon
+    end
+
+    def pdf_icon
+      sanitize "<i class='bi bi-filetype-pdf link-icon' aria-label='PDF'></i>"
     end
 
     def href
@@ -37,6 +41,10 @@ module Articles
 
     def link_attr
       { data: { turbo: false } }
+    end
+
+    def display_link
+      icon.present? ? (sanitize "#{icon} #{link_text}") : link_text
     end
 
     def casalini_text = nil
