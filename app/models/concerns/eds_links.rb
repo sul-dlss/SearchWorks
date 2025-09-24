@@ -94,12 +94,11 @@ module EdsLinks
     #
     # 1 and 2 are preferred, and can coexist
     # show 3 only if there's no 1 or 2
-    # show 4 only if there's no 1-3.
+    # show 4 only if there's no 1-3
     # show 5 only if there's no 1-4
     #
     # @param [Array<Integer>] `all_categories`
     # @param [Integer] `category`
-    # @param String `label`
     def show?(categories, category)
       case category
       when 1, 2
