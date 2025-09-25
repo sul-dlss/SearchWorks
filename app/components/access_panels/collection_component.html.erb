@@ -5,8 +5,13 @@
 
   <% component.with_body do %>
     <h4><%= link_to(helpers.document_presenter(@collection).heading, solr_document_path(@collection[:id])) %></h4>
+
+    <div class="mb-2">
+      <%= safe_join([@collection.document_formats&.first, @collection.extent_sans_format].compact, ' &mdash; '.html_safe) %>
+    </div>
+
     <% if @collection[:summary_display] %>
-      <div class="mb-3" data-controller="long-text" data-long-text-truncate-class="truncate-3">
+      <div class="mb-2" data-controller="long-text" data-long-text-truncate-class="truncate-3">
         <div data-long-text-target="text">
           <%= helpers.format_record_html(@collection[:summary_display].join(', ')) %>
         </div>
@@ -14,14 +19,15 @@
     <% end %>
     <dl class="dl-invert">
       <% if @collection.collection_members.present? %>
-        <div class="d-flex flex-wrap gap-2">
+        <div class="d-flex flex-wrap gap-1">
           <dt>Digital collection</dt>
-          <dd><%= link_to(pluralize(@collection.collection_members.total, 'digital item'), collection_members_path(@collection)) %></dd>
+          <dd>
+            <%= render BadgeCounterComponent.new(@collection.collection_members.total, 'item') %>
+            <%= link_to(collection_members_path(@collection), class: 'ps-1 icon-link') do %>
+              Browse <i class="bi bi-chevron-right"></i>
+            <% end %>
+          </dd>
         </div>
-      <% end %>
-      <% if @collection.extent_sans_format.present? %>
-        <dt>Physical collection</dt>
-        <dd><%= @collection.extent_sans_format %></dd>
       <% end %>
       <% if @collection.has_finding_aid? %>
         <dt>Finding aid</dt>
