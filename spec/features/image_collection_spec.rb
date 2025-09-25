@@ -15,6 +15,13 @@ RSpec.feature "Image Collection", :js do
 
     expect(page).to have_css("h3 a", text: "Image Collection1") #title
     expect(page).to have_css("div[data-controller='long-text']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
+
+    within 'article[data-document-id="mf774fs2413"]' do
+      aggregate_failures do
+        expect(page).to have_text 'Part of collection: Image Collection1'
+        expect(page).to have_link 'Image Collection1', href: solr_document_path('29')
+      end
+    end
   end
 
   scenario "Record view" do

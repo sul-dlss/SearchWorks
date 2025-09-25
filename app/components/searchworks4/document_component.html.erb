@@ -54,10 +54,18 @@
           </div>
         <% end %>
 
+        <% if document.index_parent_collections&.any? %>
+          <div class="mb-1">
+            Part of collection: <%= safe_join(document.index_parent_collections.map { |coll| helpers.link_to_document(coll) }, ', ') %>
+          </div>
+        <% end %>
+
         <% if document.mods? %>
-          <ul class="document-metadata list-unstyled truncate-2">
-            <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
-          </ul>
+          <% if document.mods.name.any? %>
+            <ul class="document-metadata list-unstyled truncate-2">
+              <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
+            </ul>
+          <% end %>
           <%= render SummaryDataComponent.new(document:) %>
         <% else %>
           <ul class="document-metadata list-unstyled">
