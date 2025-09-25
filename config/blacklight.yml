@@ -19,3 +19,5 @@ test: &test
 production:
   url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:8983/solr/blacklight-core" %>
   adapter: solr
+  open_timeout: 5
+  timeout: 15
