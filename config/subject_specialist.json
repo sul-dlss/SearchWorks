@@ -1,6 +1,6 @@
 {
   "query": "e",
-  "count": 131,
+  "count": 129,
   "results": [
     {
       "id": "51d9e75c-404d-4c56-a9bc-fb73f777ae78",
@@ -295,21 +295,6 @@
       "path": "/people/juanita-chabot"
     },
     {
-      "id": "5a07e58d-622c-41f9-812b-2afb016de0eb",
-      "firstName": "Peter",
-      "lastName": "Chan",
-      "fullTitle": "Web Archivist, Special Collections\n",
-      "photo": {
-        "url": "https://library.sites-pro.stanford.edu/sites/library/files/media/image/stanford-person-default-profile-image.png"
-      },
-      "personTypes": [
-        {
-          "name": "Staff"
-        }
-      ],
-      "path": "/people/peter-chan"
-    },
-    {
       "id": "024877df-e079-400c-9fad-17c7e62458e4",
       "firstName": "Freja",
       "lastName": "Cole",
@@ -447,6 +432,18 @@
       "path": "/people/chris-doan"
     },
     {
+      "id": "2cca3cbc-7a9a-4fff-91a4-2ff8f598d5b4",
+      "firstName": "Jennifer",
+      "lastName": "Dockter",
+      "fullTitle": "Reference Asst., Learning and Outreach\nStaff, Library Technology\n",
+      "photo": {
+        "url": "https://library.sites-pro.stanford.edu/sites/library/files/media/image/stanford-person-default-profile-image.png"
+      },
+      "email": "jldock@stanford.edu",
+      "mailCode": "6004",
+      "path": "/people/jennifer-dockter"
+    },
+    {
       "id": "3b44eab0-ae60-4394-b722-9880ee10e4ab",
       "firstName": "Quinn",
       "lastName": "Dombrowski",
@@ -491,7 +488,7 @@
         "url": "https://library.sites-pro.stanford.edu/sites/library/files/media/person/nilesdorn1701452488618.jpg",
         "alt": "Niles Dorn"
       },
-      "body": "Niles Dorn received his BA in Physics &amp; Astronomy from Pomona College. At the Map Center, he assists in overseeing operations and technology in service of making the collections more accessible to students, researchers and the public.",
+      "body": "Niles Dorn received his BA in Physics &amp; Astronomy from Pomona College. At the Map Center, he assists in overseeing collection structure and technology in service of making Center materials more accessible to students, researchers, and the public.",
       "email": "nedorn@stanford.edu",
       "mailCode": "6004",
       "personTypes": [
@@ -701,28 +698,6 @@
         }
       ],
       "path": "/people/hannah-frost"
-    },
-    {
-      "id": "810c4628-5463-417a-966f-46b2be3a6177",
-      "firstName": "Karen",
-      "lastName": "Fung",
-      "fullTitle": "Curator, African Collection, Humanities Resource Group\n",
-      "photo": {
-        "url": "https://library.sites-pro.stanford.edu/sites/library/files/media/image/stanford-person-default-profile-image.png"
-      },
-      "body": "I am the Curator for the Africa Collection, Stanford University Libraries. I acquire publications, audio visual resources, and special collections from and about Sub-Saharan Africa. I help students, faculty, staff and visiting researchers find the information they need for their work.",
-      "email": "kfung@stanford.edu",
-      "telephone": "(650) 216-8496",
-      "mailCode": "6004",
-      "research": [
-        "African Studies"
-      ],
-      "personTypes": [
-        {
-          "name": "Subject specialist"
-        }
-      ],
-      "path": "/people/karen-fung"
     },
     {
       "id": "838134de-ed2f-4ac1-8533-a7fb1a0812f2",
@@ -1086,29 +1061,6 @@
       "telephone": "(650) 460-9720",
       "mailCode": "8406",
       "path": "/people/frances-kaplan"
-    },
-    {
-      "id": "9ae40b37-c2c4-4b02-a0d8-425a5fa9b8fe",
-      "firstName": "Phyllis",
-      "lastName": "Kayten",
-      "fullTitle": "Outreach and Instruction Librarian, Learning and Outreach\n",
-      "photo": {
-        "url": "https://library.sites-pro.stanford.edu/sites/library/files/media/person/phyllis-kayten1684525721012.jpg",
-        "alt": "Phyllis Kayten"
-      },
-      "body": "Prior to coming to Stanford University, I served as a Human Performance Investigator for the National Transportation Safety Board (NTSB), investigating the human causes of major transportation accidents. I was also the Deputy Scientific and Technical Advisor for Human Factors to the Administrator of the Federal Aviation Administration (FAA), and a Human Factors Research Scientist at the US Merchant Marine Academy.",
-      "email": "pkayten@stanford.edu",
-      "mailCode": "6068",
-      "research": [
-        "Outreach and Instruction",
-        "General Reference"
-      ],
-      "personTypes": [
-        {
-          "name": "Subject specialist"
-        }
-      ],
-      "path": "/people/phyllis-kayten"
     },
     {
       "id": "d7d64880-aad9-4e89-921a-63867bcea358",
@@ -1811,7 +1763,7 @@
         "url": "https://library.sites-pro.stanford.edu/sites/library/files/media/person/ronald-nakao1685054023795.jpg",
         "alt": "Ron Nakao"
       },
-      "body": "I am responsible for purchasing Library materials and resources, such as books, journals, and data to support research and teaching in economics and political science. Contact me if you have questions about our economics, political science or social science data collections.<br><br>I am Stanford's Representative to two Social Science Data Archives, the Inter-university Consortium for Political and Social Research (ICPSR) and the Roper Center for Public Opinion Research (Roper) and can help you access their collections and resources.<br><br>I can assist you in preparing your research proposal's Data Management Plan (DMP) and can work with you to document and share your data with other researchers (<a href=\"http://data.stanford.edu/\">http://data.stanford.edu/</a>) and preserve it for the long-term in the Stanford Digital Repository (SDR).",
+      "body": "I am responsible for purchasing Library materials and resources, such as books, journals, and data to support research and teaching in economics and political science. Contact me if you have questions about our economics, political science or social science data collections.<br><br>I am Stanford's Representative to two Social Science Data Archives, the Inter-university Consortium for Political and Social Research (ICPSR) and the Roper Center for Public Opinion Research (Roper) and can help you access their collections and resources.<br><br>I can assist you in preparing your research proposal's Data Management Plan (DMP) and can work with you to document and share your data with other researchers (<a href=\"http://data.stanford.edu/\">http://data.stanford.edu/</a>) and preserve it for the long-term in the Stanford Digital Repository (<a href=\"https://sdr.library.stanford.edu/\">https://sdr.library.stanford.edu/</a>).",
       "email": "ronbo@stanford.edu",
       "research": [
         "Asian American Studies",
@@ -2176,11 +2128,10 @@
       "telephone": "(650) 206-3528",
       "mailCode": "6067",
       "research": [
+        "African Studies",
         "Anthropology",
         "Archaeology",
-        "Communications",
         "Gender, Feminist and Sexuality Studies (LGBTQ+)",
-        "Journalism",
         "Native American Studies"
       ],
       "personTypes": [
@@ -2449,9 +2400,11 @@
         "url": "https://library.sites-pro.stanford.edu/sites/library/files/media/person/felicia-smith1691264619230.jpg",
         "alt": "Felicia A. Smith"
       },
-      "body": "Felicia A. Smith, MLIS, is the inaugural Racial Justice and Social Equity Librarian at Stanford Libraries. Felicia is responsible for outreach to faculty and students across all schools and departments including the Department of African and African American Studies (DAAAS), and Stanford Center for Racial Justice (SCRJ), as well as the Equity, Community, Leadership (ECL) centers. Felicia is responsible for collection development of research materials in all formats that support the research and teaching needs of scholars. She works with other bibliographers to identify publishers and data sources that expand the breadth of Stanford’s collections.<br><br>Felicia believes that as an African American librarian, she is charged with the awesome responsibility of being a keeper of the light and protector of our shared memories. In addition to her numerous national and international presentations, Felicia has published several peer-reviewed articles as well as a book, Cybrarian Extraordinaire, detailing her highly successful and unique approach to library instruction. Felicia created a program that taught Information Literacy using Kindles for inmates in a Juvenile Jail. Previously, Felicia was as a Criminal Defense Private Investigator in Chicago, Illinois, specializing in homicide and narcotics. Her motto is, \"I make the unknown, known.\" <br><br>Felicia received a Master of Library Science degree, from Dominican University and a Bachelor of Arts in Communications from the University of Illinois at Chicago. Her past positions include serving as the Latino Studies Subject Specialist as an Assistant Librarian, at the University of Notre Dame.",
+      "body": "Felicia A. Smith, MLIS, is the inaugural Racial Justice and Social Equity Librarian at Stanford Libraries. She is responsible for outreach to faculty and students across all schools and departments including the Department of African and African American Studies (DAAAS), and Stanford Center for Racial Justice (SCRJ), as well as the Equity, Community, Leadership (ECL) centers. <br><br>Felicia is also the Communication &amp; Journalism Librarian who serves as the primary liaison between the library and those academic departments, programs, faculty and students. She is the library liaison to the Stanford Big Local News Project and the Black Graphic Design History Collections.<br><br>Felicia is responsible for collection development of research materials in all formats including data sources that support the research and teaching needs of Stanford scholars and  that expand the breadth of Stanford’s collections.<br><br>Felicia believes that as a librarian, she is charged with the awesome responsibility of being a keeper of the light and protector of our shared memories. In addition to her numerous national and international presentations, Felicia has published several peer-reviewed articles as well as a book, Cybrarian Extraordinaire, detailing her highly successful and unique approach to library instruction. Felicia created a program that taught Information Literacy using Kindles for inmates in a Juvenile Jail. Previously, Felicia was as a Criminal Defense Private Investigator in Chicago, Illinois, specializing in homicide and narcotics. Her motto is, \"I make the unknown, known.\" <br><br>Felicia received a Master of Library Science degree, from Dominican University and a Bachelor of Arts in Communications from the University of Illinois at Chicago. Her past positions include serving as the Latino Studies Subject Specialist as an Assistant Librarian, at the University of Notre Dame.",
       "research": [
-        "African American Studies"
+        "African American Studies",
+        "Communication",
+        "Journalism"
       ],
       "personTypes": [
         {
