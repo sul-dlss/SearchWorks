@@ -104,6 +104,7 @@ gem 'rinku', require: 'rails_rinku'
 gem 'bootstrap', '~> 5.0'
 
 gem 'rack-attack' # For throttle configuration
+gem 'bot_challenge_page'
 gem 'redis'
 
 gem 'global_alerts'
