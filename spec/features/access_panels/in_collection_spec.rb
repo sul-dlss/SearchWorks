@@ -11,7 +11,7 @@ RSpec.feature "In collection Access Panel" do
       expect(page).to have_css("h4 a", text: "Image Collection1")
       expect(page).to have_css("[data-controller='long-text']", text: /A collection of fixture images/)
       expect(page).to have_css("dt", text: 'Digital collection')
-      expect(page).to have_css("dd a", text: /\d+ digital items?/)
+      expect(page).to have_css("dd .badge", text: /\d+ items?/)
       expect(page).to have_css("dt", text: "Finding aid")
       expect(page).to have_css("dd a", text: "Online Archive of California")
     end
