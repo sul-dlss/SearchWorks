@@ -42,6 +42,8 @@ class CatalogController < ApplicationController
     blacklight_config.max_per_page = 10000 if params[:export]
   end
 
+  bot_challenge only: :index, if: -> { has_search_parameters? }
+
   # Upstream opensearch action doesn't handle our complex title field well.
   before_action only: :opensearch do
     blacklight_config.index.title_field = blacklight_config.index.title_field.field
