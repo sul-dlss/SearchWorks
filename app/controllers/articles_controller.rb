@@ -18,6 +18,8 @@ class ArticlesController < ApplicationController
     end
   end
 
+  bot_challenge only: :index
+
   rescue_from 'Faraday::Error' do |exception|
     raise ActionController::RoutingError, 'Not Found' if params[:action] == 'show'
 
