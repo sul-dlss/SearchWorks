@@ -542,6 +542,9 @@ class CatalogController < ApplicationController
   def stackmap
     @document = search_service.fetch(params[:id])
     @items = @document.holdings.items.select { |item| item.effective_permanent_location_code == params[:location] }
+
+    render plain: 'No items found', status: :not_found and return unless @items.any?
+
     library_code = @items.first.library
     location = @document.holdings.libraries.find { |library| library.code == library_code }.locations.find { |location| location.code == params[:location] }
     @stackmap_api_url = location.stackmap_api_url
