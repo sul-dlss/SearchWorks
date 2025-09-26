@@ -76,11 +76,12 @@ module Searchworks4
     class LocationComponent < ViewComponent::Base
       attr_reader :location, :document
 
-      def initialize(location:, document:, classes: ['text-nowrap'], suppress_off_campus: true)
+      def initialize(location:, document:, classes: ['text-nowrap'], suppress_off_campus: true, backlink_hash: {})
         @location = location
         @document = document
         @classes = classes
         @suppress_off_campus = suppress_off_campus
+        @backlink_hash = backlink_hash
         super()
       end
 
@@ -95,7 +96,8 @@ module Searchworks4
       def call
         if stackmappable?
           analytics = { action: "click->analytics#trackLink", controller: "analytics", analytics_category_value: "item_location" }
-          link_to stackmap_path(id: document.id, location: location.code), data: { blacklight_modal: 'trigger', **analytics }, class: @classes + ['location-name'] do
+          link_to stackmap_path(id: document.id, location: location.code, **@backlink_hash), data: { blacklight_modal: 'trigger', **analytics, **@data },
+                                                                                             class: @classes + ['location-name'] do
             tag.i(class: "bi bi-geo-alt-fill me-1") + location.name
           end
         else
