@@ -17,17 +17,27 @@ module MarcHelper
                      'author_title'
                    end
     vern = data[:fields].first[:vernacular][:vern]
-    href = "\"#{[field_data[:author], field_data[:link_text]].join(' ')}\""
+
     {
       label: data[:label],
-      unmatched_vernacular: data[:unmatched_vernacular],
+      unmatched_vernacular: format_uniform_title_value(data[:unmatched_vernacular], search_field:),
       fields: [
         {
-          field: "#{field_data[:pre_text]} #{link_to(field_data[:link_text],
-                                                     { action: 'index', controller: 'catalog', q: href, search_field: })} #{field_data[:post_text]}".html_safe,
-          vernacular: (link_to(vern, { q: "\"#{vern}\"", controller: 'catalog', action: 'index', search_field: }) if vern)
+          field: format_uniform_title_value(field_data, search_field:),
+          vernacular: format_uniform_title_value(vern, search_field:)
         }
       ]
     }
+  end
+
+  def format_uniform_title_value(field_data, search_field:)
+    return unless field_data
+
+    return link_to(field_data, { q: "\"#{field_data}\"", controller: 'catalog', action: 'index', search_field: }) if field_data.is_a?(String)
+
+    q = "\"#{[field_data[:author], field_data[:link_text]].join(' ')}\""
+    link = link_to(field_data[:link_text], { action: 'index', controller: 'catalog', q:, search_field: })
+
+    safe_join([field_data[:pre_text], link, field_data[:post_text]].compact, " ")
   end
 end
