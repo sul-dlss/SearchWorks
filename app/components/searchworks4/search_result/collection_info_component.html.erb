@@ -31,7 +31,7 @@
     <% end %>
     <% if collection.marc_links.finding_aid.present? %>
       <div class="d-flex gap-3 justify-content-start">
-        <dt>Finding aid</dt><dd><%= render Searchworks4::LinkComponent.new(link: collection.marc_links.finding_aid.first, document: collection) %></dd>
+        <dt>Finding aid</dt><dd><%= render Searchworks4::FindingAidLinkComponent.new(link: collection.marc_links.finding_aid.first, document: collection) %></dd>
       </div>
     <% end %>
   </dl>

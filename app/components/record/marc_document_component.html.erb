@@ -16,7 +16,7 @@
         <dl class="mt-4">
           <div class="d-flex justify-content-start gap-3">
             <dt>Finding aid</dt>
-            <dd><%= render Searchworks4::LinkComponent.new(link: document.preferred_finding_aid, document: document) %></dd>
+            <dd><%= render Searchworks4::FindingAidLinkComponent.new(link: document.preferred_finding_aid, document: document) %></dd>
           </div>
         </dl>
       <% end %>

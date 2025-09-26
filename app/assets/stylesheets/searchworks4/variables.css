@@ -4,6 +4,7 @@
   --sul-shadow-color: rgba(0, 0, 0, 0.2);
   --bs-box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
 
+  --stanford-palo-alto: #175E54;
   --stanford-palo-alto-dark: #014240;
 
   /* https://github.com/sul-dlss/component-library/pull/180 */

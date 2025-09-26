@@ -106,6 +106,18 @@ aside,
   color: var(--stanford-palo-alto-dark);
 }
 
+.btn-palo-alto {
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--stanford-palo-alto);
+  --bs-btn-border-color: var(--stanford-palo-alto);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--stanford-palo-alto-dark);
+  --bs-btn-hover-border-color: var(--stanford-palo-alto-dark);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--stanford-palo-alto-dark);
+  --bs-btn-active-border-color: var(--stanford-palo-alto-dark);
+}
+
 .text-digital-red-light {
   color: var(--stanford-digital-red-light);
 }
