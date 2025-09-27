@@ -4,7 +4,7 @@ class Links
   class Link
     include ActionView::Helpers::TagHelper
 
-    attr_accessor :href, :file_id, :druid, :type, :sort, :link_title
+    attr_accessor :href, :file_id, :druid, :type, :sort, :link_title, :fulltext
 
     def initialize(options = {})
       @additional_text = options[:additional_text]

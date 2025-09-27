@@ -1,13 +1,15 @@
 <%= render @layout.new(classes: 'panel-online') do |component| %>
-  <% component.with_title(tag: 'h3', classes: ['h4', 'ms-n3', 'ps-3', 'bg-light', 'py-2']) do %>
-    Best source
+  <% component.with_title(tag: 'h3', classes: ['h4', 'ms-n3', 'ps-3', 'bg-light', 'py-2', 'available-online']) do %>
+    Online
   <% end %>
 
   <% component.with_body do %>
-    <ul class='document-metadata list-unstyled'>
+    <ul class='links list-unstyled mb-1'>
       <% links.each do |link| %>
-        <li>
-          <%= render Articles::LinkComponent.new(link: link, document: document) %>
+        <li class="mt-2">
+          <div>
+            <%= render Articles::LinkComponent.new(link: link, document: document) %>
+          </div>
         </li>
       <% end %>
     </ul>
