@@ -157,6 +157,8 @@ Rails.application.routes.draw do
     match code, to: 'errors#show', code: code, via: :all
   end
 
+  post "/challenge", to: "bot_challenge_page/bot_challenge_page#verify_challenge", as: :bot_detect_challenge
+
   Rails.application.routes.draw do
     mount Lookbook::Engine, at: "/lookbook"
   end

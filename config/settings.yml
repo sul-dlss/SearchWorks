@@ -29,6 +29,14 @@ throttling:
     - 171.64.0.0/14
     - 10.0.0.0/8
     - 172.16.0.0/12
+
+turnstile:
+  enabled: false
+  safelist:
+    - 171.64.0.0/14
+    - 10.0.0.0/8
+    - 172.16.0.0/12
+  allowed_user_agents: []
 THROTTLE_TRAFFIC: false
 SEND_THROTTLE_NOTIFICATIONS_TO_HONEYBADGER: true
 EDS_ENABLED: true
