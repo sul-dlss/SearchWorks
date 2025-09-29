@@ -5,6 +5,7 @@ module FacetsHelper
 
   def resource_icon_value(values)
     values = Array(values).flatten.compact
+    values.delete("Microform") if values.length > 1
     values.delete("Database") if values.length > 1
     values.delete("Book") if values.length > 1
     values.first
