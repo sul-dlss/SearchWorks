@@ -178,7 +178,7 @@ RSpec.describe MarcLinks do
   end
 
   describe '#preferred_online_links' do
-    it 'prioritizes non-aggregator links when EBSCO added the data' do
+    it 'prioritizes non-aggregator links' do
       document = SolrDocument.new(
         marc_links_struct: [
           { href: 'https://search.ebscohost.com/', link_text: 'EBSCOHost Link', fulltext: true },
@@ -188,17 +188,6 @@ RSpec.describe MarcLinks do
       )
 
       expect(document.preferred_online_links.first.href).to eq 'https://example.com/direct'
-    end
-
-    it 'leaves the links alone if there is no EBSCO data' do
-      document = SolrDocument.new(
-        marc_links_struct: [
-          { href: 'https://proquest.com/aggregator', link_text: 'Aggregator Link', fulltext: true },
-          { href: 'https://example.com/direct', link_text: 'Direct Link', fulltext: true }
-        ]
-      )
-
-      expect(document.preferred_online_links.first.href).to eq 'https://proquest.com/aggregator'
     end
   end
 end
