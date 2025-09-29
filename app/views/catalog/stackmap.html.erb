@@ -8,4 +8,9 @@
       <%= render StackmapComponent.new(items: @items, stackmap_api_url: @stackmap_api_url) %>
     </div>
   <% end %>
+  <% if params[:backlink_href] %>
+    <% component.with_footer do %>
+      <%= modal_back_link %>
+    <% end %>
+  <% end %>
 <% end %>
