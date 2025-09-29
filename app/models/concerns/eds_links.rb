@@ -14,26 +14,7 @@ module EdsLinks
 
     categories = links.filter_map(&:category).map(&:to_i)
 
-    mapped_links = links.map { |link| link.to_searchworks_link(categories) }
-
-    process_view_content_links(mapped_links)
-  end
-
-  def process_view_content_links(mapped_links)
-    # Are there multiple fulltext links with different link texts
-    fulltext_links = mapped_links.select(&:fulltext?)
-    fulltext_text = fulltext_links.filter_map(&:link_text).uniq
-
-    # If there are multiple fulltext links, and one is 'View on content provider's site',
-    # we do NOT want to use the 'View on content provider's site' link.
-    # Settung the 'fulltext' prope
-    if fulltext_text.size > 1 && fulltext_text.include?('View on content provider\'s site')
-      mapped_links.each do |link|
-        link.fulltext = false if link.link_text == 'View on content provider\'s site'
-      end
-    end
-
-    mapped_links
+    links.map { |link| link.to_searchworks_link(categories) }
   end
 
   # EDS-centric full text link
