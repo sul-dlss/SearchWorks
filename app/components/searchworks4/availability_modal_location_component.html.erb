@@ -1,6 +1,6 @@
-<div class="d-flex gap-1 flex-column">
-<div class="availability-library-location suppress-item-level-request-button-if-there-is-a-location-level-request-button">
-  <div class="mt-2 location-request col-3" data-availability-target="location">
+<div class="d-flex gap-1 flex-column mb-4">
+<div class="availability-library-location suppress-item-level-request-button-if-there-is-a-location-level-request-button flex-column">
+  <div class="mt-2 ms-1 location-request" data-availability-target="location">
     <h4 class="fs-15 mb-0"><%= render Searchworks4::PhysicalAvailabilityComponent::LocationComponent.new(location: location, document: document, classes: [], suppress_off_campus: false) %></h4>
     <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link text-nowrap py-0]) %>
     <%= render AccessPanels::LibraryLocationPopoverComponent.new(mhld: location.mhld, is_modal: true) %>
@@ -19,8 +19,8 @@
   </div>
 
 
-  <div class="col-9 ms-2">
-    <table class="w-100 mt-2">
+  <div class="mt-2 ms-4">
+    <table class="w-100">
       <caption class="visually-hidden">
         <%= pluralize(location.items.count, 'item') %> in <%= library.name %> <%= location.name %>
       </caption>
