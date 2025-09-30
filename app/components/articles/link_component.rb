@@ -13,7 +13,7 @@ module Articles
     end
 
     def pdf_icon
-      tag.i class:'bi bi-filetype-pdf link-icon', aria: {label: 'PDF'}
+      tag.i class: 'bi bi-filetype-pdf link-icon', aria: { label: 'PDF' }
     end
 
     def href
