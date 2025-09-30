@@ -179,7 +179,7 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
       { field: 'or', label: 'Includes any' },
       { field: 'not', label: 'Excludes all' }
     ],
-    currentId: filterFields.filter(f => f.top).length,
+    currentId: filterFields.filter(f => f.top).length + 2,
     searchFields: [
       { id: 0, field: searchFieldOptions[0]?.field || '', type: 'must', value: queryParams.q || '' },
       { id: 1, field: searchFieldOptions[0]?.field || '', type: 'must', value: '' }
