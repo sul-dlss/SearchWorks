@@ -165,7 +165,7 @@ RSpec.describe EdsLinks do
     end
 
     it 'handles PDF full text variants' do
-      expect(document.eds_links.all.first).to have_attributes(text: 'ePub eBook Full Text')
+      expect(document.eds_links.all.first).to have_attributes(text: 'eBook Full Text')
     end
   end
 
@@ -245,6 +245,7 @@ RSpec.describe EdsLinks do
       [
         { 'Text' => 'HTML FULL TEXT',          'Url' => 'http://example.com/1' },
         { 'Text' => 'PDF FULL TEXT',           'Url' => 'http://example.com/2' },
+        { 'Text' => 'eBook Full Text',         'Url' => 'http://example.com/ebook' },
         { 'Text' => 'EDS FULL TEXT',           'Url' => 'http://example.com/3' },
         { 'Text' => 'OPEN ACCESS',             'Url' => 'http://example.com/4' },
         { 'Text' => 'VIEW REQUEST OPTIONS',    'Url' => 'http://example.com/5' },
@@ -252,7 +253,7 @@ RSpec.describe EdsLinks do
       ]
     end
 
-    context 'categories 1 and 2' do
+    context 'HTML + PDF links' do
       let(:links) { all_custom_links }
 
       it 'shows 1 and 2 only' do
@@ -262,8 +263,18 @@ RSpec.describe EdsLinks do
       end
     end
 
+    context 'HTML + eBook links (without a PDF)' do
+      let(:links) { all_custom_links.reject { |x| x['Text'] == 'PDF FULL TEXT' } }
+
+      it 'shows 1 and 2 only' do
+        expect(document.eds_links.fulltext.length).to eq 2
+        expect(document.eds_links.fulltext.first.href).to eq('http://example.com/1')
+        expect(document.eds_links.fulltext.last.href).to eq('http://example.com/ebook')
+      end
+    end
+
     context 'category 3' do
-      let(:links) { all_custom_links[2..4] }
+      let(:links) { all_custom_links[3..] }
 
       it 'shows 3 only' do
         expect(document.eds_links.fulltext.length).to eq 1
@@ -272,7 +283,7 @@ RSpec.describe EdsLinks do
     end
 
     context 'category 4' do
-      let(:links) { all_custom_links[3..4] }
+      let(:links) { all_custom_links[4..] }
 
       it 'shows 4 only' do
         expect(document.eds_links.fulltext.length).to eq 1
@@ -281,7 +292,7 @@ RSpec.describe EdsLinks do
     end
 
     context 'category 5' do
-      let(:links) { all_custom_links[4..4] }
+      let(:links) { all_custom_links[5..] }
 
       it 'shows 5 only' do
         expect(document.eds_links.fulltext.length).to eq 1
