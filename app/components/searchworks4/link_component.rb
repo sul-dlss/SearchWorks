@@ -19,7 +19,7 @@ module Searchworks4
     # placeholder for icon, used by articles+ subclass
     def icon = nil
 
-    def display_link
+    def link_text_for_display
       link_text
     end
 

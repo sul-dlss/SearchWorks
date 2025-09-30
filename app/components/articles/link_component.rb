@@ -43,7 +43,7 @@ module Articles
       { data: { turbo: false } }
     end
 
-    def display_link
+    def link_text_for_display
       icon.present? ? (sanitize "#{icon} #{link_text}") : link_text
     end
 
