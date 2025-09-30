@@ -13,7 +13,7 @@ module Articles
     end
 
     def pdf_icon
-      sanitize "<i class='bi bi-filetype-pdf link-icon' aria-label='PDF'></i>"
+      tag.i class:'bi bi-filetype-pdf link-icon', aria: {label: 'PDF'}
     end
 
     def href
@@ -44,7 +44,9 @@ module Articles
     end
 
     def link_text_for_display
-      icon.present? ? (sanitize "#{icon} #{link_text}") : link_text
+      return link_text unless icon
+
+      safe_join([icon, link_text], ' ')
     end
 
     def casalini_text = nil
