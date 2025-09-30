@@ -19,6 +19,10 @@ module Searchworks4
     # placeholder for icon, used by articles+ subclass
     def icon = nil
 
+    def link_text_for_display
+      link_text
+    end
+
     def stanford_only_icon
       render StanfordOnlyPopoverComponent.new
     end
