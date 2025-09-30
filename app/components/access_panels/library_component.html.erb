@@ -1,5 +1,7 @@
 <div class="d-flex flex-column mt-2 mb-4 panel-library-location">
-  <%= render AccessPanels::LibraryHeaderComponent.new(document:, library:) %>
+  <div class="mb-3">
+    <%= render AccessPanels::LibraryHeaderComponent.new(document:, library:) %>
+  </div>
 
   <%= render AccessPanels::AdditionalInfoComponent.new(document:, library:) %>
 
