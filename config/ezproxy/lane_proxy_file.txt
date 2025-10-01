@@ -683,6 +683,7 @@ go.drugbank.com
 go.gale.com
 go.galegroup.com
 go.oreilly.com
+gocm.bmj.com
 gongjushu.oversea.cnki.net
 goo.gl
 gpa-eastview-com.stanford.idm.oclc.org
@@ -2382,6 +2383,7 @@ www.lrb.co.uk
 www.lsspjournal.com
 www.lungca.org
 www.lyellcollection.org
+www.magonlinelibrary.com
 www.maizegdb.org
 www.managedhealthcareconnect.com
 www.maneyonline.com
@@ -2439,6 +2441,7 @@ www.mohrsiebeck.com
 www.molbiolcell.org
 www.molcells.org
 www.molvis.org
+www.mona.uwi.edu
 www.morganclaypool.com
 www.moritzlaw.osu.edu
 www.morthoj.org
@@ -2585,6 +2588,7 @@ www.primarypsychiatry.com
 www.primescholars.com
 www.princeton.edu
 www.progressinorthodontics.com
+www.prokla.de
 www.proquest.com
 www.protein.bio.msu.ru
 www.proteinatlas.org
