@@ -7,7 +7,7 @@
 class Language < MarcField
   def values
     field_values = super
-    return if field_values.blank?
+    return if field_values.blank? && indexed_languages.blank?
 
     [[indexed_languages.join(', '), field_values.join(', ')].reject(&:blank?).join('. ')]
   end
