@@ -91,6 +91,9 @@ application.register("google-cover-image", GoogleCoverImageController)
 import HomePageSearchController from "./home_page_search_controller"
 application.register("home-page-search", HomePageSearchController)
 
+import InlineTurnstileController from "./inline_turnstile_controller"
+application.register("inline-turnstile", InlineTurnstileController)
+
 import LibraryH3lpController from "./library_h3lp_controller"
 application.register("library-h3lp", LibraryH3lpController)
 

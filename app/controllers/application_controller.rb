@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   # Adds a few additional behaviors into the application controller
   include Blacklight::Controller
   include BotChallengePage::Controller
+  include BotChallengePage::GuardAction
+  class_attribute :bot_challenge_config, default: ::BotChallengePage.config
+
+  SESSION_DATETIME_KEY = "t"
+  SESSION_FINGERPRINT_KEY = "f"
 
   # Please be sure to impelement current_user and user_session. Blacklight depends on
   # these methods in order to perform user specific actions.
@@ -27,4 +32,11 @@ class ApplicationController < ActionController::Base
     IPRange.includes?(request.remote_ip) || current_user&.stanford_affiliated?
   end
   helper_method :on_campus_or_su_affiliated_user?
+
+  def turnstile_ok?
+    return true unless BotChallengePage::BotChallengePageController.bot_challenge_config.enabled
+
+    self.class._bot_detect_passed_good?(request) || current_user || Settings.turnstile.safelist.any? { |cidr| request.remote_ip.in? IPAddr.new(cidr) }
+  end
+  helper_method :turnstile_ok?
 end

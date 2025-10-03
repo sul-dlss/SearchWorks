@@ -4,5 +4,5 @@
   <% end %>
   <%= render AccessPanels::GroupedLibraryComponent.new(label: 'Off-campus collections', libraries: document.holdings.sal_libraries , document:) %>
 
-  <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document) %>
+  <%= helpers.availability_turbo_frame(document) %>
 </div>

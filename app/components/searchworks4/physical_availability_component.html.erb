@@ -16,7 +16,7 @@
       </span>
     </span>
   <% end %>
-  <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy', data: { 'eager-lazy-target': 'frame' } %>
+  <%= helpers.availability_turbo_frame document, loading: 'lazy', data: { 'eager-lazy-target': 'frame' } %>
 <% elsif truncated_display_with_finding_aid? %>
   <%# Instances with a single item collapse the item information %>
   <%= container_tag(classes: %w[border rounded d-inline-flex suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
@@ -97,7 +97,7 @@
           </tbody>
         </table>
       </div>
-      <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
+      <%= helpers.availability_turbo_frame document, loading: 'lazy' %>
     </div>
   <% end %>
 <% else %>
@@ -167,7 +167,7 @@
           <% end %>
         </div>
       <% end %>
-      <%= helpers.turbo_frame_tag "availability_#{dom_id(document)}", src: availability_path(document), loading: 'lazy' %>
+      <%= helpers.availability_turbo_frame document, loading: 'lazy' %>
     </div>
   <% end %>
 <% end %>
