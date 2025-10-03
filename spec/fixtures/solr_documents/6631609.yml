@@ -194,11 +194,6 @@ imprint_display:
 date_cataloged: '2007-03-01T00:00:00Z'
 language:
 - English
-url_fulltext:
-- https://purl.stanford.edu/rc671ym6474
-url_suppl:
-- https://archives.stanford.edu/findingaid/ark:/22236/s1aff14110-7e6c-431c-ab04-35ccc19a311d
-- https://www.oac.cdlib.org/findaid/ark:/13030/c8fx7g1r/
 oclc:
 - '48227022'
 access_facet:
@@ -307,8 +302,6 @@ shelfkey:
 reverse_shelfkey:
 - b6il8~0d7~zzytrr~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - b6il8~7ndzzzvvu~pnnc~zzxzyu~zzzzqq~ipek~ob2~zzzzzy
-managed_purl_urls:
-- https://purl.stanford.edu/rc671ym6474
 collection:
 - sirsi
 - folio

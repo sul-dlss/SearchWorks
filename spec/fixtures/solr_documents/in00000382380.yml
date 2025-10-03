@@ -124,8 +124,6 @@ imprint_display:
 date_cataloged: '2025-03-17T00:00:00Z'
 language:
 - English
-url_fulltext:
-- https://purl.stanford.edu/bp098kt2063
 oclc:
 - '1509352419'
 access_facet:
@@ -172,8 +170,6 @@ library_code_facet_ssim:
 - SDR
 building_facet:
 - Stanford Digital Repository
-managed_purl_urls:
-- https://purl.stanford.edu/bp098kt2063
 collection:
 - sirsi
 - folio
