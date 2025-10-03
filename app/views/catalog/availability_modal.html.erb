@@ -16,7 +16,7 @@
       <%= render Searchworks4::OnlineAccordionComponent.new(document: @document, toggled_library: params[:library]) %>
       <%= render Searchworks4::AvailabilityAccordionComponent.with_collection(@document.holdings.non_sal_libraries, document: @document, toggled_library: params[:library])%>
       <%= render Searchworks4::AvailabilityAccordionComponent.new(library: @document.holdings.sal_libraries.first, document: @document, toggled_library: params[:library], libraries: @document.holdings.sal_libraries) %>
-      <%= turbo_frame_tag "availability_#{dom_id(@document)}", src: availability_path(@document) %>
+      <%= availability_turbo_frame @document %>
     </div>
   </div>
   <% end %>

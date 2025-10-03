@@ -6,6 +6,16 @@
 module CatalogHelper
   include Blacklight::CatalogHelperBehavior
 
+  def availability_turbo_frame(document, **attr)
+    immediate = turnstile_ok?
+
+    url = availability_path(document)
+
+    tag.div(data: { 'inline-turnstile-target': ('frame' unless immediate) }) do
+      turbo_frame_tag "availability_#{dom_id(document)}", src: immediate ? url : Base64.encode64(url), disabled: !immediate, **attr
+    end
+  end
+
   # override upstream so we don't check the session for the last view type.
   def document_index_view_type(query_params = params || {})
     view_param = query_params[:view]
