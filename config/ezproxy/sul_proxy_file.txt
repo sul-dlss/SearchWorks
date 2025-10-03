@@ -1642,3 +1642,5 @@ thepolynesiansociety.org
 edu.contemporaryartlibrary.org
 reader.exacteditions.com
 ondemand.metopera.org
+dl.astm.org
+compass.astm.org
