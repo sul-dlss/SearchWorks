@@ -88,20 +88,24 @@ citeproc_citations:
 dynamic_sitemap_solr_endpoint: "select"
 
 selected_databases:
-  "5749286": # Academic search premier
+  "5749286":
+    title: Academic search premier
     description: "Multidisciplinary database of over 4,650 mostly scholarly publications, many full-text; a great place to start your research."
-  "8785205": # ProQuest
+  "8785205":
+    title: ProQuest
     description: "From business and political science to literature and psychology, access to a wide range of popular academic subjects; includes more than 5,000 titles (over 3,500 in full text) from 1971 forward."
-  "5572228":  # web of science
-    title: "Web of Science"
+  "5572228":
+    title: Web of Science
     description: "Web of Science provides access to information on science, social sciences, and arts and humanities, as well as search and analysis (citation) tools."
-  "6745620":  # jstor
+  "6745620":
+    title: JSTOR
     description: "A digital library for scholars, researchers, and students, offering access to thousands of academic journals, books, and primary sources across many disciplines."
-  "4287807": # IEEE Xplore
+  "4287807":
+    title: IEEE Xplore
     description: "A research database for electrical engineering, computer science, and electronics literature, providing access to IEEE journals, conferences, and standards."
-  "13709575": # google scholar
+  "13709575":
+    title: Google scholar
     description: "A freely accessible web search engine that indexes the full text or metadata of scholarly literature across an array of publishing formats and disciplines."
-
 
 browse_nearby:
   enabled: true

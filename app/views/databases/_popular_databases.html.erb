@@ -4,8 +4,8 @@
 <ul class="list-unstyled">
   <% @selected_databases.each do |document| %>
     <li class="mb-3">
-      <div class="fw-semibold"><%= link_to(Settings.selected_databases[document.id]&.title || document.first('title_245a_display'), document, class: 'fw-semibold text-body link-decoration-none') %></div>
-      <div><%= Settings.selected_databases[document.id]&.description %></div>
+      <div class="fw-semibold"><%= link_to(Settings.selected_databases[document.id].title, document, class: 'fw-semibold text-body link-decoration-none') %></div>
+      <div><%= Settings.selected_databases[document.id].description %></div>
 
       <% link = document.preferred_online_links&.first %>
       <% if link.present? %>
