@@ -12,9 +12,9 @@ module EdsLinks
       EdsLinks::FulltextLink.new(link_field)
     end
 
-    categories = links.filter_map(&:category).map(&:to_i)
+    all_link_categories = links.filter_map(&:category).map(&:to_i)
 
-    links.map { |link| link.to_searchworks_link(categories) }
+    links.map { |link| link.to_searchworks_link(all_link_categories) }
   end
 
   # EDS-centric full text link
@@ -52,19 +52,16 @@ module EdsLinks
     end
 
     def category
-      return map[:category] if map.present? # matches a label exactly
+      @category ||= map[:category] if map.present? # matches a label exactly
 
-      [/Access URL/i, /Availability/i].each do |excluded| # always exclude these labels
-        return nil if label&.match?(excluded)
-      end
-      LINK_MAPPING[:open_access_link][:category] # the rest are open-access
+      @category ||= LINK_MAPPING[:open_access_link][:category] unless [/Access URL/i, /Availability/i].any? { |excluded| label&.match?(excluded) } # always exclude these labels
     end
 
-    def to_searchworks_link(categories = [])
+    def to_searchworks_link(all_link_categories = [])
       Links::Link.new(
         link_text: label,
         href:      url,
-        fulltext:  present? && show?(categories, category),
+        fulltext:  present? && show?(all_link_categories),
         ill:       ill?,
         type:,
         stanford_only: pdf? || type == 'other'
@@ -74,17 +71,18 @@ module EdsLinks
     # Link types are prioritized as follows:
     #
     # 1 and 2 are preferred, and can coexist
-    # show 3 only if there's no 1 or 2
-    # show 4 only if there's no 1-3
-    # show 5 only if there's no 1-4
+    # show 3 only if there's no 2 (but can coexist with 1)
+    # show the rest only if there is no higher priority link
     #
     # @param [Array<Integer>] `all_categories`
     # @param [Integer] `category`
-    def show?(categories, category)
+    def show?(categories)
       case category
       when 1, 2
         true
-      when 3, 4, 5
+      when 3
+        categories.none?(2)
+      when 4, 5, 6, 7
         categories.none? { |i| i < category }
       end
     end
@@ -96,10 +94,11 @@ module EdsLinks
       'HTML full text'.downcase =>           { label: 'View full text', category: 1 },
       'PDF full text'.downcase =>            { label: 'View/download PDF', category: 2 },
       'PDF eBook Full Text'.downcase =>      { label: 'View/download PDF', category: 2 },
-      'EDS Full text'.downcase =>            { label: 'View on content provider\'s site', category: 3 },
-      'Full text'.downcase =>                { label: 'View on content provider\'s site', category: 4 },
-      :open_access_link =>                   { label: :as_is, category: 4 },
-      'View request options'.downcase =>     { label: 'Find full text or request', category: 5 }
+      'eBook Full Text'.downcase =>          { label: 'eBook Full Text', category: 3 },
+      'EDS Full text'.downcase =>            { label: 'View on content provider\'s site', category: 4 },
+      'Full text'.downcase =>                { label: 'View on content provider\'s site', category: 5 },
+      :open_access_link =>                   { label: :as_is, category: 6 },
+      'View request options'.downcase =>     { label: 'Find full text or request', category: 7 }
     }.freeze
     private_constant :LINK_MAPPING
 
