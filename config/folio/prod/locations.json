@@ -27,7 +27,7 @@
     "id": "0047160a-acae-4c9d-bfbd-f4f738c2fa3c",
     "name": "Earth Sci Shelved Elsewhere",
     "code": "EAR-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -41,8 +41,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:02.399+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:02.399+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:04:41.053+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -2229,7 +2229,7 @@
     "id": "21c8748f-6a84-417e-b61f-18ee7171a10e",
     "name": "Art Shelved Elsewhere",
     "code": "ART-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -2243,8 +2243,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:39.314+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:39.314+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-03T23:54:17.118+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -3287,7 +3287,7 @@
     "id": "3516da02-847d-41a0-a69d-2a3ca8101d7f",
     "name": "Media Shelved Elsewhere",
     "code": "MEDIA-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -3301,8 +3301,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:51.971+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:51.971+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:15:35.451+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -3751,7 +3751,7 @@
     "id": "3d8166aa-9f44-4187-8d79-a257929729bf",
     "name": "East Asia Shelved Elsewhere",
     "code": "EAL-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -3765,8 +3765,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:01.402+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:01.402+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:05:11.444+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -4677,7 +4677,7 @@
     "id": "4c97036b-29dc-4340-881b-eab30eee9496",
     "name": "SAL Shelved Elsewhere",
     "code": "SAL-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -4691,8 +4691,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:08.984+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:08.984+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:16:27.212+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -4749,7 +4749,7 @@
     "id": "4e04fb13-3520-44c0-97c1-4960ac717b0b",
     "name": "Classics Shelved Elsewhere",
     "code": "CLA-SEE-OTHER",
-    "discoveryDisplayName": "See linked record",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -4763,8 +4763,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:39.785+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:39.785+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-03T23:54:54.515+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -6318,7 +6318,7 @@
     "id": "7010a71d-5bbd-4e08-b3a0-e2da8d633ccc",
     "name": "Music Shelved Elsewhere",
     "code": "MUS-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -6332,8 +6332,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:48.684+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:48.684+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:15:55.528+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -7967,7 +7967,7 @@
     "id": "903610b9-9c31-4c50-b3a4-fc977da4d091",
     "name": "Marine Bio Shelved Elsewhere",
     "code": "MAR-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -7981,8 +7981,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:42.429+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:42.429+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:07:39.837+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -8584,7 +8584,7 @@
     "id": "9bd34db9-c70a-4322-9dcc-a5bb4860c777",
     "name": "Rumsey Center Shelved Elsewhere",
     "code": "RUM-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -8600,8 +8600,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:58.126+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:58.126+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-03T23:55:34.582+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -9230,7 +9230,7 @@
     "id": "a452dd96-7821-4dc9-9553-baa820b9e7ea",
     "name": "Tanner Shelved Elsewhere",
     "code": "TAN-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -9244,8 +9244,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:23.571+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:23.571+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:16:11.628+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -10216,7 +10216,7 @@
     "id": "b8621e0a-cecb-4835-b65d-1f9219b3c6ed",
     "name": "ARS Shelved Elsewhere",
     "code": "ARS-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -10230,8 +10230,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:36.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:36.715+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-03T23:53:13.535+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -10282,7 +10282,7 @@
     "id": "ba7c343b-d2f1-4625-a26a-1afaa3228dff",
     "name": "Green Shelved Elsewhere",
     "code": "GRE-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -10296,8 +10296,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:11.591+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:11.591+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:07:03.313+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -11255,7 +11255,7 @@
     "id": "c9a7840d-3523-4d66-a5e1-7c757036ca82",
     "name": "Eng Shelved Elsewhere",
     "code": "ENG-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -11269,8 +11269,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:06.005+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:06.005+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:06:32.640+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -12090,7 +12090,7 @@
     "id": "d3985088-5ff3-44e5-88c2-4b32a8927499",
     "name": "Science Shelved Elsewhere",
     "code": "SCI-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -12104,8 +12104,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:42.138+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:42.138+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:17:03.991+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -12207,7 +12207,7 @@
     "id": "d4d319ae-6310-419f-8f90-1b03f952aa44",
     "name": "Spec Shelved Elsewhere",
     "code": "SPEC-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -12223,8 +12223,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:48:02.729+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:48:02.729+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:17:22.292+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -13538,7 +13538,7 @@
     "id": "f05736d2-d3a2-4532-88aa-031a87528863",
     "name": "SUL Shelved Elsewhere",
     "code": "SUL-SEE-OTHER",
-    "discoveryDisplayName": "See linked record to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -13552,8 +13552,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:24.075+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:24.075+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-04T00:17:40.021+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -13907,7 +13907,7 @@
     "id": "f565b2b6-e15f-472c-ae0b-2f8e47aee704",
     "name": "Education Shelved Elsewhere",
     "code": "EDU-SEE-OTHER",
-    "discoveryDisplayName": "See linked records to request items bound together",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -13921,8 +13921,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:00.427+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-28T17:32:35.507+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-10-04T00:06:16.729+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
