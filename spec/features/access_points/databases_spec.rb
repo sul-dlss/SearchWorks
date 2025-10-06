@@ -42,4 +42,17 @@ RSpec.feature "Databases Access Point" do
 
     expect(page).to have_text "No results found"
   end
+
+  scenario "searching for a particular topic", :js, :responsive, page_width: 1400 do
+    visit databases_path
+
+    fill_in "search for", with: "biolo"
+    click_link 'Biology'
+
+    expect(page).to have_link "Web of science core collection"
+    within('aside') do
+      expect(page).to have_text "Popular Databases"
+      expect(page).to have_link "research.ebsco.com"
+    end
+  end
 end

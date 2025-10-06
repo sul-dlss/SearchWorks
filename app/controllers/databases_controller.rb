@@ -41,7 +41,7 @@ class DatabasesController < ApplicationController
 
   before_action only: :index do
     ids = Settings.selected_databases.keys.map(&:to_s)
-    @selected_databases = search_service.fetch(ids, { sort: "title_sort asc", rows: ids.length }).sort_by { |doc| ids.index(doc.id) }
+    @selected_databases = clean_search_service.fetch(ids, { sort: "title_sort asc", rows: ids.length }).sort_by { |doc| ids.index(doc.id) }
   end
 
   class DatabaseTitleSuggestionsSearchBuilder < Blacklight::SearchBuilder
@@ -106,5 +106,9 @@ class DatabasesController < ApplicationController
     @facet_response = autocomplete_subject_search_service.search_results
 
     render layout: false
+  end
+
+  def clean_search_service
+    search_service_class.new(config: blacklight_config, search_state: search_state_class.new({}, blacklight_config, self), **search_service_context)
   end
 end
