@@ -58,7 +58,7 @@ RSpec.describe Searchworks4::ConstraintsComponent, type: :component do
 
   context 'with advanced search clause parameters' do
     let(:query_params) do
-      { clause: { "0" => { "field" => "search", "op" => "must", "query" => "art tea" }, "1" => { "field" => "search_title", "op" => "should", "query" => "bread roses" } } }
+      { clause: { "0" => { "field" => "search", "type" => "all", "query" => "art tea" }, "1" => { "field" => "search_title", "type" => "any", "query" => "bread roses" } } }
     end
 
     it 'renders the prefixes for the advanced search clauses' do
