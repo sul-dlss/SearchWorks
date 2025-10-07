@@ -97,11 +97,8 @@ RSpec.feature "Advanced Search" do
   end
 
   scenario "should have search tips" do
-    pending 'Search tips need to be reviewed + rewritten'
-
     within ".advanced-search-form" do
-      expect(page).to have_css("h2", text: "Search tips")
-      expect(page).to have_css("ul.advanced-help")
+      expect(page).to have_css("h2", text: "Tips for better results")
     end
   end
 end
