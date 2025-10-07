@@ -4,6 +4,8 @@ require Rails.root.join("app/models/solr_document")
 
 module AccessPanels
   class AtTheLibraryComponentPreview < Lookbook::Preview
+    layout 'lookbook'
+
     def special_collections
       document = SolrDocument.from_fixture("219330.yml")
       render AccessPanels::AtTheLibraryComponent.new(document: document)

@@ -3,7 +3,7 @@
 class ViewComponentPreviewController < ActionController::Base # rubocop:disable Rails/ApplicationController
   include ViewComponent::PreviewActions
   # Adds a few additional behaviors into the application controller
-  helper_method :controller_tracking_method, :blacklight_config, :blacklight_configuration_context, :search_session, :current_search_session, :search_state
+  helper_method :controller_tracking_method, :blacklight_config, :blacklight_configuration_context, :search_session, :current_search_session, :search_state, :turnstile_ok?
 
   def controller_tracking_method
     'track_catalog_path'
@@ -25,5 +25,9 @@ class ViewComponentPreviewController < ActionController::Base # rubocop:disable 
 
   def search_state
     Blacklight::SearchState.new(params, blacklight_config)
+  end
+
+  def turnstile_ok?
+    true
   end
 end

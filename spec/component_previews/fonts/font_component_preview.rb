@@ -3,7 +3,7 @@
 class DummyComponent < ViewComponent::Base
   def initialize(string:)
     @string = string
-    super
+    super()
   end
 
   def call
