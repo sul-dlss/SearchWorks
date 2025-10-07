@@ -36,5 +36,6 @@ module SearchWorks
     config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log')
 
     config.view_component.preview_controller = "ViewComponentPreviewController"
+    config.lookbook.preview_controller = "ViewComponentPreviewController"
   end
 end
