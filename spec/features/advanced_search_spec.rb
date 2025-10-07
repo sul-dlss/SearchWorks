@@ -53,8 +53,8 @@ RSpec.feature "Advanced Search" do
     query = Rack::Utils.parse_nested_query(uri.query).with_indifferent_access
 
     expect(query['clause'].values).to include(
-      { field: 'search_title', op: 'must', query: 'Image title' },
-      { field: 'search', op: 'must', query: 'Cats' }
+      { field: 'search_title', type: 'all', query: 'Image title' },
+      { field: 'search', type: 'all', query: 'Cats' }
     )
   end
 
@@ -71,6 +71,29 @@ RSpec.feature "Advanced Search" do
         'access_facet' => ['Online']
       }
     )
+  end
+
+  it 'gets the expected results for an advanced search query with contains any', :js do
+    # Switch the first field to "Title"
+    find_all('.search-field').first.click
+    find('[role="listbox"] li:nth-child(2)').click
+
+    # Switch the operator to "contains any"
+    find_all('.search-operator').first.click
+    find('[role="listbox"] li:nth-child(2)').click
+
+    fill_in 'Title search term', with: 'portal topics'
+
+    page.driver.browser.execute_script("document.querySelector('form').submit()")
+    expect(page).to have_css('.blacklight-catalog-index')
+    uri = URI.parse(page.current_url)
+    query = Rack::Utils.parse_nested_query(uri.query).with_indifferent_access
+
+    expect(query['clause'].values).to include(
+      { field: 'search_title', type: 'any', query: 'portal topics' }
+    )
+
+    expect(page).to have_content('Arctic science portal').and have_content('Aristotle : topics')
   end
 
   scenario "should have search tips" do

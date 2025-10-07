@@ -12,7 +12,7 @@ RSpec.describe AdvancedClausePresenter, type: :presenter do
   let(:params) { {} }
 
   context 'with operator must' do
-    let(:params) { { clause: { '0' => { query: 'abc def', op: 'must' } } } }
+    let(:params) { { clause: { '0' => { query: 'abc def', type: 'all' } } } }
 
     describe '#prefix' do
       it 'returns the prefix for AND' do
@@ -28,7 +28,7 @@ RSpec.describe AdvancedClausePresenter, type: :presenter do
   end
 
   context 'with operator should' do
-    let(:params) { { clause: { '0' => { query: 'abc def', op: 'should' } } } }
+    let(:params) { { clause: { '0' => { query: 'abc def', type: 'any' } } } }
 
     describe '#prefix' do
       it 'returns the prefix for AND' do

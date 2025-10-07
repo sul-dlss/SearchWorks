@@ -8,7 +8,7 @@ class AdvancedClausePresenter < Blacklight::ClausePresenter
   #
   # @return [String]
   def label
-    return user_parameters[:query] if user_parameters[:op] == 'must'
+    return user_parameters[:query] if user_parameters[:type] == 'all'
 
     user_parameters[:query].parameterize(separator: ', ')
   end
@@ -16,6 +16,6 @@ class AdvancedClausePresenter < Blacklight::ClausePresenter
   # The prefix method is used to generate what should appear in the selected
   # constraint for an advanced search clause query.
   def prefix
-    user_parameters[:op] == 'must' ? 'Contains <span class="fw-bold">ALL</span>' : 'Contains <span class="fw-bold">ANY</span>'
+    user_parameters[:type] == 'all' ? 'Contains <span class="fw-bold">ALL</span>' : 'Contains <span class="fw-bold">ANY</span>'
   end
 end

@@ -45,7 +45,7 @@ const formReducer = (state, action) => {
     case 'addSearchField':
       const searchFieldDefaults = {
         field: state.searchFieldOptions[0]?.field || '',
-        type: state.searchTypeOptions[0]?.field || 'must',
+        type: state.searchTypeOptions[0]?.field || 'all',
         value: ''
       };
       return {
@@ -90,7 +90,7 @@ const formReducer = (state, action) => {
     case 'reset':
       return {
         ...state,
-        searchFields: [{ id: 0, field: state.searchFieldOptions[0]?.field || '', type: 'must', value: '' }],
+        searchFields: [{ id: 0, field: state.searchFieldOptions[0]?.field || '', type: 'all', value: '' }],
         filterFields: state.filterFieldOptions.filter(f => f.top).map((f, i) => ({
           id: i + 1, field: f.field, type: 'and', values: []
         })),
@@ -111,7 +111,7 @@ const mapBlacklightQueryParamsToForm = (queryParams, defaultData) => {
       return {
         id: currentId++,
         field: clause.field || '',
-        type: clause.op || 'must',
+        type: clause.type || 'all',
         value: clause.query || ''
       };
     });
@@ -181,13 +181,13 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     ],
     currentId: filterFields.filter(f => f.top).length + 2,
     searchFields: [
-      { id: 0, field: searchFieldOptions[0]?.field || '', type: 'must', value: queryParams.q || '' },
-      { id: 1, field: searchFieldOptions[0]?.field || '', type: 'must', value: '' }
+      { id: 0, field: searchFieldOptions[0]?.field || '', type: 'all', value: queryParams.q || '' },
+      { id: 1, field: searchFieldOptions[0]?.field || '', type: 'all', value: '' }
     ],
     searchFieldOptions: searchFieldOptions || [],
     searchTypeOptions: [
-      { field: 'must', label: 'Contains all'},
-      { field: 'should', label: 'Contains any' }
+      { field: 'all', label: 'Contains all'},
+      { field: 'any', label: 'Contains any' }
     ]
   }
 
@@ -221,7 +221,7 @@ const HiddenInputFields = () => {
       {context.searchFields.map((field) => field.value?.length > 0 && (
         <>
           <input type="hidden" name={`clause[${field.id}][field]`} value={field.field} key={`${field.id}_field`} />
-          <input type="hidden" name={`clause[${field.id}][op]`} value={field.type} key={`${field.id}_type`} />
+          <input type="hidden" name={`clause[${field.id}][type]`} value={field.type} key={`${field.id}_type`} />
           <input type="hidden" name={`clause[${field.id}][query]`} value={field.value} key={`${field.id}_value`}/>
         </>
       ))}
@@ -294,7 +294,7 @@ const SearchField = ({ field, id, type, value, removeField }) => {
       </FormControl>
       <FormControl className="col-4 col-sm-3 col-lg-2 col-xl-3" size="small">
         <InputLabel id={`search-field-operator-${id}`} className="visually-hidden">{searchField?.label} search operator</InputLabel>
-        <Select labelId={`search-field-operator-${id}`} className="w-auto" value={type} onChange={(event) => dispatch({ type: 'updateSearchField', id: id, data: { type: event.target.value } })}>
+        <Select labelId={`search-field-operator-${id}`} className="w-auto search-operator" value={type} onChange={(event) => dispatch({ type: 'updateSearchField', id: id, data: { type: event.target.value } })}>
           {context.searchTypeOptions.map((option) => (
             <MenuItem key={option.field} value={option.field}>
               {option.label}

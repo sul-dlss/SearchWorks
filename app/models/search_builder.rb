@@ -5,6 +5,7 @@ require 'blacklight_advanced_search/advanced_search_builder'
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
   include BlacklightAdvancedSearch::AdvancedSearchBuilder
+  include Searchworks::AdvancedSearchBuilder
   include BlacklightRangeLimit::RangeLimitBuilder
   include CJKQuery
 
