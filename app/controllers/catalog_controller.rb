@@ -293,7 +293,6 @@ class CatalogController < ApplicationController
         pf2: '${pf2_cjk}',
         pf3: '${pf3_cjk}'
       }
-      field.clause_params = { edismax: { mm: 0, 'q.op': 'OR' } }
     end
 
     config.add_search_field('search_title') do |field|
