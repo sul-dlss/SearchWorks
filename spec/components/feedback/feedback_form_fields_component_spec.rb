@@ -7,7 +7,8 @@ RSpec.describe Feedback::FeedbackFormFieldsComponent, type: :component do
 
   before do
     allow(vc_test_controller).to receive_messages(current_user: User.new)
-    allow(form).to receive_messages(text_field: '<input type="text" name="name">'.html_safe,
+    allow(form).to receive_messages(label: '',
+                                    text_field: '<input type="text" name="name">'.html_safe,
                                     email_field: '<input type="email" name="to" required="required">'.html_safe,
                                     text_area: '<textarea name="message" required="required"></textarea>'.html_safe,
                                     hidden_field: '<input type="hidden" name="url" value="http://localhost:3000" class="reporting-from-field">'.html_safe)
