@@ -1,11 +1,11 @@
 <div class="accordion-item mb-2">
-  <h2 class="accordion-header" id="library-<%= index %>">
+  <h2 class="accordion-header">
     <button class="accordion-button d-flex justify-content-between align-items-center <% unless toggled_library? %>collapsed<% end %>" type="button" data-bs-toggle="collapse" data-bs-target="#<%= library.code %>" aria-expanded="<%= toggled_library? %>" aria-controls="<%= library.code %>">
       <%= render AccessPanels::LibraryHeaderComponent.new(document:, library:) %>
       <div class="text-end"><%= render BadgeCounterComponent.new(item_count, 'item', additional_classes: ['me-3'], color: nil) %></div>
     </button>
   </h2>
-  <div id="<%= library.code %>" class="accordion-collapse collapse<% if toggled_library? %> show<% end %>" aria-labelledby="library-<%= index %>" data-bs-parent="#<%= library.code %>">
+  <div id="<%= library.code %>" class="accordion-collapse collapse<% if toggled_library? %> show<% end %>" data-bs-parent="#<%= library.code %>">
     <div class="accordion-body">
       <% libraries.each do |lib| %>
         <%= render AccessPanels::AdditionalInfoComponent.new(document:, library: lib) %>
