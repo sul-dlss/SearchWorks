@@ -33,11 +33,11 @@ const Button = ({ children, onClick, ...props }) => {
 }
 
 const AddButton = ({ children, className, ...props }) => (
-  <Button className={`btn icon-link text-nowrap ${className}`} {...props}><i class="bi bi-plus-square-fill text-digital-green" aria-hidden></i>{children}</Button>
+  <Button className={`btn icon-link text-nowrap ${className}`} {...props}><i className="bi bi-plus-square-fill text-digital-green" aria-hidden></i>{children}</Button>
 )
 
 const DeleteButton = ({ children, className, ...props }) => (
-  <Button className={`btn icon-link text-nowrap ${className}`} {...props} ariaLabel={children}><i class="bi bi-dash-square-fill text-digital-red-light" aria-hidden></i><span class="d-none d-md-inline">{children}</span></Button>
+  <Button className={`btn icon-link text-nowrap ${className}`} {...props} aria-label={children}><i className="bi bi-dash-square-fill text-digital-red-light" aria-hidden></i><span className="d-none d-md-inline">{children}</span></Button>
 )
 
 const formReducer = (state, action) => {
@@ -444,8 +444,8 @@ const AutocompleteFilterField = ({ id, type, values, field }) => {
         disableCloseOnSelect
         getOptionLabel={mapValueToLabel}
         popupIcon={
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
           </svg>
         }
         renderOption={(props, option, { selected }) => {
@@ -497,7 +497,7 @@ const SulSelectDropdownIcon = (props) => (
     fill="currentColor"
     viewBox="0 0 16 16"
   >
-    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+    <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
   </svg>
 );
 
