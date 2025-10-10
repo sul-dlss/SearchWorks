@@ -603,7 +603,6 @@ eprints.lib.hokudai.ac.jp
 epubs.siam.org
 epubs.utah.edu
 equityhealthj.biomedcentral.com
-eric.ed.gov
 erp.bioscientifica.com
 esajournals.onlinelibrary.wiley.com
 escholarship.org
