@@ -1,9 +1,11 @@
+<% presenter = document_presenter(@document) %>
+<h1 class="my-4"><%= presenter.heading %></h1>
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
     <h2 class="modal-title">Availability</h2>
   <% end %>
   <% component.with_body do %>
-  <%= render Searchworks4::RecordSummaryComponent.new(presenter: document_presenter(@document)) %>
+  <%= render Searchworks4::RecordSummaryComponent.new(presenter: presenter) %>
   <div class="modal-body">
     <div class="accordion availability-modal px-3 mt-3" data-controller="availability-search">
       <div class="input-group my-3">
