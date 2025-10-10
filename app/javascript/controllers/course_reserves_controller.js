@@ -83,7 +83,7 @@ export default class extends Controller {
     const info = `<strong>${this.currentPage * this.pageRows + 1} - ${this.pageMax}</strong> of <strong>${this.total}</strong>`
     const nextButton = this.hasNext ? `<a class="ms-2" rel="next" href="#" data-action="course-reserves#nextPage">Next ${this.nextIcon}</a>` : ``
     const prevButton = this.hasPrevious ? `<a class="me-2" rel="prev" href="#" data-action="course-reserves#prevPage">${this.prevIcon} Previous</a>` : `<span class="disabled me-2">${this.prevIcon} Previous</span>`
-    this.resultsTarget.innerHTML = `<nav class="page_links page-entries-info">${prevButton}${info}${nextButton}</nav>`
+    this.resultsTarget.innerHTML = `<nav class="page_links page-entries-info" aria-label="Pagination">${prevButton}${info}${nextButton}</nav>`
   }
 
   drawBottomPagination() {
