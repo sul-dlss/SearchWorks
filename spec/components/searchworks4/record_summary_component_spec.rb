@@ -11,10 +11,10 @@ RSpec.describe Searchworks4::RecordSummaryComponent, type: :component do
   end
 
   context 'with no authors' do
-    let(:document) { SolrDocument.from_fixture('2.yml') }
+    let(:document) { SolrDocument.from_fixture('5488000.yml') }
 
     it "renders the description" do
-      expect(page).to have_content "Another object"
+      expect(page).to have_content "The gases of swamp rice soils"
       expect(page).to have_css "ul"
       expect(page).to have_no_content "ul li"
     end

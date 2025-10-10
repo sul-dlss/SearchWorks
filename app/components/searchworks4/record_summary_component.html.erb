@@ -4,11 +4,13 @@
     <div>
       <div class="fw-semibold"><%= presenter.heading %></div>
       <div><%= resource_icon %> <%= presenter.document_format %> <%= presenter.main_title_date %></div>
-      <ul class="list-unstyled mb-1">
-        <% authors.each do |author| %>
-          <li><%= author %></li>
-        <% end %>
-      </ul>
+      <% if authors.any? %>
+        <ul class="list-unstyled mb-1">
+          <% authors.each do |author| %>
+            <li><%= author %></li>
+          <% end %>
+        </ul>
+      <% end %>
       <%= render Searchworks4::QuickReportComponent.new if render_quick_report?%>
     </div>
   </div>
