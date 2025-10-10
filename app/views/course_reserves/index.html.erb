@@ -66,9 +66,9 @@
         <tbody data-course-reserves-target="tableBody">
         <% @course_reserves.each do |course| %>
           <tr>
-            <td>
+            <th scope="row">
               <%= link_to course.course_number, course_search_path(course), class: 'text-nowrap' %>
-            </td>
+            </th>
             <td>
               <%= link_to course.name, course_search_path(course), style: 'text-wrap: balance' %>
             </td>
