@@ -1,7 +1,7 @@
 #course-reserves-browse {
   --bs-table-striped-bg: white;
   --bs-table-bg: var(--stanford-fog-light);
-  th {
+  thead th {
     --bs-table-bg: var(--stanford-20-black);
   }
   tbody > tr:nth-child(2n + 1 of :not(.d-none)) > * {
