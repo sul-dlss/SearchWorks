@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import fetchJsonp from "fetch-jsonp"
 
 export default class extends Controller {
-    static targets = [ 'icon', 'link', 'hours' ]
+    static targets = [ 'icon', 'link', 'placeholder', 'hours' ]
 
     static values = {
         jid: String,
@@ -39,14 +39,16 @@ export default class extends Controller {
         this.available = true
         this.iconTarget.classList.remove("bi-chat")
         this.iconTarget.classList.add("bi-chat-fill")
-        this.linkTarget.classList.remove("disabled")
+        this.placeholderTarget.classList.add("d-none")
+        this.linkTarget.classList.remove("d-none")
     }
 
     setAsUnavailable() {
         this.available = false
         this.iconTarget.classList.remove("bi-chat-fill")
         this.iconTarget.classList.add("bi-chat")
-        this.linkTarget.classList.add("disabled")
+        this.linkTarget.classList.add("d-none")
+        this.placeholderTarget.classList.remove("d-none")
     }
 
     openChat(event) {
