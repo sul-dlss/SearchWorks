@@ -1,4 +1,4 @@
-<section class="search-masthead search-area-bg <%= classes.join(' ') %>">
+<%= tag.section(aria: { label: label }, class: (%w(search-masthead search-area-bg) + classes)) do %>
   <div class="container-lg">
     <div class="row flex-column flex-md-row">
       <section class="col pe-md-5 mb-5 mb-md-0">
@@ -21,4 +21,4 @@
       <% end %>
     </div>
   </div>
-</section>
+<% end %>

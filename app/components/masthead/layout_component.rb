@@ -6,11 +6,12 @@ module Masthead
     renders_one :search
     renders_one :aside
 
-    attr_reader :classes
+    attr_reader :label, :classes
 
-    def initialize(classes: [])
+    def initialize(label: 'Masthead', classes: [])
       super()
 
+      @label = label
       @classes = Array(classes)
     end
   end

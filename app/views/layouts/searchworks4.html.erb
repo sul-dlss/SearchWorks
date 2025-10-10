@@ -59,7 +59,7 @@
     <% end %>
 
     <% if content_for?(:breadcrumb) %>
-      <nav class="mb-3 mt-4 container-lg">
+      <nav class="mb-3 mt-4 container-lg" aria-label="Breadcrumb navigation">
         <%= content_for(:breadcrumb) %>
       </nav>
     <% end %>
