@@ -52,22 +52,27 @@
 
     <%= render 'shared/searchworks4/top_navbar' %>
 
-    <% if content_for?(:search_navbar) %>
-      <%= content_for(:search_navbar) %>
-    <% else %>
+    <% unless content_for?(:search_navbar) %>
       <%= render 'shared/searchworks4/search_navbar' %>
     <% end %>
 
-    <% if content_for?(:breadcrumb) %>
-      <nav class="mb-3 mt-4 container-lg" aria-label="Breadcrumb navigation">
-        <%= content_for(:breadcrumb) %>
-      </nav>
-    <% end %>
+    <main>
+      <% if content_for?(:search_navbar) %>
+        <%= content_for(:search_navbar) %>
+      <% end %>
+
+      <% if content_for?(:breadcrumb) %>
+        <nav class="mb-3 mt-4 container-lg" aria-label="Breadcrumb navigation">
+          <%= content_for(:breadcrumb) %>
+        </nav>
+      <% end %>
 
 
-    <%= render MainContainerComponent.new do %>
-      <%= yield %>
-    <% end %>
+      <%= render MainContainerComponent.new do %>
+        <%= yield %>
+      <% end %>
+    </main>
+
     <%= render 'shared/searchworks4/su_footer' %>
   </body>
 </html>

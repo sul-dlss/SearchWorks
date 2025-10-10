@@ -1,6 +1,6 @@
 <div class="container-lg flex-1 mb-auto" data-controller="google-cover-image inline-turnstile" data-inline-turnstile-site-key-value="<%= Settings.turnstile.site_key %>" data-inline-turnstile-challenge-path-value="<%= bot_detect_challenge_path %>">
   <%= render 'shared/modal' %>
-  <main id="main-container" class="mb-5">
+  <div id="main-container" class="mb-5">
 
     <% # The quick report javascript requires this node to be on the page %>
     <div class="flash_messages<% if flash.any? %> mx-auto my-3<% end %>" style="max-width: 1000px;">
@@ -16,5 +16,5 @@
         <%= render ToastComponent.new %>
       </template>
     </div>
-  </main>
+  </div>
 </div>
