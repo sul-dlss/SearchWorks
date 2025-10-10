@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     this.element.ariaDisabled = 'true'
     this.element.ariaExpanded = 'false'
-    this.element.ariaLabel = "This button is disabled because assistive technologies already announced the content."
+    this.element.ariaLabel = "Show more (note: this button is disabled because assistive technologies already announced the content)."
 
     switch (this.styleValue) {
       case 'text-button':
@@ -51,6 +51,7 @@ export default class extends Controller {
 
     if (this.styleValue == 'icon-button') {
       this.element.innerText = "Show less"
+      this.element.ariaLabel = this.element.ariaLabel.replace('Show more', 'Show less')
       this.element.prepend(this.buttonIcon())
     } else {
       this.element.textContent = 'less'
@@ -64,6 +65,7 @@ export default class extends Controller {
 
     if (this.styleValue == 'icon-button') {
       this.element.innerText = "Show more"
+      this.element.ariaLabel = this.element.ariaLabel.replace('Show less', 'Show more')
       this.element.prepend(this.buttonIcon())
     } else {
       this.element.textContent = 'more'
