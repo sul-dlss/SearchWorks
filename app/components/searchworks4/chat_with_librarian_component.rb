@@ -12,9 +12,9 @@ module Searchworks4
     end
 
     def chat_link(link_text)
-      link_to("https://library.stanford.edu/contact-us", class: 'disabled start-chat me-2', data: { 'library-h3lp-target': 'link', action: 'library-h3lp#openChat' }) do
-        safe_join([tag.span(class: 'bi bi-chat me-1', data: { 'library-h3lp-target': 'icon' }), link_text], ' ')
-      end
+      value = safe_join([tag.span(class: 'bi bi-chat me-1', data: { 'library-h3lp-target': 'icon' }), link_text], ' ')
+      link_to(value, "https://library.stanford.edu/contact-us", class: 'd-none start-chat me-2', data: { 'library-h3lp-target': 'link', action: 'library-h3lp#openChat' }) +
+        tag.button(value, class: 'btn btn-link btn-disabled text-start align-baseline p-0 disabled me-2', data: { 'library-h3lp-target': 'placeholder' })
     end
 
     def chat_attrs

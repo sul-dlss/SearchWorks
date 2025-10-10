@@ -1,7 +1,7 @@
 <%= tag.nav class: 'page_links' do %>
   <%= link_to_previous_page response, t('views.pagination.previous').html_safe, class: 'me-2' do %>
     <%# Display the disabled previous link if there is no previous page %>
-    <%= tag.span t('views.pagination.previous').html_safe, class: 'disabled me-2' if response.total_pages > 1 %>
+    <%= tag.button t('views.pagination.previous').html_safe, class: 'btn btn-link btn-disabled text-start align-baseline p-0 disabled me-2', disabled: true if response.total_pages > 1 %>
   <% end %>
   <span class="page_entries">
     <% if response.total_count == 1 %>
