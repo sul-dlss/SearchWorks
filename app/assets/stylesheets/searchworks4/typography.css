@@ -102,6 +102,10 @@ aside,
   color: var(--stanford-digital-green);
 }
 
+.text-digital-green-dark {
+  color: rgb(var(--stanford-digital-green-dark-rgb));
+}
+
 .text-palo-alto-dark {
   color: var(--stanford-palo-alto-dark);
 }
