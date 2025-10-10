@@ -10,7 +10,7 @@
       <% end %>
     </button>
   </h2>
-  <div id="online" class="accordion-collapse collapse<% if toggled_library? %> show<% end %>" aria-labelledby="online-header" data-bs-parent="#online">
+  <div id="online" class="accordion-collapse collapse<% if toggled_library? %> show<% end %>" data-bs-parent="#online">
     <div class="accordion-body">
       <%= render AccessPanels::OnlineLinkListComponent.new(document:, links:) %>
     </div>
