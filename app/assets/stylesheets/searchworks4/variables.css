@@ -17,3 +17,8 @@
 .dropdown-menu {
   box-shadow: var(--bs-dropdown-box-shadow);
 }
+
+/* BUG? component-library sets --bs-pagination-border-width, but also uses --bs-border-width to tweak the size */
+.pagination {
+  --bs-border-width: 0;
+}
