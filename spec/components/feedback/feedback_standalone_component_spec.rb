@@ -14,7 +14,7 @@ RSpec.describe Feedback::FeedbackStandaloneComponent, type: :component do
   end
 
   it 'contains the feedback form title' do
-    expect(page).to have_css('h2', text: 'Send feedback')
+    expect(page).to have_css('h1', text: 'Send feedback')
   end
 
   it 'displays the reporting alert box with specific information' do
