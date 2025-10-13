@@ -109,7 +109,7 @@ RSpec.feature 'Bookmarking Items', :js do
       end
 
       click_button 'Remove all'
-      expect(page).to have_text 'Your selections have been deleted'
+      expect(page).to have_text 'Your saved records have been removed'
       expect(page).to have_css('.active .badge', text: '0')
     end
   end
@@ -146,7 +146,7 @@ RSpec.feature 'Bookmarking Items', :js do
     it "renders the page" do
       visit bookmarks_path
       expect(page).to have_css('.bookmark-counter', text: '0')
-      expect(page).to have_content "You have no selections"
+      expect(page).to have_content "You have no saved records"
     end
   end
 end
