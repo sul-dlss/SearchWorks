@@ -1644,3 +1644,4 @@ reader.exacteditions.com
 ondemand.metopera.org
 dl.astm.org
 compass.astm.org
+magazine.thediplomat.com
