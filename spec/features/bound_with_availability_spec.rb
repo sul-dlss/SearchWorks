@@ -20,11 +20,10 @@ RSpec.describe 'Bound with availability', :js do
   end
 
   describe 'availability modal display' do
-    it 'displays the bound with parent and children' do
+    it 'displays the bound with parent and children', :responsive, page_height: 1200 do
       visit solr_document_path('5488000')
       click_link 'Expand'
 
-      find('.modal-body').scroll_to(:center)
       within 'dialog' do
         expect(page).to have_text 'Bound and shelved with:'
         expect(page).to have_text 'Item is bound with other items'
