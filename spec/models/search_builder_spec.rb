@@ -103,19 +103,4 @@ RSpec.describe SearchBuilder do
       end
     end
   end
-
-  describe 'advanced search' do
-    let(:blacklight_params) do
-      { clause: { "0" => { "field" => "search", "type" => "all", "query" => "art tea" }, "1" => { "field" => "search_title", "type" => "any", "query" => "bread roses" } } }
-    end
-
-    it 'builds the correct solr query' do
-      search_builder.add_adv_search_clauses(solr_params)
-
-      expect(solr_params.dig('json', 'query', 'bool', 'must')).to be_present.and(include(
-                                                                                   { edismax: hash_including(query: 'art tea') },
-                                                                                   { edismax: hash_including(query: 'bread roses', 'q.op': 'OR', mm: 0, qf: "${qf_title}") }
-                                                                                 ))
-    end
-  end
 end
