@@ -189,7 +189,7 @@ export default class extends Controller {
   rowMatches(tr, filter) {
     if (filter === '') return true;
 
-    const tds = tr.getElementsByTagName("td")
+    const tds = tr.querySelectorAll("td,th")
 
     return Array.from(tds).some((td) => {
       const txtValue = td.textContent || td.innerText
