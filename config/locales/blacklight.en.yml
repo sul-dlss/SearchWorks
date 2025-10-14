@@ -60,9 +60,9 @@ en:
     advanced_search:
       inclusive: 'Includes ANY'
     bookmarks:
-      no_bookmarks: 'You have no selections'
+      no_bookmarks: 'You have no saved records'
       clear:
-        success: 'Your selections have been deleted.'
+        success: 'Your saved records have been removed.'
     tools:
       refworks_html: 'RefWorks'
       librarian_view: 'Librarian view'
