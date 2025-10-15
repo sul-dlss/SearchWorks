@@ -10126,7 +10126,7 @@
     "id": "b5f0c1f6-d478-439e-bb0b-aed25febef4a",
     "name": "Education Instructor",
     "code": "EDU-INSTRUCTOR",
-    "discoveryDisplayName": "On reserve: Ask at circulation desk",
+    "discoveryDisplayName": "On reserve: Ask at Education circulation desk",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -10140,7 +10140,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:04.524+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T21:00:13.582+00:00",
+      "updatedDate": "2025-10-14T18:45:19.876+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
