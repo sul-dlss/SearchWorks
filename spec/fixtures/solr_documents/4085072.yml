@@ -274,11 +274,6 @@ latest_year_isi: 2013
 date_cataloged: '1999-05-29T00:00:00Z'
 language:
 - English
-url_fulltext:
-- http://purl.stanford.edu/cr247kt0623
-url_suppl:
-- http://www.oac.cdlib.org/findaid/ark:/13030/kt8n39s2dr
-- https://archives.stanford.edu/findingaid/ark:/22236/s16207470b-44d9-4a42-a74a-4971c868e182
 oclc:
 - '968761115'
 access_facet:
@@ -3111,8 +3106,6 @@ shelfkey:
 - other sc000122 001981-000087 flat box 000001
 reverse_shelfkey:
 - b6il8~7nzzzyxx~zzyqry~zzzzrs~kep6~ob2~zzzzzy~~~~~~
-managed_purl_urls:
-- http://purl.stanford.edu/cr247kt0623
 marc_collection_title_ssim:
 - Silicon Valley Archives
 collection:
