@@ -7280,8 +7280,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
-      "pageAeonSite": "ARS",
-      "availabilityClass": "Offsite"
+      "pageAeonSite": "ARS"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "servicePointIds": [
@@ -7291,7 +7290,7 @@
     "metadata": {
       "createdDate": "2025-10-16T21:51:49.079+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-10-16T21:51:49.079+00:00",
+      "updatedDate": "2025-10-20T22:26:08.308+00:00",
       "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
