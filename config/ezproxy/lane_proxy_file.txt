@@ -708,7 +708,6 @@ hccpjournal.biomedcentral.com
 hcupnet.ahrq.gov
 hdl-handle-net.stanford.idm.oclc.org
 hdl.handle.net
-hdl.library.upenn.edu
 hdsr.mitpress.mit.edu
 he02.tci-thaijo.org
 head-face-med.biomedcentral.com
