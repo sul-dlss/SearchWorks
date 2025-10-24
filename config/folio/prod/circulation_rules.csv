@@ -372,8 +372,8 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,accessories 1,,,,GREEN,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,ART,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,book,,,,SAL,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
-graduate or staff,kit,,,,,,1qtr-1renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$2000 lost fee kit
-faculty,kit,,,,,,1qtr-1renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$2000 lost fee kit
+graduate or staff,kit,,,,,,1qtr-1renew-7daygrace,Hold only,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$2000 lost fee kit
+faculty,kit,,,,,,1qtr-1renew-7daygrace,Hold only,Qtrly/Annual notice,No fines,$2000 lost fee kit
 ,,,,,,GRE-RESV-PROCESSING or SUL-LOANED-FOR-EXHIBIT or SUL-TS-CONSERVATIONSERVICES,No loan,No requests allowed,Default notice,No fines,$250 lost fee
 ,,,,,,SUL-BORROW-DIRECT,16week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
 ,periodical,,,,,,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$500 lost fee
