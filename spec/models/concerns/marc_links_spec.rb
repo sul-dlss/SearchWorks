@@ -62,12 +62,12 @@ RSpec.describe MarcLinks do
         expect(marc_links.last.href).to eq 'https://searchworks.stanford.edu'
       end
 
-      it 'identifies urls that are in the url_restricted field as stanford only' do
+      it 'identifies urls that are restricted as stanford only' do
         expect(marc_links.first).to be_stanford_only
         expect(marc_links.last).not_to be_stanford_only
       end
 
-      it 'identifies urls that are in the url_fulltext field as fulltext' do
+      it 'identifies urls that are fulltext' do
         expect(marc_links.first).to be_fulltext
         expect(marc_links.last).not_to be_fulltext
       end
