@@ -135,7 +135,7 @@ libraries:
   EDUCATION:
     about_url: https://library.stanford.edu/libraries/cubberley-education-library
     hours_api_url: education/location/education_library
-    name: Education Library (at SAL1&2)
+    name: Education Library
   ENG:
     about_url: https://library.stanford.edu/libraries/terman-engineering-library
     hours_api_url: engineering/location/engineering_library
