@@ -146,6 +146,7 @@ ascpjournal.biomedcentral.com
 ascpt.onlinelibrary.wiley.com
 asean-endocrinejournal.org
 ashpublications.org
+asih.kglmeridian.com
 asistdl.onlinelibrary.wiley.com
 aslopubs.onlinelibrary.wiley.com
 asma.kglmeridian.com
@@ -587,6 +588,7 @@ ejrnm.springeropen.com
 electronicimaging.spiedigitallibrary.org
 elib.infolinker.com.tw
 elib.maruzen.co.jp
+elibrary.duncker-humblot.com
 emergencias.portalsemes.org
 emergency.lwwhealthlibrary.com
 emj.bmj.com
@@ -605,6 +607,7 @@ equityhealthj.biomedcentral.com
 erp.bioscientifica.com
 esajournals.onlinelibrary.wiley.com
 escholarship.org
+esh.kglmeridian.com
 esi.clarivate.com
 esj-journals.onlinelibrary.wiley.com
 esmoopen.bmj.com
@@ -1098,6 +1101,7 @@ mmbr.asm.org
 mmcts.org
 mmrjournal.biomedcentral.com
 mobilednajournal.biomedcentral.com
+mobilization.kglmeridian.com
 molcellped.springeropen.com
 molcelltherapies.biomedcentral.com
 molecular-cancer.biomedcentral.com
@@ -1119,6 +1123,7 @@ msp.org
 msystems.asm.org
 muse.jhu.edu
 musicid.academicrightspress.com
+mvedel.kglmeridian.com
 my.vitallaw.com
 nam.edu
 nanoconvergencejournal.springeropen.com
@@ -1343,6 +1348,7 @@ reader.digitale-sammlungen.de
 rebase.neb.com
 redivis.com
 ref.uabc.mx
+reference-global.com
 referenceworks.brillonline.com
 refworks.proquest.com
 regenmedres.biomedcentral.com
