@@ -576,7 +576,6 @@ ehoonline.biomedcentral.com
 ehp.niehs.nih.gov
 ehrafworldcultures.yale.edu
 ejb.springeropen.com
-eje.bioscientifica.com
 ejfs.springeropen.com
 ejhi.springeropen.com
 ejim.springeropen.com
@@ -604,7 +603,6 @@ eprints.lib.hokudai.ac.jp
 epubs.siam.org
 epubs.utah.edu
 equityhealthj.biomedcentral.com
-erp.bioscientifica.com
 esajournals.onlinelibrary.wiley.com
 escholarship.org
 esh.kglmeridian.com
