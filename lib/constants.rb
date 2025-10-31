@@ -237,7 +237,7 @@ module Constants
       ['Classics Library', '650 723 0479'],
       ['Earth Sciences Library (Branner)', '650 723 2746'],
       ['East Asia Library', '650 725 3435'],
-      ['Education Library (at SAL1&2)', '650 723 2121'],
+      ['Education Library', '650 723 2121'],
       ['Engineering Library (Terman)', '650 723 0001'],
       ['Hoover Institution Library', '650 723 2058'],
       ['Hoover Institution Archives', '650 723 3563'],
@@ -316,9 +316,6 @@ module Constants
   }
 
   LIBRARY_INSTRUCTIONS = {
-    'EDUCATION' => {
-      text: 'The Education Library is closed for construction. Request items for pickup at another library.'
-    },
     'HILA' => {
       text: 'Reservations are required at least seven days in advance. For more information, see ' \
             '<a href="https://www.hoover.org/library-archives/research-services/plan-research-visit" target="_blank">Plan a research visit</a>.'
