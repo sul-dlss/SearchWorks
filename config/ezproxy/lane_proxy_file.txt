@@ -502,6 +502,7 @@ disastermilitarymedicine.biomedcentral.com
 discover.nci.nih.gov
 discoveriesjournals.org
 dl.acm.org
+dl.astm.org
 dl.moazine.com
 dlc.mpg.de
 dlib.eastview.com
@@ -1749,7 +1750,6 @@ www.asm.org
 www.asmedigitalcollection.asme.org
 www.aspbooks.org
 www.aspresolver.com
-www.astm.org
 www.atcs.jp
 www.atlantis-press.com
 www.atmph.org
