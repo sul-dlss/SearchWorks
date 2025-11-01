@@ -57,7 +57,10 @@ class FixtureHarvester
     '13709575',
 
     # aeon pageable finding aids
-    '11966809'
+    '11966809',
+
+    # example with volumes with unknown availability
+    '2027166'
   ].freeze
 
   def self.harvest_all
