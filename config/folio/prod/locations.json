@@ -1672,7 +1672,7 @@
     "id": "1af5b924-b048-4e13-b556-c6cf7f7e9cb0",
     "name": "Education Historical Curriculum",
     "code": "EDU-CURRSTOR",
-    "discoveryDisplayName": "Historical Curriculum",
+    "discoveryDisplayName": "Historical curriculum collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -1686,8 +1686,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:18.874+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:18.874+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-31T22:43:43.933+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -3265,7 +3265,7 @@
     "id": "34aff776-2bcb-4c5d-8151-bd18f55e1f8c",
     "name": "Education Curriculum",
     "code": "EDU-CURRICULUM",
-    "discoveryDisplayName": "Curriculum at Green",
+    "discoveryDisplayName": "Curriculum collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -3279,8 +3279,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:17.912+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:17.912+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-31T22:43:20.719+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -5965,7 +5965,7 @@
     "id": "68ad9f49-b972-4f28-b847-7732f394c62f",
     "name": "Education Microtext",
     "code": "EDU-MICROTEXT",
-    "discoveryDisplayName": "Microtext",
+    "discoveryDisplayName": "Microtext collection",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -5979,8 +5979,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:05.703+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:05.703+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-31T22:44:02.943+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -7849,7 +7849,7 @@
     "id": "8c25edbe-7a5e-496b-8cef-e7f9e2b7cabc",
     "name": "Education Reference",
     "code": "EDU-REF",
-    "discoveryDisplayName": "Jonsson Social Sciences Reading Room: Education Reference",
+    "discoveryDisplayName": "Reference",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -7863,8 +7863,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:05.833+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:05.833+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-10-31T22:44:22.068+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
