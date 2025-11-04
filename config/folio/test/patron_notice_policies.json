@@ -1,5 +1,46 @@
 [
   {
+    "id": "0da49c1c-798d-48f0-922a-34c1e9b436a5",
+    "name": "test notice ",
+    "metadata": {
+      "createdDate": "2025-09-17T18:52:23.235+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2025-09-17T18:54:04.312+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    },
+    "loanNotices": [
+      {
+        "templateId": "cc3b542f-a8d3-4bf0-bf2b-c0c2cd4a42a5",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Due date",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Hours"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Weeks"
+          }
+        }
+      }
+    ],
+    "feeFineNotices": [],
+    "requestNotices": [
+      {
+        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
+      }
+    ]
+  },
+  {
     "id": "122b3d2b-4788-4f1e-9117-56daa91cb75c",
     "name": "Send No Notices",
     "description": "A basic notice policy that does not define any notices",
@@ -320,7 +361,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:14.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-14T15:14:52.514+00:00",
+      "updatedDate": "2025-10-20T22:48:31.297+00:00",
       "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     },
     "loanNotices": [
@@ -388,7 +429,7 @@
         }
       },
       {
-        "templateId": "10caf5fc-3cbf-410b-b056-4a696db516a8",
+        "templateId": "3a647ad9-6dd2-4369-8549-e2b920ba9b6c",
         "format": "Email",
         "frequency": "Recurring",
         "realTime": false,
@@ -397,7 +438,7 @@
           "sendWhen": "Aged to lost - fine charged",
           "sendBy": {
             "duration": 1,
-            "intervalId": "Hours"
+            "intervalId": "Minutes"
           },
           "sendEvery": {
             "duration": 1,
