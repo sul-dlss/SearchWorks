@@ -5,3 +5,4 @@ collection:
 port: 8983
 env:
   SOLR_OPTS: '-Dsolr.config.lib.enabled=true'
+version: 9.9.0
