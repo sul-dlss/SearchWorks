@@ -704,7 +704,6 @@ gynoncrp.biomedcentral.com
 hanchi.ihp.sinica.edu.tw
 harmreductionjournal.biomedcentral.com
 hawaiijournalhealth.org
-hbcp.chemnetbase.com
 hccpjournal.biomedcentral.com
 hcupnet.ahrq.gov
 hdl-handle-net.stanford.idm.oclc.org
@@ -1432,7 +1431,6 @@ sdrc.lib.uiowa.edu
 search.alexanderstreet.com
 search.datapages.com
 search.ebscohost.com
-search.ebscohost.com.
 search.epnet.com
 search.informit.com.au
 search.mandumah.com
