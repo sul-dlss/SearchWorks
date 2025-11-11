@@ -407,6 +407,7 @@ cnjournal.biomedcentral.com
 cocatalog.loc.gov
 cognet.mit.edu
 cognitiveresearchjournal.springeropen.com
+collections.nlm.nih.gov
 collections.plos.org
 coloproctol.org
 companions.digitalhumanities.org
@@ -529,7 +530,6 @@ dsm.psychiatryonline.org
 dspace.library.uu.nl
 dwso.revealdigital.org
 dx.doi.org
-dxplain.net
 dynamic-med.biomedcentral.com
 e-apem.org
 e-ceo.org
@@ -704,6 +704,7 @@ gynoncrp.biomedcentral.com
 hanchi.ihp.sinica.edu.tw
 harmreductionjournal.biomedcentral.com
 hawaiijournalhealth.org
+hbcp.chemnetbase.com
 hccpjournal.biomedcentral.com
 hcupnet.ahrq.gov
 hdl-handle-net.stanford.idm.oclc.org
@@ -1287,7 +1288,6 @@ prhsj.rcm.upr.edu
 primarysources.brillonline.com
 proceedings.asmedigitalcollection.asme.org
 proceedings.spiedigitallibrary.org
-products.asminternational.org
 profiles.nlm.nih.gov
 projecteuclid.org
 projections.pubpub.org
