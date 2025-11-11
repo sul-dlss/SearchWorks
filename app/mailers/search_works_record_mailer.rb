@@ -11,31 +11,21 @@ class SearchWorksRecordMailer < ApplicationMailer
 
   def email_record(documents, details, url_gen_params)
     setup_email_defaults(documents, details, url_gen_params)
-
-    mail(to: details[:to], subject: subject_from_details(details, documents))
-  end
-
-  def article_email_record(documents, details, url_gen_params)
-    setup_email_defaults(documents, details, url_gen_params)
-
-    mail(to: details[:to], subject: subject_from_details(details, documents))
+    mail(to: details[:to], subject: subject_from_details(details, documents), template_name: [template_prefix, 'email_record'].join)
   end
 
   def full_email_record(documents, details, url_gen_params)
     setup_email_defaults(documents, details, url_gen_params)
-
-    mail(to: details[:to], subject: subject_from_details(details, documents))
-  end
-
-  def article_full_email_record(documents, details, url_gen_params)
-    setup_email_defaults(documents, details, url_gen_params)
-
-    mail(to: details[:to], subject: subject_from_details(details, documents))
+    mail(to: details[:to], subject: subject_from_details(details, documents), template_name: [template_prefix, 'full_email_record'].join)
   end
 
   helper_method :link_to, :search_catalog_path
 
   private
+
+  def template_prefix
+    'article_' if @documents.first.eds?
+  end
 
   def link_to(*args)
     args.first

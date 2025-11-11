@@ -22,7 +22,7 @@ RSpec.describe "Emailing Records", :js do
   end
 
   context 'when a user is logged in' do
-    let(:user) { User.new(email: 'example@stanford.edu') }
+    let(:user) { User.create!(email: 'example@stanford.edu', password: 'totallysecurepassword') }
 
     before { login_as(user) }
 
@@ -164,6 +164,47 @@ RSpec.describe "Emailing Records", :js do
           expect(email).to have_css('h2', text: /Bibliographic information/)
           expect(email).to have_css('dd', text: /A quartely publication/)
         end
+      end
+    end
+
+    context 'when viewing catalog saved records' do
+      before do
+        %w[5488000 28].each do |id|
+          Bookmark.create!(document_id: id, user:)
+        end
+        visit bookmarks_path
+        click_link 'Email'
+        fill_in 'To', with: 'email@example.com'
+        click_button 'Send'
+      end
+
+      it 'emails multiple records' do
+        expect(page).to have_css '.toast', text: 'Email sent'
+
+        email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
+        expect(email).to have_text('The gases of swamp rice soils')
+        expect(email).to have_text('Some intersting papers')
+      end
+    end
+
+    context 'when viewing article saved records' do
+      before do
+        stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+        StubArticleService::SAMPLE_RESULTS.map do |article|
+          Bookmark.create!(document_id: article.id, user:, record_type: 'article')
+        end
+        visit article_selections_path
+        click_link 'Email'
+        fill_in 'To', with: 'email@example.com'
+        click_button 'Send'
+      end
+
+      it 'emails multiple records' do
+        expect(page).to have_css '.toast', text: 'Email sent'
+
+        email = Capybara.string(ActionMailer::Base.deliveries.last.body.to_s)
+        expect(email).to have_text('The title of the document')
+        expect(email).to have_text('Another title for the fulltext document')
       end
     end
   end

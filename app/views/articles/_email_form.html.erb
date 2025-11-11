@@ -22,7 +22,8 @@
           </div>
           <%= render 'shared/email_form', documents: @documents %>
         <% else %>
-          <%= render 'shared/email_form', documents: @documents %>
+         <%= hidden_field_tag(:type, 'brief') %>
+         <%= render 'shared/email_form', documents: @documents %>
         <% end %>
     <% end %>
   <% end %>
