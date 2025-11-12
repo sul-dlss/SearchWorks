@@ -397,7 +397,7 @@
 }
 
 .toc {
-  list-style-position: inside;
+  list-style-position: outside;
   padding-left: 0.25rem;
 }
 
