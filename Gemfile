@@ -46,7 +46,7 @@ end
 group :development, :test do
   gem "axe-core-rspec"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug"
   gem 'capybara', '~> 3.0'
   gem "herb", "~> 0.4.3"
   gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
