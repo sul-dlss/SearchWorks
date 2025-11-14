@@ -37,5 +37,6 @@ module SearchWorks
 
     config.view_component.preview_controller = "ViewComponentPreviewController"
     config.lookbook.preview_controller = "ViewComponentPreviewController"
+    config.active_storage.variant_processor = :disabled
   end
 end
