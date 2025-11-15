@@ -150,11 +150,6 @@ latest_year_isi: 2017
 date_cataloged: '2025-01-24T00:00:00Z'
 language:
 - English
-url_fulltext:
-- https://purl.stanford.edu/yr538tn4898
-url_suppl:
-- https://www.oac.cdlib.org/findaid/ark:/13030/c8fn1c01/
-- https://archives.stanford.edu/findingaid/ark:/22236/s18dd61885-9d4a-4472-bead-fa86a6865dbc
 oclc:
 - '1493506789'
 access_facet:
@@ -204,8 +199,6 @@ shelfkey:
 - other sc001346 002017-000227 flat box 000001
 reverse_shelfkey:
 - b6il8~7nzzywvt~zzxzys~zzzxxs~kep6~ob2~zzzzzy~~~~~~
-managed_purl_urls:
-- https://purl.stanford.edu/yr538tn4898
 collection:
 - sirsi
 - folio
