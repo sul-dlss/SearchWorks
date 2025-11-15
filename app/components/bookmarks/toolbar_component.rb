@@ -14,7 +14,11 @@ module Bookmarks
     end
 
     def email_href
-      email_bookmarks_path(sort: params[:sort], per_page: params[:per_page], id: document_ids)
+      if bookmark_type == 'article'
+        email_article_selections_path(sort: params[:sort], per_page: params[:per_page], id: document_ids)
+      else
+        email_bookmarks_path(sort: params[:sort], per_page: params[:per_page], id: document_ids)
+      end
     end
 
     def bookmark_icon

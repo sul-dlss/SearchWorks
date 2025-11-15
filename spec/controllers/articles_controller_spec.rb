@@ -178,27 +178,4 @@ RSpec.describe ArticlesController do
       expect(user_session[Settings.EDS_SESSION_TOKEN_KEY]).to eq 'xyz'
     end
   end
-
-  describe '#email' do
-    before { stub_article_service(type: :single, docs: [EdsDocument.new(id: '123')]) }
-
-    it 'sets the provided subject' do
-      expect { post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '123' } }.to change {
-        ActionMailer::Base.deliveries.count
-      }.by(1)
-      expect(ActionMailer::Base.deliveries.last.subject).to eq 'Email Subject'
-    end
-    it 'sends a brief email when requested' do
-      email = double('email')
-      expect(SearchWorksRecordMailer).to receive(:article_email_record).and_return(email)
-      expect(email).to receive(:deliver_now)
-      post :email, params: { to: 'email@example.com', subject: 'Email Subject', type: 'brief', id: '123' }
-    end
-
-    it 'is able to send emails to multiple addresses' do
-      expect do
-        post :email, params: { to: 'e1@example.com, e2@example.com, e3@example.com', subject: 'Subject', type: 'full', id: '123' }
-      end.to change { ActionMailer::Base.deliveries.count }.by(3)
-    end
-  end
 end

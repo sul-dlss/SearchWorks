@@ -41,7 +41,7 @@ RSpec.describe SearchWorksRecordMailer do
                           })
         ]
       end
-      let(:mail) { SearchWorksRecordMailer.article_email_record(documents, params, url_params) }
+      let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
 
       it 'sends an HTML email' do
         expect(mail.content_type).to match "text/html; charset=UTF-8"

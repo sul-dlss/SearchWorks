@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   include Blacklight::Catalog
   include Blacklight::Configurable
   include EmailValidation
+  include CatalogEmailSending
 
   allow_browser versions: :modern, block: :handle_outdated_browser
 
@@ -247,26 +248,6 @@ class ArticlesController < ApplicationController
   # Used by default Blacklight `index` and `show` actions
   delegate :search_results, :fetch, to: :search_service
 
-  def email
-    # TODO: Handle arrays of IDs in future selection work
-    @response = fetch(params[:id])
-    @documents = action_documents
-    if request.post? && validate_email_params_and_recaptcha
-
-      send_emails_to_all_recipients(@documents)
-
-      respond_to do |format|
-        format.html { render 'email_success', layout: !request.xhr? }
-        format.turbo_stream { render 'email_success' }
-      end and return
-
-    end
-
-    respond_to do |format|
-      format.html { render layout: !request.xhr? }
-    end
-  end
-
   def index
     super if has_search_parameters?
   end
@@ -276,21 +257,6 @@ class ArticlesController < ApplicationController
   end
 
   protected
-
-  def send_emails_to_all_recipients(documents)
-    email_params = { message: params[:message], subject: params[:subject], email_from: params[:email_from] }
-    email_addresses.each do |email_address|
-      email_params[:to] = email_address
-      email = if params[:type] == 'full'
-                SearchWorksRecordMailer.article_full_email_record(documents, email_params, url_options)
-              else
-                SearchWorksRecordMailer.article_email_record(documents, email_params, url_options)
-              end
-      email.deliver_now
-    end
-
-    flash[:success] = I18n.t('blacklight.email.success')
-  end
 
   def _prefixes
     @_prefixes ||= super + ['catalog']
