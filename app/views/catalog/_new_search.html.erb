@@ -9,6 +9,10 @@
     </button>
 
     <div id="offcanvas-facets" class="offcanvas-md offcanvas-bottom offcanvas-sm-start">
+      <div class="offcanvas-header border-bottom">
+        <h1 class="offcanvas-title ms-2" id="offcanvasLabel">Filters</h1>
+        <button type="button" class="btn-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-label="Close"></button>
+      </div>
       <div class="offcanvas-body flex-column">
         <%= render 'facet_header' %>
         <%= render Facets::GroupComponent.new(id: 'top-filters', title: 'Top filters',
