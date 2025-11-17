@@ -67,7 +67,7 @@ class CatalogController < ApplicationController
     top_filters = blacklight_config.top_filters[PageLocation.new(search_state).access_point] || blacklight_config.top_filters[:default]
 
     top_filters.each do |filter|
-      blacklight_config.facet_fields[filter].group = 'top' if blacklight_config.facet_fields[filter].present?
+      (blacklight_config.facet_fields[filter].presence&.group='top')
     end
   end
 
