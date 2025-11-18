@@ -124,7 +124,7 @@
     "metadata": {
       "createdDate": "2024-05-28T19:49:34.157+00:00",
       "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
-      "updatedDate": "2025-06-16T18:10:41.971+00:00",
+      "updatedDate": "2025-11-17T19:42:26.091+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
@@ -217,6 +217,24 @@
         "sendOptions": {
           "sendHow": "Upon At",
           "sendWhen": "Overdue fine returned"
+        }
+      },
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 5,
+            "intervalId": "Minutes"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Months"
+          }
         }
       }
     ],
@@ -325,8 +343,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:14.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-10-31T23:50:59.251+00:00",
-      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+      "updatedDate": "2025-11-17T19:41:13.982+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
       {
@@ -380,20 +398,6 @@
         "sendOptions": {
           "sendWhen": "Item recalled"
         }
-      },
-      {
-        "templateId": "702cbd8d-9f3c-4ba4-8c70-94d695963dc6",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 7,
-            "intervalId": "Days"
-          }
-        }
       }
     ],
     "feeFineNotices": [
@@ -404,6 +408,24 @@
         "sendOptions": {
           "sendHow": "Upon At",
           "sendWhen": "Overdue fine returned"
+        }
+      },
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 5,
+            "intervalId": "Minutes"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Months"
+          }
         }
       }
     ],
