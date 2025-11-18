@@ -61,7 +61,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:15.289+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-08T21:30:58.290+00:00",
+      "updatedDate": "2025-11-17T20:03:29.669+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
@@ -115,7 +115,7 @@
         }
       },
       {
-        "templateId": "10caf5fc-3cbf-410b-b056-4a696db516a8",
+        "templateId": "3a647ad9-6dd2-4369-8549-e2b920ba9b6c",
         "format": "Email",
         "frequency": "Recurring",
         "realTime": false,
@@ -297,8 +297,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:12.398+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-10-31T23:51:15.141+00:00",
-      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+      "updatedDate": "2025-11-17T19:49:59.162+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
       {
@@ -349,6 +349,24 @@
         "sendOptions": {
           "sendHow": "Upon At",
           "sendWhen": "Aged to lost - fine charged"
+        }
+      },
+      {
+        "templateId": "3a647ad9-6dd2-4369-8549-e2b920ba9b6c",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Days"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Days"
+          }
         }
       }
     ],
