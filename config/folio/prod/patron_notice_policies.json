@@ -124,7 +124,7 @@
     "metadata": {
       "createdDate": "2024-05-28T19:49:34.157+00:00",
       "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
-      "updatedDate": "2025-11-17T19:42:26.091+00:00",
+      "updatedDate": "2025-11-18T18:25:44.961+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
@@ -178,20 +178,6 @@
         "realTime": false,
         "sendOptions": {
           "sendWhen": "Item recalled"
-        }
-      },
-      {
-        "templateId": "702cbd8d-9f3c-4ba4-8c70-94d695963dc6",
-        "format": "Email",
-        "frequency": "One time",
-        "realTime": false,
-        "sendOptions": {
-          "sendHow": "After",
-          "sendWhen": "Due date",
-          "sendBy": {
-            "duration": 7,
-            "intervalId": "Days"
-          }
         }
       },
       {
