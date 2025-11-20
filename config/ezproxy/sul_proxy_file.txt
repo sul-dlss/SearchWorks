@@ -1645,3 +1645,11 @@ ondemand.metopera.org
 dl.astm.org
 compass.astm.org
 magazine.thediplomat.com
+american-archivist.kglmeridian.com
+asih.kglmeridian.com
+awg.kglmeridian.com
+esh.kglmeridian.com
+jcr.kglmeridian.com
+jgb.kglmeridian.com
+mobilization.kglmeridian.com
+mvedel.kglmeridian.com
