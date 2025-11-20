@@ -2466,7 +2466,7 @@
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
     "details": {
       "pageMediationGroupKey": "EDUCATION",
-      "pageServicePointCodes": "SPEC"
+      "pageServicePointCodes": "EDUCATION"
     },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
@@ -2476,7 +2476,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:42.605+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T21:04:13.791+00:00",
+      "updatedDate": "2025-11-19T18:31:12.379+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
