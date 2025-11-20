@@ -103,7 +103,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 2504ac9b-b034-42c7-b3fd-267a1cb3e61f,Rumsey W7 Box Large,RUM-W7-BOX-LG,SU,SUL,RUMSEY-MAP,Map Center (W7 large box),true,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,
 25458af5-a928-426d-9453-caecf0c54408,Science Exhibit,SCI-EXHIBIT,SU,SUL,SCIENCE,On exhibit,true,SCIENCE,SCIENCE,,,,,,,,,,,,,,,
 25b19d0e-ac10-44cf-a5be-d7c15b209200,Marine Bio Withdrawn Digital Substitute,MAR-WD-DIGITAL-SUB,SU,SUL,MARINE-BIO,Digital substitute,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,,,,
-2636a2b1-e60c-4a7d-889a-8bfd61ecec26,Education Locked Stacks,EDU-LOCKED,SU,SUL,EDUCATION,Locked stacks,true,EDUCATION,EDUCATION,,,,EDUCATION,SPEC,,,,,,,,,,
+2636a2b1-e60c-4a7d-889a-8bfd61ecec26,Education Locked Stacks,EDU-LOCKED,SU,SUL,EDUCATION,Locked stacks,true,EDUCATION,EDUCATION,,,,EDUCATION,EDUCATION,,,,,,,,,,
 266cc9fd-f444-4b6b-9a7f-6424de7ba224,Science Popular Science,SCI-POPSCI,SU,SUL,SCIENCE,Popular science,true,SCIENCE,SCIENCE,,,,,,,,,,,,,,,
 2680e0fa-90a9-4a38-9042-ad4e7673c94c,Science Reserves,SCI-CRES,SU,SUL,SCIENCE,On reserve: Ask at Science circulation desk,true,SCIENCE,SCIENCE,,,,,,,,,,true,,,,,
 26836d26-5046-473b-96d6-861b660d7938,Law - Display,LAW - DISPLAY,SU,LAW,LAW,Law - Display,true,LAW,LAW,Used for temporary displays at the Law Library.,,,,,,,,,,,,,,
