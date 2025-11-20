@@ -36,7 +36,7 @@ en:
         chicago-author-date: Chicago
         harvard-cite-them-right: Harvard
         modern-language-association: MLA
-        turabian-author-date: Turabian
+        chicago-author-date-17th-edition: Turabian
     mini_bento:
       article:
         name: Catalog
