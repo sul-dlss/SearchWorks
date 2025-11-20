@@ -29,8 +29,6 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
   private
 
   def item_attributes
-    # NOTE: we're removing "<" and ">" because it causes https://github.com/inukshuk/citeproc-ruby/issues/89
-    publisher_clean = publisher.tr('<>', '')
     # TODO: For future optimization: We don't need a URL if we have a DOI.
     { id:, author:, issued:, title:, type:, publisher: publisher_clean, genre:,
       'publisher-place' => publisher_place, 'DOI' => doi, 'URL' => url,
@@ -142,7 +140,7 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
 
   # Type is important because the CSL may
   def type
-    return 'report' if genre == 'dissertation'
+    return 'thesis' if genre == 'dissertation'
 
     # https://www.loc.gov/marc/bibliographic/bdleader.html
     case marc.leader[6]
@@ -162,6 +160,12 @@ class CiteprocItemService # rubocop:disable Metrics/ClassLength
     return field260 if field260.present?
 
     Array(marc['264']).filter_map { |subfield| subfield.value.delete_suffix(',') if subfield.code == 'b' }.join(' ')
+  end
+
+  def publisher_clean
+    # NOTE: we're removing "<" and ">" because it causes https://github.com/inukshuk/citeproc-ruby/issues/89
+    # We're removing square brackets to avoid APA citations like `[Dissertation, [Stanford University]`
+    publisher.tr('<>[]', '')
   end
 
   def publisher_place

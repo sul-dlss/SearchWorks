@@ -42,8 +42,8 @@ RSpec.describe CiteprocItemService do
         processor.tap { it.import item }.render(:bibliography, id:).first
       end
 
-      it 'has place of publication from 260a' do
-        expect(chicago).to eq "Finlow, Robert Steel. 1918. <i>\"Heart Damage\" in Baled Jute</i>. Calcutta, London: " \
+      it 'makes an item' do
+        expect(chicago).to eq "Finlow, Robert Steel. 1918. <i>\"Heart Damage\" in Baled Jute</i>. " \
                               "Published for the Imperial Dept. of Agriculture in India by Thacker, Spink &amp; Co.; W. Thacker &amp; Co."
       end
     end
@@ -80,7 +80,7 @@ RSpec.describe CiteprocItemService do
     let(:document) { SolrDocument.find('13553090') }
 
     it 'makes an item' do
-      expect(citation).to eq "Skordis, A. (2016). <i>\"......\" : for orchestra : 2010</i>. Donemus. http://www.aspresolver.com/aspresolver.asp?SHM4;3568528"
+      expect(citation).to eq "Skordis, A. (2016). <i>\"......\" : for orchestra : 2010</i> [Audio recording]. Donemus. http://www.aspresolver.com/aspresolver.asp?SHM4;3568528"
     end
   end
 
@@ -115,8 +115,8 @@ RSpec.describe CiteprocItemService do
       processor.tap { it.import item }.render(:bibliography, id:).first
     end
 
-    it 'makes an item' do
-      expect(chicago).to eq "Strom, Dao. 2020. <i>Instrument</i>. First edition; First printing. Portland, Oregon : Fonograf Editions."
+    it 'does not include the place of publication(per CMOS18)' do
+      expect(chicago).to eq "Strom, Dao. 2020. <i>Instrument</i>. First edition; First printing. Fonograf Editions."
     end
   end
 
@@ -180,11 +180,11 @@ RSpec.describe CiteprocItemService do
   context 'with a thesis' do
     let(:document) { SolrDocument.find('in00000382380') }
 
-    it "has dissertation in parenthesis" do
+    it "has dissertation and Stanford University in square brackets" do
       expect(citation).to eq 'Mutlu, O. C., Wall, D. P., Nishimura, D. G., Pauly, J., Stanford University School of Engineering, ' \
                              '&amp; Stanford University Department of Electrical Engineering. (2025). ' \
                              '<i>Adaptation and regularization of deep neural networks under temporal smoothness assumption</i> ' \
-                             '[Dissertation]. [Stanford University]. https://purl.stanford.edu/bp098kt2063'
+                             '[Dissertation, Stanford University]. https://purl.stanford.edu/bp098kt2063'
     end
 
     context 'when requesting Chicago' do
@@ -197,7 +197,7 @@ RSpec.describe CiteprocItemService do
         expect(chicago).to eq 'Mutlu, Onur Cezmi, Dennis Paul Wall, Dwight George Nishimura, John Pauly, Stanford University School of Engineering, ' \
                               'and Stanford University Department of Electrical Engineering. 2025. ' \
                               '“Adaptation and Regularization of Deep Neural Networks under Temporal Smoothness Assumption.” ' \
-                              'Dissertation. [Stanford, California] : [Stanford University]. https://purl.stanford.edu/bp098kt2063.'
+                              'Dissertation, Stanford University. https://purl.stanford.edu/bp098kt2063.'
       end
     end
   end
