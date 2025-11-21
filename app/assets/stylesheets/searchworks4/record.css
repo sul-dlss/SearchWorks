@@ -208,24 +208,25 @@
   }
 
   .heading,
-  .tabs {
+  .callnumber-tabs {
     .btn {
       --bs-btn-font-size: 0.875rem;
       --bs-btn-padding-y: 0.0625rem;
     }
   }
 
-  li .btn {
+  .callnumber-btn {
     border-color: var(--stanford-60-black);
     color: var(--stanford-black);
+
     &::before {
       padding-right: 0.25rem;
     }
-  }
 
-  li .btn.active {
-    background-color: var(--stanford-10-black);
-    font-weight: 600;
+    &.active  {
+      background-color: var(--stanford-10-black);
+      font-weight: 600;
+    }
   }
 
   .heading {
