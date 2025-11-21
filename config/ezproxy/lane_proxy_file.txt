@@ -137,7 +137,6 @@ arthritis-research.biomedcentral.com
 arthroplasty.biomedcentral.com
 arxiv.org
 as-botanicalstudies.springeropen.com
-asa.scitation.org
 asbmr.onlinelibrary.wiley.com
 ascelibrary.org
 asclepio.revistas.csic.es
@@ -456,7 +455,6 @@ database.yomiuri.co.jp
 datadryad.org
 datasets.americasbarometer.org
 daten.digitale-sammlungen.de
-db.saur.de
 dbs.g-search.or.jp
 dcc.icgc.org
 dccc.chemnetbase.com
@@ -1127,7 +1125,6 @@ mvedel.kglmeridian.com
 my.vitallaw.com
 nam.edu
 nanoconvergencejournal.springeropen.com
-nanoengineeringmedical.asmedigitalcollection.asme.org
 nanophotonics.spiedigitallibrary.org
 nap.nationalacademies.org
 nasenjournals.onlinelibrary.wiley.com
@@ -1810,7 +1807,6 @@ www.broad.mit.edu
 www.broadcastingamerica.amdigital.co.uk
 www.btrt.org
 www.buildinggreen.com
-www.cabdirect.org
 www.cabidigitallibrary.org
 www.cairn-int.info
 www.cairn.info
@@ -2550,7 +2546,6 @@ www.pagepressjournals.org
 www.paijournal.com
 www.painphysicianjournal.com
 www.pakmedinet.com
-www.palgrave-journals.com
 www.panafrican-med-journal.com
 www.paom.pl
 www.parasitol.or.kr
@@ -2800,7 +2795,6 @@ www.vjel.org
 www.vjultrafast.org
 www.vr-elibrary.de
 www.wageningenacademic.com
-www.washingtonpost.com
 www.webofscience.com
 www.who.int
 www.wikidoc.org
