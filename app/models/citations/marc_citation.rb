@@ -8,7 +8,7 @@ module Citations
 
     # Names of CSL files in https://github.com/citation-style-language/styles
     FORMATS = %w[apa chicago-author-date harvard-cite-them-right modern-language-association
-                 turabian-author-date].freeze
+                 chicago-author-date-17th-edition].freeze
 
     # @param citeproc_item [CiteProc::Item]
     def initialize(citeproc_item:)
