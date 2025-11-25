@@ -122,4 +122,4 @@ gem 'blacklight-ris', '~> 0.2.0'
 gem "citeproc", "~> 1.1"
 gem 'citeproc-ruby', '~> 2.0'
 gem 'csl', '~> 2.0'
-gem "csl-styles", "2.0.1" # See https://github.com/sul-dlss/SearchWorks/issues/6298
+gem "csl-styles", "~> 2.0"
