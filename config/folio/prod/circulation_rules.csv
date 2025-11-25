@@ -244,7 +244,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,library equipment 4,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$1000 lost fee
 ,library equipment 3,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 ,library equipment 1,,,,,ENG-MAKERBAR,28day-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
-,accessories 2,,,,,MEDIA-ATCIRCDESK,7day-1renew-3daygrace,Hold only,Short Term Notices,No fines,$150 - 1 hr aged to lost
+,accessories 2,,,,,MEDIA-ATCIRCDESK,7day-1renew-3daygrace,Hold only,Default notice,No fines,$150 - 1 hr aged to lost
 ,accessories 1,,,,,MUS-RECORDINGS,4hour-norenew-1hourgrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,,MEDIA-ATCIRCDESK,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,,GRE-STAFFSHADOW,1day-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$30 lost fee
