@@ -45,18 +45,16 @@ Rails.application.routes.draw do
   end
 
   constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
+    resources :article_selections, path: 'selections/articles' do
+      concerns :exportable
+    end
+
     resources :bookmarks, path: :selections do
       concerns :exportable
 
       collection do
         delete 'clear'
         delete '', action: :destroy
-      end
-
-      collection do
-        resources :article_selections, path: :articles do
-          concerns :exportable
-        end
       end
     end
   end

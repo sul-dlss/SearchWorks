@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ArticleSelectionsController < ApplicationController
+class ArticleSelectionsController < ArticlesController
   include Blacklight::Catalog
   include Blacklight::Configurable
   include Blacklight::SearchContext
@@ -43,6 +43,12 @@ class ArticleSelectionsController < ApplicationController
       additional_response_formats(format)
       document_export_formats(format)
     end
+  end
+
+  def action_documents
+    bookmarks = token_or_current_or_guest_user.bookmarks&.select { |bookmark| bookmark.record_type == 'article' }
+    bookmark_ids = bookmarks.collect { |b| b.document_id.to_s }
+    search_service.fetch(bookmark_ids, rows: bookmark_ids.count)
   end
 
   def _prefixes
