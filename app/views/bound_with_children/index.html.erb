@@ -2,6 +2,6 @@
   <% if @bound_with_children.present? %>
     <div class="bound-with bg-light p-2 mt-2">
       <%= render Record::BoundWithChildrenComponent.new(bound_with_children: @bound_with_children, item_id: @item_id, instance_id: @id) %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 <% end %>
