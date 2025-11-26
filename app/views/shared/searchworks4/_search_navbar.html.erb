@@ -8,11 +8,11 @@
       <div class="text-nowrap order-1 py-2">
         <span class="fw-bold me-2">Search mode:</span>
         <div class="form-check d-inline-block mx-1">
-          <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" data-url="<%= search_bar_catalog_url %>" data-action="search-navbar#toggleMode" <% unless articles_checked %>checked<% end %>>
+          <input class="form-check-input" type="radio" name="search-type" id="searchTypeCatalog" value="catalog" data-url="<%= search_bar_catalog_url %>" data-action="search-navbar#toggleMode" <%= 'checked' unless articles_checked %>>
           <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
         </div>
         <div class="form-check d-inline-block mx-1">
-          <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" data-url="<%= search_bar_articles_url %>" data-action="search-navbar#toggleMode" <% if articles_checked %>checked<% end %>>
+          <input class="form-check-input" type="radio" name="search-type" id="searchTypeArticle" value="articles" data-url="<%= search_bar_articles_url %>" data-action="search-navbar#toggleMode" <%= 'checked' if articles_checked %>>
           <label class="form-check-label" for="searchTypeArticle">Articles+</label>
         </div>
       </div>
