@@ -17,9 +17,9 @@ module AccessPanels
     end
 
     def container_target
-      return 'data-bs-container="#blacklight-modal"' if @is_modal
+      return unless @is_modal
 
-      ''
+      '#blacklight-modal'
     end
 
     def render?
