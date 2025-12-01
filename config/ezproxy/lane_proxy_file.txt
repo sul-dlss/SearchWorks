@@ -420,7 +420,6 @@ conflictandhealth.biomedcentral.com
 congressional.proquest.com
 connect.h1.co
 connect.springerpub.com
-consumerpyramidsdx.cmie.com
 content.iospress.com
 content.nejm.org
 content.sciendo.com
@@ -1294,7 +1293,6 @@ proquest.umi.com
 proteomesci.biomedcentral.com
 proview.thomsonreuters.com
 prowessdx.cmie.com
-proxy.dramonline.org.stanford.idm.oclc.org
 ps.psychiatryonline.org
 psnet.ahrq.gov
 pssjournal.biomedcentral.com
@@ -1443,7 +1441,6 @@ server.wenzibase.com
 services.igi-global.com
 setac.onlinelibrary.wiley.com
 sfamjournals.onlinelibrary.wiley.com
-shakespearenewsletter.com
 shop.seg.org
 shs.cairn.info
 sigmapubs.onlinelibrary.wiley.com
@@ -1490,7 +1487,6 @@ stanfordhealthcare.org
 stanforduniversity.qualtrics.com
 statabs-proquest-com.stanford.idm.oclc.org
 statabs.proquest.com
-statesofindia.cmie.com
 statestatistics.org
 static.routledge.com
 stedmansonline.com
