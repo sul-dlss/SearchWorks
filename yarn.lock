@@ -360,9 +360,9 @@
     "@types/json-schema" "^7.0.15"
 
 "@eslint/eslintrc@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-3.3.1.tgz#e55f7f1dd400600dd066dbba349c4c0bac916964"
-  integrity sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-3.3.3.tgz#26393a0806501b5e2b6a43aa588a4d8df67880ac"
+  integrity sha512-Kr+LPIUVKz2qkx1HAMH8q1q6azbqBAsXJUxBl/ODDuVPX45Z9DfwB8tPjTi6nNZ8BuM3nbJxC5zCAg5elnBUTQ==
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -370,7 +370,7 @@
     globals "^14.0.0"
     ignore "^5.2.0"
     import-fresh "^3.2.1"
-    js-yaml "^4.1.0"
+    js-yaml "^4.1.1"
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
@@ -801,17 +801,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-"blacklight-frontend@>=7.1 <10.0.0":
-  version "8.12.3"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-8.12.3.tgz#1996706d7da84f84b64fbf1d2e997473199edf2d"
-  integrity sha512-o93FffPgANUWtS6tzzFmX7Q7n/JrzXryRQa/QprwhDBRRlNRa7VTIikan2HESoJ5kVcDu0X8OEOblPhtqozXIA==
-  dependencies:
-    bootstrap ">=4.3.1 <6.0.0"
-
-blacklight-frontend@^9.0.0-beta6:
-  version "9.0.0-beta8"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0-beta8.tgz#7f2bfb1491b8c049c3d55ddaf6c665139e02050e"
-  integrity sha512-qtEiFGi0hjvuV41I1jhTuKnUf6ckw4Qs7wa3wSlLDnFyiaIIY8fBR5gp8d/dQQiGJF4CMfcJK3DMMobTN0AkTg==
+"blacklight-frontend@>=7.1 <10.0.0", blacklight-frontend@^9.0.0-beta6:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.0.0.tgz#74fb324ca604465ae7b89aed2f8d3df5c097f9bd"
+  integrity sha512-lvNivnINpi2gS3XLugfpEljHQV1TXMrY/0g/c94NVnAvQgvIK/trdqAGQq2Y+cdLPFjs0+L+qO3EbxjgGTxmIA==
   dependencies:
     bootstrap ">=5.3.5 <6.0.0"
 
@@ -829,7 +822,7 @@ blacklight-range-limit@^9.0.0:
   dependencies:
     chart.js "^ 4.4.1"
 
-bootstrap@5, "bootstrap@>=4.3.1 <6.0.0", "bootstrap@>=5.3.5 <6.0.0":
+bootstrap@5, "bootstrap@>=5.3.5 <6.0.0":
   version "5.3.8"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.8.tgz#6401a10057a22752d21f4e19055508980656aeed"
   integrity sha512-HP1SZDqaLDPwsNiqRqi5NcP0SSXciX2s9E+RyqJIIqGo+vJeN5AJVM98CXmW/Wux0nQ5L7jeWUdplCEf0Ee+tg==
@@ -1763,7 +1756,7 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^4.1.0:
+js-yaml@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.1.tgz#854c292467705b699476e1a2decc0c8a3458806b"
   integrity sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==
