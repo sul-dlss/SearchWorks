@@ -18,7 +18,8 @@ pipeline {
           git switch main
           git pull
 
-          bundle install --without production
+          bundle config set without 'production'
+          bundle install
 
           # Harvest
           bin/rake proxies:import_lane || exit 1

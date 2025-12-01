@@ -26,7 +26,8 @@ pipeline {
           git switch main
           git pull
 
-          bundle install --without production
+          bundle config set without 'production'
+          bundle install
 
           # Harvest -prod
           SETTINGS__FOLIO__CONFIG_SET=prod bin/rake folio:update_types_cache || exit 1
@@ -60,7 +61,8 @@ pipeline {
           rvm use 3.4.1@searchworks --create
           gem install bundler
 
-          bundle install --without production
+          bundle config set without 'production'
+          bundle install
 
           # Harvest -test
           SETTINGS__FOLIO__CONFIG_SET=test bin/rake folio:update_types_cache || exit 1
