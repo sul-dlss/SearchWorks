@@ -1540,7 +1540,6 @@ newarchive.ihp.sinica.edu.tw
 nyaspubs.onlinelibrary.wiley.com
 online.salempress.com
 opg.optica.org
-parker.stanford.edu
 politicalmoneyline.com
 prde.upress.virginia.edu
 reference.paratext.com
