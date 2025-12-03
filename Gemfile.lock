@@ -785,7 +785,7 @@ DEPENDENCIES
   rack-attack
   rack-mini-profiler (~> 3.0)
   rack-utf8_sanitizer
-  rails (~> 8.0)
+  rails (~> 8.1.0)
   rails-controller-testing
   recaptcha (~> 5.17)
   redis
