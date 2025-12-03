@@ -82,7 +82,8 @@
       --bs-border-color: var(--stanford-80-black);
     }
 
-    &.active,&:active {
+    &.active,
+    &:active {
       --bs-border-color: var(--stanford-cardinal);
     }
 
@@ -105,7 +106,8 @@
     /* --bs-btn-padding-y: 0.25rem; */
     --bs-btn-padding-x: var(--item-padding-x);
   }
-  .nav-link, .action-button {
+  .nav-link,
+  .action-button {
     --bs-nav-link-color: var(--stanford-80-black);
     --bs-nav-link-padding-y: 0.25rem;
     --bs-nav-link-padding-x: var(--item-padding-x);
@@ -191,12 +193,6 @@
   }
 }
 
-.popover-availability {
-  --bs-popover-bg: var(--stanford-black);
-  --bs-popover-body-color: #ffffff;
-  --bs-popover-max-width: 22rem;
-}
-
 .record-browse-nearby {
   --bs-border-color: var(--stanford-20-black);
   border-radius: 0.25rem;
@@ -223,7 +219,7 @@
       padding-right: 0.25rem;
     }
 
-    &.active  {
+    &.active {
       background-color: var(--stanford-10-black);
       font-weight: 600;
     }
@@ -278,7 +274,7 @@
 /* Stop the translate effect from bouncing if the cursor is left hovering in the gap */
 .embed-callnumber-browse-container .gallery-document:hover::after,
 .collection-result-preview .filmstrip-gallery-card:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.5rem;
   left: 0;
@@ -286,7 +282,6 @@
   height: 0.5rem;
   z-index: -1;
 }
-
 
 .availability-modal {
   --bs-accordion-border-radius: 0;
@@ -329,13 +324,12 @@
     --bs-badge-color: var(--stanford-black);
     --bs-badge-font-weight: 500;
   }
-
 }
 
 .alert.citations-alert {
   --bs-alert-bg: rgba(var(--stanford-poppy-dark-rgb), 0.1);
   &::before {
-    color: rgb(var(--stanford-poppy-rgb))
+    color: rgb(var(--stanford-poppy-rgb));
   }
 }
 
@@ -353,7 +347,7 @@
   }
 
   #online {
-    display: none !important
+    display: none !important;
   }
 
   .item-row {
@@ -364,7 +358,7 @@
     display: flex !important;
   }
 
-  .availability-library-location  {
+  .availability-library-location {
     display: none !important;
   }
 
@@ -378,20 +372,26 @@
 }
 
 .blacklight-articles-fulltext_html {
-  #topnav .navbar { display: none; }
+  #topnav .navbar {
+    display: none;
+  }
   .access-panel-heading {
     display: none;
   }
 }
 
 .popover-availability {
+  --bs-popover-bg: var(--stanford-black);
+  --bs-popover-body-color: #ffffff;
+  --bs-popover-body-padding-y: 0;
+  --bs-popover-body-padding-x: 0.5rem 0.75rem;
+  --bs-popover-border-color: transparent;
+  --bs-popover-max-width: 22rem;
   --bs-popover-header-padding-y: 0.5rem;
   --bs-popover-header-padding-x: 0.5rem 0;
   --bs-popover-header-bg: var(--bs-popover-body-bg);
   --bs-popover-header-color: var(--bs-popover-body-color);
-  --bs-popover-body-padding-y: 0;
-  --bs-popover-body-padding-x: 0.5rem 0.75rem;
-  --bs-popover-border-color: transparent;
+
   .btn {
     --bs-btn-color: var(--bs-popover-body-color);
   }
