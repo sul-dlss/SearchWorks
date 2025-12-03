@@ -1289,7 +1289,6 @@ projecteuclid.org
 projections.pubpub.org
 prola.aps.org
 proquest.safaribooksonline.com
-proquest.umi.com
 proteomesci.biomedcentral.com
 proview.thomsonreuters.com
 prowessdx.cmie.com
@@ -1426,7 +1425,6 @@ sdrc.lib.uiowa.edu
 search.alexanderstreet.com
 search.datapages.com
 search.ebscohost.com
-search.epnet.com
 search.informit.com.au
 search.mandumah.com
 search.ndltd.org
@@ -2563,9 +2561,7 @@ www.picronline.org
 www.pjmonline.org
 www.pjms.com.pk
 www.pjps.pk
-www.plantcell.org
 www.plantgdb.org
-www.plantphysiol.org
 www.ploscompbiol.org
 www.plosgenetics.org
 www.plosntds.org
