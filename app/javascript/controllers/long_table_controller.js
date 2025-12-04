@@ -8,15 +8,15 @@ export default class extends Controller {
     rows: { type: Number, default: 5 }
   }
 
-  static targets = [ "body", "button", "notice" ]
+  static targets = ["body", "button", "notice"]
 
   connect() {
-    if (!this.children) return;
+    if (!this.children) return
     // It's possible that in the case of "Available online", one of the elements is a google book, which is hidden.
     const nonIgnored = Array.from(this.children).filter(elem => elem.dataset.longTableControllerIgnore !== "true")
-    if (nonIgnored.length <= this.rowsValue) return;
+    if (nonIgnored.length <= this.rowsValue) return
 
-    if (!this.hasButtonTarget) this.addControls();
+    if (!this.hasButtonTarget) this.addControls()
     this.collapse()
   }
 
@@ -24,23 +24,23 @@ export default class extends Controller {
     if (this.hasBodyTarget) {
       return this.bodyTargets.flatMap((bodyTarget) => Array.from(bodyTarget.children))
     } else {
-      return Array.from(this.element.children);
+      return Array.from(this.element.children)
     }
   }
 
   expand() {
-    const firstHiddenElement= this.children.find((childElement) => childElement.hidden);
-    this.children.forEach((childElement) => childElement.hidden = false);
-    this.expandedValue = true;
-    firstHiddenElement.tabIndex = -1;
-    firstHiddenElement.focus();
+    const firstHiddenElement = this.children.find((childElement) => childElement.hidden)
+    this.children.forEach((childElement) => childElement.hidden = false)
+    this.expandedValue = true
+    firstHiddenElement.tabIndex = -1
+    firstHiddenElement.focus()
   }
 
   collapse() {
     Array.from(this.children).forEach((childElement, index) => {
-      childElement.hidden = (index >= this.rowsValue) && childElement.dataset.longTablePreserve !== "true";
+      childElement.hidden = (index >= this.rowsValue) && childElement.dataset.longTablePreserve !== "true"
     })
-    this.expandedValue = false;
+    this.expandedValue = false
   }
 
   toggle() {
@@ -55,27 +55,27 @@ export default class extends Controller {
     }
 
     if (this.buttonContextValue) {
-      const srSpan = document.createElement("span");
-      srSpan.classList.add("visually-hidden");
-      srSpan.innerText = this.buttonContextValue;
+      const srSpan = document.createElement("span")
+      srSpan.classList.add("visually-hidden")
+      srSpan.innerText = this.buttonContextValue
 
-      this.buttonTarget.appendChild(srSpan);
+      this.buttonTarget.appendChild(srSpan)
     }
   }
 
   addControls() {
     const button = document.createElement("button")
     button.classList.add("btn", "btn-link", "p-0")
-    button.dataset.longTableTarget = "button";
-    button.dataset.action = "long-table#toggle";
-    button.innerText = this.expandedValue ? "show less" : "show all";
+    button.dataset.longTableTarget = "button"
+    button.dataset.action = "long-table#toggle"
+    button.innerText = this.expandedValue ? "show less" : "show all"
 
     if (this.buttonContextValue) {
-      const srSpan = document.createElement("span");
-      srSpan.classList.add("visually-hidden");
-      srSpan.innerText = this.buttonContextValue;
+      const srSpan = document.createElement("span")
+      srSpan.classList.add("visually-hidden")
+      srSpan.innerText = this.buttonContextValue
 
-      button.appendChild(srSpan);
+      button.appendChild(srSpan)
     }
 
     if (this.element.tagName === "TABLE") {
@@ -83,29 +83,29 @@ export default class extends Controller {
       const tr = document.createElement("tr")
       const td = document.createElement("td")
       td.setAttribute("colspan", this.children[0].children.length)
-      td.appendChild(this.buildNotice());
+      td.appendChild(this.buildNotice())
       td.appendChild(button)
       tr.appendChild(td)
       tbody.appendChild(tr)
       this.element.appendChild(tbody)
     } else if (this.element.tagName === "UL" || this.element.tagName === "OL") {
       const li = document.createElement("li")
-      li.dataset.longTablePreserve = "true";
-      li.appendChild(this.buildNotice());
+      li.dataset.longTablePreserve = "true"
+      li.appendChild(this.buildNotice())
       li.appendChild(button)
-      this.element.appendChild(li);
+      this.element.appendChild(li)
     }
   }
 
   buildNotice() {
-    const notice = document.createElement("span");
-    notice.classList.add("visually-hidden");
-    notice.ariaAtomic = "true";
-    notice.ariaLive = "polite";
-    notice.profile = "status";
-    notice.dataset.longTableTarget = "notice";
+    const notice = document.createElement("span")
+    notice.classList.add("visually-hidden")
+    notice.ariaAtomic = "true"
+    notice.ariaLive = "polite"
+    notice.profile = "status"
+    notice.dataset.longTableTarget = "notice"
 
     notice.innerText = `showing ${this.rowsValue} of ${this.children.length} items`
-    return notice;
+    return notice
   }
 }

@@ -11,19 +11,19 @@ export default class extends Controller {
   }
 
   loadEmbed() {
-    if (this.element.attributes.complete || this.element.attributes.busy) return;
+    if (this.element.attributes.complete || this.element.attributes.busy) return
 
-    this.element.setAttribute("busy", "");
+    this.element.setAttribute("busy", "")
 
     fetch(this.urlValue)
       .then(response => response.json())
       .then(data => {
-        this.element.removeAttribute("busy");
+        this.element.removeAttribute("busy")
         if (data !== null) {
           this.element.innerHTML = data.html
-          this.element.setAttribute("complete", "");
+          this.element.setAttribute("complete", "")
         }
       })
-      .catch(error => console.error('Error loading embed:', error))
+      .catch(error => console.error("Error loading embed:", error))
   }
 }

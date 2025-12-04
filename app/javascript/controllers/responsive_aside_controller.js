@@ -9,22 +9,22 @@ export default class extends Controller {
   }
 
   moveContentIfNeeded() {
-    if (!this.hasResponsiveTarget || !this.hasContentTarget) return;
+    if (!this.hasResponsiveTarget || !this.hasContentTarget) return
 
     const stateChanged = !this.lastState || this.responsiveTargetVisible !== this.lastState
 
-    if (!stateChanged) return;
+    if (!stateChanged) return
 
     this.lastState = this.responsiveTargetVisible
 
     if (this.responsiveTargetVisible) {
-      this.responsiveTarget.appendChild(this.contentTarget);
+      this.responsiveTarget.appendChild(this.contentTarget)
     } else {
-      this.defaultTarget.appendChild(this.contentTarget);
+      this.defaultTarget.appendChild(this.contentTarget)
     }
   }
 
   get responsiveTargetVisible() {
-    return this.hasResponsiveTarget && this.responsiveTarget.checkVisibility && this.responsiveTarget.checkVisibility();
+    return this.hasResponsiveTarget && this.responsiveTarget.checkVisibility && this.responsiveTarget.checkVisibility()
   }
 }

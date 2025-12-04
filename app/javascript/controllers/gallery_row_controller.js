@@ -3,49 +3,49 @@ import scrollOver from "../scroll-over"
 
 // Connects to data-controller="gallery-row"
 export default class extends Controller {
-  static targets = [ "container" ]
-  static outlets = [ "gallery-card", "preview" ]
+  static targets = ["container"]
+  static outlets = ["gallery-card", "preview"]
   static values = {
-    currentDocumentClass: { type: String, default: 'current-document' },
+    currentDocumentClass: { type: String, default: "current-document" },
     maxPreviewWidth: { type: Number, default: -1 }
   }
 
   scrollToCurrentDocument(e) {
-    if (e.target.parentElement != this.containerTarget) return;
+    if (e.target.parentElement != this.containerTarget) return
 
     scrollOver(this.currentDocumentTarget(), this.containerTarget)
   }
 
   currentDocumentTarget() {
-    return this.galleryCardOutletElements.find(el => el.classList.contains(this.currentDocumentClassValue));
+    return this.galleryCardOutletElements.find(el => el.classList.contains(this.currentDocumentClassValue))
   }
 
   setCurrentPreview(event) {
-    this.currentPreview = event.target;
+    this.currentPreview = event.target
 
     this.galleryCardOutlets.forEach((tile) => {
-      if (tile.element === event.target) return;
+      if (tile.element === event.target) return
 
-      tile.updateButton('closed');
-    });
+      tile.updateButton("closed")
+    })
 
-    this.adjustPreviewMargins();
+    this.adjustPreviewMargins()
   }
 
   get previewContainer() {
-    return this.galleryCardOutletElement.parentElement;
+    return this.galleryCardOutletElement.parentElement
   }
 
   adjustPreviewMargins() {
-    if (!this.currentPreview) return;
+    if (!this.currentPreview) return
 
     // This is assuming the preview is styled for 100% width
     this.previewOutletElement.style.marginLeft = 0
     this.previewOutletElement.style.marginRight = 0
-    const maxPreviewWidth = this.maxPreviewWidthValue;
+    const maxPreviewWidth = this.maxPreviewWidthValue
     const galleryRect = this.currentPreview.getBoundingClientRect()
     const previewRect = this.previewOutletElement.getBoundingClientRect()
-    const galleryDocumentWidth = this.previewContainer.getBoundingClientRect().width / this.galleryCardOutlets.length;
+    const galleryDocumentWidth = this.previewContainer.getBoundingClientRect().width / this.galleryCardOutlets.length
     const previewWidth = previewRect.width
     const leftBound = previewRect.left
     const rightBound = leftBound + previewWidth
@@ -61,7 +61,7 @@ export default class extends Controller {
       return
     }
 
-    if (galleryCenterDistanceFromLeftBound <= (maxPreviewWidth/2)) {
+    if (galleryCenterDistanceFromLeftBound <= (maxPreviewWidth / 2)) {
       // If the center of the element is too close to the left to center, max the right margin
       const marginRight = Math.ceil(previewWidth - maxPreviewWidth) - minMargin
       this.previewOutletElement.style.marginLeft = `${minMargin}px`
@@ -70,7 +70,7 @@ export default class extends Controller {
       return
     }
 
-    if (galleryCenterDistanceFromRightBound <= (maxPreviewWidth/2)) {
+    if (galleryCenterDistanceFromRightBound <= (maxPreviewWidth / 2)) {
       // If the center of the element is too close to the right to center, max the left margin
       const marginLeft = Math.ceil(previewWidth - maxPreviewWidth) - minMargin
       this.previewOutletElement.style.marginLeft = `${marginLeft}px`
@@ -92,16 +92,16 @@ export default class extends Controller {
     const arrowLeft = targetCenter - pointerWidth
 
     if (arrowLeft > 0 && leftBound + targetCenter < rightBound) {
-      this.arrow.style.left = arrowLeft + 'px'
-      this.arrow.classList.add('d-block')
-      this.arrow.classList.remove('d-none')
+      this.arrow.style.left = arrowLeft + "px"
+      this.arrow.classList.add("d-block")
+      this.arrow.classList.remove("d-none")
     } else {
-      this.arrow.classList.add('d-none')
-      this.arrow.classList.remove('d-block')
+      this.arrow.classList.add("d-none")
+      this.arrow.classList.remove("d-block")
     }
   }
 
   get arrow() {
-    return this.previewOutlet.arrowTarget;
+    return this.previewOutlet.arrowTarget
   }
 }

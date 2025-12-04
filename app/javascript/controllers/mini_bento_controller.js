@@ -13,18 +13,18 @@ export default class extends Controller {
   }
 
   requestData() {
-    this.placeholderTarget.classList.remove('d-none')
+    this.placeholderTarget.classList.remove("d-none")
     this.element.busy = true
     this.element.complete = false
 
-    const alternateCatalogUrl = this.urlValue;
+    const alternateCatalogUrl = this.urlValue
 
-    fetch(alternateCatalogUrl, { headers: { 'accept': 'application/json' } })
+    fetch(alternateCatalogUrl, { headers: { "accept": "application/json" } })
       .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`)
-          }
-          return response.json()
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`)
+        }
+        return response.json()
       })
       .then(response => this.handleResponse(response))
       .catch((error) => {
@@ -37,13 +37,13 @@ export default class extends Controller {
     this.element.complete = true
 
     const count = parseInt(response.response.pages.total_count)
-    this.countValue = count;
+    this.countValue = count
 
     // Update title
-    this.titleTarget.innerHTML = 'Looking for more?'
+    this.titleTarget.innerHTML = "Looking for more?"
     this.countTarget.innerHTML = count.toLocaleString()
-    this.bodyTarget.classList.remove('d-none')
-    this.placeholderTarget.classList.add('d-none')
+    this.bodyTarget.classList.remove("d-none")
+    this.placeholderTarget.classList.add("d-none")
 
     // inform the mini-mini-bento outlet that we have data
     this.miniMiniBentoOutlet.receiveCount(count)
@@ -52,8 +52,8 @@ export default class extends Controller {
   // if a new mini-mini-bento outlet is connected and we already have data,
   // send it the count value
   miniMiniBentoOutletConnected(outlet, _element) {
-    if (!this.countValue) return;
+    if (!this.countValue) return
 
-    outlet.receiveCount(this.countValue);
+    outlet.receiveCount(this.countValue)
   }
 }

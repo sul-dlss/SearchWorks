@@ -2,13 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="bookmark-all"
 export default class extends Controller {
-  static outlets = ['bookmark']
-  static targets = ['checkbox']
+  static outlets = ["bookmark"]
+  static targets = ["checkbox"]
 
   connect() {
     this.update()
     if (this.bookmarkOutlets.length > 0) {
-      this.element.removeAttribute('disabled')
+      this.element.removeAttribute("disabled")
     }
   }
 
@@ -18,12 +18,12 @@ export default class extends Controller {
 
   async removeAll() {
     const bookmarks = this.bookmarkOutlets.filter(bookmark => bookmark.isBookmarked())
-    await this.performBulkBookmarkAction(bookmarks, '/selections', 'DELETE')
+    await this.performBulkBookmarkAction(bookmarks, "/selections", "DELETE")
   }
 
   async selectAll() {
     const bookmarks = this.bookmarkOutlets.filter(bookmark => !bookmark.isBookmarked())
-    await this.performBulkBookmarkAction(bookmarks, '/selections', 'POST')
+    await this.performBulkBookmarkAction(bookmarks, "/selections", "POST")
   }
 
   async performBulkBookmarkAction(bookmarks, url, method) {
@@ -35,15 +35,15 @@ export default class extends Controller {
 
     if (bookmarksData.length === 0) return
 
-    this.element.setAttribute('disabled', true)
+    this.element.setAttribute("disabled", true)
 
     try {
       const response = await fetch(url, {
         method: method,
         headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest',
-          'X-CSRF-Token': document.querySelector('meta[name=csrf-token]')?.content
+          "Content-Type": "application/json",
+          "X-Requested-With": "XMLHttpRequest",
+          "X-CSRF-Token": document.querySelector("meta[name=csrf-token]")?.content
         },
         body: JSON.stringify({ bookmarks: bookmarksData })
       })
@@ -52,16 +52,16 @@ export default class extends Controller {
         this.checkboxTarget.checked = !this.checkboxTarget.checked
         const newState = this.checkboxTarget.checked
         const result = await response.json()
-        bookmarks.forEach(bookmark => bookmark.updateBookmarksFor(bookmark.element.dataset.documentId, newState));
+        bookmarks.forEach(bookmark => bookmark.updateBookmarksFor(bookmark.element.dataset.documentId, newState))
         this.updateBookmarksCounters(result.bookmarks.count)
         this.updateAria()
       } else {
-        console.error(`Failed to perform bulk selection action:`, response.status || response)
+        console.error("Failed to perform bulk selection action:", response.status || response)
       }
-    } catch (error) {
+    } catch(error) {
       console.error(error)
     } finally {
-      this.element.removeAttribute('disabled')
+      this.element.removeAttribute("disabled")
     }
   }
 
@@ -71,8 +71,8 @@ export default class extends Controller {
   }
 
   updateAria() {
-    this.element.ariaLabel = this.checkboxTarget.checked ? 'Remove all saved records on this page' : 'Save all records on this page'
-    this.element.dispatchEvent(new CustomEvent('update-tooltip', { bubbles: true }))
+    this.element.ariaLabel = this.checkboxTarget.checked ? "Remove all saved records on this page" : "Save all records on this page"
+    this.element.dispatchEvent(new CustomEvent("update-tooltip", { bubbles: true }))
   }
 
   allBookmarked() {
@@ -83,16 +83,16 @@ export default class extends Controller {
         return false
       }
     }
-    
+
     return true
   }
 
   documentTypeFor(bookmark) {
-    return bookmark.element.querySelector('input[name="bookmarks[][document_type]"]')?.value || 'SolrDocument'
+    return bookmark.element.querySelector('input[name="bookmarks[][document_type]"]')?.value || "SolrDocument"
   }
 
   recordTypeFor(bookmark) {
-    return bookmark.element.querySelector('input[name="bookmarks[][record_type]"]')?.value || 'catalog'
+    return bookmark.element.querySelector('input[name="bookmarks[][record_type]"]')?.value || "catalog"
   }
 
   bookmarksCounter() {
@@ -101,7 +101,7 @@ export default class extends Controller {
 
   updateBookmarksCounters(count) {
     this.bookmarksCounter().forEach(counter => {
-      counter.innerHTML = count;
-    });
+      counter.innerHTML = count
+    })
   }
 }

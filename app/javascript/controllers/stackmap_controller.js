@@ -1,21 +1,21 @@
 import { Controller } from "@hotwired/stimulus"
 import L from "leaflet"
-import fetchJsonp from 'fetch-jsonp';
+import fetchJsonp from "fetch-jsonp"
 
 export default class extends Controller {
   static values = {
     apiUrl: String
   }
 
-  static targets = ["map", "directions", "directionsTab", "callnumber", "library", "floorname", 'fitButton', 'zoomOutButton']
+  static targets = ["map", "directions", "directionsTab", "callnumber", "library", "floorname", "fitButton", "zoomOutButton"]
 
   connect() {
-    fetchJsonp(this.apiUrlValue, { headers: { 'accept': 'application/json' } })
+    fetchJsonp(this.apiUrlValue, { headers: { "accept": "application/json" } })
       .then((response) => response.json())
       .then((data) => this.handleResponse(data))
       .catch((error) => {
         console.error("StackMap fetch error:", error)
-        this.element.innerHTML = '<p>Error loading map data.</p>'
+        this.element.innerHTML = "<p>Error loading map data.</p>"
       })
   }
 
@@ -29,7 +29,7 @@ export default class extends Controller {
     if (data.stat === "OK" && data.results.maps.length > 0) {
       this.plugContent(data)
     } else {
-      this.element.innerHTML = '<p>No map available for this item</p>'
+      this.element.innerHTML = "<p>No map available for this item</p>"
     }
   }
 
@@ -44,10 +44,10 @@ export default class extends Controller {
       this.floornameTarget.textContent = map.floorname
 
       if (map.directions == "") {
-        this.directionsTabTarget.classList.add('d-none')
+        this.directionsTabTarget.classList.add("d-none")
       } else {
         // Replace <li>- with <li>
-        this.directionsTarget.innerHTML = map.directions.replaceAll(/<li>-\s*/g, '<li>')
+        this.directionsTarget.innerHTML = map.directions.replaceAll(/<li>-\s*/g, "<li>")
       }
 
       this.bounds = [[0, 0], [map.height, map.width]]
@@ -74,9 +74,9 @@ export default class extends Controller {
 
   zoomBounds() {
     if (this.viewer && this.bounds) {
-      this.viewer.fitBounds(this.bounds);
-      this.fitButtonTarget.classList.add('disabled')
-      this.zoomOutButtonTarget.classList.add('disabled')
+      this.viewer.fitBounds(this.bounds)
+      this.fitButtonTarget.classList.add("disabled")
+      this.zoomOutButtonTarget.classList.add("disabled")
     }
   }
 
@@ -84,18 +84,18 @@ export default class extends Controller {
    * Update the zoom control state based on the current map state.
    */
   handleBoundsChanged(e) {
-    if (!this.viewer || !this.fittedBounds) return;
+    if (!this.viewer || !this.fittedBounds) return
 
     if (this.viewer.getZoom() <= this.viewer.getMinZoom()) {
-      this.zoomOutButtonTarget.classList.add('disabled')
+      this.zoomOutButtonTarget.classList.add("disabled")
     } else {
-      this.zoomOutButtonTarget.classList.remove('disabled')
+      this.zoomOutButtonTarget.classList.remove("disabled")
     }
 
     if (this.viewer.getBounds().equals(this.fittedBounds)) {
-      this.fitButtonTarget.classList.add('disabled')
+      this.fitButtonTarget.classList.add("disabled")
     } else {
-      this.fitButtonTarget.classList.remove('disabled')
+      this.fitButtonTarget.classList.remove("disabled")
     }
   }
 
@@ -116,12 +116,12 @@ export default class extends Controller {
     this.zoomBounds()
 
     // bookkeep the initial viewer bounds
-    this.fittedBounds = this.viewer.getBounds();
+    this.fittedBounds = this.viewer.getBounds()
 
     // Enable reset button after zoom
-    this.viewer.on('zoomstart', () => this.fitButtonTarget.classList.remove('disabled'))
-    this.viewer.on('movestart', () => this.fitButtonTarget.classList.remove('disabled'))
-    this.viewer.on('moveend', (e) => this.handleBoundsChanged(e))
-    this.viewer.on('zoomend', (e) => this.handleBoundsChanged(e))
+    this.viewer.on("zoomstart", () => this.fitButtonTarget.classList.remove("disabled"))
+    this.viewer.on("movestart", () => this.fitButtonTarget.classList.remove("disabled"))
+    this.viewer.on("moveend", (e) => this.handleBoundsChanged(e))
+    this.viewer.on("zoomend", (e) => this.handleBoundsChanged(e))
   }
 }

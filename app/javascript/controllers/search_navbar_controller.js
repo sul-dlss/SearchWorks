@@ -9,19 +9,19 @@ export default class extends Controller {
   }
 
   toggleMode(event) {
-    const path = event.target.dataset.url;
-    const query = new URLSearchParams(new FormData(this.element.querySelector('.search-query-form')));
+    const path = event.target.dataset.url
+    const query = new URLSearchParams(new FormData(this.element.querySelector(".search-query-form")))
 
     if (this.additionalArticlesParamsValue) {
       Object.entries(this.additionalArticlesParamsValue).forEach(([key, value]) => {
         if (value) {
-          query.delete(key);
-          query.append(key, value);
+          query.delete(key)
+          query.append(key, value)
         }
-      });
+      })
     }
 
-    const url = `${path}?${query.toString()}`;
-    this.containerTarget.src = url;
+    const url = `${path}?${query.toString()}`
+    this.containerTarget.src = url
   }
 }

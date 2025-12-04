@@ -9,15 +9,15 @@ export default class extends Controller {
 
   // We don't use connect() here, because this node gets moved in the DOM, which results in 2 calls to connect()
   initialize() {
-    fetch(this.urlValue, { headers: { 'accept': 'application/json' } })
+    fetch(this.urlValue, { headers: { "accept": "application/json" } })
       .then((response) => response.json())
       .then((data) => this.handleResponse(data))
       .catch(console.error)
   }
 
   handleResponse(data) {
-   const count = data.meta.pages.total_count
+    const count = data.meta.pages.total_count
 
-   this.countTarget.innerHTML = count.toLocaleString()
+    this.countTarget.innerHTML = count.toLocaleString()
   }
 }
