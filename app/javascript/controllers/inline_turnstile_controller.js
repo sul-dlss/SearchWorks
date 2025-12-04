@@ -63,7 +63,11 @@ export default class extends Controller {
       body: JSON.stringify({ cf_turnstile_response: token }),
     });
 
-    const result = await response.json();
+    const result = await response.json().catch(() => {
+      throw new Error(
+        `Invalid JSON in response from ${this.challengePathValue}: ${response.statusText}`
+      )
+    })
     if (result["success"] == true) {
       turnstile.remove();
       this.challengeTarget.className = '';
