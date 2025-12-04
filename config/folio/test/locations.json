@@ -4148,14 +4148,15 @@
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
-      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+      "6a7f9353-cc07-46de-8186-9b5b1eb24fc4"
     ],
     "servicePoints": [],
     "metadata": {
       "createdDate": "2023-08-10T17:47:35.899+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:04:18.475+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2025-12-03T23:22:57.826+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
