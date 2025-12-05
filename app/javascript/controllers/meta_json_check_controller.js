@@ -12,12 +12,12 @@ export default class extends Controller {
     fetch(this.urlValue)
       .then((response) => response.json())
       .then((data) => this.updateElement(data))
-      .catch(error => console.error('meta_json fetch failed',error))
+      .catch(error => console.error("meta_json fetch failed", error))
   }
 
   updateElement(data) {
     if (data[this.fieldValue]){
-      this.element.classList.add('mb-2')
+      this.element.classList.add("mb-2")
       this.element.innerHTML = `<a href="${this.linkUrlValue}">${this.linkLabelValue}</a>`
     }
   }

@@ -5,7 +5,7 @@ export default class extends Controller {
     route: String
   }
 
-  static targets = ['hours']
+  static targets = ["hours"]
 
   connect() {
     this.locationHours()
@@ -14,7 +14,7 @@ export default class extends Controller {
   formatTimeRange({ openTime, closeTime, isClosed }) {
     if (isClosed) {
       return "Closed today"
-    } else if (openTime === '12a' && closeTime === '11:59p') {
+    } else if (openTime === "12a" && closeTime === "11:59p") {
       return "Open 24hr today"
     } else {
       return `Today's hours: ${openTime} - ${closeTime}`
@@ -23,11 +23,11 @@ export default class extends Controller {
 
   parseTime(dateString) {
     const date = new Date(dateString)
-    const options = { timeZone: 'America/Los_Angeles', timeStyle: 'short' }
-    const shortTime = new Intl.DateTimeFormat('en-US', options).format(date)
-    const [time, period] = shortTime.split(' ')
-    const formattedTime = time.replace(':00', '')
-    const formattedPeriod = period === 'AM' ? 'a' : 'p'
+    const options = { timeZone: "America/Los_Angeles", timeStyle: "short" }
+    const shortTime = new Intl.DateTimeFormat("en-US", options).format(date)
+    const [time, period] = shortTime.split(" ")
+    const formattedTime = time.replace(":00", "")
+    const formattedPeriod = period === "AM" ? "a" : "p"
     return formattedTime + formattedPeriod
   }
 

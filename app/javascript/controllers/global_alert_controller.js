@@ -5,17 +5,17 @@ export default class extends Controller {
   static values = { cookieId: String, dismiss: String }
 
   writeCookie() {
-    const cookieId = this.cookieIdValue;
-    if (!cookieId) return;
+    const cookieId = this.cookieIdValue
+    if (!cookieId) return
 
-    let lifetime;
+    let lifetime
 
     if (this.dismissValue == "permanent") {
-      const date = new Date();
-      date.setFullYear(date.getFullYear() + 1);
-      lifetime = `expires=${date.toUTCString()};`;
+      const date = new Date()
+      date.setFullYear(date.getFullYear() + 1)
+      lifetime = `expires=${date.toUTCString()};`
     }
 
-    document.cookie = `${cookieId}=dismissed; ${lifetime} path=/`;
+    document.cookie = `${cookieId}=dismissed; ${lifetime} path=/`
   }
 }

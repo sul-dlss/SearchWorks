@@ -1,4 +1,4 @@
-import Blacklight from 'blacklight-frontend'
+import Blacklight from "blacklight-frontend"
 
 Blacklight.onLoad(() => {
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -17,11 +17,11 @@ Blacklight.onLoad(() => {
       // tags and attributes allowed in the popover, everything not listed will be stripped
       // needed to be able to put a data-controller and data-action in popover
       allowList: {
-        '*': ['class', 'role', 'data-controller', 'data-action', 'aria-*'], // allow data-custom and data-another
-        div: ['class', 'role', 'data-action', 'data-controller'],
-        button: ['data-action'],
-        i: ['class']
+        "*": ["class", "role", "data-controller", "data-action", "aria-*"], // allow data-custom and data-another
+        div: ["class", "role", "data-action", "data-controller"],
+        button: ["data-action"],
+        i: ["class"]
       }
     })
   })
-});
+})

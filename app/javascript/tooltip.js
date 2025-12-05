@@ -1,4 +1,4 @@
-import Blacklight from 'blacklight-frontend'
+import Blacklight from "blacklight-frontend"
 
 Blacklight.onLoad(() => {
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')

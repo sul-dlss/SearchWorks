@@ -4,21 +4,21 @@ import { Controller } from "@hotwired/stimulus"
 // Opens long facet lists in a modal
 export default class extends Controller {
   static values = { title: String }
-  static targets = [ "list" ]
+  static targets = ["list"]
 
   open(e) {
     e.preventDefault()
     Blacklight.Modal.show()
-    const modalContent = document.querySelector('.modal-content')
+    const modalContent = document.querySelector(".modal-content")
 
     modalContent.innerHTML = this.modalHtml(this.titleValue)
 
-    const modalBody = document.querySelector('.modal-body')
-    modalContent.dataset.controller = 'articles-facet-paginate'
+    const modalBody = document.querySelector(".modal-body")
+    modalContent.dataset.controller = "articles-facet-paginate"
     const list = this.listTarget.cloneNode(true)
-    list.dataset.articlesFacetPaginateTarget = 'list'
+    list.dataset.articlesFacetPaginateTarget = "list"
     modalBody.replaceChildren(list)
-    list.querySelectorAll('[hidden]').forEach(item => item.hidden = false)
+    list.querySelectorAll("[hidden]").forEach(item => item.hidden = false)
   }
 
   modalHtml(title) {

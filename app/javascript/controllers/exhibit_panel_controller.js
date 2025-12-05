@@ -37,9 +37,9 @@ export default class extends Controller {
       })
 
       this.addToggleButtonBehavior()
-      this.element.style.display = 'block'
-    } catch (error) {
-      console.error('Failed to fetch exhibits:', error)
+      this.element.style.display = "block"
+    } catch(error) {
+      console.error("Failed to fetch exhibits:", error)
     }
   }
 
@@ -61,19 +61,19 @@ export default class extends Controller {
     const exhibitCount = exhibitElements.length
 
     if (exhibitCount > this.exhibitToggleThreshold) {
-      let toggleButton = this.cardBodyTarget.querySelector('button.see-all-exhibits')
+      let toggleButton = this.cardBodyTarget.querySelector("button.see-all-exhibits")
 
       if (!toggleButton) {
-        toggleButton = document.createElement('button')
-        toggleButton.className = 'see-all-exhibits btn btn-secondary btn-xs'
+        toggleButton = document.createElement("button")
+        toggleButton.className = "see-all-exhibits btn btn-secondary btn-xs"
         toggleButton.textContent = `show all ${exhibitCount} exhibits`
-        toggleButton.addEventListener('click', this.toggleExhibits.bind(this))
+        toggleButton.addEventListener("click", this.toggleExhibits.bind(this))
         this.cardBodyTarget.appendChild(toggleButton)
       }
 
       exhibitElements.forEach((element, i) => {
         if (i >= this.exhibitToggleThreshold) {
-          element.classList.remove('d-flex')
+          element.classList.remove("d-flex")
           element.hidden = true
         }
       })
@@ -92,10 +92,10 @@ export default class extends Controller {
     exhibitElements.forEach((element, i) => {
       if (i >= this.exhibitToggleThreshold) {
         if (!element.hidden) {
-          element.classList.remove('d-flex')
+          element.classList.remove("d-flex")
           element.hidden = true
         } else {
-          element.classList.add('d-flex')
+          element.classList.add("d-flex")
           element.hidden = false
         }
       }
@@ -104,10 +104,10 @@ export default class extends Controller {
 
   createExhibitMediaObject(exhibit, parentNode) {
     const exhibitUrl = this.exhibitsUrl(exhibit.slug)
-    const wrapper = document.createElement('div')
-    wrapper.dataset.exhibitPanelTarget = 'exhibit'
-    wrapper.className = 'd-flex mb-2'
-    const subtitle = exhibit.subtitle || ''
+    const wrapper = document.createElement("div")
+    wrapper.dataset.exhibitPanelTarget = "exhibit"
+    wrapper.className = "d-flex mb-2"
+    const subtitle = exhibit.subtitle || ""
     const body = `<div><div class="exhibit-heading"><h4><a href="${exhibitUrl}">${exhibit.title}</a></h4>${subtitle}</div></div>`
 
     if (exhibit.thumbnail_url) {
@@ -119,11 +119,11 @@ export default class extends Controller {
     }
 
     // Add click tracking to exhibit links
-    wrapper.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        if (typeof ga !== 'undefined') {
-          ga('send', 'event', 'Exhibit link', 'clicked', [exhibit.title, exhibit.subtitle].join(' '), {
-            'transport': 'beacon'
+    wrapper.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof ga !== "undefined") {
+          ga("send", "event", "Exhibit link", "clicked", [exhibit.title, exhibit.subtitle].join(" "), {
+            "transport": "beacon"
           })
         }
       })
