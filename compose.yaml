@@ -1,9 +1,12 @@
 services:
   solr:
-    image: "solr:${SOLR_VERSION:-9.6.1}"
+    image: "solr:${SOLR_VERSION:-9.10.0}"
+    environment:
+      - SOLR_MODULES=analysis-extras,llm
+      - SOLR_OPTS=-Dsolr.config.lib.enabled=true -Xms512m -Xmx512m
     volumes:
       - $PWD/config/solr_configs:/opt/solr/conf
-      - $PWD/config/solr_configs/CJKFilterUtils-v4.0.jar:/opt/solr/contrib/CJKFilterUtils-v4.0.jar
+      - $PWD/config/solr_configs/CJKFilterUtils-v4.0.jar:/opt/solr/contrib/analysis-extras/lib/CJKFilterUtils-v4.0.jar
     ports:
       - "${SOLR_PORT:-8983}:8983"
     entrypoint:

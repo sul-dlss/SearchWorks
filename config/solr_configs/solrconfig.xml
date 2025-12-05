@@ -39,6 +39,18 @@
     </commitWithin>
   </updateHandler>
 
+  <queryParser name="knn_text_to_vector"
+               class="org.apache.solr.llm.textvectorisation.search.TextToVectorQParserPlugin"/>
+
+  <updateRequestProcessorChain name="text-to-vector">
+    <processor class="solr.llm.textvectorisation.update.processor.TextToVectorUpdateProcessorFactory">
+      <str name="inputField">all_search</str>
+      <str name="outputField">all_search_vector</str>
+      <str name="model">openai-1</str>
+    </processor>
+    <processor class="solr.LogUpdateProcessorFactory"/>
+    <processor class="solr.RunUpdateProcessorFactory"/>
+  </updateRequestProcessorChain>
 
   <!-- NOTE:  these 2 lib dirs are here for testing only and do NOT go in the prod file -->
   <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
@@ -222,7 +234,12 @@
 
   <requestHandler name="standard" class="solr.StandardRequestHandler" />
   <requestHandler name="/analysis/field" startup="lazy" class="solr.FieldAnalysisRequestHandler" />
-  <requestHandler name="/update" class="solr.UpdateRequestHandler"  />
+  <requestHandler name="/update" class="solr.UpdateRequestHandler">
+    <lst name="defaults">
+      <str name="update.chain">text-to-vector</str>
+    </lst>
+  </requestHandler>
+
 
   <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
     <lst name="invariants">
@@ -246,7 +263,16 @@
        provided with Solr is "SearchHandler" It delegates to a sequent
        of SearchComponents (see below) and supports distributed
        queries across multiple shards
-    -->
+  -->
+
+  <requestHandler name="/semantic" class="solr.SearchHandler">
+    <lst name="defaults">
+      <str name="defType">knn_text_to_vector</str>
+      <str name="f">all_search_vector</str>
+      <str name="model">openai-1</str>
+      <int name="topK">10</int>
+    </lst>
+  </requestHandler>
   <requestHandler name="search" class="solr.SearchHandler" default="true">
     <lst name="defaults">
       <str name="defType">edismax</str>

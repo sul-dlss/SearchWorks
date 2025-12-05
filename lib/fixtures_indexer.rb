@@ -32,7 +32,8 @@ class FixturesIndexer
   private
 
   def index
-    fixtures = SolrFixtureLoader.load_all
+    # fixtures = SolrFixtureLoader.load_all
+    fixtures = [SolrFixtureLoader.load('10678312.yml')]
     @solr.add fixtures
   end
 

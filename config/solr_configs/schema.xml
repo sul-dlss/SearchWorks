@@ -19,6 +19,8 @@
     <field name="all_unstem_search" type="textNoStem" indexed="true" stored="false" />
     <field name="vern_all_search" type="text" indexed="true" stored="true" />
 
+    <field name="all_search_vector" type="vector_test" indexed="true" stored="true"/>
+
     <field name="bib_search" type="text" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true"/>
     <field name="bib_unstem_search" type="textNoStem" indexed="true" stored="false" />
     <field name="vern_bib_search" type="text" indexed="true" stored="true" />
@@ -450,6 +452,12 @@
     <fieldType name="tdouble" class="solr.DoublePointField"/>
     <fieldType name="tdate" class="solr.DatePointField" />
     <fieldType name="random" class="solr.RandomSortField" indexed="true" />
+
+    <fieldType name="vector_test"
+           class="solr.DenseVectorField"
+           vectorDimension="768"
+           similarityFunction="cosine"
+           knnAlgorithm="hnsw"/>
 
     <!-- Analyzed Text, general case -->
     <fieldtype name="text" class="solr.TextField" positionIncrementGap="10000" autoGeneratePhraseQueries="true">
