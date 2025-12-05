@@ -92,8 +92,6 @@ imprint_display:
 date_cataloged: '1991-08-24T00:00:00Z'
 language:
 - English
-url_fulltext:
-- http://purl.stanford.edu/ph310ms8188
 oclc:
 - '710646'
 access_facet:
@@ -190,8 +188,6 @@ reverse_shelfkey:
 - en~9o~~zzwt}zzzzzz~jz}xzzzzz~mz}vzzzzz~zzyquu~~~~~
 - en~9o~~zzwt}zzzzzz~jz}xzzzzz~7z}wzzzzz~~~~~~~~~~~~
 - ml3l1~uwz}qxzzzzzz~jyur7~~~~~~~~~~~~~~~~~~~~~~~~~~
-managed_purl_urls:
-- http://purl.stanford.edu/ph310ms8188
 marc_collection_title_ssim:
 - Barchas Reference Collection
 - Stephen Jay Gould Collection
