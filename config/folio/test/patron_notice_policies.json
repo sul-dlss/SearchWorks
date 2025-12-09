@@ -54,6 +54,115 @@
     "requestNotices": []
   },
   {
+    "id": "19bba080-d12d-4ac6-87e5-6bbddcbf0468",
+    "name": "Hourly Loan Notices",
+    "description": "Intended for very short-term loans, such as equipment that is checked out for a day or less. This policy excludes the daily recurring bill notice that exists in the Short Term Notices policy. This is not intended for course reserve items. ",
+    "active": true,
+    "metadata": {
+      "createdDate": "2025-12-05T16:36:58.412+00:00",
+      "createdByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b",
+      "updatedDate": "2025-12-05T16:36:58.412+00:00",
+      "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
+    },
+    "loanNotices": [
+      {
+        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Check in"
+        }
+      },
+      {
+        "templateId": "9cfbbbd0-79ae-40c5-b8bf-b9bf358359e8",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Due date",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Hours"
+          }
+        }
+      },
+      {
+        "templateId": "0fd754ff-6b16-4bff-b7b2-a99ba945b114",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Check out"
+        }
+      },
+      {
+        "templateId": "8630574c-dd75-4000-8b37-72eb1aa1e6d7",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Item recalled"
+        }
+      }
+    ],
+    "feeFineNotices": [
+      {
+        "templateId": "2ece07e2-5d68-4e6e-90b1-3ea183bf7f1d",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Overdue fine returned"
+        }
+      },
+      {
+        "templateId": "3a647ad9-6dd2-4369-8549-e2b920ba9b6c",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 15,
+            "intervalId": "Minutes"
+          }
+        }
+      }
+    ],
+    "requestNotices": [
+      {
+        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
+      },
+      {
+        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Hold expiration",
+          "sendBy": {
+            "duration": 2,
+            "intervalId": "Days"
+          }
+        }
+      },
+      {
+        "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Request cancellation"
+        }
+      }
+    ]
+  },
+  {
     "id": "1fd0ccd5-0ac3-446f-a720-ceafcecf818c",
     "name": "Short Term Notices",
     "description": "Intended for things like equipment that check out for a day or so or less. Main differences between the default notice policy are: the courtesy due date reminder is ~1 hour before the due date, there is no overdue notice, the lost item-fee notice goes out as soon as the item ages to lost (which is dependent upon the lost-item policy applied in the circ rule but typically fairly soon after the item was due), and all notices are sent out as they happen, rather than being batched overnight.\n\n\n",
