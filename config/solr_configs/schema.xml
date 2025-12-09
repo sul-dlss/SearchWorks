@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<schema name="Stanford Searchworks" version="1.5">
+<schema name="Stanford Searchworks" version="1.7">
   <uniqueKey>id</uniqueKey>
   <similarity class="solr.BM25SimilarityFactory"/>
 
@@ -7,11 +7,11 @@
     <!-- needed by some of Solr 4.0 functionality like transaction log or partial documents update -->
     <field name="_version_" type="long" indexed="true" stored="true" />
 
-    <field name="id" type="string" indexed="true" stored="true" required="true" docValues="true" />
+    <field name="id" type="string" indexed="true" stored="true" required="true"/>
     <field name="id_search" type="string_punct_stop" indexed="true" stored="false" />
-    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
-    <field name="created" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
-    <field name="last_updated" type="date" indexed="true" stored="true" default="NOW/SECOND" docValues="true" />
+    <field name="timestamp" type="date" indexed="true" stored="true" default="NOW/SECOND"/>
+    <field name="created" type="date" indexed="true" stored="true" default="NOW/SECOND"/>
+    <field name="last_updated" type="date" indexed="true" stored="true" default="NOW/SECOND"/>
     <!-- entire marc bib record -->
     <field name="marcxml" type="string" indexed="false" stored="true" large="true" />
     <!-- all_search: catch-all field for searchable text; stored for hit highlighting />-->
@@ -165,14 +165,14 @@
     <!-- Pub Date Facet Fields -->
     <!-- pub_date was facet and display, now deprecated -->
     <field name="pub_date" type="string" indexed="true" stored="true" />
-    <field name="pub_year_tisim" type="tint" indexed="true" stored="true" multiValued="true" docValues="true" />
+    <field name="pub_year_tisim" type="tint" indexed="true" stored="true" multiValued="true"/>
     <field name="pub_display" type="string" indexed="false" stored="true" multiValued="true"/>
     <!-- pub_date_display can be removed after all DOR objects reindexed in Feb/March 2016 -->
     <field name="pub_date_display" type="string" indexed="false" stored="true"/>
     <field name="imprint_display" type="string" indexed="false" stored="true" multiValued="true"/>
 
     <!-- Date Cataloged for new items feed -->
-    <field name="date_cataloged" type="date" indexed="true" stored="true" docValues="true" />
+    <field name="date_cataloged" type="date" indexed="true" stored="true"/>
 
     <!-- URL Fields -->
     <field name="url_fulltext" type="string" indexed="false" stored="true" multiValued="true"/>
@@ -180,7 +180,7 @@
     <!-- sfx urls should rarely occur more than once in a marc bib record -->
     <field name="url_sfx" type="string" indexed="false" stored="true" multiValued="true" />
     <field name="url_restricted" type="string" indexed="false" stored="true" multiValued="true" />
-    <field name="managed_purl_urls" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
+    <field name="managed_purl_urls" type="string" indexed="true" stored="true" multiValued="true"/>
 
     <!-- Physical Fields -->
     <field name="physical" type="text" indexed="true" stored="true" multiValued="true" />
@@ -215,11 +215,11 @@
     <field name="shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
     <field name="reverse_shelfkey" type="alphaSort" indexed="true" stored="true" multiValued="true" />
 
-    <field name="barcode_search" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
-    <field name="item_barcodes" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
+    <field name="barcode_search" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="item_barcodes" type="string" indexed="true" stored="true" multiValued="true"/>
     <field name="item_barcodes_search" type="string_punct_stop" indexed="true" stored="false" multiValued="true" />
     <field name="preferred_barcode" type="string" indexed="false" stored="true" />
-    <field name="access_facet" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
+    <field name="access_facet" type="string" indexed="true" stored="true" multiValued="true"/>
     <field name="building_facet" type="string" indexed="true" stored="true" multiValued="true" />
     <!-- barcode -|- lib -|- location -|- lopped_callnum -|- shelfkey -|- reverse_shelfkey -|- full_callnum -|- callnum_show_sort  -->
     <field name="item_display" type="string" indexed="false" stored="true" multiValued="true" />
@@ -253,7 +253,7 @@
     <field name="druid" type="string_punct_stop" indexed="true" stored="true" />
     <field name="modsxml" type="string" indexed="false" stored="true" large="true" />
     <!-- collection (facet and display): "sirsi" or, for DOR items, the id of their parent coll -->
-    <field name="collection" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" docValues="true"/>
+    <field name="collection" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
     <!-- collection_with_title: easy way to indicate item's parent coll title in UI (may be deprecated in future) -->
     <field name="collection_with_title" type="string" indexed="false" stored="true" multiValued="true" />
     <!-- collection_search: allow searching within collections for aggr. colls -->
@@ -268,9 +268,9 @@
     <field name="set_with_title" type="string" indexed="false" stored="true" multiValued="true" />
 
 
-    <field name="uuid_ssi" type="string" indexed="true" stored="true" multiValued="false" docValues="true" />
-    <field name="hashed_id_ssi" type="string" indexed="true" stored="true" multiValued="false" docValues="true" />
-    <field name="building_location_facet_ssim" type="string" indexed="false" stored="true" docValues="true" multiValued="true" />
+    <field name="uuid_ssi" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="hashed_id_ssi" type="string" indexed="true" stored="true" multiValued="false" />
+    <field name="building_location_facet_ssim" type="string" indexed="false" stored="true" multiValued="true" />
 
     <!-- *************** dynamic field types  ****************** -->
     <!--
@@ -294,7 +294,7 @@
     <dynamicField name="ja_*" type="text_ja" indexed="true" stored="false" multiValued="true" />
     <dynamicField name="ko_*" type="text_ko" indexed="true" stored="false" multiValued="true" />
     <dynamicField name="*_hsim" type="string_hierarch" stored="true" indexed="true" multiValued="true" />
-    <dynamicField name="*_struct" type="string" stored="true" indexed="false" multiValued="true" omitNorms="true" />
+    <dynamicField name="*_struct" type="string" stored="true" indexed="false" multiValued="true" omitNorms="true" docValues="false" />
     <dynamicField name="*_dtsi" type="date" stored="true" indexed="false" omitNorms="true" />
     <dynamicField name="*suggest" type="textSuggest" indexed="true" stored="false" multiValued="true" />
   </fields>
@@ -703,7 +703,7 @@
     </fieldType>
 
     <!-- single token analyzed text, for sorting.  Punctuation is significant. -->
-    <fieldtype name="alphaSort" class="solr.TextField" sortMissingLast="true" omitNorms="true">
+    <fieldtype name="alphaSort" class="solr.TextField" sortMissingLast="true" omitNorms="true" uninvertible="true">
       <analyzer>
         <tokenizer class="solr.KeywordTokenizerFactory" />
         <filter class="solr.ICUFoldingFilterFactory"/>
