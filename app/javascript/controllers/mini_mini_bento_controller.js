@@ -7,9 +7,9 @@ export default class extends Controller {
 
   // triggered by mini-bento controller when it has data (or after this element is connected)
   receiveCount(count) {
-    if (count < 1) return;
+    if (count < 1) return
 
     this.countTarget.innerHTML = `${count.toLocaleString()} matches`
-    this.element.classList.remove('d-none')
+    this.element.classList.remove("d-none")
   }
 }

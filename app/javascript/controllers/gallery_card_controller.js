@@ -7,34 +7,34 @@ export default class extends Controller {
     url: String
   }
 
-  static targets = [ "button", "buttonText" ]
+  static targets = ["button", "buttonText"]
 
-  static outlets = [ "preview" ]
+  static outlets = ["preview"]
 
 
   updateButton(state) {
-    if (state == 'open') {
-      this.buttonTarget.classList.add('preview-open')
-      this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-up')
-      this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-down')
-      this.buttonTarget.ariaLabel = 'Hide preview'
-      this.buttonTextTarget.textContent = 'Close'
-      this.buttonTextTarget.classList.add('show')
-    } else if (this.buttonTarget.classList.contains('preview-open')) {
-      this.buttonTarget.classList.remove('preview-open')
-      this.buttonTarget.querySelector('.bi').classList.remove('bi-chevron-up')
-      this.buttonTarget.querySelector('.bi').classList.add('bi-chevron-down')
-      this.buttonTarget.ariaLabel = 'Show preview'
-      this.buttonTextTarget.textContent = 'Preview'
-      this.buttonTextTarget.classList.remove('show')
+    if (state == "open") {
+      this.buttonTarget.classList.add("preview-open")
+      this.buttonTarget.querySelector(".bi").classList.add("bi-chevron-up")
+      this.buttonTarget.querySelector(".bi").classList.remove("bi-chevron-down")
+      this.buttonTarget.ariaLabel = "Hide preview"
+      this.buttonTextTarget.textContent = "Close"
+      this.buttonTextTarget.classList.add("show")
+    } else if (this.buttonTarget.classList.contains("preview-open")) {
+      this.buttonTarget.classList.remove("preview-open")
+      this.buttonTarget.querySelector(".bi").classList.remove("bi-chevron-up")
+      this.buttonTarget.querySelector(".bi").classList.add("bi-chevron-down")
+      this.buttonTarget.ariaLabel = "Show preview"
+      this.buttonTextTarget.textContent = "Preview"
+      this.buttonTextTarget.classList.remove("show")
     }
   }
 
   showPreview() {
     this.previewOutlet.load(this.idValue, this.urlValue)
 
-    this.updateButton('open')
-    this.dispatch('show');
+    this.updateButton("open")
+    this.dispatch("show")
   }
 
   closePreview() {
@@ -50,13 +50,13 @@ export default class extends Controller {
   }
 
   previewOpen(){
-    return this.buttonTarget.classList.contains('preview-open')
+    return this.buttonTarget.classList.contains("preview-open")
   }
 
   handlePreviewClosed(event) {
-    if (event.target != this.previewOutletElement) return;
-    if (!this.previewOpen()) return;
+    if (event.target != this.previewOutletElement) return
+    if (!this.previewOpen()) return
 
-    this.updateButton('closed')
+    this.updateButton("closed")
   }
 }

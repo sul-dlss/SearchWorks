@@ -2,10 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="browse-nearby"
 export default class extends Controller {
-  static targets = [ "container", "tabs", "fullPage" ]
+  static targets = ["container", "tabs", "fullPage"]
 
   connect() {
-    this.addActiveClasses(this.tabsTarget.querySelector('button.active'))
+    this.addActiveClasses(this.tabsTarget.querySelector("button.active"))
     this.resizeWithAside()
   }
 
@@ -13,23 +13,23 @@ export default class extends Controller {
     this.addActiveClasses(event.target)
     this.removeActiveClasses(event.relatedTarget)
 
-    if (this.hasFullPageTarget) this.fullPageTarget.href = event.target.dataset.fullPageUrl;
+    if (this.hasFullPageTarget) this.fullPageTarget.href = event.target.dataset.fullPageUrl
   }
 
   resizeWithAside() {
-    this.isAsideBlocking() ? this.containerTarget.classList.remove('breakout') : this.containerTarget.classList.add('breakout')
+    this.isAsideBlocking() ? this.containerTarget.classList.remove("breakout") : this.containerTarget.classList.add("breakout")
   }
 
   addActiveClasses(element) {
-    if (element) element.classList.add('bi', 'bi-check2')
+    if (element) element.classList.add("bi", "bi-check2")
   }
 
   removeActiveClasses(element) {
-    if (element) element.classList.remove('bi', 'bi-check2')
+    if (element) element.classList.remove("bi", "bi-check2")
   }
 
   getAsideTarget() {
-    return document.getElementById('aside')
+    return document.getElementById("aside")
   }
 
   isAsideBlocking() {

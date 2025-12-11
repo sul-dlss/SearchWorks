@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    document.addEventListener("click", this.handleClickOutside.bind(this));
+    document.addEventListener("click", this.handleClickOutside.bind(this))
   }
 
   hidePopover() {
@@ -13,7 +13,7 @@ export default class extends Controller {
 
   handleClickOutside(event) {
     if (!this.element.contains(event.target)) {
-      this.hidePopover();
+      this.hidePopover()
     }
   }
 }

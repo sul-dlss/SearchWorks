@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="citation-format"
 export default class extends Controller {
-  static targets = ['tab']
+  static targets = ["tab"]
 
   reveal(e) {
     const citationFormat = e.target.value

@@ -3,8 +3,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="course-reserves"
 export default class extends Controller {
-  static targets = ['table', 'tableBody', 'sortButton', 'perPageButton', 'sortItem', 'perPageItem', 'results', 'bottomPagination']
-  static classes = ['activeMenuItem']
+  static targets = ["table", "tableBody", "sortButton", "perPageButton", "sortItem", "perPageItem", "results", "bottomPagination"]
+  static classes = ["activeMenuItem"]
 
   getCellValue = (tr, idx) => {
     const val = tr.children[idx].innerText || tr.children[idx].textContent
@@ -72,23 +72,23 @@ export default class extends Controller {
   }
 
   get nextIcon() {
-    return `»`
+    return "»"
   }
 
   get prevIcon() {
-    return `«`
+    return "«"
   }
 
   drawTopResults() {
     const info = `<strong>${this.currentPage * this.pageRows + 1} - ${this.pageMax}</strong> of <strong>${this.total}</strong>`
-    const nextButton = this.hasNext ? `<a class="ms-2" rel="next" href="#" data-action="course-reserves#nextPage">Next ${this.nextIcon}</a>` : ``
+    const nextButton = this.hasNext ? `<a class="ms-2" rel="next" href="#" data-action="course-reserves#nextPage">Next ${this.nextIcon}</a>` : ""
     const prevButton = this.hasPrevious ? `<a class="me-2" rel="prev" href="#" data-action="course-reserves#prevPage">${this.prevIcon} Previous</a>` : `<button disabled class="btn btn-link btn-disabled text-start align-baseline p-0 disabled me-2">${this.prevIcon} Previous</button>`
     this.resultsTarget.innerHTML = `<nav class="page_links page-entries-info" aria-label="Pagination">${prevButton}${info}${nextButton}</nav>`
   }
 
   drawBottomPagination() {
-    const prevItem = `<li class="page-item${this.hasPrevious ? '' : ' disabled'}"><a class="page-link" rel="prev" href="#" data-action="course-reserves#prevPage">${this.prevIcon} Previous</a></li>`
-    const nextItem = `<li class="page-item${this.hasNext ? '' : ' disabled'}"><a class="page-link" rel="next" href="#" data-action="course-reserves#nextPage">Next ${this.nextIcon}</a></li>`
+    const prevItem = `<li class="page-item${this.hasPrevious ? "" : " disabled"}"><a class="page-link" rel="prev" href="#" data-action="course-reserves#prevPage">${this.prevIcon} Previous</a></li>`
+    const nextItem = `<li class="page-item${this.hasNext ? "" : " disabled"}"><a class="page-link" rel="next" href="#" data-action="course-reserves#nextPage">Next ${this.nextIcon}</a></li>`
     this.bottomPaginationTarget.innerHTML = `<nav class="page_links page-entries-info" aria-label="Pagination links"><ul class="pagination">${prevItem}${this.pageLinks()}<li>${nextItem}</li></ul></nav>`
   }
 
@@ -98,48 +98,48 @@ export default class extends Controller {
 
     const links = []
 
-    const pagesToRender = [];
+    const pagesToRender = []
 
     for (let i = 0; i < this.totalPages; i++) {
       if (i < outerWindow || i >= this.totalPages - outerWindow || (i >= this.currentPage - innerWindow && i <= this.currentPage + innerWindow) ||
           (this.currentPage < outerWindow && i <= outerWindow + innerWindow)
-        ) {
+      ) {
         pagesToRender.push(i)
       } else {
-        if (pagesToRender[pagesToRender.length - 1] != 'gap') pagesToRender.push('gap')
+        if (pagesToRender[pagesToRender.length - 1] != "gap") pagesToRender.push("gap")
       }
     }
 
     pagesToRender.forEach((i) => {
-      if (i == 'gap') {
+      if (i == "gap") {
         links.push('<li class="page-item disabled"><span class="page-link">...</span></li>')
         return
       }
 
       const active = i === this.currentPage
-      const link = `<li class="page-item${active ? ' active' : ''}"><a class="page-link" href="#${i}" data-action="course-reserves#gotoPage">${i + 1}</a></li>`
+      const link = `<li class="page-item${active ? " active" : ""}"><a class="page-link" href="#${i}" data-action="course-reserves#gotoPage">${i + 1}</a></li>`
       links.push(link)
     })
 
-    return links.join('')
+    return links.join("")
   }
 
   gotoPage(e){
     e.preventDefault()
-    this.currentPage = parseInt(e.target.hash.replace('#', ''))
+    this.currentPage = parseInt(e.target.hash.replace("#", ""))
     this.draw()
   }
 
   sort(e) {
     e.preventDefault()
-    this.sortColumn = parseInt(URL.parse(e.target.href).hash.replace('#', ''))
+    this.sortColumn = parseInt(URL.parse(e.target.href).hash.replace("#", ""))
 
     const colName = this.tableTarget.querySelector(`th:nth-child(${this.sortColumn + 1})`).textContent
     this.sortButtonTarget.innerHTML = `Sort<span class="d-none d-lg-inline"> by ${colName}</span>`
 
     this.sortItemTargets.forEach((item, idx) => {
-      item.getAttribute('aria-current', idx === this.sortColumn)
-      item.querySelector('.active-icon').classList.toggle(this.activeMenuItemClass, idx === this.sortColumn)
+      item.getAttribute("aria-current", idx === this.sortColumn)
+      item.querySelector(".active-icon").classList.toggle(this.activeMenuItemClass, idx === this.sortColumn)
     })
 
     this.draw()
@@ -159,14 +159,14 @@ export default class extends Controller {
 
   perPage(e) {
     e.preventDefault()
-    this.pageRows = parseInt(URL.parse(e.target.href).hash.replace('#', ''))
+    this.pageRows = parseInt(URL.parse(e.target.href).hash.replace("#", ""))
     this.currentPage = 0
     this.perPageButtonTarget.innerHTML = `${this.pageRows} <span class="d-none d-lg-inline"> per page</span>`
 
     this.perPageItemTargets.forEach((item) => {
-      const current = item.getAttribute('href') === `#${this.pageRows}`
-      item.getAttribute('aria-current', current)
-      item.querySelector('.active-icon').classList.toggle(this.activeMenuItemClass, current)
+      const current = item.getAttribute("href") === `#${this.pageRows}`
+      item.getAttribute("aria-current", current)
+      item.querySelector(".active-icon").classList.toggle(this.activeMenuItemClass, current)
     })
 
     this.draw()
@@ -177,7 +177,7 @@ export default class extends Controller {
     this.searchFilter = event.target.value.toLowerCase()
     this.currentPage = 0
 
-    if (this.searchFilter === '')
+    if (this.searchFilter === "")
       this.total = this.rows.length
     else
       this.total = Array.from(this.tableBodyTarget.querySelectorAll("tr"))
@@ -187,7 +187,7 @@ export default class extends Controller {
   }
 
   rowMatches(tr, filter) {
-    if (filter === '') return true;
+    if (filter === "") return true
 
     const tds = tr.querySelectorAll("td,th")
 

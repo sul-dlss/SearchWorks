@@ -5,8 +5,8 @@ import Blacklight from "blacklight-frontend"
 export default class extends Controller {
   // https://github.com/projectblacklight/blacklight/pull/3694/files
   fixupBackdrop() {
-    document.body.style.removeProperty('overflow');
-    document.body.style.removeProperty('padding-right');
+    document.body.style.removeProperty("overflow")
+    document.body.style.removeProperty("padding-right")
   }
 
   close() {

@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Paginates long facet lists in a modal
 export default class extends Controller {
-  static targets = [ "list" , "next", "prev", "sortLabel"]
+  static targets = ["list", "next", "prev", "sortLabel"]
 
   perPage = 20
   currentPage = 1
@@ -55,26 +55,26 @@ export default class extends Controller {
       return textA < textB ? -1 : textA > textB ? 1 : 0
     })
 
-    this.listTarget.innerHTML = ''
+    this.listTarget.innerHTML = ""
     this.items.forEach(item => this.listTarget.appendChild(item))
     this.paginate()
-    this.sortLabelTarget.textContent = 'Sort by A-Z'
+    this.sortLabelTarget.textContent = "Sort by A-Z"
   }
 
   sortNum() {
     this.items.sort((b, a) => {
-      const countA = this.intValue(a.querySelector('.facet-count').textContent)
-      const countB = this.intValue(b.querySelector('.facet-count').textContent)
+      const countA = this.intValue(a.querySelector(".facet-count").textContent)
+      const countB = this.intValue(b.querySelector(".facet-count").textContent)
       return countA - countB
     })
 
-    this.listTarget.innerHTML = '';
+    this.listTarget.innerHTML = ""
     this.items.forEach(item => this.listTarget.appendChild(item))
     this.paginate()
-    this.sortLabelTarget.textContent = 'Sort by number of matches'
+    this.sortLabelTarget.textContent = "Sort by number of matches"
   }
 
   intValue(str) {
-    return Number.parseInt(str.replace(/,/g, ''))
+    return Number.parseInt(str.replace(/,/g, ""))
   }
 }
