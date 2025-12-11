@@ -296,7 +296,7 @@
     <dynamicField name="*_hsim" type="string_hierarch" stored="true" indexed="true" multiValued="true" />
     <dynamicField name="*_struct" type="string" stored="true" indexed="false" multiValued="true" omitNorms="true" docValues="false" />
     <dynamicField name="*_dtsi" type="date" stored="true" indexed="false" omitNorms="true" />
-    <dynamicField name="*suggest" type="textSuggest" indexed="true" stored="false" multiValued="true" />
+    <dynamicField name="*suggest" type="textSuggest" indexed="true" stored="true" multiValued="true" />
   </fields>
 
   <!-- copy fields -->
@@ -433,6 +433,10 @@
   <copyField source="vern_bib_search" dest="ko_bib_search" />
   <copyField source="vern_author_title_245ac_search" dest="ko_author_title_245ac_search" />
   <copyfield source="vern_author_title_1xx_search" dest="ko_vern_author_title_1xx_search" />
+
+  <!-- for suggestions -->
+  <copyField source="author_person_facet" dest="suggest"/>
+  <copyField source="author_other_facet" dest="suggest"/>
 
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
@@ -659,10 +663,22 @@
       </analyzer>
     </fieldType>
 
-    <!-- for suggestions -->
-    <fieldType class="solr.TextField" name="textSuggest" positionIncrementGap="100">
-      <analyzer>
+    <!-- for storing suggestions -->
+    <fieldType name="textSuggest" class="solr.TextField" positionIncrementGap="100">
         <tokenizer class="solr.KeywordTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+    </fieldType>
+    <!-- for analysis of suggested text as part of lookup implementation-->
+    <fieldType name="textSuggestAnalyzer" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+        <filter class="solr.EdgeNGramFilterFactory" minGramSize="2" maxGramSize="20"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
       </analyzer>

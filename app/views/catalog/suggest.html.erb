@@ -1,0 +1,3 @@
+<% @suggestions.each do |suggestion| %>
+    <li role="option" class="dropdown-item"><span><%= sanitize suggestion['term'] %></span></li>
+<% end %>
