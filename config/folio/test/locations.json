@@ -4144,7 +4144,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -4155,8 +4156,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:35.899+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-12-03T23:22:57.826+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-12-11T18:33:01.552+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -6093,7 +6094,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
     "servicePointIds": [
@@ -6103,7 +6105,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:48.393+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-26T15:29:14.049+00:00",
+      "updatedDate": "2025-12-11T18:35:08.886+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6209,7 +6211,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
     "servicePointIds": [
@@ -6219,7 +6222,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:39.182+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-26T15:29:46.117+00:00",
+      "updatedDate": "2025-12-11T18:35:55.113+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -8790,7 +8793,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
     "servicePointIds": [
@@ -8800,7 +8804,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:50.317+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-26T15:27:50.664+00:00",
+      "updatedDate": "2025-12-11T18:35:31.217+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
