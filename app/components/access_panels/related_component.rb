@@ -20,7 +20,7 @@ module AccessPanels
     private
 
     def hidden # rubocop:disable Naming/PredicateMethod
-      oclc.blank?
+      oclc.blank? && !additional_finding_aids?
     end
 
     def finding_aid_class(link)
