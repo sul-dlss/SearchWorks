@@ -92,5 +92,7 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
+  # Require this file to prevent "uninitialized constant DummyComponent" warning in cron emails
+  require_relative '../../spec/component_previews/fonts/font_component_preview'
   config.lookbook.preview_paths = ["spec/component_previews"]
 end
