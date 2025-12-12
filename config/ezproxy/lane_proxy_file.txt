@@ -443,7 +443,6 @@ cvi.asm.org
 cvirendovasc.springeropen.com
 cysjournal.ca
 d-nb.info
-d.lib.msu.edu
 d2snwnmzyr8jue.cloudfront.net
 darujps.biomedcentral.com
 data.bls.gov
@@ -1250,7 +1249,6 @@ permanent.access.gpo.gov
 permanent.fdlp.gov
 perspectivesinmedicine.cshlp.org
 pharmrev.aspetjournals.org
-phaseonline.ceramics.org
 phcfm.org
 phil.cdc.gov
 physics.aps.org
@@ -1456,7 +1454,6 @@ southasiacommons.net
 sp.lyellcollection.org
 spiedigitallibrary.org
 spj.sciencemag.org
-spontaneousgenerations.library.utoronto.ca
 sportsmedicine-open.springeropen.com
 springerlink.com
 springerlink.metapress.com
