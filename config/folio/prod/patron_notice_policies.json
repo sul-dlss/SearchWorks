@@ -258,6 +258,152 @@
     ]
   },
   {
+    "id": "64b9f25e-adcf-487f-9d01-28c2b2e4de3e",
+    "name": "Hourly Loan Notices",
+    "description": "Intended for very short-term loans, such as equipment that checks out for a day or so or less. This policy excludes the daily recurring bill notice that exists in the Short Term Notices policy. This is not intended for course reserve items.",
+    "active": true,
+    "metadata": {
+      "createdDate": "2025-12-12T22:14:13.800+00:00",
+      "createdByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b",
+      "updatedDate": "2025-12-12T22:14:13.800+00:00",
+      "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
+    },
+    "loanNotices": [
+      {
+        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Check in"
+        }
+      },
+      {
+        "templateId": "9cfbbbd0-79ae-40c5-b8bf-b9bf358359e8",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Due date",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Hours"
+          }
+        }
+      },
+      {
+        "templateId": "0fd754ff-6b16-4bff-b7b2-a99ba945b114",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Check out"
+        }
+      },
+      {
+        "templateId": "9d046995-bf32-4ada-b097-d7af1b7155c9",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Aged to lost"
+        }
+      },
+      {
+        "templateId": "8630574c-dd75-4000-8b37-72eb1aa1e6d7",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Item recalled"
+        }
+      }
+    ],
+    "feeFineNotices": [
+      {
+        "templateId": "2ece07e2-5d68-4e6e-90b1-3ea183bf7f1d",
+        "format": "Email",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Upon At",
+          "sendWhen": "Overdue fine returned"
+        }
+      },
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 15,
+            "intervalId": "Minutes"
+          }
+        }
+      },
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Weeks"
+          }
+        }
+      },
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 2,
+            "intervalId": "Weeks"
+          }
+        }
+      }
+    ],
+    "requestNotices": [
+      {
+        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
+      },
+      {
+        "templateId": "35026487-d753-45a6-a350-5b976def9df4",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": true,
+        "sendOptions": {
+          "sendHow": "Before",
+          "sendWhen": "Hold expiration",
+          "sendBy": {
+            "duration": 2,
+            "intervalId": "Days"
+          }
+        }
+      },
+      {
+        "templateId": "afdc4033-8cd8-4e9f-893f-9399ffca3d12",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Request cancellation"
+        }
+      }
+    ]
+  },
+  {
     "id": "9d9ab9b0-2b9b-40d6-b122-49c4bdd71736",
     "name": "Course reserves ",
     "description": "Notices used for course reserves loans",
