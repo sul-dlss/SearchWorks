@@ -175,9 +175,9 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,any,,,,,EDU-PROCESSING or GRE-PROCESSING or GRE-TECH-PROCESSOR or SUL-PAGEABLE-LOC,No loan,Allow paging/hold,Default notice,No fines,$250 lost fee
 ,any,,,,,SUL-TS-PROCESSING,No loan,Allow All,Default notice,No fines,$250 lost fee
 ,any,,,,,ARS-INPROCESS or ART-PROCESSING-SERIALS or ART-PROCESSING-LOCKED or ART-VRC or EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAL-INPROCESS or ENG-TECH-PROCESSOR or GRE-CPR-BINDERY or GRE-REPAIR-EVALUATION or MEDIA-REPAIR-SHELF or MEDIA-TECH-PROCESSOR or MEDIA-SER-PROCESSING or MUS-INPROCESS or SUL-CATALOGING or SUL-COLLECTIONCARE or SUL-TS-CC-BINDERYPREP or SUL-TS-CC-BOOKJACKET or SUL-TS-CC-KASEMAKE or SUL-TS-CC-REPAIR or SUL-TS-CC-SPECIALPROJECTS or SUL-TS-COLLECTIONCARE or SUL-TS-MAINTENANCE,No loan,Hold only,Default notice,No fines,$250 lost fee
-,book,,,,,LAW-EYLESAISLE or LAW-BOOKCABINET,4hour-norenew-1hourgrace,No requests allowed,Default notice,No fines,$150 lost fee
+,book,,,,,LAW-EYLESAISLE or LAW-BOOKCABINET,4hour-norenew-1hourgrace,No requests allowed,Hourly Loan Notices,No fines,$150 lost fee
 ,book,,,,,LAW-VROOMAN2 or LAW-STACKS2 or LAW-REF or LAW-STAFFSHADOW,No loan,No requests allowed,Default notice,No fines,$150 lost fee
-,book,,,,,LAW-PERMRES or LAW-NEWBOOK or LAW - DISPLAY,7day-2renew-1daygrace,No requests allowed,Default notice,No fines,$150 lost fee
+,book,,,,,LAW-PERMRES or LAW-NEWBOOK or LAW - DISPLAY,7day-2renew-1daygrace,No requests allowed,Short Term Notices,No fines,$150 lost fee
 ,book,,,,,LAW-COOKBOOK,14day-2renew-1daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-CAREER or LAW-COOKBOOK or LAW-OUTDOOR-TRAVEL or LAW-VROOMAN or LAW-VROOMAN-OV or LAW-WELLNESS or Law-Kids,14day-2renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee
 ,book,,,,,LAW-ATCIRCDESK or LAW-CRES or LAW-ELECTRONIC or LAW-INSTRUCTOR or LAW-MANNING or LAW-MEDIA or LAW-MICROTEXT or LAW-NEUKOM or LAW-NEWSPAPERS or LAW-SPECIALCOLLECTIONS,28day-2renew-7daygrace,No requests allowed,Default notice,No fines,$150 lost fee
@@ -300,7 +300,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,ARS-LOCKED,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,book,,,,,ARS-STACKS,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$65 lost fee
 ,archival,,,,,SPEC-INPROCESS-585-RWC or SPEC-INPROCESS-RWC,No loan,No requests allowed,Default notice,No fines,$600 lost fee
-,archival,,,,,SAL3-PAGE-MU,No loan,Allow paging/hold,Default notice,No fines,$500 lost fee
+,archival,,,,,SAL3-PAGE-ED or SAL3-PAGE-MU,No loan,Allow paging/hold,Default notice,No fines,$500 lost fee
 ,archival,,,,,EAL-LOCKED-FLATFILE or SAL3-PAGE-EA-SPEC,No loan,Allow paging/hold,Default notice,No fines,$800 lost fee
 ,archival,,,,,SAL3-SCAN-PAGE-SP,No loan,Allow paging,Default notice,No fines,$600 lost fee
 ,archival,,,,,SAL3-PAGE-SP,No loan,Allow paging/hold,Default notice,No fines,$600 lost fee
@@ -319,8 +319,8 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,accessories 1,,,,LANE,,12hour-norenew-15mingrace,No requests allowed,Short Term Notices,1.00/30.00 hourly fine,$100 lost fee - 1 hr aged to lost
 ,periodical,,,,LANE,,7day-2renew-3daygrace,Allow paging/hold,Default notice,3.00/21.00 recall overdue fine,$250 lost fee
 ,multimedia,,,,LAW,,No loan,No requests allowed,Default notice,No fines,$150 lost fee
-,accessories 1,,,,LAW,,4hour-norenew-1hourgrace,No requests allowed,Default notice,No fines,$100 lost fee
-,periodical,,,,LAW,,7day-1renew-1daygrace,Allow All,Default notice,No fines,$150 lost fee
+,accessories 1,,,,LAW,,4hour-norenew-1hourgrace,No requests allowed,Hourly Loan Notices,No fines,$100 lost fee
+,periodical,,,,LAW,,7day-1renew-1daygrace,Allow All,Short Term Notices,No fines,$150 lost fee
 ,accessories 4 or av equipment 3,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$5000 lost fee - 1 hr aged to lost
 ,accessories 3 or av equipment 2,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$1000 lost fee - 1 hr aged to lost
 ,accessories 2 or av equipment 1,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Short Term Notices,3.00/21.00 recall overdue fine,$500 lost fee - 1 hr aged to lost

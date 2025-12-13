@@ -61,7 +61,7 @@
     "metadata": {
       "createdDate": "2025-12-05T16:36:58.412+00:00",
       "createdByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b",
-      "updatedDate": "2025-12-05T16:36:58.412+00:00",
+      "updatedDate": "2025-12-12T21:59:39.070+00:00",
       "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
     },
     "loanNotices": [
@@ -125,6 +125,34 @@
           "sendBy": {
             "duration": 15,
             "intervalId": "Minutes"
+          }
+        }
+      },
+      {
+        "templateId": "3a647ad9-6dd2-4369-8549-e2b920ba9b6c",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 1,
+            "intervalId": "Weeks"
+          }
+        }
+      },
+      {
+        "templateId": "3a647ad9-6dd2-4369-8549-e2b920ba9b6c",
+        "format": "Email",
+        "frequency": "One time",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 2,
+            "intervalId": "Weeks"
           }
         }
       }
