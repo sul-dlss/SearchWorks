@@ -4166,6 +4166,7 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
     "details": {
+      "pageAeonSite": "ARS",
       "pageServicePointCodes": "ARS"
     },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
@@ -4176,7 +4177,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:36.015+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T20:35:50.551+00:00",
+      "updatedDate": "2025-12-13T01:19:49.824+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6579,7 +6580,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
-    "details": {},
+    "details": {
+      "pageAeonSite": "ARS"
+    },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
       "faa81922-3da8-4086-a7fa-977d7d3e7977"
@@ -6588,7 +6591,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:54.907+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-07-23T15:18:39.298+00:00",
+      "updatedDate": "2025-12-13T01:20:10.332+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -7274,7 +7277,7 @@
     "id": "8184b82b-b078-4cb4-8768-c54d43af6115",
     "name": "ARS SAL3 Stacks",
     "code": "ARS-SAL3-STACKS",
-    "discoveryDisplayName": "For use in Archive of Recorded Sound",
+    "discoveryDisplayName": "Stored offsite",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -7290,8 +7293,8 @@
     "metadata": {
       "createdDate": "2025-10-16T21:51:49.079+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-10-20T22:26:08.308+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-12-13T01:16:01.536+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -8193,7 +8196,7 @@
     "id": "93abb417-6c5f-4053-ab4b-171c41d791ac",
     "name": "Education Oversize",
     "code": "EDU-OVERSIZE",
-    "discoveryDisplayName": "Oversize",
+    "discoveryDisplayName": "Curriculum collection (Oversize)",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -8207,8 +8210,8 @@
     "metadata": {
       "createdDate": "2025-08-26T22:55:48.914+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-08-26T22:55:48.914+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2025-12-13T01:01:40.658+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
