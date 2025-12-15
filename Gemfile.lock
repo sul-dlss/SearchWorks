@@ -108,8 +108,8 @@ GEM
       rails (>= 7.0, < 9)
       view_component (>= 3.0, < 5.0)
       zeitwerk
-    blacklight-hierarchy (6.8.0)
-      blacklight (>= 7.18, < 9)
+    blacklight-hierarchy (6.9.0)
+      blacklight (>= 7.18, < 10)
       deprecation
       rails (>= 7.1, < 9)
     blacklight-marc (8.2.0)
@@ -139,7 +139,7 @@ GEM
       http (~> 5.2)
       rails (>= 7.1, < 8.2)
     builder (3.3.0)
-    capistrano (3.19.2)
+    capistrano (3.20.0)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -183,7 +183,7 @@ GEM
     coderay (1.1.3)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.6)
     config (5.6.1)
       deep_merge (~> 1.2, >= 1.2.1)
       ostruct
@@ -207,7 +207,7 @@ GEM
     cssbundling-rails (1.4.3)
       railties (>= 6.0.0)
     csv (3.3.5)
-    date (3.5.0)
+    date (3.5.1)
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
@@ -284,7 +284,7 @@ GEM
     herb (0.4.3-x86_64-darwin)
     herb (0.4.3-x86_64-linux-gnu)
     herb (0.4.3-x86_64-linux-musl)
-    honeybadger (6.1.3)
+    honeybadger (6.2.0)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -302,7 +302,7 @@ GEM
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    io-console (0.8.1)
+    io-console (0.8.2)
     irb (1.15.3)
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
@@ -314,7 +314,7 @@ GEM
       activesupport (>= 7.0.0)
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
-    json (2.17.1)
+    json (2.18.0)
     jwt (3.1.2)
       base64
     kaminari (1.2.2)
@@ -375,7 +375,7 @@ GEM
     matrix (0.4.3)
     mini_mime (1.1.5)
     minitar (1.1.0)
-    minitest (5.26.2)
+    minitest (5.27.0)
     mods (3.0.5)
       csv (~> 3.3)
       edtf (~> 3.0)
@@ -397,7 +397,7 @@ GEM
       racc (~> 1.7)
     net-http (0.8.0)
       uri (>= 0.11.1)
-    net-imap (0.5.12)
+    net-imap (0.6.0)
       date
       net-protocol
     net-pop (0.1.2)
@@ -463,7 +463,7 @@ GEM
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
-    psych (5.2.6)
+    psych (5.3.0)
       date
       stringio
     public_suffix (7.0.0)
@@ -643,7 +643,7 @@ GEM
     sqlite3 (2.8.1-x86_64-darwin)
     sqlite3 (2.8.1-x86_64-linux-gnu)
     sqlite3 (2.8.1-x86_64-linux-musl)
-    sshkit (1.24.0)
+    sshkit (1.25.0)
       base64
       logger
       net-scp (>= 1.1.2)
@@ -811,4 +811,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.0
+  4.0.1
