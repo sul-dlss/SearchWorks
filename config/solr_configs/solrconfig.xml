@@ -16,7 +16,7 @@
  limitations under the License.
 -->
 <config>
-  <luceneMatchVersion>8.11.2</luceneMatchVersion>
+  <luceneMatchVersion>9.10.0</luceneMatchVersion>
   <!--  The DirectoryFactory to use for indexes.
         solr.StandardDirectoryFactory, the default, is filesystem based.
         solr.RAMDirectoryFactory is memory based, not persistent, and doesn't work with replication. -->
@@ -39,16 +39,10 @@
     </commitWithin>
   </updateHandler>
 
-
-  <!-- NOTE:  these 2 lib dirs are here for testing only and do NOT go in the prod file -->
-  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lib" />
   <lib dir="${solr.install.dir:../../../..}/modules/analysis-extras/lib" />
-  <lib dir="${solr.install.dir:../../../..}/contrib/analysis-extras/lucene-libs" />
   <lib dir="${solr.install.dir:../../../..}/contrib" regex="CJKFilterUtils-v4.0.jar" />
 
   <dataDir>${solr.data.dir:}</dataDir>
-
-
 
   <query>
     <filterCache class="solr.search.CaffeineCache" size="50000" initialSize="12500" autowarmCount="48" cleanupThread="true"/>
@@ -293,7 +287,7 @@
         isbn_search^1.6
         issn_search^1.6
         id_search
-        callnum_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search
+        callnum_search callnum_exact_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search
         druid
         oclc
         item_barcodes_search
@@ -365,7 +359,7 @@
         pub_date_search^2
         isbn_search^1.6
         issn_search^1.6
-        callnum_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search
+        callnum_search callnum_exact_search alphanum_callnum_search spec_callnum_search sudoc_callnum_search undoc_callnum_search
         id_search
         druid
         oclc
@@ -437,6 +431,7 @@
         bib_search^7
         pub_date_search^10
         issn_search^7.5
+        callnum_exact_search^7.5
         callnum_search^7 alphanum_callnum_search^7 spec_callnum_search^7 sudoc_callnum_search^7 undoc_callnum_search^7
         physical^5                     vern_physical^5
         award_search^5
@@ -1021,6 +1016,7 @@
         oclc
         item_barcodes_search
         callnum_search
+        callnum_exact_search
       </str>
       <str name="pf_number">issn_search^5 callnum_search^5</str>
       <str name="pf3_number">callnum_search^3</str>
