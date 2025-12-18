@@ -920,6 +920,7 @@ journal.telospress.com
 journal.waocp.org
 journalhosting.ucalgary.ca
 journalimplantdent.springeropen.com
+journalofasianhealth.org
 journalofbigdata.springeropen.com
 journalofeconomicinsight.com
 journalofethics.ama-assn.org
