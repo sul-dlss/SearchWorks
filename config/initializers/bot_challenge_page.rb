@@ -25,7 +25,7 @@ BotChallengePage.configure do |config|
     ((is_a?(CatalogController) || is_a?(ArticlesController)) &&
       params[:action].in?(%w[facet index]) && request.format.json? && request.headers['sec-fetch-dest'] == 'empty') ||
       Settings.turnstile.safelist.map { |cidr| IPAddr.new(cidr) }.any? { |range| request.remote_ip.in?(range) } ||
-      Settings.turnstile.allowed_user_agents.any? { |x| request.user_agent.include?(x) } ||
+      Settings.turnstile.allowed_user_agents.include?(request.user_agent) ||
       current_user
   end
 
