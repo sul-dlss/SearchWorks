@@ -20,8 +20,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:15.289+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-10-31T23:50:46.564+00:00",
-      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+      "updatedDate": "2025-12-18T21:26:01.388+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
       {
@@ -80,6 +80,24 @@
         "sendOptions": {
           "sendHow": "Upon At",
           "sendWhen": "Overdue fine returned"
+        }
+      },
+      {
+        "templateId": "7c28d6b6-2b97-4010-b683-175bfc13b58f",
+        "format": "Email",
+        "frequency": "Recurring",
+        "realTime": false,
+        "sendOptions": {
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 15,
+            "intervalId": "Minutes"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Days"
+          }
         }
       }
     ],
@@ -411,8 +429,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:12.398+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-10-31T23:51:15.141+00:00",
-      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+      "updatedDate": "2025-12-18T21:29:26.835+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
       {
@@ -459,10 +477,19 @@
       {
         "templateId": "a203b44e-9982-46d6-94ba-ed303c11be2b",
         "format": "Email",
-        "realTime": true,
+        "frequency": "Recurring",
+        "realTime": false,
         "sendOptions": {
-          "sendHow": "Upon At",
-          "sendWhen": "Aged to lost - fine charged"
+          "sendHow": "After",
+          "sendWhen": "Aged to lost - fine charged",
+          "sendBy": {
+            "duration": 15,
+            "intervalId": "Minutes"
+          },
+          "sendEvery": {
+            "duration": 1,
+            "intervalId": "Days"
+          }
         }
       }
     ],
