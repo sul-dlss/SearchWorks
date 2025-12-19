@@ -380,23 +380,6 @@
   }
 }
 
-.popover-availability {
-  --bs-popover-bg: var(--stanford-black);
-  --bs-popover-body-color: #ffffff;
-  --bs-popover-body-padding-y: 0;
-  --bs-popover-body-padding-x: 0.5rem 0.75rem;
-  --bs-popover-border-color: transparent;
-  --bs-popover-max-width: 22rem;
-  --bs-popover-header-padding-y: 0.5rem;
-  --bs-popover-header-padding-x: 0.5rem 0;
-  --bs-popover-header-bg: var(--bs-popover-body-bg);
-  --bs-popover-header-color: var(--bs-popover-body-color);
-
-  .btn {
-    --bs-btn-color: var(--bs-popover-body-color);
-  }
-}
-
 .toc {
   list-style-position: outside;
   padding-left: 0.25rem;
