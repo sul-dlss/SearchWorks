@@ -7,6 +7,7 @@ class SearchWorksRecordMailer < ApplicationMailer
   default 'Content-Transfer-Encoding' => '7bit'
   include Roadie::Rails::Automatic
   include Blacklight::Configurable
+
   helper :application, :catalog, :marc, :record, :results_document
 
   def email_record(documents, details, url_gen_params)

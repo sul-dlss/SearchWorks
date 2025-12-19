@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe LinkedSerials do
   include MarcMetadataFixtures
+
   subject { described_class.new(SolrDocument.new(marc_json_struct: marc)) }
 
   describe 'labels' do

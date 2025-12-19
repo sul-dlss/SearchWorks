@@ -8,6 +8,7 @@ end
 
 RSpec.describe ModsData do
   include ModsFixtures
+
   let(:document) { SolrDocument.new(modsxml: mods_everything) }
 
   describe "#mods" do

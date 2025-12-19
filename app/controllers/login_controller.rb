@@ -10,7 +10,7 @@ class LoginController < ApplicationController
     if params[:referrer].present?
       redirect_to params[:referrer]
     else
-      redirect_back fallback_location: root_url
+      redirect_back_or_to(root_url)
     end
   end
 end

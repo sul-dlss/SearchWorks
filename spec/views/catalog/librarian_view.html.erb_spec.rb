@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe "catalog/librarian_view" do
   include ModsFixtures
   include MarcMetadataFixtures
+
   describe "MARC records" do
     before do
       assign(:document, SolrDocument.new(

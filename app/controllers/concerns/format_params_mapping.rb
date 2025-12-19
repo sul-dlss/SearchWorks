@@ -2,6 +2,7 @@
 
 module FormatParamsMapping
   extend ActiveSupport::Concern
+
   included do
     before_action :map_format_params, only: :index if respond_to?(:before_action) # rubocop:disable Rails/LexicallyScopedActionFilter
   end

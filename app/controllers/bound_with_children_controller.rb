@@ -3,6 +3,7 @@
 class BoundWithChildrenController < ApplicationController
   include Blacklight::Configurable
   include Blacklight::Searchable
+
   copy_blacklight_config_from(CatalogController)
 
   configure_blacklight do |config|

@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe UnlinkedSeries do
   include MarcMetadataFixtures
+
   let(:document) { SolrDocument.new(marc_json_struct: complex_series_fixture) }
 
   subject { described_class.new(document) }
