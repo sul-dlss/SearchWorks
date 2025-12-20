@@ -170,3 +170,7 @@ label[for="facet_option_stanford_only"] > a {
 .blacklight-catalog:not(:has(.constraints .constraint)) #facet-pub_year_tisim .chart-wrapper {
   display: none !important; /* important needed to override the inline style that chartjs inserts */
 }
+
+#offcanvas-facets {
+  --bs-offcanvas-height: 80%;
+}
