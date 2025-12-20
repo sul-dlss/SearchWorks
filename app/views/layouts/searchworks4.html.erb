@@ -5,10 +5,10 @@
     <link rel="preconnect" href="https://www-media.stanford.edu">
 
     <meta charset="utf-8">
-    <meta name="description" content="Stanford Libraries' official online search tool for books, media, journals, databases, government documents and more." />
+    <meta name="description" content="Stanford Libraries' official online search tool for books, media, journals, databases, government documents and more.">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="application-name" value="<%= I18n.t('blacklight.application_name') %>">
-    <meta name="google-site-verification" content="<%= Settings.GOOGLE_SITE_VERIFICATION %>" />
+    <meta name="google-site-verification" content="<%= Settings.GOOGLE_SITE_VERIFICATION %>">
 
     <meta name="analytics_debug" value="<%= Settings.ANALYTICS_DEBUG %>">
     <meta name="turbo-prefetch" content="false">
@@ -18,9 +18,9 @@
 
     <title><%= render_page_title %></title>
     <%= opensearch_description_tag I18n.t('blacklight.application_name'), opensearch_catalog_path(format: 'xml') %>
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-08-14/styles/icon.png" type="image/png">
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-08-14/styles/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-08-14/styles/icon.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-12-19/styles/icon.png" type="image/png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-12-19/styles/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-12-19/styles/icon.png">
     <%= stylesheet_link_tag "searchworks4", media: "all", 'data-turbo-track' => true %>
     <%= stylesheet_link_tag "print", media: "print", 'data-turbo-track' => true %>
 
