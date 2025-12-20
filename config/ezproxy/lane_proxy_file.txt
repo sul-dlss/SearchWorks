@@ -920,7 +920,6 @@ journal.telospress.com
 journal.waocp.org
 journalhosting.ucalgary.ca
 journalimplantdent.springeropen.com
-journalofasianhealth.org
 journalofbigdata.springeropen.com
 journalofeconomicinsight.com
 journalofethics.ama-assn.org
@@ -1798,7 +1797,6 @@ www.brepolsonline.net
 www.broad.mit.edu
 www.broadcastingamerica.amdigital.co.uk
 www.btrt.org
-www.buildinggreen.com
 www.cabidigitallibrary.org
 www.cairn-int.info
 www.cairn.info
