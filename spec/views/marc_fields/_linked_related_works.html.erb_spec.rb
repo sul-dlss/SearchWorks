@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'marc_fields/_linked_related_works' do
   include MarcMetadataFixtures
+
   let(:document) { SolrDocument.new(marc_json_struct: linked_related_works_fixture) }
 
   before do

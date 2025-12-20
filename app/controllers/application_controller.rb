@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   include Blacklight::Controller
   include BotChallengePage::Controller
   include BotChallengePage::GuardAction
+
   class_attribute :bot_challenge_config, default: ::BotChallengePage.config
 
   SESSION_DATETIME_KEY = "t"

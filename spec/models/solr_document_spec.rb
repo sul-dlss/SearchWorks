@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe SolrDocument do
   include MarcMetadataFixtures
+
   describe "marc field" do
     let(:marcjson) { SolrDocument.new(marc_json_struct: metadata1) }
 
@@ -118,7 +119,7 @@ RSpec.describe SolrDocument do
     end
 
     context 'when there are physical items and the library is SUL' do
-      solr_info = YAML.load_file(Rails.root.join('spec/fixtures/solr_documents/13553090.yml'))
+      let(:solr_info) { YAML.load_file(Rails.root.join('spec/fixtures/solr_documents/13553090.yml')) }
       let(:solr_doc) { SolrDocument.new(solr_info) }
 
       it 'does not have a location display' do

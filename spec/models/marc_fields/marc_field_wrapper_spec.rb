@@ -8,6 +8,7 @@ end
 
 RSpec.describe MarcFieldWrapper do
   include MarcMetadataFixtures
+
   subject { described_class.new(field) }
 
   describe '#canonical_tag' do

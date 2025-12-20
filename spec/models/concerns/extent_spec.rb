@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Extent do
   include MarcMetadataFixtures
+
   let(:no_format) { SolrDocument.new() }
   let(:single_format) {
     SolrDocument.new(

@@ -23,7 +23,7 @@ class Subjects < MarcField
   end
 
   def repeating_subfield_a?(_field, subfields)
-    subfields.count { |sf| sf.code == 'a' && !ignored_subfield_a_value?(sf) } > 1
+    subfields.many? { |sf| sf.code == 'a' && !ignored_subfield_a_value?(sf) }
   end
 
   def ignored_subfield_a_value?(subfield)

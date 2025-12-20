@@ -2,6 +2,7 @@
 
 class ViewComponentPreviewController < ActionController::Base # rubocop:disable Rails/ApplicationController
   include ViewComponent::PreviewActions
+
   # Adds a few additional behaviors into the application controller
   helper_method :controller_tracking_method, :blacklight_config, :blacklight_configuration_context, :search_session, :current_search_session, :search_state, :turnstile_ok?
 
