@@ -115,8 +115,6 @@ class CatalogController < ApplicationController
       config.crawler_detector = lambda { |_| true }
     end
 
-    config.facet_search_builder_class = CustomFacetSearchBuilder
-
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
     config.index.document_component = Searchworks4::DocumentComponent
@@ -559,7 +557,7 @@ class CatalogController < ApplicationController
   def facet_results
     @facet = blacklight_config.facet_fields[params[:id]]
 
-    @response = facet_search_service.facet_suggest_response(@facet.key, params[:query_fragment], "f.#{@facet.key}.facet.method" => 'fc')
+    @response = search_service.facet_suggest_response(@facet.key, params[:query_fragment], "f.#{@facet.key}.facet.method" => 'fc')
 
     @display_facet = @response.aggregations[@facet.field]
     @presenter = @facet.presenter.new(@facet, @display_facet, view_context)

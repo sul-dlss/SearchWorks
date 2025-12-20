@@ -9,11 +9,16 @@ class SearchBuilder < Blacklight::SearchBuilder
   include BlacklightRangeLimit::RangeLimitBuilder
   include CJKQuery
 
-  self.default_processor_chain += [:add_edismax_advanced_parse_q_to_solr, :add_advanced_search_to_solr]
-  self.default_processor_chain += [:database_prefix_search]
-  self.default_processor_chain += [:modify_params_for_cjk, :modify_params_for_cjk_advanced]
-  self.default_processor_chain += [:consolidate_home_page_params]
-  self.default_processor_chain += [:modify_single_term_qf]
+  self.default_processor_chain += [
+    :add_edismax_advanced_parse_q_to_solr,
+    :add_advanced_search_to_solr,
+    :database_prefix_search,
+    :modify_params_for_cjk,
+    :modify_params_for_cjk_advanced,
+    :consolidate_home_page_params,
+    :modify_single_term_qf,
+    :force_facet_method_for_searching
+  ]
 
   # Tweak advanced search's boolean query output to use edismax instead of dismax.
   # By using the same (edismax) query parser for advanced search as we do for regular search,
@@ -74,5 +79,14 @@ class SearchBuilder < Blacklight::SearchBuilder
     return false if search_state.controller.params[:new].present?
 
     search_params.all? { |param| blacklight_params[param].blank? }
+  end
+
+  # We use facet.method=uif for normal faceting (presumably because it improves performance or
+  # resource usage), but uif isn't compatible with facet.contains based searching.
+  def force_facet_method_for_searching(solr_params)
+    return if facet.blank?
+
+    facet_config = blacklight_config.facet_fields[facet]
+    solr_params[:"f.#{facet_config.field}.facet.method"] = 'fc'
   end
 end
