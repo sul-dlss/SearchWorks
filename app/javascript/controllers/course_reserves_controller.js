@@ -1,9 +1,18 @@
 import { Controller } from "@hotwired/stimulus"
 
-
 // Connects to data-controller="course-reserves"
+// This handles the search in the masthead area, and the sorting of the table.
 export default class extends Controller {
-  static targets = ["table", "tableBody", "sortButton", "perPageButton", "sortItem", "perPageItem", "results", "bottomPagination"]
+  static targets = [
+    "table",
+    "tableBody",
+    "sortButton",
+    "perPageButton",
+    "sortItem",
+    "perPageItem",
+    "results",
+    "bottomPagination"
+  ]
   static classes = ["activeMenuItem"]
 
   getCellValue = (tr, idx) => {
