@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Citation do
   include ModsFixtures
+
   let(:document) { SolrDocument.new }
   let(:mods_citation) { instance_double(Citations::ModsCitation, all_citations: { 'preferred' => 'Mods citation content' }) }
 

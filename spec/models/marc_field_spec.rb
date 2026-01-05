@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe MarcField do
   include MarcMetadataFixtures
+
   let(:marc) { metadata1 }
   let(:document) { SolrDocument.new(marc_json_struct: marc) }
   let(:tags) { [] }

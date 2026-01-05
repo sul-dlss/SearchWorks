@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Record::ModsDocumentComponent, type: :component do
   include ModsFixtures
+
   subject(:page) { render_inline(component) }
 
   let(:component) { described_class.new(document: ShowDocumentPresenter.new(document, view_context)) }

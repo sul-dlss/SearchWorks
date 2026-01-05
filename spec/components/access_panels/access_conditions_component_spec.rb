@@ -4,6 +4,7 @@ require "rails_helper"
 
 RSpec.describe AccessPanels::AccessConditionsComponent, type: :component do
   include ModsFixtures
+
   subject(:page) { render_inline(component) }
 
   let(:component) { described_class.new(document:) }

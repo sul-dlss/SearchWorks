@@ -19,7 +19,7 @@ module CatalogEmailSending
         # Not valid
         respond_to do |format|
           format.html do
-            return render layout: false, status: :unprocessable_entity if request.xhr?
+            return render layout: false, status: :unprocessable_content if request.xhr?
             # Otherwise draw the full page
           end
         end

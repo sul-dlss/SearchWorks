@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'MarcInstrumentation' do
   include MarcMetadataFixtures
+
   it 'returns nil for non marc object' do
     document = SolrDocument.new
     expect(document.marc_instrumentation).to be_nil

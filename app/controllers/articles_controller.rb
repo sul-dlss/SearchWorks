@@ -242,7 +242,7 @@ class ArticlesController < ApplicationController
     end
 
     flash[:error] = flash_message_for_link_error
-    redirect_back fallback_location: articles_path
+    redirect_back_or_to(articles_path)
   end
 
   # Used by default Blacklight `index` and `show` actions

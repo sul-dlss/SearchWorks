@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe SearchWorksRecordMailer do
   include MarcMetadataFixtures
   include ModsFixtures
+
   let(:documents) {
     [
       SolrDocument.new(

@@ -42,7 +42,7 @@ class BookmarksController < CatalogController
     else
       flash[:error] = I18n.t('blacklight.bookmarks.clear.failure')
     end
-    redirect_back fallback_location: bookmarks_url
+    redirect_back_or_to(bookmarks_url)
   end
 
   protected

@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe OrganizationAndArrangement do
   include MarcMetadataFixtures
+
   subject { described_class.new(SolrDocument.new(marc_json_struct: organization_and_arrangement_fixture)) }
 
   describe 'label' do
