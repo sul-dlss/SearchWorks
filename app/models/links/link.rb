@@ -88,8 +88,8 @@ class Links
       uri = URI.parse(Addressable::URI.encode(href.strip))
       host = uri.host
       if host =~ Links::PROXY_REGEX && uri.query
-        query = CGI.parse(uri.query)
-        host = URI.parse(query['url'].first).host if query['url'].present?
+        query = Rack::Utils.parse_nested_query(uri.query)
+        host = URI.parse(query['url']).host if query['url']
       end
 
       host || href
