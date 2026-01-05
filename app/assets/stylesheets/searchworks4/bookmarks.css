@@ -38,7 +38,8 @@
     display: none;
   }
 
-  .toggle-bookmark, .toggle-all-bookmark {
+  .toggle-bookmark,
+  .bookmark-toggle-all {
     cursor: pointer;
 
     .toggle-bookmark-label {
@@ -51,14 +52,19 @@
       }
     }
 
-    .bookmark-hover-icon, .bookmark-checked-icon, .saved-label {
+    .bookmark-hover-icon,
+    .bookmark-checked-icon,
+    .saved-label {
       display: none;
     }
+  }
 
-    &:has(input[type="checkbox"]:checked) {
-       .bookmark-checked-icon, .saved-label {
-         display: inline;
-       }
+  .toggle-bookmark:has(input[type="checkbox"]:checked),
+  .bookmark-toggle-all:has(+ input[type="checkbox"]:checked) {
+      .bookmark-checked-icon,
+      .saved-label {
+        display: inline;
+      }
 
       &:hover {
         .bookmark-checked-icon {
@@ -70,12 +76,12 @@
         }
       }
 
-       .bookmark-unchecked-icon, .save-label {
-         display: none;
-       }
+      .bookmark-unchecked-icon,
+      .save-label {
+        display: none;
+      }
     }
   }
-  
 
   /* override for line 21.
       Creates weird spacing in toolbar when min-width is set to 8rem */
@@ -129,7 +135,8 @@
     --bl-icon-color: var(--stanford-digital-red);
   }
 
-  .bookmark-checked-icon, .bookmark-unchecked-icon {
+  .bookmark-checked-icon,
+  .bookmark-unchecked-icon {
     display: none;
   }
 }

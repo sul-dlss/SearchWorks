@@ -3,12 +3,12 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="bookmark-all"
 export default class extends Controller {
   static outlets = ["bookmark"]
-  static targets = ["checkbox"]
+  static targets = ["checkbox", "button"]
 
   connect() {
     this.update()
     if (this.bookmarkOutlets.length > 0) {
-      this.element.removeAttribute("disabled")
+      this.buttonTarget.removeAttribute("disabled")
     }
   }
 
@@ -35,7 +35,7 @@ export default class extends Controller {
 
     if (bookmarksData.length === 0) return
 
-    this.element.setAttribute("disabled", true)
+    this.buttonTarget.setAttribute("disabled", true)
 
     try {
       const response = await fetch(url, {
@@ -61,7 +61,7 @@ export default class extends Controller {
     } catch(error) {
       console.error(error)
     } finally {
-      this.element.removeAttribute("disabled")
+      this.buttonTarget.removeAttribute("disabled")
     }
   }
 
@@ -71,8 +71,12 @@ export default class extends Controller {
   }
 
   updateAria() {
-    this.element.ariaLabel = this.checkboxTarget.checked ? "Remove all saved records on this page" : "Save all records on this page"
-    this.element.dispatchEvent(new CustomEvent("update-tooltip", { bubbles: true }))
+    this.buttonTarget.ariaLabel = this.checkboxTarget.checked
+      ? "Remove all saved records on this page"
+      : "Save all records on this page"
+    this.buttonTarget.dispatchEvent(
+      new CustomEvent("update-tooltip", { bubbles: true })
+    )
   }
 
   allBookmarked() {
