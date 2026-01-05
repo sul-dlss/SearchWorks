@@ -12,7 +12,7 @@
     <% if @documents.any? { |d| d.exports_as? :refworks_marc_txt } %>
       <li>
         <%= link_to "To RefWorks",
-                    refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, search_state.params_for_search))%>
+                    refworks_export_url(url: bookmarks_export_url(:refworks_marc_txt, search_state.params_for_search)) %>
       </li>
     <% end %>
 
