@@ -44,7 +44,9 @@
     <%= content_for(:head) %>
   </head>
   <body class="<%= render_body_class %> d-flex flex-column"
-    <%= content_for(:body_attributes) if content_for?(:body_attributes) %>>
+    <% if content_for?(:body_attributes) %>
+      <%= content_for(:body_attributes) %>
+    <% end %>>
     <%= render blacklight_config.skip_link_component.new do %>
       <%= content_for(:skip_links) %>
     <% end %>
