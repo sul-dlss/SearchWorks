@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby: ["3.4"]
+        ruby: ["3.4", "4.0"]
     steps:
       - uses: actions/checkout@v6
       - name: Set up Ruby
