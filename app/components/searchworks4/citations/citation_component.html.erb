@@ -36,7 +36,7 @@
       <li>
         <%= link_to 'To RefWorks', '', onclick: "event.preventDefault(); document.getElementById('refworks-form').submit();", class: 'refworks' %>
         <%= form_tag(refworks_export_url, id: 'refworks-form', aria: { hidden: true }) do %>
-          <% # TODO: Remove send when Blacklight::Marc exposes this as a public method projectblacklight/blacklight-marc#64 %>
+          <%# TODO: Remove send when Blacklight::Marc exposes this as a public method projectblacklight/blacklight-marc#64 %>
           <%= content_tag(:input, nil, type: :hidden, name: :ImportData, value: presenter.document.send(:export_as_refworks_marc_txt)) %>
         <% end %>
       </li>
@@ -62,7 +62,10 @@
   <% end %>
 
   <% citations.each do |style, citation| %>
-    <div class="mb-4 bg-light p-2 citations" data-citation-format-target="tab" data-controller="copy-text" id="citation-format-<%= style %>" <%= 'hidden' unless style == default_style %>>
+    <%= tag.div class: "mb-4 bg-light p-2 citations",
+                data: { citation_format_target: "tab", citation_format_controller: "copy-text"},
+                id: "citation-format-#{style}",
+                hidden: style != default_style do %>
       <% unless unavailable? %>
         <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm lh-1 ms-4" data-action="copy-text#copy">Copy</button></h5>
       <% end %>
@@ -71,7 +74,6 @@
           <%= helpers.auto_link cite %>
         </div>
       <% end %>
-    </div>
+    <% end %>
   <% end %>
-
 </div>

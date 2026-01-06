@@ -39,8 +39,10 @@
   <% end %>
 
   <% Citations::MarcCitation::FORMATS.each.with_index do |format, index| %>
-    <div class="citations bg-light p-3"<%= ' hidden' if index != 0 %> data-citation-format-target="tab"
-      data-controller="copy-text" id="citation-format-<%= format %>">
+    <%= tag.div class: 'citations bg-light p-3',
+                hidden: index != 0,
+                data: { citation_format_target: 'tab', controller: 'copy-text'},
+                id: "citation-format-#{format}" do %>
       <div class="d-flex align-items-center gap-2 mb-2">
       <% unless all_unavailable? %>
         <h4 class="mb-0 me-3">
@@ -68,7 +70,7 @@
           <% end %>
         </li>
         <% end %>
-    </ol>
-  </div>
+      </ol>
+    <% end %>
   <% end %>
 </div>

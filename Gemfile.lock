@@ -271,8 +271,8 @@ GEM
     hashdiff (1.2.1)
     hashie (5.1.0)
       logger
-    herb (0.4.3-arm64-darwin)
-    herb (0.4.3-x86_64-linux-gnu)
+    herb (0.8.6-arm64-darwin)
+    herb (0.8.6-x86_64-linux-gnu)
     honeybadger (6.2.0)
       logger
       ostruct
@@ -730,7 +730,7 @@ DEPENDENCIES
   faraday
   faraday-follow_redirects
   global_alerts
-  herb (~> 0.4.3)
+  herb (~> 0.8.6)
   honeybadger
   jbuilder (~> 2.7)
   jsbundling-rails (~> 1.2)
