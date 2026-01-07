@@ -41,6 +41,9 @@ set :honeybadger_env, fetch(:stage)
 
 set :whenever_roles, %i[app db]
 
+# See https://github.com/capistrano/bundler/pull/137
+set :bundle_version, 4
+
 desc 'Clear EDS cache on all web hosts'
 task :clear_eds_cache do
   on roles(:web) do
