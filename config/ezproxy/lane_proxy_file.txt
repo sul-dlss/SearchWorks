@@ -831,6 +831,7 @@ ispub.com
 issoonline.biomedcentral.com
 it.iucr.org
 iubmb.onlinelibrary.wiley.com
+iucrdata.iucr.org
 iv.iiarjournals.org
 iwaponline.com
 j-biomed-discovery.biomedcentral.com
@@ -1719,6 +1720,7 @@ www.apollomedicine.org
 www.appliedradiology.com
 www.apspjcaserep.com
 www.arabidopsis.org
+www.arc-trust.org
 www.arch-anim-breed.net
 www.archbronconeumol.org
 www.archive.org
@@ -2606,7 +2608,6 @@ www.rarebooks.info
 www.rcpe.ac.uk
 www.rcvmonline.com
 www.re3data.org
-www.reaxys.com
 www.regenmedres-journal.org
 www.rehab.research.va.gov
 www.relatosdeplomo.es
