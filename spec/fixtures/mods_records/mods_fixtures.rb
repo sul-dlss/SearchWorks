@@ -160,6 +160,6 @@ module ModsFixtures
       </titleInfo>
       <abstract>This work was finished by January 2025.&#13;\n&#13;\nThis record is about this work.</abstract>
     </mods>
-  xml
+    xml
   end
 end

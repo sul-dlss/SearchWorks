@@ -142,7 +142,7 @@ RSpec.describe Record::ModsDocumentComponent, type: :component do
     let(:document) { SolrDocument.new(modsxml: mods_ascii_abstract) }
 
     it "translates or removes ASCII character encodings" do
-      expect(page).to_not have_content("&#13;")
+      expect(page).to have_no_content("&#13;")
       expect(page).to have_css("dd", text: "This work was finished by January 2025.\n\nThis record is about this work.")
     end
   end
