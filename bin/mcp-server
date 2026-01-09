@@ -1,0 +1,269 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# MCP Server for SearchWorks
+# Provides search capabilities for books (catalog) and articles through the Model Context Protocol
+
+require_relative "../config/boot"
+require_relative "../config/environment"
+require "mcp"
+
+# Tool for searching the catalog (books)
+class CatalogSearchTool < MCP::Tool
+  description "Search the Stanford library catalog for books, journals, media, and other materials. " \
+              "Returns bibliographic records with titles, authors, publication info, and availability."
+
+  input_schema(
+    properties: {
+      query: {
+        type: "string",
+        description: "The search query to find materials in the catalog"
+      },
+      search_field: {
+        type: "string",
+        description: "The field to search in",
+        enum: ["all_fields", "title", "author", "subject"],
+        default: "all_fields"
+      },
+      rows: {
+        type: "integer",
+        description: "Number of results to return (max 20)",
+        minimum: 1,
+        maximum: 20,
+        default: 10
+      }
+    },
+    required: ["query"]
+  )
+
+  def self.call(query:, search_field: "all_fields", rows: 10, server_context:)
+    # Map search field to Blacklight field names
+    field_mapping = {
+      "all_fields" => "search",
+      "title" => "search_title",
+      "author" => "search_author",
+      "subject" => "subject_terms"
+    }
+
+    # Build search parameters
+    search_params = {
+      q: query,
+      search_field: field_mapping[search_field] || "search",
+      rows: [rows, 20].min
+    }
+
+    # Get the Blacklight configuration
+    blacklight_config = CatalogController.blacklight_config
+
+    search_state = Blacklight::SearchState.new(search_params, blacklight_config)
+
+    # Create a search service (using default Blacklight SearchService)
+    search_service = Blacklight::SearchService.new(
+      config: blacklight_config,
+      search_state: search_state
+    )
+
+    # Perform the search
+    response = search_service.search_results
+
+    # Format the results
+    results = response.documents.map do |doc|
+      {
+        id: doc.id,
+        title: doc["title_display"] || doc["title_full_display"] || "Untitled",
+        author: doc["author_person_display"] || doc["author_person_full_display"],
+        format: doc["format"]&.first || doc["format_main_ssim"]&.first,
+        pub_date: doc["pub_date"] || doc["pub_year_tisim"]&.first,
+        url: "https://searchworks.stanford.edu/view/#{doc.id}"
+      }.compact
+    end
+
+    result_text = if results.empty?
+      "No results found for query: #{query}"
+    else
+      "Found #{response.total} results (showing #{results.length}):\n\n" +
+        results.map.with_index(1) do |r, i|
+          lines = ["#{i}. #{r[:title]}"]
+          lines << "   Author: #{r[:author]}" if r[:author]
+          lines << "   Format: #{r[:format]}" if r[:format]
+          lines << "   Published: #{r[:pub_date]}" if r[:pub_date]
+          lines << "   URL: #{r[:url]}"
+          lines.join("\n")
+        end.join("\n\n")
+    end
+
+    MCP::Tool::Response.new(
+      [{
+        type: "text",
+        text: result_text
+      }],
+      structured_content: {
+        total: response.total,
+        results: results
+      }
+    )
+  rescue => e
+    MCP::Tool::Response.new(
+      [{
+        type: "text",
+        text: "Error searching catalog: #{e.message}"
+      }],
+      error: true
+    )
+  end
+end
+
+# Tool for searching articles
+class ArticleSearchTool < MCP::Tool
+  description "Search for scholarly articles, journal articles, and other academic publications. " \
+              "Requires EDS (EBSCO Discovery Service) to be enabled. Returns article metadata " \
+              "including titles, authors, abstracts, and full-text links when available."
+
+  input_schema(
+    properties: {
+      query: {
+        type: "string",
+        description: "The search query to find articles"
+      },
+      search_field: {
+        type: "string",
+        description: "The field to search in",
+        enum: ["all_fields", "title", "author", "subject"],
+        default: "all_fields"
+      },
+      rows: {
+        type: "integer",
+        description: "Number of results to return (max 20)",
+        minimum: 1,
+        maximum: 20,
+        default: 10
+      }
+    },
+    required: ["query"]
+  )
+
+  def self.call(query:, search_field: "all_fields", rows: 10, server_context:)
+    unless Settings.EDS_ENABLED
+      return MCP::Tool::Response.new(
+        [{
+          type: "text",
+          text: "Article search is not currently enabled. EDS (EBSCO Discovery Service) must be configured."
+        }],
+        error: true
+      )
+    end
+
+    # Map search field to EDS field names
+    field_mapping = {
+      "all_fields" => "search",
+      "title" => "title",
+      "author" => "author",
+      "subject" => "subject"
+    }
+
+    # Build search parameters
+    search_params = {
+      q: query,
+      search_field: field_mapping[search_field] || "search",
+      rows: [rows, 20].min
+    }
+
+    # Get the Blacklight configuration for articles
+    blacklight_config = ArticlesController.blacklight_config
+
+    # Create EDS search service
+    eds_params = {
+      guest: true, # Default to guest access for MCP
+      session_token: nil
+    }
+
+    # Establish EDS session
+    session_token = Eds::Session.new(guest: true, caller: 'mcp-server').session_token
+    eds_params[:session_token] = session_token
+
+    search_service = Eds::SearchService.new(blacklight_config, search_params, eds_params)
+
+    # Perform the search
+    response, documents = search_service.search_results
+
+    # Format the results
+    results = documents.map do |doc|
+      {
+        id: doc.id,
+        title: doc["eds_title"]&.first || "Untitled",
+        authors: doc["eds_authors"] || [],
+        source: doc["eds_composed_title"]&.first,
+        publication_date: doc["eds_publication_date"]&.first,
+        abstract: doc["eds_abstract"]&.first&.truncate(500),
+        subjects: doc["eds_subjects"] || [],
+        url: "https://searchworks.stanford.edu/articles/#{doc.id}"
+      }.compact
+    end
+
+    result_text = if results.empty?
+      "No articles found for query: #{query}"
+    else
+      "Found #{response.total} articles (showing #{results.length}):\n\n" +
+        results.map.with_index(1) do |r, i|
+          lines = ["#{i}. #{r[:title]}"]
+          lines << "   Authors: #{r[:authors].join(', ')}" if r[:authors]&.any?
+          lines << "   Source: #{r[:source]}" if r[:source]
+          lines << "   Published: #{r[:publication_date]}" if r[:publication_date]
+          lines << "   Abstract: #{r[:abstract]}" if r[:abstract]
+          lines << "   URL: #{r[:url]}"
+          lines.join("\n")
+        end.join("\n\n")
+    end
+
+    MCP::Tool::Response.new(
+      [{
+        type: "text",
+        text: result_text
+      }],
+      structured_content: {
+        total: response.total,
+        results: results
+      }
+    )
+  rescue => e
+    MCP::Tool::Response.new(
+      [{
+        type: "text",
+        text: "Error searching articles: #{e.message}\n#{e.backtrace.first(3).join("\n")}"
+      }],
+      error: true
+    )
+  end
+end
+
+# Create configuration with older protocol version for better compatibility
+configuration = MCP::Configuration.new(protocol_version: "2025-03-26")
+
+# Create and configure the MCP server
+server = MCP::Server.new(
+  name: "searchworks",
+  title: "SearchWorks Stanford Library Search",
+  version: "1.0.0",
+  instructions: "Use these tools to search Stanford University Libraries catalog and article databases. " \
+                "The catalog search finds books, journals, media, and other physical/digital materials. " \
+                "The article search finds scholarly articles and publications.",
+  tools: [CatalogSearchTool, ArticleSearchTool],
+  configuration: configuration
+)
+
+# Configure error reporting
+MCP.configure do |config|
+  config.exception_reporter = ->(exception, context) {
+    $stderr.puts "MCP Error: #{exception.class} - #{exception.message}"
+    $stderr.puts exception.backtrace.first(5).join("\n")
+    $stderr.puts "Context: #{context.inspect}"
+  }
+
+  config.instrumentation_callback = ->(data) {
+    $stderr.puts "MCP Instrumentation: #{data.inspect}"
+  }
+end
+
+# Start the stdio transport
+transport = MCP::Server::Transports::StdioTransport.new(server)
+transport.open
