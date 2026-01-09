@@ -1,0 +1,437 @@
+# frozen_string_literal: true
+
+# SearchworksMcp - Business logic for MCP (Model Context Protocol) integration
+# This module extracts the core search functionality from the MCP server
+# so it can be used in both stdio and HTTP contexts.
+module SearchworksMcp
+  # Module for catalog search functionality
+  module CatalogSearch
+    extend self
+
+    # Dynamically build input schema based on Blacklight configuration
+    def build_input_schema
+      # Get the Blacklight configuration
+      blacklight_config = CatalogController.blacklight_config
+
+      # Extract visible facet fields that could be useful for filtering
+      facet_options = {}
+      blacklight_config.facet_fields.each do |field_name, field_config|
+        # Skip facets that are explicitly hidden or have no label
+        next if field_config.show == false || field_config.label.blank?
+        # Skip complex facets that might not work well in simple search
+        next if field_config.query.present? || field_config.pivot.present?
+        # Skip range facets for now
+        next if field_config.range == true
+
+        # Use the human-readable label as the key
+        clean_label = field_config.label.downcase.gsub(/[^a-z0-9]+/, '_').gsub(/^_|_$/, '')
+        facet_options[clean_label] = {
+          field: field_name,
+          label: field_config.label,
+          description: "Filter by #{field_config.label.downcase}"
+        }
+      end
+
+      # Build the schema properties
+      properties = {
+        query: {
+          type: "string",
+          description: "The search query to find materials in the catalog"
+        },
+        search_field: {
+          type: "string",
+          description: "The field to search in",
+          enum: %w[all_fields title author subject],
+          default: "all_fields"
+        },
+        rows: {
+          type: "integer",
+          description: "Number of results to return (max 20)",
+          minimum: 1,
+          maximum: 20,
+          default: 10
+        }
+      }
+
+      # Add facet filter parameters
+      unless facet_options.empty?
+        properties[:filters] = {
+          type: "object",
+          description: "Optional filters to narrow search results",
+          properties: facet_options.transform_values do |opts|
+            {
+              type: "string",
+              description: opts[:description]
+            }
+          end,
+          additionalProperties: false
+        }
+      end
+
+      {
+        properties: properties,
+        required: ["query"]
+      }
+    end
+
+    def search(query:, search_field: "all_fields", rows: 10, filters: {})
+      # Map search field to Blacklight field names
+      field_mapping = {
+        "all_fields" => "search",
+        "title" => "search_title",
+        "author" => "search_author",
+        "subject" => "subject_terms"
+      }
+
+      # Build search parameters
+      search_params = {
+        q: query,
+        search_field: field_mapping[search_field] || "search",
+        rows: [rows, 20].min
+      }
+
+      # Add facet filters if provided
+      if filters.present?
+        search_params[:f] = {}
+        blacklight_config = CatalogController.blacklight_config
+
+        filters.each do |filter_key, filter_value|
+          # Find the corresponding facet field
+          facet_field = blacklight_config.facet_fields.find do |_field_name, field_config|
+            clean_label = field_config.label&.downcase&.gsub(/[^a-z0-9]+/, '_')&.gsub(/^_|_$/, '')
+            clean_label == filter_key.to_s
+          end
+
+          next unless facet_field
+
+          field_name, field_config = facet_field
+          # Use the actual solr field name if specified
+          solr_field = field_config.field || field_name
+          search_params[:f][solr_field] = [filter_value]
+        end
+      end
+
+      # Get the Blacklight configuration
+      blacklight_config = CatalogController.blacklight_config
+
+      # Create a search service (using default Blacklight SearchService)
+      search_state = Blacklight::SearchState.new(search_params, blacklight_config)
+      search_service = Blacklight::SearchService.new(
+        config: blacklight_config,
+        search_state: search_state
+      )
+
+      # Perform the search
+      response = search_service.search_results
+      documents = response.documents
+
+      # Handle nil or empty documents
+      documents ||= []
+
+      # Format the results
+      results = documents.map do |doc|
+        result = {
+          id: doc.id || doc["id"],
+          title: extract_field_value(doc, %w[title_display title_full_display]) || "Untitled",
+          author: extract_field_value(doc, %w[author_person_display author_person_full_display]),
+          format: extract_field_value(doc, %w[format format_main_ssim]),
+          pub_date: extract_field_value(doc, %w[pub_date pub_year_tisim]),
+          url: "https://searchworks.stanford.edu/view/#{doc.id || doc['id']}"
+        }
+
+        # Add library information if available
+        library = extract_field_value(doc, ["library"])
+        result[:library] = library if library
+
+        # Add call number if available
+        call_number = extract_field_value(doc, ["callnum_display"])
+        result[:call_number] = call_number if call_number
+
+        result.compact
+      end
+
+      # Extract facet information for refinement suggestions
+      facets = {}
+      begin
+        if response.respond_to?(:facet_fields)
+          response.facet_fields.each do |field_name, facet_data|
+            facet_config = blacklight_config.facet_fields[field_name]
+            next if facet_config&.label.blank?
+
+            # Handle different facet data formats
+            values = []
+            if facet_data.is_a?(Array)
+              # Array format: [value1, count1, value2, count2, ...]
+              facet_data.each_slice(2).first(5).each do |value, count|
+                values << { value: value, count: count } if value && count
+              end
+            elsif facet_data.respond_to?(:items)
+              # Object format with items method
+              values = facet_data.items.first(5).map do |item|
+                { value: item.value, count: item.hits }
+              end
+            end
+
+            next unless values.any?
+
+            # Create clean label for facet
+            clean_label = facet_config.label.downcase.gsub(/[^a-z0-9]+/, '_').gsub(/^_|_$/, '')
+            facets[clean_label] = {
+              label: facet_config.label,
+              values: values
+            }
+          end
+        end
+      rescue StandardError => e
+        # If facet processing fails, just continue without facets
+        Rails.logger.warn "Could not process facets: #{e.message}"
+      end
+
+      # Build descriptive text about applied filters
+      filter_text = ""
+      if filters.present?
+        applied_filters = filters.map { |k, v| "#{k}: #{v}" }.join(", ")
+        filter_text = " with filters (#{applied_filters})"
+      end
+
+      # Build facet suggestions text
+      facet_text = ""
+      if facets.any?
+        facet_text = "\n\nAvailable refinement options:\n" +
+                     facets.map do |_key, facet_info|
+                       values_text = facet_info[:values].map { |v| "#{v[:value]} (#{v[:count]})" }.join(", ")
+                       "- #{facet_info[:label]}: #{values_text}"
+                     end.join("\n")
+      end
+
+      result_text = if results.empty?
+                      "No results found for query: #{query}#{filter_text}"
+                    else
+                      "Found #{response.total} results#{filter_text} (showing #{results.length}):\n\n" +
+                        results.map.with_index(1) do |r, i|
+                          lines = ["#{i}. #{r[:title]}"]
+                          lines << "   Author: #{r[:author]}" if r[:author]
+                          lines << "   Format: #{r[:format]}" if r[:format]
+                          lines << "   Published: #{r[:pub_date]}" if r[:pub_date]
+                          lines << "   Library: #{r[:library]}" if r[:library]
+                          lines << "   Call Number: #{r[:call_number]}" if r[:call_number]
+                          lines << "   URL: #{r[:url]}"
+                          lines.join("\n")
+                        end.join("\n\n") + facet_text
+                    end
+
+      {
+        text: result_text,
+        structured_content: {
+          query: query,
+          search_field: search_field,
+          filters: filters || {},
+          total: response.total,
+          results: results,
+          facets: facets
+        }
+      }
+    rescue StandardError => e
+      {
+        text: "Error searching catalog: #{e.message}",
+        structured_content: { error: e.message },
+        error: true
+      }
+    end
+
+    private
+
+    def extract_field_value(doc, field_names)
+      field_names.each do |field_name|
+        value = doc[field_name]
+        if value.is_a?(Array) && value.any?
+          return value.first
+        elsif value.is_a?(String) && !value.empty?
+          return value
+        end
+      end
+      nil
+    end
+  end
+
+  # Module for article search functionality
+  module ArticleSearch
+    extend self
+
+    def search(query:, search_field: "all_fields", rows: 10)
+      unless Settings.EDS_ENABLED
+        return {
+          text: "Article search is not currently enabled. EDS (EBSCO Discovery Service) must be configured.",
+          structured_content: { error: "EDS not enabled" },
+          error: true
+        }
+      end
+
+      # Map search field to EDS field names
+      field_mapping = {
+        "all_fields" => "search",
+        "title" => "title",
+        "author" => "author",
+        "subject" => "subject"
+      }
+
+      # Build search parameters
+      search_params = {
+        q: query,
+        search_field: field_mapping[search_field] || "search",
+        rows: [rows, 20].min
+      }
+
+      # Get the Blacklight configuration for articles
+      blacklight_config = ArticlesController.blacklight_config
+
+      # Create EDS search service
+      eds_params = {
+        guest: true, # Default to guest access for MCP
+        session_token: nil
+      }
+
+      # Establish EDS session
+      session_token = Eds::Session.new(guest: true, caller: 'mcp-server').session_token
+      eds_params[:session_token] = session_token
+
+      search_service = Eds::SearchService.new(blacklight_config, search_params, eds_params)
+
+      # Perform the search
+      response = search_service.search_results
+      documents = response.documents
+
+      # Handle nil or empty documents
+      documents ||= []
+
+      # Format the results
+      results = documents.map do |doc|
+        abstract = extract_eds_field_value(doc, ["eds_abstract"])
+        abstract = abstract&.truncate(500) if abstract
+
+        {
+          id: doc.id || doc["id"],
+          title: extract_eds_field_value(doc, ["eds_title"]) || "Untitled",
+          authors: doc["eds_authors"] || [],
+          source: extract_eds_field_value(doc, ["eds_composed_title"]),
+          publication_date: extract_eds_field_value(doc, ["eds_publication_date"]),
+          abstract: abstract,
+          subjects: doc["eds_subjects"] || [],
+          url: "https://searchworks.stanford.edu/articles/#{doc.id || doc['id']}"
+        }.compact
+      end
+
+      result_text = if results.empty?
+                      "No articles found for query: #{query}"
+                    else
+                      "Found #{response.total} articles (showing #{results.length}):\n\n" +
+                        results.map.with_index(1) do |r, i|
+                          lines = ["#{i}. #{r[:title]}"]
+                          lines << "   Authors: #{r[:authors].join(', ')}" if r[:authors]&.any?
+                          lines << "   Source: #{r[:source]}" if r[:source]
+                          lines << "   Published: #{r[:publication_date]}" if r[:publication_date]
+                          lines << "   Abstract: #{r[:abstract]}" if r[:abstract]
+                          lines << "   URL: #{r[:url]}"
+                          lines.join("\n")
+                        end.join("\n\n")
+                    end
+
+      {
+        text: result_text,
+        structured_content: {
+          query: query,
+          search_field: search_field,
+          total: response.total,
+          results: results
+        }
+      }
+    rescue StandardError => e
+      {
+        text: "Error searching articles: #{e.message}",
+        structured_content: { error: e.message },
+        error: true
+      }
+    end
+
+    private
+
+    def extract_eds_field_value(doc, field_names)
+      field_names.each do |field_name|
+        value = doc[field_name]
+        if value.is_a?(Array) && value.any?
+          return value.first
+        elsif value.is_a?(String) && !value.empty?
+          return value
+        end
+      end
+      nil
+    end
+  end
+
+  # Module for MCP tool definitions
+  module Tools
+    CATALOG_SEARCH = {
+      name: "catalog_search_tool",
+      description: "Search the Stanford library catalog for books, journals, media, and other materials. " \
+                   "Returns bibliographic records with titles, authors, publication info, and availability. " \
+                   "Also provides facet suggestions for refining search results (format, language, topic, etc.).",
+      input_schema: -> { CatalogSearch.build_input_schema }
+    }.freeze
+
+    ARTICLE_SEARCH = {
+      name: "article_search_tool",
+      description: "Search for scholarly articles, journal articles, and other academic publications. " \
+                   "Requires EDS (EBSCO Discovery Service) to be enabled. Returns article metadata " \
+                   "including titles, authors, abstracts, and full-text links when available.",
+      input_schema: {
+        properties: {
+          query: {
+            type: "string",
+            description: "The search query to find articles"
+          },
+          search_field: {
+            type: "string",
+            description: "The field to search in",
+            enum: %w[all_fields title author subject],
+            default: "all_fields"
+          },
+          rows: {
+            type: "integer",
+            description: "Number of results to return (max 20)",
+            minimum: 1,
+            maximum: 20,
+            default: 10
+          }
+        },
+        required: ["query"]
+      }
+    }.freeze
+
+    ALL_TOOLS = [CATALOG_SEARCH, ARTICLE_SEARCH].freeze
+
+    def self.list_tools
+      ALL_TOOLS.map do |tool|
+        {
+          name: tool[:name],
+          description: tool[:description],
+          inputSchema: tool[:input_schema].is_a?(Proc) ? tool[:input_schema].call : tool[:input_schema]
+        }
+      end
+    end
+
+    def self.call_tool(name, arguments = {})
+      case name
+      when "catalog_search_tool"
+        CatalogSearch.search(**arguments.symbolize_keys)
+      when "article_search_tool"
+        ArticleSearch.search(**arguments.symbolize_keys)
+      else
+        {
+          text: "Unknown tool: #{name}",
+          structured_content: { error: "Unknown tool" },
+          error: true
+        }
+      end
+    end
+  end
+end
