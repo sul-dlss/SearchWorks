@@ -66,3 +66,83 @@ There is one testing task: `rake ci`
 This is intended for running tests against the fixtures in the local index.
 
     $ rake ci
+
+## MCP Server (Model Context Protocol)
+
+SearchWorks provides an MCP endpoint through the Rails application. Start the server with `bin/rails server`, then configure an HTTP-capable MCP client to use:
+
+```
+POST http://localhost:3000/mcp
+Content-Type: application/json
+```
+
+To list the available tools:
+
+```bash
+curl -X POST http://localhost:3000/mcp \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "1",
+    "method": "tools/list"
+  }'
+```
+
+To search the catalog:
+
+```bash
+curl -X POST http://localhost:3000/mcp \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "2",
+    "method": "tools/call",
+    "params": {
+      "name": "catalog_search_tool",
+      "arguments": {
+        "query": "machine learning",
+        "rows": 5
+      }
+    }
+  }'
+```
+
+The endpoint exposes two tools:
+
+- `catalog_search_tool` searches the library catalog.
+- `article_search_tool` searches scholarly articles when EDS is enabled.
+
+### Using the endpoint with Claude Code
+
+To use a local SearchWorks server with Claude Code, start Rails and add the endpoint:
+
+```bash
+bin/rails server
+claude mcp add --transport http searchworks http://localhost:3000/mcp
+```
+
+Run `/mcp` in Claude Code to verify the connection.
+
+### Using the endpoint with Claude Desktop
+
+To use the endpoint with Claude or Claude Desktop, deploy SearchWorks at a public HTTPS URL, then:
+
+1. Edit `~/Library/Application Support/Claude/claude_desktop_config.json`
+2. Add the endpoint URL to the `claude_desktop_config.json` file:
+   ```json
+   {
+     "mcpServers": {
+       "searchworks-gryphon": {
+         "command": "npx",
+         "args": [
+           "-y", "mcp-remote",
+           "https://gryphon-search.stanford.edu/mcp",
+           "--transport", "http-only"
+         ]
+       }
+     },
+     "preferences": { "...leave your existing preferences block as-is..." }
+   }
+   ```
+
+We can't use "Connectors", yet, because on Team and Enterprise plans, an organization owner must add the connector under **Organization settings > Connectors** before members can enable it.
