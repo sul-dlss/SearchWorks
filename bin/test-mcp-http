@@ -1,0 +1,224 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Test script for the SearchWorks MCP HTTP API
+# This script tests the HTTP endpoint using proper JSON-RPC MCP format
+
+require 'json'
+require 'net/http'
+require 'uri'
+
+BASE_URL = ENV['SEARCHWORKS_URL'] || 'http://localhost:3000'
+MCP_ENDPOINT = "#{BASE_URL}/mcp"
+
+def send_mcp_request(method, params = {}, id = nil)
+  uri = URI(MCP_ENDPOINT)
+  http = Net::HTTP.new(uri.host, uri.port)
+
+  request_body = {
+    jsonrpc: "2.0",
+    method: method,
+    id: id || SecureRandom.uuid
+  }
+  request_body[:params] = params unless params.empty?
+
+  request = Net::HTTP::Post.new(uri)
+  request.body = request_body.to_json
+  request['Content-Type'] = 'application/json'
+  request['Accept'] = 'application/json'
+
+  response = http.request(request)
+
+  {
+    status: response.code.to_i,
+    body: response.body,
+    parsed: (JSON.parse(response.body) rescue nil)
+  }
+rescue => e
+  {
+    status: 0,
+    body: nil,
+    parsed: nil,
+    error: e.message
+  }
+end
+
+def test_mcp_method(name, method, params = {})
+  print "Testing #{name}... "
+  result = send_mcp_request(method, params)
+
+  if result[:error]
+    puts "✗ CONNECTION ERROR: #{result[:error]}"
+    return false
+  end
+
+  if result[:status] == 200 && result[:parsed]
+    response = result[:parsed]
+
+    if response['error']
+      puts "✗ MCP ERROR: #{response['error']['message']}"
+      return false
+    elsif response['result']
+      puts "✓ SUCCESS"
+
+      # Print relevant result info
+      if method == "initialize"
+        puts "  Server: #{response['result']['serverInfo']['name']}"
+        puts "  Version: #{response['result']['serverInfo']['version']}"
+      elsif method == "tools/list"
+        tools = response['result']['tools']
+        puts "  Found #{tools.length} tools:"
+        tools.each { |tool| puts "    - #{tool['name']}" }
+      elsif method == "tools/call"
+        if response['result']['content']
+          text = response['result']['content'][0]['text']
+          puts "  Response: #{text[0..100]}#{'...' if text.length > 100}"
+        end
+        if response['result']['structuredContent']&.dig('total')
+          puts "  Total results: #{response['result']['structuredContent']['total']}"
+        end
+      end
+
+      return true
+    else
+      puts "✗ UNEXPECTED RESPONSE FORMAT"
+      return false
+    end
+  else
+    puts "✗ HTTP ERROR (#{result[:status]})"
+    puts "  Response: #{result[:body][0..200]}..." if result[:body]
+    return false
+  end
+end
+
+puts "Testing SearchWorks MCP HTTP API"
+puts "Endpoint: #{MCP_ENDPOINT}"
+puts "=" * 60
+
+success_count = 0
+total_tests = 0
+
+# Test 1: Initialize
+total_tests += 1
+if test_mcp_method("Initialize", "initialize", {
+  protocolVersion: "2024-10-07",
+  capabilities: {},
+  clientInfo: {
+    name: "test-client",
+    version: "1.0.0"
+  }
+})
+  success_count += 1
+end
+
+puts
+
+# Test 2: List tools
+total_tests += 1
+if test_mcp_method("List Tools", "tools/list")
+  success_count += 1
+end
+
+puts
+
+# Test 3: Ping
+total_tests += 1
+if test_mcp_method("Ping", "ping")
+  success_count += 1
+end
+
+puts
+
+# Test 4: Catalog search
+total_tests += 1
+if test_mcp_method("Catalog Search", "tools/call", {
+  name: "catalog_search_tool",
+  arguments: {
+    query: "physics",
+    rows: 3
+  }
+})
+  success_count += 1
+end
+
+puts
+
+# Test 5: Catalog search with filters
+total_tests += 1
+if test_mcp_method("Catalog Search with Filters", "tools/call", {
+  name: "catalog_search_tool",
+  arguments: {
+    query: "shakespeare",
+    search_field: "author",
+    rows: 2,
+    filters: {
+      format: "Book"
+    }
+  }
+})
+  success_count += 1
+end
+
+puts
+
+# Test 6: Article search
+total_tests += 1
+if test_mcp_method("Article Search", "tools/call", {
+  name: "article_search_tool",
+  arguments: {
+    query: "machine learning",
+    rows: 2
+  }
+})
+  success_count += 1
+end
+
+puts
+
+# Test 7: Catalog search by title
+total_tests += 1
+if test_mcp_method("Catalog Search by Title", "tools/call", {
+  name: "catalog_search_tool",
+  arguments: {
+    query: "Pride and Prejudice",
+    search_field: "title",
+    rows: 2
+  }
+})
+  success_count += 1
+end
+
+puts "=" * 60
+puts "Test Results: #{success_count}/#{total_tests} passed"
+
+if success_count == total_tests
+  puts "🎉 All tests passed!"
+  puts
+  puts "The MCP HTTP endpoint is working correctly."
+  puts "You can now use JSON-RPC requests to interact with SearchWorks:"
+  puts
+  puts "Example request:"
+  puts JSON.pretty_generate({
+    jsonrpc: "2.0",
+    id: "1",
+    method: "tools/call",
+    params: {
+      name: "catalog_search_tool",
+      arguments: {
+        query: "artificial intelligence",
+        rows: 5
+      }
+    }
+  })
+  puts
+  exit 0
+else
+  puts "❌ Some tests failed."
+  puts
+  puts "Possible issues:"
+  puts "- Rails server is not running: Run 'rails server' in another terminal"
+  puts "- Solr is not running: Check Solr status and configuration"
+  puts "- Dependencies missing: Run 'bundle install'"
+  puts
+  exit 1
+end
