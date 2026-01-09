@@ -12,8 +12,14 @@ module Record
       @layout = layout
     end
 
-    def truncated_mods_record_field(field, component: ModsDisplay::FieldComponent, value_transformer: nil)
-      render component.new(field: field, value_transformer: value_transformer, value_html_attributes: { data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-5' } })
+    def truncated_mods_record_field(field, component: ModsDisplay::FieldComponent)
+      render component.new(field: field, value_transformer: transformer, value_html_attributes: { data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-5' } })
+    end
+
+    # Returns a lambda with the value escaped
+    # Both places where this field is called, we use the same data attributes
+    def transformer
+      ->(v) { tag.div v.nil? ? nil : CGI.unescapeHTML(v), data: { 'long-text-target' => 'text' } }
     end
   end
 end

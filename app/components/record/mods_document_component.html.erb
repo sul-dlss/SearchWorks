@@ -90,13 +90,13 @@
     <%= render Searchworks4::DocumentSectionLayout.new(title: 'Abstract/Contents', dl_classes: 'dl-horizontal dl-text') do %>
       <% document.mods.abstract.each do |abstract| %>
         <div class="my-2">
-          <%= truncated_mods_record_field(abstract, value_transformer: ->(v) { tag.div CGI.unescapeHTML(v), data: { 'long-text-target' => 'text' } } ) %>
+          <%= truncated_mods_record_field(abstract) %>
         </div>
       <% end %>
 
       <% document.mods.contents.each do |contents| %>
         <div class="my-2">
-          <%= truncated_mods_record_field(contents, value_transformer: ->(v) { tag.div v, data: { 'long-text-target' => 'text' } } ) %>
+          <%= truncated_mods_record_field(contents) %>
         </div>
       <% end %>
     <% end %>
