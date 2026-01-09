@@ -1,0 +1,156 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Test script for the SearchWorks MCP Server
+# This script sends test commands to the MCP server via stdio
+
+require 'open3'
+require 'json'
+
+MCP_SERVER = File.expand_path('../mcp-server', __FILE__)
+
+def send_request(stdin, id, method, params = {})
+  request = {
+    jsonrpc: "2.0",
+    id: id.to_s,
+    method: method
+  }
+  request[:params] = params unless params.empty?
+
+  stdin.puts request.to_json
+  stdin.flush
+end
+
+def read_response(stdout)
+  line = stdout.gets
+  return nil unless line
+
+  JSON.parse(line)
+rescue JSON::ParserError => e
+  puts "Error parsing response: #{e.message}"
+  puts "Raw line: #{line}"
+  nil
+end
+
+puts "Starting MCP Server test..."
+puts "=" * 60
+
+Open3.popen3(MCP_SERVER) do |stdin, stdout, stderr, wait_thr|
+  # Start error reader thread
+  error_thread = Thread.new do
+    stderr.each_line do |line|
+      puts "[STDERR] #{line}"
+    end
+  end
+
+  begin
+    # Test 1: Initialize
+    puts "\n1. Testing initialize..."
+    send_request(stdin, 1, "initialize", {
+      protocolVersion: "2025-03-26",
+      capabilities: {},
+      clientInfo: {
+        name: "test-client",
+        version: "1.0.0"
+      }
+    })
+
+    response = read_response(stdout)
+    if response && response["result"]
+      puts "✓ Initialize successful"
+      puts "  Server: #{response['result']['serverInfo']['name']}"
+      puts "  Version: #{response['result']['serverInfo']['version']}"
+    else
+      puts "✗ Initialize failed: #{response.inspect}"
+    end
+
+    # Test 2: List tools
+    puts "\n2. Testing tools/list..."
+    send_request(stdin, 2, "tools/list")
+
+    response = read_response(stdout)
+    if response && response["result"] && response["result"]["tools"]
+      tools = response["result"]["tools"]
+      puts "✓ Found #{tools.length} tools:"
+      tools.each do |tool|
+        puts "  - #{tool['name']}: #{tool['description'][0..60]}..."
+      end
+    else
+      puts "✗ Tools list failed: #{response.inspect}"
+    end
+
+    # Test 3: Ping
+    puts "\n3. Testing ping..."
+    send_request(stdin, 3, "ping")
+
+    response = read_response(stdout)
+    if response && response["result"] == {}
+      puts "✓ Ping successful"
+    else
+      puts "✗ Ping failed: #{response.inspect}"
+    end
+
+    # Test 4: Catalog search
+    puts "\n4. Testing catalog_search_tool..."
+    send_request(stdin, 4, "tools/call", {
+      name: "catalog_search_tool",
+      arguments: {
+        query: "physics",
+        rows: 3
+      }
+    })
+
+    response = read_response(stdout)
+    if response && response["result"]
+      puts "✓ Catalog search successful"
+      if response["result"]["content"]
+        text = response["result"]["content"][0]["text"]
+        puts "  Results preview: #{text}..."
+      end
+      if response["result"]["structuredContent"]
+        total = response["result"]["structuredContent"]["total"]
+        count = response["result"]["structuredContent"]["results"].length
+        puts "  Found: #{total} total, returned #{count} results"
+      end
+    else
+      puts "✗ Catalog search failed: #{response.inspect}"
+    end
+
+    # Test 5: Article search (may fail if EDS not enabled)
+    puts "\n5. Testing article_search_tool..."
+    send_request(stdin, 5, "tools/call", {
+      name: "article_search_tool",
+      arguments: {
+        query: "machine learning",
+        rows: 2
+      }
+    })
+
+    response = read_response(stdout)
+    if response
+      if response["result"]
+        if response["result"]["isError"]
+          puts "⚠ Article search returned error (expected if EDS not enabled):"
+          puts "  #{response['result']['content'][0]['text']}"
+        else
+          puts "✓ Article search successful"
+          if response["result"]["content"]
+            text = response["result"]["content"][0]["text"]
+            puts "  Results preview: #{text[0..200]}..."
+          end
+        end
+      else
+        puts "✗ Article search failed: #{response.inspect}"
+      end
+    end
+
+    puts "\n" + "=" * 60
+    puts "Test completed!"
+    puts "\nSending shutdown signal..."
+
+  ensure
+    stdin.close
+    error_thread.join(2)
+    wait_thr.kill if wait_thr.alive?
+  end
+end

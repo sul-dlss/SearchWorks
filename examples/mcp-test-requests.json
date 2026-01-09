@@ -1,0 +1,191 @@
+[
+  {
+    "description": "Initialize the MCP connection",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "1",
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2024-10-07",
+        "capabilities": {},
+        "clientInfo": {
+          "name": "test-client",
+          "version": "1.0.0"
+        }
+      }
+    }
+  },
+  {
+    "description": "List available tools",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "2",
+      "method": "tools/list"
+    }
+  },
+  {
+    "description": "Ping the server",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "3",
+      "method": "ping"
+    }
+  },
+  {
+    "description": "Search catalog for books about physics",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "4",
+      "method": "tools/call",
+      "params": {
+        "name": "catalog_search_tool",
+        "arguments": {
+          "query": "physics",
+          "rows": 5
+        }
+      }
+    }
+  },
+  {
+    "description": "Search catalog by title",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "5",
+      "method": "tools/call",
+      "params": {
+        "name": "catalog_search_tool",
+        "arguments": {
+          "query": "Pride and Prejudice",
+          "search_field": "title",
+          "rows": 3
+        }
+      }
+    }
+  },
+  {
+    "description": "Search catalog by author (shows available facet refinements)",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "6",
+      "method": "tools/call",
+      "params": {
+        "name": "catalog_search_tool",
+        "arguments": {
+          "query": "physics",
+          "search_field": "all_fields",
+          "rows": 5
+        }
+      }
+    }
+  },
+  {
+    "description": "Search catalog with specific query (demonstrates facet suggestions)",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "7",
+      "method": "tools/call",
+      "params": {
+        "name": "catalog_search_tool",
+        "arguments": {
+          "query": "machine learning",
+          "search_field": "subject",
+          "rows": 5
+        }
+      }
+    }
+  },
+  {
+    "description": "Search catalog for broad topic (shows rich facet data)",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "8",
+      "method": "tools/call",
+      "params": {
+        "name": "catalog_search_tool",
+        "arguments": {
+          "query": "artificial intelligence",
+          "rows": 5
+        }
+      }
+    }
+  },
+  {
+    "description": "Search catalog by title (Note: Filtering is available but may need refinement)",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "9",
+      "method": "tools/call",
+      "params": {
+        "name": "catalog_search_tool",
+        "arguments": {
+          "query": "Pride and Prejudice",
+          "search_field": "title",
+          "rows": 3
+        }
+      }
+    }
+  },
+  {
+    "description": "Search catalog by author (demonstrates facet-based refinement suggestions)",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "10",
+      "method": "tools/call",
+      "params": {
+        "name": "catalog_search_tool",
+        "arguments": {
+          "query": "Shakespeare",
+          "search_field": "author",
+          "rows": 5
+        }
+      }
+    }
+  },
+  {
+    "description": "Search articles about climate change",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "11",
+      "method": "tools/call",
+      "params": {
+        "name": "article_search_tool",
+        "arguments": {
+          "query": "climate change",
+          "rows": 5
+        }
+      }
+    }
+  },
+  {
+    "description": "Search articles by title",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "12",
+      "method": "tools/call",
+      "params": {
+        "name": "article_search_tool",
+        "arguments": {
+          "query": "artificial intelligence",
+          "search_field": "title",
+          "rows": 3
+        }
+      }
+    }
+  },
+  {
+    "description": "Search articles by author",
+    "request": {
+      "jsonrpc": "2.0",
+      "id": "13",
+      "method": "tools/call",
+      "params": {
+        "name": "article_search_tool",
+        "arguments": {
+          "query": "Smith",
+          "search_field": "author",
+          "rows": 5
+        }
+      }
+    }
+  }
+]
