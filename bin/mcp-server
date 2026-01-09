@@ -13,8 +13,32 @@ class CatalogSearchTool < MCP::Tool
   description "Search the Stanford library catalog for books, journals, media, and other materials. " \
               "Returns bibliographic records with titles, authors, publication info, and availability."
 
-  input_schema(
-    properties: {
+  # Dynamically build input schema based on Blacklight configuration
+  def self.build_input_schema
+    # Get the Blacklight configuration
+    blacklight_config = CatalogController.blacklight_config
+
+    # Extract visible facet fields that could be useful for filtering
+    facet_options = {}
+    blacklight_config.facet_fields.each do |field_name, field_config|
+      # Skip facets that are explicitly hidden or have no label
+      next if field_config.show == false || field_config.label.blank?
+      # Skip complex facets that might not work well in simple search
+      next if field_config.query.present? || field_config.pivot.present?
+      # Skip range facets for now
+      next if field_config.range == true
+
+      # Use the human-readable label as the key
+      clean_label = field_config.label.downcase.gsub(/[^a-z0-9]+/, '_').gsub(/^_|_$/, '')
+      facet_options[clean_label] = {
+        field: field_name,
+        label: field_config.label,
+        description: "Filter by #{field_config.label.downcase}"
+      }
+    end
+
+    # Build the schema properties
+    properties = {
       query: {
         type: "string",
         description: "The search query to find materials in the catalog"
@@ -32,11 +56,32 @@ class CatalogSearchTool < MCP::Tool
         maximum: 20,
         default: 10
       }
-    },
-    required: ["query"]
-  )
+    }
 
-  def self.call(query:, search_field: "all_fields", rows: 10, server_context:)
+    # Add facet filter parameters
+    unless facet_options.empty?
+      properties[:filters] = {
+        type: "object",
+        description: "Optional filters to narrow search results",
+        properties: facet_options.transform_values { |opts|
+          {
+            type: "string",
+            description: opts[:description]
+          }
+        },
+        additionalProperties: false
+      }
+    end
+
+    {
+      properties: properties,
+      required: ["query"]
+    }
+  end
+
+  input_schema(build_input_schema)
+
+  def self.call(query:, search_field: "all_fields", rows: 10, filters: {}, server_context:)
     # Map search field to Blacklight field names
     field_mapping = {
       "all_fields" => "search",
@@ -52,41 +97,94 @@ class CatalogSearchTool < MCP::Tool
       rows: [rows, 20].min
     }
 
+    # Add facet filters if provided
+    if filters && !filters.empty?
+      search_params[:f] = {}
+      blacklight_config = CatalogController.blacklight_config
+
+      filters.each do |filter_key, filter_value|
+        # Find the corresponding facet field
+        facet_field = blacklight_config.facet_fields.find do |field_name, field_config|
+          clean_label = field_config.label&.downcase&.gsub(/[^a-z0-9]+/, '_')&.gsub(/^_|_$/, '')
+          clean_label == filter_key.to_s
+        end
+
+        if facet_field
+          field_name, field_config = facet_field
+          # Use the actual solr field name if specified
+          solr_field = field_config.field || field_name
+          search_params[:f][solr_field] = [filter_value]
+        end
+      end
+    end
+
     # Get the Blacklight configuration
     blacklight_config = CatalogController.blacklight_config
 
-    search_state = Blacklight::SearchState.new(search_params, blacklight_config)
-
     # Create a search service (using default Blacklight SearchService)
+    search_state = Blacklight::SearchState.new(search_params, blacklight_config)
     search_service = Blacklight::SearchService.new(
       config: blacklight_config,
       search_state: search_state
     )
 
     # Perform the search
-    response = search_service.search_results
+    begin
+      response = search_service.search_results
+      documents = response.documents
+    rescue => e
+      return MCP::Tool::Response.new(
+        [{
+          type: "text",
+          text: "Error performing search: #{e.message}"
+        }],
+        error: true
+      )
+    end
+
+    # Handle nil or empty documents
+    documents ||= []
 
     # Format the results
-    results = response.documents.map do |doc|
-      {
-        id: doc.id,
-        title: doc["title_display"] || doc["title_full_display"] || "Untitled",
-        author: doc["author_person_display"] || doc["author_person_full_display"],
-        format: doc["format"]&.first || doc["format_main_ssim"]&.first,
-        pub_date: doc["pub_date"] || doc["pub_year_tisim"]&.first,
-        url: "https://searchworks.stanford.edu/view/#{doc.id}"
-      }.compact
+    results = documents.map do |doc|
+      result = {
+        id: doc.id || doc["id"],
+        title: extract_field_value(doc, ["title_display", "title_full_display"]) || "Untitled",
+        author: extract_field_value(doc, ["author_person_display", "author_person_full_display"]),
+        format: extract_field_value(doc, ["format", "format_main_ssim"]),
+        pub_date: extract_field_value(doc, ["pub_date", "pub_year_tisim"]),
+        url: "https://searchworks.stanford.edu/view/#{doc.id || doc['id']}"
+      }
+
+      # Add library information if available
+      library = extract_field_value(doc, ["library"])
+      result[:library] = library if library
+
+      # Add call number if available
+      call_number = extract_field_value(doc, ["callnum_display"])
+      result[:call_number] = call_number if call_number
+
+      result.compact
+    end
+
+    # Build descriptive text about applied filters
+    filter_text = ""
+    if filters && !filters.empty?
+      applied_filters = filters.map { |k, v| "#{k}: #{v}" }.join(", ")
+      filter_text = " with filters (#{applied_filters})"
     end
 
     result_text = if results.empty?
-      "No results found for query: #{query}"
+      "No results found for query: #{query}#{filter_text}"
     else
-      "Found #{response.total} results (showing #{results.length}):\n\n" +
+      "Found #{response.total} results#{filter_text} (showing #{results.length}):\n\n" +
         results.map.with_index(1) do |r, i|
           lines = ["#{i}. #{r[:title]}"]
           lines << "   Author: #{r[:author]}" if r[:author]
           lines << "   Format: #{r[:format]}" if r[:format]
           lines << "   Published: #{r[:pub_date]}" if r[:pub_date]
+          lines << "   Library: #{r[:library]}" if r[:library]
+          lines << "   Call Number: #{r[:call_number]}" if r[:call_number]
           lines << "   URL: #{r[:url]}"
           lines.join("\n")
         end.join("\n\n")
@@ -98,6 +196,9 @@ class CatalogSearchTool < MCP::Tool
         text: result_text
       }],
       structured_content: {
+        query: query,
+        search_field: search_field,
+        filters: filters || {},
         total: response.total,
         results: results
       }
@@ -110,6 +211,20 @@ class CatalogSearchTool < MCP::Tool
       }],
       error: true
     )
+  end
+
+  private
+
+  def self.extract_field_value(doc, field_names)
+    field_names.each do |field_name|
+      value = doc[field_name]
+      if value.is_a?(Array) && value.any?
+        return value.first
+      elsif value.is_a?(String) && !value.empty?
+        return value
+      end
+    end
+    nil
   end
 end
 
@@ -184,19 +299,36 @@ class ArticleSearchTool < MCP::Tool
     search_service = Eds::SearchService.new(blacklight_config, search_params, eds_params)
 
     # Perform the search
-    response, documents = search_service.search_results
+    begin
+      response = search_service.search_results
+      documents = response.documents
+    rescue => e
+      return MCP::Tool::Response.new(
+        [{
+          type: "text",
+          text: "Error searching articles: #{e.message}"
+        }],
+        error: true
+      )
+    end
+
+    # Handle nil or empty documents
+    documents ||= []
 
     # Format the results
     results = documents.map do |doc|
+      abstract = extract_eds_field_value(doc, ["eds_abstract"])
+      abstract = abstract&.truncate(500) if abstract
+
       {
-        id: doc.id,
-        title: doc["eds_title"]&.first || "Untitled",
+        id: doc.id || doc["id"],
+        title: extract_eds_field_value(doc, ["eds_title"]) || "Untitled",
         authors: doc["eds_authors"] || [],
-        source: doc["eds_composed_title"]&.first,
-        publication_date: doc["eds_publication_date"]&.first,
-        abstract: doc["eds_abstract"]&.first&.truncate(500),
+        source: extract_eds_field_value(doc, ["eds_composed_title"]),
+        publication_date: extract_eds_field_value(doc, ["eds_publication_date"]),
+        abstract: abstract,
         subjects: doc["eds_subjects"] || [],
-        url: "https://searchworks.stanford.edu/articles/#{doc.id}"
+        url: "https://searchworks.stanford.edu/articles/#{doc.id || doc['id']}"
       }.compact
     end
 
@@ -233,6 +365,20 @@ class ArticleSearchTool < MCP::Tool
       }],
       error: true
     )
+  end
+
+  private
+
+  def self.extract_eds_field_value(doc, field_names)
+    field_names.each do |field_name|
+      value = doc[field_name]
+      if value.is_a?(Array) && value.any?
+        return value.first
+      elsif value.is_a?(String) && !value.empty?
+        return value
+      end
+    end
+    nil
   end
 end
 

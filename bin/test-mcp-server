@@ -116,6 +116,31 @@ Open3.popen3(MCP_SERVER) do |stdin, stdout, stderr, wait_thr|
       puts "✗ Catalog search failed: #{response.inspect}"
     end
 
+    # Test 4.5: Catalog search with filters
+    puts "\n4.5. Testing catalog_search_tool with filters..."
+    send_request(stdin, "4.5", "tools/call", {
+      name: "catalog_search_tool",
+      arguments: {
+        query: "shakespeare",
+        search_field: "author",
+        rows: 2,
+        filters: {
+          format: "Book"
+        }
+      }
+    })
+
+    response = read_response(stdout)
+    if response && response["result"]
+      puts "✓ Catalog search with filters successful"
+      if response["result"]["structuredContent"]
+        filters = response["result"]["structuredContent"]["filters"]
+        puts "  Applied filters: #{filters.inspect}" if filters && !filters.empty?
+      end
+    else
+      puts "✗ Catalog search with filters failed: #{response.inspect}"
+    end
+
     # Test 5: Article search (may fail if EDS not enabled)
     puts "\n5. Testing article_search_tool..."
     send_request(stdin, 5, "tools/call", {
