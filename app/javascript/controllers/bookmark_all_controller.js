@@ -28,7 +28,7 @@ export default class extends Controller {
 
   async performBulkBookmarkAction(bookmarks, url, method) {
     const bookmarksData = bookmarks.map(bookmark => ({
-      document_id: bookmark.element.dataset.documentId,
+      document_id: this.documentIdFor(bookmark),
       document_type: this.documentTypeFor(bookmark),
       record_type: this.recordTypeFor(bookmark)
     }))
@@ -89,6 +89,10 @@ export default class extends Controller {
     }
 
     return true
+  }
+
+  documentIdFor(bookmark) {
+    return bookmark.element.querySelector('input[name="bookmarks[][document_id]"]')?.value || bookmark.element.dataset.documentId
   }
 
   documentTypeFor(bookmark) {

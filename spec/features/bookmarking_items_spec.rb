@@ -114,6 +114,24 @@ RSpec.feature 'Bookmarking Items', :js do
     end
   end
 
+  describe 'bookmarking articles' do
+    before do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+    end
+
+    it 'uses the correct document id when saving all records' do
+      visit articles_path(q: '"Yet another title for the document"')
+
+      # The bookmark component for articles adds a hidden input with the EDS document ID, which could differ from
+      # the record's parameterized ID found in data-document-id. E.g., Original "wq/oeif.zzz" vs parameterized "wq-oeif-zzz".
+      expect(page).to have_css('input[name="bookmarks[][document_id]"][value="wq/oeif.zzz"]', visible: :hidden)
+      click_button 'Save all'
+      expect(page).to have_button('Saved all')
+      bookmark = user.bookmarks.find_by(document_id: 'wq/oeif.zzz')
+      expect(bookmark).to be_present
+    end
+  end
+
   describe 'the cite modal' do
     before do
       %w[1 2 3].each do |id|
