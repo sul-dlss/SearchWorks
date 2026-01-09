@@ -125,3 +125,5 @@ gem 'csl', '~> 2.0'
 gem "csl-styles", "~> 2.0"
 
 gem 'connection_pool', '~> 2.5' # pinned until fix for https://github.com/rails/rails/issues/56291 is released
+
+gem 'mcp' # Model Context Protocol

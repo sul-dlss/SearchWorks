@@ -66,3 +66,43 @@ There is one testing task: `rake ci`
 This is intended for running tests against the fixtures in the local index.
 
     $ rake ci
+
+## MCP Server (Model Context Protocol)
+
+SearchWorks includes an MCP server that allows AI assistants and other MCP-compatible tools to search the Stanford library catalog and article databases.
+
+
+### Smoke test
+```bash
+./bin/test-mcp-server
+```
+
+### Usage with AI Assistants
+
+The MCP server can be integrated with:
+- Claude Desktop
+- Cursor IDE
+- Continue.dev
+- Zed
+- And other MCP-compatible clients
+
+Add the server to your client configuration:
+
+```json
+{
+  "mcpServers": {
+    "searchworks": {
+      "command": "/full/path/to/SearchWorks/bin/mcp-server",
+      "args": [],
+      "env": {
+        "RAILS_ENV": "development"
+      }
+    }
+  }
+}
+```
+
+### Available Tools
+
+1. **catalog_search_tool** - Search books, journals, media, and other library materials
+2. **article_search_tool** - Search scholarly articles and publications
