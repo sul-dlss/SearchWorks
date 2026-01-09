@@ -22,7 +22,7 @@ BotChallengePage.configure do |config|
   # Also exempt any user agents in Settings.turnstile.allowed_user_agents (for registered bots/crawlers).
   # Also exempt any logged-in users.
   config.skip_when = lambda do |_config|
-    ((is_a?(CatalogController) || is_a?(ArticlesController)) &&
+    ((is_a?(CatalogController) || is_a?(ArticlesController) || is_a?(McpController)) &&
       params[:action].in?(%w[facet index]) && request.format.json? && request.headers['sec-fetch-dest'] == 'empty') ||
       Settings.turnstile.safelist.map { |cidr| IPAddr.new(cidr) }.any? { |range| request.remote_ip.in?(range) } ||
       Settings.turnstile.allowed_user_agents.include?(request.user_agent) ||
