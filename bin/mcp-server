@@ -11,7 +11,8 @@ require "mcp"
 # Tool for searching the catalog (books)
 class CatalogSearchTool < MCP::Tool
   description "Search the Stanford library catalog for books, journals, media, and other materials. " \
-              "Returns bibliographic records with titles, authors, publication info, and availability."
+              "Returns bibliographic records with titles, authors, publication info, and availability. " \
+              "Also provides facet suggestions for refining search results (format, language, topic, etc.)."
 
   # Dynamically build input schema based on Blacklight configuration
   def self.build_input_schema
@@ -167,11 +168,58 @@ class CatalogSearchTool < MCP::Tool
       result.compact
     end
 
+    # Extract facet information for refinement suggestions
+    facets = {}
+    begin
+      if response.respond_to?(:facet_fields)
+        response.facet_fields.each do |field_name, facet_data|
+          facet_config = blacklight_config.facet_fields[field_name]
+          next unless facet_config&.label.present?
+
+          # Handle different facet data formats
+          values = []
+          if facet_data.is_a?(Array)
+            # Array format: [value1, count1, value2, count2, ...]
+            facet_data.each_slice(2).first(5).each do |value, count|
+              values << { value: value, count: count } if value && count
+            end
+          elsif facet_data.respond_to?(:items)
+            # Object format with items method
+            values = facet_data.items.first(5).map do |item|
+              { value: item.value, count: item.hits }
+            end
+          end
+
+          if values.any?
+            # Create clean label for facet
+            clean_label = facet_config.label.downcase.gsub(/[^a-z0-9]+/, '_').gsub(/^_|_$/, '')
+            facets[clean_label] = {
+              label: facet_config.label,
+              values: values
+            }
+          end
+        end
+      end
+    rescue => e
+      # If facet processing fails, just continue without facets
+      $stderr.puts "Warning: Could not process facets: #{e.message}"
+    end
+
     # Build descriptive text about applied filters
     filter_text = ""
     if filters && !filters.empty?
       applied_filters = filters.map { |k, v| "#{k}: #{v}" }.join(", ")
       filter_text = " with filters (#{applied_filters})"
+    end
+
+    # Build facet suggestions text
+    facet_text = ""
+    if facets.any?
+      facet_text = "\n\nAvailable refinement options:\n" +
+        facets.map do |key, facet_info|
+          values_text = facet_info[:values].map { |v| "#{v[:value]} (#{v[:count]})" }.join(", ")
+          "- #{facet_info[:label]}: #{values_text}"
+        end.join("\n")
     end
 
     result_text = if results.empty?
@@ -187,7 +235,7 @@ class CatalogSearchTool < MCP::Tool
           lines << "   Call Number: #{r[:call_number]}" if r[:call_number]
           lines << "   URL: #{r[:url]}"
           lines.join("\n")
-        end.join("\n\n")
+        end.join("\n\n") + facet_text
     end
 
     MCP::Tool::Response.new(
@@ -200,7 +248,8 @@ class CatalogSearchTool < MCP::Tool
         search_field: search_field,
         filters: filters || {},
         total: response.total,
-        results: results
+        results: results,
+        facets: facets
       }
     )
   rescue => e
