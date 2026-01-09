@@ -69,17 +69,21 @@ This is intended for running tests against the fixtures in the local index.
 
 ## MCP Server (Model Context Protocol)
 
-SearchWorks includes an MCP server that allows AI assistants and other MCP-compatible tools to search the Stanford library catalog and article databases.
+SearchWorks includes MCP (Model Context Protocol) support that allows AI assistants and other MCP-compatible tools to search the Stanford library catalog and article databases. Two interfaces are available:
 
+1. **stdio MCP Server** - For AI assistants and MCP clients
+2. **HTTP MCP API** - For web applications and custom integrations
 
-### Smoke test
+### stdio MCP Server
+
+#### Quick Test
 ```bash
 ./bin/test-mcp-server
 ```
 
-### Usage with AI Assistants
+#### Usage with AI Assistants
 
-The MCP server can be integrated with:
+The stdio MCP server can be integrated with:
 - Claude Desktop
 - Cursor IDE
 - Continue.dev
@@ -102,7 +106,84 @@ Add the server to your client configuration:
 }
 ```
 
+### HTTP MCP API
+
+The HTTP MCP API provides the same functionality via JSON-RPC over HTTP, making it accessible to web applications and environments where stdio MCP clients aren't available.
+
+#### Quick Test
+```bash
+# Start Rails server
+rails server
+
+# Run HTTP API tests
+./bin/test-mcp-http
+```
+
+#### Connecting MCP Clients to HTTP Server
+
+For MCP clients that support HTTP transport, configure them to connect to:
+
+```
+POST http://localhost:3000/mcp
+Content-Type: application/json
+```
+
+**Example client configurations:**
+
+```json
+{
+  "mcpServers": {
+    "searchworks-http": {
+      "transport": "http",
+      "url": "http://localhost:3000/mcp",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  }
+}
+```
+
+**Manual JSON-RPC requests:**
+
+```bash
+# List available tools
+curl -X POST http://localhost:3000/mcp \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "1",
+    "method": "tools/list"
+  }'
+
+# Search the catalog
+curl -X POST http://localhost:3000/mcp \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": "2", 
+    "method": "tools/call",
+    "params": {
+      "name": "catalog_search_tool",
+      "arguments": {
+        "query": "machine learning",
+        "rows": 5
+      }
+    }
+  }'
+```
+
 ### Available Tools
 
 1. **catalog_search_tool** - Search books, journals, media, and other library materials
-2. **article_search_tool** - Search scholarly articles and publications
+   - Supports dynamic facet filtering (format, language, access, etc.)
+   - Returns comprehensive metadata and refinement suggestions
+
+2. **article_search_tool** - Search scholarly articles and publications (requires EDS)
+   - Access to millions of scholarly articles
+   - Includes abstracts, authors, and full-text links
+
+### Documentation
+
+- **Quick Start**: See [QUICKSTART_MCP.md](QUICKSTART_MCP.md) for setup guide
+- **HTTP API**: See [MCP_HTTP_API.md](MCP_HTTP_API.md) for complete HTTP API documentation
