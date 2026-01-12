@@ -904,15 +904,16 @@
     "name": "Education Loan Desk",
     "code": "EDUCATION",
     "discoveryDisplayName": "Education Library (Cubberley)",
-    "pickupLocation": false,
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "description": "{\"isDefaultPickup\":true}",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
-      },
-      {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
         "printByDefault": false
       },
       {
@@ -922,14 +923,22 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:10.483+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:10.483+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2025-11-04T21:16:40.826+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
