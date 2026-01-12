@@ -175,9 +175,9 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     })),
     filterFieldOptions: filterFields || [],
     filterTypeOptions: [
-      { field: 'and', label: 'Includes all' },
-      { field: 'or', label: 'Includes any' },
-      { field: 'not', label: 'Excludes all' }
+      { field: 'and', label: 'Includes all (AND)' },
+      { field: 'or', label: 'Includes any (OR)' },
+      { field: 'not', label: 'Excludes all (NOT)' }
     ],
     currentId: filterFields.filter(f => f.top).length + 2,
     searchFields: [
@@ -186,8 +186,8 @@ const AdvancedSearchForm = ({ filterFields, queryParams, searchFieldOptions }) =
     ],
     searchFieldOptions: searchFieldOptions || [],
     searchTypeOptions: [
-      { field: 'all', label: 'Contains all'},
-      { field: 'any', label: 'Contains any' }
+      { field: 'all', label: 'Contains all (AND)'},
+      { field: 'any', label: 'Contains any (OR)' }
     ]
   }
 
