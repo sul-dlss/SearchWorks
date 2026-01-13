@@ -831,7 +831,6 @@ ispub.com
 issoonline.biomedcentral.com
 it.iucr.org
 iubmb.onlinelibrary.wiley.com
-iucrdata.iucr.org
 iv.iiarjournals.org
 iwaponline.com
 j-biomed-discovery.biomedcentral.com
@@ -1271,7 +1270,6 @@ portal.acm.org
 portal.genego.com
 portal.genexplain.com
 portal.igpublish.com
-portico.org
 portlandpress.com
 practicalactionpublishing.com
 practicalgastro.com
@@ -1682,7 +1680,6 @@ www.ama-assn.org
 www.americanconsumerculture.amdigital.co.uk
 www.americangeosciences.org
 www.americanhistory.amdigital.co.uk
-www.americanlibrarydirectory.com
 www.americanwest.amdigital.co.uk
 www.americashealthrankings.org
 www.amj.net.au
@@ -1719,7 +1716,6 @@ www.apollomedicine.org
 www.appliedradiology.com
 www.apspjcaserep.com
 www.arabidopsis.org
-www.arc-trust.org
 www.arch-anim-breed.net
 www.archbronconeumol.org
 www.archive.org
@@ -1906,7 +1902,6 @@ www.dialogues-cns.org
 www.digitale-sammlungen.de
 www.digitaliafilmlibrary.com
 www.digitaliapublishing.com
-www.digizeitschriften.de
 www.dirjournal.org
 www.djo.harvard.edu
 www.djph.org
@@ -2055,7 +2050,6 @@ www.genomesonline.org
 www.gensat.org
 www.geolsoc.org.uk
 www.geomednews.com
-www.geoscienceworld.org
 www.germs.ro
 www.ghfbb.ir
 www.ghspjournal.org
@@ -2099,7 +2093,6 @@ www.hoopladigital.com
 www.hopkinsguides.com
 www.horizonpress.com
 www.hormones.gr
-www.hstalks.com
 www.hti.umich.edu
 www.humantechnology.jyu.fi
 www.i-jmr.org
