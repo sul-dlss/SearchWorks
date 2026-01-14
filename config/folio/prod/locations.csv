@@ -262,7 +262,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 69ff02b2-362f-40d5-96ac-0f514f15a2e9,Lane Offsite: SAL3,LANE-SAL3,SU,MED,LANE,Stored Offsite: Please request,true,SAL3,SAL3,,,,,,,,Offsite,,,,,,,SAL3,
 6a0aee81-af95-4240-947f-ec6f930d96d0,Eng Tech Processor,ENG-TECH-PROCESSOR,SU,SUL,ENG,In process,true,ENG,ENG,,,,,,,,In_process,,,,,,,,
 6a21a66a-40e4-434c-bacf-5d39ab0d6882,SAL Newark PAGE-EA,SALN-PAGE-EA,SU,SUL,SAL-NEWARK,For use in East Asia Library,true,SAL-NEWARK,SAL-NEWARK,,,,,,,,Offsite,,,,,,,,
-6a81c846-bc17-400f-94d9-5372b6a39064,SAL Locked Page to East-Asia,SAL-LOCKED-PAGE-EA,SU,SUL,SAL,Request for use in East Asia Library,true,SAL,SAL,,,,EASTASIA,,,,Offsite,,,,,,,,
+6a81c846-bc17-400f-94d9-5372b6a39064,SAL Locked Page to East-Asia,SAL-LOCKED-PAGE-EA,SU,SUL,SAL,Request for use in East Asia Library,true,SAL,SAL,,,,EASTASIA,,,,Offsite,true,,,,,,,
 6babb3e3-fc13-4762-a03f-d15fdf10c756,Art Locked Stacks Large,ART-LOCKED-LARGE,SU,SUL,ART,Locked stacks (Large),true,ART,ART,,,,,ART,ART,,,,,,,,,,
 6bb4959c-9113-4286-8653-3f331d40c9ee,East Asia Chinese,EAL-CHINESE,SU,SUL,EAST-ASIA,Chinese collection,true,EAST-ASIA,EAST-ASIA,,https://stanford.stackmap.com/json/,GREEN,,,,,,,,,,,,,
 6c377b07-a62d-4e85-b552-ee5266a46044,Marine Bio Children-YA,MAR-CHILDRENYA,SU,SUL,MARINE-BIO,Child & Young Adult collection,true,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,,,,,
