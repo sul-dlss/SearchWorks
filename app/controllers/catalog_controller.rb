@@ -557,7 +557,8 @@ class CatalogController < ApplicationController
   def facet_results
     @facet = blacklight_config.facet_fields[params[:id]]
 
-    @response = search_service.facet_suggest_response(@facet.key, params[:query_fragment], "f.#{@facet.key}.facet.method" => 'fc')
+    facet_args = { "f.#{@facet.key}.facet.method" => 'fc' } unless @facet.key == 'format_hsim'
+    @response = search_service.facet_suggest_response(@facet.key, params[:query_fragment], **facet_args)
 
     @display_facet = @response.aggregations[@facet.field]
     @presenter = @facet.presenter.new(@facet, @display_facet, view_context)
