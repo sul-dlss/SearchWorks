@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# MCP Server for SearchWorks
+# Provides search capabilities for books (catalog) and articles through the Model Context Protocol
+
+require_relative "../config/boot"
+require_relative "../config/environment"
+require "mcp"
+
+# Tool for searching the catalog (books)
+class CatalogSearchTool < MCP::Tool
+  description SearchworksMcp::Tools::CATALOG_SEARCH[:description]
+  input_schema(SearchworksMcp::Tools::CATALOG_SEARCH[:input_schema].call)
+
+  def self.call(**args)
+    server_context = args.delete(:server_context)
+    result = SearchworksMcp::CatalogSearch.search(**args)
+
+    MCP::Tool::Response.new(
+      [{
+        type: "text",
+        text: result[:text]
+      }],
+      structured_content: result[:structured_content],
+      error: result[:error] || false
+    )
+  end
+end
+
+# Tool for searching articles
+class ArticleSearchTool < MCP::Tool
+  description SearchworksMcp::Tools::ARTICLE_SEARCH[:description]
+  input_schema(SearchworksMcp::Tools::ARTICLE_SEARCH[:input_schema])
+
+  def self.call(**args)
+    server_context = args.delete(:server_context)
+    result = SearchworksMcp::ArticleSearch.search(**args)
+
+    MCP::Tool::Response.new(
+      [{
+        type: "text",
+        text: result[:text]
+      }],
+      structured_content: result[:structured_content],
+      error: result[:error] || false
+    )
+  end
+end
+
+# Create configuration with older protocol version for better compatibility
+configuration = MCP::Configuration.new(protocol_version: "2025-03-26")
+
+# Create and configure the MCP server
+server = MCP::Server.new(
+  name: "searchworks",
+  title: "SearchWorks Stanford Library Search",
+  version: "1.0.0",
+  instructions: "Use these tools to search Stanford University Libraries catalog and article databases. " \
+                "The catalog search finds books, journals, media, and other physical/digital materials. " \
+                "The article search finds scholarly articles and publications.",
+  tools: [CatalogSearchTool, ArticleSearchTool],
+  configuration: configuration
+)
+
+# Configure error reporting
+MCP.configure do |config|
+  config.exception_reporter = ->(exception, context) {
+    $stderr.puts "MCP Error: #{exception.class} - #{exception.message}"
+    $stderr.puts exception.backtrace.first(5).join("\n")
+    $stderr.puts "Context: #{context.inspect}"
+  }
+
+  config.instrumentation_callback = ->(data) {
+    $stderr.puts "MCP Instrumentation: #{data.inspect}"
+  }
+end
+
+# Start the stdio transport
+transport = MCP::Server::Transports::StdioTransport.new(server)
+transport.open
