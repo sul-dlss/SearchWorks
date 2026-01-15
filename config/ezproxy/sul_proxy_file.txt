@@ -1012,6 +1012,7 @@ www.africa-confidential.com
 oeb.griffith.ox.ac.uk
 eebo.chadwyck.com
 bap.chadwyck.com
+bap.priweb2.org
 collections.chadwyck.com
 cecilpapers.chadwyck.com
 teso.chadwyck.com
@@ -1207,6 +1208,7 @@ sloanreview.mit.edu
 www.springermaterials.com
 www.cnbksy.com
 www.fasebj.org
+www.faz-biblionet.de
 www.jspes.org
 www.chinabooktrading.com
 www.ethnologue.com
@@ -1641,6 +1643,7 @@ thepolynesiansociety.org
 edu.contemporaryartlibrary.org
 reader.exacteditions.com
 ondemand.metopera.org
+dl.asminternational.org
 dl.astm.org
 compass.astm.org
 magazine.thediplomat.com
