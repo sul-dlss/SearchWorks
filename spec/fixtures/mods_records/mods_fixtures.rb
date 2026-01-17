@@ -150,4 +150,16 @@ module ModsFixtures
       </mods>
     xml
   end
+
+  def mods_ascii_abstract
+    <<-xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd">
+      <titleInfo>
+        <title>A record with ascii in abstract</title>
+      </titleInfo>
+      <abstract>This work was finished by January 2025.&#13;\n&#13;\nThis record is about this work.</abstract>
+    </mods>
+    xml
+  end
 end
