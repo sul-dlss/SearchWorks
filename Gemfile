@@ -75,7 +75,7 @@ group :test do
   gem 'simplecov', '~> 0.14', require: false
 end
 
-gem 'newrelic_rpm'
+gem 'newrelic_rpm', '~> 9.0' # https://github.com/sul-dlss/SearchWorks/issues/6424
 
 gem "coderay"
 

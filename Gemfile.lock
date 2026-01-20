@@ -402,8 +402,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     net-ssh (7.3.0)
-    newrelic_rpm (10.0.0)
-      logger
+    newrelic_rpm (9.24.0)
     nio4r (2.7.5)
     nokogiri (1.19.0-arm64-darwin)
       racc (~> 1.4)
@@ -741,7 +740,7 @@ DEPENDENCIES
   lookbook (>= 2.3.9)
   mods_display (~> 1.1)
   mysql2
-  newrelic_rpm
+  newrelic_rpm (~> 9.0)
   nokogiri (>= 1.7.1)
   oauth2
   okcomputer
