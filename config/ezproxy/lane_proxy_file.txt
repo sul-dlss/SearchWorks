@@ -380,7 +380,6 @@ cjkhd.biomedcentral.com
 cjnr.archive.mcgill.ca
 cjon.ons.org
 classiques-garnier.com
-classweb.org
 clendening.kumc.edu
 clincancerres.aacrjournals.org
 clindiabetesendo.biomedcentral.com
@@ -2189,7 +2188,6 @@ www.ingentaconnect.com
 www.injepijournal.com
 www.insee.fr
 www.int-res.com
-www.interactionofcolor.com
 www.internationaljournalofcaringsciences.org
 www.intmedpress.com
 www.iop.org
