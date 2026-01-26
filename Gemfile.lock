@@ -216,10 +216,10 @@ GEM
       activesupport
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    devise (4.9.4)
+    devise (5.0.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0)
+      railties (>= 7.0)
       responders
       warden (~> 1.2.3)
     devise-guests (0.8.3)
@@ -273,7 +273,7 @@ GEM
       logger
     herb (0.8.8-arm64-darwin)
     herb (0.8.8-x86_64-linux-gnu)
-    honeybadger (6.2.0)
+    honeybadger (6.2.1)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -514,7 +514,7 @@ GEM
     redcarpet (3.6.1)
     redis (5.4.1)
       redis-client (>= 0.22.0)
-    redis-client (0.26.3)
+    redis-client (0.26.4)
       connection_pool
     regexp_parser (2.11.3)
     reline (0.6.3)
