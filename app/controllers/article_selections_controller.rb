@@ -51,6 +51,10 @@ class ArticleSelectionsController < ArticlesController
     search_service.fetch(bookmark_ids, rows: bookmark_ids.count)
   end
 
+  def current_search_session
+    nil
+  end
+
   def _prefixes
     @_prefixes ||= super + ['articles', 'catalog']
   end
