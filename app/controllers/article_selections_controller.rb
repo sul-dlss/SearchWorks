@@ -11,9 +11,11 @@ class ArticleSelectionsController < ArticlesController
   copy_blacklight_config_from(ArticlesController)
 
   before_action :verify_user
+  before_action :clear_search_session, only: :index
 
   blacklight_config.http_method = Blacklight::Engine.config.blacklight.bookmarks_http_method
   blacklight_config.add_results_collection_tool(:clear_bookmarks_widget)
+  blacklight_config.track_search_session.storage = false
 
   blacklight_config.show.document_actions[:bookmark].if = false if blacklight_config.show.document_actions[:bookmark]
 
@@ -49,6 +51,10 @@ class ArticleSelectionsController < ArticlesController
     bookmarks = token_or_current_or_guest_user.bookmarks&.select { |bookmark| bookmark.record_type == 'article' }
     bookmark_ids = bookmarks.collect { |b| b.document_id.to_s }
     search_service.fetch(bookmark_ids, rows: bookmark_ids.count)
+  end
+
+  def clear_search_session
+    session[:search] = {}
   end
 
   def _prefixes
