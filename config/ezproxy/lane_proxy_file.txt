@@ -886,6 +886,7 @@ jkcvhl.com
 jkms.org
 jlb.onlinelibrary.wiley.com
 jlsc-pub.org
+jmb-online.com
 jme.bioscientifica.com
 jme.bmj.com
 jmedicalcasereports.biomedcentral.com
@@ -1226,6 +1227,7 @@ oxfordreference.com
 p.udpweb.com
 pa-rotations.lwwhealthlibrary.com
 pagepress.org
+palmcentral.com
 pao.chadwyck.com
 parasite-journal.org
 parasitesandvectors.biomedcentral.com
