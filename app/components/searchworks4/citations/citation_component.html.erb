@@ -63,7 +63,7 @@
 
   <% citations.each do |style, citation| %>
     <%= tag.div class: "mb-4 bg-light p-2 citations",
-                data: { citation_format_target: "tab", citation_format_controller: "copy-text"},
+                data: { citation_format_target: "tab", controller: "copy-text"},
                 id: "citation-format-#{style}",
                 hidden: style != default_style do %>
       <% unless unavailable? %>
