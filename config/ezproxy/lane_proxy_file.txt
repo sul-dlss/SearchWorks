@@ -498,6 +498,7 @@ disastermilitarymedicine.biomedcentral.com
 discover.nci.nih.gov
 discoveriesjournals.org
 dl.acm.org
+dl.asminternational.org
 dl.astm.org
 dl.moazine.com
 dlc.mpg.de
