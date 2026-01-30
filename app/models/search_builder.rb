@@ -87,6 +87,9 @@ class SearchBuilder < Blacklight::SearchBuilder
     return if facet.blank?
 
     facet_config = blacklight_config.facet_fields[facet]
+
+    return if facet_config.field == 'format_hsim'
+
     solr_params[:"f.#{facet_config.field}.facet.method"] = 'fc'
   end
 end
