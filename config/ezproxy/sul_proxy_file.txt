@@ -144,7 +144,6 @@ data.people.com.cn
 www.wto-ilibrary.org
 www.un-ilibrary.org
 www.hbw.com
-www.am-explorer.com
 www.thebhs.org
 treasuryoflives.org
 philippinestudies.net
@@ -242,6 +241,7 @@ www.18thcjournals.amdigital.co.uk
 www.aac.amdigital.co.uk
 www.aap.amdigital.co.uk
 www.indigenousnewspapersinnorthamerica.amdigital.co.uk
+www.amexplorer.amdigital.co.uk
 www.amscholar.amdigital.co.uk
 www.exploration.amdigital.co.uk
 www.americanconsumerculture.amdigital.co.uk
