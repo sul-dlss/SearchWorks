@@ -144,7 +144,6 @@ data.people.com.cn
 www.wto-ilibrary.org
 www.un-ilibrary.org
 www.hbw.com
-www.washingtonpost.com
 www.am-explorer.com
 www.thebhs.org
 treasuryoflives.org
