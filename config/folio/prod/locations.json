@@ -10714,7 +10714,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
       "4827ae1d-b8bf-4b90-9e09-d642557893ab"
@@ -10723,8 +10725,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:03.092+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:03.092+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-29T22:24:56.824+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
