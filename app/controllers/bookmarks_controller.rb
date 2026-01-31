@@ -8,7 +8,8 @@ class BookmarksController < CatalogController
     config.default_solr_params = {
       qt: 'document',
       q: '*:*',
-      rows: 20
+      rows: 20,
+      'facet.mincount': 1
     }
     config.sort_fields.delete('relevance')
     config.sort_fields.delete('new-to-libs')
