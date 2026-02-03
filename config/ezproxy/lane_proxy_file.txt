@@ -1037,7 +1037,6 @@ lupus.bmj.com
 lwwhealthlibrary.com
 macyfoundation.org
 malariajournal.biomedcentral.com
-marc.crcnetbase.com
 marketplace.unl.edu
 materials.springer.com
 math.missouri.edu
@@ -1679,13 +1678,13 @@ www.alliedacademies.org
 www.allthatstats.com
 www.alr-journal.org
 www.altmetric.com
-www.am-explorer.com
 www.ama-assn.org
 www.americanconsumerculture.amdigital.co.uk
 www.americangeosciences.org
 www.americanhistory.amdigital.co.uk
 www.americanwest.amdigital.co.uk
 www.americashealthrankings.org
+www.amexplorer.amdigital.co.uk
 www.amj.net.au
 www.ams.org
 www.amscholar.amdigital.co.uk
