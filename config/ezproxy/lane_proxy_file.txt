@@ -1257,7 +1257,6 @@ physoc.onlinelibrary.wiley.com
 pi.lib.uchicago.edu
 pilotfeasibilitystudies.biomedcentral.com
 plantmethods.biomedcentral.com
-platform.almanhal.com
 platform.marketintelligence.spglobal.com
 pm.nlx.com
 pn.bmj.com
