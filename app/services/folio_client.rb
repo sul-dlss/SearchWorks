@@ -148,7 +148,7 @@ class FolioClient # rubocop:disable Metrics/ClassLength
       response = request('/authn/login', json: { username: @username, password: @password }, method: :post)
       raise Error, "Unable to login to Folio: #{response.body}" unless response.status.created?
 
-      response['x-okapi-token']
+      response['x-okapi-token'] || parse(response)&.dig('okapiToken')
     end
   end
 
