@@ -387,5 +387,5 @@ faculty,kit,,,,,,1qtr-1renew-7daygrace,Hold only,Qtrly/Annual notice,No fines,$2
 ,microform,,,,,,No loan,No requests allowed,Default notice,No fines,$5000 lost fee - 1 hr aged to lost
 ,map,,,,,,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,kit,,,,,,No loan,No requests allowed,Default notice,No fines,$2000 lost fee kit
-,game,,,,,,14day-2renew-3daygrace,No requests allowed,Default notice,No fines,$30 lost fee
+,game,,,,,,14day-2renew-3daygrace,No requests allowed,Default notice,No fines,$50 lost fee
 ,,,,,,,No loan,No requests allowed,Default notice,No fines,no replacement
