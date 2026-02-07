@@ -733,6 +733,7 @@ hmap.biomedcentral.com
 hms.harvard.edu
 hojishinbun.hoover.org
 home.liebertpub.com
+hospital-pharmacytech.therapeuticresearch.com
 hpp.tbzmed.ac.ir
 hqlo.biomedcentral.com
 hrbopenresearch.org
@@ -1081,7 +1082,6 @@ mg.nlcpress.com
 mh.bmj.com
 mhealth.amegroups.com
 mhealth.jmir.org
-mhebooklibrary.com
 mhnpjournal.biomedcentral.com
 microbialcell.com
 microbialcellfactories.biomedcentral.com
@@ -1777,7 +1777,6 @@ www.bjbms.org
 www.bjcardio.co.uk
 www.bjcvs.org
 www.bjmp.org
-www.blackwellreference.com
 www.bloodresearch.or.kr
 www.bloodtransfusion.it
 www.bloomsburyculturalhistory.com
