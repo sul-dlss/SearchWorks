@@ -134,10 +134,10 @@ class FolioClient # rubocop:disable Metrics/ClassLength
   end
 
   # @param [HTTP::Response] response
-  # @raises [StandardError] if the response was not a 200
+  # @raises [StandardError] if the response was not successful.
   # @return [Hash] the parsed JSON data structure
   def parse(response)
-    raise response unless response.status.ok?
+    raise response unless response.status.success?
     return nil if response.body.empty?
 
     JSON.parse(response.body)
