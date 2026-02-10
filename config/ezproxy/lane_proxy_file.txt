@@ -408,7 +408,6 @@ cognitiveresearchjournal.springeropen.com
 collections.nlm.nih.gov
 collections.plos.org
 coloproctol.org
-companions.digitalhumanities.org
 comparative-hepatology.biomedcentral.com
 compassionjournal.com
 computationalsurgery.springeropen.com
