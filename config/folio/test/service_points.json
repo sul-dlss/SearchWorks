@@ -179,6 +179,24 @@
     }
   },
   {
+    "id": "32c6f0c7-26e4-4350-8c29-1e11c2e3efc4",
+    "name": "Interim service point",
+    "code": "interimsp",
+    "discoveryDisplayName": "Interim service point",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 3,
+      "intervalId": "Weeks"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [],
+    "ecsRequestRouting": false,
+    "metadata": {
+      "createdDate": "2026-01-22T20:40:50.615+00:00",
+      "updatedDate": "2026-01-28T23:18:06.906+00:00"
+    }
+  },
+  {
     "id": "3a306665-eec7-4a40-8f4d-608585b2a394",
     "name": "Sal3",
     "code": "SAL3",
@@ -209,6 +227,24 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:45:27.212+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "3a40852d-49fd-4df2-a1f9-6e2641a6e91f",
+    "name": "Circ Desk 1",
+    "code": "cd1",
+    "discoveryDisplayName": "Circulation Desk -- Hallway",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 3,
+      "intervalId": "Weeks"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [],
+    "ecsRequestRouting": false,
+    "metadata": {
+      "createdDate": "2026-01-22T20:40:50.617+00:00",
+      "updatedDate": "2026-01-28T23:18:06.924+00:00"
     }
   },
   {
@@ -581,7 +617,7 @@
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-09T20:33:25.599+00:00",
-      "updatedDate": "2024-06-22T06:34:26.878+00:00"
+      "updatedDate": "2026-01-28T23:18:06.925+00:00"
     }
   },
   {
@@ -939,6 +975,24 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2025-11-04T21:16:40.826+00:00",
       "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
+    "id": "c4c90014-c8c9-4ade-8f24-b5e313319f4b",
+    "name": "Circ Desk 2",
+    "code": "cd2",
+    "discoveryDisplayName": "Circulation Desk -- Back Entrance",
+    "pickupLocation": true,
+    "holdShelfExpiryPeriod": {
+      "duration": 5,
+      "intervalId": "Days"
+    },
+    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
+    "staffSlips": [],
+    "ecsRequestRouting": false,
+    "metadata": {
+      "createdDate": "2026-01-22T20:40:50.609+00:00",
+      "updatedDate": "2026-01-28T23:18:06.923+00:00"
     }
   },
   {

@@ -24,7 +24,7 @@
     "name": "Can circulate",
     "metadata": {
       "createdDate": "2023-08-09T20:33:07.823+00:00",
-      "updatedDate": "2024-06-22T06:34:24.161+00:00"
+      "updatedDate": "2026-01-28T23:17:40.897+00:00"
     }
   },
   {
@@ -32,7 +32,7 @@
     "name": "Reading room",
     "metadata": {
       "createdDate": "2023-08-09T20:33:07.818+00:00",
-      "updatedDate": "2024-06-22T06:34:24.117+00:00"
+      "updatedDate": "2026-01-28T23:17:40.801+00:00"
     }
   },
   {
@@ -46,6 +46,16 @@
     }
   },
   {
+    "id": "4e653676-0e81-4883-abe8-31695c596e86",
+    "name": "26-week ILL",
+    "metadata": {
+      "createdDate": "2026-02-06T01:59:35.070+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-02-06T01:59:35.070+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "52d7b849-b6d8-4fb3-b2ab-a9b0eb41b6fd",
     "name": "Non-circulating",
     "metadata": {
@@ -53,6 +63,16 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T18:44:52.140+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "57a0f67f-1a57-4b3f-ab7a-8b882c481e9a",
+    "name": "4-week ILL",
+    "metadata": {
+      "createdDate": "2026-02-06T01:58:39.794+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-02-06T01:58:39.794+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -83,6 +103,16 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-30T18:52:58.501+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "678651b8-00d1-42d4-b2f7-c6cd22aa052c",
+    "name": "8-week ILL",
+    "metadata": {
+      "createdDate": "2026-02-06T01:59:14.536+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-02-06T01:59:14.536+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -126,11 +156,21 @@
     }
   },
   {
+    "id": "a06ea0dd-1322-4d26-bcf3-68f7e251b284",
+    "name": "16-week ILL",
+    "metadata": {
+      "createdDate": "2026-02-06T01:58:58.920+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-02-06T01:58:58.920+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "a1dc1ce3-d56f-4d8a-b498-d5d674ccc845",
     "name": "Selected",
     "metadata": {
       "createdDate": "2023-08-09T20:33:08.015+00:00",
-      "updatedDate": "2024-06-22T06:34:24.104+00:00"
+      "updatedDate": "2026-01-28T23:17:41.000+00:00"
     }
   },
   {
@@ -141,6 +181,16 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T18:44:48.634+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "bd354aa6-6f48-4a46-88b3-1eab4c9069f8",
+    "name": "12-week ILL",
+    "metadata": {
+      "createdDate": "2026-02-06T01:59:26.527+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-02-06T01:59:26.527+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -168,7 +218,7 @@
     "name": "Course reserves",
     "metadata": {
       "createdDate": "2023-08-09T20:33:08.104+00:00",
-      "updatedDate": "2024-06-22T06:34:24.162+00:00"
+      "updatedDate": "2026-01-28T23:17:40.999+00:00"
     }
   }
 ]
