@@ -1,6 +1,5 @@
 3d4medical.com
 5minuteconsult.com
-7cajas.com
 MedOne-Radiology.thieme.com
 PA-Rotations.lwwhealthlibrary.com
 aacijournal.biomedcentral.com
@@ -1343,7 +1342,6 @@ regenmedres.biomedcentral.com
 rehab.jmir.org
 remotesensing.spiedigitallibrary.org
 rep.bioscientifica.com
-repository.icesi.edu.co
 repository.law.umich.edu
 repository.uchastings.edu
 repository.uclawsf.edu
@@ -1597,7 +1595,6 @@ www-fars.nhtsa.dot.gov
 www-krpia-co-kr.stanford.idm.oclc.org
 www-pub.iaea.org
 www-sciencedirect-com.stanford.idm.oclc.org
-www.0334.cl
 www.18thcjournals.amdigital.co.uk
 www.ClinicalKey.com
 www.aaas.org
@@ -1704,7 +1701,6 @@ www.anndermatol.org
 www.annfammed.org
 www.annphys.org
 www.annualreviews.org
-www.antimicrobe.org
 www.aornguidelines.org
 www.aosonline.org
 www.aott.org.tr
@@ -2107,7 +2103,6 @@ www.icjournal.org
 www.iclc.us
 www.icm-experimental.com
 www.icmpe.org
-www.icpsr.umich.edu
 www.id-press.eu
 www.idoj.in
 www.iea.org
@@ -2588,7 +2583,6 @@ www.ptsd.va.gov
 www.publichealthinafrica.org
 www.publish.csiro.au
 www.pubstemcell.com
-www.puvill.com
 www.qscience.com
 www.quackwatch.org
 www.qualitycheck.org
@@ -2770,7 +2764,6 @@ www.vetsci.org
 www.victorianpopularculture.amdigital.co.uk
 www.virginiacompanyarchives.amdigital.co.uk
 www.virtualpediatrichospital.org
-www.visualdx.com
 www.vjel.org
 www.vjultrafast.org
 www.vr-elibrary.de
