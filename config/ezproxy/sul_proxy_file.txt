@@ -84,7 +84,6 @@ www.journalofeconomicinsight.com
 euppublishing.com
 t21ipau.nikkei.co.jp
 www.scitation.org
-ojs.library.dal.ca
 mjb.hiersemann.de
 www.hrgdigital.de
 kotar.cet.ac.il
@@ -151,7 +150,6 @@ www.philippinestudies.net
 elibrary.bwv-verlag.de
 zs-archiv.bwv-verlag.de
 pubs.asha.org
-www.budrich-journals.de
 tracreports.org
 www.elevenjournals.com
 asppublications.org
@@ -321,7 +319,6 @@ theindex.princeton.edu
 msi.ipublishcentral.com
 verterbukh.org
 cse.ucpress.edu
-www.heldermann.de
 primaryresearch.com
 www.global-sci.org
 lib.music.org
@@ -376,7 +373,6 @@ www.springer.com
 link.springer.com
 www.emis.de
 search.marquiswhoswho.com
-ojs.library.ubc.ca
 www.publish.csiro.au
 www.wageningenacademic.com
 www.tandfonline.com
@@ -1007,7 +1003,6 @@ www.cell.com
 www.aeaweb.org
 aes2.org
 www.utexaspressjournals.org
-www.africa-confidential.com
 oeb.griffith.ox.ac.uk
 eebo.chadwyck.com
 bap.chadwyck.com
@@ -1638,7 +1633,6 @@ thediplomat.com
 www.bloomsburycollections.com
 advance.lexis.com
 global.factiva.com
-thepolynesiansociety.org
 edu.contemporaryartlibrary.org
 reader.exacteditions.com
 ondemand.metopera.org
