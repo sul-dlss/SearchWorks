@@ -1,5 +1,4 @@
 3d4medical.com
-5minuteconsult.com
 MedOne-Radiology.thieme.com
 PA-Rotations.lwwhealthlibrary.com
 aacijournal.biomedcentral.com
@@ -31,7 +30,6 @@ accessphysiotherapy.mhmedical.com
 accesssurgery.mhmedical.com
 accp1.onlinelibrary.wiley.com
 accpjournals.onlinelibrary.wiley.com
-aclandanatomy.com
 aclanthology.org
 acr.amegroups.com
 acsess.onlinelibrary.wiley.com
@@ -685,7 +683,6 @@ gpa.eastview.com
 gpsych.bmj.com
 grantome.com
 grants.nih.gov
-greenplanet.eolss.net
 gs.amegroups.com
 gsejournal.biomedcentral.com
 guidelines.ecri.org
