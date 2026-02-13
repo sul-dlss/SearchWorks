@@ -1019,7 +1019,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LAW"
+    },
     "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
       "ef1ea792-b2bb-49a2-8747-94376b64a74d"
@@ -1028,8 +1030,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:22.950+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:22.950+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-02-13T00:12:07.035+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -5611,7 +5613,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LAW"
+    },
     "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
       "ef1ea792-b2bb-49a2-8747-94376b64a74d"
@@ -5620,8 +5624,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:41.822+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:41.822+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-02-13T00:13:12.739+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -5973,7 +5977,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LAW"
+    },
     "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
       "ef1ea792-b2bb-49a2-8747-94376b64a74d"
@@ -5982,7 +5988,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:40.076+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-05-02T18:13:34.625+00:00",
+      "updatedDate": "2026-02-13T00:13:31.991+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
