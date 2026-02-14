@@ -20,6 +20,8 @@ module Searchworks4
     end
 
     def render?
+      return false if presenter.document.eds? || presenter.document.managed_purls.many? || presenter.document.druid
+
       value.present?
     end
 

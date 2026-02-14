@@ -534,6 +534,11 @@ class CatalogController < ApplicationController
     @documents = search_service.fetch(Array(params[:id]))
   end
 
+  def thumbnail
+    presenter = helpers.document_presenter(search_service.fetch(params[:id]))
+    render Searchworks4::ThumbnailComponent.new(presenter: presenter, counter: nil, classes: %w[thumbnail]), layout: false
+  end
+
   def availability_modal
     @document = search_service.fetch(params[:id])
     render layout: !request.xhr?
