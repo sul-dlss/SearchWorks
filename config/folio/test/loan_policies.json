@@ -487,27 +487,50 @@
     }
   },
   {
-    "id": "43198de5-f56a-4a53-a0bd-5a324418967a",
-    "name": "One Hour",
+    "id": "465c7cff-78db-4303-b3b1-d7cdb3036ee6",
+    "name": "test five day",
     "loanable": true,
     "loansPolicy": {
       "profileId": "Rolling",
       "period": {
-        "duration": 1,
-        "intervalId": "Hours"
+        "duration": 5,
+        "intervalId": "Days"
       },
-      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE_TIME"
+      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE",
+      "gracePeriod": {
+        "duration": 3,
+        "intervalId": "Days"
+      }
     },
     "renewable": true,
     "renewalsPolicy": {
-      "unlimited": false,
-      "numberAllowed": 3.0,
-      "renewFromId": "SYSTEM_DATE",
-      "differentPeriod": false
+      "numberAllowed": 1.0,
+      "renewFromId": "CURRENT_DUE_DATE"
+    },
+    "requestManagement": {
+      "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 3,
+          "intervalId": "Days"
+        },
+        "allowRecallsToExtendOverdueLoans": false
+      },
+      "holds": {
+        "alternateCheckoutLoanPeriod": {
+          "duration": 3,
+          "intervalId": "Days"
+        }
+      }
     },
     "metadata": {
-      "createdDate": "2023-08-09T20:35:29.414+00:00",
-      "updatedDate": "2026-01-28T23:15:21.559+00:00"
+      "createdDate": "2026-02-12T17:59:26.047+00:00",
+      "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
+      "updatedDate": "2026-02-12T17:59:26.047+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
