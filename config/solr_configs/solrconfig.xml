@@ -147,7 +147,6 @@
           <str name="facet.field">language</str>
             <str name="f.language.facet.method">uif</str>
           <str name="facet.field">location_facet</str>
-          <str name="facet.field">pub_date</str>
           <str name="facet.field">pub_year_tisim</str>
             <str name="f.pub_year_tisim.facet.method">uif</str>
           <str name="facet.field">topic_facet</str>
@@ -1073,7 +1072,6 @@
       <str name="facet.field">language</str>
         <str name="f.language.facet.method">uif</str>
       <str name="facet.field">location_facet</str>
-      <str name="facet.field">pub_date</str>
       <str name="facet.field">pub_year_tisim</str>
         <str name="f.pub_year_tisim.facet.method">uif</str>
       <str name="facet.field">topic_facet</str>
@@ -1112,7 +1110,6 @@
         oclc,
         physical,                     vern_physical,
         preferred_barcode,
-        pub_date,
         pub_year_ss,
         publication_year_isi,
         beginning_year_isi,
