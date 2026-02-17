@@ -142,7 +142,6 @@ ascpjournal.biomedcentral.com
 ascpt.onlinelibrary.wiley.com
 asean-endocrinejournal.org
 ashpublications.org
-asih.kglmeridian.com
 asistdl.onlinelibrary.wiley.com
 aslopubs.onlinelibrary.wiley.com
 asma.kglmeridian.com
@@ -1914,7 +1913,6 @@ www.drugeruptiondata.com
 www.drugs.com
 www.drugsincontext.com
 www.drugtopics.com
-www.duncker-humblot.de
 www.dustri.com
 www.e-acfs.org
 www.e-agmr.org
