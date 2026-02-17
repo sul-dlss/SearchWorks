@@ -12,7 +12,8 @@ class LinkedCollection < MarcField
   end
 
   def collection_titles
-    document.fetch(:collection_struct, []).reject { |collection| collection[:source] == 'SDR-PURL' }
+    document.fetch(:collection_struct, [])
+            .reject { |collection| collection[:source] == 'SDR-PURL' }
             .map { |collection| collection.slice(:title, :vernacular).compact }
             .reject(&:empty?)
   end
