@@ -496,7 +496,7 @@
     "name": "$2000 lost fee kit",
     "description": "Fee policy for educational kits",
     "itemAgedLostOverdue": {
-      "duration": 7,
+      "duration": 8,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -530,8 +530,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.214+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-03-11T18:23:21.649+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2026-02-17T21:34:02.225+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     },
     "id": "883f3c16-3720-4678-899c-2279f06cd25f"
   },
@@ -987,6 +987,37 @@
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "df2237da-7a20-4e22-aba6-4d88ac2ee281"
+  },
+  {
+    "name": "test 40$",
+    "description": "used for Kidlit at education",
+    "itemAgedLostOverdue": {
+      "duration": 7,
+      "intervalId": "Days"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 40.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": false,
+    "lostItemReturned": "Charge",
+    "metadata": {
+      "createdDate": "2026-02-17T21:31:40.836+00:00",
+      "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
+      "updatedDate": "2026-02-17T21:31:40.836+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
+    },
+    "id": "e0caffb1-dbfd-460a-bbc3-32ff4271c246"
   },
   {
     "name": "$1000 lost fee",
