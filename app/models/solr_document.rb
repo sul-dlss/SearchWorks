@@ -42,8 +42,8 @@ class SolrDocument
     document.key?(:folio_json_struct)
   end
 
-  use_extension(ModsExport) do |document|
-    document.key?(:modsxml)
+  use_extension(CocinaExport) do |document|
+    document.key?(:cocina_struct)
   end
 
   sw_field_semantics = {
