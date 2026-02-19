@@ -1,0 +1,242 @@
+---
+id: bx988zq7071
+druid: bx988zq7071
+hashed_id_ssi: 0c6d43843a9569bc9db329e89f19adcf
+cocina_struct:
+- '{"description":{"title":[{"value":"Photographs from \"bogliasco/Lorna''s photos\"
+  directory on Robert Creeley Lacie hard drive","status":"primary"}],"contributor":[{"name":[{"value":"Bieber,
+  Lorna","uri":"http://id.loc.gov/authorities/names/nr2001019746","source":{"code":"naf"}}],"type":"person","status":"primary","role":[{"value":"creator","code":"cre","uri":"http://id.loc.gov/vocabulary/relators/cre","source":{"code":"marcrelator"}}]}],"event":[{"type":"creation","date":[{"structuredValue":[{"value":"2002-04","type":"start","encoding":{"value":"w3cdtf"}},{"value":"2002-05","type":"end","encoding":{"value":"w3cdtf"}}],"type":"creation","encoding":{"value":"w3cdtf"}}]}],"form":[{"value":"still
+  image","type":"resource type","source":{"value":"MODS resource types"}},{"value":"883
+  JPEG image files (472,000 KB)","type":"extent"},{"value":"digital photographs","type":"genre","uri":"http://vocab.getty.edu/page/aat/300417379","source":{"code":"aat"}},{"value":"preservation","type":"reformatting
+  quality"},{"value":"born digital","type":"digital origin"},{"value":"image/jpeg","type":"media
+  type"}],"language":[{"code":"eng","source":{"code":"iso632-2b"},"uri":"http://id.loc.gov/vocabulary/iso639-2/eng","value":"English"}],"note":[{"value":"883
+  JPEG image files containing photographs taken during Robert Creeley''s writers residency
+  at the Liguria Study Center in Bogliasco, Italy. Files are organized into the following
+  folders: genoa trip, ken''s birthday, lieder concert, misc, nervi and beyond, paintings,
+  people inside villa, portofino, studio, studio visit, town walk, trip to flea market,
+  villa orbiana, villa pini gardens, villa pini-inside, villa rincon, villa rincon
+  garden, walk in hill, my room, my studio, people in orbiana, people in villa, rincon,
+  scarves, towns, villa orbina gardens.","type":"abstract"},{"value":"M0662_CM903/FAMILY/photos/bogliasco/Lorna''s
+  photos","type":"provenance"}],"identifier":[{"value":"MSS-2011-036","type":"accession
+  number"}],"subject":[{"structuredValue":[{"value":"American literature","type":"topic","uri":"lcsh","source":{"code":"http://id.loc.gov/authorities/subjects/sh85004336"}},{"value":"20th
+  century","type":"time","uri":"lcsh","source":{"code":"http://id.loc.gov/authorities/subjects/sh85139020"}}]},{"structuredValue":[{"value":"American
+  poetry","type":"topic","uri":"lcsh","source":{"code":"http://id.loc.gov/authorities/subjects/sh85004382"}},{"value":"20th
+  century","type":"time","uri":"lcsh","source":{"code":"http://id.loc.gov/authorities/subjects/sh85139020"}}]},{"structuredValue":[{"value":"Poets,
+  American","type":"topic","source":{"code":"http://id.loc.gov/authorities/subjects/sh85103735"}},{"value":"20th
+  century","type":"time","uri":"lcsh","source":{"code":"http://id.loc.gov/authorities/subjects/sh85139020"}}]},{"value":"Bogliasco
+  (Italy)","type":"place","uri":"naf","source":{"code":"http://id.loc.gov/authorities/names/nr89007363"}}],"access":{"accessContact":[{"value":"Stanford
+  University. Libraries. Department of Special Collections and University Archives","type":"repository","uri":"http://id.loc.gov/authorities/names/no2014019980","source":{"code":"naf"}}]},"relatedResource":[{"type":"part
+  of","title":[{"value":"Finding aid"}],"access":{"url":[{"value":"http://www.oac.cdlib.org/findaid/ark:/13030/tf7b69n911/"}]}}],"adminMetadata":{"contributor":[{"name":[{"code":"CSt","uri":"http://id.loc.gov/vocabulary/organizations/cst","source":{"code":"marcorg"}}],"type":"organization","role":[{"value":"original
+  cataloging agency"}]}],"language":[{"code":"eng","uri":"http://id.loc.gov/vocabulary/iso639-2/eng","value":"English"}]},"purl":"https://purl.stanford.edu/bx988zq7071"},"identification":{"sourceId":"sul:M0662_CM903_e2159b2ca6d8c74f2ee064b57e0bde99"},"access":{"view":"location-based","download":"location-based","location":"spec","controlledDigitalLending":false,"copyright":"Materials
+  may be subject to copyright.","useAndReproductionStatement":"While Special Collections
+  is the owner of the physical and digital items, permission to examine collection
+  materials is not an authorization to publish. These materials are made available
+  for use in research, teaching, and private study. Any transmission or reproduction
+  beyond that allowed by fair use requires permission from the owners of rights, their
+  heir(s) or assigns. When required, it is the researcher''s responsibility to obtain
+  such permissions. Access Condition: Content is available for access via the Special
+  Collections Reading Room. For assistance please contact specialcollections@stanford.edu."}}'
+all_search: 'Photographs from "bogliasco/Lorna''s photos" directory on Robert Creeley
+  Lacie hard drive Bieber, Lorna cre creator 2002-04 2002-05 w3cdtf still image 883
+  JPEG image files (472,000 KB) digital photographs preservation born digital image/jpeg
+  eng English 883 JPEG image files containing photographs taken during Robert Creeley''s
+  writers residency at the Liguria Study Center in Bogliasco, Italy. Files are organized
+  into the following folders: genoa trip, ken''s birthday, lieder concert, misc, nervi
+  and beyond, paintings, people inside villa, portofino, studio, studio visit, town
+  walk, trip to flea market, villa orbiana, villa pini gardens, villa pini-inside,
+  villa rincon, villa rincon garden, walk in hill, my room, my studio, people in orbiana,
+  people in villa, rincon, scarves, towns, villa orbina gardens. M0662_CM903/FAMILY/photos/bogliasco/Lorna''s
+  photos MSS-2011-036 American literature 20th century American poetry 20th century
+  Poets, American 20th century Bogliasco (Italy) Stanford University. Libraries. Department
+  of Special Collections and University Archives Finding aid http://www.oac.cdlib.org/findaid/ark:/13030/tf7b69n911/
+  CSt original cataloging agency eng English'
+title_245a_search: Photographs from "bogliasco/Lorna's photos" directory on Robert
+  Creeley Lacie hard drive
+title_245_search: Photographs from "bogliasco/Lorna's photos" directory on Robert
+  Creeley Lacie hard drive.
+title_sort: Photographs from bogliascoLornas photos directory on Robert Creeley Lacie
+  hard drive
+title_display: Photographs from "bogliasco/Lorna's photos" directory on Robert Creeley
+  Lacie hard drive
+title_full_display: Photographs from "bogliasco/Lorna's photos" directory on Robert
+  Creeley Lacie hard drive.
+author_1xx_search: Bieber, Lorna
+author_person_facet:
+- Bieber, Lorna
+author_sort: Bieber Lorna Photographs from bogliascoLornas photos directory on Robert
+  Creeley Lacie hard drive
+author_person_display:
+- Bieber, Lorna
+author_person_full_display:
+- Bieber, Lorna
+topic_search:
+- American literature
+- American poetry
+- Poets, American
+topic_display:
+- American literature
+- American poetry
+- Poets, American
+geographic_search:
+- Bogliasco (Italy)
+subject_other_subvy_search:
+- 20th century
+subject_all_search:
+- American literature
+- American poetry
+- Poets, American
+- 20th century
+- Bogliasco (Italy)
+topic_facet:
+- American literature
+- American poetry
+- Poets, American
+geographic_facet:
+- Bogliasco (Italy)
+era_facet:
+- 20th century
+pub_date: 2002-04 - 2002-05
+pub_date_search: 2002-04 - 2002-05
+pub_date_sort: 2002-04 - 2002-05
+publication_year_isi: 2002
+pub_year_ss: 2002-04 - 2002-05
+imprint_display:
+- 2002-04 - 2002-05
+pub_year_tisim:
+- 2002
+genre_ssim:
+- Digital photographs
+physical:
+- 883 JPEG image files (472,000 KB)
+format_hsim:
+- Image
+language:
+- English
+summary_search:
+- '883 JPEG image files containing photographs taken during Robert Creeley''s writers
+  residency at the Liguria Study Center in Bogliasco, Italy. Files are organized into
+  the following folders: genoa trip, ken''s birthday, lieder concert, misc, nervi
+  and beyond, paintings, people inside villa, portofino, studio, studio visit, town
+  walk, trip to flea market, villa orbiana, villa pini gardens, villa pini-inside,
+  villa rincon, villa rincon garden, walk in hill, my room, my studio, people in orbiana,
+  people in villa, rincon, scarves, towns, villa orbina gardens.'
+summary_display:
+- '883 JPEG image files containing photographs taken during Robert Creeley''s writers
+  residency at the Liguria Study Center in Bogliasco, Italy. Files are organized into
+  the following folders: genoa trip, ken''s birthday, lieder concert, misc, nervi
+  and beyond, paintings, people inside villa, portofino, studio, studio visit, town
+  walk, trip to flea market, villa orbiana, villa pini gardens, villa pini-inside,
+  villa rincon, villa rincon garden, walk in hill, my room, my studio, people in orbiana,
+  people in villa, rincon, scarves, towns, villa orbina gardens.'
+url_suppl:
+- http://www.oac.cdlib.org/findaid/ark:/13030/tf7b69n911/
+url_fulltext:
+- https://purl.stanford.edu/bx988zq7071
+iiif_manifest_url_ssim:
+- https://purl.stanford.edu/bx988zq7071/iiif3/manifest
+access_facet:
+- Online
+library_code_facet_ssim:
+- SDR
+building_facet:
+- Stanford Digital Repository
+dor_content_type_ssi: image
+dor_file_mimetype_ssim:
+- image/jpeg
+- image/jp2
+dor_resource_content_type_ssim:
+- image
+dor_resource_count_isi: 864
+file_id:
+- bx988zq7071%2FDSCN0631
+collection:
+- a4084039
+collection_search:
+- a4084039
+collection_with_title:
+- a4084039-|-Robert Creeley papers, 1950-2005
+context_source_ssi: sdr
+modsxml: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.7" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd">
+      <titleInfo usage="primary">
+        <title>Photographs from "bogliasco/Lorna's photos" directory on Robert Creeley Lacie hard drive</title>
+      </titleInfo>
+      <name valueURI="http://id.loc.gov/authorities/names/nr2001019746" authority="naf" usage="primary" type="personal">
+        <namePart>Bieber, Lorna</namePart>
+        <role>
+          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre" authority="marcrelator" type="text">creator</roleTerm>
+          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/cre" authority="marcrelator" type="code">cre</roleTerm>
+        </role>
+      </name>
+      <typeOfResource>still image</typeOfResource>
+      <genre valueURI="http://vocab.getty.edu/page/aat/300417379" authority="aat">digital photographs</genre>
+      <physicalDescription>
+        <extent>883 JPEG image files (472,000 KB)</extent>
+        <reformattingQuality>preservation</reformattingQuality>
+        <digitalOrigin>born digital</digitalOrigin>
+        <internetMediaType>image/jpeg</internetMediaType>
+      </physicalDescription>
+      <language>
+        <languageTerm valueURI="http://id.loc.gov/vocabulary/iso639-2/eng" authority="iso632-2b" type="text">English</languageTerm>
+        <languageTerm valueURI="http://id.loc.gov/vocabulary/iso639-2/eng" authority="iso632-2b" type="code">eng</languageTerm>
+      </language>
+      <abstract>883 JPEG image files containing photographs taken during Robert Creeley's writers residency at the Liguria Study Center in Bogliasco, Italy. Files are organized into the following folders: genoa trip, ken's birthday, lieder concert, misc, nervi and beyond, paintings, people inside villa, portofino, studio, studio visit, town walk, trip to flea market, villa orbiana, villa pini gardens, villa pini-inside, villa rincon, villa rincon garden, walk in hill, my room, my studio, people in orbiana, people in villa, rincon, scarves, towns, villa orbina gardens.</abstract>
+      <note type="provenance">M0662_CM903/FAMILY/photos/bogliasco/Lorna's photos</note>
+      <subject>
+        <topic authority="http://id.loc.gov/authorities/subjects/sh85004336" valueURI="lcsh">American literature</topic>
+        <temporal authority="http://id.loc.gov/authorities/subjects/sh85139020" valueURI="lcsh">20th century</temporal>
+      </subject>
+      <subject>
+        <topic authority="http://id.loc.gov/authorities/subjects/sh85004382" valueURI="lcsh">American poetry</topic>
+        <temporal authority="http://id.loc.gov/authorities/subjects/sh85139020" valueURI="lcsh">20th century</temporal>
+      </subject>
+      <subject>
+        <topic authority="http://id.loc.gov/authorities/subjects/sh85103735">Poets, American</topic>
+        <temporal authority="http://id.loc.gov/authorities/subjects/sh85139020" valueURI="lcsh">20th century</temporal>
+      </subject>
+      <subject authority="http://id.loc.gov/authorities/names/nr89007363">
+        <geographic authority="http://id.loc.gov/authorities/names/nr89007363" valueURI="naf">Bogliasco (Italy)</geographic>
+      </subject>
+      <originInfo eventType="creation">
+        <dateCreated point="start">2002-04</dateCreated>
+        <dateCreated point="end">2002-05</dateCreated>
+      </originInfo>
+      <identifier type="accession number">MSS-2011-036</identifier>
+      <location>
+        <url usage="primary display">https://purl.stanford.edu/bx988zq7071</url>
+      </location>
+      <location>
+        <physicalLocation type="repository" valueURI="http://id.loc.gov/authorities/names/no2014019980" authority="naf">Stanford University. Libraries. Department of Special Collections and University Archives</physicalLocation>
+      </location>
+      <recordInfo>
+        <languageOfCataloging>
+          <languageTerm valueURI="http://id.loc.gov/vocabulary/iso639-2/eng" type="text">English</languageTerm>
+          <languageTerm valueURI="http://id.loc.gov/vocabulary/iso639-2/eng" type="code">eng</languageTerm>
+        </languageOfCataloging>
+        <recordContentSource valueURI="http://id.loc.gov/vocabulary/organizations/cst" authority="marcorg">CSt</recordContentSource>
+      </recordInfo>
+      <relatedItem type="host">
+        <titleInfo>
+          <title>Finding aid</title>
+        </titleInfo>
+        <location>
+          <url>http://www.oac.cdlib.org/findaid/ark:/13030/tf7b69n911/</url>
+        </location>
+      </relatedItem>
+      <relatedItem type="host">
+        <titleInfo>
+          <title>Robert Creeley papers, 1950-2005</title>
+        </titleInfo>
+        <location>
+          <url>https://purl.stanford.edu/rt197vk2661</url>
+        </location>
+        <typeOfResource collection="yes"/>
+      </relatedItem>
+      <accessCondition type="useAndReproduction">While Special Collections is the owner of the physical and digital items, permission to examine collection materials is not an authorization to publish. These materials are made available for use in research, teaching, and private study. Any transmission or reproduction beyond that allowed by fair use requires permission from the owners of rights, their heir(s) or assigns. When required, it is the researcher's responsibility to obtain such permissions. Access Condition: Content is available for access via the Special Collections Reading Room. For assistance please contact specialcollections@stanford.edu.</accessCondition>
+      <accessCondition type="copyright">Materials may be subject to copyright.</accessCondition>
+    </mods>
+author_struct:
+- link: Bieber, Lorna
+  search: '"Bieber, Lorna"'
+  post_text: "(creator)"

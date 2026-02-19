@@ -21,18 +21,6 @@ RSpec.describe ModsData do
     end
   end
 
-  describe "#prettified_mods" do
-    it "is nil if no modsxml" do
-      expect(SolrDocument.new().prettified_mods).to be_nil
-    end
-
-    it "returns prettified mods" do
-      expect(document.prettified_mods).to be_a String
-      expect(document.prettified_mods).to match /<div class="CodeRay">/
-      expect(document.prettified_mods).to match />A record with everything</
-    end
-  end
-
   describe '#mods_abstract' do
     let(:document) { SolrDocument.new(summary_display: ['The Abstract']) }
 

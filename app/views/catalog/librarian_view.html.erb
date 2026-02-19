@@ -9,8 +9,8 @@
 
   <% if @document.respond_to?(:to_marc) %>
     <%= render "marc_view" %>
-  <% elsif @document.mods? %>
-    <%= render "mods_view"%>
+  <% elsif @document.cocina? %>
+    <%= render "cocina_view", cocina: @document.cocina %>
   <% else %>
     <%= t('blacklight.search.librarian_view.empty') %>
   <% end %>

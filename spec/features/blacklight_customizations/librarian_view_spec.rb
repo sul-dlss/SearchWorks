@@ -21,19 +21,18 @@ RSpec.describe "Librarian View Customization", :js do
   end
 
   it "MODS records should display" do
-    visit solr_document_path('35')
+    visit solr_document_path('bx988zq7071')
 
     within(".tech-details") do
-      expect(page).to have_content('DRUID: 35')
+      expect(page).to have_content('DRUID: bx988zq7071')
 
       click_link('Librarian view')
     end
 
     expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
 
-    within(".mods-view") do
-      expect(page).to have_content("A record with everything")
-      expect(page).to have_css("span", text: "<title>")
+    within(".cocina-view") do
+      expect(page).to have_content("883 JPEG image files containing photographs")
     end
   end
 end

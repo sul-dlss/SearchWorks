@@ -46,6 +46,7 @@ class FixtureHarvester
     '4250062', # items in SAL1&2 and SAL3
     '14205849', # multiple items with unique truncated call numbers
     'nj140cs3237', # mods preferred citation
+    'bx988zq7071', # Cocina struct
     '1213958', # contains public notes, multiple locations including spec
 
     # selected databases

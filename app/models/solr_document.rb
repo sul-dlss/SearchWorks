@@ -20,6 +20,18 @@ class SolrDocument
   delegate :empty?, :blank?, to: :to_h
   delegate :managed_purls, to: :marc_links
 
+  def cocina?
+    cocina_json_str.present?
+  end
+
+  def cocina_json_str
+    self[:cocina_struct]&.first
+  end
+
+  def cocina
+    @cocina ||= JSON.parse(cocina_json_str)
+  end
+
   def eds_ris_export?
     false
   end

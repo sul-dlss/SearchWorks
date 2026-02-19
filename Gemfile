@@ -77,8 +77,6 @@ end
 
 gem 'newrelic_rpm', '~> 9.0' # https://github.com/sul-dlss/SearchWorks/issues/6424
 
-gem "coderay"
-
 gem 'blacklight', '~> 9.0'
 gem "blacklight-marc", "~> 9.0"
 gem "blacklight_advanced_search", '~> 8.0'
