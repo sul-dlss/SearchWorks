@@ -135,6 +135,38 @@
     ]
   },
   {
+    "id": "378fc8e0-2e79-4a69-b088-e9ce34217955",
+    "name": "Test Notice Policy",
+    "description": "This is a new active notice policy",
+    "metadata": {
+      "createdDate": "2026-02-18T17:22:20.152+00:00",
+      "createdByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b",
+      "updatedDate": "2026-02-18T17:22:20.152+00:00",
+      "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
+    },
+    "loanNotices": [
+      {
+        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Check in"
+        }
+      }
+    ],
+    "feeFineNotices": [],
+    "requestNotices": [
+      {
+        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Available"
+        }
+      }
+    ]
+  },
+  {
     "id": "3fce32f6-b761-4110-95b3-64f4336680a7",
     "name": "Qtrly/Annual notice",
     "description": "Courtesy due date reminder for annual loans sent 4 days and 21 days before the due date",
