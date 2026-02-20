@@ -287,7 +287,7 @@
     "name": "$30 lost fee",
     "description": "MMTX lost fee for DVDs",
     "itemAgedLostOverdue": {
-      "duration": 7,
+      "duration": 3,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -321,7 +321,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:00.915+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-03-11T18:24:41.279+00:00",
+      "updatedDate": "2026-02-19T21:23:12.073+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "5306967f-4613-4a27-b796-ea2d3f99af2e"
