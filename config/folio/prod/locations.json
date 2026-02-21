@@ -2319,7 +2319,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -2328,8 +2330,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:30.133+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:01:07.375+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:27:39.391+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -4329,7 +4331,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -4338,8 +4342,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:03.559+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:00:19.813+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:26:32.345+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -5012,7 +5016,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -5021,8 +5027,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:30.280+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:01:01.200+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:27:56.146+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -6070,6 +6076,7 @@
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
     "details": {
+      "scanServicePointCode": "SAL3",
       "availabilityClass": "Offsite",
       "pagingSchedule": "SAL3"
     },
@@ -6081,8 +6088,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:39.027+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:01:17.879+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:28:24.409+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -9663,7 +9670,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -9672,8 +9681,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:24.485+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:00:52.944+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:27:00.479+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -13966,7 +13975,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -13975,8 +13986,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:19.017+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:00:36.485+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:25:58.922+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
