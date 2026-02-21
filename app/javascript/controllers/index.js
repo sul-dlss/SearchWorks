@@ -159,3 +159,6 @@ application.register("toast", ToastController)
 
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
+
+import VolumesSearchController from "./volumes_search_controller"
+application.register("volumes-search", VolumesSearchController)
