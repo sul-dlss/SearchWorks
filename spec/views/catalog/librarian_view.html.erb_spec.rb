@@ -31,13 +31,14 @@ RSpec.describe "catalog/librarian_view" do
 
   describe "MODS records" do
     before do
-      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-02T23:01:18Z', modsxml: mods_everything))
+      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-02T23:01:18Z',
+                                         cocina_struct: [{ "description" => "hi" }.to_json]))
       render
     end
 
     it "renders the mods_view" do
       expect(rendered).to have_content('August  2, 2022  4:01pm')
-      expect(rendered).to have_css('.mods-view')
+      expect(rendered).to have_css('.cocina-view')
     end
   end
 
