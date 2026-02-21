@@ -1,7 +1,6 @@
 ---
-id: nj140cs3237
-hashed_id_ssi: fb233de89c4d1fea1eb8100669fb17b2
-druid: nj140cs3237
+access_facet:
+- Online
 all_search: ' 0246_H_AO_AOD Kathrin Bäumler author aut Malte Rolf-Pissarczyk author
   aut Richard Schussnig author aut Thomas-Peter Fries author aut Gabriel Mistelbauer
   author aut Martin R. Pfaller author aut Stanford University compiler com Vascular
@@ -46,12 +45,6 @@ all_search: ' 0246_H_AO_AOD Kathrin Bäumler author aut Malte Rolf-Pissarczyk au
   rights of individuals. Content distributed via the Stanford Digital Repository may
   be subject to additional license and use restrictions applied by the depositor.
   https://doi.org/10.25740/nj140cs3237 '
-title_245a_search: 0246_H_AO_AOD
-title_245_search: 0246_H_AO_AOD.
-title_sort: 0246HAOAOD
-title_245a_display: 0246HAOAOD
-title_display: 0246_H_AO_AOD
-title_full_display: 0246_H_AO_AOD.
 author_1xx_search: Bäumler, Kathrin
 author_7xx_search:
 - Rolf-Pissarczyk, Malte
@@ -64,27 +57,26 @@ author_7xx_search:
 - Stanford University Medical Center
 - Deutscher Akademischer Austauschdienst (DAAD) Doctoral Candidate Scholarship
 - NIH (R01LM013120 & R01HL131823)
-author_person_facet:
-- Bäumler, Kathrin
-- Rolf-Pissarczyk, Malte
-- Schussnig, Richard
-- Fries, Thomas-Peter
-- Mistelbauer, Gabriel
-- Pfaller, Martin R.
-author_other_facet:
-- Stanford University
-- Vascular Model Repository
-- Stanford University Medical Center
-- Deutscher Akademischer Austauschdienst (DAAD) Doctoral Candidate Scholarship
-- NIH (R01LM013120 & R01HL131823)
-author_sort: Bäumler Kathrin0246HAOAOD
 author_corp_display:
 - Stanford University
 - Vascular Model Repository
 - Stanford University Medical Center
 - Deutscher Akademischer Austauschdienst (DAAD) Doctoral Candidate Scholarship
 - NIH (R01LM013120 & R01HL131823)
+author_other_facet:
+- Stanford University
+- Vascular Model Repository
+- Stanford University Medical Center
+- Deutscher Akademischer Austauschdienst (DAAD) Doctoral Candidate Scholarship
+- NIH (R01LM013120 & R01HL131823)
 author_person_display:
+- Bäumler, Kathrin
+- Rolf-Pissarczyk, Malte
+- Schussnig, Richard
+- Fries, Thomas-Peter
+- Mistelbauer, Gabriel
+- Pfaller, Martin R.
+author_person_facet:
 - Bäumler, Kathrin
 - Rolf-Pissarczyk, Malte
 - Schussnig, Richard
@@ -98,41 +90,62 @@ author_person_full_display:
 - Fries, Thomas-Peter
 - Mistelbauer, Gabriel
 - Pfaller, Martin R.
-topic_search:
-- Aorta
-- Aortic dissection
-- Female
-- Human
-topic_display:
-- Aorta
-- Aortic dissection
-- Female
-- Human
-subject_all_search:
-- Aorta
-- Aortic dissection
-- Female
-- Human
-topic_facet:
-- Aorta
-- Aortic dissection
-- Female
-- Human
-pub_year_isi: 2025
-pub_date_sort: '2025'
-imprint_display:
-- March 27, 2025; March  7, 2025
-pub_date: '2025'
-pub_date_search: '2025'
-pub_year_ss: '2025'
-pub_year_tisim:
-- 2025
-publication_year_isi: 2025
+author_sort: Bäumler Kathrin0246HAOAOD
+building_facet:
+- Stanford Digital Repository
+collection:
+- dj064dg8823
+collection_search:
+- dj064dg8823
+collection_with_title:
+- dj064dg8823-|-Vascular Model Repository
+context_source_ssi: sdr
+dor_content_type_ssi: file
+dor_file_mimetype_ssim:
+- application/zip
+- application/pdf
+- application/octet-stream
+- application/xml
+- application/vnd.openxmlformats-officedocument.wordprocessingml.document
+dor_read_rights_ssim:
+- world
+dor_resource_content_type_ssim:
+- file
+dor_resource_count_isi: 129
+druid: nj140cs3237
+format_hsim:
+- Dataset
+- Object
+- Image
 format_main_ssim:
 - Dataset
 - Object
 - Image
 genre_ssim:
+- Data
+- 3D model
+- Image
+- Data sets
+- dataset
+- three-dimensional scan
+hashed_id_ssi: fb233de89c4d1fea1eb8100669fb17b2
+id: nj140cs3237
+imprint_display:
+- March 27, 2025; March  7, 2025
+library_code_facet_ssim:
+- SDR
+pub_date: '2025'
+pub_date_search: '2025'
+pub_date_sort: '2025'
+pub_year_isi: 2025
+pub_year_ss: '2025'
+pub_year_tisim:
+- 2025
+subject_all_search:
+- Aorta
+- Aortic dissection
+- Female
+- Human
 - Data
 - 3D model
 - Image
@@ -147,40 +160,31 @@ summary_display:
 - Model of the aorta of a 25-year-old female with Marfan syndrome, illustrating the
   progression of a type B aortic dissection over a seven-year period. Simulation results
   are availableThis model can be found in the Vascular Model Repository.
-url_suppl:
-- https://purl.stanford.edu/dj064dg8823
+title_245_search: 0246_H_AO_AOD.
+title_245a_display: 0246HAOAOD
+title_245a_search: 0246_H_AO_AOD
+title_display: 0246_H_AO_AOD
+title_full_display: 0246_H_AO_AOD.
+title_sort: 0246HAOAOD
+topic_facet:
+- Aorta
+- Aortic dissection
+- Female
+- Human
+topic_search:
+- Aorta
+- Aortic dissection
+- Female
+- Human
+topic_display:
+- Aorta
+- Aortic dissection
+- Female
+- Human
 url_fulltext:
 - https://purl.stanford.edu/nj140cs3237
-access_facet:
-- Online
-library_code_facet_ssim:
-- SDR
-- SDR
-building_facet:
-- Stanford Digital Repository
-collection:
-- dj064dg8823
-collection_search:
-- dj064dg8823
-collection_with_title:
-- dj064dg8823-|-Vascular Model Repository
-dor_content_type_ssi: file
-dor_resource_content_type_ssim:
-- file
-dor_file_mimetype_ssim:
-- application/zip
-- application/pdf
-- application/octet-stream
-- application/xml
-- application/vnd.openxmlformats-officedocument.wordprocessingml.document
-dor_resource_count_isi: 129
-dor_read_rights_ssim:
-- world
-context_source_ssi: sdr
-format_hsim:
-- Dataset
-- Object
-- Image
+url_suppl:
+- https://purl.stanford.edu/dj064dg8823
 modsxml: |
   <?xml version="1.0" encoding="UTF-8"?>
   <mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.7" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd">
