@@ -785,6 +785,7 @@ ila.onlinelibrary.wiley.com
 ilibri.casalini.it
 imagebank.osa.org
 images.tandf.co.uk
+images.yourcloudlibrary.com
 img1.od-cdn.com
 immunityageing.biomedcentral.com
 immunome-research.biomedcentral.com
@@ -850,6 +851,7 @@ jbioleng.biomedcentral.com
 jbiolres.biomedcentral.com
 jbiomedsci.biomedcentral.com
 jbiomedsem.biomedcentral.com
+jbuon.com
 jcannabisresearch.biomedcentral.com
 jcheminf.springeropen.com
 jcmr-online.biomedcentral.com
@@ -2206,7 +2208,6 @@ www.jbe-platform.com
 www.jbr.gr
 www.jbra.com.br
 www.jbsr.be
-www.jbuon.com
 www.jcancer.org
 www.jcasonline.com
 www.jcd.org.in
