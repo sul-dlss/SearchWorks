@@ -216,7 +216,7 @@ GEM
       activesupport
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    devise (5.0.1)
+    devise (5.0.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 7.0)
@@ -273,7 +273,7 @@ GEM
       logger
     herb (0.8.10-arm64-darwin)
     herb (0.8.10-x86_64-linux-gnu)
-    honeybadger (6.3.1)
+    honeybadger (6.4.0)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -405,9 +405,9 @@ GEM
     net-ssh (7.3.0)
     newrelic_rpm (9.24.0)
     nio4r (2.7.5)
-    nokogiri (1.19.0-arm64-darwin)
+    nokogiri (1.19.1-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.19.0-x86_64-linux-gnu)
+    nokogiri (1.19.1-x86_64-linux-gnu)
       racc (~> 1.4)
     nom-xml (1.2.0)
       i18n
@@ -430,7 +430,7 @@ GEM
     orm_adapter (0.5.0)
     ostruct (0.6.3)
     parallel (1.27.0)
-    parser (3.3.10.1)
+    parser (3.3.10.2)
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
@@ -523,7 +523,7 @@ GEM
     responders (3.2.0)
       actionpack (>= 7.0)
       railties (>= 7.0)
-    retriable (3.1.2)
+    retriable (3.2.1)
     rexml (3.4.4)
     rinku (2.0.6)
     roadie (5.2.1)
@@ -544,7 +544,7 @@ GEM
     rspec-mocks (3.13.7)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (8.0.2)
+    rspec-rails (8.0.3)
       actionpack (>= 7.2)
       activesupport (>= 7.2)
       railties (>= 7.2)
@@ -590,7 +590,7 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     securerandom (0.4.1)
-    selenium-webdriver (4.40.0)
+    selenium-webdriver (4.41.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -690,7 +690,7 @@ GEM
       nokogiri (~> 1.8)
     yard (0.9.38)
     yell (2.2.2)
-    zeitwerk (2.7.4)
+    zeitwerk (2.7.5)
 
 PLATFORMS
   arm64-darwin
