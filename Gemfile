@@ -123,3 +123,4 @@ gem "citeproc", "~> 1.1"
 gem 'citeproc-ruby', '~> 2.0'
 gem 'csl', '~> 2.0'
 gem "csl-styles", "~> 2.0"
+gem "cocina_display"

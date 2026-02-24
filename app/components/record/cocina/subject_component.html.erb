@@ -1,0 +1,12 @@
+<%= render Searchworks4::DocumentSectionLayout.new(title: 'Subjects') do %>
+  <% fields.each do |field| %>
+    <%= tag.div class: 'my-2', data: { controller: 'list-toggle', 'list-toggle-target': 'group' } do %>
+      <%= tag.dt field.label %>
+      <% field.objects.each do |form| %>
+        <%= tag.dd do %>
+          <%= render_values(form) %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

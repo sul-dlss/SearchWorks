@@ -32,7 +32,7 @@ RSpec.describe 'Digital Collections Access Point', :js do
 
     choose "Show collections and individual items"
     expect(page).to have_no_css('.filter-value', text: 'Digital Collection')
-    expect(page).to have_css('article', count: 8)
+    expect(page).to have_css('article', count: 9)
 
     choose "Show collections only"
     expect(page).to have_css('article', count: 3)
