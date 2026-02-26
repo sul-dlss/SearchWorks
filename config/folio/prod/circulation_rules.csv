@@ -124,7 +124,7 @@ postdoctoral or undergrad,book,,,,,ENG-JEDI or ENG-SCIFI or ENG-STACKS,1qtr-3ren
 staff or staff-casual or fellow,book,,,,,ENG-JEDI or ENG-SCIFI or ENG-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
 graduate,book,,,,,ENG-JEDI or ENG-SCIFI or ENG-STACKS,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
 faculty,book,,,,,ENG-JEDI or ENG-SCIFI or ENG-STACKS,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$150 lost fee
-any,book,,,,,EDU-LOCKED,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
+any,book,,,,,EDU-LOCKED,No loan,Allow paging/recall,Default notice,No fines,$75 lost fee
 any,book,,,,,EDU-REF,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 undergrad or postdoctoral,book,,,,,EDU-CURRICULUM or EDU-CURRSTOR or EDU-OVERSIZE or EDU-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 staff or staff-casual or fellow,book,,,,,EDU-CURRICULUM or EDU-CURRSTOR or EDU-OVERSIZE or EDU-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
