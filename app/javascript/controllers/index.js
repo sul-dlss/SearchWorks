@@ -25,17 +25,20 @@ application.register("bento-result-count", BentoResultCountController)
 import BlacklightResultCountController from "./blacklight_result_count_controller"
 application.register("blacklight-result-count", BlacklightResultCountController)
 
-import BookmarkController from "./bookmark_controller"
-application.register("bookmark", BookmarkController)
-
 import BookmarkAllController from "./bookmark_all_controller"
 application.register("bookmark-all", BookmarkAllController)
+
+import BookmarkController from "./bookmark_controller"
+application.register("bookmark", BookmarkController)
 
 import BrowseNearbyController from "./browse_nearby_controller"
 application.register("browse-nearby", BrowseNearbyController)
 
 import CitationFormatController from "./citation_format_controller"
 application.register("citation-format", CitationFormatController)
+
+import CocinaViewController from "./cocina_view_controller"
+application.register("cocina-view", CocinaViewController)
 
 import CopyLinkController from "./copy_link_controller"
 application.register("copy-link", CopyLinkController)
@@ -151,8 +154,8 @@ application.register("show-more-button", ShowMoreButtonController)
 import StackmapController from "./stackmap_controller"
 application.register("stackmap", StackmapController)
 
-import ToastContainer from "./toast_container_controller"
-application.register("toast-container", ToastContainer)
+import ToastContainerController from "./toast_container_controller"
+application.register("toast-container", ToastContainerController)
 
 import ToastController from "./toast_controller"
 application.register("toast", ToastController)

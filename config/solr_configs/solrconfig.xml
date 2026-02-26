@@ -1141,6 +1141,7 @@
         characteristics_ssim,
         holdings_json_struct:[json],
         author_struct:[json],
+        cocina_struct:[json],
         marc_links_struct:[json],
         summary_struct:[json],
         toc_struct:[json],

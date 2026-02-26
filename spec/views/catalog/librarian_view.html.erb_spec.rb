@@ -41,6 +41,19 @@ RSpec.describe "catalog/librarian_view" do
     end
   end
 
+  describe "Cocina records" do
+    before do
+      assign(:document, SolrDocument.new(id: '12345', last_updated: '2022-08-02T23:01:18Z',
+                                         cocina_struct: [{ "description" => "hi" }.to_json]))
+      render
+    end
+
+    it "renders the cocina_view" do
+      expect(rendered).to have_content('August  2, 2022  4:01pm')
+      expect(rendered).to have_css('.cocina-view')
+    end
+  end
+
   describe "records w/o raw metadata" do
     before do
       assign(:document, SolrDocument.new(id: '12345'))
