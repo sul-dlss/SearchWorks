@@ -6,6 +6,7 @@ class SolrDocument
   include Extent
   include CollectionMember
   include ModsData
+  include CocinaData
   include StacksImages
   include SolrHoldings
   include SolrSet

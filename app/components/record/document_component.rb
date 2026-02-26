@@ -10,7 +10,9 @@ module Record
     end
 
     def call
-      if @document.mods?
+      if @document.cocina?
+        render Record::CocinaDocumentComponent.new(document: @presenter, **@kwargs)
+      elsif @document.mods?
         render Record::ModsDocumentComponent.new(document: @presenter, **@kwargs)
       else
         render Record::MarcDocumentComponent.new(document: @presenter, **@kwargs)

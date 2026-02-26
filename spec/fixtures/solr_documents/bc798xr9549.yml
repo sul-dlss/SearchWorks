@@ -1,0 +1,224 @@
+---
+id: bc798xr9549
+druid: bc798xr9549
+hashed_id_ssi: 30c57d2487793968f0a8428bf95c7d46
+cocina_struct:
+  - '{"description":{"title":[{"value":"Oral history with Kalsang Yulgial, Nov.
+    15, 2014"}],"contributor":[{"name":[{"value":"Kalsang Yulgial"}],"type":"person","status":"primary","role":[{"value":"interviewee","code":"ive","uri":"http://id.loc.gov/vocabulary/relators/ive","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}},{"value":"creator","code":"cre","uri":"http://id.loc.gov/vocabulary/relators/cre","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"value":"Adamski,
+    Marcella"}],"type":"person","role":[{"value":"interviewer","code":"ivr","uri":"http://id.loc.gov/vocabulary/relators/ivr","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"value":"Sondag,
+    Tony"}],"type":"person","role":[{"value":"videographer","code":"vdg","uri":"http://id.loc.gov/vocabulary/relators/vdg","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]}],"event":[{"type":"production","displayLabel":"Interview
+    location","date":[{"value":"2014-11-15","type":"creation","status":"primary","encoding":{"code":"w3cdtf"}}],"location":[{"value":"Seattle
+    (Wash.)","uri":"http://id.loc.gov/authorities/names/n79041965","source":{"uri":"http://id.loc.gov/authorities/names/"}}]}],"form":[{"value":"Filmed
+    interviews","type":"genre","uri":"http://id.loc.gov/authorities/genreForms/gf2011026269","source":{"code":"lcgft","uri":"http://id.loc.gov/authorities/genreForms/"}},{"value":"Interview
+    transcripts","type":"genre","uri":"http://id.loc.gov/authorities/genreForms/gf2014026115","source":{"code":"lcgft","uri":"http://id.loc.gov/authorities/genreForms/"}},{"value":"moving
+    image","type":"resource type","source":{"value":"MODS resource types"}},{"value":"text","type":"resource
+    type","source":{"value":"MODS resource types"}},{"value":"access","type":"reformatting
+    quality","source":{"value":"MODS reformatting quality terms"}},{"value":"video/mp4","type":"media
+    type","source":{"value":"IANA media types"}},{"value":"image/jpeg","type":"media
+    type","source":{"value":"IANA media types"}},{"value":"1 video file and 1 PDF","type":"extent"},{"value":"born
+    digital","type":"digital origin","source":{"value":"MODS digital origin terms"}},{"note":[{"value":"Sound","displayLabel":"Sound
+    content"},{"value":"Color","displayLabel":"Color content"}]}],"language":[{"code":"eng","source":{"code":"iso639-2b","uri":"http://id.loc.gov/vocabulary/iso639-2"},"uri":"http://id.loc.gov/vocabulary/iso639-2/eng","value":"English"}],"note":[{"value":"Kalsang
+    Yulgial was born in Phari bordering Sikkim in India. He describes Phari as a
+    trading town where many different types of goods were transferred in and out
+    of India. He was lucky to have the opportunity to attend a private school and
+    he describes the curriculum and methods used for teaching. After the Chinese
+    invasion, the Chinese closed all the Tibetan schools and sent the children to
+    a large Chinese-run school in Phari. Some of the students, including Kalsang
+    Yulgial, were later sent to a Chinese school in Lhasa, but they began to suspect
+    the Chinese education was separating them from Tibetan language and culture.\n
+    \nKalsang Yulgial was selected by the Chinese to go to a school in China. He
+    explains how the family evaded this by sending him on a trade mission with his
+    stepfather. By the time they returned many Tibetans had started fleeing from
+    the Chinese through Phari. He recounts the circumstances under which his family
+    made their escape journey through Bhutan and into India.\n \nKalsang Yulgial
+    describes his education in India, then in Denmark and Iran where he received
+    vocational training. He recounts the various positions that he held under the
+    Tibetan government-in-exile after his return to India, starting as a mechanic
+    and finally as a representative of a large refugee settlement.","type":"abstract"},{"value":"67","displayLabel":"Age"},{"value":"Male","displayLabel":"Gender"},{"value":"education,
+    Utsang, refugee in India -- life as, escape experiences, Tibetan Government-in-exile,
+    trade, childhood memories, Chinese rule -- life under","displayLabel":"Keywords"},{"value":"Sakya
+    Monastery, Seattle, Washington, United States","displayLabel":"Interview Location"}],"identifier":[{"value":"30C_Kalsang_Yulgial.mov","type":"local","source":{"code":"local"},"displayLabel":"Source
+    ID"}],"subject":[{"value":"Utsang","type":"place","uri":"https://www.wikidata.org/wiki/Q330785","source":{"code":"wikidata","uri":"https://www.wikidata.org/wiki"},"displayLabel":"Region"},{"value":"Invasion
+    and Occupation","type":"topic","source":{"code":"local"},"displayLabel":"Main
+    topics"},{"structuredValue":[{"value":"Oral history","type":"topic","uri":"http://id.loc.gov/authorities/subjects/sh85095453","source":{"code":"lcsh","uri":"http://id.loc.gov/authorities/subjects/"}},{"value":"China","type":"place","uri":"http://id.loc.gov/authorities/names/n79091366","source":{"code":"lcsh","uri":"http://id.loc.gov/authorities/names/"}},{"value":"Tibet
+    Autonomous Region","type":"place","uri":"http://id.loc.gov/authorities/names/n79101132","source":{"code":"lcsh","uri":"http://id.loc.gov/authorities/names/"}}]},{"structuredValue":[{"value":"Tibet
+    Autonomous Region","type":"place","uri":"http://id.loc.gov/authorities/names/n79101103","source":{"code":"lcsh","uri":"http://id.loc.gov/authorities/names/"}},{"value":"History","type":"topic","uri":"http://id.loc.gov/authorities/subjects/sh85061398","source":{"code":"lcsh","uri":"http://id.loc.gov/authorities/subjects/"}}]}],"access":{"accessContact":[{"value":"Stanford
+    University. East Asia Library","type":"repository","uri":"http://id.loc.gov/authorities/names/no2016112695","source":{"code":"naf"}}]},"adminMetadata":{"contributor":[{"name":[{"code":"CSt","uri":"http://id.loc.gov/vocabulary/organizations/cst","source":{"code":"marcorg","uri":"http://id.loc.gov/vocabulary/organizations"}}],"type":"organization","role":[{"value":"original
+    cataloging agency"}]}],"language":[{"code":"eng","source":{"code":"iso639-2b","uri":"http://id.loc.gov/vocabulary/iso639-2"},"uri":"http://id.loc.gov/vocabulary/iso639-2/eng"}],"note":[{"value":"human
+    prepared","type":"record origin"}]},"purl":"https://purl.stanford.edu/bc798xr9549"},"identification":{"sourceId":"sul:30C_Kalsang_Yulgial.mov"},"access":{"view":"world","download":"world","controlledDigitalLending":false,"useAndReproductionStatement":"Property
+    rights reside with the repository. To obtain permission to publish or reproduce,
+    please contact the East Asia Library at eastasialibrary@stanford.edu."}}'
+all_search: Oral history with Kalsang Yulgial, Nov. 15, 2014 Kalsang Yulgial ive
+  interviewee cre creator Adamski, Marcella ivr interviewer Sondag, Tony vdg videographer
+  2014-11-15 w3cdtf Seattle (Wash.) Filmed interviews Interview transcripts moving
+  image text access video/mp4 image/jpeg 1 video file and 1 PDF born digital Sound
+  Color eng English Kalsang Yulgial was born in Phari bordering Sikkim in India.
+  He describes Phari as a trading town where many different types of goods were
+  transferred in and out of India. He was lucky to have the opportunity to attend
+  a private school and he describes the curriculum and methods used for teaching.
+  After the Chinese invasion, the Chinese closed all the Tibetan schools and sent
+  the children to a large Chinese-run school in Phari. Some of the students, including
+  Kalsang Yulgial, were later sent to a Chinese school in Lhasa, but they began
+  to suspect the Chinese education was separating them from Tibetan language and
+  culture. Kalsang Yulgial was selected by the Chinese to go to a school in China.
+  He explains how the family evaded this by sending him on a trade mission with
+  his stepfather. By the time they returned many Tibetans had started fleeing
+  from the Chinese through Phari. He recounts the circumstances under which his
+  family made their escape journey through Bhutan and into India. Kalsang Yulgial
+  describes his education in India, then in Denmark and Iran where he received
+  vocational training. He recounts the various positions that he held under the
+  Tibetan government-in-exile after his return to India, starting as a mechanic
+  and finally as a representative of a large refugee settlement. 67 Male education,
+  Utsang, refugee in India -- life as, escape experiences, Tibetan Government-in-exile,
+  trade, childhood memories, Chinese rule -- life under Sakya Monastery, Seattle,
+  Washington, United States 30C_Kalsang_Yulgial.mov Utsang Invasion and Occupation
+  Oral history China Tibet Autonomous Region Tibet Autonomous Region History Stanford
+  University. East Asia Library CSt original cataloging agency eng human prepared
+title_245a_search: Oral history with Kalsang Yulgial, Nov. 15, 2014
+title_245_search: Oral history with Kalsang Yulgial, Nov. 15, 2014.
+title_sort: Oral history with Kalsang Yulgial Nov 15 2014
+title_display: Oral history with Kalsang Yulgial, Nov. 15, 2014
+title_full_display: Oral history with Kalsang Yulgial, Nov. 15, 2014.
+author_1xx_search: Kalsang Yulgial
+author_7xx_search:
+  - Adamski, Marcella
+  - Sondag, Tony
+author_person_facet:
+  - Kalsang Yulgial
+  - Adamski, Marcella
+  - Sondag, Tony
+author_sort: Kalsang Yulgial Oral history with Kalsang Yulgial Nov 15 2014
+author_person_display:
+  - Kalsang Yulgial
+  - Adamski, Marcella
+  - Sondag, Tony
+author_person_full_display:
+  - Kalsang Yulgial
+  - Adamski, Marcella
+  - Sondag, Tony
+topic_search:
+  - Invasion and Occupation
+  - Oral history
+  - History
+topic_display:
+  - Invasion and Occupation
+  - Oral history
+  - History
+geographic_search:
+  - Utsang
+  - China
+  - Tibet Autonomous Region
+subject_all_search:
+  - Invasion and Occupation
+  - Oral history
+  - History
+  - Utsang
+  - China
+  - Tibet Autonomous Region
+topic_facet:
+  - Invasion and Occupation
+  - Oral history
+  - History
+geographic_facet:
+  - Utsang
+  - China
+  - Tibet Autonomous Region
+pub_date: "2014"
+pub_date_search: "2014"
+pub_date_sort: "2014"
+pub_search:
+  - Seattle (Wash.)
+pub_display:
+  - Seattle (Wash.)
+publication_year_isi: 2014
+pub_year_ss: "2014"
+imprint_display:
+  - Seattle (Wash.), November 15, 2014
+pub_year_tisim:
+  - 2014
+genre_ssim:
+  - Filmed interviews
+  - Interview transcripts
+physical:
+  - 1 video file and 1 PDF
+format_hsim:
+  - Video/Film
+  - Book
+language:
+  - English
+summary_search:
+  - "Kalsang Yulgial was born in Phari bordering Sikkim in India. He describes Phari
+    as a trading town where many different types of goods were transferred in and
+    out of India. He was lucky to have the opportunity to attend a private school
+    and he describes the curriculum and methods used for teaching. After the Chinese
+    invasion, the Chinese closed all the Tibetan schools and sent the children to
+    a large Chinese-run school in Phari. Some of the students, including Kalsang
+    Yulgial, were later sent to a Chinese school in Lhasa, but they began to suspect
+    the Chinese education was separating them from Tibetan language and culture.\n
+    \nKalsang Yulgial was selected by the Chinese to go to a school in China. He
+    explains how the family evaded this by sending him on a trade mission with his
+    stepfather. By the time they returned many Tibetans had started fleeing from
+    the Chinese through Phari. He recounts the circumstances under which his family
+    made their escape journey through Bhutan and into India.\n \nKalsang Yulgial
+    describes his education in India, then in Denmark and Iran where he received
+    vocational training. He recounts the various positions that he held under the
+    Tibetan government-in-exile after his return to India, starting as a mechanic
+    and finally as a representative of a large refugee settlement."
+summary_display:
+  - "Kalsang Yulgial was born in Phari bordering Sikkim in India. He describes Phari
+    as a trading town where many different types of goods were transferred in and
+    out of India. He was lucky to have the opportunity to attend a private school
+    and he describes the curriculum and methods used for teaching. After the Chinese
+    invasion, the Chinese closed all the Tibetan schools and sent the children to
+    a large Chinese-run school in Phari. Some of the students, including Kalsang
+    Yulgial, were later sent to a Chinese school in Lhasa, but they began to suspect
+    the Chinese education was separating them from Tibetan language and culture.\n
+    \nKalsang Yulgial was selected by the Chinese to go to a school in China. He
+    explains how the family evaded this by sending him on a trade mission with his
+    stepfather. By the time they returned many Tibetans had started fleeing from
+    the Chinese through Phari. He recounts the circumstances under which his family
+    made their escape journey through Bhutan and into India.\n \nKalsang Yulgial
+    describes his education in India, then in Denmark and Iran where he received
+    vocational training. He recounts the various positions that he held under the
+    Tibetan government-in-exile after his return to India, starting as a mechanic
+    and finally as a representative of a large refugee settlement."
+url_fulltext:
+  - https://purl.stanford.edu/bc798xr9549
+access_facet:
+  - Online
+library_code_facet_ssim:
+  - SDR
+building_facet:
+  - Stanford Digital Repository
+dor_content_type_ssi: media
+dor_file_mimetype_ssim:
+  - video/mp4
+  - image/jp2
+  - application/pdf
+dor_resource_content_type_ssim:
+  - video
+  - file
+  - image
+dor_resource_count_isi: 3
+file_id:
+  - bc798xr9549%2Fbc798xr9549_30C_Kalsang_Yulgial_thumb
+collection:
+  - gm872vz2147
+collection_search:
+  - gm872vz2147
+collection_with_title:
+  - gm872vz2147-|-Tibet Oral History Project
+context_source_ssi: sdr
+last_updated: "2026-02-24T17:53:07Z"
+created: "2026-02-24T17:53:07Z"
+timestamp: "2026-02-24T17:53:07Z"
+author_struct:
+  - link: Kalsang Yulgial
+    search: '"Kalsang Yulgial"'
+    post_text: "(interviewee, creator)"
+  - link: Adamski, Marcella
+    search: '"Adamski, Marcella"'
+    post_text: "(interviewer)"
+  - link: Sondag, Tony
+    search: '"Sondag, Tony"'
+    post_text: "(videographer)"
