@@ -1688,7 +1688,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -1697,7 +1699,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:18.874+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-10-31T22:43:43.933+00:00",
+      "updatedDate": "2026-02-26T22:23:29.552+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -2806,7 +2808,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -2815,8 +2819,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:01.031+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:01.031+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-02-26T22:24:43.363+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -3290,7 +3294,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -3299,7 +3305,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:17.912+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-10-31T22:43:20.719+00:00",
+      "updatedDate": "2026-02-26T22:22:54.389+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -8241,7 +8247,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -8250,7 +8258,7 @@
     "metadata": {
       "createdDate": "2025-08-26T22:55:48.914+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-12-13T01:01:40.658+00:00",
+      "updatedDate": "2026-02-26T22:26:26.249+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -11923,7 +11931,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -11932,7 +11942,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:50.970+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-09-09T20:13:23.508+00:00",
+      "updatedDate": "2026-02-26T22:24:22.574+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -13999,7 +14009,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -14008,7 +14020,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:00.427+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-10-04T00:06:16.729+00:00",
+      "updatedDate": "2026-02-26T22:27:51.011+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
