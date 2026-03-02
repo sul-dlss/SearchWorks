@@ -18,8 +18,12 @@
 
   .field {
     border-bottom: 1px solid var(--stanford-60-black);
-    clear: both;
+    display: flex;
     word-break: break-all;
+  }
+
+  .control-field-values {
+    white-space: pre-wrap;
   }
 
   .ind1,
@@ -28,12 +32,9 @@
     padding: 0 0.25rem;
   }
 
-  .subfields {
-    padding-left: 5em;
-  }
-
   .tag_ind {
-    float: left;
+    width: 5rem;
+    flex: 0 0 auto;
   }
 }
 
