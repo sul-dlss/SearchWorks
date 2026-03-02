@@ -75,7 +75,7 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
-    addressable (2.8.8)
+    addressable (2.8.9)
       public_suffix (>= 2.0.2, < 8.0)
     airbrussh (1.6.0)
       sshkit (>= 1.6.1, != 1.7.0)
@@ -249,7 +249,7 @@ GEM
     ed25519 (1.4.0)
     edtf (3.2.0)
       activesupport (>= 3.0, < 9.0)
-    erb (6.0.1)
+    erb (6.0.2)
     erubi (1.13.1)
     factory_bot (6.5.6)
       activesupport (>= 6.1.0)
@@ -281,7 +281,7 @@ GEM
       logger
     herb (0.8.10-arm64-darwin)
     herb (0.8.10-x86_64-linux-gnu)
-    honeybadger (6.4.0)
+    honeybadger (6.5.0)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -314,6 +314,9 @@ GEM
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
     json (2.18.1)
+    json-schema (6.1.0)
+      addressable (~> 2.8)
+      bigdecimal (>= 3.1, < 5)
     jwt (3.1.2)
       base64
     kaminari (1.2.2)
@@ -373,6 +376,8 @@ GEM
       marc (~> 1.0)
     marcel (1.1.0)
     matrix (0.4.3)
+    mcp (0.7.1)
+      json-schema (>= 4.1)
     mini_mime (1.1.5)
     minitar (1.1.0)
     minitest (6.0.2)
@@ -496,8 +501,8 @@ GEM
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.6.2)
-      loofah (~> 2.21)
+    rails-html-sanitizer (1.7.0)
+      loofah (~> 2.25)
       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
     rails_autolink (1.1.8)
       actionview (> 3.1)
@@ -551,7 +556,7 @@ GEM
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.7)
+    rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-rails (8.0.3)
@@ -563,10 +568,11 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.7)
-    rubocop (1.84.2)
+    rubocop (1.85.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
+      mcp (~> 0.6)
       parallel (~> 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
@@ -625,8 +631,8 @@ GEM
       ostruct
       retriable
       ruby-progressbar
-    sqlite3 (2.9.0-arm64-darwin)
-    sqlite3 (2.9.0-x86_64-linux-gnu)
+    sqlite3 (2.9.1-arm64-darwin)
+    sqlite3 (2.9.1-x86_64-linux-gnu)
     sshkit (1.25.0)
       base64
       logger
@@ -670,7 +676,7 @@ GEM
     uri (1.1.1)
     useragent (0.16.11)
     version_gem (1.1.9)
-    view_component (4.4.0)
+    view_component (4.5.0)
       actionview (>= 7.1.0)
       activesupport (>= 7.1.0)
       concurrent-ruby (~> 1)
@@ -680,11 +686,10 @@ GEM
       descendants_tracker (~> 0.0, >= 0.0.3)
     warden (1.2.9)
       rack (>= 2.0.9)
-    web-console (4.2.1)
-      actionview (>= 6.0.0)
-      activemodel (>= 6.0.0)
+    web-console (4.3.0)
+      actionview (>= 8.0.0)
       bindex (>= 0.4.0)
-      railties (>= 6.0.0)
+      railties (>= 8.0.0)
     webmock (3.26.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -789,4 +794,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.6
+  4.0.7
