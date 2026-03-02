@@ -19,7 +19,7 @@ module Folio
       rule(:priority) do
         (str('first-line') | str('last-line') | str('number-of-criteria') | criteriumPriority | sevenCriteriumLetters).as(:criterium)
       end
-      rule(:criteriumPriority) { (str('criterium') >> ws? >> str('(') >> ws? >> sevenCriteriumLetters >> ws? >> str(')')) }
+      rule(:criteriumPriority) { str('criterium') >> ws? >> str('(') >> ws? >> sevenCriteriumLetters >> ws? >> str(')') }
       rule(:sevenCriteriumLetters) { criterium_letter >> (criterium_letter | match('[, ]')).repeat(0) }
       rule(:criterium_letter) { match('[tabcsmg]').as(:letter) }
 
@@ -39,7 +39,7 @@ module Folio
       end
 
       rule(:policies) { (policy >> ws?).repeat(0).as(:policy) }
-      rule(:policy) { (match('[a-z]').as(:type) >> ws? >> name.as(:uuid)) }
+      rule(:policy) { match('[a-z]').as(:type) >> ws? >> name.as(:uuid) }
 
       root(:file)
     end
