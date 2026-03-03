@@ -8,6 +8,10 @@ class TocAndSummaryComponent < ViewComponent::Base
 
   attr_reader :document
 
+  def render?
+    toc.present? || summaries.any?
+  end
+
   def toc
     @toc ||= document.fetch(:toc_struct, []).first || {}
   end
