@@ -168,6 +168,7 @@ awwa.onlinelibrary.wiley.com
 babel.hathitrust.org
 bac-lac.on.worldcat.org
 bacandrology.biomedcentral.com
+bap.priweb2.org
 basicandappliedzoology.springeropen.com
 basictranslational.onlinejacc.org
 bdj.pensoft.net
@@ -833,7 +834,6 @@ insight.jci.org
 insights.ceicdata.com
 inspec-analytics-app.theiet.org
 institutions.rarebookhub.com
-intellectdiscover.com
 interactionofcolor.com
 internalmedicine.lwwhealthlibrary.com
 internationalbreastfeedingjournal.biomedcentral.com
@@ -1550,7 +1550,6 @@ thailand.digitaljournals.org
 theatlantic.com
 thejns.org
 theoncologist.onlinelibrary.wiley.com
-thepolynesiansociety.org
 thescipub.com
 thesurgery.or.kr
 thorax.bmj.com
@@ -2661,7 +2660,6 @@ www.rsc.org
 www.rsfjournal.org
 www.ruralneuropractice.com
 www.sage-hindawi.com
-www.sanp.ch
 www.sapj.co.za
 www.sarsreference.com
 www.saudija.org
@@ -2804,6 +2802,7 @@ www.vetsci.org
 www.victorianpopularculture.amdigital.co.uk
 www.virginiacompanyarchives.amdigital.co.uk
 www.virtualpediatrichospital.org
+www.visualdx.com
 www.vjel.org
 www.vjultrafast.org
 www.vr-elibrary.de
