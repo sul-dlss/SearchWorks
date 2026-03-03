@@ -114,6 +114,11 @@ summary_display:
     the included data, can be used to reproduce several of the figures from the
     publication.\r\n\r\nCode and data are provided as part of the goal of ensuring
     that computational methods are reproducible by other researchers."
+summary_struct:
+  - label: Abstract
+    fields:
+      - field:
+          - "This site houses sample data and code for the publication, \r\n\r\nTakemura, H., Rokem, A., Winawer, J., Yeatman, J.D., Wandell, B. A., and Pestilli, F.  A major human white-matter pathway between dorsal and ventral visual cortex.\r\n\r\nAll code in this repository is written in MATLAB (Mathworks) and, together with the included data, can be used to reproduce several of the figures from the publication.\r\n\r\nCode and data are provided as part of the goal of ensuring that computational methods are reproducible by other researchers."
 access_facet:
   - Online
 library_code_facet_ssim:

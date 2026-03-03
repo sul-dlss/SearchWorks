@@ -14,3 +14,10 @@ beginning_year_isi: 2010
 imprint_display: 2010
 summary_display:
   - Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet
+    vernacular:
+  unmatched_vernacular: []

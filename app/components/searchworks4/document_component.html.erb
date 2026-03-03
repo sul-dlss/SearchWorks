@@ -66,21 +66,19 @@
               <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
             </ul>
           <% end %>
-          <%= render SummaryDataComponent.new(document:) %>
         <% else %>
           <ul class="document-metadata list-unstyled">
             <% %i[creator corporate_author meeting].each do |target| %>
               <%= render 'marc_fields/linked_author_index', linked_author: document.linked_author(target) %>
             <% end %>
           </ul>
-
-          <div data-controller="long-text" data-long-text-truncate-class="truncate-2" data-long-text-show-more-button-style-value="text-button">
-            <div data-long-text-target="text">
-              <%= render TocAndSummaryComponent.new(document:) %>
-            </div>
-          </div>
         <% end %>
 
+        <div data-controller="long-text" data-long-text-truncate-class="truncate-2" data-long-text-show-more-button-style-value="text-button">
+          <div data-long-text-target="text">
+            <%= render TocAndSummaryComponent.new(document:) %>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-2 d-flex flex-column align-items-center">

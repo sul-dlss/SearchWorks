@@ -128,6 +128,21 @@ summary_display:
   walk, trip to flea market, villa orbiana, villa pini gardens, villa pini-inside,
   villa rincon, villa rincon garden, walk in hill, my room, my studio, people in orbiana,
   people in villa, rincon, scarves, towns, villa orbina gardens.'
+summary_struct:
+  - label: Abstract
+    fields:
+      - field:
+          - >-
+            883 JPEG image files containing photographs taken during Robert
+            Creeley's writers residency at the Liguria Study Center in
+            Bogliasco, Italy. Files are organized into the following
+            folders: genoa trip, ken's birthday, lieder concert, misc, nervi
+            and beyond, paintings, people inside villa, portofino, studio,
+            studio visit, town walk, trip to flea market, villa orbiana,
+            villa pini gardens, villa pini-inside, villa rincon, villa
+            rincon garden, walk in hill, my room, my studio, people in
+            orbiana, people in villa, rincon, scarves, towns, villa orbina
+            gardens.
 iiif_manifest_url_ssim:
 - https://purl.stanford.edu/bx988zq7071/iiif3/manifest
 access_facet:
