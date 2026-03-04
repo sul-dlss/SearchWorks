@@ -1,7 +1,16 @@
 <%= render @layout.new(classes: 'panel-access-conditions') do |component| %>
   <% component.with_title(classes: 'h3 text-secondary') { 'Access conditions' } %>
   <% component.with_body do %>
-    <% document.mods.accessCondition.each do |accessCondition| %>
+    <% field_map.each do |fields| %>
+      <%= tag.div data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-6'} do %>
+        <% tag.dl class: 'mb-0', data: { 'long-text-target': 'text' } do %>
+          <% fields.each do |field| %>
+            <%= render Record::Cocina::FieldComponent.new(field: field) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% mods_access_conditions.each do |accessCondition| %>
       <%= tag.div data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-6'} do %>
         <dl class="mb-0" data-long-text-target="text">
           <%= render ModsDisplay::FieldComponent.new(field: accessCondition) %>

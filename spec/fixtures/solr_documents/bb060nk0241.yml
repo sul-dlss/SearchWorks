@@ -1,0 +1,178 @@
+id: bb060nk0241
+druid: bb060nk0241
+hashed_id_ssi: dacc22c2eb3e9afca57b8f1928a18033
+all_search:
+  "A major human white-matter pathway between dorsal and ventral visual
+  cortex Hiromasa Takemura aut author Ariel Rokem aut author Jonathan Winawer
+  aut author Jason Yeatman aut author Brian Wandell aut author Franco Pestilli
+  aut author 2016-06-14 edtf 2014-04-30 edtf Data Data sets dataset Dataset Dataset
+  This site houses sample data and code for the publication, Takemura, H., Rokem,
+  A., Winawer, J., Yeatman, J.D., Wandell, B. A., and Pestilli, F. A major human
+  white-matter pathway between dorsal and ventral visual cortex. All code in this
+  repository is written in MATLAB (Mathworks) and, together with the included
+  data, can be used to reproduce several of the figures from the publication.
+  Code and data are provided as part of the goal of ensuring that computational
+  methods are reproducible by other researchers. diffusion MRI visual cortex fMRI
+  white matter neuroanatomy htakemur@stanford.edu Takemura, H., Rokem, A., Winawer,
+  J., Yeatman, J.D., Wandell, B. A., and Pestilli, F. A major human white-matter
+  pathway between dorsal and ventral visual cortex. Cereb. Cortex (2016) 26 (5):
+  2205-2214. doi: 10.1093/cercor/bhv064 2016-06-14 edtf Metadata created by user
+  via Stanford self-deposit application"
+title_245a_search: A major human white-matter pathway between dorsal and ventral
+  visual cortex
+title_245_search: A major human white-matter pathway between dorsal and ventral
+  visual cortex.
+title_sort: A major human whitematter pathway between dorsal and ventral visual
+  cortex
+title_display:
+  A major human white-matter pathway between dorsal and ventral visual
+  cortex
+title_full_display:
+  A major human white-matter pathway between dorsal and ventral
+  visual cortex.
+author_1xx_search: Takemura, Hiromasa
+author_7xx_search:
+  - Rokem, Ariel
+  - Winawer, Jonathan
+  - Yeatman, Jason
+  - Wandell, Brian
+  - Pestilli, Franco
+author_person_facet:
+  - Takemura, Hiromasa
+  - Rokem, Ariel
+  - Winawer, Jonathan
+  - Yeatman, Jason
+  - Wandell, Brian
+  - Pestilli, Franco
+author_sort: Takemura Hiromasa A major human whitematter pathway between dorsal
+  and ventral visual cortex
+author_person_display:
+  - Takemura, Hiromasa
+  - Rokem, Ariel
+  - Winawer, Jonathan
+  - Yeatman, Jason
+  - Wandell, Brian
+  - Pestilli, Franco
+author_person_full_display:
+  - Takemura, Hiromasa
+  - Rokem, Ariel
+  - Winawer, Jonathan
+  - Yeatman, Jason
+  - Wandell, Brian
+  - Pestilli, Franco
+topic_search:
+  - diffusion MRI
+  - visual cortex
+  - fMRI
+  - white matter
+  - neuroanatomy
+topic_display:
+  - diffusion MRI
+  - visual cortex
+  - fMRI
+  - white matter
+  - neuroanatomy
+subject_all_search:
+  - diffusion MRI
+  - visual cortex
+  - fMRI
+  - white matter
+  - neuroanatomy
+topic_facet:
+  - diffusion MRI
+  - visual cortex
+  - fMRI
+  - white matter
+  - neuroanatomy
+pub_date: "2016"
+pub_date_search: "2016"
+pub_date_sort: "2016"
+publication_year_isi: 2016
+pub_year_ss: "2016"
+imprint_display:
+  - June 14, 2016; April 30, 2014
+pub_year_tisim:
+  - 2016
+genre_ssim:
+  - Data sets
+  - Dataset
+format_hsim:
+  - Dataset
+summary_search:
+  - "This site houses sample data and code for the publication, \r\n\r\nTakemura,
+    H., Rokem, A., Winawer, J., Yeatman, J.D., Wandell, B. A., and Pestilli, F.
+    \ A major human white-matter pathway between dorsal and ventral visual cortex.\r\n\r\nAll
+    code in this repository is written in MATLAB (Mathworks) and, together with
+    the included data, can be used to reproduce several of the figures from the
+    publication.\r\n\r\nCode and data are provided as part of the goal of ensuring
+    that computational methods are reproducible by other researchers."
+summary_display:
+  - "This site houses sample data and code for the publication, \r\n\r\nTakemura,
+    H., Rokem, A., Winawer, J., Yeatman, J.D., Wandell, B. A., and Pestilli, F.
+    \ A major human white-matter pathway between dorsal and ventral visual cortex.\r\n\r\nAll
+    code in this repository is written in MATLAB (Mathworks) and, together with
+    the included data, can be used to reproduce several of the figures from the
+    publication.\r\n\r\nCode and data are provided as part of the goal of ensuring
+    that computational methods are reproducible by other researchers."
+access_facet:
+  - Online
+library_code_facet_ssim:
+  - SDR
+building_facet:
+  - Stanford Digital Repository
+dor_resource_count_isi: 9
+collection:
+  - qd500xn1572
+collection_search:
+  - qd500xn1572
+collection_with_title:
+  - qd500xn1572-|-VISTA Lab
+context_source_ssi: sdr
+context_version_ssi: "b1675ec1126a228cc542828dcb338a011c970cee"
+last_updated: "2026-03-01T12:56:12Z"
+created: "2026-03-01T12:56:12Z"
+timestamp: "2026-03-01T12:56:12Z"
+cocina_struct:
+  - '{"description":{"title":[{"value":"A major human white-matter pathway between
+    dorsal and ventral visual cortex"}],"contributor":[{"name":[{"structuredValue":[{"value":"Hiromasa","type":"forename"},{"value":"Takemura","type":"surname"}]}],"type":"person","status":"primary","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Ariel","type":"forename"},{"value":"Rokem","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Jonathan","type":"forename"},{"value":"Winawer","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Jason","type":"forename"},{"value":"Yeatman","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Brian","type":"forename"},{"value":"Wandell","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Franco","type":"forename"},{"value":"Pestilli","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]}],"event":[{"type":"deposit","date":[{"value":"2016-06-14","type":"publication","encoding":{"code":"edtf"}}]},{"type":"creation","date":[{"value":"2014-04-30","type":"creation","encoding":{"code":"edtf"}}]}],"form":[{"structuredValue":[{"value":"Data","type":"type"}],"type":"resource
+    type","source":{"value":"Stanford self-deposit resource types"}},{"value":"Data
+    sets","type":"genre","uri":"http://id.loc.gov/authorities/genreForms/gf2018026119","source":{"code":"lcgft"}},{"value":"dataset","type":"genre","source":{"code":"local"}},{"value":"Dataset","type":"resource
+    type","uri":"http://id.loc.gov/vocabulary/resourceTypes/dat","source":{"uri":"http://id.loc.gov/vocabulary/resourceTypes/"}},{"value":"Dataset","type":"resource
+    type","source":{"value":"DataCite resource types"}}],"note":[{"value":"This
+    site houses sample data and code for the publication, \r\n\r\nTakemura, H.,
+    Rokem, A., Winawer, J., Yeatman, J.D., Wandell, B. A., and Pestilli, F.  A major
+    human white-matter pathway between dorsal and ventral visual cortex.\r\n\r\nAll
+    code in this repository is written in MATLAB (Mathworks) and, together with
+    the included data, can be used to reproduce several of the figures from the
+    publication.\r\n\r\nCode and data are provided as part of the goal of ensuring
+    that computational methods are reproducible by other researchers.","type":"abstract"}],"subject":[{"value":"diffusion
+    MRI","type":"topic"},{"value":"visual cortex","type":"topic"},{"value":"fMRI","type":"topic"},{"value":"white
+    matter","type":"topic"},{"value":"neuroanatomy","type":"topic"}],"access":{"accessContact":[{"value":"htakemur@stanford.edu","type":"email","displayLabel":"Contact"}]},"relatedResource":[{"note":[{"value":"Takemura,
+    H., Rokem, A., Winawer, J., Yeatman, J.D., Wandell, B. A., and Pestilli, F.  A
+    major human white-matter pathway between dorsal and ventral visual cortex. Cereb.
+    Cortex (2016) 26 (5): 2205-2214. doi: 10.1093/cercor/bhv064","type":"preferred
+    citation"}]}],"adminMetadata":{"event":[{"type":"creation","date":[{"value":"2016-06-14","encoding":{"code":"edtf"}}]}],"note":[{"value":"Metadata
+    created by user via Stanford self-deposit application","type":"record origin"}]},"purl":"https://purl.stanford.edu/bb060nk0241"},"identification":{"sourceId":"hydrus:object-363"},"access":{"view":"world","download":"world","controlledDigitalLending":false,"useAndReproductionStatement":"User
+    agrees that, where applicable, content will not be used to identify or to otherwise
+    infringe the privacy or confidentiality rights of individuals. Content distributed
+    via the Stanford Digital Repository may be subject to additional license and
+    use restrictions applied by the depositor.","license":"https://opendatacommons.org/licenses/by/1-0/"}}'
+author_struct:
+  - link: Takemura, Hiromasa
+    search: '"Takemura, Hiromasa"'
+    post_text: "(author)"
+  - link: Rokem, Ariel
+    search: '"Rokem, Ariel"'
+    post_text: "(author)"
+  - link: Winawer, Jonathan
+    search: '"Winawer, Jonathan"'
+    post_text: "(author)"
+  - link: Yeatman, Jason
+    search: '"Yeatman, Jason"'
+    post_text: "(author)"
+  - link: Wandell, Brian
+    search: '"Wandell, Brian"'
+    post_text: "(author)"
+  - link: Pestilli, Franco
+    search: '"Pestilli, Franco"'
+    post_text: "(author)"
