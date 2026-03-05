@@ -13,20 +13,15 @@ class Citation
 
   # @return [Boolean] Whether or not the document is citable
   def citable?
-    citations_from_mods.present? || citations_from_marc.present?
+    citations_from_cocina.present? ||
+      citations_from_mods.present? ||
+      citations_from_marc.present?
   end
 
   # @return [Hash] A hash of all citations for the document
   #          in the form of { citation_style => [citation_text] }
   def citations
     all_citations.presence || NULL_CITATION
-  end
-
-  # @return [Hash] A hash of MODS citations for the document
-  #          Used when assembling citations for multiple documents
-  #          in the form of { citation_style => [citation_text] }
-  def mods_citations
-    citations_from_mods.presence || {}
   end
 
   def citeproc_item
@@ -42,6 +37,7 @@ class Citation
       citation_hash = {}
 
       citation_hash.merge!(citations_from_mods) if citations_from_mods.present?
+      citation_hash.merge!(citations_from_cocina) if citations_from_cocina.present?
       citation_hash.merge!(citations_from_marc) if citations_from_marc.present?
 
       citation_hash
@@ -52,6 +48,12 @@ class Citation
     return unless document.mods && document.mods.note.present?
 
     @citations_from_mods ||= Citations::ModsCitation.new(notes: document.mods.note).all_citations
+  end
+
+  def citations_from_cocina
+    return unless document.cocina?
+
+    @citations_from_cocina ||= Citations::CocinaCitation.new(cocina_display: document.cocina_display).all_citations
   end
 
   def citations_from_marc
