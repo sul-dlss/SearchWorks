@@ -7,8 +7,6 @@
 }
 
 #marc_view {
-  text-align: left;
-
   .item-details {
     caption {
       caption-side: top;
