@@ -1,0 +1,6 @@
+<%= tag.ul class: 'document-metadata list-unstyled mb-0' do %>
+  <%= render Searchworks4::SearchResult::LinkedContributorComponent.with_collection(creators, marc_type: :creator) %>
+  <%= render Searchworks4::SearchResult::LinkedContributorComponent.with_collection(corporate_authors, marc_type: :corporate_author) %>
+  <%= render Searchworks4::SearchResult::LinkedContributorComponent.with_collection(meeting_authors, marc_type: :meeting) %>
+  <%= render Searchworks4::SearchResult::LinkedContributorComponent.with_collection(other_contributors, marc_type: :contributors) %>
+<% end %>
