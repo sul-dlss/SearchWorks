@@ -13,7 +13,10 @@ class DatabasesController < ApplicationController
 
   configure_blacklight do |config|
     config.facet_fields.delete_if { |k, _v| k != 'db_az_subject' }
-    config.facet_fields['db_az_subject'].show = false
+    config.facet_fields['db_az_subject'].show = true
+    config.facet_fields['db_az_subject'].if = true
+    config.facet_fields['db_az_subject'].collapse = false
+    config.facet_fields['db_az_subject'].limit = -1
     config.search_fields.clear
     config.add_search_field('search')
     config.view.delete(:gallery)
@@ -40,8 +43,12 @@ class DatabasesController < ApplicationController
   end
 
   before_action only: :index do
+    blacklight_config.index.mini_bento_component = nil
     ids = Settings.selected_databases.keys.map(&:to_s)
     @selected_databases = clean_search_service.fetch(ids, { sort: "title_sort asc", rows: ids.length }).sort_by { |doc| ids.index(doc.id) }
+
+    response, _documents = database_subject_search_service.search_results
+    @subjects_by_letter = response.aggregations['db_az_subject'].items.group_by { |item| item.value[0].upcase }
   end
 
   class DatabaseTitleSuggestionsSearchBuilder < Blacklight::SearchBuilder
@@ -75,10 +82,16 @@ class DatabasesController < ApplicationController
       solr_parameters[:q] = '*:*'
       solr_parameters[:facet] = 'true'
       solr_parameters['facet.field'] = 'db_az_subject'
-      solr_parameters['f.db_az_subject.facet.method'] = 'fc'
-      solr_parameters['f.db_az_subject.facet.contains'] = search_state.query_param
-      solr_parameters['f.db_az_subject.facet.contains.ignoreCase'] = 'true'
       solr_parameters[:rows] = 0
+
+      if search_state.query_param.present?
+        solr_parameters['f.db_az_subject.facet.method'] = 'fc'
+        solr_parameters['f.db_az_subject.facet.contains'] = search_state.query_param
+        solr_parameters['f.db_az_subject.facet.contains.ignoreCase'] = 'true'
+      else
+        # return all the subjects
+        solr_parameters['facet.limit'] = -1
+      end
     end
   end
 
@@ -94,7 +107,7 @@ class DatabasesController < ApplicationController
     search_service_class.new(config: blacklight_config, search_state: search_state, search_builder_class: DatabaseTitleSuggestionsSearchBuilder, **search_service_context)
   end
 
-  def autocomplete_subject_search_service
+  def database_subject_search_service
     search_service_class.new(config: blacklight_config, search_state: search_state, search_builder_class: DatabaseSubjectSuggestionsSearchBuilder, **search_service_context)
   end
 
@@ -103,7 +116,7 @@ class DatabasesController < ApplicationController
   def autocomplete
     @query = search_state.query_param
     @title_response = autocomplete_title_search_service.search_results
-    @facet_response = autocomplete_subject_search_service.search_results
+    @facet_response = database_subject_search_service.search_results
 
     render layout: false
   end
