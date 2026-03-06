@@ -1,8 +1,7 @@
 <% content_for(:search_navbar) { render 'header' } %>
+
 <% content_for(:additional_aside_content) do %>
-  <div class="pt-4 px-1">
-    <%= render 'popular_databases' %>
-  </div>
+  <%= render 'popular_databases' %>
 <% end %>
 
-<%= render partial: "search_results", locals: { content_classes: 'col-md-8 me-md-auto', hide_constraints: true, hide_facets: true } %>
+<%= render partial: "search_results", locals: {hide_constraints: false, hide_facets: false, database_aside: true } %>
