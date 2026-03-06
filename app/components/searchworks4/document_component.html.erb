@@ -60,19 +60,11 @@
           </div>
         <% end %>
 
-        <% if document.mods? %>
-          <% if document.mods.name.any? %>
-            <ul class="document-metadata list-unstyled truncate-2">
-              <%= render Searchworks4::ModsAuthorsComponent.new(document:) %>
-            </ul>
-          <% end %>
-        <% else %>
-          <ul class="document-metadata list-unstyled">
-            <% %i[creator corporate_author meeting].each do |target| %>
-              <%= render 'marc_fields/linked_author_index', linked_author: document.linked_author(target) %>
-            <% end %>
-          </ul>
-        <% end %>
+        <div class="mb-1" data-controller="long-text" data-long-text-truncate-class="truncate-3" data-long-text-show-more-button-style-value="text-button">
+          <div data-long-text-target="text">
+            <%= render Searchworks4::SearchResult::LinkedContributorsComponent.new(document:) %>
+          </div>
+        </div>
 
         <div data-controller="long-text" data-long-text-truncate-class="truncate-2" data-long-text-show-more-button-style-value="text-button">
           <div data-long-text-target="text">
