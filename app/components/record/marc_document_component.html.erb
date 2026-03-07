@@ -1,5 +1,5 @@
 <%= render layout.new(document:) do |component| %>
-  <% component.with_thumbnail { render Searchworks4::ThumbnailComponent.new(presenter: presenter, counter: nil, classes: %w[document-thumbnail float-end mt-1]) unless document.managed_purls.many? || document.druid } %>
+  <% component.with_thumbnail { render Searchworks4::ThumbnailComponent.new(presenter: presenter, counter: nil, classes: %w[document-thumbnail float-end mt-1]) } %>
   <% component.with_title { presenter.heading } %>
   <% component.with_header do %>
     <% if presenter.vernacular_title.present? %>
