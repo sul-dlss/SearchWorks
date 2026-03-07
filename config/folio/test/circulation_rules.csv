@@ -175,11 +175,11 @@ faculty,book,,,,SAL,,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,N
 any,book,,,,MEDIA-CENTER,,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 faculty,book,,,,HILA,,No loan,Allow hold/recall,Default notice,No fines,$100 lost fee
 any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
-,,26-week ILL,,,,SUL-ILLIAD,26week-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
-,,16-week ILL,,,,SUL-ILLIAD,16week-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
-,,12-week ILL,,,,SUL-ILLIAD,12week-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
-,,8-week ILL,,,,SUL-ILLIAD,8week-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
-,,4-week ILL,,,,SUL-ILLIAD,4week-norenew-7daygrace,No requests allowed,Default notice,No fines,$100 lost fee
+,,26-week ILL,,,,SUL-ILLIAD,26week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
+,,16-week ILL,,,,SUL-ILLIAD,16week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
+,,12-week ILL,,,,SUL-ILLIAD,12week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
+,,8-week ILL,,,,SUL-ILLIAD,8week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
+,,4-week ILL,,,,SUL-ILLIAD,4week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
 ,periodical,,,,SCIENCE,SCI-REF or SCI-RETIRED-REF,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,any,,,,,EDU-PROCESSING or GRE-PROCESSING or GRE-TECH-PROCESSOR or SUL-PAGEABLE-LOC,No loan,Allow paging/hold,Default notice,No fines,$250 lost fee
 ,any,,,,,SUL-TS-PROCESSING,No loan,Allow All,Default notice,No fines,$250 lost fee
