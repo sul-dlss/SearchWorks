@@ -93,6 +93,82 @@ author_person_full_display:
 author_sort: Bäumler Kathrin0246HAOAOD
 building_facet:
 - Stanford Digital Repository
+cocina_struct:
+  - >-
+    {"description":{"title":[{"value":"0246_H_AO_AOD"}],"contributor":[{"name":[{"structuredValue":[{"value":"Kathrin","type":"forename"},{"value":"Bäumler","type":"surname"}]}],"type":"person","status":"primary","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Malte","type":"forename"},{"value":"Rolf-Pissarczyk","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Richard","type":"forename"},{"value":"Schussnig","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Thomas-Peter","type":"forename"},{"value":"Fries","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Gabriel","type":"forename"},{"value":"Mistelbauer","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"structuredValue":[{"value":"Martin
+    R.","type":"forename"},{"value":"Pfaller","type":"surname"}]}],"type":"person","role":[{"value":"author","code":"aut","uri":"http://id.loc.gov/vocabulary/relators/aut","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"value":"Stanford
+    University"}],"type":"organization","role":[{"value":"compiler","code":"com","uri":"http://id.loc.gov/vocabulary/relators/com","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"value":"Vascular
+    Model
+    Repository"}],"type":"organization","role":[{"value":"compiler","code":"com","uri":"http://id.loc.gov/vocabulary/relators/com","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"value":"Stanford
+    University Medical
+    Center"}],"type":"organization","role":[{"value":"data
+    contributor","code":"dtc","uri":"http://id.loc.gov/vocabulary/relators/dtc","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"value":"Deutscher
+    Akademischer Austauschdienst (DAAD) Doctoral Candidate
+    Scholarship"}],"type":"organization","role":[{"value":"funder","code":"fnd","uri":"http://id.loc.gov/vocabulary/relators/fnd","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]},{"name":[{"value":"NIH
+    (R01LM013120 &
+    R01HL131823)"}],"type":"organization","role":[{"value":"funder","code":"fnd","uri":"http://id.loc.gov/vocabulary/relators/fnd","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]}],"event":[{"type":"deposit","date":[{"value":"2025-03-27","type":"publication","encoding":{"code":"edtf"}}]},{"type":"publication","date":[{"value":"2025-03-07","type":"publication","status":"primary","encoding":{"code":"edtf"}}]}],"form":[{"structuredValue":[{"value":"Data","type":"type"},{"value":"3D
+    model","type":"subtype"},{"value":"Image","type":"subtype"}],"type":"resource
+    type","source":{"value":"Stanford self-deposit resource
+    types"}},{"value":"Data
+    sets","type":"genre","uri":"http://id.loc.gov/authorities/genreForms/gf2018026119","source":{"code":"lcgft"}},{"value":"dataset","type":"genre","source":{"code":"local"}},{"value":"three-dimensional
+    scan","type":"genre","source":{"code":"local"}},{"value":"Dataset","type":"resource
+    type","uri":"http://id.loc.gov/vocabulary/resourceTypes/dat","source":{"uri":"http://id.loc.gov/vocabulary/resourceTypes/"}},{"value":"three
+    dimensional object","type":"resource type","source":{"value":"MODS
+    resource types"}},{"value":"still image","type":"resource
+    type","source":{"value":"MODS resource
+    types"}},{"value":"Dataset","type":"resource
+    type","source":{"value":"DataCite resource
+    types"}}],"note":[{"value":"Model of the aorta of a 25-year-old female
+    with Marfan syndrome, illustrating the progression of a type B aortic
+    dissection over a seven-year period. Simulation results are
+    availableThis model can be found in the Vascular Model
+    Repository.","type":"abstract"},{"value":"Bäumler, K., Rolf-Pissarczyk,
+    M., Schussnig, R., Fries, T., Mistelbauer, G., and Pfaller, M. (2025).
+    0246_H_AO_AOD. Version 1. Stanford Digital Repository. Available at
+    https://purl.stanford.edu/nj140cs3237/version/1.
+    https://doi.org/10.25740/nj140cs3237.","type":"preferred
+    citation"}],"subject":[{"value":"Aorta","type":"topic","uri":"http://id.worldcat.org/fast/811020/","source":{"code":"fast","uri":"http://id.worldcat.org/fast/"}},{"value":"Aortic
+    dissection","type":"topic","uri":"http://id.worldcat.org/fast/895393/","source":{"code":"fast","uri":"http://id.worldcat.org/fast/"}},{"value":"Female","type":"topic","uri":"http://id.worldcat.org/fast/1007080/","source":{"code":"fast","uri":"http://id.worldcat.org/fast/"}},{"value":"Human","type":"topic"}],"access":{"accessContact":[{"value":"simvascular@gmail.com","type":"email","displayLabel":"Contact"}]},"relatedResource":[{"note":[{"value":"Bäumler,
+    K., Rolf-Pissarczyk, M., Schussnig, R., Fries, T. P., Mistelbauer, G.,
+    Pfaller, M. R., Marsden, A. L., Fleischmann, D., & Holzapfel, G. A.
+    (2025). Assessment of aortic dissection remodeling with patient-specific
+    fluid–structure interaction models. IEEE Transactions on Biomedical
+    Engineering, 72(3), 953–964.
+    https://doi.org/10.1109/TBME.2024.3480362","type":"preferred
+    citation"}]}],"adminMetadata":{"event":[{"type":"creation","date":[{"value":"2025-03-27","encoding":{"code":"edtf"}}]}],"note":[{"value":"Metadata
+    created by user via Stanford self-deposit application","type":"record
+    origin"}]},"purl":"https://purl.stanford.edu/nj140cs3237"},"identification":{"doi":"10.25740/nj140cs3237","sourceId":"hydrus:object-9234"},"access":{"view":"world","download":"world","controlledDigitalLending":false,"useAndReproductionStatement":"Copyright
+    (c) Stanford University, the Regents of the University of
+    California,\r\nOpen Source Medical Software Corporation, and other
+    parties.\r\n\r\nAll Rights Reserved.\r\n\r\nPermission is hereby
+    granted, free of charge, to any person obtaining\r\na copy of this data
+    to use the data for research and development\r\npurposes subject to the
+    following conditions:\r\n\r\nThe above copyright notice and this
+    README-COPYRIGHT file shall be\r\nincluded in all copies of any portion
+    of this data.\r\n\r\nWhenever reasonable and possible in publications
+    and presentations\r\nwhen this data is used in whole or part, please
+    include an acknowledgement\r\n similar to the following:\r\n\r\n\"The
+    data used herein was provided in whole or in part with\r\nFederal funds
+    from the National Library of Medicine under Grant\r\n No. R01LM013120,
+    and the National Heart, Lung, and Blood Institute,\r\n National
+    Institutes of Health, Department of Health and Human Services, \r\nunder
+    Contract No. HHSN268201100035C\"\r\n\r\nAND/OR\r\n\r\nN.M. Wilson, A.K.
+    Ortiz, and A.B. Johnson, “The Vascular Model Repository:\r\nA Public
+    Resource of Medical Imaging Data and Blood Flow Simulation
+    Results,”\r\nJ. Med. Devices 7(4), 040923 (Dec 05, 2013)
+    doi:10.1115/1.4025983.\r\n\r\nAND/OR\r\n\r\nReference the official
+    website for this data: www.vascularmodel.com.\r\n\r\nTHE DATA IS
+    PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\r\nOR IMPLIED,
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\r\nMERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\r\nIN NO EVENT
+    SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\r\nCLAIM,
+    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\r\nTORT OR
+    OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\r\nDATA OR THE
+    USE OR OTHER DEALINGS IN THE DATA.\r\n\r\nUser agrees that, where
+    applicable, content will not be used to identify or to otherwise
+    infringe the privacy or confidentiality rights of individuals. Content
+    distributed via the Stanford Digital Repository may be subject to
+    additional license and use restrictions applied by the depositor."}}
 collection:
 - dj064dg8823
 collection_search:
@@ -160,6 +236,15 @@ summary_display:
 - Model of the aorta of a 25-year-old female with Marfan syndrome, illustrating the
   progression of a type B aortic dissection over a seven-year period. Simulation results
   are availableThis model can be found in the Vascular Model Repository.
+summary_struct:
+  - label: Abstract
+    fields:
+      - field:
+          - >-
+            Model of the aorta of a 25-year-old female with Marfan syndrome,
+            illustrating the progression of a type B aortic dissection over
+            a seven-year period. Simulation results are availableThis model
+            can be found in the Vascular Model Repository.
 title_245_search: 0246_H_AO_AOD.
 title_245a_display: 0246HAOAOD
 title_245a_search: 0246_H_AO_AOD
@@ -181,190 +266,6 @@ topic_display:
 - Aortic dissection
 - Female
 - Human
-modsxml: |
-  <?xml version="1.0" encoding="UTF-8"?>
-  <mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.7" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd">
-      <titleInfo>
-        <title>0246_H_AO_AOD</title>
-      </titleInfo>
-      <name usage="primary" type="personal">
-        <namePart type="given">Kathrin</namePart>
-        <namePart type="family">Bäumler</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">author</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">aut</roleTerm>
-        </role>
-      </name>
-      <name type="personal">
-        <namePart type="given">Malte</namePart>
-        <namePart type="family">Rolf-Pissarczyk</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">author</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">aut</roleTerm>
-        </role>
-      </name>
-      <name type="personal">
-        <namePart type="given">Richard</namePart>
-        <namePart type="family">Schussnig</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">author</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">aut</roleTerm>
-        </role>
-      </name>
-      <name type="personal">
-        <namePart type="given">Thomas-Peter</namePart>
-        <namePart type="family">Fries</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">author</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">aut</roleTerm>
-        </role>
-      </name>
-      <name type="personal">
-        <namePart type="given">Gabriel</namePart>
-        <namePart type="family">Mistelbauer</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">author</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">aut</roleTerm>
-        </role>
-      </name>
-      <name type="personal">
-        <namePart type="given">Martin R.</namePart>
-        <namePart type="family">Pfaller</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">author</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/aut" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">aut</roleTerm>
-        </role>
-      </name>
-      <name type="corporate">
-        <namePart>Stanford University</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/com" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">compiler</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/com" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">com</roleTerm>
-        </role>
-      </name>
-      <name type="corporate">
-        <namePart>Vascular Model Repository</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/com" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">compiler</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/com" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">com</roleTerm>
-        </role>
-      </name>
-      <name type="corporate">
-        <namePart>Stanford University Medical Center</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/dtc" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">data contributor</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/dtc" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">dtc</roleTerm>
-        </role>
-      </name>
-      <name type="corporate">
-        <namePart>Deutscher Akademischer Austauschdienst (DAAD) Doctoral Candidate Scholarship</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/fnd" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">funder</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/fnd" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">fnd</roleTerm>
-        </role>
-      </name>
-      <name type="corporate">
-        <namePart>NIH (R01LM013120 &amp; R01HL131823)</namePart>
-        <role>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/fnd" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="text">funder</roleTerm>
-          <roleTerm valueURI="http://id.loc.gov/vocabulary/relators/fnd" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators/" type="code">fnd</roleTerm>
-        </role>
-      </name>
-      <genre type="H2 type">Data</genre>
-      <genre type="H2 subtype">3D model</genre>
-      <genre type="H2 subtype">Image</genre>
-      <genre valueURI="http://id.loc.gov/authorities/genreForms/gf2018026119" authority="lcgft">Data sets</genre>
-      <genre authority="local">dataset</genre>
-      <genre authority="local">three-dimensional scan</genre>
-      <typeOfResource valueURI="http://id.loc.gov/vocabulary/resourceTypes/dat" authorityURI="http://id.loc.gov/vocabulary/resourceTypes/">Dataset</typeOfResource>
-      <typeOfResource>three dimensional object</typeOfResource>
-      <typeOfResource>still image</typeOfResource>
-      <extension displayLabel="datacite">
-        <resourceType resourceTypeGeneral="Dataset">3D model; Image</resourceType>
-      </extension>
-      <abstract>Model of the aorta of a 25-year-old female with Marfan syndrome, illustrating the progression of a type B aortic dissection over a seven-year period. Simulation results are availableThis model can be found in the Vascular Model Repository.</abstract>
-      <note type="preferred citation">Bäumler, K., Rolf-Pissarczyk, M., Schussnig, R., Fries, T., Mistelbauer, G., and Pfaller, M. (2025). 0246_H_AO_AOD. Version 1. Stanford Digital Repository. Available at https://purl.stanford.edu/nj140cs3237/version/1. https://doi.org/10.25740/nj140cs3237.</note>
-      <subject authority="fast">
-        <topic authority="fast" authorityURI="http://id.worldcat.org/fast/" valueURI="http://id.worldcat.org/fast/811020/">Aorta</topic>
-      </subject>
-      <subject authority="fast">
-        <topic authority="fast" authorityURI="http://id.worldcat.org/fast/" valueURI="http://id.worldcat.org/fast/895393/">Aortic dissection</topic>
-      </subject>
-      <subject authority="fast">
-        <topic authority="fast" authorityURI="http://id.worldcat.org/fast/" valueURI="http://id.worldcat.org/fast/1007080/">Female</topic>
-      </subject>
-      <subject>
-        <topic>Human</topic>
-      </subject>
-      <originInfo eventType="deposit">
-        <dateIssued encoding="edtf">2025-03-27</dateIssued>
-      </originInfo>
-      <originInfo eventType="publication">
-        <dateIssued encoding="edtf" keyDate="yes">2025-03-07</dateIssued>
-      </originInfo>
-      <location>
-        <url usage="primary display">https://purl.stanford.edu/nj140cs3237</url>
-      </location>
-      <note type="contact" displayLabel="Contact">simvascular@gmail.com</note>
-      <recordInfo>
-        <recordOrigin>Metadata created by user via Stanford self-deposit application</recordOrigin>
-        <recordCreationDate encoding="edtf">2025-03-27</recordCreationDate>
-      </recordInfo>
-      <relatedItem>
-        <note type="preferred citation">Bäumler, K., Rolf-Pissarczyk, M., Schussnig, R., Fries, T. P., Mistelbauer, G., Pfaller, M. R., Marsden, A. L., Fleischmann, D., &amp; Holzapfel, G. A. (2025). Assessment of aortic dissection remodeling with patient-specific fluid–structure interaction models. IEEE Transactions on Biomedical Engineering, 72(3), 953–964. https://doi.org/10.1109/TBME.2024.3480362</note>
-      </relatedItem>
-      <relatedItem type="host">
-        <titleInfo>
-          <title>Vascular Model Repository</title>
-        </titleInfo>
-        <location>
-          <url>https://purl.stanford.edu/dj064dg8823</url>
-        </location>
-        <typeOfResource collection="yes"/>
-      </relatedItem>
-      <accessCondition type="useAndReproduction">Copyright (c) Stanford University, the Regents of the University of California,&#13;
-  Open Source Medical Software Corporation, and other parties.&#13;
-  &#13;
-  All Rights Reserved.&#13;
-  &#13;
-  Permission is hereby granted, free of charge, to any person obtaining&#13;
-  a copy of this data to use the data for research and development&#13;
-  purposes subject to the following conditions:&#13;
-  &#13;
-  The above copyright notice and this README-COPYRIGHT file shall be&#13;
-  included in all copies of any portion of this data.&#13;
-  &#13;
-  Whenever reasonable and possible in publications and presentations&#13;
-  when this data is used in whole or part, please include an acknowledgement&#13;
-   similar to the following:&#13;
-  &#13;
-  "The data used herein was provided in whole or in part with&#13;
-  Federal funds from the National Library of Medicine under Grant&#13;
-   No. R01LM013120, and the National Heart, Lung, and Blood Institute,&#13;
-   National Institutes of Health, Department of Health and Human Services, &#13;
-  under Contract No. HHSN268201100035C"&#13;
-  &#13;
-  AND/OR&#13;
-  &#13;
-  N.M. Wilson, A.K. Ortiz, and A.B. Johnson, “The Vascular Model Repository:&#13;
-  A Public Resource of Medical Imaging Data and Blood Flow Simulation Results,”&#13;
-  J. Med. Devices 7(4), 040923 (Dec 05, 2013) doi:10.1115/1.4025983.&#13;
-  &#13;
-  AND/OR&#13;
-  &#13;
-  Reference the official website for this data: www.vascularmodel.com.&#13;
-  &#13;
-  THE DATA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS&#13;
-  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF&#13;
-  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.&#13;
-  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY&#13;
-  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,&#13;
-  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE&#13;
-  DATA OR THE USE OR OTHER DEALINGS IN THE DATA.&#13;
-  &#13;
-  User agrees that, where applicable, content will not be used to identify or to otherwise infringe the privacy or confidentiality rights of individuals. Content distributed via the Stanford Digital Repository may be subject to additional license and use restrictions applied by the depositor.</accessCondition>
-      <identifier type="doi" displayLabel="DOI">https://doi.org/10.25740/nj140cs3237</identifier>
-    </mods>
 author_struct:
 - link: Bäumler, Kathrin
   search: '"Bäumler, Kathrin"'

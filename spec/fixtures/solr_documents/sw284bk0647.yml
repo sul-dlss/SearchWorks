@@ -1,0 +1,166 @@
+id: sw284bk0647
+druid: sw284bk0647
+hashed_id_ssi: ae91d58cc940a96ad13d98fb878289a9
+cocina_struct:
+  - >-
+    {"description":{"title":[{"structuredValue":[{"value":"Illustrations of
+    universal progress","type":"main title"},{"value":"a series of
+    discussions","type":"subtitle"}]}],"contributor":[{"name":[{"structuredValue":[{"value":"Spencer,
+    Herbert","type":"name"},{"value":"1820-1903","type":"life
+    dates"}]}],"type":"person","role":[{"value":"creator","source":{"code":"marcrelator"}}]}],"event":[{"date":[{"value":"1864","type":"publication"},{"value":"1864","type":"publication","status":"primary","encoding":{"code":"marc"}}],"contributor":[{"name":[{"value":"D.
+    Appleton and
+    company"}],"type":"organization","role":[{"value":"publisher","code":"pbl","uri":"http://id.loc.gov/vocabulary/relators/pbl","source":{"code":"marcrelator","uri":"http://id.loc.gov/vocabulary/relators/"}}]}],"location":[{"value":"New
+    York"},{"code":"nyu","source":{"code":"marccountry"}}],"note":[{"value":"monographic","type":"issuance","source":{"value":"MODS
+    issuance terms"}}]}],"form":[{"value":"text","type":"resource
+    type","source":{"value":"MODS resource
+    types"}},{"value":"print","type":"form","source":{"code":"marcform"}},{"value":"1
+    p. l., [v]-xxiv p., 1 l., 446 p. 21
+    cm.","type":"extent"}],"language":[{"code":"eng","source":{"code":"iso639-2b"}}],"note":[{"value":"By
+    Herbert Spencer; with a notice of Spencer's \"New system of
+    philosophy\".","displayLabel":"statement of
+    responsibility"},{"value":"First published in English periodicals,
+    chiefly the quarterly reviews, and issued in London with several other
+    papers, under the title of \"Essays, scientific, political and
+    speculative\", first and second series, 1857-1863. cf.
+    Pref."},{"value":"Progress: its law and cause.--Manners and
+    fashion.--The genesis of science.--The physiology of laughter.--The
+    origin and function of music.--The nebular hypothesis.--Bain on the
+    emotions and the will.--Illogical geology.--The development
+    hypothesis.--The social organism.--Use and beauty.--The sources of
+    architectural types.--The use of anthropomorphism.","type":"table of
+    contents"}],"identifier":[{"value":"34040553","type":"LCCN","source":{"code":"lccn"}}],"subject":[{"value":"Science","type":"topic","source":{"code":"lcsh"}},{"value":"Political
+    science","type":"topic","source":{"code":"lcsh"}},{"value":"Philosophy","type":"topic","source":{"code":"lcsh"}},{"value":"B1653
+    .E7
+    1864","type":"classification","source":{"code":"lcc"}},{"value":"192.8","type":"classification","source":{"code":"ddc"}}],"adminMetadata":{"contributor":[{"name":[{"code":"DLC","source":{"code":"marcorg"}}],"type":"organization","role":[{"value":"original
+    cataloging
+    agency"}]}],"event":[{"type":"creation","date":[{"value":"770429","encoding":{"code":"marc"}}]},{"type":"modification","date":[{"value":"19891206124535.0","encoding":{"code":"iso8601"}}]}],"identifier":[{"value":"a16802"}]},"purl":"https://purl.stanford.edu/sw284bk0647"},"identification":{"barcode":"36105116270096","catalogLinks":[{"catalog":"folio","refresh":true,"catalogRecordId":"a16802"},{"catalog":"symphony","refresh":true,"catalogRecordId":"16802"}],"sourceId":"sul:barcode_36105116270096"},"access":{"view":"world","download":"world","controlledDigitalLending":false,"copyright":"Property
+    rights reside with the repository. Copyright © Stanford University. All
+    Rights Reserved."}}
+all_search: >-
+  Illustrations of universal progress a series of discussions Spencer,
+  Herbert 1820-1903 creator 1864 1864 marc D. Appleton and company pbl
+  publisher New York nyu monographic text print 1 p. l., [v]-xxiv p., 1 l.,
+  446 p. 21 cm. eng By Herbert Spencer; with a notice of Spencer's "New
+  system of philosophy". First published in English periodicals, chiefly the
+  quarterly reviews, and issued in London with several other papers, under
+  the title of "Essays, scientific, political and speculative", first and
+  second series, 1857-1863. cf. Pref. Progress: its law and cause.--Manners
+  and fashion.--The genesis of science.--The physiology of laughter.--The
+  origin and function of music.--The nebular hypothesis.--Bain on the
+  emotions and the will.--Illogical geology.--The development
+  hypothesis.--The social organism.--Use and beauty.--The sources of
+  architectural types.--The use of anthropomorphism. 34040553 Science
+  Political science Philosophy B1653 .E7 1864 192.8 DLC original cataloging
+  agency 770429 marc 19891206124535.0 iso8601 a16802
+title_245a_search: Illustrations of universal progress
+title_245_search: "Illustrations of universal progress : a series of discussions."
+title_sort: Illustrations of universal progress a series of discussions
+title_display: "Illustrations of universal progress : a series of discussions"
+title_full_display: "Illustrations of universal progress : a series of discussions."
+author_1xx_search: "Spencer, Herbert, 1820-1903"
+author_person_facet:
+  - "Spencer, Herbert, 1820-1903"
+author_other_facet:
+  - D. Appleton and company
+author_sort: >-
+  Spencer Herbert Illustrations of universal progress a series of
+  discussions
+author_corp_display:
+  - D. Appleton and company
+author_person_display:
+  - "Spencer, Herbert, 1820-1903"
+author_person_full_display:
+  - "Spencer, Herbert, 1820-1903"
+topic_search:
+  - Science
+  - Political science
+  - Philosophy
+topic_display:
+  - Science
+  - Political science
+  - Philosophy
+subject_all_search:
+  - Science
+  - Political science
+  - Philosophy
+topic_facet:
+  - Science
+  - Political science
+  - Philosophy
+pub_date: "1864"
+pub_date_search: "1864"
+pub_date_sort: "1864"
+pub_search:
+  - New York
+  - New York (State)
+pub_display:
+  - New York
+  - New York (State)
+publication_year_isi: 1864
+pub_year_ss: "1864"
+imprint_display:
+  - "New York : D. Appleton and company, 1864"
+pub_country: New York (State)
+pub_year_tisim:
+  - 1864
+physical:
+  - "1 p. l., [v]-xxiv p., 1 l., 446 p. 21 cm."
+format_hsim:
+  - Book
+language:
+  - English
+toc_search:
+  - >-
+    Progress: its law and cause. -- Manners and fashion. -- The genesis of
+    science. -- The physiology of laughter. -- The origin and function of
+    music. -- The nebular hypothesis. -- Bain on the emotions and the will.
+    -- Illogical geology. -- The development hypothesis. -- The social
+    organism. -- Use and beauty. -- The sources of architectural types. --
+    The use of anthropomorphism.
+iiif_manifest_url_ssim:
+  - "https://purl.stanford.edu/sw284bk0647/iiif3/manifest"
+access_facet:
+  - Online
+library_code_facet_ssim:
+  - SDR
+building_facet:
+  - Stanford Digital Repository
+lccn: "34040553"
+dor_resource_count_isi: 518
+file_id:
+  - sw284bk0647%2Fsw284bk0647_00_0001
+collection:
+  - sp673gr4168
+collection_search:
+  - sp673gr4168
+collection_with_title:
+  - sp673gr4168-|-Stephen J. Gould Rare Books Collection
+context_source_ssi: sdr
+last_updated: "2026-03-06T22:58:38Z"
+created: "2026-03-06T22:58:38Z"
+timestamp: "2026-03-06T22:58:38Z"
+toc_struct:
+  - label: Table of contents
+    fields:
+      - - "Progress: its law and cause."
+        - Manners and fashion.
+        - The genesis of science.
+        - The physiology of laughter.
+        - The origin and function of music.
+        - The nebular hypothesis.
+        - Bain on the emotions and the will.
+        - Illogical geology.
+        - The development hypothesis.
+        - The social organism.
+        - Use and beauty.
+        - The sources of architectural types.
+        - The use of anthropomorphism.
+author_struct:
+  - corporate_author:
+      - link: D. Appleton and company
+        search: D. Appleton and company
+        post_text: publisher
+    contributors:
+      - link: "Spencer, Herbert, 1820-1903"
+        search: "Spencer, Herbert"
+        post_text: creator
