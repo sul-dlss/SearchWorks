@@ -1,0 +1,13 @@
+<div class="row">
+  <% @subjects_by_letter.each do |letter, subjects| %>
+    <div class="col-sm-6 col-md-12 col-lg-4">
+      <hr>
+      <h2><%= letter %></h2>
+      <ul class="list-unstyled">
+        <% subjects.each do |subject_name, count| %>
+          <li><%= link_to "#{subject_name} (#{count})", databases_path(f: { db_az_subject: [subject_name] }) %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

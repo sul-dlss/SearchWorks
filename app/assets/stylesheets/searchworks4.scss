@@ -37,6 +37,24 @@ layer(framework);
 @import url("searchworks4/stackmap.css") layer(local);
 @import "leaflet/dist/leaflet";
 
+/* This overrides BS defaults for offcanvas */
+@layer framework {
+  .offcanvas-md.popular-databases, .offcanvas-xxl.popular-databases {
+    height: 75vh;
+    background-color: var(--stanford-fog-light) !important;
+  }
+  @media (min-width: 768px) {
+    .offcanvas-md.popular-databases {
+      height: 100%;
+    }
+  }
+  @media(min-width: 1400px) {
+    .offcanvas-xxl.popular-databases {
+      height: 100%;
+    }
+  }
+}
+
 @layer local {
   @media (min-width: 1580px) {
     .container-lg {
