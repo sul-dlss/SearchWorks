@@ -390,3 +390,17 @@
     word-break: break-word;
   }
 }
+
+/* Show component library focus-visible styles on the parent element when the title link is active */
+.index_title:has(a:not(.btn):focus-visible) {
+  outline: 2px solid white;
+  box-shadow: 0 0 0 4px var(--stanford-black);
+  border-radius: 0.375rem;
+  outline-offset: 1px;
+}
+
+/* Hide the component library focus-visible styles on the title link when we show it on the parent element */
+.index_title a:not(.btn):focus-visible {
+  outline: none;
+  box-shadow: none;
+}
