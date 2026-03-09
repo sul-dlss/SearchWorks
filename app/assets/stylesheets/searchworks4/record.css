@@ -37,6 +37,19 @@
   }
 }
 
+/* nested dl styling for related resources */
+.related-item {
+  dt {
+    font-weight: normal;
+    font-style: italic;
+    margin-left: 0;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+}
+
 .document-title {
   /* create room for the thumbnail */
   margin-right: 150px;
