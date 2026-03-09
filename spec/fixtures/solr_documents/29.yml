@@ -19,3 +19,10 @@ marc_links_struct:
   - version: '0.2'
     note: 'finding aid'
     href: http://oac.cdlib.org/findaid/ark:/something-else
+summary_struct:
+- label: Summary
+  fields:
+  - field:
+    - Nunc venenatis et odio ac elementum. Nulla ornare faucibus laoreet
+    vernacular:
+  unmatched_vernacular: []

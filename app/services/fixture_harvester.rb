@@ -47,6 +47,7 @@ class FixtureHarvester
     '14205849', # multiple items with unique truncated call numbers
     'nj140cs3237', # mods preferred citation
     'bx988zq7071', # cocina struct
+    'sw284bk0647', # cocina with a table of contents
     '1213958', # contains public notes, multiple locations including spec
 
     # selected databases
