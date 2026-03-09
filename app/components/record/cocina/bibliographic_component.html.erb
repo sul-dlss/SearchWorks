@@ -1,9 +1,26 @@
 <%= render Searchworks4::DocumentSectionLayout.new(title: 'Bibliographic information') do %>
-  <% field_map.each do |fields, delimiter| %>
-    <% fields.each do |field| %>
-      <%= tag.div class: 'my-2' do %>
-        <%= render Record::Cocina::FieldComponent.new(field: field, delimiter: delimiter) %>
-      <% end %>
+  <% general_note_display_data.each do |field| %>
+    <%= tag.div class: 'my-2' do %>
+      <%= render Record::Cocina::FieldComponent.new(field: field) %>
+    <% end %>
+  <% end %>
+
+  <% related_resource_display_data.each do |field| %>
+    <%= tag.div class: 'my-2' do %>
+      <%= tag.dt field.label %>
+      <%= render Record::Cocina::RelatedResourceComponent.with_collection(field.objects) %>
+    <% end %>
+  <% end %>
+
+  <% identifier_display_data.each do |field| %>
+    <%= tag.div class: 'my-2' do %>
+      <%= render Record::Cocina::FieldComponent.new(field: field, delimiter: ', ') %>
+    <% end %>
+  <% end %>
+
+  <% access_display_data.each do |field| %>
+    <%= tag.div class: 'my-2' do %>
+      <%= render Record::Cocina::FieldComponent.new(field: field) %>
     <% end %>
   <% end %>
 <% end %>

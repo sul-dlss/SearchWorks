@@ -1,0 +1,13 @@
+<% if url? %>
+  <%= tag.dd do %>
+    <%= tag.a href: link_url do %>
+      <%= link_text %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= tag.dd class: "related-item" do %>
+    <%= tag.dl do %>
+      <%= render Record::Cocina::FieldComponent.with_collection(related_resource.display_data) %>
+    <% end %>
+  <% end %>
+<% end %>

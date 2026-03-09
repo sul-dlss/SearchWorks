@@ -101,5 +101,24 @@ RSpec.describe Record::CocinaDocumentComponent, type: :component do
     it "does not display the purl URL" do
       expect(page).to have_no_css("dd", text: "https://purl.stanford.edu/bc798xr9549")
     end
+
+    context "with a related resource that has no URL (preferred citation)" do
+      let(:druid) { 'bb060nk0241' }
+
+      it "displays the related resource as a nested dl" do
+        expect(page).to have_css("dt", text: "Related item")
+        expect(page).to have_css("dd dl dt", text: "Preferred citation")
+        expect(page).to have_css("dd dl dd", text: /Cereb\. Cortex \(2016\) 26 \(5\): 2205-2214/)
+      end
+    end
+
+    context "with a related resource that has a URL" do
+      let(:druid) { 'bx988zq7071' }
+
+      it "displays the related resource as a link" do
+        expect(page).to have_css("dt", text: "Part of")
+        expect(page).to have_link("Finding aid", href: "http://www.oac.cdlib.org/findaid/ark:/13030/tf7b69n911/")
+      end
+    end
   end
 end

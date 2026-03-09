@@ -11,24 +11,14 @@ module Record
       attr_reader :document
 
       delegate :cocina_display, to: :document
-
-      COMMA = ', '
-
-      # Ordered list of fields and delimiters to display
-      def field_map
-        @field_map ||= [
-          [cocina_display.general_note_display_data, nil],
-          [cocina_display.related_resource_display_data, nil],
-          [cocina_display.identifier_display_data, COMMA],
-          [access_display_data, nil]
-        ].select { |field, _| field.present? }
-      end
+      delegate :general_note_display_data, :related_resource_display_data, :identifier_display_data, to: :cocina_display
 
       def render?
-        field_map.present?
+        general_note_display_data.present? ||
+          related_resource_display_data.present? ||
+          identifier_display_data.present? ||
+          access_display_data.present?
       end
-
-      private
 
       # If the document has a druid, we don't want to show the purl for the object on the page twice.
       # The purl will show up in the OtherListingsComponent if there is a druid
