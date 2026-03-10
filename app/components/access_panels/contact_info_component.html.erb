@@ -1,0 +1,11 @@
+<%= render @layout.new(classes: 'panel-access-conditions') do |component| %>
+  <% component.with_title(classes: 'h3 text-secondary') { 'Contact information' } %>
+  <% component.with_body do %>
+    <% cocina_display.contact_email_display_data.each do |field| %>
+      <%= tag.dt field.label, class: 'visually-hidden' %>
+      <% field.values.each do |value| %>
+        <%= tag.dd auto_link(value) %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
