@@ -21,6 +21,7 @@ insights.ceicdata.com
 www.prokla.de
 scholarlypublishingcollective.org
 englishyiddishdictionary.com
+jah.harrassowitz-library.com
 www.harrassowitz-library.com
 zdmg.harrassowitz-library.com
 bibliographies.brillonline.com
@@ -323,7 +324,6 @@ cse.ucpress.edu
 primaryresearch.com
 www.global-sci.org
 lib.music.org
-kratylos.reichert-online.org
 www.ontheboards.tv
 journals.equinoxpub.com
 robotics.sciencemag.org
@@ -980,7 +980,6 @@ www.ams.org
 www.ata-journal.org
 elibrary.chbeck.de
 www.math.klte.hu
-www.db.dyabola.de
 www.inderscienceonline.com
 nplusonemag.com
 www.actahort.org
@@ -1647,3 +1646,4 @@ mobilization.kglmeridian.com
 mvedel.kglmeridian.com
 faseb.onlinelibrary.wiley.com
 e-newsfolio.com
+www.inlibra.com
