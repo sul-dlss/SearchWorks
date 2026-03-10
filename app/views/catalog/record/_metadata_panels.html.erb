@@ -5,6 +5,8 @@
 
   <%= render AccessPanels::AccessConditionsComponent.new(document:) %>
 
+  <%= render AccessPanels::ContactInfoComponent.new(document:) %>
+
   <% context = capture do %>
     <%= render AccessPanels::AppearsInComponent.new(document: document) %>
     <%= render AccessPanels::InCollectionComponent.new(document: document) %>
