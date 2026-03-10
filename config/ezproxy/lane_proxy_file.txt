@@ -553,6 +553,7 @@ e-jmm.org
 e-kjo.org
 e-kjs.org
 e-mfp.org
+e-newsfolio.com
 eaccess.heart.org
 eahrj.eahealth.org
 eandv.biomedcentral.com
@@ -1614,7 +1615,6 @@ wellcomelibrary.org
 westindies.scielo.org
 whqlibdoc.who.int
 wildlife.onlinelibrary.wiley.com
-wio.iwaponline.com
 wisesearch6.wisers.net
 wjes.biomedcentral.com
 wjso.biomedcentral.com
@@ -1787,6 +1787,7 @@ www.beck-elibrary.de
 www.beilstein-journals.org
 www.beilstein.com
 www.benkler.org
+www.benthamdirect.com
 www.berghahnjournals.com
 www.besjournal.com
 www.biij.org
