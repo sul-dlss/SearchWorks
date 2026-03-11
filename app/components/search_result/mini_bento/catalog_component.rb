@@ -13,8 +13,6 @@ module SearchResult
       delegate :document_index_view_type, to: :helpers
 
       def render?
-        # return false if controller.controller_name == 'databases'
-
         params.fetch(:q, nil).present? && document_index_view_type.to_s != 'gallery'
       end
 

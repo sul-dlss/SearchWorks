@@ -2,7 +2,7 @@
   <% component.with_header { 'Databases' } %>
 
   <% component.with_search do %>
-    <div class="fs-5 mb-2">Search for databases by title or subject area</div>
+    <div class="fs-5 mb-2">Search for databases by title or topic</div>
     <%= render Databases::SearchBarComponent.new url: search_action_url, params: search_state.params_for_search.except(:qt) %>
   <% end %>
 
@@ -15,9 +15,10 @@
       <div class="d-flex flex-wrap">
         <span class="fw-semibold text-nowrap me-3">Other helpful resources:</span>
         <ul class="list-inline d-inline">
-          <li class="list-inline-item me-3 text-nowrap"><a href="https://publications.ebsco.com/c/7qtmxi">Publication Finder <span class="bi-arrow-up-right"></span></a><%= render StanfordOnlyPopoverComponent.new %></li>
-          <li class="list-inline-item me-3 text-nowrap"><a href="/articles">Articles+ <span class="bi-arrow-up-right"></span></a></li>
-          <li class="list-inline-item text-nowrap"><a href="https://library.stanford.edu/services/off-campus-access">Off-campus access <span class="bi-arrow-up-right"></span></a></li>
+          <li class="list-inline-item me-3 mb-1 text-nowrap"><a href="https://guides.library.stanford.edu/srch.php?q=databases">Databases in Guides<span class="bi-arrow-up-right"></span></a></li>
+          <li class="list-inline-item me-3 mb-1 text-nowrap"><a href="https://publications.ebsco.com/c/7qtmxi">Publication Finder <span class="bi-arrow-up-right"></span></a><%= render StanfordOnlyPopoverComponent.new %></li>
+          <li class="list-inline-item me-3 mb-1 text-nowrap"><a href="/articles">Articles+ <span class="bi-arrow-up-right"></span></a></li>
+          <li class="list-inline-item me-3 mb-1 text-nowrap"><a href="https://library.stanford.edu/services/off-campus-access">Off-campus access <span class="bi-arrow-up-right"></span></a></li>
         </ul>
       </div>
   <% end %>
