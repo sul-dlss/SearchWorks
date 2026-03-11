@@ -215,7 +215,7 @@ libraries:
     name: Music Library
   RUMSEY-MAP:
     about_url: https://library.stanford.edu/libraries/david-rumsey-map-center
-    hours_api_url: Rumsey/location/visitor-access
+    hours_api_url: rumsey/location/visitor-access
     name: David Rumsey Map Center
   SAL:
     name: SAL1&2 (on-campus shelving)
