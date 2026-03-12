@@ -203,7 +203,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,periodical,,,,,MUS-INPROCESS or MUS-PROCESSING-CIRC,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,MUS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,periodical,,,,,MEDIA-SER-PROCESSING,No loan,No requests allowed,Default notice,No fines,$100 lost fee
-,periodical,,,,,GRE-GOV-TECH-PROCESSOR or GRE-HASRC or GRE-LOCKED-STK or GRE-RAUB-COLL or GRE-RAUB-NUM or GRE-HH-REF or GRE-SSRC,No loan,No requests allowed,Default notice,No fines,$500 lost fee
+,periodical,,,,,GRE-GOV-TECH-PROCESSOR or GRE-HASRC or GRE-HH-MAGAZINE or GRE-LOCKED-STK or GRE-RAUB-COLL or GRE-RAUB-NUM or GRE-HH-REF or GRE-SSRC,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAL-EXHIBIT,No loan,Hold only,Default notice,No fines,$500 lost fee
 ,periodical,,,,,EAL-REF,No loan,No requests allowed,Default notice,No fines,$100 lost fee
 ,periodical,,,,,EAR-SCANLAB,No loan,Hold only,Default notice,No fines,$500 lost fee
