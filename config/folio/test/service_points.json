@@ -841,8 +841,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -853,15 +857,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:16.262+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-26T23:52:36.875+00:00",
+      "updatedDate": "2026-03-12T19:04:51.784+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
