@@ -12,3 +12,23 @@
   font-weight: bold;
   background-color: transparent;
 }
+
+.blacklight-databases {
+  #facets-top-filters {
+    display: none;
+  }
+
+  #facets-other-filters {
+    .facets-header {
+      display: none
+    }
+
+    .facet-limit {
+      margin-top: 2rem;
+    }
+
+    .facet-limit-active .facet-field-heading .accordion-button {
+      background: none;
+    }
+  }
+}

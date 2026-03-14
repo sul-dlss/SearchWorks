@@ -1,4 +1,4 @@
-<%# locals: (content_classes: document_index_view_type == :gallery ? 'col-md-8 col-xxl-9 px-xxl-4 ps-lg-4 ps-2' : 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false) %>
+<%# locals: (content_classes: document_index_view_type == :gallery ? 'col-md-8 col-xxl-9 px-xxl-4 ps-lg-4 ps-2' : 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false, database_aside: false) %>
 <% if page_location.collection? && get_collection.present? %>
   <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 <% elsif page_location.access_point? %>
@@ -15,7 +15,6 @@
     <% @page_title = "#{I18n.t('blacklight.application_name')} catalog" %>
   <% end %>
 <% end %>
-
 <% view_config = blacklight_config.view_config(document_index_view_type, action_name: action_name) %>
 <% content_for(:head) do -%>
   <%= render '/catalog/opensearch_response_metadata' %>
@@ -23,12 +22,9 @@
   <%= atom_feed_link_tag %>
   <%= json_api_link_tag %>
 <% end -%>
-
 <h1 class="visually-hidden">Search Results</h1>
-
 <%= render Searchworks4::SearchResult::CollectionInfoComponent.new(collection: @parent) if page_location.collection? %>
 <%= render Searchworks4::SearchResult::BookplateFundComponent.new(bookplate: bookplate_from_document_list) %>
-
 <% if has_search_parameters? && !hide_constraints %>
   <div class="row">
     <div class="constraints col d-flex">
@@ -36,7 +32,6 @@
     </div>
   </div>
 <% end %>
-
 <% if @response.empty? %>
   <%= render "zero_results" %>
 <% else %>
@@ -49,7 +44,9 @@
         <button class="btn btn-primary d-inline-block d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-controls="offcanvas-facets">
           <i class="bi bi-sliders" aria-hidden="true"></i> Filters
         </button>
-
+        <% if database_aside %>
+          <button class="btn btn-primary d-xxl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Popular databases</button>
+        <% end %>
         <div id="offcanvas-facets" class="offcanvas-md offcanvas-bottom offcanvas-sm-start">
           <div class="offcanvas-header pb-0">
             <button type="button" class="btn-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-label="Close"></button>
@@ -64,31 +61,27 @@
                 <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group('top'), response: @response) %>
               <% end %>
             <% end %>
-
             <%= render Facets::GroupComponent.new(id: 'other-filters', title: 'Other filters',
-                                                  show_button: true,
+                                                  show_button: !database_aside,
                                                   container_classes: 'facets other-filters sidenav mb-md-4',
                                                   header_classes: 'facets-heading',
                                                   body_classes: 'accordion') do |component| %>
               <% component.with_body do %>
-                <div data-facet-list-target="hideFacets" id="hidden-facets">
+                <div <% unless database_aside %>data-facet-list-target="hideFacets"<% end %> id="hidden-facets">
                   <%= render Blacklight::FacetComponent.with_collection(blacklight_config.facet_fields_in_group(nil).sort_by(&:label), response: @response) %>
                 </div>
               <% end %>
             <% end %>
           </div>
         </div>
-
         <% benchmark 'Alt results' do %>
           <%= render view_config.mini_bento_component.new if view_config.mini_bento_component %>
         <% end %>
       </div>
     <% end %>
-
     <div id="content" class="results col <%= content_classes %>" data-controller="eager-lazy">
       <div class="page-entries-info mb-2 d-flex flex-wrap gap-2 justify-content-between align-items-center">
         <%= render PageLinksComponent.new(response: @response) %>
-
         <div class="d-flex flex-wrap gap-2 align-items-center">
           <span class="sort-and-per-page d-flex gap-2">
             <%= render partial: 'sort_widget' %>
@@ -97,17 +90,14 @@
           <span><%= render Document::SaveAllBookmarksComponent.new(documents_selector: '#documents') %></span>
         </div>
       </div>
-
       <div data-inline-turnstile-target="challenge"></div>
-
       <% # container for all documents in index list view -%>
       <div id="documents" class="documents-<%= document_index_view_type %>">
         <%= render view_config.document_component.with_collection(@response.documents.map { |document| document_presenter(document) }, counter_offset: document_counter_with_offset(-1)) %>
       </div>
       <%= render 'results_pagination' %>
     </div>
-
-    <aside class="col-xxl-3 d-none d-xxl-block">
+    <aside class="col-xxl-3 d-xxl-block <%= database_aside ? 'offcanvas-xxl offcanvas-bottom popular-databases' : 'd-none'  %>" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
       <div data-responsive-aside-target="responsive">
       </div>
       <%= content_for(:additional_aside_content) %>
