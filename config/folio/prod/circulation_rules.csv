@@ -71,6 +71,7 @@ faculty,multimedia,,,,,EDU-CURRICULUM,1yearfixed-2renew-7daygrace,Allow All,Qtrl
 any,microform,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging,Default notice,No fines,$75 lost fee
 faculty,map,,,,,SAL3-PAGE-MP,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$75 lost fee
 any,map,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging,Default notice,No fines,$75 lost fee
+faculty,map,,,,,EAR-MEZZANINE,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$500 lost fee
 faculty,map,,,,,EAR-ATLASES or EAR-FOLIO or EAR-MEZZANINE or EAR-STORAGE or EAR-MAP-CASES or EAR-MAP-FILES,1qtr-3renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,No fines,$500 lost fee
 staff or staff-casual or fellow or graduate or postdoctoral,book,,,,,TAN-NEWBOOK,1qtr-1renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,,TAN-NEWBOOK,1qtr-1renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,No fines,$75 lost fee
@@ -136,16 +137,16 @@ undergrad or postdoctoral,book,,,,,EAL-CHINESE or EAL-FOLIO-CHINESE or EAL-FOLIO
 staff or staff-casual or fellow,book,,,,,EAL-CHINESE or EAL-FOLIO-CHINESE or EAL-FOLIO-JAPANESE or EAL-FOLIO-KOREAN or EAL-JAPANESE or EAL-KOREAN or EAL-SETS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 graduate,book,,,,,EAL-CHINESE or EAL-FOLIO-CHINESE or EAL-FOLIO-JAPANESE or EAL-FOLIO-KOREAN or EAL-JAPANESE or EAL-KOREAN or EAL-SETS,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,,EAL-CHINESE or EAL-FOLIO-CHINESE or EAL-FOLIO-JAPANESE or EAL-FOLIO-KOREAN or EAL-JAPANESE or EAL-KOREAN or EAL-SETS,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$75 lost fee
-undergrad or postdoctoral,book,,,,,EAR-ATLASES or EAR-MAP-CASES or EAR-MAP-FILES,1qtr-3renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
-staff or staff-casual or fellow,book,,,,,EAR-ATLASES or EAR-MAP-CASES or EAR-MAP-FILES,1yearfixed-2renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
-graduate,book,,,,,EAR-ATLASES or EAR-MAP-CASES or EAR-MAP-FILES,1qtr-7renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
-faculty,book,,,,,EAR-ATLASES or EAR-MAP-CASES or EAR-MAP-FILES,1yearfixed-4renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,No fines,$500 lost fee
+undergrad or postdoctoral,book,,,,,EAR-ATLASES or EAR-MAP-CASES,1qtr-3renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
+staff or staff-casual or fellow,book,,,,,EAR-ATLASES or EAR-MAP-CASES,1yearfixed-2renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
+graduate,book,,,,,EAR-ATLASES or EAR-MAP-CASES,1qtr-7renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
+faculty,book,,,,,EAR-ATLASES or EAR-MAP-CASES,1yearfixed-4renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,No fines,$500 lost fee
 graduate or postdoctoral,book,,,,,EAR-LOCKED-MAPS,2hour-norenew-15mingrace,No requests allowed,Default notice,No fines,$5000 lost fee - 1 hr aged to lost
 faculty,book,,,,,EAR-LOCKED-MAPS,2hour-norenew-15mingrace,No requests allowed,Default notice,No fines,$5000 lost fee - 1 hr aged to lost
-undergrad or postdoctoral,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-CASES or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
-staff or staff-casual or fellow,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-CASES or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
-graduate,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-CASES or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
-faculty,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-CASES or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$500 lost fee
+undergrad or postdoctoral,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
+staff or staff-casual or fellow,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
+graduate,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
+faculty,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$500 lost fee
 undergrad or fellow or postdoctoral,book,,,,,ART-FOLIO or ART-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
 staff or staff-casual,book,,,,,ART-FOLIO or ART-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
 graduate,book,,,,,ART-FOLIO or ART-STACKS,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
@@ -238,6 +239,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,map,,,,,SAL3-PAGE-AR or SAL3-PAGE-AS or SAL3-PAGE-EA or SAL3-PAGE-ED or SAL3-PAGE-EN or SAL3-PAGE-ES or SAL3-PAGE-FC or SAL3-PAGE-GR or SAL3-PAGE-LP or SAL3-PAGE-MA or SAL3-PAGE-MD or SAL3-PAGE-MU or SAL3-PAGE-RM or SAL3-PAGE-SP,No loan,Allow paging,Default notice,No fines,$75 lost fee
 ,map,,,,,MAR-ATLASES or MAR-MAPS,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,map,,,,,EAR-PROCESSING-MAP-OFFICE or EAR-SCANLAB,No loan,Hold only,Default notice,No fines,$500 lost fee
+,map,,,,,EAR-MEZZANINE,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,map,,,,,EAR-LOCKED-MAPS or EAR-LOCKED-STACKS,No loan,No requests allowed,Short Term Notices,No fines,$5000 lost fee - 1 hr aged to lost
 ,map,,,,,EAR-ATLASES or EAR-FOLIO or EAR-MEZZANINE or EAR-STORAGE or EAR-MAP-CASES or EAR-MAP-FILES,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,game,,,,,MEDIA-CAGE,14day-2renew-3daygrace,Hold only,Default notice,No fines,$75 lost fee
@@ -293,11 +295,11 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,EAR-THESES,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,book,,,,,EAR-READY-REF,2hour-1renew-15mingrace,No requests allowed,Short Term Notices,No fines,$500 lost fee
 ,book,,,,,EAR-SPECIALPROJECTS or EAR-SCANLAB,No loan,Hold only,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
-,book,,,,,EAR-ATLASES or EAR-MAP-CASES or EAR-MAP-FILES,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
+,book,,,,,EAR-ATLASES or EAR-MAP-CASES,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,book,,,,,EAR-LOCKED-MAPS,No loan,No requests allowed,Short Term Notices,No fines,$5000 lost fee - 1 hr aged to lost
 ,book,,,,,EAR-LOCKED-STACKS or EAR-STOR-LOCKED,No loan,No requests allowed,Short Term Notices,No fines,$500 lost fee
 ,book,,,,,EAR-ATCIRCDESK or EAR-DISPLAY-CIRC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
-,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-CASES or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
+,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$500 lost fee
 ,book,,,,,ART-COURTESY-HOLD or ART-VRC,No loan,Hold only,Default notice,No fines,$150 lost fee
 ,book,,,,,ART-EXHIBIT or ART-PROCESSING-LOCKED,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,ART-NEWBOOK,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$150 lost fee
