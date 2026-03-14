@@ -142,6 +142,7 @@ arppress.org
 arrow-journal.org
 arthritis-research.biomedcentral.com
 arthroplasty.biomedcentral.com
+arthroscopyjournals.onlinelibrary.wiley.com
 arxiv.org
 as-botanicalstudies.springeropen.com
 asbmr.onlinelibrary.wiley.com
@@ -2127,6 +2128,7 @@ www.hoopladigital.com
 www.hopkinsguides.com
 www.horizonpress.com
 www.hormones.gr
+www.hstalks.com
 www.hti.umich.edu
 www.humantechnology.jyu.fi
 www.i-jmr.org
