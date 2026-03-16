@@ -1,17 +1,19 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
-
 <% content_for(:search_navbar) do %>
   <%= render 'header' %>
 <% end %>
-
-<div class="row mt-4">
-  <div class="col-xl-6 col-lg-8 col-md-12">
-    <section class="">
-      <%= render 'popular_databases' %>
-    </section>
-  </div>
+<div class="d-flex justify-content-between align-items-center">
+  <h2>Database topics</h2>
+  <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Popular databases</button>
 </div>
-
+<div class="row gx-5">
+  <section class="col-12 col-md-8 col-lg-9">
+    <%= render 'db_az_subjects' %>
+  </section>
+  <aside class="offcanvas-md offcanvas-bottom col-md-4 col-lg-3 popular-databases" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+    <%= render 'popular_databases' %>
+  </aside>
+</div>
 <% content_for(:breadcrumb) do %>
   <a href="/" class="icon-link"><%= back_icon %> Back to catalog search</a>
 <% end %>
