@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
   def turnstile_ok?
     return true unless BotChallengePage::BotChallengePageController.bot_challenge_config.enabled
 
-    self.class._bot_detect_passed_good?(request) || current_user || Settings.turnstile.safelist.any? { |cidr| request.remote_ip.in? IPAddr.new(cidr) }
+    self.class._bot_detect_passed_good?(self) || current_user || Settings.turnstile.safelist.any? { |cidr| request.remote_ip.in? IPAddr.new(cidr) }
   end
   helper_method :turnstile_ok?
 end
