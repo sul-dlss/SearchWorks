@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    action_text-trix (2.1.16)
+    action_text-trix (2.1.17)
       railties
     actioncable (8.1.2)
       actionpack (= 8.1.2)
@@ -135,7 +135,7 @@ GEM
       msgpack (~> 1.2)
     bootstrap (5.3.8)
       popper_js (>= 2.11.8, < 3)
-    bot_challenge_page (1.0.0)
+    bot_challenge_page (1.1.0)
       http (~> 5.2)
       rails (>= 7.1, < 8.2)
     builder (3.3.0)
@@ -419,7 +419,7 @@ GEM
       net-ssh (>= 5.0.0, < 8.0.0)
     net-smtp (0.5.1)
       net-protocol
-    net-ssh (7.3.0)
+    net-ssh (7.3.1)
     newrelic_rpm (9.24.0)
     nio4r (2.7.5)
     nokogiri (1.19.1-arm64-darwin)
@@ -540,7 +540,7 @@ GEM
     responders (3.2.0)
       actionpack (>= 7.0)
       railties (>= 7.0)
-    retriable (3.3.0)
+    retriable (3.4.1)
     rexml (3.4.4)
     rinku (2.0.6)
     roadie (5.2.1)
@@ -561,14 +561,14 @@ GEM
     rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (8.0.3)
+    rspec-rails (8.0.4)
       actionpack (>= 7.2)
       activesupport (>= 7.2)
       railties (>= 7.2)
-      rspec-core (~> 3.13)
-      rspec-expectations (~> 3.13)
-      rspec-mocks (~> 3.13)
-      rspec-support (~> 3.13)
+      rspec-core (>= 3.13.0, < 5.0.0)
+      rspec-expectations (>= 3.13.0, < 5.0.0)
+      rspec-mocks (>= 3.13.0, < 5.0.0)
+      rspec-support (>= 3.13.0, < 5.0.0)
     rspec-support (3.13.7)
     rubocop (1.85.1)
       json (~> 2.3)
@@ -582,7 +582,7 @@ GEM
       rubocop-ast (>= 1.49.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.49.0)
+    rubocop-ast (1.49.1)
       parser (>= 3.3.7.2)
       prism (~> 1.7)
     rubocop-capybara (2.22.1)
@@ -626,15 +626,15 @@ GEM
     snaky_hash (2.0.3)
       hashie (>= 0.1.0, < 6)
       version_gem (>= 1.1.8, < 3)
-    solr_wrapper (4.3.0)
-      faraday (>= 1.0, < 3)
+    solr_wrapper (4.4.0)
+      faraday (~> 2.0)
       faraday-follow_redirects
       minitar
       ostruct
       retriable
       ruby-progressbar
-    sqlite3 (2.9.1-arm64-darwin)
-    sqlite3 (2.9.1-x86_64-linux-gnu)
+    sqlite3 (2.9.2-arm64-darwin)
+    sqlite3 (2.9.2-x86_64-linux-gnu)
     sshkit (1.25.0)
       base64
       logger
@@ -652,7 +652,7 @@ GEM
     thread_safe (0.3.6)
     time (0.4.2)
       date
-    timeout (0.6.0)
+    timeout (0.6.1)
     traject (3.8.3)
       concurrent-ruby (>= 0.8.0)
       csv
@@ -796,4 +796,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.7
+  4.0.8
