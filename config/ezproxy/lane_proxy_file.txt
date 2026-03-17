@@ -1564,7 +1564,6 @@ tnsw.infolinker.com.tw
 tobaccocontrol.bmj.com
 tocs.kubikat.org
 tomography.org
-topology.nipissingu.ca
 tp.amegroups.com
 trace.tennessee.edu
 tracreports.org
@@ -2604,7 +2603,6 @@ www.primarypsychiatry.com
 www.primescholars.com
 www.princeton.edu
 www.progressinorthodontics.com
-www.prokla.de
 www.proquest.com
 www.protein.bio.msu.ru
 www.proteinatlas.org
