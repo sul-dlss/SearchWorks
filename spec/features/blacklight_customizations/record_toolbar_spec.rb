@@ -7,7 +7,7 @@ RSpec.feature "Record Toolbar", :js do
 
   before do
     allow(Citation).to receive(:new).and_return(citation)
-    allow(citation).to receive_messages(all_citations: { 'mla' => '<p class="citation_style_MLA">MLA Citation</p>' }, citable?: true)
+    allow(citation).to receive_messages(citations: { 'mla' => '<p class="citation_style_MLA">MLA Citation</p>' }, citable?: true)
     visit root_path
   end
 
