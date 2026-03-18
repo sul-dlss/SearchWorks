@@ -433,6 +433,7 @@ conflictandhealth.biomedcentral.com
 congressional.proquest.com
 connect.h1.co
 connect.springerpub.com
+connectsci.au
 content.iospress.com
 content.nejm.org
 content.sciendo.com
@@ -539,6 +540,7 @@ druginfo.nlm.nih.gov
 ds.cc.yamaguchi-u.ac.jp
 dsm.psychiatryonline.org
 dspace.library.uu.nl
+dtb.bmj.com
 dwso.revealdigital.org
 dx.doi.org
 dynamic-med.biomedcentral.com
@@ -785,6 +787,7 @@ ijbnpa.biomedcentral.com
 ijcbnm.sums.ac.ir
 ijdb.ehu.eus
 ijehse.biomedcentral.com
+ijgc.bmj.com
 ijhoscr.tums.ac.ir
 ijhpm.com
 ijhpr.biomedcentral.com
@@ -1001,6 +1004,7 @@ jpma.org.pk
 jpro.springeropen.com
 jramc.bmj.com
 jrms.mui.ac.ir
+jrnms.bmj.com
 jrobio.springeropen.com
 jsava.co.za
 jsedres.geoscienceworld.org
@@ -1234,7 +1238,6 @@ openbioresources.metajnl.com
 openhealthdata.metajnl.com
 openheart.bmj.com
 openhypertensionjournal.com
-openknowledge.fao.org
 openlibrary.org
 openres.ersjournals.com
 opg.optica.org
@@ -1523,6 +1526,7 @@ stemcellres.biomedcentral.com
 stemcellsjournals.onlinelibrary.wiley.com
 sti.bmj.com
 stm.cairn.info
+student.bmj.com
 students.law.umich.edu
 subscriber.politicopro.com
 subscription.mbrjournal.com
@@ -1783,7 +1787,6 @@ www.bc.edu
 www.bcmj.org
 www.bdsl-online.de
 www.beat-journal.com
-www.beck-elibrary.de
 www.beilstein-journals.org
 www.beilstein.com
 www.benkler.org
@@ -2218,6 +2221,7 @@ www.infoworld.com
 www.ingenta.com
 www.ingentaconnect.com
 www.injepijournal.com
+www.inlibra.com
 www.insee.fr
 www.int-res.com
 www.internationaljournalofcaringsciences.org
