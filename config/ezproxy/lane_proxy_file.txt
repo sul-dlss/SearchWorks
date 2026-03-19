@@ -139,7 +139,6 @@ archrazi.areeo.ac.ir
 ard.bmj.com
 aricjournal.biomedcentral.com
 arppress.org
-arrow-journal.org
 arthritis-research.biomedcentral.com
 arthroplasty.biomedcentral.com
 arthroscopyjournals.onlinelibrary.wiley.com
@@ -494,7 +493,6 @@ digital.slub-dresden.de
 digital.staatsbibliothek-berlin.de
 digitalarchives.publishersweekly.com
 digitalassets.lib.berkeley.edu
-digitalcampus-swankmp-net.stanford.idm.oclc.org
 digitalcampus.swankmp.net
 digitalcommons.pepperdine.edu
 digitalcommons.usu.edu
