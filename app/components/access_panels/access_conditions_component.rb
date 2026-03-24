@@ -14,12 +14,8 @@ module AccessPanels
       ].compact_blank
     end
 
-    def mods_access_conditions
-      document.mods&.accessCondition || []
-    end
-
     def render?
-      field_map.present? || mods_access_conditions.present?
+      field_map.present?
     end
   end
 end

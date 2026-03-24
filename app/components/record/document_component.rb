@@ -12,8 +12,6 @@ module Record
     def call
       if @document.cocina?
         render Record::CocinaDocumentComponent.new(document: @presenter, **@kwargs)
-      elsif @document.mods?
-        render Record::ModsDocumentComponent.new(document: @presenter, **@kwargs)
       else
         render Record::MarcDocumentComponent.new(document: @presenter, **@kwargs)
       end

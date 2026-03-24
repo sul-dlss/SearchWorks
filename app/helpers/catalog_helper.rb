@@ -33,7 +33,7 @@ module CatalogHelper
     details.push link_to('Collection PURL', "https://purl.stanford.edu/#{document.druid}") if document.is_a_collection?
     if document.respond_to?(:to_marc)
       details.push "Catkey: #{document.id}"
-    elsif document.cocina? || document.mods?
+    elsif document.cocina?
       details.push "DRUID: #{document.id}"
     else
       details.push "ID: #{document.id}"

@@ -243,7 +243,6 @@
 
     <!-- *************** additional fields for DOR objects  ****************** -->
     <field name="druid" type="string_punct_stop" indexed="true" stored="true" />
-    <field name="modsxml" type="string" indexed="false" stored="true" large="true" />
     <!-- collection (facet and display): "sirsi" or, for DOR items, the id of their parent coll -->
     <field name="collection" type="string" indexed="true" stored="true" multiValued="true" omitNorms="true" />
     <!-- collection_with_title: easy way to indicate item's parent coll title in UI (may be deprecated in future) -->

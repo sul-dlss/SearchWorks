@@ -12,7 +12,7 @@ module Searchworks4
     end
 
     def render?
-      document.preferred_online_links.any? || (document.druid.present? && (!document.cocina? || !document.mods? || document.published_content?))
+      document.preferred_online_links.any? || (document.druid.present? && (!document.cocina? || document.published_content?))
     end
 
     def links

@@ -11,8 +11,6 @@
     <%= render "marc_view" %>
   <% elsif @document.cocina? %>
     <%= render "cocina_view", cocina: @document.cocina %>
-  <% elsif @document.mods? %>
-    <%= render "mods_view"%>
   <% else %>
     <%= t('blacklight.search.librarian_view.empty') %>
   <% end %>

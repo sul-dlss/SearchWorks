@@ -10,7 +10,6 @@ collection:
   - 38
 building_facet:
   - "Stanford Digital Repository"
-modsxml: <%= mods_everything %>
 marc_links_struct:
   - version: '0.2'
     href: https://purl.stanford.edu/40

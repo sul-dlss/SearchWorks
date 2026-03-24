@@ -46,7 +46,7 @@ RSpec.describe Citations::MultipleCitationsComponent, type: :component do
     end
   end
 
-  context 'when some items have only preferred citations (mods)' do
+  context 'when some items have only preferred citations' do
     let(:documents) { [SolrDocument.find('in00000053236'), SolrDocument.find('nj140cs3237')] }
     let(:request_url) { "/view/citation?id%5B%5D=in00000053236&id%5B%5D=nj140cs3237" }
 
@@ -65,7 +65,7 @@ RSpec.describe Citations::MultipleCitationsComponent, type: :component do
     end
   end
 
-  context 'when all items have only preferred citations (mods)' do
+  context 'when all items have only preferred citations' do
     let(:documents) { [SolrDocument.find('nj140cs3237')] }
     let(:request_url) { "/view/citation?id%5B%5D=nj140cs3237" }
 

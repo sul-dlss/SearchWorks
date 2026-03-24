@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.feature "In collection Access Panel" do
-  scenario "for MODS derived documents" do
+  scenario "for Cocina derived documents" do
     visit solr_document_path('mf774fs2413')
 
     within(".panel-in-collection") do

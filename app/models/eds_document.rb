@@ -471,7 +471,7 @@ class EdsDocument # rubocop:disable Metrics/ClassLength
   def is_a_database? = false
   def druid = nil
   def eresources_library_display_name = nil
-  def mods = nil
+  def cocina = nil
   def oclc_number = nil
 
   def holdings

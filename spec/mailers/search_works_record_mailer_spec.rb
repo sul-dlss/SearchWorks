@@ -4,8 +4,31 @@ require 'rails_helper'
 
 RSpec.describe SearchWorksRecordMailer do
   include MarcMetadataFixtures
-  include ModsFixtures
 
+  let(:cocina_struct) do
+    {
+      "description" => {
+        "contributor" => [
+          {
+            "name" => [
+              { "value" => "B. Smith" }
+            ],
+            "role" => [
+              { "value" => "Producer" }
+            ]
+          }
+        ],
+        "subject" => [
+          {
+            "value" => "Subject1"
+          }
+        ],
+        "identifier" => [
+          { "value" => "1234567890" }
+        ]
+      }
+    }.to_json
+  end
   let(:documents) {
     [
       SolrDocument.new(
@@ -13,7 +36,7 @@ RSpec.describe SearchWorksRecordMailer do
         title_display: "Title1",
         item_display_struct: [{ barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', callnumber: 'ABC 123' }],
         marc_links_struct: [{ href: "https://library.stanford.edu" }],
-        modsxml: mods_everything
+        cocina_struct: [cocina_struct]
       ),
       SolrDocument.new(
         id: '321',
@@ -148,7 +171,7 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to have_css('h1 a', text: 'Title2')
       end
 
-      it 'includes Subjects and Bibliographic information from both MARC and MODS records' do
+      it 'includes Subjects and Bibliographic information from both MARC and Cocina records' do
         expect(mail.body).to have_css('h2', text: 'Subjects', count: 2)
         expect(mail.body).to have_css('h2', text: 'Bibliographic information', count: 2)
       end
@@ -158,7 +181,7 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to have_css('dd', text: 'A quartely publication.')
       end
 
-      it 'includes the HTML markup for MODS records' do
+      it 'includes the HTML markup for Cocina records' do
         expect(mail.body).to have_css('dt', text: 'Producer')
         expect(mail.body).to have_css('dd', text: 'B. Smith')
       end

@@ -8,7 +8,19 @@ summary_display:
 format: Image
 format_hsim: Image
 collection_type: Digital Collection
-modsxml: <%= mods_everything %>
+cocina_struct:
+  - '{"description":{"title":[{"value":"Reproduction from the Official Map of San
+    Francisco, Showing the District Swept..."},{"value":"San Francisco District
+    Swept by Fire, 1906 (reproduction)","type":"alternative"}],"event":[{"date":[{"value":"copyright
+    1906","type":"publication"}]}],"form":[{"value":"still image","type":"resource
+    type","source":{"value":"MODS resource types"}},{"value":"offset lithograph
+    on paper","type":"form","note":[{"value":"13-1/4 x 10 inches","displayLabel":"Dimensions"},{"value":"good","displayLabel":"Condition"}]}],"note":[{"value":"Topographical
+    and street map of the western part of the city of San Francisco, with red indicating
+    fire area.  Annotations:  “Area, approximately 4 square miles”;  entire title
+    reads: “Reproduction from the Official Map of San Francisco, Showing the District
+    Swept by Fire of April 18, 19, 20, 1906.”","type":"abstract","displayLabel":"Description"}],"identifier":[{"value":"rd-412","type":"local","source":{"code":"local"}}],"subject":[{"value":"1906
+    Earthquake","type":"topic","source":{"code":"lcsh"}}],"purl":"https://purl.stanford.edu/zz400gd3785"},"identification":{"sourceId":"ReidDennis:7923"},"access":{"view":"world","download":"world","controlledDigitalLending":false,"useAndReproductionStatement":"You
+    do not need to obtain permission to use materials in the public domain."}}'
 pub_date: 2014
 beginning_year_isi: 2000
 imprint_display: 1990

@@ -143,10 +143,10 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
     end
   end
 
-  context 'with a MODS record' do
+  context 'with a Cocina record' do
     let(:document) { SolrDocument.from_fixture("mf774fs2413.yml") }
 
-    it 'renders the MODS record availability' do
+    it 'renders the record availability' do
       render_inline(described_class.new(document: document))
 
       expect(page).to have_css('.availability-component', text: 'Available online')

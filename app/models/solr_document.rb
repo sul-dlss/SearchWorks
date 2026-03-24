@@ -5,7 +5,6 @@ class SolrDocument
   include DigitalCollection
   include Extent
   include CollectionMember
-  include ModsData
   include CocinaData
   include StacksImages
   include SolrHoldings

@@ -2,7 +2,6 @@
 
 require Rails.root.join("spec/fixtures/marc_records/marc_856_fixtures")
 require Rails.root.join("spec/fixtures/marc_records/marc_metadata_fixtures")
-require Rails.root.join("spec/fixtures/mods_records/mods_fixtures")
 
 class SolrFixtureLoader
   STRUCT_KEYS = %w[
@@ -14,7 +13,6 @@ class SolrFixtureLoader
   class ErbContext
     include Marc856Fixtures
     include MarcMetadataFixtures
-    include ModsFixtures
 
     def context_binding
       binding

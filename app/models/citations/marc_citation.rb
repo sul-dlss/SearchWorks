@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ###
-# Returns a MODS citation formatted for use by SearchWorks
+# Returns a MARC citation formatted for use by SearchWorks
 module Citations
   class MarcCitation
     attr_reader :citeproc_item
