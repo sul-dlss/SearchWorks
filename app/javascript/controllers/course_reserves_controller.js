@@ -147,7 +147,7 @@ export default class extends Controller {
     this.sortButtonTarget.innerHTML = `Sort<span class="d-none d-lg-inline"> by ${colName}</span>`
 
     this.sortItemTargets.forEach((item, idx) => {
-      item.getAttribute("aria-current", idx === this.sortColumn)
+      item.setAttribute("aria-current", idx === this.sortColumn)
       item.querySelector(".active-icon").classList.toggle(this.activeMenuItemClass, idx === this.sortColumn)
     })
 
@@ -174,7 +174,7 @@ export default class extends Controller {
 
     this.perPageItemTargets.forEach((item) => {
       const current = item.getAttribute("href") === `#${this.pageRows}`
-      item.getAttribute("aria-current", current)
+      item.setAttribute("aria-current", current)
       item.querySelector(".active-icon").classList.toggle(this.activeMenuItemClass, current)
     })
 
