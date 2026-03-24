@@ -20,23 +20,6 @@ RSpec.describe "Librarian View Customization", :js do
     end
   end
 
-  it "MODS records should display" do
-    visit solr_document_path('35')
-
-    within(".tech-details") do
-      expect(page).to have_content('DRUID: 35')
-
-      click_link('Librarian view')
-    end
-
-    expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
-
-    within(".mods-view") do
-      expect(page).to have_content("A record with everything")
-      expect(page).to have_css("span", text: "<title>")
-    end
-  end
-
   it "Cocina records should display" do
     visit solr_document_path('bx988zq7071')
 

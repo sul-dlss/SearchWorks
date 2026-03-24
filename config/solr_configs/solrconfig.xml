@@ -1108,7 +1108,6 @@
         lccn,
         lc_assigned_callnum_ssim,
         mhld_display,
-        modsxml,
         oclc,
         physical,                     vern_physical,
         preferred_barcode,

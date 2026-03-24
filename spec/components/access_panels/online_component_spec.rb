@@ -3,8 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe AccessPanels::OnlineComponent, type: :component do
-  include ModsFixtures
-
   let(:fulltext) { described_class.new(document: SolrDocument.new(marc_links_struct: [{ link_text: "Link text", href: "https://library.stanford.edu", fulltext: true }])) }
   let(:supplemental) { described_class.new(document: SolrDocument.new) }
   let(:eds_links) do
@@ -36,7 +34,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
     )
   end
 
-  let(:mods) do
+  let(:sdr) do
     described_class.new(
       document: SolrDocument.new(
         collection: ['12345'],
@@ -66,8 +64,8 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
   end
 
   describe '#links' do
-    it 'does not return links when they are present in MODS records' do
-      expect(mods.links).not_to be_present
+    it 'does not return links when they are present in SDR records' do
+      expect(sdr.links).not_to be_present
     end
 
     it 'returns fulltext links' do

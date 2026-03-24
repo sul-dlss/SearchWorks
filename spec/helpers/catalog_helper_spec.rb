@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe CatalogHelper do
-  include ModsFixtures
   include MarcMetadataFixtures
 
   describe 'document_index_view_type' do
@@ -37,21 +36,21 @@ RSpec.describe CatalogHelper do
       end
     end
 
-    context 'mods document' do
-      let(:document) { SolrDocument.new(id: '12345', modsxml: mods_everything) }
+    context 'cocina document' do
+      let(:document) { SolrDocument.from_fixture('mf774fs2413.yml') }
 
       it 'adds correct tech details' do
-        expect(tech_details(document)).to have_content('DRUID: 12345')
+        expect(tech_details(document)).to have_content('DRUID: mf774fs2413')
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
       end
     end
 
-    context 'a collection document' do
-      let(:document) { SolrDocument.new(id: '12345', modsxml: mods_everything) }
+    context 'cocina collection document' do
+      let(:document) { SolrDocument.from_fixture('mf774fs2413.yml') }
 
       it 'adds correct tech details' do
         expect(document).to receive(:is_a_collection?).at_least(:once).and_return(true)
-        expect(tech_details(document)).to have_content('DRUID: 12345')
+        expect(tech_details(document)).to have_content('DRUID: mf774fs2413')
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
         expect(tech_details(document)).to have_css('a', text: 'Collection PURL')
       end

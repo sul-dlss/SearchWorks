@@ -21,7 +21,7 @@
           <% else %>
             In <%= document.holdings.libraries.length %> libraries
           <% end %>
-        <% elsif document.mods? %>
+        <% elsif document.cocina? %>
           Stanford Digital Repository
         <% elsif document.preferred_online_links.present?  %>
           <%= document.eresources_library_display_name || 'Stanford Libraries' %>

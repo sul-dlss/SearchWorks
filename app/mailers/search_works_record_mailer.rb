@@ -8,7 +8,7 @@ class SearchWorksRecordMailer < ApplicationMailer
   include Roadie::Rails::Automatic
   include Blacklight::Configurable
 
-  helper :application, :catalog, :marc, :record, :results_document
+  helper :application, :catalog, :marc, :results_document
 
   def email_record(documents, details, url_gen_params)
     setup_email_defaults(documents, details, url_gen_params)
