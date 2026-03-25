@@ -57,7 +57,7 @@ module Record
         end
 
         def spines
-          browseable_spines.first(ITEMS_TO_SHOW)
+          browseable_spines.first(ITEMS_TO_SHOW).filter { |spine| spine.base_callnumber.present? }
         end
       end
     end
