@@ -288,7 +288,6 @@ www.thieme-connect.com
 asc.eastview.com
 rotunda.upress.virginia.edu
 ccg.eastview.com
-app.dimensions.ai
 scholarworks.wmich.edu
 research.emporis.com
 www.chinamaxx.net
@@ -1647,3 +1646,4 @@ mvedel.kglmeridian.com
 faseb.onlinelibrary.wiley.com
 e-newsfolio.com
 www.inlibra.com
+www.harvardeducationalreview.org
