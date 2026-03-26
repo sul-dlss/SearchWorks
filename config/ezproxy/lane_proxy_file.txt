@@ -1030,7 +1030,6 @@ knowitallanyware.com
 knowledge.sagepub.com
 knowledgehub.icheme.org
 koreamed.org
-ksiebook.kstudy.com
 ladb.unm.edu
 laokan.dachengdata.com
 law.ucla.edu
@@ -2546,7 +2545,6 @@ www.openbookpublishers.com
 www.openedition.org
 www.openhelix.com
 www.openhumanitiespress.org
-www.openlibhums.org
 www.ophthalmologia.be
 www.optica-opn.org
 www.orthomolecular.org
