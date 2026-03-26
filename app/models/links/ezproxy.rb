@@ -46,7 +46,7 @@ class Links
     end
 
     def apply_lane_proxy_prefix?
-      libraries.include?('LANE') &&
+      (link.link_text.downcase.include?('lane library') || libraries.include?('LANE')) &&
         ezproxied_hosts['LANE'].any?(link_host) &&
         link.stanford_only?
     end

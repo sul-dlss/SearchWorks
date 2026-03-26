@@ -9,8 +9,9 @@ RSpec.describe Links::Ezproxy do
 
   let(:stanford_only) { true }
   let(:link_title) { nil }
+  let(:link_text) { 'link text' }
 
-  let(:link) { instance_double(Links::Link, href: url, link_title:, stanford_only?: stanford_only) }
+  let(:link) { instance_double(Links::Link, href: url, link_text:, link_title:, stanford_only?: stanford_only) }
 
   describe '#to_proxied_url' do
     context 'SUL record' do
@@ -92,6 +93,25 @@ RSpec.describe Links::Ezproxy do
         it 'adds the proxy prefix' do
           expect(ezproxy.to_proxied_url).to eq 'https://ezproxy.law.stanford.edu/login?qurl=https%3A%2F%2Fwww.iareporter.com%2Fwhatever'
         end
+      end
+    end
+
+    context 'Digital LANE record' do
+      let(:document) { SolrDocument.new(holdings_library_code_ssim: ['SUL']) }
+      let(:link_text) { 'American Diabetes Association: Subscription: Lane Library' }
+
+      let(:url) { 'https://www.who.int/whatever' }
+
+      context 'link is a SUL restricted' do
+        it 'adds the proxy prefix' do
+          expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
+        end
+      end
+
+      context 'link is NOT LANE restricted' do
+        let(:stanford_only) { false }
+
+        it { expect(ezproxy.to_proxied_url).to be_nil }
       end
     end
 
