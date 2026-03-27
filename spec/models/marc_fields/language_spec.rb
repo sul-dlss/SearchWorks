@@ -38,6 +38,17 @@ RSpec.describe Language do
         expect(language.label).to eq 'Language'
       end
     end
+
+    context 'when doc has languages with no 546 field' do
+      let(:document) do
+        SolrDocument.new(marc_json_struct: marc, language: ['English'])
+      end
+      let(:marc) { metadata1 }
+
+      it 'is "Language"' do
+        expect(language.label).to eq 'Language'
+      end
+    end
   end
 
   describe 'values' do

@@ -29,6 +29,8 @@ class Language < MarcField
   end
 
   def contains_only_subfield_b?
+    return false unless extracted_fields.lazy.any?
+
     extracted_fields.all? do |_field, subfields|
       subfields.all? do |subfield|
         subfield.code == 'b'
