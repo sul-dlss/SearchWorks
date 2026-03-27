@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Searchworks4::ThumbnailComponent, type: :component do
+RSpec.describe Searchworks4::LinkThumbnailComponent, type: :component do
   subject(:component) { described_class.new presenter: presenter }
 
   let(:current_search_session) { nil }
