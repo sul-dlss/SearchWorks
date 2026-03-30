@@ -21,8 +21,7 @@ module Record
           [cocina_display.title_display_data(exclude_primary: true), COMMA],
           [cocina_display.form_display_data, SEMICOLON],
           [cocina_display.form_note_display_data, COMMA],
-          [cocina_display.publication_display_data, COMMA],
-          [cocina_display.event_date_display_data, SEMICOLON],
+          [cocina_display.event_display_data, SEMICOLON],
           [cocina_display.event_note_display_data, COMMA],
           [cocina_display.language_display_data, SEMICOLON],
           [cocina_display.map_display_data, COMMA]

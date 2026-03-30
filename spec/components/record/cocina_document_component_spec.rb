@@ -24,14 +24,9 @@ RSpec.describe Record::CocinaDocumentComponent, type: :component do
       expect(page).to have_css("dd", text: "1 video file and 1 PDF")
     end
 
-    it "displays the publication place" do
-      expect(page).to have_css("dt", text: "Place")
-      expect(page).to have_css("dd", text: "Seattle (Wash.)")
-    end
-
-    it "displays the event dates" do
-      expect(page).to have_css("dt", text: "Creation date")
-      expect(page).to have_css("dd", text: "November 15, 2014")
+    it "displays the event data (respecting displayLabel)" do
+      expect(page).to have_css("dt", text: "Interview location")
+      expect(page).to have_css("dd", text: "Seattle (Wash.), November 15, 2014")
     end
 
     it "displays the languages" do
