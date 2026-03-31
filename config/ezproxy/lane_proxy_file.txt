@@ -139,6 +139,7 @@ archrazi.areeo.ac.ir
 ard.bmj.com
 aricjournal.biomedcentral.com
 arppress.org
+arrow-journal.org
 arthritis-research.biomedcentral.com
 arthroplasty.biomedcentral.com
 arthroscopyjournals.onlinelibrary.wiley.com
@@ -562,7 +563,6 @@ ebm.bmj.com
 ebmh.bmj.com
 ebn.bmj.com
 ebook.3m.com
-ebook.kstudy.com
 ebook.rsc.org
 ebook.sts.org
 ebookcentral.proquest.com
@@ -702,7 +702,6 @@ go.oreilly.com
 gocm.bmj.com
 gongjushu.oversea.cnki.net
 goo.gl
-gpa-eastview-com.stanford.idm.oclc.org
 gpa.eastview.com
 gpsych.bmj.com
 grantome.com
@@ -772,7 +771,6 @@ icsd.fiz-karlsruhe.de
 icurology.org
 ideas.repec.org
 idpjournal.biomedcentral.com
-ieeeXplore.ieee.org
 ieeexplore-ieee-org.stanford.idm.oclc.org
 ieeexplore.ieee.org
 ier.ut.ac.ir
@@ -1002,7 +1000,6 @@ jpma.org.pk
 jpro.springeropen.com
 jramc.bmj.com
 jrms.mui.ac.ir
-jrnms.bmj.com
 jrobio.springeropen.com
 jsava.co.za
 jsedres.geoscienceworld.org
@@ -1510,11 +1507,9 @@ stanford.lib.overdrive.com
 stanford.naxosmusiclibrary.com
 stanford.overdrive.com
 stanford.policymap.com
-stanford.redivis.com
 stanford.universitypressscholarship.com
 stanfordhealthcare.org
 stanforduniversity.qualtrics.com
-statabs-proquest-com.stanford.idm.oclc.org
 statabs.proquest.com
 static.routledge.com
 statsusa.org
@@ -1800,7 +1795,6 @@ www.bioline.org.br
 www.biomed.cas.cz
 www.biomolther.org
 www.bioone.org
-www.bioscience.org
 www.biotechnologyhealthcare.com
 www.birpublications.org
 www.biusante.parisdescartes.fr
@@ -2086,7 +2080,6 @@ www.geomednews.com
 www.germs.ro
 www.ghfbb.ir
 www.ghspjournal.org
-www.gideononline.net
 www.giornalechirurgia.it
 www.girinst.org
 www.globalcommodities.amdigital.co.uk
@@ -2607,7 +2600,6 @@ www.proquest.com
 www.protein.bio.msu.ru
 www.proteinatlas.org
 www.protocol-online.org
-www.protocols.io
 www.psychiatria-danubina.com
 www.psychiatrist.com
 www.psychiatryinvestigation.org
