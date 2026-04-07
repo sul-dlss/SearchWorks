@@ -37,6 +37,9 @@
         environment: '<%= Honeybadger.config.get(:env) %>',
         debug: false,
         enableUncaught: true,
+        ignorePatterns: [
+          /turnstile is not defined/i,
+        ],
         revision: '<%= Settings.REVISION %>'
       });
     </script>
