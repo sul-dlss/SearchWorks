@@ -657,7 +657,6 @@ find.gale.com
 find.galegroup.com
 firstsearch.oclc.org
 fjps.springeropen.com
-flipster.ebsco.com
 fluidsbarrierscns.biomedcentral.com
 fmch.bmj.com
 fn.bmj.com
@@ -1030,7 +1029,6 @@ laokan.dachengdata.com
 law.ucla.edu
 lcweb.loc.gov
 learnmem.cshlp.org
-legacy.audio-digest.org
 leginfo.legislature.ca.gov
 leprev.ilsl.br
 lib.ugent.be
