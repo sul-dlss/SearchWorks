@@ -523,7 +523,6 @@ inscription.ancientbooks.cn
 insidetrade.com
 insights.ceicdata.com
 inspec-analytics-app.theiet.org
-institutions.rarebookhub.com
 intellectdiscover.com
 interactionofcolor.com
 interpretation.geoscienceworld.org
@@ -936,7 +935,6 @@ radium.journaldephysique.org
 rai.onlinelibrary.wiley.com
 randstatestats.org
 rapidreviewscovid19.mitpress.mit.edu
-rarebookhub.com
 rd.springer.com
 read.dukeupress.edu
 reader.exacteditions.com
@@ -1629,7 +1627,6 @@ www.nzjh.auckland.ac.nz
 www.obs-banyuls.fr
 www.oed.com
 www.oldcitypublishing.com
-www.oldmaps.com
 www.onepetro.org
 www.ontheboards.tv
 www.oparsbooks.com
