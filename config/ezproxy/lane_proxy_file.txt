@@ -831,7 +831,6 @@ insidetrade.com
 insight.jci.org
 insights.ceicdata.com
 inspec-analytics-app.theiet.org
-institutions.rarebookhub.com
 interactionofcolor.com
 internalmedicine.lwwhealthlibrary.com
 internationalbreastfeedingjournal.biomedcentral.com
@@ -1463,6 +1462,7 @@ server.wenzibase.com
 services.igi-global.com
 setac.onlinelibrary.wiley.com
 sfamjournals.onlinelibrary.wiley.com
+shibboleth.statista.com
 shop.seg.org
 shs.cairn.info
 sigmapubs.onlinelibrary.wiley.com
