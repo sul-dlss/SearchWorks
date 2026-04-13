@@ -4,6 +4,7 @@
     "name": "SAL1&2 (on-campus storage)",
     "code": "SAL",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:49.370+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -16,6 +17,7 @@
     "name": "David Rumsey Map Center",
     "code": "RUMSEY-MAP",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:51.390+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -28,6 +30,7 @@
     "name": "Media Center",
     "code": "MEDIA-CENTER",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:56.089+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -40,6 +43,7 @@
     "name": "Art & Architecture Library (Bowes)",
     "code": "ART",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:48.074+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -52,6 +56,7 @@
     "name": "Classics Library",
     "code": "CLASSICS",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:51.232+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -64,6 +69,7 @@
     "name": "Marine Biology Library (Miller)",
     "code": "MARINE-BIO",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:50.904+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -76,6 +82,7 @@
     "name": "Music Library",
     "code": "MUSIC",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:49.192+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -88,6 +95,7 @@
     "name": "Lane Medical Library",
     "code": "LANE",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:47.713+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -100,6 +108,7 @@
     "name": "Special Collections",
     "code": "SPEC-COLL",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:55.943+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -112,6 +121,7 @@
     "name": "Engineering Library (Terman)",
     "code": "ENG",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:49.727+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -124,6 +134,7 @@
     "name": "Law Library (Crown)",
     "code": "LAW",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:47.903+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -136,6 +147,7 @@
     "name": "Education Library (Cubberley)",
     "code": "EDUCATION",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:48.513+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -148,6 +160,7 @@
     "name": "Earth Sciences Library (Branner)",
     "code": "EARTH-SCI",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:48.229+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -160,6 +173,7 @@
     "name": "East Asia Library",
     "code": "EAST-ASIA",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:48.667+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -172,6 +186,7 @@
     "name": "SUL",
     "code": "SUL",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:56.280+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -184,6 +199,7 @@
     "name": "SAL Newark (off-campus storage)",
     "code": "SAL-NEWARK",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:52.733+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -196,6 +212,7 @@
     "name": "SAL3 (off-campus storage)",
     "code": "SAL3",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:49.555+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -208,6 +225,7 @@
     "name": "Philosophy Library (Tanner)",
     "code": "TANNER",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:52.573+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -220,6 +238,7 @@
     "name": "Science Library (Li and Ma)",
     "code": "SCIENCE",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:49.053+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -232,6 +251,7 @@
     "name": "Business Library",
     "code": "BUSINESS",
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:47.290+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -244,6 +264,7 @@
     "name": "Green Library",
     "code": "GREEN",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:48.373+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -256,6 +277,7 @@
     "name": "Archive of Recorded Sound",
     "code": "ARS",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:51.099+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -268,6 +290,7 @@
     "name": "Hoover Institution Library & Archives",
     "code": "HILA",
     "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:47.467+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
