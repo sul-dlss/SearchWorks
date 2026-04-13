@@ -535,6 +535,7 @@ d5fd6401-4df7-4d59-9ed8-73716f079899,SAL EAL Sets,SAL-EAL-SETS,SU,SUL,SAL,East A
 d6349eca-00c6-4d97-ace1-21338c1cc691,Science Shelved by Title,SCI-SHELBYTITLE,SU,SUL,SCIENCE,Serials,true,false,SCIENCE,SCIENCE,,,,,,,,,,,,,,,,Shelved by title
 d73b9dcf-c18a-45f2-ac08-a61aca9b5b26,Green migration error,GRE-MIGRATE-ERR,SU,SUL,GREEN,Error during migration,true,false,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,,,
 d7dbee55-c788-4dd3-806e-8028ccaf01a4,Law Reserves,LAW-CRES,SU,LAW,LAW,On reserve: Law Teaming room,true,false,LAW,LAW,,,,,,,,,,true,,,,,,
+d8c65cbf-53dc-49f5-97ac-290cfdb863fd,Spec U-Arch Reference W,SPEC-UARCH-REF-W,SU,SUL,SPEC-COLL,University Archives Reference,true,false,SPEC,SPEC,,,SPECUA,,,,,,,,,,,,,
 d8dcbee8-4a1a-4ae2-b650-1f06170c8a69,Spec Sal Robinson,SPEC-SAL-ROBINSON,SU,SUL,SPEC-COLL,Robinson Collection,true,false,SPEC,SPEC,,,,,,,,,,,,,,,,
 d92f0bbd-15ac-48c3-b682-dce149ef3d39,Earth Sci migration error,EAR-MIGRATE-ERR,SU,SUL,EARTH-SCI,Error during migration,true,false,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,,,
 d953f8fe-1fa9-44b0-ada2-5b6e7df177aa,SAL3 PAGE-MU Circulating,SAL3-PAGE-MU-CIRC,SU,SUL,SAL3,Request for pickup at Music Library,true,false,SAL3,SAL3,,,,,MUSIC,,,Offsite,,,,,,,,
@@ -547,6 +548,7 @@ dbc775db-ff3a-4b6e-bd92-7e0060d86bd3,HILA Reference,HILA-REF,SU,HOOVER,HILA,Refe
 dbe976e6-93dc-4a43-9817-eee3996c8ef3,Science Shadowed,SCI-SHADOW,SU,SUL,SCIENCE,Ask at circulation desk,true,false,SCIENCE,SCIENCE,,,,,,,,,,,,,,,,
 dbf198d7-2692-4aca-9b83-30e72d139655,Media PAGE-MD,MEDIA-PAGE-MD,SU,SUL,MEDIA-CENTER,For use in the Media Center ,true,false,MEDIA-CENTER,MEDIA-CENTER,,,,,,,,,,,,,,,,
 dd418045-6405-4227-b594-837ae4bacaf9,Green International Docs,GRE-INTL-DOCS,SU,SUL,GREEN,International Government Documents,true,false,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,International,,,,,
+ddcac224-966c-4250-9658-ff408d7ed439,Spec SAL3 Shelved Elsewhere,SPEC-SAL3-SEE-OTHER,SU,SUL,SPEC-COLL,Individual volumes catalogued separately,true,false,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,,
 de18291c-b5a5-4810-bf68-d997823ce618,Spec Sal Newton,SPEC-SAL-NEWTON,SU,SUL,SPEC-COLL,Newton Collection,true,false,SPEC,SPEC,,,,,,,,,,,,,,,,
 de45d120-8d3e-41ae-bb6c-3e15d684beaf,SUL Cataloging,SUL-CATALOGING,SU,SUL,SUL,In process,true,false,SULTS,SULTS,,,,,,,,In_process,,,,,,,,
 df22df7e-4781-4354-ba29-f63d8d274886,Classics Withdrawn Digital Substitute,CLA-WD-DIGITAL-SUB,SU,SUL,CLASSICS,Digital substitute,true,false,CLASSICS,CLASSICS,,,,,,,,,,,,,,,,
@@ -585,6 +587,7 @@ ecc609ab-7204-4a4f-be73-fca050ae9918,Lane Books: Oversize Folio,LANE-FOLIO,SU,ME
 ecf8e20b-9135-437c-855b-d24fe92844f2,Eng Science Fiction,ENG-SCIFI,SU,SUL,ENG,Science fiction collection,true,false,ENG,ENG,,,,,,,,,,,,,,,,
 ee3965d1-d19d-49ef-8493-88bac9929121,Spec Robinson,SPEC-ROBINSON,SU,SUL,SPEC-COLL,Robinson Collection,true,false,SPEC,SPEC,,,SPECUA,,,,,,,,,,,,,
 ef28be31-ff72-45ce-a4b1-b4b139ec19db,Green Hohbach Reference,GRE-HH-REF,SU,SUL,GREEN,Hohbach Hall: Reference,true,false,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,,
+f041a017-c4e4-4a7c-aed3-1f4b98a3a0e8,HILA SAL3 Shelved Elsewhere,HILA-SAL3-SEE-OTHER,SU,HOOVER,HILA,See linked record,true,false,SAL3,SAL3,,,,,,,,,,,,,,,,
 f05736d2-d3a2-4532-88aa-031a87528863,SUL Shelved Elsewhere,SUL-SEE-OTHER,SU,SUL,SUL,Individual volumes catalogued separately,true,false,Online,Online,,,,,,,,,,,,,,,,
 f0872428-a8ee-446e-a535-de44bc4b8d98,Spec SAL3 MemLibMusic,SPEC-SAL3-MEMLIBMUS,SU,SUL,SPEC-COLL,Memorial Library of Music,true,false,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,,
 f12eef7a-3da0-4c45-82bf-712bdf795135,Eng Timoshenko Collection,ENG-TIMO-COLL,SU,SUL,ENG,Timoshenko Collection: Ask at circulation desk,true,false,ENG,ENG,,,,,,,,,,,,,,,,
