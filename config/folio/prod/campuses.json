@@ -4,6 +4,7 @@
     "name": "Medical Center",
     "code": "MED",
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:45.387+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -16,6 +17,7 @@
     "name": "Law School",
     "code": "LAW",
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:45.217+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -28,6 +30,7 @@
     "name": "Graduate School of Business",
     "code": "GSB",
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:44.519+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -40,6 +43,7 @@
     "name": "Hoover Institution",
     "code": "HOOVER",
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:45.017+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
@@ -52,6 +56,7 @@
     "name": "Stanford Libraries",
     "code": "SUL",
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "isShadow": false,
     "metadata": {
       "createdDate": "2023-08-10T17:44:45.557+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",

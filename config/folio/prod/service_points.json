@@ -763,11 +763,11 @@
     "staffSlips": [
       {
         "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -779,23 +779,23 @@
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
-        "printByDefault": true
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:29.674+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-03-12T17:15:38.144+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2026-04-08T18:58:45.298+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -841,11 +841,11 @@
     "staffSlips": [
       {
         "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -857,23 +857,23 @@
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
-        "printByDefault": true
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:30.675+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-03-12T17:16:29.117+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2026-04-08T16:29:13.580+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -1105,11 +1105,11 @@
     "staffSlips": [
       {
         "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -1121,23 +1121,23 @@
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
-        "printByDefault": true
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:32.587+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-03-12T17:16:53.506+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2026-04-09T18:27:10.016+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -1373,11 +1373,11 @@
     "staffSlips": [
       {
         "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -1389,23 +1389,23 @@
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": true
+        "printByDefault": false
       },
       {
         "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
-        "printByDefault": true
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-09-22T23:25:04.824+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2026-03-12T17:14:43.071+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2026-04-08T17:57:57.114+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {

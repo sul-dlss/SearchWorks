@@ -277,7 +277,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,MUS-LOCKED or MUS-REF,No loan,No requests allowed,Default notice,No fines,$500 lost fee
 ,book,,,,,MUS-R-STACKS or MUS-R-OVERSIZE or MUS-R-MINIATURE,No loan,No requests allowed,Default notice,No fines,$400 lost fee
 ,book,,,,,MUS-FLAT or MUS-OVERSIZE or MUS-MINIATURE or MUS-SCORES or MUS-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$65 lost fee
-,book,,,,,MAR-LOCKED-THESES,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
+,book,,,,,MAR-LOCKED-THESES,28day-2renew-7daygrace,No requests allowed,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 ,book,,,,,MAR-CHILDRENYA or MAR-EXHIBIT or MAR-GRAPHIC-NOVEL or MAR-JEDI or MAR-POPSCI or MAR-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 ,book,,,,,GRE-REPAIR-EVALUATION or GRE-COURTESY-HOLD,No loan,No requests allowed,Default notice,No fines,$75 lost fee
 ,book,,,,,GRE-HH-SVA-SPECIALPROJECTS,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
