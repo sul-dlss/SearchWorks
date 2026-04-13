@@ -12955,6 +12955,31 @@
     }
   },
   {
+    "id": "d8c65cbf-53dc-49f5-97ac-290cfdb863fd",
+    "name": "Spec U-Arch Reference W",
+    "code": "SPEC-UARCH-REF-W",
+    "discoveryDisplayName": "University Archives Reference",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
+    "servicePointIds": [
+      "0e924af7-785c-46eb-a5e2-060394822016"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-04-02T23:38:46.380+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-04-02T23:38:46.380+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "d8dcbee8-4a1a-4ae2-b650-1f06170c8a69",
     "name": "Spec Sal Robinson",
     "code": "SPEC-SAL-ROBINSON",
@@ -13244,6 +13269,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-10-02T17:00:48.845+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
+    "id": "ddcac224-966c-4250-9658-ff408d7ed439",
+    "name": "Spec SAL3 Shelved Elsewhere",
+    "code": "SPEC-SAL3-SEE-OTHER",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-04-07T23:02:04.155+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-04-07T23:02:04.155+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -14167,6 +14217,29 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-10-02T17:00:31.761+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
+    "id": "f041a017-c4e4-4a7c-aed3-1f4b98a3a0e8",
+    "name": "HILA SAL3 Shelved Elsewhere",
+    "code": "HILA-SAL3-SEE-OTHER",
+    "discoveryDisplayName": "See linked record",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
+    "libraryId": "ffe6ea8e-1e14-482f-b3e9-66e05efb04dd",
+    "details": {},
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-04-01T18:59:41.179+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-04-01T18:59:41.179+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
