@@ -1709,7 +1709,6 @@ www.americashealthrankings.org
 www.amexplorer.amdigital.co.uk
 www.amj.net.au
 www.ams.org
-www.amscholar.amdigital.co.uk
 www.amsjournal.com
 www.ancientscienceoflife.org
 www.andp.org
@@ -2033,7 +2032,6 @@ www.excli.de
 www.exeley.com
 www.exp-oncology.com.ua
 www.experimentalneurobiology.org
-www.exploration.amdigital.co.uk
 www.eymj.org
 www.facetsjournal.com
 www.facs.org
@@ -2532,7 +2530,6 @@ www.openanatomy.org
 www.openbookpublishers.com
 www.openedition.org
 www.openhelix.com
-www.openhumanitiespress.org
 www.ophthalmologia.be
 www.optica-opn.org
 www.orthomolecular.org
