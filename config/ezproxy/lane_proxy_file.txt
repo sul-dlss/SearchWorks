@@ -128,7 +128,6 @@ aquifer.org
 ar.iiarjournals.org
 arbs.biblioteca.unesp.br
 arc.aiaa.org
-archive.ahrq.gov
 archive.org
 archived-bulletin.stanford.mobi
 archives.datapages.com
@@ -306,7 +305,6 @@ books.google.be
 books.google.ch
 books.google.co.uk
 books.google.com
-books.nap.edu
 books.openedition.org
 books.rsc.org
 booksandjournals.brillonline.com
@@ -362,7 +360,6 @@ catalogimages.wiley.com
 catalogue.bnf.fr
 catalyst.nejm.org
 catdir.loc.gov
-cbmjournal.springeropen.com
 cccc.uochb.cas.cz
 ccdm.aphapublications.org
 ccforum.biomedcentral.com
@@ -508,7 +505,6 @@ dioc.chemnetbase.com
 dip.doe-mbi.ucla.edu
 direct.mit.edu
 disastermilitarymedicine.biomedcentral.com
-discover.nci.nih.gov
 discoveriesjournals.org
 dl.acm.org
 dl.asminternational.org
@@ -586,7 +582,6 @@ efsa.onlinelibrary.wiley.com
 egazete.cumhuriyet.com.tr
 ehjournal.biomedcentral.com
 ehoonline.biomedcentral.com
-ehp.niehs.nih.gov
 ehrafworldcultures.yale.edu
 ejb.springeropen.com
 ejfs.springeropen.com
@@ -717,7 +712,6 @@ harmreductionjournal.biomedcentral.com
 hawaiijournalhealth.org
 hbcp.chemnetbase.com
 hccpjournal.biomedcentral.com
-hcupnet.ahrq.gov
 hdl-handle-net.stanford.idm.oclc.org
 hdl.handle.net
 hdsr.mitpress.mit.edu
@@ -726,7 +720,6 @@ head-face-med.biomedcentral.com
 headachejournal.onlinelibrary.wiley.com
 headandneckoncology.biomedcentral.com
 health-policy-systems.biomedcentral.com
-health.usnews.com
 healtheducationresources.unesco.org
 healthmap.org
 healthpsychologyresearch.openmedicalpublishing.org
@@ -1404,6 +1397,7 @@ rphysap.journaldephysique.org
 rps.mui.ac.ir
 rrtjournal.biomedcentral.com
 rsaiconnect.onlinelibrary.wiley.com
+rsnz.onlinelibrary.wiley.com
 rsos.royalsocietypublishing.org
 rss.onlinelibrary.wiley.com
 rsta.royalsocietypublishing.org
@@ -1613,7 +1607,6 @@ wjes.biomedcentral.com
 wjso.biomedcentral.com
 wms.cartographic.com
 womensmidlifehealthjournal.biomedcentral.com
-wonder.cdc.gov
 worldscholar.galegroup.com
 worldtradelaw.net
 worldwidescience.org
@@ -2257,7 +2250,6 @@ www.jeo-esska.com
 www.jfcmonline.com
 www.jfda-online.com
 www.jfma-online.com
-www.jfponline.com
 www.jfsf.eu
 www.jgid.org
 www.jgld.ro
@@ -2351,7 +2343,6 @@ www.knovel.com
 www.krepublishers.com
 www.krpia.co.kr
 www.kstudy.com
-www.labtestsonline.org
 www.lakartidningen.se
 www.laryngologyandvoice.org
 www.latinnews.com
@@ -2466,7 +2457,6 @@ www.nber.org
 www.nbn-resolving.de
 www.ncbi.nlm.nih.gov
 www.nejm.org
-www.neonatology.org
 www.neoplasia.com
 www.nepjol.info
 www.netanatomy.com
@@ -2478,11 +2468,9 @@ www.neurologyindia.com
 www.neurosurgicalatlas.com
 www.newday.com
 www.newswise.com
-www.nextbio.com
 www.nice.org.uk
 www.nigeriamedj.com
 www.nigerianjsurg.com
-www.nih.go.jp
 www.nist.gov
 www.nitrd.gov
 www.njcponline.com
@@ -2562,7 +2550,6 @@ www.pharmacytimes.com
 www.phcogres.com
 www.phcogrev.com
 www.philanthropy.com
-www.phrma.org
 www.physiologicalchemistryandphysics.com
 www.physweekly.com
 www.picronline.org
@@ -2582,7 +2569,6 @@ www.poljpathol.cm-uj.krakow.pl
 www.popularmedicine.amdigital.co.uk
 www.portal.euromonitor.com
 www.povertylaw.org
-www.pparx.org
 www.ppjonline.org
 www.primarypsychiatry.com
 www.primescholars.com
@@ -2606,7 +2592,6 @@ www.publish.csiro.au
 www.pubstemcell.com
 www.qscience.com
 www.quackwatch.org
-www.qualitycheck.org
 www.r2library.com
 www.racgp.org.au
 www.radiologycases.com
@@ -2682,7 +2667,6 @@ www.sfn.org
 www.sgecm.org.tw
 www.sicot-j.org
 www.sid.ir
-www.signalsmag.com
 www.signavitae.com
 www.sjkdt.org
 www.sjmms.net
