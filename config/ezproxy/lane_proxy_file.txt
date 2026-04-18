@@ -37,6 +37,7 @@ acr.amegroups.com
 acsess.onlinelibrary.wiley.com
 acsjournals.onlinelibrary.wiley.com
 acta.tums.ac.ir
+actabio.pwr.edu.pl
 actanaturae.ru
 actaneurocomms.biomedcentral.com
 actavetscand.biomedcentral.com
@@ -78,6 +79,7 @@ alzres.biomedcentral.com
 amb-express.springeropen.com
 americanlibrariesmagazine.org
 amjcaserep.com
+analisiseconomico.azc.uam.mx
 analyticscampus.gallup.com
 anatomypubs.onlinelibrary.wiley.com
 ancestrylibrary.proquest.com
@@ -129,7 +131,6 @@ ar.iiarjournals.org
 arbs.biblioteca.unesp.br
 arc.aiaa.org
 archive.org
-archived-bulletin.stanford.mobi
 archives.datapages.com
 archives.newyorker.com
 archivesphysiotherapy.biomedcentral.com
@@ -591,7 +592,6 @@ ejim.springeropen.com
 ejnmmipharmchem.springeropen.com
 ejnpn.springeropen.com
 ejns.springeropen.com
-ejo.springeropen.com
 ejrnm.springeropen.com
 electronicimaging.spiedigitallibrary.org
 elib.infolinker.com.tw
@@ -722,7 +722,6 @@ headandneckoncology.biomedcentral.com
 health-policy-systems.biomedcentral.com
 healtheducationresources.unesco.org
 healthmap.org
-healthpsychologyresearch.openmedicalpublishing.org
 heart.bmj.com
 heartasia.bmj.com
 heartfailure.onlinejacc.org
@@ -770,7 +769,6 @@ iiif.lib.harvard.edu
 ij-healthgeographics.biomedcentral.com
 ijaai.tums.ac.ir
 ijbnpa.biomedcentral.com
-ijcbnm.sums.ac.ir
 ijdb.ehu.eus
 ijehse.biomedcentral.com
 ijgc.bmj.com
@@ -834,6 +832,7 @@ iopscience.iop.org
 iovs.arvojournals.org
 ipb.uclouvain.be
 iris.paho.org
+iris.who.int
 irishvetjournal.biomedcentral.com
 irjnm.tums.ac.ir
 ismocd.org
@@ -1173,7 +1172,6 @@ nowpublishers.com
 npcd.oversea.cnki.net
 npepjournal.biomedcentral.com
 nph.onlinelibrary.wiley.com
-nrs.harvard.edu
 nuclear-receptor.biomedcentral.com
 nursing.jmir.org
 nutrirejournal.biomedcentral.com
@@ -1186,7 +1184,6 @@ nzmj.org.nz
 obgyn.lwwhealthlibrary.com
 obgyn.mhmedical.com
 obgyn.onlinelibrary.wiley.com
-objects.library.uu.nl
 occup-med.biomedcentral.com
 oce.ovid.com
 oed.com
@@ -1270,7 +1267,6 @@ phcfm.org
 phil.cdc.gov
 physics.aps.org
 physoc.onlinelibrary.wiley.com
-pi.lib.uchicago.edu
 pilotfeasibilitystudies.biomedcentral.com
 plantmethods.biomedcentral.com
 platform.marketintelligence.spglobal.com
@@ -1643,7 +1639,6 @@ www.acpjournals.org
 www.acs.org
 www.acta-apa.org
 www.actaanaesthesiologica.be
-www.actabio.pwr.wroc.pl
 www.actabp.pl
 www.actaitalica.it
 www.actaneurologica.be
@@ -2014,6 +2009,7 @@ www.esaim-ps.org
 www.eugenicsarchive.org
 www.euppublishing.com
 www.eurannallergyimm.com
+www.eure.cl
 www.eurekaselect.com
 www.eurjbreasthealth.com
 www.eurjrheumatol.org
@@ -2259,7 +2255,6 @@ www.jiaci.org
 www.jiaps.com
 www.jidc.org
 www.jinfowar.com
-www.jioh.org
 www.jisponline.com
 www.jisppd.com
 www.jkacap.org
@@ -2454,7 +2449,6 @@ www.nationalacademies.org
 www.nationalnursesunited.org
 www.nature.com
 www.nber.org
-www.nbn-resolving.de
 www.ncbi.nlm.nih.gov
 www.nejm.org
 www.neoplasia.com
@@ -2588,7 +2582,6 @@ www.psywb.com
 www.ptfarm.pl
 www.ptsd.va.gov
 www.publichealthinafrica.org
-www.publish.csiro.au
 www.pubstemcell.com
 www.qscience.com
 www.quackwatch.org
@@ -2599,7 +2592,6 @@ www.rairo-ita.org
 www.rand.org
 www.rarebooks.info
 www.rcpe.ac.uk
-www.rcvmonline.com
 www.re3data.org
 www.regenmedres-journal.org
 www.rehab.research.va.gov
@@ -2612,6 +2604,8 @@ www.researchprotocols.org
 www.retronews.fr
 www.reumatismo.org
 www.revespcardiol.org
+www.revistaei.uchile.cl
+www.revistas.unal.edu.co
 www.rhinologyjournal.com
 www.rimed.org
 www.risk.net
