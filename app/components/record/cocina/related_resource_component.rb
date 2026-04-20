@@ -13,19 +13,7 @@ module Record
       attr_reader :related_resource
 
       def render?
-        related_resource.display_data.present?
-      end
-
-      def url?
-        link_url.present?
-      end
-
-      def link_text
-        related_resource.to_s
-      end
-
-      def link_url
-        related_resource.url
+        related_resource.present?
       end
     end
   end

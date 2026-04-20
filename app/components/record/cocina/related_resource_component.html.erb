@@ -1,13 +1,24 @@
-<% if url? %>
-  <%= tag.dd do %>
-    <%= tag.a href: link_url do %>
-      <%= link_text %>
+<dd>
+  <dl class="related-item">
+    <dt class="visually-hidden">Title</dt>
+    <dd class="title">
+      <% if related_resource.url? %>
+        <%= link_to related_resource.to_s, related_resource.url, class: 'su-underline' %>
+      <% else %>
+        <%= helpers.auto_link related_resource.to_s, html: { class: 'su-underline' } %>
+      <% end %>
+    </dd>
+    <% if related_resource.display_data.present? %>
+      <div class="display-data">
+      <% related_resource.display_data.each do |field| %>
+        <dt><%= field.label %></dt>
+        <% field.values.each do |value| %>
+          <dd>
+            <%= auto_link value, html: { class: 'su-underline' } %>
+          </dd>
+        <% end %>
+      <% end %>
+      </div>
     <% end %>
-  <% end %>
-<% else %>
-  <%= tag.dd class: "related-item" do %>
-    <%= tag.dl do %>
-      <%= render Record::Cocina::FieldComponent.with_collection(related_resource.display_data) %>
-    <% end %>
-  <% end %>
-<% end %>
+  </dl>
+</dd>
