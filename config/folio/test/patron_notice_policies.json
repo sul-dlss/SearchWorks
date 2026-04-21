@@ -534,7 +534,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:14.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-11-17T19:41:13.982+00:00",
+      "updatedDate": "2026-04-20T18:38:30.816+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
@@ -588,6 +588,14 @@
         "realTime": false,
         "sendOptions": {
           "sendWhen": "Item recalled"
+        }
+      },
+      {
+        "templateId": "013fbf68-6ca2-4230-b681-28b397074c60",
+        "format": "Email",
+        "realTime": false,
+        "sendOptions": {
+          "sendWhen": "Manual due date change"
         }
       }
     ],
