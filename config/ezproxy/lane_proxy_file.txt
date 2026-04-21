@@ -413,7 +413,6 @@ cmj.sinoperi.com
 cmj.yiigle.com
 cmjournal.biomedcentral.com
 cmm.mazums.ac.ir
-cmr.cochrane.org
 cnjournal.biomedcentral.com
 cocatalog.loc.gov
 cognet.mit.edu
@@ -1558,7 +1557,6 @@ trialsjournal.biomedcentral.com
 tropmedhealth.biomedcentral.com
 tsaco.bmj.com
 tta.thieme.com
-turkthoracj.org
 tvst.arvojournals.org
 uclibs.org
 udbstat.eastview.com
@@ -1622,9 +1620,7 @@ www.aaic.net.au
 www.aamc.org
 www.aana.com
 www.aanda.org
-www.aapspharmscitech.org
 www.ablj.org
-www.ac-psych.org
 www.accessdata.fda.gov
 www.accessengineeringlibrary.com
 www.accessible.com
@@ -1652,7 +1648,6 @@ www.aeaweb.org
 www.aei.org
 www.aeronline.org
 www.aerzteblatt.de
-www.afrjpaedsurg.org
 www.aginganddisease.org
 www.ahajournals.org
 www.ahbps.org
