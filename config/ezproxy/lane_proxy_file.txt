@@ -76,7 +76,6 @@ allafrica.com
 almob.biomedcentral.com
 alz-journals.onlinelibrary.wiley.com
 alzres.biomedcentral.com
-amb-express.springeropen.com
 americanlibrariesmagazine.org
 amjcaserep.com
 analisiseconomico.azc.uam.mx
@@ -99,7 +98,6 @@ anzhealthpolicy.biomedcentral.com
 anzjsurg.onlinelibrary.wiley.com
 aocs.onlinelibrary.wiley.com
 aoemj.biomedcentral.com
-aojnmb.mums.ac.ir
 aops.springeropen.com
 aornjournal.onlinelibrary.wiley.com
 apfmj.biomedcentral.com
@@ -209,7 +207,6 @@ biotechnologyforbiofuels.biomedcentral.com
 bipadi.ub.edu
 birdsoftheworld.org
 bjbas.springeropen.com
-bjcvs.org
 bjd-abcd.com
 bjgp.org
 bjgpopen.org
@@ -604,6 +601,7 @@ engine.scichina.com
 english.rrsurg.com
 enterprise.clcd.com
 environmentalmicrobiome.biomedcentral.com
+eor.bioscientifica.com
 ep.bmj.com
 epag.springeropen.com
 epigeneticsandchromatin.biomedcentral.com
@@ -951,6 +949,7 @@ journals.athmsi.org
 journals.biologists.com
 journals.cambridge.org
 journals.co.za
+journals.copmadrid.org
 journals.healio.com
 journals.humankinetics.com
 journals.iucr.org
@@ -1058,7 +1057,6 @@ materials.springer.com
 math.missouri.edu
 mathscinet.ams.org
 mbio.asm.org
-mbrc.shirazu.ac.ir
 mcpharmacol.com
 mcr.aacrjournals.org
 mct.aacrjournals.org
@@ -1161,7 +1159,6 @@ new.sourceoecd.org
 newfirstsearch.oclc.org
 newleftreview.org
 newspaperslibrary.proquest.com
-nexisuni.com
 ng.neurology.org
 nida.nih.gov
 nmsjournal.kaums.ac.ir
@@ -1317,6 +1314,7 @@ public.ebookcentral.proquest.com
 publications.aap.org
 publications.ersnet.org
 publications.iarc.fr
+publications.iarc.who.int
 publicationsncte.org
 publichealth.jmir.org
 publichealthreviews.biomedcentral.com
@@ -1338,6 +1336,7 @@ pubs.rsna.org
 pubsonline.informs.org
 purl.access.gpo.gov
 purl.fdlp.gov
+qe2a-proxy.mun.ca
 qims.amegroups.com
 qualitysafety.bmj.com
 radium.journaldephysique.org
@@ -2165,7 +2164,6 @@ www.imaios.com
 www.imdb.com
 www.img.cas.cz
 www.imj.ie
-www.impactaging.com
 www.impan.pl
 www.imrpress.com
 www.imstat.org
@@ -2496,7 +2494,6 @@ www.oldcitypublishing.com
 www.omicsonline.org
 www.omjournal.org
 www.ompu.ac.jp
-www.oncologypractice.com
 www.onepetro.org
 www.onlinejets.org
 www.onlinelibrary.wiley.com
@@ -2571,7 +2568,6 @@ www.psychiatria-danubina.com
 www.psychiatrist.com
 www.psychiatryinvestigation.org
 www.psychologicabelgica.com
-www.psychosocial-intervention.org
 www.psychotherapy.net
 www.psywb.com
 www.ptfarm.pl
@@ -2689,6 +2685,7 @@ www.surgicalneurologyint.com
 www.tanaffosjournal.ir
 www.tandfonline.com
 www.taylorfrancis.com
+www.techscience.com
 www.tera.org
 www.termedia.pl
 www.the-aps.org
@@ -2793,7 +2790,6 @@ www.zerotothree.org
 www.zjujournals.com
 www.zoores.ac.cn
 www150.statcan.gc.ca
-www3.cricyt.edu.ar
 wwwn.cdc.gov
 xenetwork.org
 xlink.rsc.org
