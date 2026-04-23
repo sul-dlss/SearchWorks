@@ -1304,6 +1304,7 @@ psnet.ahrq.gov
 pssjournal.biomedcentral.com
 psychiatry.lwwhealthlibrary.com
 psychiatryonline.org
+psychlatryonline.org
 psychnews.psychiatryonline.org
 psychotherapy.psychiatryonline.org
 psycnet.apa.org
