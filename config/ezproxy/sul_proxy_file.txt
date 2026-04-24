@@ -389,6 +389,7 @@ epjb.edpsciences.org
 epjd.edpsciences.org
 epje.edpsciences.org
 epljournal.edpsciences.org
+epub.prsgroup.com
 epubs.siam.org
 epwrfits.in
 er.uwpress.org
