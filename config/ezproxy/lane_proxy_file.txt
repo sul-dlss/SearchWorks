@@ -727,7 +727,6 @@ heinonline.org
 hemonc.mhmedical.com
 hereditasjournal.biomedcentral.com
 herpesviridae.biomedcentral.com
-hijournal.bcs.org
 hindawi.com
 history-commons.net
 history.paratext.com
@@ -790,7 +789,6 @@ ijpho.ssu.ac.ir
 ijpm.mui.ac.ir
 ijponline.biomedcentral.com
 ijps.tums.ac.ir
-ijvr.shirazu.ac.ir
 ila.onlinelibrary.wiley.com
 ilibri.casalini.it
 imagebank.osa.org
@@ -805,7 +803,6 @@ imrs.oxfordjournals.org
 imsear.searo.who.int
 in-silico-cell-and-tissue-science.springeropen.com
 indexmedicus.afro.who.int
-indianheartjournal.com
 infectagentscancer.biomedcentral.com
 inflammregen.biomedcentral.com
 informatics.bmj.com
@@ -916,7 +913,6 @@ jneuroengrehab.biomedcentral.com
 jneuroinflammation.biomedcentral.com
 jnis.bmj.com
 jnm.snmjournals.org
-jnmcth.nmcth.edu
 jnnp.bmj.com
 jnrbm.biomedcentral.com
 joe.bioscientifica.com
@@ -931,6 +927,7 @@ journal-of-parasitology.kglmeridian.com
 journal.copdfoundation.org
 journal.equinoxpub.com
 journal.imbio.de
+journal.nmcth.edu
 journal.telospress.com
 journal.waocp.org
 journalhosting.ucalgary.ca
@@ -1304,6 +1301,7 @@ psnet.ahrq.gov
 pssjournal.biomedcentral.com
 psychiatry.lwwhealthlibrary.com
 psychiatryonline.org
+psychlab.massey.ac.nz
 psychlatryonline.org
 psychnews.psychiatryonline.org
 psychotherapy.psychiatryonline.org
@@ -2373,7 +2371,6 @@ www.managedhealthcareconnect.com
 www.maneyonline.com
 www.manu.edu.mk
 www.marketresearch.amdigital.co.uk
-www.massey.ac.nz
 www.massobservation.amdigital.co.uk
 www.masstourism.amdigital.co.uk
 www.math.kth.se
@@ -2493,6 +2490,7 @@ www.ojhas.org
 www.ojoonline.org
 www.oldcitypublishing.com
 www.omicsonline.org
+www.omim.org
 www.omjournal.org
 www.ompu.ac.jp
 www.onepetro.org
@@ -2738,7 +2736,6 @@ www.turkjps.org
 www.turkjsurg.com
 www.turkpediatriarsivi.com
 www.turkpsikiyatri.com
-www.turkurolojidergisi.com
 www.uhms.org
 www.uic.edu
 www.ulb.tu-darmstadt.de
