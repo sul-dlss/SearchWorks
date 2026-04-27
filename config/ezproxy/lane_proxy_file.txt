@@ -779,7 +779,6 @@ ijmhs.biomedcentral.com
 ijms.sums.ac.ir
 ijoh.tums.ac.ir
 ijorl.mums.ac.ir
-ijp.iranpath.org
 ijpa.tums.ac.ir
 ijpc.com
 ijpds.org
@@ -1142,6 +1141,7 @@ naturalmedicines.therapeuticresearch.com
 nbn-resolving.de
 nbn-resolving.org
 ncco.galegroup.com
+ndltd.org
 neoreviews.aappublications.org
 nephropathol.com
 neuraldevelopment.biomedcentral.com
@@ -1437,7 +1437,6 @@ search.ebscohost.com
 search.ebscohost.com.
 search.informit.com.au
 search.mandumah.com
-search.ndltd.org
 search.opinionarchives.com
 search.proquest.com
 searchworks.stanford.edu
