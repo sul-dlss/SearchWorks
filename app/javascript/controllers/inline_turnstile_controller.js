@@ -4,10 +4,6 @@ export default class extends Controller {
   static targets = ["challenge", "frame"]
   static values = { challengePath: String, siteKey: String, status: Boolean }
 
-  connect() {
-    turnstile.implicitRender()
-  }
-
   frameTargetConnected(element) {
     if (this.statusValue) {
       this.convertFrame(element.querySelector("turbo-frame"))
