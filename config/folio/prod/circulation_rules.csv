@@ -147,10 +147,10 @@ undergrad or postdoctoral,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES o
 staff or staff-casual or fellow,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
 graduate,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$500 lost fee
 faculty,book,,,,,EAR-BIB-INDEX or EAR-FOLIO or EAR-MAP-FILES or EAR-MEZZANINE or EAR-STACKS or EAR-STOR-MAPS or EAR-STORAGE or EAR-TECH-REPORTS or EAR-MICROTEXT or EAR-SGC,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$500 lost fee
-undergrad or fellow or postdoctoral,book,,,,,ART-FOLIO or ART-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
-staff or staff-casual,book,,,,,ART-FOLIO or ART-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
-graduate,book,,,,,ART-FOLIO or ART-STACKS,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
-faculty,book,,,,,ART-FOLIO or ART-STACKS,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$150 lost fee
+undergrad or fellow or postdoctoral,book,,,,,ART-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
+staff or staff-casual,book,,,,,ART-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
+graduate,book,,,,,ART-STACKS,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
+faculty,book,,,,,ART-STACKS,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$150 lost fee
 postdoctoral or undergrad or staff or staff-casual or fellow,book,,,,,ARS-LOCKED,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$65 lost fee
 graduate,book,,,,,ARS-LOCKED,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$65 lost fee
 faculty,book,,,,,ARS-LOCKED,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$65 lost fee
@@ -304,8 +304,8 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,ART-EXHIBIT or ART-PROCESSING-LOCKED,No loan,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,ART-NEWBOOK,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$150 lost fee
 ,book,,,,,ART-REF or ART-REF-FOLIO,7day-norenew-3daygrace,No requests allowed,Default notice,No fines,$250 lost fee
-,book,,,,,ART-LOCKED-MEDIUM or ART-LOCKED-LARGE or ART-LOCKED-OVERSIZE or ART-LOCKED-SMALL or ART-LOCKED-LARGE-R or ART-LOCKED-MEDIUM-R or ART-LOCKED-OVERSIZE-R or ART-LOCKED-SMALL-R,No loan,Allow paging/hold,Default notice,No fines,$800 lost fee
-,book,,,,,ART-FOLIO or ART-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
+,book,,,,,ART-FOLIO or ART-LOCKED-MEDIUM or ART-LOCKED-LARGE or ART-LOCKED-OVERSIZE or ART-LOCKED-SMALL or ART-LOCKED-LARGE-R or ART-LOCKED-MEDIUM-R or ART-LOCKED-OVERSIZE-R or ART-LOCKED-SMALL-R,No loan,Allow paging/hold,Default notice,No fines,$800 lost fee
+,book,,,,,ART-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
 ,book,,,,,ARS-SPECIALPROJECTS,No loan,No requests allowed,Default notice,No fines,$1000 lost fee - 1 hr aged to lost
 ,book,,,,,ARS-INPROCESS or ARS-OVERSIZE or ARS-REF,No loan,No requests allowed,Default notice,No fines,$65 lost fee
 ,book,,,,,ARS-SAL3-STACKS,No loan,Allow paging/hold,Default notice,No fines,$65 lost fee
