@@ -4,6 +4,14 @@ export default class extends Controller {
   static targets = ["challenge", "frame"]
   static values = { challengePath: String, siteKey: String, status: Boolean }
 
+  connect() {
+    let cfTurnstileElement = this.element.querySelector('.cf-turnstile')
+
+    if (cfTurnstileElement) {
+      turnstile.render(cfTurnstileElement, { sitekey: this.siteKeyValue })
+    }
+  }
+
   frameTargetConnected(element) {
     if (this.statusValue) {
       this.convertFrame(element.querySelector("turbo-frame"))
