@@ -15,7 +15,7 @@ Capybara/SpecificActions:
     - "spec/features/sort_and_per_page_dropdown_spec.rb"
 
 # Offense count: 21
-Capybara/SpecificMatcher:
+Capybara/RSpec/SpecificMatcher:
   Exclude:
     - "spec/components/articles/document_list_component_spec.rb"
     - "spec/components/search_result/mini_bento/article_component_spec.rb"
@@ -31,7 +31,7 @@ Capybara/SpecificMatcher:
     - "spec/features/sort_and_per_page_dropdown_spec.rb"
 
 # Offense count: 92
-Capybara/VisibilityMatcher:
+Capybara/RSpec/VisibilityMatcher:
   Exclude:
     - "spec/components/access_panels/related_component_spec.rb"
     - "spec/features/access_panels/exhibit_spec.rb"
