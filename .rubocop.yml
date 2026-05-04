@@ -457,9 +457,9 @@ Performance/StringInclude: # new in 1.7
   Enabled: true
 Performance/Sum: # new in 1.8
   Enabled: true
-Capybara/MatchStyle: # new in 2.17
+Capybara/RSpec/MatchStyle: # new in 2.17
   Enabled: true
-Capybara/NegationMatcher: # new in 2.14
+Capybara/RSpec/NegationMatcher: # new in 2.14
   Enabled: true
 Capybara/RedundantWithinFind: # new in 2.20
   Enabled: true
@@ -539,11 +539,11 @@ Performance/ZipWithoutBlock: # new in 1.24
   Enabled: true
 Capybara/FindAllFirst: # new in 2.22
   Enabled: true
-Capybara/NegationMatcherAfterVisit: # new in 2.22
+Capybara/RSpec/NegationMatcherAfterVisit: # new in 2.22
   Enabled: true
 RSpec/IncludeExamples: # new in 3.6
   Enabled: true
-Capybara/SpecificMatcher: # new in 2.12
+Capybara/RSpec/SpecificMatcher: # new in 2.12
   Enabled: true
 Lint/UselessDefaultValueArgument: # new in 1.76
   Enabled: true
