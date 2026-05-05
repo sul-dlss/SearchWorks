@@ -7,7 +7,7 @@ export default class extends Controller {
   connect() {
     let cfTurnstileElement = this.element.querySelector('.cf-turnstile')
 
-    if (cfTurnstileElement) {
+    if (window.turnstile && cfTurnstileElement) {
       turnstile.render(cfTurnstileElement, { sitekey: this.siteKeyValue })
     }
   }
@@ -35,6 +35,7 @@ export default class extends Controller {
 
   connectChallenge() {
     if (
+      !window.turnstile ||
       this.statusValue ||
       !this.hasChallengeTarget ||
       this.challengeTarget.childElementCount > 0
