@@ -37,6 +37,7 @@ acr.amegroups.com
 acsess.onlinelibrary.wiley.com
 acsjournals.onlinelibrary.wiley.com
 acta.tums.ac.ir
+actabio.pwr.edu.pl
 actanaturae.ru
 actaneurocomms.biomedcentral.com
 actavetscand.biomedcentral.com
@@ -64,11 +65,13 @@ ajcc.aacnjournals.org
 ajcn.nutrition.org
 ajlmonline.org
 ajns.paans.org
+ajod.org
 ajp.mums.ac.ir
 ajp.psychiatryonline.org
 ajph.aphapublications.org
 akjournals.com
 alfama.sim.ucm.es
+all-imm.com
 allafrica.com
 almob.biomedcentral.com
 alz-journals.onlinelibrary.wiley.com
@@ -87,6 +90,7 @@ ann.sagepub.com
 annals-csis.org
 annals-general-psychiatry.biomedcentral.com
 annals.edu.sg
+annalsofintensivecare.springeropen.com
 annalsofneurosciences.org
 annalsoftransplantation.com
 anthrosource.onlinelibrary.wiley.com
@@ -158,6 +162,7 @@ asthmarp.biomedcentral.com
 atena.beic.it
 atm.amegroups.com
 aviationweek.com
+avmajournals.avma.org
 awwa.onlinelibrary.wiley.com
 babel.hathitrust.org
 bac-lac.on.worldcat.org
@@ -172,6 +177,7 @@ bera-journals.onlinelibrary.wiley.com
 besjournals.onlinelibrary.wiley.com
 bestpractice.bmj.com
 beyoglueye.com
+bhsd.sccgov.org
 bi.tbzmed.ac.ir
 bibliographies.brillonline.com
 biblioscout.net
@@ -182,6 +188,7 @@ biocyc.org
 biodatamining.biomedcentral.com
 bioelecmed.biomedcentral.com
 bioethics.georgetown.edu
+biolmoodanxietydisord.biomedcentral.com
 biologicalproceduresonline.biomedcentral.com
 biologydirect.biomedcentral.com
 biolres.biomedcentral.com
@@ -259,9 +266,11 @@ bmcnutr.biomedcentral.com
 bmcobes.biomedcentral.com
 bmcophthalmol.biomedcentral.com
 bmcoralhealth.biomedcentral.com
+bmcpalliatcare.biomedcentral.com
 bmcpediatr.biomedcentral.com
 bmcpharmacoltoxicol.biomedcentral.com
 bmcphysiol.biomedcentral.com
+bmcplantbiol.biomedcentral.com
 bmcpregnancychildbirth.biomedcentral.com
 bmcproc.biomedcentral.com
 bmcpsychiatry.biomedcentral.com
@@ -438,6 +447,7 @@ cshprotocols.cshlp.org
 ctajournal.biomedcentral.com
 currentprotocols.onlinelibrary.wiley.com
 currents.plos.org
+cvi.asm.org
 cvirendovasc.springeropen.com
 cysjournal.ca
 d-nb.info
@@ -489,6 +499,7 @@ digitalscholarship.unlv.edu
 digitool.hbz-nrw.de
 diglib.hab.de
 dioc.chemnetbase.com
+dip.doe-mbi.ucla.edu
 direct.mit.edu
 disastermilitarymedicine.biomedcentral.com
 discoveriesjournals.org
@@ -517,24 +528,29 @@ drc.bmj.com
 drive.google.com
 droit.cairn.info
 druginfo.nlm.nih.gov
+ds.cc.yamaguchi-u.ac.jp
 dsm.psychiatryonline.org
 dspace.library.uu.nl
 dtb.bmj.com
 dwso.revealdigital.org
 dx.doi.org
 dynamic-med.biomedcentral.com
+e-apem.org
 e-ceo.org
 e-cnr.org
 e-dmj.org
 e-eht.org
+e-enm.org
 e-jbm.org
 e-jmd.org
 e-jmm.org
+e-kjo.org
 e-kjs.org
 e-mfp.org
 e-newsfolio.com
 eaccess.heart.org
 eahrj.eahealth.org
+eandv.biomedcentral.com
 ebm.bmj.com
 ebmh.bmj.com
 ebn.bmj.com
@@ -590,6 +606,7 @@ ep.bmj.com
 epag.springeropen.com
 epigeneticsandchromatin.biomedcentral.com
 eprints.lib.hokudai.ac.jp
+epub.prsgroup.com
 epubs.siam.org
 epubs.utah.edu
 equityhealthj.biomedcentral.com
@@ -633,6 +650,7 @@ find.gale.com
 find.galegroup.com
 firstsearch.oclc.org
 fjps.springeropen.com
+fluidsbarrierscns.biomedcentral.com
 fmch.bmj.com
 fn.bmj.com
 focus.psychiatryonline.org
@@ -640,7 +658,9 @@ fod.infobase.com
 formative.jmir.org
 fraser.stlouisfed.org
 freida.ama-assn.org
+frontiersinzoology.biomedcentral.com
 fungalbiolbiotech.biomedcentral.com
+fuse-journal.org
 galenet.galegroup.com
 gallica.bnf.fr
 games.jmir.org
@@ -686,6 +706,7 @@ gutpathogens.biomedcentral.com
 gvt-journal.biomedcentral.com
 gynoncrp.biomedcentral.com
 hanchi.ihp.sinica.edu.tw
+harmreductionjournal.biomedcentral.com
 hawaiijournalhealth.org
 hbcp.chemnetbase.com
 hccpjournal.biomedcentral.com
@@ -695,6 +716,7 @@ hdsr.mitpress.mit.edu
 he02.tci-thaijo.org
 head-face-med.biomedcentral.com
 headachejournal.onlinelibrary.wiley.com
+headandneckoncology.biomedcentral.com
 health-policy-systems.biomedcentral.com
 healtheducationresources.unesco.org
 healthmap.org
@@ -754,10 +776,13 @@ ijhr.iums.ac.ir
 iji.sums.ac.ir
 ijm.tums.ac.ir
 ijme.in
+ijmhs.biomedcentral.com
 ijms.sums.ac.ir
 ijoh.tums.ac.ir
+ijorl.mums.ac.ir
 ijpa.tums.ac.ir
 ijpc.com
+ijpds.org
 ijpeonline.biomedcentral.com
 ijph.tums.ac.ir
 ijpho.ssu.ac.ir
@@ -778,6 +803,7 @@ imrs.oxfordjournals.org
 imsear.searo.who.int
 in-silico-cell-and-tissue-science.springeropen.com
 indexmedicus.afro.who.int
+infectagentscancer.biomedcentral.com
 inflammregen.biomedcentral.com
 informatics.bmj.com
 infotrac.gale.com
@@ -799,6 +825,7 @@ investigativegenetics.biomedcentral.com
 iopscience.iop.org
 iovs.arvojournals.org
 ipb.uclouvain.be
+iris.paho.org
 iris.who.int
 irishvetjournal.biomedcentral.com
 irjnm.tums.ac.ir
@@ -821,6 +848,7 @@ jamanetwork.com
 jamba.org.za
 jambo.africa.kyoto-u.ac.jp
 jamc.ayubmed.edu.pk
+janimscitechnol.biomedcentral.com
 jap.kap.or.kr
 japanknowledge.com
 japmaonline.org
@@ -876,6 +904,7 @@ jmedicalcasereports.biomedcentral.com
 jmehm.tums.ac.ir
 jmg.bmj.com
 jmhg.springeropen.com
+jmolecularpsychiatry.biomedcentral.com
 jnanobiotechnology.biomedcentral.com
 jnccn.org
 jnephropharmacology.com
@@ -885,6 +914,7 @@ jneuroinflammation.biomedcentral.com
 jnis.bmj.com
 jnm.snmjournals.org
 jnnp.bmj.com
+jnrbm.biomedcentral.com
 joe.bioscientifica.com
 johnjohnson.chadwyck.com
 joii-journal.springeropen.com
@@ -902,6 +932,7 @@ journal.telospress.com
 journal.waocp.org
 journalhosting.ucalgary.ca
 journalimplantdent.springeropen.com
+journalofbigdata.springeropen.com
 journalofeconomicinsight.com
 journalofethics.ama-assn.org
 journalotohns.biomedcentral.com
@@ -985,6 +1016,7 @@ law.ucla.edu
 lcweb.loc.gov
 learnmem.cshlp.org
 leginfo.legislature.ca.gov
+leprev.ilsl.br
 lib.ugent.be
 libguides.heinonline.org
 libraries.ase.org.uk
@@ -994,12 +1026,12 @@ library.med.utah.edu
 library.msri.org
 library.seg.org
 library.stanford.edu
-liebertpub.com
 link-springer-com.stanford.idm.oclc.org
 link.gale.com
 link.galegroup.com
 link.overdrive.com
 link.springer.com
+link.springer.com.
 lipidworld.biomedcentral.com
 listview.lib.harvard.edu
 litguide.press.jhu.edu
@@ -1012,6 +1044,7 @@ longevityandhealthspan.biomedcentral.com
 lsc-pagepro.mydigitalpublication.com
 lsspjournal.biomedcentral.com
 lupus.bmj.com
+lwwhealthlibrary.com
 macyfoundation.org
 maisaku.mainichi.jp
 malariajournal.biomedcentral.com
@@ -1048,6 +1081,7 @@ medone-radiology.thieme.com
 medone.thieme.com
 medpix.nlm.nih.gov
 mefj.springeropen.com
+mehdijournal.com
 mejdd.org
 mental.jmir.org
 merckindex.rsc.org
@@ -1065,15 +1099,18 @@ microbiologysociety.org
 microbiomejournal.biomedcentral.com
 microform.digital
 militaryhealth.bmj.com
+mirt.tsnmjournals.org
 mitpress-ebooks.mit.edu
 mitpress.mit.edu
 mjiri.iums.ac.ir
 mmbr.asm.org
 mmcts.org
 mmrjournal.biomedcentral.com
+mobilednajournal.biomedcentral.com
 mobilization.kglmeridian.com
 molcellped.springeropen.com
 molcelltherapies.biomedcentral.com
+molecular-cancer.biomedcentral.com
 molecularautism.biomedcentral.com
 molecularbrain.biomedcentral.com
 molecularcasestudies.cshlp.org
@@ -1087,11 +1124,14 @@ monographs.iarc.who.int
 movementecologyjournal.biomedcentral.com
 mp.bmj.com
 mra.asm.org
+mrmjournal.biomedcentral.com
 msp.org
+msystems.asm.org
 muse.jhu.edu
 musicid.academicrightspress.com
 mvedel.kglmeridian.com
 my.vitallaw.com
+nam.edu
 nanoconvergencejournal.springeropen.com
 nanophotonics.spiedigitallibrary.org
 nap.nationalacademies.org
@@ -1103,6 +1143,7 @@ nbn-resolving.org
 ncco.galegroup.com
 ndltd.org
 neoreviews.aappublications.org
+nephropathol.com
 neuraldevelopment.biomedcentral.com
 neuralsystemsandcircuits.biomedcentral.com
 neuro.psychiatryonline.org
@@ -1126,6 +1167,7 @@ npepjournal.biomedcentral.com
 nph.onlinelibrary.wiley.com
 nuclear-receptor.biomedcentral.com
 nursing.jmir.org
+nutrirejournal.biomedcentral.com
 nutrition.bmj.com
 nutritionandmetabolism.biomedcentral.com
 nutritionj.biomedcentral.com
@@ -1208,6 +1250,7 @@ peerj.com
 peh-med.biomedcentral.com
 pensoftonline.net
 pep-web.org
+periop.jmir.org
 perioperativemedicinejournal.biomedcentral.com
 permanent.access.gpo.gov
 permanent.fdlp.gov
@@ -1228,6 +1271,7 @@ pneumonia.biomedcentral.com
 poj.peeters-leuven.be
 policycommons.net
 poly.chemnetbase.com
+pophealthmetrics.biomedcentral.com
 porcinehealthmanagement.biomedcentral.com
 portal.acm.org
 portal.genego.com
@@ -1240,6 +1284,7 @@ prc.springeropen.com
 prcp.psychiatryonline.org
 premiumbasicsciences.lwwhealthlibrary.com
 presses.univ-lyon2.fr
+prhsj.rcm.upr.edu
 primarysources.brillonline.com
 proceedings.asmedigitalcollection.asme.org
 proceedings.spiedigitallibrary.org
@@ -1275,6 +1320,7 @@ publichealthreviews.biomedcentral.com
 publikationen.ub.uni-frankfurt.de
 publish.ancientbooks.cn
 publishing.rcseng.ac.uk
+pubmed.ncbi.nlm.nih.gov
 pubs.acs.org
 pubs.aip.org
 pubs.asha.org
@@ -1341,6 +1387,7 @@ ropercenter.cornell.edu
 rotunda.upress.virginia.edu
 royalsocietypublishing.org
 rphysap.journaldephysique.org
+rps.mui.ac.ir
 rrtjournal.biomedcentral.com
 rsaiconnect.onlinelibrary.wiley.com
 rsnz.onlinelibrary.wiley.com
@@ -1381,6 +1428,7 @@ sciwheel.com
 scjilb.org
 scmr.org
 scoliosisjournal.biomedcentral.com
+scop.berkeley.edu
 sdrc.lib.uiowa.edu
 search.alexanderstreet.com
 search.datapages.com
@@ -1515,10 +1563,12 @@ upload.wikimedia.org
 urbanland.uli.org
 us.expasy.org
 usp.az1.qualtrics.com
+uswest.ensembl.org
 utmj.org
 utppublishing.com
 vascularcell.biomedcentral.com
 vciba.springeropen.com
+veterinaryresearch.biomedcentral.com
 video.alexanderstreet.com
 videocast.nih.gov
 viewpoint.eiu.com
@@ -1543,7 +1593,9 @@ whqlibdoc.who.int
 wildlife.onlinelibrary.wiley.com
 wisesearch6.wisers.net
 wjes.biomedcentral.com
+wjso.biomedcentral.com
 wms.cartographic.com
+womensmidlifehealthjournal.biomedcentral.com
 worldscholar.galegroup.com
 worldtradelaw.net
 worldwidescience.org
@@ -1553,6 +1605,7 @@ www-krpia-co-kr.stanford.idm.oclc.org
 www-pub.iaea.org
 www-sciencedirect-com.stanford.idm.oclc.org
 www.18thcjournals.amdigital.co.uk
+www.ClinicalKey.com
 www.aaas.org
 www.aac.amdigital.co.uk
 www.aaem.pl
@@ -1577,6 +1630,7 @@ www.acpjournals.org
 www.acs.org
 www.acta-apa.org
 www.actaanaesthesiologica.be
+www.actabp.pl
 www.actaitalica.it
 www.actaneurologica.be
 www.actaorthopaedica.be
@@ -1591,6 +1645,7 @@ www.aeronline.org
 www.aerzteblatt.de
 www.aginganddisease.org
 www.ahajournals.org
+www.ahbps.org
 www.ahd.com
 www.ahrq.gov
 www.aidsreviews.com
@@ -1679,6 +1734,7 @@ www.aspbooks.org
 www.aspresolver.com
 www.atcs.jp
 www.atlantis-press.com
+www.atmph.org
 www.atsdr.cdc.gov
 www.atsjournals.org
 www.auajournals.org
@@ -1842,6 +1898,7 @@ www.dialogues-cns.org
 www.digitale-sammlungen.de
 www.digitaliafilmlibrary.com
 www.digitaliapublishing.com
+www.dirjournal.org
 www.djo.harvard.edu
 www.djph.org
 www.dl.begellhouse.com
@@ -1872,6 +1929,7 @@ www.e-hir.org
 www.e-ijd.org
 www.e-jcvi.org
 www.e-jla.org
+www.e-jyms.org
 www.e-mjm.org
 www.e-neurospine.org
 www.e-periodica.ch
@@ -1889,6 +1947,7 @@ www.ebooks.iospress.nl
 www.ecmjournal.org
 www.ecoamericas.com
 www.economist.com
+www.ectrx.org
 www.edaddeplata.org
 www.educationforhealth.net
 www.educause.edu
@@ -1903,6 +1962,7 @@ www.ejcrim.com
 www.ejcrp.org
 www.eje.cz
 www.ejh.it
+www.ejnmmiphys.com
 www.ejomr.org
 www.ejop.org
 www.elgaronline.com
@@ -1940,6 +2000,7 @@ www.eurekaselect.com
 www.eurjbreasthealth.com
 www.eurjrheumatol.org
 www.europeanjournalofmidwifery.eu
+www.europeanreview.org
 www.eurosurveillance.org
 www.everydaylife.amdigital.co.uk
 www.excli.de
@@ -2064,6 +2125,7 @@ www.ijciis.org
 www.ijcm.org.in
 www.ijdentistry.com
 www.ijdr.in
+www.ijdvl.com
 www.ijehe.org
 www.ijfs.ir
 www.ijic.org
@@ -2076,10 +2138,12 @@ www.ijnpnd.com
 www.ijo.cn
 www.ijoem.com
 www.ijotm.com
+www.ijoy.org.in
 www.ijp-online.com
 www.ijph.in
 www.ijpmonline.org
 www.ijppp.org
+www.ijpsonline.com
 www.ijpsy.com
 www.ijri.org
 www.ijstd.org
@@ -2095,12 +2159,14 @@ www.imj.ie
 www.impan.pl
 www.imrpress.com
 www.imstat.org
+www.in-silico-pharmacology.com
 www.inderscienceonline.com
 www.indexcat.nlm.nih.gov
 www.indexfungorum.org
 www.indianjcancer.com
 www.indianjgastro.com
 www.indianjnephrol.org
+www.indianjotol.org
 www.indianjrheumatol.com
 www.indianjurol.com
 www.indiastat.com
@@ -2160,12 +2226,16 @@ www.jcvjs.com
 www.jcytol.org
 www.jdentaled.org
 www.jeb.co.in
+www.jehp.net
 www.jeo-esska.com
+www.jfcmonline.com
 www.jfda-online.com
 www.jfma-online.com
 www.jfsf.eu
 www.jgid.org
 www.jgld.ro
+www.jhrsonline.org
+www.jhse.ua.es
 www.jiaci.org
 www.jiaps.com
 www.jidc.org
@@ -2176,6 +2246,9 @@ www.jkacap.org
 www.jkamprs.com
 www.jkaoms.org
 www.jkscience.org
+www.jle.com
+www.jlifestylemed.org
+www.jmaj.jp
 www.jmau.org
 www.jmcp.org
 www.jmidlifehealth.org
@@ -2185,8 +2258,10 @@ www.jmuonline.org
 www.jneonatalsurg.com
 www.jneurosci.org
 www.jniosh.johas.go.jp
+www.jnma.com.np
 www.jnmjournal.org
 www.joacc.com
+www.jocgp.com
 www.jocmr.org
 www.jocr.co.in
 www.jofem.org
@@ -2194,11 +2269,14 @@ www.jofs.in
 www.jogh.org
 www.jointsjournal.eu
 www.jomfp.in
+www.jomi.com
 www.jorthodsci.org
 www.josonline.org
 www.jospt.org
 www.journalbipolardisorders.com
 www.journalhealthpollution.org
+www.journalmc.org
+www.journalnma.org
 www.journalofadvertisingresearch.com
 www.journalofcognition.org
 www.journalofextracellularvesicles.net
@@ -2211,6 +2289,7 @@ www.journalslibrary.nihr.ac.uk
 www.jove.com
 www.jpands.org
 www.jpbsonline.org
+www.jpgmonline.com
 www.jpmh.org
 www.jpmi.org.pk
 www.jptcp.com
@@ -2294,6 +2373,7 @@ www.mathnet.ru
 www.mathunion.org
 www.mattioli1885journals.com
 www.mbc.ca.gov
+www.mchandaids.org
 www.mcl.hu
 www.mdedge.com
 www.mdpi.com
@@ -2360,10 +2440,14 @@ www.nepjol.info
 www.netanatomy.com
 www.netread.com
 www.neue-politische-literatur.tu-darmstadt.de
+www.neuroanatomy.org
 www.neurology.org
 www.neurologyindia.com
+www.neurosurgicalatlas.com
 www.newday.com
 www.newswise.com
+www.nice.org.uk
+www.nigeriamedj.com
 www.nigerianjsurg.com
 www.nist.gov
 www.nitrd.gov
@@ -2378,6 +2462,7 @@ www.noropsikiyatriarsivi.com
 www.nossdav.org
 www.nowpublishers.com
 www.nplusonemag.com
+www.npmj.org
 www.nps.org.au
 www.nrcresearchpress.com
 www.nrmp.org
@@ -2402,6 +2487,7 @@ www.omim.org
 www.omjournal.org
 www.ompu.ac.jp
 www.onepetro.org
+www.onlinejets.org
 www.onlinelibrary.wiley.com
 www.ons.gov.uk
 www.ons.org
@@ -2446,11 +2532,13 @@ www.physiologicalchemistryandphysics.com
 www.physweekly.com
 www.picronline.org
 www.pjmonline.org
+www.pjms.com.pk
 www.pjps.pk
 www.plantgdb.org
 www.plantphysiol.org
 www.ploscompbiol.org
 www.plosgenetics.org
+www.plosntds.org
 www.plosone.org
 www.plospathogens.org
 www.plutobooks.com
@@ -2479,6 +2567,7 @@ www.ptsd.va.gov
 www.publichealthinafrica.org
 www.pubstemcell.com
 www.qscience.com
+www.quackwatch.org
 www.r2library.com
 www.racgp.org.au
 www.radiologycases.com
@@ -2492,6 +2581,8 @@ www.rehab.research.va.gov
 www.relatosdeplomo.es
 www.rep.routledge.com
 www.repdevmed.org
+www.rerf.or.jp
+www.researchinpsychotherapy.org
 www.researchprotocols.org
 www.retronews.fr
 www.reumatismo.org
@@ -2543,9 +2634,12 @@ www.scipharm.at
 www.scirp.org
 www.scopemed.org
 www.scopus.com
+www.scripps.edu
+www.secretsoflifeanddeath.com
 www.segweb.org
 www.serena.unina.it
 www.sfaf.org
+www.sfdph.org
 www.sfn.org
 www.sgecm.org.tw
 www.sicot-j.org
@@ -2573,6 +2667,7 @@ www.srm-ejournal.com
 www.ssa.gov
 www.ssph-journal.org
 www.standardsingenomics.org
+www.stanforddaily.com
 www.stata-journal.com
 www.statista.com
 www.statistik.at
@@ -2608,6 +2703,7 @@ www.thlz.com
 www.thno.org
 www.thoracicmedicine.org
 www.tictocs.ac.uk
+www.tjh.com.tr
 www.tjog-online.com
 www.tjpr.org
 www.tm.mahidol.ac.th
@@ -2640,6 +2736,7 @@ www.ums.ac.uk
 www.uni-mannheim.de
 www.unodc.org
 www.uptodate.com
+www.urologyannals.com
 www.uspharmacist.com
 www.usrds.org
 www.utpjournals.press
