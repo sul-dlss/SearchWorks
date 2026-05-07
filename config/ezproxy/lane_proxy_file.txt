@@ -793,7 +793,6 @@ ila.onlinelibrary.wiley.com
 ilibri.casalini.it
 imagebank.osa.org
 images.tandf.co.uk
-images.yourcloudlibrary.com
 img1.od-cdn.com
 immunityageing.biomedcentral.com
 immunome-research.biomedcentral.com
@@ -1805,7 +1804,6 @@ www.cardiologyplus.org
 www.cardiologyres.org
 www.cardozo.yu.edu
 www.catchword.com
-www.ccadvisor.org
 www.ccdc.cam.ac.uk
 www.ccmbm.com
 www.ccsenet.org
