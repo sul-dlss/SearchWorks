@@ -1487,6 +1487,7 @@ stanford.lib.overdrive.com
 stanford.naxosmusiclibrary.com
 stanford.overdrive.com
 stanford.policymap.com
+stanford.redivis.com
 stanford.universitypressscholarship.com
 stanfordhealthcare.org
 stanforduniversity.qualtrics.com
