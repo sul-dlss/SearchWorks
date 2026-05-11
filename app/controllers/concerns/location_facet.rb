@@ -17,7 +17,7 @@ module LocationFacet
   def redirect_legacy_building_facet
     return unless params[:f] && params[:f][:building_facet]
 
-    raw_facet = params[:f].delete(:building_facet)
+    raw_facet = params.expect(:f).delete(:building_facet)
 
     legacy_names = raw_facet.respond_to?(:values) ? raw_facet.values : raw_facet
 

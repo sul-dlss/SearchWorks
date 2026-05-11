@@ -30,7 +30,7 @@ module EmailValidation
   end
 
   def email_addresses
-    params[:to].split(/,|\s+/).reject(&:blank?)
+    params.expect(:to).split(/,|\s+/).reject(&:blank?)
   end
 
   def validate_email_params_and_recaptcha

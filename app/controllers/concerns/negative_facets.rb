@@ -14,7 +14,7 @@ module NegativeFacets
   def add_negative_facet_fields
     return unless params[:f]
 
-    params[:f].select { |k, _v| k.start_with?('-') }.each_key do |k|
+    params.expect(:f).select { |k, _v| k.start_with?('-') }.each_key do |k|
       original_field = blacklight_config.facet_fields[k.delete_prefix('-')]
       next if original_field.nil? || blacklight_config.facet_fields[k]
 
