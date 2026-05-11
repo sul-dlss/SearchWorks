@@ -531,8 +531,9 @@ Rails/EnumSyntax: # new in 2.26
   Enabled: true
 Rails/MultipleRoutePaths: # new in 2.29
   Enabled: true
+# Pending https://github.com/rubocop/rubocop-rails/pull/1616
 Rails/StrongParametersExpect: # new in 2.29
-  Enabled: true
+  Enabled: false
 Performance/StringBytesize: # new in 1.23
   Enabled: true
 Performance/ZipWithoutBlock: # new in 1.24
