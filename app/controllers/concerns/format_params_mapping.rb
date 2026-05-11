@@ -14,7 +14,7 @@ module FormatParamsMapping
 
     params[:f][:format_hsim] ||= []
     params[:f][:format_hsim] += params.dig(:f, :format_main_ssim).map { |f| legacy_format_data_mapping[f] || f }
-    params.expect(:f).delete(:format_main_ssim)
+    params[:f].delete(:format_main_ssim)
   end
 
   # These were the old format values that need to be mapped to the new format values

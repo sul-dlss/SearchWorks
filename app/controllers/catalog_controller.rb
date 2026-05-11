@@ -31,7 +31,7 @@ class CatalogController < ApplicationController
   include Blacklight::TokenBasedUser # For refworks export of multiple records
 
   before_action only: :index do
-    if params[:page] && params.expect(:page).to_i > Settings.PAGINATION_THRESHOLD.to_i
+    if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
       flash[:error] =
         "You have paginated too deep into the result set. Please contact us using the feedback form if you have a need to view results past page #{Settings.PAGINATION_THRESHOLD}."
       redirect_to root_path

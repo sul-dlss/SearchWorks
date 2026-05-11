@@ -17,7 +17,7 @@ module ReplaceSpecialQuotes
   def replace_special_quotes
     replace_single_quotes_from_hash params, :q
 
-    params.expect(:clause)&.each_value do |value|
+    params[:clause]&.each_value do |value|
       replace_single_quotes_from_hash value, :query
     end
   end

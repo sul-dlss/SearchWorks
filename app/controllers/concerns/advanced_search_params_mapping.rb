@@ -19,7 +19,7 @@ module AdvancedSearchParamsMapping
     advanced_search_legacy_field_mapping.each do |field, new_field|
       next unless params[field]
 
-      params.expect(:clause)[field] = { query: params[field], field: new_field }
+      params[:clause][field] = { query: params[field], field: new_field }
       params.delete(field)
     end
   end

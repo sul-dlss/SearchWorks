@@ -26,9 +26,9 @@ module SearchRelevancyLogging
       action_name,
       "search=#{search_session['id']}",
       "counter=#{session[:history_counter].to_i}",
-      "page=#{params.expect(:page).to_i}",
+      "page=#{params[:page].to_i}",
       "numFound=#{@response.response[:numFound]}",
-      "q=#{params.expect(:q)&.gsub(/\s+/, ' ')}",
+      "q=#{params[:q]&.gsub(/\s+/, ' ')}",
       params.except(:utf8, :q, :action, :controller).to_json.gsub(/\s+/, ' ')
     ].join("\t"))
   rescue StandardError => e
