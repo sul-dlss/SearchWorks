@@ -167,7 +167,6 @@ awwa.onlinelibrary.wiley.com
 babel.hathitrust.org
 bac-lac.on.worldcat.org
 bacandrology.biomedcentral.com
-bap.priweb2.org
 basicandappliedzoology.springeropen.com
 basictranslational.onlinejacc.org
 bdj.pensoft.net
