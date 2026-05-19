@@ -401,6 +401,7 @@ clinicalmolecularallergy.biomedcentral.com
 clinicalmovementdisorders.biomedcentral.com
 clinicalproteomicsjournal.biomedcentral.com
 clinicalsarcomaresearch.biomedcentral.com
+clinician.nejm.org
 clinphytoscience.springeropen.com
 clintransmed.springeropen.com
 clockss.org
@@ -1617,6 +1618,7 @@ www.ablj.org
 www.accessdata.fda.gov
 www.accessengineeringlibrary.com
 www.accessible.com
+www.accessmedicine.com
 www.accessscience.com
 www.accjournal.org
 www.achot.cz
@@ -1866,6 +1868,7 @@ www.consumerlab.com
 www.contempclindent.org
 www.cos-sco.ca
 www.countrywatch.com
+www.covidence.org
 www.cpn.or.kr
 www.crcnetbase.com
 www.crd.york.ac.uk
@@ -2046,6 +2049,7 @@ www.geomednews.com
 www.germs.ro
 www.ghfbb.ir
 www.ghspjournal.org
+www.gideononline.com
 www.giornalechirurgia.it
 www.girinst.org
 www.globalcommodities.amdigital.co.uk
