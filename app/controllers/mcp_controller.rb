@@ -51,8 +51,8 @@ class McpController < ApplicationController
       input_schema(input_schema_proc.call)
 
       def self.call(**args)
-        args.delete(:server_context)
-        result = SearchworksMcp::CatalogSearch.search(**args)
+        server_context = args.delete(:server_context)
+        result = SearchworksMcp::CatalogSearch.search(controller: server_context&.dig(:controller), **args)
 
         MCP::Tool::Response.new(
           [{

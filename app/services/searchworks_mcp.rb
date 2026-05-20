@@ -74,7 +74,7 @@ module SearchworksMcp
       }
     end
 
-    def search(query:, search_field: "all_fields", rows: 10, filters: {})
+    def search(query:, search_field: "all_fields", rows: 10, filters: {}, controller: nil)
       # Map search field to Blacklight field names
       field_mapping = {
         "all_fields" => "search",
@@ -114,8 +114,10 @@ module SearchworksMcp
       # Get the Blacklight configuration
       blacklight_config = CatalogController.blacklight_config
 
-      # Create a search service (using default Blacklight SearchService)
-      search_state = Blacklight::SearchState.new(search_params, blacklight_config)
+      # Create a search service (using default Blacklight SearchService).
+      # Pass the controller as context so SearchBuilder components that call
+      # search_state.controller (e.g. PageLocation) receive a non-nil object.
+      search_state = Blacklight::SearchState.new(search_params, blacklight_config, controller)
       search_service = Blacklight::SearchService.new(
         config: blacklight_config,
         search_state: search_state
