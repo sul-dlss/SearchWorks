@@ -1,7 +1,6 @@
+access.heinonline.com
 almanacofthefederaljudiciary.com
 app.investorstatelawguide.com
-app.leadershipconnect.io
-apps.fastcase.com
 booksandjournals.brillonline.com
 brill.com
 brillonline.com
@@ -9,7 +8,6 @@ ceb.com
 checkpoint.riag.com
 elr.info
 discover.llmc.com
-fc7.fastcase.com
 find.gale.com
 galenet.galegroup.com
 gdc.galegroup.com
@@ -72,7 +70,6 @@ www.llmc.com
 www.llmcdigital.com
 www.llmcdigital.org
 www.nationallawjournal.com
-www.oxfordbibliographies.com
 www.proquest.com
 www.therecorder.com
 www.tradelawguide.com
