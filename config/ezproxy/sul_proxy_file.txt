@@ -208,6 +208,7 @@ chn.oversea.cnki.net
 choicereviews.org
 chronicle.com
 cindasdata.com
+cinelogue.librarystack.org
 cjc.utppublishing.com
 cjes.geoscienceworld.org
 cl.uwpress.org
