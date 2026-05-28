@@ -811,7 +811,6 @@ infoweb.newsbank.com
 infraclearsso.auth.us-east-2.amazoncognito.com
 injuryprevention.bmj.com
 innovations.bmj.com
-insidetrade.com
 insight.jci.org
 insights.ceicdata.com
 inspec-analytics-app.theiet.org
@@ -1198,6 +1197,7 @@ onehealthoutlook.biomedcentral.com
 online.boneandjoint.org.uk
 online.lexi.com
 online.liebertpub.com
+online.munzinger.de
 online.salempress.com
 online.statref.com
 online.ucpress.edu
@@ -2424,7 +2424,6 @@ www.mpr.co.uk
 www.mrcindia.org
 www.msma.org
 www.msri.org
-www.munzinger.de
 www.musicalamerica.com
 www.mygcronline.org
 www.na.infn.it
