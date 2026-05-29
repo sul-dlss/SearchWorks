@@ -86,7 +86,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 1f0e3f18-99d4-4400-95a1-0f55d092f201,Earth Sci Scanning Lab,EAR-SCANLAB,SU,SUL,EARTH-SCI,In process,true,false,EARTH-SCI,EARTH-SCI,,,,,,,,In_process,,,,,,,,
 1f3a8d48-2de3-432d-923e-76eb93de9ffc,Spec SAL3 Rare Books,SPEC-SAL3-RBC,SU,SUL,SPEC-COLL,Rare Books Collection,true,false,SAL3,SAL3,,,SPECUA,,,,,,,,,,,,,
 203157ff-56bc-4d5d-9f68-3410d9ac40e9,Earth Sci Ready Ref,EAR-READY-REF,SU,SUL,EARTH-SCI,Reference,true,false,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,,,
-2034f7e2-9dfe-4920-87d2-92d455bd5533,Rumsey migration erorr,RUM-MIGRATE-ERR,SU,SUL,RUMSEY-MAP,Error during migration,true,false,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,,
+2034f7e2-9dfe-4920-87d2-92d455bd5533,Rumsey migration error,RUM-MIGRATE-ERR,SU,SUL,RUMSEY-MAP,Error during migration,true,false,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,,
 203882d5-acd0-40b6-bc73-1cf8d64832cb,Green Federal Docs,GRE-FED-DOCS,SU,SUL,GREEN,US Federal Documents,true,false,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,,,,,,,,,Federal,,,,,
 2065af65-904d-41bb-8db8-35bff753cf64,Spec Inprocess RWC,SPEC-INPROCESS-RWC,SU,SUL,SPEC-COLL,In process,true,false,SPEC,SPEC,,,,,,,,In_process_non_requestable,,,,,,,,
 20981666-b567-4124-b18e-f4713823e51f,Music Inprocess,MUS-INPROCESS,SU,SUL,MUSIC,In process,true,false,MUSICTS,MUSICTS,,,,,,,,In_process,,,,,,,,
@@ -462,6 +462,7 @@ bef18917-8809-48da-b3b3-966010fd330a,Spec SAL3 Felton,SPEC-SAL3-FELTON,SU,SUL,SP
 bef9e4c4-2072-426e-943c-4f0a115c32e0,Lane Spec: Arabic,LANE-ARAB,SU,MED,LANE,Medical History Center: By appointment,true,false,LANE-DESK,LANE-DESK,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,,,
 bf11ec11-1343-42e3-ad93-163ce3ec1bf4,SUL TS Cataloging Shelf,SUL-TS-CATALOGING-SHELF,SU,SUL,SUL,In process,true,false,SULTS,SULTS;SULMD,,,,,,,,In_process,,,,,,,,
 bf42be75-fd71-4efc-8167-30fb30512784,Earth Sci Mezzanine,EAR-MEZZANINE,SU,SUL,EARTH-SCI,Mezzanine,true,false,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,,,
+bf8c3c19-3abc-4021-aa90-a520c1117c76,Rumsey Center Staff Room,RUM-C-STAFF-ROOM,SU,SUL,RUMSEY-MAP,Ask at desk,true,false,RUMSEY-MAP,RUMSEY-MAP,,,RUMSEY,,,,,,,,,,,,,
 bf8d7cef-ceea-480f-a5cf-d81cbeb0a168,SAL3 PAGE-EA,SAL3-PAGE-EA,SU,SUL,SAL3,For use in East Asia Library,true,false,SAL3,SAL3,,,,,EAST-ASIA,,,Offsite,,,,,,,,
 bfccc77a-ca0e-45fa-ab0a-c35b6b460d48,East Asia Folios Japanese,EAL-FOLIO-JAPANESE,SU,SUL,EAST-ASIA,Japanese folios,true,false,EAST-ASIA,EAST-ASIA,,,,,,,,,,,,,,,,
 bffa197c-a6db-446c-96f7-e1fd37a8842e,Business Newspaper Stacks,BUS-NEWS-STKS,SU,GSB,BUSINESS,Newspapers,true,false,BUS-IDESK,BUS-IDESK,,,,,,,,,,,,,,,,Shelved by title

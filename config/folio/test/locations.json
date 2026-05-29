@@ -2125,7 +2125,7 @@
   },
   {
     "id": "2034f7e2-9dfe-4920-87d2-92d455bd5533",
-    "name": "Rumsey migration erorr",
+    "name": "Rumsey migration error",
     "code": "RUM-MIGRATE-ERR",
     "discoveryDisplayName": "Error during migration",
     "isActive": true,
@@ -2144,8 +2144,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:53.799+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-23T19:57:03.409+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2026-05-27T17:05:11.244+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -11177,6 +11177,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:46:03.092+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "bf8c3c19-3abc-4021-aa90-a520c1117c76",
+    "name": "Rumsey Center Staff Room",
+    "code": "RUM-C-STAFF-ROOM",
+    "discoveryDisplayName": "Ask at desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "05241c96-6541-41ed-b2ad-61a126d62c2d",
+    "details": {
+      "pageAeonSite": "RUMSEY"
+    },
+    "primaryServicePoint": "b6987737-1e63-44cc-bfb1-2bcf044adcd7",
+    "servicePointIds": [
+      "b6987737-1e63-44cc-bfb1-2bcf044adcd7"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-05-27T23:35:46.434+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-05-27T23:35:46.434+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
