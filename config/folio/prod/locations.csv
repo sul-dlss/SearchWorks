@@ -613,6 +613,7 @@ f9b45b58-ec4c-490a-8808-86206cdf5ac8,SAL3 PAGE-ED,SAL3-PAGE-ED,SU,SUL,SAL3,For u
 fa5f5ea8-933f-4e11-80b7-aa686efd6e74,Green Tech Processor,GRE-TECH-PROCESSOR,SU,SUL,GREEN,In process,true,false,GREEN-LOAN,GREEN-LOAN,,,,,,,,In_process,,,,,,,,
 fa8b31ea-a6d8-4d5a-b80f-5fa04cce7f2d,Earth Sci Tech Reports,EAR-TECH-REPORTS,SU,SUL,EARTH-SCI,Technical reports,true,false,EARTH-SCI,EARTH-SCI,,,GREEN,,,,,,,,,,,,,
 fb5a351d-b636-4d91-bea5-2533bdef7cb5,Media Exhibit,MEDIA-EXHIBIT,SU,SUL,MEDIA-CENTER,On exhibit,true,false,MEDIA-CENTER,MEDIA-CENTER,,https://stanford.stackmap.com/json/,,,,,,,,,,,,,,
+fb826fba-5681-445b-85e6-77d5a4224b06,Rumsey Center Staff Room,RUM-C-STAFF-ROOM,SU,SUL,RUMSEY-MAP,Ask at desk,true,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
 fb8b8f71-5f2f-43c1-a436-3922661354a3,East Asia Locked Flat file,EAL-LOCKED-FLATFILE,SU,SUL,EAST-ASIA,Locked stacks: Ask at circulation desk,true,false,EAST-ASIA,EAST-ASIA,,,,EASTASIA,,,,,,,,,,,,
 fcaf0f95-d613-4fbd-90c1-350c605909b2,Spec Sal Rare Books,SPEC-SAL-RBC,SU,SUL,SPEC-COLL,Rare Books Collection,true,false,SPEC,SPEC,,,,,,,,,,,,,,,,
 fcbaa566-1dbd-4d89-8b89-9218106463fa,SAL Shadowed,SAL-SHADOW,SU,SUL,SAL,Withdrawn,true,false,SAL,SAL,,,,,,,,,,,,,,,,
