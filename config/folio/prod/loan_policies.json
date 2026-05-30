@@ -136,6 +136,31 @@
     }
   },
   {
+    "id": "1edb93d0-2c3f-40d8-9128-a39aa4df2d0d",
+    "name": "4week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 4 weeks",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 4,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2026-05-29T20:15:54.557+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:15:54.557+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "26c44ee7-5a7d-4832-aa84-febe49a8d2f8",
     "name": "14day-norenew-1daygrace",
     "description": "Loan policy for periodicals ",
@@ -629,6 +654,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T18:49:57.627+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "63e87569-5d6b-448a-9b99-358999725437",
+    "name": "26week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 26 weeks",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 26,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2026-05-29T20:18:11.068+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:18:11.068+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -1190,6 +1240,31 @@
     }
   },
   {
+    "id": "9bccee2a-d97e-4c14-9151-c307a674c95d",
+    "name": "12week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 12 weeks",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 12,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2026-05-29T20:17:39.091+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:17:39.091+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "a369ef4d-cec8-4348-bf36-acb16f72f67f",
     "name": "24hour-norenew-15mingrace",
     "description": "24 hour loan (often for equipment at GSB)",
@@ -1339,6 +1414,31 @@
       "createdDate": "2023-08-10T18:49:55.827+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2025-09-15T15:45:45.418+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "b6d0cb8b-fd8d-46a7-be95-5f63a34a3278",
+    "name": "8week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 8 weeks",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 8,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2026-05-29T20:16:39.168+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:16:39.168+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
