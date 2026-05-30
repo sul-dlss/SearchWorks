@@ -36,6 +36,16 @@
     }
   },
   {
+    "id": "3b9c9909-3cd2-4cc6-8691-677dcd1726aa",
+    "name": "26-week ILL",
+    "metadata": {
+      "createdDate": "2026-05-29T20:11:50.107+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:11:50.107+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "403041a7-d858-487a-a158-751d6654c5f6",
     "name": "12-hour short term",
     "metadata": {
@@ -134,6 +144,16 @@
     }
   },
   {
+    "id": "ab1c48da-6401-446a-afdb-d8ecf8071aea",
+    "name": "8-week ILL",
+    "metadata": {
+      "createdDate": "2026-05-29T20:11:16.618+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:11:16.618+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "ad0ab640-aa9d-4cd3-94be-f4482c714ebb",
     "name": "borrow direct",
     "metadata": {
@@ -164,11 +184,41 @@
     }
   },
   {
+    "id": "e368dcc4-71f5-4dbe-bb87-427c260043f2",
+    "name": "16-week ILL",
+    "metadata": {
+      "createdDate": "2026-05-29T20:11:38.703+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:11:38.703+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "e8b311a6-3b21-43f2-a269-dd9310cb2d0e",
     "name": "Course reserves",
     "metadata": {
       "createdDate": "2023-08-09T20:33:08.104+00:00",
       "updatedDate": "2024-06-22T06:34:24.162+00:00"
+    }
+  },
+  {
+    "id": "e9d71a46-5ec6-461f-a40a-6c292b178794",
+    "name": "4-week ILL",
+    "metadata": {
+      "createdDate": "2026-05-29T20:11:01.846+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:11:01.846+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
+    "id": "f61f7a64-0742-45de-89d2-cfab753018c2",
+    "name": "12-week ILL",
+    "metadata": {
+      "createdDate": "2026-05-29T20:11:27.189+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:11:27.189+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   }
 ]
