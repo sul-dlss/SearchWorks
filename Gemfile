@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 8.1.0'
 gem "propshaft"
 # Use Puma as the app server
-gem 'puma', '~> 6.0'
+gem 'puma', '>= 6.0'
 
 gem 'turbo-rails', '~> 2.0'
 
