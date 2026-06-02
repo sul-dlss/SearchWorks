@@ -20,7 +20,7 @@ pipeline {
           export HUB_CONFIG=/ci/home/config/hub
 
           # Load RVM
-          rvm use 3.4.1@searchworks --create
+          rvm use 4.0.5@searchworks --create
           gem install bundler
 
           git switch main
@@ -58,7 +58,7 @@ pipeline {
           export HUB_CONFIG=/ci/home/config/hub
 
           # Load RVM
-          rvm use 3.4.1@searchworks --create
+          rvm use 4.0.5@searchworks --create
           gem install bundler
 
           bundle config set without 'production'
