@@ -597,6 +597,7 @@ emergencias.portalsemes.org
 emergency.lwwhealthlibrary.com
 emj.bmj.com
 ems.press
+en.ilr-rit.org
 engine.scichina.com
 english.rrsurg.com
 enterprise.clcd.com
@@ -814,6 +815,7 @@ innovations.bmj.com
 insight.jci.org
 insights.ceicdata.com
 inspec-analytics-app.theiet.org
+intellectdiscover.com
 interactionofcolor.com
 internalmedicine.lwwhealthlibrary.com
 internationalbreastfeedingjournal.biomedcentral.com
@@ -1003,7 +1005,6 @@ kjme.kr
 kjnt.org
 kluwerlawonline.com
 knepublishing.com
-knovel.com
 knowitallanyware.com
 knowledge.sagepub.com
 knowledgehub.icheme.org
@@ -1132,7 +1133,6 @@ my.vitallaw.com
 nam.edu
 nanoconvergencejournal.springeropen.com
 nanophotonics.spiedigitallibrary.org
-nap.nationalacademies.org
 nasenjournals.onlinelibrary.wiley.com
 nass.oxfordjournals.org
 naturalmedicines.therapeuticresearch.com
@@ -1602,7 +1602,6 @@ worldwidescience.org
 ww1.cpa-apc.org
 www-fars.nhtsa.dot.gov
 www-krpia-co-kr.stanford.idm.oclc.org
-www-pub.iaea.org
 www-sciencedirect-com.stanford.idm.oclc.org
 www.18thcjournals.amdigital.co.uk
 www.ClinicalKey.com
@@ -2320,7 +2319,6 @@ www.kjronline.org
 www.kluwerarbitration.com
 www.kluwerlawonline.com
 www.kma.org.kw
-www.knovel.com
 www.krepublishers.com
 www.krpia.co.kr
 www.kstudy.com
@@ -2423,7 +2421,6 @@ www.morthoj.org
 www.mpr.co.uk
 www.mrcindia.org
 www.msma.org
-www.msri.org
 www.musicalamerica.com
 www.mygcronline.org
 www.na.infn.it
@@ -2752,7 +2749,6 @@ www.vjel.org
 www.vjultrafast.org
 www.vr-elibrary.de
 www.wageningenacademic.com
-www.washingtonpost.com
 www.webofscience.com
 www.who.int
 www.wikidoc.org
