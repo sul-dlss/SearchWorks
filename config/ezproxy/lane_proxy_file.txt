@@ -593,6 +593,7 @@ electronicimaging.spiedigitallibrary.org
 elib.infolinker.com.tw
 elib.maruzen.co.jp
 elibrary.duncker-humblot.com
+elpais.com
 emergencias.portalsemes.org
 emergency.lwwhealthlibrary.com
 emj.bmj.com
@@ -2749,6 +2750,7 @@ www.vjel.org
 www.vjultrafast.org
 www.vr-elibrary.de
 www.wageningenacademic.com
+www.washingtonpost.com
 www.webofscience.com
 www.who.int
 www.wikidoc.org
