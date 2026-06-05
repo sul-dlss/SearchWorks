@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 8.1.0'
 gem "propshaft"
 # Use Puma as the app server
-gem 'puma', '~> 6.0'
+gem 'puma', '>= 6.0'
 
 gem 'turbo-rails', '~> 2.0'
 
@@ -48,7 +48,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug"
   gem 'capybara', '~> 3.0'
-  gem "herb", "~> 0.8.6"
+  gem "herb", "~> 0.10"
   gem 'launchy' # useful for debugging rspec/capybara integration tests -- put "save_and_open_page" in your test to debug
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 8.0'

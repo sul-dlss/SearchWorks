@@ -281,8 +281,8 @@ GEM
     hashdiff (1.2.1)
     hashie (5.1.0)
       logger
-    herb (0.8.10-arm64-darwin)
-    herb (0.8.10-x86_64-linux-gnu)
+    herb (0.10.1-arm64-darwin)
+    herb (0.10.1-x86_64-linux-gnu)
     honeybadger (6.6.2)
       logger
       ostruct
@@ -445,7 +445,7 @@ GEM
       date
       stringio
     public_suffix (7.0.5)
-    puma (6.6.1)
+    puma (8.0.2)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.6)
@@ -721,7 +721,7 @@ DEPENDENCIES
   faraday
   faraday-follow_redirects
   global_alerts
-  herb (~> 0.8.6)
+  herb (~> 0.10)
   honeybadger
   jbuilder (~> 2.7)
   jsbundling-rails (~> 1.2)
@@ -736,7 +736,7 @@ DEPENDENCIES
   okcomputer
   parslet (~> 2.0)
   propshaft
-  puma (~> 6.0)
+  puma (>= 6.0)
   rack-attack
   rack-mini-profiler (~> 3.0)
   rack-utf8_sanitizer
