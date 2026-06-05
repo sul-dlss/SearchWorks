@@ -1262,6 +1262,7 @@ phil.cdc.gov
 physics.aps.org
 physoc.onlinelibrary.wiley.com
 pilotfeasibilitystudies.biomedcentral.com
+piracy.ssrc.org
 plantmethods.biomedcentral.com
 platform.marketintelligence.spglobal.com
 play.google.com
@@ -2643,6 +2644,7 @@ www.sgecm.org.tw
 www.sicot-j.org
 www.sid.ir
 www.signavitae.com
+www.significantproperties.org.uk
 www.sjkdt.org
 www.sjmms.net
 www.sjweh.fi
