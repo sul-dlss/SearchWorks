@@ -257,7 +257,7 @@ module Constants
     # No Physics or Meyer (ACOMP) in doc provided, the show up on web
   }
 
-  EXCLUDE_FIELDS = ['w', '0', '1', '2', '5', '6', '8', '?', '=']
+  EXCLUDE_FIELDS = ['w', '0', '1', '2', '5', '6', '7', '8', '?', '=']
 
   NIELSEN_TAGS = { '505' => '905', '520' => '920', '586' => '986' }
   SOURCES = {
