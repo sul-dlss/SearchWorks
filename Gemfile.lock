@@ -80,8 +80,8 @@ GEM
     airbrussh (1.6.1)
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.3)
-    auth-sanitizer (0.1.4)
-      version_gem (~> 1.1, >= 1.1.9)
+    auth-sanitizer (0.2.1)
+      version_gem (~> 1.1, >= 1.1.10)
     axe-core-api (4.11.3)
       dumb_delegator
       ostruct
@@ -133,12 +133,12 @@ GEM
     blacklight_range_limit (9.2.0)
       blacklight (>= 7.25.2, < 10)
       view_component (>= 2.54, < 5)
-    bootsnap (1.24.5)
+    bootsnap (1.24.6)
       msgpack (~> 1.2)
     bootstrap (5.3.8)
       popper_js (>= 2.11.8, < 3)
-    bot_challenge_page (1.1.0)
-      http (~> 5.2)
+    bot_challenge_page (1.2.0)
+      http (>= 5.2, < 7)
       rails (>= 7.1, < 8.2)
     builder (3.3.0)
     capistrano (3.20.1)
@@ -182,13 +182,13 @@ GEM
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 2.0)
       observer (< 1.0)
-    cocina_display (2.5.0)
+    cocina_display (2.6.0)
       activesupport (>= 7)
       edtf (~> 3.2)
       geo_coord (~> 0.2)
       i18n
       iso8601 (~> 0.13.0)
-      janeway-jsonpath (~> 0.6)
+      janeway-jsonpath (>= 0.6, < 2)
       zeitwerk (~> 2.7)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -264,7 +264,7 @@ GEM
       logger
     faraday-follow_redirects (0.5.0)
       faraday (>= 1, < 3)
-    faraday-net_http (3.4.3)
+    faraday-net_http (3.4.4)
       net-http (~> 0.5)
     ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
@@ -283,7 +283,7 @@ GEM
       logger
     herb (0.10.1-arm64-darwin)
     herb (0.10.1-x86_64-linux-gnu)
-    honeybadger (6.6.2)
+    honeybadger (6.7.0)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -308,13 +308,13 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     iso8601 (0.13.0)
-    janeway-jsonpath (0.6.0)
+    janeway-jsonpath (1.0.0)
     jbuilder (2.15.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
-    json (2.19.7)
+    json (2.19.8)
     jwt (3.2.0)
       base64
     kaminari (1.2.2)
@@ -409,15 +409,15 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.3-x86_64-linux-gnu)
       racc (~> 1.4)
-    oauth2 (2.0.20)
-      auth-sanitizer (~> 0.1, >= 0.1.3)
+    oauth2 (2.0.22)
+      auth-sanitizer (~> 0.2, >= 0.2.1)
       faraday (>= 0.17.3, < 4.0)
       jwt (>= 1.0, < 4.0)
       logger (~> 1.2)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 4)
-      snaky_hash (~> 2.0, >= 2.0.4)
-      version_gem (~> 1.1, >= 1.1.9)
+      snaky_hash (~> 2.0, >= 2.0.5)
+      version_gem (~> 1.1, >= 1.1.11)
     observer (0.1.2)
     okcomputer (1.19.2)
       benchmark
@@ -441,7 +441,7 @@ GEM
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
-    psych (5.3.1)
+    psych (5.4.0)
       date
       stringio
     public_suffix (7.0.5)
@@ -568,15 +568,16 @@ GEM
       lint_roller (~> 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.47.1, < 2.0)
-    rubocop-rails (2.35.3)
+    rubocop-rails (2.35.4)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
       rack (>= 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
-    rubocop-rspec (3.9.0)
+    rubocop-rspec (3.10.2)
       lint_roller (~> 1.1)
-      rubocop (~> 1.81)
+      regexp_parser (>= 2.0)
+      rubocop (~> 1.86, >= 1.86.2)
     ruby-oembed (0.18.1)
     ruby-progressbar (1.13.0)
     rubyzip (3.3.1)
@@ -599,7 +600,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     singleton (0.3.0)
     slop (4.10.1)
-    snaky_hash (2.0.4)
+    snaky_hash (2.0.5)
       hashie (>= 0.1.0, < 6)
       version_gem (>= 1.1.8, < 3)
     solr_wrapper (4.4.0)
@@ -609,8 +610,8 @@ GEM
       ostruct
       retriable
       ruby-progressbar
-    sqlite3 (2.9.4-arm64-darwin)
-    sqlite3 (2.9.4-x86_64-linux-gnu)
+    sqlite3 (2.9.5-arm64-darwin)
+    sqlite3 (2.9.5-x86_64-linux-gnu)
     sshkit (1.25.0)
       base64
       logger
@@ -650,8 +651,8 @@ GEM
     unicode-emoji (4.2.0)
     uri (1.1.1)
     useragent (0.16.11)
-    version_gem (1.1.9)
-    view_component (4.11.0)
+    version_gem (1.1.11)
+    view_component (4.12.0)
       actionview (>= 7.1.0)
       activesupport (>= 7.1.0)
       concurrent-ruby (~> 1)
@@ -670,7 +671,7 @@ GEM
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
     websocket (1.2.11)
-    websocket-driver (0.8.0)
+    websocket-driver (0.8.1)
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -767,4 +768,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.12
+  4.0.13
