@@ -2140,7 +2140,7 @@
   },
   {
     "id": "2034f7e2-9dfe-4920-87d2-92d455bd5533",
-    "name": "Rumsey migration erorr",
+    "name": "Rumsey migration error",
     "code": "RUM-MIGRATE-ERR",
     "discoveryDisplayName": "Error during migration",
     "isActive": true,
@@ -2159,8 +2159,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:53.799+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-23T19:57:03.409+00:00",
-      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+      "updatedDate": "2026-06-08T22:28:02.687+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
