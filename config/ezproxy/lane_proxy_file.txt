@@ -951,7 +951,6 @@ journals.copmadrid.org
 journals.healio.com
 journals.humankinetics.com
 journals.iucr.org
-journals.jps.jp
 journals.lib.unb.ca
 journals.library.ualberta.ca
 journals.lub.lu.se
@@ -1867,7 +1866,6 @@ www.consultant360.com
 www.consumerlab.com
 www.contempclindent.org
 www.cos-sco.ca
-www.countrywatch.com
 www.covidence.org
 www.cpn.or.kr
 www.crcnetbase.com
