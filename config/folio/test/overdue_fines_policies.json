@@ -22,7 +22,7 @@
     "metadata": {
       "createdDate": "2025-04-28T17:42:01.757+00:00",
       "createdByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b",
-      "updatedDate": "2026-05-15T15:09:30.995+00:00",
+      "updatedDate": "2026-05-15T15:11:34.888+00:00",
       "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
     },
     "id": "12d0d55b-bcb9-473e-9bd7-1a54d52c007f"
@@ -92,7 +92,7 @@
     "maxOverdueRecallFine": 0.0,
     "metadata": {
       "createdDate": "2023-08-09T21:20:05.215+00:00",
-      "updatedDate": "2026-01-28T23:16:36.379+00:00"
+      "updatedDate": "2025-12-20T20:25:49.875+00:00"
     },
     "id": "cd3f6cac-fa17-4079-9fae-2fb28e521412"
   }

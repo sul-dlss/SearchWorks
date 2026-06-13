@@ -6,7 +6,7 @@
     "active": true,
     "metadata": {
       "createdDate": "2023-08-09T20:35:44.015+00:00",
-      "updatedDate": "2026-01-28T23:15:21.880+00:00"
+      "updatedDate": "2024-11-28T01:48:02.368+00:00"
     },
     "loanNotices": [],
     "feeFineNotices": [],
@@ -130,38 +130,6 @@
         "realTime": false,
         "sendOptions": {
           "sendWhen": "Request cancellation"
-        }
-      }
-    ]
-  },
-  {
-    "id": "378fc8e0-2e79-4a69-b088-e9ce34217955",
-    "name": "Test Notice Policy",
-    "description": "This is a new active notice policy",
-    "metadata": {
-      "createdDate": "2026-02-18T17:22:20.152+00:00",
-      "createdByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b",
-      "updatedDate": "2026-02-18T17:22:20.152+00:00",
-      "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
-    },
-    "loanNotices": [
-      {
-        "templateId": "eb1f23c1-7194-42ea-9ab3-f0a3d57f8473",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Check in"
-        }
-      }
-    ],
-    "feeFineNotices": [],
-    "requestNotices": [
-      {
-        "templateId": "fd7a0418-ea29-4393-a6d5-ff72efc4a963",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Available"
         }
       }
     ]
@@ -534,7 +502,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:14.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-04-20T18:38:30.816+00:00",
+      "updatedDate": "2025-11-17T19:41:13.982+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "loanNotices": [
@@ -588,14 +556,6 @@
         "realTime": false,
         "sendOptions": {
           "sendWhen": "Item recalled"
-        }
-      },
-      {
-        "templateId": "013fbf68-6ca2-4230-b681-28b397074c60",
-        "format": "Email",
-        "realTime": false,
-        "sendOptions": {
-          "sendWhen": "Manual due date change"
         }
       }
     ],

@@ -13,8 +13,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -25,16 +29,24 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:18.186+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T15:27:40.895+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-03-12T17:14:17.794+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -46,12 +58,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -60,14 +72,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:33.329+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:33.329+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-03-12T17:17:13.839+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -116,12 +140,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -130,14 +154,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:28.737+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:28.737+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-03-12T17:15:27.962+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -154,8 +190,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -166,34 +206,24 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:21.327+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T00:24:57.884+00:00",
+      "updatedDate": "2026-03-12T17:14:26.890+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
-    }
-  },
-  {
-    "id": "32c6f0c7-26e4-4350-8c29-1e11c2e3efc4",
-    "name": "Interim service point",
-    "code": "interimsp",
-    "discoveryDisplayName": "Interim service point",
-    "pickupLocation": true,
-    "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
-    },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
-    "staffSlips": [],
-    "ecsRequestRouting": false,
-    "metadata": {
-      "createdDate": "2026-01-22T20:40:50.615+00:00",
-      "updatedDate": "2026-01-28T23:18:06.906+00:00"
     }
   },
   {
@@ -205,12 +235,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -219,32 +249,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:27.212+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:27.212+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "3a40852d-49fd-4df2-a1f9-6e2641a6e91f",
-    "name": "Circ Desk 1",
-    "code": "cd1",
-    "discoveryDisplayName": "Circulation Desk -- Hallway",
-    "pickupLocation": true,
-    "holdShelfExpiryPeriod": {
-      "duration": 3,
-      "intervalId": "Weeks"
-    },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
-    "staffSlips": [],
-    "ecsRequestRouting": false,
-    "metadata": {
-      "createdDate": "2026-01-22T20:40:50.617+00:00",
-      "updatedDate": "2026-01-28T23:18:06.924+00:00"
+      "updatedDate": "2026-03-12T17:15:09.746+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -261,8 +285,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -273,15 +301,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:08.635+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T00:24:16.610+00:00",
+      "updatedDate": "2026-03-12T17:09:13.197+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -299,8 +335,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -311,15 +351,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:23.530+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T00:25:18.109+00:00",
+      "updatedDate": "2026-03-12T17:14:50.567+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -337,8 +385,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -349,15 +401,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:27.957+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T00:25:39.106+00:00",
+      "updatedDate": "2026-03-12T17:15:20.413+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -375,8 +435,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -387,15 +451,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:09.535+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T00:24:28.684+00:00",
+      "updatedDate": "2026-03-12T17:13:19.681+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -408,12 +480,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -422,14 +494,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:17.262+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:17.262+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-03-12T17:14:07.030+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -437,11 +521,16 @@
     "name": "SUL - Digitization Services",
     "code": "SULDIGITIZATION",
     "discoveryDisplayName": "SUL Digitization Services",
+    "pickupLocation": false,
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -452,16 +541,24 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-29T21:39:59.170+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2023-08-29T21:39:59.170+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2026-03-12T17:16:44.817+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -473,12 +570,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -487,14 +584,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:15.229+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:15.229+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-03-12T17:13:49.444+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -544,8 +653,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -556,15 +669,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:03.032+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T00:24:00.984+00:00",
+      "updatedDate": "2026-03-12T17:08:48.673+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -581,12 +702,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -595,14 +716,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:34.130+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:34.130+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-03-12T17:17:27.311+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -617,7 +750,7 @@
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-09T20:33:25.599+00:00",
-      "updatedDate": "2026-01-28T23:18:06.925+00:00"
+      "updatedDate": "2024-06-22T06:34:26.878+00:00"
     }
   },
   {
@@ -629,11 +762,11 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
         "printByDefault": false
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
         "printByDefault": false
       },
       {
@@ -643,14 +776,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:29.674+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:29.674+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-04-08T18:58:45.298+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -695,11 +840,11 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
         "printByDefault": false
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
         "printByDefault": false
       },
       {
@@ -709,14 +854,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:30.675+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:30.675+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-04-08T16:29:13.580+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -765,8 +922,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -777,15 +938,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:22.422+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-26T23:52:59.234+00:00",
+      "updatedDate": "2026-03-12T17:14:35.278+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -873,7 +1042,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:16.262+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-03-12T19:04:51.784+00:00",
+      "updatedDate": "2026-03-12T17:13:57.889+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -890,12 +1059,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -904,14 +1073,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:24.616+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:24.616+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-03-12T17:14:59.808+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -923,11 +1104,11 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
         "printByDefault": false
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
         "printByDefault": false
       },
       {
@@ -937,14 +1118,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": false
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": false
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:32.587+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:32.587+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-04-09T18:27:10.016+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -961,8 +1154,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -978,33 +1175,19 @@
       },
       {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:10.483+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-11-04T21:16:40.826+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
-    }
-  },
-  {
-    "id": "c4c90014-c8c9-4ade-8f24-b5e313319f4b",
-    "name": "Circ Desk 2",
-    "code": "cd2",
-    "discoveryDisplayName": "Circulation Desk -- Back Entrance",
-    "pickupLocation": true,
-    "holdShelfExpiryPeriod": {
-      "duration": 5,
-      "intervalId": "Days"
-    },
-    "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
-    "staffSlips": [],
-    "ecsRequestRouting": false,
-    "metadata": {
-      "createdDate": "2026-01-22T20:40:50.609+00:00",
-      "updatedDate": "2026-01-28T23:18:06.923+00:00"
+      "updatedDate": "2026-03-12T16:58:39.725+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -1081,7 +1264,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:31.836+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T19:04:33.496+00:00",
+      "updatedDate": "2026-05-11T23:01:41.590+00:00",
       "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
@@ -1099,8 +1282,12 @@
     "holdShelfClosedLibraryDateManagement": "Move_to_the_end_of_the_next_open_day",
     "staffSlips": [
       {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
+      },
+      {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -1111,15 +1298,23 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T17:45:14.414+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-06-27T00:24:40.817+00:00",
+      "updatedDate": "2026-03-12T17:13:36.056+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -1132,12 +1327,12 @@
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
       {
-        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
-        "printByDefault": false
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": true
       },
       {
-        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
-        "printByDefault": false
+        "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
+        "printByDefault": true
       },
       {
         "id": "8812bae1-2738-442c-bc20-fe4bb38a11f8",
@@ -1146,14 +1341,26 @@
       {
         "id": "1ed55c5c-64d9-40eb-8b80-7438a262288b",
         "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": true
+      },
+      {
+        "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": true
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
+        "printByDefault": true
       }
     ],
     "ecsRequestRouting": false,
     "metadata": {
       "createdDate": "2023-08-10T18:17:16.045+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:17:16.045+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-03-12T17:17:02.447+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -1161,8 +1368,13 @@
     "name": "Music - Tech Services",
     "code": "MUSICTS",
     "discoveryDisplayName": "Music - Tech Services",
+    "pickupLocation": false,
     "holdShelfClosedLibraryDateManagement": "Keep_the_current_due_date",
     "staffSlips": [
+      {
+        "id": "0b52bca7-db17-4e91-a740-7872ed6d7323",
+        "printByDefault": false
+      },
       {
         "id": "6a6e72f0-69da-4b4c-8254-7154679e9d88",
         "printByDefault": false
@@ -1176,7 +1388,15 @@
         "printByDefault": false
       },
       {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e03",
+        "printByDefault": false
+      },
+      {
         "id": "f838cdaf-555a-473f-abf1-f35ef6ab8ae1",
+        "printByDefault": false
+      },
+      {
+        "id": "e6e29ec1-1a76-4913-bbd3-65f4ffd94e04",
         "printByDefault": false
       }
     ],
@@ -1184,7 +1404,7 @@
     "metadata": {
       "createdDate": "2023-09-22T23:25:04.824+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2023-09-22T23:25:04.824+00:00",
+      "updatedDate": "2026-04-08T17:57:57.114+00:00",
       "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },

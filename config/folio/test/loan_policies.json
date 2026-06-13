@@ -1,30 +1,5 @@
 [
   {
-    "id": "05422f40-2db3-4311-971a-5d5935bf5033",
-    "name": "26week-norenew-7daygrace",
-    "description": "Loan policy for ILL materials loaned to Stanford users for 26 weeks",
-    "loanable": true,
-    "loansPolicy": {
-      "profileId": "Rolling",
-      "period": {
-        "duration": 12,
-        "intervalId": "Weeks"
-      },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
-      "gracePeriod": {
-        "duration": 7,
-        "intervalId": "Days"
-      }
-    },
-    "renewable": false,
-    "metadata": {
-      "createdDate": "2026-02-06T01:56:26.548+00:00",
-      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
-      "updatedDate": "2026-02-06T01:56:26.548+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
-    }
-  },
-  {
     "id": "07115e75-c4a9-4ef0-b013-dba184251041",
     "name": "7day-norenew-1daygrace",
     "description": "7-day loan (Art periodicals and Business Permanent Reserves)",
@@ -161,14 +136,14 @@
     }
   },
   {
-    "id": "258404de-52ee-4808-b0ab-a4113eb9995e",
-    "name": "8week-norenew-7daygrace",
-    "description": "Loan policy for ILL materials loaned to Stanford users for 8 weeks",
+    "id": "1edb93d0-2c3f-40d8-9128-a39aa4df2d0d",
+    "name": "4week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 4 weeks",
     "loanable": true,
     "loansPolicy": {
       "profileId": "Rolling",
       "period": {
-        "duration": 8,
+        "duration": 4,
         "intervalId": "Weeks"
       },
       "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
@@ -179,9 +154,9 @@
     },
     "renewable": false,
     "metadata": {
-      "createdDate": "2026-02-06T01:55:18.012+00:00",
+      "createdDate": "2026-05-29T20:15:54.557+00:00",
       "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
-      "updatedDate": "2026-02-06T01:55:18.012+00:00",
+      "updatedDate": "2026-05-29T20:15:54.557+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
@@ -413,31 +388,6 @@
     }
   },
   {
-    "id": "3e5943fc-7d5c-464c-a014-4cee3733ea8f",
-    "name": "4week-norenew-7daygrace",
-    "description": "Loan policy for ILL materials loaned to Stanford users for 4 weeks",
-    "loanable": true,
-    "loansPolicy": {
-      "profileId": "Rolling",
-      "period": {
-        "duration": 4,
-        "intervalId": "Weeks"
-      },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
-      "gracePeriod": {
-        "duration": 7,
-        "intervalId": "Days"
-      }
-    },
-    "renewable": false,
-    "metadata": {
-      "createdDate": "2026-02-06T01:54:03.053+00:00",
-      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
-      "updatedDate": "2026-02-06T01:54:03.053+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
-    }
-  },
-  {
     "id": "3efe7693-3357-4f9b-999d-a271f86019b0",
     "name": "28day-2renew-7daygrace",
     "description": "Loan policy for Edu, Green, Lane and Law materials",
@@ -487,50 +437,27 @@
     }
   },
   {
-    "id": "465c7cff-78db-4303-b3b1-d7cdb3036ee6",
-    "name": "test five day",
+    "id": "43198de5-f56a-4a53-a0bd-5a324418967a",
+    "name": "One Hour",
     "loanable": true,
     "loansPolicy": {
       "profileId": "Rolling",
       "period": {
-        "duration": 5,
-        "intervalId": "Days"
+        "duration": 1,
+        "intervalId": "Hours"
       },
-      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE",
-      "gracePeriod": {
-        "duration": 3,
-        "intervalId": "Days"
-      }
+      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE_TIME"
     },
     "renewable": true,
     "renewalsPolicy": {
-      "numberAllowed": 1.0,
-      "renewFromId": "CURRENT_DUE_DATE"
-    },
-    "requestManagement": {
-      "recalls": {
-        "minimumGuaranteedLoanPeriod": {
-          "duration": 1,
-          "intervalId": "Days"
-        },
-        "recallReturnInterval": {
-          "duration": 3,
-          "intervalId": "Days"
-        },
-        "allowRecallsToExtendOverdueLoans": false
-      },
-      "holds": {
-        "alternateCheckoutLoanPeriod": {
-          "duration": 3,
-          "intervalId": "Days"
-        }
-      }
+      "unlimited": false,
+      "numberAllowed": 3.0,
+      "renewFromId": "SYSTEM_DATE",
+      "differentPeriod": false
     },
     "metadata": {
-      "createdDate": "2026-02-12T17:59:26.047+00:00",
-      "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
-      "updatedDate": "2026-02-12T17:59:26.047+00:00",
-      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
+      "createdDate": "2023-08-09T20:35:29.414+00:00",
+      "updatedDate": "2024-11-28T01:48:02.061+00:00"
     }
   },
   {
@@ -727,6 +654,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T18:49:57.627+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "63e87569-5d6b-448a-9b99-358999725437",
+    "name": "26week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 26 weeks",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 26,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2026-05-29T20:18:11.068+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:18:11.068+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -1092,6 +1044,14 @@
     "renewable": false,
     "requestManagement": {
       "recalls": {
+        "minimumGuaranteedLoanPeriod": {
+          "duration": 1,
+          "intervalId": "Days"
+        },
+        "recallReturnInterval": {
+          "duration": 7,
+          "intervalId": "Days"
+        },
         "allowRecallsToExtendOverdueLoans": false
       },
       "holds": {
@@ -1104,8 +1064,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:00.432+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-10-15T23:50:53.708+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2026-03-12T17:04:22.767+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -1280,6 +1240,31 @@
     }
   },
   {
+    "id": "9bccee2a-d97e-4c14-9151-c307a674c95d",
+    "name": "12week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 12 weeks",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 12,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2026-05-29T20:17:39.091+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:17:39.091+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "a369ef4d-cec8-4348-bf36-acb16f72f67f",
     "name": "24hour-norenew-15mingrace",
     "description": "24 hour loan (often for equipment at GSB)",
@@ -1433,6 +1418,31 @@
     }
   },
   {
+    "id": "b6d0cb8b-fd8d-46a7-be95-5f63a34a3278",
+    "name": "8week-norenew-7daygrace",
+    "description": "Loan policy for ILL materials loaned to Stanford users for 8 weeks",
+    "loanable": true,
+    "loansPolicy": {
+      "profileId": "Rolling",
+      "period": {
+        "duration": 8,
+        "intervalId": "Weeks"
+      },
+      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "gracePeriod": {
+        "duration": 7,
+        "intervalId": "Days"
+      }
+    },
+    "renewable": false,
+    "metadata": {
+      "createdDate": "2026-05-29T20:16:39.168+00:00",
+      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
+      "updatedDate": "2026-05-29T20:16:39.168+00:00",
+      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+    }
+  },
+  {
     "id": "b79e3dbf-b30a-420c-9e97-dcf92e937883",
     "name": "16week-norenew-7daygrace",
     "description": "Loan policy for BorrowDirect materials loaned to Stanford users",
@@ -1486,31 +1496,6 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T18:49:53.062+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "bae47de7-c724-48cd-aadf-106caee4305e",
-    "name": "12week-norenew-7daygrace",
-    "description": "Loan policy for ILL materials loaned to Stanford users for 12 weeks",
-    "loanable": true,
-    "loansPolicy": {
-      "profileId": "Rolling",
-      "period": {
-        "duration": 12,
-        "intervalId": "Weeks"
-      },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
-      "gracePeriod": {
-        "duration": 7,
-        "intervalId": "Days"
-      }
-    },
-    "renewable": false,
-    "metadata": {
-      "createdDate": "2026-02-06T01:56:00.100+00:00",
-      "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
-      "updatedDate": "2026-02-06T01:56:00.100+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     }
   },
   {
@@ -1868,7 +1853,7 @@
     },
     "metadata": {
       "createdDate": "2023-08-09T20:35:35.015+00:00",
-      "updatedDate": "2026-01-28T23:15:21.566+00:00"
+      "updatedDate": "2024-11-28T01:48:02.071+00:00"
     }
   },
   {
