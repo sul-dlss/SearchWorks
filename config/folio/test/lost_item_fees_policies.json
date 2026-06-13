@@ -37,7 +37,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:04.315+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:13:41.299+00:00",
+      "updatedDate": "2026-05-08T18:04:43.792+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "1c1ff8ee-646f-4a39-8625-f08d763ced7f"
@@ -72,7 +72,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.549+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:10:52.545+00:00",
+      "updatedDate": "2026-05-08T18:00:38.210+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "1d12c9e3-ad47-4a49-95ad-5c496a48ee6d"
@@ -115,7 +115,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.315+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:11:43.521+00:00",
+      "updatedDate": "2026-05-08T18:02:44.554+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "24da62db-472c-47fe-991f-75fc9c3f7481"
@@ -162,7 +162,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.805+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:07:26.733+00:00",
+      "updatedDate": "2026-05-08T17:59:17.428+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "294488c1-ffd9-478d-8f77-619d60c0f5f9"
@@ -197,7 +197,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.983+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:11:21.874+00:00",
+      "updatedDate": "2026-05-08T18:02:24.661+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "29684504-bb35-488e-bf2d-74f7ec27d91c"
@@ -240,7 +240,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.562+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:07:12.144+00:00",
+      "updatedDate": "2026-05-08T17:59:03.991+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "332e35f5-a167-44e0-a843-a0ba0000e777"
@@ -282,7 +282,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.310+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:12:48.514+00:00",
+      "updatedDate": "2026-05-08T18:03:53.546+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "4e9fff6f-6bd9-4bb7-b3f2-9dbb7d8e57be"
@@ -291,7 +291,7 @@
     "name": "$30 lost fee",
     "description": "MMTX lost fee for DVDs",
     "itemAgedLostOverdue": {
-      "duration": 7,
+      "duration": 3,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -325,7 +325,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:00.915+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:12:00.465+00:00",
+      "updatedDate": "2026-05-08T18:02:53.884+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "5306967f-4613-4a27-b796-ea2d3f99af2e"
@@ -368,7 +368,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.655+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:11:07.223+00:00",
+      "updatedDate": "2026-05-08T18:02:07.839+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "5e4ee2a3-237d-40e2-bf2e-497963dda0ec"
@@ -411,7 +411,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.955+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:10:30.470+00:00",
+      "updatedDate": "2026-05-08T17:59:53.354+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "622b0090-e1c5-4e67-9c59-7b7a5801bb06"
@@ -453,7 +453,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:07.216+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:11:32.817+00:00",
+      "updatedDate": "2026-05-08T18:02:34.630+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "76a76e01-fc47-4a3b-9b32-cdcae78be003"
@@ -495,7 +495,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:07.869+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:12:30.454+00:00",
+      "updatedDate": "2026-05-08T18:03:23.022+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "86f0f52b-09cf-47c4-bf8b-b77585c4c3d2"
@@ -504,7 +504,7 @@
     "name": "$2000 lost fee kit",
     "description": "Fee policy for educational kits",
     "itemAgedLostOverdue": {
-      "duration": 8,
+      "duration": 7,
       "intervalId": "Days"
     },
     "patronBilledAfterAgedLost": {
@@ -538,7 +538,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.214+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:10:43.923+00:00",
+      "updatedDate": "2026-05-08T18:00:20.827+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "883f3c16-3720-4678-899c-2279f06cd25f"
@@ -581,7 +581,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.247+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:06:52.945+00:00",
+      "updatedDate": "2026-05-08T17:58:02.153+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "966833f9-ad73-41f6-bc7d-cc44280d4e15"
@@ -692,7 +692,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.095+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:13:09.236+00:00",
+      "updatedDate": "2026-05-08T18:04:04.473+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "b467648a-7724-4df3-926a-b6566eeac649"
@@ -735,7 +735,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:04.851+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:06:43.357+00:00",
+      "updatedDate": "2026-05-08T17:57:42.763+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "bb338f23-67e1-4e34-ab8d-a861b3c9879a"
@@ -777,7 +777,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:07.515+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:12:11.273+00:00",
+      "updatedDate": "2026-05-08T18:03:02.290+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "bcfd2c6d-a1c1-40a0-a6e8-dc0fe7225d76"
@@ -820,7 +820,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.581+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:14:05.336+00:00",
+      "updatedDate": "2026-05-08T18:05:09.062+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "be384a8b-98aa-4443-8d3e-1eeb115a83bc"
@@ -863,7 +863,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.057+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:07:36.645+00:00",
+      "updatedDate": "2026-05-08T17:59:30.418+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "beb889d3-9d45-4b9a-85a4-5decc1427693"
@@ -906,7 +906,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:05.917+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:14:21.508+00:00",
+      "updatedDate": "2026-05-08T18:05:19.553+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "c8e30e2f-8fa1-45d6-b42f-7f1abe31939c"
@@ -948,7 +948,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:02.715+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:13:56.140+00:00",
+      "updatedDate": "2026-05-08T18:04:58.990+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "dd2fb6cd-cff1-4405-992d-78c2e7faca04"
@@ -991,41 +991,10 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.452+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:13:18.163+00:00",
+      "updatedDate": "2026-05-08T18:04:19.894+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "df2237da-7a20-4e22-aba6-4d88ac2ee281"
-  },
-  {
-    "name": "test 40$",
-    "description": "used for Kidlit at education",
-    "itemAgedLostOverdue": {
-      "duration": 7,
-      "intervalId": "Days"
-    },
-    "patronBilledAfterAgedLost": {
-      "duration": 1,
-      "intervalId": "Minutes"
-    },
-    "chargeAmountItem": {
-      "chargeType": "anotherCost",
-      "amount": 40.0
-    },
-    "lostItemProcessingFee": 0.0,
-    "chargeAmountItemPatron": false,
-    "chargeAmountItemSystem": false,
-    "returnedLostItemProcessingFee": false,
-    "replacedLostItemProcessingFee": false,
-    "replacementProcessingFee": 0.0,
-    "replacementAllowed": false,
-    "lostItemReturned": "Charge",
-    "metadata": {
-      "createdDate": "2026-02-17T21:31:40.836+00:00",
-      "createdByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9",
-      "updatedDate": "2026-02-17T21:31:40.836+00:00",
-      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
-    },
-    "id": "e0caffb1-dbfd-460a-bbc3-32ff4271c246"
   },
   {
     "name": "$1000 lost fee",
@@ -1064,7 +1033,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:06.854+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:07:02.658+00:00",
+      "updatedDate": "2026-05-08T17:58:50.030+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "e768902e-b3ef-4b1f-a480-ad84e0522c35"
@@ -1106,7 +1075,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:08.104+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:12:39.763+00:00",
+      "updatedDate": "2026-05-08T18:03:32.620+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "e85da957-dca3-4b67-b9a7-0b603ffe2961"
@@ -1132,7 +1101,7 @@
     "lostItemReturned": "Charge",
     "metadata": {
       "createdDate": "2023-08-09T21:20:01.318+00:00",
-      "updatedDate": "2026-01-28T23:16:36.061+00:00"
+      "updatedDate": "2025-12-20T20:25:49.753+00:00"
     },
     "id": "ed892c0e-52e0-4cd9-8133-c0ef07b4a709"
   },
@@ -1174,7 +1143,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:04.614+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:07:52.348+00:00",
+      "updatedDate": "2026-05-08T17:59:41.921+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "f96e7828-4c47-4c3f-be2d-189bef9fba7a"
@@ -1217,7 +1186,7 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:03.779+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-08T18:13:27.483+00:00",
+      "updatedDate": "2026-05-08T18:04:29.456+00:00",
       "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
     },
     "id": "facb376f-09e3-4984-9fd7-554cf2085961"

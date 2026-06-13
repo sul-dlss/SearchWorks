@@ -80,7 +80,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -91,8 +92,8 @@
     "metadata": {
       "createdDate": "2024-05-03T22:36:01.600+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2024-05-03T22:36:01.600+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2026-01-12T17:53:22.798+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -129,7 +130,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
     "servicePointIds": [
       "4d77d74b-271e-421a-91c6-992afa9afb3c"
@@ -139,8 +142,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:54.274+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:54.274+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-12T18:23:27.956+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -475,7 +478,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "fe87087a-108b-4771-8ab9-5a4a5fc40960",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "faa81922-3da8-4086-a7fa-977d7d3e7977",
     "servicePointIds": [
       "faa81922-3da8-4086-a7fa-977d7d3e7977"
@@ -485,7 +490,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:36.301+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-07-23T15:18:23.519+00:00",
+      "updatedDate": "2026-01-12T18:24:33.379+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -1057,7 +1062,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LAW"
+    },
     "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
       "ef1ea792-b2bb-49a2-8747-94376b64a74d"
@@ -1067,8 +1074,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:22.950+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:22.950+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-02-13T00:12:07.035+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -1080,7 +1087,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
       "4827ae1d-b8bf-4b90-9e09-d642557893ab"
@@ -1090,8 +1099,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:04.206+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:04.206+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-28T21:41:34.325+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -1332,7 +1341,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
       "4827ae1d-b8bf-4b90-9e09-d642557893ab"
@@ -1342,8 +1353,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:59.024+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:59.024+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-28T21:38:29.975+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -1748,7 +1759,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -1758,7 +1771,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:18.874+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-10-31T22:43:43.933+00:00",
+      "updatedDate": "2026-02-26T22:23:29.552+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -1867,7 +1880,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
     "servicePointIds": [
       "50ef1036-06d3-48ef-9048-26cabfccf630"
@@ -1877,8 +1892,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:19.787+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:19.787+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-28T21:46:35.049+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -2125,7 +2140,7 @@
   },
   {
     "id": "2034f7e2-9dfe-4920-87d2-92d455bd5533",
-    "name": "Rumsey migration error",
+    "name": "Rumsey migration erorr",
     "code": "RUM-MIGRATE-ERR",
     "discoveryDisplayName": "Error during migration",
     "isActive": true,
@@ -2144,8 +2159,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:53.799+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-05-27T17:05:11.244+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2023-10-23T19:57:03.409+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -2159,6 +2174,7 @@
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
       "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN",
       "searchworksGovDocsClassification": "Federal"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
@@ -2170,7 +2186,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:54.652+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T16:56:49.044+00:00",
+      "updatedDate": "2026-01-12T17:33:26.571+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -2305,7 +2321,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -2316,7 +2333,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:12.738+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:02:34.738+00:00",
+      "updatedDate": "2026-01-12T17:58:33.649+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -2402,7 +2419,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -2412,8 +2431,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:30.133+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:01:07.375+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:27:39.391+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -2595,7 +2614,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
     "servicePointIds": [
       "50ef1036-06d3-48ef-9048-26cabfccf630"
@@ -2605,8 +2626,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:18.587+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:18.587+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-28T21:46:52.014+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -2906,7 +2927,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -2916,8 +2939,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:01.031+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:01.031+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-02-26T22:24:43.363+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -3120,7 +3143,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -3131,7 +3155,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:08.197+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T16:58:51.541+00:00",
+      "updatedDate": "2026-01-12T17:34:53.452+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -3410,7 +3434,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -3420,7 +3446,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:17.912+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-10-31T22:43:20.719+00:00",
+      "updatedDate": "2026-02-26T22:22:54.389+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -3652,6 +3678,7 @@
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
       "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN",
       "searchworksGovDocsClassification": "Federal"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
@@ -3663,7 +3690,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:13.154+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:03:45.104+00:00",
+      "updatedDate": "2026-01-12T18:05:41.825+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -4082,7 +4109,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
       "4827ae1d-b8bf-4b90-9e09-d642557893ab"
@@ -4092,8 +4121,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:41.712+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:41.712+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-28T21:35:38.794+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -4371,7 +4400,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -4382,7 +4412,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:35.899+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:04:18.475+00:00",
+      "updatedDate": "2026-01-12T17:32:10.432+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -4446,7 +4476,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "958cc062-591c-45de-85c1-0e8672fbbfc5",
     "servicePointIds": [
       "958cc062-591c-45de-85c1-0e8672fbbfc5"
@@ -4456,8 +4488,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:47.780+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:45:47.780+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-05-07T22:25:02.393+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -4492,7 +4524,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -4502,8 +4536,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:03.559+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:00:19.813+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:26:32.345+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -5033,7 +5067,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -5044,7 +5079,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:10.709+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T16:59:01.738+00:00",
+      "updatedDate": "2026-01-12T17:35:18.310+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -5203,7 +5238,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -5213,8 +5250,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:30.280+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:01:01.200+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:27:56.146+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -5592,6 +5629,7 @@
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
       "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN",
       "searchworksGovDocsClassification": "California"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
@@ -5603,7 +5641,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:46.506+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T16:55:08.097+00:00",
+      "updatedDate": "2026-01-12T17:32:52.783+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -5710,7 +5748,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "d0db91bf-90e7-4036-8e91-721001cf52fc",
     "servicePointIds": [
       "d0db91bf-90e7-4036-8e91-721001cf52fc"
@@ -5720,8 +5760,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:06.181+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:06.181+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-28T21:43:36.373+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -5827,7 +5867,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LAW"
+    },
     "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
       "ef1ea792-b2bb-49a2-8747-94376b64a74d"
@@ -5837,8 +5879,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:41.822+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:41.822+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-02-13T00:13:12.739+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -6205,7 +6247,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "7003123d-ef65-45f6-b469-d2b9839e1bb3",
     "libraryId": "7e4c05e3-1ce6-427d-b9ce-03464245cd78",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LAW"
+    },
     "primaryServicePoint": "ef1ea792-b2bb-49a2-8747-94376b64a74d",
     "servicePointIds": [
       "ef1ea792-b2bb-49a2-8747-94376b64a74d"
@@ -6215,7 +6259,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:40.076+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2024-05-02T18:13:34.625+00:00",
+      "updatedDate": "2026-02-13T00:13:31.991+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6300,6 +6344,7 @@
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
     "details": {
+      "scanServicePointCode": "SAL3",
       "availabilityClass": "Offsite",
       "pagingSchedule": "SAL3"
     },
@@ -6312,8 +6357,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:39.027+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:01:17.879+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:28:24.409+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -6377,7 +6422,8 @@
     "libraryId": "00d012b4-d5ee-422c-9f38-3457e0ddd1ed",
     "details": {
       "pageAeonSite": "EASTASIA",
-      "availabilityClass": "Offsite"
+      "availabilityClass": "Offsite",
+      "pagePreferSendIlliad": "true"
     },
     "primaryServicePoint": "6e0748f5-4420-4995-b96e-f7aeb978a45a",
     "servicePointIds": [
@@ -6388,7 +6434,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:10.225+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T23:52:09.196+00:00",
+      "updatedDate": "2026-01-13T22:20:27.031+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6428,7 +6474,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
     "servicePointIds": [
@@ -6439,7 +6486,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:48.393+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-26T15:29:14.049+00:00",
+      "updatedDate": "2026-01-12T18:08:12.020+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -6549,7 +6596,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
     "servicePointIds": [
@@ -6560,7 +6608,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:39.182+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-26T15:29:46.117+00:00",
+      "updatedDate": "2026-01-12T18:09:25.290+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -7233,7 +7281,8 @@
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
     "details": {
-      "shelvedByText": "Shelved by title"
+      "shelvedByText": "Shelved by title",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "958cc062-591c-45de-85c1-0e8672fbbfc5",
     "servicePointIds": [
@@ -7244,7 +7293,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:47.305+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-02T00:47:23.398+00:00",
+      "updatedDate": "2026-05-07T22:24:47.301+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -7388,29 +7437,6 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-21T20:37:23.702+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
-    }
-  },
-  {
-    "id": "7e162894-011e-4cb9-85f9-2c982511ef6a",
-    "name": "SUL ILLiad",
-    "code": "SUL-ILLIAD",
-    "discoveryDisplayName": "ILLiad",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
-    "details": {},
-    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
-    "servicePointIds": [
-      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
-    ],
-    "servicePoints": [],
-    "isShadow": false,
-    "metadata": {
-      "createdDate": "2026-02-04T23:25:39.643+00:00",
-      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2026-02-04T23:25:39.643+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -8577,7 +8603,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -8587,7 +8615,7 @@
     "metadata": {
       "createdDate": "2025-08-26T22:55:48.914+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-12-13T01:01:40.658+00:00",
+      "updatedDate": "2026-02-26T22:26:26.249+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -9299,7 +9327,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
     "servicePointIds": [
@@ -9310,7 +9339,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:50.317+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-26T15:27:50.664+00:00",
+      "updatedDate": "2026-01-12T18:09:04.417+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -9372,7 +9401,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -9383,7 +9413,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:13.030+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:03:32.793+00:00",
+      "updatedDate": "2026-01-12T18:04:44.622+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -10066,7 +10096,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -10076,8 +10108,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:24.485+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:00:52.944+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:27:00.479+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -10667,7 +10699,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
-    "details": {},
+    "details": {
+      "pageServicePointCodes": "MUSIC"
+    },
     "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
     "servicePointIds": [
       "4d77d74b-271e-421a-91c6-992afa9afb3c"
@@ -10677,8 +10711,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:51.380+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:51.380+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-12T18:55:07.923+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -10702,6 +10736,29 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:48.664+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "b7a2821f-8a5b-4b4f-aa18-8f7c1faaef7e",
+    "name": "SUL ILLiad",
+    "code": "SUL-ILLIAD",
+    "discoveryDisplayName": "ILLiad",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {},
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-05-29T19:57:56.713+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-05-29T19:57:56.713+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -11018,7 +11075,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "d0db91bf-90e7-4036-8e91-721001cf52fc",
     "servicePointIds": [
       "d0db91bf-90e7-4036-8e91-721001cf52fc"
@@ -11028,8 +11087,8 @@
     "metadata": {
       "createdDate": "2025-09-15T19:55:33.570+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2025-09-15T19:55:33.570+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2026-01-28T21:42:50.489+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -11165,7 +11224,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
       "4827ae1d-b8bf-4b90-9e09-d642557893ab"
@@ -11175,33 +11236,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:03.092+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:03.092+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
-    }
-  },
-  {
-    "id": "bf8c3c19-3abc-4021-aa90-a520c1117c76",
-    "name": "Rumsey Center Staff Room",
-    "code": "RUM-C-STAFF-ROOM",
-    "discoveryDisplayName": "Ask at desk",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "05241c96-6541-41ed-b2ad-61a126d62c2d",
-    "details": {
-      "pageAeonSite": "RUMSEY"
-    },
-    "primaryServicePoint": "b6987737-1e63-44cc-bfb1-2bcf044adcd7",
-    "servicePointIds": [
-      "b6987737-1e63-44cc-bfb1-2bcf044adcd7"
-    ],
-    "servicePoints": [],
-    "isShadow": false,
-    "metadata": {
-      "createdDate": "2026-05-27T23:35:46.434+00:00",
-      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2026-05-27T23:35:46.434+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2026-01-29T22:24:56.824+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -11505,7 +11541,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
     "details": {
-      "shelvedByText": "Shelved by series"
+      "shelvedByText": "Shelved by series",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
     "servicePointIds": [
@@ -11516,7 +11553,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:12.190+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-02T00:46:33.946+00:00",
+      "updatedDate": "2026-01-28T21:45:00.509+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -11543,6 +11580,29 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2025-05-02T16:49:23.910+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
+    "id": "c618778c-8870-4f38-8571-f73132deeb0a",
+    "name": "HILA SAL3 Shelved Elsewhere",
+    "code": "HILA-SAL3-SEE-OTHER",
+    "discoveryDisplayName": "See linked record",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
+    "libraryId": "ffe6ea8e-1e14-482f-b3e9-66e05efb04dd",
+    "details": {},
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-04-01T18:44:51.950+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-04-01T18:44:51.950+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -11671,7 +11731,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "958cc062-591c-45de-85c1-0e8672fbbfc5",
     "servicePointIds": [
       "958cc062-591c-45de-85c1-0e8672fbbfc5"
@@ -11681,8 +11743,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:09.623+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:09.623+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-05-07T22:24:29.454+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -11695,7 +11757,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/ "
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/ ",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
     "servicePointIds": [
@@ -11706,7 +11769,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:46.359+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-09-29T17:43:16.706+00:00",
+      "updatedDate": "2026-01-28T21:30:54.175+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -11871,7 +11934,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
     "servicePointIds": [
@@ -11882,7 +11946,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:12.204+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:00:08.167+00:00",
+      "updatedDate": "2026-01-12T17:56:20.737+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -11977,7 +12041,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:45.050+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T16:54:56.470+00:00",
+      "updatedDate": "2026-01-12T17:43:31.443+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -12430,7 +12494,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -12440,7 +12506,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:50.970+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-09-09T20:13:23.508+00:00",
+      "updatedDate": "2026-02-26T22:24:22.574+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -12490,6 +12556,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:24.264+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "d1de0efc-53ee-40b4-bbb4-3b21dbf81ff0",
+    "name": "Spec U-Arch Reference W",
+    "code": "SPEC-UARCH-REF-W",
+    "discoveryDisplayName": "University Archives Reference",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
+    "servicePointIds": [
+      "0e924af7-785c-46eb-a5e2-060394822016"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-04-02T23:36:07.489+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-04-02T23:36:07.489+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -12573,7 +12664,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "b89563c5-cb66-4de7-b63c-ca4d82e9d856",
     "libraryId": "f5c58187-3db6-4bda-b1bf-e5f0717e2149",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "958cc062-591c-45de-85c1-0e8672fbbfc5",
     "servicePointIds": [
       "958cc062-591c-45de-85c1-0e8672fbbfc5"
@@ -12583,8 +12676,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:59.165+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:59.165+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-05-07T22:24:12.141+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -12980,31 +13073,6 @@
     }
   },
   {
-    "id": "d8c65cbf-53dc-49f5-97ac-290cfdb863fd",
-    "name": "Spec U-Arch Reference W",
-    "code": "SPEC-UARCH-REF-W",
-    "discoveryDisplayName": "University Archives Reference",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
-    "details": {
-      "pageAeonSite": "SPECUA"
-    },
-    "primaryServicePoint": "0e924af7-785c-46eb-a5e2-060394822016",
-    "servicePointIds": [
-      "0e924af7-785c-46eb-a5e2-060394822016"
-    ],
-    "servicePoints": [],
-    "isShadow": false,
-    "metadata": {
-      "createdDate": "2026-04-02T23:38:46.380+00:00",
-      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2026-04-02T23:38:46.380+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
-    }
-  },
-  {
     "id": "d8dcbee8-4a1a-4ae2-b650-1f06170c8a69",
     "name": "Spec Sal Robinson",
     "code": "SPEC-SAL-ROBINSON",
@@ -13281,6 +13349,7 @@
     "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
     "details": {
       "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN",
       "searchworksGovDocsClassification": "International"
     },
     "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
@@ -13292,33 +13361,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:13.666+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T17:00:48.845+00:00",
+      "updatedDate": "2026-01-12T17:56:45.363+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
-    }
-  },
-  {
-    "id": "ddcac224-966c-4250-9658-ff408d7ed439",
-    "name": "Spec SAL3 Shelved Elsewhere",
-    "code": "SPEC-SAL3-SEE-OTHER",
-    "discoveryDisplayName": "Individual volumes catalogued separately",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
-    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
-    "details": {
-      "pageAeonSite": "SPECUA"
-    },
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [],
-    "isShadow": false,
-    "metadata": {
-      "createdDate": "2026-04-07T23:02:04.155+00:00",
-      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2026-04-07T23:02:04.155+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -14036,7 +14080,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
     "servicePointIds": [
       "4d77d74b-271e-421a-91c6-992afa9afb3c"
@@ -14046,8 +14092,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:52.610+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:52.610+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-12T18:23:05.531+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -14180,7 +14226,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "5ffbd230-b4fd-409a-8f1c-045f0494c5ef",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "d0db91bf-90e7-4036-8e91-721001cf52fc",
     "servicePointIds": [
       "d0db91bf-90e7-4036-8e91-721001cf52fc"
@@ -14190,7 +14238,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:07.128+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-21T21:08:45.247+00:00",
+      "updatedDate": "2026-01-28T21:43:23.367+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -14242,29 +14290,6 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-10-02T17:00:31.761+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
-    }
-  },
-  {
-    "id": "f041a017-c4e4-4a7c-aed3-1f4b98a3a0e8",
-    "name": "HILA SAL3 Shelved Elsewhere",
-    "code": "HILA-SAL3-SEE-OTHER",
-    "discoveryDisplayName": "See linked record",
-    "isActive": true,
-    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
-    "campusId": "be6468b8-ed88-4876-93fe-5bdac764959c",
-    "libraryId": "ffe6ea8e-1e14-482f-b3e9-66e05efb04dd",
-    "details": {},
-    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
-    "servicePointIds": [
-      "3a306665-eec7-4a40-8f4d-608585b2a394"
-    ],
-    "servicePoints": [],
-    "isShadow": false,
-    "metadata": {
-      "createdDate": "2026-04-01T18:59:41.179+00:00",
-      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2026-04-01T18:59:41.179+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -14348,7 +14373,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
     "details": {
-      "stackmapBaseUrl": "https://stanford.stackmap.com/json/"
+      "pageMediationGroupKey": "ART",
+      "pageServicePointCodes": "ART"
     },
     "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
     "servicePointIds": [
@@ -14359,7 +14385,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:45:40.287+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-02T15:45:43.652+00:00",
+      "updatedDate": "2026-04-29T22:32:42.640+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -14638,7 +14664,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "40b76104-95ea-4360-a2be-5fd887222e2d",
     "libraryId": "5b2c8449-eed6-4bd3-bcef-af1e5a225400",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "LANE"
+    },
     "primaryServicePoint": "0483c7bd-8e95-4c7b-9704-484b01879b02",
     "servicePointIds": [
       "0483c7bd-8e95-4c7b-9704-484b01879b02"
@@ -14648,8 +14676,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:19.017+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-20T16:00:36.485+00:00",
-      "updatedByUserId": "ff43bcb5-9f21-4ed3-a28e-d46fab8e382f"
+      "updatedDate": "2026-02-21T00:25:58.922+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -14661,7 +14689,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "87b6c439-dd55-4d27-91d4-eb8552b18bb4",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "bd5fd8d9-72f3-4532-b68c-4db88063d16b",
     "servicePointIds": [
       "bd5fd8d9-72f3-4532-b68c-4db88063d16b"
@@ -14671,7 +14701,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:00.427+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-10-04T00:06:16.729+00:00",
+      "updatedDate": "2026-02-26T22:27:51.011+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
@@ -14797,6 +14827,32 @@
     }
   },
   {
+    "id": "f9b05c9f-2d91-4c76-b669-54f3531a14ba",
+    "name": "Music Recordings Display",
+    "code": "MUS-RECORDINGS-DISPLAY",
+    "discoveryDisplayName": "Recordings",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "45d4bfcc-439b-4ae3-8c62-a8f975be1d5b",
+    "details": {
+      "searchworksTreatTemporaryLocationAsPermanentLocation": "true",
+      "pageServicePointCodes": "MUSIC"
+    },
+    "primaryServicePoint": "4d77d74b-271e-421a-91c6-992afa9afb3c",
+    "servicePointIds": [
+      "4d77d74b-271e-421a-91c6-992afa9afb3c"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-01-20T21:51:57.525+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-01-20T21:51:57.525+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "f9b45b58-ec4c-490a-8808-86206cdf5ac8",
     "name": "SAL3 PAGE-ED",
     "code": "SAL3-PAGE-ED",
@@ -14856,7 +14912,9 @@
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
-    "details": {},
+    "details": {
+      "scanServicePointCode": "GREEN"
+    },
     "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
     "servicePointIds": [
       "4827ae1d-b8bf-4b90-9e09-d642557893ab"
@@ -14866,8 +14924,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:46:02.543+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:46:02.543+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-01-28T21:39:29.279+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -14893,6 +14951,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2025-09-09T20:14:56.251+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
+    "id": "fb826fba-5681-445b-85e6-77d5a4224b06",
+    "name": "Rumsey Center Staff Room",
+    "code": "RUM-C-STAFF-ROOM",
+    "discoveryDisplayName": "Ask at desk",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "05241c96-6541-41ed-b2ad-61a126d62c2d",
+    "details": {
+      "pageAeonSite": "RUMSEY"
+    },
+    "primaryServicePoint": "b6987737-1e63-44cc-bfb1-2bcf044adcd7",
+    "servicePointIds": [
+      "b6987737-1e63-44cc-bfb1-2bcf044adcd7"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-05-27T23:29:39.191+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-05-27T23:33:06.151+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -15106,6 +15189,31 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:45:51.040+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "ff2cacc4-ee6d-4dcb-8458-cd6f7bb2b461",
+    "name": "Spec SAL3 Shelved Elsewhere",
+    "code": "SPEC-SAL3-SEE-OTHER",
+    "discoveryDisplayName": "Individual volumes catalogued separately",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "5b61a365-6b39-408c-947d-f8861a7ba8ae",
+    "details": {
+      "pageAeonSite": "SPECUA"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-04-07T19:42:54.865+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-04-07T19:42:54.865+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
