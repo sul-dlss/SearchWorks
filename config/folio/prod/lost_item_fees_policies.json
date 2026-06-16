@@ -544,6 +544,49 @@
     "id": "883f3c16-3720-4678-899c-2279f06cd25f"
   },
   {
+    "name": "$50 lost fee - 1 hr aged to lost",
+    "description": "Used for Bus equipment",
+    "itemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "recalledItemAgedLostOverdue": {
+      "duration": 1,
+      "intervalId": "Hours"
+    },
+    "patronBilledAfterRecalledItemAgedLost": {
+      "duration": 1,
+      "intervalId": "Minutes"
+    },
+    "chargeAmountItem": {
+      "chargeType": "anotherCost",
+      "amount": 50.0
+    },
+    "lostItemProcessingFee": 0.0,
+    "chargeAmountItemPatron": false,
+    "chargeAmountItemSystem": false,
+    "returnedLostItemProcessingFee": false,
+    "replacedLostItemProcessingFee": false,
+    "replacementProcessingFee": 0.0,
+    "replacementAllowed": true,
+    "lostItemReturned": "Charge",
+    "feesFinesShallRefunded": {
+      "duration": 60,
+      "intervalId": "Months"
+    },
+    "metadata": {
+      "createdDate": "2026-06-15T18:22:59.114+00:00",
+      "createdByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4",
+      "updatedDate": "2026-06-15T18:22:59.114+00:00",
+      "updatedByUserId": "e732577d-6dd0-4852-a579-8d3b7b202be4"
+    },
+    "id": "94ecab3d-357b-4aef-b998-e470ccec9ab1"
+  },
+  {
     "name": "$100 lost fee - 1 hr aged to lost",
     "description": "Used for Lane, Bus and SUL equipment",
     "itemAgedLostOverdue": {

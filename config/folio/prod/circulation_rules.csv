@@ -23,7 +23,7 @@ graduate or postdoctoral or faculty or fellow,any,lckstk-expensive,,SUL,,,2hour-
 ,any,1-day reserve,,,LANE,,1day-norenew-15mingrace,No requests allowed,Course reserves,3.00/21.00 recall overdue fine,$250 lost fee
 ,any,28-day reserve,,,LANE,,28day-2renew-7daygrace,No requests allowed,Course reserves,1.00/30.00 daily overdue fines,$250 lost fee
 ,any,2-hour reserve,,,LANE,,2hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$250 lost fee
-,accessories 1 or game,8-hour reserve,,,BUSINESS,,8 hour - due at end of day - no renew,No requests allowed,Hourly Loan Notices,3.00/21.00 recall overdue fine,$100 lost fee - 1 hr aged to lost
+,accessories 1 or game,8-hour reserve,,,BUSINESS,,8 hour - due at end of day - no renew,No requests allowed,Hourly Loan Notices,3.00/21.00 recall overdue fine,$50 lost fee - 1 hr aged to lost
 ,book,Course reserves,,,BUSINESS,,28day-2renew-7daygrace,Allow paging,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 ,any,4-hour reserve,,SUL,,,4hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
 ,any,3-hour reserve,,SUL,,,3hour-norenew-15mingrace,No requests allowed,Course reserves,1.00/30.00 hourly fine,$230 reserves lost fee
@@ -341,7 +341,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,accessories 4 or av equipment 3,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Hourly Loan Notices,3.00/21.00 recall overdue fine,$5000 lost fee - 1 hr aged to lost
 ,accessories 3 or av equipment 2,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Hourly Loan Notices,3.00/21.00 recall overdue fine,$1000 lost fee - 1 hr aged to lost
 ,accessories 2 or av equipment 1,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Hourly Loan Notices,3.00/21.00 recall overdue fine,$500 lost fee - 1 hr aged to lost
-,accessories 1 or game,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Hourly Loan Notices,3.00/21.00 recall overdue fine,$100 lost fee - 1 hr aged to lost
+,accessories 1 or game,,,,BUSINESS,,24hour-norenew-15mingrace,No requests allowed,Hourly Loan Notices,3.00/21.00 recall overdue fine,$50 lost fee - 1 hr aged to lost
 ,book or multimedia or periodical,,,,BUSINESS,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$100 lost fee
 ,periodical,,,,TANNER,,14day-1renew-7daygrace,Allow hold/recall,Default notice,No fines,$100 lost fee
 ,periodical,,,,SCIENCE,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$400 lost fee
