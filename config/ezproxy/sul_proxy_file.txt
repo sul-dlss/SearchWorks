@@ -886,6 +886,7 @@ positions.dukejournals.org
 pra.aps.org
 practicalactionpublishing.com
 pragda.docuseek2.com
+prc.goosuudata.com
 prde.upress.virginia.edu
 premium.oxforddictionaries.com
 primaryresearch.com
@@ -1433,6 +1434,7 @@ www.facetsjournal.com
 www.fasebj.org
 www.faz-biblionet.de
 www.fenimoreartmuseum.org
+www.filmsecession.com
 www.firstworldwar.amdigital.co.uk
 www.flm-journal.org
 www.florida.universitypressscholarship.com
@@ -1502,6 +1504,7 @@ www.infobank.cn
 www.informaworld.com
 www.ingentaconnect.com
 www.inlibra.com
+www.insidehighered.com
 www.int-res.com
 www.interactionofcolor.com
 www.interscience.wiley.com
