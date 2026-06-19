@@ -369,7 +369,6 @@ cellandbioscience.biomedcentral.com
 cellandchromosome.biomedcentral.com
 celljournal.org
 cellregeneration.springeropen.com
-cepr.org
 ceramics.onlinelibrary.wiley.com
 cerebellumandataxias.biomedcentral.com
 cgejournal.biomedcentral.com
@@ -2400,7 +2399,6 @@ www.micropublication.org
 www.migration.amdigital.co.uk
 www.minervamedica.it
 www.minsocam.org
-www.mitpressjournals.org
 www.mja.com.au
 www.mjhid.org
 www.mlanet.org
