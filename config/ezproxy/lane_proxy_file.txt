@@ -426,6 +426,7 @@ congressional.proquest.com
 connect.h1.co
 connect.springerpub.com
 connectsci.au
+considerations.bmj.com
 content.iospress.com
 content.nejm.org
 content.sciendo.com
@@ -737,7 +738,6 @@ hjemmesider.diku.dk
 hmap.biomedcentral.com
 hms.harvard.edu
 hojishinbun.hoover.org
-home.liebertpub.com
 hospital-pharmacytech.therapeuticresearch.com
 hpp.tbzmed.ac.ir
 hqlo.biomedcentral.com
@@ -1002,7 +1002,6 @@ kingguide.com
 kinoden.kinokuniya.co.jp
 kjme.kr
 kjnt.org
-kluwerlawonline.com
 knepublishing.com
 knowitallanyware.com
 knowledge.sagepub.com
