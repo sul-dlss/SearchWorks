@@ -691,7 +691,6 @@ go.drugbank.com
 go.gale.com
 go.galegroup.com
 go.oreilly.com
-gocm.bmj.com
 gongjushu.oversea.cnki.net
 goo.gl
 gpa.eastview.com
@@ -1002,6 +1001,7 @@ kingguide.com
 kinoden.kinokuniya.co.jp
 kjme.kr
 kjnt.org
+kluwerlawonline.com
 knepublishing.com
 knowitallanyware.com
 knowledge.sagepub.com
@@ -1209,6 +1209,7 @@ openheart.bmj.com
 openhypertensionjournal.com
 openlibrary.org
 openres.ersjournals.com
+openscience.bmj.com
 openurl.ebsco.com
 opg.optica.org
 ophthalmology.lwwhealthlibrary.com
@@ -1313,6 +1314,7 @@ publications.iarc.fr
 publications.iarc.who.int
 publicationsncte.org
 publichealth.jmir.org
+publichealthinafrica.org
 publichealthreviews.biomedcentral.com
 publikationen.ub.uni-frankfurt.de
 publish.ancientbooks.cn
@@ -1607,6 +1609,7 @@ www.aaas.org
 www.aac.amdigital.co.uk
 www.aaem.pl
 www.aaeportal.com
+www.aafp.org
 www.aaic.net.au
 www.aamc.org
 www.aana.com
@@ -2593,6 +2596,7 @@ www.rpe.org.in
 www.rrh.org.au
 www.rsc.org
 www.rsfjournal.org
+www.rsna.org
 www.ruralneuropractice.com
 www.sage-hindawi.com
 www.sapj.co.za
