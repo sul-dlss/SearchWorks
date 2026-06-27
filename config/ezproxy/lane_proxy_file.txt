@@ -1432,7 +1432,6 @@ sdrc.lib.uiowa.edu
 search.alexanderstreet.com
 search.datapages.com
 search.ebscohost.com
-search.ebscohost.com.
 search.informit.com.au
 search.mandumah.com
 search.opinionarchives.com
@@ -1504,6 +1503,7 @@ student.bmj.com
 students.law.umich.edu
 subscriber.politicopro.com
 subscription.mbrjournal.com
+subscriptions.energysociety.org
 subscriptions.techstreet.com
 substanceabusepolicy.biomedcentral.com
 sumsearch.org
