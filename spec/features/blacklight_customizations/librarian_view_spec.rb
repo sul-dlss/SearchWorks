@@ -7,7 +7,7 @@ RSpec.describe "Librarian View Customization", :js do
     visit solr_document_path('28')
 
     within(".tech-details") do
-      expect(page).to have_content('Catkey: 28')
+      expect(page).to have_text('Catkey: 28')
 
       click_link('Librarian view')
     end
@@ -24,7 +24,7 @@ RSpec.describe "Librarian View Customization", :js do
     visit solr_document_path('bx988zq7071')
 
     within(".tech-details") do
-      expect(page).to have_content('DRUID: bx988zq7071')
+      expect(page).to have_text('DRUID: bx988zq7071')
 
       click_link('Librarian view')
     end
@@ -32,7 +32,7 @@ RSpec.describe "Librarian View Customization", :js do
     expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
 
     within(".cocina-view") do
-      expect(page).to have_content("883 JPEG image files containing photographs")
+      expect(page).to have_text("883 JPEG image files containing photographs")
     end
   end
 end

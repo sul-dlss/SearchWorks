@@ -32,7 +32,7 @@ RSpec.feature "Results Toolbar" do
     fill_in "q", with: '24'
     click_button 'search'
     within('.page_links') do
-      expect(page).to have_no_content('1 entry')
+      expect(page).to have_no_text('1 entry')
     end
   end
 

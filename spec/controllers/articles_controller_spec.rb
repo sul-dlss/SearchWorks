@@ -99,10 +99,10 @@ RSpec.describe ArticlesController do
         it 'returns an error message indicating to login to view the content' do
           get :fulltext_link, params: { id: '123', type: 'pdf' }
           error_message = Capybara.string(flash[:error])
-          expect(error_message).to have_content(
+          expect(error_message).to have_text(
             'Sorry, the PDF download was not successful because you are currently in guest mode.'
           )
-          expect(error_message).to have_content('Log in to try the download again')
+          expect(error_message).to have_text('Log in to try the download again')
           expect(response).to have_http_status(:found) # redirects back
         end
 
@@ -123,8 +123,8 @@ RSpec.describe ArticlesController do
         it 'returns an error message indicating to report it as a connection problem' do
           get :fulltext_link, params: { id: '123', type: 'pdf' }
           error_message = Capybara.string(flash[:error])
-          expect(error_message).to have_content 'Sorry, the PDF download was not successful'
-          expect(error_message).to have_content 'We don\'t know the source of the error.'
+          expect(error_message).to have_text 'Sorry, the PDF download was not successful'
+          expect(error_message).to have_text 'We don\'t know the source of the error.'
           expect(error_message).to have_css('a', text: 'please report it as a connection problem')
           expect(response).to have_http_status(:found) # redirects back
         end

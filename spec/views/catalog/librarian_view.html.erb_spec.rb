@@ -20,11 +20,11 @@ RSpec.describe "catalog/librarian_view" do
     it "renders the marc_view" do
       expect(rendered).to have_css('#marc_view')
 
-      expect(rendered).to have_content('August  2, 2022  4:01pm')
-      expect(rendered).to have_content('holdings_key')
-      expect(rendered).to have_content('holdings_value')
-      expect(rendered).to have_content('folio_key')
-      expect(rendered).to have_content('folio_value')
+      expect(rendered).to have_text('August  2, 2022  4:01pm')
+      expect(rendered).to have_text('holdings_key')
+      expect(rendered).to have_text('holdings_value')
+      expect(rendered).to have_text('folio_key')
+      expect(rendered).to have_text('folio_value')
     end
   end
 
@@ -36,7 +36,7 @@ RSpec.describe "catalog/librarian_view" do
     end
 
     it "renders the cocina_view" do
-      expect(rendered).to have_content('August  2, 2022  4:01pm')
+      expect(rendered).to have_text('August  2, 2022  4:01pm')
       expect(rendered).to have_css('.cocina-view')
     end
   end
@@ -48,7 +48,7 @@ RSpec.describe "catalog/librarian_view" do
     end
 
     it "indicates there is no librarian view" do
-      expect(rendered).to have_content('No librarian view available')
+      expect(rendered).to have_text('No librarian view available')
     end
   end
 end

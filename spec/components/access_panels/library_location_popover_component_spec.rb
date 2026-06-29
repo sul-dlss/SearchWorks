@@ -22,7 +22,7 @@ RSpec.describe AccessPanels::LibraryLocationPopoverComponent, type: :component d
 
     it 'does not render the button' do
       expect(page).to have_no_css('button[data-bs-content]')
-      expect(page).to have_no_content('Summary of items')
+      expect(page).to have_no_text('Summary of items')
     end
   end
 end

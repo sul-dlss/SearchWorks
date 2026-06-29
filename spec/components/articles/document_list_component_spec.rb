@@ -25,7 +25,7 @@ RSpec.describe Articles::DocumentListComponent, type: :component do
     it 'displays EdsRestrictedComponent' do
       render_inline(component)
 
-      expect(page).to have_content 'This title cannot be displayed for guests.'
+      expect(page).to have_text 'This title cannot be displayed for guests.'
       expect(page).to have_css('button', class: 'stanford-only')
     end
   end

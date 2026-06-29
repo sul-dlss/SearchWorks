@@ -18,28 +18,28 @@ RSpec.feature 'Bookmarking Items', :js do
         find('.toggle-bookmark').click
       end
 
-      expect(page).to have_content('Record saved')
+      expect(page).to have_text('Record saved')
 
       # Add another document to saved records
       within(first('.document:nth-child(2)')) do
         find('.toggle-bookmark').click
       end
 
-      expect(page).to have_content('Record saved')
+      expect(page).to have_text('Record saved')
 
       # Remove the second document from saved records
       within(first('.document:nth-child(2)')) do
         find('.toggle-bookmark').click
       end
 
-      expect(page).to have_content('Record removed')
+      expect(page).to have_text('Record removed')
 
       # Add another document to saved records
       within(all('.document').last) do
         find('.toggle-bookmark').click
       end
 
-      expect(page).to have_content('Record saved')
+      expect(page).to have_text('Record saved')
 
       visit bookmarks_path
 
@@ -100,7 +100,7 @@ RSpec.feature 'Bookmarking Items', :js do
         find('.toggle-bookmark').click
       end
 
-      expect(page).to have_content('Record removed')
+      expect(page).to have_text('Record removed')
 
       expect(page).to have_css('.active .badge', text: '2')
       expect(page).to have_css('.badge', text: '0')
@@ -151,7 +151,7 @@ RSpec.feature 'Bookmarking Items', :js do
 
       within('.modal-dialog') do
         select 'Turabian', from: 'Select format'
-        expect(page).to have_content '“Some Intersting Papers.” n.d. Imprint Statement.'
+        expect(page).to have_text '“Some Intersting Papers.” n.d. Imprint Statement.'
 
         expect(page).to have_link 'In RIS format (Zotero)', href: '/selections.ris'
         expect(page).to have_link 'To RefWorks'
@@ -164,7 +164,7 @@ RSpec.feature 'Bookmarking Items', :js do
     it "renders the page" do
       visit bookmarks_path
       expect(page).to have_css('.bookmark-counter', text: '0')
-      expect(page).to have_content "You have no saved records"
+      expect(page).to have_text "You have no saved records"
     end
   end
 end

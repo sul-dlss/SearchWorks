@@ -23,8 +23,8 @@ RSpec.describe Citations::MultipleCitationsComponent, type: :component do
 
       expect(page).to have_css 'h4', text: 'APA'
       expect(page).to have_button 'Copy'
-      expect(page).to have_content '100 years of radio in South Africa'
-      expect(page).to have_content 'Between parents'
+      expect(page).to have_text '100 years of radio in South Africa'
+      expect(page).to have_text 'Between parents'
 
       expect(page).to have_css 'h4', text: 'MLA', visible: :hidden
 

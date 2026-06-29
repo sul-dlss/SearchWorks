@@ -26,7 +26,7 @@ RSpec.describe Articles::LoginBannerComponent, type: :component do
       render_inline(component)
 
       expect(page).to have_css '.alert'
-      expect(page).to have_content 'Stanford affiliates: Log in to view all results and benefit from streamlined access to articles and more.'
+      expect(page).to have_text 'Stanford affiliates: Log in to view all results and benefit from streamlined access to articles and more.'
     end
   end
 end

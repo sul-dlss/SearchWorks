@@ -23,7 +23,7 @@ RSpec.describe Record::MarcContentAdviceComponent, type: :component do
 
     it 'creates a content warning' do
       expect(page).to have_css('.content-advice')
-      expect(page).to have_content('Warning about the content')
+      expect(page).to have_text('Warning about the content')
       expect(page).to have_css('strong', text: 'Content advice: ')
     end
   end
@@ -46,7 +46,7 @@ RSpec.describe Record::MarcContentAdviceComponent, type: :component do
 
     it 'creates a content warning' do
       expect(page).to have_css('.content-advice')
-      expect(page).to have_content('Warning about the content in some other language')
+      expect(page).to have_text('Warning about the content in some other language')
       expect(page).to have_css('strong', text: 'Content advice: ')
     end
   end

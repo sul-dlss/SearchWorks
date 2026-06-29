@@ -21,30 +21,30 @@ RSpec.feature "Course Reserve Access Point", :js do
       expect(page).to have_link "More information"
     end
 
-    expect(page).to have_content '1 - 20 of 53'
-    expect(page).to have_no_content 'Alpha course'
+    expect(page).to have_text '1 - 20 of 53'
+    expect(page).to have_no_text 'Alpha course'
     within '.sort-and-per-page' do
       click_link 'Next'
     end
 
-    expect(page).to have_content '21 - 40 of 53'
-    expect(page).to have_no_content 'Alpha course'
+    expect(page).to have_text '21 - 40 of 53'
+    expect(page).to have_no_text 'Alpha course'
 
     within '.sort-and-per-page' do
       click_link 'Next'
     end
-    expect(page).to have_content '41 - 53 of 53'
-    expect(page).to have_content 'Alpha course'
+    expect(page).to have_text '41 - 53 of 53'
+    expect(page).to have_text 'Alpha course'
 
     fill_in 'search', with: 'Knuth'
-    expect(page).to have_content '1 - 20 of 52'
+    expect(page).to have_text '1 - 20 of 52'
 
     fill_in 'search', with: ''
-    expect(page).to have_content '1 - 20 of 53'
+    expect(page).to have_text '1 - 20 of 53'
 
     click_button "Sort by course ID"
     click_link "description"
-    expect(page).to have_content 'Alpha course'
+    expect(page).to have_text 'Alpha course'
   end
 
   describe "visiting a result page" do
@@ -58,7 +58,7 @@ RSpec.feature "Course Reserve Access Point", :js do
       within(".search-area-bg") do
         expect(page).to have_css "h1", text: 'Course reserves Course(s)'
         expect(page).to have_css "h2", text: "ENGLISH-17Q-01 -- After 2001: A 21st Century Science Fiction Odyssey"
-        expect(page).to have_content 'Melissa Stevenson'
+        expect(page).to have_text 'Melissa Stevenson'
       end
 
       expect(page).to have_link "Find reserve list for another course"

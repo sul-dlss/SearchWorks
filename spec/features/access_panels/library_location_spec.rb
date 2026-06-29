@@ -84,19 +84,19 @@ RSpec.describe "Library Location Access Panel" do
       visit '/view/402381'
       click_link 'Expand'
 
-      expect(page).to have_content 'SI 8.9: 29'
-      expect(page).to have_content 'N380 .S75 V.73'
+      expect(page).to have_text 'SI 8.9: 29'
+      expect(page).to have_text 'N380 .S75 V.73'
     end
 
     it 'shows public notes' do
       visit solr_document_path '1213958'
-      expect(page).to have_content 'Note: Copy 3'
-      expect(page).to have_content 'Note: Timoshenko Collection'
+      expect(page).to have_text 'Note: Copy 3'
+      expect(page).to have_text 'Note: Timoshenko Collection'
       click_link 'Expand'
 
       within '.availability-modal' do
-        expect(page).to have_content 'Note: Copy 3'
-        expect(page).to have_content 'Note: Timoshenko Collection'
+        expect(page).to have_text 'Note: Copy 3'
+        expect(page).to have_text 'Note: Timoshenko Collection'
       end
     end
 
@@ -104,8 +104,8 @@ RSpec.describe "Library Location Access Panel" do
       visit '/view/402381'
       click_link 'Browse all 9 items'
 
-      expect(page).to have_content 'N380 .S75 V.73'
-      expect(page).to have_no_content 'SI 8.9: 29'
+      expect(page).to have_text 'N380 .S75 V.73'
+      expect(page).to have_no_text 'SI 8.9: 29'
     end
 
     it 'allows the user to search by call number' do
@@ -117,18 +117,18 @@ RSpec.describe "Library Location Access Panel" do
 
         expect(page).to have_css('.availability-modal tr:has(mark)', count: 12)
 
-        expect(page).to have_content('20 items | 2 matches').and(have_content('US Federal Documents')).and(have_content('SI 8.9: 7'))
-        expect(page).to have_content('9 items | 9 matches').and(have_content('SAL3')).and(have_content('N380 .S75 V.12'))
+        expect(page).to have_text('20 items | 2 matches').and(have_text('US Federal Documents')).and(have_text('SI 8.9: 7'))
+        expect(page).to have_text('9 items | 9 matches').and(have_text('SAL3')).and(have_text('N380 .S75 V.12'))
 
         fill_in 'Search items', with: '73'
 
-        expect(page).to have_content('20 items | 0 matches').and(have_no_content('US Federal Documents'))
-        expect(page).to have_content('9 items | 1 match').and(have_content('SAL3'))
+        expect(page).to have_text('20 items | 0 matches').and(have_no_text('US Federal Documents'))
+        expect(page).to have_text('9 items | 1 match').and(have_text('SAL3'))
 
         fill_in 'Search items', with: ''
 
-        expect(page).to have_content 'SI 8.9: 29'
-        expect(page).to have_content 'N380 .S75 V.73'
+        expect(page).to have_text 'SI 8.9: 29'
+        expect(page).to have_text 'N380 .S75 V.73'
       end
     end
 
@@ -138,7 +138,7 @@ RSpec.describe "Library Location Access Panel" do
       fill_in 'Search items', with: 'ML'
 
       within '.availability-modal' do
-        expect(page).to have_no_content('MIT Press Direct')
+        expect(page).to have_no_text('MIT Press Direct')
       end
     end
   end

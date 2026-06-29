@@ -34,37 +34,37 @@ RSpec.describe FeedbackMailer do
       end
 
       it "has the right email" do
-        expect(mail.body).to have_content "Name: Mildred Turner"
+        expect(mail.body).to have_text "Name: Mildred Turner"
       end
 
       it "has the right name" do
-        expect(mail.body).to have_content "Email: test@test.com"
+        expect(mail.body).to have_text "Email: test@test.com"
       end
 
       it "has the right host" do
-        expect(mail.body).to have_content "Host: TEST-HOST"
+        expect(mail.body).to have_text "Host: TEST-HOST"
       end
 
       it "has the right IP" do
-        expect(mail.body).to have_content "123.43.54.123"
+        expect(mail.body).to have_text "123.43.54.123"
       end
 
       it 'has the user_agent' do
-        expect(mail.body).to have_content 'agent #1'
+        expect(mail.body).to have_text 'agent #1'
       end
 
       it 'has the viewport' do
-        expect(mail.body).to have_content 'width:100 height:50'
+        expect(mail.body).to have_text 'width:100 height:50'
       end
 
       it 'has the last search' do
-        expect(mail.body).to have_content '/?q=kittenz'
+        expect(mail.body).to have_text '/?q=kittenz'
       end
 
       describe 'time' do
         it 'has the current time' do
           expect(Time.zone).to receive(:now).at_least(:once).and_return('NOW!')
-          expect(mail.body).to have_content 'Time sent: NOW!'
+          expect(mail.body).to have_text 'Time sent: NOW!'
         end
       end
     end
@@ -75,11 +75,11 @@ RSpec.describe FeedbackMailer do
       let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
 
       it "has the right email" do
-        expect(mail.body).to have_content "Name: No name given"
+        expect(mail.body).to have_text "Name: No name given"
       end
 
       it "has the right name" do
-        expect(mail.body).to have_content "Email: No email given"
+        expect(mail.body).to have_text "Email: No email given"
       end
     end
   end
@@ -117,39 +117,39 @@ RSpec.describe FeedbackMailer do
       end
 
       it 'has the right email' do
-        expect(mail.body).to have_content 'Name: Mildred Turner'
+        expect(mail.body).to have_text 'Name: Mildred Turner'
       end
 
       it 'has the right name' do
-        expect(mail.body).to have_content 'Email: test@test.com'
+        expect(mail.body).to have_text 'Email: test@test.com'
       end
 
       it 'has the right host' do
-        expect(mail.body).to have_content 'Host: TEST-HOST'
+        expect(mail.body).to have_text 'Host: TEST-HOST'
       end
 
       it 'has the right IP' do
-        expect(mail.body).to have_content '123.43.54.123'
+        expect(mail.body).to have_text '123.43.54.123'
       end
 
       it 'has the user_agent' do
-        expect(mail.body).to have_content 'agent #1'
+        expect(mail.body).to have_text 'agent #1'
       end
 
       it 'has the viewport' do
-        expect(mail.body).to have_content 'width:100 height:50'
+        expect(mail.body).to have_text 'width:100 height:50'
       end
 
       it 'has the resource name' do
-        expect(mail.body).to have_content 'Cool database'
+        expect(mail.body).to have_text 'Cool database'
       end
 
       it 'has the problem url' do
-        expect(mail.body).to have_content 'http://www.example.com/cool'
+        expect(mail.body).to have_text 'http://www.example.com/cool'
       end
 
       it 'has the message' do
-        expect(mail.body).to have_content 'Bad things'
+        expect(mail.body).to have_text 'Bad things'
       end
     end
   end
@@ -160,11 +160,11 @@ RSpec.describe FeedbackMailer do
     let(:mail) { FeedbackMailer.submit_wrong_book_cover(params, ip) }
 
     it 'includes the ip address' do
-      expect(mail.body).to have_content '123.45.67.890'
+      expect(mail.body).to have_text '123.45.67.890'
     end
 
     it 'includes the referrer url' do
-      expect(mail.body).to have_content 'http://www.example.com/view/1234'
+      expect(mail.body).to have_text 'http://www.example.com/view/1234'
     end
   end
 end
