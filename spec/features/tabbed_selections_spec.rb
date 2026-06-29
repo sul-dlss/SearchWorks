@@ -31,12 +31,12 @@ RSpec.describe 'Tabbed selections UI' do
       visit '/selections/articles?per_page=2'
       expect(page).to have_css('.document-counter', text: '1.')
       expect(page).to have_css('.document-counter', text: '2.')
-      expect(page).to have_content '1 - 2'
+      expect(page).to have_text '1 - 2'
 
       visit '/selections/articles?per_page=2&page=2'
       expect(page).to have_css('.document-counter', text: '3.')
       expect(page).to have_css('.document-counter', text: '4.')
-      expect(page).to have_content '3 - 4'
+      expect(page).to have_text '3 - 4'
     end
   end
 

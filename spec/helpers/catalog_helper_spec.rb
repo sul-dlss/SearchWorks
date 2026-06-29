@@ -31,7 +31,7 @@ RSpec.describe CatalogHelper do
       let(:document) { SolrDocument.new(id: '12345', marc_json_struct: metadata1) }
 
       it 'adds correct tech details' do
-        expect(tech_details(document)).to have_content('Catkey: 12345')
+        expect(tech_details(document)).to have_text('Catkey: 12345')
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
       end
     end
@@ -40,7 +40,7 @@ RSpec.describe CatalogHelper do
       let(:document) { SolrDocument.from_fixture('mf774fs2413.yml') }
 
       it 'adds correct tech details' do
-        expect(tech_details(document)).to have_content('DRUID: mf774fs2413')
+        expect(tech_details(document)).to have_text('DRUID: mf774fs2413')
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
       end
     end
@@ -50,7 +50,7 @@ RSpec.describe CatalogHelper do
 
       it 'adds correct tech details' do
         expect(document).to receive(:is_a_collection?).at_least(:once).and_return(true)
-        expect(tech_details(document)).to have_content('DRUID: mf774fs2413')
+        expect(tech_details(document)).to have_text('DRUID: mf774fs2413')
         expect(tech_details(document)).to have_css('a', text: 'Librarian view')
         expect(tech_details(document)).to have_css('a', text: 'Collection PURL')
       end

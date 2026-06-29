@@ -22,6 +22,6 @@ RSpec.describe Feedback::FeedbackFormFieldsComponent, type: :component do
   end
 
   it 'contains a chat with librarian section' do
-    expect(page).to have_content("Chat with a librarian")
+    expect(page).to have_text("Chat with a librarian")
   end
 end

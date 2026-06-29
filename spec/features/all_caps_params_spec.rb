@@ -9,8 +9,8 @@ RSpec.describe "Search parameters in all caps" do
     click_button 'search'
 
     within('.breadcrumb') do
-      expect(page).to have_no_content("HELLO WORLD")
-      expect(page).to have_content("hello world")
+      expect(page).to have_no_text("HELLO WORLD")
+      expect(page).to have_text("hello world")
     end
 
     text_field = find_by_id('q')

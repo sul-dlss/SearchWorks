@@ -88,11 +88,11 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
     end
 
     it "does not display request links for requestable libraries" do
-      expect(page).to have_no_content("Request")
+      expect(page).to have_no_text("Request")
     end
 
     it 'displays the callnumber with live lookup' do
-      expect(page).to have_content 'ABC 123'
+      expect(page).to have_text 'ABC 123'
       expect(page).to have_css 'turbo-frame[src="/availability/1234"]'
     end
   end

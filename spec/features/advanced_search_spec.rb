@@ -93,7 +93,7 @@ RSpec.feature "Advanced Search" do
       { field: 'search_title', type: 'any', query: 'portal topics' }
     )
 
-    expect(page).to have_content('Arctic science portal').and have_content('Aristotle : topics')
+    expect(page).to have_text('Arctic science portal').and have_text('Aristotle : topics')
   end
 
   scenario "should have search tips" do

@@ -1166,20 +1166,20 @@ RSpec.describe Librarian::ItemDetails::TableComponent, type: :component do
 
     it 'has three tables' do
       # within('table:first-of-type do # https://github.com/ViewComponent/view_component/issues/1910
-      expect(page).to have_content '36105218665789'
-      expect(page).to have_content '36105005105536'
+      expect(page).to have_text '36105218665789'
+      expect(page).to have_text '36105005105536'
       # end
       # within('table:nth-of-type(2)') do # https://github.com/ViewComponent/view_component/issues/1910
-      expect(page).to have_content '36105225598411'
-      expect(page).to have_content '36105225598403'
-      expect(page).to have_content '36105225598080'
-      expect(page).to have_content '36105226157456'
+      expect(page).to have_text '36105225598411'
+      expect(page).to have_text '36105225598403'
+      expect(page).to have_text '36105225598080'
+      expect(page).to have_text '36105226157456'
       # end
 
       # within('table:nth-of-type(3)') do # https://github.com/ViewComponent/view_component/issues/1910
-      expect(page).to have_content '36105223688552'
-      expect(page).to have_content '36105226146277'
-      expect(page).to have_content '36105226059181'
+      expect(page).to have_text '36105223688552'
+      expect(page).to have_text '36105226146277'
+      expect(page).to have_text '36105226059181'
       # end
     end
   end
@@ -1394,8 +1394,8 @@ RSpec.describe Librarian::ItemDetails::TableComponent, type: :component do
     end
 
     it "has replacement text" do
-      expect(page).to have_content 'No call number'
-      expect(page).to have_content 'No barcode'
+      expect(page).to have_text 'No call number'
+      expect(page).to have_text 'No barcode'
     end
   end
 end

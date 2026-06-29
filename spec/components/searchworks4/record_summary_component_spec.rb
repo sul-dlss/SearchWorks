@@ -14,9 +14,9 @@ RSpec.describe Searchworks4::RecordSummaryComponent, type: :component do
     let(:document) { SolrDocument.from_fixture('5488000.yml') }
 
     it "renders the description" do
-      expect(page).to have_content "The gases of swamp rice soils"
+      expect(page).to have_text "The gases of swamp rice soils"
       expect(page).to have_css "ul"
-      expect(page).to have_no_content "ul li"
+      expect(page).to have_no_text "ul li"
     end
   end
 

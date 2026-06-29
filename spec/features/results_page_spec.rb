@@ -71,8 +71,8 @@ RSpec.feature "Search Results Page" do
       visit search_catalog_path f: { access_facet: ['Online'] }, q: 'book'
       click_link 'Clear all'
 
-      expect(page).to have_content 'Search tips'
-      expect(page).to have_content 'Featured resources'
+      expect(page).to have_text 'Search tips'
+      expect(page).to have_text 'Featured resources'
       expect(page).to have_css '.sidebar'
       expect(page).to have_no_css '.search-area-image-bg'
       expect(page.current_url).not_to include(/[q|f]=/)

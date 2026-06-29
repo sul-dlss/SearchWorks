@@ -53,8 +53,8 @@ RSpec.feature 'Article Record Display' do
         click_link 'Full text'
 
         switch_to_window(windows.last)
-        expect(page).to have_content('This Journal')
-        expect(page).to have_no_content('<anid>')
+        expect(page).to have_text('This Journal')
+        expect(page).to have_no_text('<anid>')
       end
     end
 

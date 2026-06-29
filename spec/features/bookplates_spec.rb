@@ -24,7 +24,7 @@ RSpec.describe 'Bookplates' do
     it 'does not include the section when there is no bookplate data' do
       visit solr_document_path('44')
 
-      expect(page).to have_content 'The Guanches of Tenerife'
+      expect(page).to have_text 'The Guanches of Tenerife'
       expect(page).to have_no_css('h2', text: 'Acquired with support from')
       expect(page).to have_no_css('.bookplate')
     end
@@ -43,7 +43,7 @@ RSpec.describe 'Bookplates' do
       within('.bookplate-fund-masthead') do
         expect(page).to have_css('img')
         expect(page).to have_css('h1', text: 'Susan and Ruth Sharp Fund')
-        expect(page).to have_content masthead_text
+        expect(page).to have_text masthead_text
       end
 
       within('.constraint') do
@@ -58,7 +58,7 @@ RSpec.describe 'Bookplates' do
       within('.bookplate-fund-masthead') do
         expect(page).to have_css('img')
         expect(page).to have_css('h1', text: 'The Edgar Amos Boyles Centennial Book Fund')
-        expect(page).to have_content masthead_text
+        expect(page).to have_text masthead_text
       end
 
       within('.constraint') do

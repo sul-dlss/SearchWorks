@@ -47,7 +47,7 @@ RSpec.describe 'marc_fields/_linked_serials' do
 
     it 'combined arrays of links and text properly' do
       expect(subject).to have_css('dd a', text: 'Link Value1')
-      expect(subject).to have_content('Text Value2')
+      expect(subject).to have_text('Text Value2')
       expect(subject).to have_no_css('dd a', text: 'Text Value2')
       expect(subject).to have_css('dd', text: '(Link Value2)')
       expect(subject).to have_css('dd a', text: 'Link Value2')

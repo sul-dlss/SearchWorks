@@ -21,6 +21,6 @@ RSpec.describe 'marc_fields/_bound_with_note_for_access_panel' do
 
   it 'replaces the ID in the value with a link' do
     expect(subject).to have_link('12345', href: '/view/12345')
-    expect(subject).to have_content('12345 Bound With')
+    expect(subject).to have_text('12345 Bound With')
   end
 end

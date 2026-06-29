@@ -37,7 +37,7 @@ RSpec.feature "Skip-to Navigation" do
         within '.bookmark-toggle[data-document-id="20"]' do
           find('.toggle-bookmark').click
         end
-        expect(page).to have_content('Record saved') # rubocop:disable RSpec/ExpectInHook
+        expect(page).to have_text('Record saved') # rubocop:disable RSpec/ExpectInHook
 
         visit bookmarks_path
       end

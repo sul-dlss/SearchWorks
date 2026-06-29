@@ -9,8 +9,8 @@ RSpec.describe "Special Quotes" do
     click_button 'search'
 
     within('.breadcrumb') do
-      expect(page).to have_content '"stuff"'
-      expect(page).to have_no_content '『stuff』'
+      expect(page).to have_text '"stuff"'
+      expect(page).to have_no_text '『stuff』'
     end
   end
 end
