@@ -24,8 +24,8 @@
               </td>
               <td class="me-2 file-icon">
                 <%= render_resource_icon collection_member.document_formats %><span class="ms-1"><%= resource_icon_value collection_member.document_formats %></span>
-                <% if collection_member[:pub_date] %>
-                  <span class="main-title-date">(<%= collection_member[:pub_date] %>)</span>
+                <% if collection_member[:pub_year_ss] %>
+                  <span class="main-title-date">(<%= collection_member[:pub_year_ss] %>)</span>
                 <% end %>
               </td>
               <td>
