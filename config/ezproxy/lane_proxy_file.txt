@@ -285,6 +285,7 @@ bmcurol.biomedcentral.com
 bmcvetres.biomedcentral.com
 bmcwomenshealth.biomedcentral.com
 bmczool.biomedcentral.com
+bmjimmunology.bmj.com
 bmjleader.bmj.com
 bmjopen.bmj.com
 bmjopengastro.bmj.com
@@ -471,6 +472,7 @@ degruyter.com
 deposit.d-nb.de
 deposit.ddb.de
 deposit.dnb.de
+dergipark.org.tr
 dermatology.mhmedical.com
 dfg-viewer.de
 diabetes.jmir.org
@@ -2651,6 +2653,7 @@ www.socialexplorer.com
 www.socialismonfilm.amdigital.co.uk
 www.socio.com
 www.soshoo.com
+www.soulsjournal.org
 www.spandidos-publications.com
 www.sphinxsai.com
 www.spiedigitallibrary.org
