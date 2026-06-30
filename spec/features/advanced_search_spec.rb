@@ -58,6 +58,35 @@ RSpec.feature "Advanced Search" do
     )
   end
 
+  context 'when switching between advanced search results and articles search' do
+    before do
+      stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+    end
+
+    it 'removes clause params', :js do
+      find_all('.search-field').first.click
+      find('[role="listbox"] li:nth-child(2)').click
+      fill_in 'Title search term', with: 'Image title'
+      fill_in 'All fields search term', with: 'Cats'
+
+      page.driver.browser.execute_script("document.querySelector('form').submit()")
+      expect(page).to have_css('.blacklight-catalog-index')
+      uri = URI.parse(page.current_url)
+      query = Rack::Utils.parse_nested_query(uri.query).with_indifferent_access
+
+      expect(query['clause'].values).to include(
+        { field: 'search_title', type: 'all', query: 'Image title' },
+        { field: 'search', type: 'all', query: 'Cats' }
+      )
+
+      find_by_id('searchTypeArticle').click
+      expect(page).to have_no_css('.advanced-search-link')
+      click_button 'Search'
+
+      expect(page).to have_current_path('/articles?f%5Beds_search_limiters_facet%5D%5B%5D=Direct+access+to+full+text&search_field=search&q=')
+    end
+  end
+
   it 'submits the form with the filter parameters', :js do
     find_field('Access').send_keys 'Onl'
     find('[role="listbox"] li', text: 'Online').click
