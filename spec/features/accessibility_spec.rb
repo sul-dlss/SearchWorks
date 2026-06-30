@@ -22,6 +22,14 @@ RSpec.describe 'Site Accessibility', :js do
       end
     end
 
+    context 'with results that display a request button' do
+      before { visit search_catalog_path q: 'soils' }
+
+      it 'is accessible' do
+        expect(page).to be_accessible.within('main')
+      end
+    end
+
     context 'with zero results' do
       before { visit search_catalog_path q: 'sdfsda', search_field: 'search_author' }
 
