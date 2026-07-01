@@ -19,7 +19,7 @@ class PerformanceCheck < OkComputer::Check
   end
 end
 
-class OkapiCheck < OkComputer::Check
+class OkapiCheck < OkComputer::Check # rubocop:disable Style/OneClassPerFile
   def check
     if FolioClient.new.ping
       mark_message 'Connected to OKAPI'

@@ -23,7 +23,7 @@ RSpec.feature 'Article Searching' do
       end
 
       expect(page).to have_css('h1', text: 'The title of the document')
-      expect(current_url).to match(%r{/articles/abc123})
+      expect(current_url).to include('/articles/abc123')
     end
 
     scenario 'abstracts are truncated', :js do

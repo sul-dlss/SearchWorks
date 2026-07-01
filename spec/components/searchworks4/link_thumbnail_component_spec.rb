@@ -43,7 +43,7 @@ RSpec.describe Searchworks4::LinkThumbnailComponent, type: :component do
       render_inline(component)
 
       expect(page).to have_css('img.stacks-image')
-      expect(page.first('img.stacks-image')['src']).to match(%r{iiif/abc123/full})
+      expect(page.first('img.stacks-image')['src']).to include('iiif/abc123/full')
       expect(page).to have_no_css('.document-thumbnail .fake-cover')
     end
 
