@@ -153,7 +153,7 @@ RSpec.describe SearchWorksRecordMailer do
       let(:mail) { SearchWorksRecordMailer.full_email_record(documents, params, url_params) }
 
       it 'sends a html email' do
-        expect(mail.content_type).to match(/text\/html/)
+        expect(mail.content_type).to include('text/html')
       end
 
       it 'includes full HTML markup' do

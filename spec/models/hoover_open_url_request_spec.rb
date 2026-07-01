@@ -22,13 +22,13 @@ RSpec.describe HooverOpenUrlRequest do
 
   describe '#to_url' do
     it 'joins the configured base url and the params hash as a query string' do
-      expect(url.to_url).to match(/aeon\.dll\?Action=10&Form=20&ItemAuthor=Arbitrary/)
+      expect(url.to_url).to include('aeon.dll?Action=10&Form=20&ItemAuthor=Arbitrary')
     end
   end
 
   describe '#to_param' do
     it 'is delegated to the params hash' do
-      expect(url.to_param).to match(/&ReferenceNumber=abc123&Value=GenericRequestMonograph/)
+      expect(url.to_param).to include('&ReferenceNumber=abc123&Value=GenericRequestMonograph')
     end
   end
 

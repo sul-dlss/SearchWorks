@@ -74,7 +74,7 @@ RSpec.describe "Emailing Records", :js do
           email = ActionMailer::Base.deliveries.last
           email_subject = email.subject.to_s
           email_body = Capybara.string(email.body.to_s)
-          expect(email_subject).to match(/The title/)
+          expect(email_subject).to include('The title')
           expect(email_body).to have_link(href: %r{articles/123})
         end
       end

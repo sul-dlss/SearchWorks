@@ -18,22 +18,22 @@ RSpec.describe RequestLinkHelper do
   describe '#request_url' do
     it 'returns a url including the catkey' do
       link = request_url(document, library: 'library', location: 'location')
-      expect(link).to match(/item_id=1234/)
+      expect(link).to include('item_id=1234')
     end
 
     it 'returns a url including the library' do
       link = request_url(document, library: 'library', location: 'location')
-      expect(link).to match(/origin=library/)
+      expect(link).to include('origin=library')
     end
 
     it 'returns a url including the location' do
       link = request_url(document, library: 'library', location: 'location')
-      expect(link).to match(/origin_location=location/)
+      expect(link).to include('origin_location=location')
     end
 
     it 'returns a url including any other provided parameters' do
       link = request_url(document, library: 'library', location: 'location', foo: 'bar')
-      expect(link).to match(/foo=bar/)
+      expect(link).to include('foo=bar')
     end
   end
 end

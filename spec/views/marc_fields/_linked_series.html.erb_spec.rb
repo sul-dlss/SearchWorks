@@ -31,8 +31,8 @@ RSpec.describe 'marc_fields/_linked_series' do
 
   it 'links the (stripped) link value as a phrase search to the search_series search field' do
     expect(subject).to have_css('dd a', text: 'The Link Value')
-    expect(subject.first('a')['href']).to match(/q=%22The\+Link\+Value%22/)
-    expect(subject.first('a')['href']).to match(/search_field=search_series/)
+    expect(subject.first('a')['href']).to include('q=%22The+Link+Value%22')
+    expect(subject.first('a')['href']).to include('search_field=search_series')
   end
 
   it 'included the extra text after the link' do

@@ -18,7 +18,7 @@ RSpec.describe CallnumberSearch do
     end
 
     it "downcases the q parameter" do
-      expect(params[:q]).to match /abc 123/
+      expect(params[:q]).to include('abc 123')
       expect(params[:q]).not_to include "ABC"
     end
     it "quotes the q parameter" do
