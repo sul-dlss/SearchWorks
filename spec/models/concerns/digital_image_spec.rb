@@ -19,7 +19,7 @@ RSpec.describe 'Image object' do
 
       it 'constructs the appropriate stacks url stripping of .jp2' do
         expect(subject.image_urls.length).to eq 1
-        expect(subject.image_urls.first).to match(%r{/image/iiif/abc123%2Fxyz321/})
+        expect(subject.image_urls.first).to include('/image/iiif/abc123%2Fxyz321/')
       end
     end
 

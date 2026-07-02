@@ -36,24 +36,24 @@ RSpec.describe StacksImages do
 
     context 'when a druid is present in the image id' do
       it 'returns the image url using the image id directly' do
-        expect(subject.craft_image_url(image_id: 'druid123%2Ffile-123.jp2')).to match(%r{iiif/druid123%2Ffile-123/})
+        expect(subject.craft_image_url(image_id: 'druid123%2Ffile-123.jp2')).to include('iiif/druid123%2Ffile-123/')
       end
     end
 
     describe 'size' do
       context 'when not passed' do
         it 'uses the default size' do
-          expect(subject.craft_image_url(image_id: '123456')).to match(%r{/123456/full/80,80/})
+          expect(subject.craft_image_url(image_id: '123456')).to include('/123456/full/80,80/')
         end
       end
 
       context 'when passed' do
         it 'uses the given size' do
-          expect(subject.craft_image_url(image_id: '12345', size: :large)).to match(%r{/full/!400,400/})
+          expect(subject.craft_image_url(image_id: '12345', size: :large)).to include('/full/!400,400/')
         end
 
         it 'uses the default size if given an invalid size' do
-          expect(subject.craft_image_url(image_id: '123456')).to match(%r{/full/80,80/})
+          expect(subject.craft_image_url(image_id: '123456')).to include('/full/80,80/')
         end
       end
     end

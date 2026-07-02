@@ -46,7 +46,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
     it 'links to the article_fulltext_link route instead of "detail"' do
       link = page.find('li a')
       expect(link['href']).not_to include('detail')
-      expect(link['href']).to match(%r{abc123\/pdf\/fulltext})
+      expect(link['href']).to include('abc123/pdf/fulltext')
     end
 
     it 'the list item has the stanford-only class' do

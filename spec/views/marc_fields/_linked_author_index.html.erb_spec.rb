@@ -15,7 +15,7 @@ RSpec.describe 'marc_fields/_linked_author_index' do
     let(:target) { :creator }
 
     it 'does not render the label' do
-      expect(rendered).not_to match(/Author\/Creator/)
+      expect(rendered).not_to include('Author/Creator')
     end
 
     it 'renders link, search, and post_text correctly' do
@@ -27,7 +27,7 @@ RSpec.describe 'marc_fields/_linked_author_index' do
     end
 
     it 'included the extra text after the link' do
-      expect(rendered).to match(/author\. Author/)
+      expect(rendered).to include('author. Author')
     end
   end
 
@@ -39,7 +39,7 @@ RSpec.describe 'marc_fields/_linked_author_index' do
     let(:target) { :corporate_author }
 
     it 'does not render the label' do
-      expect(rendered).not_to match(/Corporate Author/)
+      expect(rendered).not_to include('Corporate Author')
     end
 
     it 'renders link, search, and post_text correctly' do
@@ -51,7 +51,7 @@ RSpec.describe 'marc_fields/_linked_author_index' do
     end
 
     it 'included the extra text after the link' do
-      expect(rendered).to match(/author, issuing body\. Art copyist/)
+      expect(rendered).to include('author, issuing body. Art copyist')
     end
   end
 
@@ -73,7 +73,7 @@ RSpec.describe 'marc_fields/_linked_author_index' do
     let(:target) { :meeting }
 
     it 'does not render label' do
-      expect(rendered).not_to match(/Meeting/)
+      expect(rendered).not_to include('Meeting')
     end
 
     it 'renders link, search, and post_text correctly' do
@@ -90,7 +90,7 @@ RSpec.describe 'marc_fields/_linked_author_index' do
     end
 
     it 'included the extra text after the link' do
-      expect(rendered).to match(/creator\. Other/)
+      expect(rendered).to include('creator. Other')
     end
   end
 end

@@ -20,7 +20,7 @@ RSpec.describe Imprint do
 
   it 'does not include subfields that should not be displayed' do
     expect(subject.values.length).to eq 1
-    expect(subject.values.first).not_to match(/SubZ/)
+    expect(subject.values.first).not_to include('SubZ')
   end
 
   it 'is labeled Imprint' do

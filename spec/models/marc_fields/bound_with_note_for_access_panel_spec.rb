@@ -31,7 +31,7 @@ RSpec.describe BoundWithNoteForAccessPanel do
   describe 'preprocessors' do
     it 'removes any fields that do not include a $c' do
       expect(subject.values.length).to eq 1
-      expect(subject.values.first[:value]).not_to match(/A 590 that does not have \$c/)
+      expect(subject.values.first[:value]).not_to include('A 590 that does not have $c')
     end
   end
 end

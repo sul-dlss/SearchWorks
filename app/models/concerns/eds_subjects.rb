@@ -35,7 +35,7 @@ module EdsSubjects
     end
 
     def to_s
-      terms.map(&:to_s).join(' -- ')
+      terms.join(' -- ')
     end
 
     def to_html

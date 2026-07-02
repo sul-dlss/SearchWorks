@@ -26,11 +26,11 @@ RSpec.describe Holdings::MHLD do
   end
 
   it "replaces '),(' with '), ('" do
-    expect(Holdings::MHLD.new(special_mhld).public_note).to match(/\), \(/)
+    expect(Holdings::MHLD.new(special_mhld).public_note).to include('), (')
   end
 
   it "replaces ',' with ', '" do
-    expect(Holdings::MHLD.new(special_mhld).public_note).to match(/no\.17, no\.14/)
+    expect(Holdings::MHLD.new(special_mhld).public_note).to include('no.17, no.14')
   end
 
   it "replaces ';' with '; '" do
