@@ -3874,6 +3874,7 @@
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
       "availabilityClass": "Offsite",
+      "pageMediationGroupKey": "SPEC-COLL",
       "pageServicePointCodes": "SPEC"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -3885,8 +3886,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:20.486+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:20.486+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-07-02T03:59:51.184+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {

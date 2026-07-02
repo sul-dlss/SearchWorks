@@ -157,7 +157,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 3b562a08-66ee-4839-86b6-e9b08d07f375,Art PAGE-AR,ART-PAGE-AR,SU,SUL,ART,Ask at circulation desk,true,false,ART,ART,,,,,,,,,,,,,,,,
 3bba3b30-22be-4bf9-8b7a-96caf31b7c80,Law New Books,LAW-NEWBOOK,SU,LAW,LAW,New books shelf,true,false,LAW,LAW,,,,,,,,,,,,,,,,
 3c4db814-f0e7-4119-a14c-5909953608a6,Music Tech Shadowed,MUS-SHADOW,SU,SUL,MUSIC,Ask at circulation desk,true,false,MUSIC,MUSIC,,,,,,,,,,,,,,,,
-3cbd5559-5ca9-473e-8d7d-98a67bff29f5,SAL3 PAGE-SP,SAL3-PAGE-SP,SU,SUL,SAL3,For use in Special Collections Reading Room,true,false,SAL3,SAL3,,,,,,SPEC,,Offsite,,,,,,,,
+3cbd5559-5ca9-473e-8d7d-98a67bff29f5,SAL3 PAGE-SP,SAL3-PAGE-SP,SU,SUL,SAL3,For use in Special Collections Reading Room,true,false,SAL3,SAL3,,,,,SPEC-COLL,SPEC,,Offsite,,,,,,,,
 3ceb1ba8-fa7a-46b5-9712-31be762653fd,Music Processing Circ,MUS-PROCESSING-CIRC,SU,SUL,MUSIC,Ask at circulation desk,true,false,MUSIC,MUSIC,,,,,,,,,,,,,,,,
 3d54bc2b-6d87-42a4-a915-4fc918a224e0,Lane Acquisitions,LANE-ACQ,SU,MED,LANE,Lane Acquisitions,true,false,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,,
 3d8166aa-9f44-4187-8d79-a257929729bf,East Asia Shelved Elsewhere,EAL-SEE-OTHER,SU,SUL,EAST-ASIA,Individual volumes catalogued separately,true,false,EAST-ASIA,EAST-ASIA,,,,,,,,,,,,,,,,
