@@ -51,6 +51,12 @@
     <% if content_for?(:body_attributes) %>
       <%= content_for(:body_attributes) %>
     <% end %>>
+    <div
+      data-controller="asset-version"
+      data-asset-version-url-value="<%= asset_version_path %>"
+      data-asset-version-revision-value="<%= Settings.REVISION %>"
+      data-asset-version-loaded-at-value="<%= Time.current.to_i %>"
+    ></div>
     <%= render blacklight_config.skip_link_component.new do %>
       <%= content_for(:skip_links) %>
     <% end %>
