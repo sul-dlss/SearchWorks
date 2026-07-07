@@ -13,7 +13,10 @@ export default class extends Controller {
   scrollToCurrentDocument(e) {
     if (e.target.parentElement != this.containerTarget) return
 
-    scrollOver(this.currentDocumentTarget(), this.containerTarget)
+    const currentDocument = this.currentDocumentTarget()
+    if (!currentDocument) return
+
+    scrollOver(currentDocument, this.containerTarget)
   }
 
   currentDocumentTarget() {
