@@ -91,6 +91,8 @@ export default class extends Controller {
   }
 
   movePointer(targetCenter, leftBound, rightBound) {
+    if (!this.previewOutlet.hasArrowTarget) return
+
     const pointerWidth = 21
     const arrowLeft = targetCenter - pointerWidth
 
