@@ -17,6 +17,7 @@ academic.eb.com
 academic.oup.com
 academicjournals.org
 acamh.onlinelibrary.wiley.com
+access.heinonline.com
 access.newspaperarchive.com
 access.ovid.com
 access.portico.org
@@ -1292,7 +1293,6 @@ proceedings.spiedigitallibrary.org
 profiles.nlm.nih.gov
 projecteuclid.org
 projections.pubpub.org
-prola.aps.org
 proquest.safaribooksonline.com
 proteomesci.biomedcentral.com
 proview.thomsonreuters.com
@@ -1987,7 +1987,6 @@ www.epjap.org
 www.eplasty.com
 www.epschinadata.com
 www.epw.in
-www.epwrfits.in
 www.erudit.org
 www.esaim-cocv.org
 www.esaim-m2an.org
