@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
   root to: "catalog#index"
 
+  get "asset_version" => "asset_version#show", as: :asset_version
+
   # redirect Symphony-migrated FOLIO HRIDs to their original Symphony URLs
   constraints(id: /a\d+/) do
     get '/view/:id', to: redirect { |path_params, _req| "/view/#{path_params[:id].delete_prefix('a')}" }
