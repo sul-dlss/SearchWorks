@@ -76,6 +76,8 @@ export default class extends Controller {
   }
 
   movePointer(targetCenter) {
+    if (!this.currentGalleryCard.previewOutlet.hasArrowTarget) return
+
     const pointerWidth = 21
     const arrowLeft = targetCenter - pointerWidth
     this.currentGalleryCard.previewOutlet.arrowTarget.style.left = arrowLeft + "px"
