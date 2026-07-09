@@ -979,6 +979,7 @@ jphys.journaldephysique.org
 jphyscol.journaldephysique.org
 jphysiolanthropol.biomedcentral.com
 jphyslet.journaldephysique.org
+jpllnet.sfsu.edu
 jpma.org.pk
 jpro.springeropen.com
 jramc.bmj.com
@@ -1018,6 +1019,7 @@ leginfo.legislature.ca.gov
 leprev.ilsl.br
 lib.ugent.be
 libguides.heinonline.org
+libproxy.uwyo.edu
 libraries.ase.org.uk
 libraries.casalini.it
 library.cqpress.com
@@ -1191,7 +1193,6 @@ omicsonline.com
 ommbid.mhmedical.com
 oncology.lwwhealthlibrary.com
 oncologyreviews.org
-ondemand.metopera.org
 onehealthoutlook.biomedcentral.com
 online.boneandjoint.org.uk
 online.lexi.com
@@ -1600,6 +1601,7 @@ womensmidlifehealthjournal.biomedcentral.com
 worldscholar.galegroup.com
 worldtradelaw.net
 worldwidescience.org
+wsuproxy.mnpals.net
 ww1.cpa-apc.org
 www-fars.nhtsa.dot.gov
 www-krpia-co-kr.stanford.idm.oclc.org
