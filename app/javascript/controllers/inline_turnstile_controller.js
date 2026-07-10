@@ -87,11 +87,47 @@ export default class extends Controller {
       body: JSON.stringify({ cf_turnstile_response: token })
     })
 
-    const result = await response.json().catch(() => {
-      throw new Error(
+    const responseBody = await response.text()
+    let result
+
+    try {
+      result = JSON.parse(responseBody)
+    } catch {
+      const error = new Error(
         `Invalid JSON in response from ${this.challengePathValue}: ${response.statusText}`
       )
-    })
+      const context = {
+        challenge_path: this.challengePathValue,
+        csrf_meta_tag_present: Boolean(csrfToken),
+        csrf_token_present: Boolean(csrfToken?.content),
+        cookies_enabled: window.navigator.cookieEnabled,
+        current_origin: window.location.origin,
+        embedded_in_frame: window.self !== window.top,
+        page_age_seconds: Math.round(window.performance.now() / 1000),
+        response_body_preview: responseBody.slice(0, 1000).replace(/\s+/g, " ").trim(),
+        response_content_type: response.headers.get("content-type"),
+        response_redirected: response.redirected,
+        response_request_id: response.headers.get("x-request-id"),
+        response_status: response.status,
+        response_status_text: response.statusText,
+        response_url: response.url
+      }
+
+      if (window.Honeybadger) {
+        window.Honeybadger.notify(error, {
+          name: "InvalidTurnstileChallengeResponse",
+          component: "inline_turnstile_controller",
+          action: "handleChallengeResponse",
+          context,
+          tags: ["turnstile", "challenge-response"]
+        })
+      } else {
+        console.error(error, context)
+      }
+
+      return
+    }
+
     if (result["success"] == true) {
       turnstile.remove()
       this.challengeTarget.className = ""
