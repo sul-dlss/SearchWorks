@@ -18,7 +18,6 @@ academic.oup.com
 academicjournals.org
 acamh.onlinelibrary.wiley.com
 access.heinonline.com
-access.newspaperarchive.com
 access.ovid.com
 access.portico.org
 access.torrossa.com
@@ -2749,7 +2748,6 @@ www.vjel.org
 www.vjultrafast.org
 www.vr-elibrary.de
 www.wageningenacademic.com
-www.washingtonpost.com
 www.webofscience.com
 www.who.int
 www.wikidoc.org
