@@ -12,12 +12,15 @@
                 embed_provider: Settings.PURL_EMBED_PROVIDER,
                 managed_purl_target: 'button',
                 action: 'click->managed-purl#switchItem'
-            }, class: 'p-0 btn w-100 h-100 text-start text-decoration-none')  do %>
+            }, class: 'p-0 btn text-start text-decoration-none d-flex align-items-start text-break')  do %>
               <% if purl.file_id %>
-                <img src="<%= document.craft_image_url(image_id: purl.file_id, size: :rect_thumbnail) %>" class="me-2">
+                <span class="me-2 img-column">
+                  <img class="object-fit-contain w-100 h-100" src="<%= document.craft_image_url(image_id: purl.file_id, size: :rect_thumbnail) %>">
+                </span>
               <% end %>
-
-              <%= purl.part_label(index: i + 1) %>
+              <span class="align-self-center">
+                <%= purl.part_label(index: i + 1) %>
+              </span>
             <% end %>
           </li>
         <% end %>

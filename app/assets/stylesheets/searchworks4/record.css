@@ -100,6 +100,12 @@
       --bs-border-color: var(--stanford-cardinal);
     }
 
+    .img-column {
+      flex: 0 0 104px; /* column is exactly 104px wide, never grows or shrinks */
+      width: 104px;
+      height: 104px;
+    }
+
     img {
       background-color: var(--stanford-fog-light);
     }
