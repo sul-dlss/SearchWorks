@@ -115,7 +115,6 @@ app.wileydigitalarchives.com
 applied-informatics-j.springeropen.com
 appliedcr.biomedcentral.com
 appliedsciencecommons.net
-appmicro.springeropen.com
 apps.ama-assn.org
 apps.apple.com
 apps.bea.gov
@@ -167,7 +166,6 @@ awwa.onlinelibrary.wiley.com
 babel.hathitrust.org
 bac-lac.on.worldcat.org
 bacandrology.biomedcentral.com
-basicandappliedzoology.springeropen.com
 basictranslational.onlinejacc.org
 bdj.pensoft.net
 behavioralandbrainfunctions.biomedcentral.com
@@ -401,7 +399,6 @@ clinicalmovementdisorders.biomedcentral.com
 clinicalproteomicsjournal.biomedcentral.com
 clinicalsarcomaresearch.biomedcentral.com
 clinician.nejm.org
-clinphytoscience.springeropen.com
 clintransmed.springeropen.com
 clockss.org
 cmajopen.ca
@@ -412,7 +409,6 @@ cmm.mazums.ac.ir
 cnjournal.biomedcentral.com
 cocatalog.loc.gov
 cognet.mit.edu
-cognitiveresearchjournal.springeropen.com
 collections.nlm.nih.gov
 collections.plos.org
 coloproctol.org
@@ -586,9 +582,6 @@ ejb.springeropen.com
 ejfs.springeropen.com
 ejhi.springeropen.com
 ejhp.bmj.com
-ejim.springeropen.com
-ejnmmipharmchem.springeropen.com
-ejnpn.springeropen.com
 ejns.springeropen.com
 ejrnm.springeropen.com
 electronicimaging.spiedigitallibrary.org
@@ -680,7 +673,6 @@ genomeintegrity.biomedcentral.com
 genomemedicine.biomedcentral.com
 genomics.senescence.info
 genominfo.org
-geochemicaltransactions.springeropen.com
 geoscienceworld.org
 gh.bmj.com
 ghr.nlm.nih.gov
@@ -862,7 +854,6 @@ jbiomedsem.biomedcentral.com
 jbuon.com
 jcannabisresearch.biomedcentral.com
 jcb.rupress.org
-jcheminf.springeropen.com
 jcmr-online.biomedcentral.com
 jcompassionatehc.biomedcentral.com
 jcp.bmj.com
@@ -983,7 +974,6 @@ jpma.org.pk
 jpro.springeropen.com
 jramc.bmj.com
 jrms.mui.ac.ir
-jrobio.springeropen.com
 jsava.co.za
 jsedres.geoscienceworld.org
 jsedres.sepmonline.org
