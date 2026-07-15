@@ -1314,7 +1314,7 @@
     "renewable": true,
     "renewalsPolicy": {
       "numberAllowed": 2.0,
-      "renewFromId": "SYSTEM_DATE"
+      "renewFromId": "CURRENT_DUE_DATE"
     },
     "requestManagement": {
       "recalls": {
@@ -1338,8 +1338,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:49:47.717+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:47.717+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-07-14T18:30:01.058+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
@@ -1580,8 +1580,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:49:53.834+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:53.834+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-07-14T18:33:45.122+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
@@ -1754,7 +1754,7 @@
     "renewable": true,
     "renewalsPolicy": {
       "numberAllowed": 2.0,
-      "renewFromId": "SYSTEM_DATE"
+      "renewFromId": "CURRENT_DUE_DATE"
     },
     "requestManagement": {
       "recalls": {
@@ -1778,8 +1778,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:49:56.419+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:56.419+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-07-14T18:31:58.428+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
