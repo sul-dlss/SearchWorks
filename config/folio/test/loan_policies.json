@@ -1088,13 +1088,13 @@
     "renewable": true,
     "renewalsPolicy": {
       "numberAllowed": 4.0,
-      "renewFromId": "SYSTEM_DATE"
+      "renewFromId": "CURRENT_DUE_DATE"
     },
     "metadata": {
       "createdDate": "2023-08-10T18:49:55.138+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T18:49:55.138+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-07-15T17:27:40.654+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
