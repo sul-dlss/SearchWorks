@@ -12901,6 +12901,31 @@
     }
   },
   {
+    "id": "d44d013d-5769-49aa-9ebc-8334044950e4",
+    "name": "SUL Born Digital Preservation Lab",
+    "code": "SUL-BORNDIGITAL-PRESLAB",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "c1a86906-ced0-46cb-8f5b-8cef542bdd00",
+    "details": {
+      "availabilityClass": "In_process"
+    },
+    "primaryServicePoint": "68002733-5923-46db-acc7-3d18cbf30870",
+    "servicePointIds": [
+      "68002733-5923-46db-acc7-3d18cbf30870"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-07-17T01:14:07.971+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-07-17T01:14:07.971+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "d4d319ae-6310-419f-8f90-1b03f952aa44",
     "name": "Spec Shelved Elsewhere",
     "code": "SPEC-SEE-OTHER",
