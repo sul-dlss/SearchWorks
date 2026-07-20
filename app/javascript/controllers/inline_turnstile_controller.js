@@ -87,6 +87,12 @@ export default class extends Controller {
       body: JSON.stringify({ cf_turnstile_response: token })
     })
 
+    // A long-lived page may have a CSRF token from an expired or replaced session.
+    if (response.status === 422) {
+      window.location.reload()
+      return
+    }
+
     const responseBody = await response.text()
     let result
 
