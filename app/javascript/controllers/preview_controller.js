@@ -34,13 +34,15 @@ export default class extends Controller {
   }
 
   appendFrame() {
+    if (this.hasFrameTarget) return
+
     const frame = document.createElement("turbo-frame")
-    frame.setAttribute("data-preview-target", "frame")
     frame.setAttribute("data-preview-target", "frame")
     this.element.appendChild(frame)
   }
 
   reset() {
+    if (!this.hasFrameTarget) return
     this.frameTarget.innerHTML = ""
   }
 
@@ -49,6 +51,7 @@ export default class extends Controller {
       this.reset()
       this.idValue = id
       this.urlValue = url
+      this.appendFrame()
       this.frameTarget.setAttribute("id", `preview_${this.idValue}`)
       this.frameTarget.setAttribute("src", this.urlValue)
     }
