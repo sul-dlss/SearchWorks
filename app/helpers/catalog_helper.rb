@@ -12,7 +12,7 @@ module CatalogHelper
     url = availability_path(document)
 
     tag.div(data: { 'inline-turnstile-target': ('frame' unless immediate) }) do
-      turbo_frame_tag "availability_#{dom_id(document)}", src: immediate ? url : Base64.encode64(url), disabled: !immediate, **attr
+      turbo_frame_tag "availability_#{dom_id(document)}", src: immediate ? url : Base64.urlsafe_encode64(url), disabled: !immediate, **attr
     end
   end
 
