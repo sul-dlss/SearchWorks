@@ -34,6 +34,10 @@ class ArticlesController < ApplicationController
 
     search_state.params['f'] ||= {}
     search_state.params['f']['eds_search_limiters_facet'] ||= ['Direct access to full text']
+
+    # remove advanced search params which only works in the catalog
+    # https://github.com/sul-dlss/SearchWorks/issues/6376
+    search_state.params.delete('clause')
   end
 
   around_action :manage_eds_session_token
