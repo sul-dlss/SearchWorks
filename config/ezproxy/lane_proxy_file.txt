@@ -468,7 +468,6 @@ degruyter.com
 deposit.d-nb.de
 deposit.ddb.de
 deposit.dnb.de
-dergipark.org.tr
 dermatology.mhmedical.com
 dfg-viewer.de
 diabetes.jmir.org
@@ -834,6 +833,7 @@ j-dac.jp
 jaapl.org
 jacketsearch.tandf.co.uk
 jaclinicalreports.springeropen.com
+jacobin.com
 jad.tums.ac.ir
 jag.igr.poznan.pl
 jalm.aaccjnls.org
@@ -2644,7 +2644,6 @@ www.socialexplorer.com
 www.socialismonfilm.amdigital.co.uk
 www.socio.com
 www.soshoo.com
-www.soulsjournal.org
 www.spandidos-publications.com
 www.sphinxsai.com
 www.spiedigitallibrary.org
