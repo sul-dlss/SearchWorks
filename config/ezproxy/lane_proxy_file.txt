@@ -1009,7 +1009,7 @@ learnmem.cshlp.org
 leginfo.legislature.ca.gov
 leprev.ilsl.br
 lib.ugent.be
-libguides.heinonline.org
+libguides.heinonline.com
 libproxy.uwyo.edu
 libraries.ase.org.uk
 libraries.casalini.it
