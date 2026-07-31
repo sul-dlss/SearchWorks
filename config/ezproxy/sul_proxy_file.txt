@@ -131,6 +131,7 @@ beva.onlinelibrary.wiley.com
 bianjiang.ancientbooks.cn
 bib.eastview.com
 bibliographies.brillonline.com
+bibliographies.brill.com
 biblioscout.net
 big5.oversea.cnki.net
 biocyc.org
