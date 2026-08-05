@@ -1221,6 +1221,7 @@ osf.io
 ousar.lib.okayama-u.ac.jp
 ovarianresearch.biomedcentral.com
 oversea.cnki.net
+ovid.biocyc.org
 ovidsp.dc2.ovid.com
 ovidsp.ovid.com
 oxford.universitypressscholarship.com
@@ -1326,6 +1327,7 @@ pubs.lib.umn.edu
 pubs.nctm.org
 pubs.rsc.org
 pubs.rsna.org
+pubsapp.acs.org
 pubsonline.informs.org
 purl.access.gpo.gov
 purl.fdlp.gov
