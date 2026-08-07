@@ -227,6 +227,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,periodical,,,,,ARS-SAL3-STACKS,No loan,Allow paging/hold,Default notice,No fines,$65 lost fee
 ,newspaper,,,,,MEDIA-SER-PROCESSING,No loan,No requests allowed,Send No Notices,No fines,$100 lost fee
 ,newspaper,,,,,SAL3-PAGE-EA or SAL3-PAGE-GR or SAL3-PAGE-SP,No loan,Allow paging,Send No Notices,No fines,$100 lost fee
+,multimedia,,,,,SPEC-RWC-MEDIA,No loan,No requests allowed,Default notice,No fines,$600 lost fee
 ,multimedia,,,,,SCI-ATCIRCDESK,7day-1renew-1daygrace,No requests allowed,Default notice,No fines,$200 lost fee book
 ,multimedia,,,,,SAL3-PAGE-MU-CIRC,28day-2renew-7daygrace,Allow All,Default notice,No fines,$225 lost fee
 ,multimedia,,,,,SAL3-PAGE-MP,7day-norenew-1daygrace,Allow All,Default notice,No fines,$500 lost fee
