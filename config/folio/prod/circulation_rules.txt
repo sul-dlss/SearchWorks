@@ -496,6 +496,7 @@ m 794de86f-ecbc-45ad-b790-f30eb19797ec : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 
     /science atcircdesk has books and CD ROms. While books circ CD ROMS do not
     s 920e71ee-5ea3-4934-a878-7fe64b1fc8fc : l 5866e82c-ab61-4628-85d4-ee1497b0d3c8 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n c4ec90cb-1139-4c59-a690-9de48c4e3fd6 o bba172e9-eb78-4471-a4a7-08761fbdfff9 i f96e7828-4c47-4c3f-be2d-189bef9fba7a 
         g a8fabc39-4646-44e2-9640-2ef1b9f2de1a : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n c4ec90cb-1139-4c59-a690-9de48c4e3fd6 o bba172e9-eb78-4471-a4a7-08761fbdfff9 i f96e7828-4c47-4c3f-be2d-189bef9fba7a
+    s a6da8c71-4c39-4180-8300-b131effba8e7 : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe n c4ec90cb-1139-4c59-a690-9de48c4e3fd6 o bba172e9-eb78-4471-a4a7-08761fbdfff9 i 1c1ff8ee-646f-4a39-8625-f08d763ced7f  
 
 /NEWSPAPERS
 m 5df0f5e3-2e36-4dc7-979c-88705a9103a4 : l 34ea18bb-f71f-4f22-85b3-71b981d57db2 r 8a58b9d6-855d-49bb-9a16-8b409e590dfe  n 122b3d2b-4788-4f1e-9117-56daa91cb75c o bba172e9-eb78-4471-a4a7-08761fbdfff9 i bb338f23-67e1-4e34-ab8d-a861b3c9879a    
