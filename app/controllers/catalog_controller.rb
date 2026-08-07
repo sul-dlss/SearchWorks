@@ -29,6 +29,7 @@ class CatalogController < ApplicationController
 
   include Blacklight::Ris::Catalog
   include Blacklight::TokenBasedUser # For refworks export of multiple records
+  include ModernBrowsers
 
   before_action only: :index do
     if params[:page] && params[:page].to_i > Settings.PAGINATION_THRESHOLD.to_i
