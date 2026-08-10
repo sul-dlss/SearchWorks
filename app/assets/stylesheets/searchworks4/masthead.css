@@ -3,8 +3,9 @@
     --sul-link-font-weight: 600;
   }
 
-  .h1 {
+  .h1 a {
     --sul-link-font-weight: 300;
+    font-weight: var(--sul-link-font-weight);
     --bs-link-color-rgb: var(--stanford-cardinal-rgb);
     --bs-link-hover-color-rgb: var(--stanford-cardinal-rgb);
   }
