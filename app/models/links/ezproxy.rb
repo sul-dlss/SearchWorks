@@ -34,14 +34,15 @@ class Links
       if apply_law_proxy_prefix?
         Settings.libraries.LAW.ezproxy_host
       elsif apply_lane_proxy_prefix?
-        Settings.libraries['LANE'].ezproxy_host
+        Settings.libraries.LANE.ezproxy_host
       elsif apply_sul_proxy_prefix?
         Settings.libraries.default.ezproxy_host
       end
     end
 
     def apply_law_proxy_prefix?
-      libraries.include?('LAW') &&
+      (link.link_text.downcase.include?('law library') || libraries.include?('LAW')) &&
+        libraries.include?('LAW') &&
         ezproxied_hosts['LAW'].any?(link_host)
     end
 
