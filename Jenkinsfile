@@ -195,11 +195,11 @@ pipeline {
     stage('gryphon uat/preview deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'preview_gryphon'
-        BRANCH = '4879-autocomplete'
+        BRANCH = 'mcp-server'
       }
 
       when {
-        branch "4879-autocomplete"
+        branch "mcp-server"
       }
 
       steps {
