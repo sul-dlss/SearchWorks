@@ -1204,7 +1204,6 @@ openbioresources.metajnl.com
 openhealthdata.metajnl.com
 openheart.bmj.com
 openhypertensionjournal.com
-openknowledge.worldbank.org
 openlibrary.org
 openres.ersjournals.com
 openscience.bmj.com
