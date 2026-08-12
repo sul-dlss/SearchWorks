@@ -42,7 +42,6 @@ class Links
 
     def apply_law_proxy_prefix?
       (link.link_text.downcase.include?('law library') || libraries.include?('LAW')) &&
-        libraries.include?('LAW') &&
         ezproxied_hosts['LAW'].any?(link_host)
     end
 
