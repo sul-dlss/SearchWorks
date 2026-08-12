@@ -10861,6 +10861,32 @@
     }
   },
   {
+    "id": "b902510f-48ea-417f-9dfa-65c0aed85d0a",
+    "name": "Art Locked Stacks Flat",
+    "code": "ART-LOCKED-FLAT",
+    "discoveryDisplayName": "Locked stacks (Flat)",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART",
+      "pageServicePointCodes": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-08-11T20:09:54.204+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-08-11T20:09:54.204+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "b96a3a7a-a4a2-42e3-845c-7a35f18c04e5",
     "name": "Earth Sci Withdrawn Digital Substitute",
     "code": "EAR-WD-DIGITAL-SUB",
