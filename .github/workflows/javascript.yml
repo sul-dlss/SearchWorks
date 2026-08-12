@@ -1,4 +1,4 @@
-name: JavaScript Linting
+name: JavaScript
 
 on:
   pull_request:
@@ -6,23 +6,26 @@ on:
       - '**/*.js'
       - 'package.json'
       - 'yarn.lock'
-      - '.eslintrc.json'
-      - '.github/workflows/javascript-linter.yml'
+      - 'eslint.config.js'
+      - '.github/workflows/javascript.yml'
 
 jobs:
-  eslint:
+  javascript:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
           node-version: '20'
           cache: 'yarn'
-          
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        
+
       - name: Run ESLint
         run: yarn lint
+
+      - name: Run JavaScript tests
+        run: npm test
