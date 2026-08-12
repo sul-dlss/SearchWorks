@@ -43,7 +43,9 @@ RSpec.feature "Advanced Search" do
 
   it 'submits the form with the search parameters', :js do
     find_all('.search-field').first.click
-    find('[role="listbox"] li:nth-child(2)').click
+    find('[role="listbox"] li', text: 'Title', exact_text: true).click
+    expect(page).to have_css('.search-field', text: 'Title')
+    expect(page).to have_no_css('.MuiModal-root', visible: :all)
     fill_in 'Title search term', with: 'Image title'
     fill_in 'All fields search term', with: 'Cats'
 
@@ -76,11 +78,14 @@ RSpec.feature "Advanced Search" do
   it 'gets the expected results for an advanced search query with contains any', :js do
     # Switch the first field to "Title"
     find_all('.search-field').first.click
-    find('[role="listbox"] li:nth-child(2)').click
+    find('[role="listbox"] li', text: 'Title', exact_text: true).click
+    expect(page).to have_css('.search-field', text: 'Title')
+    expect(page).to have_no_css('.MuiModal-root', visible: :all)
 
     # Switch the operator to "contains any"
     find_all('.search-operator').first.click
-    find('[role="listbox"] li:nth-child(2)').click
+    find('[role="listbox"] li', text: 'Contains any (OR)', exact_text: true).click
+    expect(page).to have_css('.search-operator', text: 'Contains any (OR)')
 
     fill_in 'Title search term', with: 'portal topics'
 
