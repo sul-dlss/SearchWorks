@@ -31,6 +31,7 @@
     "build:dev": "esbuild app/javascript/searchworks4.js app/javascript/searchworks4-adv-search.js --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
     "build:css": "sass ./app/assets/stylesheets/searchworks4.scss:./app/assets/builds/searchworks4.css --no-source-map --quiet-deps --load-path=node_modules",
     "lint": "eslint app/javascript/",
-    "lint:fix": "eslint app/javascript/ --fix"
+    "lint:fix": "eslint app/javascript/ --fix",
+    "test": "node --test spec/javascript/*.test.js"
   }
 }

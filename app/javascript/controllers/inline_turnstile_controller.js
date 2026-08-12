@@ -5,7 +5,7 @@ export default class extends Controller {
   static values = { challengePath: String, siteKey: String, status: Boolean }
 
   connect() {
-    let cfTurnstileElement = this.element.querySelector('.cf-turnstile')
+    let cfTurnstileElement = this.element.querySelector(".cf-turnstile")
 
     if (window.turnstile && cfTurnstileElement) {
       turnstile.render(cfTurnstileElement, { sitekey: this.siteKeyValue })
@@ -29,6 +29,10 @@ export default class extends Controller {
   }
 
   convertFrame(frame) {
+    // A frame restored from the browser's back/forward cache may already have
+    // been decoded and enabled before Stimulus reconnects this controller.
+    if (!frame?.hasAttribute("disabled")) return
+
     frame.src = atob(frame.src)
     frame.removeAttribute("disabled")
   }
