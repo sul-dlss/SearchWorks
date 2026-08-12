@@ -3,6 +3,14 @@
 require 'rails_helper'
 
 RSpec.feature "Advanced Search" do
+  def select_mui_option(select_element, option)
+    select_element.click
+    expect(page).to have_css('.MuiPopover-paper', style: { transform: 'none' })
+    find('[role="listbox"] li', text: option, exact_text: true).click
+    expect(select_element).to have_text(option)
+    expect(page).to have_no_css('.MuiModal-root', visible: :all)
+  end
+
   before do
     visit advanced_search_path
   end
@@ -14,15 +22,18 @@ RSpec.feature "Advanced Search" do
 
     expect(page).to have_css('.search-field', text: 'All fields', count: 2)
 
-    find_all('.search-field').first.click
+    first_search_field = first('.search-field')
+    first_search_field.click
     expect(page).to have_css '[role="listbox"] li', text: "All fields"
     expect(page).to have_css '[role="listbox"] li', text: "Title"
     expect(page).to have_css '[role="listbox"] li', text: "Author"
     expect(page).to have_css '[role="listbox"] li', text: "Subject"
     expect(page).to have_css '[role="listbox"] li', text: "Call number"
     expect(page).to have_css '[role="listbox"] li', text: "Series"
+    expect(page).to have_css('.MuiPopover-paper', style: { transform: 'none' })
     find('[role="listbox"] li:nth-child(2)').click
-    expect(page).to have_css('.search-field', text: 'Title', count: 1)
+    expect(first_search_field).to have_text('Title')
+    expect(page).to have_no_css('.MuiModal-root', visible: :all)
 
     click_on 'Add search terms'
     expect(page).to have_css('.search-field', count: 3)
@@ -42,10 +53,7 @@ RSpec.feature "Advanced Search" do
   end
 
   it 'submits the form with the search parameters', :js do
-    find_all('.search-field').first.click
-    find('[role="listbox"] li', text: 'Title', exact_text: true).click
-    expect(page).to have_css('.search-field', text: 'Title')
-    expect(page).to have_no_css('.MuiModal-root', visible: :all)
+    select_mui_option(first('.search-field'), 'Title')
     fill_in 'Title search term', with: 'Image title'
     fill_in 'All fields search term', with: 'Cats'
 
@@ -77,15 +85,10 @@ RSpec.feature "Advanced Search" do
 
   it 'gets the expected results for an advanced search query with contains any', :js do
     # Switch the first field to "Title"
-    find_all('.search-field').first.click
-    find('[role="listbox"] li', text: 'Title', exact_text: true).click
-    expect(page).to have_css('.search-field', text: 'Title')
-    expect(page).to have_no_css('.MuiModal-root', visible: :all)
+    select_mui_option(first('.search-field'), 'Title')
 
     # Switch the operator to "contains any"
-    find_all('.search-operator').first.click
-    find('[role="listbox"] li', text: 'Contains any (OR)', exact_text: true).click
-    expect(page).to have_css('.search-operator', text: 'Contains any (OR)')
+    select_mui_option(first('.search-operator'), 'Contains any (OR)')
 
     fill_in 'Title search term', with: 'portal topics'
 
