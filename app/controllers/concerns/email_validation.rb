@@ -40,6 +40,6 @@ module EmailValidation
   def verify_recaptcha_if_no_user
     return true if current_user.present?
 
-    verify_recaptcha(action: 'email')
+    verify_recaptcha(action: 'email', minimum_score: 0.5)
   end
 end
