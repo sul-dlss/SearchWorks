@@ -41,7 +41,7 @@ class FeedbackFormsController < ApplicationController
   def valid?
     errors = []
 
-    errors << 'You must pass the reCAPTCHA challenge' if current_user.blank? && !verify_recaptcha(action: 'feedback')
+    errors << 'You must pass the reCAPTCHA challenge' if current_user.blank? && !verify_recaptcha(action: 'feedback', minimum_score: 0.5)
 
     if params[:message].nil? or params[:message] == ""
       errors << "A message is required"
