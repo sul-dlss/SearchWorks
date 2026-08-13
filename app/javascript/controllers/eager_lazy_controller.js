@@ -27,7 +27,9 @@ export default class extends Controller {
   }
 
   eagerLazyLoad(n = 1) {
-    this.frameTargets.filter(frame => frame.loading == "lazy" && !frame.attributes.complete).slice(0, n).forEach(frame => {
+    this.frameTargets.filter(frame => (
+      frame.loading == "lazy" && !frame.hasAttribute("complete") && !frame.hasAttribute("busy")
+    )).slice(0, n).forEach(frame => {
       frame.loading = "eager"
       delete frame.dataset.eagerLazyTarget
     })
@@ -36,7 +38,7 @@ export default class extends Controller {
   }
 
   garbageCollectOtherFrameTargets() {
-    this.frameTargets.filter(frame => frame.loading != "lazy" || frame.attributes.complete).forEach(frame => {
+    this.frameTargets.filter(frame => frame.loading != "lazy" || frame.hasAttribute("complete")).forEach(frame => {
       delete frame.dataset.eagerLazyTarget
     })
 
