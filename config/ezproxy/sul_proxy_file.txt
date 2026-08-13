@@ -66,6 +66,7 @@ anthrosource.onlinelibrary.wiley.com
 aocs.onlinelibrary.wiley.com
 aornjournal.onlinelibrary.wiley.com
 aplm.kglmeridian.com
+app.candid.org
 app.harpweek.com
 app.jove.com
 app.knovel.com
