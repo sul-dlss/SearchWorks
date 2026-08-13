@@ -4,6 +4,7 @@ import test from "node:test"
 import EagerLazyController from "../../app/javascript/controllers/eager_lazy_controller.js"
 
 const eagerLazyLoad = EagerLazyController.prototype.eagerLazyLoad
+const frameWillLoad = EagerLazyController.prototype.frameWillLoad
 
 const buildFrame = ({ loading = "lazy", busy = false, complete = false } = {}) => ({
   loading,
@@ -34,4 +35,15 @@ test("eagerLazyLoad does not restart a lazy frame that Turbo is already loading"
 
   assert.equal(frame.loading, "lazy")
   assert.equal(frame.dataset.eagerLazyTarget, "frame")
+})
+
+test("frameWillLoad removes a frame from the queue before Turbo marks it busy", () => {
+  const frame = buildFrame()
+  const controller = buildController([frame])
+
+  frameWillLoad.call(controller, { target: frame })
+  eagerLazyLoad.call(controller)
+
+  assert.equal(frame.loading, "lazy")
+  assert.equal(frame.dataset.eagerLazyTarget, undefined)
 })
