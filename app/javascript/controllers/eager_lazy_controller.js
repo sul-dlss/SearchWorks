@@ -26,9 +26,18 @@ export default class extends Controller {
     }
   }
 
+  frameWillLoad(event) {
+    // Turbo dispatches this before it marks the frame busy. Stop scheduling the
+    // frame immediately so changing its loading style cannot restart the fetch.
+    delete event.target.dataset.eagerLazyTarget
+  }
+
   eagerLazyLoad(n = 1) {
     this.frameTargets.filter(frame => (
-      frame.loading == "lazy" && !frame.hasAttribute("complete") && !frame.hasAttribute("busy")
+      frame.dataset.eagerLazyTarget == "frame" &&
+      frame.loading == "lazy" &&
+      !frame.hasAttribute("complete") &&
+      !frame.hasAttribute("busy")
     )).slice(0, n).forEach(frame => {
       frame.loading = "eager"
       delete frame.dataset.eagerLazyTarget
