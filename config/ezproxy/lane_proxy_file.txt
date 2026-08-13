@@ -369,6 +369,7 @@ cellandbioscience.biomedcentral.com
 cellandchromosome.biomedcentral.com
 celljournal.org
 cellregeneration.springeropen.com
+cen.acs.org
 ceramics.onlinelibrary.wiley.com
 cerebellumandataxias.biomedcentral.com
 cgejournal.biomedcentral.com
@@ -2352,7 +2353,6 @@ www.lyellcollection.org
 www.magonlinelibrary.com
 www.maizegdb.org
 www.managedhealthcareconnect.com
-www.maneyonline.com
 www.manu.edu.mk
 www.marketresearch.amdigital.co.uk
 www.massobservation.amdigital.co.uk
