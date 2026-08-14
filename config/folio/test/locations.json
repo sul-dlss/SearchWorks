@@ -7784,6 +7784,31 @@
     }
   },
   {
+    "id": "83b2fda5-214c-4437-b66e-97651eef3421",
+    "name": "Green Google Scanning On-Campus",
+    "code": "GRE-GOOGLE-SCANNING-ONCAMPUS",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+      "availabilityClass": "In_process"
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-08-11T00:43:04.942+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-08-11T00:43:04.942+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "83d9b015-df36-4eb4-b8f3-0098f54d68b4",
     "name": "Art Locked Stacks Medium",
     "code": "ART-LOCKED-MEDIUM",
@@ -12900,6 +12925,31 @@
     }
   },
   {
+    "id": "d433a9e6-88fc-4f86-bf33-5904c5c543bc",
+    "name": "SAL3 Google Scanning",
+    "code": "SAL3-GOOGLE-SCANNING",
+    "discoveryDisplayName": "In process",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
+    "details": {
+      "availabilityClass": "In_process"
+    },
+    "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
+    "servicePointIds": [
+      "3a306665-eec7-4a40-8f4d-608585b2a394"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-08-11T00:43:54.211+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-08-11T00:43:54.211+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "d444c783-1064-44e0-b930-cea6615a44d8",
     "name": "Rumsey W7 Stacks Medium",
     "code": "RUM-W7-STK-MD",
@@ -13361,6 +13411,32 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:49.107+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "dd3dec7f-8710-4e83-90b1-73635c14a7ad",
+    "name": "Art Locked Stacks Flat",
+    "code": "ART-LOCKED-FLAT",
+    "discoveryDisplayName": "Locked stacks (Flat)",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "2926c7ed-ed36-4385-8503-58cd6cee73e8",
+    "details": {
+      "pageMediationGroupKey": "ART",
+      "pageServicePointCodes": "ART"
+    },
+    "primaryServicePoint": "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca",
+    "servicePointIds": [
+      "77cd12ac-2de8-4d13-99a0-f6b3b4f4bdca"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-08-11T20:11:48.648+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-08-11T20:11:48.648+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
