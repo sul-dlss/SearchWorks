@@ -539,7 +539,7 @@ d4d319ae-6310-419f-8f90-1b03f952aa44,Spec Shelved Elsewhere,SPEC-SEE-OTHER,SU,SU
 d50c3151-3532-4e6d-a1d3-7a8fe6cf4fdc,Lane Spec: Display,LANE-WKSTD,SU,MED,LANE,Medical History Center: By appointment,true,false,LANE-DESK,LANE-DESK,,,,,,,https://lane.stanford.edu/med-history/contact.html,,,,,,,,,
 d59b21e4-a2c9-48ed-916c-edf91ab49741,Media Withdrawn,MEDIA-WITHDRAWN,SU,SUL,MEDIA-CENTER,Ask at Media Center desk,true,false,MEDIA-CENTER,MEDIA-CENTER,,,,,,,,,,,,,,,,
 d5fd6401-4df7-4d59-9ed8-73716f079899,SAL EAL Sets,SAL-EAL-SETS,SU,SUL,SAL,East Asia Big Sets,true,false,SAL,SAL,,,GREEN,,,,,Offsite,true,,,,,,,
-d6349eca-00c6-4d97-ace1-21338c1cc691,Science Shelved by Title,SCI-SHELBYTITLE,SU,SUL,SCIENCE,Serials,true,false,SCIENCE,SCIENCE,,,,,,,,,,,,,,,,Shelved by title
+d6349eca-00c6-4d97-ace1-21338c1cc691,Science Shelved by Title,SCI-SHELBYTITLE,SU,SUL,SCIENCE,Serials,true,false,SCIENCE,SCIENCE,,,GREEN,,,,,,,,,,,,,Shelved by title
 d73b9dcf-c18a-45f2-ac08-a61aca9b5b26,Green migration error,GRE-MIGRATE-ERR,SU,SUL,GREEN,Error during migration,true,false,GREEN-LOAN,GREEN-LOAN,,,,,,,,,,,,,,,,
 d7dbee55-c788-4dd3-806e-8028ccaf01a4,Law Reserves,LAW-CRES,SU,LAW,LAW,On reserve: Law Teaming room,true,false,LAW,LAW,,,,,,,,,,true,,,,,,
 d8dcbee8-4a1a-4ae2-b650-1f06170c8a69,Spec Sal Robinson,SPEC-SAL-ROBINSON,SU,SUL,SPEC-COLL,Robinson Collection,true,false,SPEC,SPEC,,,,,,,,,,,,,,,,

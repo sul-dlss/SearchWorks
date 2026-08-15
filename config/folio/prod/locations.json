@@ -13136,7 +13136,8 @@
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "e8068690-b2c9-433b-83ac-3bdfd6427e1a",
     "details": {
-      "shelvedByText": "Shelved by title"
+      "shelvedByText": "Shelved by title",
+      "scanServicePointCode": "GREEN"
     },
     "primaryServicePoint": "50ef1036-06d3-48ef-9048-26cabfccf630",
     "servicePointIds": [
@@ -13147,7 +13148,7 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:12.377+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2025-08-02T00:46:13.829+00:00",
+      "updatedDate": "2026-08-14T15:50:31.826+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
