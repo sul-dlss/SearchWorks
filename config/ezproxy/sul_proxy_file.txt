@@ -282,6 +282,7 @@ dictionaries.brillonline.com
 dictionary.doe.utoronto.ca
 dictionary.oed.com
 differences.dukejournals.org
+digi.bib.uni-mannheim.de
 digital-library.theiet.org
 digital.asahi.com
 digital.casalini.it
