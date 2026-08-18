@@ -12,8 +12,10 @@ module FormatParamsMapping
   def map_format_params
     return unless params.dig(:f, :format_main_ssim)
 
+    legacy_formats = params[:f].expect(format_main_ssim: [])
+
     params[:f][:format_hsim] ||= []
-    params[:f][:format_hsim] += params.dig(:f, :format_main_ssim).map { |f| legacy_format_data_mapping[f] || f }
+    params[:f][:format_hsim] += legacy_formats.map { |format| legacy_format_data_mapping[format] || format }
     params[:f].delete(:format_main_ssim)
   end
 
