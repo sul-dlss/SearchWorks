@@ -41,10 +41,12 @@ class McpController < ApplicationController
       name: "searchworks",
       title: "SearchWorks Stanford Library Search",
       version: "1.0.0",
-      instructions: "Use these tools to search Stanford University Libraries catalog and article databases. " \
-                    "The catalog search finds books, journals, media, and other physical/digital materials. " \
-                    "The article search finds scholarly articles and publications.",
-      tools: [catalog_tool, article_tool],
+      instructions: "Choose the search tool that matches the requested material; do not call both unless the user " \
+                    "asks for both. Use catalog_search_tool for books, journals as whole publications, databases, " \
+                    "media, archives, maps, and other catalog materials. Use article_search_tool for individual " \
+                    "scholarly, journal, or newspaper articles. Use the corresponding get tool only when detailed " \
+                    "metadata is needed for a selected result. Cite the canonical SearchWorks URL returned by tools.",
+      tools: [catalog_tool, article_tool, catalog_record_tool, article_record_tool],
       server_context: {
         controller: self,
         request_id: request.uuid
@@ -65,12 +67,27 @@ class McpController < ApplicationController
     end
   end
 
+  def catalog_record_tool
+    build_tool(SearchworksMcp::Tools::GET_CATALOG_RECORD) do |arguments, context|
+      SearchworksMcp::CatalogRecord.fetch(controller: context&.dig(:controller), **arguments)
+    end
+  end
+
+  def article_record_tool
+    build_tool(SearchworksMcp::Tools::GET_ARTICLE) do |arguments, _context|
+      SearchworksMcp::ArticleRecord.fetch(**arguments)
+    end
+  end
+
   def build_tool(definition, &search)
     schema = definition[:input_schema]
     Class.new(MCP::Tool).tap do |tool|
       tool.tool_name definition[:name]
       tool.description definition[:description]
       tool.input_schema(schema.is_a?(Proc) ? schema.call : schema)
+      output_schema = definition[:output_schema]
+      tool.output_schema(output_schema.is_a?(Proc) ? output_schema.call : output_schema) if output_schema
+      tool.annotations(definition[:annotations]) if definition[:annotations]
       tool.define_singleton_method(:call) do |**arguments|
         context = arguments.delete(:server_context)
         result = search[arguments, context]
