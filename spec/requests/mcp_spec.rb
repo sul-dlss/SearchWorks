@@ -24,6 +24,22 @@ RSpec.describe 'MCP endpoint' do
       post '/mcp', params: body.to_json, headers: { 'Content-Type' => 'application/json' }
     end
 
+    describe 'tools/list' do
+      it 'advertises distinct read-only catalog and article tools with output schemas' do
+        post_mcp(jsonrpc: '2.0', id: '1', method: 'tools/list', params: {})
+
+        expect(response).to have_http_status(:ok)
+        tools = response.parsed_body.dig('result', 'tools').index_by { |tool| tool['name'] }
+        expect(tools.keys).to contain_exactly(
+          'catalog_search_tool', 'article_search_tool', 'get_catalog_record', 'get_article'
+        )
+        expect(tools.values).to all(include('annotations' => include('readOnlyHint' => true)))
+        expect(tools.values).to all(include('outputSchema' => include('type' => 'object')))
+        expect(tools['catalog_search_tool']['description']).to include('Use article_search_tool instead')
+        expect(tools['article_search_tool']['description']).to include('Use catalog_search_tool instead')
+      end
+    end
+
     describe 'tools/call catalog_search_tool' do
       context 'with a plain query (no filters)' do
         it 'returns a successful result' do
@@ -55,6 +71,28 @@ RSpec.describe 'MCP endpoint' do
           expect(body.dig('result', 'content', 0, 'text')).not_to include("controller_name")
           expect(body.dig('result', 'content', 0, 'text')).to include('No results found')
         end
+      end
+    end
+
+    describe 'tools/call get_catalog_record' do
+      it 'returns detailed catalog metadata from the selected result' do
+        allow(SearchworksMcp::CatalogRecord).to receive(:fetch).and_return(
+          text: "A catalog record\nURL: https://searchworks.stanford.edu/view/123",
+          structured_content: {
+            id: '123', title: 'A catalog record', url: 'https://searchworks.stanford.edu/view/123',
+            metadata: { authors: ['An Author'] }
+          }
+        )
+
+        post_mcp(
+          jsonrpc: '2.0', id: '1', method: 'tools/call',
+          params: { name: 'get_catalog_record', arguments: { id: '123' } }
+        )
+
+        expect(response).to have_http_status(:ok)
+        expect(response.parsed_body.dig('result', 'structuredContent')).to include(
+          'id' => '123', 'url' => 'https://searchworks.stanford.edu/view/123'
+        )
       end
     end
   end
