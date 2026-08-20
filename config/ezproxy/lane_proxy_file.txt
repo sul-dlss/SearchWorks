@@ -106,6 +106,7 @@ apjai-journal.org
 apjcn.nhri.org.tw
 aplm.kglmeridian.com
 apn.mhmedical.com
+app.candid.org
 app.deweydata.io
 app.gideononline.com
 app.jove.com
@@ -478,6 +479,7 @@ diagnosticpathology.biomedcentral.com
 diagnprognres.biomedcentral.com
 dialogue.ias.ac.in
 dictybase.org
+digi.bib.uni-mannheim.de
 digital-library.theiet.org
 digital.bib-bvb.de
 digital.casalini.it
@@ -1175,7 +1177,6 @@ oeis.org
 oem.bmj.com
 ogscience.org
 ohsonline.com
-ojin.nursingworld.org
 ojphi.org
 ojrd.biomedcentral.com
 ojvr.org
@@ -1663,6 +1664,7 @@ www.ajronline.org
 www.ajtmh.org
 www.ajts.org
 www.akademiai.com
+www.akjournals.com
 www.al-monitor.com
 www.ala.org
 www.allelopathyjournal.com
@@ -2588,7 +2590,6 @@ www.rpe.org.in
 www.rrh.org.au
 www.rsc.org
 www.rsfjournal.org
-www.rsna.org
 www.ruralneuropractice.com
 www.sage-hindawi.com
 www.sapj.co.za
