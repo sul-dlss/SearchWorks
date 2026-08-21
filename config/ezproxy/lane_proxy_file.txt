@@ -111,6 +111,7 @@ app.deweydata.io
 app.gideononline.com
 app.jove.com
 app.knovel.com
+app.kortext.com
 app.simplyanalytics.com
 app.wileydigitalarchives.com
 applied-informatics-j.springeropen.com
@@ -1938,7 +1939,6 @@ www.earticle.net
 www.eastindiacompany.amdigital.co.uk
 www.ebi.ac.uk
 www.ebm-journal.org
-www.ebooks.iospress.nl
 www.ecmjournal.org
 www.ecoamericas.com
 www.economist.com
@@ -2430,7 +2430,6 @@ www.netread.com
 www.neue-politische-literatur.tu-darmstadt.de
 www.neuroanatomy.org
 www.neurology.org
-www.neurologyindia.com
 www.neurosurgicalatlas.com
 www.newday.com
 www.newswise.com
