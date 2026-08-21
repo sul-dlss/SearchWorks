@@ -38,6 +38,8 @@
         revision: '<%= Settings.REVISION %>'
       })
       Honeybadger.beforeNotify((notice) => {
+        Object.assign(notice.context, window.searchworksFrontendErrorContext?.())
+
         if ("TurnstileError" === notice.name) {
           return false
         }
