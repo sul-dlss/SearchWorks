@@ -1260,7 +1260,6 @@ physoc.onlinelibrary.wiley.com
 pilotfeasibilitystudies.biomedcentral.com
 piracy.ssrc.org
 plantmethods.biomedcentral.com
-platform.marketintelligence.spglobal.com
 play.google.com
 pm.nlx.com
 pmj.bmj.com
