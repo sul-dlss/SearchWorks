@@ -32,7 +32,7 @@ module SearchworksMcp
         author: field_value(document, %w[author_person_display author_person_full_display]),
         format: field_value(document, %w[format format_main_ssim]),
         pub_date: field_value(document, %w[pub_date pub_year_tisim]),
-        url: "https://searchworks.stanford.edu/view/#{id}",
+        url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(id.to_s)}",
         library: field_value(document, ["library"]),
         call_number: field_value(document, ["callnum_display"])
       }.compact

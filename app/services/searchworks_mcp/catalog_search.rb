@@ -5,6 +5,9 @@ module SearchworksMcp
   module CatalogSearch
     extend self
 
+    MAX_QUERY_LENGTH = 1000
+    MAX_FILTER_VALUE_LENGTH = 500
+
     SEARCH_FIELDS = {
       "all_fields" => "search",
       "title" => "search_title",
@@ -16,7 +19,9 @@ module SearchworksMcp
       properties = {
         query: {
           type: "string",
-          description: "The search query to find materials in the catalog"
+          description: "The search query to find materials in the catalog",
+          minLength: 1,
+          maxLength: MAX_QUERY_LENGTH
         },
         search_field: {
           type: "string",
@@ -33,11 +38,11 @@ module SearchworksMcp
         }
       }
       facet_properties = facet_options.transform_values do |options|
-        { type: "string", description: options[:description] }
+        { type: "string", description: options[:description], maxLength: MAX_FILTER_VALUE_LENGTH }
       end
       properties[:filters] = filter_schema(facet_properties) if facet_properties.any?
 
-      { properties: properties, required: ["query"] }
+      { properties: properties, required: ["query"], additionalProperties: false }
     end
 
     def search(query:, search_field: "all_fields", rows: 10, filters: {}, controller: nil)
@@ -54,11 +59,7 @@ module SearchworksMcp
         config: config
       )
     rescue StandardError => e
-      {
-        text: "Error searching catalog: #{e.message}",
-        structured_content: { error: e.message },
-        error: true
-      }
+      SearchworksMcp.internal_tool_error(e, public_message: "Catalog search is temporarily unavailable.")
     end
 
     private

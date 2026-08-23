@@ -5,22 +5,20 @@ module SearchworksMcp
   module CatalogRecord
     extend self
 
+    MAX_ID_LENGTH = 255
+
     def fetch(id:, controller: nil)
       document = search_service(controller).fetch(id)
       result = {
         id: document.id.to_s,
         title: scalar(document, "title_display", "title_full_display") || "Untitled",
-        url: "https://searchworks.stanford.edu/view/#{document.id}",
+        url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(document.id.to_s)}",
         metadata: metadata(document)
       }
 
       { text: record_text(result), structured_content: result }
     rescue StandardError => e
-      {
-        text: "Error retrieving catalog record: #{e.message}",
-        structured_content: { error: e.message },
-        error: true
-      }
+      SearchworksMcp.internal_tool_error(e, public_message: "Catalog record retrieval is temporarily unavailable.")
     end
 
     private

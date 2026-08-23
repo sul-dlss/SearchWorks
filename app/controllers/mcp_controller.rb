@@ -23,17 +23,15 @@ class McpController < ApplicationController
     headers.each { |name, value| response.set_header(name, value) }
     self.response_body = body
   rescue StandardError => e
-    Rails.logger.error "MCP Error: #{e.class} - #{e.message}"
-    Rails.logger.error e.backtrace.join("\n")
+    SearchworksMcp.report_exception(e, context: { request_id: request.uuid })
     render json: {
       jsonrpc: "2.0",
       id: nil,
       error: {
         code: -32603,
-        message: "Internal error: #{e.message}"
+        message: "Internal server error"
       }
     }, status: :internal_server_error
-    Honeybadger.notify(e)
   end
 
   private
@@ -43,6 +41,12 @@ class McpController < ApplicationController
   end
 
   def create_mcp_server
+    configuration = MCP::Configuration.new(
+      exception_reporter: lambda do |exception, context|
+        SearchworksMcp.report_exception(exception, context: context)
+      end,
+      validate_tool_call_results: true
+    )
     MCP::Server.new(
       name: "searchworks",
       title: "SearchWorks Stanford Library Search",
@@ -61,7 +65,8 @@ class McpController < ApplicationController
       server_context: {
         controller: self,
         request_id: request.uuid
-      }
+      },
+      configuration: configuration
     )
   end
 
@@ -101,9 +106,13 @@ class McpController < ApplicationController
       tool.define_singleton_method(:call) do |**arguments|
         context = arguments.delete(:server_context)
         result = search[arguments, context]
+        text = SearchworksMcp.sanitize_output(result[:text].to_s)
+        structured_content = SearchworksMcp.sanitize_output(result[:structured_content])
+        content = [{ type: "text", text: text }]
+        content << { type: "text", text: JSON.generate(structured_content) } if structured_content
         MCP::Tool::Response.new(
-          [{ type: "text", text: result[:text] }],
-          structured_content: result[:structured_content],
+          content,
+          structured_content: structured_content,
           error: result[:error] || false
         )
       end
