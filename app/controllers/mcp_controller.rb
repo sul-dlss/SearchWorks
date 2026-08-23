@@ -11,7 +11,7 @@ class McpController < ApplicationController
   # Handle MCP requests with the SDK's Streamable HTTP transport.
   def index
     mcp_server = create_mcp_server
-    transport = MCP::Server::Transports::StreamableHTTPTransport.new(
+    transport = SearchworksMcp::StreamableHttpTransport.new(
       mcp_server,
       stateless: true,
       allowed_hosts: Settings.MCP_ALLOWED_HOSTS,
