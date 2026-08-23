@@ -3,18 +3,25 @@
 require 'mcp'
 
 # MCP Controller - HTTP interface for Model Context Protocol functionality
-# Uses the official MCP::Server#handle_json method for proper MCP compliance
 class McpController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_default_response_format
 
   # POST /mcp
-  # Handle MCP JSON-RPC requests via HTTP
+  # Handle MCP requests with the SDK's Streamable HTTP transport.
   def index
     mcp_server = create_mcp_server
-    response_json = mcp_server.handle_json(request.body.read)
+    transport = MCP::Server::Transports::StreamableHTTPTransport.new(
+      mcp_server,
+      stateless: true,
+      allowed_hosts: Settings.MCP_ALLOWED_HOSTS,
+      allowed_origins: Settings.MCP_ALLOWED_ORIGINS
+    )
+    status, headers, body = transport.handle_request(request)
 
-    render json: response_json
+    self.status = status
+    headers.each { |name, value| response.set_header(name, value) }
+    self.response_body = body
   rescue StandardError => e
     Rails.logger.error "MCP Error: #{e.class} - #{e.message}"
     Rails.logger.error e.backtrace.join("\n")

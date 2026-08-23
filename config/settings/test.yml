@@ -1,4 +1,7 @@
 HOSTNAME: "TEST-HOST"
+MCP_ALLOWED_HOSTS:
+  - www.example.com
+MCP_ALLOWED_ORIGINS: []
 HOURS_API:
   enabled: false
 SU_AFFILIATIONS:
