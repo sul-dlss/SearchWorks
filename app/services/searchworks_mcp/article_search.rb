@@ -5,6 +5,8 @@ module SearchworksMcp
   module ArticleSearch
     extend self
 
+    MAX_QUERY_LENGTH = 1000
+
     SEARCH_FIELDS = {
       "all_fields" => "search",
       "title" => "title",
@@ -28,11 +30,7 @@ module SearchworksMcp
         }
       }
     rescue StandardError => e
-      {
-        text: "Error searching articles: #{e.message}",
-        structured_content: { error: e.message },
-        error: true
-      }
+      SearchworksMcp.internal_tool_error(e, public_message: "Article search is temporarily unavailable.")
     end
 
     private
@@ -69,7 +67,7 @@ module SearchworksMcp
         publication_date: field_value(document, ["eds_publication_date"]),
         abstract: abstract&.truncate(500),
         subjects: document["eds_subjects"] || [],
-        url: "https://searchworks.stanford.edu/articles/#{id}"
+        url: "https://searchworks.stanford.edu/articles/#{ERB::Util.url_encode(id.to_s)}"
       }.compact
     end
 

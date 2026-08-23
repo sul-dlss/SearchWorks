@@ -29,7 +29,12 @@ module SearchworksMcp
                    "metadata and canonical SearchWorks URLs; access to full text may require Stanford authentication.",
       input_schema: {
         properties: {
-          query: { type: "string", description: "The search query to find articles" },
+          query: {
+            type: "string",
+            description: "The search query to find articles",
+            minLength: 1,
+            maxLength: ArticleSearch::MAX_QUERY_LENGTH
+          },
           search_field: {
             type: "string",
             description: "The field to search in",
@@ -44,7 +49,8 @@ module SearchworksMcp
             default: 10
           }
         },
-        required: ["query"]
+        required: ["query"],
+        additionalProperties: false
       },
       output_schema: -> { Schemas.article_search },
       annotations: READ_ONLY_ANNOTATIONS
@@ -56,9 +62,15 @@ module SearchworksMcp
                    "catalog_search_tool. This retrieves catalog metadata, not the full text of the cataloged work.",
       input_schema: {
         properties: {
-          id: { type: "string", description: "Catalog record id returned by catalog_search_tool" }
+          id: {
+            type: "string",
+            description: "Catalog record id returned by catalog_search_tool",
+            minLength: 1,
+            maxLength: CatalogRecord::MAX_ID_LENGTH
+          }
         },
-        required: ["id"]
+        required: ["id"],
+        additionalProperties: false
       },
       output_schema: -> { Schemas.record },
       annotations: READ_ONLY_ANNOTATIONS
@@ -70,9 +82,15 @@ module SearchworksMcp
                    "returned by article_search_tool. This does not return licensed article full text.",
       input_schema: {
         properties: {
-          id: { type: "string", description: "Article id returned by article_search_tool" }
+          id: {
+            type: "string",
+            description: "Article id returned by article_search_tool",
+            minLength: 1,
+            maxLength: ArticleRecord::MAX_ID_LENGTH
+          }
         },
-        required: ["id"]
+        required: ["id"],
+        additionalProperties: false
       },
       output_schema: -> { Schemas.record },
       annotations: READ_ONLY_ANNOTATIONS
