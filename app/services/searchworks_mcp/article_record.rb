@@ -5,14 +5,16 @@ module SearchworksMcp
   module ArticleRecord
     extend self
 
+    MAX_ID_LENGTH = 255
+
     def fetch(id:)
       return disabled_response unless Settings.EDS_ENABLED
 
       document = search_service.fetch(id)
       result = {
         id: document.id.to_s,
-        title: document.eds_title,
-        url: "https://searchworks.stanford.edu/articles/#{document.id}",
+        title: document.eds_title.presence || "Untitled",
+        url: "https://searchworks.stanford.edu/articles/#{ERB::Util.url_encode(document.id.to_s)}",
         metadata: {
           authors: document.eds_authors,
           source: document.eds_source_title,
@@ -31,11 +33,7 @@ module SearchworksMcp
 
       { text: record_text(result), structured_content: result }
     rescue StandardError => e
-      {
-        text: "Error retrieving article: #{e.message}",
-        structured_content: { error: e.message },
-        error: true
-      }
+      SearchworksMcp.internal_tool_error(e, public_message: "Article retrieval is temporarily unavailable.")
     end
 
     private

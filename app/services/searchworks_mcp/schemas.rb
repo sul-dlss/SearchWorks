@@ -21,9 +21,9 @@ module SearchworksMcp
           filters: { type: "object" },
           total: { type: "integer" },
           results: { type: "array", items: SEARCH_RESULT },
-          facets: { type: "object" },
-          error: { type: "string" }
-        }
+          facets: { type: "object" }
+        },
+        required: %w[query search_field filters total results facets]
       }
     end
 
@@ -33,9 +33,9 @@ module SearchworksMcp
           query: { type: "string" },
           search_field: { type: "string" },
           total: { type: "integer" },
-          results: { type: "array", items: SEARCH_RESULT },
-          error: { type: "string" }
-        }
+          results: { type: "array", items: SEARCH_RESULT }
+        },
+        required: %w[query search_field total results]
       }
     end
 
@@ -45,9 +45,9 @@ module SearchworksMcp
           id: { type: "string" },
           title: { type: "string" },
           url: { type: "string" },
-          metadata: { type: "object" },
-          error: { type: "string" }
-        }
+          metadata: { type: "object" }
+        },
+        required: %w[id title url metadata]
       }
     end
   end
