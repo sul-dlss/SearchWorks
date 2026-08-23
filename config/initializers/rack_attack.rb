@@ -88,6 +88,20 @@ if Settings.THROTTLE_TRAFFIC
     req.ip if route[:controller] == 'articles' && route[:action] == 'show'
   end
 
+  # Bound MCP traffic independently because tool calls invoke catalog and EDS
+  # services without passing through their browser-facing controller routes.
+  Rack::Attack.throttle('mcp/requests/ip', limit: 120, period: 1.minute) do |req|
+    req.ip if req.post? && req.path == '/mcp'
+  end
+
+  Rack::Attack.throttle('mcp/searches/ip', limit: 30, period: 1.minute) do |req|
+    next unless req.post? && req.path == '/mcp'
+    next unless req.get_header('HTTP_MCP_METHOD') == 'tools/call'
+    next unless req.get_header('HTTP_MCP_NAME').in?(%w[catalog_search_tool article_search_tool])
+
+    req.ip
+  end
+
   Rack::Attack.throttle('req/actions/ip', limit: 15, period: 1.minute) do |req|
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}
