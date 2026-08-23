@@ -122,4 +122,4 @@ gem 'csl', '~> 2.0'
 gem "csl-styles", "~> 2.0"
 gem "cocina_display", "~> 2.3"
 
-gem 'mcp' # Model Context Protocol
+gem 'mcp', '~> 1.3' # Model Context Protocol
