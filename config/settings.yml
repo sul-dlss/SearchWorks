@@ -5,6 +5,8 @@ EMAIL_TO:
   FEEDBACK: "fake-email@kittenz.com"
   CONNECTION: "fake-connectionz@kittenz.com"
 HOSTNAME: <%= (`echo $HOSTNAME`).gsub('.stanford.edu', '') %>
+MCP_ALLOWED_HOSTS: <%= ENV.fetch('MCP_ALLOWED_HOSTS', 'searchworks.stanford.edu').split(',') %>
+MCP_ALLOWED_ORIGINS: <%= ENV.fetch('MCP_ALLOWED_ORIGINS', '').split(',').reject(&:empty?) %>
 STACKS_URL: "https://stacks.stanford.edu/image"
 REQUESTS_URL: "https://host.example.com/requests/new"
 HOOVER_REQUESTS_URL: "https://hoover.aeon.atlas-sys.com/aeon.dll?Action=10&Form=20"
