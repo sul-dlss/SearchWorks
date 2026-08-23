@@ -91,9 +91,9 @@ Rails.application.routes.draw do
     { controller: '/catalog', action: 'index', f: { genre_ssim: ['Thesis/Dissertation'] } }
   end
 
-  # MCP (Model Context Protocol) HTTP API routes
-  # Standard MCP over HTTP uses POST for JSON-RPC requests
-  post '/mcp', to: 'mcp#index', as: :mcp
+  # MCP (Model Context Protocol) Streamable HTTP endpoint. The transport
+  # returns method-specific responses, including 405 for unsupported methods.
+  match '/mcp', to: 'mcp#index', as: :mcp, via: :all
 
   direct :digital_collections do
     { controller: '/catalog', action: 'index', f: { library: ['SDR'], collection_type: ['Digital Collection'] } }
