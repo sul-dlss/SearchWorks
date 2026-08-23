@@ -43,7 +43,6 @@ class McpController < ApplicationController
   end
 
   def create_mcp_server
-    configuration = MCP::Configuration.new(protocol_version: "2025-03-26")
     MCP::Server.new(
       name: "searchworks",
       title: "SearchWorks Stanford Library Search",
@@ -57,8 +56,7 @@ class McpController < ApplicationController
       server_context: {
         controller: self,
         request_id: request.uuid
-      },
-      configuration: configuration
+      }
     )
   end
 
