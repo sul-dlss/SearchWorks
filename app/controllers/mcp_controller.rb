@@ -46,13 +46,17 @@ class McpController < ApplicationController
     MCP::Server.new(
       name: "searchworks",
       title: "SearchWorks Stanford Library Search",
-      version: "1.0.0",
+      description: "Search Stanford Libraries catalog and article metadata.",
+      version: Settings.REVISION.presence || "1.0.0",
+      website_url: "https://searchworks.stanford.edu",
       instructions: "Choose the search tool that matches the requested material; do not call both unless the user " \
                     "asks for both. Use catalog_search_tool for books, journals as whole publications, databases, " \
                     "media, archives, maps, and other catalog materials. Use article_search_tool for individual " \
                     "scholarly, journal, or newspaper articles. Use the corresponding get tool only when detailed " \
                     "metadata is needed for a selected result. Cite the canonical SearchWorks URL returned by tools.",
       tools: [catalog_tool, article_tool, catalog_record_tool, article_record_tool],
+      ttl_ms: 1.hour.in_milliseconds,
+      cache_scope: "public",
       server_context: {
         controller: self,
         request_id: request.uuid
