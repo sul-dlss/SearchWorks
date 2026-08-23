@@ -55,6 +55,7 @@ class McpController < ApplicationController
                     "scholarly, journal, or newspaper articles. Use the corresponding get tool only when detailed " \
                     "metadata is needed for a selected result. Cite the canonical SearchWorks URL returned by tools.",
       tools: [catalog_tool, article_tool, catalog_record_tool, article_record_tool],
+      capabilities: { tools: {} },
       ttl_ms: 1.hour.in_milliseconds,
       cache_scope: "public",
       server_context: {
