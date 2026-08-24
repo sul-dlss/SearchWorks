@@ -617,7 +617,7 @@
     "id": "08601677-5d55-459d-a499-b06114c940c2",
     "name": "SUL Borrow Direct",
     "code": "SUL-BORROW-DIRECT",
-    "discoveryDisplayName": "Borrow Direct",
+    "discoveryDisplayName": "BorrowDirect",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -632,8 +632,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:22.627+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:22.627+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-08-21T23:42:11.471+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -3924,7 +3924,6 @@
     "libraryId": "ddd3bce1-9f8f-4448-8d6d-b6c1b3907ba9",
     "details": {
       "availabilityClass": "Offsite",
-      "pageMediationGroupKey": "SPEC-COLL",
       "pageServicePointCodes": "SPEC"
     },
     "primaryServicePoint": "3a306665-eec7-4a40-8f4d-608585b2a394",
@@ -3936,8 +3935,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:20.486+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-07-02T03:59:51.184+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2026-08-21T16:08:55.817+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
@@ -7909,6 +7908,32 @@
     }
   },
   {
+    "id": "850e9dd2-ed59-477d-9049-d758b74a79d4",
+    "name": "Green SSRC Exhibit",
+    "code": "GRE-SSRC-EXHIBIT",
+    "discoveryDisplayName": "Jonsson Social Sciences Reading Room: On exhibit",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "f6b5519e-88d9-413e-924d-9ed96255f72e",
+    "details": {
+      "stackmapBaseUrl": "https://stanford.stackmap.com/json/",
+      "scanServicePointCode": "GREEN"
+    },
+    "primaryServicePoint": "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d",
+    "servicePointIds": [
+      "a5dbb3dc-84f8-4eb3-8bfe-c61f74a9e92d"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-08-21T16:01:37.793+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-08-21T16:08:28.376+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "854d0fc5-066f-4282-b438-0c204ddd192a",
     "name": "Lane Books: Rel Title Browse",
     "code": "LANE-SERIES",
@@ -10818,7 +10843,7 @@
     "id": "b7a2821f-8a5b-4b4f-aa18-8f7c1faaef7e",
     "name": "SUL ILLiad",
     "code": "SUL-ILLIAD",
-    "discoveryDisplayName": "ILLiad",
+    "discoveryDisplayName": "Interlibrary loan",
     "isActive": true,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
@@ -10833,8 +10858,8 @@
     "metadata": {
       "createdDate": "2026-05-29T19:57:56.713+00:00",
       "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
-      "updatedDate": "2026-05-29T19:57:56.713+00:00",
-      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+      "updatedDate": "2026-08-21T21:05:06.709+00:00",
+      "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
     }
   },
   {
