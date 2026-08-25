@@ -46,7 +46,7 @@ RSpec.describe ReplaceSpecialQuotes do
       end
     end
 
-    context 'when there are multiple single quotation marks in the string' do
+    context 'when the same single quotation mark repeats with no matching counterpart' do
       let(:params) do
         {
           clause: {
@@ -58,13 +58,33 @@ RSpec.describe ReplaceSpecialQuotes do
         }.with_indifferent_access
       end
 
+      it 'is replaced with apostrophes, since none of the marks can be part of a matched pair' do
+        controller.send(:replace_special_quotes)
+
+        expect(params.dig(:clause, :a_param, :query)).to eq "'query'"
+        expect(params.dig(:clause, :b_param, :query)).to eq "'query'"
+        expect(params.dig(:clause, :c_param, :query)).to eq "'query'"
+        expect(params.dig(:clause, :d_param, :query)).to eq "'query'"
+      end
+    end
+
+    context 'when there is a matched pair of single quotation marks' do
+      let(:params) { { clause: { '1': { query: "‘#{q}’" } } }.with_indifferent_access }
+
       it 'is replaced with the standard double quote character' do
         controller.send(:replace_special_quotes)
 
-        expect(params.dig(:clause, :a_param, :query)).to eq '"query"'
-        expect(params.dig(:clause, :b_param, :query)).to eq '"query"'
-        expect(params.dig(:clause, :c_param, :query)).to eq '"query"'
-        expect(params.dig(:clause, :d_param, :query)).to eq '"query"'
+        expect(params.dig(:clause, '1', :query)).to eq %("#{q}")
+      end
+    end
+
+    context 'when multiple apostrophes appear in a natural-language query (e.g. from iOS smart quotes)' do
+      let(:params) { { clause: { '1': { query: "i’m a cyborg but that’s okay" } } }.with_indifferent_access }
+
+      it 'replaces each apostrophe individually rather than treating them as a quoted phrase' do
+        controller.send(:replace_special_quotes)
+
+        expect(params.dig(:clause, '1', :query)).to eq "i'm a cyborg but that's okay"
       end
     end
   end
