@@ -481,6 +481,7 @@ diagnprognres.biomedcentral.com
 dialogue.ias.ac.in
 dictybase.org
 digi.bib.uni-mannheim.de
+digital-archives.japantimes.co.jp
 digital-library.theiet.org
 digital.bib-bvb.de
 digital.casalini.it
@@ -983,7 +984,6 @@ jsedres.geoscienceworld.org
 jsedres.sepmonline.org
 jslhr.pubs.asha.org
 jss.amegroups.com
-jt-archives.jp
 jtd.amegroups.com
 jthc.tums.ac.ir
 jtultrasound.biomedcentral.com
