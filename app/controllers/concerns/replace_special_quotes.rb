@@ -40,8 +40,10 @@ module ReplaceSpecialQuotes
       # only uneven single quotes
       next unless opens.length != closes.length
 
-      hash[key] = hash[key].sub(/#{open_quote}/, "'") if opens.length == 1
-      hash[key] = hash[key].sub(/#{close_quote}/, "'") if closes.length == 1
+      # if there are no closing marks, none of the opening marks can be part of
+      # a matched pair, so treat all of them as apostrophes (and vice versa)
+      hash[key] = hash[key].gsub(/#{open_quote}/, "'") if closes.empty?
+      hash[key] = hash[key].gsub(/#{close_quote}/, "'") if opens.empty?
     end
   end
 
