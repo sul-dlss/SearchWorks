@@ -1,4 +1,5 @@
 import assert from "node:assert/strict"
+import { readFile } from "node:fs/promises"
 import test, { afterEach } from "node:test"
 
 import handleFilmstripFetchRequest from "../../app/javascript/turbo/handleFilmstripFetchRequest.js"
@@ -14,6 +15,15 @@ const buildEvent = (id = "filmstrip_MFILM-N.S.-11047:4") => ({
 })
 
 afterEach(() => { globalThis.fetch = originalFetch })
+
+test("registers the interceptor before Turbo starts eager frame requests", async() => {
+  const entrypoint = await readFile(new URL("../../app/javascript/searchworks4.js", import.meta.url), "utf8")
+  const registrationIndex = entrypoint.indexOf('import "./turbo/registerEventHandlers"')
+  const turboIndex = entrypoint.indexOf('import "@hotwired/turbo-rails"')
+
+  assert.notEqual(registrationIndex, -1)
+  assert.ok(registrationIndex < turboIndex)
+})
 
 test("turns a filmstrip network failure into an empty frame response", async() => {
   globalThis.fetch = async() => { throw new TypeError("Failed to fetch") }

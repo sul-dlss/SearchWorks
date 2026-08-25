@@ -1,5 +1,7 @@
 // Entry point for the build script in your packageon
 
+// Register event handlers before Turbo upgrades eager frames and starts fetching.
+import "./turbo/registerEventHandlers"
 import "@hotwired/turbo-rails"
 import "blacklight-frontend"
 
