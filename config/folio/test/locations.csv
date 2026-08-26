@@ -374,6 +374,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 9bd34db9-c70a-4322-9dcc-a5bb4860c777,Rumsey Center Shelved Elsewhere,RUM-SEE-OTHER,SU,SUL,RUMSEY-MAP,Individual volumes catalogued separately,true,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
 9bd8dc35-7df9-4b3e-abd8-abd8773e00b8,East Asia Locked Stacks,EAL-LOCKED,SU,SUL,EAST-ASIA,Locked stacks: Ask at circulation desk,true,false,EAST-ASIA,EAST-ASIA,,,,EASTASIA,,,,,,,,,,,,
 9c2d3584-1cef-49a4-90bd-0b387be8a07d,Music Reserves,MUS-CRES,SU,SUL,MUSIC,On reserve: Ask at Music circulation desk,true,false,MUSIC,MUSIC,,,,,,,,,,true,,,,,,
+9c7b5f9c-2924-4625-9795-9f40d4794901,Green SSRC Exhibit,GRE-SSRC-EXHIBIT,SU,SUL,GREEN,Jonsson Social Sciences Reading Room: On exhibit,true,false,GREEN-LOAN,GREEN-LOAN,,https://stanford.stackmap.com/json/,GREEN,,,,,,,,,,,,,
 9c92e9ba-bfaa-4b83-bb05-a556d5284f09,Law Vrooman 1st floor,LAW-VROOMAN,SU,LAW,LAW,"Vrooman collection, 1st floor",true,false,LAW,LAW,,,,,,,,,,,,,,,,
 9d0737d0-ee3b-4474-8577-8df64eb1a9d0,Rumsey W7 Stacks Large,RUM-W7-STK-LG,SU,SUL,RUMSEY-MAP,Map Center (W7 large stacks),true,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
 9d083e5f-df3a-4560-9ee2-bf9d10d9a155,SUL Loaned for Exhibit,SUL-LOANED-FOR-EXHIBIT,SU,SUL,SUL,Loaned for exhibit,true,false,SPEC,SPEC,,,,,,,,,,,,,,,,
