@@ -122,10 +122,10 @@ undergrad or postdoctoral,book,,,,,GRE-FOLIO or GRE-FOLIO-FLAT,1qtr-3renew-7dayg
 staff or staff-casual or fellow,book,,,,,GRE-FOLIO or GRE-FOLIO-FLAT,1yearfixed-2renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 graduate,book,,,,,GRE-FOLIO or GRE-FOLIO-FLAT,1qtr-7renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
 faculty,book,,,,,GRE-FOLIO or GRE-FOLIO-FLAT,1yearfixed-4renew-7daygrace,Allow hold/recall,Qtrly/Annual notice,No fines,$75 lost fee
-undergrad or postdoctoral,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-NEWDOC or GRE-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
-staff or staff-casual or fellow,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-NEWDOC or GRE-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
-graduate,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-NEWDOC or GRE-STACKS,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
-faculty,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-NEWDOC or GRE-STACKS,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$75 lost fee
+undergrad or postdoctoral,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-EXHIBIT or GRE-SSRC-NEWDOC or GRE-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
+staff or staff-casual or fellow,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-EXHIBIT or GRE-SSRC-NEWDOC or GRE-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
+graduate,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-EXHIBIT or GRE-SSRC-NEWDOC or GRE-STACKS,1qtr-7renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$75 lost fee
+faculty,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-EXHIBIT or GRE-SSRC-NEWDOC or GRE-STACKS,1yearfixed-4renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$75 lost fee
 any,book,,,,,ENG-STK-NONCIRC or ENG-TERM-COLL or ENG-TIMO-COLL,No loan,No requests allowed,Default notice,No fines,$300 lost fee
 postdoctoral or undergrad,book,,,,,ENG-JEDI or ENG-SCIFI or ENG-STACKS,1qtr-3renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
 staff or staff-casual or fellow,book,,,,,ENG-JEDI or ENG-SCIFI or ENG-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,3.00/21.00 recall overdue fine,$150 lost fee
@@ -296,7 +296,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,book,,,,,GRE-HH-SVA-SPECIALPROJECTS,No loan,Allow paging/hold,Default notice,No fines,$75 lost fee
 ,book,,,,,GRE-SSRC-CSLI or GRE-SSRC-NEWBOOK,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,GRE-FOLIO or GRE-FOLIO-FLAT,28day-2renew-7daygrace,Allow hold/recall,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
-,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-NEWDOC or GRE-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
+,book,,,,,GRE-CAL-DOCS or GRE-FED-DOCS or GRE-HAS-EXHIBIT or GRE-HAS-FICTION or GRE-HAS-GEN or GRE-HAS-NEWBOOK or GRE-HH-FOYER or GRE-INTL-DOCS or GRE-SSRC-EXHIBIT or GRE-SSRC-NEWDOC or GRE-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
 ,book,,,,,ENG-TECH-PROCESSOR,No loan,Hold only,Default notice,No fines,$225 lost fee
 ,book,,,,,ENG-PERMRES,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$225 lost fee
 ,book,,,,,ENG-JEDI or ENG-SCIFI or ENG-STACKS,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$150 lost fee
@@ -397,7 +397,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,accessories 1,,,,GREEN,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,accessories 1,,,,ART,,4hour-norenew-15mingrace,No requests allowed,Short Term Notices,No fines,$100 lost fee - 1 hr aged to lost
 ,book,,,,SAL,,28day-2renew-7daygrace,Allow All,Default notice,3.00/21.00 recall overdue fine,$75 lost fee
-,,,,,,SU>SUL>SUL>SUL-BORNDIGITAL-PRESLAB or GRE-RESV-PROCESSING or SUL-LOANED-FOR-EXHIBIT or SUL-MEDIAPRESLAB or SUL-TS-CONSERVATIONSERVICES,No loan,No requests allowed,Default notice,No fines,$250 lost fee
+,,,,,,SUL-BORNDIGITAL-PRESLAB or GRE-RESV-PROCESSING or SUL-LOANED-FOR-EXHIBIT or SUL-MEDIAPRESLAB or SUL-TS-CONSERVATIONSERVICES,No loan,No requests allowed,Default notice,No fines,$250 lost fee
 ,,,,,,SUL-BORROW-DIRECT,16week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
 ,periodical,,,,,,7day-1renew-3daygrace,No requests allowed,Default notice,No fines,$500 lost fee
 ,newspaper,,,,,,No loan,No requests allowed,Send No Notices,No fines,$100 lost fee
