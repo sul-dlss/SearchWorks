@@ -5,14 +5,14 @@
             data: { controller: 'search-navbar', 'search-navbar-additional-articles-params-value': addl_parameters&.to_json } do %>
   <turbo-frame id="search-navbar-frame" refresh="morph" data-search-navbar-target="container">
     <div class="container-lg search-form d-flex align-items-center column-gap-3 flex-wrap flex-lg-nowrap">
-      <div class="text-nowrap order-1 py-2">
+      <div class="text-nowrap order-1 py-2" data-controller="analytics" data-analytics-category-value="select_search_mode">
         <span class="fw-bold me-2">Search mode:</span>
         <div class="form-check d-inline-block mx-1">
-          <%= tag.input type: 'radio', class: 'form-check-input', name: 'search-type', id: 'searchTypeCatalog', value: 'catalog', checked: !articles_checked, data: { action: 'search-navbar#toggleMode', url: search_bar_catalog_url } %>
+          <%= tag.input type: 'radio', class: 'form-check-input', name: 'search-type', id: 'searchTypeCatalog', value: 'catalog', checked: !articles_checked, data: { action: 'search-navbar#toggleMode analytics#trackEvent', url: search_bar_catalog_url } %>
           <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
         </div>
         <div class="form-check d-inline-block mx-1">
-          <%= tag.input type: 'radio', class: 'form-check-input', name: 'search-type', id: 'searchTypeArticle', value: 'articles', checked: articles_checked, data: { action: 'search-navbar#toggleMode', url: search_bar_articles_url } %>
+          <%= tag.input type: 'radio', class: 'form-check-input', name: 'search-type', id: 'searchTypeArticle', value: 'articles', checked: articles_checked, data: { action: 'search-navbar#toggleMode analytics#trackEvent', url: search_bar_articles_url } %>
           <label class="form-check-label" for="searchTypeArticle">Articles+</label>
         </div>
       </div>

@@ -32,7 +32,8 @@ export default class extends Controller {
     const dimensions = {
       link_classes: element.className,
       link_id: element.id,
-      link_text: element.innerText.trim()
+      // Form controls have no innerText, so fall back to the submitted value
+      link_text: element.innerText.trim() || element.value || ""
     }
     gtag("event", eventName, dimensions)
   }
