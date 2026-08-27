@@ -34,8 +34,9 @@ export default class extends Controller {
   }
 
   appendFrame() {
+    if (this.hasFrameTarget) return
+
     const frame = document.createElement("turbo-frame")
-    frame.setAttribute("data-preview-target", "frame")
     frame.setAttribute("data-preview-target", "frame")
     this.element.appendChild(frame)
   }
@@ -45,6 +46,9 @@ export default class extends Controller {
   }
 
   load(id, url) {
+    // Turbo may remove a frame while rendering or restoring a cached page.
+    this.appendFrame()
+
     if (this.idValue != id) {
       this.reset()
       this.idValue = id

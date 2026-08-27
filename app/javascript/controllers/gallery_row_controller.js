@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import scrollOver from "../scroll-over"
+import scrollOver from "../scroll-over.js"
 
 // Connects to data-controller="gallery-row"
 export default class extends Controller {
@@ -35,12 +35,27 @@ export default class extends Controller {
     this.adjustPreviewMargins()
   }
 
-  get previewContainer() {
-    return this.galleryCardOutletElement.parentElement
+  disconnect() {
+    this.currentPreview = undefined
+  }
+
+  // Stimulus lifecycle callback invoked when a gallery-card outlet disconnects.
+  galleryCardOutletDisconnected(_outlet, element) {
+    if (this.currentPreview === element) this.currentPreview = undefined
   }
 
   adjustPreviewMargins() {
     if (!this.currentPreview) return
+
+    const galleryCardOutlets = this.galleryCardOutlets
+    const currentGalleryCard = galleryCardOutlets.find((outlet) => outlet.element === this.currentPreview)
+    if (!currentGalleryCard || !this.hasPreviewOutlet) {
+      this.currentPreview = undefined
+      return
+    }
+
+    const previewContainer = currentGalleryCard.element.parentElement
+    if (!previewContainer) return
 
     // This is assuming the preview is styled for 100% width
     this.previewOutletElement.style.marginLeft = 0
@@ -48,7 +63,7 @@ export default class extends Controller {
     const maxPreviewWidth = this.maxPreviewWidthValue
     const galleryRect = this.currentPreview.getBoundingClientRect()
     const previewRect = this.previewOutletElement.getBoundingClientRect()
-    const galleryDocumentWidth = this.previewContainer.getBoundingClientRect().width / this.galleryCardOutlets.length
+    const galleryDocumentWidth = previewContainer.getBoundingClientRect().width / galleryCardOutlets.length
     const previewWidth = previewRect.width
     const leftBound = previewRect.left
     const rightBound = leftBound + previewWidth
