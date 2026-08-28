@@ -1,6 +1,9 @@
-// Browse nearby is optional content. Turbo does not handle a rejected fetch for
-// frame src requests, so turn network failures into an empty filmstrip response.
-function emptyFilmstripResponse(frameId) {
+const FALLBACK_FRAME_ID_PREFIXES = ["availability_", "filmstrip_"]
+
+// Turbo does not handle rejected fetches for frame src requests. These frames
+// enhance content that is already present on the page, so replace network
+// failures with an empty frame response instead of leaving an unhandled promise.
+function emptyFrameResponse(frameId) {
   const escapedFrameId = frameId.replaceAll("&", "&amp;")
     .replaceAll('"', "&quot;")
     .replaceAll("<", "&lt;")
@@ -14,7 +17,7 @@ function emptyFilmstripResponse(frameId) {
 
 export default function(event) {
   const frameId = event.target.id
-  if (!frameId?.startsWith("filmstrip_")) return
+  if (!FALLBACK_FRAME_ID_PREFIXES.some((prefix) => frameId?.startsWith(prefix))) return
 
   const fetchRequest = event.detail.fetchRequest
   const response = fetchRequest?.response || globalThis.fetch(event.detail.url, event.detail.fetchOptions)
@@ -24,7 +27,7 @@ export default function(event) {
     response: Promise.resolve(response).catch((error) => {
       if (error.name === "AbortError") throw error
 
-      return emptyFilmstripResponse(frameId)
+      return emptyFrameResponse(frameId)
     })
   }
 }
