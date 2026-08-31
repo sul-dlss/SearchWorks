@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'blacklight_advanced_search/advanced_search_builder'
+require 'digest'
 
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
@@ -8,6 +9,10 @@ class SearchBuilder < Blacklight::SearchBuilder
   include Searchworks::AdvancedSearchBuilder
   include BlacklightRangeLimit::RangeLimitBuilder
   include CJKQuery
+
+  SEMANTIC_SEARCH_FIELD = 'semantic'
+  VECTOR_FIELD = 'embedding_vector'
+  VECTOR_TOP_K = 250
 
   self.default_processor_chain += [
     :add_edismax_advanced_parse_q_to_solr,
@@ -17,8 +22,26 @@ class SearchBuilder < Blacklight::SearchBuilder
     :modify_params_for_cjk_advanced,
     :consolidate_home_page_params,
     :modify_single_term_qf,
-    :force_facet_method_for_searching
+    :force_facet_method_for_searching,
+    :add_semantic_search_query
   ]
+
+  def add_semantic_search_query(solr_params)
+    return unless blacklight_params[:search_field] == SEMANTIC_SEARCH_FIELD
+    return if blacklight_params[:q].blank?
+
+    embedding = semantic_query_embedding(blacklight_params[:q])
+    solr_params.delete(:q)
+    solr_params[:spellcheck] = false
+    solr_params[:json] ||= {}
+    solr_params[:json][:query] = {
+      knn: {
+        f: VECTOR_FIELD,
+        topK: VECTOR_TOP_K,
+        query: "[#{embedding.join(', ')}]"
+      }
+    }
+  end
 
   # Tweak advanced search's boolean query output to use edismax instead of dismax.
   # By using the same (edismax) query parser for advanced search as we do for regular search,
@@ -67,6 +90,21 @@ class SearchBuilder < Blacklight::SearchBuilder
   end
 
   private
+
+  def semantic_query_embedding(query)
+    cache_key = [
+      'semantic-query-embedding',
+      GeminiEmbedding.model,
+      GeminiEmbedding::DEFAULT_QUERY_INSTRUCTION,
+      Digest::SHA256.hexdigest(query)
+    ]
+    Rails.cache.fetch(cache_key) do
+      GeminiEmbedding.new.embedding(
+        input: [query],
+        instruction: GeminiEmbedding::DEFAULT_QUERY_INSTRUCTION
+      ).first
+    end
+  end
 
   def page_location
     @page_location ||= PageLocation.new(search_state)

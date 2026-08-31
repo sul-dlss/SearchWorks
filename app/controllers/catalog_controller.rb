@@ -380,6 +380,13 @@ class CatalogController < ApplicationController
       }
     end
 
+    config.add_search_field('semantic') do |field|
+      field.label = 'Semantic'
+      field.include_in_simple_select = true
+      field.include_in_advanced_search = false
+      field.advanced_parse = false
+    end
+
     # Adds search fields for use only in BL Advanced Search
     config.add_search_field("series_search") do |field|
       field.label = "Series title"

@@ -107,6 +107,14 @@ RSpec.describe CatalogController do
     end
 
     describe 'search types' do
+      it 'includes semantic search in the simple selector only' do
+        search_field = config.search_fields['semantic']
+        expect(search_field).to be_present
+        expect(search_field.label).to eq 'Semantic'
+        expect(search_field.include_in_simple_select).to be true
+        expect(search_field.include_in_advanced_search).to be false
+      end
+
       it 'includes Author+Title search' do
         search_field = config.search_fields["author_title"]
         expect(search_field).to be_present
