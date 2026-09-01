@@ -699,7 +699,6 @@ gs.amegroups.com
 gsejournal.biomedcentral.com
 guidelines.ecri.org
 guilfordjournals.com
-guji.dahailaozhen.cn
 gut.bmj.com
 gutpathogens.biomedcentral.com
 gvt-journal.biomedcentral.com
@@ -2462,7 +2461,6 @@ www.nyu.edu
 www.oandp.org
 www.oapen.org
 www.ochsnerjournal.org
-www.oclc.org
 www.oecd-ilibrary.org
 www.oecd.org
 www.ojhas.org
