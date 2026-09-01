@@ -80,6 +80,20 @@ RSpec.describe CJKQuery do
         expect(solr_params[:q]).not_to include "_cjk_cjk"
       end
     end
+
+    context "with a Korean query" do
+      let(:q_str) { '꼭 읽어야 할 중학교 문학 첫걸음' }
+      let(:solr_q) do
+        "_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND " \
+          "_query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\""
+      end
+
+      it "uses the Korean query fields instead of the generic CJK fields" do
+        expect(solr_params[:q]).to include "qf=$qf_ko pf=$pf_ko pf3=$pf3_ko pf2=$pf2_ko #{local_params} }#{q_str}"
+        expect(solr_params[:q]).to include "qf=$qf_title_ko pf=$pf_title_ko pf3=$pf3_title_ko pf2=$pf2_title_ko #{local_params} }#{q_str}"
+        expect(solr_params[:q]).not_to include '$qf_cjk'
+      end
+    end
   end
 
   describe "cjk_query_addl_params" do
@@ -174,6 +188,20 @@ RSpec.describe CJKQuery do
           pf:  '${pf_cjk}',
           pf2: '${pf2_cjk}',
           pf3: '${pf3_cjk}'
+        )
+      end
+
+      it 'uses Korean analyzer fields for a Hangul query' do
+        korean_query = '꼭 읽어야 할 중학교 문학 첫걸음'
+        blacklight_params.merge!(q: korean_query, search_field: 'search')
+        solr_params = { q: korean_query }
+        search_builder.modify_params_for_cjk(solr_params)
+
+        expect(solr_params).to include(
+          qf:  '${qf_ko}',
+          pf:  '${pf_ko}',
+          pf2: '${pf2_ko}',
+          pf3: '${pf3_ko}'
         )
       end
 
