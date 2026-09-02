@@ -685,7 +685,6 @@ ghrp.biomedcentral.com
 global.oup.com
 globalheartjournal.com
 globalizationandhealth.biomedcentral.com
-go.drugbank.com
 go.gale.com
 go.galegroup.com
 go.oreilly.com
