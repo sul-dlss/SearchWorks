@@ -35,29 +35,25 @@ RSpec.describe DigitalCollection do
   describe "CollectionMembers" do
     let(:collection_members) { DigitalCollection::CollectionMembers.new(collection) }
     let(:collection_members_with_rows) { DigitalCollection::CollectionMembers.new(collection, rows: 17) }
-    let(:stub_solr) { double('solr') }
     let(:stub_params) { { params: { fq: "collection:\"1234\" OR collection:\"a1234\"", rows: 20 } } }
     let(:rows_params) { { params: { fq: "collection:\"1234\" OR collection:\"a1234\"", rows: 17 } } }
     let(:small_rows_params) { { params: { fq: "collection:\"1234\" OR collection:\"a1234\"", rows: 3 } } }
-    let(:stub_response) { {
-      'response' => {
-        'numFound' => 2,
-        'docs' => [{ id: 4321 }, { id: 8765 }]
-      }
-    }}
-
-    before do
-      allow(Blacklight.default_index).to receive(:connection).and_return(stub_solr)
+    let(:stub_response) do
+      instance_double(
+        Blacklight::Solr::Response,
+        total: 2,
+        documents: [SolrDocument.new(id: 4321), SolrDocument.new(id: 8765)]
+      )
     end
 
     describe "#documents" do
       it "searches solr for all members of a collection" do
-        expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
+        expect(Blacklight.default_index).to receive(:search).with(**stub_params).and_return(stub_response)
         expect(collection_members.documents).to be_present
       end
 
       it "returns solr documents" do
-        expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
+        allow(Blacklight.default_index).to receive(:search).with(**stub_params).and_return(stub_response)
         collection_members.documents.each do |member|
           expect(member).to be_a SolrDocument
         end
@@ -66,7 +62,7 @@ RSpec.describe DigitalCollection do
 
     describe "#total" do
       it "returns the numFound integer" do
-        expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
+        allow(Blacklight.default_index).to receive(:search).with(**stub_params).and_return(stub_response)
         expect(collection_members.total).to eq 2
       end
     end

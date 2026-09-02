@@ -26,24 +26,17 @@ RSpec.describe CollectionMember do
   describe "#parent_collections" do
     let(:multi_collection) { SolrDocument.new(collection: ['12345', '54321']) }
     let(:catkey_prefix) { SolrDocument.new(collection: ['a12345']) }
-    let(:stub_solr) { double('solr') }
     let(:stub_params) { { params: { fq: "id:12345" } } }
-    let(:stub_response) { {
-      'response' => {
-        'docs' => [{ id: 12345 }]
-      }
-    }}
-
-    before do
-      allow(Blacklight.default_index).to receive(:connection).and_return(stub_solr)
+    let(:stub_response) do
+      instance_double(Blacklight::Solr::Response, documents: [SolrDocument.new(id: 12345)])
     end
 
     it "searches solr for ids in the collection" do
-      expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
+      expect(Blacklight.default_index).to receive(:search).with(**stub_params).and_return(stub_response)
       expect(member.parent_collections).to be_present
     end
     it "returns a solr document" do
-      expect(Blacklight.default_index.connection).to receive(:select).with(stub_params).and_return(stub_response)
+      allow(Blacklight.default_index).to receive(:search).with(**stub_params).and_return(stub_response)
       member.parent_collections.each do |parent|
         expect(parent).to be_a SolrDocument
       end

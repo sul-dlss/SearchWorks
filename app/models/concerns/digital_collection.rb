@@ -15,20 +15,16 @@ module DigitalCollection
   # Simple Plain Ruby Object to return an array of collection members
   class CollectionMembers
     delegate :[], :present?, :blank?, :each, :first, :last, :map, :length, to: :documents
+    delegate :total, to: :response
+
     def initialize(document, options = {})
       @document = document
       @options = options
       @type = 'index'
     end
 
-    def total
-      response['numFound']
-    end
-
     def documents
-      @documents ||= response['docs'].map do |document|
-        ::SolrDocument.new(document)
-      end
+      @documents ||= response.documents
     end
 
     def render_type
@@ -40,12 +36,12 @@ module DigitalCollection
     attr_reader :document, :options, :type
 
     def response
-      @response ||= blacklight_solr.select(
+      @response ||= Blacklight.default_index.search(
         params: {
           fq: collection_member_params,
           rows: 20
         }
-      )['response']
+      )
     end
 
     def should_display_filmstrip?
@@ -65,10 +61,6 @@ module DigitalCollection
       documents.count do |doc|
         doc.image_urls.blank?
       end
-    end
-
-    def blacklight_solr
-      Blacklight.default_index.connection
     end
 
     # @return [String] a Solr query string

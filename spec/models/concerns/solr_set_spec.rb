@@ -4,13 +4,10 @@ require 'rails_helper'
 
 RSpec.describe SolrSet do
   let(:solr_data) { { id: '12345', set: ['set1'], set_with_title: ['set1 -|- SetABC'] } }
-  let(:documents) { [{ id: 'set1', title_display: 'SetABC' }] }
+  let(:documents) { [SolrDocument.new(id: 'set1', title_display: 'SetABC')] }
+  let(:stub_response) { instance_double(Blacklight::Solr::Response, documents:) }
 
   subject { SolrDocument.new(solr_data) }
-
-  before do
-    allow(subject).to receive_messages(set_document_list: documents)
-  end
 
   context 'when an item is a member of a set' do
     describe '#set_member?' do
@@ -21,9 +18,14 @@ RSpec.describe SolrSet do
 
     describe '#parent_sets' do
       it 'returns an array of solr documents' do
+        allow(Blacklight.default_index).to receive(:search)
+          .with(params: { fq: 'id:set1' })
+          .and_return(stub_response)
+
         expect(subject.parent_sets).to be_all do |set|
           set.is_a?(SolrDocument)
         end
+        expect(Blacklight.default_index).to have_received(:search).with(params: { fq: 'id:set1' })
       end
     end
 

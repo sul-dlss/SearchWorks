@@ -12,9 +12,7 @@ module SolrSet
   def parent_sets
     return unless set_member?
 
-    @parent_sets ||= set_document_list.map do |doc|
-      SolrDocument.new(doc)
-    end
+    @parent_sets ||= set_document_list
   end
 
   # Used for generating simple title links to the parent sets w/o making a Solr request
@@ -30,7 +28,7 @@ module SolrSet
   private
 
   def set_document_list
-    @document_list ||= Blacklight.default_index.connection.select(set_solr_params)['response']['docs']
+    @document_list ||= Blacklight.default_index.search(**set_solr_params).documents
   end
 
   def set_solr_params
