@@ -148,10 +148,11 @@ pipeline {
     stage('sdr-stage preview deploy') {
       environment {
         DEPLOY_ENVIRONMENT = 'preview_stage'
+        BRANCH = 'semantic-search'
       }
 
       when {
-        tag "v*"
+        branch 'semantic-search'
       }
 
       steps {
