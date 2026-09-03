@@ -417,7 +417,7 @@
     "id": "622b0090-e1c5-4e67-9c59-7b7a5801bb06"
   },
   {
-    "name": "250",
+    "name": "$250 lost fee",
     "itemAgedLostOverdue": {
       "duration": 7,
       "intervalId": "Days"
@@ -453,8 +453,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:50:07.216+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2026-09-01T22:40:58.022+00:00",
-      "updatedByUserId": "298184dc-c0ad-4835-93d5-f11804a19e41"
+      "updatedDate": "2026-09-02T18:49:27.732+00:00",
+      "updatedByUserId": "213fa9cf-bfed-4a39-a0db-b03a54013a1b"
     },
     "id": "76a76e01-fc47-4a3b-9b32-cdcae78be003"
   },
