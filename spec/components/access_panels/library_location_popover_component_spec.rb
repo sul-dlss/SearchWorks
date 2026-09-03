@@ -8,12 +8,11 @@ RSpec.describe AccessPanels::LibraryLocationPopoverComponent, type: :component d
   before { render_inline(component) }
 
   context 'when mhld contains library holding information' do
-    let(:mhld) { [Holdings::MHLD.new('GREEN -|- GRE-STACKS -|- public note -|- library has no.1 -|- latest received')] }
+    let(:mhld) { [Holdings::MHLD.new('SAL3 -|- SAL3-STACKS -|- -|- v.1(1984)-v.3(1986) <no.29,33,39 in series> -|-')] }
 
     it 'renders the button for displaying the popover' do
       expect(page).to have_css('button[data-bs-content][data-bs-custom-class="popover-availability"]', text: 'Summary of items')
-      # the content of the popover should include the text for library has
-      expect(page.find('button.btn-link')['data-bs-content']).to include('library has no.1')
+      expect(page.find('button.btn-link')['data-bs-content']).to eq('v.1(1984)-<wbr/>v.3(1986) no.29, 33, 39 in series')
     end
   end
 
