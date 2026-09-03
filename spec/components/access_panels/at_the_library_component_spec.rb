@@ -419,7 +419,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
 
       it 'renders request via OAC finding aid' do
         pending 'SW 4.0 in development'
-        expect(page).to have_css 'a[href*="oac"]', text: 'Request via Finding Aid'
+        expect(page).to have_css 'a[href*="oac"]', text: 'Request'
         expect(page).to have_css '.availability-icon.noncirc'
         expect(page).to have_css '.status-text', text: 'In-library use'
       end

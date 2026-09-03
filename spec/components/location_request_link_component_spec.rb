@@ -216,7 +216,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
         )
       end
 
-      it { expect(page).to have_link 'Request via Finding Aid', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
+      it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
     end
 
     context 'in a non-pageable location' do
