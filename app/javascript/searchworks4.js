@@ -1,5 +1,6 @@
 // Entry point for the build script in your packageon
 
+import "./frontend_error_context"
 import "@hotwired/turbo-rails"
 import "blacklight-frontend"
 
