@@ -22,9 +22,9 @@ module Record
 
       private
 
-      # Strip blanks and auto-link any URLs
+      # Strip blanks, sanitize HTML markup, and auto-link any URLs
       def formatted_values
-        @formatted_values ||= @field.values.compact_blank.map { |value| auto_link value }
+        @formatted_values ||= @field.values.compact_blank.map { |value| auto_link sanitize(value) }
       end
     end
   end
