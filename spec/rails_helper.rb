@@ -97,6 +97,7 @@ RSpec.configure do |config|
   config.include ViewComponent::SystemTestHelpers, type: :component
   config.include Capybara::RSpecMatchers, type: :component
   config.include Warden::Test::Helpers
+  config.after { Warden.test_reset! }
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::IntegrationHelpers, type: :request
   config.include Factories::Methods
