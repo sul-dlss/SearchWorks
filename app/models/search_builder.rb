@@ -12,7 +12,7 @@ class SearchBuilder < Blacklight::SearchBuilder
 
   SEMANTIC_SEARCH_FIELD = 'semantic'
   VECTOR_FIELD = 'embedding_vector'
-  VECTOR_TOP_K = 250
+  VECTOR_MIN_SIMILARITY = 0.8
 
   self.default_processor_chain += [
     :add_edismax_advanced_parse_q_to_solr,
@@ -35,9 +35,9 @@ class SearchBuilder < Blacklight::SearchBuilder
     solr_params[:spellcheck] = false
     solr_params[:json] ||= {}
     solr_params[:json][:query] = {
-      knn: {
+      vectorSimilarity: {
         f: VECTOR_FIELD,
-        topK: VECTOR_TOP_K,
+        minReturn: VECTOR_MIN_SIMILARITY,
         query: "[#{embedding.join(', ')}]"
       }
     }

@@ -71,15 +71,15 @@ RSpec.describe SearchBuilder do
       allow(embedding_client).to receive(:embedding).and_return([embedding])
     end
 
-    it 'replaces the keyword query with a pure KNN query' do
+    it 'replaces the keyword query with a similarity-threshold query' do
       solr_params = search_builder.to_hash
 
       expect(solr_params[:q]).to be_nil
       expect(solr_params[:spellcheck]).to be false
       expect(solr_params.dig(:json, :query).deep_symbolize_keys).to eq(
-        knn: {
+        vectorSimilarity: {
           f: 'embedding_vector',
-          topK: 250,
+          minReturn: 0.8,
           query: "[#{embedding.join(', ')}]"
         }
       )
@@ -107,7 +107,7 @@ RSpec.describe SearchBuilder do
 
       expect(solr_params[:fq]).to eq(['format_hsim:Book'])
       expect(solr_params.dig(:json, :facet, :formats).deep_symbolize_keys).to eq(type: 'terms', field: 'format_hsim')
-      expect(solr_params.dig(:json, :query, :knn, :f)).to eq('embedding_vector')
+      expect(solr_params.dig(:json, :query, :vectorSimilarity, :f)).to eq('embedding_vector')
     end
   end
 
