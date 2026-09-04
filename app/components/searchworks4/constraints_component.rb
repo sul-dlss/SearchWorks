@@ -28,7 +28,7 @@ module Searchworks4
         )
       else
         ''.html_safe
-      end +  render(@facet_constraint_component.with_collection(advanced_clause_presenters.to_a, **@facet_constraint_component_options))
+      end + render(@facet_constraint_component.with_collection(advanced_clause_presenters.to_a, **@facet_constraint_component_options))
     end
 
     private
