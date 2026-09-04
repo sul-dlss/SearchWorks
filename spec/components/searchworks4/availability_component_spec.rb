@@ -162,7 +162,7 @@ RSpec.describe Searchworks4::AvailabilityComponent, type: :component do
 
       expect(page).to have_text 'Special Collections'
       expect(page).to have_css('.callnumber', text: 'SC1346')
-      expect(page).to have_link('Request via Finding Aid')
+      expect(page).to have_link('Request')
     end
   end
 end
