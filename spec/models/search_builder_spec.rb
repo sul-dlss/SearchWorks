@@ -60,6 +60,65 @@ RSpec.describe SearchBuilder do
     end
   end
 
+  describe 'semantic search' do
+    let(:blacklight_params) { { q: 'natural language query', search_field: 'semantic' } }
+    let(:embedding) { Array.new(GeminiEmbedding::DIMENSIONS, 0.25) }
+    let(:embedding_client) { instance_double(GeminiEmbedding) }
+
+    before do
+      allow(Rails.cache).to receive(:fetch).and_yield
+      allow(GeminiEmbedding).to receive(:new).and_return(embedding_client)
+      allow(embedding_client).to receive(:embedding).and_return([embedding])
+    end
+
+    it 'replaces the keyword query with a similarity-threshold query' do
+      solr_params = search_builder.to_hash
+
+      expect(solr_params[:q]).to be_nil
+      expect(solr_params[:spellcheck]).to be false
+      expect(solr_params.dig(:json, :query).deep_symbolize_keys).to eq(
+        vectorSimilarity: {
+          f: 'embedding_vector',
+          minReturn: 0.8,
+          query: "[#{embedding.join(', ')}]"
+        }
+      )
+      expect(embedding_client).to have_received(:embedding).with(
+        input: ['natural language query'],
+        instruction: GeminiEmbedding::DEFAULT_QUERY_INSTRUCTION
+      )
+    end
+
+    it 'does not add a keyword clause or reranking parameters' do
+      solr_params = search_builder.to_hash
+
+      expect(solr_params.dig(:json, :query)).not_to include(:bool, :boost)
+      expect(solr_params.dig(:json, :params)).to be_nil
+    end
+
+    it 'preserves Solr filters and JSON facets' do
+      solr_params = Blacklight::Solr::Request.new(
+        q: 'keyword query',
+        fq: ['format_hsim:Book'],
+        json: { facet: { formats: { type: 'terms', field: 'format_hsim' } } }
+      )
+
+      search_builder.add_semantic_search_query(solr_params)
+
+      expect(solr_params[:fq]).to eq(['format_hsim:Book'])
+      expect(solr_params.dig(:json, :facet, :formats).deep_symbolize_keys).to eq(type: 'terms', field: 'format_hsim')
+      expect(solr_params.dig(:json, :query, :vectorSimilarity, :f)).to eq('embedding_vector')
+    end
+  end
+
+  it 'does not request an embedding for a keyword search' do
+    allow(GeminiEmbedding).to receive(:new)
+
+    search_builder.with(q: 'keyword query', search_field: 'search').to_hash
+
+    expect(GeminiEmbedding).not_to have_received(:new)
+  end
+
   context "with an advanced search" do
     let(:action_name) { 'advanced_search' }
 

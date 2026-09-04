@@ -9,6 +9,8 @@ RSpec.describe "Masthead search", :js do
 
   it 'updates the search form when switching search modes' do
     visit '/catalog?q=1*'
+    expect(page).to have_css('[name="search_field"] option[value="semantic"]', text: 'Semantic')
+
     within '#search-navbar' do
       choose 'Articles+'
     end
