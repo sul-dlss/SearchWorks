@@ -30,23 +30,26 @@ RSpec.feature "Feedback form modal", :js do
   scenario "feedback form in a new browser tab" do
     click_link "Feedback"
     expect(page).to have_css("#feedback-form", visible: true)
-    click_link 'Open in new tab'
+    original_window = current_window
+    feedback_window = window_opened_by { click_link 'Open in new tab' }
 
     expect(page).to have_css("#feedback-form", visible: false), 'hides the modal'
 
     aggregate_failures('shows the feedback form in a new tab') do
-      switch_to_window(windows.last)
-      expect(page).to have_css(".feedback-form", visible: true)
-      within "form.feedback-form" do
-        fill_in("message", with: "This is only a test")
-        fill_in("name", with: "Ronald McDonald")
-        fill_in("to", with: "test@kittenz.eu")
-        click_button "Send"
+      within_window feedback_window do
+        expect(page).to have_css(".feedback-form", visible: true)
+        within "form.feedback-form" do
+          fill_in("message", with: "This is only a test")
+          fill_in("name", with: "Ronald McDonald")
+          fill_in("to", with: "test@kittenz.eu")
+          click_button "Send"
+        end
       end
     end
 
     aggregate_failures('shows the feedback toast in the original tab and closes the new tab') do
-      switch_to_window(windows.first)
+      expect(feedback_window).to become_closed
+      switch_to_window(original_window)
       expect(page).to have_css("div.toast-body", text: "Thank you!\nYour feedback has been sent.")
       expect(windows.length).to eq(1)
     end
