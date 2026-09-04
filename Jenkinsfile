@@ -161,8 +161,6 @@ pipeline {
         sshagent (['sul-devops-team', 'sul-continuous-deployment']){
           sh '''#!/bin/bash -l
           export DEPLOY=1
-          export BRANCH=$TAG_NAME
-          export REVISION=$TAG_NAME
 
           # Load RVM
           rvm use 4.0.5@searchworks --create
