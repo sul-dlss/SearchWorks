@@ -37,11 +37,6 @@
         environment: '<%= Honeybadger.config.get(:env) %>',
         revision: '<%= Settings.REVISION %>'
       })
-      Honeybadger.beforeNotify((notice) => {
-        if ("TurnstileError" === notice.name) {
-          return false
-        }
-      })
     </script>
     <%= csrf_meta_tags %>
     <%= content_for(:head) %>
