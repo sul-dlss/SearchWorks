@@ -19,10 +19,10 @@ RSpec.describe Holdings::MHLD do
     expect(mhld.latest_received).to eq 'mhld latest received'
   end
 
-  it 'escapes HTML enteties in MHLD data' do
+  it 'strips angle brackets from MHLD data' do
     library_has = Holdings::MHLD.new(special_mhld).library_has
     expect(library_has).not_to include('<html>')
-    expect(library_has).to include('&lt;html&gt;')
+    expect(library_has).to include('html entities')
   end
 
   it "replaces '),(' with '), ('" do
