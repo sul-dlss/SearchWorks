@@ -16,6 +16,27 @@ RSpec.describe ArticlesController do
       expect(response).to render_template('index')
     end
 
+    context 'with catalog advanced search clauses' do
+      render_views
+
+      it 'removes the unsupported clauses before rendering the results' do
+        stub_article_service(docs: StubArticleService::SAMPLE_RESULTS)
+
+        get :index, params: {
+          q: 'novel Latin America',
+          search_field: 'subject',
+          clause: {
+            '6' => { field: 'search_title', type: 'all', query: 'novel' },
+            '7' => { field: 'subject_terms', type: 'all', query: 'Latin America' }
+          },
+          f: { eds_search_limiters_facet: ['Direct access to full text'] }
+        }
+
+        expect(response).to render_template('index')
+        expect(controller.send(:search_state).clause_params).to be_empty
+      end
+    end
+
     context 'when a query causes an EDS error' do
       before { stub_article_service(type: :error, docs: []) }
 
