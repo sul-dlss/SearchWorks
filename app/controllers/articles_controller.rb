@@ -30,6 +30,10 @@ class ArticlesController < ApplicationController
   # manipulate the search state params to set 'Direct access to full text' as the default
   # unless the user might have un-checked it already as part of asearch.
   before_action do
+    # Advanced search clauses only work in the catalog. Article searches use the
+    # combined query and search field generated when switching search modes.
+    search_state.params.delete('clause')
+
     next if action_name == 'index' && has_search_parameters?
 
     search_state.params['f'] ||= {}
