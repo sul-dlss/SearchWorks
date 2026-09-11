@@ -122,3 +122,5 @@ gem 'csl', '~> 2.0'
 gem "csl-styles", "~> 2.0"
 gem "cocina_display", "~> 2.3"
 gem 'json', '~> 2.0' # Pinned until Rails 8.1.4 is released https://github.com/rails/rails/issues/58685
+
+gem 'mcp', '~> 1.3' # Model Context Protocol
