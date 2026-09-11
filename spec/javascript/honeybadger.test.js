@@ -42,6 +42,30 @@ test("reports an unhandled promise rejection with actionable information", () =>
   }), false)
 })
 
+test("ignores unhandled promise rejections raised by browser extensions", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "window.onunhandledrejection",
+    message: "UnhandledPromiseRejectionWarning: TypeError: Cannot read properties of undefined (reading 'M_ID')",
+    stack: "TypeError: Cannot read properties of undefined (reading 'M_ID')\n    at Y (chrome-extension://extension-id/executors/200.js:1:761)"
+  }), true)
+})
+
+test("reports application unhandled promise rejections even when the message mentions an extension", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "window.onunhandledrejection",
+    message: "UnhandledPromiseRejectionWarning: Extension API request failed",
+    stack: "Error: Extension API request failed\n    at load (https://searchworks.stanford.edu/assets/application.js:1:100)"
+  }), false)
+})
+
+test("does not ignore non-promise errors from browser extensions", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "TypeError",
+    message: "Cannot read properties of undefined",
+    stack: "TypeError\n    at load (chrome-extension://extension-id/content.js:1:100)"
+  }), false)
+})
+
 test("continues to ignore Turnstile errors", () => {
   assert.equal(ignoreHoneybadgerNotice({ name: "TurnstileError", message: "Widget failed" }), true)
 })
