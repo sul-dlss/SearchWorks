@@ -29,5 +29,7 @@ module RequestLinks
         title: I18n.t('searchworks.request_link.aeon_note')
       ))
     end
+
+    delegate :has_finding_aid?, to: :document
   end
 end
