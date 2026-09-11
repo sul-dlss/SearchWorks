@@ -5,8 +5,8 @@ require 'rails_helper'
 RSpec.describe "collection_members/_file_collection_members" do
   let(:document) { SolrDocument.new(id: 12345) }
   let(:collection_members) { [
-    SolrDocument.new(id: 1, pub_date: "2010", author_person_full_display: "Mr. Bean", collection: []),
-    SolrDocument.new(id: 2, pub_date: "2011", collection: [])
+    SolrDocument.new(id: 1, pub_year_ss: "2010", author_person_full_display: "Mr. Bean", collection: []),
+    SolrDocument.new(id: 2, pub_year_ss: "2011", collection: [])
   ] }
 
   before do
