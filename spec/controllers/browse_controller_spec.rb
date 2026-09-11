@@ -49,4 +49,14 @@ RSpec.describe BrowseController do
       end
     end
   end
+
+  describe 'GET #nearby' do
+    it 'requires a call number' do
+      expect(NearbyOnShelf).not_to receive(:around_spine)
+
+      expect do
+        get :nearby, params: { start: 'xyz', view: 'gallery' }
+      end.to raise_error(ActionController::ParameterMissing, /call_number/)
+    end
+  end
 end
