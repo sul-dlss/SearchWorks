@@ -17,6 +17,24 @@ test("ignores an unhandled promise rejection with no specified reason", () => {
   }), true)
 })
 
+test("ignores CefSharp object binding promise rejections", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "window.onunhandledrejection",
+    message: "UnhandledPromiseRejectionWarning: Object Not Found Matching Id:2, MethodName:update, ParamCount:4"
+  }), true)
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "window.onunhandledrejection",
+    message: "UnhandledPromiseRejectionWarning: Object Not Found Matching Id:15, MethodName:simulateEvent, ParamCount:2"
+  }), true)
+})
+
+test("reports other object-not-found errors", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "window.onunhandledrejection",
+    message: "UnhandledPromiseRejectionWarning: Object Not Found Matching Id:2"
+  }), false)
+})
+
 test("reports an unhandled promise rejection with actionable information", () => {
   assert.equal(ignoreHoneybadgerNotice({
     name: "window.onunhandledrejection",
