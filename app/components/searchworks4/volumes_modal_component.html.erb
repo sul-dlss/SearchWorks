@@ -1,0 +1,33 @@
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.with_header do %>
+    <h2 class="modal-title">Volumes catalogued separately</h2>
+  <% end %>
+  <% component.with_body do %>
+    <div class="d-flex flex-column mt-2 mb-4" data-controller="volumes-search">
+      <div class="bg-light ps-3 py-2">
+        <h2 class="h4 p-0 m-0 fw-semibold"><%=@call_number%> (<%= @title %>)</h2>
+      </div>
+      <% if show_search? %>
+      <div class="input-group ps-3 py-2 pe-3">
+        <label class="input-group-text bg-body border-end-0 pe-0" for="volume_suggest">
+          <span class="visually-hidden">Search for a copy, volume, or issue</span>
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </label>
+        <input type="search" name="volume_suggest" id="volume_suggest" class="form-control border-start-0" placeholder="Search for a copy, volume, or issue" data-action="volumes-search#search"> 
+      </div>
+      <% end %>
+      <div class="py-2">
+        <% results.each do |result| %>
+          <div class="row mx-3 border-top">
+            <div class="col-8 px-0 title">
+              <a href="<%= solr_document_path(result['id']) %>"><%= result['title_display'] %></a>
+            </div>
+            <div class="col-4 px-0 text-end callnumber">
+              <%= call_number_display(result) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
