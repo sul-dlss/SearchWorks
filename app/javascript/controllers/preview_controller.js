@@ -38,6 +38,7 @@ export default class extends Controller {
 
     const frame = document.createElement("turbo-frame")
     frame.setAttribute("data-preview-target", "frame")
+    frame.setAttribute("target", "_top")
     this.element.appendChild(frame)
   }
 
