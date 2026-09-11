@@ -82,14 +82,24 @@ export default class extends Controller {
   async handleChallengeResponse(token) {
     const csrfToken = document.querySelector("[name='csrf-token']")
 
-    const response = await fetch(this.challengePathValue, {
-      method: "POST",
-      headers: {
-        "X-CSRF-Token": csrfToken?.content,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ cf_turnstile_response: token })
-    })
+    let response
+
+    try {
+      response = await fetch(this.challengePathValue, {
+        method: "POST",
+        headers: {
+          "X-CSRF-Token": csrfToken?.content,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ cf_turnstile_response: token })
+      })
+    } catch(error) {
+      // A network failure (including a request cancelled by Safari during a
+      // navigation) rejects fetch without producing an HTTP response. Do not
+      // let that rejection reach window.onunhandledrejection.
+      console.error("Problem verifying Turnstile challenge", this.challengePathValue, error)
+      return
+    }
 
     // A long-lived page may have a CSRF token from an expired or replaced session.
     if (response.status === 422) {
