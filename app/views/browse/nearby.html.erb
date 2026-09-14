@@ -1,4 +1,4 @@
-<turbo-frame id="filmstrip_<%= params[:call_number].gsub(' ', '-') %>">
+<turbo-frame id="filmstrip_<%= @call_number.to_s.gsub(' ', '-') %>">
   <% if @spines.present? %>
     <% view_config = blacklight_config&.view_config(:gallery) %>
     <div class="d-flex">

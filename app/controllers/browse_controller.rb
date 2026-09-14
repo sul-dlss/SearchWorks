@@ -7,6 +7,7 @@ class BrowseController < ApplicationController
 
   copy_blacklight_config_from(CatalogController)
 
+  before_action :require_call_number, only: :nearby
   before_action :fetch_orginal_document
   before_action :fetch_browse_items
   before_action :fetch_bookmarks
@@ -41,6 +42,10 @@ class BrowseController < ApplicationController
 
   def browse_params
     params.permit(:start, :barcode, :before, :after, :view, :call_number)
+  end
+
+  def require_call_number
+    @call_number = params.expect(:call_number)
   end
 
   def fetch_orginal_document
