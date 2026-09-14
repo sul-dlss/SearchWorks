@@ -4,6 +4,7 @@ import test from "node:test"
 import InlineTurnstileController from "../../app/javascript/controllers/inline_turnstile_controller.js"
 
 const convertFrame = InlineTurnstileController.prototype.convertFrame
+const handleChallengeResponse = InlineTurnstileController.prototype.handleChallengeResponse
 
 const buildFrame = ({ src, disabled }) => ({
   src,
@@ -36,4 +37,35 @@ test("convertFrame ignores a frame already enabled before Stimulus reconnects", 
 
   assert.doesNotThrow(() => convertFrame.call({}, frame))
   assert.equal(frame.src, "/availability/7617682")
+})
+
+test("handleChallengeResponse handles a failed challenge request", async () => {
+  const originalFetch = globalThis.fetch
+  const originalDocument = globalThis.document
+  const originalWindow = globalThis.window
+  const originalConsoleError = console.error
+  const errors = []
+
+  globalThis.fetch = async () => {
+    throw new TypeError("Load failed")
+  }
+  globalThis.document = { querySelector: () => null }
+  globalThis.window = {}
+  console.error = (...args) => errors.push(args)
+
+  try {
+    await assert.doesNotReject(() => handleChallengeResponse.call({
+      challengePathValue: "/challenge"
+    }, "turnstile-token"))
+  } finally {
+    globalThis.fetch = originalFetch
+    globalThis.document = originalDocument
+    globalThis.window = originalWindow
+    console.error = originalConsoleError
+  }
+
+  assert.equal(errors.length, 1)
+  assert.equal(errors[0][0], "Problem verifying Turnstile challenge")
+  assert.equal(errors[0][1], "/challenge")
+  assert.equal(errors[0][2].message, "Load failed")
 })
