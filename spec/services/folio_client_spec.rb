@@ -53,6 +53,33 @@ RSpec.describe FolioClient do
     end
   end
 
+  describe '#courses' do
+    let(:first_course) do
+      { 'id' => '2', 'courseNumber' => 'CS 2', 'courseListingObject' => { 'instructorObjects' => [{ 'name' => 'First instructor', 'email' => 'first@example.edu' }] } }
+    end
+    let(:second_course) do
+      { 'id' => '1', 'courseNumber' => 'CS 1', 'courseListingObject' => { 'instructorObjects' => [{ 'name' => 'Second instructor', 'email' => 'second@example.edu' }] } }
+    end
+
+    before do
+      stub_request(:get, 'https://okapi.example.edu/coursereserves/courses?limit=100&offset=0')
+        .with(headers: { 'x-okapi-token': 'tokentokentoken', 'X-Okapi-Tenant': 'sul' })
+        .to_return(body: { 'courses' => [first_course], 'totalRecords' => 2 }.to_json)
+      stub_request(:get, 'https://okapi.example.edu/coursereserves/courses?limit=100&offset=1')
+        .with(headers: { 'x-okapi-token': 'tokentokentoken', 'X-Okapi-Tenant': 'sul' })
+        .to_return(body: { 'courses' => [second_course], 'totalRecords' => 2 }.to_json)
+    end
+
+    it 'fetches every course in bounded pages' do
+      expect(client.courses).to eq [
+        { 'id' => '1', 'courseNumber' => 'CS 1', 'courseListingObject' => { 'instructorObjects' => [{ 'name' => 'Second instructor' }] } },
+        { 'id' => '2', 'courseNumber' => 'CS 2', 'courseListingObject' => { 'instructorObjects' => [{ 'name' => 'First instructor' }] } }
+      ]
+
+      expect(a_request(:get, 'https://okapi.example.edu/coursereserves/courses?limit=2147483647')).not_to have_been_made
+    end
+  end
+
   describe '#request_policies' do
     before do
       stub_request(:get, 'https://okapi.example.edu/request-policy-storage/request-policies?limit=2147483647')

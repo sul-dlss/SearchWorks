@@ -3,6 +3,8 @@
 require 'http'
 
 class FolioClient # rubocop:disable Metrics/ClassLength
+  COURSES_PAGE_SIZE = 100
+
   DEFAULT_HEADERS = {
     accept: 'application/json',
     content_type: 'application/json'
@@ -56,7 +58,7 @@ class FolioClient # rubocop:disable Metrics/ClassLength
 
   # https://s3.amazonaws.com/foliodocs/api/mod-courses/r/courses.html#coursereserves_courses_get
   def courses
-    get_json('/coursereserves/courses', params: { limit: 2_147_483_647 }, timeout: 60).fetch('courses', []).sort_by { |x| x['id'] }.map do |course|
+    course_pages.sort_by { |x| x['id'] }.map do |course|
       instructors = course.dig('courseListingObject', 'instructorObjects').map { |x| x.slice('name') }
       course['courseListingObject'] = course['courseListingObject'].merge({ 'instructorObjects' => instructors })
       course.slice('id', 'courseNumber', 'sectionName', 'name', 'description', 'metadata', 'courseListingObject')
@@ -116,6 +118,24 @@ class FolioClient # rubocop:disable Metrics/ClassLength
   end
 
   private
+
+  # mod-courses can time out while constructing an unbounded response. Fetching
+  # courses in small pages keeps each Okapi request within its response timeout.
+  def course_pages
+    courses = []
+    offset = 0
+
+    loop do
+      response = get_json('/coursereserves/courses', params: { limit: COURSES_PAGE_SIZE, offset: }, timeout: 60)
+      page = response.fetch('courses', [])
+      courses.concat(page)
+      offset += page.length
+
+      break if page.empty? || offset >= response.fetch('totalRecords', offset)
+    end
+
+    courses
+  end
 
   def post(path, **)
     authenticated_request(path, method: :post, **)
