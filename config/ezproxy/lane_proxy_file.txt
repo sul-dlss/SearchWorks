@@ -613,6 +613,7 @@ epub.prsgroup.com
 epubs.siam.org
 epubs.utah.edu
 equityhealthj.biomedcentral.com
+er.uwpress.org
 erj.ersjournals.com
 esajournals.onlinelibrary.wiley.com
 escholarship.org
@@ -1186,6 +1187,7 @@ omicsonline.com
 ommbid.mhmedical.com
 oncology.lwwhealthlibrary.com
 oncologyreviews.org
+ondemand.metopera.org
 onehealthoutlook.biomedcentral.com
 online.boneandjoint.org.uk
 online.infoteka.com
@@ -2267,7 +2269,6 @@ www.journalbipolardisorders.com
 www.journalhealthpollution.org
 www.journalmc.org
 www.journalnma.org
-www.journalofadvertisingresearch.com
 www.journalofcognition.org
 www.journalofextracellularvesicles.net
 www.journalofmas.com
