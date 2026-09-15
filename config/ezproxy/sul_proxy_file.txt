@@ -271,7 +271,6 @@ db.mkstudy.com
 db.saur.de
 db1.udpweb.com.tw
 dbpia.co.kr
-dbs.g-search.or.jp
 dccc.chemnetbase.com
 dcjournal.ca
 dds.crl.edu
@@ -706,6 +705,7 @@ lyellcollection.org
 lymphosign.com
 ma.ecsdl.org
 magazine.thediplomat.com
+maisaku.mainichi.jp
 manchester.universitypressscholarship.com
 marc.crcnetbase.com
 marc.thehistorymakers.org
@@ -1724,7 +1724,6 @@ www.shakespeareinperformance.amdigital.co.uk
 www.siam.org
 www.sidm.it
 www.slavery.amdigital.co.uk
-www.smpte.org
 www.socialexplorer.com
 www.socialismonfilm.amdigital.co.uk
 www.socio.com
