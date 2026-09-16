@@ -4,11 +4,15 @@ require 'rails_helper'
 
 RSpec.describe SearchworksMcp::Availability do
   describe '.fetch' do
+    let(:request_attributes) { { allowed_request_types: ['Hold'], folio_status: 'Checked out' } }
     let(:item) do
       instance_double(
         Holdings::Item,
-        live_lookup_item_id: 'item-1', folio_item?: true, allowed_request_types: ['Hold'],
-        library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS', barcode: '36105000000000'
+        live_lookup_item_id: 'item-1', folio_item?: true,
+        effective_location: instance_double(Folio::Location, details: {}),
+        permanent_location: instance_double(Folio::Location, id: 'location-uuid', cached_location_data: {}),
+        library: 'SAL3', **request_attributes,
+        effective_permanent_location_code: 'SAL3-STACKS', barcode: '36105000000000'
       )
     end
     let(:location) do
@@ -64,6 +68,18 @@ RSpec.describe SearchworksMcp::Availability do
         'Request: https://host.example.com/requests/new',
         'purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339'
       )
+    end
+
+    context 'when the location is pageable' do
+      let(:request_attributes) { { allowed_request_types: ['Page'], folio_status: 'Available' } }
+
+      it 'returns the location-level request URL shown by the web application' do
+        request_url = described_class.fetch(id: '123').dig(:structured_content, :availability, 0, :request_url)
+
+        expect(request_url).to eq(
+          'https://host.example.com/requests/new?item_id=123&origin=SAL3&origin_location=SAL3-STACKS'
+        )
+      end
     end
 
     context 'when the record has no physical items' do
