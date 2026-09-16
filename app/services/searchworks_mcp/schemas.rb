@@ -13,6 +13,28 @@ module SearchworksMcp
       required: %w[id title url]
     }.freeze
 
+    AVAILABILITY_ITEM = {
+      type: "object",
+      properties: {
+        item_id: { type: %w[string null] },
+        due_date: { type: %w[string null] },
+        status: { type: %w[string null] },
+        is_available: { type: %w[boolean null] },
+        is_requestable_status: { type: %w[boolean null] },
+        request_url: { type: "string", description: "Direct request link, when the item is requestable" }
+      }
+    }.freeze
+
+    ONLINE_SOURCE = {
+      type: "object",
+      properties: {
+        url: { type: "string" },
+        label: { type: "string" },
+        stanford_only: { type: "boolean" }
+      },
+      required: %w[url label stanford_only]
+    }.freeze
+
     def self.catalog_search
       {
         properties: {
@@ -56,22 +78,10 @@ module SearchworksMcp
         properties: {
           id: { type: "string" },
           url: { type: "string" },
-          availability: {
-            type: "array",
-            items: {
-              type: "object",
-              properties: {
-                item_id: { type: %w[string null] },
-                due_date: { type: %w[string null] },
-                status: { type: %w[string null] },
-                is_available: { type: %w[boolean null] },
-                is_requestable_status: { type: %w[boolean null] },
-                request_url: { type: "string", description: "Direct request link, when the item is requestable" }
-              }
-            }
-          }
+          availability: { type: "array", items: AVAILABILITY_ITEM },
+          online_sources: { type: "array", items: ONLINE_SOURCE }
         },
-        required: %w[id url availability]
+        required: %w[id url availability online_sources]
       }
     end
   end

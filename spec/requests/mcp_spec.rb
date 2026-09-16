@@ -93,22 +93,30 @@ RSpec.describe 'MCP endpoint' do
     end
 
     describe 'tools/call get_availability' do
-      it 'returns current item-level availability for a catalog record' do
-        allow(SearchworksMcp::Availability).to receive(:fetch).and_return(
+      let(:availability_result) do
+        {
           text: "Availability for catalog record 123:\n- item-1: Available",
           structured_content: {
-            id: '123',
-            url: 'https://searchworks.stanford.edu/view/123',
-            availability: [
-              {
-                item_id: 'item-1', due_date: nil, status: 'Available',
-                is_available: true, is_requestable_status: false,
-                request_url: 'https://requests.stanford.edu/requests/new?item_id=123'
-              }
+            id: '123', url: 'https://searchworks.stanford.edu/view/123',
+            availability: [{
+              item_id: 'item-1', due_date: nil, status: 'Available', is_available: true,
+              is_requestable_status: false,
+              request_url: 'https://requests.stanford.edu/requests/new?item_id=123'
+            }],
+            online_sources: [
+              { url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }
             ]
           }
-        )
+        }
+      end
 
+      before do
+        allow(SearchworksMcp::Availability).to receive(:fetch).and_return(
+          availability_result
+        )
+      end
+
+      it 'returns current item-level availability for a catalog record' do
         post_mcp(
           {
             jsonrpc: '2.0', id: 'availability', method: 'tools/call',
@@ -122,6 +130,9 @@ RSpec.describe 'MCP endpoint' do
         expect(result.dig('structuredContent', 'availability', 0)).to include(
           'item_id' => 'item-1', 'status' => 'Available', 'is_available' => true,
           'request_url' => 'https://requests.stanford.edu/requests/new?item_id=123'
+        )
+        expect(result.dig('structuredContent', 'online_sources', 0)).to include(
+          'url' => 'https://purl.fdlp.gov/GPO/LPS59339', 'stanford_only' => false
         )
         expect(SearchworksMcp::Availability).to have_received(:fetch).with(id: '123', controller: an_instance_of(McpController))
       end

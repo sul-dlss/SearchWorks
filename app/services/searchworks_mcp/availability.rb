@@ -5,13 +5,16 @@ module SearchworksMcp
   module Availability
     extend self
 
+    MAX_ONLINE_SOURCES = 5
+
     def fetch(id:, controller: nil)
       document = search_service(controller).fetch(id)
       records = availability_records(document)
       result = {
         id: document.id.to_s,
         url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(document.id.to_s)}",
-        availability: records
+        availability: records,
+        online_sources: online_sources(document)
       }
 
       { text: availability_text(result), structured_content: result }
@@ -49,19 +52,43 @@ module SearchworksMcp
       )
     end
 
-    def availability_text(result)
-      return "No item availability information found for catalog record #{result[:id]}." if result[:availability].empty?
+    def online_sources(document)
+      document.preferred_online_links.first(MAX_ONLINE_SOURCES).filter_map do |link|
+        next if link.href.blank?
 
-      lines = ["Availability for catalog record #{result[:id]}:"]
-      result[:availability].each do |record|
+        {
+          url: link.href,
+          label: link.link_text,
+          stanford_only: !!link.stanford_only?
+        }
+      end
+    end
+
+    def availability_text(result)
+      lines = if result[:availability].empty?
+                ["No item availability information found for catalog record #{result[:id]}."]
+              else
+                availability_lines(result)
+              end
+      if result[:online_sources].any?
+        lines << "Online access:"
+        result[:online_sources].each do |source|
+          access = source[:stanford_only] ? " (Stanford-only)" : ""
+          lines << "- #{source[:label]}: #{source[:url]}#{access}"
+        end
+      end
+      lines << "URL: #{result[:url]}"
+      lines.join("\n")
+    end
+
+    def availability_lines(result)
+      ["Availability for catalog record #{result[:id]}:"] + result[:availability].map do |record|
         record = record.with_indifferent_access
         item = [record[:item_id], record[:status]].compact_blank.join(": ")
         item += " (due #{record[:due_date]})" if record[:due_date].present?
         item += " — Request: #{record[:request_url]}" if record[:request_url].present?
-        lines << "- #{item}"
+        "- #{item}"
       end
-      lines << "URL: #{result[:url]}"
-      lines.join("\n")
     end
   end
 end

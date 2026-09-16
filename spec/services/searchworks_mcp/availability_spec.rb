@@ -4,16 +4,23 @@ require 'rails_helper'
 
 RSpec.describe SearchworksMcp::Availability do
   describe '.fetch' do
-    it 'looks up the catalog document and returns its live availability records' do
-      item = instance_double(
+    let(:item) do
+      instance_double(
         Holdings::Item,
         live_lookup_item_id: 'item-1', folio_item?: true, allowed_request_types: ['Hold'],
         library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS', barcode: '36105000000000'
       )
-      holdings = instance_double(Holdings, items: [item])
-      document = instance_double(SolrDocument, id: '123', holdings:)
-      search_service = instance_double(Blacklight::SearchService, fetch: document)
-      live_lookup = instance_double(
+    end
+    let(:holdings) { instance_double(Holdings, items: [item]) }
+    let(:online_link) do
+      instance_double(
+        Links::Link, href: 'https://purl.fdlp.gov/GPO/LPS59339', link_text: 'purl.fdlp.gov', stanford_only?: false
+      )
+    end
+    let(:document) { instance_double(SolrDocument, id: '123', holdings:, preferred_online_links: [online_link]) }
+    let(:search_service) { instance_double(Blacklight::SearchService, fetch: document) }
+    let(:live_lookup) do
+      instance_double(
         LiveLookup,
         records: [
           {
@@ -22,10 +29,15 @@ RSpec.describe SearchworksMcp::Availability do
           }
         ]
       )
+    end
+
+    before do
       allow(document).to receive(:[]).with(:uuid_ssi).and_return('instance-uuid')
       allow(described_class).to receive(:search_service).and_return(search_service)
       allow(LiveLookup).to receive(:new).with('instance-uuid').and_return(live_lookup)
+    end
 
+    it 'returns live availability, request links, and online sources' do
       result = described_class.fetch(id: '123')
 
       expect(result[:structured_content]).to include(
@@ -34,9 +46,24 @@ RSpec.describe SearchworksMcp::Availability do
         availability: [include(
           item_id: 'item-1', status: 'Checked out', is_available: false,
           request_url: 'https://host.example.com/requests/new?barcode=36105000000000&item_id=123&origin=SAL3&origin_location=SAL3-STACKS'
-        )]
+        )],
+        online_sources: [{ url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }]
       )
-      expect(result[:text]).to include('item-1: Checked out', 'Request: https://host.example.com/requests/new')
+      expect(result[:text]).to include(
+        'item-1: Checked out', 'Request: https://host.example.com/requests/new',
+        'purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339'
+      )
+    end
+
+    context 'when the record has no physical items' do
+      let(:live_lookup) { instance_double(LiveLookup, records: []) }
+
+      it 'still returns the online source' do
+        result = described_class.fetch(id: '123')
+
+        expect(result.dig(:structured_content, :online_sources, 0, :url)).to eq('https://purl.fdlp.gov/GPO/LPS59339')
+        expect(result[:text]).to include('purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339')
+      end
     end
 
     it 'returns a model-visible error when availability cannot be retrieved' do
