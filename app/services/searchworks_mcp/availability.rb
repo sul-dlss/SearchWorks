@@ -33,33 +33,40 @@ module SearchworksMcp
     def availability_records(document)
       holdings = document.holdings
       items = holdings.items.index_by(&:live_lookup_item_id)
-      locations = holding_locations(holdings)
+      locations = holding_locations(document, holdings)
       LiveLookup.new(document[:uuid_ssi]).records.map do |record|
         record = record.symbolize_keys
         item = items[record[:item_id]]
         record.merge!(locations[record[:item_id]] || {})
-        request_url = request_url(document, item, record)
-        record[:request_url] = request_url if request_url
+        record[:request_url] ||= item_request_url(document, item, record)
         record
       end
     end
 
-    def holding_locations(holdings)
+    def holding_locations(document, holdings)
       holdings.libraries.each_with_object({}) do |library, item_locations|
         library.locations.each do |location|
+          request_url = location_request_url(document, library, location)
           location.items.each do |item|
             item_locations[item.live_lookup_item_id] = {
               library: library.name || library.code,
               library_code: library.code,
               location: location.name || location.code,
-              location_code: location.code
-            }
+              location_code: location.code,
+              request_url:
+            }.compact
           end
         end
       end
     end
 
-    def request_url(document, item, rtac)
+    def location_request_url(document, library, location)
+      return unless LocationRequestLinkPolicy.new(location:, library_code: library.code).show?
+
+      ApplicationController.helpers.request_url(document, library: library.code, location: location.code)
+    end
+
+    def item_request_url(document, item, rtac)
       return unless item && ItemRequestLinkPolicy.new(item:, rtac:).show?
 
       ApplicationController.helpers.request_url(
