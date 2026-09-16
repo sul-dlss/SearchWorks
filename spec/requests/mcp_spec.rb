@@ -102,7 +102,8 @@ RSpec.describe 'MCP endpoint' do
             availability: [
               {
                 item_id: 'item-1', due_date: nil, status: 'Available',
-                is_available: true, is_requestable_status: false
+                is_available: true, is_requestable_status: false,
+                request_url: 'https://requests.stanford.edu/requests/new?item_id=123'
               }
             ]
           }
@@ -119,7 +120,8 @@ RSpec.describe 'MCP endpoint' do
         result = response.parsed_body.fetch('result')
         expect(result).to include('resultType' => 'complete', 'isError' => false)
         expect(result.dig('structuredContent', 'availability', 0)).to include(
-          'item_id' => 'item-1', 'status' => 'Available', 'is_available' => true
+          'item_id' => 'item-1', 'status' => 'Available', 'is_available' => true,
+          'request_url' => 'https://requests.stanford.edu/requests/new?item_id=123'
         )
         expect(SearchworksMcp::Availability).to have_received(:fetch).with(id: '123', controller: an_instance_of(McpController))
       end

@@ -65,7 +65,8 @@ module SearchworksMcp
                 due_date: { type: %w[string null] },
                 status: { type: %w[string null] },
                 is_available: { type: %w[boolean null] },
-                is_requestable_status: { type: %w[boolean null] }
+                is_requestable_status: { type: %w[boolean null] },
+                request_url: { type: "string", description: "Direct request link, when the item is requestable" }
               }
             }
           }
