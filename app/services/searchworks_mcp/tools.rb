@@ -95,7 +95,26 @@ module SearchworksMcp
       output_schema: -> { Schemas.record },
       annotations: READ_ONLY_ANNOTATIONS
     }.freeze
-    ALL_TOOLS = [CATALOG_SEARCH, ARTICLE_SEARCH, GET_CATALOG_RECORD, GET_ARTICLE].freeze
+
+    GET_AVAILABILITY = {
+      name: "get_availability",
+      description: "Retrieve current item-level availability for one catalog result. Call this with an id returned " \
+                   "by catalog_search_tool.",
+      input_schema: {
+        properties: {
+          id: {
+            type: "string",
+            description: "Catalog record id returned by catalog_search_tool",
+            minLength: 1, maxLength: CatalogRecord::MAX_ID_LENGTH
+          }
+        },
+        required: ["id"],
+        additionalProperties: false
+      },
+      output_schema: -> { Schemas.availability },
+      annotations: READ_ONLY_ANNOTATIONS
+    }.freeze
+    ALL_TOOLS = [CATALOG_SEARCH, ARTICLE_SEARCH, GET_CATALOG_RECORD, GET_ARTICLE, GET_AVAILABILITY].freeze
 
     def self.list_tools
       ALL_TOOLS.map do |tool|
@@ -121,6 +140,8 @@ module SearchworksMcp
         CatalogRecord.fetch(**arguments.symbolize_keys)
       when "get_article"
         ArticleRecord.fetch(**arguments.symbolize_keys)
+      when "get_availability"
+        Availability.fetch(**arguments.symbolize_keys)
       else
         { text: "Unknown tool: #{name}", structured_content: { error: "Unknown tool" }, error: true }
       end

@@ -57,8 +57,9 @@ class McpController < ApplicationController
                     "asks for both. Use catalog_search_tool for books, journals as whole publications, databases, " \
                     "media, archives, maps, and other catalog materials. Use article_search_tool for individual " \
                     "scholarly, journal, or newspaper articles. Use the corresponding get tool only when detailed " \
-                    "metadata is needed for a selected result. Cite the canonical SearchWorks URL returned by tools.",
-      tools: [catalog_tool, article_tool, catalog_record_tool, article_record_tool],
+                    "metadata is needed for a selected result. Use get_availability when current item-level " \
+                    "availability is needed. Cite the canonical SearchWorks URL returned by tools.",
+      tools: [catalog_tool, article_tool, catalog_record_tool, article_record_tool, availability_tool],
       capabilities: { tools: {} },
       ttl_ms: 1.hour.in_milliseconds,
       cache_scope: "public",
@@ -91,6 +92,12 @@ class McpController < ApplicationController
   def article_record_tool
     build_tool(SearchworksMcp::Tools::GET_ARTICLE) do |arguments, _context|
       SearchworksMcp::ArticleRecord.fetch(**arguments)
+    end
+  end
+
+  def availability_tool
+    build_tool(SearchworksMcp::Tools::GET_AVAILABILITY) do |arguments, context|
+      SearchworksMcp::Availability.fetch(controller: context&.dig(:controller), **arguments)
     end
   end
 

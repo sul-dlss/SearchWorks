@@ -50,5 +50,28 @@ module SearchworksMcp
         required: %w[id title url metadata]
       }
     end
+
+    def self.availability
+      {
+        properties: {
+          id: { type: "string" },
+          url: { type: "string" },
+          availability: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                item_id: { type: %w[string null] },
+                due_date: { type: %w[string null] },
+                status: { type: %w[string null] },
+                is_available: { type: %w[boolean null] },
+                is_requestable_status: { type: %w[boolean null] }
+              }
+            }
+          }
+        },
+        required: %w[id url availability]
+      }
+    end
   end
 end

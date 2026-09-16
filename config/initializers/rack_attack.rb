@@ -88,7 +88,7 @@ if Settings.THROTTLE_TRAFFIC
     req.ip if route[:controller] == 'articles' && route[:action] == 'show'
   end
 
-  # Bound MCP traffic independently because tool calls invoke catalog and EDS
+  # Bound MCP traffic independently because tool calls invoke catalog, EDS, and FOLIO
   # services without passing through their browser-facing controller routes.
   Rack::Attack.throttle('mcp/requests/ip', limit: 120, period: 1.minute) do |req|
     req.ip if req.post? && req.path == '/mcp'
@@ -97,7 +97,7 @@ if Settings.THROTTLE_TRAFFIC
   Rack::Attack.throttle('mcp/searches/ip', limit: 30, period: 1.minute) do |req|
     next unless req.post? && req.path == '/mcp'
     next unless req.get_header('HTTP_MCP_METHOD') == 'tools/call'
-    next unless req.get_header('HTTP_MCP_NAME').in?(%w[catalog_search_tool article_search_tool])
+    next unless req.get_header('HTTP_MCP_NAME').in?(%w[catalog_search_tool article_search_tool get_availability])
 
     req.ip
   end
