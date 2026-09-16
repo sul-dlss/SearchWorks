@@ -85,7 +85,7 @@ module SearchworksMcp
       return "No results found for query: #{query}#{filter_text}" if results.empty?
 
       "Found #{total} results#{filter_text} (showing #{results.length}):\n\n" \
-        "#{formatted_results(results)}#{facet_text(facets)}"
+        "#{formatted_results(results)}#{facet_text(facets)}#{availability_follow_up(results)}"
     end
 
     def filter_text(filters)
@@ -116,6 +116,12 @@ module SearchworksMcp
         "- #{facet[:label]}: #{values}"
       end
       "\n\nAvailable refinement options:\n#{options.join("\n")}"
+    end
+
+    def availability_follow_up(results)
+      return "" unless results.one?
+
+      "\n\nRequired next step: Call get_availability with id #{results.first[:id]} before responding to the user."
     end
   end
 end
