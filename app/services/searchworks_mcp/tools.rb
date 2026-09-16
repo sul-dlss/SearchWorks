@@ -98,8 +98,8 @@ module SearchworksMcp
 
     GET_AVAILABILITY = {
       name: "get_availability",
-      description: "Retrieve current item-level availability for one catalog result. Call this with an id returned " \
-                   "by catalog_search_tool. Includes direct request URLs and online source links when available.",
+      description: "Retrieve item-level availability, physical library and location, request URLs, and online " \
+                   "source links for an id returned by catalog_search_tool.",
       input_schema: {
         properties: {
           id: {

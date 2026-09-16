@@ -11,7 +11,15 @@ RSpec.describe SearchworksMcp::Availability do
         library: 'SAL3', effective_permanent_location_code: 'SAL3-STACKS', barcode: '36105000000000'
       )
     end
-    let(:holdings) { instance_double(Holdings, items: [item]) }
+    let(:location) do
+      instance_double(Holdings::Location, code: 'SAL3-STACKS', name: 'Stacks', items: [item])
+    end
+    let(:library) do
+      instance_double(
+        Holdings::Library, code: 'SAL3', name: 'Stanford Auxiliary Library 3', locations: [location]
+      )
+    end
+    let(:holdings) { instance_double(Holdings, items: [item], libraries: [library]) }
     let(:online_link) do
       instance_double(
         Links::Link, href: 'https://purl.fdlp.gov/GPO/LPS59339', link_text: 'purl.fdlp.gov', stanford_only?: false
@@ -45,12 +53,15 @@ RSpec.describe SearchworksMcp::Availability do
         url: 'https://searchworks.stanford.edu/view/123',
         availability: [include(
           item_id: 'item-1', status: 'Checked out', is_available: false,
+          library: 'Stanford Auxiliary Library 3', library_code: 'SAL3',
+          location: 'Stacks', location_code: 'SAL3-STACKS',
           request_url: 'https://host.example.com/requests/new?barcode=36105000000000&item_id=123&origin=SAL3&origin_location=SAL3-STACKS'
         )],
         online_sources: [{ url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }]
       )
       expect(result[:text]).to include(
-        'item-1: Checked out', 'Request: https://host.example.com/requests/new',
+        'item-1: Checked out — Stanford Auxiliary Library 3, Stacks',
+        'Request: https://host.example.com/requests/new',
         'purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339'
       )
     end
