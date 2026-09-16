@@ -113,7 +113,7 @@ The endpoint exposes five tools:
 - `article_search_tool` searches scholarly articles when EDS is enabled.
 - `get_catalog_record` retrieves detailed metadata for a catalog search result.
 - `get_article` retrieves detailed metadata and an available abstract for an article search result.
-- `get_availability` retrieves current item-level availability, direct request links, and online source links for a catalog search result.
+- `get_availability` retrieves current item-level availability with physical library/location details, direct request links, and online source links.
 
 ### Using the endpoint with Claude Code
 

@@ -31,13 +31,31 @@ module SearchworksMcp
     end
 
     def availability_records(document)
-      items = document.holdings.items.index_by(&:live_lookup_item_id)
+      holdings = document.holdings
+      items = holdings.items.index_by(&:live_lookup_item_id)
+      locations = holding_locations(holdings)
       LiveLookup.new(document[:uuid_ssi]).records.map do |record|
         record = record.symbolize_keys
         item = items[record[:item_id]]
+        record.merge!(locations[record[:item_id]] || {})
         request_url = request_url(document, item, record)
         record[:request_url] = request_url if request_url
         record
+      end
+    end
+
+    def holding_locations(holdings)
+      holdings.libraries.each_with_object({}) do |library, item_locations|
+        library.locations.each do |location|
+          location.items.each do |item|
+            item_locations[item.live_lookup_item_id] = {
+              library: library.name || library.code,
+              library_code: library.code,
+              location: location.name || location.code,
+              location_code: location.code
+            }
+          end
+        end
       end
     end
 
@@ -85,6 +103,8 @@ module SearchworksMcp
       ["Availability for catalog record #{result[:id]}:"] + result[:availability].map do |record|
         record = record.with_indifferent_access
         item = [record[:item_id], record[:status]].compact_blank.join(": ")
+        physical_location = [record[:library], record[:location]].compact_blank.uniq.join(", ")
+        item += " — #{physical_location}" if physical_location.present?
         item += " (due #{record[:due_date]})" if record[:due_date].present?
         item += " — Request: #{record[:request_url]}" if record[:request_url].present?
         "- #{item}"

@@ -101,6 +101,8 @@ RSpec.describe 'MCP endpoint' do
             availability: [{
               item_id: 'item-1', due_date: nil, status: 'Available', is_available: true,
               is_requestable_status: false,
+              library: 'Green Library', library_code: 'GREEN',
+              location: 'Stacks', location_code: 'GRE-STACKS',
               request_url: 'https://requests.stanford.edu/requests/new?item_id=123'
             }],
             online_sources: [
@@ -129,6 +131,7 @@ RSpec.describe 'MCP endpoint' do
         expect(result).to include('resultType' => 'complete', 'isError' => false)
         expect(result.dig('structuredContent', 'availability', 0)).to include(
           'item_id' => 'item-1', 'status' => 'Available', 'is_available' => true,
+          'library' => 'Green Library', 'location' => 'Stacks',
           'request_url' => 'https://requests.stanford.edu/requests/new?item_id=123'
         )
         expect(result.dig('structuredContent', 'online_sources', 0)).to include(

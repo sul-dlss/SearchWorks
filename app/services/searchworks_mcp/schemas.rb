@@ -21,6 +21,10 @@ module SearchworksMcp
         status: { type: %w[string null] },
         is_available: { type: %w[boolean null] },
         is_requestable_status: { type: %w[boolean null] },
+        library: { type: "string" },
+        library_code: { type: "string" },
+        location: { type: "string" },
+        location_code: { type: "string" },
         request_url: { type: "string", description: "Direct request link, when the item is requestable" }
       }
     }.freeze
