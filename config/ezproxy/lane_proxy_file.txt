@@ -461,7 +461,6 @@ database.yomiuri.co.jp
 datadryad.org
 datasets.americasbarometer.org
 daten.digitale-sammlungen.de
-dbs.g-search.or.jp
 dcc.icgc.org
 dccc.chemnetbase.com
 dcjournal.ca
@@ -1040,6 +1039,7 @@ lsspjournal.biomedcentral.com
 lupus.bmj.com
 lwwhealthlibrary.com
 macyfoundation.org
+maisaku.mainichi.jp
 malariajournal.biomedcentral.com
 marketplace.unl.edu
 materials.springer.com
@@ -1498,7 +1498,6 @@ sti.bmj.com
 stm.cairn.info
 student.bmj.com
 students.law.umich.edu
-subscriber.politicopro.com
 subscription.mbrjournal.com
 subscriptions.energysociety.org
 subscriptions.techstreet.com
