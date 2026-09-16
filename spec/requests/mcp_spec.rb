@@ -84,11 +84,44 @@ RSpec.describe 'MCP endpoint' do
         expect(first_result.fetch('tools')).to eq(second_result.fetch('tools'))
         tools = first_result.fetch('tools').index_by { |tool| tool.fetch('name') }
         expect(tools.keys).to eq(
-          %w[catalog_search_tool article_search_tool get_catalog_record get_article]
+          %w[catalog_search_tool article_search_tool get_catalog_record get_article get_availability]
         )
         expect(tools.values).to all(include('annotations' => include('readOnlyHint' => true)))
         expect(tools.values).to all(include('outputSchema' => include('type' => 'object')))
         expect(tools.values).to all(include('inputSchema' => include('additionalProperties' => false)))
+      end
+    end
+
+    describe 'tools/call get_availability' do
+      it 'returns current item-level availability for a catalog record' do
+        allow(SearchworksMcp::Availability).to receive(:fetch).and_return(
+          text: "Availability for catalog record 123:\n- item-1: Available",
+          structured_content: {
+            id: '123',
+            url: 'https://searchworks.stanford.edu/view/123',
+            availability: [
+              {
+                item_id: 'item-1', due_date: nil, status: 'Available',
+                is_available: true, is_requestable_status: false
+              }
+            ]
+          }
+        )
+
+        post_mcp(
+          {
+            jsonrpc: '2.0', id: 'availability', method: 'tools/call',
+            params: { name: 'get_availability', arguments: { id: '123' } }
+          }
+        )
+
+        expect(response).to have_http_status(:ok)
+        result = response.parsed_body.fetch('result')
+        expect(result).to include('resultType' => 'complete', 'isError' => false)
+        expect(result.dig('structuredContent', 'availability', 0)).to include(
+          'item_id' => 'item-1', 'status' => 'Available', 'is_available' => true
+        )
+        expect(SearchworksMcp::Availability).to have_received(:fetch).with(id: '123', controller: an_instance_of(McpController))
       end
     end
 

@@ -107,10 +107,13 @@ curl -X POST http://localhost:3000/mcp \
   }'
 ```
 
-The endpoint exposes two tools:
+The endpoint exposes five tools:
 
 - `catalog_search_tool` searches the library catalog.
 - `article_search_tool` searches scholarly articles when EDS is enabled.
+- `get_catalog_record` retrieves detailed metadata for a catalog search result.
+- `get_article` retrieves detailed metadata and an available abstract for an article search result.
+- `get_availability` retrieves current item-level availability for a catalog search result.
 
 ### Using the endpoint with Claude Code
 
