@@ -5,6 +5,8 @@ module SearchworksMcp
   module CatalogResults
     extend self
 
+    AVAILABILITY_FOLLOW_UP_LIMIT = 5
+
     def format(response:, query:, search_field:, filters:, config:)
       results = Array(response.documents).map { |document| format_document(document) }
       facets = extract_facets(response, config)
@@ -119,9 +121,15 @@ module SearchworksMcp
     end
 
     def availability_follow_up(results)
-      return "" unless results.one?
+      return "" if results.empty? || results.length > AVAILABILITY_FOLLOW_UP_LIMIT
 
-      "\n\nRequired next step: Call get_availability with id #{results.first[:id]} before responding to the user."
+      case results.length
+      when 1
+        "\n\nRequired next step: Call get_availability with id #{results.first[:id]} before responding to the user."
+      else
+        "\n\nRequired next step: After selecting the best result, call get_availability with that result's id before " \
+        "responding to the user."
+      end
     end
   end
 end

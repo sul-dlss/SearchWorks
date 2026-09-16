@@ -14,8 +14,8 @@ module SearchworksMcp
       name: "catalog_search_tool",
       description: "Search the Stanford library catalog for books, journals as cataloged publications, databases, " \
                    "media, archival collections, maps, and other library materials. Use article_search_tool instead " \
-                   "for individual articles. This does not return current availability; when exactly one result is " \
-                   "returned, call get_availability with its id before responding.",
+                   "for individual articles. This does not return current availability; call get_availability for " \
+                   "a single result or the specific result selected from a short result list before responding.",
       input_schema: -> { CatalogSearch.build_input_schema },
       output_schema: -> { Schemas.catalog_search },
       annotations: READ_ONLY_ANNOTATIONS
@@ -99,7 +99,7 @@ module SearchworksMcp
     GET_AVAILABILITY = {
       name: "get_availability",
       description: "Retrieve availability, physical location, request URLs, and online source links. Always call " \
-                   "this with the id when catalog_search_tool returns exactly one result.",
+                   "this for a single result or the result selected from a short catalog search result list.",
       input_schema: {
         properties: {
           id: {
