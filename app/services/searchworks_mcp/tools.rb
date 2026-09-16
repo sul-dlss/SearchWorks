@@ -99,7 +99,7 @@ module SearchworksMcp
     GET_AVAILABILITY = {
       name: "get_availability",
       description: "Retrieve current item-level availability for one catalog result. Call this with an id returned " \
-                   "by catalog_search_tool.",
+                   "by catalog_search_tool. Requestable items include a direct request_url.",
       input_schema: {
         properties: {
           id: {
