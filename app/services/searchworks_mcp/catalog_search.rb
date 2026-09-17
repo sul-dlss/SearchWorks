@@ -25,16 +25,14 @@ module SearchworksMcp
         },
         search_field: {
           type: "string",
-          description: "The field to search in",
-          enum: SEARCH_FIELDS.keys,
-          default: "all_fields"
+          description: "The field to search in (defaults to all_fields)",
+          enum: SEARCH_FIELDS.keys
         },
         rows: {
           type: "integer",
-          description: "Number of results to return (max 20)",
+          description: "Number of results to return (defaults to 10, max 20)",
           minimum: 1,
-          maximum: 20,
-          default: 10
+          maximum: 20
         }
       }
       facet_properties = facet_options.transform_values do |options|
