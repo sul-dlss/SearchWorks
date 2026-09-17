@@ -60,7 +60,8 @@ class McpController < ApplicationController
                     "detailed metadata is needed. Whenever catalog_search_tool returns exactly one result or you " \
                     "select a specific result from a result set, you must call get_availability with that result's " \
                     "id before answering, even if the user did not ask about availability. Cite the canonical " \
-                    "SearchWorks URL returned by tools.",
+                    "SearchWorks URL returned by tools. When availability includes a request_url, present that " \
+                    "direct link to the user so they can request the material.",
       tools: [catalog_tool, article_tool, catalog_record_tool, article_record_tool, availability_tool],
       capabilities: { tools: {} },
       ttl_ms: 1.hour.in_milliseconds,
