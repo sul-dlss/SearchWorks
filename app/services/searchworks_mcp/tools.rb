@@ -14,8 +14,8 @@ module SearchworksMcp
       name: "catalog_search_tool",
       description: "Search the Stanford library catalog for books, journals as cataloged publications, databases, " \
                    "media, archival collections, maps, and other library materials. Use article_search_tool instead " \
-                   "for individual articles. This does not return current availability; call get_availability for " \
-                   "a single result or the specific result selected from a short result list before responding.",
+                   "for individual articles. Results do not contain current availability. Each result includes a " \
+                   "required availability_lookup; follow it before presenting that record to the user.",
       input_schema: -> { CatalogSearch.build_input_schema },
       output_schema: -> { Schemas.catalog_search },
       annotations: READ_ONLY_ANNOTATIONS

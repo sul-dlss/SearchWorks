@@ -92,6 +92,9 @@ RSpec.describe 'MCP endpoint' do
         catalog_schema = tools.fetch('catalog_search_tool').fetch('inputSchema')
         expect(catalog_schema.fetch('required')).to eq(['query'])
         expect(catalog_schema.dig('properties', 'rows')).not_to have_key('default')
+        catalog_result = tools.fetch('catalog_search_tool').dig('outputSchema', 'properties', 'results', 'items')
+        expect(catalog_result.dig('properties', 'availability_lookup', 'description')).to include('Required follow-up')
+        expect(catalog_result.fetch('required')).to include('availability_lookup')
       end
     end
 

@@ -14,6 +14,11 @@ RSpec.describe SearchworksMcp::CatalogResults do
     result = format([SolrDocument.new(id: '123', title_display: 'A book')])
 
     expect(result[:text]).to include('Required next step: Call get_availability with id 123')
+    expect(result.dig(:structured_content, :results, 0, :availability_lookup)).to eq(
+      tool: 'get_availability',
+      id: '123',
+      instruction: 'Call get_availability with this id before presenting this record to the user.'
+    )
   end
 
   it 'requires an availability lookup for the selected result from a short list' do
