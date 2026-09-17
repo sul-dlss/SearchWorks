@@ -38,5 +38,13 @@ module AccessPanels
     def display_items
       location.items.first(5)
     end
+
+    def volumes_display?
+      location&.code == 'SAL3-SEE-OTHER'
+    end
+
+    def volumes_display_classes
+      'item-row w-100 flex-wrap fs-15 border-top align-items-center'
+    end
   end
 end
