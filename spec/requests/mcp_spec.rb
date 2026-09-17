@@ -64,6 +64,9 @@ RSpec.describe 'MCP endpoint' do
           'title' => 'SearchWorks Stanford Library Search',
           'websiteUrl' => 'https://searchworks.stanford.edu'
         )
+        expect(result.fetch('instructions')).to include(
+          'When availability includes a request_url, present that direct link to the user'
+        )
       end
     end
 
@@ -95,6 +98,10 @@ RSpec.describe 'MCP endpoint' do
         catalog_result = tools.fetch('catalog_search_tool').dig('outputSchema', 'properties', 'results', 'items')
         expect(catalog_result.dig('properties', 'availability_lookup', 'description')).to include('Required follow-up')
         expect(catalog_result.fetch('required')).to include('availability_lookup')
+        request_url = tools.fetch('get_availability').dig(
+          'outputSchema', 'properties', 'availability', 'items', 'properties', 'request_url'
+        )
+        expect(request_url.fetch('description')).to include('Present this URL to the user')
       end
     end
 

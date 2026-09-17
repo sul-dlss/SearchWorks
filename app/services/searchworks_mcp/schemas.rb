@@ -42,7 +42,10 @@ module SearchworksMcp
         library_code: { type: "string" },
         location: { type: "string" },
         location_code: { type: "string" },
-        request_url: { type: "string", description: "Direct request link, when the item is requestable" }
+        request_url: {
+          type: "string",
+          description: "Direct request link. Present this URL to the user so they can request the material."
+        }
       }
     }.freeze
 
