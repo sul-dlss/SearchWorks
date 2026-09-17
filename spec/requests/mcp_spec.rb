@@ -89,6 +89,9 @@ RSpec.describe 'MCP endpoint' do
         expect(tools.values).to all(include('annotations' => include('readOnlyHint' => true)))
         expect(tools.values).to all(include('outputSchema' => include('type' => 'object')))
         expect(tools.values).to all(include('inputSchema' => include('additionalProperties' => false)))
+        catalog_schema = tools.fetch('catalog_search_tool').fetch('inputSchema')
+        expect(catalog_schema.fetch('required')).to eq(['query'])
+        expect(catalog_schema.dig('properties', 'rows')).not_to have_key('default')
       end
     end
 
@@ -146,7 +149,7 @@ RSpec.describe 'MCP endpoint' do
         post_mcp(
           {
             jsonrpc: '2.0', id: 'search', method: 'tools/call',
-            params: { name: 'catalog_search_tool', arguments: { query: 'physics', filters: { format: 'Book' } } }
+            params: { name: 'catalog_search_tool', arguments: { query: 'Balloon madness', search_field: 'title' } }
           }
         )
 
@@ -156,7 +159,7 @@ RSpec.describe 'MCP endpoint' do
         expect(result.dig('content', 0, 'text')).to include('No results found')
         expect(JSON.parse(result.dig('content', 1, 'text'))).to eq(result.fetch('structuredContent'))
         expect(result.fetch('structuredContent')).to include(
-          'query' => 'physics', 'filters' => { 'format' => 'Book' }, 'results' => []
+          'query' => 'Balloon madness', 'search_field' => 'title', 'filters' => {}, 'results' => []
         )
       end
 
