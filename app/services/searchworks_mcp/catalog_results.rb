@@ -36,7 +36,12 @@ module SearchworksMcp
         pub_date: field_value(document, %w[pub_date pub_year_tisim]),
         url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(id.to_s)}",
         library: field_value(document, ["library"]),
-        call_number: field_value(document, ["callnum_display"])
+        call_number: field_value(document, ["callnum_display"]),
+        availability_lookup: {
+          tool: "get_availability",
+          id: id,
+          instruction: "Call get_availability with this id before presenting this record to the user."
+        }
       }.compact
     end
 

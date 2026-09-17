@@ -13,6 +13,23 @@ module SearchworksMcp
       required: %w[id title url]
     }.freeze
 
+    AVAILABILITY_LOOKUP = {
+      type: "object",
+      description: "Required follow-up for current availability, physical location, and request links",
+      properties: {
+        tool: { type: "string" },
+        id: { type: "string" },
+        instruction: { type: "string" }
+      },
+      required: %w[tool id instruction]
+    }.freeze
+
+    CATALOG_SEARCH_RESULT = {
+      type: "object",
+      properties: SEARCH_RESULT[:properties].merge(availability_lookup: AVAILABILITY_LOOKUP),
+      required: SEARCH_RESULT[:required] + %w[availability_lookup]
+    }.freeze
+
     AVAILABILITY_ITEM = {
       type: "object",
       properties: {
@@ -46,7 +63,7 @@ module SearchworksMcp
           search_field: { type: "string" },
           filters: { type: "object" },
           total: { type: "integer" },
-          results: { type: "array", items: SEARCH_RESULT },
+          results: { type: "array", items: CATALOG_SEARCH_RESULT },
           facets: { type: "object" }
         },
         required: %w[query search_field filters total results facets]
