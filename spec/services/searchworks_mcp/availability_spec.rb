@@ -57,12 +57,14 @@ RSpec.describe SearchworksMcp::Availability do
         url: 'https://searchworks.stanford.edu/view/123',
         availability: [include(
           item_id: 'item-1', status: 'Checked out', is_available: false,
+          is_requestable: true,
           library: 'Stanford Auxiliary Library 3', library_code: 'SAL3',
           location: 'Stacks', location_code: 'SAL3-STACKS',
           request_url: 'https://host.example.com/requests/new?barcode=36105000000000&item_id=123&origin=SAL3&origin_location=SAL3-STACKS'
         )],
         online_sources: [{ url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }]
       )
+      expect(result.dig(:structured_content, :availability, 0)).not_to have_key(:is_requestable_status)
       expect(result[:text]).to include(
         'item-1: Checked out — Stanford Auxiliary Library 3, Stacks',
         'Request: https://host.example.com/requests/new',

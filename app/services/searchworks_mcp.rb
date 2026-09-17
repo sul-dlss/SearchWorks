@@ -25,7 +25,7 @@ module SearchworksMcp
     when Array
       value.map { |nested_value| sanitize_output(nested_value) }
     when String
-      ActionController::Base.helpers.strip_tags(value).scrub.gsub(UNSAFE_CONTROL_CHARACTERS, "")
+      ActionController::Base.helpers.strip_tags(value).scrub.gsub("&amp;", "&").gsub(UNSAFE_CONTROL_CHARACTERS, "")
     else
       value
     end

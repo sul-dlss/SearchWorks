@@ -36,9 +36,11 @@ module SearchworksMcp
       locations = holding_locations(document, holdings)
       LiveLookup.new(document[:uuid_ssi]).records.map do |record|
         record = record.symbolize_keys
+        record.delete(:is_requestable_status)
         item = items[record[:item_id]]
         record.merge!(locations[record[:item_id]] || {})
         record[:request_url] ||= item_request_url(document, item, record)
+        record[:is_requestable] = record[:request_url].present?
         record
       end
     end

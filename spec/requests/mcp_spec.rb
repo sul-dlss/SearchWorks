@@ -106,10 +106,10 @@ RSpec.describe 'MCP endpoint' do
             id: '123', url: 'https://searchworks.stanford.edu/view/123',
             availability: [{
               item_id: 'item-1', due_date: nil, status: 'Available', is_available: true,
-              is_requestable_status: false,
+              is_requestable: true,
               library: 'Green Library', library_code: 'GREEN',
               location: 'Stacks', location_code: 'GRE-STACKS',
-              request_url: 'https://requests.stanford.edu/requests/new?item_id=123'
+              request_url: 'https://requests.stanford.edu/requests/new?item_id=123&origin=GREEN&origin_location=GRE-STACKS'
             }],
             online_sources: [
               { url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }
@@ -137,9 +137,10 @@ RSpec.describe 'MCP endpoint' do
         expect(result).to include('resultType' => 'complete', 'isError' => false)
         expect(result.dig('structuredContent', 'availability', 0)).to include(
           'item_id' => 'item-1', 'status' => 'Available', 'is_available' => true,
-          'library' => 'Green Library', 'location' => 'Stacks',
-          'request_url' => 'https://requests.stanford.edu/requests/new?item_id=123'
+          'is_requestable' => true, 'library' => 'Green Library', 'location' => 'Stacks',
+          'request_url' => 'https://requests.stanford.edu/requests/new?item_id=123&origin=GREEN&origin_location=GRE-STACKS'
         )
+        expect(result.to_json).not_to include('is_requestable_status', '&amp;')
         expect(result.dig('structuredContent', 'online_sources', 0)).to include(
           'url' => 'https://purl.fdlp.gov/GPO/LPS59339', 'stanford_only' => false
         )
