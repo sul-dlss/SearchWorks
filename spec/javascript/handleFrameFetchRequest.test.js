@@ -85,3 +85,24 @@ test("wraps a response supplied by another Turbo request interceptor", async() =
 
   assert.equal(await event.detail.fetchRequest.response, cachedResponse)
 })
+
+test("does not leave an abort unhandled when Turbo never reads the response", async() => {
+  const abortError = new Error("The user aborted a request.")
+  abortError.name = "AbortError"
+  globalThis.fetch = async() => { throw abortError }
+  const event = buildEvent("availability_solr_document_5574017")
+  const unhandledRejections = []
+  const recordRejection = (reason) => unhandledRejections.push(reason)
+  process.on("unhandledRejection", recordRejection)
+
+  try {
+    handleFrameFetchRequest(event)
+    // The browser aborts frames still in flight when the user navigates away, so Turbo
+    // never resumes the request and never awaits the response we handed it.
+    await new Promise((resolve) => setImmediate(resolve))
+  } finally {
+    process.off("unhandledRejection", recordRejection)
+  }
+
+  assert.deepEqual(unhandledRejections, [])
+})
