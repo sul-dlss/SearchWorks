@@ -5,3 +5,7 @@ SU_AFFILIATIONS:
   - test-stanford:test
 
 live_lookup_service: LiveLookup::Testing
+
+# Served by MockPurlEmbedEndpoint (mounted in config/routes.rb) so that the viewer
+# iframes on document pages resolve against the test server instead of the network.
+PURL_EMBED_PROVIDER: "/purl_embed/embed"
