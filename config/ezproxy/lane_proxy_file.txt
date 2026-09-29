@@ -789,6 +789,7 @@ ilibri.casalini.it
 imagebank.osa.org
 images.tandf.co.uk
 img1.od-cdn.com
+imj.ie
 immunityageing.biomedcentral.com
 immunome-research.biomedcentral.com
 implementationscience.biomedcentral.com
@@ -1592,7 +1593,6 @@ womensmidlifehealthjournal.biomedcentral.com
 worldscholar.galegroup.com
 worldtradelaw.net
 worldwidescience.org
-ww1.cpa-apc.org
 www-fars.nhtsa.dot.gov
 www-krpia-co-kr.stanford.idm.oclc.org
 www-sciencedirect-com.stanford.idm.oclc.org
@@ -1611,7 +1611,6 @@ www.accessdata.fda.gov
 www.accessengineeringlibrary.com
 www.accessible.com
 www.accessmedicine.com
-www.accessscience.com
 www.accjournal.org
 www.achot.cz
 www.acli.com
@@ -1743,7 +1742,6 @@ www.bcmj.org
 www.bdsl-online.de
 www.beat-journal.com
 www.beilstein-journals.org
-www.beilstein.com
 www.benkler.org
 www.benthamdirect.com
 www.berghahnjournals.com
@@ -1844,7 +1842,6 @@ www.cmaj.ca
 www.cmi.ustc.edu.cn
 www.cmj.hr
 www.cmrpjournal.org
-www.cms.gov
 www.cnbksy.com
 www.cochranelibrary.com
 www.collantropol.hr
@@ -2143,7 +2140,6 @@ www.ima.org.il
 www.imaios.com
 www.imdb.com
 www.img.cas.cz
-www.imj.ie
 www.impan.pl
 www.imrpress.com
 www.imstat.org
@@ -2537,6 +2533,7 @@ www.protocol-online.org
 www.psychiatria-danubina.com
 www.psychiatrist.com
 www.psychiatryinvestigation.org
+www.psychiatryonline.org
 www.psychologicabelgica.com
 www.psychotherapy.net
 www.psywb.com
