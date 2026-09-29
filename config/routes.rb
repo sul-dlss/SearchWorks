@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   if Rails.env.test?
     require_relative '../spec/support/rack_apps/mock_exhibits_finder_endpoint'
     mount MockExhibitsFinderEndpoint.new, at: '/exhibit_finder'
+
+    require_relative '../spec/support/rack_apps/mock_purl_embed_endpoint'
+    mount MockPurlEmbedEndpoint.new, at: '/purl_embed'
   end
 
   concern :searchable, Blacklight::Routes::Searchable.new
