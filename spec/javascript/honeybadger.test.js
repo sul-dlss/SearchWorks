@@ -66,6 +66,14 @@ test("does not ignore non-promise errors from browser extensions", () => {
   }), false)
 })
 
+test("ignores Firefox dead object errors raised by privileged code", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "TypeError",
+    message: "can't access dead object",
+    stack: "can't access dead object\n    at ? (unknown:0:0)"
+  }), true)
+})
+
 test("continues to ignore Turnstile errors", () => {
   assert.equal(ignoreHoneybadgerNotice({ name: "TurnstileError", message: "Widget failed" }), true)
 })
