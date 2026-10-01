@@ -192,7 +192,7 @@ any,book,,,,HILA,,No loan,Allow hold/recall,Default notice,3.00/21.00 recall ove
 ,,8-week ILL,,,,SUL-ILLIAD,8week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
 ,,4-week ILL,,,,SUL-ILLIAD,4week-norenew-7daygrace,Allow paging,Default notice,No fines,$100 lost fee
 ,periodical,,,,SCIENCE,SCI-REF or SCI-RETIRED-REF,No loan,No requests allowed,Default notice,No fines,$400 lost fee
-,any,,,,,EDU-PROCESSING or GRE-PROCESSING or GRE-TECH-PROCESSOR or SUL-PAGEABLE-LOC,No loan,Allow paging/hold,Default notice,No fines,$250 lost fee
+,any,,,,,EDU-PROCESSING or GRE-PROCESSING or GRE-TECH-PROCESSOR or SAL3-GOOGLE-SCANNING or SUL-PAGEABLE-LOC,No loan,Allow paging/hold,Default notice,No fines,$250 lost fee
 ,any,,,,,SUL-TS-PROCESSING,No loan,Allow All,Default notice,No fines,$250 lost fee
 ,any,,,,,ARS-INPROCESS or ART-PROCESSING-SERIALS or ART-PROCESSING-LOCKED or ART-VRC or EAR-PROCESSING-AP or EAR-PROCESSING-JC or EAR-PROCESSING-CIRCLS or EAR-PROCESSING-TR or EAR-SPECIALPROJECTS or EAL-INPROCESS or ENG-TECH-PROCESSOR or GRE-CPR-BINDERY or GRE-REPAIR-EVALUATION or MEDIA-REPAIR-SHELF or MEDIA-TECH-PROCESSOR or MEDIA-SER-PROCESSING or MUS-INPROCESS or SUL-CATALOGING or SUL-COLLECTIONCARE or SUL-TS-CC-BINDERYPREP or SUL-TS-CC-BOOKJACKET or SUL-TS-CC-KASEMAKE or SUL-TS-CC-REPAIR or SUL-TS-CC-SPECIALPROJECTS or SUL-TS-COLLECTIONCARE or SUL-TS-MAINTENANCE,No loan,Hold only,Default notice,No fines,$250 lost fee
 ,book,,,,,LAW-EYLESAISLE or LAW-BOOKCABINET,4hour-norenew-1hourgrace,No requests allowed,Hourly Loan Notices,No fines,$150 lost fee
