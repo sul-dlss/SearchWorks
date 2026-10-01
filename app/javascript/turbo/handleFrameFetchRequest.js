@@ -22,12 +22,17 @@ export default function(event) {
   const fetchRequest = event.detail.fetchRequest
   const response = fetchRequest?.response || globalThis.fetch(event.detail.url, event.detail.fetchOptions)
 
-  event.detail.fetchRequest = {
-    ...fetchRequest,
-    response: Promise.resolve(response).catch((error) => {
-      if (error.name === "AbortError") throw error
+  const frameResponse = Promise.resolve(response).catch((error) => {
+    if (error.name === "AbortError") throw error
 
-      return emptyFrameResponse(frameId)
-    })
-  }
+    return emptyFrameResponse(frameId)
+  })
+
+  // Aborts stay rejected so Turbo discards the request it cancelled, but Turbo only looks at
+  // this promise once it resumes the request it is intercepting. The browser aborts frames that
+  // are still in flight when the user navigates away, and by then nothing is waiting on them,
+  // so keep a handler attached to the rejection instead of letting it go unhandled.
+  frameResponse.catch(() => {})
+
+  event.detail.fetchRequest = { ...fetchRequest, response: frameResponse }
 }
