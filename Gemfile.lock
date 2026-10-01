@@ -720,7 +720,6 @@ DEPENDENCIES
   honeybadger
   jbuilder (~> 2.7)
   jsbundling-rails (~> 1.2)
-  json (~> 2.0)
   launchy
   letter_opener
   listen
