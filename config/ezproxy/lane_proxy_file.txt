@@ -662,6 +662,7 @@ freida.ama-assn.org
 frontiersinzoology.biomedcentral.com
 fungalbiolbiotech.biomedcentral.com
 fuse-journal.org
+gal-studies.museogalileo.it
 galenet.galegroup.com
 gallica.bnf.fr
 games.jmir.org
@@ -849,6 +850,7 @@ japanknowledge.com
 japmaonline.org
 jasbsci.biomedcentral.com
 jautoimdis.biomedcentral.com
+jazz.ripmfulltext.org
 jbiol.biomedcentral.com
 jbioleng.biomedcentral.com
 jbiolres.biomedcentral.com
