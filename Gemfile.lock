@@ -171,7 +171,7 @@ GEM
       namae (~> 1.0)
       observer (< 1.0)
       open-uri (< 1.0)
-    citeproc-ruby (2.1.8)
+    citeproc-ruby (2.2.0)
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 2.0)
       observer (< 1.0)
@@ -273,7 +273,7 @@ GEM
     herb (0.11.0-aarch64-linux-gnu)
     herb (0.11.0-arm64-darwin)
     herb (0.11.0-x86_64-linux-gnu)
-    honeybadger (6.9.2)
+    honeybadger (6.9.3)
       logger
       ostruct
     htmlbeautifier (1.4.3)
@@ -303,7 +303,7 @@ GEM
       activesupport (>= 7.0.0)
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
-    json (2.21.2)
+    json (3.0.2)
     jwt (3.3.0)
       base64
     kaminari (1.2.2)
@@ -327,7 +327,7 @@ GEM
       launchy (>= 2.2, < 4)
     library_stdnums (1.6.0)
     lint_roller (1.1.0)
-    listen (3.10.0)
+    listen (3.10.1)
       logger
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -387,9 +387,9 @@ GEM
       net-ssh (>= 2.6.5, < 8.0.0)
     net-sftp (4.0.0)
       net-ssh (>= 5.0.0, < 8.0.0)
-    net-smtp (0.5.1)
+    net-smtp (0.5.2)
       net-protocol
-    net-ssh (7.3.3)
+    net-ssh (7.3.5)
     newrelic_rpm (9.24.0)
     nio4r (2.7.5)
     nokogiri (1.19.4-aarch64-linux-gnu)
@@ -417,7 +417,7 @@ GEM
       uri
     orm_adapter (0.5.0)
     ostruct (0.6.3)
-    parallel (2.2.0)
+    parallel (2.3.0)
     parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
@@ -492,7 +492,7 @@ GEM
       logger
       prism (>= 1.6.0)
       tsort
-    rdoc (8.0.0)
+    rdoc (8.1.0)
       erb
       prism (>= 1.6.0)
       rbs (>= 4.0.0)
@@ -503,7 +503,7 @@ GEM
       redis-client (= 0.30.1)
     redis-client (0.30.1)
       connection_pool
-    regexp_parser (2.13.0)
+    regexp_parser (2.13.1)
     reline (0.7.0)
       io-console (~> 0.5)
     responders (3.2.1)
@@ -578,10 +578,9 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     securerandom (0.4.1)
-    selenium-webdriver (4.49.0)
+    selenium-webdriver (4.50.0)
       base64 (~> 0.2)
       logger (~> 1.4)
-      rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
     set (1.1.3)
@@ -762,4 +761,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-  4.0.21
+  4.0.22
