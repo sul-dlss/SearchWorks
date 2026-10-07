@@ -1053,7 +1053,6 @@ mecp.springeropen.com
 med.amegroups.com
 meded.lwwhealthlibrary.com
 mededu.jmir.org
-media3.criterionpic.com
 mediaenviron.org
 medical.med.tokushima-u.ac.jp
 medicaleconomics.modernmedicine.com
@@ -2198,7 +2197,6 @@ www.jcasonline.com
 www.jcd.org.in
 www.jcda.ca
 www.jcdr.net
-www.jcdronline.org
 www.jci.org
 www.jcimjournal.com
 www.jcircadianrhythms.com
@@ -2715,7 +2713,6 @@ www.uspharmacist.com
 www.usrds.org
 www.utpjournals.press
 www.vasculardiseasemanagement.com
-www.vdb.org
 www.veterinaryworld.org
 www.vetsci.org
 www.victorianpopularculture.amdigital.co.uk
