@@ -634,6 +634,7 @@ experiments.springernature.com
 extoxnet.orst.edu
 extras.springer.com
 extremephysiolmed.biomedcentral.com
+ezproxy.canterbury.ac.nz
 f1000research.com
 facultyopinions.com
 familymedicine.lwwhealthlibrary.com
@@ -687,6 +688,7 @@ globalheartjournal.com
 globalizationandhealth.biomedcentral.com
 go.gale.com
 go.galegroup.com
+go.openathens.net
 go.oreilly.com
 gongjushu.oversea.cnki.net
 goo.gl
