@@ -248,6 +248,8 @@ libraries:
     name: Stanford Libraries
 
 library_chat_hours_url: "https://library-hours.stanford.edu/api/v1/library/green/location/reference/hours/for/today"
+lookbook:
+  display: false
 
 folio_hold_recall_statuses:
   - Checked out
