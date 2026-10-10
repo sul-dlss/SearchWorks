@@ -9,7 +9,7 @@
         <div class='mhld note-highlight fs-14 d-inline-block'>Latest: <%= location.mhld.first.latest_received %></div>
       <% end %>
       <% location.mhld.each do |mhld| %>
-        <% if mhld.public_note.present? %>
+        <% if mhld.public_note.present? && !volumes_display? %>
           <div>
             <div class='mhld note-highlight fs-14 d-inline-block'><%= mhld.public_note %></div>
           </div>
@@ -32,7 +32,11 @@
         </tr>
       </thead>
       <tbody>
-        <%= render Searchworks4::AvailabilityModalItemLocationComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?) %>
+        <% if volumes_display? %>
+          <%= render Searchworks4::AvailabilityModalItemLocationComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?, classes: volumes_display_classes) %>
+        <% else %>
+          <%= render Searchworks4::AvailabilityModalItemLocationComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?) %>
+        <% end %>
       </tbody>
     </table>
   </div>
