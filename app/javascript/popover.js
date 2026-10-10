@@ -1,6 +1,10 @@
 import Blacklight from "blacklight-frontend"
 
 Blacklight.onLoad(() => {
+  // Bootstrap is loaded from a CDN, which may be blocked or unreachable for some users.
+  // Throwing here would also prevent any later Blacklight.onLoad callbacks from running.
+  if (typeof bootstrap === "undefined") return
+
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
   popoverTriggerList.forEach((popoverTriggerEl) => {
     new bootstrap.Popover(popoverTriggerEl, {
