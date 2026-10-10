@@ -5,6 +5,7 @@ aacijournal.biomedcentral.com
 aacnjournals.org
 aacrjournals.org
 aaeportal.com
+aalas.kglmeridian.com
 aalas.publisher.ingentaconnect.com
 aao-hnsfjournals.onlinelibrary.wiley.com
 aap.onlinelibrary.wiley.com
@@ -558,6 +559,7 @@ ebn.bmj.com
 ebook.3m.com
 ebook.rsc.org
 ebook.sts.org
+ebook.yourcloudlibrary.com
 ebookcentral.proquest.com
 ebooks.cap.org
 ebooks.geoscienceworld.org
@@ -790,6 +792,7 @@ ila.onlinelibrary.wiley.com
 ilibri.casalini.it
 imagebank.osa.org
 images.tandf.co.uk
+images.yourcloudlibrary.com
 img1.od-cdn.com
 imj.ie
 immunityageing.biomedcentral.com
@@ -1028,11 +1031,13 @@ link.springer.com.
 lipidworld.biomedcentral.com
 listview.lib.harvard.edu
 litguide.press.jhu.edu
+liverpool.idm.oclc.org
 liverpooluniversitypress.co.uk
 lkcnhm.nus.edu.sg
 llmc.com
 lockwoodonlinejournals.com
 login.infobase.com
+login.uproxy.library.dc-uoit.ca
 londmathsoc.onlinelibrary.wiley.com
 longevityandhealthspan.biomedcentral.com
 lsc-pagepro.mydigitalpublication.com
@@ -1533,6 +1538,7 @@ titlelist.readex.com
 tle.geoscienceworld.org
 tnsw.infolinker.com.tw
 tobaccocontrol.bmj.com
+toc.proceedings.com
 tocs.kubikat.org
 tomography.org
 tp.amegroups.com
@@ -2723,6 +2729,7 @@ www.virtualpediatrichospital.org
 www.visualdx.com
 www.vjel.org
 www.vjultrafast.org
+www.vlebooks.com
 www.vr-elibrary.de
 www.wageningenacademic.com
 www.webofscience.com
