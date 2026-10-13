@@ -26,7 +26,7 @@ export default class extends Controller {
 
   addLoadingPlaceholder() {
     const placeholder = document.createElement("div")
-    placeholder.classList.add("text-center", "p-3", "fst-italic", "ms-4", "facet-search-results")
+    placeholder.classList.add("text-center", "p-5", "fst-italic", "ms-7", "facet-search-results")
     placeholder.innerHTML = "Loading..."
     this.frameTarget.innerHTML = ""
     this.frameTarget.appendChild(placeholder)

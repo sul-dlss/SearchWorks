@@ -35,8 +35,8 @@
 }
 
 .facet-values {
-  --bl-facet-remove-color: var(--bs-secondary-color);
-  --bl-facet-remove-hover-color: var(--bs-danger);
+  --bl-facet-remove-color: var(--bs-fg-2);
+  --bl-facet-remove-hover-color: var(--bs-danger-fg);
 
   margin-bottom: 0;
 
@@ -92,6 +92,7 @@
     --btn-hover-decoration: none;
 
     cursor: default;
+    display: inline-block; /* Bootstrap 6 buttons are inline-flex, which breaks the ellipsis */
     text-overflow: ellipsis;
     overflow: hidden;
     padding-inline: 0.75rem 0.25rem; /* Keeping the default top/bottom padding */
@@ -144,15 +145,29 @@
   }
 }
 
-.modal {
-  --bl-modal-backdrop-bg: rgba(var(--stanford-black-rgb), 0.4);
-}
+#blacklight-modal {
+  --bs-dialog-backdrop-bg: rgba(var(--stanford-black-rgb), 0.4);
+  --bs-dialog-backdrop-blur: 0;
+  --bs-dialog-border-radius: 5px;
 
-.modal-dialog {
-  border-radius: 5px;
-}
+  /* Blacklight renders the dialog content into .modal-content (sometimes inside a form),
+     which Bootstrap doesn't style. Pass the dialog's flex column through those wrappers
+     so the body shrinks and scrolls instead of spilling out of the dialog. */
+  &[open] {
+    .modal-content,
+    .modal-content > form {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      min-height: 0;
+    }
 
-.modal-content {
+    .dialog-body {
+      min-height: 0;
+      overflow-y: auto;
+    }
+  }
+
   .page-sidebar {
     display: none;
   }
@@ -168,29 +183,9 @@
   display: none;
 }
 
-/* When modal content is rendered outside of a modal, Bootstrap css variables like
-// --bs-modal-footer-border-width are undefined (only in .modal scope). So we apply
-// light styling to the modal footer when it's not in a modal. */
-.modal-footer:not(.modal .modal-footer) {
+/* When dialog content is rendered outside of a dialog, apply light styling to the footer. */
+.dialog-footer:not(.dialog .dialog-footer) {
   border-top: var(--bs-border-width) solid var(--bs-border-color);
   padding-top: 1rem;
   margin-top: 1rem;
-}
-
-/* Blacklight's decision to try to use bootstrap modal CSS with an html5 dialog --
-   in such a way the <dialog> element actually serves as the modal backdrop --
-   requires some fixes to both bootstrap CSS and user-agent default css */
-dialog.modal[open] {
-  /* override bootstrap .modal class default display: none
-     since we aren't using bootstrap JS that sets and unsets the display */
-  display: block;
-  background: none;
-  border: none;
-
-  max-height: unset; /*override user-agent dialog */
-  max-width: unset; /* override user-agent dialog */
-
-  &::backdrop {
-    background-color: var(--bl-modal-backdrop-bg);
-  }
 }

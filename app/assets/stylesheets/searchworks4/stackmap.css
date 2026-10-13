@@ -23,7 +23,7 @@
   /* nesting nav-tabs inside of nav-pills doesn't work */
   .sw-pills {
     & > .nav-item > .nav-link {
-      --bs-nav-link-font-size: 0.875rem;
+      font-size: 0.875rem;
       --bs-nav-link-padding-y: 0.25rem;
       --bs-nav-link-padding-x: 0.5rem;
       --bs-nav-link-color: var(--stanford-black-80);

@@ -9,11 +9,11 @@ RSpec.feature "Sort options" do
     click_button 'search'
 
     within '#sort-dropdown' do
-      expect(page).to have_css("a.dropdown-item", text: 'relevance')
-      expect(page).to have_css("a.dropdown-item", text: 'year (new to old)')
-      expect(page).to have_css("a.dropdown-item", text: 'year (old to new)')
-      expect(page).to have_css("a.dropdown-item", text: 'author')
-      expect(page).to have_css("a.dropdown-item", text: 'title')
+      expect(page).to have_css("a.menu-item", text: 'relevance')
+      expect(page).to have_css("a.menu-item", text: 'year (new to old)')
+      expect(page).to have_css("a.menu-item", text: 'year (old to new)')
+      expect(page).to have_css("a.menu-item", text: 'author')
+      expect(page).to have_css("a.menu-item", text: 'title')
     end
   end
 end

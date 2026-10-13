@@ -36,6 +36,6 @@ export default class extends Controller {
 
   inputElement() {
     // This is needed rather than this.element because the modal rewrites the DOM
-    return document.querySelector(".modal-body input.facet-suggest")
+    return document.querySelector(".dialog-body input.facet-suggest")
   }
 }

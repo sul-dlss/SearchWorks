@@ -1,15 +1,15 @@
-<div class="dropdown item-menu-dropdown">
+<div class="item-menu-dropdown">
   <%= button_tag aria: { label: 'More actions', expanded: false },
                  class: "btn p-1 lh-1 action-button",
                  type: "button",
                  data: {
-                   bs_toggle: "dropdown",
+                   bs_toggle: "menu",
                    controller: "tooltip",
                    action: "mouseenter->tooltip#show focus->tooltip#show mouseleave->tooltip#hide click->tooltip#hide blur->tooltip#hide"
                  } do %><i class="bi bi-three-dots-vertical" aria-hidden="true"></i><% end %>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" data-blacklight-modal="trigger" href="<%= cite_path %>"><i class="bi bi-quote me-2"></i>Cite</a></li>
-    <li><a class="dropdown-item" data-blacklight-modal="trigger" href="<%= email_path %>"><i class="bi bi-envelope me-2"></i>Email</a></li>
-    <li><button class="dropdown-item btn btn-link" type="button" data-controller="copy-link" data-action="click->copy-link#copyLink" data-copy-link-url-value="<%= copy_url %>"><i class="bi bi-link-45deg me-2"></i>Copy link to record</button></li>
-  </ul>
+  <div class="menu">
+    <a class="menu-item" data-blacklight-modal="trigger" href="<%= cite_path %>"><i class="bi bi-quote"></i>Cite</a>
+    <a class="menu-item" data-blacklight-modal="trigger" href="<%= email_path %>"><i class="bi bi-envelope"></i>Email</a>
+    <button class="menu-item" type="button" data-controller="copy-link" data-action="click->copy-link#copyLink" data-copy-link-url-value="<%= copy_url %>"><i class="bi bi-link-45deg"></i>Copy link to record</button>
+  </div>
 </div>

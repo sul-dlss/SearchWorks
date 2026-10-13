@@ -77,11 +77,12 @@ end
 
 gem 'newrelic_rpm', '~> 9.0' # https://github.com/sul-dlss/SearchWorks/issues/6424
 
-gem 'blacklight', '~> 9.0'
+# TODO: Bootstrap 6 support; switch back to a release once it's published
+gem 'blacklight', github: 'projectblacklight/blacklight', branch: 'bootstrap6'
 gem "blacklight-marc", "~> 9.0"
 gem "blacklight_advanced_search", '~> 8.0'
-gem "blacklight_range_limit", "~> 9.0"
-gem 'blacklight-hierarchy', "~> 6.0"
+gem "blacklight_range_limit", github: "projectblacklight/blacklight_range_limit", branch: "bs6"
+gem 'blacklight-hierarchy', github: 'sul-dlss/blacklight-hierarchy', branch: 'bs6'
 gem 'blacklight_dynamic_sitemap'
 gem 'rsolr'
 gem 'nokogiri', '>= 1.7.1'
@@ -98,7 +99,6 @@ gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'recaptcha', '~> 5.17'
 gem 'rinku', require: 'rails_rinku'
-gem 'bootstrap', '~> 5.0'
 
 gem 'rack-attack' # For throttle configuration
 gem 'bot_challenge_page'

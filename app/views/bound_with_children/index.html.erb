@@ -1,6 +1,6 @@
 <%= turbo_frame_tag [:item, @item_id] do %>
   <% if @bound_with_children.present? %>
-    <div class="bound-with bg-light p-2 mt-2">
+    <div class="bound-with bg-2 p-3 mt-3">
       <%= render Record::BoundWithChildrenComponent.new(bound_with_children: @bound_with_children, item_id: @item_id, instance_id: @id) %>
     </div>
   <% end %>

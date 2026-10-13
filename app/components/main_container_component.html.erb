@@ -1,9 +1,9 @@
-<div class="container-lg flex-1 mb-auto" data-controller="google-cover-image inline-turnstile" data-inline-turnstile-site-key-value="<%= Settings.turnstile.site_key %>" data-inline-turnstile-challenge-path-value="<%= bot_detect_challenge_path %>">
+<div class="lg:container flex-1 mb-auto" data-controller="google-cover-image inline-turnstile" data-inline-turnstile-site-key-value="<%= Settings.turnstile.site_key %>" data-inline-turnstile-challenge-path-value="<%= bot_detect_challenge_path %>">
   <%= render 'shared/modal' %>
-  <div id="main-container" class="mb-5">
+  <div id="main-container" class="mb-12">
 
     <% # The quick report javascript requires this node to be on the page %>
-    <div class="flash_messages<% if flash.any? %> mx-auto my-3<% end %>" style="max-width: 1000px;">
+    <div class="flash_messages<% if flash.any? %> mx-auto my-5<% end %>" style="max-width: 1000px;">
       <% FLASH_TYPES_WITH_LEVEL.each do |type, alert_level| %>
         <%= render AlertComponent.new(level: alert_level, message: flash[type].html_safe) if flash[type] %>
       <% end %>
@@ -11,7 +11,7 @@
     </div>
 
     <%= content %>
-    <div id="toast-area" data-turbo-permanent class="toast-container position-fixed bottom-0 end-0 p-3" data-controller="toast-container" data-action="show-toast@window->toast-container#showToast">
+    <div id="toast-area" data-turbo-permanent class="toast-container position-fixed bottom-0 end-0 p-5" data-controller="toast-container" data-action="show-toast@window->toast-container#showToast">
       <template id="toast-template">
         <%= render ToastComponent.new %>
       </template>

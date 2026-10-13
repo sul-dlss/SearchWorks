@@ -16,7 +16,7 @@
   }
 
   .clear-all {
-    --bs-primary-rgb: var(--stanford-digital-red-rgb)
+    --bs-primary-fg: var(--stanford-digital-red)
   }
 
   .constraints-container {
@@ -40,7 +40,7 @@
 
   /* Have primary & other mini-bento tools in columns rather than rows between md and lg */
   .alternate-catalog {
-    @media (min-width: 768px) and (max-width: 991.99px) {
+    @media (min-width: 768px) and (max-width: 1023.98px) {
       .alternate-catalog-primary-tools, .alternate-catalog-other-tools {
         flex: 0 0 auto;
         width: 50%;

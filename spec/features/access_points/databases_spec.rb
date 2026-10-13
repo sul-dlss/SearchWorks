@@ -43,7 +43,7 @@ RSpec.feature "Databases Access Point" do
     expect(page).to have_text "No results found"
   end
 
-  scenario "searching for a particular topic", :js, :responsive, page_width: 1400 do
+  scenario "searching for a particular topic", :js, :responsive, page_width: 1536 do
     visit databases_path
 
     fill_in "search for", with: "biolo"

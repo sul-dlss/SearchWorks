@@ -1,6 +1,7 @@
 // Entry point for the build script in your packageon
 
 import "./turbo"
+import "bootstrap"
 import "blacklight-frontend"
 
 import "./popover"

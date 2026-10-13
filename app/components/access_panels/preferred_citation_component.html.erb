@@ -1,5 +1,5 @@
 <%= render @layout.new(classes: 'panel-access-conditions') do |component| %>
-  <% component.with_title(classes: 'h3 text-secondary') { 'Preferred citation' } %>
+  <% component.with_title(classes: 'h3 fg-secondary') { 'Preferred citation' } %>
   <% component.with_body do %>
     <%= auto_link preferred_citation %>
   <% end %>

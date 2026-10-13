@@ -1,12 +1,16 @@
-@layer framework, components, local;
-@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)
+/* Bootstrap 6 utilities aren't !important (as they were in v5), so load them again
+ * in the last layer to keep utility classes winning over our component styles. */
+@layer framework, components, local, utilities;
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css)
 layer(framework);
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css")
 layer(framework);
 @import url("https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2026-08-06/styles/sul.css")
 layer(components);
+@import url("searchworks4/bootstrap6-bridge.css") layer(components);
+@import url("searchworks4/bootstrap6-tokens.css");
 
-@import url("https://cdn.jsdelivr.net/npm/blacklight-hierarchy@6.7.1/app/assets/stylesheets/blacklight/hierarchy/hierarchy.css")
+@import url("https://cdn.jsdelivr.net/gh/sul-dlss/blacklight-hierarchy@4a51475bae25085f2a7d535500039195c94dbea2/app/assets/stylesheets/blacklight/hierarchy/hierarchy.css")
 layer(framework);
 
 @import url("searchworks4/alerts.css") layer(local);
@@ -22,6 +26,7 @@ layer(framework);
 @import url("searchworks4/item-preview.css") layer(local);
 @import url("searchworks4/links.css") layer(local);
 @import url("searchworks4/masthead.css") layer(local);
+@import url("searchworks4/menus.css") layer(local);
 @import url("searchworks4/mini-bento.css") layer(local);
 @import url("searchworks4/modal.css") layer(local);
 @import url("searchworks4/record.css") layer(local);
@@ -35,35 +40,33 @@ layer(framework);
 @import url("searchworks4/chat.css") layer(local);
 @import url("searchworks4/librarian-view.css") layer(local);
 @import url("searchworks4/stackmap.css") layer(local);
+/* Must be imported last: Sass hoists these imports above the @layer statement, so import order sets the layer order */
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap-utilities.min.css)
+layer(utilities);
 @import "leaflet/dist/leaflet";
 
-/* This overrides BS defaults for offcanvas */
-@layer framework {
-  .offcanvas-md.popular-databases, .offcanvas-xxl.popular-databases {
-    height: 75vh;
-    background-color: var(--stanford-fog-light) !important;
+/* This overrides BS defaults for the popular databases drawer.
+ * Above the breakpoint Bootstrap forces the drawer transparent and height: auto (!important),
+ * so the background is set on the wrapping <aside> column. */
+@layer local {
+  .popular-databases {
+    --bs-drawer-height: 75vh;
+    --bs-drawer-bg: var(--stanford-fog-light);
   }
-  @media (min-width: 768px) {
-    .offcanvas-md.popular-databases {
-      height: 100%;
-    }
-  }
-  @media(min-width: 1400px) {
-    .offcanvas-xxl.popular-databases {
-      height: 100%;
-    }
+  .popular-databases-aside {
+    background-color: var(--stanford-fog-light);
   }
 }
 
 @layer local {
   @media (min-width: 1580px) {
-    .container-lg {
+    .lg\:container {
       max-width: 1500px;
     }
   }
 
-  @media screen and (max-width: 992px) {
-    .container-lg {
+  @media screen and (max-width: 1023.98px) {
+    .lg\:container {
       --bs-gutter-x: 3rem;
     }
   }

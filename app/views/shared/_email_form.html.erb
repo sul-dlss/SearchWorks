@@ -1,25 +1,25 @@
-  <div class="mb-3">
-    <label class="form-label fw-bold me-3" for="to">To</label><small class="text-secondary">* Required</small>
+  <div class="mb-5">
+    <label class="form-label fw-bold me-5" for="to">To</label><small class="fg-secondary">* Required</small>
     <%= email_field_tag :to, params[:to], multiple: true, placeholder: "Enter value", class: 'form-control w-50', required: true %>
   </div>
 
-  <div class="mb-3">
+  <div class="mb-5">
     <label class="form-label fw-bold" for="email_from">From</label>
     <%= text_field_tag :email_from, params[:email_from], placeholder: "Enter value", class: 'form-control w-50' %>
   </div>
 
-  <div class="mb-3">
+  <div class="mb-5">
     <label class="form-label fw-bold" for="subject">Subject</label>
     <%= text_field_tag :subject, I18n.t('blacklight.email.text.subject', count: documents.length, title: (documents.first.to_semantic_values[:title].first rescue 'N/A') ), class: 'form-control' %>
   </div>
 
-  <div class="mb-3">
+  <div class="mb-5">
     <label class="form-label fw-bold" for="message">Message</label>
     <%= text_area_tag :message, params[:message], class: 'form-control' %>
   </div>
 
   <% if current_user.blank? %>
-    <div class="mb-3">
+    <div class="mb-5">
       <%= render RecaptchaComponent.new(action: 'email') %>
     </div>
   <% end %>

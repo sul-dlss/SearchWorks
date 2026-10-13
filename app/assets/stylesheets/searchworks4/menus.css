@@ -1,0 +1,37 @@
+/* Bootstrap 6 menus (formerly dropdowns) */
+
+/* Keep the Bootstrap 5 dropdown sizing and the SUL shadow */
+.menu {
+  --bs-menu-font-size: 1rem;
+  --bs-menu-padding-y: 0.5rem;
+  --bs-menu-item-padding-x: 1rem;
+  --bs-menu-item-padding-y: 0.25rem;
+  --bs-menu-box-shadow: var(--bs-box-shadow);
+}
+
+/* Bootstrap 6 no longer draws a caret on menu toggles, so recreate the Bootstrap 5 one.
+ * Blacklight's Bootstrap 6 markup also keeps .dropdown-toggle on its menu toggles. */
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.125em;
+  align-self: center; /* when the toggle is a flex container, e.g. a v6 .btn or .nav-link */
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+/* Match the active item to the toggle's theme (was .btn-primary + .dropdown-menu in the component library) */
+.theme-primary + .menu {
+  --bs-menu-item-active-bg: var(--stanford-digital-blue);
+}
+
+.theme-secondary + .menu {
+  --bs-menu-item-active-bg: var(--stanford-cardinal);
+}

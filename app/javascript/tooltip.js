@@ -1,6 +1,7 @@
 import Blacklight from "blacklight-frontend"
+import { Tooltip } from "bootstrap"
 
 Blacklight.onLoad(() => {
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  tooltipTriggerList.forEach(tooltipTriggerEl => Tooltip.getOrCreateInstance(tooltipTriggerEl))
 })

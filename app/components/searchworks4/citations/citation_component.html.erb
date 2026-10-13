@@ -1,9 +1,9 @@
 <%= render Searchworks4::RecordSummaryComponent.new(presenter:) %>
 
-<div class="modal-body" data-controller="citation-format">
+<div class="dialog-body" data-controller="citation-format">
   <% unless unavailable? %>
   <h3>Export citation</h3>
-  <ul class="list-unstyled d-flex gap-3 export-citations mb-4">
+  <ul class="list-unstyled d-flex gap-5 export-citations mb-7">
     <% if exports_ris? %>
       <% if eds_ris_export? %>
         <li>
@@ -47,12 +47,12 @@
   <h3>Copy citation</h3>
 
   <% unless unavailable? || preferred_only? %>
-  <div class="row mb-3">
+  <div class="row mb-5">
     <div class="col-auto">
       <label for="citation-format-select" class="col-form-label fw-bold">Select format</label>
     </div>
     <div class="col-auto">
-      <select id="citation-format-select" data-action="change->citation-format#reveal" class="form-select" style="width: unset;" aria-controls="<%= citations.keys.map { |style| "citation-format-#{style}" }.join(' ') %>">
+      <select id="citation-format-select" data-action="change->citation-format#reveal" class="form-control" style="width: unset;" aria-controls="<%= citations.keys.map { |style| "citation-format-#{style}" }.join(' ') %>">
         <% citations.keys.each do |style| %>
           <option value="citation-format-<%= style %>" ><%= t("searchworks.citations.styles.#{style}") %></option>
         <% end %>
@@ -62,15 +62,15 @@
   <% end %>
 
   <% citations.each do |style, citation| %>
-    <%= tag.div class: "mb-4 bg-light p-2 citations",
+    <%= tag.div class: "mb-7 bg-2 p-3 citations",
                 data: { citation_format_target: "tab", controller: "copy-text"},
                 id: "citation-format-#{style}",
                 hidden: style != default_style do %>
       <% unless unavailable? %>
-        <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline-primary btn-sm lh-1 ms-4" data-action="copy-text#copy">Copy</button></h5>
+        <h5><%= t("searchworks.citations.styles.#{style}") %> <button type="button" class="btn btn-outline theme-primary btn-sm lh-1 ms-7" data-action="copy-text#copy">Copy</button></h5>
       <% end %>
       <% Array(citation).each do |cite| %>
-        <div class="mb-2" data-copy-text-target="text">
+        <div class="mb-3" data-copy-text-target="text">
           <%= helpers.auto_link cite %>
         </div>
       <% end %>

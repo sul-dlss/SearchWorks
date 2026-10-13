@@ -10,7 +10,7 @@
                        options_for_select(search_fields, h(@search_field)),
                        title: scoped_t('search_field.title'),
                        id: "#{@prefix}search_field",
-                       class: "custom-select form-select search-field search_field") %>
+                       class: "custom-select form-control search-field search_field") %>
       </span>
     <% elsif search_fields.length == 1 %>
       <%= hidden_field_tag :search_field, search_fields.first.last %>
@@ -20,7 +20,7 @@
 
     <%= text_field_tag @query_param, @q, placeholder: t("searchworks.search.form.q.#{controller_name}", default: :'searchworks.search.form.q.default'), class: "search_q search-q q form-control rounded-#{search_fields.length > 1 ? '0' : 'left'}", id: "#{@prefix}q", autofocus: @autofocus  %>
     <span class="input-group-btn">
-      <button type="submit" class="btn btn-secondary search-btn" id="search">
+      <button type="submit" class="btn btn-solid theme-secondary search-btn" id="search">
         <%=t('blacklight.search.form.submit_html')%>
       </button>
     </span>

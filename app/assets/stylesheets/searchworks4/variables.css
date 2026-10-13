@@ -2,14 +2,10 @@
   --identity-bar-bg-color: var(--stanford-cardinal);
   --identity-bar-color: white;
   --sul-shadow-color: rgba(0, 0, 0, 0.2);
-  --bs-box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
-
-  --bs-dark-bg-subtle: var(--stanford-10-black);
 }
 
-/* TODO: Remove after https://github.com/twbs/bootstrap/issues/41569 is resolved*/
-.dropdown-menu {
-  box-shadow: var(--bs-dropdown-box-shadow);
+.bg-4 {
+  --bs-bg: var(--stanford-10-black);
 }
 
 /* BUG? component-library sets --bs-pagination-border-width, but also uses --bs-border-width to tweak the size */

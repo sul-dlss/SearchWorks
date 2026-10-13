@@ -16,6 +16,7 @@ RSpec.describe 'Callnumber Browse', :js do
       end
 
       click_button '840.5 .Y18'
+      scroll_to find_by_id('callnumber-1') # the filmstrip is lazy loaded
       within '#callnumber-1' do
         expect(page).to have_text '840.5 .Y18'
         expect(page).to have_css '.current-document'

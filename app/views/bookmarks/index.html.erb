@@ -1,8 +1,8 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: t('blacklight.bookmarks.page_heading'), application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 
-<div class="col-xl-9 col-md-12 mt-3" data-controller="saved-list" data-action="bookmark.blacklight->saved-list#bookmarksUpdated">
-  <div class="d-sm-flex mb-2">
-    <h1 class="me-3">Saved Records</h1>
+<div class="xl:col-9 md:col-12 mt-5" data-controller="saved-list" data-action="bookmark.blacklight->saved-list#bookmarksUpdated">
+  <div class="sm:d-flex mb-3">
+    <h1 class="me-5">Saved Records</h1>
 
     <ul class="nav nav-tabs">
       <li class="nav-item">
@@ -20,7 +20,7 @@
         <% end %>
       </li>
     </ul>
-    <div class="tab-underline-extend flex-grow-1 border-bottom d-none d-sm-block">
+    <div class="tab-underline-extend flex-grow-1 border-bottom d-none sm:d-block">
     </div>
   </div>
 
@@ -34,10 +34,10 @@
 
     <%= render Bookmarks::ToolbarComponent.new(document_ids: article_selections? ? @bookmarks.map(&:id) : @response.documents.map(&:id)) %>
 
-    <div class="page-entries-info sort-and-per-page mb-2 d-flex justify-content-between align-items-center">
+    <div class="page-entries-info sort-and-per-page mb-3 d-flex justify-content-between align-items-center">
       <%= render PageLinksComponent.new(response: article_selections? ? @bookmarks : @response) %>
 
-      <span class="d-flex flex-row gap-2">
+      <span class="d-flex flex-row gap-3">
         <%= render partial: 'sort_widget' %>
         <span>
           <%= render partial: 'shared/per_page_widget' %>

@@ -29,7 +29,7 @@ module AccessPanels
     def popover_title
       '<div class="d-flex justify-content-between align-content-center">
         <div class="fw-bold align-self-center">Library has:</div>
-        <button class="btn p-0 ms-2 fs-5 lh-1" aria-label="close summary of items popover" data-action="click->popover#hidePopover" type="button">
+        <button class="btn p-0 ms-3 fs-lg lh-1" aria-label="close summary of items popover" data-action="click->popover#hidePopover" type="button">
           <i class="bi bi-x"></i>
         </button>
       </div>'

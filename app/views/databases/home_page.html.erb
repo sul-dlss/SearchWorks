@@ -4,14 +4,16 @@
 <% end %>
 <div class="d-flex justify-content-between align-items-center">
   <h2>Database topics</h2>
-  <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Popular databases</button>
+  <button class="btn btn-solid theme-primary md:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#popular-databases-drawer" aria-controls="popular-databases-drawer">Popular databases</button>
 </div>
-<div class="row gx-5">
-  <section class="col-12 col-md-8 col-lg-9">
+<div class="row gx-12">
+  <section class="col-12 md:col-8 lg:col-9">
     <%= render 'db_az_subjects' %>
   </section>
-  <aside class="offcanvas-md offcanvas-bottom col-md-4 col-lg-3 popular-databases" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-    <%= render 'popular_databases' %>
+  <aside class="md:col-4 lg:col-3 popular-databases-aside">
+    <dialog class="md:drawer drawer-bottom flex-column popular-databases" id="popular-databases-drawer" aria-labelledby="popular-databases-label">
+      <%= render 'popular_databases' %>
+    </dialog>
   </aside>
 </div>
 <% content_for(:breadcrumb) do %>

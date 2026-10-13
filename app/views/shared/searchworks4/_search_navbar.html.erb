@@ -1,26 +1,26 @@
 <% articles_checked = controller_name.in?(%w[article_selections articles]) %>
 <% addl_parameters = controller_name == 'articles' && action_name == 'index' ? nil : { 'f[eds_search_limiters_facet][]': 'Direct access to full text' } %>
-<%= tag.nav id: 'search-navbar', class: %w[bg-light py-2 mb-3],
+<%= tag.nav id: 'search-navbar', class: %w[bg-2 py-3 mb-5],
             'aria-label': t('searchworks.navigation.search_bar'),
             data: { controller: 'search-navbar', 'search-navbar-additional-articles-params-value': addl_parameters&.to_json } do %>
   <turbo-frame id="search-navbar-frame" refresh="morph" data-search-navbar-target="container">
-    <div class="container-lg search-form d-flex align-items-center column-gap-3 flex-wrap flex-lg-nowrap">
-      <div class="text-nowrap order-1 py-2" data-controller="analytics" data-analytics-category-value="select_search_mode">
-        <span class="fw-bold me-2">Search mode:</span>
-        <div class="form-check d-inline-block mx-1">
-          <%= tag.input type: 'radio', class: 'form-check-input', name: 'search-type', id: 'searchTypeCatalog', value: 'catalog', checked: !articles_checked, data: { action: 'search-navbar#toggleMode analytics#trackEvent', url: search_bar_catalog_url } %>
-          <label class="form-check-label" for="searchTypeCatalog">Catalog</label>
+    <div class="lg:container search-form d-flex align-items-center column-gap-5 flex-wrap lg:flex-nowrap">
+      <div class="text-nowrap order-1 py-3" data-controller="analytics" data-analytics-category-value="select_search_mode">
+        <span class="fw-bold me-3">Search mode:</span>
+        <div class="form-field d-inline-grid align-items-center mx-1">
+          <%= tag.input type: 'radio', class: 'radio', name: 'search-type', id: 'searchTypeCatalog', value: 'catalog', checked: !articles_checked, data: { action: 'search-navbar#toggleMode analytics#trackEvent', url: search_bar_catalog_url } %>
+          <label for="searchTypeCatalog">Catalog</label>
         </div>
-        <div class="form-check d-inline-block mx-1">
-          <%= tag.input type: 'radio', class: 'form-check-input', name: 'search-type', id: 'searchTypeArticle', value: 'articles', checked: articles_checked, data: { action: 'search-navbar#toggleMode analytics#trackEvent', url: search_bar_articles_url } %>
-          <label class="form-check-label" for="searchTypeArticle">Articles+</label>
+        <div class="form-field d-inline-grid align-items-center mx-1">
+          <%= tag.input type: 'radio', class: 'radio', name: 'search-type', id: 'searchTypeArticle', value: 'articles', checked: articles_checked, data: { action: 'search-navbar#toggleMode analytics#trackEvent', url: search_bar_articles_url } %>
+          <label for="searchTypeArticle">Articles+</label>
         </div>
       </div>
       <%= render MastheadSearchComponent.new url: search_action_url,
                                             advanced_search_url: controller_name.in?(%w[article_selections articles]) ? nil : search_action_url(action: 'advanced_search'),
                                             params: search_state.params_for_search.except(:qt),
                                             autocomplete_path: suggest_index_catalog_path %>
-      <%= link_to_unless_current 'Advanced search', advanced_search_path(search_state.params_for_search), data: { turbo: false }, class: 'advanced-search-link text-body text-nowrap order-3 order-sm-2 order-lg-3 ms-sm-auto ms-lg-0 py-2 py-lg-0' unless controller_name.in?(%w[article_selections articles]) %>
+      <%= link_to_unless_current 'Advanced search', advanced_search_path(search_state.params_for_search), data: { turbo: false }, class: 'advanced-search-link fg-body text-nowrap order-3 sm:order-2 lg:order-3 sm:ms-auto lg:ms-0 py-3 lg:py-0' unless controller_name.in?(%w[article_selections articles]) %>
     </div>
   </turbo-frame>
 <% end %>

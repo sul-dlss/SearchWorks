@@ -3,8 +3,8 @@
 module SearchResult
   module MiniBento
     class LayoutComponent < ViewComponent::Base
-      def initialize(url:, i18n_key:, offcanvas: true)
-        @offcanvas = offcanvas
+      def initialize(url:, i18n_key:, drawer: true)
+        @drawer = drawer
         @url = url
         @i18n_key = i18n_key
         super()
@@ -12,8 +12,8 @@ module SearchResult
 
       attr_reader :url, :i18n_key
 
-      def offcanvas?
-        @offcanvas
+      def drawer?
+        @drawer
       end
 
       def bento_url

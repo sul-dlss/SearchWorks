@@ -15,35 +15,35 @@
 
 
 
-<div class="row mt-4">
-  <div class="col-xxl-9">
+<div class="row mt-7">
+  <div class="2xl:col-9">
     <section class="">
-      <div class="sort-and-per-page d-flex justify-content-between align-items-center mb-2">
+      <div class="sort-and-per-page d-flex justify-content-between align-items-center mb-3">
         <div data-course-reserves-target="results"></div>
-        <div class="d-flex flex-row gap-2">
-          <div class="dropdown">
-              <button type="button" class="btn btn-sm btn-outline-primary lh-1 dropdown-toggle show" data-bs-toggle="dropdown" data-course-reserves-target="sortButton">
-                Sort<span class="d-none d-lg-inline"> by course ID</span>
+        <div class="d-flex flex-row gap-3">
+          <div>
+              <button type="button" class="btn btn-sm btn-outline theme-primary lh-1 dropdown-toggle" data-bs-toggle="menu" data-course-reserves-target="sortButton">
+                Sort<span class="d-none lg:d-inline"> by course ID</span>
               </button>
 
-              <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item icon-link" aria-current="true" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#0" data-course-reserves-target="sortItem">
+              <div class="menu" role="menu">
+                  <a class="menu-item icon-link" aria-current="true" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#0" data-course-reserves-target="sortItem">
                     <i class="bi bi-check-lg active-icon" aria-hidden="true"></i>course ID</a>
-                  <a class="dropdown-item icon-link" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#1" data-course-reserves-target="sortItem">
+                  <a class="menu-item icon-link" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#1" data-course-reserves-target="sortItem">
                     <i class="bi active-icon" aria-hidden="true"></i>description</a>
-                  <a class="dropdown-item icon-link" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#2" data-course-reserves-target="sortItem">
+                  <a class="menu-item icon-link" aria-current="false" data-action="click->course-reserves#sort" role="menuitem" tabindex="-1" href="#2" data-course-reserves-target="sortItem">
                     <i class="bi active-icon" aria-hidden="true"></i>instructor</a>
               </div>
           </div>
-          <div class="dropdown">
-              <button type="button" class="btn btn-sm btn-outline-primary lh-1 dropdown-toggle show" data-bs-toggle="dropdown" data-course-reserves-target="perPageButton">
-                20<span class="d-none d-lg-inline"> per page</span>
+          <div>
+              <button type="button" class="btn btn-sm btn-outline theme-primary lh-1 dropdown-toggle" data-bs-toggle="menu" data-course-reserves-target="perPageButton">
+                20<span class="d-none lg:d-inline"> per page</span>
               </button>
 
-              <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item icon-link" aria-current="true" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#20" data-course-reserves-target="perPageItem">
+              <div class="menu" role="menu">
+                  <a class="menu-item icon-link" aria-current="true" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#20" data-course-reserves-target="perPageItem">
                     <i class="bi bi-check-lg active-icon" aria-hidden="true"></i>20</a>
-                  <a class="dropdown-item icon-link" aria-current="false" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#50" data-course-reserves-target="perPageItem">
+                  <a class="menu-item icon-link" aria-current="false" data-action="click->course-reserves#perPage" role="menuitem" tabindex="-1" href="#50" data-course-reserves-target="perPageItem">
                     <i class="bi active-icon" aria-hidden="true"></i>50</a>
               </div>
           </div>

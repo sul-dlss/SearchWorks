@@ -32,11 +32,11 @@
   background-color: rgb(var(--stanford-fog-light-rgb), 0.7);
 }
 
-#alternate-catalog-offcanvas {
-  --bs-offcanvas-height: auto;
+#alternate-catalog-drawer {
+  --bs-drawer-height: auto;
 }
 
-.offcanvas .alternate-catalog {
+.drawer .alternate-catalog {
   background: none;
 
   .alternate-catalog-heading {

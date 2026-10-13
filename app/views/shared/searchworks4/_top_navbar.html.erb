@@ -1,6 +1,6 @@
     <header id="topnav" role="banner">
       <div class="identity-bar">
-        <div class="container-lg">
+        <div class="lg:container">
           <a
             class="su-brand-bar__logo d-inline"
             href="https://www.stanford.edu"
@@ -8,13 +8,13 @@
           >
         </div>
       </div>
-      <nav class="navbar navbar-expand-md">
-        <div class="container-lg">
+      <nav class="navbar md:navbar-expand">
+        <div class="lg:container">
           <a
             class="mb-0 navbar-brand navbar-logo"
             href="https://library.stanford.edu" aria-label="Stanford University Libraries"></a>
           <button
-            class="navbar-toggler navbar-toggler-right collapsed"
+            class="btn-icon navbar-toggler navbar-toggler-right"
             type="button"
             data-toggle="collapse"
             data-bs-toggle="collapse"
@@ -27,17 +27,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="d-md-block d-none">
+          <div class="md:d-block d-none">
             <%= render 'shared/searchworks4/user_util_links', extra_classes: '' %>
           </div>
         </div>
       </nav>
       <div class="masthead">
-        <div class="container-lg">
+        <div class="lg:container">
           <div
-            class="d-flex flex-wrap align-items-center pt-3 pb-1 pb-md-3 gap-2"
+            class="d-flex flex-wrap align-items-center pt-5 pb-1 md:pb-5 gap-3"
           >
-          <div class="d-flex align-items-center gap-2 flex-grow-1">
+          <div class="d-flex align-items-center gap-3 flex-grow-1">
               <span class="rosette-logo me-1 align-self-start flex-shrink-0" aria-hidden></span>
               <div class="me-1 flex-grow-1">
                 <div class="h1 my-0">
@@ -49,24 +49,24 @@
                 </div>
               </div>
             </div>
-            <div class="navbars ms-md-auto">
+            <div class="navbars md:ms-auto">
               <nav
-                class="collapse navbar-collapse align-items-start justify-content-md-end navbar-expand-md d-md-flex flex-column flex-md-row"
+                class="collapse navbar-collapse align-items-start md:justify-content-end flex-column md:flex-row"
                 aria-label="browse"
                 id="user-util-collapse"
               >
-                <hr class="d-md-none vw-100 my-0">
+                <hr class="md:d-none vw-100 my-0">
                 <ul
-                  class="navbar-nav justify-content-md-end gap-0 gap-md-4 w-100"
+                  class="navbar-nav md:justify-content-end gap-0 md:gap-7 w-100"
                 >
                   <%= render 'shared/searchworks4/catalog_featured_resources' %>
 
-                  <li class="nav-item dropdown">
+                  <li class="nav-item">
                     <a
                       class="nav-link dropdown-toggle"
                       href="#"
                       role="button"
-                      data-bs-toggle="dropdown"
+                      data-bs-toggle="menu"
                       aria-expanded="false"
                     >
                       Help
@@ -74,8 +74,8 @@
                     <%= render 'shared/search_navbar_services_menu' %>
                   </li>
                 </ul>
-                <hr class="d-md-none vw-100 my-0">
-                <%= render 'shared/searchworks4/user_util_links', extra_classes: 'd-md-none w-100' %>
+                <hr class="md:d-none vw-100 my-0">
+                <%= render 'shared/searchworks4/user_util_links', extra_classes: 'md:d-none w-100' %>
               </nav>
             </div>
           </div>

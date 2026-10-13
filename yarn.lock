@@ -392,6 +392,26 @@
     "@eslint/core" "^0.17.0"
     levn "^0.4.1"
 
+"@floating-ui/core@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.8.0.tgz#d01c0bbea02e4a57f6fd7d5de6fc2c5c7dca40e1"
+  integrity sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==
+  dependencies:
+    "@floating-ui/utils" "^0.2.12"
+
+"@floating-ui/dom@^1.7.6":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.8.0.tgz#8a20e6facbe2456afdbeb6c8b968a72df689cf63"
+  integrity sha512-yXSrzeHZBTZadLOlfyhCkJHNeLJnHRnRInwdZ40L7ZiaAtrBwoYlsDrX3v5zB1Utk7CLfzcOVnVVWoXEky7Ceg==
+  dependencies:
+    "@floating-ui/core" "^1.8.0"
+    "@floating-ui/utils" "^0.2.12"
+
+"@floating-ui/utils@^0.2.12":
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.12.tgz#afefe785949f16ac4cdd1e695935a321572dd56a"
+  integrity sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==
+
 "@hotwired/stimulus@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.2.2.tgz#071aab59c600fed95b97939e605ff261a4251608"
@@ -632,7 +652,7 @@
     "@parcel/watcher-win32-arm64" "2.6.0"
     "@parcel/watcher-win32-x64" "2.6.0"
 
-"@popperjs/core@2.11.8", "@popperjs/core@^2.11.8":
+"@popperjs/core@^2.11.8":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
@@ -820,31 +840,28 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-"blacklight-frontend@>=7.1 <10.0.0", blacklight-frontend@^9.0.0-beta6:
+"blacklight-frontend@>=7.1 <10.0.0", "blacklight-frontend@github:projectblacklight/blacklight#bootstrap6":
   version "9.2.1"
-  resolved "https://registry.yarnpkg.com/blacklight-frontend/-/blacklight-frontend-9.2.1.tgz#f7b6a38855d0fd56f291f9f8141671e0e8f36ec6"
-  integrity sha512-ahDgeQJaAQRwLupb1DeF/IW8eIGPYLBtxDB/3qABnmqv5V3yunj0TXVy/7rbOwVh/ITBls0nigUxsmZIR9rn7A==
+  resolved "https://codeload.github.com/projectblacklight/blacklight/tar.gz/d63eb512950c92c27a1fdb013ff89fd387fb7251"
   dependencies:
-    bootstrap ">=5.3.5 <6.0.0"
+    bootstrap "^5.3.5 || ^6.0.0-alpha.1"
 
-blacklight-hierarchy@^6.1.2:
+"blacklight-hierarchy@github:sul-dlss/blacklight-hierarchy#bs6":
   version "6.9.0"
-  resolved "https://registry.yarnpkg.com/blacklight-hierarchy/-/blacklight-hierarchy-6.9.0.tgz#55ad4d3f9c72ccb4411757286d3772b161fa3ce3"
-  integrity sha512-ZKrbQfQTGgkOgYczd9cBDZuHEDpMyEHitdTFDnqJnvEByolMZnq96KNB//3b4Q9jo4toGm+6Sy1fK59+BmCP+Q==
+  resolved "https://codeload.github.com/sul-dlss/blacklight-hierarchy/tar.gz/4a51475bae25085f2a7d535500039195c94dbea2"
   dependencies:
     blacklight-frontend ">=7.1 <10.0.0"
 
-blacklight-range-limit@^9.0.0:
+"blacklight-range-limit@github:projectblacklight/blacklight_range_limit#bs6":
   version "9.3.0"
-  resolved "https://registry.yarnpkg.com/blacklight-range-limit/-/blacklight-range-limit-9.3.0.tgz#b919ad356d304d9cde992b46eccf0274cbd33e6f"
-  integrity sha512-vX60ysO1xOsXXe/zCTBt1BSO7x0BlvW6JebCR0CCqnmRu0Cn4ZNFqpMM2wU2K6CUzRWekHc524rfqJpAYfy1Xw==
+  resolved "https://codeload.github.com/projectblacklight/blacklight_range_limit/tar.gz/13a1b8809b2dada4a6855e8ade9f3c8ab02f11ae"
   dependencies:
     chart.js "^ 4.4.1"
 
-bootstrap@5, "bootstrap@>=5.3.5 <6.0.0":
-  version "5.3.8"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.8.tgz#6401a10057a22752d21f4e19055508980656aeed"
-  integrity sha512-HP1SZDqaLDPwsNiqRqi5NcP0SSXciX2s9E+RyqJIIqGo+vJeN5AJVM98CXmW/Wux0nQ5L7jeWUdplCEf0Ee+tg==
+bootstrap@6.0.0-alpha.1, "bootstrap@^5.3.5 || ^6.0.0-alpha.1":
+  version "6.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-6.0.0-alpha.1.tgz#786e9d916c994a39bfffd50ece184bd1f9765ba9"
+  integrity sha512-snAWSjKDVdQAyPOtR69Upy247tZq13gw86SMDMZS4wNfBXGNdzbHdIP6GAyaAVJwTX4LjWowY8YYaJkSDv2wGQ==
 
 brace-expansion@^1.1.7:
   version "1.1.21"
@@ -2454,6 +2471,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+vanilla-calendar-pro@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/vanilla-calendar-pro/-/vanilla-calendar-pro-3.4.0.tgz#22f25f2a203498faacaf4ce5b3c4e15e8d8ac463"
+  integrity sha512-HLWjzHOWvMIrjI77tXK5bYzp0s5TeBSrZC247STjcTAdWI7kqEwWT6Xvu20vqdwzF498H1Da8l4WpdgVIGtc1Q==
 
 which-boxed-primitive@^1.1.0, which-boxed-primitive@^1.1.1:
   version "1.1.1"

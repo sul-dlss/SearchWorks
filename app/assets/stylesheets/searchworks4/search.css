@@ -13,7 +13,7 @@
     --search-q-border: none;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 1024px) {
     .about-section {
       border-inline-start: 1px solid var(--stanford-40-black);
     }
@@ -30,7 +30,7 @@
     max-width: 100%;
   }
 
-  @media (width >= 991.98px) {
+  @media (width >= 1023.98px) {
     order: 2;
     max-width: 38rem;
   }
@@ -43,7 +43,7 @@
     @media (width >= 767.98px) {
       margin-right: calc(100vw - 45rem);
     }
-    @media (width >= 991.98px) {
+    @media (width >= 1023.98px) {
       margin-right: 0;
     }
   }

@@ -1,4 +1,4 @@
-<%# locals: (content_classes: document_index_view_type == :gallery ? 'col-md-8 col-xxl-9 px-xxl-4 ps-lg-4 ps-2' : 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false, database_aside: false) %>
+<%# locals: (content_classes: document_index_view_type == :gallery ? 'md:col-8 2xl:col-9 2xl:px-7 lg:ps-7 ps-3' : 'md:col-8 2xl:col-6 2xl:px-7 lg:ps-7 ps-3', hide_constraints: false, hide_facets: false, database_aside: false) %>
 <% if page_location.collection? && get_collection.present? %>
   <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 <% elsif page_location.access_point? %>
@@ -28,7 +28,7 @@
 <% if has_search_parameters? && !hide_constraints %>
   <div class="row">
     <div class="constraints col d-flex">
-      <%= render view_config.constraints_component.new(search_state:, classes: 'breadcrumb d-inline-flex') %>
+      <%= render view_config.constraints_component.new(search_state:, classes: 'breadcrumb d-inline-flex mb-5') %>
     </div>
   </div>
 <% end %>
@@ -38,23 +38,23 @@
   <% content_for(:skip_links) do -%>
     <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
   <% end %>
-  <div class="row align-items-start mt-4" data-controller="responsive-aside" data-action="resize@window->responsive-aside#moveContentIfNeeded">
+  <div class="row align-items-start mt-7" data-controller="responsive-aside" data-action="resize@window->responsive-aside#moveContentIfNeeded">
     <% unless hide_facets %>
-      <div class="sidebar col-12 col-md-4 col-xxl-3 mb-3" data-controller="analytics" data-responsive-aside-target="default" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
-        <button class="btn btn-primary d-inline-block d-md-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-controls="offcanvas-facets">
+      <div class="sidebar col-12 md:col-4 2xl:col-3 mb-5" data-controller="analytics" data-responsive-aside-target="default" data-action="hide.bs.collapse->analytics#trackFacetHide show.bs.collapse->analytics#trackFacetShow">
+        <button class="btn btn-solid theme-primary d-inline-block md:d-none me-3" type="button" data-bs-toggle="drawer" data-bs-target="#facets-drawer" aria-controls="facets-drawer">
           <i class="bi bi-sliders" aria-hidden="true"></i> Filters
         </button>
         <% if database_aside %>
-          <button class="btn btn-primary d-xxl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Popular databases</button>
+          <button class="btn btn-solid theme-primary 2xl:d-none" type="button" data-bs-toggle="drawer" data-bs-target="#popular-databases-drawer" aria-controls="popular-databases-drawer">Popular databases</button>
         <% end %>
-        <div id="offcanvas-facets" class="offcanvas-md offcanvas-bottom offcanvas-sm-start">
-          <div class="offcanvas-header pb-0">
-            <button type="button" class="btn-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-facets" aria-label="Close"></button>
+        <dialog id="facets-drawer" class="md:drawer drawer-bottom drawer-sm-start" aria-label="Filters">
+          <div class="drawer-header pb-0">
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
           </div>
-          <div class="offcanvas-body pt-0 flex-column">
+          <div class="drawer-body pt-0 flex-column">
             <%= render 'facet_header' %>
             <%= render Facets::GroupComponent.new(id: 'top-filters', title: 'Top filters',
-                                                  container_classes: 'facets top-filters sidenav mb-md-4',
+                                                  container_classes: 'facets top-filters sidenav md:mb-7',
                                                   header_classes: 'facets-heading',
                                                   body_classes: 'accordion') do |component| %>
               <% component.with_body do %>
@@ -63,7 +63,7 @@
             <% end %>
             <%= render Facets::GroupComponent.new(id: 'other-filters', title: 'Other filters',
                                                   show_button: !database_aside,
-                                                  container_classes: 'facets other-filters sidenav mb-md-4',
+                                                  container_classes: 'facets other-filters sidenav md:mb-7',
                                                   header_classes: 'facets-heading',
                                                   body_classes: 'accordion') do |component| %>
               <% component.with_body do %>
@@ -73,7 +73,7 @@
               <% end %>
             <% end %>
           </div>
-        </div>
+        </dialog>
         <% benchmark 'Alt results' do %>
           <%= render view_config.mini_bento_component.new if view_config.mini_bento_component %>
         <% end %>
@@ -81,10 +81,10 @@
     <% end %>
     <div id="content" class="results col <%= content_classes %>" data-controller="eager-lazy"
          data-action="turbo:before-fetch-request->eager-lazy#frameWillLoad">
-      <div class="page-entries-info mb-2 d-flex flex-wrap gap-2 justify-content-between align-items-center">
+      <div class="page-entries-info mb-3 d-flex flex-wrap gap-3 justify-content-between align-items-center">
         <%= render PageLinksComponent.new(response: @response) %>
-        <div class="d-flex flex-wrap gap-2 align-items-center">
-          <span class="sort-and-per-page d-flex gap-2">
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <span class="sort-and-per-page d-flex gap-3">
             <%= render partial: 'sort_widget' %>
             <%= render partial: 'shared/per_page_widget' %>
           </span>
@@ -98,10 +98,20 @@
       </div>
       <%= render 'results_pagination' %>
     </div>
-    <aside class="col-xxl-3 d-xxl-block <%= database_aside ? 'offcanvas-xxl offcanvas-bottom popular-databases' : 'd-none'  %>" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-      <div data-responsive-aside-target="responsive">
-      </div>
-      <%= content_for(:additional_aside_content) %>
-    </aside>
+    <% if database_aside %>
+      <aside class="2xl:col-3 popular-databases-aside">
+        <dialog class="2xl:drawer drawer-bottom flex-column popular-databases" id="popular-databases-drawer" aria-labelledby="popular-databases-label">
+          <div data-responsive-aside-target="responsive">
+          </div>
+          <%= content_for(:additional_aside_content) %>
+        </dialog>
+      </aside>
+    <% else %>
+      <aside class="2xl:col-3 d-none 2xl:d-block">
+        <div data-responsive-aside-target="responsive">
+        </div>
+        <%= content_for(:additional_aside_content) %>
+      </aside>
+    <% end %>
   </div>
 <% end %>

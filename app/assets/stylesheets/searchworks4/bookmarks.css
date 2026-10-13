@@ -11,7 +11,7 @@
 }
 
 .bookmark-toggle {
-  --bl-icon-color: var(--bs-primary);
+  --bl-icon-color: var(--bs-primary-base);
   color: var(--stanford-80-black);
 
   .blacklight-icons svg {
@@ -110,7 +110,7 @@
     padding-bottom: 0.1875rem;
   }
 
-  .btn-outline-primary {
+  .btn-outline.theme-primary {
     --bs-btn-active-color: var(--stanford-80-black);
     --bs-btn-disabled-color: var(--stanford-50-black);
     --bs-btn-border-color: var(--stanford-80-black);

@@ -8,11 +8,16 @@
 
   transform: translateX(calc(100% + 30px));
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.25, 1.35);
+  /* Bootstrap 6 toggles display: none <-> flex, so let the slide run across that change */
+  transition-behavior: allow-discrete;
   &.show {
     transform: translateX(0);
   }
-  &.showing {
-    opacity: 1;
+}
+
+/* Bootstrap 6 has no .showing state; slide in from offscreen when .show is added */
+@starting-style {
+  .toast.show {
     transform: translateX(calc(100% + 30px));
   }
 }

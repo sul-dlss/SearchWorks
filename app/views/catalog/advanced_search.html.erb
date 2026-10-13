@@ -9,9 +9,9 @@
 <% end %>
 
 <% content_for :search_navbar do %>
-<header class="search-masthead search-area-bg mb-5">
-  <div class="container-lg">
-    <div class="row flex-column flex-md-row">
+<header class="search-masthead search-area-bg mb-12">
+  <div class="lg:container">
+    <div class="row flex-column md:flex-row">
         <h1 class="advanced page-header">
             <%= t('blacklight.advanced_search.form.title') %>
         </h1>
@@ -19,13 +19,13 @@
   </div>
 </header>
 <% end %>
-<div class="advanced-search-form col-sm-12">
+<div class="advanced-search-form sm:col-12">
   <div class="row">
-    <div class="col-xl-9" id="advanced-search-form">
+    <div class="xl:col-9" id="advanced-search-form">
       <%= render 'advanced_search_form' %>
     </div>
 
-    <div class="col-xl-3 mt-xl-0 mt-4">
+    <div class="xl:col-3 xl:mt-0 mt-7">
       <%= render 'advanced_search_help' %>
     </div>
   </div>

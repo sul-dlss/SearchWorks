@@ -1,5 +1,5 @@
 <%= render @layout.new(classes: 'panel-access-conditions') do |component| %>
-  <% component.with_title(classes: 'h3 text-secondary') { 'Access conditions' } %>
+  <% component.with_title(classes: 'h3 fg-secondary') { 'Access conditions' } %>
   <% component.with_body do %>
     <% field_map.each do |fields| %>
       <%= tag.div data: { controller: 'long-text', 'long-text-truncate-class': 'truncate-6'} do %>

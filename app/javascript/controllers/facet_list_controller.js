@@ -23,16 +23,16 @@ export default class extends Controller {
   }
 
   #show() {
-    this.hideFacets().forEach(facet => facet.classList.remove("d-md-none"))
-    this.titleTarget?.classList.remove("d-md-none")
+    this.hideFacets().forEach(facet => facet.classList.remove("md:d-none"))
+    this.titleTarget?.classList.remove("md:d-none")
     this.buttonTarget.setAttribute("aria-expanded", "true")
     this.buttonTarget.innerHTML = '<i class="bi bi-sliders" aria-hidden="true"></i> Hide other filters'
   }
 
   #hide() {
-    this.hideFacets().forEach(facet => facet.classList.add("d-md-none", "d-xxl-block"))
-    this.titleTarget?.classList.add("d-md-none", "d-xxl-block")
-    this.buttonTarget.classList.add("d-xxl-none")
+    this.hideFacets().forEach(facet => facet.classList.add("md:d-none", "2xl:d-block"))
+    this.titleTarget?.classList.add("md:d-none", "2xl:d-block")
+    this.buttonTarget.classList.add("2xl:d-none")
     this.buttonTarget.setAttribute("aria-expanded", "false")
     this.buttonTarget.innerHTML = '<i class="bi bi-sliders" aria-hidden="true"></i> Show all filters'
   }

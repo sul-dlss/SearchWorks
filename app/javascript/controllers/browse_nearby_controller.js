@@ -35,7 +35,7 @@ export default class extends Controller {
   isAsideBlocking() {
     const aside = this.getAsideTarget()
     if (!aside) return false
-    if (window.innerWidth < 992) return true
+    if (window.innerWidth < 1024) return true
 
     const asideBottom = aside.getBoundingClientRect().bottom
     const browseNearbyTop = this.containerTarget.getBoundingClientRect().top - 32

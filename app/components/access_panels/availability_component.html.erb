@@ -1,7 +1,7 @@
 <div>
-  <div class="d-flex align-content-between mb-3">
-    <h2 class="h3 text-secondary">Availability</h2>
-    <a href="<%= availability_modal_path(document) %>" data-blacklight-modal="trigger" class="expand-availability link-decoration-none btn btn-link text-secondary icon-link align-self-start ms-3 p-0">Expand<i class="bi bi-arrows-angle-expand"></i></a>
+  <div class="d-flex align-content-between mb-5">
+    <h2 class="h3 fg-secondary">Availability</h2>
+    <a href="<%= availability_modal_path(document) %>" data-blacklight-modal="trigger" class="expand-availability link-decoration-none btn btn-link fg-secondary icon-link align-self-start ms-5 p-0">Expand<i class="bi bi-arrows-angle-expand"></i></a>
   </div>
 
   <%= render AccessPanels::OnlineComponent.new(document:) %>

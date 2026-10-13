@@ -1,10 +1,11 @@
 .modal-content:has(.record-summary) {
-  --bs-modal-header-border-width: 0;
-  --bs-modal-padding: 1.5rem;
+  --bs-dialog-header-border-width: 0;
+  --bs-dialog-padding: 1.5rem;
+  --bs-dialog-header-padding: 1.5rem;
   --bs-border-color: var(--stanford-30-black);
 
-  .modal-footer {
-    --bs-modal-padding: 1rem;
+  .dialog-footer {
+    --bs-dialog-footer-padding: 1rem;
   }
 }
 
@@ -19,20 +20,18 @@
 }
 
 /* Hide the modal footer close button for modal content being viewed as a page. */
-#main-container .modal-footer button[data-bl-dismiss="modal"] {
+#main-container .dialog-footer button[data-bl-dismiss="modal"] {
   display: none;
 }
 
-/* Anchor (override modal-dialog-centered) the availability & facet suggest modals */
-.modal-dialog:has(.facet-suggest),
-.modal-dialog:has(.availability-modal) {
-  align-items: normal;
-  display: block;
+/* Anchor (rather than vertically center) the availability & facet suggest modals */
+#blacklight-modal:has(.facet-suggest),
+#blacklight-modal:has(.availability-modal) {
+  margin-top: var(--bs-dialog-margin);
 }
 
-.modal:has(.feedback-form) {
-  /* This footer padding value is not affected by or the same as --bs-modal-padding */
-  .modal-footer {
+#blacklight-modal:has(.feedback-form) {
+  .dialog-footer {
     padding: 1rem;
   }
 

@@ -14,21 +14,21 @@
   </ul>
   <div class="tab-content">
     <div id="map-<%= item.id %>" data-stackmap-target="map" class="map-template tab-pane fade show active">
-      <div class="zoom-controls mt-2 mb-1 d-flex justify-content-end gap-2">
-        <%= button_tag class: "zoom-in btn btn-link p-sm-1 icon-link", data: { action: 'click->stackmap#zoomIn' } do %>
-          <i class="bi bi-zoom-in"></i><span class="d-none d-sm-inline"> Zoom in</span>
+      <div class="zoom-controls mt-3 mb-1 d-flex justify-content-end gap-3">
+        <%= button_tag class: "zoom-in btn btn-link sm:p-1 icon-link", data: { action: 'click->stackmap#zoomIn' } do %>
+          <i class="bi bi-zoom-in"></i><span class="d-none sm:d-inline"> Zoom in</span>
         <% end %>
-        <%= button_tag class: "zoom-out btn btn-link p-sm-1 icon-link", data: { stackmap_target: 'zoomOutButton', action: 'click->stackmap#zoomOut' } do %>
-          <i class="bi bi-zoom-out"></i><span class="d-none d-sm-inline"> Zoom out</span>
+        <%= button_tag class: "zoom-out btn btn-link sm:p-1 icon-link", data: { stackmap_target: 'zoomOutButton', action: 'click->stackmap#zoomOut' } do %>
+          <i class="bi bi-zoom-out"></i><span class="d-none sm:d-inline"> Zoom out</span>
         <% end %>
-        <%= button_tag class: "zoom-fit btn btn-link p-sm-1 icon-link", data: { stackmap_target: 'fitButton', action: 'click->stackmap#zoomBounds' } do %>
-          <i class="bi bi-arrows-angle-contract"></i><span class="d-none d-sm-inline"> Reset size</span>
+        <%= button_tag class: "zoom-fit btn btn-link sm:p-1 icon-link", data: { stackmap_target: 'fitButton', action: 'click->stackmap#zoomBounds' } do %>
+          <i class="bi bi-arrows-angle-contract"></i><span class="d-none sm:d-inline"> Reset size</span>
         <% end %>
       </div>
       <div class="osd">
       </div>
     </div>
-    <div id="directions-<%= item.id %>" data-stackmap-target="directions" class="text-directions col-md-12 mt-4 tab-pane fade">
+    <div id="directions-<%= item.id %>" data-stackmap-target="directions" class="text-directions md:col-12 mt-7 tab-pane fade">
     </div>
   </div>
 </div>
