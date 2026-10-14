@@ -2154,7 +2154,6 @@ www.inderscienceonline.com
 www.indexcat.nlm.nih.gov
 www.indexfungorum.org
 www.indianjcancer.com
-www.indianjgastro.com
 www.indianjnephrol.org
 www.indianjotol.org
 www.indianjrheumatol.com
@@ -2260,6 +2259,7 @@ www.jomi.com
 www.jorthodsci.org
 www.josonline.org
 www.jospt.org
+www.journalbelgianhistory.be
 www.journalbipolardisorders.com
 www.journalhealthpollution.org
 www.journalmc.org
