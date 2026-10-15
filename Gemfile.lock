@@ -704,7 +704,7 @@ DEPENDENCIES
   cocina_display (~> 2.3)
   config
   csl (~> 2.0)
-  csl-styles (~> 2.0)
+  csl-styles (~> 2.0.2)
   cssbundling-rails (~> 1.4)
   debug
   devise
