@@ -30,7 +30,7 @@ module NegativeFacets
       solr_field ||= filter.config.key
 
       negated_queries = filter.values.compact_blank.map do |value|
-        "-#{solr_field}:\"#{value}\""
+        "-#{solr_field}:\"#{RSolr.solr_escape(value.to_s)}\""
       end
 
       [negated_queries, {}]
