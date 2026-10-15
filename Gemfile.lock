@@ -200,7 +200,7 @@ GEM
       set (~> 1.1)
       singleton (< 1.0)
       time (< 1.0)
-    csl-styles (2.1.0)
+    csl-styles (2.0.2)
       csl (~> 2.0)
     css_parser (3.3.0)
       addressable
@@ -705,7 +705,7 @@ DEPENDENCIES
   cocina_display (~> 2.3)
   config
   csl (~> 2.0)
-  csl-styles (~> 2.0)
+  csl-styles (~> 2.0.2)
   cssbundling-rails (~> 1.4)
   debug
   devise
