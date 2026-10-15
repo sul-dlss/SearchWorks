@@ -48,7 +48,7 @@ module Eds
     def search(params)
       post('/edsapi/rest/Search', params).body
     rescue Faraday::Error => e
-      eds_code = e.response_body['ErrorNumber'] || e.response_body['ErrorCode']
+      eds_code = eds_error_code(e)
 
       case eds_code
       when '138'
@@ -89,7 +89,7 @@ module Eds
     def request(method, url, params = nil, headers = nil)
       authorized_connection.public_send(method, url, params, headers)
     rescue Faraday::Error => e
-      eds_code = e.response_body['ErrorNumber'] || e.response_body['ErrorCode']
+      eds_code = eds_error_code(e)
 
       case eds_code
       when '108', '109'
@@ -112,12 +112,18 @@ module Eds
         @auth_token = nil
         reset_session_token!
 
-        retries += 1
-
         retry
       end
 
       raise
+    end
+
+    # Network-level errors (e.g. timeouts) have no response body, and non-JSON error responses aren't parsed into a Hash
+    def eds_error_code(error)
+      body = error.response_body
+      return unless body.is_a?(Hash)
+
+      body['ErrorNumber'] || body['ErrorCode']
     end
 
     def reset_session_token!
