@@ -90,6 +90,12 @@ RSpec.describe SearchWorksRecordMailer do
         expect(mail.body).to include "The message"
       end
 
+      it 'escapes HTML in the provided message' do
+        params[:message] = '<a href="https://evil.example">Click</a>'
+        expect(mail.body.to_s).to include '&lt;a href=&quot;https://evil.example&quot;&gt;Click&lt;/a&gt;'
+        expect(mail.body).to have_no_link('Click')
+      end
+
       it 'includes the title' do
         expect(mail.body).to include "Title1"
       end
@@ -126,6 +132,12 @@ RSpec.describe SearchWorksRecordMailer do
 
       it 'includes the provided message' do
         expect(mail.body).to include "The message"
+      end
+
+      it 'escapes HTML in the provided message' do
+        params[:message] = '<a href="https://evil.example">Click</a>'
+        expect(mail.body.to_s).to include '&lt;a href=&quot;https://evil.example&quot;&gt;Click&lt;/a&gt;'
+        expect(mail.body).to have_no_link('Click')
       end
 
       it 'includes the titles of all documents' do
