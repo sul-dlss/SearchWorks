@@ -119,5 +119,5 @@ gem 'blacklight-ris', '~> 0.2.0'
 gem "citeproc", "~> 1.1"
 gem 'citeproc-ruby', '~> 2.0'
 gem 'csl', '~> 2.0'
-gem "csl-styles", "~> 2.0.2" # Pinned until https://github.com/citation-style-language/styles/issues/8376 is resolved
+gem "csl-styles", "~> 2.0"
 gem "cocina_display", "~> 2.3"
