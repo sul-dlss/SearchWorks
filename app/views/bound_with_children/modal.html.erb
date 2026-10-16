@@ -1,14 +1,14 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h2 class="modal-title">
+    <h2 class="dialog-title">
       Items bound with
     </h2>
   <% end %>
   <% component.with_body do %>
-    <div class="bound-with bg-light w-100 px-3 py-2 h4">
+    <div class="bound-with bg-2 w-100 px-5 py-3 h4">
       <%= @bound_with_parent['call_number'] %> (<%= @bound_with_parent['title'] %>)
     </div>
-    <div class="modal-body">
+    <div class="dialog-body">
       <div class="bound-with-modal">
         <%= render Record::BoundWithChildrenTableComponent.new(bound_with_children: @bound_with_children, item_id: @item_id, instance_id: @id) %>
       </div>

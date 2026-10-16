@@ -14,7 +14,7 @@ RSpec.describe "Emailing Records", :js do
 
         expect(page).to have_css 'h2', text: 'Email'
 
-        within('.modal-dialog') do
+        within('#blacklight-modal') do
           expect(page).to have_css('[data-recaptcha-action-value="email"]')
         end
       end
@@ -47,7 +47,7 @@ RSpec.describe "Emailing Records", :js do
         it 'sends the brief record' do
           expect(page).to have_css 'h2', text: 'Email'
 
-          within('.modal-dialog') do
+          within('#blacklight-modal') do
             choose 'type_brief'
             fill_in 'to', with: 'email@example.com'
             click_button 'Send'
@@ -59,7 +59,7 @@ RSpec.describe "Emailing Records", :js do
 
       context 'when "Full record" is selected' do
         before do
-          within('.modal-dialog') do
+          within('#blacklight-modal') do
             fill_in 'to', with: 'email@example.com'
             choose 'Full record'
 
@@ -91,7 +91,7 @@ RSpec.describe "Emailing Records", :js do
         it "sends the brief record" do
           expect(page).to have_css 'h2', text: 'Email'
 
-          within('.modal-dialog') do
+          within('#blacklight-modal') do
             fill_in 'to', with: 'email@example.com'
             click_button 'Send'
           end
@@ -102,7 +102,7 @@ RSpec.describe "Emailing Records", :js do
 
       context 'when "Full record" is selected' do
         before do
-          within('.modal-dialog') do
+          within('#blacklight-modal') do
             fill_in 'to', with: 'email@example.com'
             choose 'Full record'
 
@@ -127,7 +127,7 @@ RSpec.describe "Emailing Records", :js do
 
         visit search_catalog_path(q: '14')
 
-        within('#documents article:first-of-type .dropdown') do
+        within('#documents article:first-of-type .item-menu-dropdown') do
           click_button 'More actions'
           click_link 'Email'
         end
@@ -137,7 +137,7 @@ RSpec.describe "Emailing Records", :js do
         it "sends the brief record" do
           expect(page).to have_css 'h2', text: 'Email'
 
-          within('.modal-dialog') do
+          within('#blacklight-modal') do
             fill_in 'to', with: 'email@example.com'
             click_button 'Send'
           end
@@ -148,7 +148,7 @@ RSpec.describe "Emailing Records", :js do
 
       context 'when "Full record" is selected' do
         before do
-          within('.modal-dialog') do
+          within('#blacklight-modal') do
             fill_in 'To', with: 'email@example.com'
             choose 'Full record'
 

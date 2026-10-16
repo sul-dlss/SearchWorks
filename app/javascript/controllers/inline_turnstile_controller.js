@@ -52,24 +52,24 @@ export default class extends Controller {
       "before-interactive-callback": () => {
         this.challengeTarget.classList.add(
           "alert",
-          "alert-info",
+          "theme-info",
           "alert-dismissible",
           "shadow-sm",
-          "mt-4",
+          "mt-7",
           "mb-0"
         )
         if (!this.challengeTarget.querySelector("i.bi.bi-info-circle-fill")) {
           const msg = document.createElement("div")
           msg.innerText = "For real-time availability, please verify below."
-          msg.classList.add("text-body", "mb-2")
+          msg.classList.add("fg-body", "mb-3")
           this.challengeTarget.prepend(msg)
           const icon = document.createElement("i")
           icon.classList.add(
             "bi",
             "bi-info-circle-fill",
-            "fs-3",
-            "me-3",
-            "mt-4",
+            "fs-2xl",
+            "me-5",
+            "mt-7",
             "float-start"
           )
           this.challengeTarget.prepend(icon)

@@ -1,4 +1,5 @@
 import Blacklight from "blacklight-frontend"
+import { Collapse } from "bootstrap"
 
 Blacklight.onLoad(function(){
 
@@ -55,7 +56,7 @@ class FeedbackForm {
           }).then((resp) => resp.json())
             .then((json) => {
             // Hide the collapse element
-              const collapseElement = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el)
+              const collapseElement = Collapse.getOrCreateInstance(el)
               collapseElement.hide()
               form.reset()
               this.renderFlashMessages(json)
@@ -80,11 +81,11 @@ class FeedbackForm {
     response.forEach((val) => {
       const alertType = val[0] == "error" ? "danger" : val[0]
       const flashHtml = `
-        <div class="alert alert-${alertType} alert-dismissible shadow-sm d-flex align-items-center">
-          <div class="text-body">
+        <div class="alert theme-${alertType} alert-dismissible shadow-sm d-flex align-items-center">
+          <div class="fg-body">
             <div>${val[1]}</div>
           </div>
-          <button type="button" class="btn-close p-2 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
+          <button type="button" class="btn-close p-3 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>`
 
       // Show the flash message

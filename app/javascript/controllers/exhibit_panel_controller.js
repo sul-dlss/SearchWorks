@@ -65,7 +65,7 @@ export default class extends Controller {
 
       if (!toggleButton) {
         toggleButton = document.createElement("button")
-        toggleButton.className = "see-all-exhibits btn btn-secondary btn-xs"
+        toggleButton.className = "see-all-exhibits btn btn-solid theme-secondary btn-xs"
         toggleButton.textContent = `show all ${exhibitCount} exhibits`
         toggleButton.addEventListener("click", this.toggleExhibits.bind(this))
         this.cardBodyTarget.appendChild(toggleButton)
@@ -106,13 +106,13 @@ export default class extends Controller {
     const exhibitUrl = this.exhibitsUrl(exhibit.slug)
     const wrapper = document.createElement("div")
     wrapper.dataset.exhibitPanelTarget = "exhibit"
-    wrapper.className = "d-flex mb-2"
+    wrapper.className = "d-flex mb-3"
     const subtitle = exhibit.subtitle || ""
     const body = `<div><div class="exhibit-heading"><h4><a href="${exhibitUrl}">${exhibit.title}</a></h4>${subtitle}</div></div>`
 
     if (exhibit.thumbnail_url) {
       wrapper.innerHTML = `<a href="${exhibitUrl}" tabindex="-1" aria-hidden="true">
-        <img alt="" src="${exhibit.thumbnail_url}" class="me-3" />
+        <img alt="" src="${exhibit.thumbnail_url}" class="me-5" />
       </a>${body}`
     } else {
       wrapper.innerHTML = body

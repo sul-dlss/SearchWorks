@@ -1,7 +1,7 @@
 <%= render Searchworks4::DocumentSectionLayout.new(title: 'Description') do %>
   <% field_map.each do |fields, delimiter| %>
     <% fields.each do |field| %>
-      <%= tag.div class: 'my-2' do %>
+      <%= tag.div class: 'my-3' do %>
         <%= render Record::Cocina::FieldComponent.new(field: field, delimiter: delimiter) %>
       <% end %>
     <% end %>

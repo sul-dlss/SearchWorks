@@ -3,7 +3,7 @@
 <% content_for(:search_navbar) { tag.div(class: 'd-none') } %>
 
 <div class="d-flex justify-content-center align-items-center">
-  <div class="col-md col-xxl-8">
+  <div class="md:col 2xl:col-8">
     <div class="text-end">
       <%= render AccessPanels::OnlineEdsComponent.new(document: @document) %>
     </div>

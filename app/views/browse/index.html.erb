@@ -1,9 +1,9 @@
 <% @page_title = t 'blacklight.search.masthead_title', title: 'Browse related items', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
 
 <% if params[:start].present? %>
-  <div class="px-4 py-2 mb-3 bg-light">
+  <div class="px-7 py-3 mb-5 bg-2">
     <div id="masthead" class="browse-masthead">
-      <h1 class="my-3">Browse related items</h1>
+      <h1 class="my-5">Browse related items</h1>
       <p>Starting at call number:
         <% if params[:call_number].present? %>
           <%= params[:call_number] %>
@@ -20,18 +20,18 @@
 <% end %>
 
 <% if @spines.present? %>
-  <div class="browse-toolbar mb-3">
-    <%= link_to(browse_index_path(browse_params.merge(before: @spines.first.reverse_shelfkey, after: nil)), class: 'btn btn-outline-primary btn-sm me-2') do %>
+  <div class="browse-toolbar mb-5">
+    <%= link_to(browse_index_path(browse_params.merge(before: @spines.first.reverse_shelfkey, after: nil)), class: 'btn btn-outline theme-primary btn-sm me-3') do %>
       <i class="bi-arrow-left-short" aria-hidden="true"></i><span class="visually-hidden">Previous</span>
     <% end %>
     <%= @spines.first.callnumber %> - <%= @spines.last.callnumber %>
-    <%= link_to(browse_index_path(browse_params.merge(before: nil, after: @spines.last.shelfkey)), class: 'btn btn-outline-primary btn-sm ms-2') do %>
+    <%= link_to(browse_index_path(browse_params.merge(before: nil, after: @spines.last.shelfkey)), class: 'btn btn-outline theme-primary btn-sm ms-3') do %>
       <i class="bi-arrow-right-short" aria-hidden="true"></i><span class="visually-hidden">Next</span>
     <% end %>
   </div>
 <% end %>
 
-<div id="content" class="callnumber-browse p-3">
+<div id="content" class="callnumber-browse p-5">
   <% if @spines.present? %>
     <% view_config = blacklight_config&.view_config(:gallery) %>
     <div id="documents" class="row gallery" data-controller="gallery-layout" data-gallery-layout-gallery-card-outlet=".gallery-document" data-action="resize@window->gallery-layout#reorderPreviewDivs gallery-card:show->gallery-layout#handlePreviewShow">

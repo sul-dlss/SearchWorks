@@ -51,7 +51,7 @@ RSpec.feature 'Alterate catalog results', :js do
     it 'renders a button that opens mini-bento in a drawer' do
       visit search_catalog_path(q: '1*')
       click_button 'Looking for more?'
-      expect(page).to have_css '.offcanvas-md .alternate-catalog'
+      expect(page).to have_css 'dialog.drawer-bottom[open] .alternate-catalog'
     end
   end
 
@@ -63,7 +63,7 @@ RSpec.feature 'Alterate catalog results', :js do
     end
   end
 
-  context 'when on extra large screens', :responsive, page_width: 1400 do
+  context 'when on extra large screens', :responsive, page_width: 1536 do
     it 'draws mini-bento in the aside' do
       visit search_catalog_path(q: '1*')
       expect(page).to have_css 'aside .alternate-catalog'

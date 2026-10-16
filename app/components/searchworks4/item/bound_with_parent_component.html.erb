@@ -1,4 +1,4 @@
-<div class="bound-with bg-light p-2 mt-2">
+<div class="bound-with bg-2 p-3 mt-3">
   <div class="bound-with-type">Bound and shelved with:</div>
   <div class="bound-with-title">
     <%= document_bound_with_item? ? tag.em('Same title') : link_to(bound_with_title, solr_document_path(item.bound_with_id)) %>

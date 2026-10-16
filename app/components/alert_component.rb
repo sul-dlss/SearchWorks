@@ -10,7 +10,7 @@ class AlertComponent < ViewComponent::Base
   attr_reader :level, :message
 
   def alert_class
-    "alert-#{level}"
+    "theme-#{level}"
   end
 
   def icon

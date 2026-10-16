@@ -5,13 +5,13 @@
     <% location = library.locations.first %>
     <% item = location.items.first %>
     <%= tag.span library.name, class: 'library fw-semibold text-nowrap' %>
-    <span class="d-inline-flex gap-4 row-gap-2 align-items-center flex-wrap">
+    <span class="d-inline-flex gap-7 row-gap-3 align-items-center flex-wrap">
       <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
       <%= tag.span item.callnumber, class: 'callnumber text-nowrap' %>
-      <span class="d-inline-flex gap-3">
+      <span class="d-inline-flex gap-5">
         <%= render Searchworks4::ItemStatusComponent.new(item:) %>
         <% unless item.request_link.render? %>
-          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-solid theme-secondary location-request-link]) %>
         <% end %>
       </span>
     </span>
@@ -24,13 +24,13 @@
     <% location = library.locations.first %>
     <% item = location.items.first %>
     <%= tag.span library.name, class: 'library fw-semibold text-nowrap' %>
-    <span class="d-inline-flex gap-4 row-gap-2 align-items-center flex-wrap">
+    <span class="d-inline-flex gap-7 row-gap-3 align-items-center flex-wrap">
       <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: true) %>
       <%= tag.span item.truncated_callnumber, class: 'callnumber text-nowrap' %>
-      <span class="d-inline-flex gap-3">
+      <span class="d-inline-flex gap-5">
         <%= render Searchworks4::ItemStatusComponent.new(item:) %>
         <% unless item.request_link.render? %>
-          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-solid theme-secondary location-request-link]) %>
         <% end %>
       </span>
     </span>
@@ -49,7 +49,7 @@
     <% end %>
 
     <%= render ItemCountComponent.new(document.holdings.items.count) %>
-    <%= link_to_document document, 'See availability', counter: nil, class: 'ms-3 fs-15' %>
+    <%= link_to_document document, 'See availability', counter: nil, class: 'ms-5 fs-15' %>
   <% end %>
 <% elsif single_location? %>
   <%# If the instance only has items in one location, we can pull some of the library + location information to the top %>
@@ -57,22 +57,22 @@
   <% location = library.locations.first %>
   <%= container_tag('details', classes: %w[w-100 suppress-item-level-request-button-if-there-is-a-location-level-request-button]) do %>
     <%= tag.summary class: ['d-flex'] do %>
-      <%= tag.div class: header_classes + ['d-inline-flex', 'me-4'] do %>
+      <%= tag.div class: header_classes + ['d-inline-flex', 'me-7'] do %>
         <%= tag.span library.name, class: 'library fw-semibold' %>
         <%= render ItemCountComponent.new(document.holdings.items.count) %>
         <span class="me-auto">
-          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link me-2 me-md-3 me-lg-4 me-xl-5]) %>
+          <%= render LocationRequestLinkComponent.for(document:, location: location, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-solid theme-secondary location-request-link me-3 md:me-5 lg:me-7 xl:me-12]) %>
         </span>
 
-        <div class="btn btn-outline-primary btn-sm text-nowrap">
+        <div class="btn btn-outline theme-primary btn-sm text-nowrap">
           <span class="open-hidden icon-link"><i class="bi bi-chevron-down"></i> Show details</span>
           <span class="open-visible icon-link"><i class="bi bi-chevron-up"></i> Hide details</span>
         </div>
       <% end %>
     <% end %>
     <div class="border rounded-end rounded-bottom">
-      <div class="d-flex gap-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
-        <div class="pt-2 d-none d-sm-block">
+      <div class="d-flex gap-12 p-3 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+        <div class="pt-3 d-none sm:d-block">
           <%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false) %>
         </div>
         <table class="table w-auto">
@@ -103,7 +103,7 @@
 <% else %>
   <%# With multiple locations, we just require the user expand the whole table to see any item details %>
   <%= container_tag('details', classes: %w[w-100]) do %>
-    <%= tag.summary class: ['d-flex', 'me-4'] do %>
+    <%= tag.summary class: ['d-flex', 'me-7'] do %>
       <%= tag.div class: header_classes + ['d-inline-flex'] do %>
         <% if library_groups.one? %>
           <%= tag.span library_groups.first.name, class: 'library fw-semibold' %>
@@ -112,30 +112,30 @@
         <% end %>
 
         <span class="me-auto">
-          <span class="me-2 me-md-3 me-lg-4 me-xl-5">
+          <span class="me-3 md:me-5 lg:me-7 xl:me-12">
             <%= render ItemCountComponent.new(document.holdings.items.count) %>
           </span>
         </span>
 
-        <div class="btn btn-outline-primary btn-sm text-nowrap">
+        <div class="btn btn-outline theme-primary btn-sm text-nowrap">
           <span class="open-hidden icon-link"><i class="bi bi-chevron-down"></i> Show details</span>
           <span class="open-visible icon-link"><i class="bi bi-chevron-up"></i> Hide details</span>
         </div>
       <% end %>
     <% end %>
-    <div class="border rounded-end rounded-bottom p-2">
+    <div class="border rounded-end rounded-bottom p-3">
       <% library_groups.each do |library_group| %>
-        <div class="d-flex flex-column my-2">
+        <div class="d-flex flex-column my-3">
           <% if library_groups.many? %>
-            <div class="bg-light fw-semibold"><%= library_group.name %></div>
+            <div class="bg-2 fw-semibold"><%= library_group.name %></div>
           <% end %>
           <% library_group.libraries.each do |library| %>
             <% library.locations.each do |location| %>
               <% truncate_items = truncate_location_items?(library: library, location: location) %>
-              <div class="d-flex flex-column flex-sm-row gap-2 gap-sm-5 p-2 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
-                <div class="pt-2" data-availability-target="location">
+              <div class="d-flex flex-column sm:flex-row gap-3 sm:gap-12 p-3 suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+                <div class="pt-3" data-availability-target="location">
                   <div><%= render LocationComponent.new(location: location, document: document, suppress_off_campus: false, classes: []) %></div>
-                  <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link]) %>
+                  <%= render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-solid theme-secondary location-request-link]) %>
                 </div>
                 <table class="table w-auto">
                   <caption class="visually-hidden">

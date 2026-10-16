@@ -12,7 +12,7 @@
     <div class="range-limit-input-group">
       <div class="d-flex justify-content-between align-items-end">
         <div class="d-flex flex-column mr-1 me-1">
-          <%= label_tag("range[#{@facet_field.key}][begin]", t("blacklight.range_limit.range_begin_short"), class: 'text-muted small mb-1') %>
+          <%= label_tag("range[#{@facet_field.key}][begin]", t("blacklight.range_limit.range_begin_short"), class: 'fg-2 small mb-1') %>
           <%= number_field_tag("range[#{@facet_field.key}][begin]",
               date_range.begin,
               min: date_range.min_year,
@@ -21,7 +21,7 @@
               %>
         </div>
         <div class="d-flex flex-column ml-1 ms-1">
-          <%= label_tag("range[#{@facet_field.key}][end]", t("blacklight.range_limit.range_end_short"), class: 'text-muted small mb-1') %>
+          <%= label_tag("range[#{@facet_field.key}][end]", t("blacklight.range_limit.range_end_short"), class: 'fg-2 small mb-1') %>
           <%= number_field_tag("range[#{@facet_field.key}][end]",
               date_range.end,
               min: date_range.min_year,
@@ -30,7 +30,7 @@
               %>
         </div>
       </div>
-      <div class="d-flex justify-content-end mt-2">
+      <div class="d-flex justify-content-end mt-3">
         <%= submit_tag t('blacklight.range_limit.submit_limit'), class: @classes[:submit], name: nil %>
       </div>
     </div>

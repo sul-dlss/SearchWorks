@@ -1,25 +1,25 @@
 <% 
     message_text = flash.key?(:error) ?  flash[:error] : flash[:success]
-    alert_class = flash.key?(:error) ? 'alert-error' : 'alert-success'
+    alert_class = flash.key?(:error) ? 'theme-danger' : 'theme-success'
     icon_class =  flash.key?(:error) ? "bi-exclamation-triangle-fill" : "bi-check-circle-fill"
 %>
 
 <%  if params[:form_format] == 'standalone' %>
     <%= turbo_stream.action 'updateOpener', 'toast-text' do %>
-        <i class='<%= "bi #{icon_class} me-2" %>'></i> <%= sanitize message_text %>
+        <i class='<%= "bi #{icon_class} me-3" %>'></i> <%= sanitize message_text %>
     <% end %>
     <%= turbo_stream.replace 'feedback-form_frame' do %>
         <div class="alert <%= alert_class %> alert-dismissible shadow-sm d-flex align-items-center">
-            <div class="text-body">
-                <div><i class='<%= "bi #{icon_class} me-2" %>'></i> <%= sanitize message_text %></div>
+            <div class="fg-body">
+                <div><i class='<%= "bi #{icon_class} me-3" %>'></i> <%= sanitize message_text %></div>
             </div>
-            <button type="button" class="btn-close p-2 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close p-3 mt-1" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <% end %>
 <% else %>
     <%= turbo_stream.append 'toast-area' do %>
         <%= render ToastComponent.new do %>
-            <i class='<%= "bi #{icon_class} me-2" %>'></i> <%= sanitize message_text %>
+            <i class='<%= "bi #{icon_class} me-3" %>'></i> <%= sanitize message_text %>
         <% end %>
     <% end %>
 <% end %>

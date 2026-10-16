@@ -17,17 +17,17 @@ RSpec.feature 'EDS Facets', :js do
         click_link 'Browse all'
       end
 
-      within 'dialog' do
+      within '#blacklight-modal' do
         expect(page).to have_link 'swedish'
         expect(page).to have_no_link 'slovenian'
 
-        within '.modal-header .facet-pagination' do
+        within '.dialog-header .facet-pagination' do
           click_on "Next"
         end
         expect(page).to have_no_link 'swedish'
         expect(page).to have_link 'slovenian'
 
-        within '.modal-header .facet-pagination' do
+        within '.dialog-header .facet-pagination' do
           click_on "Previous"
         end
         expect(page).to have_link 'swedish'
@@ -48,7 +48,7 @@ RSpec.feature 'EDS Facets', :js do
         click_on 'Close'
       end
 
-      expect(page).to have_no_css 'dialog'
+      expect(page).to have_no_css '#blacklight-modal'
     end
   end
 end

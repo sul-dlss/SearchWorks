@@ -4,7 +4,7 @@
 
 <%= tag.ul class: "links list-unstyled mb-1", id: "online-link-list" do %>
   <% links.each.with_index do |link, index| %>
-    <%= tag.li class: "mt-2 #{'border-top' unless index == 0}" do %>
+    <%= tag.li class: "mt-3 #{'border-top' unless index == 0}" do %>
       <div>
         <%= render Searchworks4::LinkComponent.new(link: link, document: document) %>
       </div>

@@ -12,7 +12,7 @@ RSpec.describe "Librarian View Customization", :js do
       click_link('Librarian view')
     end
 
-    expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
+    expect(page).to have_css('.dialog-title', text: "Librarian View", visible: true)
 
     find('details:first-of-type > summary').click
     within("#marc_view") do
@@ -29,7 +29,7 @@ RSpec.describe "Librarian View Customization", :js do
       click_link('Librarian view')
     end
 
-    expect(page).to have_css('.modal-title', text: "Librarian View", visible: true)
+    expect(page).to have_css('.dialog-title', text: "Librarian View", visible: true)
 
     within(".cocina-view") do
       expect(page).to have_text("883 JPEG image files containing photographs")

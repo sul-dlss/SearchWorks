@@ -1,7 +1,7 @@
 <div data-controller="citation-format">
   <% unless all_unavailable? %>
-  <h3 class="mb-3">Export citations</h3>
-  <ul class="list-unstyled d-flex gap-3 export-citations mb-4">
+  <h3 class="mb-5">Export citations</h3>
+  <ul class="list-unstyled d-flex gap-5 export-citations mb-7">
     <% if @documents.any? {|d| d.export_formats.key?(:ris) } %>
       <li>
         <%= link_to 'In RIS format (Zotero)', bookmarks_path(:ris, search_state.params_for_search),
@@ -28,9 +28,9 @@
 
   <h3>Copy citations</h3>
   <% unless preferred_or_unavailable_citations_only? %>
-  <div class="d-flex align-items-center gap-2 mb-3">
+  <div class="d-flex align-items-center gap-3 mb-5">
     <label for="citation-format" class="fw-bold">Select format</label>
-    <select id="citation-format" class="form-select w-25" data-action="change->citation-format#reveal" aria-controls="<%= Citations::MarcCitation::FORMATS.map { |style| "citation-format-#{style}" }.join(' ') %>">
+    <select id="citation-format" class="form-control w-25" data-action="change->citation-format#reveal" aria-controls="<%= Citations::MarcCitation::FORMATS.map { |style| "citation-format-#{style}" }.join(' ') %>">
       <% Citations::MarcCitation::FORMATS.each do |format| %>
         <option value="citation-format-<%= format %>"><%= t format, scope: 'searchworks.citations.styles' %></option>
       <% end %>
@@ -39,30 +39,30 @@
   <% end %>
 
   <% Citations::MarcCitation::FORMATS.each.with_index do |format, index| %>
-    <%= tag.div class: 'citations bg-light p-3',
+    <%= tag.div class: 'citations bg-2 p-5',
                 hidden: index != 0,
                 data: { citation_format_target: 'tab', controller: 'copy-text'},
                 id: "citation-format-#{format}" do %>
-      <div class="d-flex align-items-center gap-2 mb-2">
+      <div class="d-flex align-items-center gap-3 mb-3">
       <% unless all_unavailable? %>
-        <h4 class="mb-0 me-3">
+        <h4 class="mb-0 me-5">
           <% if preferred_or_unavailable_citations_only? %>
             Preferred citations
           <% else %>
             <%= t format, scope: 'searchworks.citations.styles' %>
           <% end %>
         </h4>
-        <button class="btn btn-outline-primary" data-action="click->copy-text#copy">Copy</button>
+        <button class="btn btn-outline theme-primary" data-action="click->copy-text#copy">Copy</button>
       <% end %>
       </div>
       <% if all_unavailable? %>
-        <div class="alert citations-alert bi bi-exclamation-circle-fill p-2 my-3"><span class="ms-2">All citations are unavailable for the saved records.</span></div>
+        <div class="alert citations-alert bi bi-exclamation-circle-fill p-3 my-5"><span class="ms-3">All citations are unavailable for the saved records.</span></div>
       <% elsif unavailable_citation_count(format).positive? %>
-        <div class="alert citations-alert bi bi-exclamation-circle-fill p-2 my-3"><span class="ms-2">Citations are unavailable for <%= unavailable_citation_count(format) %> of the <%= all_citations.count %> saved records.</span></div>
+        <div class="alert citations-alert bi bi-exclamation-circle-fill p-3 my-5"><span class="ms-3">Citations are unavailable for <%= unavailable_citation_count(format) %> of the <%= all_citations.count %> saved records.</span></div>
       <% end %>
-      <ol class="mb-3 ps-3" data-copy-text-target="text">
+      <ol class="mb-5 ps-5" data-copy-text-target="text">
         <% all_citations.each do |citations_for_document| %>
-        <li class="mb-3 ps-2">
+        <li class="mb-5 ps-3">
           <% cite = helpers.auto_link citation_for_format(citations_for_document, format) %>
           <%= cite.presence || '<i>Citation unavailable</i>'.html_safe %>
           <% if !preferred_or_unavailable_citations_only? && preferred_citation_only?(citations_for_document) %>

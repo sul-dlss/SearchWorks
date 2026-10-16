@@ -57,7 +57,7 @@ RSpec.feature 'Bookmarking Items', :js do
       click_button 'Save all'
       expect(page).to have_button 'Saved all'
       expect(page).to have_css('button[aria-label="Remove all saved records on this page"]')
-      expect(page).to have_text 'Saved 20'
+      expect(page).to have_link 'Saved 20'
       within '#documents' do
         bookmarks = page.all('.toggle-bookmark')
         expect(bookmarks).to all(have_css('.checked'))
@@ -66,10 +66,10 @@ RSpec.feature 'Bookmarking Items', :js do
       within(first('.document')) do
         find('.toggle-bookmark').click
       end
-      expect(page).to have_text 'Saved 19'
+      expect(page).to have_link 'Saved 19'
 
       click_button 'Save all'
-      expect(page).to have_text 'Saved 20'
+      expect(page).to have_link 'Saved 20'
 
       click_button 'Saved all'
       within '#documents' do
@@ -149,7 +149,7 @@ RSpec.feature 'Bookmarking Items', :js do
         click_link 'Cite'
       end
 
-      within('.modal-dialog') do
+      within('#blacklight-modal') do
         select 'Turabian', from: 'Select format'
         expect(page).to have_text '“Some Intersting Papers.” n.d. Imprint Statement.'
 

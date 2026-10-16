@@ -90,8 +90,8 @@ export default class extends Controller {
 
   drawTopResults() {
     const info = `<strong>${this.currentPage * this.pageRows + 1} - ${this.pageMax}</strong> of <strong>${this.total}</strong>`
-    const nextButton = this.hasNext ? `<a class="ms-2" rel="next" href="#" data-action="course-reserves#nextPage">Next ${this.nextIcon}</a>` : ""
-    const prevButton = this.hasPrevious ? `<a class="me-2" rel="prev" href="#" data-action="course-reserves#prevPage">${this.prevIcon} Previous</a>` : `<button disabled class="btn btn-link btn-disabled text-start align-baseline p-0 disabled me-2">${this.prevIcon} Previous</button>`
+    const nextButton = this.hasNext ? `<a class="ms-3" rel="next" href="#" data-action="course-reserves#nextPage">Next ${this.nextIcon}</a>` : ""
+    const prevButton = this.hasPrevious ? `<a class="me-3" rel="prev" href="#" data-action="course-reserves#prevPage">${this.prevIcon} Previous</a>` : `<button disabled class="btn btn-link btn-disabled text-start align-baseline p-0 disabled me-3">${this.prevIcon} Previous</button>`
     this.resultsTarget.innerHTML = `<nav class="page_links page-entries-info" aria-label="Pagination">${prevButton}${info}${nextButton}</nav>`
   }
 
@@ -144,7 +144,7 @@ export default class extends Controller {
     this.sortColumn = parseInt(URL.parse(e.target.href).hash.replace("#", ""))
 
     const colName = this.tableTarget.querySelector(`th:nth-child(${this.sortColumn + 1})`).textContent
-    this.sortButtonTarget.innerHTML = `Sort<span class="d-none d-lg-inline"> by ${colName}</span>`
+    this.sortButtonTarget.innerHTML = `Sort<span class="d-none lg:d-inline"> by ${colName}</span>`
 
     this.sortItemTargets.forEach((item, idx) => {
       item.setAttribute("aria-current", idx === this.sortColumn)
@@ -170,7 +170,7 @@ export default class extends Controller {
     e.preventDefault()
     this.pageRows = parseInt(URL.parse(e.target.href).hash.replace("#", ""))
     this.currentPage = 0
-    this.perPageButtonTarget.innerHTML = `${this.pageRows} <span class="d-none d-lg-inline"> per page</span>`
+    this.perPageButtonTarget.innerHTML = `${this.pageRows} <span class="d-none lg:d-inline"> per page</span>`
 
     this.perPageItemTargets.forEach((item) => {
       const current = item.getAttribute("href") === `#${this.pageRows}`

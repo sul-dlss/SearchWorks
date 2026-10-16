@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1279.98px) {
   .dl-text {
     dt {
       width: 100%;
@@ -68,7 +68,7 @@
 }
 
 .record-panels {
-  --bs-offcanvas-height: 50%;
+  --bs-drawer-height: 50%;
   overflow: auto;
 }
 
@@ -135,6 +135,15 @@
   /* Suppress e.g. the save button tooltip, which is unnecessary because we're showing the label already */
   .tooltip {
     display: none !important;
+  }
+
+  /* The toolbars only use .navbar for its flex layout; undo the Bootstrap 6 additions
+   * (inline-size containment would collapse the inline-flex list to zero width) */
+  .navbar {
+    container-type: normal;
+    min-height: 0;
+    color: inherit;
+    background-color: transparent;
   }
 }
 
@@ -304,6 +313,12 @@
 
 .availability-modal {
   --bs-accordion-border-radius: 0;
+  --bs-accordion-border-width: 0;
+  --bs-accordion-btn-bg: var(--stanford-fog-light);
+  --bs-accordion-active-bg: var(--stanford-fog-light);
+  --bs-accordion-btn-color: var(--stanford-black);
+  --bs-accordion-active-color: var(--stanford-black);
+  --bs-accordion-btn-padding-y: 0;
 
   .accordion-body {
     padding: 0.1rem 1rem 1rem;
@@ -314,23 +329,21 @@
     --bs-border-width: 0;
   }
 
-  .accordion-button {
-    --bs-accordion-btn-bg: var(--stanford-fog-light);
-    --bs-accordion-active-bg: var(--stanford-fog-light);
-    --bs-accordion-btn-padding-y: 0;
+  .accordion-header {
     --bs-heading-color: var(--stanford-black);
-    --bs-link-color-rgb: var(--stanford-black-rgb);
-    --bs-accordion-active-color: var(--stanford-black);
-    --bs-link-hover-color-rgb: var(--stanford-black-rgb);
-    --bs-light-rgb: transparent;
-    --bs-accordion-inner-border-radius: 0;
+    --bs-link-color: var(--stanford-black);
+    --bs-link-hover-color: var(--stanford-black);
 
     &:not(:focus-visible) {
       box-shadow: none;
     }
 
-    div {
+    > div {
       flex: 1;
+    }
+
+    .library-location-heading {
+      background-color: transparent;
     }
   }
 
@@ -361,7 +374,7 @@
 }
 
 .search-mode {
-  h2 .badge {
+  .accordion-header .badge {
     background-color: rgba(var(--stanford-digital-green-rgb), 0.2);
   }
 

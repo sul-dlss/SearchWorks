@@ -53,10 +53,10 @@ RSpec.feature "Facets Customizations" do
     visit facet_catalog_path('genre_ssim')
 
     aggregate_failures do
-      expect(page).to have_css '.modal-body .input-group'
+      expect(page).to have_css '.dialog-body .input-group'
 
       # we've added an icon and hidden the label text
-      within '.modal-body .input-group' do
+      within '.dialog-body .input-group' do
         expect(page).to have_css '.bi-search'
         expect(page).to have_css 'input[type="text"][placeholder="Search genre"]'
       end
@@ -78,7 +78,7 @@ RSpec.feature "Facets Customizations" do
 
     click_button 'Sort by number of matches'
 
-    sort_items = page.all('.dropdown.sort-options .dropdown-item')
+    sort_items = page.all('.sort-options .menu-item')
 
     aggregate_failures do
       expect(sort_items.length).to eq 2

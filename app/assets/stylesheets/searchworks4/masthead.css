@@ -17,9 +17,37 @@
   }
 }
 
-#user-util-collapse .dropdown-menu {
-  --bs-dropdown-item-padding-x: 1rem;
-  --bs-dropdown-item-padding-y: 0.25rem;
+#user-util-collapse .menu {
+  --bs-menu-item-padding-x: 1rem;
+  --bs-menu-item-padding-y: 0.25rem;
+}
+
+#topnav .navbar {
+  /* Bootstrap 5 navbars had no background or minimum height */
+  --bs-navbar-bg: transparent;
+  --bs-navbar-min-height: 0;
+
+  /* Bootstrap 6 Collapse no longer toggles .collapsed on the trigger; show an X while the menu is open */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    --bs-navbar-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z'/%3e%3c/svg%3e");
+  }
+}
+
+/* The masthead links are deliberately not inside a .navbar (see the component library's header.css),
+ * so Bootstrap 6's container-query .md:navbar-expand can't apply. Expand them at the md breakpoint here,
+ * matching the toggler, which .md:navbar-expand hides on the full-width top navbar. */
+#user-util-collapse {
+  /* .collapse clips overflow, which would cut off the menus */
+  overflow: visible;
+
+  @media (width >= 768px) {
+    display: flex;
+    block-size: auto;
+
+    .navbar-nav {
+      flex-direction: row;
+    }
+  }
 }
 
 .badge.small {
@@ -33,7 +61,7 @@
     width: 100%;
     max-width: 200px;
 
-    @media (width >= 1199.98px) {
+    @media (width >= 1279.98px) {
       max-width: 400px;
     }
   }

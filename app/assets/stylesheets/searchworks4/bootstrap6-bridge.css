@@ -1,0 +1,143 @@
+/*
+ * The SUL component library (sul.css) targets Bootstrap 5: it sets the v5 custom
+ * properties (--bs-*-rgb, --bs-body-color, ...) and styles v5 classes (.btn-primary, ...).
+ * This maps those settings onto Bootstrap 6's tokens and classes.
+ * TODO: Remove once sul-dlss/component-library supports Bootstrap 6.
+ */
+
+/* sul.css (and our CSS) set the v5 --bs-link-*-rgb properties on containers;
+   resolve them on each link so the nearest container's setting wins. */
+a,
+.btn-link {
+  --bs-link-color: rgb(var(--bs-link-color-rgb));
+  --bs-link-hover-color: rgb(var(--bs-link-hover-color-rgb));
+}
+
+/* Bootstrap 5 button radii (v6 uses --bs-radius-5 for .btn) */
+.btn {
+  --bs-btn-border-radius: var(--bs-border-radius);
+}
+
+/* Bootstrap 5 buttons had no minimum height; SUL's compact padding sets their size */
+.btn:not(.btn-icon),
+.btn-link {
+  --bs-btn-min-height: 0;
+}
+
+/* Bootstrap 5 buttons without a variant were transparent; v6 gives them a neutral surface */
+.btn:not(.btn-solid, .btn-outline, .btn-subtle, .btn-text, .btn-styled) {
+  --bs-btn-bg: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-active-bg: transparent;
+}
+
+.btn-link {
+  --bs-btn-disabled-bg: transparent;
+}
+
+.btn-sm,
+.btn-xs {
+  --bs-btn-border-radius: var(--bs-radius-3);
+}
+
+.btn-lg {
+  --bs-btn-border-radius: var(--bs-radius-5);
+}
+
+/* Ports of sul.css button.css from .btn-{primary,secondary,outline-*} */
+.btn:not(.btn-link) {
+  --bs-btn-disabled-color: var(--stanford-80-black);
+  --bs-btn-disabled-bg: var(--stanford-10-black);
+  --bs-btn-disabled-border-color: var(--stanford-30-black);
+}
+
+.btn-solid.theme-primary,
+.btn-solid.theme-primary:hover {
+  --bs-btn-bg: var(--stanford-digital-blue);
+  --bs-btn-border-color: var(--stanford-digital-blue);
+  --bs-btn-hover-bg: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-color: white;
+  --bs-btn-active-bg: var(--stanford-digital-blue-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-blue-darker);
+  --bs-btn-active-color: white;
+}
+
+.btn-solid.theme-secondary,
+.btn-solid.theme-secondary:hover {
+  --bs-btn-bg: var(--stanford-cardinal);
+  --bs-btn-border-color: var(--stanford-cardinal);
+  --bs-btn-hover-bg: var(--stanford-digital-red-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-red-dark);
+  --bs-btn-hover-color: white;
+  --bs-btn-active-bg: var(--stanford-digital-red-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-red-darker);
+  --bs-btn-active-color: white;
+}
+
+.btn-outline.theme-primary,
+.btn-outline.theme-primary:hover {
+  --bs-btn-border-color: var(--stanford-digital-blue);
+  --bs-btn-color: var(--stanford-digital-blue);
+  --bs-btn-hover-color: var(--stanford-digital-blue-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-blue-dark);
+  --bs-btn-active-color: var(--stanford-digital-blue-darker);
+  --bs-btn-active-border-color: var(--stanford-digital-blue-darker);
+}
+
+.btn-outline.theme-secondary,
+.btn-outline.theme-secondary:hover {
+  --bs-btn-border-color: var(--stanford-cardinal);
+  --bs-btn-color: var(--stanford-cardinal);
+  --bs-btn-hover-color: var(--stanford-digital-red-dark);
+  --bs-btn-hover-border-color: var(--stanford-digital-red-dark);
+  --bs-btn-active-border-color: var(--stanford-digital-red-darker);
+  --bs-btn-active-color: var(--stanford-digital-red-darker);
+}
+
+.btn-outline.theme-primary,
+.btn-outline.theme-primary:hover,
+.btn-outline.theme-secondary,
+.btn-outline.theme-secondary:hover {
+  --bs-btn-disabled-bg: white;
+  --bs-btn-hover-bg: white;
+  --bs-btn-active-bg: white;
+  --bs-btn-bg: white;
+}
+
+/* sul.css forms.css */
+.form-control {
+  &:focus-visible,
+  &:focus {
+    border-color: var(--stanford-black);
+    box-shadow: 0 0 0 2px var(--stanford-black);
+    outline: none;
+  }
+}
+
+/* sul.css alert.css */
+.alert.theme-warning a {
+  color: var(--bs-body-color);
+}
+
+/* sul.css header.css: .bg-light was the v5 class for the light masthead */
+.bg-2 .bookmark-counter {
+  background-color: var(--stanford-20-black);
+}
+
+/* Bootstrap 5's navbar toggler had a border (sul.css header.css sets its color) */
+.navbar-toggler {
+  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color, rgb(var(--bs-body-color-rgb) / 15%));
+  border-radius: var(--bs-border-radius);
+}
+
+/* Bootstrap 5's plain "X" close icon and sizing (v6 draws an X in a filled square).
+ * sul.css masks hover states with --bs-btn-close-bg. */
+.btn-close {
+  --bs-btn-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+  --bs-btn-close-bg: var(--bs-btn-close-icon);
+  --bs-btn-close-size: 1em;
+  padding: 0.25em;
+  mask-origin: content-box;
+  mask-clip: content-box;
+}

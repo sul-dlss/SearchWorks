@@ -9,7 +9,7 @@ module Searchworks4
                    facet_constraint_component_options: { layout: Searchworks4::ConstraintLayoutComponent },
                    **args)
       super
-      @classes += ' gap-2 mt-3'
+      @classes += ' gap-3 mt-5'
     end
 
     # In the situation of advanced search, we want to use our own clause presenters

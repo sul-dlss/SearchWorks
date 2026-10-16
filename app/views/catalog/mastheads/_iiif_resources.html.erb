@@ -1,9 +1,9 @@
 <%= render Masthead::LayoutComponent.new do |component| %>
   <% component.with_header do %>
-    <div class='col-md-2'>
+    <div class='md:col-2'>
       <%= image_tag('iiif_logo.svg', width: '150', alt: "", title: '', style: 'padding: 10px;') %>
     </div>
-    <div class='col-md-10'>
+    <div class='md:col-10'>
       IIIF resources
     </div>
   <% end %>

@@ -1,15 +1,15 @@
 <div class="article-record-metadata row align-items-start">
   <div class="article-record-sections record-sections">
     <% if @document.html_fulltext? %>
-      <div class="html-fulltext-container mb-5">
-        <%= link_to(fulltext_href, class: 'btn btn-secondary', target: '_blank') do %>
+      <div class="html-fulltext-container mb-12">
+        <%= link_to(fulltext_href, class: 'btn btn-solid theme-secondary', target: '_blank') do %>
           Full text <i class='bi bi-chevron-right'></i>
         <% end %>
       </div>
     <% end %>
 
     <% metadata_sections.each do |section_name, section| -%>
-      <%= render Searchworks4::DocumentSectionLayout.new(title: section_name, **({ dl_classes: ['my-3 dl-horizontal dl-text'] } if section_name == 'Contents/Summary')) do %>
+      <%= render Searchworks4::DocumentSectionLayout.new(title: section_name, **({ dl_classes: ['my-5 dl-horizontal dl-text'] } if section_name == 'Contents/Summary')) do %>
         <%= render section -%>
       <% end -%>
     <% end %>

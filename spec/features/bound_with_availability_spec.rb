@@ -11,8 +11,8 @@ RSpec.describe 'Bound with availability', :js do
       expect(page).to have_text 'Item is bound with other items'
       all(:link, 'See items').last.click
 
-      expect(page).to have_css('dialog')
-      within 'dialog' do
+      expect(page).to have_css('#blacklight-modal')
+      within '#blacklight-modal' do
         expect(page).to have_text 'Items bound with'
         expect(page.all('td.bound-with-title').size).to be 5
       end
@@ -24,7 +24,7 @@ RSpec.describe 'Bound with availability', :js do
       visit solr_document_path('5488000')
       click_link 'Expand'
 
-      within 'dialog' do
+      within '#blacklight-modal' do
         expect(page).to have_text 'Bound and shelved with:'
         expect(page).to have_text 'Item is bound with other items'
       end

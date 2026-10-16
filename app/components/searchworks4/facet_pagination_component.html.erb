@@ -9,21 +9,17 @@
     <% end %>
   </div>
 
-  <div class="dropdown sort-options">
-    <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-action="click->facet-suggest#handleSort">
+  <div class="sort-options">
+    <button class="btn btn-sm btn-outline theme-primary dropdown-toggle" type="button" data-bs-toggle="menu" data-bs-placement="bottom-end" aria-expanded="false" data-action="click->facet-suggest#handleSort">
       Sort by <%= sort == 'count' ? 'number of matches' : 'A-Z' %>
     </button>
-    <ul class="dropdown-menu dropdown-menu-end">
-      <li>
-        <%= link_to_unless sort == 'count', 'Number of matches', sort_facet_url('count'), data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'dropdown-item' do %>
-          <%= link_to 'Number of matches', sort_facet_url('count'), aria: { current: true }, data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'dropdown-item active' %>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to_unless sort == 'index', 'A-Z', sort_facet_url('index'), data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'dropdown-item' do %>
-          <%= link_to 'A-Z', sort_facet_url('index'), aria: { current: true }, data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'dropdown-item active' %>
-        <% end %>
-      </li>
-    </ul>
+    <div class="menu">
+      <%= link_to_unless sort == 'count', 'Number of matches', sort_facet_url('count'), data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'menu-item' do %>
+        <%= link_to 'Number of matches', sort_facet_url('count'), aria: { current: true }, data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'menu-item active' %>
+      <% end %>
+      <%= link_to_unless sort == 'index', 'A-Z', sort_facet_url('index'), data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'menu-item' do %>
+        <%= link_to 'A-Z', sort_facet_url('index'), aria: { current: true }, data: { blacklight_modal: "preserve", facet_suggest_target:"query" }, class: 'menu-item active' %>
+      <% end %>
+    </div>
   </div>
 </div>

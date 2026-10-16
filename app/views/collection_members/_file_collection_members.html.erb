@@ -2,12 +2,12 @@
 
 <div class="collection-result-preview">
 <% if document.collection_members.present? %>
-  <div class="file-collection-members mb-3">
-    <div class="d-inline-flex bg-white ms-4 px-2">
+  <div class="file-collection-members mb-5">
+    <div class="d-inline-flex bg-white ms-7 px-3">
       <h2 class="mb-0">Digital collection</h2>
-      <%= render BadgeCounterComponent.new(document.collection_members.total, 'item', additional_classes: %w[ms-2 align-self-center]) %>
+      <%= render BadgeCounterComponent.new(document.collection_members.total, 'item', additional_classes: %w[ms-3 align-self-center]) %>
     </div>
-    <div class="col-12 collection-members border rounded px-3 pb-2">
+    <div class="col-12 collection-members border rounded px-5 pb-3">
       <table class="w-100">
         <thead class="visually-hidden">
           <tr>
@@ -22,7 +22,7 @@
               <td class="file-title">
               <%= link_to(document_presenter(collection_member).heading, solr_document_path(collection_member)) %>
               </td>
-              <td class="me-2 file-icon">
+              <td class="me-3 file-icon">
                 <%= render_resource_icon collection_member.document_formats %><span class="ms-1"><%= resource_icon_value collection_member.document_formats %></span>
                 <% if collection_member[:pub_date] %>
                   <span class="main-title-date">(<%= collection_member[:pub_date] %>)</span>

@@ -1,8 +1,6 @@
 :root {
   --underline-color: var(--stanford-50-black);
-  --bs-link-decoration: underline dotted var(--underline-color);
   --bs-link-hover-color-rgb: var(--stanford-digital-blue-dark-rgb);
-  --bs-link-hover-decoration: underline;
 }
 
 #topnav .identity-bar,
@@ -22,7 +20,7 @@
 .zoom-controls .btn-link,
 .bookmark-toolbar,
 .export-citations,
-.dropdown-item,
+.menu-item,
 .facet-options,
 .link-decoration-none
 {
@@ -32,4 +30,12 @@
 .link-icon {
   height: 16px;
   display: inline-block;
+}
+
+/* sul.css themes #su-footer through Bootstrap 5's .bg-dark and --bs-link-color-rgb,
+   neither of which exist in Bootstrap 6 */
+#su-footer {
+  --bs-link-color: white;
+  --bs-link-hover-color: white;
+  background-color: var(--stanford-cardinal);
 }

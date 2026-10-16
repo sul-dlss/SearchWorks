@@ -12,6 +12,7 @@ AllCops:
     - 'bin/**/*'
     - 'db/**/*'
     - 'vendor/**/*'
+    - 'node_modules/**/*'
   TargetRubyVersion: 3.4
   SuggestExtensions: false
 

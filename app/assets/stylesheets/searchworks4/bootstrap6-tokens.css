@@ -1,0 +1,59 @@
+/*
+ * Overrides of Bootstrap 6 root tokens. Bootstrap's tokens are declared on :root, and
+ * bootstrap-utilities.css (loaded again in the last layer) re-declares them, so these
+ * must stay unlayered to win.
+ * The SUL component library (sul.css) targets Bootstrap 5; this also maps its
+ * settings (--bs-body-color, --bs-*-rgb, ...) onto Bootstrap 6's tokens.
+ * TODO: Fold the SUL parts into sul-dlss/component-library once it supports Bootstrap 6.
+ */
+:root {
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-fg-body: var(--bs-body-color);
+  --bs-body-bg: var(--bs-bg-body);
+  --bs-secondary-color: var(--bs-fg-2);
+  --bs-tertiary-color: var(--bs-fg-3);
+  --bs-border-radius: var(--bs-radius-4);
+  --bs-body-color-rgb: var(--stanford-black-rgb);
+
+  --bs-primary-base: var(--stanford-digital-blue);
+  --bs-primary-bg: var(--stanford-digital-blue);
+  --bs-primary-fg: var(--stanford-digital-blue);
+  --bs-primary-fg-emphasis: var(--stanford-digital-blue-dark);
+  --bs-primary-border: var(--stanford-digital-blue);
+
+  --bs-secondary-base: var(--stanford-cardinal);
+  --bs-secondary-bg: var(--stanford-cardinal);
+  --bs-secondary-fg: var(--stanford-cardinal);
+  --bs-secondary-fg-emphasis: var(--stanford-digital-red-dark);
+  --bs-secondary-border: var(--stanford-cardinal);
+  --bs-secondary-contrast: white;
+
+  --bs-danger-base: rgb(var(--stanford-digital-red-dark-rgb));
+  --bs-danger-fg: rgb(var(--stanford-digital-red-dark-rgb));
+  --bs-danger-fg-emphasis: rgb(var(--stanford-digital-red-dark-rgb));
+  --bs-danger-bg-subtle: rgb(var(--stanford-digital-red-dark-rgb) / 10%);
+  --bs-danger-border: rgb(var(--stanford-digital-red-dark-rgb));
+
+  --bs-success-base: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-fg: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-fg-emphasis: rgb(var(--stanford-digital-green-dark-rgb));
+  --bs-success-bg-subtle: rgb(var(--stanford-digital-green-dark-rgb) / 10%);
+  --bs-success-border: rgb(var(--stanford-digital-green-dark-rgb));
+
+  --bs-warning-base: rgb(var(--stanford-poppy-dark-rgb));
+  --bs-warning-fg: rgb(var(--stanford-poppy-dark-rgb));
+  --bs-warning-fg-emphasis: rgb(var(--stanford-poppy-dark-rgb));
+  --bs-warning-bg-subtle: rgb(var(--stanford-poppy-dark-rgb) / 10%);
+  --bs-warning-border: rgb(var(--stanford-poppy-dark-rgb));
+
+  --bs-info-base: rgb(var(--stanford-digital-blue-dark-rgb));
+  --bs-info-fg: rgb(var(--stanford-digital-blue-dark-rgb));
+  --bs-info-fg-emphasis: rgb(var(--stanford-digital-blue-dark-rgb));
+  --bs-info-bg-subtle: rgb(var(--stanford-digital-blue-dark-rgb) / 10%);
+  --bs-info-border: rgb(var(--stanford-digital-blue-dark-rgb));
+
+  /* from links.css and variables.css */
+  --bs-link-decoration: underline dotted var(--underline-color);
+  --bs-link-hover-decoration: underline;
+  --bs-box-shadow: 0 4px 8px -2px var(--sul-shadow-color);
+}

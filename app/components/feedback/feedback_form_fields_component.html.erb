@@ -3,7 +3,7 @@
         <%= @form.hidden_field :viewport, 'data-feedback-form-target': 'viewport' %>
         <%= @form.hidden_field :last_search, 'data-feedback-form-target': 'lastSearch' %>
 
-        <div class="mb-3 d-flex justify-content-start gap-3">
+        <div class="mb-5 d-flex justify-content-start gap-5">
             <strong class="fw-semibold">Other helpful resources:</strong>
 
             <ul class="list-inline mb-0">
@@ -20,28 +20,28 @@
             </ul>
         </div>
 
-        <div class="mb-3 row">
+        <div class="mb-5 row">
             <%= render Searchworks4::ChatWithLibrarianComponent.new(layout: 'inline', header_class: "fw-semibold") %>
         </div>
 
-        <div class="mb-3 row">
+        <div class="mb-5 row">
             <%= @form.label :name, 'Name', class: 'col-form-label fw-bold' %>
             <div>
                 <%= @form.text_field :name, value: "", class:"form-control", autocomplete: "name" %>
             </div>
         </div>
-        <div class="mb-3 row">
+        <div class="mb-5 row">
             <%= @form.label :to, 'Email', class: 'col-form-label required fw-bold' %>
             <div>
                 <%= @form.email_field :to, value: "", class:"form-control", autocomplete: "email", required: true %>
             </div>
         </div>
-        <div class="mb-3 row">
+        <div class="mb-5 row">
             <%= @form.label :message, 'Message', class: 'col-form-label required fw-bold' %>
             <div>
                 <%= @form.text_area :message, value: "", rows:"2", class:"form-control", required: true %>
                 <% if helpers.current_user.blank? %>
-                    <div class="login-message mt-4 mb-0">
+                    <div class="login-message mt-7 mb-0">
                         <%= render RecaptchaComponent.new(action: 'feedback') %>
                     </div>
                 <% end %>

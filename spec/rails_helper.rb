@@ -23,7 +23,8 @@ Capybara.register_driver :headless_chrome do |app|
   browser_options = Selenium::WebDriver::Chrome::Options.new.tap do |opts|
     opts.args << '--headless'
     opts.args << '--disable-gpu'
-    opts.args << '--window-size=1000,700'
+    # Within Bootstrap 6's lg breakpoint (1024px-1279px)
+    opts.args << '--window-size=1100,700'
   end
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
 end
@@ -86,11 +87,11 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 
   config.before(:example, :responsive) do |example|
-    page.current_window.resize_to(example.metadata[:page_width]&.to_i || 1000, example.metadata[:page_height]&.to_i || 700)
+    page.current_window.resize_to(example.metadata[:page_width]&.to_i || 1100, example.metadata[:page_height]&.to_i || 700)
   end
 
   config.after(:example, :responsive) do
-    page.current_window.resize_to(1000, 700)
+    page.current_window.resize_to(1100, 700)
   end
 
   config.include ViewComponent::TestHelpers, type: :component

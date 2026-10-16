@@ -1,6 +1,6 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
   <% component.with_header do %>
-    <h2 class="modal-title"><%= t('blacklight.search.librarian_view.title') %></h2>
+    <h2 class="dialog-title"><%= t('blacklight.search.librarian_view.title') %></h2>
 
     <% if @document.last_updated %>
       <span class="last-updated">Last updated in SearchWorks on <%= l @document.last_updated&.in_time_zone, format: :long %></span>
