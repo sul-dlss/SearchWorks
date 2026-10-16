@@ -6,11 +6,8 @@ namespace :searchworks do
   desc "Run SearchWorks local installation steps"
   task install: [:environment] do
     Rake::Task["db:migrate"].invoke
-    SolrWrapper.wrap do |solr|
-      Rake::Task['searchworks:copy_solr_dependencies'].invoke
-      solr.with_collection(name: 'blacklight-core') do
-        Rake::Task['searchworks:fixtures'].invoke
-      end
+    with_solr do
+      Rake::Task['searchworks:fixtures'].invoke
     end
   end
 

@@ -12,18 +12,12 @@ task default: [:ci]
 
 desc "Execute the test build that runs in CI"
 task ci: ['rubocop', 'environment', 'test:prepare'] do
-  require 'solr_wrapper'
-
   ENV['environment'] = 'test'
 
   Rake::Task["db:migrate"].invoke
 
-  SolrWrapper.wrap do |solr|
-    Rake::Task['searchworks:copy_solr_dependencies'].invoke
-
-    solr.with_collection(name: 'blacklight-core') do
-      Rake::Task["searchworks:fixtures"].invoke
-      Rake::Task["spec"].invoke
-    end
+  with_solr do
+    Rake::Task["searchworks:fixtures"].invoke
+    Rake::Task["spec"].invoke
   end
 end
