@@ -1,6 +1,6 @@
 services:
   solr:
-    image: "solr:${SOLR_VERSION:-9.10.0}"
+    image: "solr:${SOLR_VERSION:-9.10.1}"
     volumes:
       - $PWD/config/solr_configs:/opt/solr/conf
       - $PWD/config/solr_configs/CJKFilterUtils-v4.0.jar:/opt/solr/contrib/CJKFilterUtils-v4.0.jar
