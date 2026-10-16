@@ -1226,6 +1226,29 @@
     }
   },
   {
+    "id": "120608c1-b15f-4784-9b45-c1649978ddae",
+    "name": "East Asia Flat Folios",
+    "code": "EAL-FOLIO-FLAT",
+    "discoveryDisplayName": "Flat folios",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "a97665ba-db3c-4f95-91b6-b582cc3080c7",
+    "details": {},
+    "primaryServicePoint": "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b",
+    "servicePointIds": [
+      "58cfd8b4-ee04-4f1a-a74e-4a1771fe5b6b"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-10-14T22:12:13.259+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-10-14T22:12:13.259+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "123d9cba-85a8-42e0-b130-c82e504c64d6",
     "name": "Art Circ Desk",
     "code": "ART-ATCIRCDESK",
@@ -2603,6 +2626,29 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2025-11-19T18:31:12.379+00:00",
       "updatedByUserId": "2f7f4956-c95a-47ba-95f8-395354707b6f"
+    }
+  },
+  {
+    "id": "266b1124-55cb-435f-8e6f-25f64cdd97f5",
+    "name": "Earth Sci Map Cases Oversize",
+    "code": "EAR-MAP-CASES-OVERSIZE",
+    "discoveryDisplayName": "Map cases oversize",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
+    "details": {},
+    "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
+    "servicePointIds": [
+      "4827ae1d-b8bf-4b90-9e09-d642557893ab"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-10-14T22:30:00.708+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-10-14T22:30:00.708+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -10840,6 +10886,29 @@
     }
   },
   {
+    "id": "b84fca8d-c422-4a91-8886-9a29809821dc",
+    "name": "Earth Sci Map Cases Index",
+    "code": "EAR-MAP-CASES-INDEX",
+    "discoveryDisplayName": "Map cases index",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
+    "details": {},
+    "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
+    "servicePointIds": [
+      "4827ae1d-b8bf-4b90-9e09-d642557893ab"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-10-14T22:29:21.014+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-10-14T22:29:21.014+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
+    }
+  },
+  {
     "id": "b8621e0a-cecb-4835-b65d-1f9219b3c6ed",
     "name": "ARS Shelved Elsewhere",
     "code": "ARS-SEE-OTHER",
@@ -12634,6 +12703,29 @@
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
       "updatedDate": "2023-08-10T17:47:24.264+00:00",
       "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+    }
+  },
+  {
+    "id": "d1c2f1c4-adce-4223-920a-9bedf7b35b6a",
+    "name": "Earth Sci Map Files Index",
+    "code": "EAR-MAP-FILES-INDEX",
+    "discoveryDisplayName": "Map files index",
+    "isActive": true,
+    "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
+    "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
+    "libraryId": "96630997-201d-49b3-b8d5-e4ba43a6cde8",
+    "details": {},
+    "primaryServicePoint": "4827ae1d-b8bf-4b90-9e09-d642557893ab",
+    "servicePointIds": [
+      "4827ae1d-b8bf-4b90-9e09-d642557893ab"
+    ],
+    "servicePoints": [],
+    "isShadow": false,
+    "metadata": {
+      "createdDate": "2026-10-14T22:30:26.719+00:00",
+      "createdByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc",
+      "updatedDate": "2026-10-14T22:30:26.719+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
