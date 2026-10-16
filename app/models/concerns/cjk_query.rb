@@ -6,9 +6,9 @@ module CJKQuery
   extend ActiveSupport::Concern
 
   def modify_params_for_cjk(solr_params)
-    return unless blacklight_params && blacklight_params[:q].present?
+    return if search_state.params[:q].blank?
 
-    q_str = blacklight_params[:q]
+    q_str = search_state.params[:q]
     number_of_unigrams = cjk_unigrams_size(q_str)
     solr_params.merge!(cjk_mm_qs_params(q_str)) if number_of_unigrams > 2
     # adjust q local params to use cjk flavored fields for qf, pf
@@ -23,10 +23,10 @@ module CJKQuery
   end
 
   def modify_params_for_cjk_advanced(solr_params)
-    return if blacklight_params&.dig(:clause).blank? || solr_params[:q]&.include?('_cjk')
+    return if search_state.params[:clause].blank? || solr_params[:q]&.include?('_cjk')
 
     modifiable_params_keys.each do |param|
-      hash = blacklight_params[:clause].values.find { |v| v[:field] == param } || {}
+      hash = search_state.params[:clause].values.find { |v| v[:field] == param } || {}
       query = hash[:query]
 
       next unless cjk_unigrams_size(query) > 0

@@ -11,10 +11,10 @@ module Eds
     end
 
     def add_date_slider(eds_params)
-      return unless blacklight_params[:range]
+      return unless search_state.params[:range]
 
-      begin_year = blacklight_params.dig('range', 'pub_year_tisim', 'begin')
-      end_year = blacklight_params.dig('range', 'pub_year_tisim', 'end')
+      begin_year = search_state.params.dig('range', 'pub_year_tisim', 'begin')
+      end_year = search_state.params.dig('range', 'pub_year_tisim', 'end')
 
       return if begin_year.blank? && end_year.blank?
 
@@ -26,9 +26,9 @@ module Eds
 
     def add_query_parameters(eds_params)
       eds_params[:SearchCriteria][:Queries] = if search_field&.eds_field_code
-                                                [{ Term: blacklight_params[:q], FieldCode: search_field.eds_field_code }]
+                                                [{ Term: search_state.params[:q], FieldCode: search_field.eds_field_code }]
                                               else
-                                                [{ Term: blacklight_params[:q] }]
+                                                [{ Term: search_state.params[:q] }]
                                               end
     end
 
@@ -71,8 +71,8 @@ module Eds
 
     def add_pagination(eds_params)
       # @View = info.default_result_list_view
-      eds_params[:RetrievalCriteria][:ResultsPerPage] = blacklight_params[:per_page]&.to_i || blacklight_config.default_per_page
-      eds_params[:RetrievalCriteria][:PageNumber] = blacklight_params[:page]&.to_i || 1
+      eds_params[:RetrievalCriteria][:ResultsPerPage] = search_state.params[:per_page]&.to_i || blacklight_config.default_per_page
+      eds_params[:RetrievalCriteria][:PageNumber] = search_state.params[:page]&.to_i || 1
     end
 
     def info

@@ -48,19 +48,19 @@ class SearchBuilder < Blacklight::SearchBuilder
 
   def database_prefix_search(solr_params)
     return unless page_location.databases? &&
-                  blacklight_params[:prefix]&.match?(/^(0-9|[a-z])$/i)
+                  search_state.params[:prefix]&.match?(/^(0-9|[a-z])$/i)
 
     solr_params[:fq] ||= []
-    solr_params[:fq] << "title_sort:/[#{blacklight_params[:prefix]}].*/"
+    solr_params[:fq] << "title_sort:/[#{search_state.params[:prefix]}].*/"
   end
 
   # Solr edismax does not apply phrase boosts to single-term matches. When we have a single term query,
   # we can use a different set of query boosts to give better results.
   def modify_single_term_qf(solr_params)
     return unless Settings.search.use_single_term_query_fields
-    return unless blacklight_params && blacklight_params[:q].present? && solr_params[:qf].blank?
+    return unless search_state.params[:q].present? && solr_params[:qf].blank?
 
-    q_str = blacklight_params[:q]
+    q_str = search_state.params[:q]
     return unless q_str.is_a?(String) && q_str.split.size == 1
 
     solr_params[:qf] = '${qf_single_term}'
@@ -78,7 +78,7 @@ class SearchBuilder < Blacklight::SearchBuilder
     # new isn't an allowed search state parameter, so we have to dig through the controller to get the original params
     return false if search_state.controller.params[:new].present?
 
-    search_params.all? { |param| blacklight_params[param].blank? }
+    search_params.all? { |param| search_state.params[param].blank? }
   end
 
   # We use facet.method=uif for normal faceting (presumably because it improves performance or
