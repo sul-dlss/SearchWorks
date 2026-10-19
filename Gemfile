@@ -121,3 +121,5 @@ gem 'citeproc-ruby', '~> 2.0'
 gem 'csl', '~> 2.0'
 gem "csl-styles", "~> 2.0.2" # Pinned until https://github.com/citation-style-language/styles/issues/8376 is resolved
 gem "cocina_display", "~> 2.3"
+
+gem 'mcp', '~> 1.8' # Model Context Protocol
