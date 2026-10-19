@@ -1288,7 +1288,7 @@ RSpec.describe Librarian::ItemDetails::TableComponent, type: :component do
     end
 
     it "doesn't render" do
-      expect(page).to have_no_selector("body")
+      expect(page).to have_no_css("body")
     end
   end
 

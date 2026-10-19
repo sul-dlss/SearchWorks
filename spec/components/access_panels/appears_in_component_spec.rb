@@ -40,7 +40,7 @@ RSpec.describe AccessPanels::AppearsInComponent, type: :component do
     let(:document) { SolrDocument.new(id: 'abc123', set: ['set1']) }
 
     it 'renders nothing' do
-      expect(page).to have_no_selector '.panel'
+      expect(page).to have_no_css '.panel'
     end
   end
 
@@ -48,7 +48,7 @@ RSpec.describe AccessPanels::AppearsInComponent, type: :component do
     let(:document) { SolrDocument.new(id: 'abc123') }
 
     it 'renders nothing' do
-      expect(page).to have_no_selector '.panel'
+      expect(page).to have_no_css '.panel'
     end
   end
 end
