@@ -42,6 +42,10 @@ module SearchworksMcp
         library_code: { type: "string" },
         location: { type: "string" },
         location_code: { type: "string" },
+        call_number: {
+          type: "string",
+          description: "Shelf call number. Present it with the location so the user can find the item in the library."
+        },
         request_url: {
           type: "string",
           description: "Direct request link. Present this URL to the user so they can request the material."

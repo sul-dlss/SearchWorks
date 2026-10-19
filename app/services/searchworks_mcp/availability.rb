@@ -84,6 +84,7 @@ module SearchworksMcp
               library_code: library.code,
               location: location.name || location.code,
               location_code: location.code,
+              call_number: item.callnumber(default: nil),
               request_url:
             }.compact
           end
@@ -144,6 +145,7 @@ module SearchworksMcp
         item = [record[:item_id], record[:status]].compact_blank.join(": ")
         physical_location = [record[:library], record[:location]].compact_blank.uniq.join(", ")
         item += " — #{physical_location}" if physical_location.present?
+        item += " — Call number: #{record[:call_number]}" if record[:call_number].present?
         item += " (due #{record[:due_date]})" if record[:due_date].present?
         item += " — Request: #{record[:request_url]}" if record[:request_url].present?
         "- #{item}"

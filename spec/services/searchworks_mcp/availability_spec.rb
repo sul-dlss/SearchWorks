@@ -12,7 +12,8 @@ RSpec.describe SearchworksMcp::Availability do
         effective_location: instance_double(Folio::Location, details: {}),
         permanent_location: instance_double(Folio::Location, id: 'location-uuid', cached_location_data: {}),
         library: 'SAL3', **request_attributes,
-        effective_permanent_location_code: 'SAL3-STACKS', barcode: '36105000000000'
+        effective_permanent_location_code: 'SAL3-STACKS', barcode: '36105000000000',
+        callnumber: 'PS3545 .I345 Z5'
       )
     end
     let(:location) do
@@ -59,7 +60,7 @@ RSpec.describe SearchworksMcp::Availability do
           item_id: 'item-1', status: 'Checked out', is_available: false,
           is_requestable: true,
           library: 'Stanford Auxiliary Library 3', library_code: 'SAL3',
-          location: 'Stacks', location_code: 'SAL3-STACKS',
+          location: 'Stacks', location_code: 'SAL3-STACKS', call_number: 'PS3545 .I345 Z5',
           request_url: 'https://host.example.com/requests/new?barcode=36105000000000&item_id=123&origin=SAL3&origin_location=SAL3-STACKS'
         )],
         online_sources: [{ url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }]
@@ -67,7 +68,7 @@ RSpec.describe SearchworksMcp::Availability do
       expect(result[:structured_content]).to include(live_status: true)
       expect(result.dig(:structured_content, :availability, 0)).not_to have_key(:is_requestable_status)
       expect(result[:text]).to include(
-        'item-1: Checked out — Stanford Auxiliary Library 3, Stacks',
+        'item-1: Checked out — Stanford Auxiliary Library 3, Stacks — Call number: PS3545 .I345 Z5',
         'Request: https://host.example.com/requests/new',
         'purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339'
       )
@@ -123,7 +124,7 @@ RSpec.describe SearchworksMcp::Availability do
           live_status: false,
           availability: [include(
             item_id: 'item-1', status: 'Checked out', is_available: false, is_requestable: true,
-            library: 'Stanford Auxiliary Library 3', location: 'Stacks'
+            library: 'Stanford Auxiliary Library 3', location: 'Stacks', call_number: 'PS3545 .I345 Z5'
           )]
         )
         expect(result[:text]).to include('item-1: Checked out', 'may be out of date')
