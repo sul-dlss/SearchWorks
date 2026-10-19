@@ -59,7 +59,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
     it 'is false when there are only supplemental links present' do
       render_inline(supplemental)
 
-      expect(page).to have_no_selector '.panel-online'
+      expect(page).to have_no_css '.panel-online'
     end
   end
 
