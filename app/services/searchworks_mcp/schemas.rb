@@ -102,10 +102,14 @@ module SearchworksMcp
         properties: {
           id: { type: "string" },
           url: { type: "string" },
+          live_status: {
+            type: "boolean",
+            description: "False when current status could not be retrieved and statuses are from the last catalog update"
+          },
           availability: { type: "array", items: AVAILABILITY_ITEM },
           online_sources: { type: "array", items: ONLINE_SOURCE }
         },
-        required: %w[id url availability online_sources]
+        required: %w[id url live_status availability online_sources]
       }
     end
   end

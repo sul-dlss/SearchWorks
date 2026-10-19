@@ -8,7 +8,7 @@ RSpec.describe SearchworksMcp::Availability do
     let(:item) do
       instance_double(
         Holdings::Item,
-        live_lookup_item_id: 'item-1', folio_item?: true,
+        live_lookup_item_id: 'item-1', folio_item?: true, suppressed?: false,
         effective_location: instance_double(Folio::Location, details: {}),
         permanent_location: instance_double(Folio::Location, id: 'location-uuid', cached_location_data: {}),
         library: 'SAL3', **request_attributes,
@@ -64,6 +64,7 @@ RSpec.describe SearchworksMcp::Availability do
         )],
         online_sources: [{ url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }]
       )
+      expect(result[:structured_content]).to include(live_status: true)
       expect(result.dig(:structured_content, :availability, 0)).not_to have_key(:is_requestable_status)
       expect(result[:text]).to include(
         'item-1: Checked out — Stanford Auxiliary Library 3, Stacks',
@@ -84,6 +85,19 @@ RSpec.describe SearchworksMcp::Availability do
       end
     end
 
+    context 'when the item is not requestable' do
+      let(:request_attributes) { { allowed_request_types: [], folio_status: 'Available' } }
+
+      it 'omits the request URL and conforms to the output schema' do
+        result = described_class.fetch(id: '123')
+        output_schema = MCP::Tool::OutputSchema.new(SearchworksMcp::Schemas.availability)
+
+        expect(result.dig(:structured_content, :availability, 0)).to include(is_requestable: false)
+        expect(result.dig(:structured_content, :availability, 0)).not_to have_key(:request_url)
+        expect { output_schema.validate_result(result[:structured_content]) }.not_to raise_error
+      end
+    end
+
     context 'when the record has no physical items' do
       let(:live_lookup) { instance_double(LiveLookup, records: []) }
 
@@ -93,6 +107,36 @@ RSpec.describe SearchworksMcp::Availability do
         expect(result.dig(:structured_content, :online_sources, 0, :url)).to eq('https://purl.fdlp.gov/GPO/LPS59339')
         expect(result[:text]).to include('purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339')
       end
+    end
+
+    context 'when the real-time lookup fails' do
+      before do
+        allow(live_lookup).to receive(:records).and_raise(FolioClient::Error, 'timeout')
+        allow(SearchworksMcp).to receive(:report_exception)
+      end
+
+      it 'falls back to the indexed item status' do
+        result = described_class.fetch(id: '123')
+
+        expect(result).not_to include(error: true)
+        expect(result[:structured_content]).to include(
+          live_status: false,
+          availability: [include(
+            item_id: 'item-1', status: 'Checked out', is_available: false, is_requestable: true,
+            library: 'Stanford Auxiliary Library 3', location: 'Stacks'
+          )]
+        )
+        expect(result[:text]).to include('item-1: Checked out', 'may be out of date')
+        expect(SearchworksMcp).to have_received(:report_exception)
+      end
+    end
+
+    it 'returns a model-visible error when the record does not exist' do
+      allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::RecordNotFound)
+
+      result = described_class.fetch(id: 'missing')
+
+      expect(result).to include(error: true, text: 'No catalog record found for id missing.')
     end
 
     it 'returns a model-visible error when availability cannot be retrieved' do

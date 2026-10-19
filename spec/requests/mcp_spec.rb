@@ -110,7 +110,7 @@ RSpec.describe 'MCP endpoint' do
         {
           text: "Availability for catalog record 123:\n- item-1: Available",
           structured_content: {
-            id: '123', url: 'https://searchworks.stanford.edu/view/123',
+            id: '123', url: 'https://searchworks.stanford.edu/view/123', live_status: true,
             availability: [{
               item_id: 'item-1', due_date: nil, status: 'Available', is_available: true,
               is_requestable: true,
