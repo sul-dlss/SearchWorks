@@ -8,7 +8,7 @@ RSpec.feature 'Article Searching' do
       article_search_for('Kittens')
 
       expect(page).to have_title 'Search for Kittens'
-      expect(current_url).to match(%r{/articles\?.*&q=Kittens})
+      expect(page).to have_current_path(%r{/articles\?.*&q=Kittens}, url: true)
     end
   end
 
@@ -23,7 +23,7 @@ RSpec.feature 'Article Searching' do
       end
 
       expect(page).to have_css('h1', text: 'The title of the document')
-      expect(current_url).to include('/articles/abc123')
+      expect(page).to have_current_path(%r{/articles/abc123})
     end
 
     scenario 'abstracts are truncated', :js do
@@ -88,7 +88,7 @@ RSpec.feature 'Article Searching' do
 
       first(:css, 'a.remove').click
       expect(page).to have_no_css('.applied-filter', text: /kittens/)
-      expect(current_url).not_to match(%r{/article\?.*&q=kittens})
+      expect(page).to have_no_current_path(%r{/article\?.*&q=kittens}, url: true)
     end
   end
 

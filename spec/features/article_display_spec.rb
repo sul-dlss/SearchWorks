@@ -50,9 +50,9 @@ RSpec.feature 'Article Record Display' do
         visit eds_document_path(document.id)
 
         expect(page).to have_link 'Full text'
-        click_link 'Full text'
+        new_window = window_opened_by { click_link 'Full text' }
 
-        switch_to_window(windows.last)
+        switch_to_window(new_window)
         expect(page).to have_text('This Journal')
         expect(page).to have_no_text('<anid>')
       end

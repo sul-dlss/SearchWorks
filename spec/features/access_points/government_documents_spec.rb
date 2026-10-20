@@ -16,7 +16,7 @@ RSpec.describe 'Government Documents Access Point' do
   end
 
   it 'takes the user to the govdocs url' do
-    expect(current_url).to eq govdocs_url
+    expect(page).to have_current_path govdocs_url
   end
 
   it 'returns the govenment document results' do

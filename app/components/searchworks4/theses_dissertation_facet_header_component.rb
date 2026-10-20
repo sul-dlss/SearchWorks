@@ -17,11 +17,10 @@ module Searchworks4
     end
 
     # Don't let rubocop change values.include? to .values?
-    # rubocop:disable Performance/InefficientHashSearch
+    # rubocop:disable-next Performance/InefficientHashSearch
     def stanford_only_selected?
       state = search_state.deep_dup
       state.filter('stanford_work_facet_hsim').values.include?('Thesis/Dissertation')
     end
-    # rubocop:enable Performance/InefficientHashSearch
   end
 end

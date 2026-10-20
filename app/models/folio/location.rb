@@ -12,7 +12,7 @@ module Folio
 
     attr_reader :id, :code, :institution, :campus, :library
 
-    # rubocop:disable Metrics/ParameterLists
+    # rubocop:disable-next Metrics/ParameterLists
     def initialize(id:, code:, campus:, library:, name: nil, institution: SU)
       @id = id
       @code = code
@@ -21,7 +21,6 @@ module Folio
       @campus = campus
       @library = library
     end
-    # rubocop:enable Metrics/ParameterLists
 
     # Prefer the locally cached name, but fall back to the name from the document if we have to
     # The name in the document is the "discoveryDisplayName", which may differ from "name"

@@ -614,4 +614,35 @@ Lint/DeprecatedReference: # new in 1.89
   Enabled: true
 Lint/NameTypo: # new in 1.89
   Enabled: true
-
+Lint/ArgumentMismatch: # new in 1.90
+  Enabled: true
+Lint/MisplacedMagicComment: # new in 1.91
+  Enabled: true
+Lint/SuperArgumentMismatch: # new in 1.90
+  Enabled: true
+Style/DirectiveScope: # new in 1.90
+  Enabled: true
+Style/TimeNow: # new in 1.90
+  Enabled: true
+RSpec/Output: # new in 3.9
+  Enabled: true
+Capybara/AbsoluteXPathInElementScope: # new in 3.1
+  Enabled: true
+Capybara/AlwaysTrueCountQuery: # new in 3.1
+  Enabled: true
+Capybara/ChainedFind: # new in 3.1
+  Enabled: true
+Capybara/IgnoredQueryOption: # new in 3.1
+  Enabled: true
+Capybara/ModalMethodWithoutBlock: # new in 3.1
+  Enabled: true
+Capybara/NativeAttribute: # new in 3.1
+  Enabled: true
+Capybara/UnorderedWindowAccess: # new in 3.1
+  Enabled: true
+Capybara/VisibilityOption: # new in 3.1
+  Enabled: true
+Capybara/RSpec/CurrentUrlExpectation: # new in 3.1
+  Enabled: true
+Capybara/RSpec/FindElementValueEq: # new in 3.1
+  Enabled: true

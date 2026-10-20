@@ -13,7 +13,7 @@ module Folio
       end
     end
 
-    # rubocop:disable Metrics/ParameterLists
+    # rubocop:disable-next Metrics/ParameterLists
     def initialize(id:, status:, barcode:, material_type:, permanent_loan_type:, effective_location:,
                    call_number:, volume:, enumeration:, chronology:, effective_shelving_order: nil,
                    permanent_location: nil, temporary_loan_type: nil)
@@ -31,7 +31,6 @@ module Folio
       @chronology = chronology
       @effective_shelving_order = effective_shelving_order
     end
-    # rubocop:enable Metrics/ParameterLists
 
     def self.from_dynamic(json, holdings_record: nil)
       new(id: json.fetch('id'),
