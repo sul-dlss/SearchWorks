@@ -367,7 +367,6 @@ ccj.springeropen.com
 ccn.aacnjournals.org
 cdnsciencepub.com
 cebp.aacrjournals.org
-celebratio.org
 cellandbioscience.biomedcentral.com
 cellandchromosome.biomedcentral.com
 celljournal.org
@@ -388,7 +387,6 @@ cindasdata.com
 cjkhd.biomedcentral.com
 cjnr.archive.mcgill.ca
 cjon.ons.org
-classiques-garnier.com
 clendening.kumc.edu
 clincancerres.aacrjournals.org
 clinchem.aaccjnls.org
@@ -477,7 +475,6 @@ diabetes.jmir.org
 diabetesjournals.org
 diagnosticpathology.biomedcentral.com
 diagnprognres.biomedcentral.com
-dialogue.ias.ac.in
 dictybase.org
 digi.bib.uni-mannheim.de
 digital-archives.japantimes.co.jp
@@ -758,7 +755,6 @@ ideas.repec.org
 idpjournal.biomedcentral.com
 ieeexplore-ieee-org.stanford.idm.oclc.org
 ieeexplore.ieee.org
-ier.ut.ac.ir
 ietresearch.onlinelibrary.wiley.com
 ifst.onlinelibrary.wiley.com
 iiif.lib.harvard.edu
@@ -1999,7 +1995,6 @@ www.exeley.com
 www.exp-oncology.com.ua
 www.experimentalneurobiology.org
 www.eymj.org
-www.facetsjournal.com
 www.facs.org
 www.fao.org
 www.faz-biblionet.de
@@ -2343,7 +2338,6 @@ www.lrb.co.uk
 www.lsspjournal.com
 www.lungca.org
 www.lyellcollection.org
-www.magonlinelibrary.com
 www.maizegdb.org
 www.managedhealthcareconnect.com
 www.manu.edu.mk
@@ -2481,6 +2475,7 @@ www.orthomolecular.org
 www.osapublishing.org
 www.osha.gov
 www.overleaf.com
+www.ovid.com
 www.oxfordbibliographies.com
 www.oxfordhandbooks.com
 www.oxfordreference.com
