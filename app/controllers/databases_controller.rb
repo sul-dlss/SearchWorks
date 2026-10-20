@@ -45,7 +45,7 @@ class DatabasesController < ApplicationController
   before_action only: :index do
     blacklight_config.index.mini_bento_component = nil
     ids = Settings.selected_databases.keys.map(&:to_s)
-    @selected_databases = clean_search_service.fetch(ids, { sort: "title_sort asc", rows: ids.length }).sort_by { |doc| ids.index(doc.id) }
+    @selected_databases = clean_search_service.fetch(ids, { sort: "title_sort asc" }).sort_by { |doc| ids.index(doc.id) }
 
     response, _documents = database_subject_search_service.search_results
     @subjects_by_letter = response.aggregations['db_az_subject'].items.group_by { |item| item.value[0].upcase }
