@@ -48,7 +48,7 @@ class ArticleSelectionsController < ArticlesController
   def action_documents
     bookmarks = token_or_current_or_guest_user.bookmarks&.select { |bookmark| bookmark.record_type == 'article' }
     bookmark_ids = bookmarks.collect { |b| b.document_id.to_s }
-    search_service.fetch(bookmark_ids, rows: bookmark_ids.count)
+    search_service.fetch(bookmark_ids)
   end
 
   def current_search_session
