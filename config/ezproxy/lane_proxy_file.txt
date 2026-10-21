@@ -374,7 +374,6 @@ cellregeneration.springeropen.com
 ceramics.onlinelibrary.wiley.com
 cerebellumandataxias.biomedcentral.com
 cgejournal.biomedcentral.com
-cgjonline.ca
 cgmj.cgu.edu.tw
 cgp.iiarjournals.org
 chemistry-europe.onlinelibrary.wiley.com
@@ -598,6 +597,7 @@ emj.bmj.com
 ems.press
 en.ilr-rit.org
 engine.scichina.com
+english.digitaliapublishing.com
 english.rrsurg.com
 enterprise.clcd.com
 environmentalmicrobiome.biomedcentral.com
@@ -767,7 +767,6 @@ ijgc.bmj.com
 ijhoscr.tums.ac.ir
 ijhpm.com
 ijhpr.biomedcentral.com
-ijhr.iums.ac.ir
 iji.sums.ac.ir
 ijm.tums.ac.ir
 ijme.in
@@ -779,7 +778,6 @@ ijpa.tums.ac.ir
 ijpc.com
 ijpds.org
 ijpeonline.biomedcentral.com
-ijph.tums.ac.ir
 ijpho.ssu.ac.ir
 ijpm.mui.ac.ir
 ijponline.biomedcentral.com
@@ -1076,7 +1074,6 @@ medone.thieme.com
 medpix.nlm.nih.gov
 mefj.springeropen.com
 mehdijournal.com
-mejdd.org
 mental.jmir.org
 merckindex.rsc.org
 meridian.allenpress.com
@@ -1371,6 +1368,7 @@ retrovirology.biomedcentral.com
 revistas.unc.edu.ar
 revistas.usb.edu.co
 revistasice.com
+revpediatria.sld.cu
 rgd.mcw.edu
 rimg.geoscienceworld.org
 rjme.ro
@@ -1398,7 +1396,6 @@ safpj.co.za
 sajcd.org.za
 sajhivmed.org.za
 sajid.co.za
-sajp.co.za
 sajp.org.za
 sajr.org.za
 sajs.redbricklibrary.com
@@ -1787,7 +1784,6 @@ www.cabidigitallibrary.org
 www.cairn.info
 www.cambridge.org
 www.canadiana.org
-www.canadianoncologynursingjournal.com
 www.cancer.gov
 www.cancerbiomed.org
 www.cancernetwork.com
@@ -1827,7 +1823,6 @@ www.ciaonet.org
 www.cis.rit.edu
 www.cisejournal.org
 www.cjcmh.com
-www.cjrt.ca
 www.classiques-garnier.com
 www.clinexprheumatol.org
 www.clinicalcases.eu
@@ -1867,7 +1862,6 @@ www.csc2.ncsu.edu
 www.ctt-journal.com
 www.ctte-conference.org
 www.cumhuriyetarsivi.com
-www.curationis.org.za
 www.cureus.com
 www.currentpsychiatry.com
 www.currentscience.ac.in
@@ -1964,7 +1958,6 @@ www.emerald.com
 www.emeraldinsight.com
 www.emory.edu
 www.empire.amdigital.co.uk
-www.emro.who.int
 www.ems-ph.org
 www.emsworld.com
 www.endocrine-abstracts.org
@@ -2247,7 +2240,6 @@ www.jocmr.org
 www.jocr.co.in
 www.jofem.org
 www.jofs.in
-www.jogh.org
 www.jointsjournal.eu
 www.jomfp.in
 www.jomi.com
@@ -2336,7 +2328,6 @@ www.longdom.org
 www.longwoods.com
 www.lrb.co.uk
 www.lsspjournal.com
-www.lungca.org
 www.lyellcollection.org
 www.maizegdb.org
 www.managedhealthcareconnect.com
@@ -2370,7 +2361,6 @@ www.medievalfamilylife.amdigital.co.uk
 www.medigraphic.com
 www.medrxiv.org
 www.medsci.org
-www.medultrason.ro
 www.mein.nagoya-u.ac.jp
 www.merck.com
 www.merckvetmanual.com
