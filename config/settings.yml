@@ -68,7 +68,8 @@ turnstile:
     - 3.138.54.100
     - 3.129.126.175
     - 3.124.152.112
-  allowed_user_agents: []
+  allowed_user_agents:
+    - Claude-User
 THROTTLE_TRAFFIC: false
 SEND_THROTTLE_NOTIFICATIONS_TO_HONEYBADGER: true
 EDS_ENABLED: true

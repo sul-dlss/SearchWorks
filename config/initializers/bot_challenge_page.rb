@@ -19,13 +19,13 @@ BotChallengePage.configure do |config|
   # this header, but until we see that behavior, we'll allow it so the facet UI works.
   # We also have an exception for index json so that the mini-bento frontend fetch in Searchworks doesn't get blocked.
   # Also exempt any IPs contained in the CIDR blocks in Settings.turnstile.safelist.
-  # Also exempt any user agents in Settings.turnstile.allowed_user_agents (for registered bots/crawlers).
+  # Also exempt any user agents containing a string in Settings.turnstile.allowed_user_agents (for registered bots/crawlers).
   # Also exempt any logged-in users.
   config.skip_when = lambda do |_config|
     ((is_a?(CatalogController) || is_a?(ArticlesController)) &&
       params[:action].in?(%w[facet index]) && request.format.json? && request.headers['sec-fetch-dest'] == 'empty') ||
       Settings.turnstile.safelist.map { |cidr| IPAddr.new(cidr) }.any? { |range| request.remote_ip.in?(range) } ||
-      Settings.turnstile.allowed_user_agents.include?(request.user_agent) ||
+      Settings.turnstile.allowed_user_agents.any? { |ua| request.user_agent.to_s.include?(ua) } ||
       current_user
   end
 
