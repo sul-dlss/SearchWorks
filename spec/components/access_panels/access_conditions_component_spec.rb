@@ -12,9 +12,8 @@ RSpec.describe AccessPanels::AccessConditionsComponent, type: :component do
 
     it "displays the use and reproduction statement" do
       expect(page).to have_css("dt", text: "Use and reproduction")
-      # rubocop:disable Layout/LineLength
+      # rubocop:disable-next Layout/LineLength
       expect(page).to have_css("dd", text: "Property rights reside with the repository. To obtain permission to publish or reproduce, please contact the East Asia Library at eastasialibrary@stanford.edu.")
-      # rubocop:enable Layout/LineLength
     end
   end
 

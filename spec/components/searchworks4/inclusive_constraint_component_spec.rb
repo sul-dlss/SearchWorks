@@ -55,8 +55,8 @@ RSpec.describe Searchworks4::InclusiveConstraintComponent, type: :component do
   end
 
   it 'displays removal links for selected facets' do
-    a_remove = page.find('span.selected', text: 'a').find('+a.remove')
-    b_remove = page.find('span.selected', text: 'b').find('+a.remove')
+    a_remove = page.find('span.selected', text: 'a').sibling('a.remove')
+    b_remove = page.find('span.selected', text: 'b').sibling('a.remove')
     expect(CGI.unescape(a_remove['href'])).to eq('http://test.host/catalog?f_inclusive[field][]=b')
     expect(CGI.unescape(b_remove['href'])).to eq('http://test.host/catalog?f_inclusive[field][]=a')
   end

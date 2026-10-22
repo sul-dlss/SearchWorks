@@ -45,7 +45,7 @@ module Folio
 
     # Output a CSV of all locations, flattening details and converting UUIDs to codes
     # @return [String] comma-separated data for all locations
-    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable-next Metrics/MethodLength
     def self.to_csv
       headers = %w[id name code institutionCode campusCode libraryCode]
       detail_headers = []
@@ -102,7 +102,6 @@ module Folio
         end
       end
     end
-    # rubocop:enable Metrics/MethodLength
 
     def data
       @data ||= Folio::Types.locations.values.index_by { |v| v['code'] }
