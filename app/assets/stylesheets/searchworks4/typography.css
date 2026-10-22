@@ -121,7 +121,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .truncate-lg-none {
     display: inherit;
     -webkit-line-clamp: initial;

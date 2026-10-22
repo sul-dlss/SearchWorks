@@ -1,13 +1,13 @@
-<div class="global-alert alert pt-4 pb-1 rounded-0" data-controller="global-alert" data-action="close.bs.alert->global-alert#writeCookie" data-global-alert-cookie-id-value="<%= alert_id %>" data-global-alert-dismiss-value="<%= dismiss_type %>">
-  <div class="container-lg">
-    <div class="alert-content mx-auto mt-2" role="alert">
+<div class="global-alert alert pt-7 pb-1 rounded-0" data-controller="global-alert" data-action="close.bs.alert->global-alert#writeCookie" data-global-alert-cookie-id-value="<%= alert_id %>" data-global-alert-dismiss-value="<%= dismiss_type %>">
+  <div class="lg:container">
+    <div class="alert-content mx-auto mt-3" role="alert">
       <div class="d-flex align-items-center">
-        <i class="bi bi-exclamation-circle-fill fs-3"></i>
-        <div class="text-body mx-3">
+        <i class="bi bi-exclamation-circle-fill fs-2xl"></i>
+        <div class="fg-body mx-5">
           <%= @alert.html.html_safe %>
         </div>
       </div>
-      <button class="btn text-muted float-end me-5" data-bs-dismiss="alert"><i class="bi bi-x-lg me-1"></i>Close</button>
+      <button class="btn fg-2 float-end me-12" data-bs-dismiss="alert"><i class="bi bi-x-lg me-1"></i>Close</button>
     </div>
   </div>
 </div>

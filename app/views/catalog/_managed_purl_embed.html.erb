@@ -1,12 +1,12 @@
 <div class="managed-purl" data-controller="managed-purl">
-  <div class="d-inline-flex bg-white ms-4 px-2">
-    <h2 class="mb-0">Digital content</h2><%= render BadgeCounterComponent.new(document.managed_purls.count, 'part', additional_classes: %w[ms-2 align-self-center]) %>
+  <div class="d-inline-flex bg-white ms-7 px-3">
+    <h2 class="mb-0">Digital content</h2><%= render BadgeCounterComponent.new(document.managed_purls.count, 'part', additional_classes: %w[ms-3 align-self-center]) %>
   </div>
-  <div class="border rounded px-3 pb-2 row digital-viewer">
+  <div class="border rounded px-5 pb-3 row digital-viewer">
     <div class="col-4">
-      <ul class="list-unstyled overflow-scroll pe-3" style="height: 520px;">
+      <ul class="list-unstyled overflow-scroll pe-5" style="height: 520px;">
         <% document.managed_purls.each_with_index do |purl, i| %>
-          <li data-managed-purl-target="item" class="mb-2 border">
+          <li data-managed-purl-target="item" class="mb-3 border">
             <%= button_tag(data: {
                 embed_target: "#{Settings.PURL_EMBED_RESOURCE}#{purl.druid}",
                 embed_provider: Settings.PURL_EMBED_PROVIDER,
@@ -14,7 +14,7 @@
                 action: 'click->managed-purl#switchItem'
             }, class: 'p-0 btn text-start text-decoration-none d-flex align-items-start text-break')  do %>
               <% if purl.file_id %>
-                <span class="me-2 img-column">
+                <span class="me-3 img-column">
                   <img class="object-fit-contain w-100 h-100" src="<%= document.craft_image_url(image_id: purl.file_id, size: :rect_thumbnail) %>">
                 </span>
               <% end %>

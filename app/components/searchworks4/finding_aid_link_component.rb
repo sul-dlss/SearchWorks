@@ -14,7 +14,7 @@ module Searchworks4
       if href&.include?('//archives.stanford.edu')
         { class: 'btn btn-sm py-0 btn-palo-alto' }
       else
-        { class: 'btn btn-sm py-0 btn-outline-secondary' }
+        { class: 'btn btn-sm py-0 btn-outline theme-secondary' }
       end
     end
 

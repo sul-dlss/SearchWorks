@@ -1,5 +1,5 @@
 <% if show_pagination? && @response.total_pages > 1 %>
-  <div class="my-3">
+  <div class="my-5">
     <%# EDS API has page skipping errors so we do prev/next only, see issue 1391 %>
     <%= render partial: "catalog/paginate_compact", object: @response %>
   </div>

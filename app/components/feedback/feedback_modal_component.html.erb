@@ -1,24 +1,24 @@
 <%= render Blacklight::System::ModalComponent.new do |component| %>
     <% component.with_header do %>
         <div class="d-flex flex-nowrap flex-row w-100 justify-content-between">
-            <h2 class="modal-title fw-normal"><%= t('blacklight.feedback_form.title') %></h2>
+            <h2 class="dialog-title fw-normal"><%= t('blacklight.feedback_form.title') %></h2>
             <a href="/feedback" class="new-link text-nowrap" target="_blank" data-bl-dismiss="modal" rel="opener"><i class="bi bi-box-arrow-up-left me-1"></i> <%= t('blacklight.feedback_form.new_tab')%></a>
         </div>
     <% end %>
     <% component.with_body do %>
         <% if request.referer %>
-            <div class="bg-dark-subtle py-1 px-4 border-top">
+            <div class="bg-4 py-1 px-7 border-top">
                 Reporting from <%= request.referer %>
             </div>
 
             <% if catalog_document_id %>
                 <turbo-frame id="document-summary-<%= catalog_document_id %>" src="<%= document_summary_path(catalog_document_id, render_quick_report: true)%>">
-                    <div class="modal-header bg-light py-5"></div>
+                    <div class="dialog-header bg-2 py-12"></div>
                 </turbo-frame>
             <% end %>
         <% end %>
 
-        <div class="modal-body">
+        <div class="dialog-body">
             <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
                 <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'turbo:submit-end->modal#close submit->recaptcha#refresh' } do |f| %>
                     <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
@@ -26,9 +26,9 @@
             <% end %>
         </div>
 
-        <div class="modal-footer">
-            <button type="button" class="btn btn-outline-primary me-2 close" data-bl-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" form="feedback-form">Send</button>
+        <div class="dialog-footer">
+            <button type="button" class="btn btn-outline theme-primary me-3 close" data-bl-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-solid theme-primary" form="feedback-form">Send</button>
         </div>
     <% end %>
 <% end %>

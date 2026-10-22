@@ -11,7 +11,7 @@ RSpec.describe Searchworks4::ConstraintLayoutComponent, type: :component do
   let(:prefix) { nil }
 
   it "includes remove link that uses the font based icons" do
-    expect(page).to have_css("a.remove .bi.bi-x.fs-4")
+    expect(page).to have_css("a.remove .bi.bi-x.fs-xl")
     expect(page).to have_no_css("svg")
   end
 

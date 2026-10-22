@@ -1,14 +1,14 @@
-<div class="p-4 mt-4 mb-3 bg-fog-light collection-info">
+<div class="p-7 mt-7 mb-5 bg-fog-light collection-info">
   <%= render Searchworks4::CollectionSuperhead.new %>
 
-  <div class="d-flex justify-content-between gap-3">
+  <div class="d-flex justify-content-between gap-5">
     <h1 class="h2 mb-0"><%= collection[:title_display] %></h1>
-    <%= link_to solr_document_path(collection[:id]), class: "align-self-baseline text-nowrap btn btn-icon btn-outline-primary" do %>
+    <%= link_to solr_document_path(collection[:id]), class: "align-self-baseline text-nowrap btn btn-icon btn-outline theme-primary" do %>
       Collection details <i class="bi bi-chevron-right"></i>
     <% end %>
   </div>
 
-  <div class="mb-2">
+  <div class="mb-3">
     <% if presenter.document_format.present? %>
       <span class="align-text-bottom me-1"><%= resource_icon %></span> <%= collection.document_formats&.first %> &mdash;
     <% end %>
@@ -16,7 +16,7 @@
   </div>
 
   <% if collection[:summary_display] %>
-  <div class="collection-summary mt-2 col-xxl-9" data-controller="long-text" data-long-text-truncate-class="truncate-3">
+  <div class="collection-summary mt-3 2xl:col-9" data-controller="long-text" data-long-text-truncate-class="truncate-3">
     <div data-long-text-target="text">
       <%= helpers.simple_format(collection[:summary_display].join(', ')) %>
     </div>
@@ -25,12 +25,12 @@
 
   <dl class="collection-metadata mb-0">
     <% if collection.collection_members.present? %>
-      <div class="d-flex gap-3 justify-content-start">
+      <div class="d-flex gap-5 justify-content-start">
         <dt>Digital collection</dt><dd><%= render BadgeCounterComponent.new(collection.collection_members.total, 'item', color: nil) %></dd>
       </div>
     <% end %>
     <% if collection.marc_links.finding_aid.present? %>
-      <div class="d-flex gap-3 justify-content-start">
+      <div class="d-flex gap-5 justify-content-start">
         <dt>Finding aid</dt><dd><%= render Searchworks4::FindingAidLinkComponent.new(link: collection.marc_links.finding_aid.first, document: collection) %></dd>
       </div>
     <% end %>

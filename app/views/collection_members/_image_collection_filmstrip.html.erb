@@ -2,16 +2,16 @@
   preview_container = 'preview-filmstrip-container-' + collection_document.id
 %>
 <div class="collection-result-preview">
-  <div class="d-inline-flex bg-white ms-4 px-2">
+  <div class="d-inline-flex bg-white ms-7 px-3">
     <h2 class="mb-0">Digital collection</h2>
-    <%= render BadgeCounterComponent.new(collection_document.collection_members.total, 'item', additional_classes: %w[ms-2 align-self-center]) %>
-    <%= link_to(collection_members_path(collection_document), class: 'ms-2 btn btn-outline-primary') do %>
+    <%= render BadgeCounterComponent.new(collection_document.collection_members.total, 'item', additional_classes: %w[ms-3 align-self-center]) %>
+    <%= link_to(collection_members_path(collection_document), class: 'ms-3 btn btn-outline theme-primary') do %>
       <i class="bi bi-search me-1"></i>Search collection
     <% end %>
   </div>
-  <div class="col-md-12 image-filmstrip border rounded p-4" data-controller="gallery-row" data-action="resize@window->gallery-row#adjustPreviewMargins gallery-card:show->gallery-row#setCurrentPreview" data-gallery-row-preview-outlet="<%= ".#{preview_container}" %>" data-gallery-row-gallery-card-outlet=".container-images li">
+  <div class="md:col-12 image-filmstrip border rounded p-7" data-controller="gallery-row" data-action="resize@window->gallery-row#adjustPreviewMargins gallery-card:show->gallery-row#setCurrentPreview" data-gallery-row-preview-outlet="<%= ".#{preview_container}" %>" data-gallery-row-gallery-card-outlet=".container-images li">
     <div class="viewport overflow-scroll" data-gallery-row-target="container" data-action="scroll->gallery-row#adjustPreviewMargins" >
-      <ul class="container-images list-unstyled d-flex gap-2 pt-2">
+      <ul class="container-images list-unstyled d-flex gap-3 pt-3">
         <% collection_document.collection_members.documents.select { |document| document.image_urls.present? }.each do |document| %>
           <li class="filmstrip-gallery-card d-inline-block position-relative" data-controller="gallery-card" data-action="preview:close@document->gallery-card#handlePreviewClosed" data-gallery-card-url-value="<%= preview_solr_document_path(document.id) %>" data-gallery-card-id-value="<%= document.id %>" data-gallery-card-preview-outlet="<%= ".#{preview_container}" %>">
             <a href="<%= solr_document_path(document.id) %>">

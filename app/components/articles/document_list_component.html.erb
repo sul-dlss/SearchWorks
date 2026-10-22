@@ -13,7 +13,7 @@
     <%= header %>
     <div class="document-main-section d-flex">
       <% # header bar for doc items in index view %>
-      <div class="col-10 pe-4">
+      <div class="col-10 pe-7">
         <div class="documentHeader">
           <h3 class="index_title">
             <% if counter %>
@@ -55,7 +55,7 @@
           <% end %>
 
           <% if !@document.eds_restricted? && (@document.preferred_online_links.any? || @document.html_fulltext?) %>
-            <div class="availability-component d-inline-flex border rounded p-2 gap-3">
+            <div class="availability-component d-inline-flex border rounded p-3 gap-5">
               <% if @document.preferred_online_links.any? || @document.html_fulltext? %>
                 <div class="fw-semibold available-online text-nowrap">
                 Available online  <i class="bi bi-forward-fill"></i>
@@ -76,7 +76,7 @@
 
       </div>
       <div class="col-2 d-flex flex-column align-items-center">
-        <div class="d-flex flex-row gap-1 mb-3">
+        <div class="d-flex flex-row gap-1 mb-5">
           <%= render Document::TrackingBookmarkComponent.new(document:, action: view_config.document_actions[:bookmark]) %>
           <%= render Searchworks4::SearchResult::ItemMenuComponent.new(document:) %>
         </div>

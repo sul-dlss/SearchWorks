@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://www-media.stanford.edu">
@@ -23,8 +23,6 @@
     <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2026-08-06/styles/icon.png">
     <%= stylesheet_link_tag "searchworks4", media: "all", 'data-turbo-track' => true %>
     <%= stylesheet_link_tag "print", media: "print", 'data-turbo-track' => true %>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script
       src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
       defer
@@ -68,7 +66,7 @@
       <% end %>
 
       <% if content_for?(:breadcrumb) %>
-        <nav class="mb-3 mt-4 container-lg" aria-label="Breadcrumb navigation">
+        <nav class="mb-5 mt-7 lg:container" aria-label="Breadcrumb navigation">
           <%= content_for(:breadcrumb) %>
         </nav>
       <% end %>

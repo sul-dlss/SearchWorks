@@ -1,7 +1,7 @@
 <% if @documents.one? %>
   <%= render Searchworks4::RecordSummaryComponent.new(presenter: document_presenter(@documents.first)) %>
 <% end %>
-<div class="modal-body">
+<div class="dialog-body">
   <%= turbo_frame_tag 'email_form_frame' do %>
     <%= form_tag url_for(controller: controller_name, action: "email"),
                 id: 'email_form',
@@ -13,12 +13,12 @@
                 }  do %>
         <% if @documents.one? %>
           <div class="fw-bold">Send</div>
-          <div class="form-check form-check-inline mb-3">
-            <%= radio_button_tag :type, 'full', true, class: 'form-check-input' %> <%= label_tag(:type_full, "Full record", class: 'form-check-label') %>
+          <div class="form-field d-inline-grid align-items-center me-5 mb-5">
+            <%= radio_button_tag :type, 'full', true, class: 'radio' %> <%= label_tag(:type_full, "Full record") %>
           </div>
 
-          <div class="form-check form-check-inline">
-            <%= radio_button_tag :type, 'brief', class: 'form-check-input' %> <%= label_tag(:type_brief,  "Brief (title, call number, and library location)", class:'form-check-label') %>
+          <div class="form-field d-inline-grid align-items-center">
+            <%= radio_button_tag :type, 'brief', true, class: 'radio' %> <%= label_tag(:type_brief,  "Brief (title, call number, and library location)") %>
           </div>
           <%= render 'shared/email_form', documents: @documents %>
         <% else %>
@@ -28,7 +28,7 @@
     <% end %>
   <% end %>
 </div>
-<div class="modal-footer">
-  <button type="button" data-bl-dismiss="modal" class="btn btn-outline-primary">Cancel</button>
-  <button type="submit" class="btn btn-primary" form="email_form">Send</button>
+<div class="dialog-footer">
+  <button type="button" data-bl-dismiss="modal" class="btn btn-outline theme-primary">Cancel</button>
+  <button type="submit" class="btn btn-solid theme-primary" form="email_form">Send</button>
 </div>

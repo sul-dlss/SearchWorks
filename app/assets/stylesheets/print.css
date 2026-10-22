@@ -49,13 +49,18 @@
         --sul-header-font-size: 1.5rem;
       }
 
-      /* Reset offcanvas */
-      --bs-offcanvas-transition: none;
+      /* Reset drawer */
+      transition: none;
       position: relative;
+      inset: auto;
       transform: none;
       height: auto;
+      max-height: none;
+      max-width: none;
       overflow: visible;
       visibility: visible;
+      border: 0;
+      box-shadow: none;
     }
 
     .expand-availability {

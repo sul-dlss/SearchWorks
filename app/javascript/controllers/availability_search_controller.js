@@ -38,7 +38,7 @@ export default class extends Controller {
     })
 
     this.libraryElements.forEach((element) => {
-      const badge = element.querySelector("h2 .badge")
+      const badge = element.querySelector(".accordion-header .badge")
       if (!badge) return
 
       if (badge.dataset.originalContent) {
@@ -47,11 +47,9 @@ export default class extends Controller {
         badge.dataset.originalContent = badge.innerHTML
       }
 
-      const matches = document.createElement("span")
       const count = element.querySelectorAll(".item-row:has(mark)").length
-      matches.innerHTML = ` | ${count} match${count == 1 ? "" : "es"}`
-
-      badge.appendChild(matches)
+      // A text node (not an element) so it flows with the count inside Bootstrap 6's inline-flex .badge
+      badge.append(` | ${count} match${count == 1 ? "" : "es"}`)
     })
 
   }
@@ -65,7 +63,7 @@ export default class extends Controller {
     })
 
     this.libraryElements.forEach((element) => {
-      const badge = element.querySelector("h2 .badge")
+      const badge = element.querySelector(".accordion-header .badge")
 
       if (!badge) return
 

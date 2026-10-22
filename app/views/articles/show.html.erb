@@ -1,10 +1,10 @@
 <% @page_title = t 'blacklight.search.show.title_html', document_title: document_presenter(@document).html_title, application_name: "#{I18n.t('blacklight.application_name')} articles" %>
 
 <div class="row align-items-start">
-  <div id="content" class="col-12 col-lg-8 show-document">
+  <div id="content" class="col-12 lg:col-8 show-document">
     <%= render RecordToolbarComponent.new(presenter: document_presenter(@document), search_context: @search_context, search_session: search_session) %>
     <% if @document.eds_restricted? %>
-      <div class="mt-4">
+      <div class="mt-7">
         <%= render Articles::LoginBannerComponent.new %>
       </div>
     <% end %>
@@ -19,12 +19,14 @@
     <% end %>
   </div>
   <% if @document.eds_links.any? %>
-    <div id="aside" class="mt-5 record-panels col-12 offset-lg-1 col-lg-3 py-3 py-lg-0 px-0 offcanvas-lg offcanvas-bottom">
-      <div class="metadata-panels border-start px-3 ps-lg-3 mb-5">
-        <h2 class="h3 mb-3 text-secondary">Availability</h2>
+    <div class="col-12 lg:offset-1 lg:col-3 px-0">
+      <dialog id="aside" class="mt-12 record-panels py-5 lg:py-0 px-0 lg:drawer drawer-bottom flex-column" aria-label="Availability">
+        <div class="metadata-panels border-start px-5 lg:ps-5 mb-12">
+          <h2 class="h3 mb-5 fg-secondary">Availability</h2>
 
-        <%= render AccessPanels::OnlineEdsComponent.new(document: @document) %>
-      </div>
+          <%= render AccessPanels::OnlineEdsComponent.new(document: @document) %>
+        </div>
+      </dialog>
     </div>
   <% end %>
 </div>

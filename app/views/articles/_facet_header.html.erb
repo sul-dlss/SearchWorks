@@ -1,5 +1,5 @@
 <% if facet_options_presenter.limiters.present? %>
-  <div class="pt-2 px-3 pb-1 mb-4 mx-3 mx-xl-4 border border-secondary rounded-1">
+  <div class="pt-3 px-5 pb-1 mb-7 mx-5 xl:mx-7 border border-secondary rounded-3">
     <h2 class="visually-hidden">
       <%= t("searchworks.articles.facets.options.heading") %>
     </h2>
@@ -17,7 +17,7 @@
                     nil
                   )
               %>
-              <%= link_to(limiter.search_url, data: { newState: !limiter.selected?, action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1 text-secondary') do %>
+              <%= link_to(limiter.search_url, data: { newState: !limiter.selected?, action: 'facet-checkboxes#toggleLink', turbo: false }, class: 'ms-1 fg-secondary') do %>
                 <%= limiter.label %>
               <% end %>
             <% end %>

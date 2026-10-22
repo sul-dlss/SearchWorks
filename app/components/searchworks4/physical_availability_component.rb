@@ -6,7 +6,7 @@ module Searchworks4
 
     delegate :link_to_document, to: :helpers
 
-    def initialize(document:, classes: %w[availability-component fs-15], header_classes: %w[header p-2 gap-4 row-gap-2 align-items-center flex-wrap])
+    def initialize(document:, classes: %w[availability-component fs-15], header_classes: %w[header p-3 gap-7 row-gap-3 align-items-center flex-wrap])
       @document = document
       @classes = classes
       @header_classes = header_classes
@@ -111,7 +111,7 @@ module Searchworks4
       end
 
       def call
-        render BadgeCounterComponent.new(@count, 'item', additional_classes: %w[px-2 lh-sm text-nowrap])
+        render BadgeCounterComponent.new(@count, 'item', additional_classes: %w[px-3 lh-sm text-nowrap])
       end
     end
   end

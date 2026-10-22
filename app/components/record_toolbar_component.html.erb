@@ -1,10 +1,10 @@
-<nav class="record-toolbar d-flex flex-column flex-xxl-row mt-5 mb-3 mb-xxl-4 gap-4" aria-label="Tools" data-controller="analytics" data-analytics-category-value="record-toolbar">
-  <div class="d-flex d-flex-row column-gap-3 align-items-center">
+<nav class="record-toolbar d-flex flex-column 2xl:flex-row mt-12 mb-5 2xl:mb-7 gap-7" aria-label="Tools" data-controller="analytics" data-analytics-category-value="record-toolbar">
+  <div class="d-flex d-flex-row column-gap-5 align-items-center">
     <%= helpers.link_back_to_catalog class: 'back-to-results', label: t('blacklight.back_to_search').html_safe %>
     <%= render ToolbarSearchContextInfoComponent.new(search_context: @search_context, search_session: search_session, current_document: document) %>
   </div>
-  <div class="ms-xxl-auto flex-nowrap">
-    <ul class="nav navbar justify-content-start d-inline-flex gap-2 border rounded px-1 py-0">
+  <div class="2xl:ms-auto flex-nowrap">
+    <ul class="nav navbar justify-content-start d-inline-flex gap-3 border rounded px-1 py-0">
       <li>
         <%= render Document::TrackingBookmarkComponent.new(document:, action: @presenter.view_config.document_actions.find { |x| x.key == :bookmark }) %>
       </li>

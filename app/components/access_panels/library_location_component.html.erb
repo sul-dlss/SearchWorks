@@ -1,11 +1,11 @@
-<div class="mb-4 location suppress-item-level-request-button-if-there-is-a-location-level-request-button">
+<div class="mb-7 location suppress-item-level-request-button-if-there-is-a-location-level-request-button">
   <div class="mb-1 d-flex flex-wrap col-gap-3 justify-content-between align-items-center location-request" data-availability-target="location">
     <h4 class="fs-15 mb-0"><%= render Searchworks4::PhysicalAvailabilityComponent::LocationComponent.new(location: location, document: document, classes: [], suppress_off_campus: false) %></h4>
     <% summary = capture { render AccessPanels::LibraryLocationPopoverComponent.new(mhld: location.mhld) } %>
-    <% request_link = capture { render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-secondary location-request-link text-nowrap ms-auto py-0]) } %>
+    <% request_link = capture { render LocationRequestLinkComponent.for(document:, location:, library_code: library.code, hide_icon: true, classes: %w[btn btn-sm btn-solid theme-secondary location-request-link text-nowrap ms-auto py-0]) } %>
 
     <% if summary.present? %>
-      <div class="w-100 d-flex justify-content-between align-items-center gap-2">
+      <div class="w-100 d-flex justify-content-between align-items-center gap-3">
         <%= summary %>
         <div class="ms-auto">
           <%= request_link %>

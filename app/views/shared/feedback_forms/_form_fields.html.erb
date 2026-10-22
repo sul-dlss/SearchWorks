@@ -3,48 +3,48 @@
   <%= f.hidden_field :user_agent %>
   <%= f.hidden_field :viewport %>
   <%= f.hidden_field :last_search %>
-  <div class="col-sm-8 offset-sm-1">
+  <div class="sm:col-8 sm:offset-1">
     <%= f.hidden_field :type, value: type %>
-    <div class="mb-3 row ">
-      <%= f.label(:resource_name, 'Name of resource', class:"col-sm-3 col-form-label text-right") %>
-      <div class="col-sm-9">
+    <div class="mb-5 row ">
+      <%= f.label(:resource_name, 'Name of resource', class:"sm:col-3 col-form-label text-right") %>
+      <div class="sm:col-9">
         <%= f.text_field :resource_name, value: "", class:"form-control", required: true %>
       </div>
     </div>
-    <div class="mb-3 row">
-      <%= f.label(:problem_url, 'Problem URL', class:"col-sm-3 col-form-label text-right") %>
-      <div class="col-sm-9">
+    <div class="mb-5 row">
+      <%= f.label(:problem_url, 'Problem URL', class:"sm:col-3 col-form-label text-right") %>
+      <div class="sm:col-9">
         <%= f.text_field :problem_url, value: "", class:"form-control", required: true %>
       </div>
     </div>
-    <div class="mb-3 row">
-      <%= f.label(:message, 'Describe the connection issue', class:"col-sm-3 col-form-label text-right") %>
-      <div class="col-sm-9">
+    <div class="mb-5 row">
+      <%= f.label(:message, 'Describe the connection issue', class:"sm:col-3 col-form-label text-right") %>
+      <div class="sm:col-9">
         <%= f.text_area :message, value: "", rows:"5", class:"form-control", required: true %>
       </div>
     </div>
-    <div class="mb-3 row">
-      <%= f.label(:name, 'Your name', class:"col-sm-3 col-form-label text-right") %>
-      <div class="col-sm-9">
+    <div class="mb-5 row">
+      <%= f.label(:name, 'Your name', class:"sm:col-3 col-form-label text-right") %>
+      <div class="sm:col-9">
         <%= f.text_field :name, value: "", class:"form-control", autocomplete: "name", required: true %>
       </div>
     </div>
-    <div class="mb-3 row">
-      <%= f.label(:to, 'Your email', class:"col-sm-3 col-form-label text-right") %>
-      <div class="col-sm-9">
+    <div class="mb-5 row">
+      <%= f.label(:to, 'Your email', class:"sm:col-3 col-form-label text-right") %>
+      <div class="sm:col-9">
         <%= f.email_field :to, value: "", class:"form-control", autocomplete: "email", required: true %>
       </div>
     </div>
 
     <% if current_user.blank? %>
-      <div class="mb-3 row">
+      <div class="mb-5 row">
         <%= render RecaptchaComponent.new(action: 'feedback') %>
       </div>
     <% end %>
 
-    <div class="mb-3 row">
-      <div class="offset-sm-3 col-sm-9">
-        <button type="submit" class="btn btn-primary">Send</button>
+    <div class="mb-5 row">
+      <div class="sm:offset-3 sm:col-9">
+        <button type="submit" class="btn btn-solid theme-primary">Send</button>
         <button type="button" class="cancel-link btn btn-link" data-bs-toggle="collapse" data-bs-target="<%= target %>">Cancel</button>
       </div>
     </div>

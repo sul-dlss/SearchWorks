@@ -95,7 +95,7 @@ RSpec.feature "Search Results Page" do
     end
 
     it 'flags the collection' do
-      expect(page).to have_css '.badge.text-secondary', text: 'Collection'
+      expect(page).to have_css '.badge.fg-secondary', text: 'Collection'
     end
   end
 end

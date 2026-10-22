@@ -1,15 +1,15 @@
 
-<div class="section record-browse-nearby p-4 border" data-controller="analytics browse-nearby" data-action="resize@window->browse-nearby#resizeWithAside turbo:frame-load@window->browse-nearby#resizeWithAside show.bs.tab->browse-nearby#setActive" data-analytics-category-value="browse-nearby" data-browse-nearby-target="container">
-  <div class="heading view-full-page ps-2 d-flex me-auto justify-content-start">
-    <h2 class="m-0 pe-3">Related items</h2>
-    <%= link_to "Full page", full_page_path(spines.first.base_callnumber), class: 'btn btn-primary bi bi-arrows-angle-expand fw-normal', data: { 'browse-nearby-target': "fullPage", action: "click->analytics#trackLink" } %>
+<div class="section record-browse-nearby p-7 border" data-controller="analytics browse-nearby" data-action="resize@window->browse-nearby#resizeWithAside turbo:frame-load@window->browse-nearby#resizeWithAside show.bs.tab->browse-nearby#setActive" data-analytics-category-value="browse-nearby" data-browse-nearby-target="container">
+  <div class="heading view-full-page ps-3 d-flex me-auto justify-content-start">
+    <h2 class="m-0 pe-5">Related items</h2>
+    <%= link_to "Full page", full_page_path(spines.first.base_callnumber), class: 'btn btn-solid theme-primary bi bi-arrows-angle-expand fw-normal', data: { 'browse-nearby-target': "fullPage", action: "click->analytics#trackLink" } %>
   </div>
-  <div class="row mt-4 ps-2 tabs callnumber-tabs" data-browse-nearby-target="tabs">
-    <div class="col mb-3">
+  <div class="row mt-7 ps-3 tabs callnumber-tabs" data-browse-nearby-target="tabs">
+    <div class="col mb-5">
       Start at call number:
-      <ul class="list-inline d-inline ms-2" role="tablist">
+      <ul class="list-inline d-inline ms-3" role="tablist">
         <% spines.each_with_index do |spine, index| %>
-          <li class="d-inline px-2" role="presentation">
+          <li class="d-inline px-3" role="presentation">
             <%= link_to_callnumber_browse(spine, index) %>
           </li>
         <% end %>
@@ -22,7 +22,7 @@
     <% spines.each_with_index do |item, index| %>
       <% preview_id = "browse-nearby-preview-#{index}" %>
       <div data-controller="gallery-row" data-gallery-row-max-preview-width-value="800" data-action="resize@window->gallery-row#adjustPreviewMargins turbo:frame-load->gallery-row#scrollToCurrentDocument gallery-card:show->gallery-row#setCurrentPreview" data-gallery-row-preview-outlet="#<%= preview_id %>" data-gallery-row-gallery-card-outlet="#callnumber-<%=index%> .gallery-document" id="callnumber-<%=index%>" class="embed-callnumber-browse-container tab-pane fade <%= 'show active' if index.zero? %>" role="tabpanel">
-        <div class="embedded-items overflow-x-scroll overflow-y-hidden mb-2 pt-2" data-gallery-row-target="container" data-action="scroll->gallery-row#adjustPreviewMargins">
+        <div class="embedded-items overflow-x-scroll overflow-y-hidden mb-3 pt-3" data-gallery-row-target="container" data-action="scroll->gallery-row#adjustPreviewMargins">
           <%= helpers.turbo_frame_tag "filmstrip_#{item.base_callnumber.gsub(' ', '-')}", src: filmstrip_path(item.base_callnumber, preview_id: preview_id), loading: index == 0 ? 'eager' : 'lazy', class: 'gallery' %>
         </div>
         <div id="<%= preview_id %>" class="d-none" data-controller="preview"></div>

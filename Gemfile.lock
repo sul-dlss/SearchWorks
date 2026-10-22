@@ -1,3 +1,37 @@
+GIT
+  remote: https://github.com/projectblacklight/blacklight.git
+  revision: d63eb512950c92c27a1fdb013ff89fd387fb7251
+  branch: bootstrap6
+  specs:
+    blacklight (9.2.1)
+      globalid
+      i18n (>= 1.7.0)
+      jbuilder (~> 2.7)
+      kaminari (>= 0.15)
+      ostruct (>= 0.3.2)
+      rails (>= 7.2, < 9)
+      view_component (~> 4.0)
+      zeitwerk
+
+GIT
+  remote: https://github.com/projectblacklight/blacklight_range_limit.git
+  revision: 13a1b8809b2dada4a6855e8ade9f3c8ab02f11ae
+  branch: bs6
+  specs:
+    blacklight_range_limit (9.3.0)
+      blacklight (>= 7.25.2, < 10)
+      view_component (>= 2.54, < 5)
+
+GIT
+  remote: https://github.com/sul-dlss/blacklight-hierarchy.git
+  revision: 4a51475bae25085f2a7d535500039195c94dbea2
+  branch: bs6
+  specs:
+    blacklight-hierarchy (6.9.0)
+      blacklight (>= 7.18, < 10)
+      deprecation
+      rails (>= 7.1, < 9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -94,19 +128,6 @@ GEM
     benchmark (0.5.0)
     bigdecimal (4.1.3)
     bindex (0.8.1)
-    blacklight (9.2.1)
-      globalid
-      i18n (>= 1.7.0)
-      jbuilder (~> 2.7)
-      kaminari (>= 0.15)
-      ostruct (>= 0.3.2)
-      rails (>= 7.2, < 9)
-      view_component (~> 4.0)
-      zeitwerk
-    blacklight-hierarchy (6.9.0)
-      blacklight (>= 7.18, < 10)
-      deprecation
-      rails (>= 7.1, < 9)
     blacklight-marc (9.0.0)
       blacklight (>= 7.11, < 10)
       library_stdnums
@@ -123,13 +144,8 @@ GEM
     blacklight_dynamic_sitemap (1.0.0)
       blacklight (> 7.0)
       rails
-    blacklight_range_limit (9.3.0)
-      blacklight (>= 7.25.2, < 10)
-      view_component (>= 2.54, < 5)
     bootsnap (1.26.0)
       msgpack (~> 1.5)
-    bootstrap (5.3.8)
-      popper_js (>= 2.11.8, < 3)
     bot_challenge_page (1.2.0)
       http (>= 5.2, < 7)
       rails (>= 7.1, < 8.2)
@@ -423,7 +439,6 @@ GEM
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
-    popper_js (2.11.8)
     pp (0.6.4)
       prettyprint
     prettyprint (0.2.1)
@@ -684,15 +699,14 @@ PLATFORMS
 DEPENDENCIES
   actioncable
   axe-core-rspec
-  blacklight (~> 9.0)
-  blacklight-hierarchy (~> 6.0)
+  blacklight!
+  blacklight-hierarchy!
   blacklight-marc (~> 9.0)
   blacklight-ris (~> 0.2.0)
   blacklight_advanced_search (~> 8.0)
   blacklight_dynamic_sitemap
-  blacklight_range_limit (~> 9.0)
+  blacklight_range_limit!
   bootsnap
-  bootstrap (~> 5.0)
   bot_challenge_page
   capistrano (~> 3.0)
   capistrano-bundler

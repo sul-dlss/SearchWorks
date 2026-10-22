@@ -17,7 +17,7 @@ RSpec.describe 'catalog/stackmap' do
     end
 
     it 'renders stackmap map template' do
-      expect(rendered).to have_css('div.modal-header h2.modal-title')
+      expect(rendered).to have_css('div.dialog-header h2.dialog-title')
 
       expect(rendered).to have_css('div.stackmap .map-template')
 

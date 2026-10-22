@@ -1,28 +1,18 @@
-                  <li class="nav-item dropdown">
+                  <li class="nav-item">
                     <a
                       class="nav-link dropdown-toggle"
                       href="#"
                       role="button"
-                      data-bs-toggle="dropdown"
+                      data-bs-toggle="menu"
                       aria-expanded="false"
                     >
                       Featured resources
                     </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <%= link_to 'Course reserves', course_reserves_path, class: 'dropdown-item' %>
-                      </li>
-                      <li>
-                        <%= link_to 'Databases', databases_path, class: 'dropdown-item' %>
-                      </li>
-                      <li>
-                        <%= link_to 'Digital collections', digital_collections_path, class: 'dropdown-item' %>
-                      </li>
-                      <li>
-                        <%= link_to 'Government documents', govdocs_path, class: 'dropdown-item' %>
-                      </li>
-                      <li>
-                        <%= link_to 'Theses and dissertations', theses_and_dissertations_path, class: 'dropdown-item' %>
-                      </li>
-                    </ul>
+                    <div class="menu">
+                      <%= link_to 'Course reserves', course_reserves_path, class: 'menu-item' %>
+                      <%= link_to 'Databases', databases_path, class: 'menu-item' %>
+                      <%= link_to 'Digital collections', digital_collections_path, class: 'menu-item' %>
+                      <%= link_to 'Government documents', govdocs_path, class: 'menu-item' %>
+                      <%= link_to 'Theses and dissertations', theses_and_dissertations_path, class: 'menu-item' %>
+                    </div>
                   </li>

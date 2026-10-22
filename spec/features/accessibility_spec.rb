@@ -87,7 +87,7 @@ RSpec.describe 'Site Accessibility', :js do
       expect(page).to have_button 'Sort by number of matches'
       click_button 'Sort by number of matches'
       expect(page).to have_button 'A-Z'
-      expect(page).to be_accessible.within('dialog')
+      expect(page).to be_accessible.within('#blacklight-modal')
     end
 
     it 'has an accessible zero results page' do

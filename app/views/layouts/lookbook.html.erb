@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
    <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -7,13 +7,11 @@
     <title>Component Preview</title>
     <%= opensearch_description_tag I18n.t('blacklight.application_name'), opensearch_catalog_path(format: 'xml') %>
     <%= stylesheet_link_tag "searchworks4", media: "all", 'data-turbo-track' => true %>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <%= javascript_include_tag "searchworks4", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
     <%= render 'shared/modal' %>
-    <div class="m-5">
+    <div class="m-12">
       <%= yield %>
     </div>
   </body>

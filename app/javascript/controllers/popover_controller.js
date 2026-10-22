@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { Popover } from "bootstrap"
 
 export default class extends Controller {
   connect() {
@@ -7,7 +8,7 @@ export default class extends Controller {
 
   hidePopover() {
     const triggerBtn = document.querySelector(`[aria-describedby="${this.element.id}"]`)
-    const popover = bootstrap.Popover.getInstance(triggerBtn)
+    const popover = Popover.getInstance(triggerBtn)
     if (popover) popover.hide()
   }
 

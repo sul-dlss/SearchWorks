@@ -1,4 +1,4 @@
-<div class="metadata-panels border-start ps-lg-3 px-3 mb-5">
+<div class="metadata-panels border-start lg:ps-5 px-5 mb-12">
   <%= render AccessPanels::CourseReservesComponent.new(document: document) %>
 
   <%= render AccessPanels::AvailabilityComponent.new(document: document) %>
@@ -20,7 +20,7 @@
   <% end %>
 
   <% if context.present? || potential_context.present? %>
-    <h2 class="h3 mb-2 text-secondary">Context</h2>
+    <h2 class="h3 mb-3 fg-secondary">Context</h2>
     <%= context %>
     <%= potential_context %>
   <% end %>

@@ -14,17 +14,17 @@ RSpec.describe "Database views", :feature, :js do
       expect(page).to have_link('American History (1)', href: '/databases?f%5Bdb_az_subject%5D%5B%5D=American+History')
     end
 
-    it 'renders Popular database aside and does not render offcanvas button on MD screens', :responsive, page_width: 768 do
-      expect(page).to have_css('aside.popular-databases')
+    it 'renders Popular database aside and does not render drawer button on MD screens', :responsive, page_width: 768 do
+      expect(page).to have_css('dialog.popular-databases')
       expect(page).to have_link('scholar.google.com', href: 'https://scholar.google.com/')
-      expect(page).to have_no_css('[data-bs-toggle="offcanvas"]')
+      expect(page).to have_no_css('[data-bs-toggle="drawer"]')
     end
 
-    it 'renders offcanvas features under MD breakpoint', :responsive, page_width: 767 do
-      expect(page).to have_no_css('aside.popular-databases')
-      expect(page).to have_css('[data-bs-toggle="offcanvas"]')
+    it 'renders drawer features under MD breakpoint', :responsive, page_width: 767 do
+      expect(page).to have_no_css('dialog.popular-databases')
+      expect(page).to have_css('[data-bs-toggle="drawer"]')
       click_button('Popular databases')
-      expect(page).to have_css('aside.popular-databases')
+      expect(page).to have_css('dialog.popular-databases')
     end
   end
 
@@ -55,7 +55,7 @@ RSpec.describe "Database views", :feature, :js do
     end
 
     it 'supresses the Mini bento component' do
-      expect(page).to have_no_css('#alternate-catalog-offcanvas')
+      expect(page).to have_no_css('#alternate-catalog-drawer')
     end
 
     it 'displays intended facet areas' do
@@ -69,15 +69,15 @@ RSpec.describe "Database views", :feature, :js do
       expect(page).to have_css('h2', text: 'Database topics')
     end
 
-    it 'does not render offcanvas button on XXL screens', :responsive, page_width: 1401 do
-      expect(page).to have_no_css('[data-bs-toggle="offcanvas"]')
+    it 'does not render drawer button on 2XL screens', :responsive, page_width: 1536 do
+      expect(page).to have_no_css('[data-bs-toggle="drawer"]')
     end
 
-    it 'renders the popular databases offcanvas button under XXL breakpoint', :responsive, page_width: 1399 do
-      expect(page).to have_no_css('aside.popular-databases')
-      expect(page).to have_css('[data-bs-toggle="offcanvas"]')
+    it 'renders the popular databases drawer button under 2XL breakpoint', :responsive, page_width: 1535 do
+      expect(page).to have_no_css('dialog.popular-databases')
+      expect(page).to have_css('[data-bs-toggle="drawer"]')
       click_button('Popular databases')
-      expect(page).to have_css('aside.popular-databases')
+      expect(page).to have_css('dialog.popular-databases')
     end
   end
 end

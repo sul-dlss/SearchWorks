@@ -1,4 +1,4 @@
-<search class="dropdown" data-action="keydown.esc->database-autocomplete#esc keydown.down->database-autocomplete#next keydown.up->database-autocomplete#previous" data-controller="database-autocomplete" data-database-autocomplete-url-value="<%= autocomplete_databases_url %>">
+<search class="position-relative" data-action="keydown.esc->database-autocomplete#esc keydown.down->database-autocomplete#next keydown.up->database-autocomplete#previous" data-controller="database-autocomplete" data-database-autocomplete-url-value="<%= autocomplete_databases_url %>">
   <%= form_with url: @url, local: true, method: @method, class: @classes.join(' '), scope: @prefix, role: 'search', **@form_options do |f| %>
     <%= render Blacklight::HiddenSearchStateComponent.new(params: @params) %>
     <% if search_fields.length > 1 %>

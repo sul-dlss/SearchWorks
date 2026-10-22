@@ -1,5 +1,5 @@
 <div id="marc_view">
-  <details class="mb-3">
+  <details class="mb-5">
     <summary class="h3">Metadata</summary>
     <% fields = @document.to_marc.find_all{|f| ('000'..'999') === f.tag }.reject { |f| f.tag.to_s == '940' } %>
     <div class="field"><%= t('blacklight.search.librarian_view.leader', :leader => @document.to_marc.leader) %></div>

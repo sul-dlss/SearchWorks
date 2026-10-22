@@ -17,7 +17,7 @@ export default class extends Controller {
 
   updateElement(data) {
     if (data[this.fieldValue]){
-      this.element.classList.add("mb-2")
+      this.element.classList.add("mb-3")
       this.element.innerHTML = `<a href="${this.linkUrlValue}">${this.linkLabelValue}</a>`
     }
   }

@@ -24,7 +24,7 @@ RSpec.feature 'Connection form (js)', :js do
     end
 
     expect(page).to have_css(
-      'div.alert-success',
+      'div.alert.theme-success',
       text: 'Thank you! Your connection problem report has been sent.',
       visible: true
     )
@@ -50,7 +50,7 @@ RSpec.feature 'Connection form (no js)' do
       click_button 'Send'
     end
     expect(page).to have_css(
-      'div.alert-success',
+      'div.alert.theme-success',
       text: 'Thank you! Your connection problem report has been sent.'
     )
   end

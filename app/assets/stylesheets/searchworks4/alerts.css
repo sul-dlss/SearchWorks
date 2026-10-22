@@ -1,3 +1,16 @@
+/* Bootstrap 6 dropped .alert-dismissible; keep the close button pinned to the corner. */
+.alert-dismissible {
+  position: relative;
+  padding-inline-end: 3rem;
+
+  .btn-close {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    z-index: 2;
+  }
+}
+
 .alert.eds-restricted {
   border: 1px solid var(--stanford-cardinal);
   border-left: 4px solid var(--stanford-cardinal);

@@ -1,8 +1,8 @@
-<details class="item-details mb-3">
+<details class="item-details mb-5">
     <summary class="h3">Item details</summary>
     <% locations.each do |location| %>
       <table class="table">
-          <caption class="px-3 h4 mb-0"><strong>Permanent Location</strong> <%= location.label %></caption>
+          <caption class="px-5 h4 mb-0"><strong>Permanent Location</strong> <%= location.label %></caption>
           <thead>
               <tr>
                   <th>Effective Call Number</th>
@@ -13,7 +13,7 @@
           <tbody>
             <% location.items.each do |item| %>
                 <tr>
-                  <td class="ps-5"><%= item.call_number %></td>
+                  <td class="ps-12"><%= item.call_number %></td>
                   <td><%= item.barcode %></td>
                   <td><%= item.location %></td>
               </tr>

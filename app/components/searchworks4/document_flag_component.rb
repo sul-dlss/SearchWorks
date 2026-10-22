@@ -17,7 +17,7 @@ module Searchworks4
       if document.stanford_archives_finding_aid?
         'text-palo-alto-dark'
       else
-        'text-secondary'
+        'fg-secondary'
       end
     end
   end

@@ -3,7 +3,7 @@
 module Searchworks4
   class CollectionSuperhead < ViewComponent::Base
     def call
-      tag.div 'Collection', class: 'superhead small fw-semibold text-uppercase text-secondary mb-2'
+      tag.div 'Collection', class: 'superhead small fw-semibold text-uppercase fg-secondary mb-3'
     end
   end
 end

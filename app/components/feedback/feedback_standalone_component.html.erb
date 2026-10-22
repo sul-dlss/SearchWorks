@@ -3,23 +3,23 @@
 
     <div class="feedback-form-container">
         <% if request.referer %>
-            <div class="bg-dark-subtle py-1 px-2">
+            <div class="bg-4 py-1 px-3">
                 Reporting from <%= request.referer %>
             </div>
         <% end %>
 
         <% if catalog_document_id %>
             <turbo-frame id="document-summary-<%= catalog_document_id %>" src="<%= document_summary_path(catalog_document_id, render_quick_report: true)%>">
-                <div class="modal-header bg-light py-5"></div>
+                <div class="dialog-header bg-2 py-12"></div>
             </turbo-frame>
         <% end %>
 
         <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
-        <% form_with url: feedback_form_path, method: :post, class: "feedback-form mt-3", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'submit->recaptcha#refresh' } do |f| %>
+        <% form_with url: feedback_form_path, method: :post, class: "feedback-form mt-5", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'submit->recaptcha#refresh' } do |f| %>
                 <%= f.hidden_field :form_format, value: 'standalone' %>
                 <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
                 <div class="d-flex-inline text-end">
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-solid theme-primary">Send</button>
                 </div>
             <% end %>
         <% end %>
