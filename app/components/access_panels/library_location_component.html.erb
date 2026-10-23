@@ -22,9 +22,11 @@
       <div class='mhld note-highlight fs-14 d-inline-block mt-0'>Latest: <%= location.mhld.first.latest_received %></div>
     <% end %>
     <% location.mhld.filter_map(&:public_note).uniq.each do |public_note| %>
+      <% unless volumes_display? %>
         <div>
           <div class='mhld note-highlight fs-14 d-inline-block'><%= public_note %></div>
         </div>
+      <% end %>
     <% end %>
   <% end %>
 
@@ -40,7 +42,11 @@
       </tr>
     </thead>
     <tbody>
-      <%= render AccessPanels::LocationItemComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?) %>
+      <% if volumes_display? %>
+        <%= render AccessPanels::LocationItemComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?, classes: volumes_display_classes) %>
+      <% else %>
+        <%= render AccessPanels::LocationItemComponent.with_collection(display_items, document:, consolidate_for_finding_aid: consolidate_items?) %>
+      <% end %>
     </tbody>
   </table>
   <% if location_count? %>

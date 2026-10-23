@@ -4,10 +4,10 @@
       <span class="placeholder placeholder-sm likely-available"></span>
     </p>
   <% else %>
-    <% if status_text %>
+    <% if status_display %>
       <%= tag.span class:  "availability #{availability_class} d-inline-flex align-items-center" do %>
         <%= tag.i(class: "bi #{availability_icon} me-1") %>
-        <%= status_text %>
+        <%= status_display %>
         <%= tag.span "Due #{rtac[:due_date]}", class: 'ms-2 due-date' if rtac&.dig(:due_date) %>
       <% end %>
       <% end %>
