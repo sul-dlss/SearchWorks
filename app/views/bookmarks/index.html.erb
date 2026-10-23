@@ -8,6 +8,7 @@
       <li class="nav-item">
         <%= link_to bookmarks_path,
           class: "nav-link #{'active' unless article_selections?}",
+          data: { turbo: false },
           aria: !article_selections? ? {} :{ current: 'page'} do %>
           Catalog <%= render BadgeCounterComponent.new(@catalog_count) %>
         <% end %>
@@ -15,6 +16,7 @@
       <li class="nav-item">
         <%= link_to article_selections_path,
           class: "nav-link #{'active' if article_selections?}",
+          data: { turbo: false },
           aria: article_selections? ? {} :{ current: 'page'} do %>
           Articles+ <%= render BadgeCounterComponent.new(@article_count) %>
         <% end %>
