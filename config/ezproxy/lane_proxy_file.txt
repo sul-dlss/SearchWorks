@@ -112,7 +112,6 @@ app.deweydata.io
 app.gideononline.com
 app.jove.com
 app.knovel.com
-app.kortext.com
 app.simplyanalytics.com
 app.wileydigitalarchives.com
 applied-informatics-j.springeropen.com
@@ -2713,7 +2712,6 @@ www.virtualpediatrichospital.org
 www.visualdx.com
 www.vjel.org
 www.vjultrafast.org
-www.vlebooks.com
 www.vr-elibrary.de
 www.wageningenacademic.com
 www.webofscience.com
