@@ -207,7 +207,6 @@ biotechnologyforbiofuels.biomedcentral.com
 bipadi.ub.edu
 birdsoftheworld.org
 bjbas.springeropen.com
-bjd-abcd.com
 bjgp.org
 bjgpopen.org
 bjo.bmj.com
@@ -632,7 +631,6 @@ experiments.springernature.com
 extoxnet.orst.edu
 extras.springer.com
 extremephysiolmed.biomedcentral.com
-ezproxy.canterbury.ac.nz
 f1000research.com
 facultyopinions.com
 familymedicine.lwwhealthlibrary.com
@@ -835,7 +833,6 @@ jacketsearch.tandf.co.uk
 jaclinicalreports.springeropen.com
 jacobin.com
 jad.tums.ac.ir
-jag.igr.poznan.pl
 jalm.aaccjnls.org
 jamanetwork.com
 jamba.org.za
@@ -1024,13 +1021,11 @@ link.springer.com.
 lipidworld.biomedcentral.com
 listview.lib.harvard.edu
 litguide.press.jhu.edu
-liverpool.idm.oclc.org
 liverpooluniversitypress.co.uk
 lkcnhm.nus.edu.sg
 llmc.com
 lockwoodonlinejournals.com
 login.infobase.com
-login.uproxy.library.dc-uoit.ca
 londmathsoc.onlinelibrary.wiley.com
 longevityandhealthspan.biomedcentral.com
 lsc-pagepro.mydigitalpublication.com
@@ -1183,7 +1178,6 @@ om-pc.biomedcentral.com
 omicsonline.com
 ommbid.mhmedical.com
 oncology.lwwhealthlibrary.com
-oncologyreviews.org
 ondemand.metopera.org
 onehealthoutlook.biomedcentral.com
 online.boneandjoint.org.uk
@@ -1328,7 +1322,6 @@ pubsapp.acs.org
 pubsonline.informs.org
 purl.access.gpo.gov
 purl.fdlp.gov
-qe2a-proxy.mun.ca
 qims.amegroups.com
 qualitysafety.bmj.com
 radium.journaldephysique.org
@@ -1495,6 +1488,7 @@ sti.bmj.com
 stm.cairn.info
 student.bmj.com
 students.law.umich.edu
+su.airitibooks.com
 subscription.mbrjournal.com
 subscriptions.techstreet.com
 substanceabusepolicy.biomedcentral.com
@@ -1768,7 +1762,6 @@ www.bls.gov
 www.bmas-conf.org
 www.bmbreports.org
 www.bmj.com
-www.bodley.ox.ac.uk
 www.bookrail.co.kr
 www.brain-map.org
 www.braincirculation.org
@@ -1835,7 +1828,6 @@ www.clinmedres.org
 www.clinmicronow.org
 www.clspectrum.com
 www.cmaj.ca
-www.cmi.ustc.edu.cn
 www.cmj.hr
 www.cmrpjournal.org
 www.cnbksy.com
@@ -2054,7 +2046,6 @@ www.hellenicjcardiol.com
 www.hematologyandoncology.net
 www.hgmd.cf.ac.uk
 www.hh.um.es
-www.hhrjournal.org
 www.highwirepress.com
 www.hindawi.com
 www.hindicinema.amdigital.co.uk
@@ -2079,7 +2070,6 @@ www.icevirtuallibrary.com
 www.icjournal.org
 www.iclc.us
 www.icm-experimental.com
-www.icmpe.org
 www.icpsr.umich.edu
 www.id-press.eu
 www.idoj.in
@@ -2219,7 +2209,6 @@ www.jkacap.org
 www.jkamprs.com
 www.jkaoms.org
 www.jkscience.org
-www.jle.com
 www.jlifestylemed.org
 www.jmaj.jp
 www.jmau.org
@@ -2271,7 +2260,6 @@ www.jrpp.net
 www.jsad.com
 www.jscisociety.com
 www.jsmm.org
-www.jsnm.org
 www.jstage.jst.go.jp
 www.jstatsoft.org
 www.jstor.org
@@ -2512,7 +2500,6 @@ www.povertylaw.org
 www.ppjonline.org
 www.primarypsychiatry.com
 www.primescholars.com
-www.princeton.edu
 www.progressinorthodontics.com
 www.proquest.com
 www.protein.bio.msu.ru
@@ -2627,10 +2614,8 @@ www.springeropen.com
 www.springerprotocols.com
 www.srm-ejournal.com
 www.ssa.gov
-www.ssph-journal.org
 www.standardsingenomics.org
 www.stanforddaily.com
-www.stata-journal.com
 www.statista.com
 www.statistik.at
 www.stm-journal.ru
@@ -2646,7 +2631,6 @@ www.the-aps.org
 www.the-jcen.org
 www.the-scientist.com
 www.thecco.net
-www.thecjcr.org
 www.thecritui.com
 www.thedriftmag.com
 www.theiet.org
