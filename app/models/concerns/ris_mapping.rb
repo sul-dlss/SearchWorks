@@ -27,7 +27,7 @@ module RisMapping
       PB: 'pub_display',
       KW: 'subject_all_search',
       LA: 'language',
-      Y1: 'pub_date',
+      Y1: 'pub_year_ss',
       CY: 'pub_country',
       AB: 'summary_display',
       C3: 'physical',
