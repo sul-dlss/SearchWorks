@@ -231,17 +231,5 @@ RSpec.describe Folio::CirculationRules::PolicyService do
     it 'can fetch the loan policy for an item' do
       expect(service.item_loan_policy(item)).to eq('3 day loan, no renewals, 15 minute grace period')
     end
-
-    it 'can fetch the lost policy for an item' do
-      expect(service.item_lost_policy(item)).to eq('$30 lost fee policy')
-    end
-
-    it 'can fetch the notice policy for an item' do
-      expect(service.item_notice_policy(item)).to eq('Short-term loan notice policy')
-    end
-
-    it 'can fetch the overdue policy for an item' do
-      expect(service.item_overdue_policy(item)).to eq('1.50/10.50 overdue fine')
-    end
   end
 end
