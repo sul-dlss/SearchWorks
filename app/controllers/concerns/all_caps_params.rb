@@ -4,9 +4,7 @@ module AllCapsParams
   extend ActiveSupport::Concern
 
   included do
-    if self.respond_to?(:before_action)
-      before_action :downcase_all_caps_params, only: :index
-    end
+    before_action :downcase_all_caps_params, only: :index if respond_to?(:before_action)
   end
 
   private
@@ -19,13 +17,13 @@ module AllCapsParams
     end
   end
 
-  def downcase_all_caps_param hash, key
+  def downcase_all_caps_param(hash, key)
     return if hash[key].blank?
 
     query = hash[key]
 
-    if query.upcase == query
-      hash[key] = query.downcase
-    end
+    return unless query.upcase == query
+
+    hash[key] = query.downcase
   end
 end

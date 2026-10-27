@@ -62,7 +62,6 @@ module CJKQuery
     blacklight_config.search_fields.keys
   end
 
-
   def modify_field_key_for_cjk(field_key)
     field_key.gsub(/(_?search_?)|(_terms)/, '').gsub(/^pub$/, 'pub_info')
   end
@@ -76,7 +75,7 @@ module CJKQuery
   end
 
   def cjk_unigrams_size(str)
-    if str && str.kind_of?(String)
+    if str && str.is_a?(String)
       str.scan(/\p{Han}|\p{Katakana}|\p{Hiragana}|\p{Hangul}/).size
     else
       0

@@ -23,15 +23,15 @@ class User < ActiveRecord::Base
   end
 
   def affiliations
-    @affiliations ||= ENV['suAffiliation']
+    @affiliations ||= ENV.fetch('suAffiliation', nil)
   end
 
   def person_affiliations
-    @person_affiliations ||= ENV['unscoped-affiliation']
+    @person_affiliations ||= ENV.fetch('unscoped-affiliation', nil)
   end
 
   def entitlements
-    @entitlements ||= ENV['eduPersonEntitlement']
+    @entitlements ||= ENV.fetch('eduPersonEntitlement', nil)
   end
 
   # Based on previous work and discussions, the 'eduPersonAffiliaton' attribute, which is mapped
@@ -51,11 +51,11 @@ class User < ActiveRecord::Base
     # We also want to send a notification in case it is covered by suAffiliation
     # because this shows us a mismatch between the attributes when there shouldn't be a difference.
     # TODO: Refer to https://github.com/sul-dlss/SearchWorks/issues/4016
-    if su_affiliated?
-      Honeybadger.notify('User affiliations and privileges: Not affiliated by eduPersonAffiliation or eduPersonEntitlement ' \
-                         'but affiliated by suAffiliation', context: to_honeybadger_context)
-      true
-    end
+    return false unless su_affiliated?
+
+    Honeybadger.notify('User affiliations and privileges: Not affiliated by eduPersonAffiliation or eduPersonEntitlement ' \
+                       'but affiliated by suAffiliation', context: to_honeybadger_context)
+    true
   end
 
   # Checks if access is enabled based on set of defined Stanford affiliations

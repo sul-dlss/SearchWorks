@@ -4,12 +4,12 @@ require 'rails_helper'
 require 'page_location'
 
 RSpec.describe PageLocation do
+  subject(:page_location) { PageLocation.new(search_state) }
+
   let(:params) { { f: { format_hsim: ["Database"] } } }
   let(:controller) { CatalogController.new }
   let(:action) { 'index' }
   let(:search_state) { Blacklight::SearchState.new(params, controller.blacklight_config, controller) }
-
-  subject(:page_location) { PageLocation.new(search_state) }
 
   before do
     allow(controller).to receive_messages(action_name: action, params:)
@@ -48,14 +48,17 @@ RSpec.describe PageLocation do
           it "is defined when a facet is selected" do
             expect(access_point).to eq :databases
           end
+
           it "is defined when an additional format facet is selected" do
             params[:f][:format_hsim] << "Book"
             expect(access_point).to eq :databases
           end
+
           it "is defined when searching within selected" do
             params[:q] = "My Query"
             expect(access_point).to eq :databases
           end
+
           it "is not defined when a non-database format facet is selected" do
             params[:f] = { access: "Online" }
             expect(access_point).to be_nil
@@ -64,10 +67,10 @@ RSpec.describe PageLocation do
       end
 
       describe "course reserve" do
-        before {
+        before do
           create(:reg_course)
           params[:f] = { courses_folio_id_ssim: ['00254a1b-d0f5-4a9a-88a0-1dd596075d08'] }
-        }
+        end
 
         context 'when courses_folio_id_ssim facet is selected' do
           it { is_expected.to eq :course_reserve }
@@ -104,10 +107,12 @@ RSpec.describe PageLocation do
         it 'is defined when the collection_type is digital collection' do
           expect(access_point).to eq :digital_collections
         end
+
         it "is not defined when digital_collection is not present" do
           params[:f] = {}
           expect(access_point).to be_nil
         end
+
         it "is not defined when digital_collection is a different value" do
           params[:f] = { collection_type: ["Something Else"] }
           expect(access_point).to be_nil
@@ -120,10 +125,12 @@ RSpec.describe PageLocation do
         it 'is defined when the Library facet is Stanford Digital Repository' do
           expect(access_point).to eq :sdr
         end
+
         it "is not defined when Stanford Digital Repository is not present" do
           params[:f] = {}
           expect(access_point).to be_nil
         end
+
         it "is not defined when Library facet is a different value" do
           params[:f] = { library: ["GREEN"] }
           expect(access_point).to be_nil
@@ -136,10 +143,12 @@ RSpec.describe PageLocation do
         it 'is defined when genre facet is "Thesis/Dissertation"' do
           expect(access_point).to eq :dissertation_theses
         end
+
         it 'is not defined when Thesis/Dissertation is not present' do
           params[:f] = {}
           expect(access_point).to be_nil
         end
+
         it 'is not defined when genre_ssim is another value' do
           params[:f] = { genre_ssim: ['Cat Tricks'] }
           expect(access_point).to be_nil

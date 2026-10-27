@@ -21,7 +21,7 @@ class Language < MarcField
   private
 
   def tags
-    %w(546)
+    %w[546]
   end
 
   def notation?

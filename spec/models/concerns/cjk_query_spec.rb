@@ -4,8 +4,9 @@ require 'rails_helper'
 
 RSpec.describe CJKQuery do
   # let(:search_builder) { double(SearchBuilder, blacklight_params: blacklight_params) }
-  let(:search_builder)  {
- SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config, search_state_class: nil)).with(blacklight_params.with_indifferent_access) }
+  let(:search_builder)  do
+    SearchBuilder.new([], double('ControllerScope', blacklight_config: CatalogController.blacklight_config, search_state_class: nil)).with(blacklight_params.with_indifferent_access)
+  end
   let(:blacklight_params) { {} }
   let(:cjk_mm) { '3<86%' }
   let(:q_str) { '舊小說' }
@@ -33,32 +34,40 @@ RSpec.describe CJKQuery do
     end
 
     describe "unprocessed" do
-      let(:solr_q) { "_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
+      let(:solr_q) do
+        "_query_:\"{!edismax pf2=$pf2 pf3=$pf3}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_title pf=$pf_title pf3=$pf3_title pf2=$pf2_title}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_author pf=$pf_author pf3=$pf3_author pf2=$pf2_author}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_subject pf=$pf_subject pf3=$pf3_subject pf2=$pf2_subject}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_series pf=$pf_series pf3=$pf3_series pf2=$pf2_series}#{q_str}\" AND
                      _query_:\"{!edismax qf=$qf_pub_info pf=$pf_pub_info pf3=$pf3_pub_info pf2=$pf2_pub_info}#{q_str}\" AND
-                     _query_:\"{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}\""}
+                     _query_:\"{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}\""
+      end
 
       it "handles the non-fielded pf/qf" do
         expect(solr_params[:q]).to include "{!edismax qf=$qf_cjk pf=$pf_cjk pf3=$pf3_cjk pf2=$pf2_cjk #{local_params} }#{q_str}"
       end
+
       it "handles title pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_title_cjk pf=$pf_title_cjk pf3=$pf3_title_cjk pf2=$pf2_title_cjk #{local_params} }#{q_str}"
       end
+
       it "handles author pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_author_cjk pf=$pf_author_cjk pf3=$pf3_author_cjk pf2=$pf2_author_cjk #{local_params} }#{q_str}"
       end
+
       it "handles subject pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_subject_cjk pf=$pf_subject_cjk pf3=$pf3_subject_cjk pf2=$pf2_subject_cjk #{local_params} }#{q_str}"
       end
+
       it "handles series pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_series_cjk pf=$pf_series_cjk pf3=$pf3_series_cjk pf2=$pf2_series_cjk #{local_params} }#{q_str}"
       end
+
       it "handles pub_info pf/qf" do
         expect(solr_params[:q]).to include "{!edismax  qf=$qf_pub_info_cjk pf=$pf_pub_info_cjk pf3=$pf3_pub_info_cjk pf2=$pf2_pub_info_cjk #{local_params} }#{q_str}"
       end
+
       it "does not do anything w/ the number qf/pf" do
         expect(solr_params[:q]).to include "{!edismax qf=$qf_number pf=$pf_number pf3=$pf3_number pf2=$pf2_number}#{q_str}"
       end
@@ -90,6 +99,7 @@ RSpec.describe CJKQuery do
       search_builder.modify_params_for_cjk(solr_params)
       expect(solr_params).to include(my_solr_params)
     end
+
     describe "mm and qs solr params" do
       it "if only 1 CJK char, it shouldn't send in additional Solr params" do
         blacklight_params[:q] = '飘'
@@ -98,6 +108,7 @@ RSpec.describe CJKQuery do
         expect(solr_params).not_to have_key("mm")
         expect(solr_params).not_to have_key("qs")
       end
+
       it "if only 2 CJK chars, it shouldn't send in additional Solr params" do
         blacklight_params[:q] = '三國'
         solr_params = {}
@@ -105,6 +116,7 @@ RSpec.describe CJKQuery do
         expect(solr_params).not_to have_key("mm")
         expect(solr_params).not_to have_key("qs")
       end
+
       it "detects Han - Traditional and add mm and qs to Solr params" do
         blacklight_params[:q] = '舊小說'
         solr_params = {}
@@ -112,6 +124,7 @@ RSpec.describe CJKQuery do
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
+
       it "detects Han - Simplified and add mm and qs to Solr params" do
         blacklight_params[:q] = '旧小说'
         solr_params = {}
@@ -119,6 +132,7 @@ RSpec.describe CJKQuery do
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
+
       it "detects Hiragana and add mm and qs to Solr params" do
         blacklight_params[:q] = 'まんが'
         solr_params = {}
@@ -126,6 +140,7 @@ RSpec.describe CJKQuery do
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
+
       it "detects Katakana and add mm and qs to Solr params" do
         blacklight_params[:q] = 'マンガ'
         solr_params = {}
@@ -133,6 +148,7 @@ RSpec.describe CJKQuery do
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
+
       it "detects Hangul and add mm and qs to Solr params" do
         blacklight_params[:q] = '한국경제'
         solr_params = {}
@@ -140,6 +156,7 @@ RSpec.describe CJKQuery do
         expect(solr_params['mm']).to eq cjk_mm
         expect(solr_params['qs']).to eq 0
       end
+
       it "detects CJK mixed with other alphabets and add mm and qs to Solr params" do
         blacklight_params[:q] = 'abcけいちゅうabc'
         solr_params = {}
@@ -157,8 +174,8 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
 
         expect(solr_params).to include(
-          qf:  '${qf_cjk}',
-          pf:  '${pf_cjk}',
+          qf: '${qf_cjk}',
+          pf: '${pf_cjk}',
           pf2: '${pf2_cjk}',
           pf3: '${pf3_cjk}'
         )
@@ -170,8 +187,8 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
 
         expect(solr_params).to include(
-          qf:  '${qf_cjk}',
-          pf:  '${pf_cjk}',
+          qf: '${qf_cjk}',
+          pf: '${pf_cjk}',
           pf2: '${pf2_cjk}',
           pf3: '${pf3_cjk}'
         )
@@ -184,8 +201,8 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
 
         expect(solr_params).to include(
-          qf:  '${qf_cjk}',
-          pf:  '${pf_cjk}',
+          qf: '${qf_cjk}',
+          pf: '${pf_cjk}',
           pf2: '${pf2_cjk}',
           pf3: '${pf3_cjk}'
         )
@@ -197,8 +214,8 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
 
         expect(solr_params).to include(
-          qf:  '${qf_title_cjk}',
-          pf:  '${pf_title_cjk}',
+          qf: '${qf_title_cjk}',
+          pf: '${pf_title_cjk}',
           pf2: '${pf2_title_cjk}',
           pf3: '${pf3_title_cjk}'
         )
@@ -210,8 +227,8 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
 
         expect(solr_params).to include(
-          qf:  '${qf_author_cjk}',
-          pf:  '${pf_author_cjk}',
+          qf: '${qf_author_cjk}',
+          pf: '${pf_author_cjk}',
           pf2: '${pf2_author_cjk}',
           pf3: '${pf3_author_cjk}'
         )
@@ -223,8 +240,8 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
 
         expect(solr_params).to include(
-          qf:  '${qf_subject_cjk}',
-          pf:  '${pf_subject_cjk}',
+          qf: '${qf_subject_cjk}',
+          pf: '${pf_subject_cjk}',
           pf2: '${pf2_subject_cjk}',
           pf3: '${pf3_subject_cjk}'
         )
@@ -236,8 +253,8 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
 
         expect(solr_params).to include(
-          qf:  '${qf_series_cjk}',
-          pf:  '${pf_series_cjk}',
+          qf: '${qf_series_cjk}',
+          pf: '${pf_series_cjk}',
           pf2: '${pf2_series_cjk}',
           pf3: '${pf3_series_cjk}'
         )
@@ -250,6 +267,7 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)
       end
+
       it "author-title search should NOT add CJK local params to q if CJK detected" do
         blacklight_params.merge!(q: q_str, search_field: 'author_title')
         q_solr_param = { q: "{!qf=author_title_search pf=author_title_search^10 pf2=author_title_search^2 pf3=author_title_search^5}#{q_str}" }
@@ -257,6 +275,7 @@ RSpec.describe CJKQuery do
         search_builder.modify_params_for_cjk(solr_params)
         expect(solr_params).to include(q_solr_param)
       end
+
       it "call number search should NOT add CJK local params to q if CJK detected" do
         blacklight_params.merge!(q: q_str, search_field: 'call_number')
         q_solr_param = { q: "{!df=callnum_search'}\"#{q_str}\"" }
@@ -282,46 +301,59 @@ RSpec.describe CJKQuery do
     it "detects hangul" do
       expect(search_builder.send(:cjk_unigrams_size, '한국주택은행')).to eq 6
     end
+
     it "detects Han - Traditional" do
       expect(search_builder.send(:cjk_unigrams_size, '舊小說')).to eq 3
     end
+
     it "detects Han - Simplified" do
       expect(search_builder.send(:cjk_unigrams_size, '旧小说')).to eq 3
     end
+
     it "detects Modern Kanji" do
       expect(search_builder.send(:cjk_unigrams_size, '漫画')).to eq 2
     end
+
     it "detects Traditional Kanji" do
       expect(search_builder.send(:cjk_unigrams_size, '漫畫')).to eq 2
     end
+
     it "detects Hiragana" do
       expect(search_builder.send(:cjk_unigrams_size, "まんが")).to eq 3
     end
+
     it "detects Katakana" do
       expect(search_builder.send(:cjk_unigrams_size, "マンガ")).to eq 3
     end
+
     it "detects Hancha traditional" do
       expect(search_builder.send(:cjk_unigrams_size, "廣州")).to eq 2
     end
+
     it "detects Hancha simplified" do
       expect(search_builder.send(:cjk_unigrams_size, "光州")).to eq 2
     end
+
     it "detects Hangul" do
       expect(search_builder.send(:cjk_unigrams_size, "한국경제")).to eq 4
     end
+
     it "detects mixed scripts" do
       expect(search_builder.send(:cjk_unigrams_size, "近世仮名遣い")).to eq 6
     end
+
     it "detects first character CJK" do
       expect(search_builder.send(:cjk_unigrams_size, "舊小說abc")).to eq 3
       expect(search_builder.send(:cjk_unigrams_size, "旧小说 abc")).to eq 3
       expect(search_builder.send(:cjk_unigrams_size, " 漫画 abc")).to eq 2
     end
+
     it "detects last character CJK" do
       expect(search_builder.send(:cjk_unigrams_size, "abc漫畫")).to eq 2
       expect(search_builder.send(:cjk_unigrams_size, "abc まんが")).to eq 3
       expect(search_builder.send(:cjk_unigrams_size, "abc マンガ ")).to eq 3
     end
+
     it "detects (latin)(CJK)(latin)" do
       expect(search_builder.send(:cjk_unigrams_size, "abc廣州abc")).to eq 2
       expect(search_builder.send(:cjk_unigrams_size, "abc 한국경제abc")).to eq 4
@@ -336,9 +368,11 @@ RSpec.describe CJKQuery do
         it "1 CJK char" do
           expect(search_builder.send(:cjk_mm_qs_params, "飘")['mm']).to be_nil
         end
+
         it "2 CJK (adj) char" do
           expect(search_builder.send(:cjk_mm_qs_params, "三國")['mm']).to be_nil
         end
+
         describe "mixed with non-CJK scripts" do
           describe "bigram" do
             it "first CJK" do
@@ -346,11 +380,13 @@ RSpec.describe CJKQuery do
               expect(search_builder.send(:cjk_mm_qs_params, "董桥 abc")['mm']).to be_nil
               expect(search_builder.send(:cjk_mm_qs_params, " 董桥 abc")['mm']).to be_nil
             end
+
             it "last CJK" do
               expect(search_builder.send(:cjk_mm_qs_params, "abc董桥")['mm']).to be_nil
               expect(search_builder.send(:cjk_mm_qs_params, "abc 董桥")['mm']).to be_nil
               expect(search_builder.send(:cjk_mm_qs_params, "abc 董桥 ")['mm']).to be_nil
             end
+
             it "(latin)(CJK)(latin)" do
               expect(search_builder.send(:cjk_mm_qs_params, "abc董桥abc")['mm']).to be_nil
               expect(search_builder.send(:cjk_mm_qs_params, "abc 董桥abc")['mm']).to be_nil
@@ -368,15 +404,19 @@ RSpec.describe CJKQuery do
         it "3 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
           expect(search_builder.send(:cjk_mm_qs_params, "マンガ")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
+
         it "4 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
           expect(search_builder.send(:cjk_mm_qs_params, "历史研究")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
+
         it "5 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
           expect(search_builder.send(:cjk_mm_qs_params, "妇女与婚姻")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
+
         it "6 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
           expect(search_builder.send(:cjk_mm_qs_params, "한국주택은행")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
+
         it "7 CJK (adj) char: mm=cjk_mm_val, qs=cjk_qs_val" do
           expect(search_builder.send(:cjk_mm_qs_params, "中国地方志集成")).to eq({ 'mm' => cjk_mm_val, 'qs' => cjk_qs_val })
         end
@@ -393,11 +433,13 @@ RSpec.describe CJKQuery do
           expect(search_builder.send(:cjk_mm_qs_params, "マンガ abc")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
           expect(search_builder.send(:cjk_mm_qs_params, " マンガ abc")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
         end
+
         it "last CJK" do
           expect(search_builder.send(:cjk_mm_qs_params, "abcマンガ")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
           expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
           expect(search_builder.send(:cjk_mm_qs_params, "abc マンガ ")).to eq({ 'mm' => mm_plus_1, 'qs' => cjk_qs_val })
         end
+
         it "(latin)(CJK)(latin)" do
           expect(search_builder.send(:cjk_mm_qs_params, "abcマンガabc")).to eq({ 'mm' => mm_plus_2, 'qs' => cjk_qs_val })
           expect(search_builder.send(:cjk_mm_qs_params, "abc マンガabc")).to eq({ 'mm' => mm_plus_2, 'qs' => cjk_qs_val })

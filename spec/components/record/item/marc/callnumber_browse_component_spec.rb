@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe Record::Item::Marc::CallnumberBrowseComponent, type: :component do
   let(:component) { described_class.new(document:) }
-  let(:document) {
+  let(:document) do
     SolrDocument.new(
       id: 'abc123',
       browse_nearby_struct: [
@@ -18,7 +18,7 @@ RSpec.describe Record::Item::Marc::CallnumberBrowseComponent, type: :component d
           lopped_callnumber: 'truncated_callnumber2', callnumber: 'callnumber2', full_shelfkey: 'full_shelfkey' }
       ]
     )
-  }
+  end
 
   before do
     render_inline(component)

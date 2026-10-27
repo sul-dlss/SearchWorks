@@ -60,9 +60,9 @@ module EdsLinks
     def to_searchworks_link(all_link_categories = [])
       Links::Link.new(
         link_text: label,
-        href:      url,
-        fulltext:  present? && show?(all_link_categories),
-        ill:       ill?,
+        href: url,
+        fulltext: present? && show?(all_link_categories),
+        ill: ill?,
         type:,
         stanford_only: pdf? || type == 'other'
       )
@@ -91,14 +91,14 @@ module EdsLinks
 
     # Primarily an EDS-label based mapping
     LINK_MAPPING = {
-      'HTML full text'.downcase =>           { label: 'View full text', category: 1 },
-      'PDF full text'.downcase =>            { label: 'View/download PDF', category: 2 },
-      'PDF eBook Full Text'.downcase =>      { label: 'View/download PDF', category: 2 },
-      'eBook Full Text'.downcase =>          { label: 'eBook Full Text', category: 3 },
-      'EDS Full text'.downcase =>            { label: 'View on content provider\'s site', category: 4 },
-      'Full text'.downcase =>                { label: 'View on content provider\'s site', category: 5 },
-      :open_access_link =>                   { label: :as_is, category: 6 },
-      'View request options'.downcase =>     { label: 'Find full text or request', category: 7 }
+      'HTML full text'.downcase => { label: 'View full text', category: 1 },
+      'PDF full text'.downcase => { label: 'View/download PDF', category: 2 },
+      'PDF eBook Full Text'.downcase => { label: 'View/download PDF', category: 2 },
+      'eBook Full Text'.downcase => { label: 'eBook Full Text', category: 3 },
+      'EDS Full text'.downcase => { label: 'View on content provider\'s site', category: 4 },
+      'Full text'.downcase => { label: 'View on content provider\'s site', category: 5 },
+      :open_access_link => { label: :as_is, category: 6 },
+      'View request options'.downcase => { label: 'Find full text or request', category: 7 }
     }.freeze
     private_constant :LINK_MAPPING
 

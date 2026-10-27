@@ -39,17 +39,17 @@ RSpec.describe Holdings::Location do
     end
 
     context 'when the public note or latest received are not present' do
-      let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- GRE-STACKS -|- -|- something -|-') }
-
       subject { described_class.new("GRE-STACKS", [], [library_has_mhld]) }
+
+      let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- GRE-STACKS -|- -|- something -|-') }
 
       it { is_expected.not_to be_present_on_index }
     end
 
     context 'when an item has a present public note or latest received' do
-      let(:mhld) { Holdings::MHLD.new('GREEN -|- GRE-STACKS -|- something') }
-
       subject { described_class.new("GRE-STACKS", [], [mhld]) }
+
+      let(:mhld) { Holdings::MHLD.new('GREEN -|- GRE-STACKS -|- something') }
 
       it { is_expected.to be_present_on_index }
     end
@@ -70,14 +70,16 @@ RSpec.describe Holdings::Location do
   describe "#items" do
     subject(:items) { location.items }
 
-    let(:callnumbers) { [
-      Holdings::Item.new({ barcode: 'barcode1', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 321', shelfkey: 'ABC+321',
-                           reverse_shelfkey: 'CBA321', callnumber: 'ABC 321', full_shelfkey: '3' }),
-      Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210',
-                           reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
-      Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100',
-                           reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
-    ] }
+    let(:callnumbers) do
+      [
+        Holdings::Item.new({ barcode: 'barcode1', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 321', shelfkey: 'ABC+321',
+                             reverse_shelfkey: 'CBA321', callnumber: 'ABC 321', full_shelfkey: '3' }),
+        Holdings::Item.new({ barcode: 'barcode2', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 210', shelfkey: 'ABC+210',
+                             reverse_shelfkey: 'CBA210', callnumber: 'ABC 210', full_shelfkey: '2' }),
+        Holdings::Item.new({ barcode: 'barcode3', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS', lopped_callnumber: 'ABC 100', shelfkey: 'ABC+100',
+                             reverse_shelfkey: 'CBA100', callnumber: 'ABC 100', full_shelfkey: '1' })
+      ]
+    end
     let(:location) { described_class.new("GRE-STACKS", callnumbers) }
 
     it "sorts items by the full shelfkey" do

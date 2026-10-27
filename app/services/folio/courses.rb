@@ -20,7 +20,7 @@ module Folio
     def sync_courses!
       folio_courses = folio_client.courses
       # Add or update all courses retrieved from FOLIO
-      folio_courses.each { |v|
+      folio_courses.each do |v|
         term = v.dig('courseListingObject', 'termObject')
         end_date = v.dig('courseListingObject', 'termObject', 'endDate')
 
@@ -45,7 +45,7 @@ module Folio
           is_active: Time.zone.today <= Date.parse(end_date),
           instructors: v.dig('courseListingObject', 'instructorObjects').pluck('name')
         )
-      }
+      end
 
       # Delete courses where the course id is not returned by the current FOLIO client call
       delete_courses(folio_courses.pluck('id'), CourseReserve.pluck(:id))

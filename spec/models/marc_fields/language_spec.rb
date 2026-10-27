@@ -5,9 +5,9 @@ require 'rails_helper'
 RSpec.describe Language do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marc_json_struct: marc, format_hsim: formats) }
-
   subject(:language) { described_class.new(document) }
+
+  let(:document) { SolrDocument.new(marc_json_struct: marc, format_hsim: formats) }
 
   describe 'label' do
     context 'when the format includes "Music score"' do

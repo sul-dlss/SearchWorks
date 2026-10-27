@@ -3,12 +3,12 @@
 require 'rails_helper'
 
 RSpec.describe Holdings do
-  let(:holdings) {
+  let(:holdings) do
     Holdings.new(
       SolrDocument.new(item_display_struct: [{ barcode: '123', library: 'abc' }]).items
     )
-  }
-  let(:complex_holdings) {
+  end
+  let(:complex_holdings) do
     Holdings.new(
       SolrDocument.new(
         item_display_struct: [
@@ -19,8 +19,8 @@ RSpec.describe Holdings do
         ]
       ).items
     )
-  }
-  let(:sortable_holdings) {
+  end
+  let(:sortable_holdings) do
     Holdings.new(
       SolrDocument.new(
         item_display_struct: [
@@ -31,7 +31,7 @@ RSpec.describe Holdings do
         ]
       ).items
     )
-  }
+  end
   let(:no_holdings) { Holdings.new }
 
   describe "#present?" do
@@ -50,16 +50,18 @@ RSpec.describe Holdings do
         expect(item).to be_a Holdings::Item
       end
     end
+
     it "returns an empty array if there are no holdings" do
       expect(no_holdings.items).to eq []
     end
+
     it "is sorted by the shelfkey" do
-      expect(sortable_holdings.items.map(&:full_shelfkey)).to eq ['111', '999']
+      expect(sortable_holdings.items.map(&:full_shelfkey)).to eq %w[111 999]
     end
   end
 
   describe "#libraries" do
-    let(:libraries) {
+    let(:libraries) do
       Holdings.new(
         SolrDocument.new(
           item_display_struct: [
@@ -69,8 +71,8 @@ RSpec.describe Holdings do
           ]
         ).items
       )
-    }
-    let(:sortable_libraries) {
+    end
+    let(:sortable_libraries) do
       Holdings.new(
         SolrDocument.new(
           item_display_struct: [
@@ -80,17 +82,19 @@ RSpec.describe Holdings do
           ]
         ).items
       )
-    }
+    end
 
     it "groups by library" do
       expect(libraries.libraries.length).to eq 2
     end
+
     it "sorts by library code when there is no translation" do
-      expect(libraries.libraries.map(&:code)).to eq ['library', 'library2']
+      expect(libraries.libraries.map(&:code)).to eq %w[library library2]
     end
+
     it "sorts Green first then the rest alpha" do
       expect(sortable_libraries.libraries.length).to eq 3
-      expect(sortable_libraries.libraries.map(&:code)).to eq ['GREEN', 'MARINE-BIO', 'SAL3']
+      expect(sortable_libraries.libraries.map(&:code)).to eq %w[GREEN MARINE-BIO SAL3]
     end
   end
 
@@ -100,16 +104,18 @@ RSpec.describe Holdings do
     it "returns a single Holdings::Item" do
       expect(found).to be_a Holdings::Item
     end
+
     it "is the correct item" do
       expect(found.barcode).to eq 'barcode2'
     end
+
     it "returns nil if the barcode is not found" do
       expect(complex_holdings.find_by_barcode('not-a-barcode')).to be_nil
     end
   end
 
   describe "mhld" do
-    let(:holdings_doc) {
+    let(:holdings_doc) do
       SolrDocument.new(
         item_display_struct: [
           { barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'STACKS', temporary_location_code: 'current-location', type: 'type',
@@ -117,12 +123,12 @@ RSpec.describe Holdings do
         ],
         mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
       )
-    }
-    let(:mhld_only_doc) {
+    end
+    let(:mhld_only_doc) do
       SolrDocument.new(
         mhld_display: ['GREEN -|- STACKS -|- public note -|- library has -|- latest received']
       )
-    }
+    end
 
     it "matches up mhlds in locations with existing call numbers" do
       holdings = holdings_doc.holdings
@@ -136,6 +142,7 @@ RSpec.describe Holdings do
       expect(location.mhld.length).to eq 1
       expect(location.mhld.first).to be_a Holdings::MHLD
     end
+
     it "includes mhlds that don't belong to an existing library or location" do
       holdings = mhld_only_doc.holdings
       expect(holdings.libraries.length).to eq 1

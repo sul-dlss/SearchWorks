@@ -6,6 +6,8 @@ RSpec.describe Holdings::Status do
   let(:status) { Holdings::Status.new(OpenStruct.new) }
 
   describe '#availability_class' do
+    subject(:availability) { described_class.new(item).availability_class }
+
     let(:item) do
       instance_double(Holdings::Item, folio_item?: true, folio_status: nil, effective_location:)
     end
@@ -13,8 +15,6 @@ RSpec.describe Holdings::Status do
       instance_double(Folio::Location, details: {})
     end
     let(:location_provided_availability) { nil }
-
-    subject(:availability) { described_class.new(item).availability_class }
 
     context 'when the item has a FOLIO status that makes it in-process' do
       let(:item) do

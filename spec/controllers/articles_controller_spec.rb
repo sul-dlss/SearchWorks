@@ -177,12 +177,14 @@ RSpec.describe ArticlesController do
       ).and_return(eds_session)
       controller.manage_eds_session_token { true }
     end
+
     it 'reuses the session if in the user session data' do
       user_session['eds_guest'] = false
       user_session[Settings.EDS_SESSION_TOKEN_KEY] = 'def'
       expect(Eds::Session).not_to receive(:new)
       controller.manage_eds_session_token { true }
     end
+
     it 'requires the session token in the user session data' do
       user_session['eds_guest'] = false
       expect(Eds::Session).to receive(:new).and_return(eds_session)

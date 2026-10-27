@@ -24,7 +24,7 @@ if Settings.THROTTLE_TRAFFIC
       {}
     end
 
-    req.ip if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+    req.ip if route[:controller] == 'catalog' && %w[index facet].include?(route[:action])
   end
 
   Rack::Attack.throttle('req/search/cidr/24', limit: 30, period: 1.minute) do |req|
@@ -36,7 +36,7 @@ if Settings.THROTTLE_TRAFFIC
 
     next if req.ip.start_with?('171.', '172.', '10.')
 
-    req.ip.slice(/^\d+\.\d+\.\d+\./) if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+    req.ip.slice(/^\d+\.\d+\.\d+\./) if route[:controller] == 'catalog' && %w[index facet].include?(route[:action])
   end
 
   Rack::Attack.throttle('req/search/cidr/16', limit: 60, period: 1.minute) do |req|
@@ -48,7 +48,7 @@ if Settings.THROTTLE_TRAFFIC
 
     next if req.ip.start_with?('171.', '172.', '10.')
 
-    req.ip.slice(/^\d+\.\d+\./) if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+    req.ip.slice(/^\d+\.\d+\./) if route[:controller] == 'catalog' && %w[index facet].include?(route[:action])
   end
 
   Rack::Attack.throttle('req/search/cidr/16/15m', limit: 150, period: 15.minutes) do |req|
@@ -60,7 +60,7 @@ if Settings.THROTTLE_TRAFFIC
 
     next if req.ip.start_with?('171.', '172.', '10.')
 
-    req.ip.slice(/^\d+\.\d+\./) if route[:controller] == 'catalog' && ['index', 'facet'].include?(route[:action])
+    req.ip.slice(/^\d+\.\d+\./) if route[:controller] == 'catalog' && %w[index facet].include?(route[:action])
   end
 
   Rack::Attack.throttle('req/view/ip', limit: 500, period: 5.minutes) do |req|

@@ -21,9 +21,11 @@ RSpec.describe CallnumberSearch do
       expect(params[:q]).to include('abc 123')
       expect(params[:q]).not_to include "ABC"
     end
+
     it "quotes the q parameter" do
       expect(params[:q]).to eq '"abc 123"'
     end
+
     describe "when already quoted" do
       let(:params) { { search_field: 'call_number', q: '"ABC 123"' } }
 

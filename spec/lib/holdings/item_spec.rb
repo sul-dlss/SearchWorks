@@ -26,6 +26,7 @@ RSpec.describe Holdings::Item do
       expect(item).to respond_to(method)
     end
   end
+
   describe '#suppressed?' do
     let(:no_item_display) { Holdings::Item.new({}) }
 
@@ -55,13 +56,13 @@ RSpec.describe Holdings::Item do
   end
 
   describe '#callnumber' do
-    let(:item_without_callnumber) {
+    let(:item_without_callnumber) do
       Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location', type: 'type',
                            lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' })
-    }
-    let(:lane_online_item) {
+    end
+    let(:lane_online_item) do
       Holdings::Item.new({ library: 'LANE', effective_permanent_location_code: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' })
-    }
+    end
 
     it "returns '(no call number) if the callnumber is blank" do
       expect(item_without_callnumber.callnumber).to eq '(no call number)'
@@ -108,7 +109,9 @@ RSpec.describe Holdings::Item do
   end
 
   context 'with data from FOLIO' do
-    let(:folio_item) {
+    subject(:item) { described_class.new({ barcode: '36105232609540', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS' }, document:) }
+
+    let(:folio_item) do
       Folio::Item.from_dynamic({
                                  'id' => '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
                                  'status' => 'Available',
@@ -122,8 +125,8 @@ RSpec.describe Holdings::Item do
                                                    'callNumber' => "PN1995.9.M6 A76 2024" },
                                  'location' => { 'effectiveLocation' => folio_location }
                                })
-    }
-    let(:folio_location) {
+    end
+    let(:folio_location) do
       {
         'id' => '4573e824-9273-4f13-972f-cff7bf504217',
         'code' => 'GRE-STACKS',
@@ -144,11 +147,9 @@ RSpec.describe Holdings::Item do
           'name' => 'Cecil H. Green'
         }
       }
-    }
+    end
 
     let(:document) { SolrDocument.new }
-
-    subject(:item) { described_class.new({ barcode: '36105232609540', library: 'GREEN', effective_permanent_location_code: 'GRE-STACKS' }, document:) }
 
     before do
       allow(document).to receive(:folio_items).and_return([folio_item])

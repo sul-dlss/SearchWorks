@@ -3,18 +3,17 @@
 require 'rails_helper'
 
 RSpec.describe Eds::SearchService do
+  subject(:instance) { described_class.new(blacklight_config, user_params) }
+
+  let(:user_params) { {} }
   let(:document_model) { double(unique_key: :id) }
-  let(:blacklight_config) {
+  let(:blacklight_config) do
     Blacklight::Configuration.new(
       repository_class: Eds::Repository,
       search_builder_class: Blacklight::SearchBuilder,
       document_model:
     )
-  }
-
-  subject(:instance) { described_class.new(blacklight_config, user_params) }
-
-  subject(:user_params) { {} }
+  end
 
   context 'with a single document' do
     before do
@@ -59,7 +58,7 @@ RSpec.describe Eds::SearchService do
     end
   end
 
-  context '#PagingWindow and #previous_and_next_document_params' do
+  describe '#PagingWindow and #previous_and_next_document_params' do
     let(:hit) { 0 } # index is 0-based
     let(:max) { 999_999_999 }
     let(:window) { Eds::SearchService::PagingWindow.new(hit, max) }
@@ -197,7 +196,7 @@ RSpec.describe Eds::SearchService do
     end
   end
 
-  context '#previous_and_next_documents_for_search' do
+  describe '#previous_and_next_documents_for_search' do
     let(:hit) { 1 }
 
     before do

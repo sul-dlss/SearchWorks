@@ -18,7 +18,7 @@ if Rails.env.production?
   # Use Warden callbacks to store and clear user data from Shibboleth since there
   # aren't any appropriate callbacks in Devise
   # https://github.com/heartcombo/devise/wiki/Callbacks
-  Warden::Manager.after_authentication do |user, auth, opts|
+  Warden::Manager.after_authentication do |user, auth, _opts|
     # We rely on both suAffiliation and unscoped-affiliation to see if people can get permissions
     # to articles. For example, a recently graduated student will not be allowed access with
     # only suAffiliation information, but 'member' under 'unscoped-affiliation'
@@ -40,13 +40,13 @@ if Rails.env.production?
   # re-hydrate the user's affiliations from the session data for each request.
   # going forward, this data is stored in the warden session for the user, but we
   # also support the previous session store for now...
-  Warden::Manager.after_fetch do |user, auth, opts|
+  Warden::Manager.after_fetch do |user, auth, _opts|
     user.affiliations = auth.session(:user)['suAffiliation'] || auth.env['rack.session']['suAffiliation']
     user.person_affiliations = auth.session(:user)['unscoped-affiliation'] || auth.env['rack.session']['unscoped-affiliation']
     user.entitlements = auth.session(:user)['eduPersonEntitlement'] || auth.env['rack.session']['eduPersonEntitlement']
   end
 
-  Warden::Manager.before_logout do |user, auth, opts|
+  Warden::Manager.before_logout do |_user, auth, _opts|
     auth.session(:user)['suAffiliation'] = nil
     auth.session(:user)['unscoped-affiliation'] = nil
     auth.session(:user)['eduPersonEntitlement'] = nil

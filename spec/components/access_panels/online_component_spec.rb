@@ -134,6 +134,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       expect(page).to have_css("h2", text: "Online")
       expect(page).to have_css("ul.links li a", text: "Link text")
     end
+
     it 'adds the stanford-only icon to Stanford only resources' do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', additional_text: '4 at one time', fulltext: true, stanford_only: true }])
       render_inline(described_class.new(document:))
@@ -141,6 +142,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
       expect(page).to have_css("ul.links li .stanford-only")
       expect(page).to have_css("div.additional-link-text", text: "4 at one time")
     end
+
     it 'renders a different heading for SDR items' do
       document = SolrDocument.new(marc_links_struct: [{ href: '...', link_text: 'Link text', fulltext: true }], druid: 'ng161qh7958')
       render_inline(described_class.new(document:))
@@ -157,6 +159,7 @@ RSpec.describe AccessPanels::OnlineComponent, type: :component do
         render_inline(described_class.new(document:))
         expect(page).to have_css("h2", text: "Search this database")
       end
+
       it "renders a special card footer" do
         render_inline(described_class.new(document:))
         expect(page).to have_link("Report a connection problem")

@@ -10,7 +10,7 @@ RSpec.feature "File Collection" do
     fill_in "q", with: "31"
     click_button 'search'
 
-    expect(page).to have_css("h3 a", text: "File Collection1") #title
+    expect(page).to have_css("h3 a", text: "File Collection1") # title
     expect(page).to have_css("div[data-controller='long-text']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
   end
 

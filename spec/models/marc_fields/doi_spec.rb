@@ -5,9 +5,9 @@ require 'rails_helper'
 RSpec.describe 'DOIs' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marc_json_struct: doi_fixture) }
-
   subject(:instance) { document.marc_field(:doi) }
+
+  let(:document) { SolrDocument.new(marc_json_struct: doi_fixture) }
 
   it '#label' do
     expect(instance.label).to eq 'DOI'

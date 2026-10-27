@@ -3,7 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe Folio::Item do
-  let(:book_json) {
+  subject(:instance) { described_class.from_dynamic(json) }
+
+  let(:book_json) do
     {
       'id' => '64d4220b-ebae-5fb0-971c-0f98f6d9cc93',
       'status' => 'Available',
@@ -63,14 +65,12 @@ RSpec.describe Folio::Item do
         "callNumber" => "PN1995.9.M6 A76 2024"
       }
     }
-  }
-
-  subject(:instance) { described_class.from_dynamic(json) }
+  end
 
   describe '#loan_type' do
-    let(:json) { book_json }
-
     subject { instance.loan_type }
+
+    let(:json) { book_json }
 
     context 'when there is a temporary loan type' do
       before do

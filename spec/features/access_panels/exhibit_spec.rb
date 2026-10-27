@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Exhibit Access Panel', :js do
   let(:content) { [] }
+
   before do
     expect(Settings.EXHIBITS_ACCESS_PANEL).to receive(:exhibits_host).and_return(
       "http://127.0.0.1:#{Capybara.current_session.server.port}"
