@@ -82,10 +82,6 @@ class Holdings
       item_display[:note]&.gsub('.PUBLIC.', '')&.strip
     end
 
-    def callnumber_type
-      item_display[:scheme]
-    end
-
     def course_id
       item_display[:course_id]
     end
@@ -134,11 +130,6 @@ class Holdings
 
     def request_link
       @request_link ||= ItemRequestLinkComponent.new(item: self)
-    end
-
-    # Check to see if the item is ever eligible for hold/recall. Used to determine whether a request link could be added by live lookup.
-    def requestable?
-      @requestable ||= ItemRequestLinkPolicy.new(item: self).item_allows_hold_recall?
     end
 
     # LiveLookup::Folio uses the item UUID

@@ -7,7 +7,7 @@ RSpec.describe Holdings::Item do
     {
       barcode: '123', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location_code', type: 'type',
       truncated_callnumber: 'truncated_callnumber', callnumber: 'callnumber',
-      full_shelfkey: 'full_shelfkey', public_note: 'public_note', scheme: 'callnumber_type',
+      full_shelfkey: 'full_shelfkey', public_note: 'public_note',
       course_id: 'course_id', reserve_desk: 'reserve_desk', loan_period: 'loan_period'
     }
   end
@@ -16,7 +16,7 @@ RSpec.describe Holdings::Item do
     [
       :barcode, :library, :effective_permanent_location_code, :temporary_location, :type,
       :truncated_callnumber, :callnumber, :full_shelfkey,
-      :public_note, :callnumber_type,
+      :public_note,
       :course_id, :reserve_desk, :loan_period
     ]
   end
