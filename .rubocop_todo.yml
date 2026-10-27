@@ -197,7 +197,6 @@ RSpec/ContextWording:
     - "spec/views/catalog/thumbnails/_collection_thumbnail.html.erb_spec.rb"
     - "spec/views/catalog/thumbnails/_item_thumbnail.html.erb_spec.rb"
     - "spec/views/marc_fields/_linked_author.html.erb_spec.rb"
-    - "spec/views/marc_fields/_linked_author_index.html.erb_spec.rb"
     - "spec/views/marc_fields/_linked_related_works.html.erb_spec.rb"
 
 # Offense count: 66
