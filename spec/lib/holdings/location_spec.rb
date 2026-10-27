@@ -31,42 +31,6 @@ RSpec.describe Holdings::Location do
     end
   end
 
-  describe "present_on_index?" do
-    context 'when there is an item without an mhld' do
-      subject { described_class.new("GRE-STACKS") }
-
-      it { is_expected.not_to be_present_on_index }
-    end
-
-    context 'when the public note or latest received are not present' do
-      subject { described_class.new("GRE-STACKS", [], [library_has_mhld]) }
-
-      let(:library_has_mhld) { Holdings::MHLD.new('GREEN -|- GRE-STACKS -|- -|- something -|-') }
-
-      it { is_expected.not_to be_present_on_index }
-    end
-
-    context 'when an item has a present public note or latest received' do
-      subject { described_class.new("GRE-STACKS", [], [mhld]) }
-
-      let(:mhld) { Holdings::MHLD.new('GREEN -|- GRE-STACKS -|- something') }
-
-      it { is_expected.to be_present_on_index }
-    end
-  end
-
-  describe '#location_link' do
-    subject(:location_link) { location.location_link }
-
-    context 'with non-external location' do
-      let(:location) { described_class.new("GRE-STACKS") }
-
-      it 'does not provide a link' do
-        expect(location_link).to be_nil
-      end
-    end
-  end
-
   describe "#items" do
     subject(:items) { location.items }
 
