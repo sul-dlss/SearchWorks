@@ -507,7 +507,6 @@ RSpec/ContextWording:
     - "spec/views/catalog/thumbnails/_collection_thumbnail.html.erb_spec.rb"
     - "spec/views/catalog/thumbnails/_item_thumbnail.html.erb_spec.rb"
     - "spec/views/marc_fields/_linked_author.html.erb_spec.rb"
-    - "spec/views/marc_fields/_linked_author_index.html.erb_spec.rb"
     - "spec/views/marc_fields/_linked_related_works.html.erb_spec.rb"
 
 # Offense count: 66
@@ -1121,7 +1120,6 @@ Style/BlockDelimiters:
     - "spec/services/folio/circulation_rules/policy_service_spec.rb"
     - "spec/views/collection_members/_file_collection_members.html.erb_spec.rb"
     - "spec/views/marc_fields/_linked_author.html.erb_spec.rb"
-    - "spec/views/marc_fields/_linked_author_index.html.erb_spec.rb"
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -1475,7 +1473,6 @@ Style/RegexpLiteral:
     - "spec/lib/holdings/mhld_spec.rb"
     - "spec/mailers/search_works_record_mailer_spec.rb"
     - "spec/models/json_results_document_presenter_spec.rb"
-    - "spec/views/marc_fields/_linked_author_index.html.erb_spec.rb"
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
