@@ -75,7 +75,7 @@ group :test do
   gem 'simplecov', '~> 0.14', require: false
 end
 
-gem 'newrelic_rpm', '~> 9.0' # https://github.com/sul-dlss/SearchWorks/issues/6424
+gem 'newrelic_rpm', '~> 10.0'
 
 gem 'blacklight', '~> 9.0'
 gem "blacklight-marc", "~> 9.0"
