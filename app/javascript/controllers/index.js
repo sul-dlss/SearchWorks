@@ -109,9 +109,6 @@ application.register("list-toggle", ListToggleController)
 import LocationHoursController from "./location_hours_controller"
 application.register("location-hours", LocationHoursController)
 
-import LongTableController from "./long_table_controller"
-application.register("long-table", LongTableController)
-
 import LongTextController from "./long_text_controller"
 application.register("long-text", LongTextController)
 
