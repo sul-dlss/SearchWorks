@@ -14,6 +14,7 @@ RSpec.feature "Search Results Page" do
   scenario "should have correct page title" do
     expect(page).to have_title("Amet ad & adipisicing ex mollit pariatur minim dolore. in SearchWorks catalog")
   end
+
   scenario "should have the vernacular title" do
     expect(page).to have_css('.vernacular-title', text: 'Currently, to obtain more information from the weakness of the resultant pain.')
   end

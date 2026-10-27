@@ -37,7 +37,7 @@ RSpec.describe EdsSubjects do
     )
   end
 
-  context '#eds_subjects' do
+  describe '#eds_subjects' do
     it 'returns an array of Subjects parsed from the XML' do
       expect(document.eds_subjects).to be_present
       expect(document.eds_subjects.length).to eq 4
@@ -73,7 +73,7 @@ RSpec.describe EdsSubjects do
     end
   end
 
-  context '#eds_subjects_person' do
+  describe '#eds_subjects_person' do
     it 'returns an array of Subjects parsed from the vanilla array' do
       expect(document.eds_subjects_person).to be_present
       expect(document.eds_subjects_person.length).to eq 2
@@ -89,7 +89,7 @@ RSpec.describe EdsSubjects do
     end
   end
 
-  context '#eds_subjects_geographic' do
+  describe '#eds_subjects_geographic' do
     it 'returns an array of Subjects parsed from the vanilla array' do
       expect(document.eds_subjects_geographic).to be_present
       expect(document.eds_subjects_geographic.length).to eq 2
@@ -105,7 +105,7 @@ RSpec.describe EdsSubjects do
     end
   end
 
-  context '#eds_author_supplied_keywords' do
+  describe '#eds_author_supplied_keywords' do
     it 'returns an array of Subjects parsed from the vanilla array' do
       expect(document.eds_author_supplied_keywords).to be_present
       expect(document.eds_author_supplied_keywords.length).to eq 2

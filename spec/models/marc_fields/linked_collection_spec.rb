@@ -5,6 +5,8 @@ require 'rails_helper'
 RSpec.describe LinkedCollection do
   include MarcMetadataFixtures
 
+  subject { described_class.new(document) }
+
   let(:document) do
     SolrDocument.new(
       { collection_struct: [{ 'title' => 'Shao shu min zu she hui li shi diao cha',
@@ -12,8 +14,6 @@ RSpec.describe LinkedCollection do
                               'source' => 'sirsi' }] }
     )
   end
-
-  subject { described_class.new(document) }
 
   describe '#label' do
     it 'is Collection' do

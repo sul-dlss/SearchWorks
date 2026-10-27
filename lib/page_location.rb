@@ -10,20 +10,19 @@ class PageLocation
                   @search_state.controller.controller_name == 'catalog' &&
                   @search_state.controller.action_name == 'index'
 
-    @access_point ||= case
-                      when format_includes_databases?
+    @access_point ||= if format_includes_databases?
                         :databases
-                      when course_reserve_parameters?
+                      elsif course_reserve_parameters?
                         :course_reserve
-                      when digital_collections_parameters?
+                      elsif digital_collections_parameters?
                         :digital_collections
-                      when sdr_parameters?
+                      elsif sdr_parameters?
                         :sdr
-                      when dissertation_theses_parameters?
+                      elsif dissertation_theses_parameters?
                         :dissertation_theses
-                      when government_documents_parameters?
+                      elsif government_documents_parameters?
                         :government_documents
-                      when iiif_resources_parameters?
+                      elsif iiif_resources_parameters?
                         :iiif_resources
                       else
                         ''

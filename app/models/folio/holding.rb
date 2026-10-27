@@ -22,9 +22,7 @@ module Folio
       new(id: json.fetch('id'),
           effective_location: Folio::Location.from_dynamic(json.fetch('location').fetch('effectiveLocation')),
           holdings_type: json.dig('holdingsType', 'name'),
-          bound_with_parent: if json.key?('boundWith') && json['boundWith'].is_a?(Hash)
-                               BoundWithParent.new(**json['boundWith'].slice('item', 'holding', 'instance'))
-                             end)
+          bound_with_parent: (BoundWithParent.new(**json['boundWith'].slice('item', 'holding', 'instance')) if json.key?('boundWith') && json['boundWith'].is_a?(Hash)))
     end
   end
 end

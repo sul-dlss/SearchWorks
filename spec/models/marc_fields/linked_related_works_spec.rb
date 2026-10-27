@@ -5,15 +5,15 @@ require 'rails_helper'
 RSpec.describe LinkedRelatedWorks do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marc_json_struct: linked_related_works_fixture) }
-
   subject(:instance) { described_class.new(document) }
+
+  let(:document) { SolrDocument.new(marc_json_struct: linked_related_works_fixture) }
 
   it '#label' do
     expect(instance.label).to eq 'Related Work'
   end
 
-  context '#values' do
+  describe '#values' do
     let(:data) { instance.values.first }
 
     it '#pre_text' do

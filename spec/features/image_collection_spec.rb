@@ -13,7 +13,7 @@ RSpec.feature "Image Collection", :js do
     fill_in "q", with: "29"
     page.find('button#search').click
 
-    expect(page).to have_css("h3 a", text: "Image Collection1") #title
+    expect(page).to have_css("h3 a", text: "Image Collection1") # title
     expect(page).to have_css("div[data-controller='long-text']", text: /Nunc venenatis et odio ac elementum/) # truncated summary
 
     within 'article[data-document-id="mf774fs2413"]' do

@@ -3,7 +3,7 @@
 require "rails_helper"
 
 RSpec.describe Record::BoundWithChildrenComponent, type: :component do
-  let(:bound_with_children) {
+  let(:bound_with_children) do
     [
       instance_double(Holdings::Item, id: '12356-789010-13da',
                                       document: instance_double(SolrDocument, id: 123456),
@@ -12,7 +12,7 @@ RSpec.describe Record::BoundWithChildrenComponent, type: :component do
                                       document: instance_double(SolrDocument, id: 987654),
                                       callnumber: 'call number 9876')
     ]
-  }
+  end
   let(:component) { described_class.new(bound_with_children:, item_id: '12356-789010-13da', instance_id: 123456) }
 
   before do

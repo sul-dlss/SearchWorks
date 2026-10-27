@@ -74,6 +74,7 @@ RSpec.describe 'Sort and per page toolbar', :feature, :js do
         expect(page).to have_css('button', text: 'Sort by relevance')
       end
     end
+
     it 'sort dropdown brings up options' do
       within '#sort-dropdown' do
         page.find('button').click
@@ -82,11 +83,13 @@ RSpec.describe 'Sort and per page toolbar', :feature, :js do
         expect(page).to have_css('a', text: 'date (oldest)', visible: true)
       end
     end
+
     it 'has a per page dropdown' do
       within '#per_page-dropdown' do
         expect(page).to have_css('button', text: 'per page')
       end
     end
+
     it 'per page dropdown brings up options' do
       within '#per_page-dropdown' do
         page.find('button').click

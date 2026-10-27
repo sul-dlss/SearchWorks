@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Folio::Location do
-  let(:json) {
+  let(:json) do
     {
       'id' => '1af90de1-a5c0-4c46-bab1-2847d041f997',
       'code' => 'GRE-BENDER',
@@ -24,7 +24,7 @@ RSpec.describe Folio::Location do
         'name' => 'Cecil H. Green'
       }
     }
-  }
+  end
 
   describe '#new' do
     context 'with no institution' do

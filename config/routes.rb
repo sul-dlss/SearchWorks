@@ -49,7 +49,7 @@ Rails.application.routes.draw do
     end
   end
 
-  constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
+  constraints(id: %r{[^/]+}) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
     resources :article_selections, path: 'selections/articles' do
       concerns :exportable
     end
@@ -131,7 +131,7 @@ Rails.application.routes.draw do
     { controller: '/catalog', action: 'index', f: { courses_folio_id_ssim: [course.id] } }
   end
 
-  constraints(id: /[^\/]+/) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
+  constraints(id: %r{[^/]+}) do # EDS identifier rules (e.g., db__acid) where acid has all sorts of different punctuation
     resources :articles, only: %i[index] do
       concerns :exportable
 
@@ -156,7 +156,7 @@ Rails.application.routes.draw do
     { controller: '/catalog', action: 'index', f: { fund_facet: [bookplate.druid] }, view: 'gallery', sort: 'new-to-libs' }
   end
 
-  %w(404 500).each do |code|
+  %w[404 500].each do |code|
     match code, to: 'errors#show', code: code, via: :all
   end
 

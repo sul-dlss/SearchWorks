@@ -32,10 +32,10 @@ RSpec.describe 'marc_fields/_linked_author_index' do
   end
 
   context 'Corporate Author' do
-    let(:document) {
+    let(:document) do
       SolrDocument.new(author_struct: [{ target => [{ link: 'Ecuador. Procuraduría General del Estado, A Title', search: 'Ecuador. Procuraduría General del Estado,',
                                                       post_text: 'author, issuing body. Art copyist' }] }])
-    }
+    end
     let(:target) { :corporate_author }
 
     it 'does not render the label' do

@@ -3,6 +3,8 @@
 require "rails_helper"
 
 RSpec.describe Librarian::ItemDetails::TableComponent, type: :component do
+  subject(:page) { render_inline(component) }
+
   let(:component) { described_class.new(document:) }
 
   let(:document) { SolrDocument.new(item_display_struct:, holdings_json_struct:) }
@@ -208,8 +210,6 @@ RSpec.describe Librarian::ItemDetails::TableComponent, type: :component do
       }
     ]
   end
-
-  subject(:page) { render_inline(component) }
 
   context "when the record has items in three locations" do
     let(:holdings_json_struct) do

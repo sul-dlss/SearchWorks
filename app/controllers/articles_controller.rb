@@ -89,11 +89,11 @@ class ArticlesController < ApplicationController
     config.index.show_link = 'eds_title'
     config.index.fulltext_links_field = 'eds_fulltext_links'
     config.index.search_field_mapping = { # Article -> Catalog
-      search:   :search,
-      author:   :search_author,
-      title:    :search_title,
-      subject:  :subject_terms,
-      source:   :search_title
+      search: :search,
+      author: :search_author,
+      title: :search_title,
+      subject: :subject_terms,
+      source: :search_title
     }
     config.add_index_field "eds_authors", label: 'Authors', helper_method: :strip_author_relators
     config.add_index_field "eds_composed_title", label: 'Source', helper_method: :italicize_composed_title
@@ -158,40 +158,40 @@ class ArticlesController < ApplicationController
     config.show.route = { controller: 'articles' }
     config.show.sections = {
       'Description' => {
-        eds_authors:              { label: 'Authors', helper_method: :link_authors },
-        eds_author_affiliations:  { label: 'Author Affiliations', helper_method: :clean_affiliations },
-        eds_composed_title:       { label: 'Source', helper_method: :italicize_composed_title },
-        eds_publication_date:     { label: 'Publication Date' },
-        eds_languages:            { label: 'Language', helper_method: :mark_html_safe }
+        eds_authors: { label: 'Authors', helper_method: :link_authors },
+        eds_author_affiliations: { label: 'Author Affiliations', helper_method: :clean_affiliations },
+        eds_composed_title: { label: 'Source', helper_method: :italicize_composed_title },
+        eds_publication_date: { label: 'Publication Date' },
+        eds_languages: { label: 'Language', helper_method: :mark_html_safe }
       },
       'Contents/Summary' => {
         eds_abstract: { label: 'Abstract', helper_method: :mark_html_safe, truncate: true },
-        eds_notes:    { label: 'Notes', truncate: true }
+        eds_notes: { label: 'Notes', truncate: true }
       },
       'Subjects' => {
-        eds_subjects:                 { label: 'Subjects', helper_method: :link_subjects },
-        eds_subjects_geographic:      { label: 'Geography', helper_method: :link_subjects },
-        eds_subjects_person:          { label: 'Person Subjects', helper_method: :link_subjects },
+        eds_subjects: { label: 'Subjects', helper_method: :link_subjects },
+        eds_subjects_geographic: { label: 'Geography', helper_method: :link_subjects },
+        eds_subjects_person: { label: 'Person Subjects', helper_method: :link_subjects },
         eds_author_supplied_keywords: { label: 'Author Supplied Keywords', helper_method: :link_subjects }
       },
       'Details' => {
-        eds_publication_type:     { label: 'Format' },
-        eds_document_doi:         { label: 'DOI', helper_method: :link_to_doi },
-        eds_database_name:        { label: 'Database' },
-        eds_source_title:         { label: 'Journal' },
-        eds_volume:               { label: 'Volume' },
-        eds_series:               { label: 'Series', helper_method: :remove_html_from_document_field },
-        eds_issue:                { label: 'Issue' },
-        eds_page_start:           { label: 'Page Start' },
-        eds_page_count:           { label: 'Page Count' },
-        eds_isbns:                { label: 'ISBN' },
-        eds_issns:                { label: 'ISSN' },
-        eds_publisher:            { label: 'Publisher' },
-        eds_publication_info:     { label: 'Published' },
-        eds_publication_status:   { label: 'Publication Status' },
-        eds_document_oclc:        { label: 'OCLC' },
-        eds_document_type:        { label: 'Document Type', helper_method: :remove_html_from_document_field },
-        eds_other_titles:         { label: 'Other Titles' },
+        eds_publication_type: { label: 'Format' },
+        eds_document_doi: { label: 'DOI', helper_method: :link_to_doi },
+        eds_database_name: { label: 'Database' },
+        eds_source_title: { label: 'Journal' },
+        eds_volume: { label: 'Volume' },
+        eds_series: { label: 'Series', helper_method: :remove_html_from_document_field },
+        eds_issue: { label: 'Issue' },
+        eds_page_start: { label: 'Page Start' },
+        eds_page_count: { label: 'Page Count' },
+        eds_isbns: { label: 'ISBN' },
+        eds_issns: { label: 'ISSN' },
+        eds_publisher: { label: 'Publisher' },
+        eds_publication_info: { label: 'Published' },
+        eds_publication_status: { label: 'Publication Status' },
+        eds_document_oclc: { label: 'OCLC' },
+        eds_document_type: { label: 'Document Type', helper_method: :remove_html_from_document_field },
+        eds_other_titles: { label: 'Other Titles' },
         eds_physical_description: { label: 'Physical Description' }
       }
     }
@@ -238,7 +238,7 @@ class ArticlesController < ApplicationController
     url = extract_fulltext_link(document, params[:type] == 'pdf' ? 'pdflink' : params[:type])
 
     redirect_to url, allow_other_host: true
-  rescue => e
+  rescue StandardError => e
     if current_user
       # We only care if there's a user, otherwise it's definitely a data problem?
       context = current_user.to_honeybadger_context.merge(eds_guest: session['eds_guest'], eds_session_token: session[Settings.EDS_SESSION_TOKEN_KEY])
@@ -268,8 +268,8 @@ class ArticlesController < ApplicationController
 
   def search_service
     eds_params = {
-      guest:          session['eds_guest'],
-      session_token:  session[Settings.EDS_SESSION_TOKEN_KEY]
+      guest: session['eds_guest'],
+      session_token: session[Settings.EDS_SESSION_TOKEN_KEY]
     }
     @search_service ||= Eds::SearchService.new(blacklight_config, params, eds_params)
   end
@@ -286,16 +286,16 @@ class ArticlesController < ApplicationController
       caller: 'new-session'
     ).session_token
 
-    if current_user
-      Honeybadger.add_breadcrumb('Established EDS session', metadata: {
-        eds_guest: session['eds_guest'],
-        eds_session_token: session[Settings.EDS_SESSION_TOKEN_KEY],
-        request_ip: request.remote_ip,
-        affiliations: current_user.affiliations,
-        person_affiliations: current_user.person_affiliations,
-        entitlements: current_user.entitlements
-      })
-    end
+    return unless current_user
+
+    Honeybadger.add_breadcrumb('Established EDS session', metadata: {
+                                 eds_guest: session['eds_guest'],
+                                 eds_session_token: session[Settings.EDS_SESSION_TOKEN_KEY],
+                                 request_ip: request.remote_ip,
+                                 affiliations: current_user.affiliations,
+                                 person_affiliations: current_user.person_affiliations,
+                                 entitlements: current_user.entitlements
+                               })
   end
 
   def has_search_parameters?

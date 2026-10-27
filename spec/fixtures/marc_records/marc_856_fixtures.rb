@@ -2,7 +2,7 @@
 
 module Marc856Fixtures
   def many_managed_purl_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -53,11 +53,11 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def simple_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -86,11 +86,11 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def labelless_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -107,11 +107,11 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def casalini_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -143,11 +143,11 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def stanford_only_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -221,11 +221,11 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def fulltext_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -273,11 +273,11 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def supplemental_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -388,11 +388,11 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def finding_aid_856
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -435,6 +435,6 @@ module Marc856Fixtures
           }
         ]
       }
-    json
+    JSON
   end
 end

@@ -126,7 +126,7 @@ module StubArticleService # rubocop:disable Metrics/ModuleLength
     }
   end
 
-  def stub_article_service(type: :multiple, docs:)
+  def stub_article_service(docs:, type: :multiple)
     raise 'Article search service stubbed without any documents.' unless docs
 
     allow_any_instance_of(Eds::Session).to receive_messages(
@@ -162,6 +162,7 @@ module StubArticleService # rubocop:disable Metrics/ModuleLength
 
   class StubArticleResponse < SimpleDelegator
     attr_reader :documents
+
     delegate :empty?, to: :documents
 
     def initialize(documents)

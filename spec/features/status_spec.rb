@@ -24,11 +24,13 @@ RSpec.feature 'application and dependency monitoring' do
     expect(page.status_code).to eq 200
     expect(page).to have_text('Application is running')
   end
+
   it 'Solr at /status/sw_solr runs' do
     visit '/status/sw_solr'
     expect(page.status_code).to eq 200
     expect(page).to have_text('sw_solr')
   end
+
   it '/status/all checks if required dependencies are ok and also shows non-crucial dependencies' do
     visit '/status/all'
     expect(page).to have_text('sw_solr') # required check

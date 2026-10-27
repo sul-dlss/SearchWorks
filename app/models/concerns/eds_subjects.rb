@@ -4,6 +4,7 @@ module EdsSubjects
   # EDS-centric subject with linking capability
   class Subject
     attr_reader :terms
+
     delegate :present?, to: :terms
 
     class Term < Struct.new(:field_code, :search_term, :label)
@@ -57,7 +58,7 @@ module EdsSubjects
     end
 
     def self.from_xml(xml)
-      xml.split(/<br[\s\/]*>/).collect do |xml_fragment|
+      xml.split(%r{<br[\s/]*>}).collect do |xml_fragment|
         doc = Nokogiri::XML("<links>#{xml_fragment}</links>")
         from_search_link_nodes(doc.xpath('//searchLink').to_a)
       end.flatten

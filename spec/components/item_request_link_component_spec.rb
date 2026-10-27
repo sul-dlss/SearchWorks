@@ -5,6 +5,8 @@ require 'rails_helper'
 RSpec.describe ItemRequestLinkComponent, type: :component do
   include MarcMetadataFixtures
 
+  subject(:page) { render_inline(component) }
+
   let(:component) { described_class.new(item:) }
 
   let(:document) { SolrDocument.new(id: '12345') }
@@ -16,8 +18,6 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
                                     temporary_location: instance_double(Holdings::Location, code: nil), circulates?: true)
   end
 
-  subject(:page) { render_inline(component) }
-
   context 'with FOLIO items' do
     let(:item) do
       instance_double(Holdings::Item, document:, barcode: nil, on_order?: false, library: nil, effective_permanent_location_code: nil, temporary_location:, folio_item?: true,
@@ -26,7 +26,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'checked out item from a location that allows holds' do
       let(:folio_status) { 'Checked out' }
-      let(:allowed_request_types) { ['Hold', 'Recall'] }
+      let(:allowed_request_types) { %w[Hold Recall] }
 
       it { is_expected.to have_link 'Request' }
     end
@@ -40,7 +40,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
 
     context 'available' do
       let(:folio_status) { 'Available' }
-      let(:allowed_request_types) { ['Hold', 'Recall'] }
+      let(:allowed_request_types) { %w[Hold Recall] }
 
       it { is_expected.to have_no_link 'Request' }
     end

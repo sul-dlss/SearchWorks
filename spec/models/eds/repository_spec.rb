@@ -3,15 +3,15 @@
 require 'rails_helper'
 
 RSpec.describe Eds::Repository do
-  let(:blacklight_config) {
+  subject(:instance) { described_class.new(blacklight_config) }
+
+  let(:blacklight_config) do
     Blacklight::Configuration.new(
       response_model: Eds::Response,
       document_model: EdsDocument,
       default_per_page: 10
     )
-  }
-
-  subject(:instance) { described_class.new(blacklight_config) }
+  end
 
   it 'has the right methods' do
     expect(instance.respond_to?(:search)).to be_truthy

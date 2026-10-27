@@ -34,7 +34,7 @@ RSpec.describe Holdings::MHLD do
   end
 
   it "replaces ';' with '; '" do
-    expect(Holdings::MHLD.new(long_mhld).library_has).to match(/v.1:no.3\(1965:Sept.20\)-<wbr\/>v.1:no.4\(1965:Oct.18\); v.1:no.6\(1965:Nov.17\)/)
+    expect(Holdings::MHLD.new(long_mhld).library_has).to match(%r{v.1:no.3\(1965:Sept.20\)-<wbr/>v.1:no.4\(1965:Oct.18\); v.1:no.6\(1965:Nov.17\)})
   end
 
   it 'appends <wbr/> to hyphens' do

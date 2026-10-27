@@ -27,6 +27,7 @@ RSpec.describe FeedbackMailerParser do
     it 'casts to a String' do
       expect(described_class.new({}, '').message).to be_an String
     end
+
     it 'accesses :message' do
       expect(described_class.new({ message: 'yo' }, '').message).to eq 'yo'
     end

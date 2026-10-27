@@ -4,12 +4,15 @@ require 'rails_helper'
 
 RSpec.describe FacetOptionsPresenter do
   # let(:view_context) { double('ViewContext') }
+  subject(:presenter) { described_class.new(params:, context: view_context) }
+
   let(:view_context) do
     Class.new do
       include Blacklight::FacetsHelperBehavior
       include Rails.application.routes.url_helpers
 
       attr_reader :params
+
       def initialize(params)
         @params = params
       end
@@ -40,8 +43,6 @@ RSpec.describe FacetOptionsPresenter do
       }
     )
   end
-
-  subject(:presenter) { described_class.new(params:, context: view_context) }
 
   describe '#limiters' do
     before do

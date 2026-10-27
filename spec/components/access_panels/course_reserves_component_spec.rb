@@ -31,12 +31,12 @@ RSpec.describe AccessPanels::CourseReservesComponent, type: :component do
       render_inline(component)
     end
 
-    let(:document) {
+    let(:document) do
       SolrDocument.new(id: '123',
-                       courses_folio_id_ssim: ['00254a1b-d0f5-4a9a-88a0-1dd596075d08',
-                                               '0030dde8-b82d-4585-a049-c630a93b94f2',
-                                               '00a45880-2088-4bbd-8b37-929093f1a032'])
-    }
+                       courses_folio_id_ssim: %w[00254a1b-d0f5-4a9a-88a0-1dd596075d08
+                                                 0030dde8-b82d-4585-a049-c630a93b94f2
+                                                 00a45880-2088-4bbd-8b37-929093f1a032])
+    end
 
     it "shows three course reservations" do
       expect(page).to have_css('section.panel-course-reserve')

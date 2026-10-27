@@ -56,7 +56,7 @@ module ArticleHelper
   def italicize_composed_title(options = {})
     composed_title = options[:value].try(:first).to_s # We only compose the first value
     return if composed_title.blank?
-    return composed_title.html_safe if /\<\/\w+\>/.match?(composed_title) # has XML so use as-is
+    return composed_title.html_safe if %r{</\w+>}.match?(composed_title) # has XML so use as-is
 
     match = /^([^[:punct:]]+)(.*)$/.match(composed_title)
     return "<i>#{match[1]}</i>#{match[2]}".html_safe if match # italicize first phrase
