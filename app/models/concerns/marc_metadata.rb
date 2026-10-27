@@ -89,10 +89,6 @@ module MarcMetadata
     @subjects[tags] ||= Subjects.new(self, tags)
   end
 
-  def bound_with_note?
-    bound_with_note_for_access_panel.present?
-  end
-
   def bound_with_note
     return if (note_object = BoundWithNote.new(self)).blank?
 
