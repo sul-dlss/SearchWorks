@@ -68,10 +68,6 @@ class Links
       end
     end
 
-    def ebscohost?
-      link_host&.include?('ebscohost.com')
-    end
-
     def additional_text_html
       content_tag(:span, additional_text, class: 'additional-link-text') if @additional_text
     end
