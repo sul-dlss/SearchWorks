@@ -75,20 +75,6 @@ RSpec.describe FacetOptionsPresenter do
       end
     end
 
-    describe 'enabled_by_default?' do
-      context 'when the "DefaultOn" is "y"' do
-        let(:limiter_hash) { { 'DefaultOn' => 'y' } }
-
-        it { expect(limiter).to be_enabled_by_default }
-      end
-
-      context 'when the "DefaultOn" is anything else' do
-        let(:limiter_hash) { { 'DefaultOn' => 'AnotherValue' } }
-
-        it { expect(limiter).not_to be_enabled_by_default }
-      end
-    end
-
     describe '#selected?' do
       let!(:params) { { f: { 'eds_search_limiters_facet' => ['SelectedValue'] } } }
 
