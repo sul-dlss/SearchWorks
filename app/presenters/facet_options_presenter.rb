@@ -58,10 +58,6 @@ class FacetOptionsPresenter
       (limiter['Order'] || 0).to_i
     end
 
-    def enabled_by_default?
-      limiter['DefaultOn'] == 'y'
-    end
-
     def selected?
       search_state.filter(config).include?(label)
     end
