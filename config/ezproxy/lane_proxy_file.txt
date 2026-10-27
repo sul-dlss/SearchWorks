@@ -595,7 +595,6 @@ emj.bmj.com
 ems.press
 en.ilr-rit.org
 engine.scichina.com
-english.digitaliapublishing.com
 english.rrsurg.com
 enterprise.clcd.com
 environmentalmicrobiome.biomedcentral.com
@@ -1005,7 +1004,6 @@ leginfo.legislature.ca.gov
 leprev.ilsl.br
 lib.ugent.be
 libguides.heinonline.com
-libraries.ase.org.uk
 libraries.casalini.it
 library.cqpress.com
 library.med.utah.edu
@@ -1052,7 +1050,6 @@ mediaenviron.org
 medical.med.tokushima-u.ac.jp
 medicaleconomics.modernmedicine.com
 medicalgasresearch.biomedcentral.com
-medicalimaging.spiedigitallibrary.org
 medicalletter.org
 medimmunol.biomedcentral.com
 medinform.jmir.org
@@ -1702,10 +1699,10 @@ www.archbronconeumol.org
 www.archive.org
 www.archives-pmr.org
 www.archivesofrheumatology.org
-www.arctt.info
 www.arjournals.org
 www.arl.org
 www.ascro.hr
+www.ase.org.uk
 www.ashdin.com
 www.asiaandro.com
 www.asiaintervention.org
@@ -2290,7 +2287,6 @@ www.law.sc.edu
 www.law.seattleu.edu
 www.law.uh.edu
 www.lawandinequality.org
-www.lexisnexis.com
 www.lib.tottori-u.ac.jp
 www.liberdomus.it
 www.libpubmedia.co.uk
@@ -2686,7 +2682,6 @@ www.uptodate.com
 www.urologyannals.com
 www.uspharmacist.com
 www.usrds.org
-www.utpjournals.press
 www.vasculardiseasemanagement.com
 www.veterinaryworld.org
 www.vetsci.org
@@ -2707,7 +2702,6 @@ www.wisconsinmedicalsociety.org
 www.wiv-isp.be
 www.wjgnet.com
 www.wjon.org
-www.wjpch.com
 www.wjps.ir
 www.womeninthenationalarchives.amdigital.co.uk
 www.world-economics-journal.com
