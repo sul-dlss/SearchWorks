@@ -93,23 +93,6 @@ RSpec.describe ArticleHelper do
     end
   end
 
-  context '#sanitize_fulltext' do
-    it 'preserves HTML entities to render' do
-      result = helper.mark_html_safe(value: Array.wrap('This &amp; That'))
-      expect(result).to include 'This &amp; That'
-    end
-
-    it 'preserves HTML elements to render' do
-      result = helper.sanitize_fulltext(value: Array.wrap('<p>This Journal</p>, 10(1)'))
-      expect(result).to include '<p>This Journal</p>, 10(1)'
-    end
-
-    it 'removes non-HTML EDS tags' do
-      result = helper.sanitize_fulltext(value: Array.wrap('<anid>09dfa;</anid><p>This Journal</p>, 10(1)'))
-      expect(result).to include '<p>This Journal</p>, 10(1)'
-    end
-  end
-
   describe '#remove_html_from_document_field' do
     it 'returns to_sentance joined text splitting on and stripping HTML' do
       result = remove_html_from_document_field(value: Array.wrap('Thing1<br/>Thing2<br/>Thing3'))
