@@ -25,8 +25,6 @@ export default [
         Turbo: "readonly",
         document: "readonly",
         window: "readonly",
-        $: "readonly",
-        jQuery: "readonly",
         global: "readonly",
         undefined: "readonly"
       }
