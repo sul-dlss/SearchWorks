@@ -339,6 +339,7 @@ ebooks.spiedigitallibrary.org
 ebooks.thieme.com
 ebooks.worldscinet.com
 ec.asm.org
+ecdb.com
 ecl.dukejournals.org
 ecommercedb.com
 econ.eldoc.ub.rug.nl
