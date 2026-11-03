@@ -77,39 +77,27 @@ class CatalogController < ApplicationController
 
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
-      qt: 'search',
       rows: 20,
       "f.callnum_facet_hsim.facet.limit": "-1",
       "f.stanford_work_facet_hsim.facet.limit": "-1",
       "f.format_hsim.facet.limit": "-1"
     }
 
-    config.fetch_many_document_params = { fl: '*' }
+    config.fetch_many_documents_path = 'document'
 
     config.search_state_fields += [
       :prefix, # used to filter by database title
       :facet_suggest_query, # used to pass facet suggest input to sort URLs
     ]
 
-    # solr path which will be added to solr base url before the other solr params.
-    #config.solr_path = 'select'
+    # Solr paths which will be added to the Solr base URL before the other Solr params.
+    config.solr_path = 'select'
+    config.document_solr_path = 'document'
+    config.json_solr_path = 'select'
 
     # items to show per page, each number in the array represent another option to choose from.
     #config.per_page = [10,20,50,100]
     config.default_per_page = 20
-
-    ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
-    ## parameters included in the Blacklight-jetty document requestHandler.
-    #
-    config.document_solr_path = 'select'
-    config.json_solr_path = 'select'
-    config.default_document_solr_params = {
-     :qt => 'document',
-    #  ## These are hard-coded in the blacklight 'document' requestHandler
-    #  # :fl => '*',
-    #  # :rows => 1
-    #  # :q => '{!raw f=id v=$id}'
-    }
 
     if Settings.DISABLE_SESSIONS
       config.crawler_detector = lambda { |_| true }
@@ -504,8 +492,6 @@ class CatalogController < ApplicationController
 
     # View type group config
     config.view.gallery(document_component: SearchResult::DocumentGalleryComponent)
-
-    config.fetch_many_document_params = { qt: 'document' }
 
     config.add_show_tools_partial :citation, if: false
     config.add_show_tools_partial :email, callback: :send_emails_to_all_recipients, validator: :validate_email_params_and_recaptcha
