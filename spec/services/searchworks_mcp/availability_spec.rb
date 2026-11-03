@@ -110,6 +110,30 @@ RSpec.describe SearchworksMcp::Availability do
       end
     end
 
+    context 'when the real-time lookup returns only holdings with the placeholder Multi status' do
+      let(:holdings) { instance_double(Holdings, items: [], libraries: []) }
+      let(:live_lookup) do
+        instance_double(
+          LiveLookup,
+          records: [{ item_id: 'holding-1', due_date: nil, status: 'Multi', is_available: false, is_requestable_status: false }]
+        )
+      end
+
+      it 'omits the holdings and presents the online sources' do
+        result = described_class.fetch(id: '123')
+
+        expect(result[:structured_content]).to include(
+          live_status: true, availability: [],
+          online_sources: [{ url: 'https://purl.fdlp.gov/GPO/LPS59339', label: 'purl.fdlp.gov', stanford_only: false }]
+        )
+        expect(result[:text]).to include(
+          'has no physical items to check; it is available online',
+          'purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339'
+        )
+        expect(result[:text]).not_to include('Multi')
+      end
+    end
+
     context 'when the real-time lookup fails' do
       before do
         allow(live_lookup).to receive(:records).and_raise(FolioClient::Error, 'timeout')

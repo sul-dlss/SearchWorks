@@ -9,6 +9,7 @@ module SearchworksMcp
     # Records with more items than this (e.g. long-running serials with a bound volume per year) are not
     # looked up item-by-item; the response would be far too large to be useful to a language model.
     MAX_ITEMS = 50
+    HOLDINGS_ONLY_STATUS = "Multi"
     STALE_STATUS_NOTE = "Current status could not be retrieved; statuses shown are from the last catalog update " \
                         "and may be out of date."
 
@@ -69,10 +70,18 @@ module SearchworksMcp
 
     # @return [Array<Hash>, nil] real-time item records from the ILS, or nil if the lookup failed
     def live_lookup_records(document)
-      LiveLookup.new(document[:uuid_ssi]).records
+      LiveLookup.new(document[:uuid_ssi]).records.reject { |record| holdings_only?(record) }
     rescue StandardError => e
       SearchworksMcp.report_exception(e, context: { id: document.id })
       nil
+    end
+
+    # FOLIO's RTAC returns holdings-level entries, not items, for instances with holdings but no items
+    # (commonly e-resources). Without a holdings statement their status is the placeholder "Multi",
+    # which says nothing about availability, so they are omitted in favor of the online sources.
+    # Example: in00001145948, an e-book whose only RTAC entry is a holding (d3f5af6c-...) with status "Multi".
+    def holdings_only?(record)
+      record.with_indifferent_access[:status] == HOLDINGS_ONLY_STATUS
     end
 
     # Falls back to the item status indexed in Solr when the real-time lookup is unavailable,
@@ -141,12 +150,13 @@ module SearchworksMcp
     end
 
     def availability_text(result)
-      lines = if result[:availability].empty?
-                ["No item availability information found for catalog record #{result[:id]}."]
+      lines = if result[:availability].any?
+                availability_lines(result) + (result[:live_status] ? [] : [STALE_STATUS_NOTE])
+              elsif result[:online_sources].any?
+                ["Catalog record #{result[:id]} has no physical items to check; it is available online."]
               else
-                availability_lines(result)
+                ["No item availability information found for catalog record #{result[:id]}."]
               end
-      lines << STALE_STATUS_NOTE unless result[:live_status]
       lines.concat(online_source_lines(result[:online_sources]))
       lines << "URL: #{result[:url]}"
       lines.join("\n")
