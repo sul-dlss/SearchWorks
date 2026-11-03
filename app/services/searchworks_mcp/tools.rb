@@ -96,10 +96,10 @@ module SearchworksMcp
 
     GET_AVAILABILITY = {
       name: "get_availability",
-      description: "Retrieve availability, physical location, call numbers, request URLs, and online source links. Always call " \
-                   "this for a single result or the result selected from a short catalog search result list. If the " \
-                   "response includes request_url, present it as a direct link so the user can request the material. " \
-                   "Include each item's call_number with its location so the user can find it on the shelf.",
+      description: "Retrieve availability, physical location, call numbers, request URLs, and online source links. Always call this for a single " \
+                   "result or the result selected from a short catalog search result list. If the response includes request_url, present it as a " \
+                   "direct link so the user can request the material. Include each item's call_number with its location so the user can find it on " \
+                   "the shelf. For records with many items, such as serials, too_many_items is true and no items are listed; direct the user to url.",
       input_schema: {
         properties: {
           id: {

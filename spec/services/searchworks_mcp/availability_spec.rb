@@ -132,6 +132,33 @@ RSpec.describe SearchworksMcp::Availability do
       end
     end
 
+    context 'when the record has too many items to list' do
+      let(:items) { Array.new(described_class::MAX_ITEMS + 1) { item } }
+      let(:location) do
+        instance_double(Holdings::Location, code: 'SAL3-STACKS', name: 'Stacks', items:)
+      end
+      let(:holdings) { instance_double(Holdings, items:, libraries: [library]) }
+
+      it 'skips the live lookup and directs the user to the record page' do
+        result = described_class.fetch(id: '123')
+        output_schema = MCP::Tool::OutputSchema.new(SearchworksMcp::Schemas.availability)
+
+        expect(LiveLookup).not_to have_received(:new)
+        expect(result[:structured_content]).to include(
+          id: '123', url: 'https://searchworks.stanford.edu/view/123', too_many_items: true,
+          item_count: 51, availability: [],
+          locations: [{ library: 'Stanford Auxiliary Library 3', location: 'Stacks', item_count: 51 }]
+        )
+        expect(result[:text]).to include(
+          'has 51 items', 'Direct the user to https://searchworks.stanford.edu/view/123',
+          '- Stanford Auxiliary Library 3, Stacks (51 items)',
+          'purl.fdlp.gov: https://purl.fdlp.gov/GPO/LPS59339'
+        )
+        expect(result[:text]).not_to include('may be out of date')
+        expect { output_schema.validate_result(result[:structured_content]) }.not_to raise_error
+      end
+    end
+
     it 'returns a model-visible error when the record does not exist' do
       allow(search_service).to receive(:fetch).and_raise(Blacklight::Exceptions::RecordNotFound)
 

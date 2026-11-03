@@ -108,9 +108,28 @@ module SearchworksMcp
           url: { type: "string" },
           live_status: {
             type: "boolean",
-            description: "False when current status could not be retrieved and statuses are from the last catalog update"
+            description: "False when current status was not retrieved; any statuses are from the last catalog update"
           },
+          too_many_items: {
+            type: "boolean",
+            description: "True when the record has too many items to list (e.g. a serial); availability is then " \
+                         "empty and the user should be directed to url"
+          },
+          item_count: { type: "integer" },
           availability: { type: "array", items: AVAILABILITY_ITEM },
+          locations: {
+            type: "array",
+            description: "Item counts per location, returned only when too_many_items is true",
+            items: {
+              type: "object",
+              properties: {
+                library: { type: "string" },
+                location: { type: "string" },
+                item_count: { type: "integer" }
+              },
+              required: %w[library location item_count]
+            }
+          },
           online_sources: { type: "array", items: ONLINE_SOURCE }
         },
         required: %w[id url live_status availability online_sources]

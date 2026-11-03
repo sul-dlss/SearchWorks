@@ -6,15 +6,21 @@ module SearchworksMcp
     extend self
 
     MAX_ONLINE_SOURCES = 5
+    # Records with more items than this (e.g. long-running serials with a bound volume per year) are not
+    # looked up item-by-item; the response would be far too large to be useful to a language model.
+    MAX_ITEMS = 50
     STALE_STATUS_NOTE = "Current status could not be retrieved; statuses shown are from the last catalog update " \
                         "and may be out of date."
 
     def fetch(id:, controller: nil)
       document = search_service(controller).fetch(id)
+      items = document.holdings.items.reject(&:suppressed?)
+      return LargeHoldings.response(document, items) if items.size > MAX_ITEMS
+
       live_records = live_lookup_records(document)
       result = {
         id: document.id.to_s,
-        url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(document.id.to_s)}",
+        url: record_url(document),
         live_status: !live_records.nil?,
         availability: availability_records(document, live_records),
         online_sources: online_sources(document)
@@ -26,6 +32,31 @@ module SearchworksMcp
       { text: message, structured_content: { error: message }, error: true }
     rescue StandardError => e
       SearchworksMcp.internal_tool_error(e, public_message: "Availability information is temporarily unavailable.")
+    end
+
+    def record_url(document)
+      "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(document.id.to_s)}"
+    end
+
+    def online_sources(document)
+      document.preferred_online_links.first(MAX_ONLINE_SOURCES).filter_map do |link|
+        next if link.href.blank?
+
+        {
+          url: link.href,
+          label: link.link_text,
+          stanford_only: !!link.stanford_only?
+        }
+      end
+    end
+
+    def online_source_lines(sources)
+      return [] if sources.empty?
+
+      ["Online access:"] + sources.map do |source|
+        access = source[:stanford_only] ? " (Stanford-only)" : ""
+        "- #{source[:label]}: #{source[:url]}#{access}"
+      end
     end
 
     private
@@ -109,18 +140,6 @@ module SearchworksMcp
       )
     end
 
-    def online_sources(document)
-      document.preferred_online_links.first(MAX_ONLINE_SOURCES).filter_map do |link|
-        next if link.href.blank?
-
-        {
-          url: link.href,
-          label: link.link_text,
-          stanford_only: !!link.stanford_only?
-        }
-      end
-    end
-
     def availability_text(result)
       lines = if result[:availability].empty?
                 ["No item availability information found for catalog record #{result[:id]}."]
@@ -128,13 +147,7 @@ module SearchworksMcp
                 availability_lines(result)
               end
       lines << STALE_STATUS_NOTE unless result[:live_status]
-      if result[:online_sources].any?
-        lines << "Online access:"
-        result[:online_sources].each do |source|
-          access = source[:stanford_only] ? " (Stanford-only)" : ""
-          lines << "- #{source[:label]}: #{source[:url]}#{access}"
-        end
-      end
+      lines.concat(online_source_lines(result[:online_sources]))
       lines << "URL: #{result[:url]}"
       lines.join("\n")
     end
