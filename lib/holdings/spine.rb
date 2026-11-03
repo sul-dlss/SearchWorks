@@ -21,12 +21,12 @@ class Holdings
 
     # create sorting key for spine
     # shelfkey asc, then by sorting title asc, then by pub date desc
-    # note: pub_date must be inverted for descending sort
+    # note: pub_year_ss must be inverted for descending sort
     def sort_key
-      sort_pub_date = if document[:pub_date].blank?
+      sort_pub_date = if document[:pub_year_ss].blank?
                         '9999'
                       else
-                        document[:pub_date].tr('0123456789', '9876543210')
+                        document[:pub_year_ss].tr('0123456789', '9876543210')
                       end
 
       [
