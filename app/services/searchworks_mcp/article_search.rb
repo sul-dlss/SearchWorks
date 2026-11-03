@@ -47,7 +47,8 @@ module SearchworksMcp
       params = {
         q: query,
         search_field: SEARCH_FIELDS.fetch(search_field, "search"),
-        rows: [rows, 20].min
+        # Eds::SearchBuilder reads per_page (not rows) for ResultsPerPage
+        per_page: rows.to_i.clamp(1, 20)
       }
       eds_params = {
         guest: true,
