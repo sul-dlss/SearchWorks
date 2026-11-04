@@ -562,8 +562,8 @@ ebooks.thieme.com
 ec.asm.org
 ec.bioscientifica.com
 ecancer.org
+ecdb.com
 ecoinvent.org
-ecommercedb.com
 econgeol.geoscienceworld.org
 econtent.hogrefe.com
 ecrbrowser.dcode.org
@@ -2473,7 +2473,6 @@ www.pharmacypractice.org
 www.pharmacytimes.com
 www.phcogres.com
 www.phcogrev.com
-www.philanthropy.com
 www.physiologicalchemistryandphysics.com
 www.physweekly.com
 www.picronline.org
