@@ -14,10 +14,17 @@ module SearchworksMcp
       "subject" => "subject"
     }.freeze
 
-    def search(query:, search_field: "all_fields", rows: 10)
+    # EDS limiter labels, as shown in the search settings on the articles results page
+    FULL_TEXT_LIMITER = "Direct access to full text"
+    PEER_REVIEWED_LIMITER = "Scholarly & peer-reviewed only"
+
+    def search(query:, search_field: "all_fields", rows: 10, full_text_only: false, peer_reviewed_only: false)
       return disabled_response unless Settings.EDS_ENABLED
 
-      response = search_service(query, search_field, rows).search_results
+      limiters = []
+      limiters << FULL_TEXT_LIMITER if full_text_only
+      limiters << PEER_REVIEWED_LIMITER if peer_reviewed_only
+      response = search_service(query, search_field, rows, limiters).search_results
       results = Array(response.documents).map { |document| format_document(document) }
 
       {
@@ -43,13 +50,14 @@ module SearchworksMcp
       }
     end
 
-    def search_service(query, search_field, rows)
+    def search_service(query, search_field, rows, limiters)
       params = {
         q: query,
         search_field: SEARCH_FIELDS.fetch(search_field, "search"),
         # Eds::SearchBuilder reads per_page (not rows) for ResultsPerPage
         per_page: rows.to_i.clamp(1, 20)
       }
+      params[:f] = { "eds_search_limiters_facet" => limiters } if limiters.any?
       eds_params = {
         guest: true,
         session_token: Eds::Session.new(guest: true, caller: "mcp-server").session_token

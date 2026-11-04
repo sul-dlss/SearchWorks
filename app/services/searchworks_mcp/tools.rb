@@ -32,8 +32,7 @@ module SearchworksMcp
           query: {
             type: "string",
             description: "The search query to find articles",
-            minLength: 1,
-            maxLength: ArticleSearch::MAX_QUERY_LENGTH
+            minLength: 1, maxLength: ArticleSearch::MAX_QUERY_LENGTH
           },
           search_field: {
             type: "string",
@@ -43,9 +42,10 @@ module SearchworksMcp
           rows: {
             type: "integer",
             description: "Number of results to return (defaults to 10, max 20)",
-            minimum: 1,
-            maximum: 20
-          }
+            minimum: 1, maximum: 20
+          },
+          full_text_only: { type: "boolean", description: "Only return articles with direct access to full text (defaults to false)" },
+          peer_reviewed_only: { type: "boolean", description: "Only return scholarly and peer-reviewed articles (defaults to false)" }
         },
         required: ["query"],
         additionalProperties: false

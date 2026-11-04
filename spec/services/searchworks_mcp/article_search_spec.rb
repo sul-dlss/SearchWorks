@@ -26,5 +26,31 @@ RSpec.describe SearchworksMcp::ArticleSearch do
 
       expect(Eds::SearchService).to have_received(:new).with(anything, hash_including(per_page: 20), anything)
     end
+
+    it 'does not apply any limiters by default' do
+      described_class.search(query: 'climate')
+
+      expect(Eds::SearchService).to have_received(:new).with(anything, hash_excluding(:f), anything)
+    end
+
+    it 'applies the full text and peer-reviewed limiters when requested' do
+      described_class.search(query: 'climate', full_text_only: true, peer_reviewed_only: true)
+
+      expect(Eds::SearchService).to have_received(:new).with(
+        anything,
+        hash_including(f: { 'eds_search_limiters_facet' => ['Direct access to full text', 'Scholarly & peer-reviewed only'] }),
+        anything
+      )
+    end
+
+    it 'applies only the requested limiter' do
+      described_class.search(query: 'climate', peer_reviewed_only: true)
+
+      expect(Eds::SearchService).to have_received(:new).with(
+        anything,
+        hash_including(f: { 'eds_search_limiters_facet' => ['Scholarly & peer-reviewed only'] }),
+        anything
+      )
+    end
   end
 end
