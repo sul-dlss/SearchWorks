@@ -6,6 +6,8 @@ module SearchworksMcp
     extend self
 
     AVAILABILITY_FOLLOW_UP_LIMIT = 5
+    # Users find longer result lists easier to scan as a table
+    TABLE_DISPLAY_THRESHOLD = 3
 
     def format(response:, query:, search_field:, filters:, config:)
       results = Array(response.documents).map { |document| format_document(document) }
@@ -92,7 +94,14 @@ module SearchworksMcp
       return "No results found for query: #{query}#{filter_text}" if results.empty?
 
       "Found #{total} results#{filter_text} (showing #{results.length}):\n\n" \
-        "#{formatted_results(results)}#{facet_text(facets)}#{availability_follow_up(results)}"
+        "#{formatted_results(results)}#{facet_text(facets)}#{display_hint(results)}#{availability_follow_up(results)}"
+    end
+
+    def display_hint(results)
+      return "" if results.length <= TABLE_DISPLAY_THRESHOLD
+
+      "\n\nDisplay hint: Present these results to the user as a table (e.g. title, author, format, published, " \
+        "library, and link) rather than as a list."
     end
 
     def filter_text(filters)

@@ -38,4 +38,16 @@ RSpec.describe SearchworksMcp::CatalogResults do
 
     expect(format(documents)[:text]).not_to include('Required next step')
   end
+
+  it 'suggests a table when there are more than three results' do
+    documents = Array.new(4) { |index| SolrDocument.new(id: index.to_s, title_display: "Book #{index}") }
+
+    expect(format(documents)[:text]).to include('Display hint: Present these results to the user as a table')
+  end
+
+  it 'does not suggest a table for three or fewer results' do
+    documents = Array.new(3) { |index| SolrDocument.new(id: index.to_s, title_display: "Book #{index}") }
+
+    expect(format(documents)[:text]).not_to include('Display hint')
+  end
 end
