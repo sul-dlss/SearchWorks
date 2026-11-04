@@ -8,6 +8,7 @@ module SearchworksMcp
     AVAILABILITY_FOLLOW_UP_LIMIT = 5
     # Users find longer result lists easier to scan as a table
     TABLE_DISPLAY_THRESHOLD = 3
+    HIGHLIGHT_FIELDS = %w[all_search vern_all_search].freeze
 
     def format(response:, query:, search_field:, filters:, config:)
       results = Array(response.documents).map { |document| format_document(document) }
@@ -39,12 +40,22 @@ module SearchworksMcp
         url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(id.to_s)}",
         library: field_value(document, ["library"]),
         call_number: field_value(document, ["callnum_display"]),
+        matched_text: matched_text(document).presence,
         availability_lookup: {
           tool: "get_availability",
           id: id,
           instruction: "Call get_availability with this id before presenting this record to the user."
         }
       }.compact
+    end
+
+    def matched_text(document)
+      return [] unless document.respond_to?(:highlight_field) && document.response
+
+      HIGHLIGHT_FIELDS.flat_map { |field| Array(document.highlight_field(field)) }
+                      .map { |snippet| snippet.to_str.squish }
+                      .compact_blank
+                      .uniq
     end
 
     def field_value(document, field_names)
@@ -119,6 +130,7 @@ module SearchworksMcp
         lines << "   Published: #{result[:pub_date]}" if result[:pub_date]
         lines << "   Library: #{result[:library]}" if result[:library]
         lines << "   Call Number: #{result[:call_number]}" if result[:call_number]
+        lines << "   Matched text: #{result[:matched_text].join(' … ')}" if result[:matched_text]
         lines << "   URL: #{result[:url]}"
         lines.join("\n")
       end.join("\n\n")

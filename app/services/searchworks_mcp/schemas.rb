@@ -26,7 +26,15 @@ module SearchworksMcp
 
     CATALOG_SEARCH_RESULT = {
       type: "object",
-      properties: SEARCH_RESULT[:properties].merge(availability_lookup: AVAILABILITY_LOOKUP),
+      properties: SEARCH_RESULT[:properties].merge(
+        matched_text: {
+          type: "array",
+          items: { type: "string" },
+          description: "Snippets of the record text that matched the query, with matching terms wrapped in **. " \
+                       "Use these to explain why the record was found."
+        },
+        availability_lookup: AVAILABILITY_LOOKUP
+      ),
       required: SEARCH_RESULT[:required] + %w[availability_lookup]
     }.freeze
 

@@ -8,6 +8,18 @@ module SearchworksMcp
     MAX_QUERY_LENGTH = 1000
     MAX_FILTER_VALUE_LENGTH = 500
 
+    # Highlight the catch-all text fields so clients can see why each record matched,
+    # without adding large stored fields (e.g. MARC notes) to the search fl.
+    HIGHLIGHT_PARAMS = {
+      hl: true,
+      'hl.method': "unified",
+      'hl.fl': "all_search,vern_all_search",
+      'hl.snippets': 3,
+      'hl.fragsize': 160,
+      'hl.tag.pre': "**",
+      'hl.tag.post': "**"
+    }.freeze
+
     SEARCH_FIELDS = {
       "all_fields" => "search",
       "title" => "search_title",
@@ -47,7 +59,9 @@ module SearchworksMcp
       config = CatalogController.blacklight_config
       params = search_params(query, search_field, rows, filters, config)
       state = Blacklight::SearchState.new(params, config, controller)
-      response = Blacklight::SearchService.new(config: config, search_state: state).search_results
+      response = Blacklight::SearchService.new(config: config, search_state: state).search_results do |builder|
+        builder.merge(HIGHLIGHT_PARAMS)
+      end
 
       CatalogResults.format(
         response: response,

@@ -50,4 +50,24 @@ RSpec.describe SearchworksMcp::CatalogResults do
 
     expect(format(documents)[:text]).not_to include('Display hint')
   end
+
+  it 'includes highlighted snippets showing why each record matched' do
+    solr_response = {
+      'highlighting' => {
+        '123' => { 'all_search' => ['For **2** **player** use.', 'Ages 8+, **2** **players**'] }
+      }
+    }
+    result = format([SolrDocument.new({ id: '123', title_display: 'A game' }, solr_response)])
+
+    expect(result.dig(:structured_content, :results, 0, :matched_text)).to eq(
+      ['For **2** **player** use.', 'Ages 8+, **2** **players**']
+    )
+    expect(result[:text]).to include('Matched text: For **2** **player** use. … Ages 8+, **2** **players**')
+  end
+
+  it 'omits matched text when there is no highlighting' do
+    result = format([SolrDocument.new(id: '123', title_display: 'A book')])
+
+    expect(result.dig(:structured_content, :results, 0)).not_to have_key(:matched_text)
+  end
 end
