@@ -8,6 +8,8 @@ module SearchworksMcp
     MAX_QUERY_LENGTH = 1000
     MAX_FILTER_VALUE_LENGTH = 500
 
+    FilterFacet = Data.define(:label, :config_key, :solr_field)
+
     # Highlight the catch-all text fields so clients can see why each record matched,
     # without adding large stored fields (e.g. MARC notes) to the search fl.
     HIGHLIGHT_PARAMS = {
@@ -47,8 +49,8 @@ module SearchworksMcp
           maximum: 20
         }
       }
-      facet_properties = facet_options.transform_values do |options|
-        { type: "string", description: options[:description], maxLength: MAX_FILTER_VALUE_LENGTH }
+      facet_properties = filter_facets(CatalogController.blacklight_config).transform_values do |facet|
+        { type: "string", description: "Filter by #{facet.label.downcase}", maxLength: MAX_FILTER_VALUE_LENGTH }
       end
       properties[:filters] = filter_schema(facet_properties) if facet_properties.any?
 
@@ -58,33 +60,56 @@ module SearchworksMcp
     def search(query:, search_field: "all_fields", rows: 10, filters: {}, controller: nil)
       config = CatalogController.blacklight_config
       params = search_params(query, search_field, rows, filters, config)
-      state = Blacklight::SearchState.new(params, config, controller)
-      response = Blacklight::SearchService.new(config: config, search_state: state).search_results do |builder|
-        builder.merge(HIGHLIGHT_PARAMS)
-      end
+      response = run_search(params, config, controller)
+      unfiltered_response = unfiltered_search(response, params, config, controller)
 
       CatalogResults.format(
         response: response,
         query: query,
         search_field: search_field,
         filters: filters || {},
-        config: config
+        config: config,
+        unfiltered_response: unfiltered_response
       )
     rescue StandardError => e
       SearchworksMcp.internal_tool_error(e, public_message: "Catalog search is temporarily unavailable.")
     end
 
+    # Facets clients can filter on, keyed by filter name (e.g. "format"). Blacklight filter params use
+    # config_key; Solr facet params and responses use solr_field (e.g. "library" vs "library_code_facet_ssim").
+    def filter_facets(config)
+      config.facet_fields.values.each_with_object({}) do |facet, facets|
+        next unless usable_facet?(facet)
+
+        facets[clean_label(facet.label)] = FilterFacet.new(label: facet.label, config_key: facet.key, solr_field: facet.field)
+      end
+    end
+
     private
 
-    def facet_options
-      CatalogController.blacklight_config.facet_fields.each_with_object({}) do |(field_name, config), options|
-        next unless usable_facet?(config)
-
-        options[clean_label(config.label)] = {
-          field: field_name,
-          description: "Filter by #{config.label.downcase}"
-        }
+    def run_search(params, config, controller)
+      state = Blacklight::SearchState.new(params, config, controller)
+      Blacklight::SearchService.new(config: config, search_state: state).search_results do |builder|
+        builder.merge(HIGHLIGHT_PARAMS.merge(facet_params(config)))
       end
+    end
+
+    # Only request facets clients can filter on, with their most common values rather than the
+    # alphabetical display order some facets (e.g. format) are configured with.
+    def facet_params(config)
+      fields = filter_facets(config).values.map(&:solr_field).uniq
+      fields.each_with_object({ 'facet.field': fields }) do |field, params|
+        params[:"f.#{field}.facet.sort"] = "count"
+        params[:"f.#{field}.facet.limit"] = CatalogResults::FACET_VALUE_LIMIT
+      end
+    end
+
+    # When filters eliminate every result (often because the client guessed a facet value),
+    # look up what the query matches without them so the client can choose valid filter values.
+    def unfiltered_search(response, params, config, controller)
+      return unless params[:f].present? && response.total.zero?
+
+      run_search(params.except(:f).merge(rows: 0), config, controller)
     end
 
     def usable_facet?(config)
@@ -98,7 +123,8 @@ module SearchworksMcp
     def filter_schema(properties)
       {
         type: "object",
-        description: "Optional filters to narrow search results",
+        description: "Optional filters to narrow search results. Values must exactly match a catalog facet value, " \
+                     "so prefer searching without filters first and choosing values from the returned facets.",
         properties: properties,
         additionalProperties: false
       }
@@ -115,15 +141,10 @@ module SearchworksMcp
     end
 
     def mapped_filters(filters, config)
+      facets = filter_facets(config)
       filters.each_with_object({}) do |(key, value), mapped|
-        field = config.facet_fields.find do |_field_name, field_config|
-          label = field_config.label
-          label.present? && clean_label(label) == key.to_s
-        end
-        next unless field
-
-        field_name, field_config = field
-        mapped[field_config.field || field_name] = [value]
+        facet = facets[key.to_s]
+        mapped[facet.config_key] = [value] if facet
       end
     end
   end

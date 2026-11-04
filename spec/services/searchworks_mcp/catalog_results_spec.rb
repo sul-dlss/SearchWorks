@@ -70,4 +70,33 @@ RSpec.describe SearchworksMcp::CatalogResults do
 
     expect(result.dig(:structured_content, :results, 0)).not_to have_key(:matched_text)
   end
+
+  describe 'facets' do
+    let(:config) do
+      Struct.new(:facet_fields).new({ 'format_hsim' => Blacklight::Configuration::FacetField.new(key: 'format_hsim', field: 'format_hsim', label: 'Format') })
+    end
+
+    def response_with(documents, facet_fields)
+      Struct.new(:documents, :total, :facet_fields).new(documents, documents.length, facet_fields)
+    end
+
+    it 'reports results and facets without filters when filters remove every result' do
+      unfiltered = Struct.new(:documents, :total, :facet_fields).new([], 2994, { 'format_hsim' => ['Object', 2900, 'Book', 40] })
+      result = described_class.format(response: response_with([], {}), query: 'board games', search_field: 'all_fields',
+                                      filters: { 'format' => 'Equipment' }, config:, unfiltered_response: unfiltered)
+
+      expect(result.dig(:structured_content, :without_filters)).to eq(
+        total: 2994,
+        facets: { 'format' => { label: 'Format', values: [{ value: 'Object', count: 2900 }, { value: 'Book', count: 40 }] } }
+      )
+      expect(result[:text]).to include('Without filters, this query has 2994 results', '- Format: Object (2900), Book (40)')
+    end
+
+    it 'omits the unfiltered summary when there is no fallback search' do
+      result = described_class.format(response: response_with([], {}), query: 'board games', search_field: 'all_fields',
+                                      filters: {}, config:)
+
+      expect(result[:structured_content]).not_to have_key(:without_filters)
+    end
+  end
 end

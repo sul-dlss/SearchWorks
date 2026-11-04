@@ -79,7 +79,17 @@ module SearchworksMcp
           filters: { type: "object" },
           total: { type: "integer" },
           results: { type: "array", items: CATALOG_SEARCH_RESULT },
-          facets: { type: "object" }
+          facets: { type: "object" },
+          without_filters: {
+            type: "object",
+            description: "Present only when filters returned no results: the total and facets for the query " \
+                         "without filters. Use these facet values to choose filters that match the catalog.",
+            properties: {
+              total: { type: "integer" },
+              facets: { type: "object" }
+            },
+            required: %w[total facets]
+          }
         },
         required: %w[query search_field filters total results facets]
       }

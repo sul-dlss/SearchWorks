@@ -10,20 +10,25 @@ module SearchworksMcp
     TABLE_DISPLAY_THRESHOLD = 3
     HIGHLIGHT_FIELDS = %w[all_search vern_all_search].freeze
 
-    def format(response:, query:, search_field:, filters:, config:)
+    # Number of values per facet requested from Solr (see CatalogSearch#facet_params)
+    FACET_VALUE_LIMIT = 10
+
+    def format(response:, query:, search_field:, filters:, config:, unfiltered_response: nil) # rubocop:disable Metrics/ParameterLists
       results = Array(response.documents).map { |document| format_document(document) }
       facets = extract_facets(response, config)
+      without_filters = unfiltered_summary(unfiltered_response, config)
 
       {
-        text: result_text(response.total, query, filters, results, facets),
+        text: result_text(response.total, query, filters, results, facets) + unfiltered_text(without_filters),
         structured_content: {
           query: query,
           search_field: search_field,
           filters: filters,
           total: response.total,
           results: results,
-          facets: facets
-        }
+          facets: facets,
+          without_filters: without_filters
+        }.compact
       }
     end
 
@@ -70,14 +75,11 @@ module SearchworksMcp
     def extract_facets(response, config)
       return {} unless response.respond_to?(:facet_fields)
 
-      response.facet_fields.each_with_object({}) do |(field_name, facet_data), facets|
-        facet_config = config.facet_fields[field_name]
-        next if facet_config&.label.blank?
-
-        values = facet_values(facet_data)
+      CatalogSearch.filter_facets(config).each_with_object({}) do |(key, facet), facets|
+        values = facet_values(response.facet_fields[facet.solr_field])
         next if values.empty?
 
-        facets[clean_label(facet_config.label)] = { label: facet_config.label, values: values }
+        facets[key] = { label: facet.label, values: values }
       end
     rescue StandardError => e
       Rails.logger.warn "Could not process facets: #{e.message}"
@@ -86,18 +88,29 @@ module SearchworksMcp
 
     def facet_values(facet_data)
       if facet_data.is_a?(Array)
-        facet_data.each_slice(2).first(5).filter_map do |value, count|
+        facet_data.each_slice(2).filter_map do |value, count|
           { value: value, count: count } if value && count
         end
       elsif facet_data.respond_to?(:items)
-        facet_data.items.first(5).map { |item| { value: item.value, count: item.hits } }
+        facet_data.items.map { |item| { value: item.value, count: item.hits } }
       else
         []
       end
     end
 
-    def clean_label(label)
-      label.downcase.gsub(/[^a-z0-9]+/, "_").gsub(/^_|_$/, "")
+    def unfiltered_summary(response, config)
+      return unless response
+
+      { total: response.total, facets: extract_facets(response, config) }
+    end
+
+    def unfiltered_text(summary)
+      return "" unless summary
+      return "\n\nThe query also has no results without filters." if summary[:total].zero?
+
+      "\n\nWithout filters, this query has #{summary[:total]} results. The filter values may not match how these " \
+        "materials are cataloged. Search again without filters, or use a filter value from these options:" \
+        "#{facet_list(summary[:facets])}"
     end
 
     def result_text(total, query, filters, results, facets)
@@ -139,11 +152,14 @@ module SearchworksMcp
     def facet_text(facets)
       return "" if facets.empty?
 
-      options = facets.map do |_key, facet|
+      "\n\nAvailable refinement options:#{facet_list(facets)}"
+    end
+
+    def facet_list(facets)
+      facets.map do |_key, facet|
         values = facet[:values].map { |value| "#{value[:value]} (#{value[:count]})" }.join(", ")
-        "- #{facet[:label]}: #{values}"
-      end
-      "\n\nAvailable refinement options:\n#{options.join("\n")}"
+        "\n- #{facet[:label]}: #{values}"
+      end.join
     end
 
     def availability_follow_up(results)
