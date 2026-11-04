@@ -28,7 +28,7 @@ class MarcField
       default: [
         (:"searchworks.marc_fields.#{tags.first}.label" if tags.present?),
         (:"searchworks.marc_fields.#{tags.first.scan(/\d{3}|\w+/).first}.label" if tags.present?),
-        :"searchworks.marc_fields.default.label"
+        :'searchworks.marc_fields.default.label'
       ].compact
     )
   end
@@ -67,7 +67,7 @@ class MarcField
       default: [
         (:"searchworks.marc_fields.#{tags.first}.delimiter" if tags.present?),
         (:"searchworks.marc_fields.#{tags.first.scan(/\d{3}|\w+/).first}.delimiter" if tags.present?),
-        :"searchworks.marc_fields.default.delimiter"
+        :'searchworks.marc_fields.default.delimiter'
       ].compact
     )
   end

@@ -3,16 +3,18 @@
 require 'rails_helper'
 
 RSpec.describe ArticleHelper do
-  context '#link_to_doi' do
+  describe '#link_to_doi' do
     it 'renders a link by appending the value to the DOI resolver' do
       result = helper.link_to_doi(value: %w[abc])
       expect(result).to have_css('a @href', text: 'https://doi.org/abc')
       expect(result).to have_css('a', text: 'abc')
     end
+
     it 'renders only the first link' do
       result = helper.link_to_doi(value: %w[abc def])
       expect(result).to have_css('a', text: 'abc')
     end
+
     it 'renders nothing if missing' do
       result = helper.link_to_doi(value: nil)
       expect(result).to be_nil
@@ -28,10 +30,10 @@ RSpec.describe ArticleHelper do
   end
 
   context 'authors' do
-    let(:authors) { %w[John\ Doe,\ Author Doe,\ Jane Fred\ Doe] }
+    let(:authors) { ['John Doe, Author', 'Doe, Jane', 'Fred Doe'] }
     let(:affiliations) { ["<relatesTo>1</relatesTo>Institute A<br /><relatesTo>2</relatesTo>Institute B<br /><relatesTo>3</relatesTo>Institute C"] }
 
-    context '#link_authors' do
+    describe '#link_authors' do
       subject(:result) { Capybara.string(safe_join(helper.link_authors(value: authors), '')) }
 
       it 'includes a search link for each author' do
@@ -41,7 +43,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context '#strip_author_relators' do
+    describe '#strip_author_relators' do
       subject(:result) { helper.strip_author_relators(value: authors) }
 
       it 'removes relator terms' do
@@ -49,7 +51,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context '#clean_affiliations' do
+    describe '#clean_affiliations' do
       let(:result) { helper.clean_affiliations(value: affiliations) }
 
       it 'removes relatesTo tags and content' do
@@ -59,7 +61,7 @@ RSpec.describe ArticleHelper do
     end
   end
 
-  context '#render_text_from_html' do
+  describe '#render_text_from_html' do
     it 'returns only text from HTML' do
       result = helper.render_text_from_html(%w[ab<c>d</c>])
       expect(result).to eq %w[ab d]
@@ -76,24 +78,26 @@ RSpec.describe ArticleHelper do
     end
   end
 
-  context '#mark_html_safe' do
+  describe '#mark_html_safe' do
     it 'preserves HTML entities to render' do
       result = helper.mark_html_safe(value: Array.wrap('This &amp; That'))
       expect(result).to include 'This &amp; That'
     end
+
     it 'preserves HTML elements to render' do
       result = helper.mark_html_safe(value: Array.wrap('<i>This Journal</i>, 10(1)'))
       expect(result).to include '<i>This Journal</i>, 10(1)'
     end
+
     it 'handles multiple values' do
       result = helper.mark_html_safe(value: %w[This That])
       expect(result).to include 'This', 'That'
-      result = helper.mark_html_safe(value: %w[This That The\ Other])
+      result = helper.mark_html_safe(value: ['This', 'That', 'The Other'])
       expect(result).to include 'This', 'That', 'The Other'
     end
   end
 
-  context '#sanitize_fulltext' do
+  describe '#sanitize_fulltext' do
     it 'preserves HTML entities to render' do
       result = helper.mark_html_safe(value: Array.wrap('This &amp; That'))
       expect(result).to include 'This &amp; That'
@@ -118,7 +122,7 @@ RSpec.describe ArticleHelper do
     end
   end
 
-  context '#italicize_composed_title' do
+  describe '#italicize_composed_title' do
     let(:result) { helper.italicize_composed_title(value: Array.wrap(title)) }
 
     context 'no title' do

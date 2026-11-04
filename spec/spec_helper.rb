@@ -92,7 +92,7 @@ def total_results
   page.find("h2", text: number_pattern).text.gsub(/\D+/, '').to_i
 end
 
-def document_index id
+def document_index(id)
   all_docs_on_page.index(id)
 end
 

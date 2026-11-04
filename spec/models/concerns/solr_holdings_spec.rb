@@ -11,7 +11,7 @@ RSpec.describe SolrHoldings do
   end
 
   describe '#bound_with_folio_items' do
-    let(:document) {
+    let(:document) do
       SolrDocument.new(holdings_json_struct: [{ 'holdings' => [
         {
           'id' => '123456', 'holdingsType' => { 'code' => 'Bound-with' },
@@ -42,7 +42,7 @@ RSpec.describe SolrHoldings do
           }
         }
       ] }])
-    }
+    end
 
     it 'adds the boundWith data to bound_with_folio_items' do
       expect(document.bound_with_folio_items.first.id).to eq '1234580'
@@ -58,7 +58,7 @@ RSpec.describe SolrHoldings do
   end
 
   describe '#preferred_barcode' do
-    let(:preferred) {
+    let(:preferred) do
       SolrDocument.new(
         preferred_barcode: '12345',
         item_display_struct: [
@@ -66,8 +66,8 @@ RSpec.describe SolrHoldings do
           { barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
-    }
-    let(:bad_preferred) {
+    end
+    let(:bad_preferred) do
       SolrDocument.new(
         preferred_barcode: 'does-not-exist',
         item_display_struct: [
@@ -75,22 +75,24 @@ RSpec.describe SolrHoldings do
           { barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
-    }
-    let(:no_preferred) {
+    end
+    let(:no_preferred) do
       SolrDocument.new(
         item_display_struct: [
           { barcode: '54321', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber1', full_shelfkey: '1' },
           { barcode: '12345', library: 'GREEN', effective_permanent_location_code: 'STACKS', callnumber: 'callnumber2', full_shelfkey: '2' }
         ]
       )
-    }
+    end
 
     it 'returns the item based on preferred barcode' do
       expect(preferred.preferred_item.barcode).to eq '12345'
     end
+
     it 'returns the first item when the preferred barcode does not exist in the holdings' do
       expect(bad_preferred.preferred_item.barcode).to eq '54321'
     end
+
     it 'returns the first item if there is no preferred barcode available' do
       expect(no_preferred.preferred_item.barcode).to eq '54321'
     end

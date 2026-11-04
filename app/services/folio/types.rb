@@ -106,20 +106,20 @@ module Folio
     private
 
     def types_of_interest
-      [
-        'request_policies',
-        'loan_policies',
-        'overdue_fines_policies',
-        'lost_item_fees_policies',
-        'patron_notice_policies',
-        'patron_groups',
-        'material_types',
-        'loan_types',
-        'institutions',
-        'campuses',
-        'libraries',
-        'locations',
-        'service_points'
+      %w[
+        request_policies
+        loan_policies
+        overdue_fines_policies
+        lost_item_fees_policies
+        patron_notice_policies
+        patron_groups
+        material_types
+        loan_types
+        institutions
+        campuses
+        libraries
+        locations
+        service_points
       ]
     end
   end

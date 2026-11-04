@@ -3,11 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe SolrSet do
+  subject { SolrDocument.new(solr_data) }
+
   let(:solr_data) { { id: '12345', set: ['set1'], set_with_title: ['set1 -|- SetABC'] } }
   let(:documents) { [SolrDocument.new(id: 'set1', title_display: 'SetABC')] }
   let(:stub_response) { instance_double(Blacklight::Solr::Response, documents:) }
-
-  subject { SolrDocument.new(solr_data) }
 
   context 'when an item is a member of a set' do
     describe '#set_member?' do

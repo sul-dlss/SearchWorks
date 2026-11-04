@@ -29,6 +29,6 @@ module SeriesLinkable
   end
 
   def tags
-    %w(440 490 800 810 811 830)
+    %w[440 490 800 810 811 830]
   end
 end

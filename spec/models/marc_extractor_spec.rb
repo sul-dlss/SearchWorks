@@ -50,9 +50,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with a field that has indicators that hide the field from display' do
-    let(:fixture) { metadata2 }
-
     subject(:extracted_data) { described_class.new(marc, '541').extract.to_a }
+
+    let(:fixture) { metadata2 }
 
     it 'is not yielded' do
       expect(marc['541']).to be_present
@@ -61,9 +61,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with vernacular data' do
-    let(:fixture) { complex_vernacular_fixture }
-
     subject(:extracted_data) { described_class.new(marc, '300a').extract.to_a }
+
+    let(:fixture) { complex_vernacular_fixture }
 
     it 'is interfiled with the matched field and unmatched verncular is appended' do
       expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).to eq [
@@ -75,9 +75,9 @@ RSpec.describe MarcExtractor do
     end
 
     context 'with subfield codes' do
-      let(:fixture) { vernacular_marc_264_fixture }
-
       subject(:extracted_data) { described_class.new(marc, '264a').extract.to_a }
+
+      let(:fixture) { vernacular_marc_264_fixture }
 
       it 'filters vernacular data' do
         expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).to eq [
@@ -89,17 +89,17 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with multiple MARC tags' do
-    subject(:extracted_data) { described_class.new(marc, ['506', '541', '555']).extract.to_a }
+    subject(:extracted_data) { described_class.new(marc, %w[506 541 555]).extract.to_a }
 
     it 'extracts field data in the order they appear in the MARC record' do
-      expect(extracted_data.map { |x| x.first.tag }).to eq ['506', '555', '541']
+      expect(extracted_data.map { |x| x.first.tag }).to eq %w[506 555 541]
     end
   end
 
   context 'with a field that has a 1st indicator of 1' do
-    let(:fixture) { metadata2 }
-
     subject(:extracted_data) { described_class.new(marc, ['760']).extract.to_a }
+
+    let(:fixture) { metadata2 }
 
     it 'is not yielded' do
       expect(marc['760']).to be_present
@@ -108,9 +108,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'without the requested field' do
-    let(:fixture) { metadata2 }
-
     subject(:extracted_data) { described_class.new(marc, ['510']).extract.to_a }
+
+    let(:fixture) { metadata2 }
 
     it 'yields nothing' do
       expect(extracted_data.length).to eq 0
@@ -118,8 +118,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with a linking field that indicates text direction' do
-    let(:fixture) { matched_vernacular_rtl_fixture }
     subject(:extracted_data) { described_class.new(marc, ['245']).extract.to_a }
+
+    let(:fixture) { matched_vernacular_rtl_fixture }
 
     it 'links the fields as per the spec' do
       expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).to eq [
@@ -130,9 +131,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with a linking field that indicates text direction that is unmatched' do
-    let(:fixture) { unmatched_vernacular_rtl_fixture }
-
     subject(:extracted_data) { described_class.new(marc, ['245']).extract.to_a }
+
+    let(:fixture) { unmatched_vernacular_rtl_fixture }
 
     it 'links the fields as per the spec' do
       expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).to eq [
@@ -142,9 +143,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with relator terms' do
-    let(:fixture) { marc_sections_fixture }
-
     subject(:extracted_data) { described_class.new(marc, ['700']).extract.to_a }
+
+    let(:fixture) { marc_sections_fixture }
 
     it 'does not include the relator terms in the subfield list' do
       expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).to eq [
@@ -155,9 +156,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with bad vernacular fields (whatever that means)' do
-    let(:fixture) { bad_vernacular_fixture }
-
     subject(:extracted_data) { described_class.new(marc, ['600']).extract.to_a }
+
+    let(:fixture) { bad_vernacular_fixture }
 
     it 'does the right thing, whatever that is' do
       expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).not_to include(/This is Vernacular/)
@@ -166,9 +167,9 @@ RSpec.describe MarcExtractor do
   end
 
   context 'with special characters' do
-    let(:fixture) { escape_characters_fixture }
-
     subject(:extracted_data) { described_class.new(marc, ['690']).extract.to_a }
+
+    let(:fixture) { escape_characters_fixture }
 
     it 'handles them correctly' do
       expect(extracted_data.map { |_, subfields| subfields.map(&:value).join(' ') }).to eq [

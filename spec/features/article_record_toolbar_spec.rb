@@ -20,9 +20,9 @@ RSpec.describe 'Article Record Toolbar', :js do
     stub_article_service(docs: [previous_document, document, next_document].compact)
     stub_article_service(type: :single, docs: [document])
 
-    Capybara.current_session.reset!         # ensure a clean session
-    visit articles_path q: 'my query'  # sets up search session
-    click_link document[:eds_title]         # show the article record
+    Capybara.current_session.reset! # ensure a clean session
+    visit articles_path q: 'my query' # sets up search session
+    click_link document[:eds_title] # show the article record
   end
 
   it 'shows the Send button' do
@@ -33,6 +33,7 @@ RSpec.describe 'Article Record Toolbar', :js do
       expect(page).to have_button('Print')
     end
   end
+
   it 'shows both prev and next buttons' do
     within '.record-toolbar' do
       expect(page).to have_css('.previous', text: 'Previous')

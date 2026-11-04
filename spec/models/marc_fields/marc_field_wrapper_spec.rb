@@ -70,7 +70,7 @@ RSpec.describe MarcFieldWrapper do
 
     describe 'when the $6 in an 880 does not point to a regular marc field' do
       let(:field) do
-        marc_fields(bad_vernacular_fixture, '880').find { |f| f['6'] == '880-00'  }
+        marc_fields(bad_vernacular_fixture, '880').find { |f| f['6'] == '880-00' }
       end
 
       it { expect(subject).not_to be_vernacular_matcher }

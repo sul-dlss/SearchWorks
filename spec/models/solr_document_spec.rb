@@ -105,10 +105,10 @@ RSpec.describe SolrDocument do
     end
 
     context 'when it is an eresource and has physical copies' do
-      let(:item_display) {
+      let(:item_display) do
         { barcode: 123456, effective_permanent_location_code: 'BUS', library: 'BUSINESS',
           permanent_location_code: 'BUS' }
-      }
+      end
       let(:physical_location_doc) do
         SolrDocument.new(eresource_bus_library.merge(item_display_struct: [item_display]))
       end
@@ -139,25 +139,25 @@ RSpec.describe SolrDocument do
   end
 
   describe '#live_lookup_id' do
-    let(:document) { SolrDocument.new(id: '11111', uuid_ssi: 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f') }
-
     subject { document.live_lookup_id }
+
+    let(:document) { SolrDocument.new(id: '11111', uuid_ssi: 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f') }
 
     it { is_expected.to eq 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f' }
   end
 
   describe 'oclc_number' do
-    let(:document) { SolrDocument.new(oclc: '12345') }
-
     subject { document.oclc_number }
+
+    let(:document) { SolrDocument.new(oclc: '12345') }
 
     it { is_expected.to eq '12345' }
   end
 
   describe '#imprint_string' do
-    let(:document) { SolrDocument.new(imprint_display: ['a', 'b']) }
-
     subject { document.imprint_string }
+
+    let(:document) { SolrDocument.new(imprint_display: %w[a b]) }
 
     it { is_expected.to eq 'a' }
   end
@@ -165,7 +165,7 @@ RSpec.describe SolrDocument do
   describe '#book_ids' do
     let(:document) do
       SolrDocument.new(
-        isbn_display: ["0393040801x", "9780393040807"],
+        isbn_display: %w[0393040801x 9780393040807],
         lccn: "a 96049953",
         oclc: 36024029
       )
@@ -174,7 +174,7 @@ RSpec.describe SolrDocument do
     it "returns book ids with prefixes" do
       book_ids = document.book_ids
 
-      expect(book_ids['isbn']).to eq ["ISBN0393040801x", "ISBN9780393040807"]
+      expect(book_ids['isbn']).to eq %w[ISBN0393040801x ISBN9780393040807]
       expect(book_ids['lccn']).to eq ["LCCNa96049953"]
       expect(book_ids['oclc']).to eq ["OCLC36024029"]
     end

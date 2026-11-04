@@ -16,6 +16,7 @@ RSpec.feature "Digital Collections Search" do
       expect(page).to have_css('.filter-value', text: "Digital Collection")
     end
   end
+
   scenario "should return results" do
     expect(page).to have_css("#documents .document")
   end

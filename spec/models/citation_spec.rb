@@ -3,6 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe Citation do
+  subject { described_class.new(document) }
+
   let(:document) { SolrDocument.new(cocina_struct: cocina_preferred_citation) }
   let(:cocina_preferred_citation) do
     [
@@ -11,8 +13,6 @@ RSpec.describe Citation do
       } }.to_json
     ]
   end
-
-  subject { described_class.new(document) }
 
   it { expect(subject).to be_citable }
 

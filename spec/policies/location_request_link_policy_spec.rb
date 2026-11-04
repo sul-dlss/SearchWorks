@@ -14,7 +14,7 @@ RSpec.describe LocationRequestLinkPolicy do
     context 'when there is a bound-with in folio' do
       # Seen in a404313 for HOOVER/STACKS where it says "Scattered issues missing"
       let(:items) { [instance_double(Holdings::Item, document:, folio_item?: false)] }
-      let(:document) {
+      let(:document) do
         SolrDocument.new(holdings_json_struct: [{ 'holdings' => [
           {
             'id' => '123456', 'holdingsType' => { 'code' => 'Bound-with' },
@@ -32,7 +32,7 @@ RSpec.describe LocationRequestLinkPolicy do
             }
           }
         ] }])
-      }
+      end
 
       it { is_expected.to be false }
     end

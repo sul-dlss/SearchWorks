@@ -8,12 +8,15 @@ RSpec.describe CatalogController do
   it 'includes the AdvancedSearchParamsMapping concern' do
     expect(subject).to be_a(AdvancedSearchParamsMapping)
   end
+
   it "includes the CallnumberSearch concern" do
     expect(subject).to be_a(CallnumberSearch)
   end
+
   it "includes the AllCapsParams concern" do
     expect(subject).to be_a(AllCapsParams)
   end
+
   it "includes the ReplaceSpecialQuotes concern" do
     expect(subject).to be_a(ReplaceSpecialQuotes)
   end
@@ -52,32 +55,32 @@ RSpec.describe CatalogController do
     let(:config) { controller.blacklight_config }
 
     it "has the correct facet order" do
-      expect(config.facet_fields.keys).to eq [
-        "access_facet",
-        "format_hsim",
-        "library",
-        "genre_ssim",
-        "pub_year_tisim",
-        "language",
-        "author_person_facet",
-        "topic_facet",
-        "geographic_facet",
-        "callnum_facet_hsim",
-        "pub_year_adv_search",
-        "db_az_subject",
-        "location_facet",
-        "stanford_work_facet_hsim",
-        "stanford_dept_sim",
-        "collection",
-        "collection_type",
-        "fund_facet",
-        "format_physical_ssim",
-        "course",
-        "instructor",
-        "courses_folio_id_ssim",
-        "era_facet",
-        "author_other_facet",
-        "iiif_resources"
+      expect(config.facet_fields.keys).to eq %w[
+        access_facet
+        format_hsim
+        library
+        genre_ssim
+        pub_year_tisim
+        language
+        author_person_facet
+        topic_facet
+        geographic_facet
+        callnum_facet_hsim
+        pub_year_adv_search
+        db_az_subject
+        location_facet
+        stanford_work_facet_hsim
+        stanford_dept_sim
+        collection
+        collection_type
+        fund_facet
+        format_physical_ssim
+        course
+        instructor
+        courses_folio_id_ssim
+        era_facet
+        author_other_facet
+        iiif_resources
       ]
     end
 
@@ -85,9 +88,11 @@ RSpec.describe CatalogController do
       it 'sets an index sort for the format facet' do
         expect(config.facet_fields['format_hsim'].sort).to eq :index
       end
+
       it 'sets an index sort for the library facet' do
         expect(config.facet_fields['library'].sort).to eq :index
       end
+
       it 'sets an index sort for the database topic facet' do
         expect(config.facet_fields['db_az_subject'].sort).to eq :index
       end
@@ -99,8 +104,9 @@ RSpec.describe CatalogController do
           expect(config.facet_fields[facet].limit).to eq 100
         end
       end
+
       it "sets the correct facet limits on standard facets" do
-        ['author_person_facet', 'topic_facet', 'genre_ssim'].each do |facet|
+        %w[author_person_facet topic_facet genre_ssim].each do |facet|
           expect(config.facet_fields[facet].limit).to eq 6
         end
       end

@@ -5,9 +5,9 @@ require 'rails_helper'
 RSpec.describe 'Subjects' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marc_json_struct: marc) }
-
   subject(:subjects) { document.subjects('650') }
+
+  let(:document) { SolrDocument.new(marc_json_struct: marc) }
 
   context 'with subjects in the $a' do
     let(:marc) do

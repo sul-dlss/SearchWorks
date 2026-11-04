@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Subjects < MarcField
-  def values(merged_subfields: ["v", "x", "y", "z"])
+  def values(merged_subfields: %w[v x y z])
     @values ||= begin
       data = []
       extracted_fields.each do |field, subfields|
@@ -33,7 +33,7 @@ class Subjects < MarcField
   end
 
   def ignored_subfield?(subfield)
-    exclude = Constants::EXCLUDE_FIELDS.dup + ["1", "2", "3", "4", "7", "9"]
+    exclude = Constants::EXCLUDE_FIELDS.dup + %w[1 2 3 4 7 9]
 
     exclude.include? subfield.code
   end

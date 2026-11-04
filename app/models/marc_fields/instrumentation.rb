@@ -15,7 +15,7 @@ class Instrumentation < MarcField
   private
 
   def terminating_subfield?(subfield)
-    %w(a b).include?(subfield.code)
+    %w[a b].include?(subfield.code)
   end
 
   def relevant_values
@@ -83,6 +83,6 @@ class Instrumentation < MarcField
   end
 
   def tags
-    %w(382abdnpsv)
+    %w[382abdnpsv]
   end
 end

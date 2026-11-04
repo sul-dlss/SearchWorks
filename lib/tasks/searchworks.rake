@@ -22,7 +22,7 @@ namespace :searchworks do
       FileUtils.mkdir_p(File.join(SolrWrapper.instance.instance_dir, 'contrib'))
 
       FileUtils.cp(
-        Rails.root.join('config', 'solr_configs', 'CJKFilterUtils-v4.0.jar'),
+        Rails.root.join("config/solr_configs/CJKFilterUtils-v4.0.jar"),
         File.join(SolrWrapper.instance.instance_dir, 'contrib')
       )
     end
@@ -37,7 +37,7 @@ namespace :searchworks do
   end
 
   desc "Prune old search data from the database"
-  task :prune_old_search_data, [:days_old] => [:environment] do |t, args|
+  task :prune_old_search_data, [:days_old] => [:environment] do |_t, args|
     chunk = 20000
     raise ArgumentError.new('days_old is expected to be greater than 0') if args[:days_old].to_i <= 0
 
@@ -53,7 +53,7 @@ namespace :searchworks do
   end
 
   desc "Prune old guest users from the database"
-  task :prune_old_guest_user_data, [:months_old] => [:environment] do |t, args|
+  task :prune_old_guest_user_data, [:months_old] => [:environment] do |_t, args|
     User.includes(:bookmarks)
         .where(guest: true)
         .where(bookmarks: { user_id: nil })
@@ -75,14 +75,14 @@ namespace :searchworks do
   end
 
   desc "Prune expired files in EDS cache"
-  task prune_eds_cache: [:environment] do |t, args|
+  task prune_eds_cache: [:environment] do |_t, _args|
     if eds_cache
       puts "Cleaning cache in #{eds_cache.cache_path}"
       eds_cache.cleanup
     end
   end
   desc "Clear all files in EDS cache"
-  task clear_eds_cache: [:environment] do |t, args|
+  task clear_eds_cache: [:environment] do |_t, _args|
     if eds_cache
       puts "Clearing cache in #{eds_cache.cache_path}"
       eds_cache.clear

@@ -9,18 +9,20 @@ RSpec.describe CollectionHelper do
         OpenStruct.new(heading: 'Title2')
       )
       document_list = [
-        SolrDocument.new(collection: ['a12345', 'a54321'], collection_with_title: ['a12345 -|- Title1', 'a54321 -|- Title2'])
+        SolrDocument.new(collection: %w[a12345 a54321], collection_with_title: ['a12345 -|- Title1', 'a54321 -|- Title2'])
       ]
       assign(:response, OpenStruct.new(documents: document_list))
       expect(helper.send(:collection_breadcrumb_value, 'a54321')).to eq 'Title2'
     end
+
     it "returns the ID with the prefix if there is no @document_list" do
       assign(:response, OpenStruct.new(documents: []))
       expect(helper.send(:collection_breadcrumb_value, 'a54321')).to eq 'a54321'
     end
+
     it "returns the ID with the prefix if there are no matching collections" do
       document_list = [
-        SolrDocument.new(collection: ['12345', '54321'], collection_with_title: ['12345 -|- Title1', '54321 -|- Title2'])
+        SolrDocument.new(collection: %w[12345 54321], collection_with_title: ['12345 -|- Title1', '54321 -|- Title2'])
       ]
       assign(:response, OpenStruct.new(documents: document_list))
       expect(helper.send(:collection_breadcrumb_value, 'a11111')).to eq 'a11111'

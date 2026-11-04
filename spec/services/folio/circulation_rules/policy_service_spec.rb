@@ -12,7 +12,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       let(:item) { instance_double(Holdings::Item, material_type:, loan_type:, effective_location:) }
       let(:material_type) { Folio::Item::MaterialType.new(Folio::Types.instance.get_type('material_types').find { |t| t['name'] == 'book' }.slice('id', 'name')) }
       let(:loan_type) { Folio::Item::LoanType.new(Folio::Types.instance.get_type('loan_types').find { |t| t['name'] == 'Can circulate' }.slice('id', 'name')) }
-      let(:effective_location) {
+      let(:effective_location) do
         Folio::Location.from_dynamic(
           Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'SAL3-STACKS' }.merge(
             'institution' => Folio::Types.instance.get_type('institutions').find { |t| t['code'] == 'SU' },
@@ -20,7 +20,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
             'library' => Folio::Types.instance.get_type('libraries').find { |t| t['code'] == 'SAL3' }
           )
         )
-      }
+      end
 
       it 'is pageable' do
         expect(described_class.instance.item_request_policy(item)['requestTypes']).to include 'Page'
@@ -31,7 +31,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       let(:item) { instance_double(Holdings::Item, material_type:, loan_type:, effective_location:) }
       let(:material_type) { Folio::Item::MaterialType.new(Folio::Types.instance.get_type('material_types').find { |t| t['name'] == 'book' }.slice('id', 'name')) }
       let(:loan_type) { Folio::Item::LoanType.new(Folio::Types.instance.get_type('loan_types').find { |t| t['name'] == 'Non-circulating' }.slice('id', 'name')) }
-      let(:effective_location) {
+      let(:effective_location) do
         Folio::Location.from_dynamic(
           Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'SAL3-PAGE-GR' }.merge(
             'institution' => Folio::Types.instance.get_type('institutions').find { |t| t['code'] == 'SU' },
@@ -39,7 +39,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
             'library' => Folio::Types.instance.get_type('libraries').find { |t| t['code'] == 'SAL3' }
           )
         )
-      }
+      end
 
       it 'is pageable' do
         expect(described_class.instance.item_request_policy(item)['requestTypes']).to include 'Page'
@@ -50,7 +50,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
       let(:item) { instance_double(Holdings::Item, material_type:, loan_type:, effective_location:) }
       let(:material_type) { Folio::Item::MaterialType.new(Folio::Types.instance.get_type('material_types').find { |t| t['name'] == 'book' }.slice('id', 'name')) }
       let(:loan_type) { Folio::Item::LoanType.new(Folio::Types.instance.get_type('loan_types').find { |t| t['name'] == 'Can circulate' }.slice('id', 'name')) }
-      let(:effective_location) {
+      let(:effective_location) do
         Folio::Location.from_dynamic(
           Folio::Types.instance.get_type('locations').find { |t| t['code'] == 'BUS-CRES' }.merge(
             'institution' => Folio::Types.instance.get_type('institutions').find { |t| t['code'] == 'SU' },
@@ -58,7 +58,7 @@ RSpec.describe Folio::CirculationRules::PolicyService do
             'library' => Folio::Types.instance.get_type('libraries').find { |t| t['code'] == 'BUSINESS' }
           )
         )
-      }
+      end
 
       it 'is not requestable' do
         expect(described_class.instance.item_request_policy(item)['requestTypes']).to be_blank
@@ -67,22 +67,22 @@ RSpec.describe Folio::CirculationRules::PolicyService do
   end
 
   describe '#item_rule' do
-    let(:rules) {
+    subject(:service) { described_class.new(rules:) }
+
+    let(:rules) do
       [
         Folio::CirculationRules::Rule.new({ 'material-type' => 'book', 'loan-type' => '7day', 'location-campus' => 'sul' }, 'books-7day-sul'),
         Folio::CirculationRules::Rule.new({ 'material-type' => 'book', 'location-campus' => 'sul', 'location-library' => 'green' }, 'books-green'),
         Folio::CirculationRules::Rule.new({ 'material-type' => 'book', 'loan-type' => 'reserves' }, 'books-reserves'),
         Folio::CirculationRules::Rule.new({ 'material-type' => { not: ['book'] }, 'loan-type' => 'reserves' }, 'other-reserves'),
         Folio::CirculationRules::Rule.new({ 'material-type' => 'book' }, 'books'),
-        Folio::CirculationRules::Rule.new({ 'material-type' => { or: ['book', 'microform'] } }, 'book-or-microform'),
+        Folio::CirculationRules::Rule.new({ 'material-type' => { or: %w[book microform] } }, 'book-or-microform'),
         Folio::CirculationRules::Rule.new({ 'location-library' => 'ars' }, 'ars'),
         Folio::CirculationRules::Rule.new({}, 'fallback')
       ]
-    }
+    end
 
     let(:item) { instance_double(Holdings::Item) }
-
-    subject(:service) { described_class.new(rules:) }
 
     context 'when no rules match the item' do
       before do
@@ -158,7 +158,9 @@ RSpec.describe Folio::CirculationRules::PolicyService do
   end
 
   describe 'policy querying' do
-    let(:rules) {
+    subject(:service) { described_class.new(rules:, policies:) }
+
+    let(:rules) do
       [
         Folio::CirculationRules::Rule.new(
           { 'loan-type' => 'can-circ' },
@@ -181,9 +183,9 @@ RSpec.describe Folio::CirculationRules::PolicyService do
           }
         )
       ]
-    }
+    end
 
-    let(:policies) {
+    let(:policies) do
       {
         request: {
           'allow-all' => 'Allow all requests',
@@ -206,11 +208,9 @@ RSpec.describe Folio::CirculationRules::PolicyService do
           'nofine' => 'No fines policy'
         }
       }
-    }
+    end
 
     let(:item) { instance_double(Holdings::Item) }
-
-    subject(:service) { described_class.new(rules:, policies:) }
 
     before do
       allow(item).to receive_messages(

@@ -11,7 +11,7 @@ RSpec.describe MarcLinks do
     let(:document) do
       SolrDocument.new(marc_links_struct: [
         { link_text: 'fulltext', fulltext: true },
-        { link_text: 'stanford only',  stanford_only: true },
+        { link_text: 'stanford only', stanford_only: true },
         { href: 'http://oac.cdlib.org/findai/ark:/13030/an-ark', link_text: 'finding aid', note: 'this is a finding aid' },
         { link_text: 'druid', managed_purl: true, file_id: 'x', druid: 'abc', sort: 'zzz' }
       ])

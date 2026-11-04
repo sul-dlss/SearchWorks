@@ -29,23 +29,23 @@ class PerformanceAlerts
 
   def violations
     @violations ||= begin
-                      JSON.parse(response)['violations'] || []
-                    rescue JSON::ParserError => e
-                      logger.warn("Unable to parse PerformanceCheck JSON with: #{e}")
-                      []
-                    end
+      JSON.parse(response)['violations'] || []
+    rescue JSON::ParserError => e
+      logger.warn("Unable to parse PerformanceCheck JSON with: #{e}")
+      []
+    end
   end
 
   def response
     @response ||= begin
-                    connection.get do |req|
-                      req.url api_url
-                      req.headers['X-Api-Key'] = api_key
-                    end.body
-                  rescue Faraday::ConnectionFailed => e
-                    logger.warn("PerformanceCheck API request failed with: #{e}")
-                    '{}'
-                  end
+      connection.get do |req|
+        req.url api_url
+        req.headers['X-Api-Key'] = api_key
+      end.body
+    rescue Faraday::ConnectionFailed => e
+      logger.warn("PerformanceCheck API request failed with: #{e}")
+      '{}'
+    end
   end
 
   def connection

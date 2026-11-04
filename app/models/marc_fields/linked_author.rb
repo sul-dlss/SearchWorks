@@ -29,7 +29,5 @@ class LinkedAuthor < MarcField
     document[:author_struct].first[target] || []
   end
 
-  def present?
-    values.present?
-  end
+  delegate :present?, to: :values
 end

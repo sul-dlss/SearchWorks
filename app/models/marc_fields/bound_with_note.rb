@@ -17,7 +17,7 @@ class BoundWithNote < MarcField
   end
 
   def tags
-    %w(590)
+    %w[590]
   end
 
   def ckey_regex

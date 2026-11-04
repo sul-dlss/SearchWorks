@@ -221,8 +221,8 @@ module Constants
                     'wde' => 'Wood -engraver',
                     'wit' => 'Witness' }
 
-  HIDE_1ST_IND = %w(760 762 765 767 770 772 773 774 775 776 777 780 785 786 787)
-  HIDE_1ST_IND0 = %w(541 542 561 583 590)
+  HIDE_1ST_IND = %w[760 762 765 767 770 772 773 774 775 776 777 780 785 786 787]
+  HIDE_1ST_IND0 = %w[541 542 561 583 590]
   CONTACT_INFO = {
     email: 'infocenter@stanford.edu',
     website: { label: 'SearchWorks', url: 'https://searchworks.stanford.edu' },

@@ -24,12 +24,12 @@ module StanfordWorkFacet
   end
 
   def add_stanford_dept_facet
-      return unless genre_facet_includes_thesis_value?
+    return unless genre_facet_includes_thesis_value?
 
-      blacklight_config.facet_fields['stanford_dept_sim'].tap do |facet|
-        facet.show = true
-        facet.if = true
-      end
+    blacklight_config.facet_fields['stanford_dept_sim'].tap do |facet|
+      facet.show = true
+      facet.if = true
+    end
   end
 
   def genre_facet_includes_thesis_value?

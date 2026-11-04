@@ -29,7 +29,7 @@ RSpec.describe SearchWorksRecordMailer do
       }
     }.to_json
   end
-  let(:documents) {
+  let(:documents) do
     [
       SolrDocument.new(
         id: '123',
@@ -46,7 +46,7 @@ RSpec.describe SearchWorksRecordMailer do
         marc_json_struct: metadata1
       )
     ]
-  }
+  end
   let(:params) do
     { to: 'email@example.com', message: 'The message', subject: 'The subject', email_from: 'Jane Stanford' }
   end
@@ -76,7 +76,7 @@ RSpec.describe SearchWorksRecordMailer do
       end
 
       it 'has the subject that from the document when none was passed in' do
-        skip('Need to update subject_from_details ')
+        skip('Need to update subject_from_details')
         params[:subject] = nil
         mail = SearchWorksRecordMailer.email_record(documents, params, url_params)
         expect(mail.subject).to eq 'SearchWorks Record: N/A'

@@ -56,7 +56,7 @@ module Eds
     # Retrieve a set of documents by id
     # @param [Array] ids
     # @param [HashWithIndifferentAccess] extra_controller_params
-    def fetch_many(ids, extra_controller_params = {})
+    def fetch_many(ids, _extra_controller_params = {})
       @repository.find_by_ids(ids) # rubocop:disable Rails/DynamicFindBy
     end
 
@@ -86,6 +86,7 @@ module Eds
 
     class PagingWindow
       attr_reader :start_page, :per_page, :prev_hit, :next_hit, :hit, :max
+
       def initialize(hit, max)
         @hit = hit
         @max = max
@@ -110,15 +111,11 @@ module Eds
         page_index = set_window # initialize window
 
         if hit < (max - 1) # then we should have a next hit
-          while page_index == (per_page - 1) # hit is last on this page, so increment per_page and recalculate
-            page_index = set_window(1)
-          end
+          page_index = set_window(1) while page_index == (per_page - 1) # hit is last on this page, so increment per_page and recalculate
         end
 
         if start_page.positive? && page_index.zero? # then we should have a previous hit, but might not on this page
-          while page_index.zero? || page_index == (per_page - 1) # hit is the first on this page, so increment per_page to move it down
-            page_index = set_window(1)
-          end
+          page_index = set_window(1) while page_index.zero? || page_index == (per_page - 1) # hit is the first on this page, so increment per_page to move it down
         end
 
         @start_page += 1 # convert from 0-based to 1-based

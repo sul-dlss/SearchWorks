@@ -6,7 +6,7 @@ RSpec.describe 'marc_fields/_marc_field' do
   subject { Capybara.string(rendered.to_s) }
 
   let(:marc_field) do
-    double('MarcField', label: 'Field Label', values: %w(Value1 Value2))
+    double('MarcField', label: 'Field Label', values: %w[Value1 Value2])
   end
 
   before do

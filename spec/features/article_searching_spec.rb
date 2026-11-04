@@ -30,25 +30,25 @@ RSpec.feature 'Article Searching' do
       long_data = Array.new(100) { |_| 'Lorem ipsum dolor sit amet' }.join(', ')
       document = EdsDocument.new({
                                    id: '123',
-                                    eds_title: 'The title of the document',
-                                    "Items" => [
-                                      {
-                                        "Name" => "Abstract", "Data" => long_data
-                                      },
-                                      {
-                                        "Name" => "Subject", "Label" => "Subject Terms", "Group" => "Su",
-                                        "Data" => "<searchLink fieldCode=\"SU\" term=\"#{long_data}\">#{long_data}</searchLink>"
-                                      }
-                                    ],
-                                    "RecordInfo" => {
-                                      "BibRecord" => {
-                                        "BibRelationships" => {
-                                          "IsPartOfRelationships" => [{
-                                            "NameFull" => long_data
-                                          }]
-                                        }
-                                      }
-                                    }
+                                   eds_title: 'The title of the document',
+                                   "Items" => [
+                                     {
+                                       "Name" => "Abstract", "Data" => long_data
+                                     },
+                                     {
+                                       "Name" => "Subject", "Label" => "Subject Terms", "Group" => "Su",
+                                       "Data" => "<searchLink fieldCode=\"SU\" term=\"#{long_data}\">#{long_data}</searchLink>"
+                                     }
+                                   ],
+                                   "RecordInfo" => {
+                                     "BibRecord" => {
+                                       "BibRelationships" => {
+                                         "IsPartOfRelationships" => [{
+                                           "NameFull" => long_data
+                                         }]
+                                       }
+                                     }
+                                   }
                                  })
       stub_article_service(docs: [document])
 
@@ -67,7 +67,7 @@ RSpec.feature 'Article Searching' do
       expect(page).to have_css('.availability-component  a', text: /^View on detail page/)
       expect(page).to have_css('.availability-component  a', text: /^View full text/)
       expect(page).to have_css('.availability-component  a', text: /^Find full text or request/)
-      expect(page).to have_css('.availability-component  a', text: /^View\/download PDF/)
+      expect(page).to have_css('.availability-component  a', text: %r{^View/download PDF})
     end
   end
 

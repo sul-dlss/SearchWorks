@@ -6,8 +6,6 @@ module AccessPanels
       AccessPanels::CourseReservesListComponent.new(document:)
     end
 
-    def render?
-      course_reserves_list.render?
-    end
+    delegate :render?, to: :course_reserves_list
   end
 end

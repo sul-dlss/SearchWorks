@@ -7,7 +7,7 @@ class Issn < MarcField
   def values
     return [] if marc.blank?
 
-    @values ||= extracted_fields.flat_map do |field, subfields|
+    @values ||= extracted_fields.flat_map do |_field, subfields|
       subfields.map { |x| x.value.strip }.select { |v| v =~ issn_pattern }
     end.compact
   end

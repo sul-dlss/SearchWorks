@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
   include MarcMetadataFixtures
 
-  let(:non_present_library_doc) {
+  let(:non_present_library_doc) do
     SolrDocument.new(
       id: '123',
       item_display_struct: [
@@ -13,10 +13,10 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
           lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
       ]
     )
-  }
+  end
 
   describe "#libraries" do
-    let(:doc) {
+    let(:doc) do
       SolrDocument.new(
         id: '123',
         item_display_struct: [
@@ -26,7 +26,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
             lopped_callnumber: 'G70.212 .A426 2011', callnumber: 'G70.212 .A426 2011', full_shelfkey: 'lc g   0070.212000 a0.426000 002011' }
         ]
       )
-    }
+    end
 
     it "only returns the libraries" do
       expect(described_class.new(document: doc).libraries.length).to eq 2
@@ -56,7 +56,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
                                                                      lopped_callnumber: 'G70.212 .A426 2011',
                                                                      callnumber: 'G70.212 .A426 2011',
                                                                      full_shelfkey: 'lc g   0070.212000 a0.426000 002011'
-                                                                   }]) ))
+                                                                   }])))
 
       expect(page).to have_css(".panel-library-location a")
       expect(page).to have_css(".library-location-heading")
@@ -165,6 +165,7 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       pending 'SW 4.0'
       expect(page).to have_css('.location .placeholder')
     end
+
     it "has explicit status text for items that we know the status" do
       expect(page).to have_css('td', text: 'Available for in-library use')
     end
@@ -351,10 +352,11 @@ RSpec.describe AccessPanels::AtTheLibraryComponent, type: :component do
       render_inline(described_class.new(document:))
     end
 
-    it "renders a zombie library" do #mmm brains
+    it "renders a zombie library" do # mmm brains
       # This seems to be counting request links (not sure if that was the intent)
       expect(page).to have_css('.panel-library-location a', count: 1)
     end
+
     it "renders blank (i.e. on order) items in the zombie library" do
       expect(page).to have_css('.panel-library-location .callnumber', text: 'GHI')
     end

@@ -35,7 +35,7 @@ class Holdings
     private
 
     def standard_or_zombie_library
-      if @mhld_display[0].blank? || %w(SUL PHYSICS).include?(@mhld_display[0])
+      if @mhld_display[0].blank? || %w[SUL PHYSICS].include?(@mhld_display[0])
         'ZOMBIE'
       else
         @mhld_display[0]

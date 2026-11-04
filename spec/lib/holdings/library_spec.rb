@@ -30,11 +30,13 @@ RSpec.describe Holdings::Library do
   end
 
   describe "#locations" do
-    let(:items) { [
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc' }),
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc2' }),
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc' })
-    ] }
+    let(:items) do
+      [
+        Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc2' }),
+        Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-loc' })
+      ]
+    end
 
     let(:locations) { Holdings::Library.new("GREEN", items).locations }
 
@@ -63,23 +65,27 @@ RSpec.describe Holdings::Library do
     end
 
     it "sorts by location code when there is no translation" do
-      expect(locations.map(&:code)).to eq ["home-loc", "home-loc2"]
+      expect(locations.map(&:code)).to eq %w[home-loc home-loc2]
     end
 
     describe 'sorting' do
       let(:locations) { Holdings::Library.new("GREEN", items).locations }
-      let(:items) { [
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'GRE-SSRC-DOCS', discoveryDisplayName: 'Current periodicals' }),
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'SAL-PAGE' }),
-        Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'GRE-CURRENTPER' })
-      ] }
+      let(:items) do
+        [
+          Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'GRE-SSRC-DOCS', discoveryDisplayName: 'Current periodicals' }),
+          Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'SAL-PAGE' }),
+          Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'GRE-CURRENTPER' })
+        ]
+      end
 
       it "sorts locations alpha by name" do
         expect(locations.map(&:name)).to eq ["Current periodicals", "Jonsson Social Sciences Reading Room: Atrium", "SAL"]
-        expect(locations.map(&:code)).to eq ["GRE-CURRENTPER", "GRE-SSRC-DOCS", "SAL-PAGE"]
+        expect(locations.map(&:code)).to eq %w[GRE-CURRENTPER GRE-SSRC-DOCS SAL-PAGE]
       end
 
       context 'when a zombie location has mhlds with nil location (hrid: a356446)' do
+        subject { library.locations }
+
         let(:library) do
           described_class.new('ZOMBIE', items, mhlds)
         end
@@ -92,19 +98,19 @@ RSpec.describe Holdings::Library do
           [Holdings::MHLD.new(" -|-  -|-  -|- no.54(1968:Feb.17),no.56(1968:Mar.2)-no.57(1968:Mar.9) ... -|- ")]
         end
 
-        subject { library.locations }
-
         it { is_expected.to all be_a Holdings::Location }
       end
     end
   end
 
   describe "#present?" do
-    let(:callnumbers) { [
-      Holdings::Item.new({}),
-      Holdings::Item.new({}),
-      Holdings::Item.new({})
-    ] }
+    let(:callnumbers) do
+      [
+        Holdings::Item.new({}),
+        Holdings::Item.new({}),
+        Holdings::Item.new({})
+      ]
+    end
     let(:library) { Holdings::Library.new("GREEN", callnumbers) }
 
     it "is false when libraries have no item display fields" do
@@ -126,6 +132,7 @@ RSpec.describe Holdings::Library do
     it "is #zombie?" do
       expect(zombie).to be_zombie
     end
+
     it "is not a holding library" do
       expect(zombie).not_to be_holding_library
     end

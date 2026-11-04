@@ -6,7 +6,7 @@
 
 set :output, 'log/cron.log'
 
-every 1.hours, roles: %i[app] do
+every 1.hour, roles: %i[app] do
   rake 'searchworks:prune_eds_cache'
 end
 
@@ -22,6 +22,6 @@ every '0 4 * * *', roles: %i[db] do # daily at 4 am
   rake 'searchworks:prune_old_guest_user_data[12]'
 end
 
-every 1.hours, at: 15, roles: %i[db] do
+every 1.hour, at: 15, roles: %i[db] do
   rake 'folio:update_courses_db'
 end

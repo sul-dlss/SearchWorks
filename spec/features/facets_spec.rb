@@ -57,6 +57,7 @@ RSpec.describe 'Facets' do
           expect(page).to have_css('a', text: 'Theses & dissertations')
         end
       end
+
       it 'renders the Stanford school or department facet when genre
           Thesis/Dissertation is selected' do
         visit search_catalog_path(f: { genre_ssim: ['Thesis/Dissertation'] })

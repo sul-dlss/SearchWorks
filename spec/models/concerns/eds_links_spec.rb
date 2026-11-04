@@ -14,7 +14,7 @@ RSpec.describe EdsLinks do
                     })
   end
 
-  context '#eds_links' do
+  describe '#eds_links' do
     it '#all returns an array of Links:link' do
       expect(document.eds_links.all).to be_present
 

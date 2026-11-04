@@ -5,10 +5,10 @@ require 'rails_helper'
 RSpec.describe BoundWithNote do
   include MarcMetadataFixtures
 
+  subject { described_class.new(document, %w[590]) }
+
   let(:marc) { linked_ckey_fixture }
   let(:document) { SolrDocument.new(marc_json_struct: marc) }
-
-  subject { described_class.new(document, %w(590)) }
 
   describe '#values' do
     it 'links to the parent ID if there is a ckey in the $c' do

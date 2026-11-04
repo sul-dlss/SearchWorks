@@ -31,7 +31,7 @@ RSpec.feature "Home Page" do
   end
 
   scenario "there should be no more link on any facets" do
-    within ('.home-page-facets') do
+    within('.home-page-facets') do
       expect(page).to have_no_css('a', text: /more/)
     end
   end

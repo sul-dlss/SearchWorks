@@ -5,10 +5,10 @@ require 'rails_helper'
 RSpec.describe BoundWithNoteForAccessPanel do
   include MarcMetadataFixtures
 
+  subject { described_class.new(document, %w[590]) }
+
   let(:marc) { linked_ckey_fixture }
   let(:document) { SolrDocument.new(marc_json_struct: marc) }
-
-  subject { described_class.new(document, %w(590)) }
 
   describe '#values' do
     it 'returns an array of hashes that include a value and an ID' do

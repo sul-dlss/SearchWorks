@@ -31,7 +31,7 @@ RSpec.describe ReplaceSpecialQuotes do
             a_param: { query: "#{q}‘s" },
             b_param: { query: "#{q}’s" },
             c_param: { query: "#{q}‚s" },
-            d_param: { query:  "#{q}‛s" }
+            d_param: { query: "#{q}‛s" }
           }
         }.with_indifferent_access
       end

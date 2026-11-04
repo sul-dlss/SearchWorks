@@ -8,6 +8,7 @@
 class MarcFieldWrapper
   attr_reader :marc_field
   attr_writer :subfields
+
   delegate :[], :each, :each_with_object, :indicator1, :indicator2, :tag, to: :marc_field
 
   def initialize(marc_field)
@@ -37,7 +38,7 @@ class MarcFieldWrapper
 
   def vernacular_matcher?
     vernacular_matching_field.include?('-') && if marc_field.tag.start_with?('8')
-                                                !vernacular_matching_field.start_with?('8')
+                                                 !vernacular_matching_field.start_with?('8')
                                                else
                                                  vernacular_matching_field.start_with?('8')
                                                end
@@ -48,7 +49,7 @@ class MarcFieldWrapper
   end
 
   def ==(other)
-    self.equal?(other) || (other.is_a?(MarcFieldWrapper) && self.marc_field == other.marc_field)
+    equal?(other) || (other.is_a?(MarcFieldWrapper) && marc_field == other.marc_field)
   end
 
   private

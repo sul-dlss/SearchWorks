@@ -5,6 +5,8 @@ require 'rails_helper'
 RSpec.describe 'Isbn' do
   include MarcMetadataFixtures
 
+  subject(:instance) { document.marc_field(:isbn) }
+
   let(:document) { SolrDocument.new(marc_json_struct: isbn_fixture) }
 
   let(:isbn_fixture) do
@@ -17,8 +19,6 @@ RSpec.describe 'Isbn' do
       }
     JSON
   end
-
-  subject(:instance) { document.marc_field(:isbn) }
 
   it '#label' do
     expect(instance.label).to eq 'ISBN'

@@ -56,12 +56,12 @@ class ArticleSelectionsController < ArticlesController
   end
 
   def _prefixes
-    @_prefixes ||= super + ['articles', 'catalog']
+    @_prefixes ||= super + %w[articles catalog]
   end
 
   # Overridden Blacklight helper method to generate a "start"
   # for bookmarks similar to what the solr response provides
-  def document_counter_with_offset idx, offset = nil
+  def document_counter_with_offset(idx, offset = nil)
     offset ||= ((@bookmarks.current_page - 1) * @bookmarks.limit_value) if @bookmarks
     offset ||= 0
 
@@ -88,9 +88,9 @@ class ArticleSelectionsController < ArticlesController
   end
 
   def verify_user
-    unless current_or_guest_user or (action == "index" and token_or_current_or_guest_user)
-      flash[:notice] = I18n.t('blacklight.bookmarks.need_login') and raise Blacklight::Exceptions::AccessDenied
-    end
+    return if current_or_guest_user or (action == "index" and token_or_current_or_guest_user)
+
+    flash[:notice] = I18n.t('blacklight.bookmarks.need_login') and raise Blacklight::Exceptions::AccessDenied
   end
 
   def search_service

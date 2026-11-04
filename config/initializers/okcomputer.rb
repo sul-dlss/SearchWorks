@@ -4,6 +4,7 @@ require 'okcomputer'
 
 class PerformanceCheck < OkComputer::Check
   attr_reader :policy
+
   def initialize(policy)
     super()
     @policy = policy

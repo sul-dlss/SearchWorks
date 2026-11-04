@@ -61,7 +61,7 @@ class CatalogController < ApplicationController
     blacklight_config.default_solr_params['request-id'] = request.request_id || '-'
   end
 
-  before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, :only => :index
+  before_action BlacklightAdvancedSearch::RedirectLegacyParamsFilter, only: :index
 
   before_action only: :index do
     top_filters = blacklight_config.top_filters[PageLocation.new(search_state).access_point] || blacklight_config.top_filters[:default]
@@ -79,23 +79,23 @@ class CatalogController < ApplicationController
     config.default_solr_params = {
       qt: 'search',
       rows: 20,
-      "f.callnum_facet_hsim.facet.limit": "-1",
-      "f.stanford_work_facet_hsim.facet.limit": "-1",
-      "f.format_hsim.facet.limit": "-1"
+      'f.callnum_facet_hsim.facet.limit': "-1",
+      'f.stanford_work_facet_hsim.facet.limit': "-1",
+      'f.format_hsim.facet.limit': "-1"
     }
 
     config.fetch_many_document_params = { fl: '*' }
 
     config.search_state_fields += [
       :prefix, # used to filter by database title
-      :facet_suggest_query, # used to pass facet suggest input to sort URLs
+      :facet_suggest_query # used to pass facet suggest input to sort URLs
     ]
 
     # solr path which will be added to solr base url before the other solr params.
-    #config.solr_path = 'select'
+    # config.solr_path = 'select'
 
     # items to show per page, each number in the array represent another option to choose from.
-    #config.per_page = [10,20,50,100]
+    # config.per_page = [10,20,50,100]
     config.default_per_page = 20
 
     ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
@@ -104,16 +104,14 @@ class CatalogController < ApplicationController
     config.document_solr_path = 'select'
     config.json_solr_path = 'select'
     config.default_document_solr_params = {
-     :qt => 'document',
-    #  ## These are hard-coded in the blacklight 'document' requestHandler
-    #  # :fl => '*',
-    #  # :rows => 1
-    #  # :q => '{!raw f=id v=$id}'
+      qt: 'document'
+      #  ## These are hard-coded in the blacklight 'document' requestHandler
+      #  # :fl => '*',
+      #  # :rows => 1
+      #  # :q => '{!raw f=id v=$id}'
     }
 
-    if Settings.DISABLE_SESSIONS
-      config.crawler_detector = lambda { |_| true }
-    end
+    config.crawler_detector = ->(_) { true } if Settings.DISABLE_SESSIONS
 
     # solr field configuration for search results/index views
     config.index.document_presenter_class = IndexDocumentPresenter
@@ -127,12 +125,12 @@ class CatalogController < ApplicationController
     config.index.mini_bento_component = SearchResult::MiniBento::CatalogComponent
 
     config.index.search_field_mapping = { # Catalog -> Article
-      search:         :search,
-      search_author:  :author,
-      search_title:   :title,
-      subject_terms:  :subject,
-      call_number:    :search,
-      search_series:  :search
+      search: :search,
+      search_author: :author,
+      search_title: :title,
+      subject_terms: :subject,
+      call_number: :search,
+      search_series: :search
     }
 
     # restrict available pagination options because we block deep pagination
@@ -162,13 +160,13 @@ class CatalogController < ApplicationController
     # :show may be set to false if you don't want the facet to be drawn in the
     # facet bar
     config.add_facet_field 'access_facet', label: 'Access',
-                           component: Searchworks4::ListComponent, sort: :index
+                                           component: Searchworks4::ListComponent, sort: :index
     config.add_facet_field "format_hsim", label: "Format", sort: :index, component: Searchworks4::FormatFacetComponent
     config.add_facet_field "library", field: "library_code_facet_ssim", label: "Library", limit: 100, sort: :index,
-                            helper_method: :translate_library_code,
-                            component: Searchworks4::LibraryFacetComponent
+                                      helper_method: :translate_library_code,
+                                      component: Searchworks4::LibraryFacetComponent
     config.add_facet_field "genre_ssim", label: "Genre", limit: 6, suggest: true,
-                           component: Searchworks4::FacetSearchComponent
+                                         component: Searchworks4::FacetSearchComponent
     config.add_facet_field "pub_year_tisim", label: "Date", range: true, advanced_search_label: 'Publication year'
 
     config.add_facet_field "language", label: "Language", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
@@ -189,11 +187,11 @@ class CatalogController < ApplicationController
                            sort: 'count', collapse: false, show: false
     config.add_facet_field 'stanford_dept_sim', label: 'Stanford school or department', collapse: false, show: false, limit: 6, component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection", label: "Collection", show: false, helper_method: :collection_breadcrumb_value,
-                            filter_query_builder: CollectionFilterQuery,
-                            component: Blacklight::Facets::ListComponent
+                                         filter_query_builder: CollectionFilterQuery,
+                                         component: Blacklight::Facets::ListComponent
     config.add_facet_field "collection_type", label: "Collection type", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field 'fund_facet', label: 'Acquired with support from', show: false, helper_method: :bookplate_breadcrumb_value, component: Blacklight::Facets::ListComponent,
-                           item_presenter: FundFacetItemPresenter
+                                         item_presenter: FundFacetItemPresenter
     config.add_facet_field "format_physical_ssim", label: "Media type", limit: 6, show: false, component: Blacklight::Facets::ListComponent
     config.facet_display = {
       hierarchy: {
@@ -207,8 +205,8 @@ class CatalogController < ApplicationController
     config.add_facet_field "course", label: "Course", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field "instructor", label: "Instructor", show: false, component: Blacklight::Facets::ListComponent
     config.add_facet_field "courses_folio_id_ssim", label: "Course", show: false,
-                           component: Blacklight::Facets::ListComponent,
-                           item_presenter: FolioCourseFacetItemPresenter
+                                                    component: Blacklight::Facets::ListComponent,
+                                                    item_presenter: FolioCourseFacetItemPresenter
 
     config.add_facet_field "era_facet", label: "Era", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
     config.add_facet_field "author_other_facet", label: "Organization (as author)", limit: 6, suggest: true, component: Searchworks4::FacetSearchComponent
@@ -219,14 +217,14 @@ class CatalogController < ApplicationController
     }, component: Blacklight::Facets::ListComponent, include_in_advanced_search: false
 
     config.top_filters = {
-      :default => ['access_facet', 'format_hsim', 'library'],
-      :government_documents => ['access_facet', 'callnum_facet_hsim', 'author_other_facet'],
-      :dissertation_theses => ['access_facet', 'stanford_dept_sim', 'stanford_work_facet_hsim'],
-      :advanced_search => ['access_facet', 'format_hsim', 'language', 'building_facet', 'pub_year_tisim']
+      default: %w[access_facet format_hsim library],
+      government_documents: %w[access_facet callnum_facet_hsim author_other_facet],
+      dissertation_theses: %w[access_facet stanford_dept_sim stanford_work_facet_hsim],
+      advanced_search: %w[access_facet format_hsim language building_facet pub_year_tisim]
     }
 
     # Pivot facet example
-    #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
+    # config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -286,8 +284,8 @@ class CatalogController < ApplicationController
     config.add_search_field('search') do |field|
       field.label = 'All fields'
       field.cjk_solr_parameters = {
-        qf:  '${qf_cjk}',
-        pf:  '${pf_cjk}',
+        qf: '${qf_cjk}',
+        pf: '${pf_cjk}',
         pf2: '${pf2_cjk}',
         pf3: '${pf3_cjk}'
       }
@@ -296,20 +294,20 @@ class CatalogController < ApplicationController
     config.add_search_field('search_title') do |field|
       field.label = "Title"
       field.solr_parameters = {
-        qf:  '${qf_title}',
-        pf:  '${pf_title}',
+        qf: '${qf_title}',
+        pf: '${pf_title}',
         pf3: '${pf3_title}',
         pf2: '${pf2_title}'
       }
       field.solr_adv_parameters = {
-        qf:  '$qf_title',
-        pf:  '$pf_title',
+        qf: '$qf_title',
+        pf: '$pf_title',
         pf3: '$pf3_title',
         pf2: '$pf2_title'
       }
       field.cjk_solr_parameters = {
-        qf:  '${qf_title_cjk}',
-        pf:  '${pf_title_cjk}',
+        qf: '${qf_title_cjk}',
+        pf: '${pf_title_cjk}',
         pf3: '${pf3_title_cjk}',
         pf2: '${pf2_title_cjk}'
       }
@@ -318,20 +316,20 @@ class CatalogController < ApplicationController
     config.add_search_field('search_author') do |field|
       field.label = "Author/Contributor"
       field.solr_parameters = {
-        qf:  '${qf_author}',
-        pf:  '${pf_author}',
+        qf: '${qf_author}',
+        pf: '${pf_author}',
         pf3: '${pf3_author}',
         pf2: '${pf2_author}'
       }
       field.solr_adv_parameters = {
-        qf:  '$qf_author',
-        pf:  '$pf_author',
+        qf: '$qf_author',
+        pf: '$pf_author',
         pf3: '$pf3_author',
         pf2: '$pf2_author'
       }
       field.cjk_solr_parameters = {
-        qf:  '${qf_author_cjk}',
-        pf:  '${pf_author_cjk}',
+        qf: '${qf_author_cjk}',
+        pf: '${pf_author_cjk}',
         pf3: '${pf3_author_cjk}',
         pf2: '${pf2_author_cjk}'
       }
@@ -340,20 +338,20 @@ class CatalogController < ApplicationController
     config.add_search_field('subject_terms') do |field|
       field.label = "Subject"
       field.solr_parameters = {
-        qf:  '${qf_subject}',
-        pf:  '${pf_subject}',
+        qf: '${qf_subject}',
+        pf: '${pf_subject}',
         pf3: '${pf3_subject}',
         pf2: '${pf2_subject}'
       }
       field.solr_adv_parameters = {
-        qf:  '$qf_subject',
-        pf:  '$pf_subject',
+        qf: '$qf_subject',
+        pf: '$pf_subject',
         pf3: '$pf3_subject',
         pf2: '$pf2_subject'
       }
       field.cjk_solr_parameters = {
-        qf:  '${qf_subject_cjk}',
-        pf:  '${pf_subject_cjk}',
+        qf: '${qf_subject_cjk}',
+        pf: '${pf_subject_cjk}',
         pf3: '${pf3_subject_cjk}',
         pf2: '${pf2_subject_cjk}'
       }
@@ -373,20 +371,20 @@ class CatalogController < ApplicationController
       field.label = "Series"
       field.include_in_advanced_search = false
       field.solr_parameters = {
-        qf:  '${qf_series}',
-        pf:  '${pf_series}',
+        qf: '${qf_series}',
+        pf: '${pf_series}',
         pf3: '${pf3_series}',
         pf2: '${pf2_series}'
       }
       field.solr_adv_parameters = {
-        qf:  '$qf_series',
-        pf:  '$pf_series',
+        qf: '$qf_series',
+        pf: '$pf_series',
         pf3: '$pf3_series',
         pf2: '$pf2_series'
       }
       field.cjk_solr_parameters = {
-        qf:  '${qf_series_cjk}',
-        pf:  '${pf_series_cjk}',
+        qf: '${qf_series_cjk}',
+        pf: '${pf_series_cjk}',
         pf3: '${pf3_series_cjk}',
         pf2: '${pf2_series_cjk}'
       }
@@ -398,20 +396,20 @@ class CatalogController < ApplicationController
       field.include_in_advanced_search = true
       field.include_in_simple_select = false
       field.solr_parameters = {
-        qf:  '${qf_series}',
-        pf:  '${pf_series}',
+        qf: '${qf_series}',
+        pf: '${pf_series}',
         pf3: '${pf3_series}',
         pf2: '${pf2_series}'
       }
       field.solr_adv_parameters = {
-        qf:  '$qf_series',
-        pf:  '$pf_series',
+        qf: '$qf_series',
+        pf: '$pf_series',
         pf3: '$pf3_series',
         pf2: '$pf2_series'
       }
       field.cjk_solr_parameters = {
-        qf:  '${qf_series_cjk}',
-        pf:  '${pf_series_cjk}',
+        qf: '${qf_series_cjk}',
+        pf: '${pf_series_cjk}',
         pf3: '${pf3_series_cjk}',
         pf2: '${pf2_series_cjk}'
       }
@@ -422,20 +420,20 @@ class CatalogController < ApplicationController
       field.include_in_advanced_search = true
       field.include_in_simple_select = false
       field.solr_parameters = {
-        qf:  '${qf_pub_info}',
-        pf:  '${pf_pub_info}',
+        qf: '${qf_pub_info}',
+        pf: '${pf_pub_info}',
         pf3: '${pf3_pub_info}',
         pf2: '${pf2_pub_info}'
       }
       field.solr_adv_parameters = {
-        qf:  '$qf_pub_info',
-        pf:  '$pf_pub_info',
+        qf: '$qf_pub_info',
+        pf: '$pf_pub_info',
         pf3: '$pf3_pub_info',
         pf2: '$pf2_pub_info'
       }
       field.cjk_solr_parameters = {
-        qf:  '${qf_pub_info_cjk}',
-        pf:  '${pf_pub_info_cjk}',
+        qf: '${qf_pub_info_cjk}',
+        pf: '${pf_pub_info_cjk}',
         pf3: '${pf3_pub_info_cjk}',
         pf2: '${pf2_pub_info_cjk}'
       }
@@ -446,14 +444,14 @@ class CatalogController < ApplicationController
       field.include_in_advanced_search = true
       field.include_in_simple_select = false
       field.solr_parameters = {
-        qf:  '${qf_number}',
-        pf:  '${pf_number}',
+        qf: '${qf_number}',
+        pf: '${pf_number}',
         pf3: '${pf3_number}',
         pf2: '${pf2_number}'
       }
       field.solr_adv_parameters = {
-        qf:  '$qf_number',
-        pf:  '$pf_number',
+        qf: '$qf_number',
+        pf: '$pf_number',
         pf3: '$pf3_number',
         pf2: '$pf2_number'
       }
@@ -464,8 +462,8 @@ class CatalogController < ApplicationController
       field.include_in_simple_select = false
       field.include_in_advanced_search = false
       field.solr_parameters = {
-        qf:  '${qf_author_title}',
-        pf:  '${pf_author_title}',
+        qf: '${qf_author_title}',
+        pf: '${pf_author_title}',
         pf3: '${pf3_author_title}',
         pf2: '${pf2_author_title}'
       }
@@ -477,8 +475,8 @@ class CatalogController < ApplicationController
       query_parser: 'edismax',
       url_key: 'advanced',
       form_solr_parameters: {
-        "facet.field" => ["access_facet", "format_hsim", "format_physical_ssim", "library_code_facet_ssim", "language"],
-         # return all facet values
+        "facet.field" => %w[access_facet format_hsim format_physical_ssim library_code_facet_ssim language],
+        # return all facet values
         "f.access_facet.facet.limit" => -1,
         "f.format_hsim.facet.limit" => -1,
         "f.format_physical_ssim.facet.limit" => -1,
@@ -581,7 +579,7 @@ class CatalogController < ApplicationController
   end
   helper_method :augment_solr_document_json_response
 
-  def advanced_search_form?(*args, **kwargs)
+  def advanced_search_form?(*_args, **_kwargs)
     action_name == 'advanced_search'
   end
 end

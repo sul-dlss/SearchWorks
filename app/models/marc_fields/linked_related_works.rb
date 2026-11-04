@@ -67,7 +67,7 @@ class LinkedRelatedWorks < MarcField
   SECTION_TO_VIEW = {
     before: %i[pre_text],
     inside: %i[link search],
-    after:  %i[post_text]
+    after: %i[post_text]
   }.freeze
   private_constant :SECTION_TO_VIEW
 

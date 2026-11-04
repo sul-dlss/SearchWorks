@@ -7,7 +7,7 @@ RSpec.describe SearchBuilder do
 
   let(:blacklight_params) { {} }
   let(:solr_params) { Blacklight::Solr::Request.new }
-  let(:action_name) { 'index'}
+  let(:action_name) { 'index' }
   let(:scope) { double(blacklight_config: CatalogController.blacklight_config, search_state_class: nil, action_name:, controller_name: 'catalog', params: {}) }
 
   before do
@@ -24,10 +24,12 @@ RSpec.describe SearchBuilder do
       search_builder.with(prefix: '0-9').database_prefix_search(solr_params)
       expect(solr_params[:fq]).to include("title_sort:/[0-9].*/")
     end
+
     it "handles alpha filters properly" do
       search_builder.with(prefix: 'b').database_prefix_search(solr_params)
       expect(solr_params[:fq]).to include("title_sort:/[b].*/")
     end
+
     it "does nothing if prefix param is invalid" do
       search_builder.with(prefix: '*').database_prefix_search(solr_params)
       expect(solr_params[:fq]).to be_nil
@@ -50,7 +52,7 @@ RSpec.describe SearchBuilder do
     end
 
     it "leaves structured queries alone" do
-      solr_params = search_builder.with(q: { id: ['12345', '54321'] }).to_hash
+      solr_params = search_builder.with(q: { id: %w[12345 54321] }).to_hash
       expect(solr_params[:qf]).to be_nil
     end
 
@@ -89,7 +91,7 @@ RSpec.describe SearchBuilder do
       it 'overrides solr parameters to just the things the home page needs' do
         solr_params = { 'facet.field' => ['some garbage'], 'rows' => 50 }
         search_builder.consolidate_home_page_params(solr_params)
-        expect(solr_params).to include 'facet.field' => ['access_facet', 'format_hsim', 'library_code_facet_ssim'], 'rows' => 0
+        expect(solr_params).to include 'facet.field' => %w[access_facet format_hsim library_code_facet_ssim], 'rows' => 0
       end
     end
 

@@ -6,25 +6,28 @@ RSpec.describe CollectionMember do
   let(:member) { SolrDocument.new(collection: ["12345"]) }
   let(:non_member) { SolrDocument.new }
   let(:sirsi) { SolrDocument.new(collection: ['sirsi']) }
-  let(:merged_sirsi) { SolrDocument.new(collection: ['sirsi', '12345']) }
+  let(:merged_sirsi) { SolrDocument.new(collection: %w[sirsi 12345]) }
 
   describe "#is_a_collection_member?" do
     it "returns true for collection members" do
       expect(member.is_a_collection_member?).to be_truthy
     end
+
     it "returns false for non collection members" do
       expect(non_member.is_a_collection_member?).to be_falsey
     end
+
     it "returns false for sirsi records" do
       expect(sirsi.is_a_collection_member?).to be_falsey
     end
+
     it "returns true for sirsi records that identify as being in another collection" do
       expect(merged_sirsi.is_a_collection_member?).to be_truthy
     end
   end
 
   describe "#parent_collections" do
-    let(:multi_collection) { SolrDocument.new(collection: ['12345', '54321']) }
+    let(:multi_collection) { SolrDocument.new(collection: %w[12345 54321]) }
     let(:catkey_prefix) { SolrDocument.new(collection: ['a12345']) }
     let(:stub_params) { { params: { fq: "id:12345" } } }
     let(:stub_response) do
@@ -35,34 +38,38 @@ RSpec.describe CollectionMember do
       expect(Blacklight.default_index).to receive(:search).with(**stub_params).and_return(stub_response)
       expect(member.parent_collections).to be_present
     end
+
     it "returns a solr document" do
       allow(Blacklight.default_index).to receive(:search).with(**stub_params).and_return(stub_response)
       member.parent_collections.each do |parent|
         expect(parent).to be_a SolrDocument
       end
     end
+
     it "#parent_collection_params should return all IDs joined w/ OR" do
       expect(multi_collection.send(:parent_collection_params)).to eq "id:12345 OR id:54321"
     end
+
     it 'strips leading "a" from collection ids' do
       expect(catkey_prefix.send(:parent_collection_params)).to eq "id:12345"
     end
+
     it "returns nil for non collection members" do
       expect(non_member.parent_collections).to be_nil
     end
   end
 
   describe "index_parent_collections" do
-    let(:document_with_parent) {
+    let(:document_with_parent) do
       SolrDocument.new(
-        collection: ['12345', '54321'],
+        collection: %w[12345 54321],
         collection_with_title: [
           '12345 -|- Collection1 Title',
           '54321 -|- Collection2 Title'
         ]
       )
-    }
-    let(:document_without_parent) { SolrDocument.new() }
+    end
+    let(:document_without_parent) { SolrDocument.new }
 
     it "returns the parent collections from the index" do
       collections = document_with_parent.index_parent_collections
@@ -75,6 +82,7 @@ RSpec.describe CollectionMember do
       expect(collections.last[:id]).to eq '54321'
       expect(collections.last[:title_display]).to eq 'Collection2 Title'
     end
+
     it "returns nil if the document is not a collection member" do
       expect(document_without_parent.index_parent_collections).to be_nil
     end

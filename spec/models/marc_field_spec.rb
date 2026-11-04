@@ -5,11 +5,11 @@ require 'rails_helper'
 RSpec.describe MarcField do
   include MarcMetadataFixtures
 
+  subject(:field) { described_class.new(document, tags) }
+
   let(:marc) { metadata1 }
   let(:document) { SolrDocument.new(marc_json_struct: marc) }
   let(:tags) { [] }
-
-  subject(:field) { described_class.new(document, tags) }
 
   describe '#label' do
     it 'falls back to a default label' do
@@ -18,7 +18,7 @@ RSpec.describe MarcField do
   end
 
   describe '#values' do
-    let(:tags) { %w(600) }
+    let(:tags) { %w[600] }
 
     it 'returns an array of concatenated subfields' do
       expect(subject.values.length).to eq 3
@@ -26,7 +26,7 @@ RSpec.describe MarcField do
     end
 
     context 'matching vernacular values' do
-      let(:tags) { %w(245 505) }
+      let(:tags) { %w[245 505] }
       let(:marc) { matched_vernacular_fixture }
 
       it 'are interfiled in the metadata' do
@@ -39,7 +39,7 @@ RSpec.describe MarcField do
     end
 
     context 'unmatched vernacular fields' do
-      let(:tags) { %w(245 505) }
+      let(:tags) { %w[245 505] }
       let(:marc) { unmatched_vernacular_fixture }
 
       it 'returns fields for the requested tags even when there is no data present' do
@@ -48,7 +48,7 @@ RSpec.describe MarcField do
     end
 
     context 'complex vernacular matching' do
-      let(:tags) { %w(245 300 350) }
+      let(:tags) { %w[245 300 350] }
       let(:marc) { complex_vernacular_fixture }
 
       it 'interfiles the matched and unmatched vernacular properly' do
@@ -65,7 +65,7 @@ RSpec.describe MarcField do
     end
 
     context 'when it contains unsafe characters' do
-      let(:tags) { %w(245) }
+      let(:tags) { %w[245] }
       let(:marc) do
         <<-JSON
           {
@@ -93,11 +93,11 @@ RSpec.describe MarcField do
   describe 'preprocessors' do
     subject { field.values }
 
-    let(:tags) { %w(600) }
+    let(:tags) { %w[600] }
 
     context 'fields that should not be displayed' do
       let(:marc) { metadata2 }
-      let(:tags) { %w(541 760) }
+      let(:tags) { %w[541 760] }
 
       it { is_expected.to be_blank }
     end

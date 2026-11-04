@@ -12,20 +12,20 @@ RSpec.describe PerformanceAlerts do
           # Closed
           {
             'test_id' => '1',
-            'opened_at' => (Time.zone.now - 2.days).to_s,
-            'closed_at' => (Time.zone.now - 1.day).to_s,
+            'opened_at' => 2.days.ago.to_s,
+            'closed_at' => 1.day.ago.to_s,
             'links' => { 'policy_id' => '12345' }
           },
           # Open
           {
             'test_id' => '2',
-            'opened_at' => Time.zone.now - 5.minutes,
+            'opened_at' => 5.minutes.ago,
             'links' => { 'policy_id' => '12345' }
           },
           # Differnt policy id
           {
             'test_id' => '3',
-            'opened_at' => Time.zone.now - 10.minutes,
+            'opened_at' => 10.minutes.ago,
             'links' => { 'policy_id' => 'not-the-right-id' }
           }
         ]
@@ -40,6 +40,8 @@ RSpec.describe PerformanceAlerts do
 
   describe 'errors' do
     context 'when the API connection fails' do
+      subject(:alerts) { described_class.new(policy_id: '12345', http_client: stub_http_client) }
+
       let(:stub_http_client) do
         Class.new do
           def get(*)
@@ -47,8 +49,6 @@ RSpec.describe PerformanceAlerts do
           end
         end
       end
-
-      subject(:alerts) { described_class.new(policy_id: '12345', http_client: stub_http_client) }
 
       it 'returns no alerts' do
         expect(alerts.open).to be_blank

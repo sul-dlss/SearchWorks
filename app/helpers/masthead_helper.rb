@@ -10,7 +10,7 @@ module MastheadHelper
     begin
       render "catalog/mastheads/#{page_location.access_point}"
     rescue ActionView::MissingTemplate
-      return
+      nil
     end
   end
 

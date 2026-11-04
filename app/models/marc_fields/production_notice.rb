@@ -23,21 +23,21 @@ class ProductionNotice < MarcField
 
   def marc_264_labels
     {
-      " 0": "Production",
-      "20": "Former production",
-      "30": "Current production",
-      " 1": "Publication",
-      "21": "Former publication",
-      "31": "Current publication",
-      " 2": "Distribution",
-      "22": "Former distribution",
-      "32": "Current distribution",
-      " 3": "Manufacture",
-      "23": "Former manufacture",
-      "33": "Current manufacture",
-      " 4": "Copyright notice",
-      "24": "Former copyright",
-      "34": "Current copyright"
+      ' 0': "Production",
+      '20': "Former production",
+      '30': "Current production",
+      ' 1': "Publication",
+      '21': "Former publication",
+      '31': "Current publication",
+      ' 2': "Distribution",
+      '22': "Former distribution",
+      '32': "Current distribution",
+      ' 3': "Manufacture",
+      '23': "Former manufacture",
+      '33': "Current manufacture",
+      ' 4': "Copyright notice",
+      '24': "Former copyright",
+      '34': "Current copyright"
     }
   end
 end

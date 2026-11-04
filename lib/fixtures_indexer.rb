@@ -16,7 +16,7 @@ class FixturesIndexer
 
     raise(
       ArgumentError,
-      <<-LONGTEXT.strip_heredoc
+      <<~LONGTEXT
         You are trying to index to the "#{configured_blacklight_collection}" collection,
         which is not the same as what is configured in .solr_wrapper.yml (#{configured_solr_wrapper_collection}).
         You may be running the inexer against a remote collection, which is not advisable.

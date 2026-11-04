@@ -5,10 +5,10 @@ require 'rails_helper'
 RSpec.describe 'Place names' do
   include MarcMetadataFixtures
 
+  subject(:place_name) { document.marc_field(:hierarchical_place_name) }
+
   let(:document) { SolrDocument.new(marc_json_struct: fixture) }
   let(:fixture) { place_name_fixture }
-
-  subject(:place_name) { document.marc_field(:hierarchical_place_name) }
 
   it 'returns MARC 752' do
     expect(place_name.values).to be_present

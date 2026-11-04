@@ -7,10 +7,10 @@ RSpec.describe 'Article Routing' do
     expect(get('/articles')).to route_to('articles#index')
   end
 
-  context '#show' do
-    let(:uri) { "/articles/#{Addressable::URI.encode_component(id)}" }
-
+  describe '#show' do
     subject(:result) { get(uri) }
+
+    let(:uri) { "/articles/#{Addressable::URI.encode_component(id)}" }
 
     context 'handles EDS identifiers' do
       let(:id) { 'eds__1(2).3-4~5,6;7|8%9:A_b' }
@@ -40,6 +40,7 @@ RSpec.describe 'Article Routing' do
   it '#track' do
     expect(post('/articles/eds__1/track')).to route_to(controller: 'articles', action: 'track', id: 'eds__1')
   end
+
   it '#fulltext' do
     expect(get('/articles/eds__1/ebook-pdf/fulltext')).to route_to(controller: 'articles', action: 'fulltext_link', id: 'eds__1', type: 'ebook-pdf')
     expect(get('/articles/eds__1/wrong type/fulltext')).not_to be_routable

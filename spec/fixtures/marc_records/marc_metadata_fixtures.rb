@@ -2,7 +2,7 @@
 
 module MarcMetadataFixtures
   def metadata1
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -341,11 +341,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def metadata2
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -555,11 +555,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def matched_vernacular_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -621,11 +621,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def unmatched_vernacular_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -659,11 +659,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def matched_vernacular_rtl_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -725,11 +725,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def unmatched_vernacular_rtl_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -763,11 +763,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def complex_vernacular_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -882,11 +882,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def bad_vernacular_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1060,11 +1060,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def linked_ckey_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1095,11 +1095,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def unlinked_ckey_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1122,11 +1122,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def escape_characters_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1154,11 +1154,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def relator_code_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1192,11 +1192,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def language_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1216,11 +1216,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def notation_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1237,11 +1237,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def contributed_works_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1355,11 +1355,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def place_name_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1379,11 +1379,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def marc_mixed_subject_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1422,11 +1422,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def marc_duplicate_subject_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1570,11 +1570,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def related_works_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1591,11 +1591,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def title_change_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1629,11 +1629,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def main_entry_and_title_serial_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1670,11 +1670,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def entry_with_subfield_seven
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1714,11 +1714,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def main_entry_and_title_serial_fixture_with_issn
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1755,11 +1755,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def only_title_serial_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1782,11 +1782,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def merged_with_serial_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1825,11 +1825,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def vernacular_serial_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1872,11 +1872,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def single_marc_264_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1899,11 +1899,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def vernacular_marc_264_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1943,11 +1943,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def marc_multi_series_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -1987,11 +1987,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def complex_series_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2079,11 +2079,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def uniform_title_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2106,11 +2106,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def marc_characteristics_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2176,11 +2176,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def marc_sections_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2273,11 +2273,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def edition_imprint_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2323,22 +2323,22 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def no_fields_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
 
         ]
       }
-    json
+    JSON
   end
 
   def marc_382_instrumentation
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2419,11 +2419,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def organization_and_arrangement_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2452,11 +2452,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def linked_author_meeting_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2511,11 +2511,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def physical_medium_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2544,11 +2544,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def linked_related_works_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2706,11 +2706,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def hoover_request_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2805,11 +2805,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def managed_purl_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2858,11 +2858,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def issn_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2888,11 +2888,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def doi_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2915,11 +2915,11 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 
   def other_024_fixture
-    <<-json
+    <<-JSON
       {
         "leader": "          22        4500",
         "fields": [
@@ -2936,6 +2936,6 @@ module MarcMetadataFixtures
           }
         ]
       }
-    json
+    JSON
   end
 end

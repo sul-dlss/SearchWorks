@@ -56,12 +56,12 @@ RSpec.describe Record::MarcContentsSummaryComponent, type: :component do
   end
 
   describe 'Contents/Summary' do
-    let(:summary_struct) {
+    let(:summary_struct) do
       [
         { label: 'Summary', fields: [{ field: 'Summary of content' }] },
         { label: 'Content advice', fields: [{ field: 'Warning about the content' }] }
       ]
-    }
+    end
     let(:marc_json_struct) { no_fields_fixture }
 
     it 'displays a Summary if present' do

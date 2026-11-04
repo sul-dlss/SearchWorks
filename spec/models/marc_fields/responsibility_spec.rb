@@ -5,9 +5,9 @@ require 'rails_helper'
 RSpec.describe 'PhysicalMedium' do
   include MarcMetadataFixtures
 
-  let(:document) { SolrDocument.new(marc_json_struct: physical_medium_fixture) }
-
   subject(:instance) { document.marc_field(340) }
+
+  let(:document) { SolrDocument.new(marc_json_struct: physical_medium_fixture) }
 
   it '#label' do
     expect(instance.label).to eq 'Medium'

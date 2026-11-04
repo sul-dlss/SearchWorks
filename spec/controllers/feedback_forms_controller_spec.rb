@@ -39,6 +39,7 @@ RSpec.describe FeedbackFormsController do
         post :create, params: { url: "http://test.host/", message: "Hello Kittenz", format: "json" }
         expect(flash[:success]).to eq "<strong>Thank you!</strong> <br/> Your feedback has been sent."
       end
+
       it "returns html success" do
         post :create, params: { url: "http://test.host/", message: "Hello Kittenz" }
         expect(flash[:success]).to eq "<strong>Thank you!</strong> <br/> Your feedback has been sent."

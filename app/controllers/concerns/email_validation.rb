@@ -4,14 +4,13 @@ module EmailValidation
   extend ActiveSupport::Concern
 
   def email_params_valid?
-    case
-    when %w(full brief).exclude?(params[:type])
+    if %w[full brief].exclude?(params[:type])
       flash[:error] = I18n.t('blacklight.email.errors.type')
-    when params[:to].blank?
+    elsif params[:to].blank?
       flash[:error] = I18n.t('blacklight.email.errors.to.blank')
-    when too_many_email_addresses?
+    elsif too_many_email_addresses?
       flash[:error] = I18n.t('blacklight.email.errors.to.too_many', max: Settings.EMAIL_THRESHOLD)
-    when !valid_email_addresses?
+    elsif !valid_email_addresses?
       flash[:error] = I18n.t('blacklight.email.errors.to.invalid', to: params[:to])
     end
 

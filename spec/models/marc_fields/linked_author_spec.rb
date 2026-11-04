@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe LinkedAuthor do # rubocop: disable Metrics/BlockLength
+RSpec.describe LinkedAuthor do
   include MarcMetadataFixtures
 
   subject(:instance) { described_class.new(document, target) }
@@ -21,6 +21,7 @@ RSpec.describe LinkedAuthor do # rubocop: disable Metrics/BlockLength
     it '#label' do
       expect(instance.label).to eq 'Corporate Author'
     end
+
     it '#values' do
       expect(instance.values).to include value
     end
@@ -32,6 +33,7 @@ RSpec.describe LinkedAuthor do # rubocop: disable Metrics/BlockLength
     it '#label' do
       expect(instance.label).to eq 'Meeting'
     end
+
     it '#values' do
       expect(instance.values).to include value
     end

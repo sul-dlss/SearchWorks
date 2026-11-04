@@ -12,29 +12,27 @@ module SchemaDotOrg
   end
 
   def solr_values_to_schema_dot_org
-    @solr_values_to_schema_dot_org ||= begin
-      {
-        "@context": "http://schema.org",
-        "@type": jsonld_itemtype,
-        name: self[:title_display],
-        author: (if self[:author_person_display]
-            {
-              "@type": 'Person',
-              name: self[:author_person_display]
-            }
-          elsif self[:author_corp_display]
-            {
-              "@type": 'Organization',
-              name: self[:author_corp_display]
-            }
-          elsif self[:author_meeting_display]
-            {
-              "@type": 'Organization',
-              name: self[:author_meeting_display]
-            }
-          end)
-      }.compact
-    end
+    @solr_values_to_schema_dot_org ||= {
+      '@context': "http://schema.org",
+      '@type': jsonld_itemtype,
+      name: self[:title_display],
+      author: (if self[:author_person_display]
+                 {
+                   '@type': 'Person',
+                   name: self[:author_person_display]
+                 }
+               elsif self[:author_corp_display]
+                 {
+                   '@type': 'Organization',
+                   name: self[:author_corp_display]
+                 }
+               elsif self[:author_meeting_display]
+                 {
+                   '@type': 'Organization',
+                   name: self[:author_meeting_display]
+                 }
+               end)
+    }.compact
   end
 
   def jsonld_itemtype
@@ -45,32 +43,31 @@ module SchemaDotOrg
   def itemtype
     format = self[:format_hsim] || []
     genre = self[:genre_ssim] || []
-    case
-    when genre.include?('Thesis/Dissertation')
+    if genre.include?('Thesis/Dissertation')
       'http://schema.org/Thesis'
-    when genre.include?('Video games')
+    elsif genre.include?('Video games')
       'http://schema.org/VideoGame'
-    when format.include?('Equipment')
+    elsif format.include?('Equipment')
       'http://schema.org/Thing'
-    when format.include?('Book')
+    elsif format.include?('Book')
       'http://schema.org/Book'
-    when format.include?('Dataset')
+    elsif format.include?('Dataset')
       'http://schema.org/Dataset'
-    when format.include?('Image')
+    elsif format.include?('Image')
       'http://schema.org/ImageObject'
-    when format.include?('Journal/Periodical')
+    elsif format.include?('Journal/Periodical')
       'http://schema.org/Periodical'
-    when format.include?('Map')
+    elsif format.include?('Map')
       'http://schema.org/Map'
-    when format.include?('Music recording')
+    elsif format.include?('Music recording')
       'http://schema.org/MusicRecording'
-    when format.include?('Newspaper')
+    elsif format.include?('Newspaper')
       'http://bib.schema.org/Newspaper'
-    when format.include?('Software/Multimedia')
+    elsif format.include?('Software/Multimedia')
       'http://schema.org/SoftwareApplication'
-    when format.include?('Sound recording')
+    elsif format.include?('Sound recording')
       'http://schema.org/AudioObject'
-    when format.include?('Video')
+    elsif format.include?('Video')
       'http://schema.org/VideoObject'
     else
       'http://schema.org/CreativeWork'
