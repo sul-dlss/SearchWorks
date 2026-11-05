@@ -71,6 +71,13 @@ module SearchworksMcp
       required: %w[url label stanford_only]
     }.freeze
 
+    WITHOUT_FILTERS = {
+      type: "object",
+      description: "Present only when filters returned no results: the total and facets without filters, for choosing valid filters.",
+      properties: { total: { type: "integer" }, facets: { type: "object" } },
+      required: %w[total facets]
+    }.freeze
+
     def self.catalog_search
       {
         properties: {
@@ -80,16 +87,7 @@ module SearchworksMcp
           total: { type: "integer" },
           results: { type: "array", items: CATALOG_SEARCH_RESULT },
           facets: { type: "object" },
-          without_filters: {
-            type: "object",
-            description: "Present only when filters returned no results: the total and facets for the query " \
-                         "without filters. Use these facet values to choose filters that match the catalog.",
-            properties: {
-              total: { type: "integer" },
-              facets: { type: "object" }
-            },
-            required: %w[total facets]
-          }
+          without_filters: WITHOUT_FILTERS
         },
         required: %w[query search_field filters total results facets]
       }
@@ -100,10 +98,14 @@ module SearchworksMcp
         properties: {
           query: { type: "string" },
           search_field: { type: "string" },
+          filters: { type: "object" },
           total: { type: "integer" },
-          results: { type: "array", items: SEARCH_RESULT }
+          results: { type: "array", items: SEARCH_RESULT },
+          facets: { type: "object" },
+          without_filters: WITHOUT_FILTERS,
+          warnings: { type: "array", items: { type: "string" }, description: "Filters that EDS ignored" }
         },
-        required: %w[query search_field total results]
+        required: %w[query search_field filters total results facets]
       }
     end
 
