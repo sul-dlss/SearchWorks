@@ -40,9 +40,6 @@ class Holdings
       items.filter_map(&:bound_with_parent)
     end
 
-    # Intentionally left blank
-    def location_link; end
-
     def present?
       any_items? || any_mhlds? || bound_with_child?
     end
