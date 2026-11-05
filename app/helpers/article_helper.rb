@@ -70,15 +70,6 @@ module ArticleHelper
     options[:value].map { |x| x.to_s.html_safe }
   end
 
-  def sanitize_fulltext(options = {})
-    return unless options[:value].present?
-
-    separators = options.dig(:config, :separator_options) || {}
-    fulltext = options[:value].map(&:to_s).to_sentence(separators)
-    fulltext = remove_eds_tag(fulltext, 'anid')
-    sanitize(fulltext).html_safe
-  end
-
   def remove_html_from_document_field(options = {})
     return if options[:value].blank?
 
