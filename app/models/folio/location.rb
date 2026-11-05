@@ -52,10 +52,6 @@ module Folio
       details['holdingsTypeName']
     end
 
-    def see_other?
-      code.ends_with?('-SEE-OTHER')
-    end
-
     def cached_location_data
       Folio::Types.locations[id] || {}
     end
