@@ -20,6 +20,22 @@ RSpec.describe SearchworksMcp::CatalogSearch do
     end
   end
 
+  describe '.build_input_schema' do
+    let(:filters) { described_class.build_input_schema.dig(:properties, :filters, :properties) }
+
+    it 'describes what the topic filter contains' do
+      expect(filters['topic'][:description]).to include('Library of Congress headings', 'BISAC')
+    end
+
+    it 'describes what the genre filter contains' do
+      expect(filters['genre'][:description]).to include('genre/form headings', 'form subdivisions')
+    end
+
+    it 'falls back to the facet label for other filters' do
+      expect(filters['library'][:description]).to eq('Filter by library')
+    end
+  end
+
   describe '.facet_params' do
     let(:params) { described_class.send(:facet_params, config) }
 

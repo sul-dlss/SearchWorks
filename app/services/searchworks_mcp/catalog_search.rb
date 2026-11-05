@@ -29,6 +29,20 @@ module SearchworksMcp
       "subject" => "subject_terms"
     }.freeze
 
+    # Descriptions for filters whose values aren't obvious from the facet label, keyed by filter name.
+    FILTER_DESCRIPTIONS = {
+      "topic" => "Filter by subject heading. Most values are Library of Congress headings without subdivisions: " \
+                 "personal names with dates (e.g. \"Shakespeare, William, 1564-1616\"), organizations, titles of works, " \
+                 "or topical terms (e.g. \"Climate change\", \"Art, Modern\"). Some recent books also have broad BISAC " \
+                 "categories in all caps (e.g. \"HISTORY\", \"FICTION\"), which are separate values from their LC " \
+                 "equivalents. Geographic headings are not included. Values are case-sensitive and must match exactly; choose them from " \
+                 "returned facets.",
+      "genre" => "Filter by genre or form: what the item is rather than what it is about. Values come from genre/form " \
+                 "headings (e.g. \"Science fiction\", \"Graphic novels\", \"Documentary films\") and from form " \
+                 "subdivisions of subject headings (e.g. \"Biography\", \"Juvenile literature\", \"Periodicals\", " \
+                 "\"Early works to 1800\"). Values are case-sensitive and must match exactly; choose them from returned facets."
+    }.freeze
+
     def build_input_schema
       properties = {
         query: {
@@ -49,8 +63,9 @@ module SearchworksMcp
           maximum: 20
         }
       }
-      facet_properties = filter_facets(CatalogController.blacklight_config).transform_values do |facet|
-        { type: "string", description: "Filter by #{facet.label.downcase}", maxLength: MAX_FILTER_VALUE_LENGTH }
+      facet_properties = filter_facets(CatalogController.blacklight_config).to_h do |name, facet|
+        description = FILTER_DESCRIPTIONS.fetch(name) { "Filter by #{facet.label.downcase}" }
+        [name, { type: "string", description: description, maxLength: MAX_FILTER_VALUE_LENGTH }]
       end
       properties[:filters] = filter_schema(facet_properties) if facet_properties.any?
 
@@ -123,7 +138,7 @@ module SearchworksMcp
     def filter_schema(properties)
       {
         type: "object",
-        description: "Optional filters to narrow search results. Values must exactly match a catalog facet value, " \
+        description: "Optional filters to narrow search results. Values must exactly match a catalog facet value, including case, " \
                      "so prefer searching without filters first and choosing values from the returned facets.",
         properties: properties,
         additionalProperties: false
