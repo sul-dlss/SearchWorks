@@ -52,7 +52,7 @@ class McpController < ApplicationController
       title: "SearchWorks Stanford Library Search",
       description: "Search Stanford Libraries catalog and article metadata.",
       version: Settings.REVISION.presence || "1.0.0",
-      website_url: "https://searchworks.stanford.edu",
+      website_url: SearchworksMcp::Urls::BASE_URL,
       instructions: "Choose the search tool that matches the requested material; do not call both unless the user " \
                     "asks for both. Use catalog_search_tool for books, journals as whole publications, databases, " \
                     "media, archives, maps, and other catalog materials. Use article_search_tool for individual " \

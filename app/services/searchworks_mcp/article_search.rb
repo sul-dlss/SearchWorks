@@ -6,6 +6,7 @@ module SearchworksMcp
     extend self
 
     MAX_QUERY_LENGTH = 1000
+    DISABLED_MESSAGE = "Article search is not currently enabled. EDS (EBSCO Discovery Service) must be configured."
 
     SEARCH_FIELDS = {
       "all_fields" => "search",
@@ -65,7 +66,7 @@ module SearchworksMcp
 
     def search(query:, search_field: "all_fields", rows: 10, start_year: nil, end_year: nil, source_type: nil, # rubocop:disable Metrics/ParameterLists
                full_text_only: false, peer_reviewed_only: false)
-      return disabled_response unless Settings.EDS_ENABLED
+      return ToolResult.failure(DISABLED_MESSAGE, error: "EDS not enabled") unless Settings.EDS_ENABLED
 
       filters = applied_filters(start_year:, end_year:, source_type:, full_text_only:, peer_reviewed_only:)
       params = search_params(query, search_field, rows, filters)
@@ -73,18 +74,10 @@ module SearchworksMcp
       unfiltered = run_search(params.except(:f, :range).merge(per_page: 1)) if filters.any? && response.total.zero?
       ArticleResults.format(response:, query:, search_field:, filters:, unfiltered_response: unfiltered)
     rescue StandardError => e
-      SearchworksMcp.internal_tool_error(e, public_message: "Article search is temporarily unavailable.")
+      ToolResult.internal_error(e, public_message: "Article search is temporarily unavailable.")
     end
 
     private
-
-    def disabled_response
-      {
-        text: "Article search is not currently enabled. EDS (EBSCO Discovery Service) must be configured.",
-        structured_content: { error: "EDS not enabled" },
-        error: true
-      }
-    end
 
     # Normalizes the filter arguments, dropping unset ones, so they can be echoed back to the client.
     def applied_filters(filters)
@@ -132,11 +125,7 @@ module SearchworksMcp
     end
 
     def run_search(params)
-      eds_params = {
-        guest: true,
-        session_token: Eds::Session.new(guest: true, caller: "mcp-server").session_token
-      }
-      Eds::SearchService.new(ArticlesController.blacklight_config, params, eds_params).search_results
+      SearchServices.eds(params).search_results
     end
   end
 end

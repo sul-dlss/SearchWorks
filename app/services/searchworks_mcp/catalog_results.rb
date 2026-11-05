@@ -18,9 +18,9 @@ module SearchworksMcp
       facets = extract_facets(response, config)
       without_filters = unfiltered_summary(unfiltered_response, config)
 
-      {
-        text: result_text(response.total, query, filters, results, facets) + unfiltered_text(without_filters),
-        structured_content: {
+      ToolResult.success(
+        result_text(response.total, query, filters, results, facets) + unfiltered_text(without_filters),
+        {
           query: query,
           search_field: search_field,
           filters: filters,
@@ -29,7 +29,7 @@ module SearchworksMcp
           facets: facets,
           without_filters: without_filters
         }.compact
-      }
+      )
     end
 
     private
@@ -38,13 +38,13 @@ module SearchworksMcp
       id = document.id || document["id"]
       {
         id: id,
-        title: field_value(document, %w[title_display title_full_display]) || "Untitled",
-        author: field_value(document, %w[author_person_display author_person_full_display]),
-        format: field_value(document, %w[format format_main_ssim]),
-        pub_date: field_value(document, %w[pub_date pub_year_tisim]),
-        url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(id.to_s)}",
-        library: field_value(document, ["library"]),
-        call_number: field_value(document, ["callnum_display"]),
+        title: TextFormat.first_value(document, %w[title_display title_full_display]) || "Untitled",
+        author: TextFormat.first_value(document, %w[author_person_display author_person_full_display]),
+        format: TextFormat.first_value(document, %w[format format_main_ssim]),
+        pub_date: TextFormat.first_value(document, %w[pub_date pub_year_tisim]),
+        url: Urls.catalog(id),
+        library: TextFormat.first_value(document, ["library"]),
+        call_number: TextFormat.first_value(document, ["callnum_display"]),
         matched_text: matched_text(document).presence,
         availability_lookup: {
           tool: "get_availability",
@@ -61,15 +61,6 @@ module SearchworksMcp
                       .map { |snippet| snippet.to_str.squish }
                       .compact_blank
                       .uniq
-    end
-
-    def field_value(document, field_names)
-      field_names.each do |field_name|
-        value = document[field_name]
-        return value.first if value.is_a?(Array) && value.any?
-        return value if value.is_a?(String) && value.present?
-      end
-      nil
     end
 
     def extract_facets(response, config)
@@ -110,7 +101,7 @@ module SearchworksMcp
 
       "\n\nWithout filters, this query has #{summary[:total]} results. The filter values may not match how these " \
         "materials are cataloged. Search again without filters, or use a filter value from these options:" \
-        "#{facet_list(summary[:facets])}"
+        "#{TextFormat.facet_list(summary[:facets])}"
     end
 
     def result_text(total, query, filters, results, facets)
@@ -118,7 +109,7 @@ module SearchworksMcp
       return "No results found for query: #{query}#{filter_text}" if results.empty?
 
       "Found #{total} results#{filter_text} (showing #{results.length}):\n\n" \
-        "#{formatted_results(results)}#{facet_text(facets)}#{display_hint(results)}#{availability_follow_up(results)}"
+        "#{formatted_results(results)}#{TextFormat.facets(facets)}#{display_hint(results)}#{availability_follow_up(results)}"
     end
 
     def display_hint(results)
@@ -147,19 +138,6 @@ module SearchworksMcp
         lines << "   URL: #{result[:url]}"
         lines.join("\n")
       end.join("\n\n")
-    end
-
-    def facet_text(facets)
-      return "" if facets.empty?
-
-      "\n\nAvailable refinement options:#{facet_list(facets)}"
-    end
-
-    def facet_list(facets)
-      facets.map do |_key, facet|
-        values = facet[:values].map { |value| "#{value[:value]} (#{value[:count]})" }.join(", ")
-        "\n- #{facet[:label]}: #{values}"
-      end.join
     end
 
     def availability_follow_up(results)

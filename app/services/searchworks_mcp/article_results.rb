@@ -15,11 +15,11 @@ module SearchworksMcp
       facets = extract_facets(response)
       without_filters = unfiltered_summary(unfiltered_response)
       warnings = filter_warnings(response, filters)
-      text = result_text(response.total, query, filters, results) + facet_text(facets) + unfiltered_text(without_filters)
+      text = result_text(response.total, query, filters, results) + TextFormat.facets(facets) + unfiltered_text(without_filters)
 
-      {
-        text: warning_text(warnings) + text,
-        structured_content: {
+      ToolResult.success(
+        warning_text(warnings) + text,
+        {
           query: query,
           search_field: search_field,
           filters: filters,
@@ -29,7 +29,7 @@ module SearchworksMcp
           without_filters: without_filters,
           warnings: warnings.presence
         }.compact
-      }
+      )
     end
 
     private
@@ -75,26 +75,17 @@ module SearchworksMcp
 
     def format_document(document)
       id = document.id || document["id"]
-      abstract = field_value(document, ["eds_abstract"])
+      abstract = TextFormat.first_value(document, ["eds_abstract"])
       {
         id: id,
-        title: field_value(document, ["eds_title"]) || "Untitled",
+        title: TextFormat.first_value(document, ["eds_title"]) || "Untitled",
         authors: document["eds_authors"] || [],
-        source: field_value(document, ["eds_composed_title"]),
-        publication_date: field_value(document, ["eds_publication_date"]),
+        source: TextFormat.first_value(document, ["eds_composed_title"]),
+        publication_date: TextFormat.first_value(document, ["eds_publication_date"]),
         abstract: abstract&.truncate(500),
         subjects: document["eds_subjects"] || [],
-        url: "https://searchworks.stanford.edu/articles/#{ERB::Util.url_encode(id.to_s)}"
+        url: Urls.article(id)
       }.compact
-    end
-
-    def field_value(document, field_names)
-      field_names.each do |field_name|
-        value = document[field_name]
-        return value.first if value.is_a?(Array) && value.any?
-        return value if value.is_a?(String) && value.present?
-      end
-      nil
     end
 
     def result_text(total, query, filters, results)
@@ -104,25 +95,12 @@ module SearchworksMcp
       "Found #{total} articles#{filter_text} (showing #{results.length}):\n\n#{formatted_results(results)}"
     end
 
-    def facet_text(facets)
-      return "" if facets.empty?
-
-      "\n\nAvailable refinement options:#{facet_list(facets)}"
-    end
-
     def unfiltered_text(summary)
       return "" unless summary
       return "\n\nThe query also has no results without filters." if summary[:total].zero?
 
       "\n\nWithout filters, this query has #{summary[:total]} articles. Search again with fewer or broader " \
-        "filters, or use a source type from these options:#{facet_list(summary[:facets])}"
-    end
-
-    def facet_list(facets)
-      facets.map do |_key, facet|
-        values = facet[:values].map { |value| "#{value[:value]} (#{value[:count]})" }.join(", ")
-        "\n- #{facet[:label]}: #{values}"
-      end.join
+        "filters, or use a source type from these options:#{TextFormat.facet_list(summary[:facets])}"
     end
 
     def formatted_results(results)

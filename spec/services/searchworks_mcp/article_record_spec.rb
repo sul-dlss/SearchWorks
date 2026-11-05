@@ -16,7 +16,7 @@ RSpec.describe SearchworksMcp::ArticleRecord do
   describe '.fetch' do
     it 'formats detailed article metadata without returning licensed full text' do
       search_service = instance_double(Eds::SearchService, fetch: document)
-      allow(described_class).to receive(:search_service).and_return(search_service)
+      allow(SearchworksMcp::SearchServices).to receive(:eds).and_return(search_service)
       allow(Settings).to receive(:EDS_ENABLED).and_return(true)
 
       result = described_class.fetch(id: 'abc123')

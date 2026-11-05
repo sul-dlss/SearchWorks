@@ -87,7 +87,7 @@ module SearchworksMcp
         unfiltered_response: unfiltered_response
       )
     rescue StandardError => e
-      SearchworksMcp.internal_tool_error(e, public_message: "Catalog search is temporarily unavailable.")
+      ToolResult.internal_error(e, public_message: "Catalog search is temporarily unavailable.")
     end
 
     # Facets clients can filter on, keyed by filter name (e.g. "format"). Blacklight filter params use
@@ -103,8 +103,7 @@ module SearchworksMcp
     private
 
     def run_search(params, config, controller)
-      state = Blacklight::SearchState.new(params, config, controller)
-      Blacklight::SearchService.new(config: config, search_state: state).search_results do |builder|
+      SearchServices.catalog(controller, params).search_results do |builder|
         builder.merge(HIGHLIGHT_PARAMS.merge(facet_params(config)))
       end
     end

@@ -5,31 +5,24 @@ module SearchworksMcp
   module CatalogRecord
     extend self
 
-    MAX_ID_LENGTH = 255
     # Keys of a summary_struct/toc_struct entry that hold text
     STRUCT_TEXT_KEYS = %i[fields vernacular unmatched_vernacular].freeze
 
     def fetch(id:, controller: nil)
-      document = search_service(controller).fetch(id)
+      document = SearchServices.catalog(controller).fetch(id)
       result = {
         id: document.id.to_s,
         title: scalar(document, "title_display", "title_full_display") || "Untitled",
-        url: "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(document.id.to_s)}",
+        url: Urls.catalog(document.id),
         metadata: metadata(document)
       }
 
-      { text: record_text(result), structured_content: result }
+      ToolResult.success(TextFormat.record(result), result)
     rescue StandardError => e
-      SearchworksMcp.internal_tool_error(e, public_message: "Catalog record retrieval is temporarily unavailable.")
+      ToolResult.internal_error(e, public_message: "Catalog record retrieval is temporarily unavailable.")
     end
 
     private
-
-    def search_service(controller)
-      config = CatalogController.blacklight_config
-      state = Blacklight::SearchState.new({}, config, controller)
-      Blacklight::SearchService.new(config: config, search_state: state)
-    end
 
     def metadata(document)
       {
@@ -89,14 +82,6 @@ module SearchworksMcp
 
     def struct_key(hash, key)
       hash[key] || hash[key.to_s]
-    end
-
-    def record_text(result)
-      lines = [result[:title], "URL: #{result[:url]}"]
-      result[:metadata].each do |label, value|
-        lines << "#{label.to_s.humanize}: #{Array(value).join('; ')}"
-      end
-      lines.join("\n")
     end
   end
 end

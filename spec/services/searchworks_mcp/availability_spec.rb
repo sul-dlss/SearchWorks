@@ -46,7 +46,7 @@ RSpec.describe SearchworksMcp::Availability do
 
     before do
       allow(document).to receive(:[]).with(:uuid_ssi).and_return('instance-uuid')
-      allow(described_class).to receive(:search_service).and_return(search_service)
+      allow(SearchworksMcp::SearchServices).to receive(:catalog).and_return(search_service)
       allow(LiveLookup).to receive(:new).with('instance-uuid').and_return(live_lookup)
     end
 
@@ -192,7 +192,7 @@ RSpec.describe SearchworksMcp::Availability do
     end
 
     it 'returns a model-visible error when availability cannot be retrieved' do
-      allow(described_class).to receive(:search_service).and_raise(StandardError, 'private backend details')
+      allow(SearchworksMcp::SearchServices).to receive(:catalog).and_raise(StandardError, 'private backend details')
       allow(SearchworksMcp).to receive(:report_exception)
 
       result = described_class.fetch(id: '123')

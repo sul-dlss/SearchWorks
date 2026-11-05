@@ -3,18 +3,18 @@
 module SearchworksMcp
   # Detailed metadata for a single EDS article result.
   module ArticleRecord
-    extend self
+    module_function
 
-    MAX_ID_LENGTH = 255
+    DISABLED_MESSAGE = "Article retrieval is not currently enabled. EDS must be configured."
 
     def fetch(id:)
-      return disabled_response unless Settings.EDS_ENABLED
+      return ToolResult.failure(DISABLED_MESSAGE, error: "EDS not enabled") unless Settings.EDS_ENABLED
 
-      document = search_service.fetch(id)
+      document = SearchServices.eds.fetch(id)
       result = {
         id: document.id.to_s,
         title: document.eds_title.presence || "Untitled",
-        url: "https://searchworks.stanford.edu/articles/#{ERB::Util.url_encode(document.id.to_s)}",
+        url: Urls.article(document.id),
         metadata: {
           authors: document.eds_authors,
           source: document.eds_source_title,
@@ -31,35 +31,9 @@ module SearchworksMcp
         }.compact_blank
       }
 
-      { text: record_text(result), structured_content: result }
+      ToolResult.success(TextFormat.record(result), result)
     rescue StandardError => e
-      SearchworksMcp.internal_tool_error(e, public_message: "Article retrieval is temporarily unavailable.")
-    end
-
-    private
-
-    def search_service
-      eds_params = {
-        guest: true,
-        session_token: Eds::Session.new(guest: true, caller: "mcp-server").session_token
-      }
-      Eds::SearchService.new(ArticlesController.blacklight_config, {}, eds_params)
-    end
-
-    def disabled_response
-      {
-        text: "Article retrieval is not currently enabled. EDS must be configured.",
-        structured_content: { error: "EDS not enabled" },
-        error: true
-      }
-    end
-
-    def record_text(result)
-      lines = [result[:title], "URL: #{result[:url]}"]
-      result[:metadata].each do |label, value|
-        lines << "#{label.to_s.humanize}: #{Array(value).join('; ')}"
-      end
-      lines.join("\n")
+      ToolResult.internal_error(e, public_message: "Article retrieval is temporarily unavailable.")
     end
   end
 end

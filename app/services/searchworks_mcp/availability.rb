@@ -14,29 +14,24 @@ module SearchworksMcp
                         "and may be out of date."
 
     def fetch(id:, controller: nil)
-      document = search_service(controller).fetch(id)
+      document = SearchServices.catalog(controller).fetch(id)
       items = document.holdings.items.reject(&:suppressed?)
       return LargeHoldings.response(document, items) if items.size > MAX_ITEMS
 
       live_records = live_lookup_records(document)
       result = {
         id: document.id.to_s,
-        url: record_url(document),
+        url: Urls.catalog(document.id),
         live_status: !live_records.nil?,
         availability: availability_records(document, live_records),
         online_sources: online_sources(document)
       }
 
-      { text: availability_text(result), structured_content: result }
+      ToolResult.success(availability_text(result), result)
     rescue Blacklight::Exceptions::RecordNotFound
-      message = "No catalog record found for id #{id}."
-      { text: message, structured_content: { error: message }, error: true }
+      ToolResult.failure("No catalog record found for id #{id}.")
     rescue StandardError => e
-      SearchworksMcp.internal_tool_error(e, public_message: "Availability information is temporarily unavailable.")
-    end
-
-    def record_url(document)
-      "https://searchworks.stanford.edu/view/#{ERB::Util.url_encode(document.id.to_s)}"
+      ToolResult.internal_error(e, public_message: "Availability information is temporarily unavailable.")
     end
 
     def online_sources(document)
@@ -61,12 +56,6 @@ module SearchworksMcp
     end
 
     private
-
-    def search_service(controller)
-      config = CatalogController.blacklight_config
-      state = Blacklight::SearchState.new({}, config, controller)
-      Blacklight::SearchService.new(config: config, search_state: state)
-    end
 
     # @return [Array<Hash>, nil] real-time item records from the ILS, or nil if the lookup failed
     def live_lookup_records(document)

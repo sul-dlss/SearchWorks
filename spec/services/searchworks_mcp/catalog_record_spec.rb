@@ -15,7 +15,7 @@ RSpec.describe SearchworksMcp::CatalogRecord do
         imprint_display: 'Stanford University Press, 2026'
       )
       search_service = instance_double(Blacklight::SearchService, fetch: document)
-      allow(described_class).to receive(:search_service).and_return(search_service)
+      allow(SearchworksMcp::SearchServices).to receive(:catalog).and_return(search_service)
 
       result = described_class.fetch(id: '123')
 
@@ -41,7 +41,7 @@ RSpec.describe SearchworksMcp::CatalogRecord do
         toc_struct: [{ label: 'Contents', fields: [['Introduction', 'The invisible hand'], ['Conclusion']], vernacular: nil, unmatched_vernacular: nil }]
       )
       search_service = instance_double(Blacklight::SearchService, fetch: document)
-      allow(described_class).to receive(:search_service).and_return(search_service)
+      allow(SearchworksMcp::SearchServices).to receive(:catalog).and_return(search_service)
 
       metadata = described_class.fetch(id: '8838698').dig(:structured_content, :metadata)
 

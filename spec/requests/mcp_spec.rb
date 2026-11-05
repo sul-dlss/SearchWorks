@@ -218,7 +218,7 @@ RSpec.describe 'MCP endpoint' do
       it 'does not expose backend exception details' do
         search_service = instance_double(Blacklight::SearchService)
         allow(search_service).to receive(:fetch).and_raise(StandardError, 'private Solr hostname')
-        allow(SearchworksMcp::CatalogRecord).to receive(:search_service).and_return(search_service)
+        allow(SearchworksMcp::SearchServices).to receive(:catalog).and_return(search_service)
         allow(SearchworksMcp).to receive(:report_exception)
 
         post_mcp(

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module SearchworksMcp
-  # MCP tool metadata and dispatch.
+  # MCP tool metadata.
   module Tools
     READ_ONLY_ANNOTATIONS = {
       read_only_hint: true,
@@ -42,7 +42,7 @@ module SearchworksMcp
             type: "string",
             description: "Catalog record id returned by catalog_search_tool",
             minLength: 1,
-            maxLength: CatalogRecord::MAX_ID_LENGTH
+            maxLength: MAX_ID_LENGTH
           }
         },
         required: ["id"],
@@ -62,7 +62,7 @@ module SearchworksMcp
             type: "string",
             description: "Article id returned by article_search_tool",
             minLength: 1,
-            maxLength: ArticleRecord::MAX_ID_LENGTH
+            maxLength: MAX_ID_LENGTH
           }
         },
         required: ["id"],
@@ -83,7 +83,7 @@ module SearchworksMcp
           id: {
             type: "string",
             description: "Catalog record id returned by catalog_search_tool",
-            minLength: 1, maxLength: CatalogRecord::MAX_ID_LENGTH
+            minLength: 1, maxLength: MAX_ID_LENGTH
           }
         },
         required: ["id"],
@@ -92,48 +92,5 @@ module SearchworksMcp
       output_schema: -> { Schemas.availability },
       annotations: READ_ONLY_ANNOTATIONS
     }.freeze
-    ALL_TOOLS = [CATALOG_SEARCH, ARTICLE_SEARCH, GET_CATALOG_RECORD, GET_ARTICLE, GET_AVAILABILITY].freeze
-
-    def self.list_tools
-      ALL_TOOLS.map do |tool|
-        schema = tool[:input_schema]
-        output_schema = tool[:output_schema]
-        {
-          name: tool[:name],
-          description: tool[:description],
-          inputSchema: schema.is_a?(Proc) ? schema.call : schema,
-          outputSchema: output_schema.is_a?(Proc) ? output_schema.call : output_schema,
-          annotations: annotation_schema(tool[:annotations])
-        }.compact
-      end
-    end
-
-    def self.call_tool(name, arguments = {})
-      case name
-      when "catalog_search_tool"
-        CatalogSearch.search(**arguments.symbolize_keys)
-      when "article_search_tool"
-        ArticleSearch.search(**arguments.symbolize_keys)
-      when "get_catalog_record"
-        CatalogRecord.fetch(**arguments.symbolize_keys)
-      when "get_article"
-        ArticleRecord.fetch(**arguments.symbolize_keys)
-      when "get_availability"
-        Availability.fetch(**arguments.symbolize_keys)
-      else
-        { text: "Unknown tool: #{name}", structured_content: { error: "Unknown tool" }, error: true }
-      end
-    end
-
-    def self.annotation_schema(annotations)
-      return unless annotations
-
-      {
-        readOnlyHint: annotations[:read_only_hint],
-        destructiveHint: annotations[:destructive_hint],
-        idempotentHint: annotations[:idempotent_hint],
-        openWorldHint: annotations[:open_world_hint]
-      }
-    end
   end
 end

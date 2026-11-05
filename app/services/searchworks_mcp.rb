@@ -3,19 +3,11 @@
 # Business logic for MCP (Model Context Protocol) integration.
 module SearchworksMcp
   UNSAFE_CONTROL_CHARACTERS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/
+  MAX_ID_LENGTH = 255
 
   def self.report_exception(exception, context: {})
     Rails.logger.error(exception.full_message)
     Honeybadger.notify(exception, context: context)
-  end
-
-  def self.internal_tool_error(exception, public_message:)
-    report_exception(exception)
-    {
-      text: public_message,
-      structured_content: { error: public_message },
-      error: true
-    }
   end
 
   def self.sanitize_output(value)

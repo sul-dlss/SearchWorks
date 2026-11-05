@@ -10,7 +10,7 @@ module SearchworksMcp
     def response(document, items)
       result = {
         id: document.id.to_s,
-        url: Availability.record_url(document),
+        url: Urls.catalog(document.id),
         live_status: false,
         too_many_items: true,
         item_count: items.size,
@@ -19,7 +19,7 @@ module SearchworksMcp
         online_sources: Availability.online_sources(document)
       }
 
-      { text: text(result), structured_content: result }
+      ToolResult.success(text(result), result)
     end
 
     private
