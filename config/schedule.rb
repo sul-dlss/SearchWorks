@@ -6,6 +6,9 @@
 
 set :output, 'log/cron.log'
 
+# Disable Honeybadger Insights for cron jobs
+env :HONEYBADGER_INSIGHTS_ENABLED, false
+
 every 1.hour, roles: %i[app] do
   rake 'searchworks:prune_eds_cache'
 end
