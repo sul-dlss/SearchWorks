@@ -6,6 +6,8 @@ module SearchworksMcp
     extend self
 
     MAX_ID_LENGTH = 255
+    # Keys of a summary_struct/toc_struct entry that hold text
+    STRUCT_TEXT_KEYS = %i[fields vernacular unmatched_vernacular].freeze
 
     def fetch(id:, controller: nil)
       document = search_service(controller).fetch(id)
@@ -54,15 +56,39 @@ module SearchworksMcp
       fields.lazy.map { |field| Array(document[field]).compact_blank }.find(&:present?) || []
     end
 
+    # Flattens summary_struct/toc_struct entries into "Label: text" strings. Each entry has a label and
+    # fields: summary fields are { field: [...], vernacular: "..." } hashes; TOC fields are lists of
+    # contents items. Both may also carry vernacular and unmatched_vernacular text.
     def structured_text(value)
-      Array(value).filter_map do |entry|
-        case entry
-        when Hash
-          [entry[:label] || entry["label"], structured_text(entry[:fields] || entry["fields"] || entry[:value] || entry["value"])].compact_blank.join(": ")
-        else
-          entry.to_s.presence
-        end
+      Array(value).flat_map do |entry|
+        next Array(struct_text(entry)) unless entry.is_a?(Hash)
+
+        label = struct_key(entry, :label)
+        texts = STRUCT_TEXT_KEYS.flat_map { |key| Array(struct_key(entry, key)) }
+        texts.filter_map { |field| struct_text(field, " -- ") }.map { |text| [label, text].compact_blank.join(": ") }
       end
+    end
+
+    # Text of a struct field. Arrays are contents items (joined with separator), or the parts of a
+    # summary; hashes are summary fields or tagged values like { link: url } and { source: text }.
+    def struct_text(field, separator = " ")
+      text = case field
+             when Hash
+               if field.key?(:field) || field.key?("field")
+                 [struct_text(struct_key(field, :field)), struct_text(struct_key(field, :vernacular))].compact.join(" / ")
+               else
+                 field.values.filter_map { |value| struct_text(value) }.join(" ")
+               end
+             when Array
+               field.filter_map { |item| struct_text(item) }.join(separator)
+             else
+               field.to_s
+             end
+      text.squish.presence
+    end
+
+    def struct_key(hash, key)
+      hash[key] || hash[key.to_s]
     end
 
     def record_text(result)

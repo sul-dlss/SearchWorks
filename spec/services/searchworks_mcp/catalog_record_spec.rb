@@ -29,5 +29,24 @@ RSpec.describe SearchworksMcp::CatalogRecord do
       )
       expect(result[:text]).to include('URL: https://searchworks.stanford.edu/view/123')
     end
+
+    it 'includes summary and contents text, not just their labels' do
+      document = SolrDocument.new(
+        id: '8838698',
+        title_display: 'Beyond the invisible hand',
+        summary_struct: [
+          { label: "Publisher's summary", fields: [{ field: ['In Beyond the Invisible Hand, Kaushik Basu argues...', { source: '--Publisher.' }], vernacular: nil }],
+            unmatched_vernacular: [] }
+        ],
+        toc_struct: [{ label: 'Contents', fields: [['Introduction', 'The invisible hand'], ['Conclusion']], vernacular: nil, unmatched_vernacular: nil }]
+      )
+      search_service = instance_double(Blacklight::SearchService, fetch: document)
+      allow(described_class).to receive(:search_service).and_return(search_service)
+
+      metadata = described_class.fetch(id: '8838698').dig(:structured_content, :metadata)
+
+      expect(metadata[:summaries]).to eq(["Publisher's summary: In Beyond the Invisible Hand, Kaushik Basu argues... --Publisher."])
+      expect(metadata[:contents]).to eq(['Contents: Introduction -- The invisible hand', 'Contents: Conclusion'])
+    end
   end
 end
