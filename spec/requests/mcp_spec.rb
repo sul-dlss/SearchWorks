@@ -55,7 +55,7 @@ RSpec.describe 'MCP endpoint' do
         expect(result).to include(
           'resultType' => 'complete',
           'supportedVersions' => [mcp_protocol_version],
-          'capabilities' => { 'tools' => {} },
+          'capabilities' => { 'tools' => {}, 'prompts' => {} },
           'ttlMs' => 3_600_000,
           'cacheScope' => 'public'
         )
@@ -102,6 +102,60 @@ RSpec.describe 'MCP endpoint' do
           'outputSchema', 'properties', 'availability', 'items', 'properties', 'request_url'
         )
         expect(request_url.fetch('description')).to include('Present this URL to the user')
+      end
+    end
+
+    describe 'prompts/list' do
+      it 'lists the find_item prompt with its arguments' do
+        post_mcp({ jsonrpc: '2.0', id: 'prompts', method: 'prompts/list', params: {} })
+
+        expect(response).to have_http_status(:ok)
+        prompts = response.parsed_body.dig('result', 'prompts')
+        expect(prompts.pluck('name')).to eq(['find_item'])
+        expect(prompts.first.fetch('arguments')).to eq(
+          [
+            { 'name' => 'item', 'title' => 'Item',
+              'description' => 'Title, author, ISBN, or a description of what you are looking for',
+              'required' => true },
+            { 'name' => 'library', 'title' => 'Preferred library',
+              'description' => 'Optional library you would like to get the item from, such as Green Library',
+              'required' => false }
+          ]
+        )
+      end
+    end
+
+    describe 'prompts/get find_item' do
+      def get_prompt(arguments)
+        post_mcp({ jsonrpc: '2.0', id: 'prompt', method: 'prompts/get',
+                   params: { name: 'find_item', arguments: arguments } })
+      end
+
+      it 'returns a user message that walks through search and availability' do
+        get_prompt({ item: 'The Left Hand of Darkness', library: 'Green Library' })
+
+        expect(response).to have_http_status(:ok)
+        messages = response.parsed_body.dig('result', 'messages')
+        expect(messages.length).to eq 1
+        expect(messages.first.fetch('role')).to eq 'user'
+        text = messages.first.dig('content', 'text')
+        expect(text).to start_with('Find this item in the Stanford Libraries catalog: The Left Hand of Darkness')
+        expect(text).to include('catalog_search_tool', 'get_availability', 'request_url')
+        expect(text).to include('Prefer copies held at Green Library')
+      end
+
+      it 'omits the library preference when none is given and strips markup' do
+        get_prompt({ item: '<b>Dune</b>' })
+
+        text = response.parsed_body.dig('result', 'messages', 0, 'content', 'text')
+        expect(text).to start_with('Find this item in the Stanford Libraries catalog: Dune')
+        expect(text).not_to include('Prefer copies')
+      end
+
+      it 'rejects a request without the required item argument' do
+        get_prompt({})
+
+        expect(response.parsed_body.dig('error', 'code')).to eq(-32_602)
       end
     end
 
