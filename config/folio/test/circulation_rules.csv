@@ -60,6 +60,7 @@ staff or staff-casual or fellow,score,,,,,MUS-SCORES or MUS-FLAT or MUS-OVERSIZE
 faculty,score,,,,,MUS-SCORES or MUS-FLAT or MUS-OVERSIZE or MUS-MINIATURE or MUS-STACKS,1yearfixed-2renew-7daygrace,Allow All,Qtrly/Annual notice,No fines,$65 lost fee
 faculty,periodical,,,,,SAL3-PAGE-MP,28day-2renew-7daygrace,Allow All,Default notice,No fines,$500 lost fee
 any,periodical,,,,,SAL-TEMP or SAL-LOCKED-PAGE-EA or SAL-PAGE-EA or SAL-PAGE-GR,No loan,Allow paging,Default notice,No fines,$75 lost fee
+any,periodical,,,,,ENG-STK-NONCIRC or ENG-TERM-COLL or ENG-TIMO-COLL,No loan,No requests allowed,Default notice,No fines,$300 lost fee
 faculty,periodical,,,,,EAR-ATCIRCDESK or EAR-DISPLAY-CIRC,28day-norenew-7daygrace,Allow All,Default notice,No fines,$500 lost fee
 faculty,multimedia,,,,,SAL3-PAGE-MU-CIRC,28day-2renew-7daygrace,Allow All,Default notice,No fines,$225 lost fee
 any,multimedia,,,,,SAL-LOCKED-PAGE-EA or SAL-PAGE or SAL-PAGE-EA or SAL-PAGE-GR or SAL-TEMP,No loan,Allow paging,Default notice,No fines,$75 lost fee
