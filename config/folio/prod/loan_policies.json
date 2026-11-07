@@ -1250,7 +1250,7 @@
         "duration": 12,
         "intervalId": "Weeks"
       },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE",
       "gracePeriod": {
         "duration": 7,
         "intervalId": "Days"
@@ -1260,8 +1260,8 @@
     "metadata": {
       "createdDate": "2026-05-29T20:17:39.091+00:00",
       "createdByUserId": "e252d213-8a69-4d26-9826-7de8c943a121",
-      "updatedDate": "2026-05-29T20:17:39.091+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2026-11-06T18:04:25.088+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
@@ -1453,7 +1453,7 @@
         "duration": 16,
         "intervalId": "Weeks"
       },
-      "closedLibraryDueDateManagementId": "END_OF_THE_NEXT_OPEN_DAY",
+      "closedLibraryDueDateManagementId": "CURRENT_DUE_DATE",
       "gracePeriod": {
         "duration": 7,
         "intervalId": "Days"
@@ -1463,8 +1463,8 @@
     "metadata": {
       "createdDate": "2023-08-10T18:49:54.227+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-10-03T23:11:37.621+00:00",
-      "updatedByUserId": "e252d213-8a69-4d26-9826-7de8c943a121"
+      "updatedDate": "2026-11-06T16:01:24.320+00:00",
+      "updatedByUserId": "611ed598-2be4-41f1-a241-2f30a362dca9"
     }
   },
   {
