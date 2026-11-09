@@ -264,11 +264,6 @@
   .embed-callnumber-browse-container {
     .gallery {
       .gallery-document {
-        position: relative;
-        margin-left: 0.375rem;
-        margin-right: 0.375rem;
-        margin-bottom: 0;
-
         &:has(.preview-button .button-text.show) {
           --bs-border-color: var(--stanford-60-black);
         }

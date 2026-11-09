@@ -1,8 +1,3 @@
 <turbo-frame id="filmstrip_<%= @call_number.to_s.gsub(' ', '-') %>">
-  <% if @spines.present? %>
-    <% view_config = blacklight_config&.view_config(:gallery) %>
-    <div class="d-flex">
-      <%= render view_config.document_component.with_collection(@spines.map(&:document_with_preferred_item).map { |document| document_presenter(document) }, starting_document: @original_doc, preview_id: @preview_id) %>
-    </div>
-  <% end %>
+  <%= render Record::Item::Marc::ShelfComponent.new(documents: Array(@spines).map(&:document_with_preferred_item), starting_document: @original_doc, preview_id: @preview_id) %>
 </turbo-frame>
