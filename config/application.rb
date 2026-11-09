@@ -35,7 +35,7 @@ module SearchWorks
     config.middleware.insert 0, Rack::UTF8Sanitizer
     config.search_logger = ActiveSupport::Logger.new(Rails.root + 'log/search.log')
 
-    config.view_component.preview_controller = "ViewComponentPreviewController"
+    config.view_component.previews.controller = "ViewComponentPreviewController"
     config.lookbook.preview_controller = "ViewComponentPreviewController"
     config.active_storage.variant_processor = :disabled
   end
