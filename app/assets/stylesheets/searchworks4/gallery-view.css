@@ -8,10 +8,6 @@
   flex-wrap: wrap;
   gap: 1.5rem 1rem;
 
-  .gallery-buttons {
-    margin-top: auto;
-  }
-
   .gallery-document {
     border-radius: 0.25rem;
     height: var(--gallery-document-total-height);
@@ -34,7 +30,7 @@
       display: flex;
       height: calc(var(--gallery-document-total-height) - var(--gallery-document-thumbnail-height));
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding: 0.75rem 0.5rem 0.5rem 0.5rem;
     }
 
