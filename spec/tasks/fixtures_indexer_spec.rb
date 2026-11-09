@@ -4,7 +4,7 @@ require 'rails_helper'
 require 'fixtures_indexer'
 
 RSpec.describe FixturesIndexer do
-  let(:stub_solr) { double('solr', uri: URI.parse('http://localhost:8983/solr/blacklight-core')) }
+  let(:stub_solr) { instance_double(RSolr::Client, uri: URI.parse('http://localhost:8983/solr/blacklight-core')) }
 
   before do
     allow(Blacklight.default_index).to receive(:connection).at_least(:once).and_return(stub_solr)

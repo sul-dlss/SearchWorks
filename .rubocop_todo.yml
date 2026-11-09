@@ -430,36 +430,6 @@ RSpec/SubjectStub:
     - "spec/presenters/facet_options_presenter_spec.rb"
     - "spec/presenters/presenter_format_spec.rb"
 
-# Offense count: 56
-# Configuration parameters: IgnoreNameless, IgnoreSymbolicNames.
-RSpec/VerifiedDoubles:
-  Exclude:
-    - "spec/components/articles/response/limited_facet_field_list_component_spec.rb"
-    - "spec/components/articles/response/more_facets_list_component_spec.rb"
-    - "spec/controllers/articles_controller_spec.rb"
-    - "spec/controllers/availability_controller_spec.rb"
-    - "spec/controllers/browse_controller_spec.rb"
-    - "spec/controllers/concerns/all_caps_params_spec.rb"
-    - "spec/controllers/concerns/replace_special_quotes_spec.rb"
-    - "spec/controllers/sfx_data_controller_spec.rb"
-    - "spec/helpers/application_helper_spec.rb"
-    - "spec/helpers/masthead_helper_spec.rb"
-    - "spec/lib/holdings/library_spec.rb"
-    - "spec/models/concerns/cjk_query_spec.rb"
-    - "spec/models/concerns/collection_member_spec.rb"
-    - "spec/models/concerns/digital_collection_spec.rb"
-    - "spec/models/search_builder_spec.rb"
-    - "spec/presenters/facet_options_presenter_spec.rb"
-    - "spec/presenters/show_eds_document_presenter_spec.rb"
-    - "spec/services/eds/search_service_spec.rb"
-    - "spec/tasks/fixtures_indexer_spec.rb"
-    - "spec/views/marc_fields/_bound_with_note_for_access_panel.html.erb_spec.rb"
-    - "spec/views/marc_fields/_instrumentation.html.erb_spec.rb"
-    - "spec/views/marc_fields/_linked_serials.html.erb_spec.rb"
-    - "spec/views/marc_fields/_linked_series.html.erb_spec.rb"
-    - "spec/views/marc_fields/_marc_field.html.erb_spec.rb"
-    - "spec/views/shared/_top_navbar.html.erb_spec.rb"
-
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Rails/ApplicationRecord:

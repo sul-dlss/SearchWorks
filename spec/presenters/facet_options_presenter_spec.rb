@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe FacetOptionsPresenter do
-  # let(:view_context) { double('ViewContext') }
   subject(:presenter) { described_class.new(params:, context: view_context) }
 
   let(:view_context) do
@@ -30,8 +29,8 @@ RSpec.describe FacetOptionsPresenter do
   end
   let(:params) { {} }
   let(:eds_session) do
-    double(
-      'Eds::Session',
+    instance_double(
+      Eds::Session,
       info: {
         'AvailableSearchCriteria' => {
           'AvailableLimiters' => [

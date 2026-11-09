@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe ReplaceSpecialQuotes do
-  let(:controller) { double('CatalogContrller') }
+  let(:controller) { CatalogController.new }
   let(:q) { 'query' }
 
   before do

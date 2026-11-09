@@ -76,9 +76,9 @@ RSpec.describe DigitalCollection do
     context 'when the majority of items have an image' do
       let(:documents) do
         [
-          double('Document', image_urls: ['http:example.com/1']),
-          double('Document', image_urls: ['http:example.com/2']),
-          double('Document', image_urls: nil)
+          instance_double(SolrDocument, image_urls: ['http:example.com/1']),
+          instance_double(SolrDocument, image_urls: ['http:example.com/2']),
+          instance_double(SolrDocument, image_urls: nil)
         ]
       end
 
@@ -90,10 +90,10 @@ RSpec.describe DigitalCollection do
     context 'when the number of items that have images is equal to the number without' do
       let(:documents) do
         [
-          double('Document', image_urls: ['http:example.com/1']),
-          double('Document', image_urls: ['http:example.com/2']),
-          double('Document', image_urls: nil),
-          double('Document', image_urls: nil)
+          instance_double(SolrDocument, image_urls: ['http:example.com/1']),
+          instance_double(SolrDocument, image_urls: ['http:example.com/2']),
+          instance_double(SolrDocument, image_urls: nil),
+          instance_double(SolrDocument, image_urls: nil)
         ]
       end
 
@@ -105,9 +105,9 @@ RSpec.describe DigitalCollection do
     context 'when the majority of items do not have an image' do
       let(:documents) do
         [
-          double('Document', image_urls: ['http:example.com/1']),
-          double('Document', image_urls: nil),
-          double('Document', image_urls: nil)
+          instance_double(SolrDocument, image_urls: ['http:example.com/1']),
+          instance_double(SolrDocument, image_urls: nil),
+          instance_double(SolrDocument, image_urls: nil)
         ]
       end
 
