@@ -39,6 +39,18 @@ module Record
           )
         end
 
+        # A turbo frame that lazily loads the gallery cards near the given spine
+        def filmstrip(spine, index:, preview_id:)
+          helpers.turbo_frame_tag filmstrip_frame_id(spine),
+                                  src: filmstrip_path(spine.base_callnumber, preview_id:),
+                                  loading: index.zero? ? 'eager' : 'lazy',
+                                  class: 'gallery'
+        end
+
+        def filmstrip_frame_id(spine)
+          "filmstrip_#{spine.base_callnumber.tr(' ', '-')}"
+        end
+
         def filmstrip_path(call_number, **)
           browse_nearby_path(
             start: document.id,

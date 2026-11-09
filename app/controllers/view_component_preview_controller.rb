@@ -4,7 +4,7 @@ class ViewComponentPreviewController < ActionController::Base # rubocop:disable 
   include ViewComponent::PreviewActions
 
   # Adds a few additional behaviors into the application controller
-  helper_method :controller_tracking_method, :blacklight_config, :blacklight_configuration_context, :search_session, :current_search_session, :search_state, :turnstile_ok?
+  helper_method :controller_tracking_method, :blacklight_config, :blacklight_configuration_context, :search_session, :current_search_session, :search_state, :turnstile_ok?, :bookmarked?
 
   def controller_tracking_method
     'track_catalog_path'
@@ -30,5 +30,15 @@ class ViewComponentPreviewController < ActionController::Base # rubocop:disable 
 
   def turnstile_ok?
     true
+  end
+
+  def render_bookmarks_control?
+    true
+  end
+
+  # Blacklight's helper looks bookmarks up from the search response and the
+  # current user, neither of which exist in a preview, so show nothing bookmarked.
+  def bookmarked?(_document)
+    false
   end
 end
