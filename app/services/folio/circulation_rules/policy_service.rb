@@ -54,24 +54,6 @@ module Folio
         @policies[:loan].fetch(rule.policy['loan'], nil)
       end
 
-      # Return the overdue fine policy for the given Holdings::Item
-      def item_overdue_policy(item)
-        rule = item_rule(item)
-        @policies[:overdue].fetch(rule.policy['overdue'], nil)
-      end
-
-      # Return the lost item policy for the given Holdings::Item
-      def item_lost_policy(item)
-        rule = item_rule(item)
-        @policies[:'lost-item'].fetch(rule.policy['lost-item'], nil)
-      end
-
-      # Return the patron notice policy for the given Holdings::Item
-      def item_notice_policy(item)
-        rule = item_rule(item)
-        @policies[:notice].fetch(rule.policy['notice'], nil)
-      end
-
       # Find the circulation rule that applies to the given Holdings::Item
       def item_rule(item)
         item_cache_key = [item.material_type.id, item.loan_type.id, item.effective_location.id]
