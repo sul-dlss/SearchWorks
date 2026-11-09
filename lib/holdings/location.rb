@@ -36,19 +36,8 @@ class Holdings
       items.any?(&:bound_with_child?)
     end
 
-    def bound_with_parents
-      items.filter_map(&:bound_with_parent)
-    end
-
-    # Intentionally left blank
-    def location_link; end
-
     def present?
       any_items? || any_mhlds? || bound_with_child?
-    end
-
-    def present_on_index?
-      any_items? || any_index_mhlds?
     end
 
     def sort
@@ -68,13 +57,6 @@ class Holdings
 
     def any_mhlds?
       mhld.any?(&:present?)
-    end
-
-    def any_index_mhlds?
-      mhld.any? do |mhld_item|
-        mhld_item.latest_received.present? ||
-          mhld_item.public_note.present?
-      end
     end
   end
 end
