@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe Holdings::Library do
   describe '#name' do
     it "translates the library code" do
-      expect(Holdings::Library.new("GREEN").name).to eq "Green Library"
+      expect(described_class.new("GREEN").name).to eq "Green Library"
     end
 
     context 'with a FOLIO item' do
@@ -13,7 +13,7 @@ RSpec.describe Holdings::Library do
       let(:library) { Folio::Library.new(id: 'green', code: 'GREEN', name: 'Cecil R. Green Library') }
 
       it "translates the library code using the FOLIO library data" do
-        expect(Holdings::Library.new("GREEN", items).name).to eq "Cecil R. Green Library"
+        expect(described_class.new("GREEN", items).name).to eq "Cecil R. Green Library"
       end
     end
 
@@ -24,7 +24,7 @@ RSpec.describe Holdings::Library do
       let(:sal3) { Folio::Library.new(id: 'sal3', code: 'SAL3', name: 'SAL3') }
 
       it "translates the library code using the FOLIO library data" do
-        expect(Holdings::Library.new("GREEN", items).name).to eq "Cecil R. Green Library"
+        expect(described_class.new("GREEN", items).name).to eq "Cecil R. Green Library"
       end
     end
   end
@@ -38,7 +38,7 @@ RSpec.describe Holdings::Library do
       ]
     end
 
-    let(:locations) { Holdings::Library.new("GREEN", items).locations }
+    let(:locations) { described_class.new("GREEN", items).locations }
 
     it "returns an array of Holdings::Locations" do
       expect(locations).to all be_a Holdings::Location
@@ -49,7 +49,7 @@ RSpec.describe Holdings::Library do
     end
 
     context 'when several locations have the same translation' do
-      let(:locations) { Holdings::Library.new('SPEC-COLL', items).locations }
+      let(:locations) { described_class.new('SPEC-COLL', items).locations }
 
       let(:items) do
         [
@@ -69,7 +69,7 @@ RSpec.describe Holdings::Library do
     end
 
     describe 'sorting' do
-      let(:locations) { Holdings::Library.new("GREEN", items).locations }
+      let(:locations) { described_class.new("GREEN", items).locations }
       let(:items) do
         [
           Holdings::Item.new({ barcode: 'barcode', library: 'GREEN', effective_permanent_location_code: 'GRE-SSRC-DOCS', discoveryDisplayName: 'Current periodicals' }),
@@ -111,7 +111,7 @@ RSpec.describe Holdings::Library do
         Holdings::Item.new({})
       ]
     end
-    let(:library) { Holdings::Library.new("GREEN", callnumbers) }
+    let(:library) { described_class.new("GREEN", callnumbers) }
 
     it "is false when libraries have no item display fields" do
       expect(library).not_to be_present
@@ -121,13 +121,13 @@ RSpec.describe Holdings::Library do
   describe '#library_instructions' do
     it 'returns instructions for libraries which have them' do
       Constants::LIBRARY_INSTRUCTIONS.each_key do |library|
-        expect(Holdings::Library.new(library).library_instructions).to have_key(:text)
+        expect(described_class.new(library).library_instructions).to have_key(:text)
       end
     end
   end
 
   describe "zombie" do
-    let(:zombie) { Holdings::Library.new("ZOMBIE") }
+    let(:zombie) { described_class.new("ZOMBIE") }
 
     it "is #zombie?" do
       expect(zombie).to be_zombie

@@ -6,7 +6,7 @@ RSpec.describe FeedbackFormsController do
   context 'when the current user is anonymous' do
     context 'when they fill in the reCAPTCHA' do
       before do
-        expect_any_instance_of(FeedbackFormsController).to receive(:verify_recaptcha).and_return(true)
+        expect_any_instance_of(described_class).to receive(:verify_recaptcha).and_return(true)
       end
 
       it 'send an email' do
@@ -18,7 +18,7 @@ RSpec.describe FeedbackFormsController do
 
     context 'when they do not fill in the reCAPTCHA' do
       before do
-        expect_any_instance_of(FeedbackFormsController).to receive(:verify_recaptcha).and_return(false)
+        expect_any_instance_of(described_class).to receive(:verify_recaptcha).and_return(false)
       end
 
       it 'does not send an email' do

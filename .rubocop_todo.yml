@@ -199,31 +199,6 @@ RSpec/ContextWording:
     - "spec/views/marc_fields/_linked_author.html.erb_spec.rb"
     - "spec/views/marc_fields/_linked_related_works.html.erb_spec.rb"
 
-# Offense count: 66
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: SkipBlocks, EnforcedStyle, OnlyStaticConstants.
-# SupportedStyles: described_class, explicit
-RSpec/DescribedClass:
-  Exclude:
-    - "spec/controllers/concerns/all_caps_params_spec.rb"
-    - "spec/controllers/concerns/replace_special_quotes_spec.rb"
-    - "spec/controllers/feedback_forms_controller_spec.rb"
-    - "spec/lib/holdings/item_spec.rb"
-    - "spec/lib/holdings/library_spec.rb"
-    - "spec/lib/holdings/mhld_spec.rb"
-    - "spec/lib/holdings/status_spec.rb"
-    - "spec/lib/holdings_spec.rb"
-    - "spec/lib/page_location_spec.rb"
-    - "spec/mailers/feedback_mailer_spec.rb"
-    - "spec/mailers/search_works_record_mailer_spec.rb"
-    - "spec/models/concerns/stacks_images_spec.rb"
-    - "spec/models/eds_document_spec.rb"
-    - "spec/models/links/ezproxy_spec.rb"
-    - "spec/models/links_spec.rb"
-    - "spec/models/solr_document_spec.rb"
-    - "spec/services/live_lookup_spec.rb"
-    - "spec/tasks/fixtures_indexer_spec.rb"
-
 # Offense count: 170
 # Configuration parameters: CountAsOne.
 RSpec/ExampleLength:

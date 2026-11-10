@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Links do
-  let(:links) { Links.new(all_links) }
+  let(:links) { described_class.new(all_links) }
 
   let(:all_links) do
     [

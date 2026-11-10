@@ -4,12 +4,12 @@ require 'rails_helper'
 
 RSpec.describe Holdings do
   let(:holdings) do
-    Holdings.new(
+    described_class.new(
       SolrDocument.new(item_display_struct: [{ barcode: '123', library: 'abc' }]).items
     )
   end
   let(:complex_holdings) do
-    Holdings.new(
+    described_class.new(
       SolrDocument.new(
         item_display_struct: [
           { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location', temporary_location_code: 'current-location', type: 'type',
@@ -21,7 +21,7 @@ RSpec.describe Holdings do
     )
   end
   let(:sortable_holdings) do
-    Holdings.new(
+    described_class.new(
       SolrDocument.new(
         item_display_struct: [
           { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location', temporary_location_code: 'current-location', type: 'type',
@@ -32,7 +32,7 @@ RSpec.describe Holdings do
       ).items
     )
   end
-  let(:no_holdings) { Holdings.new }
+  let(:no_holdings) { described_class.new }
 
   describe "#present?" do
     it "is false if there are no holdings" do
@@ -62,7 +62,7 @@ RSpec.describe Holdings do
 
   describe "#libraries" do
     let(:libraries) do
-      Holdings.new(
+      described_class.new(
         SolrDocument.new(
           item_display_struct: [
             { barcode: 'barcode', library: 'library', effective_permanent_location_code: 'home-location' },
@@ -73,7 +73,7 @@ RSpec.describe Holdings do
       )
     end
     let(:sortable_libraries) do
-      Holdings.new(
+      described_class.new(
         SolrDocument.new(
           item_display_struct: [
             { barcode: 'barcode', library: 'SAL3', effective_permanent_location_code: 'home-location' },

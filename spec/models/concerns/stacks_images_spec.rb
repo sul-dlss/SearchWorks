@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe StacksImages do
   let(:subject) { Class.new }
 
-  before { subject.extend StacksImages }
+  before { subject.extend described_class }
 
   it 'includes an image dimensions hash' do
     expect(subject.image_dimensions).to be_a Hash
