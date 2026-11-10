@@ -203,6 +203,41 @@ RSpec.describe PageLocation do
     end
   end
 
+  describe '#collection' do
+    subject(:collection) { page_location.collection(response) }
+
+    let(:response) { instance_double(Blacklight::Solr::Response, documents:) }
+    let(:documents) { [SolrDocument.new(collection: ['29'])] }
+    let(:params) { { f: { collection: ['29'] } } }
+
+    context 'when the collection filter is not set' do
+      let(:params) { { f: { format_hsim: ['Book'] } } }
+
+      it { is_expected.to be_nil }
+    end
+
+    context 'when no document is present' do
+      let(:documents) { [] }
+
+      it { is_expected.to be_nil }
+    end
+
+    context 'when documents are present' do
+      it 'returns the parent collection of the first document' do
+        expect(collection[:title_display]).to eq 'Image Collection1'
+        expect(collection[:summary_display]).to eq ['A collection of fixture images from the SearchWorks development index.']
+      end
+    end
+
+    context 'when the collection filter has a leading a' do
+      let(:params) { { f: { collection: ['a29'] } } }
+
+      it 'returns the parent collection of the first document' do
+        expect(collection[:title_display]).to eq 'Image Collection1'
+      end
+    end
+  end
+
   describe '#sdr?' do
     subject { page_location.sdr? }
 
