@@ -63,7 +63,7 @@ RSpec.describe Eds::SearchService do
     let(:max) { 999_999_999 }
     let(:window) { Eds::SearchService::PagingWindow.new(hit, max) }
 
-    context 'first hit' do
+    context 'with the first hit' do
       it 'first page without a previous hit' do
         expect(window).to be_truthy
         expect(window.start_page).to eq 1 # start_page is 1-based
@@ -73,7 +73,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'second hit' do
+    context 'with the second hit' do
       let(:hit) { 1 }
       let(:previous_and_next_document_params) do
         @eds_params = { page_number: 1, results_per_page: 10 }
@@ -90,7 +90,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'tenth hit (boundary condition)' do
+    context 'with the tenth hit (boundary condition)' do
       let(:hit) { 9 }
 
       it 'first page with both prev/next hits' do
@@ -102,7 +102,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'eleventh hit (boundary condition)' do
+    context 'with the eleventh hit (boundary condition)' do
       let(:hit) { 10 }
 
       it 'first page with both prev/next hits' do
@@ -114,7 +114,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'last hit (boundary condition)' do
+    context 'with the last hit (boundary condition)' do
       let(:hit) { 9 }
       let(:max) { 10 }
 
@@ -127,7 +127,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'middle of page hit (probed)' do
+    context 'with a middle of page hit (probed)' do
       let(:hit) { 32 }
 
       it 'is in middle' do
@@ -139,7 +139,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'last hit (probed)' do
+    context 'with the last hit (probed)' do
       let(:hit) { 39 }
       let(:max) { 40 }
 
@@ -152,7 +152,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'only hit' do
+    context 'with the only hit' do
       let(:hit) { 0 }
       let(:max) { 1 }
 
@@ -165,7 +165,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'last hit on short list' do
+    context 'with the last hit on short list' do
       let(:hit) { 1 }
       let(:max) { 2 }
 
@@ -178,7 +178,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'invalid hit' do
+    context 'with an invalid hit' do
       let(:hit) { 999 }
       let(:max) { 40 }
 
@@ -187,7 +187,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'negative hit' do
+    context 'with a negative hit' do
       let(:hit) { -1 }
 
       it 'raises error' do
@@ -211,7 +211,7 @@ RSpec.describe Eds::SearchService do
       expect(@docs.last['id']).to eq 'wq/oeif.zzz'
     end
 
-    context 'last hit' do
+    context 'with the last hit' do
       let(:hit) { StubArticleService::SAMPLE_RESULTS.length - 1 }
 
       it 'grabs the penultimate hit for the previous doc but no next doc' do
@@ -222,7 +222,7 @@ RSpec.describe Eds::SearchService do
       end
     end
 
-    context 'negative hit' do
+    context 'with a negative hit' do
       let(:hit) { -1 }
 
       it 'raises error on params' do

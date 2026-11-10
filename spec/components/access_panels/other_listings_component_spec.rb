@@ -18,7 +18,7 @@ RSpec.describe AccessPanels::OtherListingsComponent, type: :component do
     expect(rendered_content).to eq ""
   end
 
-  context 'there is a druid' do
+  context 'when there is a druid' do
     let(:document_hash) do
       { druid: 'hj948rn6493' }
     end

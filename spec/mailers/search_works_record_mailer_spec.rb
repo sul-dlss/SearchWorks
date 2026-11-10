@@ -53,7 +53,7 @@ RSpec.describe SearchWorksRecordMailer do
   let(:url_params) { { host: 'example.com' } }
 
   describe 'email_record' do
-    context 'article' do
+    context 'with an article' do
       let(:documents) do
         [
           EdsDocument.new(id: '123', eds_title: 'Title1', eds_authors: ['Author1'],
@@ -109,7 +109,7 @@ RSpec.describe SearchWorksRecordMailer do
       end
     end
 
-    context 'catalog' do
+    context 'with a catalog record' do
       let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
 
       it 'sends an HTML email' do
@@ -161,7 +161,7 @@ RSpec.describe SearchWorksRecordMailer do
   end
 
   describe 'full_email_record' do
-    context 'catalog' do
+    context 'with a catalog record' do
       let(:mail) { SearchWorksRecordMailer.full_email_record(documents, params, url_params) }
 
       it 'sends a html email' do
@@ -229,7 +229,7 @@ RSpec.describe SearchWorksRecordMailer do
       end
     end
 
-    context 'article' do
+    context 'with an article' do
       skip('Todo: article full record email')
     end
   end

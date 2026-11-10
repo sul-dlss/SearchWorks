@@ -29,7 +29,7 @@ RSpec.describe AccessPanels::OnlineEdsComponent, type: :component do
     expect(page).to have_css('ul li a', text: 'View full text')
   end
 
-  context 'fulltext PDF links (e.g. "detail" href)' do
+  context 'with fulltext PDF links (e.g. "detail" href)' do
     let(:document) do
       EdsDocument.new(
         'id' => 'abc123',

@@ -21,7 +21,7 @@ end
 RSpec.describe IPRange do
   let(:test_network) { TestIPNetwork.new }
 
-  context 'singletons' do
+  context 'with singletons' do
     it 'IP addresses configured as a single address are properly identified' do
       expect(described_class.new('172.22.45.195', test_network)).to be_included
       expect(described_class.new('172.22.45.196', test_network)).not_to be_included
@@ -36,7 +36,7 @@ RSpec.describe IPRange do
     end
   end
 
-  context 'ranges' do
+  context 'with ranges' do
     it 'IP addresses configured as custom ranges are properly identified' do
       expect(described_class.new('171.10.15.6', test_network)).not_to be_included
       expect(described_class.new('171.10.15.7', test_network)).to be_included

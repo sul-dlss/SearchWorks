@@ -20,7 +20,7 @@ RSpec.describe LinkedSeries do
       expect(subject.values.length).to eq 3
     end
 
-    context '490 local series field' do
+    context 'with a 490 local series field' do
       it 'returns only the $a in the link' do
         expect(subject.values[1][:link]).to include('Linkable 490')
       end
@@ -31,7 +31,7 @@ RSpec.describe LinkedSeries do
       end
     end
 
-    context 'other series fields' do
+    context 'with other series fields' do
       it 'returns all alpha (except $v and $x) in the link' do
         expect(subject.values[0][:link]).to include('440 $a')
         expect(subject.values[2][:link]).to include('Name SubZ')

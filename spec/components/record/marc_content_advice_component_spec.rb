@@ -13,7 +13,7 @@ RSpec.describe Record::MarcContentAdviceComponent, type: :component do
     SolrDocument.new(id: '123', summary_struct:)
   end
 
-  context 'marc_json_struct has content advice field' do
+  context 'when marc_json_struct has content advice field' do
     let(:summary_struct) do
       [
         { label: 'Summary', fields: [{ field: 'Summary of content' }] },
@@ -28,7 +28,7 @@ RSpec.describe Record::MarcContentAdviceComponent, type: :component do
     end
   end
 
-  context 'marc_json_struct does not have content advice field' do
+  context 'when marc_json_struct does not have content advice field' do
     let(:summary_struct) { [] }
 
     it 'does not render' do
@@ -36,7 +36,7 @@ RSpec.describe Record::MarcContentAdviceComponent, type: :component do
     end
   end
 
-  context 'the summary_struct has a content advice field with unmatched vernacular' do
+  context 'when the summary_struct has a content advice field with unmatched vernacular' do
     let(:summary_struct) do
       [
         { label: 'Summary', fields: [{ field: 'Summary of content' }] },

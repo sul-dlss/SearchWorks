@@ -87,7 +87,7 @@ RSpec.describe SearchBuilder do
   end
 
   describe '#consolidate_home_page_params' do
-    context 'on the home page' do
+    context 'when on the home page' do
       it 'overrides solr parameters to just the things the home page needs' do
         solr_params = { 'facet.field' => ['some garbage'], 'rows' => 50 }
         search_builder.consolidate_home_page_params(solr_params)

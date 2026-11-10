@@ -41,7 +41,7 @@ RSpec.describe 'Article Record Toolbar', :js do
     end
   end
 
-  context 'handles the first page (no prev)' do
+  context 'when on the first page (no prev)' do
     let(:previous_document) { nil }
 
     it 'shows only the Next button' do
@@ -52,7 +52,7 @@ RSpec.describe 'Article Record Toolbar', :js do
     end
   end
 
-  context 'handles the last page (no next)' do
+  context 'when on the last page (no next)' do
     let(:next_document) { nil }
 
     it 'shows only the Previous button' do
@@ -63,7 +63,7 @@ RSpec.describe 'Article Record Toolbar', :js do
     end
   end
 
-  context 'handles a single page (no prev/next)' do
+  context 'when there is a single page (no prev/next)' do
     let(:previous_document) { nil }
     let(:next_document) { nil }
 

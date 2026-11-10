@@ -27,7 +27,7 @@ RSpec.describe CatalogHelper do
   end
 
   describe '#tech_details' do
-    context 'marc document' do
+    context 'with a marc document' do
       let(:document) { SolrDocument.new(id: '12345', marc_json_struct: metadata1) }
 
       it 'adds correct tech details' do
@@ -36,7 +36,7 @@ RSpec.describe CatalogHelper do
       end
     end
 
-    context 'cocina document' do
+    context 'with a cocina document' do
       let(:document) { SolrDocument.from_fixture('mf774fs2413.yml') }
 
       it 'adds correct tech details' do
@@ -45,7 +45,7 @@ RSpec.describe CatalogHelper do
       end
     end
 
-    context 'cocina collection document' do
+    context 'with a cocina collection document' do
       let(:document) { SolrDocument.from_fixture('mf774fs2413.yml') }
 
       it 'adds correct tech details' do

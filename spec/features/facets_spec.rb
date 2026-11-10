@@ -3,8 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Facets' do
-  context 'Library Specific Location Facets' do
-    context 'Art & Architecture' do
+  describe 'Library Specific Location Facets' do
+    describe 'Art & Architecture' do
       it 'renders the location facet when Art is selected' do
         visit root_path
 
@@ -17,7 +17,7 @@ RSpec.describe 'Facets' do
       end
     end
 
-    context 'Education (Cubberley)' do
+    describe 'Education (Cubberley)' do
       it 'renders the location facet when Education is selected' do
         visit root_path
 
@@ -30,7 +30,7 @@ RSpec.describe 'Facets' do
       end
     end
 
-    context 'other libraries' do
+    describe 'other libraries' do
       it 'does not render the location facet' do
         visit root_path
 
@@ -46,8 +46,8 @@ RSpec.describe 'Facets' do
     end
   end
 
-  context 'Genre specific facets' do
-    context 'Thesis/Dissertation' do
+  describe 'Genre specific facets' do
+    describe 'Thesis/Dissertation' do
       it 'renders the Stanford student work facet when genre
           Thesis/Dissertation is selected' do
         visit search_catalog_path(f: { genre_ssim: ['Thesis/Dissertation'] })
@@ -69,7 +69,7 @@ RSpec.describe 'Facets' do
     end
   end
 
-  context 'Hierarchical facets' do
+  describe 'Hierarchical facets' do
     it 'Renders the hierarchical format_hsim facet' do
       visit root_path
 
@@ -83,8 +83,8 @@ RSpec.describe 'Facets' do
     end
   end
 
-  context 'Range facet', :js do
-    context 'has no selection' do
+  describe 'Range facet', :js do
+    context 'with no selection' do
       it 'does not show the distribution range chart' do
         visit search_catalog_path(q: '', search_field: 'search')
 
@@ -99,7 +99,7 @@ RSpec.describe 'Facets' do
       end
     end
 
-    context 'has a selection' do
+    context 'with a selection' do
       it 'shows the distribution range chart' do
         visit search_catalog_path(range: { pub_year_tisim: { begin: '1999', end: '2025' } })
 

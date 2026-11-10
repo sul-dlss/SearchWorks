@@ -12,7 +12,7 @@ RSpec.describe 'marc_fields/_linked_author' do
     render
   end
 
-  context 'Creator' do
+  context 'with a Creator' do
     let(:document) { SolrDocument.new(author_struct: [{ target => [{ link: 'Dodaro, Gene L.', search: 'Dodaro, Gene L.', post_text: 'author. Author' }] }]) }
     let(:target) { :creator }
 
@@ -37,7 +37,7 @@ RSpec.describe 'marc_fields/_linked_author' do
     end
   end
 
-  context 'Corporate Author' do
+  context 'with a Corporate Author' do
     let(:document) do
       SolrDocument.new(author_struct: [
         { target => [{
@@ -70,7 +70,7 @@ RSpec.describe 'marc_fields/_linked_author' do
     end
   end
 
-  context 'Meeting (with venacular)' do
+  context 'with a Meeting (with vernacular)' do
     let(:document) do
       SolrDocument.new(author_struct: [
         {

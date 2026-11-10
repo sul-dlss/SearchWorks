@@ -10,7 +10,7 @@ RSpec.describe FeedbackFormHelper do
   let(:user) { User.new(email: 'example@stanford.edu') }
 
   describe '#render_connection_form' do
-    context 'connection type' do
+    context 'with the connection type' do
       it { expect(helper.render_connection_form).to include 'Name of resource' }
     end
   end

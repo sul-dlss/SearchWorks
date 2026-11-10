@@ -12,7 +12,7 @@ RSpec.describe MarcFieldWrapper do
   subject { described_class.new(field) }
 
   describe '#canonical_tag' do
-    context 'for regular fields' do
+    context 'with regular fields' do
       let(:field) { marc_fields(complex_vernacular_fixture, '245').first }
 
       it 'returns the fields original tag' do
@@ -20,7 +20,7 @@ RSpec.describe MarcFieldWrapper do
       end
     end
 
-    context 'for vernacualr fields' do
+    context 'with vernacular fields' do
       let(:field) { marc_fields(complex_vernacular_fixture, '880').first }
 
       it 'returns the tag of the field it matches' do

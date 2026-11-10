@@ -202,7 +202,7 @@ RSpec.describe EdsLinks do
       end
     end
 
-    context 'omits unwanted links' do
+    context 'with unwanted links' do
       let(:link_text) { '' }
       let(:document) do
         EdsDocument.new({
@@ -233,7 +233,7 @@ RSpec.describe EdsLinks do
     end
   end
 
-  context 'prioritizing links' do
+  describe 'prioritizing links' do
     let(:document) do
       EdsDocument.new({
                         'FullText' => {
@@ -253,7 +253,7 @@ RSpec.describe EdsLinks do
       ]
     end
 
-    context 'HTML + PDF links' do
+    context 'with HTML + PDF links' do
       let(:links) { all_custom_links }
 
       it 'shows 1 and 2 only' do
@@ -263,7 +263,7 @@ RSpec.describe EdsLinks do
       end
     end
 
-    context 'HTML + eBook links (without a PDF)' do
+    context 'with HTML + eBook links (without a PDF)' do
       let(:links) { all_custom_links.reject { |x| x['Text'] == 'PDF FULL TEXT' } }
 
       it 'shows 1 and 2 only' do
@@ -273,7 +273,7 @@ RSpec.describe EdsLinks do
       end
     end
 
-    context 'category 3' do
+    context 'with category 3' do
       let(:links) { all_custom_links[3..] }
 
       it 'shows 3 only' do
@@ -282,7 +282,7 @@ RSpec.describe EdsLinks do
       end
     end
 
-    context 'category 4' do
+    context 'with category 4' do
       let(:links) { all_custom_links[4..] }
 
       it 'shows 4 only' do
@@ -291,7 +291,7 @@ RSpec.describe EdsLinks do
       end
     end
 
-    context 'category 5' do
+    context 'with category 5' do
       let(:links) { all_custom_links[5..] }
 
       it 'shows 5 only' do

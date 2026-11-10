@@ -153,7 +153,7 @@ RSpec.describe MarcLinks do
       end
 
       describe 'ezproxy' do
-        context 'pre-encoded urls' do
+        context 'with pre-encoded urls' do
           let(:document) do
             SolrDocument.new(
               marc_links_struct: [{ href: "https://stanford.idm.oclc.org/login?url=https://library.stanford.edu",
