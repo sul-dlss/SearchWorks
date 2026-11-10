@@ -10,7 +10,10 @@ class LiveLookup
   end
 
   # Uses the LiveLookup service specified by Settings.live_lookup_service
+  # Returns no records when there are no ids to look up (e.g. SDR-only records, which have no FOLIO instance)
   def records
+    return [] if @ids.empty?
+
     live_lookup_service.new(@ids).records
   end
 

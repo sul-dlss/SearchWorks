@@ -16,4 +16,13 @@ RSpec.describe LiveLookup do
     expect(LiveLookup::Folio).to receive(:new).with(ids).and_return(implementation)
     expect(live_lookup.records).to eq([{ barcode: '111' }])
   end
+
+  context 'when there are no ids to look up' do
+    let(:ids) { [nil] }
+
+    it 'returns no records without calling the implementation' do
+      expect(LiveLookup::Folio).not_to receive(:new)
+      expect(live_lookup.records).to eq([])
+    end
+  end
 end

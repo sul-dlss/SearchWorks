@@ -156,6 +156,25 @@ RSpec.describe SearchworksMcp::Availability do
       end
     end
 
+    context 'when the record has no FOLIO instance (e.g. an SDR-only record)' do
+      let(:holdings) { instance_double(Holdings, items: [], libraries: []) }
+
+      before do
+        allow(document).to receive(:[]).with(:uuid_ssi).and_return(nil)
+        allow(SearchworksMcp).to receive(:report_exception)
+      end
+
+      it 'skips the live lookup without reporting an error' do
+        result = described_class.fetch(id: '123')
+
+        expect(LiveLookup).not_to have_received(:new)
+        expect(SearchworksMcp).not_to have_received(:report_exception)
+        expect(result).not_to include(error: true)
+        expect(result[:structured_content]).to include(live_status: false, availability: [])
+        expect(result[:text]).to include('has no physical items to check; it is available online')
+      end
+    end
+
     context 'when the record has too many items to list' do
       let(:items) { Array.new(described_class::MAX_ITEMS + 1) { item } }
       let(:location) do

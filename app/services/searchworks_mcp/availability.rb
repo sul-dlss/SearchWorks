@@ -57,8 +57,11 @@ module SearchworksMcp
 
     private
 
-    # @return [Array<Hash>, nil] real-time item records from the ILS, or nil if the lookup failed
+    # @return [Array<Hash>, nil] real-time item records from the ILS, or nil if the lookup failed or
+    #   the record has no ILS instance to look up (e.g. SDR-only records such as ty162zv7580)
     def live_lookup_records(document)
+      return if document[:uuid_ssi].blank?
+
       LiveLookup.new(document[:uuid_ssi]).records.reject { |record| holdings_only?(record) }
     rescue StandardError => e
       SearchworksMcp.report_exception(e, context: { id: document.id })
