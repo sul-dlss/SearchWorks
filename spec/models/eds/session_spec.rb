@@ -32,6 +32,17 @@ RSpec.describe Eds::Session do
       expect(a_request(:get, info_url)).to have_been_made.twice
     end
 
+    it 'adds the EDS error details to the Honeybadger context' do
+      allow(Honeybadger).to receive(:context)
+      stub_request(:get, info_url)
+        .to_return(status: 400, body: { ErrorNumber: '132', Reason: 'Record not found', DetailedErrorDescription: 'Details' }.to_json,
+                   headers: { 'Content-Type' => 'application/json' })
+
+      expect { session.info }.to raise_error(Faraday::BadRequestError)
+      expect(Honeybadger).to have_received(:context)
+        .with(eds_error: { 'ErrorNumber' => '132', 'Reason' => 'Record not found', 'DetailedErrorDescription' => 'Details' })
+    end
+
     it 're-raises timeouts as Faraday errors' do
       stub_request(:get, info_url).to_timeout
 
