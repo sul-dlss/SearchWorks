@@ -1,0 +1,346 @@
+/* Home page Search / Ask the assistant toggle (HomeSearchModesComponent, home_mode_controller.js) */
+
+.search-area-image-bg:has(.home-modes) {
+  @media (min-width: 576px) {
+    padding-block: 32px 48px;
+    interpolate-size: allow-keywords;
+    transition: height 0.4s ease;
+
+    &:has(.home-modes.chat-active) {
+      height: auto;
+
+      /* The taller hero would otherwise tile the banner image */
+      &::before {
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.home-modes {
+  --home-mode-duration: 0.4s;
+}
+
+.home-mode-toggle {
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-block-end: 0.75rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background-color: white;
+  box-shadow: var(--bs-box-shadow);
+}
+
+.home-mode-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--stanford-80-black);
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--stanford-10-black);
+  }
+
+  &[aria-selected="true"] {
+    background-color: var(--stanford-cardinal);
+    color: white;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--stanford-digital-blue, #006cb8);
+    outline-offset: 2px;
+  }
+}
+
+.home-mode-beta {
+  background-color: rgb(var(--stanford-poppy-dark-rgb, 233 131 0));
+  color: var(--stanford-black);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+}
+
+/* Both panes share one grid cell so they can cross during the slide. */
+.home-mode-track {
+  display: grid;
+  overflow-x: clip;
+  overflow-y: visible;
+  /* Room for the cards' shadows, which clip would otherwise cut off */
+  padding: 0.5rem;
+  margin: -0.5rem;
+}
+
+.home-mode-pane {
+  grid-area: 1 / 1;
+  min-width: 0;
+  /* A pane being hidden stays in layout, invisibly, while the hero's height transitions;
+     otherwise the hero's height: auto would be measured without it and snap. */
+  transition: display var(--home-mode-duration) allow-discrete;
+
+  &[hidden] {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.home-mode-enter-forward { animation: home-mode-in-from-right var(--home-mode-duration) ease both; }
+.home-mode-leave-forward { animation: home-mode-out-to-left var(--home-mode-duration) ease both; }
+.home-mode-enter-back { animation: home-mode-in-from-left var(--home-mode-duration) ease both; }
+.home-mode-leave-back { animation: home-mode-out-to-right var(--home-mode-duration) ease both; }
+
+.home-mode-leave-forward,
+.home-mode-leave-back {
+  pointer-events: none;
+}
+
+@keyframes home-mode-in-from-right {
+  from { transform: translateX(calc(100% + 2rem)); opacity: 0; }
+}
+
+@keyframes home-mode-out-to-left {
+  to { transform: translateX(calc(-100% - 2rem)); opacity: 0; }
+}
+
+@keyframes home-mode-in-from-left {
+  from { transform: translateX(calc(-100% - 2rem)); opacity: 0; }
+}
+
+@keyframes home-mode-out-to-right {
+  to { transform: translateX(calc(100% + 2rem)); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-modes { --home-mode-duration: 0s; }
+  .search-area-image-bg:has(.home-modes) { transition: none; }
+}
+
+/* Chat assistant panel (ChatPanelComponent, chat_assistant_controller.js) */
+
+.chat-assistant {
+  display: flex;
+  flex-direction: column;
+  height: min(36rem, 75vh);
+  max-width: 860px;
+  padding: 1rem 1.5rem 1.25rem;
+  background-color: white;
+  box-shadow: var(--bs-box-shadow);
+}
+
+.chat-assistant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block-end: 0.5rem;
+  border-block-end: 1px solid var(--stanford-20-black);
+}
+
+.chat-assistant-transcript {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-block: 0.75rem;
+
+  &:focus-visible {
+    outline: 2px solid var(--stanford-digital-blue, #006cb8);
+    outline-offset: -2px;
+  }
+}
+
+.chat-assistant-examples {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.chat-assistant-example {
+  color: var(--stanford-80-black);
+  font-style: italic;
+
+  &::before { content: "“"; }
+  &::after { content: "”"; }
+}
+
+.chat-assistant-login {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-block-start: 0.75rem;
+  border-block-start: 1px solid var(--stanford-20-black);
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.chat-assistant-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-block-start: 0.75rem;
+  border-block-start: 1px solid var(--stanford-20-black);
+
+  textarea {
+    resize: none;
+    field-sizing: content;
+    max-height: 8rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    white-space: nowrap;
+  }
+}
+
+.chat-message {
+  margin-block-end: 1rem;
+}
+
+.chat-message-label {
+  margin-block-end: 0.25rem;
+  color: var(--stanford-60-black);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.chat-message-user .chat-message-content {
+  display: inline-block;
+  max-width: 85%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  background-color: var(--stanford-fog-light);
+  white-space: pre-wrap;
+}
+
+.chat-message-assistant .chat-message-content {
+  > :last-child { margin-block-end: 0; }
+
+  table { font-size: 0.875rem; }
+}
+
+.chat-placeholder {
+  .placeholder {
+    display: block;
+    height: 0.875rem;
+    margin-block-end: 0.375rem;
+    border-radius: 0.25rem;
+  }
+}
+
+.chat-tool-calls {
+  display: grid;
+  gap: 0.25rem;
+  margin-block-end: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.chat-tool-call {
+  summary {
+    width: fit-content;
+    color: var(--stanford-60-black);
+    cursor: pointer;
+  }
+
+  code {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &[open] summary {
+    margin-block-end: 0.25rem;
+  }
+}
+
+.chat-tool-call-section {
+  margin-inline-start: 1rem;
+
+  & + & {
+    margin-block-start: 0.5rem;
+  }
+
+  pre {
+    max-height: 12rem;
+    margin: 0;
+    padding: 0.5rem;
+    overflow: auto;
+    border-radius: var(--bs-border-radius);
+    background-color: var(--stanford-10-black);
+    font-size: 0.75rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+}
+
+.chat-tool-call-label {
+  margin-block-end: 0.125rem;
+  color: var(--stanford-60-black);
+  font-weight: 600;
+}
+
+.chat-availability-list {
+  display: grid;
+  gap: 0.5rem;
+  margin-block-start: 0.75rem;
+}
+
+.chat-availability {
+  border-color: var(--stanford-20-black);
+
+  .card-body {
+    padding: 0.625rem 0.875rem;
+  }
+}
+
+.chat-availability-title {
+  margin-block-end: 0.375rem;
+  font-weight: 600;
+}
+
+.chat-availability-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  padding-block: 0.25rem;
+  font-size: 0.875rem;
+
+  & + & {
+    border-block-start: 1px solid var(--stanford-10-black);
+  }
+}
+
+.chat-availability-callnumber {
+  margin-inline-start: 0.5rem;
+  font-family: var(--bs-font-monospace);
+  font-size: 0.8125rem;
+}
+
+.chat-availability-request {
+  margin-inline-start: auto;
+  padding: 0.125rem 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .home-mode-toggle {
+    margin-block-start: 0.75rem;
+    margin-inline: 0.75rem;
+  }
+
+  .chat-assistant {
+    height: 75vh;
+    padding-inline: 1rem;
+  }
+}

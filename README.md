@@ -149,3 +149,44 @@ To use the endpoint with Claude or Claude Desktop, deploy SearchWorks at a publi
    ```
 
 We can't use "Connectors", yet, because on Team and Enterprise plans, an organization owner must add the connector under **Organization settings > Connectors** before members can enable it.
+
+## Chat assistant
+
+The home page can switch between the search form and an AI chat assistant ("Ask the assistant"). The
+assistant runs the same tools as the MCP server, in-process, with a model served by a
+[LiteLLM proxy](https://docs.litellm.ai/) through its OpenAI-compatible streaming
+`POST /v1/chat/completions` endpoint. It is off unless `Settings.chat.enabled` is true (it is on in
+development and test).
+
+Configure:
+
+- `LITELLM_API_BASE`: proxy API base URL, with or without `/v1`
+- `LITELLM_API_KEY`: proxy master or virtual key
+- `LITELLM_CHAT_MODEL`: the model alias; it must support OpenAI-compatible tool calling and streaming
+- `LITELLM_CHAT_REASONING_EFFORT`: optional, defaults to `low`. Don't use `none` with Gemini on Vertex AI,
+  which rejects the `THINKING_LEVEL_MINIMAL` that LiteLLM maps it to.
+
+The system prompt and the conversation, tool, and output limits are under `config.x.chat` in
+`config/initializers/chat.rb`; the MCP server instructions (`SearchworksMcp::INSTRUCTIONS`) are prepended
+to the prompt. Sending a message requires login (see "Logging in" above). Article tools query EDS as a
+guest unless the user is on campus or Stanford-affiliated, as the articles UI does. When
+`THROTTLE_TRAFFIC` is on, `Settings.chat.throttle` limits turns per user.
+
+Conversations are held in the browser's `sessionStorage` and are not stored by Rails. Each turn logs
+`request.litellm`, `start.mcp_tool`, and `call.mcp_tool` events with the question's tool inputs and token
+usage, correlated by request ID but without user identity.
+
+### Chat quality evaluations
+
+`bin/rails chat:evaluate` asks the questions in `lib/chat_evaluation/chat_evaluations.yml` in-process,
+against the catalog, EDS, and FOLIO of the environment it runs in, and has an independent LiteLLM model
+judge each answer against a reference answer and rubric. Cases can also require citations of returned
+records, and require or forbid particular tools. Ordinary test runs make no network requests.
+
+```sh
+LITELLM_EVAL_MODEL=claude-sonnet-5 bin/rails chat:evaluate
+```
+
+Useful overrides: `CHAT_EVAL_CASE` (one case ID), `CHAT_EVAL_RUNS` (attempts per case, default 1),
+`CHAT_EVAL_PASS_RATE` (default 1.0), `CHAT_EVAL_MIN_SCORE` (default 0.8), and `CHAT_EVAL_REPORT` (report
+path; otherwise under `tmp/chat_evaluations`).

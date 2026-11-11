@@ -92,5 +92,40 @@ module SearchworksMcp
       output_schema: -> { Schemas.availability },
       annotations: READ_ONLY_ANNOTATIONS
     }.freeze
+
+    ALL = [CATALOG_SEARCH, ARTICLE_SEARCH, GET_CATALOG_RECORD, GET_ARTICLE, GET_AVAILABILITY].freeze
+
+    module_function
+
+    # @return [Hash, nil] the tool definition with this name
+    def find(name)
+      ALL.find { |definition| definition[:name] == name.to_s }
+    end
+
+    def resolve_schema(schema)
+      schema.is_a?(Proc) ? schema.call : schema
+    end
+
+    # Runs a tool for an MCP client or the chat assistant, returning the sanitized
+    # { text:, structured_content:, error: } hash.
+    #
+    # @param arguments [Hash] validated tool arguments with symbol keys
+    # @param controller [ActionController::Base, nil] the requesting controller, for Blacklight search state
+    # @param eds_guest [Boolean] whether article tools query EDS as a guest (anonymous MCP clients always do)
+    def invoke(name, arguments, controller: nil, eds_guest: true)
+      result = case name.to_s
+               when CATALOG_SEARCH[:name] then CatalogSearch.search(controller:, **arguments)
+               when ARTICLE_SEARCH[:name] then ArticleSearch.search(guest: eds_guest, **arguments)
+               when GET_CATALOG_RECORD[:name] then CatalogRecord.fetch(controller:, **arguments)
+               when GET_ARTICLE[:name] then ArticleRecord.fetch(guest: eds_guest, **arguments)
+               when GET_AVAILABILITY[:name] then Availability.fetch(controller:, **arguments)
+               else return ToolResult.failure("Tool not found: #{name}")
+               end
+
+      result.merge(
+        text: SearchworksMcp.sanitize_output(result[:text].to_s),
+        structured_content: SearchworksMcp.sanitize_output(result[:structured_content])
+      )
+    end
   end
 end

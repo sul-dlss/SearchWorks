@@ -53,16 +53,8 @@ class McpController < ApplicationController
       description: "Search Stanford Libraries catalog and article metadata.",
       version: Settings.REVISION.presence || "1.0.0",
       website_url: SearchworksMcp::Urls::BASE_URL,
-      instructions: "Choose the search tool that matches the requested material; do not call both unless the user " \
-                    "asks for both. Use catalog_search_tool for books, journals as whole publications, databases, " \
-                    "media, archives, maps, and other catalog materials. Use article_search_tool for individual " \
-                    "scholarly, journal, or newspaper articles. Use get_catalog_record or get_article only when " \
-                    "detailed metadata is needed. Whenever catalog_search_tool returns exactly one result or you " \
-                    "select a specific result from a result set, you must call get_availability with that result's " \
-                    "id before answering, even if the user did not ask about availability. Cite the canonical " \
-                    "SearchWorks URL returned by tools. When availability includes a request_url, present that " \
-                    "direct link to the user so they can request the material.",
-      tools: [catalog_tool, article_tool, catalog_record_tool, article_record_tool, availability_tool],
+      instructions: SearchworksMcp::INSTRUCTIONS,
+      tools: SearchworksMcp::Tools::ALL.map { |definition| build_tool(definition) },
       prompts: [SearchworksMcp::Prompts::FIND_ITEM],
       capabilities: { tools: {}, prompts: {} },
       ttl_ms: 1.hour.in_milliseconds,
@@ -75,55 +67,21 @@ class McpController < ApplicationController
     )
   end
 
-  def catalog_tool
-    build_tool(SearchworksMcp::Tools::CATALOG_SEARCH) do |arguments, context|
-      SearchworksMcp::CatalogSearch.search(controller: context&.dig(:controller), **arguments)
-    end
-  end
-
-  def article_tool
-    build_tool(SearchworksMcp::Tools::ARTICLE_SEARCH) do |arguments, _context|
-      SearchworksMcp::ArticleSearch.search(**arguments)
-    end
-  end
-
-  def catalog_record_tool
-    build_tool(SearchworksMcp::Tools::GET_CATALOG_RECORD) do |arguments, context|
-      SearchworksMcp::CatalogRecord.fetch(controller: context&.dig(:controller), **arguments)
-    end
-  end
-
-  def article_record_tool
-    build_tool(SearchworksMcp::Tools::GET_ARTICLE) do |arguments, _context|
-      SearchworksMcp::ArticleRecord.fetch(**arguments)
-    end
-  end
-
-  def availability_tool
-    build_tool(SearchworksMcp::Tools::GET_AVAILABILITY) do |arguments, context|
-      SearchworksMcp::Availability.fetch(controller: context&.dig(:controller), **arguments)
-    end
-  end
-
-  def build_tool(definition, &search)
-    schema = definition[:input_schema]
+  def build_tool(definition)
     Class.new(MCP::Tool).tap do |tool|
       tool.tool_name definition[:name]
       tool.description definition[:description]
-      tool.input_schema(schema.is_a?(Proc) ? schema.call : schema)
-      output_schema = definition[:output_schema]
-      tool.output_schema(output_schema.is_a?(Proc) ? output_schema.call : output_schema) if output_schema
+      tool.input_schema(SearchworksMcp::Tools.resolve_schema(definition[:input_schema]))
+      tool.output_schema(SearchworksMcp::Tools.resolve_schema(definition[:output_schema])) if definition[:output_schema]
       tool.annotations(definition[:annotations]) if definition[:annotations]
       tool.define_singleton_method(:call) do |**arguments|
         context = arguments.delete(:server_context)
-        result = search[arguments, context]
-        text = SearchworksMcp.sanitize_output(result[:text].to_s)
-        structured_content = SearchworksMcp.sanitize_output(result[:structured_content])
-        content = [{ type: "text", text: text }]
-        content << { type: "text", text: JSON.generate(structured_content) } if structured_content
+        result = SearchworksMcp::Tools.invoke(definition[:name], arguments, controller: context&.dig(:controller))
+        content = [{ type: "text", text: result[:text] }]
+        content << { type: "text", text: JSON.generate(result[:structured_content]) } if result[:structured_content]
         MCP::Tool::Response.new(
           content,
-          structured_content: structured_content,
+          structured_content: result[:structured_content],
           error: result[:error] || false
         )
       end

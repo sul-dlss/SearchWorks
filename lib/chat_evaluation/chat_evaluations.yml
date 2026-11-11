@@ -1,0 +1,85 @@
+# Cases for `bin/rails chat:evaluate`. Each case is asked in-process against the live catalog,
+# EDS, and FOLIO of the environment running the task, then judged against reference_answer and
+# rubric by an independent model. Holdings and statuses change, so reference answers describe
+# what a good answer does rather than exact item statuses.
+#
+# Optional keys:
+#   history: earlier { role, content } turns, for follow-up questions
+#   require_citations: at least one Markdown link must point at a record a tool returned
+#   require_tools: tools that must be called
+#   forbid_tools: tools that must not be called
+cases:
+  - id: known_item_beloved
+    question: Where can I find a copy of Beloved by Toni Morrison?
+    reference_answer: >-
+      Stanford holds Toni Morrison's novel Beloved, including the 1987 Knopf first edition
+      (https://searchworks.stanford.edu/view/1669346) and an unabridged audiobook available online
+      to Stanford-affiliated users. A good answer links the novel's record, reports where a print
+      copy is shelved with its library and call number, and says whether it is available or how to
+      request it.
+    rubric:
+      - Identifies a catalog record for the novel Beloved by Toni Morrison, not only criticism about it.
+      - Links the record using its SearchWorks URL.
+      - Gives a library or location and a call number for a physical copy, or explains how to get it online.
+      - Does not invent holdings or statuses that the tools did not return.
+    require_citations: true
+    require_tools: [catalog_search_tool, get_availability]
+    forbid_tools: [article_search_tool]
+
+  - id: follow_up_audiobook
+    history:
+      - role: user
+        content: Where can I find a copy of Beloved by Toni Morrison?
+      - role: assistant
+        content: >-
+          Green Library has [Beloved : a novel](https://searchworks.stanford.edu/view/1669346), the
+          1987 Knopf edition, in the stacks.
+    question: Is there an audiobook version I could listen to?
+    reference_answer: >-
+      Yes. SearchWorks has an unabridged audiobook of Beloved narrated by Toni Morrison
+      (Random House Audio, 2006; https://searchworks.stanford.edu/view/13886229), available online
+      through OverDrive to Stanford-affiliated users.
+    rubric:
+      - Says that an audiobook (sound recording) of Beloved is available.
+      - Links the audiobook's SearchWorks record.
+      - Explains that it is accessed online, and that access is limited to Stanford-affiliated users.
+    require_citations: true
+    require_tools: [catalog_search_tool]
+
+  - id: articles_coral_bleaching
+    question: Recent peer-reviewed articles on coral reef bleaching
+    reference_answer: >-
+      Lists several recent scholarly journal articles about coral reef bleaching, each with its
+      title linked to its SearchWorks article page and its journal or publication date, and notes
+      that full text may require Stanford authentication.
+    rubric:
+      - Presents individual articles rather than books or whole journals.
+      - The articles are about coral reef bleaching.
+      - Each listed article links to a SearchWorks article URL.
+      - Does not claim the list is complete.
+    require_citations: true
+    require_tools: [article_search_tool]
+
+  - id: maps_san_francisco_before_1906
+    question: Maps of San Francisco from before 1906
+    reference_answer: >-
+      Lists several catalog records for maps of San Francisco published before the 1906 earthquake,
+      each linked to its SearchWorks record, describing them as examples rather than a complete list.
+    rubric:
+      - Presents maps (not books about maps or articles) of San Francisco.
+      - The maps presented date from before 1906.
+      - Links each record presented to its SearchWorks URL.
+      - Does not claim the list is complete.
+    require_citations: true
+    require_tools: [catalog_search_tool]
+    forbid_tools: [article_search_tool]
+
+  - id: out_of_scope
+    question: Write me a limerick about the Golden Gate Bridge.
+    reference_answer: >-
+      Politely declines because it can only help find library materials in SearchWorks, and may
+      offer to search for books or other materials about the Golden Gate Bridge.
+    rubric:
+      - Does not write a limerick.
+      - Explains that it helps find materials in SearchWorks or the Stanford Libraries.
+    forbid_tools: [article_search_tool, get_article]

@@ -7,10 +7,10 @@ module SearchworksMcp
 
     DISABLED_MESSAGE = "Article retrieval is not currently enabled. EDS must be configured."
 
-    def fetch(id:)
+    def fetch(id:, guest: true)
       return ToolResult.failure(DISABLED_MESSAGE, error: "EDS not enabled") unless Settings.EDS_ENABLED
 
-      document = SearchServices.eds.fetch(id)
+      document = SearchServices.eds(guest:).fetch(id)
       result = {
         id: document.id.to_s,
         title: document.eds_title.presence || "Untitled",

@@ -98,6 +98,9 @@ Rails.application.routes.draw do
   # returns method-specific responses, including 405 for unsupported methods.
   match '/mcp', to: 'mcp#index', as: :mcp, via: :all
 
+  # AI chat assistant, backed by the MCP tools (behind Settings.chat.enabled)
+  post '/chat', to: 'chats#create', as: :chat
+
   direct :digital_collections do
     { controller: '/catalog', action: 'index', f: { library: ['SDR'], collection_type: ['Digital Collection'] } }
   end

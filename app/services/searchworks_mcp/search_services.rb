@@ -11,11 +11,12 @@ module SearchworksMcp
       Blacklight::SearchService.new(config: config, search_state: state)
     end
 
-    # MCP clients are anonymous, so EDS is always queried as a guest.
-    def eds(params = {})
+    # MCP clients are anonymous, so EDS is queried as a guest unless the caller (the chat
+    # assistant) has established that the user is on campus or Stanford-affiliated.
+    def eds(params = {}, guest: true)
       eds_params = {
-        guest: true,
-        session_token: Eds::Session.new(guest: true, caller: "mcp-server").session_token
+        guest: guest,
+        session_token: Eds::Session.new(guest: guest, caller: "mcp-server").session_token
       }
       Eds::SearchService.new(ArticlesController.blacklight_config, params, eds_params)
     end

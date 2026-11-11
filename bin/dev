@@ -8,4 +8,7 @@ fi
 # Default to port 3000 if not specified
 export PORT="${PORT:-3000}"
 
+export LITELLM_CHAT_MODEL="gemini-3.8-flash"
+export LITELLM_API_BASE="https://dlss-aigateway-prod.stanford.edu/v1/"
+
 exec foreman start -f Procfile.dev "$@"

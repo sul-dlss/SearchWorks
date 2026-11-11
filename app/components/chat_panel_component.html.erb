@@ -1,0 +1,55 @@
+<section class="chat-assistant rounded" aria-labelledby="chat-assistant-heading"
+         data-controller="chat-assistant"
+         data-chat-assistant-url-value="<%= helpers.chat_path %>"
+         data-chat-assistant-login-url-value="<%= login_url %>">
+  <header class="chat-assistant-header">
+    <h2 id="chat-assistant-heading" class="h5 mb-0">Ask the SearchWorks assistant</h2>
+    <button type="button" class="btn btn-link btn-sm" data-chat-assistant-target="reset" data-action="chat-assistant#reset" hidden>
+      <i class="bi bi-plus-lg" aria-hidden="true"></i> New chat
+    </button>
+  </header>
+
+  <div class="chat-assistant-transcript" role="log" aria-live="polite" aria-label="Conversation" tabindex="0" data-chat-assistant-target="transcript">
+    <div class="chat-assistant-intro" data-chat-assistant-target="intro">
+      <p>
+        Describe what you need and the assistant will search the catalog and articles, check availability, and
+        link you to the records it finds. It can make mistakes, so check the linked records.
+      </p>
+      <p class="mb-2 fw-semibold">Try asking:</p>
+      <ul class="chat-assistant-examples list-unstyled">
+        <% EXAMPLE_QUESTIONS.each do |question| %>
+          <li>
+            <% if logged_in %>
+              <button type="button" class="btn btn-sm btn-outline-primary text-start" data-action="chat-assistant#ask" data-chat-assistant-question-param="<%= question %>"><%= question %></button>
+            <% else %>
+              <span class="chat-assistant-example"><%= question %></span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-danger mb-0 mt-2" role="alert" data-chat-assistant-target="error" hidden></div>
+
+  <div class="chat-assistant-login" data-chat-assistant-target="login" <%= 'hidden' if logged_in %>>
+    <span>Log in with your SUNet ID to chat with the assistant.</span>
+    <%= link_to login_url, class: 'btn btn-primary', data: { turbo: false } do %>
+      <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Log in to chat
+    <% end %>
+  </div>
+
+  <% if logged_in %>
+    <form class="chat-assistant-form" data-chat-assistant-target="form" data-action="chat-assistant#submit">
+      <label for="chat-assistant-input" class="visually-hidden">Ask the assistant a question</label>
+      <textarea id="chat-assistant-input" class="form-control" rows="2" maxlength="2000"
+                placeholder="What are you looking for?"
+                data-chat-assistant-target="input" data-home-mode-target="chatInput"
+                data-action="keydown->chat-assistant#keydown"></textarea>
+      <button type="submit" class="btn btn-primary" data-chat-assistant-target="submit">
+        <i class="bi bi-send" aria-hidden="true"></i>
+        <span data-chat-assistant-target="submitLabel">Send</span>
+      </button>
+    </form>
+  <% end %>
+</section>

@@ -65,13 +65,13 @@ module SearchworksMcp
     }.freeze
 
     def search(query:, search_field: "all_fields", rows: 10, start_year: nil, end_year: nil, source_type: nil, # rubocop:disable Metrics/ParameterLists
-               full_text_only: false, peer_reviewed_only: false)
+               full_text_only: false, peer_reviewed_only: false, guest: true)
       return ToolResult.failure(DISABLED_MESSAGE, error: "EDS not enabled") unless Settings.EDS_ENABLED
 
       filters = applied_filters(start_year:, end_year:, source_type:, full_text_only:, peer_reviewed_only:)
       params = search_params(query, search_field, rows, filters)
-      response = run_search(params)
-      unfiltered = run_search(params.except(:f, :range).merge(per_page: 1)) if filters.any? && response.total.zero?
+      response = run_search(params, guest:)
+      unfiltered = run_search(params.except(:f, :range).merge(per_page: 1), guest:) if filters.any? && response.total.zero?
       ArticleResults.format(response:, query:, search_field:, filters:, unfiltered_response: unfiltered)
     rescue StandardError => e
       ToolResult.internal_error(e, public_message: "Article search is temporarily unavailable.")
@@ -124,8 +124,8 @@ module SearchworksMcp
       }
     end
 
-    def run_search(params)
-      SearchServices.eds(params).search_results
+    def run_search(params, guest:)
+      SearchServices.eds(params, guest:).search_results
     end
   end
 end

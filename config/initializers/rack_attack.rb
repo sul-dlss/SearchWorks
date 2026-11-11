@@ -102,6 +102,14 @@ if Settings.THROTTLE_TRAFFIC
     req.ip
   end
 
+  # Each chat turn can run several catalog, EDS, and FOLIO lookups and a model completion, so bound
+  # turns per logged-in user (ChatsController rejects anonymous requests).
+  Rack::Attack.throttle('chat/user', limit: Settings.chat.throttle.limit, period: Settings.chat.throttle.period) do |req|
+    next unless req.post? && req.path == '/chat'
+
+    req.env['warden']&.user(scope: :user, run_callbacks: false)&.email || req.ip
+  end
+
   Rack::Attack.throttle('req/actions/ip', limit: 15, period: 1.minute) do |req|
     route = begin
       Rails.application.routes.recognize_path(req.path) || {}

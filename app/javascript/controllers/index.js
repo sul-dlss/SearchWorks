@@ -37,6 +37,9 @@ application.register("bookmark", BookmarkController)
 import BrowseNearbyController from "./browse_nearby_controller"
 application.register("browse-nearby", BrowseNearbyController)
 
+import ChatAssistantController from "./chat_assistant_controller"
+application.register("chat-assistant", ChatAssistantController)
+
 import CitationFormatController from "./citation_format_controller"
 application.register("citation-format", CitationFormatController)
 
@@ -93,6 +96,9 @@ application.register("global-alert", GlobalAlertController)
 
 import GoogleCoverImageController from "./google_cover_image_controller"
 application.register("google-cover-image", GoogleCoverImageController)
+
+import HomeModeController from "./home_mode_controller"
+application.register("home-mode", HomeModeController)
 
 import HomePageSearchController from "./home_page_search_controller"
 application.register("home-page-search", HomePageSearchController)

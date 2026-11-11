@@ -1,0 +1,18 @@
+<div class="home-modes<%= ' chat-active' if chat? %>" data-controller="home-mode">
+  <div class="home-mode-toggle" role="tablist" aria-label="Choose how to find library materials">
+    <%= tag.button(**tab_attributes('search')) do %>
+      <i class="bi bi-search" aria-hidden="true"></i> Search
+    <% end %>
+    <%= tag.button(**tab_attributes('chat')) do %>
+      <i class="bi bi-stars" aria-hidden="true"></i> Ask the assistant <span class="badge home-mode-beta">Beta</span>
+    <% end %>
+  </div>
+  <div class="home-mode-track">
+    <%= tag.div(**pane_attributes('search')) do %>
+      <%= search %>
+    <% end %>
+    <%= tag.div(**pane_attributes('chat')) do %>
+      <%= render ChatPanelComponent.new(logged_in:) %>
+    <% end %>
+  </div>
+</div>
