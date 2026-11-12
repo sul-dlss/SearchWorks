@@ -302,6 +302,12 @@ class ArticlesController < ApplicationController
     params[:q].present?
   end
 
+  # Background JSON fetches (e.g., the articles mini-bento) shouldn't replace the
+  # search session.
+  def start_new_search_session?
+    super && request.format.html?
+  end
+
   def extract_fulltext_link(document, type)
     links = document.eds_fulltext_links
     link = links.find { |link| link[:url].present? && link[:url] != 'detail' && link[:type] == type.to_s }
