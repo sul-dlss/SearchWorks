@@ -4,6 +4,9 @@ class AvailabilityController < ApplicationController
   include Blacklight::Searchable
 
   before_action :redirect_bots
+  # Don't write the session cookie. These availability requests can finish after a newer
+  # request has updated the session, and would overwrite it with a stale copy.
+  before_action { request.session_options[:skip] = true }
   layout 'turbo_rails/frame'
 
   def show
