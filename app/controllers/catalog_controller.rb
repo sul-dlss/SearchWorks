@@ -572,8 +572,7 @@ class CatalogController < ApplicationController
 
   private
 
-  # Background JSON fetches (e.g., the articles mini-bento) shouldn't replace the
-  # search session.
+  # Background JSON fetches (e.g., mini-bento) shouldn't replace the search session.
   def start_new_search_session?
     super && request.format.html?
   end
