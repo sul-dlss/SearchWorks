@@ -305,7 +305,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 7bc85f97-61aa-4f4a-a537-3d74b7625c5a,Lane Unmapped,LANE-UNMAPPED,SU,MED,LANE,Unmapped location,true,false,LANE-DESK,LANE-DESK,,,,,,,,,,,,,,,,
 7bfbcbc8-7997-4b04-b3d9-bae4e90c46eb,Media Page to Media,MEDIA-PAGE-MM,SU,SUL,MEDIA-CENTER,Ask at Media Center desk,true,false,MEDIA-CENTER,MEDIA-CENTER,,,,,,,,,,,,,,,,
 7c6af6ea-86ca-42a0-94b2-58edad1637a7,Spec Felton,SPEC-FELTON,SU,SUL,SPEC-COLL,Felton Collection,true,false,SPEC,SPEC,,,,SPECUA,,,,,,,,,,,,
-7d62d997-f9f2-489e-aff3-04eb043d9537,Rumsey W7 Pocket Large,RUM-W7-POCKET-LG,SU,SUL,RUMSEY-MAP,Map Center (W7 large pocket maps),true,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
+7d62d997-f9f2-489e-aff3-04eb043d9537,Rumsey W7 Pocket Large,RUM-W7-POCKET-LG,SU,SUL,RUMSEY-MAP,Map Center (W7 large pocket maps),false,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
 7de1b6d2-9de1-4cc8-b834-971359bd385e,ARS Withdrawn,ARS-WITHDRAWN,SU,SUL,ARS,Ask at desk,true,false,ARS,ARS,,,,,,,,,,,,,,,,
 7e8506be-4d8b-499a-accd-6e9584510ea3,SAL Send to SAL3,SAL-SEND2SAL3,SU,SUL,SAL,Ask at circulation desk,true,false,SAL,SAL,,,GREEN,,,,,Offsite,true,,,,,,,
 7ea4b5ab-1725-4f47-b93b-792baf61ca27,Spec Samson,SPEC-SAMSON,SU,SUL,SPEC-COLL,Samson Collection,true,false,SPEC,SPEC,,,,SPECUA,,,,,,,,,,,,
@@ -316,7 +316,7 @@ id,name,code,institutionCode,campusCode,libraryCode,discoveryDisplayName,isActiv
 803f957e-4d9e-4109-82b6-fb0f3cb4b00a,Earth Sci Atlases,EAR-ATLASES,SU,SUL,EARTH-SCI,Atlases,true,false,EARTH-SCI,EARTH-SCI,,,,,,,,,,,,,,,,
 813f5dea-67e3-488f-9f87-57aebafe6bc7,Spec CHS,SPEC-CHS,SU,SUL,SPEC-COLL,California Historical Society Collection,true,false,SPEC,SPEC,,,,SPECUA,,,,,,,,,,,,
 8184b82b-b078-4cb4-8768-c54d43af6115,ARS SAL3 Stacks,ARS-SAL3-STACKS,SU,SUL,ARS,Stored offsite,true,false,SAL3,SAL3,,,,ARS,,,,,,,,,,,,
-825b0d52-8b5a-45b6-8698-4325bd6c1f0e,Rumsey W7 Pocket Regular,RUM-W7-POCKET-REG,SU,SUL,RUMSEY-MAP,Map Center (W7 regular pocket maps),true,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
+825b0d52-8b5a-45b6-8698-4325bd6c1f0e,Rumsey W7 Pocket Regular,RUM-W7-POCKET-REG,SU,SUL,RUMSEY-MAP,Map Center (W7 regular pocket maps),false,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
 828c4324-062d-4aa5-9960-11691b894c5b,Art Instructor,ART-INSTRUCTOR,SU,SUL,ART,On reserve: Ask at circulation desk,true,false,ART,ART,,,,,,,,,,,,,,,,
 82a67d8a-15ff-46f4-b5f5-d52bbd575683,Rumsey Center Stacks Large,RUM-C-STK-LG,SU,SUL,RUMSEY-MAP,Map Center (large stacks),true,false,RUMSEY-MAP,RUMSEY-MAP,,,,RUMSEY,,,,,,,,,,,,
 82d77fc4-6d63-4de9-a6b9-5056570ce060,Marine Bio Shelve by title,MAR-SHELBYTITLE,SU,SUL,MARINE-BIO,Serials,true,false,MARINE-BIO,MARINE-BIO,,,,,,,,,,,,,,,,Shelved by title
