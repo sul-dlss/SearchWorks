@@ -7469,7 +7469,7 @@
     "name": "Rumsey W7 Pocket Large",
     "code": "RUM-W7-POCKET-LG",
     "discoveryDisplayName": "Map Center (W7 large pocket maps)",
-    "isActive": true,
+    "isActive": false,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "05241c96-6541-41ed-b2ad-61a126d62c2d",
@@ -7485,8 +7485,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:02.830+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:02.830+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-11-11T22:56:37.673+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
@@ -7738,7 +7738,7 @@
     "name": "Rumsey W7 Pocket Regular",
     "code": "RUM-W7-POCKET-REG",
     "discoveryDisplayName": "Map Center (W7 regular pocket maps)",
-    "isActive": true,
+    "isActive": false,
     "institutionId": "8d433cdd-4e8f-4dc1-aa24-8a4ddb7dc929",
     "campusId": "c365047a-51f2-45ce-8601-e421ca3615c5",
     "libraryId": "05241c96-6541-41ed-b2ad-61a126d62c2d",
@@ -7754,8 +7754,8 @@
     "metadata": {
       "createdDate": "2023-08-10T17:47:05.447+00:00",
       "createdByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766",
-      "updatedDate": "2023-08-10T17:47:05.447+00:00",
-      "updatedByUserId": "58d0aaf6-dcda-4d5e-92da-012e6b7dd766"
+      "updatedDate": "2026-11-11T22:56:24.401+00:00",
+      "updatedByUserId": "92c1aeb5-87f1-4be1-9f4d-0f90d1203dcc"
     }
   },
   {
