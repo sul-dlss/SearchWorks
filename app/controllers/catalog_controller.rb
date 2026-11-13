@@ -51,7 +51,7 @@ class CatalogController < ApplicationController
 
   # Reset the facet component to the default Blacklight ListComponent for the facet modal
   before_action only: :facet do
-    next unless blacklight_config.facet_fields[params[:id]].component == Searchworks4::FacetSearchComponent
+    next unless blacklight_config.facet_fields[params[:id]]&.component == Searchworks4::FacetSearchComponent
 
     blacklight_config.facet_fields[params[:id]].component = Blacklight::Facets::ListComponent
   end
