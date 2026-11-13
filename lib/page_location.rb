@@ -55,6 +55,18 @@ class PageLocation
     collection_parameters?
   end
 
+  # @param response [Blacklight::Solr::Response]
+  # @return [SolrDocument, nil] the parent collection of the first result matching the collection filter
+  def collection(response)
+    return unless collection?
+
+    document = response.documents.first
+    return if document.blank?
+
+    collection_id = CollectionHelper.strip_leading_a(collection_filter_values.first)
+    document.parent_collections.find { |c| CollectionHelper.strip_leading_a(c.id) == collection_id }
+  end
+
   private
 
   delegate :filter, :filters, to: :@search_state
@@ -68,7 +80,11 @@ class PageLocation
   end
 
   def collection_parameters?
-    filter(:collection).values.excluding('sirsi', 'folio').present?
+    collection_filter_values.present?
+  end
+
+  def collection_filter_values
+    filter(:collection).values.excluding('sirsi', 'folio')
   end
 
   def digital_collections_parameters?
