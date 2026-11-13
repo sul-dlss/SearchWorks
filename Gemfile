@@ -98,7 +98,6 @@ gem 'sanitize', '~> 6.0' # "optional" dependency as of ebsco-eds 1.1.2
 gem 'whenever', require: false # Work around https://github.com/javan/whenever/issues/831
 gem 'recaptcha', '~> 5.17'
 gem 'rinku', require: 'rails_rinku'
-gem 'bootstrap', '~> 5.0'
 
 gem 'rack-attack' # For throttle configuration
 gem 'bot_challenge_page'
