@@ -19,6 +19,21 @@ RSpec.describe 'Getting availability information' do
       expect(body).to have_css 'turbo-stream[target="availability_item_10a18d45-ef67-5157-aa65-ff634506bfdb"]'
       expect(response.body).to include 'Available'
     end
+
+    context 'with forgery protection enabled (so the CSRF meta tag loads the session, as in production)' do
+      around do |example|
+        original = ActionController::Base.allow_forgery_protection
+        ActionController::Base.allow_forgery_protection = true
+        example.run
+      ensure
+        ActionController::Base.allow_forgery_protection = original
+      end
+
+      it 'does not write the session cookie' do
+        get '/availability/3402192'
+        expect(response.cookies).not_to have_key '_SearchWorks_session'
+      end
+    end
   end
 
   context 'when FOLIO login fails' do
