@@ -43,8 +43,7 @@ module Record
         def filmstrip(spine, index:, preview_id:)
           helpers.turbo_frame_tag filmstrip_frame_id(spine),
                                   src: filmstrip_path(spine.base_callnumber, preview_id:),
-                                  loading: index.zero? ? 'eager' : 'lazy',
-                                  class: 'gallery'
+                                  loading: index.zero? ? 'eager' : 'lazy'
         end
 
         def filmstrip_frame_id(spine)

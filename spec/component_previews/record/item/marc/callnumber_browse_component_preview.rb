@@ -32,14 +32,10 @@ module Record
             @gallery_documents = gallery_documents
           end
 
-          # Mirrors the markup app/views/browse/nearby.html.erb renders into the turbo frame
+          # Renders the same ShelfComponent that app/views/browse/nearby.html.erb renders into the turbo frame
           def filmstrip(spine, preview_id:, **)
             helpers.turbo_frame_tag filmstrip_frame_id(spine), class: 'gallery' do
-              tag.div class: 'd-flex' do
-                presenters = @gallery_documents.map { |gallery_document| helpers.document_presenter(gallery_document) }
-
-                render SearchResult::DocumentGalleryComponent.with_collection(presenters, starting_document: document, preview_id:)
-              end
+              render Record::Item::Marc::ShelfComponent.new(documents: @gallery_documents, starting_document: document, preview_id:)
             end
           end
         end
