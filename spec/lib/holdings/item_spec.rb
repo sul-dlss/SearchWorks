@@ -11,7 +11,7 @@ RSpec.describe Holdings::Item do
       course_id: 'course_id', reserve_desk: 'reserve_desk', loan_period: 'loan_period'
     }
   end
-  let(:item) { Holdings::Item.new(complex_item_display) }
+  let(:item) { described_class.new(complex_item_display) }
   let(:methods) do
     [
       :barcode, :library, :effective_permanent_location_code, :temporary_location, :type,
@@ -28,7 +28,7 @@ RSpec.describe Holdings::Item do
   end
 
   describe '#suppressed?' do
-    let(:no_item_display) { Holdings::Item.new({}) }
+    let(:no_item_display) { described_class.new({}) }
 
     it "is true when the item_display doesn't exist" do
       expect(no_item_display).to be_suppressed
@@ -47,7 +47,7 @@ RSpec.describe Holdings::Item do
 
   describe '#on_order?' do
     it 'returns true for on-order items' do
-      expect(Holdings::Item.new({ status: 'On order' })).to be_on_order
+      expect(described_class.new({ status: 'On order' })).to be_on_order
     end
 
     it 'returns false for non on-order items' do
@@ -57,11 +57,11 @@ RSpec.describe Holdings::Item do
 
   describe '#callnumber' do
     let(:item_without_callnumber) do
-      Holdings::Item.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location', type: 'type',
-                           lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' })
+      described_class.new({ barcode: 'barcode', library: 'library', effective_permanent_location_code: 'location_code', temporary_location_code: 'temporary_location', type: 'type',
+                            lopped_callnumber: 'truncated_callnumber', shelfkey: 'shelfkey', reverse_shelfkey: 'reverse_shelfkey', full_shelfkey: 'full_shelfkey' })
     end
     let(:lane_online_item) do
-      Holdings::Item.new({ library: 'LANE', effective_permanent_location_code: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' })
+      described_class.new({ library: 'LANE', effective_permanent_location_code: 'LANE-ECOLL', type: 'ONLINE', shelfkey: 'abc123', reverse_shelfkey: 'xyz987', scheme: 'LC' })
     end
 
     it "returns '(no call number) if the callnumber is blank" do
@@ -82,7 +82,7 @@ RSpec.describe Holdings::Item do
   end
 
   describe 'public_note' do
-    let(:public_note) { Holdings::Item.new({ note: '.PUBLIC. The Public Note' }) }
+    let(:public_note) { described_class.new({ note: '.PUBLIC. The Public Note' }) }
 
     it 'removes the .PUBLIC. string from the public note field' do
       expect(public_note.public_note).to eq 'The Public Note'
@@ -101,7 +101,7 @@ RSpec.describe Holdings::Item do
   end
 
   describe 'zombie libraries' do
-    let(:blank) { Holdings::Item.new({ barcode: '123', library: '', effective_permanent_location_code: 'LOCATION' }) }
+    let(:blank) { described_class.new({ barcode: '123', library: '', effective_permanent_location_code: 'LOCATION' }) }
 
     it 'views blank libraries as a zombie library' do
       expect(blank.library).to eq 'ZOMBIE'

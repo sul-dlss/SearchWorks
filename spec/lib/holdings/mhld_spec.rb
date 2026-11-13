@@ -11,7 +11,7 @@ RSpec.describe Holdings::MHLD do
   end
 
   it 'returns the correct elements from the MHLD combined field' do
-    mhld = Holdings::MHLD.new(mhld_display)
+    mhld = described_class.new(mhld_display)
     expect(mhld.library).to eq 'GREEN'
     expect(mhld.location).to eq 'STACKS'
     expect(mhld.public_note).to eq 'mhld public note'
@@ -20,32 +20,32 @@ RSpec.describe Holdings::MHLD do
   end
 
   it 'strips angle brackets from MHLD data' do
-    library_has = Holdings::MHLD.new(special_mhld).library_has
+    library_has = described_class.new(special_mhld).library_has
     expect(library_has).not_to include('<html>')
     expect(library_has).to include('html entities')
   end
 
   it "replaces '),(' with '), ('" do
-    expect(Holdings::MHLD.new(special_mhld).public_note).to include('), (')
+    expect(described_class.new(special_mhld).public_note).to include('), (')
   end
 
   it "replaces ',' with ', '" do
-    expect(Holdings::MHLD.new(special_mhld).public_note).to include('no.17, no.14')
+    expect(described_class.new(special_mhld).public_note).to include('no.17, no.14')
   end
 
   it "replaces ';' with '; '" do
-    expect(Holdings::MHLD.new(long_mhld).library_has).to match(%r{v.1:no.3\(1965:Sept.20\)-<wbr/>v.1:no.4\(1965:Oct.18\); v.1:no.6\(1965:Nov.17\)})
+    expect(described_class.new(long_mhld).library_has).to match(%r{v.1:no.3\(1965:Sept.20\)-<wbr/>v.1:no.4\(1965:Oct.18\); v.1:no.6\(1965:Nov.17\)})
   end
 
   it 'appends <wbr/> to hyphens' do
-    expect(Holdings::MHLD.new(special_mhld).library_has).to include('-<wbr/>')
+    expect(described_class.new(special_mhld).library_has).to include('-<wbr/>')
   end
 
   it 'includes mhlds from zombie libraries' do
-    zombie = Holdings::MHLD.new(zombie_mhld)
+    zombie = described_class.new(zombie_mhld)
     expect(zombie).to be_present
     expect(zombie.library).to eq 'ZOMBIE'
-    expect(Holdings::MHLD.new(mhld_display).library).to eq 'GREEN'
+    expect(described_class.new(mhld_display).library).to eq 'GREEN'
   end
 
   describe '#present?' do
@@ -53,11 +53,11 @@ RSpec.describe Holdings::MHLD do
     let(:mhld) { 'GREEN -|- STACKS -|- -|- -|- something' }
 
     it 'is false unless a piece of the mhld statement is available' do
-      expect(Holdings::MHLD.new(no_mhld)).not_to be_present
+      expect(described_class.new(no_mhld)).not_to be_present
     end
 
     it 'is true of any piece of the mhld is available' do
-      expect(Holdings::MHLD.new(mhld)).to be_present
+      expect(described_class.new(mhld)).to be_present
     end
   end
 end

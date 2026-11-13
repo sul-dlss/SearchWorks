@@ -22,16 +22,16 @@ RSpec.describe EdsDocument do
 
   context 'when there is an EDS citation' do
     let(:document) do
-      EdsDocument.new({
-                        'styles' => {
-                          'Citations' => [
-                            {
-                              'Id' => 'apa',
-                              'Data' => 'EDS citation content'
+      described_class.new({
+                            'styles' => {
+                              'Citations' => [
+                                {
+                                  'Id' => 'apa',
+                                  'Data' => 'EDS citation content'
+                                }
+                              ]
                             }
-                          ]
-                        }
-                      })
+                          })
     end
 
     it { expect(document).to be_citable }

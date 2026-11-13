@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Links::Ezproxy do
   subject(:ezproxy) do
-    Links::Ezproxy.new(link:, document:)
+    described_class.new(link:, document:)
   end
 
   let(:stanford_only) { true }

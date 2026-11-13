@@ -6,7 +6,7 @@ RSpec.describe AllCapsParams do
   let(:controller) { double('CatalogController') }
 
   before do
-    controller.extend(AllCapsParams)
+    controller.extend(described_class)
     allow(controller).to receive(:params).and_return(ActiveSupport::HashWithIndifferentAccess.new(params))
   end
 

@@ -6,7 +6,7 @@ RSpec.describe SolrDocument do
   include MarcMetadataFixtures
 
   describe "marc field" do
-    let(:marcjson) { SolrDocument.new(marc_json_struct: metadata1) }
+    let(:marcjson) { described_class.new(marc_json_struct: metadata1) }
 
     it "responds to #to_marc for marcjson" do
       expect(marcjson).to respond_to(:to_marc)
@@ -57,7 +57,7 @@ RSpec.describe SolrDocument do
   end
 
   describe 'SolrBookplates' do
-    subject(:document) { SolrDocument.new(bookplates_display: ['ABC -|- 123']) }
+    subject(:document) { described_class.new(bookplates_display: ['ABC -|- 123']) }
 
     it 'provides a bookplates method that returns an array of Bookplate objects' do
       expect(document).to respond_to(:bookplates)
@@ -68,7 +68,7 @@ RSpec.describe SolrDocument do
   end
 
   describe '#export_as_ris' do
-    let(:document) { SolrDocument.new(id: '456') }
+    let(:document) { described_class.new(id: '456') }
 
     it 'returns computed ris when solr RIS citation is not available' do
       expect(document.export_as_ris).to eq "TY  - GEN\n" \
@@ -97,7 +97,7 @@ RSpec.describe SolrDocument do
     let(:eresource_bus_library) { { id: 30, holdings_library_code_ssim: 'BUSINESS', item_display_struct: [] } }
 
     context 'when it has holdings but no physical items' do
-      let(:solr_doc) { SolrDocument.new(eresource_bus_library) }
+      let(:solr_doc) { described_class.new(eresource_bus_library) }
 
       it 'is has a eresources_library_display_name' do
         expect(solr_doc.eresources_library_display_name).to eq('Business Library')
@@ -110,7 +110,7 @@ RSpec.describe SolrDocument do
           permanent_location_code: 'BUS' }
       end
       let(:physical_location_doc) do
-        SolrDocument.new(eresource_bus_library.merge(item_display_struct: [item_display]))
+        described_class.new(eresource_bus_library.merge(item_display_struct: [item_display]))
       end
 
       it 'has an eresource and physical location' do
@@ -120,7 +120,7 @@ RSpec.describe SolrDocument do
 
     context 'when there are physical items and the library is SUL' do
       let(:solr_info) { YAML.load_file(Rails.root.join('spec/fixtures/solr_documents/13553090.yml')) }
-      let(:solr_doc) { SolrDocument.new(solr_info) }
+      let(:solr_doc) { described_class.new(solr_info) }
 
       it 'does not have a location display' do
         expect(solr_doc.eresources_library_display_name).to be_nil
@@ -130,7 +130,7 @@ RSpec.describe SolrDocument do
 
   describe 'EdsDocument' do
     let(:eds) { EdsDocument.new(eds_title: 'yup') }
-    let(:non_eds) { SolrDocument.new }
+    let(:non_eds) { described_class.new }
 
     it 'eds?' do
       expect(eds.eds?).to be true
@@ -141,7 +141,7 @@ RSpec.describe SolrDocument do
   describe '#live_lookup_id' do
     subject { document.live_lookup_id }
 
-    let(:document) { SolrDocument.new(id: '11111', uuid_ssi: 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f') }
+    let(:document) { described_class.new(id: '11111', uuid_ssi: 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f') }
 
     it { is_expected.to eq 'ac0f8371-13ab-55c6-9fcc-1c95bc4fe39f' }
   end
@@ -149,7 +149,7 @@ RSpec.describe SolrDocument do
   describe 'oclc_number' do
     subject { document.oclc_number }
 
-    let(:document) { SolrDocument.new(oclc: '12345') }
+    let(:document) { described_class.new(oclc: '12345') }
 
     it { is_expected.to eq '12345' }
   end
@@ -157,14 +157,14 @@ RSpec.describe SolrDocument do
   describe '#imprint_string' do
     subject { document.imprint_string }
 
-    let(:document) { SolrDocument.new(imprint_display: %w[a b]) }
+    let(:document) { described_class.new(imprint_display: %w[a b]) }
 
     it { is_expected.to eq 'a' }
   end
 
   describe '#book_ids' do
     let(:document) do
-      SolrDocument.new(
+      described_class.new(
         isbn_display: %w[0393040801x 9780393040807],
         lccn: "a 96049953",
         oclc: 36024029

@@ -7,7 +7,7 @@ RSpec.describe ReplaceSpecialQuotes do
   let(:q) { 'query' }
 
   before do
-    controller.extend(ReplaceSpecialQuotes)
+    controller.extend(described_class)
     allow(controller).to receive(:params).and_return(params)
   end
 

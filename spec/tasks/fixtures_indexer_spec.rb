@@ -14,14 +14,14 @@ RSpec.describe FixturesIndexer do
     it "indexes the fixtures and commit them" do
       expect(stub_solr).to receive(:add).twice.and_return(true)
       expect(stub_solr).to receive(:commit).twice.and_return(true)
-      FixturesIndexer.run
+      described_class.run
       subject.run
     end
   end
 
   describe "#new" do
     it "sets the solr client" do
-      expect(FixturesIndexer.new.instance_variable_get(:@solr)).to eq stub_solr
+      expect(described_class.new.instance_variable_get(:@solr)).to eq stub_solr
     end
   end
 

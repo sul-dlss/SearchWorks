@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe LiveLookup do
-  subject(:live_lookup) { LiveLookup.new(ids) }
+  subject(:live_lookup) { described_class.new(ids) }
 
   let(:ids) { ['1234566'] }
   let(:implementation) { instance_double(LiveLookup::Folio, records: [{ barcode: '111' }]) }
