@@ -128,8 +128,6 @@ GEM
       view_component (>= 2.54, < 5)
     bootsnap (1.26.1)
       msgpack (~> 1.5)
-    bootstrap (5.3.8)
-      popper_js (>= 2.11.8, < 3)
     bot_challenge_page (1.2.0)
       http (>= 5.2, < 7)
       rails (>= 7.1, < 8.2)
@@ -426,7 +424,6 @@ GEM
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
-    popper_js (2.11.8)
     pp (0.6.4)
       prettyprint
     prettyprint (0.2.1)
@@ -697,7 +694,6 @@ DEPENDENCIES
   blacklight_dynamic_sitemap
   blacklight_range_limit (~> 9.0)
   bootsnap
-  bootstrap (~> 5.0)
   bot_challenge_page
   capistrano (~> 3.0)
   capistrano-bundler
