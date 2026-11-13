@@ -130,4 +130,17 @@ RSpec.describe Searchworks4::ItemStatusComponent, type: :component do
       end
     end
   end
+
+  context 'with item of unknown availability status and individual volumes cataloged separately' do
+    let(:item) do
+      Holdings::Item.new({ status: 'Unknown', barcode: '001AKH1250' }, document: document)
+    end
+    let(:document) { SolrDocument.from_fixture("2027166.yml") }
+
+    it 'renders the See volumes link for the volumes modal' do
+      render_inline(described_class.new(item: item))
+
+      expect(page).to have_link('See volumes')
+    end
+  end
 end
