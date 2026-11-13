@@ -12,7 +12,7 @@ RSpec.describe 'marc_fields/_linked_related_works' do
     render
   end
 
-  context 'base' do
+  describe 'base' do
     it 'renders the label in a dt' do
       expect(rendered).to have_css('dt', text: 'Related Work')
     end
@@ -72,7 +72,7 @@ RSpec.describe 'marc_fields/_linked_related_works' do
     end
   end
 
-  context 'contributed works' do
+  context 'with contributed works' do
     let(:document) { SolrDocument.new(marc_json_struct: contributed_works_fixture) }
 
     it 'renders the only field that matches a related work criteria' do

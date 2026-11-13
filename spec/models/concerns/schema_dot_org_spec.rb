@@ -12,7 +12,7 @@ RSpec.describe SchemaDotOrg do
     end
   end
 
-  context 'a book with a person-author' do
+  context 'with a book with a person-author' do
     let(:document) do
       SolrDocument.new(
         title_display: 'My book title',
@@ -29,7 +29,7 @@ RSpec.describe SchemaDotOrg do
     end
   end
 
-  context 'a map with a corporate author' do
+  context 'with a map with a corporate author' do
     let(:document) do
       SolrDocument.new(
         title_display: 'Map title',
@@ -46,7 +46,7 @@ RSpec.describe SchemaDotOrg do
     end
   end
 
-  context 'a journal with a meeting author' do
+  context 'with a journal with a meeting author' do
     let(:document) do
       SolrDocument.new(
         title_display: 'Code4Lib Journal',
@@ -63,7 +63,7 @@ RSpec.describe SchemaDotOrg do
     end
   end
 
-  context 'a thesis/disertation' do
+  context 'with a thesis/dissertation' do
     let(:document) do
       SolrDocument.new(
         genre_ssim: ['Thesis/Dissertation']
@@ -76,7 +76,7 @@ RSpec.describe SchemaDotOrg do
     end
   end
 
-  context 'a equipment' do
+  context 'with equipment' do
     let(:document) do
       SolrDocument.new(
         format_hsim: ['Equipment']
@@ -89,7 +89,7 @@ RSpec.describe SchemaDotOrg do
     end
   end
 
-  context 'a video game' do
+  context 'with a video game' do
     let(:document) do
       SolrDocument.new(
         genre_ssim: ['Video games']

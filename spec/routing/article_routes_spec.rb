@@ -12,14 +12,14 @@ RSpec.describe 'Article Routing' do
 
     let(:uri) { "/articles/#{Addressable::URI.encode_component(id)}" }
 
-    context 'handles EDS identifiers' do
+    context 'with EDS identifiers' do
       let(:id) { 'eds__1(2).3-4~5,6;7|8%9:A_b' }
 
       it 'route to the show page' do
         expect(result).to route_to(controller: 'articles', action: 'show', id:)
       end
 
-      context 'identifier with an encoded semicolon' do
+      context 'with an identifier with an encoded semicolon' do
         let(:id) { 'eds__idwith%3bsemicolon' }
 
         it 'routes to the page with the appropriate identifier' do
@@ -28,7 +28,7 @@ RSpec.describe 'Article Routing' do
       end
     end
 
-    context 'rejects unknown identifiers' do
+    context 'with unknown identifiers' do
       let(:id) { 'eds__1 2/3' }
 
       it 'does not route to show page' do

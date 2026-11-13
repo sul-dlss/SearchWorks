@@ -10,13 +10,13 @@ RSpec.describe AccessPanels::CourseReservesComponent, type: :component do
       create(:reg_course)
     end
 
-    context 'has course reserve present' do
+    context 'when a course reserve is present' do
       let(:document) { SolrDocument.new(id: '123', courses_folio_id_ssim: ['00254a1b-d0f5-4a9a-88a0-1dd596075d08']) }
 
       it { expect(component.render?).to be true }
     end
 
-    context "does not have a course reserve present" do
+    context "when a course reserve is not present" do
       let(:document) { SolrDocument.new(id: '123') }
 
       it { expect(component.render?).to be false }

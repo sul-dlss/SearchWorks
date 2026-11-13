@@ -64,7 +64,7 @@ RSpec.describe ArticlesController do
         expect(response).to redirect_to(root_path)
       end
 
-      context 'for a json request' do
+      context 'with a json request' do
         it 'renders an error' do
           get :index, format: :json
 
@@ -162,7 +162,7 @@ RSpec.describe ArticlesController do
   it 'handles authentication'
   it 'handles configuration'
 
-  context 'EDS Session Management' do
+  describe 'EDS Session Management' do
     let(:user_session) { {} }
     let(:eds_session) { instance_double(Eds::Session, session_token: 'abc') }
 

@@ -14,7 +14,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
 
   let(:page) { render_inline(component) }
 
-  context 'for FOLIO items' do
+  context 'with FOLIO items' do
     let(:library_code) { 'SAL3' }
     let(:location) { instance_double(Holdings::Location, code: 'SAL3-STACKS', items:) }
 
@@ -23,7 +23,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
     let(:allowed_request_types) { [] }
     let(:permanent_location) { effective_location }
 
-    context 'in a pageable location' do
+    context 'when in a pageable location' do
       let(:allowed_request_types) { ['Page'] }
 
       let(:effective_location) do
@@ -60,7 +60,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       end
     end
 
-    context 'in a mediated location' do
+    context 'when in a mediated location' do
       let(:library_code) { 'SAL3' }
       let(:location) { instance_double(Holdings::Location, code: 'SAL3-PAGE-MP', items:) }
 
@@ -92,7 +92,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SAL3&origin_location=SAL3-PAGE-MP' }
     end
 
-    context 'in an Aeon location' do
+    context 'when in an Aeon location' do
       let(:library_code) { 'SPEC-COLL' }
       let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
 
@@ -124,7 +124,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
     end
 
-    context 'in an Aeon permanent location, but with a temporary location somewhere else' do
+    context 'when in an Aeon permanent location, but with a temporary location somewhere else' do
       let(:library_code) { 'SPEC-COLL' }
       let(:location) { instance_double(Holdings::Location, code: 'SPEC-MANUSCRIPT', items:) }
 
@@ -180,7 +180,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
     end
 
-    context 'in an Aeon location with a finding aid' do
+    context 'when in an Aeon location with a finding aid' do
       let(:document) do
         SolrDocument.new(
           id: '12345',
@@ -219,7 +219,7 @@ RSpec.describe LocationRequestLinkComponent, type: :component do
       it { expect(page).to have_link 'Request', href: 'https://host.example.com/requests/new?item_id=12345&origin=SPEC-COLL&origin_location=SPEC-MANUSCRIPT' }
     end
 
-    context 'in a non-pageable location' do
+    context 'when in a non-pageable location' do
       let(:library_code) { 'GREEN' }
       let(:location) { instance_double(Holdings::Location, code: 'GRE-STACKS', items:) }
 
