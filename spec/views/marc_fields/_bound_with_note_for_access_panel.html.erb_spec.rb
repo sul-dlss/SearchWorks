@@ -6,8 +6,8 @@ RSpec.describe 'marc_fields/_bound_with_note_for_access_panel' do
   subject { Capybara.string(rendered.to_s) }
 
   let(:bound_with_note) do
-    double(
-      'BoundWithNote',
+    instance_double(
+      BoundWithNoteForAccessPanel,
       values: [
         { value: '12345 Bound With', id: '12345' }
       ]

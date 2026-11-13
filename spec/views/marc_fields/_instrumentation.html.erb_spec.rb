@@ -6,8 +6,8 @@ RSpec.describe 'marc_fields/_instrumentation' do
   subject { Capybara.string(rendered.to_s) }
 
   let(:instrumentation) do
-    double(
-      'Instrumentation',
+    instance_double(
+      Instrumentation,
       values: {
         'Label1' => [
           { label: 'Label1', value: 'First instrumentation' },

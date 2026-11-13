@@ -6,8 +6,8 @@ RSpec.describe 'marc_fields/_linked_series' do
   subject { Capybara.string(rendered.to_s) }
 
   let(:linked_series) do
-    double(
-      'LinkedSeries',
+    instance_double(
+      LinkedSeries,
       label: 'Series',
       values: [
         { link: 'The Link Value ', extra_text: 'Some other text' },
@@ -41,8 +41,8 @@ RSpec.describe 'marc_fields/_linked_series' do
 
   context 'when a link is not present' do
     let(:linked_series) do
-      double(
-        'LinkedSeries',
+      instance_double(
+        LinkedSeries,
         label: 'Series',
         values: [
           { extra_text: 'Some other text' }
