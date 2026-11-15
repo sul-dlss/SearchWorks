@@ -74,6 +74,23 @@ test("ignores Firefox dead object errors raised by privileged code", () => {
   }), true)
 })
 
+test("ignores Firefox NS_ERROR_NOT_INITIALIZED errors raised by reCAPTCHA", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "NS_ERROR_NOT_INITIALIZED",
+    message: "NS_ERROR_NOT_INITIALIZED: ",
+    stack: "z<@https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__en.js:459:273\n" +
+      "K@https://www.gstatic.com/recaptcha/releases/0lEGiwO4Qwx5R9ArxUy0mBpf/recaptcha__en.js:380:276\n"
+  }), true)
+})
+
+test("reports NS_ERROR_NOT_INITIALIZED errors raised by application code", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "NS_ERROR_NOT_INITIALIZED",
+    message: "NS_ERROR_NOT_INITIALIZED: ",
+    stack: "load@https://searchworks.stanford.edu/assets/application.js:1:100\n"
+  }), false)
+})
+
 test("continues to ignore Turnstile errors", () => {
   assert.equal(ignoreHoneybadgerNotice({ name: "TurnstileError", message: "Widget failed" }), true)
 })
