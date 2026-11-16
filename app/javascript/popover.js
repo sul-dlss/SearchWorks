@@ -1,4 +1,5 @@
 import Blacklight from "blacklight-frontend"
+import popoverTextOptions from "./popoverTextOptions.js"
 
 Blacklight.onLoad(() => {
   // Bootstrap is loaded from a CDN, which may be blocked or unreachable for some users.
@@ -8,6 +9,7 @@ Blacklight.onLoad(() => {
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
   popoverTriggerList.forEach((popoverTriggerEl) => {
     new bootstrap.Popover(popoverTriggerEl, {
+      ...popoverTextOptions(popoverTriggerEl),
       // needed to be able to set a data-controller on popover
       // popover controller allows us to have a dimissible popover
       // that doesn't disappear when users copy/interact with the popover
