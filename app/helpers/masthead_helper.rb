@@ -15,7 +15,7 @@ module MastheadHelper
   end
 
   def page_location
-    PageLocation.new(search_state)
+    @page_location ||= PageLocation.new(search_state)
   end
 
   def bookplate_from_document_list(response = @response)
