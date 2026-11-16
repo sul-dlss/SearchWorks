@@ -8,7 +8,7 @@ RSpec.describe LinkedSerials do
   subject { described_class.new(SolrDocument.new(marc_json_struct: marc)) }
 
   describe 'labels' do
-    context '780s' do
+    context 'with 780s' do
       let(:marc) { title_change_fixture }
 
       it 'returns a value for each 780' do
@@ -21,7 +21,7 @@ RSpec.describe LinkedSerials do
       end
     end
 
-    context '785' do
+    context 'with a 785' do
       let(:marc) { merged_with_serial_fixture }
 
       it 'returns the "Merged with" label for the first merged with 785' do
@@ -37,7 +37,7 @@ RSpec.describe LinkedSerials do
       end
     end
 
-    context 'other serials' do
+    context 'with other serials' do
       let(:marc) { main_entry_and_title_serial_fixture }
 
       it 'has a field based label' do
@@ -67,7 +67,7 @@ RSpec.describe LinkedSerials do
         end
       end
 
-      context 'for vernacular' do
+      context 'with vernacular' do
         let(:marc) { vernacular_serial_fixture }
 
         it 'labels vernacular fields correctly' do
@@ -78,7 +78,7 @@ RSpec.describe LinkedSerials do
       end
     end
 
-    context 'for ISSN number ($x)' do
+    context 'with an ISSN number ($x)' do
       let(:marc) { main_entry_and_title_serial_fixture_with_issn }
 
       it 'has an ISSN prefix' do
@@ -90,7 +90,7 @@ RSpec.describe LinkedSerials do
       end
     end
 
-    context 'for ISBN number ($z)' do
+    context 'with an ISBN number ($z)' do
       let(:marc) { main_entry_and_title_serial_fixture }
 
       it 'links to the isbn_search search field' do
@@ -98,7 +98,7 @@ RSpec.describe LinkedSerials do
       end
     end
 
-    context 'for language code ($e)' do
+    context 'with a language code ($e)' do
       let(:marc) do
         <<-JSON
           {
@@ -153,7 +153,7 @@ RSpec.describe LinkedSerials do
       end
     end
 
-    context 'other subfields' do
+    context 'with other subfields' do
       let(:marc) { main_entry_and_title_serial_fixture }
 
       it 'are described as text' do
@@ -161,7 +161,7 @@ RSpec.describe LinkedSerials do
       end
     end
 
-    context 'other subfields with 7' do
+    context 'with other subfields with 7' do
       let(:marc) { entry_with_subfield_seven }
       let(:text_subfields) { subject.values.flatten.map { |val| val[:values].filter { |e| e[:text] } }.flatten.compact }
 

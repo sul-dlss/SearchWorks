@@ -25,7 +25,7 @@ RSpec.describe MarcField do
       expect(subject.values).to include 'Arbitrary, Stewart.'
     end
 
-    context 'matching vernacular values' do
+    context 'with matching vernacular values' do
       let(:tags) { %w[245 505] }
       let(:marc) { matched_vernacular_fixture }
 
@@ -38,7 +38,7 @@ RSpec.describe MarcField do
       end
     end
 
-    context 'unmatched vernacular fields' do
+    context 'with unmatched vernacular fields' do
       let(:tags) { %w[245 505] }
       let(:marc) { unmatched_vernacular_fixture }
 
@@ -47,7 +47,7 @@ RSpec.describe MarcField do
       end
     end
 
-    context 'complex vernacular matching' do
+    context 'with complex vernacular matching' do
       let(:tags) { %w[245 300 350] }
       let(:marc) { complex_vernacular_fixture }
 
@@ -95,14 +95,14 @@ RSpec.describe MarcField do
 
     let(:tags) { %w[600] }
 
-    context 'fields that should not be displayed' do
+    context 'with fields that should not be displayed' do
       let(:marc) { metadata2 }
       let(:tags) { %w[541 760] }
 
       it { is_expected.to be_blank }
     end
 
-    context 'subfields that should not be displayed' do
+    context 'with subfields that should not be displayed' do
       it 'is not present' do
         subject.each do |value|
           expect(value).not_to include 'UNAUTHORIZED'

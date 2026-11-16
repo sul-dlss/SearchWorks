@@ -53,7 +53,7 @@ RSpec.describe HooverOpenUrlRequest do
     end
   end
 
-  context 'Non library-specific' do
+  describe 'Non library-specific' do
     describe '#record_url' do
       it 'returns the solr document url from the view context' do
         expect(url.record_url).to eq 'https://searchworks.stanford.edu/view/abc123'
@@ -111,7 +111,7 @@ RSpec.describe HooverOpenUrlRequest do
     end
   end
 
-  context 'Hoover Library' do
+  context 'with a Hoover Library record' do
     describe '#request_type' do
       it { expect(url.request_type).to eq 'GenericRequestMonograph' }
     end
@@ -133,7 +133,7 @@ RSpec.describe HooverOpenUrlRequest do
     end
   end
 
-  context 'Hoover Archive' do
+  context 'with a Hoover Archive record' do
     describe '#item_date' do
       let(:marc_json_struct) { hoover_request_fixture }
 

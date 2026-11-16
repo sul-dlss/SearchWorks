@@ -10,7 +10,7 @@ RSpec.describe 'Fielded Search' do
     click_button 'search'
   end
 
-  context 'title search' do
+  context 'with a title search' do
     let(:query) { 'An object' }
     let(:search_field) { 'Title' }
 
@@ -20,7 +20,7 @@ RSpec.describe 'Fielded Search' do
     end
   end
 
-  context 'author search' do
+  context 'with an author search' do
     let(:query) { 'Doe, Jane' }
     let(:search_field) { 'Author/Contributor' }
 
