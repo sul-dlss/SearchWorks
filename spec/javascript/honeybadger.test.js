@@ -74,6 +74,38 @@ test("ignores Firefox dead object errors raised by privileged code", () => {
   }), true)
 })
 
+test("ignores frameless script parse errors from engines that cannot parse the bundle", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "SyntaxError",
+    message: "Unexpected token .",
+    stack: "SyntaxError: Unexpected token ."
+  }), true)
+})
+
+test("ignores frameless script parse errors from HTML served in place of a script", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "SyntaxError",
+    message: "Unexpected token '<'",
+    stack: "SyntaxError: Unexpected token '<'"
+  }), true)
+})
+
+test("reports syntax errors that have stack frames", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "SyntaxError",
+    message: "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    stack: "SyntaxError: Unexpected token '<'\n    at load (https://searchworks.stanford.edu/assets/searchworks4.js:1:100)"
+  }), false)
+})
+
+test("reports other frameless syntax errors", () => {
+  assert.equal(ignoreHoneybadgerNotice({
+    name: "SyntaxError",
+    message: "Invalid regular expression: missing /",
+    stack: "SyntaxError: Invalid regular expression: missing /"
+  }), false)
+})
+
 test("continues to ignore Turnstile errors", () => {
   assert.equal(ignoreHoneybadgerNotice({ name: "TurnstileError", message: "Widget failed" }), true)
 })
