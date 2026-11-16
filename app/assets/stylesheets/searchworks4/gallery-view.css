@@ -1,17 +1,19 @@
-.gallery, .documents-gallery {
+/* The gallery is used in the single row "Related items" viewer on the record page and the full page "Browse related items" */
+/* and also by the "Acquired with support from" links. */
+.gallery {
   --gallery-document-total-height: 349px;
   --gallery-document-width: 152px;
   --gallery-document-thumbnail-height: 171px;
 
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 1.5rem 1rem;
 
   .gallery-document {
     border-radius: 0.25rem;
     height: var(--gallery-document-total-height);
     width: var(--gallery-document-width);
+    flex-shrink: 0; /* keep the fixed width in a non-wrapping row; let it overflow and scroll instead */
     padding: 0;
 
     &:hover {

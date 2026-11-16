@@ -74,7 +74,7 @@ RSpec.describe 'Bookplates' do
 
       click_link 'Susan and Ruth Sharp Fund'
 
-      expect(page).to have_css('#documents.documents-gallery')
+      expect(page).to have_css('#documents.gallery')
       expect(page).to have_current_path(/view=gallery/)
 
       expect(page).to have_current_path(/sort=new-to-libs/)
