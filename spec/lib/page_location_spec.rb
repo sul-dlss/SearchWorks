@@ -4,7 +4,7 @@ require 'rails_helper'
 require 'page_location'
 
 RSpec.describe PageLocation do
-  subject(:page_location) { PageLocation.new(search_state) }
+  subject(:page_location) { described_class.new(search_state) }
 
   let(:params) { { f: { format_hsim: ["Database"] } } }
   let(:controller) { CatalogController.new }

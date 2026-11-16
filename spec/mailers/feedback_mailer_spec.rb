@@ -15,7 +15,7 @@ RSpec.describe FeedbackMailer do
           last_search: '/?q=kittenz'
         }
       end
-      let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
+      let(:mail) { described_class.submit_feedback(params, ip) }
 
       it "has the correct to field" do
         expect(mail.to).to eq ["fake-email@kittenz.com"]
@@ -72,7 +72,7 @@ RSpec.describe FeedbackMailer do
     describe "without name and email" do
       let(:ip) { "123.43.54.123" }
       let(:params) { {} }
-      let(:mail) { FeedbackMailer.submit_feedback(params, ip) }
+      let(:mail) { described_class.submit_feedback(params, ip) }
 
       it "has the right email" do
         expect(mail.body).to have_text "Name: No name given"
@@ -98,7 +98,7 @@ RSpec.describe FeedbackMailer do
           message: 'Bad things'
         }
       end
-      let(:mail) { FeedbackMailer.submit_connection(params, ip) }
+      let(:mail) { described_class.submit_connection(params, ip) }
 
       it 'has the correct to field' do
         expect(mail.to).to eq ['fake-connectionz@kittenz.com']
@@ -157,7 +157,7 @@ RSpec.describe FeedbackMailer do
   describe 'submit_wrong_book_cover' do
     let(:ip) { '123.45.67.890' }
     let(:params) { { url: 'http://www.example.com/view/1234' } }
-    let(:mail) { FeedbackMailer.submit_wrong_book_cover(params, ip) }
+    let(:mail) { described_class.submit_wrong_book_cover(params, ip) }
 
     it 'includes the ip address' do
       expect(mail.body).to have_text '123.45.67.890'

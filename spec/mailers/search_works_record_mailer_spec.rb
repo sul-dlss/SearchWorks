@@ -65,7 +65,7 @@ RSpec.describe SearchWorksRecordMailer do
                           })
         ]
       end
-      let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
+      let(:mail) { described_class.email_record(documents, params, url_params) }
 
       it 'sends an HTML email' do
         expect(mail.content_type).to match "text/html; charset=UTF-8"
@@ -78,7 +78,7 @@ RSpec.describe SearchWorksRecordMailer do
       it 'has the subject that from the document when none was passed in' do
         skip('Need to update subject_from_details')
         params[:subject] = nil
-        mail = SearchWorksRecordMailer.email_record(documents, params, url_params)
+        mail = described_class.email_record(documents, params, url_params)
         expect(mail.subject).to eq 'SearchWorks Record: N/A'
       end
 
@@ -110,7 +110,7 @@ RSpec.describe SearchWorksRecordMailer do
     end
 
     context 'catalog' do
-      let(:mail) { SearchWorksRecordMailer.email_record(documents, params, url_params) }
+      let(:mail) { described_class.email_record(documents, params, url_params) }
 
       it 'sends an HTML email' do
         expect(mail.content_type).to match "text/html; charset=UTF-8"
@@ -122,7 +122,7 @@ RSpec.describe SearchWorksRecordMailer do
 
       it 'has the subject that from the document when none was passed in' do
         params[:subject] = nil
-        mail = SearchWorksRecordMailer.email_record([documents.first], params, url_params)
+        mail = described_class.email_record([documents.first], params, url_params)
         expect(mail.subject).to eq 'SearchWorks Record: Title1'
       end
 
@@ -162,7 +162,7 @@ RSpec.describe SearchWorksRecordMailer do
 
   describe 'full_email_record' do
     context 'catalog' do
-      let(:mail) { SearchWorksRecordMailer.full_email_record(documents, params, url_params) }
+      let(:mail) { described_class.full_email_record(documents, params, url_params) }
 
       it 'sends a html email' do
         expect(mail.content_type).to include('text/html')
@@ -220,7 +220,7 @@ RSpec.describe SearchWorksRecordMailer do
             bookplates_display: ['FUND-NAME -|- druid:abc123 -|- file-id-abc123.jp2 -|- BOOKPLATE-TEXT']
           )
         end
-        let(:mail) { SearchWorksRecordMailer.full_email_record([bookplate_document], params, url_params) }
+        let(:mail) { described_class.full_email_record([bookplate_document], params, url_params) }
 
         it 'renders the bookplate data successfully' do
           expect(mail.body).to have_css('h2', text: 'Acquired with support from')

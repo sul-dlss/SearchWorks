@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Holdings::Status do
-  let(:status) { Holdings::Status.new(OpenStruct.new) }
+  let(:status) { described_class.new(OpenStruct.new) }
 
   describe '#availability_class' do
     subject(:availability) { described_class.new(item).availability_class }
