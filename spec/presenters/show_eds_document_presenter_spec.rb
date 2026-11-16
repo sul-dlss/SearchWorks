@@ -6,7 +6,7 @@ RSpec.describe ShowEdsDocumentPresenter do
   subject(:presenter) { described_class.new(document, view_context) }
 
   let(:document) { EdsDocument.new }
-  let(:view_context) { double('ViewContext', action_name: 'show', blacklight_config: ArticlesController.blacklight_config) }
+  let(:view_context) { instance_double(ArticlesController, action_name: 'show', blacklight_config: ArticlesController.blacklight_config) }
 
   describe '#heading' do
     context 'when the document is restricted' do

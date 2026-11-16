@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe AllCapsParams do
-  let(:controller) { double('CatalogController') }
+  let(:controller) { CatalogController.new }
 
   before do
     controller.extend(AllCapsParams)
