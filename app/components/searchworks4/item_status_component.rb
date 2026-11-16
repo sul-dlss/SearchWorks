@@ -15,6 +15,8 @@ module Searchworks4
     end
 
     def availability_icon
+      return '' if availability_class == 'unknown'
+
       case item_status
       when 'Aged to lost', 'Claimed returned', 'Checked out', 'Awaiting delivery', 'Awaiting pickup', 'Missing', 'Long missing', 'In transit', 'Paged'
         'bi-x-lg'
@@ -35,6 +37,20 @@ module Searchworks4
       else
         'unknown'
       end
+    end
+
+    # This display either shows a "see volumes" button in case
+    # the item status is unknown or shows the status text
+    def status_display
+      return status_text unless analytics?
+
+      url = volumes_modal_path(q: @item.callnumber || '', search_field: 'call_number', sort: 'title', title: @item.document.present? ? @item.document['title_display'] : '')
+      classes = 'volume btn btn-sm btn-outline-primary text-nowrap align-self-start'
+      link_to 'See volumes', url, title: 'See volumes', class: classes, data: { 'blacklight-modal': 'trigger' }
+    end
+
+    def analytics?
+      item.effective_location&.code == 'SAL3-SEE-OTHER' || item.permanent_location&.code == 'SAL3-SEE-OTHER'
     end
 
     def status_text
