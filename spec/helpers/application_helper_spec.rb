@@ -9,4 +9,11 @@ RSpec.describe ApplicationHelper do
       expect(helper.from_advanced_search?).to be_truthy
     end
   end
+
+  describe '#honeybadger_filters_script' do
+    it 'returns the built filter script without a source map comment' do
+      expect(helper.honeybadger_filters_script).to include('beforeNotify')
+      expect(helper.honeybadger_filters_script).not_to include('sourceMappingURL')
+    end
+  end
 end
