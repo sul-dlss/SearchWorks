@@ -92,8 +92,8 @@
         </div>
       </div>
       <div data-inline-turnstile-target="challenge"></div>
-      <% # container for all documents in index list view -%>
-      <div id="documents" class="documents-<%= document_index_view_type %>">
+      <%# container for all documents in index list view -%>
+      <div id="documents" class="<%= bookplate_from_document_list.present? ? 'gallery' : 'documents-list' %>">
         <%= render view_config.document_component.with_collection(@response.documents.map { |document| document_presenter(document) }, counter_offset: document_counter_with_offset(-1)) %>
       </div>
       <%= render 'results_pagination' %>
