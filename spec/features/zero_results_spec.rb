@@ -13,7 +13,7 @@ RSpec.feature "Zero results" do
     end
   end
 
-  context 'from advanced search' do
+  context 'when coming from advanced search' do
     it "displays the page" do
       visit search_catalog_path(op: 'all', clause: { '0' => { query: 'sdfsda', field: 'search_title' } })
       expect(page).to have_link I18n.t('blacklight.search.zero_results.return_to_advanced_search')

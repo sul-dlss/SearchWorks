@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Request Links' do
-  context 'in search results' do
+  context 'when in search results' do
     context 'with Hoover links' do
       it 'renders a link to the detail/record view instead of holdings' do
         pending 'SW4.0 redesign in progress.'
@@ -19,7 +19,7 @@ RSpec.describe 'Request Links' do
     end
   end
 
-  context 'on the record view' do
+  context 'when on the record view' do
     context 'with Hoover links' do
       it 'renders a request button at the location level' do
         visit solr_document_path '56'

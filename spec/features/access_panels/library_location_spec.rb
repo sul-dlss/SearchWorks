@@ -13,7 +13,7 @@ RSpec.describe "Library Location Access Panel" do
     end
   end
 
-  context 'for an title with three locations' do
+  context 'with a title with three locations' do
     let(:lookup_service) do
       instance_double(LiveLookup, records: [
         { item_id: "a9c6236e-bd02-484c-ae0c-b13b32ce6ff9", due_date: nil, status: 'Available', is_available: true, is_requestable_status: false }

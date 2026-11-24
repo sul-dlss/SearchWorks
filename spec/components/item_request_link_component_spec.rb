@@ -24,35 +24,35 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
                                       folio_status:, allowed_request_types:)
     end
 
-    context 'checked out item from a location that allows holds' do
+    context 'with a checked out item from a location that allows holds' do
       let(:folio_status) { 'Checked out' }
       let(:allowed_request_types) { %w[Hold Recall] }
 
       it { is_expected.to have_link 'Request' }
     end
 
-    context 'checked out from a location that does not allow holds' do
+    context 'with a checked out item from a location that does not allow holds' do
       let(:folio_status) { 'Checked out' }
       let(:allowed_request_types) { ['Page'] }
 
       it { is_expected.to have_no_link 'Request' }
     end
 
-    context 'available' do
+    context 'when available' do
       let(:folio_status) { 'Available' }
       let(:allowed_request_types) { %w[Hold Recall] }
 
       it { is_expected.to have_no_link 'Request' }
     end
 
-    context 'on-order item' do
+    context 'with an on-order item' do
       let(:folio_status) { 'On order' }
       let(:allowed_request_types) { [] }
 
       it { is_expected.to have_no_link 'Request' }
     end
 
-    context 'on-order without a FOLIO item' do
+    context 'when on-order without a FOLIO item' do
       let(:item) do
         Holdings::Item.new({
                              barcode: '123',
@@ -66,7 +66,7 @@ RSpec.describe ItemRequestLinkComponent, type: :component do
       it { is_expected.to have_link 'Request' }
     end
 
-    context 'special collections on-order without a FOLIO item' do
+    context 'when special collections on-order without a FOLIO item' do
       let(:item) do
         Holdings::Item.new({
                              barcode: '123',

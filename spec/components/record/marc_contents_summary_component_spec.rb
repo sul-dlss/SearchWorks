@@ -35,7 +35,7 @@ RSpec.describe Record::MarcContentsSummaryComponent, type: :component do
     end
   end
 
-  context 'document has no fields' do
+  context 'when the document has no fields' do
     let(:marc_json_struct) { no_fields_fixture }
 
     it "is blank if the document has not fields" do

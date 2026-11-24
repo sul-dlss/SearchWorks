@@ -14,19 +14,19 @@ RSpec.describe Links::Ezproxy do
   let(:link) { instance_double(Links::Link, href: url, link_text:, link_title:, stanford_only?: stanford_only) }
 
   describe '#to_proxied_url' do
-    context 'SUL record' do
+    context 'with a SUL record' do
       let(:document) { SolrDocument.new(holdings_library_code_ssim: ['SUL']) }
 
       context 'with a url matching a SUL proxied host' do
         let(:url) { 'http://ch.ucpress.edu/whatever' }
 
-        context 'link is SUL restricted' do
+        context 'when the link is SUL restricted' do
           it 'adds the proxy prefix' do
             expect(ezproxy.to_proxied_url).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
           end
         end
 
-        context 'is NOT a SUL restriction note' do
+        context 'when the link is NOT a SUL restriction note' do
           let(:stanford_only) { false }
 
           it { expect(ezproxy.to_proxied_url).to be_nil }
@@ -52,7 +52,7 @@ RSpec.describe Links::Ezproxy do
       end
     end
 
-    context 'LAW record' do
+    context 'with a LAW record' do
       let(:document) { SolrDocument.new(holdings_library_code_ssim: ['LAW']) }
 
       context 'with a url matching a LAW proxied host' do
@@ -67,13 +67,13 @@ RSpec.describe Links::Ezproxy do
       context 'with a url matching a SUL proxied host' do
         let(:url) { 'http://ch.ucpress.edu/whatever' }
 
-        context 'link title is a SUL restriction note' do
+        context 'when the link title is a SUL restriction note' do
           it 'adds the proxy prefix' do
             expect(ezproxy.to_proxied_url).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
           end
         end
 
-        context 'link title is NOT a SUL restriction note' do
+        context 'when the link title is NOT a SUL restriction note' do
           let(:stanford_only) { false }
 
           it { expect(ezproxy.to_proxied_url).to be_nil }
@@ -96,38 +96,38 @@ RSpec.describe Links::Ezproxy do
       end
     end
 
-    context 'Digital LANE record' do
+    context 'with a Digital LANE record' do
       let(:document) { SolrDocument.new(holdings_library_code_ssim: ['SUL']) }
       let(:link_text) { 'American Diabetes Association: Subscription: Lane Library' }
 
       let(:url) { 'https://www.who.int/whatever' }
 
-      context 'link is a SUL restricted' do
+      context 'when the link is SUL restricted' do
         it 'adds the proxy prefix' do
           expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
         end
       end
 
-      context 'link is NOT LANE restricted' do
+      context 'when the link is NOT LANE restricted' do
         let(:stanford_only) { false }
 
         it { expect(ezproxy.to_proxied_url).to be_nil }
       end
     end
 
-    context 'LANE record' do
+    context 'with a LANE record' do
       let(:document) { SolrDocument.new(holdings_library_code_ssim: ['LANE']) }
 
       context 'with a url matching a LANE proxied host' do
         let(:url) { 'https://www.who.int/whatever' }
 
-        context 'link is a SUL restricted' do
+        context 'when the link is SUL restricted' do
           it 'adds the proxy prefix' do
             expect(ezproxy.to_proxied_url).to eq 'https://login.laneproxy.stanford.edu/login?qurl=https%3A%2F%2Fwww.who.int%2Fwhatever'
           end
         end
 
-        context 'link is NOT LANE restricted' do
+        context 'when the link is NOT LANE restricted' do
           let(:link_title) { 'Some other link note' }
           let(:stanford_only) { false }
 
@@ -138,13 +138,13 @@ RSpec.describe Links::Ezproxy do
       context 'with a url matching a SUL proxied host' do
         let(:url) { 'http://ch.ucpress.edu/whatever' }
 
-        context 'link title is a SUL restriction note' do
+        context 'when the link title is a SUL restriction note' do
           it 'adds the proxy prefix' do
             expect(ezproxy.to_proxied_url).to eq 'https://stanford.idm.oclc.org/login?qurl=http%3A%2F%2Fch.ucpress.edu%2Fwhatever'
           end
         end
 
-        context 'link is NOTSUL restricted' do
+        context 'when the link is NOT SUL restricted' do
           let(:stanford_only) { false }
 
           it { expect(ezproxy.to_proxied_url).to be_nil }
@@ -158,19 +158,19 @@ RSpec.describe Links::Ezproxy do
       end
     end
 
-    context 'Database link' do
+    context 'with a Database link' do
       let(:document) { nil }
 
       context 'with a url matching a SUL proxied host' do
         let(:url) { 'https://research.ebsco.com/whatever' }
 
-        context 'link is SUL restricted' do
+        context 'when the link is SUL restricted' do
           it 'adds the proxy prefix' do
             expect(ezproxy.to_proxied_url).to eq 'https://stanford.idm.oclc.org/login?qurl=https%3A%2F%2Fresearch.ebsco.com%2Fwhatever'
           end
         end
 
-        context 'link is NOT SUL restricted' do
+        context 'when the link is NOT SUL restricted' do
           let(:stanford_only) { false }
 
           it { expect(ezproxy.to_proxied_url).to be_nil }

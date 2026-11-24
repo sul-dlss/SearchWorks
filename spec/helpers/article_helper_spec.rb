@@ -29,7 +29,7 @@ RSpec.describe ArticleHelper do
     end
   end
 
-  context 'authors' do
+  context 'with authors' do
     let(:authors) { ['John Doe, Author', 'Doe, Jane', 'Fred Doe'] }
     let(:affiliations) { ["<relatesTo>1</relatesTo>Institute A<br /><relatesTo>2</relatesTo>Institute B<br /><relatesTo>3</relatesTo>Institute C"] }
 
@@ -108,7 +108,7 @@ RSpec.describe ArticleHelper do
   describe '#italicize_composed_title' do
     let(:result) { helper.italicize_composed_title(value: Array.wrap(title)) }
 
-    context 'no title' do
+    context 'with no title' do
       let(:title) { nil }
 
       it 'returns nil' do
@@ -116,7 +116,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context 'blank title' do
+    context 'with a blank title' do
       let(:title) { '  ' }
 
       it 'returns nil' do
@@ -124,7 +124,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context 'already marked up' do
+    context 'when already marked up' do
       let(:title) { '<i>This Journal</i>. 10(1)' }
 
       it 'just returns as-is but marked HTML safe' do
@@ -133,7 +133,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context 'already marked up with anchor' do
+    context 'when already marked up with anchor' do
       let(:title) { '<searchLink fieldCode="FT">This Journal</searchLink>. 10(1)' }
 
       it 'just returns as-is' do
@@ -142,7 +142,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context 'even marked up multiple times' do
+    context 'when marked up multiple times' do
       let(:title) { '<searchLink fieldCode="FT">This Journal</searchLink>. <i>10</i>(1)' }
 
       it 'just returns as-is' do
@@ -151,7 +151,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context 'no markup' do
+    context 'with no markup' do
       let(:title) { 'This Journal. 10(1)' }
 
       it 'italicizes first phrase' do
@@ -160,7 +160,7 @@ RSpec.describe ArticleHelper do
       end
     end
 
-    context 'no markup but weird punctuation' do
+    context 'with no markup but weird punctuation' do
       context 'with []' do
         let(:title) { 'This Journal [Alternate Name]. 10(1)' }
 

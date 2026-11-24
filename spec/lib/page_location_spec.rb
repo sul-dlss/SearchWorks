@@ -22,7 +22,7 @@ RSpec.describe PageLocation do
       it { is_expected.to be true }
     end
 
-    context 'on another page' do
+    context 'when on another page' do
       let(:action) { 'show' }
 
       it { is_expected.to be false }

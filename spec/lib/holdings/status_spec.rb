@@ -52,7 +52,7 @@ RSpec.describe Holdings::Status do
       it { is_expected.to eq 'unavailable' }
     end
 
-    context 'on-order but without an item' do
+    context 'when on-order but without an item' do
       let(:item) do
         instance_double(Holdings::Item, folio_item?: false, on_order?: true)
       end
@@ -106,7 +106,7 @@ RSpec.describe Holdings::Status do
       it { is_expected.to eq 'unknown' }
     end
 
-    context 'there is not a folio item but it also is not on order (e.g. maybe it is a bound-with?)' do
+    context 'when there is not a folio item but it also is not on order (e.g. maybe it is a bound-with?)' do
       let(:item) do
         instance_double(Holdings::Item, folio_item?: false, on_order?: false)
       end

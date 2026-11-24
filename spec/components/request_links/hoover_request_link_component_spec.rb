@@ -7,7 +7,7 @@ RSpec.describe RequestLinks::HooverRequestLinkComponent, type: :component do
 
   let(:page) { render_inline(component) }
 
-  context 'for FOLIO items' do
+  context 'with FOLIO items' do
     let(:document) { SolrDocument.new(id: '12345') }
     let(:library_code) { 'HILA' }
     let(:location) { instance_double(Holdings::Location, code: 'HILA-STACKS', items:) }
@@ -62,7 +62,7 @@ RSpec.describe RequestLinks::HooverRequestLinkComponent, type: :component do
       }
     end
 
-    context 'in a non-requestable location' do
+    context 'when in a non-requestable location' do
       let(:effective_location) do
         Folio::Location.from_dynamic(
           {

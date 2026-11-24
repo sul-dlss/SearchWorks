@@ -11,13 +11,13 @@ RSpec.describe LinkedAuthor do
   let(:target) { :corporate_author }
   let(:value) { double }
 
-  context 'base' do
+  describe 'base' do
     it '#to_partial_path is overriden from the base partial path' do
       expect(instance.to_partial_path).to eq 'marc_fields/linked_author'
     end
   end
 
-  context 'corporate_author' do
+  context 'with a corporate_author' do
     it '#label' do
       expect(instance.label).to eq 'Corporate Author'
     end
@@ -27,7 +27,7 @@ RSpec.describe LinkedAuthor do
     end
   end
 
-  context 'meeting' do
+  context 'with a meeting' do
     let(:target) { :meeting }
 
     it '#label' do
@@ -39,7 +39,7 @@ RSpec.describe LinkedAuthor do
     end
   end
 
-  context 'creator' do
+  context 'with a creator' do
     let(:target) { :creator }
 
     it '#label' do
