@@ -115,7 +115,17 @@ module Eds
         retry
       end
 
+      add_eds_error_context(e)
+
       raise
+    end
+
+    # Attach the EDS error details (from the response body) to any Honeybadger notice for this request
+    def add_eds_error_context(error)
+      body = error.response_body
+      return unless body.is_a?(Hash)
+
+      Honeybadger.context(eds_error: body.slice('ErrorNumber', 'ErrorCode', 'Reason', 'ErrorDescription', 'DetailedErrorDescription'))
     end
 
     # Network-level errors (e.g. timeouts) have no response body, and non-JSON error responses aren't parsed into a Hash
