@@ -6,8 +6,8 @@ RSpec.describe 'marc_fields/_linked_serials' do
   subject { Capybara.string(rendered.to_s) }
 
   let(:linked_serial) do
-    double(
-      'LinkedSerial',
+    instance_double(
+      LinkedSerials,
       values: [
         { label: 'Label1', values: [{ text: 'Text Value1' }] },
         {

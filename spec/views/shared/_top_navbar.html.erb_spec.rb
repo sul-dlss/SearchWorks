@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'shared/searchworks4/_top_navbar' do
-  let(:user) { double('user', bookmarks: []) }
+  let(:user) { instance_double(User, bookmarks: []) }
 
   before do
     allow(view).to receive_messages(current_user: user, current_or_guest_user: user)

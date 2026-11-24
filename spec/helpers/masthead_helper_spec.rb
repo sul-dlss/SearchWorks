@@ -29,7 +29,7 @@ RSpec.describe MastheadHelper do
     end
 
     it 'is nil when there is no bookplate in the first solr document' do
-      response = double('SolrResponse', docs: [SolrDocument.new])
+      response = instance_double(Blacklight::Solr::Response, docs: [SolrDocument.new])
       expect(helper).to receive(:params).at_least(:once).and_return(
         f: { fund_facet: ['ABC123'] }
       )
@@ -38,7 +38,7 @@ RSpec.describe MastheadHelper do
     end
 
     it 'returns the bookplate that matches the value in the fund_facet' do
-      response = double('SolrResponse', docs: [
+      response = instance_double(Blacklight::Solr::Response, docs: [
         SolrDocument.new(
           bookplates_display: [
             'FUND321 -|- druid:xyz321',
@@ -59,20 +59,20 @@ RSpec.describe MastheadHelper do
 
   describe 'bookplate_breadcrumb_value' do
     it 'returns the given fund name if there are no documents' do
-      response = double('SolrResponse', docs: [])
+      response = instance_double(Blacklight::Solr::Response, docs: [])
       expect(bookplate_breadcrumb_value('ABC123', response)).to eq 'ABC123'
     end
 
     it 'returns the given fund name if there is no matching bookplate' do
-      response = double('SolrResponse', docs: [SolrDocument.new])
+      response = instance_double(Blacklight::Solr::Response, docs: [SolrDocument.new])
       expect(helper).to receive(:bookplate_from_document_list).and_return(nil)
       expect(helper.bookplate_breadcrumb_value('ABC123', response)).to eq 'ABC123'
     end
 
     it 'returns the bookplate text when a matching bookplate is available' do
-      response = double('SolrResponse', docs: [SolrDocument.new])
+      response = instance_double(Blacklight::Solr::Response, docs: [SolrDocument.new])
       expect(helper).to receive(:bookplate_from_document_list).and_return(
-        double('Bookplate', text: 'Bookplate-text')
+        instance_double(Bookplate, text: 'Bookplate-text')
       )
       expect(helper.bookplate_breadcrumb_value('ABC123', response)).to eq 'Bookplate-text'
     end
