@@ -5,7 +5,7 @@ module AccessPanels
     with_collection_parameter :item
     attr_reader :item, :document, :classes
 
-    def initialize(item:, document:, item_counter: nil, classes: nil, consolidate_for_finding_aid: false)
+    def initialize(item:, document:, item_counter: nil, classes: 'item-row pt-1 w-100 flex-wrap border-top fs-15', consolidate_for_finding_aid: false)
       super()
 
       @item = item
