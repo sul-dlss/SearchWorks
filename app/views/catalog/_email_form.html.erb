@@ -9,7 +9,7 @@
                 method: :post,
                 data: {
                   controller: "email-sent recaptcha",
-                  action: "turbo:submit-end->email-sent#done submit->recaptcha#refresh",
+                  action: "turbo:submit-end->email-sent#done focusin->recaptcha#load:once submit->recaptcha#refresh",
                 }  do %>
         <% if @documents.one? %>
           <div class="fw-bold">Send</div>

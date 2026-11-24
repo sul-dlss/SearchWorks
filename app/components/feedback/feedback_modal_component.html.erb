@@ -20,7 +20,7 @@
 
         <div class="modal-body">
             <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
-                <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'turbo:submit-end->modal#close submit->recaptcha#refresh' } do |f| %>
+                <% form_with url: feedback_form_path, method: :post, id: "feedback-form", class: "feedback-form", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'turbo:submit-end->modal#close focusin->recaptcha#load:once submit->recaptcha#refresh' } do |f| %>
                     <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
                 <% end %>
             <% end %>

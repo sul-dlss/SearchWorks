@@ -15,7 +15,7 @@
         <% end %>
 
         <%= helpers.turbo_frame_tag "feedback-form_frame" do %>
-        <% form_with url: feedback_form_path, method: :post, class: "feedback-form mt-3", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'submit->recaptcha#refresh' } do |f| %>
+        <% form_with url: feedback_form_path, method: :post, class: "feedback-form mt-3", role: "form", namespace: 'feedback', data: { 'controller': 'feedback-form recaptcha', 'action': 'focusin->recaptcha#load:once submit->recaptcha#refresh' } do |f| %>
                 <%= f.hidden_field :form_format, value: 'standalone' %>
                 <%= render Feedback::FeedbackFormFieldsComponent.new(form: f, request_referer: request.referer) %>
                 <div class="d-flex-inline text-end">
