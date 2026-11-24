@@ -1,4 +1,4 @@
-<% @page_title = t 'blacklight.search.show.title_html', document_title: document_presenter(@document).html_title, application_name: "#{I18n.t('blacklight.application_name')} articles" %>
+<% content_for(:page_title, t('blacklight.search.show.title_html', document_title: document_presenter(@document).html_title, application_name: "#{I18n.t('blacklight.application_name')} articles")) %>
 
 <div class="row align-items-start">
   <div id="content" class="col-12 col-lg-8 show-document">
