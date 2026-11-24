@@ -1,18 +1,18 @@
 <%# locals: (content_classes: document_index_view_type == :gallery ? 'col-md-8 col-xxl-9 px-xxl-4 ps-lg-4 ps-2' : 'col-md-8 col-xxl-6 px-xxl-4 ps-lg-4 ps-2', hide_constraints: false, hide_facets: false, database_aside: false) %>
 <% if page_location.collection? && get_collection.present? %>
-  <% @page_title = t 'blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+  <% content_for(:page_title, t('blacklight.search.masthead_title', title: "#{document_presenter(@parent).heading} Collection", application_name: "#{I18n.t('blacklight.application_name')} catalog")) %>
 <% elsif page_location.access_point? %>
   <% if page_location.sdr? %>
-    <% @page_title = t 'blacklight.search.masthead_title', title: "SDR items", application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+    <% content_for(:page_title, t('blacklight.search.masthead_title', title: "SDR items", application_name: "#{I18n.t('blacklight.application_name')} catalog")) %>
   <% else %>
-    <% @page_title = t 'blacklight.search.masthead_title', title: page_location.access_point.to_s.gsub(/_/, ' ').capitalize.pluralize, application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+    <% content_for(:page_title, t('blacklight.search.masthead_title', title: page_location.access_point.to_s.gsub(/_/, ' ').capitalize.pluralize, application_name: "#{I18n.t('blacklight.application_name')} catalog")) %>
   <% end %>
 <% else %>
   <% constraints_text = render_search_to_page_title(search_state) %>
   <% if constraints_text.present? %>
-    <% @page_title = t('blacklight.search.page_title.title', constraints: constraints_text, application_name: application_name) %>
+    <% content_for(:page_title, t('blacklight.search.page_title.title', constraints: constraints_text, application_name: application_name)) %>
   <% else %>
-    <% @page_title = "#{I18n.t('blacklight.application_name')} catalog" %>
+    <% content_for(:page_title, "#{I18n.t('blacklight.application_name')} catalog") %>
   <% end %>
 <% end %>
 <% view_config = blacklight_config.view_config(document_index_view_type, action_name: action_name) %>

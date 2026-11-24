@@ -1,4 +1,4 @@
-<% @page_title = t 'blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+<% content_for(:page_title, t('blacklight.search.masthead_title', title: 'Databases', application_name: "#{I18n.t('blacklight.application_name')} catalog")) %>
 <% content_for(:search_navbar) do %>
   <%= render 'header' %>
 <% end %>

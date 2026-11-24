@@ -1,4 +1,4 @@
-<% @page_title = t 'blacklight.search.masthead_title', title: 'Browse related items', application_name: "#{I18n.t('blacklight.application_name')} catalog" %>
+<% content_for(:page_title, t('blacklight.search.masthead_title', title: 'Browse related items', application_name: "#{I18n.t('blacklight.application_name')} catalog")) %>
 
 <% if params[:start].present? %>
   <div class="px-4 py-2 mb-3 bg-light">

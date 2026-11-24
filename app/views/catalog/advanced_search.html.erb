@@ -1,4 +1,4 @@
-<% @page_title = t('blacklight.advanced_search.page_title', application_name: application_name) %>
+<% content_for(:page_title, t('blacklight.advanced_search.page_title', application_name: application_name)) %>
 
 <% content_for :skip_links do %>
   <%= render blacklight_config.skip_link_item_component.new(text: 'Skip to advanced search form', href: '#advanced-search-form') %>
