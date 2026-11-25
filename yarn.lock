@@ -467,10 +467,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@kurkle/color@^0.3.0":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@kurkle/color/-/color-0.3.4.tgz#4d4ff677e1609214fc71c580125ddddd86abcabf"
-  integrity sha512-M5UknZPHRu3DEDWoipU6sE8PdkZ6Z/S+v4dD+Ke8IaNlpdSQah50lz1KtcFBa2vsdOnwbbnxJwVM4wty6udA5w==
+"@kurkle/color@^0.6.6":
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/@kurkle/color/-/color-0.6.6.tgz#34e3a0871371987dc00196e8fe883b0e37681faa"
+  integrity sha512-Bd1NjGyoe27ExXRIBu13YymFP6k/wFxpUkX97Z3RlofLFV43nECB2G8vETZzcZzz2Ct2oRzwYElX65lxyi5UNg==
 
 "@mui/core-downloads-tracker@^7.3.11":
   version "7.3.11"
@@ -660,9 +660,9 @@
     picomatch "^4.0.3"
 
 "@types/estree@^1.0.6":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.10.tgz#8a4a266065af8c2fcf5983153cd97c11b313d0c6"
-  integrity sha512-lTyOMnOcmRBzdCv6/4zUZCrEhV0xrqQiUZBZtVcbmLHBXKLnN8q89v/wKRF/Q0HbwVsqbIG3o5HDoFl9sduM+g==
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.11.tgz#34689679c1d4868100519b746d3f9d21d4a6954b"
+  integrity sha512-YBdNe5JcjYR0sPhJW1QIeRCmI11YhYvaRuGCs9+WCeTTb+Yhb2BE2XMe5/wAqF10FK5g3+q1PDhQABfT7aX0gg==
 
 "@types/json-schema@^7.0.15":
   version "7.0.15"
@@ -690,9 +690,9 @@
   integrity sha512-8TV6R3h2j7a91c+1DXdJi3Syo69zzIZbz7Lg5tORM5LEJG7X/E6a1V3drRyBRZq7/utz7A+c4OgYLiLcYGHG6w==
 
 "@typescript-eslint/types@^8.56.0":
-  version "8.73.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-8.73.0.tgz#785586de1325a973b24e4e762bcd0093b248a2a7"
-  integrity sha512-O/1ytYzflF16QDKXx4/qOXg1IuZp+n7hr9t+S0nv7N/2Tl8rJiNCshztV1gcSUvHbPtoX3+zmNbtSAyVbzxVfw==
+  version "8.74.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-8.74.0.tgz#db010a2b419d9a57717eda8d97eafea0cad3ae97"
+  integrity sha512-MpnMrJCVNpP1iVL8NiHkQZgQqIMBH5ewDGUPBh1pqQXwFtMFjsl1M03QcYPXmv6stCKEiF0PN7CGbU1ZbXFzEA==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -894,11 +894,11 @@ chalk@^4.0.0:
     supports-color "^7.1.0"
 
 "chart.js@^ 4.4.1":
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-4.6.1.tgz#40a924bc0b92544ed66fa3f4873981152fc62c52"
-  integrity sha512-hJyniucsFmq//EvXYvJ6c6mahPoI3kaxdjVH8awTaJ/fDNWeSqqqArixMJWkWNN6fcYvPU3HneSANFNYtRi61g==
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-4.6.2.tgz#f18912826f0b49ca558a5999eedcf0a49640aefe"
+  integrity sha512-xachB+pPHjp0syJi7llUBA1w3kMYl6NF3o7eVrvjnWCT+IB2zMaF2pX5UYDiwbbfsioFEIRnAjreNOMsGj5TIA==
   dependencies:
-    "@kurkle/color" "^0.3.0"
+    "@kurkle/color" "^0.6.6"
 
 chokidar@^5.0.0:
   version "5.0.0"
